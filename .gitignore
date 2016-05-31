@@ -1,4 +1,6 @@
 target/
+tools/
+.idea/
 
 *.class
 
