@@ -1,0 +1,39 @@
+version: 1.0.{build}
+assembly_info:
+  patch: false
+platform: Any CPU
+
+environment:
+  diadoc_signing_secret:
+    secure: prJOj46LFF9HWKRH4PZ8vSS7wgSkkAFIkSCkfqWfAoPNGhUcYqplF4h4PyxEmMjb
+
+install:
+  - set JDK_HOME=C:\Program Files (x86)\Java\jdk1.7.0
+  - set JAVA_HOME=C:\Program Files (x86)\Java\jdk1.7.0
+  - choco install maven -version 3.3.3
+  - set M2_HOME=C:\tools\apache-maven-3.3.3
+  - set PATH=%PATH%;C:\tools\apache-maven-3.3.3\bin
+
+  - nuget install secure-file -ExcludeVersion
+  - secure-file\tools\secure-file -decrypt cryptopro-jcp-1.0.52.zip.enc -secret %diadoc_signing_secret%
+  - 7z x cryptopro-jcp-1.0.52.zip
+  - cd target\crypto-pro
+  - install.bat "%JDK_HOME%"
+  - cd ..\..
+
+build_script:
+- ps: .\build.ps1 -Target "AppVeyor" -Verbosity Diagnostic
+
+deploy:
+  - provider: GitHub
+    release: $(appveyor_repo_tag_name)
+    description: 'diadocsdk-java'
+    auth_token:
+      secure: BSnVMByuW1RN2cKD//7Y2+RRjsmhSfgBd2QK7IpyAadKDh8dIsYe4MF9bvX0SnEz # encrypted token from GitHub
+    artifact: /\.jar$/
+    draft: false
+    prerelease: false
+    on:
+      branch: master                 # release from master branch only
+      appveyor_repo_tag: true        # deploy on tag push only
+      appveyor_repo_tag_name: /^versions/
