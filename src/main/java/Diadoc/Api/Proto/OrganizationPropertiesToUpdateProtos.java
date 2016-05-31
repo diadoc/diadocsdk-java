@@ -8,86 +8,177 @@ public final class OrganizationPropertiesToUpdateProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface StringValueOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string Value = 1;
+  public interface StringValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.StringValue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Value = 1;</code>
+     */
     boolean hasValue();
-    String getValue();
+    /**
+     * <code>optional string Value = 1;</code>
+     */
+    java.lang.String getValue();
+    /**
+     * <code>optional string Value = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.StringValue}
+   */
   public static final class StringValue extends
-      com.google.protobuf.GeneratedMessage
-      implements StringValueOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.StringValue)
+      StringValueOrBuilder {
     // Use StringValue.newBuilder() to construct.
-    private StringValue(Builder builder) {
+    private StringValue(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private StringValue(boolean noInit) {}
-    
+    private StringValue(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final StringValue defaultInstance;
     public static StringValue getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public StringValue getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StringValue(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              value_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_StringValue_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_StringValue_fieldAccessorTable;
+      return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_StringValue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.class, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<StringValue> PARSER =
+        new com.google.protobuf.AbstractParser<StringValue>() {
+      public StringValue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StringValue(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StringValue> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string Value = 1;
     public static final int VALUE_FIELD_NUMBER = 1;
     private java.lang.Object value_;
+    /**
+     * <code>optional string Value = 1;</code>
+     */
     public boolean hasValue() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getValue() {
+    /**
+     * <code>optional string Value = 1;</code>
+     */
+    public java.lang.String getValue() {
       java.lang.Object ref = value_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           value_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getValueBytes() {
+    /**
+     * <code>optional string Value = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
       java.lang.Object ref = value_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         value_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       value_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -96,12 +187,12 @@ public final class OrganizationPropertiesToUpdateProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -111,113 +202,106 @@ public final class OrganizationPropertiesToUpdateProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.StringValue}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.StringValue)
+        Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_StringValue_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_StringValue_fieldAccessorTable;
+        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_StringValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.class, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -228,27 +312,27 @@ public final class OrganizationPropertiesToUpdateProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         value_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDescriptor();
+        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_StringValue_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getDefaultInstanceForType() {
         return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue build() {
         Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue result = buildPartial();
         if (!result.isInitialized()) {
@@ -256,17 +340,7 @@ public final class OrganizationPropertiesToUpdateProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue buildPartial() {
         Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue result = new Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue(this);
         int from_bitField0_ = bitField0_;
@@ -279,7 +353,7 @@ public final class OrganizationPropertiesToUpdateProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue) {
           return mergeFrom((Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue)other);
@@ -288,70 +362,86 @@ public final class OrganizationPropertiesToUpdateProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue other) {
         if (other == Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance()) return this;
         if (other.hasValue()) {
-          setValue(other.getValue());
+          bitField0_ |= 0x00000001;
+          value_ = other.value_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              value_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string Value = 1;
+
       private java.lang.Object value_ = "";
+      /**
+       * <code>optional string Value = 1;</code>
+       */
       public boolean hasValue() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getValue() {
+      /**
+       * <code>optional string Value = 1;</code>
+       */
+      public java.lang.String getValue() {
         java.lang.Object ref = value_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          value_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setValue(String value) {
+      /**
+       * <code>optional string Value = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Value = 1;</code>
+       */
+      public Builder setValue(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -360,169 +450,386 @@ public final class OrganizationPropertiesToUpdateProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Value = 1;</code>
+       */
       public Builder clearValue() {
         bitField0_ = (bitField0_ & ~0x00000001);
         value_ = getDefaultInstance().getValue();
         onChanged();
         return this;
       }
-      void setValue(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string Value = 1;</code>
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         value_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.StringValue)
     }
-    
+
     static {
       defaultInstance = new StringValue(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.StringValue)
   }
-  
-  public interface OrganizationPropertiesToUpdateOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string OrgId = 1;
+
+  public interface OrganizationPropertiesToUpdateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.OrganizationPropertiesToUpdate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string OrgId = 1;</code>
+     */
     boolean hasOrgId();
-    String getOrgId();
-    
-    // optional .Diadoc.Api.Proto.StringValue Ogrn = 2;
+    /**
+     * <code>required string OrgId = 1;</code>
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>required string OrgId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+     */
     boolean hasOgrn();
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getOgrn();
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getOgrnOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+     */
     boolean hasIfnsCode();
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getIfnsCode();
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getIfnsCodeOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Address Address = 4;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+     */
     boolean hasAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+     */
     Diadoc.Api.Proto.AddressProtos.Address getAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+     */
     Diadoc.Api.Proto.AddressProtos.AddressOrBuilder getAddressOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+     */
     boolean hasHeadOrganizationProperties();
+    /**
+     * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate getHeadOrganizationProperties();
+    /**
+     * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdateOrBuilder getHeadOrganizationPropertiesOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.OrganizationPropertiesToUpdate}
+   */
   public static final class OrganizationPropertiesToUpdate extends
-      com.google.protobuf.GeneratedMessage
-      implements OrganizationPropertiesToUpdateOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.OrganizationPropertiesToUpdate)
+      OrganizationPropertiesToUpdateOrBuilder {
     // Use OrganizationPropertiesToUpdate.newBuilder() to construct.
-    private OrganizationPropertiesToUpdate(Builder builder) {
+    private OrganizationPropertiesToUpdate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private OrganizationPropertiesToUpdate(boolean noInit) {}
-    
+    private OrganizationPropertiesToUpdate(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final OrganizationPropertiesToUpdate defaultInstance;
     public static OrganizationPropertiesToUpdate getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public OrganizationPropertiesToUpdate getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OrganizationPropertiesToUpdate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              orgId_ = bs;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = ogrn_.toBuilder();
+              }
+              ogrn_ = input.readMessage(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ogrn_);
+                ogrn_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = ifnsCode_.toBuilder();
+              }
+              ifnsCode_ = input.readMessage(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ifnsCode_);
+                ifnsCode_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              Diadoc.Api.Proto.AddressProtos.Address.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = address_.toBuilder();
+              }
+              address_ = input.readMessage(Diadoc.Api.Proto.AddressProtos.Address.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(address_);
+                address_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = headOrganizationProperties_.toBuilder();
+              }
+              headOrganizationProperties_ = input.readMessage(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(headOrganizationProperties_);
+                headOrganizationProperties_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_fieldAccessorTable;
+      return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.class, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<OrganizationPropertiesToUpdate> PARSER =
+        new com.google.protobuf.AbstractParser<OrganizationPropertiesToUpdate>() {
+      public OrganizationPropertiesToUpdate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OrganizationPropertiesToUpdate(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OrganizationPropertiesToUpdate> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string OrgId = 1;
     public static final int ORGID_FIELD_NUMBER = 1;
     private java.lang.Object orgId_;
+    /**
+     * <code>required string OrgId = 1;</code>
+     */
     public boolean hasOrgId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getOrgId() {
+    /**
+     * <code>required string OrgId = 1;</code>
+     */
+    public java.lang.String getOrgId() {
       java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           orgId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getOrgIdBytes() {
+    /**
+     * <code>required string OrgId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
       java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         orgId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.StringValue Ogrn = 2;
+
     public static final int OGRN_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue ogrn_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+     */
     public boolean hasOgrn() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getOgrn() {
       return ogrn_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getOgrnOrBuilder() {
       return ogrn_;
     }
-    
-    // optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;
+
     public static final int IFNSCODE_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue ifnsCode_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+     */
     public boolean hasIfnsCode() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getIfnsCode() {
       return ifnsCode_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getIfnsCodeOrBuilder() {
       return ifnsCode_;
     }
-    
-    // optional .Diadoc.Api.Proto.Address Address = 4;
+
     public static final int ADDRESS_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.AddressProtos.Address address_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+     */
     public boolean hasAddress() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+     */
     public Diadoc.Api.Proto.AddressProtos.Address getAddress() {
       return address_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+     */
     public Diadoc.Api.Proto.AddressProtos.AddressOrBuilder getAddressOrBuilder() {
       return address_;
     }
-    
-    // optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;
+
     public static final int HEADORGANIZATIONPROPERTIES_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate headOrganizationProperties_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+     */
     public boolean hasHeadOrganizationProperties() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate getHeadOrganizationProperties() {
       return headOrganizationProperties_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdateOrBuilder getHeadOrganizationPropertiesOrBuilder() {
       return headOrganizationProperties_;
     }
-    
+
     private void initFields() {
       orgId_ = "";
       ogrn_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
@@ -533,8 +840,9 @@ public final class OrganizationPropertiesToUpdateProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasOrgId()) {
         memoizedIsInitialized = 0;
         return false;
@@ -554,7 +862,7 @@ public final class OrganizationPropertiesToUpdateProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -575,12 +883,12 @@ public final class OrganizationPropertiesToUpdateProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -606,113 +914,106 @@ public final class OrganizationPropertiesToUpdateProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.OrganizationPropertiesToUpdate}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdateOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.OrganizationPropertiesToUpdate)
+        Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_fieldAccessorTable;
+        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.class, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -727,7 +1028,7 @@ public final class OrganizationPropertiesToUpdateProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         orgId_ = "";
@@ -758,20 +1059,20 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.getDescriptor();
+        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate getDefaultInstanceForType() {
         return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate build() {
         Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate result = buildPartial();
         if (!result.isInitialized()) {
@@ -779,17 +1080,7 @@ public final class OrganizationPropertiesToUpdateProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate buildPartial() {
         Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate result = new Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate(this);
         int from_bitField0_ = bitField0_;
@@ -834,7 +1125,7 @@ public final class OrganizationPropertiesToUpdateProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate) {
           return mergeFrom((Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate)other);
@@ -843,11 +1134,13 @@ public final class OrganizationPropertiesToUpdateProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate other) {
         if (other == Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.getDefaultInstance()) return this;
         if (other.hasOrgId()) {
-          setOrgId(other.getOrgId());
+          bitField0_ |= 0x00000001;
+          orgId_ = other.orgId_;
+          onChanged();
         }
         if (other.hasOgrn()) {
           mergeOgrn(other.getOgrn());
@@ -864,7 +1157,7 @@ public final class OrganizationPropertiesToUpdateProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasOrgId()) {
           
@@ -884,93 +1177,71 @@ public final class OrganizationPropertiesToUpdateProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              orgId_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder subBuilder = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.newBuilder();
-              if (hasOgrn()) {
-                subBuilder.mergeFrom(getOgrn());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setOgrn(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder subBuilder = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.newBuilder();
-              if (hasIfnsCode()) {
-                subBuilder.mergeFrom(getIfnsCode());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setIfnsCode(subBuilder.buildPartial());
-              break;
-            }
-            case 34: {
-              Diadoc.Api.Proto.AddressProtos.Address.Builder subBuilder = Diadoc.Api.Proto.AddressProtos.Address.newBuilder();
-              if (hasAddress()) {
-                subBuilder.mergeFrom(getAddress());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setAddress(subBuilder.buildPartial());
-              break;
-            }
-            case 42: {
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder subBuilder = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.newBuilder();
-              if (hasHeadOrganizationProperties()) {
-                subBuilder.mergeFrom(getHeadOrganizationProperties());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setHeadOrganizationProperties(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string OrgId = 1;
+
       private java.lang.Object orgId_ = "";
+      /**
+       * <code>required string OrgId = 1;</code>
+       */
       public boolean hasOrgId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getOrgId() {
+      /**
+       * <code>required string OrgId = 1;</code>
+       */
+      public java.lang.String getOrgId() {
         java.lang.Object ref = orgId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          orgId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            orgId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setOrgId(String value) {
+      /**
+       * <code>required string OrgId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        java.lang.Object ref = orgId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orgId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OrgId = 1;</code>
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -979,25 +1250,41 @@ public final class OrganizationPropertiesToUpdateProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string OrgId = 1;</code>
+       */
       public Builder clearOrgId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         orgId_ = getDefaultInstance().getOrgId();
         onChanged();
         return this;
       }
-      void setOrgId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string OrgId = 1;</code>
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         orgId_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional .Diadoc.Api.Proto.StringValue Ogrn = 2;
+
       private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue ogrn_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder> ogrnBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+       */
       public boolean hasOgrn() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getOgrn() {
         if (ogrnBuilder_ == null) {
           return ogrn_;
@@ -1005,6 +1292,9 @@ public final class OrganizationPropertiesToUpdateProtos {
           return ogrnBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+       */
       public Builder setOgrn(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue value) {
         if (ogrnBuilder_ == null) {
           if (value == null) {
@@ -1018,6 +1308,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+       */
       public Builder setOgrn(
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder builderForValue) {
         if (ogrnBuilder_ == null) {
@@ -1029,6 +1322,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+       */
       public Builder mergeOgrn(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue value) {
         if (ogrnBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -1045,6 +1341,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+       */
       public Builder clearOgrn() {
         if (ogrnBuilder_ == null) {
           ogrn_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
@@ -1055,11 +1354,17 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder getOgrnBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getOgrnFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getOgrnOrBuilder() {
         if (ogrnBuilder_ != null) {
           return ogrnBuilder_.getMessageOrBuilder();
@@ -1067,27 +1372,35 @@ public final class OrganizationPropertiesToUpdateProtos {
           return ogrn_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Ogrn = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder> 
           getOgrnFieldBuilder() {
         if (ogrnBuilder_ == null) {
           ogrnBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder>(
-                  ogrn_,
+                  getOgrn(),
                   getParentForChildren(),
                   isClean());
           ogrn_ = null;
         }
         return ogrnBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;
+
       private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue ifnsCode_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder> ifnsCodeBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+       */
       public boolean hasIfnsCode() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getIfnsCode() {
         if (ifnsCodeBuilder_ == null) {
           return ifnsCode_;
@@ -1095,6 +1408,9 @@ public final class OrganizationPropertiesToUpdateProtos {
           return ifnsCodeBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+       */
       public Builder setIfnsCode(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue value) {
         if (ifnsCodeBuilder_ == null) {
           if (value == null) {
@@ -1108,6 +1424,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+       */
       public Builder setIfnsCode(
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder builderForValue) {
         if (ifnsCodeBuilder_ == null) {
@@ -1119,6 +1438,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+       */
       public Builder mergeIfnsCode(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue value) {
         if (ifnsCodeBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -1135,6 +1457,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+       */
       public Builder clearIfnsCode() {
         if (ifnsCodeBuilder_ == null) {
           ifnsCode_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
@@ -1145,11 +1470,17 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder getIfnsCodeBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getIfnsCodeFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getIfnsCodeOrBuilder() {
         if (ifnsCodeBuilder_ != null) {
           return ifnsCodeBuilder_.getMessageOrBuilder();
@@ -1157,27 +1488,35 @@ public final class OrganizationPropertiesToUpdateProtos {
           return ifnsCode_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue IfnsCode = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder> 
           getIfnsCodeFieldBuilder() {
         if (ifnsCodeBuilder_ == null) {
           ifnsCodeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder>(
-                  ifnsCode_,
+                  getIfnsCode(),
                   getParentForChildren(),
                   isClean());
           ifnsCode_ = null;
         }
         return ifnsCodeBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Address Address = 4;
+
       private Diadoc.Api.Proto.AddressProtos.Address address_ = Diadoc.Api.Proto.AddressProtos.Address.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.AddressProtos.Address, Diadoc.Api.Proto.AddressProtos.Address.Builder, Diadoc.Api.Proto.AddressProtos.AddressOrBuilder> addressBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+       */
       public boolean hasAddress() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.Address getAddress() {
         if (addressBuilder_ == null) {
           return address_;
@@ -1185,6 +1524,9 @@ public final class OrganizationPropertiesToUpdateProtos {
           return addressBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+       */
       public Builder setAddress(Diadoc.Api.Proto.AddressProtos.Address value) {
         if (addressBuilder_ == null) {
           if (value == null) {
@@ -1198,6 +1540,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+       */
       public Builder setAddress(
           Diadoc.Api.Proto.AddressProtos.Address.Builder builderForValue) {
         if (addressBuilder_ == null) {
@@ -1209,6 +1554,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+       */
       public Builder mergeAddress(Diadoc.Api.Proto.AddressProtos.Address value) {
         if (addressBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
@@ -1225,6 +1573,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+       */
       public Builder clearAddress() {
         if (addressBuilder_ == null) {
           address_ = Diadoc.Api.Proto.AddressProtos.Address.getDefaultInstance();
@@ -1235,11 +1586,17 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.Address.Builder getAddressBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getAddressFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.AddressOrBuilder getAddressOrBuilder() {
         if (addressBuilder_ != null) {
           return addressBuilder_.getMessageOrBuilder();
@@ -1247,27 +1604,35 @@ public final class OrganizationPropertiesToUpdateProtos {
           return address_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 4;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.AddressProtos.Address, Diadoc.Api.Proto.AddressProtos.Address.Builder, Diadoc.Api.Proto.AddressProtos.AddressOrBuilder> 
           getAddressFieldBuilder() {
         if (addressBuilder_ == null) {
           addressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.AddressProtos.Address, Diadoc.Api.Proto.AddressProtos.Address.Builder, Diadoc.Api.Proto.AddressProtos.AddressOrBuilder>(
-                  address_,
+                  getAddress(),
                   getParentForChildren(),
                   isClean());
           address_ = null;
         }
         return addressBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;
+
       private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate headOrganizationProperties_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdateOrBuilder> headOrganizationPropertiesBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+       */
       public boolean hasHeadOrganizationProperties() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate getHeadOrganizationProperties() {
         if (headOrganizationPropertiesBuilder_ == null) {
           return headOrganizationProperties_;
@@ -1275,6 +1640,9 @@ public final class OrganizationPropertiesToUpdateProtos {
           return headOrganizationPropertiesBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+       */
       public Builder setHeadOrganizationProperties(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate value) {
         if (headOrganizationPropertiesBuilder_ == null) {
           if (value == null) {
@@ -1288,6 +1656,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+       */
       public Builder setHeadOrganizationProperties(
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder builderForValue) {
         if (headOrganizationPropertiesBuilder_ == null) {
@@ -1299,6 +1670,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+       */
       public Builder mergeHeadOrganizationProperties(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate value) {
         if (headOrganizationPropertiesBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010) &&
@@ -1315,6 +1689,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+       */
       public Builder clearHeadOrganizationProperties() {
         if (headOrganizationPropertiesBuilder_ == null) {
           headOrganizationProperties_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.getDefaultInstance();
@@ -1325,11 +1702,17 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder getHeadOrganizationPropertiesBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
         return getHeadOrganizationPropertiesFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdateOrBuilder getHeadOrganizationPropertiesOrBuilder() {
         if (headOrganizationPropertiesBuilder_ != null) {
           return headOrganizationPropertiesBuilder_.getMessageOrBuilder();
@@ -1337,117 +1720,271 @@ public final class OrganizationPropertiesToUpdateProtos {
           return headOrganizationProperties_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate HeadOrganizationProperties = 5;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdateOrBuilder> 
           getHeadOrganizationPropertiesFieldBuilder() {
         if (headOrganizationPropertiesBuilder_ == null) {
           headOrganizationPropertiesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdateOrBuilder>(
-                  headOrganizationProperties_,
+                  getHeadOrganizationProperties(),
                   getParentForChildren(),
                   isClean());
           headOrganizationProperties_ = null;
         }
         return headOrganizationPropertiesBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationPropertiesToUpdate)
     }
-    
+
     static {
       defaultInstance = new OrganizationPropertiesToUpdate(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.OrganizationPropertiesToUpdate)
   }
-  
-  public interface HeadOrganizationPropertiesToUpdateOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.StringValue Kpp = 1;
+
+  public interface HeadOrganizationPropertiesToUpdateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+     */
     boolean hasKpp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getKpp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getKppOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.StringValue FullName = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+     */
     boolean hasFullName();
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getFullName();
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+     */
     Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getFullNameOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Address Address = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+     */
     boolean hasAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+     */
     Diadoc.Api.Proto.AddressProtos.Address getAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+     */
     Diadoc.Api.Proto.AddressProtos.AddressOrBuilder getAddressOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate}
+   */
   public static final class HeadOrganizationPropertiesToUpdate extends
-      com.google.protobuf.GeneratedMessage
-      implements HeadOrganizationPropertiesToUpdateOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate)
+      HeadOrganizationPropertiesToUpdateOrBuilder {
     // Use HeadOrganizationPropertiesToUpdate.newBuilder() to construct.
-    private HeadOrganizationPropertiesToUpdate(Builder builder) {
+    private HeadOrganizationPropertiesToUpdate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private HeadOrganizationPropertiesToUpdate(boolean noInit) {}
-    
+    private HeadOrganizationPropertiesToUpdate(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final HeadOrganizationPropertiesToUpdate defaultInstance;
     public static HeadOrganizationPropertiesToUpdate getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public HeadOrganizationPropertiesToUpdate getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HeadOrganizationPropertiesToUpdate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = kpp_.toBuilder();
+              }
+              kpp_ = input.readMessage(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kpp_);
+                kpp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = fullName_.toBuilder();
+              }
+              fullName_ = input.readMessage(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fullName_);
+                fullName_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.AddressProtos.Address.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = address_.toBuilder();
+              }
+              address_ = input.readMessage(Diadoc.Api.Proto.AddressProtos.Address.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(address_);
+                address_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_fieldAccessorTable;
+      return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.class, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<HeadOrganizationPropertiesToUpdate> PARSER =
+        new com.google.protobuf.AbstractParser<HeadOrganizationPropertiesToUpdate>() {
+      public HeadOrganizationPropertiesToUpdate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HeadOrganizationPropertiesToUpdate(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HeadOrganizationPropertiesToUpdate> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.StringValue Kpp = 1;
     public static final int KPP_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue kpp_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+     */
     public boolean hasKpp() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getKpp() {
       return kpp_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getKppOrBuilder() {
       return kpp_;
     }
-    
-    // optional .Diadoc.Api.Proto.StringValue FullName = 2;
+
     public static final int FULLNAME_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue fullName_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+     */
     public boolean hasFullName() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getFullName() {
       return fullName_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+     */
     public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getFullNameOrBuilder() {
       return fullName_;
     }
-    
-    // optional .Diadoc.Api.Proto.Address Address = 3;
+
     public static final int ADDRESS_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.AddressProtos.Address address_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+     */
     public boolean hasAddress() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+     */
     public Diadoc.Api.Proto.AddressProtos.Address getAddress() {
       return address_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+     */
     public Diadoc.Api.Proto.AddressProtos.AddressOrBuilder getAddressOrBuilder() {
       return address_;
     }
-    
+
     private void initFields() {
       kpp_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
       fullName_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
@@ -1456,8 +1993,9 @@ public final class OrganizationPropertiesToUpdateProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasAddress()) {
         if (!getAddress().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1467,7 +2005,7 @@ public final class OrganizationPropertiesToUpdateProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1482,12 +2020,12 @@ public final class OrganizationPropertiesToUpdateProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1505,113 +2043,106 @@ public final class OrganizationPropertiesToUpdateProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdateOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate)
+        Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_fieldAccessorTable;
+        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.class, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1625,7 +2156,7 @@ public final class OrganizationPropertiesToUpdateProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (kppBuilder_ == null) {
@@ -1648,20 +2179,20 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.getDescriptor();
+        return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate getDefaultInstanceForType() {
         return Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate build() {
         Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate result = buildPartial();
         if (!result.isInitialized()) {
@@ -1669,17 +2200,7 @@ public final class OrganizationPropertiesToUpdateProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate buildPartial() {
         Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate result = new Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate(this);
         int from_bitField0_ = bitField0_;
@@ -1712,7 +2233,7 @@ public final class OrganizationPropertiesToUpdateProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate) {
           return mergeFrom((Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate)other);
@@ -1721,7 +2242,7 @@ public final class OrganizationPropertiesToUpdateProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate other) {
         if (other == Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.getDefaultInstance()) return this;
         if (other.hasKpp()) {
@@ -1736,7 +2257,7 @@ public final class OrganizationPropertiesToUpdateProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasAddress()) {
           if (!getAddress().isInitialized()) {
@@ -1746,70 +2267,38 @@ public final class OrganizationPropertiesToUpdateProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder subBuilder = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.newBuilder();
-              if (hasKpp()) {
-                subBuilder.mergeFrom(getKpp());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setKpp(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder subBuilder = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.newBuilder();
-              if (hasFullName()) {
-                subBuilder.mergeFrom(getFullName());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setFullName(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.AddressProtos.Address.Builder subBuilder = Diadoc.Api.Proto.AddressProtos.Address.newBuilder();
-              if (hasAddress()) {
-                subBuilder.mergeFrom(getAddress());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setAddress(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.StringValue Kpp = 1;
+
       private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue kpp_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder> kppBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+       */
       public boolean hasKpp() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getKpp() {
         if (kppBuilder_ == null) {
           return kpp_;
@@ -1817,6 +2306,9 @@ public final class OrganizationPropertiesToUpdateProtos {
           return kppBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+       */
       public Builder setKpp(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue value) {
         if (kppBuilder_ == null) {
           if (value == null) {
@@ -1830,6 +2322,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+       */
       public Builder setKpp(
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder builderForValue) {
         if (kppBuilder_ == null) {
@@ -1841,6 +2336,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+       */
       public Builder mergeKpp(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue value) {
         if (kppBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -1857,6 +2355,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+       */
       public Builder clearKpp() {
         if (kppBuilder_ == null) {
           kpp_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
@@ -1867,11 +2368,17 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder getKppBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getKppFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getKppOrBuilder() {
         if (kppBuilder_ != null) {
           return kppBuilder_.getMessageOrBuilder();
@@ -1879,27 +2386,35 @@ public final class OrganizationPropertiesToUpdateProtos {
           return kpp_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue Kpp = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder> 
           getKppFieldBuilder() {
         if (kppBuilder_ == null) {
           kppBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder>(
-                  kpp_,
+                  getKpp(),
                   getParentForChildren(),
                   isClean());
           kpp_ = null;
         }
         return kppBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.StringValue FullName = 2;
+
       private Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue fullName_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder> fullNameBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+       */
       public boolean hasFullName() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue getFullName() {
         if (fullNameBuilder_ == null) {
           return fullName_;
@@ -1907,6 +2422,9 @@ public final class OrganizationPropertiesToUpdateProtos {
           return fullNameBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+       */
       public Builder setFullName(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue value) {
         if (fullNameBuilder_ == null) {
           if (value == null) {
@@ -1920,6 +2438,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+       */
       public Builder setFullName(
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder builderForValue) {
         if (fullNameBuilder_ == null) {
@@ -1931,6 +2452,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+       */
       public Builder mergeFullName(Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue value) {
         if (fullNameBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -1947,6 +2471,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+       */
       public Builder clearFullName() {
         if (fullNameBuilder_ == null) {
           fullName_ = Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.getDefaultInstance();
@@ -1957,11 +2484,17 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder getFullNameBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getFullNameFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+       */
       public Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder getFullNameOrBuilder() {
         if (fullNameBuilder_ != null) {
           return fullNameBuilder_.getMessageOrBuilder();
@@ -1969,27 +2502,35 @@ public final class OrganizationPropertiesToUpdateProtos {
           return fullName_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.StringValue FullName = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder> 
           getFullNameFieldBuilder() {
         if (fullNameBuilder_ == null) {
           fullNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder, Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValueOrBuilder>(
-                  fullName_,
+                  getFullName(),
                   getParentForChildren(),
                   isClean());
           fullName_ = null;
         }
         return fullNameBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Address Address = 3;
+
       private Diadoc.Api.Proto.AddressProtos.Address address_ = Diadoc.Api.Proto.AddressProtos.Address.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.AddressProtos.Address, Diadoc.Api.Proto.AddressProtos.Address.Builder, Diadoc.Api.Proto.AddressProtos.AddressOrBuilder> addressBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+       */
       public boolean hasAddress() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.Address getAddress() {
         if (addressBuilder_ == null) {
           return address_;
@@ -1997,6 +2538,9 @@ public final class OrganizationPropertiesToUpdateProtos {
           return addressBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+       */
       public Builder setAddress(Diadoc.Api.Proto.AddressProtos.Address value) {
         if (addressBuilder_ == null) {
           if (value == null) {
@@ -2010,6 +2554,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+       */
       public Builder setAddress(
           Diadoc.Api.Proto.AddressProtos.Address.Builder builderForValue) {
         if (addressBuilder_ == null) {
@@ -2021,6 +2568,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+       */
       public Builder mergeAddress(Diadoc.Api.Proto.AddressProtos.Address value) {
         if (addressBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -2037,6 +2587,9 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+       */
       public Builder clearAddress() {
         if (addressBuilder_ == null) {
           address_ = Diadoc.Api.Proto.AddressProtos.Address.getDefaultInstance();
@@ -2047,11 +2600,17 @@ public final class OrganizationPropertiesToUpdateProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.Address.Builder getAddressBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getAddressFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.AddressOrBuilder getAddressOrBuilder() {
         if (addressBuilder_ != null) {
           return addressBuilder_.getMessageOrBuilder();
@@ -2059,47 +2618,50 @@ public final class OrganizationPropertiesToUpdateProtos {
           return address_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Address Address = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.AddressProtos.Address, Diadoc.Api.Proto.AddressProtos.Address.Builder, Diadoc.Api.Proto.AddressProtos.AddressOrBuilder> 
           getAddressFieldBuilder() {
         if (addressBuilder_ == null) {
           addressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.AddressProtos.Address, Diadoc.Api.Proto.AddressProtos.Address.Builder, Diadoc.Api.Proto.AddressProtos.AddressOrBuilder>(
-                  address_,
+                  getAddress(),
                   getParentForChildren(),
                   isClean());
           address_ = null;
         }
         return addressBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate)
     }
-    
+
     static {
       defaultInstance = new HeadOrganizationPropertiesToUpdate(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.HeadOrganizationPropertiesToUpdate)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_StringValue_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_StringValue_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -2125,43 +2687,38 @@ public final class OrganizationPropertiesToUpdateProtos {
       "rganizationPropertiesToUpdateProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_StringValue_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_StringValue_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_StringValue_descriptor,
-              new java.lang.String[] { "Value", },
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.class,
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.StringValue.Builder.class);
-          internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_descriptor,
-              new java.lang.String[] { "OrgId", "Ogrn", "IfnsCode", "Address", "HeadOrganizationProperties", },
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.class,
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.OrganizationPropertiesToUpdate.Builder.class);
-          internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_descriptor,
-              new java.lang.String[] { "Kpp", "FullName", "Address", },
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.class,
-              Diadoc.Api.Proto.OrganizationPropertiesToUpdateProtos.HeadOrganizationPropertiesToUpdate.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.AddressProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_StringValue_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_StringValue_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_StringValue_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_OrganizationPropertiesToUpdate_descriptor,
+        new java.lang.String[] { "OrgId", "Ogrn", "IfnsCode", "Address", "HeadOrganizationProperties", });
+    internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_HeadOrganizationPropertiesToUpdate_descriptor,
+        new java.lang.String[] { "Kpp", "FullName", "Address", });
+    Diadoc.Api.Proto.AddressProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

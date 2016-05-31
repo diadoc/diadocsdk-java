@@ -8,22 +8,57 @@ public final class DocumentDirectionProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.DocumentDirection}
+   */
   public enum DocumentDirection
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownDocumentDirection = 0;</code>
+     *
+     * <pre>
+     * reserved for backward compatibility
+     * </pre>
+     */
     UnknownDocumentDirection(0, 0),
+    /**
+     * <code>Inbound = 1;</code>
+     */
     Inbound(1, 1),
+    /**
+     * <code>Outbound = 2;</code>
+     */
     Outbound(2, 2),
+    /**
+     * <code>Internal = 3;</code>
+     */
     Internal(3, 3),
     ;
-    
+
+    /**
+     * <code>UnknownDocumentDirection = 0;</code>
+     *
+     * <pre>
+     * reserved for backward compatibility
+     * </pre>
+     */
     public static final int UnknownDocumentDirection_VALUE = 0;
+    /**
+     * <code>Inbound = 1;</code>
+     */
     public static final int Inbound_VALUE = 1;
+    /**
+     * <code>Outbound = 2;</code>
+     */
     public static final int Outbound_VALUE = 2;
+    /**
+     * <code>Internal = 3;</code>
+     */
     public static final int Internal_VALUE = 3;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static DocumentDirection valueOf(int value) {
       switch (value) {
         case 0: return UnknownDocumentDirection;
@@ -33,7 +68,7 @@ public final class DocumentDirectionProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<DocumentDirection>
         internalGetValueMap() {
       return internalValueMap;
@@ -45,7 +80,7 @@ public final class DocumentDirectionProtos {
               return DocumentDirection.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -58,11 +93,9 @@ public final class DocumentDirectionProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.DocumentDirectionProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final DocumentDirection[] VALUES = {
-      UnknownDocumentDirection, Inbound, Outbound, Internal, 
-    };
-    
+
+    private static final DocumentDirection[] VALUES = values();
+
     public static DocumentDirection valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -71,19 +104,19 @@ public final class DocumentDirectionProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private DocumentDirection(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.DocumentDirection)
   }
-  
-  
+
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -99,18 +132,18 @@ public final class DocumentDirectionProtos {
       "os"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

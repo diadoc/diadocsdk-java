@@ -8,20 +8,41 @@ public final class InvoiceInfoProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion}
+   */
   public enum InvoiceFormatVersion
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DefaultInvoiceFormatVersion = 0;</code>
+     */
     DefaultInvoiceFormatVersion(0, 0),
+    /**
+     * <code>v5_01 = 1;</code>
+     */
     v5_01(1, 1),
+    /**
+     * <code>v5_02 = 2;</code>
+     */
     v5_02(2, 2),
     ;
-    
+
+    /**
+     * <code>DefaultInvoiceFormatVersion = 0;</code>
+     */
     public static final int DefaultInvoiceFormatVersion_VALUE = 0;
+    /**
+     * <code>v5_01 = 1;</code>
+     */
     public static final int v5_01_VALUE = 1;
+    /**
+     * <code>v5_02 = 2;</code>
+     */
     public static final int v5_02_VALUE = 2;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static InvoiceFormatVersion valueOf(int value) {
       switch (value) {
         case 0: return DefaultInvoiceFormatVersion;
@@ -30,7 +51,7 @@ public final class InvoiceInfoProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<InvoiceFormatVersion>
         internalGetValueMap() {
       return internalValueMap;
@@ -42,7 +63,7 @@ public final class InvoiceInfoProtos {
               return InvoiceFormatVersion.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -55,11 +76,9 @@ public final class InvoiceInfoProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final InvoiceFormatVersion[] VALUES = {
-      DefaultInvoiceFormatVersion, v5_01, v5_02, 
-    };
-    
+
+    private static final InvoiceFormatVersion[] VALUES = values();
+
     public static InvoiceFormatVersion valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -68,40 +87,85 @@ public final class InvoiceInfoProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private InvoiceFormatVersion(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion)
   }
-  
+
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Invoicing.TaxRate}
+   */
   public enum TaxRate
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>NoVat = 0;</code>
+     */
     NoVat(0, 0),
+    /**
+     * <code>Percent_0 = 1;</code>
+     */
     Percent_0(1, 1),
+    /**
+     * <code>Percent_10 = 2;</code>
+     */
     Percent_10(2, 2),
+    /**
+     * <code>Percent_18 = 3;</code>
+     */
     Percent_18(3, 3),
+    /**
+     * <code>Percent_20 = 4;</code>
+     */
     Percent_20(4, 4),
+    /**
+     * <code>Fraction_10_110 = 5;</code>
+     */
     Fraction_10_110(5, 5),
+    /**
+     * <code>Fraction_18_118 = 6;</code>
+     */
     Fraction_18_118(6, 6),
     ;
-    
+
+    /**
+     * <code>NoVat = 0;</code>
+     */
     public static final int NoVat_VALUE = 0;
+    /**
+     * <code>Percent_0 = 1;</code>
+     */
     public static final int Percent_0_VALUE = 1;
+    /**
+     * <code>Percent_10 = 2;</code>
+     */
     public static final int Percent_10_VALUE = 2;
+    /**
+     * <code>Percent_18 = 3;</code>
+     */
     public static final int Percent_18_VALUE = 3;
+    /**
+     * <code>Percent_20 = 4;</code>
+     */
     public static final int Percent_20_VALUE = 4;
+    /**
+     * <code>Fraction_10_110 = 5;</code>
+     */
     public static final int Fraction_10_110_VALUE = 5;
+    /**
+     * <code>Fraction_18_118 = 6;</code>
+     */
     public static final int Fraction_18_118_VALUE = 6;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static TaxRate valueOf(int value) {
       switch (value) {
         case 0: return NoVat;
@@ -114,7 +178,7 @@ public final class InvoiceInfoProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<TaxRate>
         internalGetValueMap() {
       return internalValueMap;
@@ -126,7 +190,7 @@ public final class InvoiceInfoProtos {
               return TaxRate.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -139,11 +203,9 @@ public final class InvoiceInfoProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.getDescriptor().getEnumTypes().get(1);
     }
-    
-    private static final TaxRate[] VALUES = {
-      NoVat, Percent_0, Percent_10, Percent_18, Percent_20, Fraction_10_110, Fraction_18_118, 
-    };
-    
+
+    private static final TaxRate[] VALUES = values();
+
     public static TaxRate valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -152,571 +214,1624 @@ public final class InvoiceInfoProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private TaxRate(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Invoicing.TaxRate)
   }
-  
-  public interface InvoiceInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string InvoiceDate = 1;
+
+  public interface InvoiceInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.InvoiceInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
     boolean hasInvoiceDate();
-    String getInvoiceDate();
-    
-    // required string InvoiceNumber = 2;
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
+    java.lang.String getInvoiceDate();
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceDateBytes();
+
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
     boolean hasInvoiceNumber();
-    String getInvoiceNumber();
-    
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
+    java.lang.String getInvoiceNumber();
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceNumberBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     boolean hasSeller();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getSeller();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getSellerOrBuilder();
-    
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     boolean hasBuyer();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getBuyer();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getBuyerOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+     *
+     * <pre>
+     * грузоотправитель
+     * </pre>
+     */
     boolean hasShipper();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+     *
+     * <pre>
+     * грузоотправитель
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee getShipper();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+     *
+     * <pre>
+     * грузоотправитель
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder getShipperOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+     *
+     * <pre>
+     * грузополучатель
+     * </pre>
+     */
     boolean hasConsignee();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+     *
+     * <pre>
+     * грузополучатель
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee getConsignee();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+     *
+     * <pre>
+     * грузополучатель
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder getConsigneeOrBuilder();
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     boolean hasSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder();
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo> 
         getPaymentDocumentsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo getPaymentDocuments(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     int getPaymentDocumentsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfoOrBuilder> 
         getPaymentDocumentsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfoOrBuilder getPaymentDocumentsOrBuilder(
         int index);
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem> 
         getItemsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem getItems(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     int getItemsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemOrBuilder> 
         getItemsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemOrBuilder getItemsOrBuilder(
         int index);
-    
-    // optional string Currency = 10;
+
+    /**
+     * <code>optional string Currency = 10;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
     boolean hasCurrency();
-    String getCurrency();
-    
-    // optional string TotalWithVatExcluded = 11;
+    /**
+     * <code>optional string Currency = 10;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
+    java.lang.String getCurrency();
+    /**
+     * <code>optional string Currency = 10;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCurrencyBytes();
+
+    /**
+     * <code>optional string TotalWithVatExcluded = 11;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     boolean hasTotalWithVatExcluded();
-    String getTotalWithVatExcluded();
-    
-    // optional string Vat = 12;
+    /**
+     * <code>optional string TotalWithVatExcluded = 11;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    java.lang.String getTotalWithVatExcluded();
+    /**
+     * <code>optional string TotalWithVatExcluded = 11;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTotalWithVatExcludedBytes();
+
+    /**
+     * <code>optional string Vat = 12;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     boolean hasVat();
-    String getVat();
-    
-    // required string Total = 13;
+    /**
+     * <code>optional string Vat = 12;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 12;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>required string Total = 13;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
     boolean hasTotal();
-    String getTotal();
-    
-    // optional string AdditionalInfo = 14;
+    /**
+     * <code>required string Total = 13;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    java.lang.String getTotal();
+    /**
+     * <code>required string Total = 13;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTotalBytes();
+
+    /**
+     * <code>optional string AdditionalInfo = 14;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
     boolean hasAdditionalInfo();
-    String getAdditionalInfo();
-    
-    // optional string InvoiceRevisionDate = 15;
+    /**
+     * <code>optional string AdditionalInfo = 14;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
+    java.lang.String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 14;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAdditionalInfoBytes();
+
+    /**
+     * <code>optional string InvoiceRevisionDate = 15;</code>
+     *
+     * <pre>
+     * дата ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
     boolean hasInvoiceRevisionDate();
-    String getInvoiceRevisionDate();
-    
-    // optional string InvoiceRevisionNumber = 16;
+    /**
+     * <code>optional string InvoiceRevisionDate = 15;</code>
+     *
+     * <pre>
+     * дата ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
+    java.lang.String getInvoiceRevisionDate();
+    /**
+     * <code>optional string InvoiceRevisionDate = 15;</code>
+     *
+     * <pre>
+     * дата ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceRevisionDateBytes();
+
+    /**
+     * <code>optional string InvoiceRevisionNumber = 16;</code>
+     *
+     * <pre>
+     * номер ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
     boolean hasInvoiceRevisionNumber();
-    String getInvoiceRevisionNumber();
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;
+    /**
+     * <code>optional string InvoiceRevisionNumber = 16;</code>
+     *
+     * <pre>
+     * номер ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
+    java.lang.String getInvoiceRevisionNumber();
+    /**
+     * <code>optional string InvoiceRevisionNumber = 16;</code>
+     *
+     * <pre>
+     * номер ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceRevisionNumberBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> 
         getAdditionalInfosList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     int getAdditionalInfosCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
         getAdditionalInfosOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
         int index);
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+     *
+     * <pre>
+     * версия формата ФУФа (для тестирования систем в переходном периоде)
+     * </pre>
+     */
     boolean hasVersion();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+     *
+     * <pre>
+     * версия формата ФУФа (для тестирования систем в переходном периоде)
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion getVersion();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceInfo}
+   */
   public static final class InvoiceInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements InvoiceInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.InvoiceInfo)
+      InvoiceInfoOrBuilder {
     // Use InvoiceInfo.newBuilder() to construct.
-    private InvoiceInfo(Builder builder) {
+    private InvoiceInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InvoiceInfo(boolean noInit) {}
-    
+    private InvoiceInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InvoiceInfo defaultInstance;
     public static InvoiceInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InvoiceInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InvoiceInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              invoiceDate_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              invoiceNumber_ = bs;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = seller_.toBuilder();
+              }
+              seller_ = input.readMessage(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(seller_);
+                seller_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = buyer_.toBuilder();
+              }
+              buyer_ = input.readMessage(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(buyer_);
+                buyer_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = shipper_.toBuilder();
+              }
+              shipper_ = input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shipper_);
+                shipper_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 50: {
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = consignee_.toBuilder();
+              }
+              consignee_ = input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(consignee_);
+                consignee_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 58: {
+              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = signer_.toBuilder();
+              }
+              signer_ = input.readMessage(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signer_);
+                signer_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                paymentDocuments_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              paymentDocuments_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.PARSER, extensionRegistry));
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                items_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem>();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              items_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.PARSER, extensionRegistry));
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              currency_ = bs;
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              totalWithVatExcluded_ = bs;
+              break;
+            }
+            case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              vat_ = bs;
+              break;
+            }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              total_ = bs;
+              break;
+            }
+            case 114: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000800;
+              additionalInfo_ = bs;
+              break;
+            }
+            case 122: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00001000;
+              invoiceRevisionDate_ = bs;
+              break;
+            }
+            case 130: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00002000;
+              invoiceRevisionNumber_ = bs;
+              break;
+            }
+            case 138: {
+              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+                additionalInfos_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo>();
+                mutable_bitField0_ |= 0x00010000;
+              }
+              additionalInfos_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.PARSER, extensionRegistry));
+              break;
+            }
+            case 144: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion value = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(18, rawValue);
+              } else {
+                bitField0_ |= 0x00004000;
+                version_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          paymentDocuments_ = java.util.Collections.unmodifiableList(paymentDocuments_);
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          items_ = java.util.Collections.unmodifiableList(items_);
+        }
+        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+          additionalInfos_ = java.util.Collections.unmodifiableList(additionalInfos_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InvoiceInfo> PARSER =
+        new com.google.protobuf.AbstractParser<InvoiceInfo>() {
+      public InvoiceInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InvoiceInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InvoiceInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string InvoiceDate = 1;
     public static final int INVOICEDATE_FIELD_NUMBER = 1;
     private java.lang.Object invoiceDate_;
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
     public boolean hasInvoiceDate() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getInvoiceDate() {
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
+    public java.lang.String getInvoiceDate() {
       java.lang.Object ref = invoiceDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceDateBytes() {
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceDateBytes() {
       java.lang.Object ref = invoiceDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string InvoiceNumber = 2;
+
     public static final int INVOICENUMBER_FIELD_NUMBER = 2;
     private java.lang.Object invoiceNumber_;
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
     public boolean hasInvoiceNumber() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getInvoiceNumber() {
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
+    public java.lang.String getInvoiceNumber() {
       java.lang.Object ref = invoiceNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceNumberBytes() {
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceNumberBytes() {
       java.lang.Object ref = invoiceNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;
+
     public static final int SELLER_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo seller_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     public boolean hasSeller() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getSeller() {
       return seller_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getSellerOrBuilder() {
       return seller_;
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;
+
     public static final int BUYER_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo buyer_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     public boolean hasBuyer() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getBuyer() {
       return buyer_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getBuyerOrBuilder() {
       return buyer_;
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;
+
     public static final int SHIPPER_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee shipper_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+     *
+     * <pre>
+     * грузоотправитель
+     * </pre>
+     */
     public boolean hasShipper() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+     *
+     * <pre>
+     * грузоотправитель
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee getShipper() {
       return shipper_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+     *
+     * <pre>
+     * грузоотправитель
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder getShipperOrBuilder() {
       return shipper_;
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;
+
     public static final int CONSIGNEE_FIELD_NUMBER = 6;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee consignee_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+     *
+     * <pre>
+     * грузополучатель
+     * </pre>
+     */
     public boolean hasConsignee() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+     *
+     * <pre>
+     * грузополучатель
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee getConsignee() {
       return consignee_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+     *
+     * <pre>
+     * грузополучатель
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder getConsigneeOrBuilder() {
       return consignee_;
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;
+
     public static final int SIGNER_FIELD_NUMBER = 7;
     private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public boolean hasSigner() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
       return signer_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
       return signer_;
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;
+
     public static final int PAYMENTDOCUMENTS_FIELD_NUMBER = 8;
     private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo> paymentDocuments_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo> getPaymentDocumentsList() {
       return paymentDocuments_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfoOrBuilder> 
         getPaymentDocumentsOrBuilderList() {
       return paymentDocuments_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     public int getPaymentDocumentsCount() {
       return paymentDocuments_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo getPaymentDocuments(int index) {
       return paymentDocuments_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+     *
+     * <pre>
+     * платежно-расчетные документы
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfoOrBuilder getPaymentDocumentsOrBuilder(
         int index) {
       return paymentDocuments_.get(index);
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;
+
     public static final int ITEMS_FIELD_NUMBER = 9;
     private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem> items_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem> getItemsList() {
       return items_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public int getItemsCount() {
       return items_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem getItems(int index) {
       return items_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
     }
-    
-    // optional string Currency = 10;
+
     public static final int CURRENCY_FIELD_NUMBER = 10;
     private java.lang.Object currency_;
+    /**
+     * <code>optional string Currency = 10;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
     public boolean hasCurrency() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
-    public String getCurrency() {
+    /**
+     * <code>optional string Currency = 10;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
+    public java.lang.String getCurrency() {
       java.lang.Object ref = currency_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           currency_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getCurrencyBytes() {
+    /**
+     * <code>optional string Currency = 10;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCurrencyBytes() {
       java.lang.Object ref = currency_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         currency_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string TotalWithVatExcluded = 11;
+
     public static final int TOTALWITHVATEXCLUDED_FIELD_NUMBER = 11;
     private java.lang.Object totalWithVatExcluded_;
+    /**
+     * <code>optional string TotalWithVatExcluded = 11;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     public boolean hasTotalWithVatExcluded() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
-    public String getTotalWithVatExcluded() {
+    /**
+     * <code>optional string TotalWithVatExcluded = 11;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public java.lang.String getTotalWithVatExcluded() {
       java.lang.Object ref = totalWithVatExcluded_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           totalWithVatExcluded_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTotalWithVatExcludedBytes() {
+    /**
+     * <code>optional string TotalWithVatExcluded = 11;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTotalWithVatExcludedBytes() {
       java.lang.Object ref = totalWithVatExcluded_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         totalWithVatExcluded_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Vat = 12;
+
     public static final int VAT_FIELD_NUMBER = 12;
     private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 12;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     public boolean hasVat() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
-    public String getVat() {
+    /**
+     * <code>optional string Vat = 12;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public java.lang.String getVat() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           vat_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getVatBytes() {
+    /**
+     * <code>optional string Vat = 12;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         vat_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Total = 13;
+
     public static final int TOTAL_FIELD_NUMBER = 13;
     private java.lang.Object total_;
+    /**
+     * <code>required string Total = 13;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
     public boolean hasTotal() {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
-    public String getTotal() {
+    /**
+     * <code>required string Total = 13;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    public java.lang.String getTotal() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           total_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTotalBytes() {
+    /**
+     * <code>required string Total = 13;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTotalBytes() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         total_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string AdditionalInfo = 14;
+
     public static final int ADDITIONALINFO_FIELD_NUMBER = 14;
     private java.lang.Object additionalInfo_;
+    /**
+     * <code>optional string AdditionalInfo = 14;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
     public boolean hasAdditionalInfo() {
       return ((bitField0_ & 0x00000800) == 0x00000800);
     }
-    public String getAdditionalInfo() {
+    /**
+     * <code>optional string AdditionalInfo = 14;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
+    public java.lang.String getAdditionalInfo() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           additionalInfo_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAdditionalInfoBytes() {
+    /**
+     * <code>optional string AdditionalInfo = 14;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAdditionalInfoBytes() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         additionalInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string InvoiceRevisionDate = 15;
+
     public static final int INVOICEREVISIONDATE_FIELD_NUMBER = 15;
     private java.lang.Object invoiceRevisionDate_;
+    /**
+     * <code>optional string InvoiceRevisionDate = 15;</code>
+     *
+     * <pre>
+     * дата ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
     public boolean hasInvoiceRevisionDate() {
       return ((bitField0_ & 0x00001000) == 0x00001000);
     }
-    public String getInvoiceRevisionDate() {
+    /**
+     * <code>optional string InvoiceRevisionDate = 15;</code>
+     *
+     * <pre>
+     * дата ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
+    public java.lang.String getInvoiceRevisionDate() {
       java.lang.Object ref = invoiceRevisionDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceRevisionDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceRevisionDateBytes() {
+    /**
+     * <code>optional string InvoiceRevisionDate = 15;</code>
+     *
+     * <pre>
+     * дата ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceRevisionDateBytes() {
       java.lang.Object ref = invoiceRevisionDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceRevisionDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string InvoiceRevisionNumber = 16;
+
     public static final int INVOICEREVISIONNUMBER_FIELD_NUMBER = 16;
     private java.lang.Object invoiceRevisionNumber_;
+    /**
+     * <code>optional string InvoiceRevisionNumber = 16;</code>
+     *
+     * <pre>
+     * номер ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
     public boolean hasInvoiceRevisionNumber() {
       return ((bitField0_ & 0x00002000) == 0x00002000);
     }
-    public String getInvoiceRevisionNumber() {
+    /**
+     * <code>optional string InvoiceRevisionNumber = 16;</code>
+     *
+     * <pre>
+     * номер ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
+    public java.lang.String getInvoiceRevisionNumber() {
       java.lang.Object ref = invoiceRevisionNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceRevisionNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceRevisionNumberBytes() {
+    /**
+     * <code>optional string InvoiceRevisionNumber = 16;</code>
+     *
+     * <pre>
+     * номер ИСФ (обязательно при формировании InvoiceRevision)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceRevisionNumberBytes() {
       java.lang.Object ref = invoiceRevisionNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceRevisionNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;
+
     public static final int ADDITIONALINFOS_FIELD_NUMBER = 17;
     private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> additionalInfos_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> getAdditionalInfosList() {
       return additionalInfos_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
         getAdditionalInfosOrBuilderList() {
       return additionalInfos_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public int getAdditionalInfosCount() {
       return additionalInfos_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index) {
       return additionalInfos_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
         int index) {
       return additionalInfos_.get(index);
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];
+
     public static final int VERSION_FIELD_NUMBER = 18;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion version_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+     *
+     * <pre>
+     * версия формата ФУФа (для тестирования систем в переходном периоде)
+     * </pre>
+     */
     public boolean hasVersion() {
       return ((bitField0_ & 0x00004000) == 0x00004000);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+     *
+     * <pre>
+     * версия формата ФУФа (для тестирования систем в переходном периоде)
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion getVersion() {
       return version_;
     }
-    
+
     private void initFields() {
       invoiceDate_ = "";
       invoiceNumber_ = "";
@@ -740,8 +1855,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasInvoiceDate()) {
         memoizedIsInitialized = 0;
         return false;
@@ -811,7 +1927,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -871,12 +1987,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -954,113 +2070,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.InvoiceInfo)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1079,7 +2188,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         invoiceDate_ = "";
@@ -1152,20 +2261,20 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00020000);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -1173,17 +2282,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo(this);
         int from_bitField0_ = bitField0_;
@@ -1299,7 +2398,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo)other);
@@ -1308,14 +2407,18 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.getDefaultInstance()) return this;
         if (other.hasInvoiceDate()) {
-          setInvoiceDate(other.getInvoiceDate());
+          bitField0_ |= 0x00000001;
+          invoiceDate_ = other.invoiceDate_;
+          onChanged();
         }
         if (other.hasInvoiceNumber()) {
-          setInvoiceNumber(other.getInvoiceNumber());
+          bitField0_ |= 0x00000002;
+          invoiceNumber_ = other.invoiceNumber_;
+          onChanged();
         }
         if (other.hasSeller()) {
           mergeSeller(other.getSeller());
@@ -1385,25 +2488,39 @@ public final class InvoiceInfoProtos {
           }
         }
         if (other.hasCurrency()) {
-          setCurrency(other.getCurrency());
+          bitField0_ |= 0x00000200;
+          currency_ = other.currency_;
+          onChanged();
         }
         if (other.hasTotalWithVatExcluded()) {
-          setTotalWithVatExcluded(other.getTotalWithVatExcluded());
+          bitField0_ |= 0x00000400;
+          totalWithVatExcluded_ = other.totalWithVatExcluded_;
+          onChanged();
         }
         if (other.hasVat()) {
-          setVat(other.getVat());
+          bitField0_ |= 0x00000800;
+          vat_ = other.vat_;
+          onChanged();
         }
         if (other.hasTotal()) {
-          setTotal(other.getTotal());
+          bitField0_ |= 0x00001000;
+          total_ = other.total_;
+          onChanged();
         }
         if (other.hasAdditionalInfo()) {
-          setAdditionalInfo(other.getAdditionalInfo());
+          bitField0_ |= 0x00002000;
+          additionalInfo_ = other.additionalInfo_;
+          onChanged();
         }
         if (other.hasInvoiceRevisionDate()) {
-          setInvoiceRevisionDate(other.getInvoiceRevisionDate());
+          bitField0_ |= 0x00004000;
+          invoiceRevisionDate_ = other.invoiceRevisionDate_;
+          onChanged();
         }
         if (other.hasInvoiceRevisionNumber()) {
-          setInvoiceRevisionNumber(other.getInvoiceRevisionNumber());
+          bitField0_ |= 0x00008000;
+          invoiceRevisionNumber_ = other.invoiceRevisionNumber_;
+          onChanged();
         }
         if (additionalInfosBuilder_ == null) {
           if (!other.additionalInfos_.isEmpty()) {
@@ -1437,7 +2554,7 @@ public final class InvoiceInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasInvoiceDate()) {
           
@@ -1507,171 +2624,87 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              invoiceDate_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              invoiceNumber_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.newBuilder();
-              if (hasSeller()) {
-                subBuilder.mergeFrom(getSeller());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSeller(subBuilder.buildPartial());
-              break;
-            }
-            case 34: {
-              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.newBuilder();
-              if (hasBuyer()) {
-                subBuilder.mergeFrom(getBuyer());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setBuyer(subBuilder.buildPartial());
-              break;
-            }
-            case 42: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.newBuilder();
-              if (hasShipper()) {
-                subBuilder.mergeFrom(getShipper());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setShipper(subBuilder.buildPartial());
-              break;
-            }
-            case 50: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.newBuilder();
-              if (hasConsignee()) {
-                subBuilder.mergeFrom(getConsignee());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setConsignee(subBuilder.buildPartial());
-              break;
-            }
-            case 58: {
-              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.newBuilder();
-              if (hasSigner()) {
-                subBuilder.mergeFrom(getSigner());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSigner(subBuilder.buildPartial());
-              break;
-            }
-            case 66: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addPaymentDocuments(subBuilder.buildPartial());
-              break;
-            }
-            case 74: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addItems(subBuilder.buildPartial());
-              break;
-            }
-            case 82: {
-              bitField0_ |= 0x00000200;
-              currency_ = input.readBytes();
-              break;
-            }
-            case 90: {
-              bitField0_ |= 0x00000400;
-              totalWithVatExcluded_ = input.readBytes();
-              break;
-            }
-            case 98: {
-              bitField0_ |= 0x00000800;
-              vat_ = input.readBytes();
-              break;
-            }
-            case 106: {
-              bitField0_ |= 0x00001000;
-              total_ = input.readBytes();
-              break;
-            }
-            case 114: {
-              bitField0_ |= 0x00002000;
-              additionalInfo_ = input.readBytes();
-              break;
-            }
-            case 122: {
-              bitField0_ |= 0x00004000;
-              invoiceRevisionDate_ = input.readBytes();
-              break;
-            }
-            case 130: {
-              bitField0_ |= 0x00008000;
-              invoiceRevisionNumber_ = input.readBytes();
-              break;
-            }
-            case 138: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addAdditionalInfos(subBuilder.buildPartial());
-              break;
-            }
-            case 144: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion value = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(18, rawValue);
-              } else {
-                bitField0_ |= 0x00020000;
-                version_ = value;
-              }
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string InvoiceDate = 1;
+
       private java.lang.Object invoiceDate_ = "";
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
       public boolean hasInvoiceDate() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getInvoiceDate() {
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
+      public java.lang.String getInvoiceDate() {
         java.lang.Object ref = invoiceDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceDate(String value) {
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceDateBytes() {
+        java.lang.Object ref = invoiceDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
+      public Builder setInvoiceDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1680,34 +2713,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
       public Builder clearInvoiceDate() {
         bitField0_ = (bitField0_ & ~0x00000001);
         invoiceDate_ = getDefaultInstance().getInvoiceDate();
         onChanged();
         return this;
       }
-      void setInvoiceDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
+      public Builder setInvoiceDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         invoiceDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string InvoiceNumber = 2;
+
       private java.lang.Object invoiceNumber_ = "";
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
       public boolean hasInvoiceNumber() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getInvoiceNumber() {
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
+      public java.lang.String getInvoiceNumber() {
         java.lang.Object ref = invoiceNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceNumber(String value) {
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceNumberBytes() {
+        java.lang.Object ref = invoiceNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
+      public Builder setInvoiceNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1716,25 +2813,57 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
       public Builder clearInvoiceNumber() {
         bitField0_ = (bitField0_ & ~0x00000002);
         invoiceNumber_ = getDefaultInstance().getInvoiceNumber();
         onChanged();
         return this;
       }
-      void setInvoiceNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
+      public Builder setInvoiceNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         invoiceNumber_ = value;
         onChanged();
+        return this;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;
+
       private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo seller_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> sellerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public boolean hasSeller() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getSeller() {
         if (sellerBuilder_ == null) {
           return seller_;
@@ -1742,6 +2871,13 @@ public final class InvoiceInfoProtos {
           return sellerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Builder setSeller(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (sellerBuilder_ == null) {
           if (value == null) {
@@ -1755,6 +2891,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Builder setSeller(
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder builderForValue) {
         if (sellerBuilder_ == null) {
@@ -1766,6 +2909,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Builder mergeSeller(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (sellerBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -1782,6 +2932,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Builder clearSeller() {
         if (sellerBuilder_ == null) {
           seller_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
@@ -1792,11 +2949,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder getSellerBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getSellerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getSellerOrBuilder() {
         if (sellerBuilder_ != null) {
           return sellerBuilder_.getMessageOrBuilder();
@@ -1804,27 +2975,47 @@ public final class InvoiceInfoProtos {
           return seller_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 3;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> 
           getSellerFieldBuilder() {
         if (sellerBuilder_ == null) {
           sellerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder>(
-                  seller_,
+                  getSeller(),
                   getParentForChildren(),
                   isClean());
           seller_ = null;
         }
         return sellerBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;
+
       private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo buyer_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> buyerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public boolean hasBuyer() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getBuyer() {
         if (buyerBuilder_ == null) {
           return buyer_;
@@ -1832,6 +3023,13 @@ public final class InvoiceInfoProtos {
           return buyerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Builder setBuyer(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (buyerBuilder_ == null) {
           if (value == null) {
@@ -1845,6 +3043,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Builder setBuyer(
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder builderForValue) {
         if (buyerBuilder_ == null) {
@@ -1856,6 +3061,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Builder mergeBuyer(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (buyerBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
@@ -1872,6 +3084,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Builder clearBuyer() {
         if (buyerBuilder_ == null) {
           buyer_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
@@ -1882,11 +3101,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder getBuyerBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getBuyerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getBuyerOrBuilder() {
         if (buyerBuilder_ != null) {
           return buyerBuilder_.getMessageOrBuilder();
@@ -1894,27 +3127,47 @@ public final class InvoiceInfoProtos {
           return buyer_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 4;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> 
           getBuyerFieldBuilder() {
         if (buyerBuilder_ == null) {
           buyerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder>(
-                  buyer_,
+                  getBuyer(),
                   getParentForChildren(),
                   isClean());
           buyer_ = null;
         }
         return buyerBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee shipper_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder> shipperBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+       *
+       * <pre>
+       * грузоотправитель
+       * </pre>
+       */
       public boolean hasShipper() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+       *
+       * <pre>
+       * грузоотправитель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee getShipper() {
         if (shipperBuilder_ == null) {
           return shipper_;
@@ -1922,6 +3175,13 @@ public final class InvoiceInfoProtos {
           return shipperBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+       *
+       * <pre>
+       * грузоотправитель
+       * </pre>
+       */
       public Builder setShipper(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee value) {
         if (shipperBuilder_ == null) {
           if (value == null) {
@@ -1935,6 +3195,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+       *
+       * <pre>
+       * грузоотправитель
+       * </pre>
+       */
       public Builder setShipper(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder builderForValue) {
         if (shipperBuilder_ == null) {
@@ -1946,6 +3213,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+       *
+       * <pre>
+       * грузоотправитель
+       * </pre>
+       */
       public Builder mergeShipper(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee value) {
         if (shipperBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010) &&
@@ -1962,6 +3236,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+       *
+       * <pre>
+       * грузоотправитель
+       * </pre>
+       */
       public Builder clearShipper() {
         if (shipperBuilder_ == null) {
           shipper_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.getDefaultInstance();
@@ -1972,11 +3253,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+       *
+       * <pre>
+       * грузоотправитель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder getShipperBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
         return getShipperFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+       *
+       * <pre>
+       * грузоотправитель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder getShipperOrBuilder() {
         if (shipperBuilder_ != null) {
           return shipperBuilder_.getMessageOrBuilder();
@@ -1984,27 +3279,47 @@ public final class InvoiceInfoProtos {
           return shipper_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Shipper = 5;</code>
+       *
+       * <pre>
+       * грузоотправитель
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder> 
           getShipperFieldBuilder() {
         if (shipperBuilder_ == null) {
           shipperBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder>(
-                  shipper_,
+                  getShipper(),
                   getParentForChildren(),
                   isClean());
           shipper_ = null;
         }
         return shipperBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee consignee_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder> consigneeBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+       *
+       * <pre>
+       * грузополучатель
+       * </pre>
+       */
       public boolean hasConsignee() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+       *
+       * <pre>
+       * грузополучатель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee getConsignee() {
         if (consigneeBuilder_ == null) {
           return consignee_;
@@ -2012,6 +3327,13 @@ public final class InvoiceInfoProtos {
           return consigneeBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+       *
+       * <pre>
+       * грузополучатель
+       * </pre>
+       */
       public Builder setConsignee(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee value) {
         if (consigneeBuilder_ == null) {
           if (value == null) {
@@ -2025,6 +3347,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000020;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+       *
+       * <pre>
+       * грузополучатель
+       * </pre>
+       */
       public Builder setConsignee(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder builderForValue) {
         if (consigneeBuilder_ == null) {
@@ -2036,6 +3365,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000020;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+       *
+       * <pre>
+       * грузополучатель
+       * </pre>
+       */
       public Builder mergeConsignee(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee value) {
         if (consigneeBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020) &&
@@ -2052,6 +3388,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000020;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+       *
+       * <pre>
+       * грузополучатель
+       * </pre>
+       */
       public Builder clearConsignee() {
         if (consigneeBuilder_ == null) {
           consignee_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.getDefaultInstance();
@@ -2062,11 +3405,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+       *
+       * <pre>
+       * грузополучатель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder getConsigneeBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
         return getConsigneeFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+       *
+       * <pre>
+       * грузополучатель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder getConsigneeOrBuilder() {
         if (consigneeBuilder_ != null) {
           return consigneeBuilder_.getMessageOrBuilder();
@@ -2074,27 +3431,47 @@ public final class InvoiceInfoProtos {
           return consignee_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.ShipperOrConsignee Consignee = 6;</code>
+       *
+       * <pre>
+       * грузополучатель
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder> 
           getConsigneeFieldBuilder() {
         if (consigneeBuilder_ == null) {
           consigneeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder>(
-                  consignee_,
+                  getConsignee(),
                   getParentForChildren(),
                   isClean());
           consignee_ = null;
         }
         return consigneeBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;
+
       private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> signerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public boolean hasSigner() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
         if (signerBuilder_ == null) {
           return signer_;
@@ -2102,6 +3479,13 @@ public final class InvoiceInfoProtos {
           return signerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder setSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (value == null) {
@@ -2115,6 +3499,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000040;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder setSigner(
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder builderForValue) {
         if (signerBuilder_ == null) {
@@ -2126,6 +3517,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000040;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder mergeSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (((bitField0_ & 0x00000040) == 0x00000040) &&
@@ -2142,6 +3540,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000040;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder clearSigner() {
         if (signerBuilder_ == null) {
           signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
@@ -2152,11 +3557,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder getSignerBuilder() {
         bitField0_ |= 0x00000040;
         onChanged();
         return getSignerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
         if (signerBuilder_ != null) {
           return signerBuilder_.getMessageOrBuilder();
@@ -2164,21 +3583,27 @@ public final class InvoiceInfoProtos {
           return signer_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 7;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> 
           getSignerFieldBuilder() {
         if (signerBuilder_ == null) {
           signerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder>(
-                  signer_,
+                  getSigner(),
                   getParentForChildren(),
                   isClean());
           signer_ = null;
         }
         return signerBuilder_;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo> paymentDocuments_ =
         java.util.Collections.emptyList();
       private void ensurePaymentDocumentsIsMutable() {
@@ -2187,10 +3612,17 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00000080;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfoOrBuilder> paymentDocumentsBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo> getPaymentDocumentsList() {
         if (paymentDocumentsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(paymentDocuments_);
@@ -2198,6 +3630,13 @@ public final class InvoiceInfoProtos {
           return paymentDocumentsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public int getPaymentDocumentsCount() {
         if (paymentDocumentsBuilder_ == null) {
           return paymentDocuments_.size();
@@ -2205,6 +3644,13 @@ public final class InvoiceInfoProtos {
           return paymentDocumentsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo getPaymentDocuments(int index) {
         if (paymentDocumentsBuilder_ == null) {
           return paymentDocuments_.get(index);
@@ -2212,6 +3658,13 @@ public final class InvoiceInfoProtos {
           return paymentDocumentsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Builder setPaymentDocuments(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo value) {
         if (paymentDocumentsBuilder_ == null) {
@@ -2226,6 +3679,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Builder setPaymentDocuments(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder builderForValue) {
         if (paymentDocumentsBuilder_ == null) {
@@ -2237,6 +3697,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Builder addPaymentDocuments(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo value) {
         if (paymentDocumentsBuilder_ == null) {
           if (value == null) {
@@ -2250,6 +3717,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Builder addPaymentDocuments(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo value) {
         if (paymentDocumentsBuilder_ == null) {
@@ -2264,6 +3738,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Builder addPaymentDocuments(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder builderForValue) {
         if (paymentDocumentsBuilder_ == null) {
@@ -2275,6 +3756,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Builder addPaymentDocuments(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder builderForValue) {
         if (paymentDocumentsBuilder_ == null) {
@@ -2286,17 +3774,32 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Builder addAllPaymentDocuments(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo> values) {
         if (paymentDocumentsBuilder_ == null) {
           ensurePaymentDocumentsIsMutable();
-          super.addAll(values, paymentDocuments_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, paymentDocuments_);
           onChanged();
         } else {
           paymentDocumentsBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Builder clearPaymentDocuments() {
         if (paymentDocumentsBuilder_ == null) {
           paymentDocuments_ = java.util.Collections.emptyList();
@@ -2307,6 +3810,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Builder removePaymentDocuments(int index) {
         if (paymentDocumentsBuilder_ == null) {
           ensurePaymentDocumentsIsMutable();
@@ -2317,10 +3827,24 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder getPaymentDocumentsBuilder(
           int index) {
         return getPaymentDocumentsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfoOrBuilder getPaymentDocumentsOrBuilder(
           int index) {
         if (paymentDocumentsBuilder_ == null) {
@@ -2328,6 +3852,13 @@ public final class InvoiceInfoProtos {
           return paymentDocumentsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfoOrBuilder> 
            getPaymentDocumentsOrBuilderList() {
         if (paymentDocumentsBuilder_ != null) {
@@ -2336,15 +3867,36 @@ public final class InvoiceInfoProtos {
           return java.util.Collections.unmodifiableList(paymentDocuments_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder addPaymentDocumentsBuilder() {
         return getPaymentDocumentsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder addPaymentDocumentsBuilder(
           int index) {
         return getPaymentDocumentsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo PaymentDocuments = 8;</code>
+       *
+       * <pre>
+       * платежно-расчетные документы
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder> 
            getPaymentDocumentsBuilderList() {
         return getPaymentDocumentsFieldBuilder().getBuilderList();
@@ -2363,8 +3915,7 @@ public final class InvoiceInfoProtos {
         }
         return paymentDocumentsBuilder_;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem> items_ =
         java.util.Collections.emptyList();
       private void ensureItemsIsMutable() {
@@ -2373,10 +3924,17 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00000100;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemOrBuilder> itemsBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem> getItemsList() {
         if (itemsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(items_);
@@ -2384,6 +3942,13 @@ public final class InvoiceInfoProtos {
           return itemsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public int getItemsCount() {
         if (itemsBuilder_ == null) {
           return items_.size();
@@ -2391,6 +3956,13 @@ public final class InvoiceInfoProtos {
           return itemsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem getItems(int index) {
         if (itemsBuilder_ == null) {
           return items_.get(index);
@@ -2398,6 +3970,13 @@ public final class InvoiceInfoProtos {
           return itemsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder setItems(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem value) {
         if (itemsBuilder_ == null) {
@@ -2412,6 +3991,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder setItems(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
@@ -2423,6 +4009,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addItems(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem value) {
         if (itemsBuilder_ == null) {
           if (value == null) {
@@ -2436,6 +4029,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addItems(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem value) {
         if (itemsBuilder_ == null) {
@@ -2450,6 +4050,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addItems(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
@@ -2461,6 +4068,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addItems(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
@@ -2472,17 +4086,32 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addAllItems(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem> values) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
-          super.addAll(values, items_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, items_);
           onChanged();
         } else {
           itemsBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder clearItems() {
         if (itemsBuilder_ == null) {
           items_ = java.util.Collections.emptyList();
@@ -2493,6 +4122,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder removeItems(int index) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
@@ -2503,10 +4139,24 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder getItemsBuilder(
           int index) {
         return getItemsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemOrBuilder getItemsOrBuilder(
           int index) {
         if (itemsBuilder_ == null) {
@@ -2514,6 +4164,13 @@ public final class InvoiceInfoProtos {
           return itemsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemOrBuilder> 
            getItemsOrBuilderList() {
         if (itemsBuilder_ != null) {
@@ -2522,15 +4179,36 @@ public final class InvoiceInfoProtos {
           return java.util.Collections.unmodifiableList(items_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder addItemsBuilder() {
         return getItemsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder addItemsBuilder(
           int index) {
         return getItemsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceItem Items = 9;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder> 
            getItemsBuilderList() {
         return getItemsFieldBuilder().getBuilderList();
@@ -2549,23 +4227,68 @@ public final class InvoiceInfoProtos {
         }
         return itemsBuilder_;
       }
-      
-      // optional string Currency = 10;
+
       private java.lang.Object currency_ = "";
+      /**
+       * <code>optional string Currency = 10;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
       public boolean hasCurrency() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
-      public String getCurrency() {
+      /**
+       * <code>optional string Currency = 10;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
+      public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          currency_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setCurrency(String value) {
+      /**
+       * <code>optional string Currency = 10;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCurrencyBytes() {
+        java.lang.Object ref = currency_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          currency_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Currency = 10;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
+      public Builder setCurrency(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2574,34 +4297,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Currency = 10;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
       public Builder clearCurrency() {
         bitField0_ = (bitField0_ & ~0x00000200);
         currency_ = getDefaultInstance().getCurrency();
         onChanged();
         return this;
       }
-      void setCurrency(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000200;
+      /**
+       * <code>optional string Currency = 10;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
+      public Builder setCurrencyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
         currency_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string TotalWithVatExcluded = 11;
+
       private java.lang.Object totalWithVatExcluded_ = "";
+      /**
+       * <code>optional string TotalWithVatExcluded = 11;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public boolean hasTotalWithVatExcluded() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
-      public String getTotalWithVatExcluded() {
+      /**
+       * <code>optional string TotalWithVatExcluded = 11;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public java.lang.String getTotalWithVatExcluded() {
         java.lang.Object ref = totalWithVatExcluded_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          totalWithVatExcluded_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            totalWithVatExcluded_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTotalWithVatExcluded(String value) {
+      /**
+       * <code>optional string TotalWithVatExcluded = 11;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTotalWithVatExcludedBytes() {
+        java.lang.Object ref = totalWithVatExcluded_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalWithVatExcluded_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string TotalWithVatExcluded = 11;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setTotalWithVatExcluded(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2610,34 +4397,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string TotalWithVatExcluded = 11;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public Builder clearTotalWithVatExcluded() {
         bitField0_ = (bitField0_ & ~0x00000400);
         totalWithVatExcluded_ = getDefaultInstance().getTotalWithVatExcluded();
         onChanged();
         return this;
       }
-      void setTotalWithVatExcluded(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000400;
+      /**
+       * <code>optional string TotalWithVatExcluded = 11;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setTotalWithVatExcludedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
         totalWithVatExcluded_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Vat = 12;
+
       private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 12;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public boolean hasVat() {
         return ((bitField0_ & 0x00000800) == 0x00000800);
       }
-      public String getVat() {
+      /**
+       * <code>optional string Vat = 12;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public java.lang.String getVat() {
         java.lang.Object ref = vat_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          vat_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setVat(String value) {
+      /**
+       * <code>optional string Vat = 12;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 12;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVat(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2646,34 +4497,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Vat = 12;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public Builder clearVat() {
         bitField0_ = (bitField0_ & ~0x00000800);
         vat_ = getDefaultInstance().getVat();
         onChanged();
         return this;
       }
-      void setVat(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000800;
+      /**
+       * <code>optional string Vat = 12;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
         vat_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Total = 13;
+
       private java.lang.Object total_ = "";
+      /**
+       * <code>required string Total = 13;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
       public boolean hasTotal() {
         return ((bitField0_ & 0x00001000) == 0x00001000);
       }
-      public String getTotal() {
+      /**
+       * <code>required string Total = 13;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public java.lang.String getTotal() {
         java.lang.Object ref = total_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          total_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            total_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTotal(String value) {
+      /**
+       * <code>required string Total = 13;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTotalBytes() {
+        java.lang.Object ref = total_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          total_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Total = 13;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public Builder setTotal(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2682,34 +4597,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Total = 13;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
       public Builder clearTotal() {
         bitField0_ = (bitField0_ & ~0x00001000);
         total_ = getDefaultInstance().getTotal();
         onChanged();
         return this;
       }
-      void setTotal(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00001000;
+      /**
+       * <code>required string Total = 13;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public Builder setTotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
         total_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string AdditionalInfo = 14;
+
       private java.lang.Object additionalInfo_ = "";
+      /**
+       * <code>optional string AdditionalInfo = 14;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
       public boolean hasAdditionalInfo() {
         return ((bitField0_ & 0x00002000) == 0x00002000);
       }
-      public String getAdditionalInfo() {
+      /**
+       * <code>optional string AdditionalInfo = 14;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
+      public java.lang.String getAdditionalInfo() {
         java.lang.Object ref = additionalInfo_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          additionalInfo_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            additionalInfo_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAdditionalInfo(String value) {
+      /**
+       * <code>optional string AdditionalInfo = 14;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAdditionalInfoBytes() {
+        java.lang.Object ref = additionalInfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          additionalInfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AdditionalInfo = 14;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
+      public Builder setAdditionalInfo(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2718,34 +4697,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string AdditionalInfo = 14;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
       public Builder clearAdditionalInfo() {
         bitField0_ = (bitField0_ & ~0x00002000);
         additionalInfo_ = getDefaultInstance().getAdditionalInfo();
         onChanged();
         return this;
       }
-      void setAdditionalInfo(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00002000;
+      /**
+       * <code>optional string AdditionalInfo = 14;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
+      public Builder setAdditionalInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
         additionalInfo_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string InvoiceRevisionDate = 15;
+
       private java.lang.Object invoiceRevisionDate_ = "";
+      /**
+       * <code>optional string InvoiceRevisionDate = 15;</code>
+       *
+       * <pre>
+       * дата ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
       public boolean hasInvoiceRevisionDate() {
         return ((bitField0_ & 0x00004000) == 0x00004000);
       }
-      public String getInvoiceRevisionDate() {
+      /**
+       * <code>optional string InvoiceRevisionDate = 15;</code>
+       *
+       * <pre>
+       * дата ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
+      public java.lang.String getInvoiceRevisionDate() {
         java.lang.Object ref = invoiceRevisionDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceRevisionDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceRevisionDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceRevisionDate(String value) {
+      /**
+       * <code>optional string InvoiceRevisionDate = 15;</code>
+       *
+       * <pre>
+       * дата ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceRevisionDateBytes() {
+        java.lang.Object ref = invoiceRevisionDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceRevisionDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string InvoiceRevisionDate = 15;</code>
+       *
+       * <pre>
+       * дата ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
+      public Builder setInvoiceRevisionDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2754,34 +4797,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string InvoiceRevisionDate = 15;</code>
+       *
+       * <pre>
+       * дата ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
       public Builder clearInvoiceRevisionDate() {
         bitField0_ = (bitField0_ & ~0x00004000);
         invoiceRevisionDate_ = getDefaultInstance().getInvoiceRevisionDate();
         onChanged();
         return this;
       }
-      void setInvoiceRevisionDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00004000;
+      /**
+       * <code>optional string InvoiceRevisionDate = 15;</code>
+       *
+       * <pre>
+       * дата ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
+      public Builder setInvoiceRevisionDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
         invoiceRevisionDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string InvoiceRevisionNumber = 16;
+
       private java.lang.Object invoiceRevisionNumber_ = "";
+      /**
+       * <code>optional string InvoiceRevisionNumber = 16;</code>
+       *
+       * <pre>
+       * номер ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
       public boolean hasInvoiceRevisionNumber() {
         return ((bitField0_ & 0x00008000) == 0x00008000);
       }
-      public String getInvoiceRevisionNumber() {
+      /**
+       * <code>optional string InvoiceRevisionNumber = 16;</code>
+       *
+       * <pre>
+       * номер ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
+      public java.lang.String getInvoiceRevisionNumber() {
         java.lang.Object ref = invoiceRevisionNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceRevisionNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceRevisionNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceRevisionNumber(String value) {
+      /**
+       * <code>optional string InvoiceRevisionNumber = 16;</code>
+       *
+       * <pre>
+       * номер ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceRevisionNumberBytes() {
+        java.lang.Object ref = invoiceRevisionNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceRevisionNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string InvoiceRevisionNumber = 16;</code>
+       *
+       * <pre>
+       * номер ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
+      public Builder setInvoiceRevisionNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2790,19 +4897,37 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string InvoiceRevisionNumber = 16;</code>
+       *
+       * <pre>
+       * номер ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
       public Builder clearInvoiceRevisionNumber() {
         bitField0_ = (bitField0_ & ~0x00008000);
         invoiceRevisionNumber_ = getDefaultInstance().getInvoiceRevisionNumber();
         onChanged();
         return this;
       }
-      void setInvoiceRevisionNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00008000;
+      /**
+       * <code>optional string InvoiceRevisionNumber = 16;</code>
+       *
+       * <pre>
+       * номер ИСФ (обязательно при формировании InvoiceRevision)
+       * </pre>
+       */
+      public Builder setInvoiceRevisionNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00008000;
         invoiceRevisionNumber_ = value;
         onChanged();
+        return this;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> additionalInfos_ =
         java.util.Collections.emptyList();
       private void ensureAdditionalInfosIsMutable() {
@@ -2811,10 +4936,17 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00010000;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> additionalInfosBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> getAdditionalInfosList() {
         if (additionalInfosBuilder_ == null) {
           return java.util.Collections.unmodifiableList(additionalInfos_);
@@ -2822,6 +4954,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public int getAdditionalInfosCount() {
         if (additionalInfosBuilder_ == null) {
           return additionalInfos_.size();
@@ -2829,6 +4968,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index) {
         if (additionalInfosBuilder_ == null) {
           return additionalInfos_.get(index);
@@ -2836,6 +4982,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder setAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
@@ -2850,6 +5003,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder setAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -2861,6 +5021,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
           if (value == null) {
@@ -2874,6 +5041,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
@@ -2888,6 +5062,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -2899,6 +5080,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -2910,17 +5098,32 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAllAdditionalInfos(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> values) {
         if (additionalInfosBuilder_ == null) {
           ensureAdditionalInfosIsMutable();
-          super.addAll(values, additionalInfos_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, additionalInfos_);
           onChanged();
         } else {
           additionalInfosBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder clearAdditionalInfos() {
         if (additionalInfosBuilder_ == null) {
           additionalInfos_ = java.util.Collections.emptyList();
@@ -2931,6 +5134,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder removeAdditionalInfos(int index) {
         if (additionalInfosBuilder_ == null) {
           ensureAdditionalInfosIsMutable();
@@ -2941,10 +5151,24 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder getAdditionalInfosBuilder(
           int index) {
         return getAdditionalInfosFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
           int index) {
         if (additionalInfosBuilder_ == null) {
@@ -2952,6 +5176,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
            getAdditionalInfosOrBuilderList() {
         if (additionalInfosBuilder_ != null) {
@@ -2960,15 +5191,36 @@ public final class InvoiceInfoProtos {
           return java.util.Collections.unmodifiableList(additionalInfos_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder addAdditionalInfosBuilder() {
         return getAdditionalInfosFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder addAdditionalInfosBuilder(
           int index) {
         return getAdditionalInfosFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder> 
            getAdditionalInfosBuilderList() {
         return getAdditionalInfosFieldBuilder().getBuilderList();
@@ -2987,15 +5239,35 @@ public final class InvoiceInfoProtos {
         }
         return additionalInfosBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion version_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion.DefaultInvoiceFormatVersion;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+       *
+       * <pre>
+       * версия формата ФУФа (для тестирования систем в переходном периоде)
+       * </pre>
+       */
       public boolean hasVersion() {
         return ((bitField0_ & 0x00020000) == 0x00020000);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+       *
+       * <pre>
+       * версия формата ФУФа (для тестирования систем в переходном периоде)
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion getVersion() {
         return version_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+       *
+       * <pre>
+       * версия формата ФУФа (для тестирования систем в переходном периоде)
+       * </pre>
+       */
       public Builder setVersion(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion value) {
         if (value == null) {
           throw new NullPointerException();
@@ -3005,128 +5277,299 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+       *
+       * <pre>
+       * версия формата ФУФа (для тестирования систем в переходном периоде)
+       * </pre>
+       */
       public Builder clearVersion() {
         bitField0_ = (bitField0_ & ~0x00020000);
         version_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion.DefaultInvoiceFormatVersion;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.InvoiceInfo)
     }
-    
+
     static {
       defaultInstance = new InvoiceInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.InvoiceInfo)
   }
-  
-  public interface AdditionalInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string Id = 1;
+
+  public interface AdditionalInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.AdditionalInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Id = 1;</code>
+     *
+     * <pre>
+     * Идентификатор
+     * </pre>
+     */
     boolean hasId();
-    String getId();
-    
-    // required string Value = 2;
+    /**
+     * <code>required string Id = 1;</code>
+     *
+     * <pre>
+     * Идентификатор
+     * </pre>
+     */
+    java.lang.String getId();
+    /**
+     * <code>required string Id = 1;</code>
+     *
+     * <pre>
+     * Идентификатор
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>required string Value = 2;</code>
+     *
+     * <pre>
+     * Значение
+     * </pre>
+     */
     boolean hasValue();
-    String getValue();
+    /**
+     * <code>required string Value = 2;</code>
+     *
+     * <pre>
+     * Значение
+     * </pre>
+     */
+    java.lang.String getValue();
+    /**
+     * <code>required string Value = 2;</code>
+     *
+     * <pre>
+     * Значение
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.AdditionalInfo}
+   */
   public static final class AdditionalInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements AdditionalInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.AdditionalInfo)
+      AdditionalInfoOrBuilder {
     // Use AdditionalInfo.newBuilder() to construct.
-    private AdditionalInfo(Builder builder) {
+    private AdditionalInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private AdditionalInfo(boolean noInit) {}
-    
+    private AdditionalInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final AdditionalInfo defaultInstance;
     public static AdditionalInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public AdditionalInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AdditionalInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              value_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<AdditionalInfo> PARSER =
+        new com.google.protobuf.AbstractParser<AdditionalInfo>() {
+      public AdditionalInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AdditionalInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AdditionalInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string Id = 1;
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.Object id_;
+    /**
+     * <code>required string Id = 1;</code>
+     *
+     * <pre>
+     * Идентификатор
+     * </pre>
+     */
     public boolean hasId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getId() {
+    /**
+     * <code>required string Id = 1;</code>
+     *
+     * <pre>
+     * Идентификатор
+     * </pre>
+     */
+    public java.lang.String getId() {
       java.lang.Object ref = id_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           id_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getIdBytes() {
+    /**
+     * <code>required string Id = 1;</code>
+     *
+     * <pre>
+     * Идентификатор
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
       java.lang.Object ref = id_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         id_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Value = 2;
+
     public static final int VALUE_FIELD_NUMBER = 2;
     private java.lang.Object value_;
+    /**
+     * <code>required string Value = 2;</code>
+     *
+     * <pre>
+     * Значение
+     * </pre>
+     */
     public boolean hasValue() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getValue() {
+    /**
+     * <code>required string Value = 2;</code>
+     *
+     * <pre>
+     * Значение
+     * </pre>
+     */
+    public java.lang.String getValue() {
       java.lang.Object ref = value_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           value_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getValueBytes() {
+    /**
+     * <code>required string Value = 2;</code>
+     *
+     * <pre>
+     * Значение
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
       java.lang.Object ref = value_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         value_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       id_ = "";
       value_ = "";
@@ -3134,8 +5577,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasId()) {
         memoizedIsInitialized = 0;
         return false;
@@ -3147,7 +5591,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -3159,12 +5603,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -3178,113 +5622,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.AdditionalInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.AdditionalInfo)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3295,7 +5732,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -3304,20 +5741,20 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -3325,17 +5762,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo(this);
         int from_bitField0_ = bitField0_;
@@ -3352,7 +5779,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo)other);
@@ -3361,19 +5788,23 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance()) return this;
         if (other.hasId()) {
-          setId(other.getId());
+          bitField0_ |= 0x00000001;
+          id_ = other.id_;
+          onChanged();
         }
         if (other.hasValue()) {
-          setValue(other.getValue());
+          bitField0_ |= 0x00000002;
+          value_ = other.value_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasId()) {
           
@@ -3385,62 +5816,87 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              id_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              value_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string Id = 1;
+
       private java.lang.Object id_ = "";
+      /**
+       * <code>required string Id = 1;</code>
+       *
+       * <pre>
+       * Идентификатор
+       * </pre>
+       */
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getId() {
+      /**
+       * <code>required string Id = 1;</code>
+       *
+       * <pre>
+       * Идентификатор
+       * </pre>
+       */
+      public java.lang.String getId() {
         java.lang.Object ref = id_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          id_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setId(String value) {
+      /**
+       * <code>required string Id = 1;</code>
+       *
+       * <pre>
+       * Идентификатор
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Id = 1;</code>
+       *
+       * <pre>
+       * Идентификатор
+       * </pre>
+       */
+      public Builder setId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3449,34 +5905,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Id = 1;</code>
+       *
+       * <pre>
+       * Идентификатор
+       * </pre>
+       */
       public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
-      void setId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string Id = 1;</code>
+       *
+       * <pre>
+       * Идентификатор
+       * </pre>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Value = 2;
+
       private java.lang.Object value_ = "";
+      /**
+       * <code>required string Value = 2;</code>
+       *
+       * <pre>
+       * Значение
+       * </pre>
+       */
       public boolean hasValue() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getValue() {
+      /**
+       * <code>required string Value = 2;</code>
+       *
+       * <pre>
+       * Значение
+       * </pre>
+       */
+      public java.lang.String getValue() {
         java.lang.Object ref = value_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          value_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setValue(String value) {
+      /**
+       * <code>required string Value = 2;</code>
+       *
+       * <pre>
+       * Значение
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Value = 2;</code>
+       *
+       * <pre>
+       * Значение
+       * </pre>
+       */
+      public Builder setValue(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3485,499 +6005,1373 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Value = 2;</code>
+       *
+       * <pre>
+       * Значение
+       * </pre>
+       */
       public Builder clearValue() {
         bitField0_ = (bitField0_ & ~0x00000002);
         value_ = getDefaultInstance().getValue();
         onChanged();
         return this;
       }
-      void setValue(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string Value = 2;</code>
+       *
+       * <pre>
+       * Значение
+       * </pre>
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         value_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.AdditionalInfo)
     }
-    
+
     static {
       defaultInstance = new AdditionalInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.AdditionalInfo)
   }
-  
-  public interface InvoiceItemOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string Product = 1;
+
+  public interface InvoiceItemOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.InvoiceItem)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
     boolean hasProduct();
-    String getProduct();
-    
-    // optional string Unit = 2;
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
+    java.lang.String getProduct();
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getProductBytes();
+
+    /**
+     * <code>optional string Unit = 2;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
     boolean hasUnit();
-    String getUnit();
-    
-    // optional string Quantity = 3;
+    /**
+     * <code>optional string Unit = 2;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
+    java.lang.String getUnit();
+    /**
+     * <code>optional string Unit = 2;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUnitBytes();
+
+    /**
+     * <code>optional string Quantity = 3;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
     boolean hasQuantity();
-    String getQuantity();
-    
-    // optional string Price = 4;
+    /**
+     * <code>optional string Quantity = 3;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
+    java.lang.String getQuantity();
+    /**
+     * <code>optional string Quantity = 3;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getQuantityBytes();
+
+    /**
+     * <code>optional string Price = 4;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
     boolean hasPrice();
-    String getPrice();
-    
-    // repeated string CountriesOfOrigin = 5;
-    java.util.List<String> getCountriesOfOriginList();
+    /**
+     * <code>optional string Price = 4;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
+    java.lang.String getPrice();
+    /**
+     * <code>optional string Price = 4;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPriceBytes();
+
+    /**
+     * <code>repeated string CountriesOfOrigin = 5;</code>
+     *
+     * <pre>
+     * страны происхождения товара (коды)  v5.01
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getCountriesOfOriginList();
+    /**
+     * <code>repeated string CountriesOfOrigin = 5;</code>
+     *
+     * <pre>
+     * страны происхождения товара (коды)  v5.01
+     * </pre>
+     */
     int getCountriesOfOriginCount();
-    String getCountriesOfOrigin(int index);
-    
-    // repeated string CustomsDeclarationNumbers = 6;
-    java.util.List<String> getCustomsDeclarationNumbersList();
+    /**
+     * <code>repeated string CountriesOfOrigin = 5;</code>
+     *
+     * <pre>
+     * страны происхождения товара (коды)  v5.01
+     * </pre>
+     */
+    java.lang.String getCountriesOfOrigin(int index);
+    /**
+     * <code>repeated string CountriesOfOrigin = 5;</code>
+     *
+     * <pre>
+     * страны происхождения товара (коды)  v5.01
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCountriesOfOriginBytes(int index);
+
+    /**
+     * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций        v5.01
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getCustomsDeclarationNumbersList();
+    /**
+     * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций        v5.01
+     * </pre>
+     */
     int getCustomsDeclarationNumbersCount();
-    String getCustomsDeclarationNumbers(int index);
-    
-    // optional string Excise = 7;
+    /**
+     * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций        v5.01
+     * </pre>
+     */
+    java.lang.String getCustomsDeclarationNumbers(int index);
+    /**
+     * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций        v5.01
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCustomsDeclarationNumbersBytes(int index);
+
+    /**
+     * <code>optional string Excise = 7;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
     boolean hasExcise();
-    String getExcise();
-    
-    // required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;
+    /**
+     * <code>optional string Excise = 7;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    java.lang.String getExcise();
+    /**
+     * <code>optional string Excise = 7;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getExciseBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+     *
+     * <pre>
+     * ставка налога
+     * </pre>
+     */
     boolean hasTaxRate();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+     *
+     * <pre>
+     * ставка налога
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate getTaxRate();
-    
-    // optional string SubtotalWithVatExcluded = 9;
+
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 9;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     boolean hasSubtotalWithVatExcluded();
-    String getSubtotalWithVatExcluded();
-    
-    // optional string Vat = 10;
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 9;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    java.lang.String getSubtotalWithVatExcluded();
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 9;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSubtotalWithVatExcludedBytes();
+
+    /**
+     * <code>optional string Vat = 10;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     boolean hasVat();
-    String getVat();
-    
-    // required string Subtotal = 11;
+    /**
+     * <code>optional string Vat = 10;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 10;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>required string Subtotal = 11;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
     boolean hasSubtotal();
-    String getSubtotal();
-    
-    // optional string AdditionalInfo = 12;
+    /**
+     * <code>required string Subtotal = 11;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    java.lang.String getSubtotal();
+    /**
+     * <code>required string Subtotal = 11;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSubtotalBytes();
+
+    /**
+     * <code>optional string AdditionalInfo = 12;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01	
+     * </pre>
+     */
     boolean hasAdditionalInfo();
-    String getAdditionalInfo();
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;
+    /**
+     * <code>optional string AdditionalInfo = 12;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01	
+     * </pre>
+     */
+    java.lang.String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 12;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01	
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAdditionalInfoBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration> 
         getCustomsDeclarationsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration getCustomsDeclarations(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     int getCustomsDeclarationsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclarationOrBuilder> 
         getCustomsDeclarationsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclarationOrBuilder getCustomsDeclarationsOrBuilder(
         int index);
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> 
         getAdditionalInfosList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     int getAdditionalInfosCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
         getAdditionalInfosOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceItem}
+   */
   public static final class InvoiceItem extends
-      com.google.protobuf.GeneratedMessage
-      implements InvoiceItemOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.InvoiceItem)
+      InvoiceItemOrBuilder {
     // Use InvoiceItem.newBuilder() to construct.
-    private InvoiceItem(Builder builder) {
+    private InvoiceItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InvoiceItem(boolean noInit) {}
-    
+    private InvoiceItem(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InvoiceItem defaultInstance;
     public static InvoiceItem getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InvoiceItem getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InvoiceItem(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              product_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              unit_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              quantity_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              price_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                countriesOfOrigin_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              countriesOfOrigin_.add(bs);
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                customsDeclarationNumbers_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              customsDeclarationNumbers_.add(bs);
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              excise_ = bs;
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate value = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(8, rawValue);
+              } else {
+                bitField0_ |= 0x00000020;
+                taxRate_ = value;
+              }
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              subtotalWithVatExcluded_ = bs;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              vat_ = bs;
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              subtotal_ = bs;
+              break;
+            }
+            case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              additionalInfo_ = bs;
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+                customsDeclarations_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration>();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              customsDeclarations_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.PARSER, extensionRegistry));
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+                additionalInfos_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo>();
+                mutable_bitField0_ |= 0x00002000;
+              }
+              additionalInfos_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          countriesOfOrigin_ = countriesOfOrigin_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          customsDeclarationNumbers_ = customsDeclarationNumbers_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+          customsDeclarations_ = java.util.Collections.unmodifiableList(customsDeclarations_);
+        }
+        if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+          additionalInfos_ = java.util.Collections.unmodifiableList(additionalInfos_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InvoiceItem> PARSER =
+        new com.google.protobuf.AbstractParser<InvoiceItem>() {
+      public InvoiceItem parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InvoiceItem(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InvoiceItem> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string Product = 1;
     public static final int PRODUCT_FIELD_NUMBER = 1;
     private java.lang.Object product_;
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
     public boolean hasProduct() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getProduct() {
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
+    public java.lang.String getProduct() {
       java.lang.Object ref = product_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           product_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getProductBytes() {
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getProductBytes() {
       java.lang.Object ref = product_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         product_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Unit = 2;
+
     public static final int UNIT_FIELD_NUMBER = 2;
     private java.lang.Object unit_;
+    /**
+     * <code>optional string Unit = 2;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
     public boolean hasUnit() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getUnit() {
+    /**
+     * <code>optional string Unit = 2;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
+    public java.lang.String getUnit() {
       java.lang.Object ref = unit_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           unit_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getUnitBytes() {
+    /**
+     * <code>optional string Unit = 2;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUnitBytes() {
       java.lang.Object ref = unit_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         unit_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Quantity = 3;
+
     public static final int QUANTITY_FIELD_NUMBER = 3;
     private java.lang.Object quantity_;
+    /**
+     * <code>optional string Quantity = 3;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
     public boolean hasQuantity() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getQuantity() {
+    /**
+     * <code>optional string Quantity = 3;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
+    public java.lang.String getQuantity() {
       java.lang.Object ref = quantity_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           quantity_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getQuantityBytes() {
+    /**
+     * <code>optional string Quantity = 3;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getQuantityBytes() {
       java.lang.Object ref = quantity_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         quantity_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Price = 4;
+
     public static final int PRICE_FIELD_NUMBER = 4;
     private java.lang.Object price_;
+    /**
+     * <code>optional string Price = 4;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
     public boolean hasPrice() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getPrice() {
+    /**
+     * <code>optional string Price = 4;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
+    public java.lang.String getPrice() {
       java.lang.Object ref = price_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           price_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getPriceBytes() {
+    /**
+     * <code>optional string Price = 4;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPriceBytes() {
       java.lang.Object ref = price_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         price_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // repeated string CountriesOfOrigin = 5;
+
     public static final int COUNTRIESOFORIGIN_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList countriesOfOrigin_;
-    public java.util.List<String>
+    /**
+     * <code>repeated string CountriesOfOrigin = 5;</code>
+     *
+     * <pre>
+     * страны происхождения товара (коды)  v5.01
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
         getCountriesOfOriginList() {
       return countriesOfOrigin_;
     }
+    /**
+     * <code>repeated string CountriesOfOrigin = 5;</code>
+     *
+     * <pre>
+     * страны происхождения товара (коды)  v5.01
+     * </pre>
+     */
     public int getCountriesOfOriginCount() {
       return countriesOfOrigin_.size();
     }
-    public String getCountriesOfOrigin(int index) {
+    /**
+     * <code>repeated string CountriesOfOrigin = 5;</code>
+     *
+     * <pre>
+     * страны происхождения товара (коды)  v5.01
+     * </pre>
+     */
+    public java.lang.String getCountriesOfOrigin(int index) {
       return countriesOfOrigin_.get(index);
     }
-    
-    // repeated string CustomsDeclarationNumbers = 6;
+    /**
+     * <code>repeated string CountriesOfOrigin = 5;</code>
+     *
+     * <pre>
+     * страны происхождения товара (коды)  v5.01
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCountriesOfOriginBytes(int index) {
+      return countriesOfOrigin_.getByteString(index);
+    }
+
     public static final int CUSTOMSDECLARATIONNUMBERS_FIELD_NUMBER = 6;
     private com.google.protobuf.LazyStringList customsDeclarationNumbers_;
-    public java.util.List<String>
+    /**
+     * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций        v5.01
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
         getCustomsDeclarationNumbersList() {
       return customsDeclarationNumbers_;
     }
+    /**
+     * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций        v5.01
+     * </pre>
+     */
     public int getCustomsDeclarationNumbersCount() {
       return customsDeclarationNumbers_.size();
     }
-    public String getCustomsDeclarationNumbers(int index) {
+    /**
+     * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций        v5.01
+     * </pre>
+     */
+    public java.lang.String getCustomsDeclarationNumbers(int index) {
       return customsDeclarationNumbers_.get(index);
     }
-    
-    // optional string Excise = 7;
+    /**
+     * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций        v5.01
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCustomsDeclarationNumbersBytes(int index) {
+      return customsDeclarationNumbers_.getByteString(index);
+    }
+
     public static final int EXCISE_FIELD_NUMBER = 7;
     private java.lang.Object excise_;
+    /**
+     * <code>optional string Excise = 7;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
     public boolean hasExcise() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public String getExcise() {
+    /**
+     * <code>optional string Excise = 7;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    public java.lang.String getExcise() {
       java.lang.Object ref = excise_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           excise_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getExciseBytes() {
+    /**
+     * <code>optional string Excise = 7;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getExciseBytes() {
       java.lang.Object ref = excise_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         excise_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;
+
     public static final int TAXRATE_FIELD_NUMBER = 8;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+     *
+     * <pre>
+     * ставка налога
+     * </pre>
+     */
     public boolean hasTaxRate() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+     *
+     * <pre>
+     * ставка налога
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate getTaxRate() {
       return taxRate_;
     }
-    
-    // optional string SubtotalWithVatExcluded = 9;
+
     public static final int SUBTOTALWITHVATEXCLUDED_FIELD_NUMBER = 9;
     private java.lang.Object subtotalWithVatExcluded_;
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 9;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     public boolean hasSubtotalWithVatExcluded() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
-    public String getSubtotalWithVatExcluded() {
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 9;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public java.lang.String getSubtotalWithVatExcluded() {
       java.lang.Object ref = subtotalWithVatExcluded_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           subtotalWithVatExcluded_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSubtotalWithVatExcludedBytes() {
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 9;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSubtotalWithVatExcludedBytes() {
       java.lang.Object ref = subtotalWithVatExcluded_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         subtotalWithVatExcluded_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Vat = 10;
+
     public static final int VAT_FIELD_NUMBER = 10;
     private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 10;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     public boolean hasVat() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
-    public String getVat() {
+    /**
+     * <code>optional string Vat = 10;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public java.lang.String getVat() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           vat_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getVatBytes() {
+    /**
+     * <code>optional string Vat = 10;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         vat_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Subtotal = 11;
+
     public static final int SUBTOTAL_FIELD_NUMBER = 11;
     private java.lang.Object subtotal_;
+    /**
+     * <code>required string Subtotal = 11;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
     public boolean hasSubtotal() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
-    public String getSubtotal() {
+    /**
+     * <code>required string Subtotal = 11;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    public java.lang.String getSubtotal() {
       java.lang.Object ref = subtotal_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           subtotal_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSubtotalBytes() {
+    /**
+     * <code>required string Subtotal = 11;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSubtotalBytes() {
       java.lang.Object ref = subtotal_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         subtotal_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string AdditionalInfo = 12;
+
     public static final int ADDITIONALINFO_FIELD_NUMBER = 12;
     private java.lang.Object additionalInfo_;
+    /**
+     * <code>optional string AdditionalInfo = 12;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01	
+     * </pre>
+     */
     public boolean hasAdditionalInfo() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
-    public String getAdditionalInfo() {
+    /**
+     * <code>optional string AdditionalInfo = 12;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01	
+     * </pre>
+     */
+    public java.lang.String getAdditionalInfo() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           additionalInfo_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAdditionalInfoBytes() {
+    /**
+     * <code>optional string AdditionalInfo = 12;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01	
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAdditionalInfoBytes() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         additionalInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;
+
     public static final int CUSTOMSDECLARATIONS_FIELD_NUMBER = 13;
     private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration> customsDeclarations_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration> getCustomsDeclarationsList() {
       return customsDeclarations_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclarationOrBuilder> 
         getCustomsDeclarationsOrBuilderList() {
       return customsDeclarations_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     public int getCustomsDeclarationsCount() {
       return customsDeclarations_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration getCustomsDeclarations(int index) {
       return customsDeclarations_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+     *
+     * <pre>
+     * номера таможенных деклараций v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclarationOrBuilder getCustomsDeclarationsOrBuilder(
         int index) {
       return customsDeclarations_.get(index);
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;
+
     public static final int ADDITIONALINFOS_FIELD_NUMBER = 14;
     private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> additionalInfos_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> getAdditionalInfosList() {
       return additionalInfos_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
         getAdditionalInfosOrBuilderList() {
       return additionalInfos_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     public int getAdditionalInfosCount() {
       return additionalInfos_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index) {
       return additionalInfos_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
         int index) {
       return additionalInfos_.get(index);
     }
-    
+
     private void initFields() {
       product_ = "";
       unit_ = "";
@@ -3997,8 +7391,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasProduct()) {
         memoizedIsInitialized = 0;
         return false;
@@ -4026,7 +7421,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -4074,12 +7469,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -4151,113 +7546,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceItem}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.InvoiceItem)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -4270,7 +7658,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         product_ = "";
@@ -4311,20 +7699,20 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem result = buildPartial();
         if (!result.isInitialized()) {
@@ -4332,17 +7720,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem(this);
         int from_bitField0_ = bitField0_;
@@ -4364,14 +7742,12 @@ public final class InvoiceInfoProtos {
         }
         result.price_ = price_;
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          countriesOfOrigin_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              countriesOfOrigin_);
+          countriesOfOrigin_ = countriesOfOrigin_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.countriesOfOrigin_ = countriesOfOrigin_;
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          customsDeclarationNumbers_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              customsDeclarationNumbers_);
+          customsDeclarationNumbers_ = customsDeclarationNumbers_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.customsDeclarationNumbers_ = customsDeclarationNumbers_;
@@ -4421,7 +7797,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem)other);
@@ -4430,20 +7806,28 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.getDefaultInstance()) return this;
         if (other.hasProduct()) {
-          setProduct(other.getProduct());
+          bitField0_ |= 0x00000001;
+          product_ = other.product_;
+          onChanged();
         }
         if (other.hasUnit()) {
-          setUnit(other.getUnit());
+          bitField0_ |= 0x00000002;
+          unit_ = other.unit_;
+          onChanged();
         }
         if (other.hasQuantity()) {
-          setQuantity(other.getQuantity());
+          bitField0_ |= 0x00000004;
+          quantity_ = other.quantity_;
+          onChanged();
         }
         if (other.hasPrice()) {
-          setPrice(other.getPrice());
+          bitField0_ |= 0x00000008;
+          price_ = other.price_;
+          onChanged();
         }
         if (!other.countriesOfOrigin_.isEmpty()) {
           if (countriesOfOrigin_.isEmpty()) {
@@ -4466,22 +7850,32 @@ public final class InvoiceInfoProtos {
           onChanged();
         }
         if (other.hasExcise()) {
-          setExcise(other.getExcise());
+          bitField0_ |= 0x00000040;
+          excise_ = other.excise_;
+          onChanged();
         }
         if (other.hasTaxRate()) {
           setTaxRate(other.getTaxRate());
         }
         if (other.hasSubtotalWithVatExcluded()) {
-          setSubtotalWithVatExcluded(other.getSubtotalWithVatExcluded());
+          bitField0_ |= 0x00000100;
+          subtotalWithVatExcluded_ = other.subtotalWithVatExcluded_;
+          onChanged();
         }
         if (other.hasVat()) {
-          setVat(other.getVat());
+          bitField0_ |= 0x00000200;
+          vat_ = other.vat_;
+          onChanged();
         }
         if (other.hasSubtotal()) {
-          setSubtotal(other.getSubtotal());
+          bitField0_ |= 0x00000400;
+          subtotal_ = other.subtotal_;
+          onChanged();
         }
         if (other.hasAdditionalInfo()) {
-          setAdditionalInfo(other.getAdditionalInfo());
+          bitField0_ |= 0x00000800;
+          additionalInfo_ = other.additionalInfo_;
+          onChanged();
         }
         if (customsDeclarationsBuilder_ == null) {
           if (!other.customsDeclarations_.isEmpty()) {
@@ -4538,7 +7932,7 @@ public final class InvoiceInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasProduct()) {
           
@@ -4566,130 +7960,87 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              product_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              unit_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              quantity_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              price_ = input.readBytes();
-              break;
-            }
-            case 42: {
-              ensureCountriesOfOriginIsMutable();
-              countriesOfOrigin_.add(input.readBytes());
-              break;
-            }
-            case 50: {
-              ensureCustomsDeclarationNumbersIsMutable();
-              customsDeclarationNumbers_.add(input.readBytes());
-              break;
-            }
-            case 58: {
-              bitField0_ |= 0x00000040;
-              excise_ = input.readBytes();
-              break;
-            }
-            case 64: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate value = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(8, rawValue);
-              } else {
-                bitField0_ |= 0x00000080;
-                taxRate_ = value;
-              }
-              break;
-            }
-            case 74: {
-              bitField0_ |= 0x00000100;
-              subtotalWithVatExcluded_ = input.readBytes();
-              break;
-            }
-            case 82: {
-              bitField0_ |= 0x00000200;
-              vat_ = input.readBytes();
-              break;
-            }
-            case 90: {
-              bitField0_ |= 0x00000400;
-              subtotal_ = input.readBytes();
-              break;
-            }
-            case 98: {
-              bitField0_ |= 0x00000800;
-              additionalInfo_ = input.readBytes();
-              break;
-            }
-            case 106: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addCustomsDeclarations(subBuilder.buildPartial());
-              break;
-            }
-            case 114: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addAdditionalInfos(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string Product = 1;
+
       private java.lang.Object product_ = "";
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
       public boolean hasProduct() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getProduct() {
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
+      public java.lang.String getProduct() {
         java.lang.Object ref = product_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          product_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            product_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setProduct(String value) {
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getProductBytes() {
+        java.lang.Object ref = product_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          product_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
+      public Builder setProduct(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4698,34 +8049,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
       public Builder clearProduct() {
         bitField0_ = (bitField0_ & ~0x00000001);
         product_ = getDefaultInstance().getProduct();
         onChanged();
         return this;
       }
-      void setProduct(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
+      public Builder setProductBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         product_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Unit = 2;
+
       private java.lang.Object unit_ = "";
+      /**
+       * <code>optional string Unit = 2;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
       public boolean hasUnit() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getUnit() {
+      /**
+       * <code>optional string Unit = 2;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
+      public java.lang.String getUnit() {
         java.lang.Object ref = unit_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          unit_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            unit_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setUnit(String value) {
+      /**
+       * <code>optional string Unit = 2;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUnitBytes() {
+        java.lang.Object ref = unit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Unit = 2;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
+      public Builder setUnit(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4734,34 +8149,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Unit = 2;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
       public Builder clearUnit() {
         bitField0_ = (bitField0_ & ~0x00000002);
         unit_ = getDefaultInstance().getUnit();
         onChanged();
         return this;
       }
-      void setUnit(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string Unit = 2;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
+      public Builder setUnitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         unit_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Quantity = 3;
+
       private java.lang.Object quantity_ = "";
+      /**
+       * <code>optional string Quantity = 3;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
       public boolean hasQuantity() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getQuantity() {
+      /**
+       * <code>optional string Quantity = 3;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
+      public java.lang.String getQuantity() {
         java.lang.Object ref = quantity_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          quantity_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            quantity_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setQuantity(String value) {
+      /**
+       * <code>optional string Quantity = 3;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getQuantityBytes() {
+        java.lang.Object ref = quantity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quantity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Quantity = 3;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
+      public Builder setQuantity(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4770,34 +8249,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Quantity = 3;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
       public Builder clearQuantity() {
         bitField0_ = (bitField0_ & ~0x00000004);
         quantity_ = getDefaultInstance().getQuantity();
         onChanged();
         return this;
       }
-      void setQuantity(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string Quantity = 3;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
+      public Builder setQuantityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         quantity_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Price = 4;
+
       private java.lang.Object price_ = "";
+      /**
+       * <code>optional string Price = 4;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
       public boolean hasPrice() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getPrice() {
+      /**
+       * <code>optional string Price = 4;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
+      public java.lang.String getPrice() {
         java.lang.Object ref = price_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          price_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            price_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setPrice(String value) {
+      /**
+       * <code>optional string Price = 4;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPriceBytes() {
+        java.lang.Object ref = price_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          price_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Price = 4;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
+      public Builder setPrice(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4806,19 +8349,37 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Price = 4;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
       public Builder clearPrice() {
         bitField0_ = (bitField0_ & ~0x00000008);
         price_ = getDefaultInstance().getPrice();
         onChanged();
         return this;
       }
-      void setPrice(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string Price = 4;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
+      public Builder setPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         price_ = value;
         onChanged();
+        return this;
       }
-      
-      // repeated string CountriesOfOrigin = 5;
+
       private com.google.protobuf.LazyStringList countriesOfOrigin_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureCountriesOfOriginIsMutable() {
         if (!((bitField0_ & 0x00000010) == 0x00000010)) {
@@ -4826,18 +8387,57 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00000010;
          }
       }
-      public java.util.List<String>
+      /**
+       * <code>repeated string CountriesOfOrigin = 5;</code>
+       *
+       * <pre>
+       * страны происхождения товара (коды)  v5.01
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
           getCountriesOfOriginList() {
-        return java.util.Collections.unmodifiableList(countriesOfOrigin_);
+        return countriesOfOrigin_.getUnmodifiableView();
       }
+      /**
+       * <code>repeated string CountriesOfOrigin = 5;</code>
+       *
+       * <pre>
+       * страны происхождения товара (коды)  v5.01
+       * </pre>
+       */
       public int getCountriesOfOriginCount() {
         return countriesOfOrigin_.size();
       }
-      public String getCountriesOfOrigin(int index) {
+      /**
+       * <code>repeated string CountriesOfOrigin = 5;</code>
+       *
+       * <pre>
+       * страны происхождения товара (коды)  v5.01
+       * </pre>
+       */
+      public java.lang.String getCountriesOfOrigin(int index) {
         return countriesOfOrigin_.get(index);
       }
+      /**
+       * <code>repeated string CountriesOfOrigin = 5;</code>
+       *
+       * <pre>
+       * страны происхождения товара (коды)  v5.01
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCountriesOfOriginBytes(int index) {
+        return countriesOfOrigin_.getByteString(index);
+      }
+      /**
+       * <code>repeated string CountriesOfOrigin = 5;</code>
+       *
+       * <pre>
+       * страны происхождения товара (коды)  v5.01
+       * </pre>
+       */
       public Builder setCountriesOfOrigin(
-          int index, String value) {
+          int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4846,7 +8446,15 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
-      public Builder addCountriesOfOrigin(String value) {
+      /**
+       * <code>repeated string CountriesOfOrigin = 5;</code>
+       *
+       * <pre>
+       * страны происхождения товара (коды)  v5.01
+       * </pre>
+       */
+      public Builder addCountriesOfOrigin(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4855,26 +8463,52 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string CountriesOfOrigin = 5;</code>
+       *
+       * <pre>
+       * страны происхождения товара (коды)  v5.01
+       * </pre>
+       */
       public Builder addAllCountriesOfOrigin(
-          java.lang.Iterable<String> values) {
+          java.lang.Iterable<java.lang.String> values) {
         ensureCountriesOfOriginIsMutable();
-        super.addAll(values, countriesOfOrigin_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, countriesOfOrigin_);
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string CountriesOfOrigin = 5;</code>
+       *
+       * <pre>
+       * страны происхождения товара (коды)  v5.01
+       * </pre>
+       */
       public Builder clearCountriesOfOrigin() {
         countriesOfOrigin_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
-      void addCountriesOfOrigin(com.google.protobuf.ByteString value) {
-        ensureCountriesOfOriginIsMutable();
+      /**
+       * <code>repeated string CountriesOfOrigin = 5;</code>
+       *
+       * <pre>
+       * страны происхождения товара (коды)  v5.01
+       * </pre>
+       */
+      public Builder addCountriesOfOriginBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCountriesOfOriginIsMutable();
         countriesOfOrigin_.add(value);
         onChanged();
+        return this;
       }
-      
-      // repeated string CustomsDeclarationNumbers = 6;
+
       private com.google.protobuf.LazyStringList customsDeclarationNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureCustomsDeclarationNumbersIsMutable() {
         if (!((bitField0_ & 0x00000020) == 0x00000020)) {
@@ -4882,18 +8516,57 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00000020;
          }
       }
-      public java.util.List<String>
+      /**
+       * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций        v5.01
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
           getCustomsDeclarationNumbersList() {
-        return java.util.Collections.unmodifiableList(customsDeclarationNumbers_);
+        return customsDeclarationNumbers_.getUnmodifiableView();
       }
+      /**
+       * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций        v5.01
+       * </pre>
+       */
       public int getCustomsDeclarationNumbersCount() {
         return customsDeclarationNumbers_.size();
       }
-      public String getCustomsDeclarationNumbers(int index) {
+      /**
+       * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций        v5.01
+       * </pre>
+       */
+      public java.lang.String getCustomsDeclarationNumbers(int index) {
         return customsDeclarationNumbers_.get(index);
       }
+      /**
+       * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций        v5.01
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCustomsDeclarationNumbersBytes(int index) {
+        return customsDeclarationNumbers_.getByteString(index);
+      }
+      /**
+       * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций        v5.01
+       * </pre>
+       */
       public Builder setCustomsDeclarationNumbers(
-          int index, String value) {
+          int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4902,7 +8575,15 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
-      public Builder addCustomsDeclarationNumbers(String value) {
+      /**
+       * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций        v5.01
+       * </pre>
+       */
+      public Builder addCustomsDeclarationNumbers(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4911,41 +8592,113 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций        v5.01
+       * </pre>
+       */
       public Builder addAllCustomsDeclarationNumbers(
-          java.lang.Iterable<String> values) {
+          java.lang.Iterable<java.lang.String> values) {
         ensureCustomsDeclarationNumbersIsMutable();
-        super.addAll(values, customsDeclarationNumbers_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, customsDeclarationNumbers_);
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций        v5.01
+       * </pre>
+       */
       public Builder clearCustomsDeclarationNumbers() {
         customsDeclarationNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
-      void addCustomsDeclarationNumbers(com.google.protobuf.ByteString value) {
-        ensureCustomsDeclarationNumbersIsMutable();
+      /**
+       * <code>repeated string CustomsDeclarationNumbers = 6;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций        v5.01
+       * </pre>
+       */
+      public Builder addCustomsDeclarationNumbersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCustomsDeclarationNumbersIsMutable();
         customsDeclarationNumbers_.add(value);
         onChanged();
+        return this;
       }
-      
-      // optional string Excise = 7;
+
       private java.lang.Object excise_ = "";
+      /**
+       * <code>optional string Excise = 7;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
       public boolean hasExcise() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
-      public String getExcise() {
+      /**
+       * <code>optional string Excise = 7;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public java.lang.String getExcise() {
         java.lang.Object ref = excise_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          excise_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            excise_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setExcise(String value) {
+      /**
+       * <code>optional string Excise = 7;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getExciseBytes() {
+        java.lang.Object ref = excise_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          excise_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Excise = 7;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public Builder setExcise(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4954,26 +8707,65 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Excise = 7;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
       public Builder clearExcise() {
         bitField0_ = (bitField0_ & ~0x00000040);
         excise_ = getDefaultInstance().getExcise();
         onChanged();
         return this;
       }
-      void setExcise(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000040;
+      /**
+       * <code>optional string Excise = 7;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public Builder setExciseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
         excise_ = value;
         onChanged();
+        return this;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.NoVat;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+       *
+       * <pre>
+       * ставка налога
+       * </pre>
+       */
       public boolean hasTaxRate() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+       *
+       * <pre>
+       * ставка налога
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate getTaxRate() {
         return taxRate_;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+       *
+       * <pre>
+       * ставка налога
+       * </pre>
+       */
       public Builder setTaxRate(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate value) {
         if (value == null) {
           throw new NullPointerException();
@@ -4983,29 +8775,81 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+       *
+       * <pre>
+       * ставка налога
+       * </pre>
+       */
       public Builder clearTaxRate() {
         bitField0_ = (bitField0_ & ~0x00000080);
         taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.NoVat;
         onChanged();
         return this;
       }
-      
-      // optional string SubtotalWithVatExcluded = 9;
+
       private java.lang.Object subtotalWithVatExcluded_ = "";
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 9;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public boolean hasSubtotalWithVatExcluded() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
-      public String getSubtotalWithVatExcluded() {
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 9;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public java.lang.String getSubtotalWithVatExcluded() {
         java.lang.Object ref = subtotalWithVatExcluded_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          subtotalWithVatExcluded_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subtotalWithVatExcluded_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSubtotalWithVatExcluded(String value) {
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 9;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSubtotalWithVatExcludedBytes() {
+        java.lang.Object ref = subtotalWithVatExcluded_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subtotalWithVatExcluded_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 9;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setSubtotalWithVatExcluded(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5014,34 +8858,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 9;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public Builder clearSubtotalWithVatExcluded() {
         bitField0_ = (bitField0_ & ~0x00000100);
         subtotalWithVatExcluded_ = getDefaultInstance().getSubtotalWithVatExcluded();
         onChanged();
         return this;
       }
-      void setSubtotalWithVatExcluded(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000100;
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 9;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setSubtotalWithVatExcludedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
         subtotalWithVatExcluded_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Vat = 10;
+
       private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 10;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public boolean hasVat() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
-      public String getVat() {
+      /**
+       * <code>optional string Vat = 10;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public java.lang.String getVat() {
         java.lang.Object ref = vat_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          vat_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setVat(String value) {
+      /**
+       * <code>optional string Vat = 10;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 10;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVat(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5050,34 +8958,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Vat = 10;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public Builder clearVat() {
         bitField0_ = (bitField0_ & ~0x00000200);
         vat_ = getDefaultInstance().getVat();
         onChanged();
         return this;
       }
-      void setVat(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000200;
+      /**
+       * <code>optional string Vat = 10;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
         vat_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Subtotal = 11;
+
       private java.lang.Object subtotal_ = "";
+      /**
+       * <code>required string Subtotal = 11;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
       public boolean hasSubtotal() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
-      public String getSubtotal() {
+      /**
+       * <code>required string Subtotal = 11;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public java.lang.String getSubtotal() {
         java.lang.Object ref = subtotal_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          subtotal_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subtotal_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSubtotal(String value) {
+      /**
+       * <code>required string Subtotal = 11;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSubtotalBytes() {
+        java.lang.Object ref = subtotal_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subtotal_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Subtotal = 11;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public Builder setSubtotal(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5086,34 +9058,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Subtotal = 11;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
       public Builder clearSubtotal() {
         bitField0_ = (bitField0_ & ~0x00000400);
         subtotal_ = getDefaultInstance().getSubtotal();
         onChanged();
         return this;
       }
-      void setSubtotal(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000400;
+      /**
+       * <code>required string Subtotal = 11;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public Builder setSubtotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
         subtotal_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string AdditionalInfo = 12;
+
       private java.lang.Object additionalInfo_ = "";
+      /**
+       * <code>optional string AdditionalInfo = 12;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01	
+       * </pre>
+       */
       public boolean hasAdditionalInfo() {
         return ((bitField0_ & 0x00000800) == 0x00000800);
       }
-      public String getAdditionalInfo() {
+      /**
+       * <code>optional string AdditionalInfo = 12;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01	
+       * </pre>
+       */
+      public java.lang.String getAdditionalInfo() {
         java.lang.Object ref = additionalInfo_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          additionalInfo_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            additionalInfo_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAdditionalInfo(String value) {
+      /**
+       * <code>optional string AdditionalInfo = 12;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01	
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAdditionalInfoBytes() {
+        java.lang.Object ref = additionalInfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          additionalInfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AdditionalInfo = 12;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01	
+       * </pre>
+       */
+      public Builder setAdditionalInfo(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5122,19 +9158,37 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string AdditionalInfo = 12;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01	
+       * </pre>
+       */
       public Builder clearAdditionalInfo() {
         bitField0_ = (bitField0_ & ~0x00000800);
         additionalInfo_ = getDefaultInstance().getAdditionalInfo();
         onChanged();
         return this;
       }
-      void setAdditionalInfo(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000800;
+      /**
+       * <code>optional string AdditionalInfo = 12;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01	
+       * </pre>
+       */
+      public Builder setAdditionalInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
         additionalInfo_ = value;
         onChanged();
+        return this;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration> customsDeclarations_ =
         java.util.Collections.emptyList();
       private void ensureCustomsDeclarationsIsMutable() {
@@ -5143,10 +9197,17 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00001000;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclarationOrBuilder> customsDeclarationsBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration> getCustomsDeclarationsList() {
         if (customsDeclarationsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(customsDeclarations_);
@@ -5154,6 +9215,13 @@ public final class InvoiceInfoProtos {
           return customsDeclarationsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public int getCustomsDeclarationsCount() {
         if (customsDeclarationsBuilder_ == null) {
           return customsDeclarations_.size();
@@ -5161,6 +9229,13 @@ public final class InvoiceInfoProtos {
           return customsDeclarationsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration getCustomsDeclarations(int index) {
         if (customsDeclarationsBuilder_ == null) {
           return customsDeclarations_.get(index);
@@ -5168,6 +9243,13 @@ public final class InvoiceInfoProtos {
           return customsDeclarationsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Builder setCustomsDeclarations(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration value) {
         if (customsDeclarationsBuilder_ == null) {
@@ -5182,6 +9264,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Builder setCustomsDeclarations(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder builderForValue) {
         if (customsDeclarationsBuilder_ == null) {
@@ -5193,6 +9282,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Builder addCustomsDeclarations(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration value) {
         if (customsDeclarationsBuilder_ == null) {
           if (value == null) {
@@ -5206,6 +9302,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Builder addCustomsDeclarations(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration value) {
         if (customsDeclarationsBuilder_ == null) {
@@ -5220,6 +9323,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Builder addCustomsDeclarations(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder builderForValue) {
         if (customsDeclarationsBuilder_ == null) {
@@ -5231,6 +9341,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Builder addCustomsDeclarations(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder builderForValue) {
         if (customsDeclarationsBuilder_ == null) {
@@ -5242,17 +9359,32 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Builder addAllCustomsDeclarations(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration> values) {
         if (customsDeclarationsBuilder_ == null) {
           ensureCustomsDeclarationsIsMutable();
-          super.addAll(values, customsDeclarations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, customsDeclarations_);
           onChanged();
         } else {
           customsDeclarationsBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Builder clearCustomsDeclarations() {
         if (customsDeclarationsBuilder_ == null) {
           customsDeclarations_ = java.util.Collections.emptyList();
@@ -5263,6 +9395,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Builder removeCustomsDeclarations(int index) {
         if (customsDeclarationsBuilder_ == null) {
           ensureCustomsDeclarationsIsMutable();
@@ -5273,10 +9412,24 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder getCustomsDeclarationsBuilder(
           int index) {
         return getCustomsDeclarationsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclarationOrBuilder getCustomsDeclarationsOrBuilder(
           int index) {
         if (customsDeclarationsBuilder_ == null) {
@@ -5284,6 +9437,13 @@ public final class InvoiceInfoProtos {
           return customsDeclarationsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclarationOrBuilder> 
            getCustomsDeclarationsOrBuilderList() {
         if (customsDeclarationsBuilder_ != null) {
@@ -5292,15 +9452,36 @@ public final class InvoiceInfoProtos {
           return java.util.Collections.unmodifiableList(customsDeclarations_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder addCustomsDeclarationsBuilder() {
         return getCustomsDeclarationsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder addCustomsDeclarationsBuilder(
           int index) {
         return getCustomsDeclarationsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.CustomsDeclaration CustomsDeclarations = 13;</code>
+       *
+       * <pre>
+       * номера таможенных деклараций v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder> 
            getCustomsDeclarationsBuilderList() {
         return getCustomsDeclarationsFieldBuilder().getBuilderList();
@@ -5319,8 +9500,7 @@ public final class InvoiceInfoProtos {
         }
         return customsDeclarationsBuilder_;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> additionalInfos_ =
         java.util.Collections.emptyList();
       private void ensureAdditionalInfosIsMutable() {
@@ -5329,10 +9509,17 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00002000;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> additionalInfosBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> getAdditionalInfosList() {
         if (additionalInfosBuilder_ == null) {
           return java.util.Collections.unmodifiableList(additionalInfos_);
@@ -5340,6 +9527,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public int getAdditionalInfosCount() {
         if (additionalInfosBuilder_ == null) {
           return additionalInfos_.size();
@@ -5347,6 +9541,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index) {
         if (additionalInfosBuilder_ == null) {
           return additionalInfos_.get(index);
@@ -5354,6 +9555,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Builder setAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
@@ -5368,6 +9576,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Builder setAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -5379,6 +9594,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
           if (value == null) {
@@ -5392,6 +9614,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
@@ -5406,6 +9635,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -5417,6 +9653,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -5428,17 +9671,32 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Builder addAllAdditionalInfos(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> values) {
         if (additionalInfosBuilder_ == null) {
           ensureAdditionalInfosIsMutable();
-          super.addAll(values, additionalInfos_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, additionalInfos_);
           onChanged();
         } else {
           additionalInfosBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Builder clearAdditionalInfos() {
         if (additionalInfosBuilder_ == null) {
           additionalInfos_ = java.util.Collections.emptyList();
@@ -5449,6 +9707,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Builder removeAdditionalInfos(int index) {
         if (additionalInfosBuilder_ == null) {
           ensureAdditionalInfosIsMutable();
@@ -5459,10 +9724,24 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder getAdditionalInfosBuilder(
           int index) {
         return getAdditionalInfosFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
           int index) {
         if (additionalInfosBuilder_ == null) {
@@ -5470,6 +9749,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
            getAdditionalInfosOrBuilderList() {
         if (additionalInfosBuilder_ != null) {
@@ -5478,15 +9764,36 @@ public final class InvoiceInfoProtos {
           return java.util.Collections.unmodifiableList(additionalInfos_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder addAdditionalInfosBuilder() {
         return getAdditionalInfosFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder addAdditionalInfosBuilder(
           int index) {
         return getAdditionalInfosFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 14;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder> 
            getAdditionalInfosBuilderList() {
         return getAdditionalInfosFieldBuilder().getBuilderList();
@@ -5505,122 +9812,286 @@ public final class InvoiceInfoProtos {
         }
         return additionalInfosBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.InvoiceItem)
     }
-    
+
     static {
       defaultInstance = new InvoiceItem(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.InvoiceItem)
   }
-  
-  public interface CustomsDeclarationOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string CountryCode = 1;
+
+  public interface CustomsDeclarationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.CustomsDeclaration)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string CountryCode = 1;</code>
+     *
+     * <pre>
+     * код страны происхождения товара
+     * </pre>
+     */
     boolean hasCountryCode();
-    String getCountryCode();
-    
-    // required string DeclarationNumber = 2;
+    /**
+     * <code>required string CountryCode = 1;</code>
+     *
+     * <pre>
+     * код страны происхождения товара
+     * </pre>
+     */
+    java.lang.String getCountryCode();
+    /**
+     * <code>required string CountryCode = 1;</code>
+     *
+     * <pre>
+     * код страны происхождения товара
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCountryCodeBytes();
+
+    /**
+     * <code>required string DeclarationNumber = 2;</code>
+     *
+     * <pre>
+     * номер таможенной декларации
+     * </pre>
+     */
     boolean hasDeclarationNumber();
-    String getDeclarationNumber();
+    /**
+     * <code>required string DeclarationNumber = 2;</code>
+     *
+     * <pre>
+     * номер таможенной декларации
+     * </pre>
+     */
+    java.lang.String getDeclarationNumber();
+    /**
+     * <code>required string DeclarationNumber = 2;</code>
+     *
+     * <pre>
+     * номер таможенной декларации
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDeclarationNumberBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.CustomsDeclaration}
+   */
   public static final class CustomsDeclaration extends
-      com.google.protobuf.GeneratedMessage
-      implements CustomsDeclarationOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.CustomsDeclaration)
+      CustomsDeclarationOrBuilder {
     // Use CustomsDeclaration.newBuilder() to construct.
-    private CustomsDeclaration(Builder builder) {
+    private CustomsDeclaration(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CustomsDeclaration(boolean noInit) {}
-    
+    private CustomsDeclaration(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CustomsDeclaration defaultInstance;
     public static CustomsDeclaration getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CustomsDeclaration getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CustomsDeclaration(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              countryCode_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              declarationNumber_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<CustomsDeclaration> PARSER =
+        new com.google.protobuf.AbstractParser<CustomsDeclaration>() {
+      public CustomsDeclaration parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CustomsDeclaration(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CustomsDeclaration> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string CountryCode = 1;
     public static final int COUNTRYCODE_FIELD_NUMBER = 1;
     private java.lang.Object countryCode_;
+    /**
+     * <code>required string CountryCode = 1;</code>
+     *
+     * <pre>
+     * код страны происхождения товара
+     * </pre>
+     */
     public boolean hasCountryCode() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getCountryCode() {
+    /**
+     * <code>required string CountryCode = 1;</code>
+     *
+     * <pre>
+     * код страны происхождения товара
+     * </pre>
+     */
+    public java.lang.String getCountryCode() {
       java.lang.Object ref = countryCode_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           countryCode_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getCountryCodeBytes() {
+    /**
+     * <code>required string CountryCode = 1;</code>
+     *
+     * <pre>
+     * код страны происхождения товара
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCountryCodeBytes() {
       java.lang.Object ref = countryCode_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         countryCode_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string DeclarationNumber = 2;
+
     public static final int DECLARATIONNUMBER_FIELD_NUMBER = 2;
     private java.lang.Object declarationNumber_;
+    /**
+     * <code>required string DeclarationNumber = 2;</code>
+     *
+     * <pre>
+     * номер таможенной декларации
+     * </pre>
+     */
     public boolean hasDeclarationNumber() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getDeclarationNumber() {
+    /**
+     * <code>required string DeclarationNumber = 2;</code>
+     *
+     * <pre>
+     * номер таможенной декларации
+     * </pre>
+     */
+    public java.lang.String getDeclarationNumber() {
       java.lang.Object ref = declarationNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           declarationNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDeclarationNumberBytes() {
+    /**
+     * <code>required string DeclarationNumber = 2;</code>
+     *
+     * <pre>
+     * номер таможенной декларации
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDeclarationNumberBytes() {
       java.lang.Object ref = declarationNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         declarationNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       countryCode_ = "";
       declarationNumber_ = "";
@@ -5628,8 +10099,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasCountryCode()) {
         memoizedIsInitialized = 0;
         return false;
@@ -5641,7 +10113,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -5653,12 +10125,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -5672,113 +10144,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.CustomsDeclaration}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclarationOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.CustomsDeclaration)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclarationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -5789,7 +10254,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         countryCode_ = "";
@@ -5798,20 +10263,20 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration result = buildPartial();
         if (!result.isInitialized()) {
@@ -5819,17 +10284,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration(this);
         int from_bitField0_ = bitField0_;
@@ -5846,7 +10301,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration)other);
@@ -5855,19 +10310,23 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.getDefaultInstance()) return this;
         if (other.hasCountryCode()) {
-          setCountryCode(other.getCountryCode());
+          bitField0_ |= 0x00000001;
+          countryCode_ = other.countryCode_;
+          onChanged();
         }
         if (other.hasDeclarationNumber()) {
-          setDeclarationNumber(other.getDeclarationNumber());
+          bitField0_ |= 0x00000002;
+          declarationNumber_ = other.declarationNumber_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasCountryCode()) {
           
@@ -5879,62 +10338,87 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              countryCode_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              declarationNumber_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string CountryCode = 1;
+
       private java.lang.Object countryCode_ = "";
+      /**
+       * <code>required string CountryCode = 1;</code>
+       *
+       * <pre>
+       * код страны происхождения товара
+       * </pre>
+       */
       public boolean hasCountryCode() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getCountryCode() {
+      /**
+       * <code>required string CountryCode = 1;</code>
+       *
+       * <pre>
+       * код страны происхождения товара
+       * </pre>
+       */
+      public java.lang.String getCountryCode() {
         java.lang.Object ref = countryCode_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          countryCode_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            countryCode_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setCountryCode(String value) {
+      /**
+       * <code>required string CountryCode = 1;</code>
+       *
+       * <pre>
+       * код страны происхождения товара
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCountryCodeBytes() {
+        java.lang.Object ref = countryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          countryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string CountryCode = 1;</code>
+       *
+       * <pre>
+       * код страны происхождения товара
+       * </pre>
+       */
+      public Builder setCountryCode(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5943,34 +10427,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string CountryCode = 1;</code>
+       *
+       * <pre>
+       * код страны происхождения товара
+       * </pre>
+       */
       public Builder clearCountryCode() {
         bitField0_ = (bitField0_ & ~0x00000001);
         countryCode_ = getDefaultInstance().getCountryCode();
         onChanged();
         return this;
       }
-      void setCountryCode(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string CountryCode = 1;</code>
+       *
+       * <pre>
+       * код страны происхождения товара
+       * </pre>
+       */
+      public Builder setCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         countryCode_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string DeclarationNumber = 2;
+
       private java.lang.Object declarationNumber_ = "";
+      /**
+       * <code>required string DeclarationNumber = 2;</code>
+       *
+       * <pre>
+       * номер таможенной декларации
+       * </pre>
+       */
       public boolean hasDeclarationNumber() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getDeclarationNumber() {
+      /**
+       * <code>required string DeclarationNumber = 2;</code>
+       *
+       * <pre>
+       * номер таможенной декларации
+       * </pre>
+       */
+      public java.lang.String getDeclarationNumber() {
         java.lang.Object ref = declarationNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          declarationNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            declarationNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setDeclarationNumber(String value) {
+      /**
+       * <code>required string DeclarationNumber = 2;</code>
+       *
+       * <pre>
+       * номер таможенной декларации
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDeclarationNumberBytes() {
+        java.lang.Object ref = declarationNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          declarationNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DeclarationNumber = 2;</code>
+       *
+       * <pre>
+       * номер таможенной декларации
+       * </pre>
+       */
+      public Builder setDeclarationNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5979,133 +10527,268 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string DeclarationNumber = 2;</code>
+       *
+       * <pre>
+       * номер таможенной декларации
+       * </pre>
+       */
       public Builder clearDeclarationNumber() {
         bitField0_ = (bitField0_ & ~0x00000002);
         declarationNumber_ = getDefaultInstance().getDeclarationNumber();
         onChanged();
         return this;
       }
-      void setDeclarationNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string DeclarationNumber = 2;</code>
+       *
+       * <pre>
+       * номер таможенной декларации
+       * </pre>
+       */
+      public Builder setDeclarationNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         declarationNumber_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.CustomsDeclaration)
     }
-    
+
     static {
       defaultInstance = new CustomsDeclaration(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.CustomsDeclaration)
   }
-  
-  public interface PaymentDocumentInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string DocumentDate = 1;
+
+  public interface PaymentDocumentInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string DocumentDate = 1;</code>
+     */
     boolean hasDocumentDate();
-    String getDocumentDate();
-    
-    // required string DocumentNumber = 2;
+    /**
+     * <code>required string DocumentDate = 1;</code>
+     */
+    java.lang.String getDocumentDate();
+    /**
+     * <code>required string DocumentDate = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDocumentDateBytes();
+
+    /**
+     * <code>required string DocumentNumber = 2;</code>
+     */
     boolean hasDocumentNumber();
-    String getDocumentNumber();
+    /**
+     * <code>required string DocumentNumber = 2;</code>
+     */
+    java.lang.String getDocumentNumber();
+    /**
+     * <code>required string DocumentNumber = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDocumentNumberBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo}
+   */
   public static final class PaymentDocumentInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements PaymentDocumentInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo)
+      PaymentDocumentInfoOrBuilder {
     // Use PaymentDocumentInfo.newBuilder() to construct.
-    private PaymentDocumentInfo(Builder builder) {
+    private PaymentDocumentInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private PaymentDocumentInfo(boolean noInit) {}
-    
+    private PaymentDocumentInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final PaymentDocumentInfo defaultInstance;
     public static PaymentDocumentInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public PaymentDocumentInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PaymentDocumentInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              documentDate_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              documentNumber_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<PaymentDocumentInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PaymentDocumentInfo>() {
+      public PaymentDocumentInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PaymentDocumentInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentDocumentInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string DocumentDate = 1;
     public static final int DOCUMENTDATE_FIELD_NUMBER = 1;
     private java.lang.Object documentDate_;
+    /**
+     * <code>required string DocumentDate = 1;</code>
+     */
     public boolean hasDocumentDate() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getDocumentDate() {
+    /**
+     * <code>required string DocumentDate = 1;</code>
+     */
+    public java.lang.String getDocumentDate() {
       java.lang.Object ref = documentDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           documentDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDocumentDateBytes() {
+    /**
+     * <code>required string DocumentDate = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDocumentDateBytes() {
       java.lang.Object ref = documentDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         documentDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string DocumentNumber = 2;
+
     public static final int DOCUMENTNUMBER_FIELD_NUMBER = 2;
     private java.lang.Object documentNumber_;
+    /**
+     * <code>required string DocumentNumber = 2;</code>
+     */
     public boolean hasDocumentNumber() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getDocumentNumber() {
+    /**
+     * <code>required string DocumentNumber = 2;</code>
+     */
+    public java.lang.String getDocumentNumber() {
       java.lang.Object ref = documentNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           documentNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDocumentNumberBytes() {
+    /**
+     * <code>required string DocumentNumber = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDocumentNumberBytes() {
       java.lang.Object ref = documentNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         documentNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       documentDate_ = "";
       documentNumber_ = "";
@@ -6113,8 +10796,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasDocumentDate()) {
         memoizedIsInitialized = 0;
         return false;
@@ -6126,7 +10810,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -6138,12 +10822,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -6157,113 +10841,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -6274,7 +10951,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         documentDate_ = "";
@@ -6283,20 +10960,20 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -6304,17 +10981,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo(this);
         int from_bitField0_ = bitField0_;
@@ -6331,7 +10998,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo)other);
@@ -6340,19 +11007,23 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.getDefaultInstance()) return this;
         if (other.hasDocumentDate()) {
-          setDocumentDate(other.getDocumentDate());
+          bitField0_ |= 0x00000001;
+          documentDate_ = other.documentDate_;
+          onChanged();
         }
         if (other.hasDocumentNumber()) {
-          setDocumentNumber(other.getDocumentNumber());
+          bitField0_ |= 0x00000002;
+          documentNumber_ = other.documentNumber_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasDocumentDate()) {
           
@@ -6364,62 +11035,71 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              documentDate_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              documentNumber_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string DocumentDate = 1;
+
       private java.lang.Object documentDate_ = "";
+      /**
+       * <code>required string DocumentDate = 1;</code>
+       */
       public boolean hasDocumentDate() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getDocumentDate() {
+      /**
+       * <code>required string DocumentDate = 1;</code>
+       */
+      public java.lang.String getDocumentDate() {
         java.lang.Object ref = documentDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          documentDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            documentDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setDocumentDate(String value) {
+      /**
+       * <code>required string DocumentDate = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDocumentDateBytes() {
+        java.lang.Object ref = documentDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          documentDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentDate = 1;</code>
+       */
+      public Builder setDocumentDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -6428,34 +11108,74 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string DocumentDate = 1;</code>
+       */
       public Builder clearDocumentDate() {
         bitField0_ = (bitField0_ & ~0x00000001);
         documentDate_ = getDefaultInstance().getDocumentDate();
         onChanged();
         return this;
       }
-      void setDocumentDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string DocumentDate = 1;</code>
+       */
+      public Builder setDocumentDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         documentDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string DocumentNumber = 2;
+
       private java.lang.Object documentNumber_ = "";
+      /**
+       * <code>required string DocumentNumber = 2;</code>
+       */
       public boolean hasDocumentNumber() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getDocumentNumber() {
+      /**
+       * <code>required string DocumentNumber = 2;</code>
+       */
+      public java.lang.String getDocumentNumber() {
         java.lang.Object ref = documentNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          documentNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            documentNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setDocumentNumber(String value) {
+      /**
+       * <code>required string DocumentNumber = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDocumentNumberBytes() {
+        java.lang.Object ref = documentNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          documentNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentNumber = 2;</code>
+       */
+      public Builder setDocumentNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -6464,93 +11184,252 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string DocumentNumber = 2;</code>
+       */
       public Builder clearDocumentNumber() {
         bitField0_ = (bitField0_ & ~0x00000002);
         documentNumber_ = getDefaultInstance().getDocumentNumber();
         onChanged();
         return this;
       }
-      void setDocumentNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string DocumentNumber = 2;</code>
+       */
+      public Builder setDocumentNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         documentNumber_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo)
     }
-    
+
     static {
       defaultInstance = new PaymentDocumentInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.PaymentDocumentInfo)
   }
-  
-  public interface ShipperOrConsigneeOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional bool SameAsSellerOrBuyer = 1;
+
+  public interface ShipperOrConsigneeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.ShipperOrConsignee)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool SameAsSellerOrBuyer = 1;</code>
+     *
+     * <pre>
+     * совпадает с продавцом/покупателем
+     * </pre>
+     */
     boolean hasSameAsSellerOrBuyer();
+    /**
+     * <code>optional bool SameAsSellerOrBuyer = 1;</code>
+     *
+     * <pre>
+     * совпадает с продавцом/покупателем
+     * </pre>
+     */
     boolean getSameAsSellerOrBuyer();
-    
-    // optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+     *
+     * <pre>
+     * реквизиты организации
+     * </pre>
+     */
     boolean hasOrgInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+     *
+     * <pre>
+     * реквизиты организации
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo getOrgInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+     *
+     * <pre>
+     * реквизиты организации
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfoOrBuilder getOrgInfoOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.ShipperOrConsignee}
+   */
   public static final class ShipperOrConsignee extends
-      com.google.protobuf.GeneratedMessage
-      implements ShipperOrConsigneeOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.ShipperOrConsignee)
+      ShipperOrConsigneeOrBuilder {
     // Use ShipperOrConsignee.newBuilder() to construct.
-    private ShipperOrConsignee(Builder builder) {
+    private ShipperOrConsignee(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private ShipperOrConsignee(boolean noInit) {}
-    
+    private ShipperOrConsignee(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final ShipperOrConsignee defaultInstance;
     public static ShipperOrConsignee getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public ShipperOrConsignee getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShipperOrConsignee(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              sameAsSellerOrBuyer_ = input.readBool();
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = orgInfo_.toBuilder();
+              }
+              orgInfo_ = input.readMessage(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(orgInfo_);
+                orgInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<ShipperOrConsignee> PARSER =
+        new com.google.protobuf.AbstractParser<ShipperOrConsignee>() {
+      public ShipperOrConsignee parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ShipperOrConsignee(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShipperOrConsignee> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional bool SameAsSellerOrBuyer = 1;
     public static final int SAMEASSELLERORBUYER_FIELD_NUMBER = 1;
     private boolean sameAsSellerOrBuyer_;
+    /**
+     * <code>optional bool SameAsSellerOrBuyer = 1;</code>
+     *
+     * <pre>
+     * совпадает с продавцом/покупателем
+     * </pre>
+     */
     public boolean hasSameAsSellerOrBuyer() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional bool SameAsSellerOrBuyer = 1;</code>
+     *
+     * <pre>
+     * совпадает с продавцом/покупателем
+     * </pre>
+     */
     public boolean getSameAsSellerOrBuyer() {
       return sameAsSellerOrBuyer_;
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;
+
     public static final int ORGINFO_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo orgInfo_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+     *
+     * <pre>
+     * реквизиты организации
+     * </pre>
+     */
     public boolean hasOrgInfo() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+     *
+     * <pre>
+     * реквизиты организации
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo getOrgInfo() {
       return orgInfo_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+     *
+     * <pre>
+     * реквизиты организации
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfoOrBuilder getOrgInfoOrBuilder() {
       return orgInfo_;
     }
-    
+
     private void initFields() {
       sameAsSellerOrBuyer_ = false;
       orgInfo_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.getDefaultInstance();
@@ -6558,8 +11437,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasOrgInfo()) {
         if (!getOrgInfo().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -6569,7 +11449,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -6581,12 +11461,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -6600,113 +11480,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.ShipperOrConsignee}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.ShipperOrConsignee)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsigneeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -6718,7 +11591,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         sameAsSellerOrBuyer_ = false;
@@ -6731,20 +11604,20 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee result = buildPartial();
         if (!result.isInitialized()) {
@@ -6752,17 +11625,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee(this);
         int from_bitField0_ = bitField0_;
@@ -6783,7 +11646,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee)other);
@@ -6792,7 +11655,7 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.getDefaultInstance()) return this;
         if (other.hasSameAsSellerOrBuyer()) {
@@ -6804,7 +11667,7 @@ public final class InvoiceInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasOrgInfo()) {
           if (!getOrgInfo().isInitialized()) {
@@ -6814,78 +11677,94 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              sameAsSellerOrBuyer_ = input.readBool();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.newBuilder();
-              if (hasOrgInfo()) {
-                subBuilder.mergeFrom(getOrgInfo());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setOrgInfo(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional bool SameAsSellerOrBuyer = 1;
+
       private boolean sameAsSellerOrBuyer_ ;
+      /**
+       * <code>optional bool SameAsSellerOrBuyer = 1;</code>
+       *
+       * <pre>
+       * совпадает с продавцом/покупателем
+       * </pre>
+       */
       public boolean hasSameAsSellerOrBuyer() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional bool SameAsSellerOrBuyer = 1;</code>
+       *
+       * <pre>
+       * совпадает с продавцом/покупателем
+       * </pre>
+       */
       public boolean getSameAsSellerOrBuyer() {
         return sameAsSellerOrBuyer_;
       }
+      /**
+       * <code>optional bool SameAsSellerOrBuyer = 1;</code>
+       *
+       * <pre>
+       * совпадает с продавцом/покупателем
+       * </pre>
+       */
       public Builder setSameAsSellerOrBuyer(boolean value) {
         bitField0_ |= 0x00000001;
         sameAsSellerOrBuyer_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool SameAsSellerOrBuyer = 1;</code>
+       *
+       * <pre>
+       * совпадает с продавцом/покупателем
+       * </pre>
+       */
       public Builder clearSameAsSellerOrBuyer() {
         bitField0_ = (bitField0_ & ~0x00000001);
         sameAsSellerOrBuyer_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;
+
       private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo orgInfo_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfoOrBuilder> orgInfoBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+       *
+       * <pre>
+       * реквизиты организации
+       * </pre>
+       */
       public boolean hasOrgInfo() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+       *
+       * <pre>
+       * реквизиты организации
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo getOrgInfo() {
         if (orgInfoBuilder_ == null) {
           return orgInfo_;
@@ -6893,6 +11772,13 @@ public final class InvoiceInfoProtos {
           return orgInfoBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+       *
+       * <pre>
+       * реквизиты организации
+       * </pre>
+       */
       public Builder setOrgInfo(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo value) {
         if (orgInfoBuilder_ == null) {
           if (value == null) {
@@ -6906,6 +11792,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+       *
+       * <pre>
+       * реквизиты организации
+       * </pre>
+       */
       public Builder setOrgInfo(
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.Builder builderForValue) {
         if (orgInfoBuilder_ == null) {
@@ -6917,6 +11810,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+       *
+       * <pre>
+       * реквизиты организации
+       * </pre>
+       */
       public Builder mergeOrgInfo(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo value) {
         if (orgInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -6933,6 +11833,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+       *
+       * <pre>
+       * реквизиты организации
+       * </pre>
+       */
       public Builder clearOrgInfo() {
         if (orgInfoBuilder_ == null) {
           orgInfo_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.getDefaultInstance();
@@ -6943,11 +11850,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+       *
+       * <pre>
+       * реквизиты организации
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.Builder getOrgInfoBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getOrgInfoFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+       *
+       * <pre>
+       * реквизиты организации
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfoOrBuilder getOrgInfoOrBuilder() {
         if (orgInfoBuilder_ != null) {
           return orgInfoBuilder_.getMessageOrBuilder();
@@ -6955,589 +11876,1620 @@ public final class InvoiceInfoProtos {
           return orgInfo_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.OrganizationInfo OrgInfo = 2;</code>
+       *
+       * <pre>
+       * реквизиты организации
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfoOrBuilder> 
           getOrgInfoFieldBuilder() {
         if (orgInfoBuilder_ == null) {
           orgInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.OrganizationInfoOrBuilder>(
-                  orgInfo_,
+                  getOrgInfo(),
                   getParentForChildren(),
                   isClean());
           orgInfo_ = null;
         }
         return orgInfoBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.ShipperOrConsignee)
     }
-    
+
     static {
       defaultInstance = new ShipperOrConsignee(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.ShipperOrConsignee)
   }
-  
-  public interface InvoiceCorrectionInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string InvoiceDate = 1;
+
+  public interface InvoiceCorrectionInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
     boolean hasInvoiceDate();
-    String getInvoiceDate();
-    
-    // required string InvoiceNumber = 2;
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
+    java.lang.String getInvoiceDate();
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceDateBytes();
+
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
     boolean hasInvoiceNumber();
-    String getInvoiceNumber();
-    
-    // optional string InvoiceRevisionDate = 3;
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
+    java.lang.String getInvoiceNumber();
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceNumberBytes();
+
+    /**
+     * <code>optional string InvoiceRevisionDate = 3;</code>
+     *
+     * <pre>
+     * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
     boolean hasInvoiceRevisionDate();
-    String getInvoiceRevisionDate();
-    
-    // optional string InvoiceRevisionNumber = 4;
+    /**
+     * <code>optional string InvoiceRevisionDate = 3;</code>
+     *
+     * <pre>
+     * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
+    java.lang.String getInvoiceRevisionDate();
+    /**
+     * <code>optional string InvoiceRevisionDate = 3;</code>
+     *
+     * <pre>
+     * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceRevisionDateBytes();
+
+    /**
+     * <code>optional string InvoiceRevisionNumber = 4;</code>
+     *
+     * <pre>
+     * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
     boolean hasInvoiceRevisionNumber();
-    String getInvoiceRevisionNumber();
-    
-    // required string InvoiceCorrectionDate = 5;
+    /**
+     * <code>optional string InvoiceRevisionNumber = 4;</code>
+     *
+     * <pre>
+     * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
+    java.lang.String getInvoiceRevisionNumber();
+    /**
+     * <code>optional string InvoiceRevisionNumber = 4;</code>
+     *
+     * <pre>
+     * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceRevisionNumberBytes();
+
+    /**
+     * <code>required string InvoiceCorrectionDate = 5;</code>
+     *
+     * <pre>
+     * дата КСФ
+     * </pre>
+     */
     boolean hasInvoiceCorrectionDate();
-    String getInvoiceCorrectionDate();
-    
-    // required string InvoiceCorrectionNumber = 6;
+    /**
+     * <code>required string InvoiceCorrectionDate = 5;</code>
+     *
+     * <pre>
+     * дата КСФ
+     * </pre>
+     */
+    java.lang.String getInvoiceCorrectionDate();
+    /**
+     * <code>required string InvoiceCorrectionDate = 5;</code>
+     *
+     * <pre>
+     * дата КСФ
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceCorrectionDateBytes();
+
+    /**
+     * <code>required string InvoiceCorrectionNumber = 6;</code>
+     *
+     * <pre>
+     * номер КСФ
+     * </pre>
+     */
     boolean hasInvoiceCorrectionNumber();
-    String getInvoiceCorrectionNumber();
-    
-    // optional string InvoiceCorrectionRevisionDate = 7;
+    /**
+     * <code>required string InvoiceCorrectionNumber = 6;</code>
+     *
+     * <pre>
+     * номер КСФ
+     * </pre>
+     */
+    java.lang.String getInvoiceCorrectionNumber();
+    /**
+     * <code>required string InvoiceCorrectionNumber = 6;</code>
+     *
+     * <pre>
+     * номер КСФ
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceCorrectionNumberBytes();
+
+    /**
+     * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+     *
+     * <pre>
+     * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
     boolean hasInvoiceCorrectionRevisionDate();
-    String getInvoiceCorrectionRevisionDate();
-    
-    // optional string InvoiceCorrectionRevisionNumber = 8;
+    /**
+     * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+     *
+     * <pre>
+     * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
+    java.lang.String getInvoiceCorrectionRevisionDate();
+    /**
+     * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+     *
+     * <pre>
+     * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceCorrectionRevisionDateBytes();
+
+    /**
+     * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+     *
+     * <pre>
+     * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
     boolean hasInvoiceCorrectionRevisionNumber();
-    String getInvoiceCorrectionRevisionNumber();
-    
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;
+    /**
+     * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+     *
+     * <pre>
+     * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
+    java.lang.String getInvoiceCorrectionRevisionNumber();
+    /**
+     * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+     *
+     * <pre>
+     * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInvoiceCorrectionRevisionNumberBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     boolean hasSeller();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getSeller();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getSellerOrBuilder();
-    
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     boolean hasBuyer();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getBuyer();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getBuyerOrBuilder();
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     boolean hasSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder();
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem> 
         getItemsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem getItems(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     int getItemsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItemOrBuilder> 
         getItemsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItemOrBuilder getItemsOrBuilder(
         int index);
-    
-    // optional string Currency = 13;
+
+    /**
+     * <code>optional string Currency = 13;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
     boolean hasCurrency();
-    String getCurrency();
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;
+    /**
+     * <code>optional string Currency = 13;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
+    java.lang.String getCurrency();
+    /**
+     * <code>optional string Currency = 13;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCurrencyBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     boolean hasTotalsInc();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff getTotalsInc();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder getTotalsIncOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     boolean hasTotalsDec();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff getTotalsDec();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder getTotalsDecOrBuilder();
-    
-    // optional string AdditionalInfo = 16;
+
+    /**
+     * <code>optional string AdditionalInfo = 16;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
     boolean hasAdditionalInfo();
-    String getAdditionalInfo();
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;
+    /**
+     * <code>optional string AdditionalInfo = 16;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
+    java.lang.String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 16;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAdditionalInfoBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> 
         getAdditionalInfosList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     int getAdditionalInfosCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
         getAdditionalInfosOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
         int index);
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+     *
+     * <pre>
+     * версия формата ФУФа (для тестирования систем в переходном периоде)
+     * </pre>
+     */
     boolean hasVersion();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+     *
+     * <pre>
+     * версия формата ФУФа (для тестирования систем в переходном периоде)
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion getVersion();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceCorrectionInfo}
+   */
   public static final class InvoiceCorrectionInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements InvoiceCorrectionInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionInfo)
+      InvoiceCorrectionInfoOrBuilder {
     // Use InvoiceCorrectionInfo.newBuilder() to construct.
-    private InvoiceCorrectionInfo(Builder builder) {
+    private InvoiceCorrectionInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InvoiceCorrectionInfo(boolean noInit) {}
-    
+    private InvoiceCorrectionInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InvoiceCorrectionInfo defaultInstance;
     public static InvoiceCorrectionInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InvoiceCorrectionInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InvoiceCorrectionInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              invoiceDate_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              invoiceNumber_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              invoiceRevisionDate_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              invoiceRevisionNumber_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              invoiceCorrectionDate_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              invoiceCorrectionNumber_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              invoiceCorrectionRevisionDate_ = bs;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              invoiceCorrectionRevisionNumber_ = bs;
+              break;
+            }
+            case 74: {
+              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000100) == 0x00000100)) {
+                subBuilder = seller_.toBuilder();
+              }
+              seller_ = input.readMessage(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(seller_);
+                seller_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000100;
+              break;
+            }
+            case 82: {
+              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000200) == 0x00000200)) {
+                subBuilder = buyer_.toBuilder();
+              }
+              buyer_ = input.readMessage(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(buyer_);
+                buyer_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000200;
+              break;
+            }
+            case 90: {
+              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000400) == 0x00000400)) {
+                subBuilder = signer_.toBuilder();
+              }
+              signer_ = input.readMessage(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signer_);
+                signer_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000400;
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+                items_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              items_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.PARSER, extensionRegistry));
+              break;
+            }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000800;
+              currency_ = bs;
+              break;
+            }
+            case 114: {
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder subBuilder = null;
+              if (((bitField0_ & 0x00001000) == 0x00001000)) {
+                subBuilder = totalsInc_.toBuilder();
+              }
+              totalsInc_ = input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(totalsInc_);
+                totalsInc_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00001000;
+              break;
+            }
+            case 122: {
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder subBuilder = null;
+              if (((bitField0_ & 0x00002000) == 0x00002000)) {
+                subBuilder = totalsDec_.toBuilder();
+              }
+              totalsDec_ = input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(totalsDec_);
+                totalsDec_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00002000;
+              break;
+            }
+            case 130: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00004000;
+              additionalInfo_ = bs;
+              break;
+            }
+            case 138: {
+              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+                additionalInfos_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo>();
+                mutable_bitField0_ |= 0x00010000;
+              }
+              additionalInfos_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.PARSER, extensionRegistry));
+              break;
+            }
+            case 144: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion value = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(18, rawValue);
+              } else {
+                bitField0_ |= 0x00008000;
+                version_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+          items_ = java.util.Collections.unmodifiableList(items_);
+        }
+        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+          additionalInfos_ = java.util.Collections.unmodifiableList(additionalInfos_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InvoiceCorrectionInfo> PARSER =
+        new com.google.protobuf.AbstractParser<InvoiceCorrectionInfo>() {
+      public InvoiceCorrectionInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InvoiceCorrectionInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InvoiceCorrectionInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string InvoiceDate = 1;
     public static final int INVOICEDATE_FIELD_NUMBER = 1;
     private java.lang.Object invoiceDate_;
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
     public boolean hasInvoiceDate() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getInvoiceDate() {
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
+    public java.lang.String getInvoiceDate() {
       java.lang.Object ref = invoiceDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceDateBytes() {
+    /**
+     * <code>required string InvoiceDate = 1;</code>
+     *
+     * <pre>
+     * дата СФ
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceDateBytes() {
       java.lang.Object ref = invoiceDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string InvoiceNumber = 2;
+
     public static final int INVOICENUMBER_FIELD_NUMBER = 2;
     private java.lang.Object invoiceNumber_;
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
     public boolean hasInvoiceNumber() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getInvoiceNumber() {
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
+    public java.lang.String getInvoiceNumber() {
       java.lang.Object ref = invoiceNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceNumberBytes() {
+    /**
+     * <code>required string InvoiceNumber = 2;</code>
+     *
+     * <pre>
+     * номер СФ
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceNumberBytes() {
       java.lang.Object ref = invoiceNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string InvoiceRevisionDate = 3;
+
     public static final int INVOICEREVISIONDATE_FIELD_NUMBER = 3;
     private java.lang.Object invoiceRevisionDate_;
+    /**
+     * <code>optional string InvoiceRevisionDate = 3;</code>
+     *
+     * <pre>
+     * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
     public boolean hasInvoiceRevisionDate() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getInvoiceRevisionDate() {
+    /**
+     * <code>optional string InvoiceRevisionDate = 3;</code>
+     *
+     * <pre>
+     * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
+    public java.lang.String getInvoiceRevisionDate() {
       java.lang.Object ref = invoiceRevisionDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceRevisionDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceRevisionDateBytes() {
+    /**
+     * <code>optional string InvoiceRevisionDate = 3;</code>
+     *
+     * <pre>
+     * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceRevisionDateBytes() {
       java.lang.Object ref = invoiceRevisionDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceRevisionDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string InvoiceRevisionNumber = 4;
+
     public static final int INVOICEREVISIONNUMBER_FIELD_NUMBER = 4;
     private java.lang.Object invoiceRevisionNumber_;
+    /**
+     * <code>optional string InvoiceRevisionNumber = 4;</code>
+     *
+     * <pre>
+     * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
     public boolean hasInvoiceRevisionNumber() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getInvoiceRevisionNumber() {
+    /**
+     * <code>optional string InvoiceRevisionNumber = 4;</code>
+     *
+     * <pre>
+     * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
+    public java.lang.String getInvoiceRevisionNumber() {
       java.lang.Object ref = invoiceRevisionNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceRevisionNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceRevisionNumberBytes() {
+    /**
+     * <code>optional string InvoiceRevisionNumber = 4;</code>
+     *
+     * <pre>
+     * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceRevisionNumberBytes() {
       java.lang.Object ref = invoiceRevisionNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceRevisionNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string InvoiceCorrectionDate = 5;
+
     public static final int INVOICECORRECTIONDATE_FIELD_NUMBER = 5;
     private java.lang.Object invoiceCorrectionDate_;
+    /**
+     * <code>required string InvoiceCorrectionDate = 5;</code>
+     *
+     * <pre>
+     * дата КСФ
+     * </pre>
+     */
     public boolean hasInvoiceCorrectionDate() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public String getInvoiceCorrectionDate() {
+    /**
+     * <code>required string InvoiceCorrectionDate = 5;</code>
+     *
+     * <pre>
+     * дата КСФ
+     * </pre>
+     */
+    public java.lang.String getInvoiceCorrectionDate() {
       java.lang.Object ref = invoiceCorrectionDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceCorrectionDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceCorrectionDateBytes() {
+    /**
+     * <code>required string InvoiceCorrectionDate = 5;</code>
+     *
+     * <pre>
+     * дата КСФ
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceCorrectionDateBytes() {
       java.lang.Object ref = invoiceCorrectionDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceCorrectionDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string InvoiceCorrectionNumber = 6;
+
     public static final int INVOICECORRECTIONNUMBER_FIELD_NUMBER = 6;
     private java.lang.Object invoiceCorrectionNumber_;
+    /**
+     * <code>required string InvoiceCorrectionNumber = 6;</code>
+     *
+     * <pre>
+     * номер КСФ
+     * </pre>
+     */
     public boolean hasInvoiceCorrectionNumber() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
-    public String getInvoiceCorrectionNumber() {
+    /**
+     * <code>required string InvoiceCorrectionNumber = 6;</code>
+     *
+     * <pre>
+     * номер КСФ
+     * </pre>
+     */
+    public java.lang.String getInvoiceCorrectionNumber() {
       java.lang.Object ref = invoiceCorrectionNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceCorrectionNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceCorrectionNumberBytes() {
+    /**
+     * <code>required string InvoiceCorrectionNumber = 6;</code>
+     *
+     * <pre>
+     * номер КСФ
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceCorrectionNumberBytes() {
       java.lang.Object ref = invoiceCorrectionNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceCorrectionNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string InvoiceCorrectionRevisionDate = 7;
+
     public static final int INVOICECORRECTIONREVISIONDATE_FIELD_NUMBER = 7;
     private java.lang.Object invoiceCorrectionRevisionDate_;
+    /**
+     * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+     *
+     * <pre>
+     * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
     public boolean hasInvoiceCorrectionRevisionDate() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
-    public String getInvoiceCorrectionRevisionDate() {
+    /**
+     * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+     *
+     * <pre>
+     * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
+    public java.lang.String getInvoiceCorrectionRevisionDate() {
       java.lang.Object ref = invoiceCorrectionRevisionDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceCorrectionRevisionDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceCorrectionRevisionDateBytes() {
+    /**
+     * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+     *
+     * <pre>
+     * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceCorrectionRevisionDateBytes() {
       java.lang.Object ref = invoiceCorrectionRevisionDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceCorrectionRevisionDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string InvoiceCorrectionRevisionNumber = 8;
+
     public static final int INVOICECORRECTIONREVISIONNUMBER_FIELD_NUMBER = 8;
     private java.lang.Object invoiceCorrectionRevisionNumber_;
+    /**
+     * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+     *
+     * <pre>
+     * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
     public boolean hasInvoiceCorrectionRevisionNumber() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
-    public String getInvoiceCorrectionRevisionNumber() {
+    /**
+     * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+     *
+     * <pre>
+     * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
+    public java.lang.String getInvoiceCorrectionRevisionNumber() {
       java.lang.Object ref = invoiceCorrectionRevisionNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           invoiceCorrectionRevisionNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInvoiceCorrectionRevisionNumberBytes() {
+    /**
+     * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+     *
+     * <pre>
+     * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceCorrectionRevisionNumberBytes() {
       java.lang.Object ref = invoiceCorrectionRevisionNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         invoiceCorrectionRevisionNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;
+
     public static final int SELLER_FIELD_NUMBER = 9;
     private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo seller_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     public boolean hasSeller() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getSeller() {
       return seller_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+     *
+     * <pre>
+     * продавец
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getSellerOrBuilder() {
       return seller_;
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;
+
     public static final int BUYER_FIELD_NUMBER = 10;
     private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo buyer_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     public boolean hasBuyer() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getBuyer() {
       return buyer_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+     *
+     * <pre>
+     * покупатель
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getBuyerOrBuilder() {
       return buyer_;
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;
+
     public static final int SIGNER_FIELD_NUMBER = 11;
     private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public boolean hasSigner() {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
       return signer_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
       return signer_;
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;
+
     public static final int ITEMS_FIELD_NUMBER = 12;
     private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem> items_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem> getItemsList() {
       return items_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItemOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public int getItemsCount() {
       return items_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem getItems(int index) {
       return items_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+     *
+     * <pre>
+     * информация о товарах
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
     }
-    
-    // optional string Currency = 13;
+
     public static final int CURRENCY_FIELD_NUMBER = 13;
     private java.lang.Object currency_;
+    /**
+     * <code>optional string Currency = 13;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
     public boolean hasCurrency() {
       return ((bitField0_ & 0x00000800) == 0x00000800);
     }
-    public String getCurrency() {
+    /**
+     * <code>optional string Currency = 13;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
+    public java.lang.String getCurrency() {
       java.lang.Object ref = currency_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           currency_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getCurrencyBytes() {
+    /**
+     * <code>optional string Currency = 13;</code>
+     *
+     * <pre>
+     * валюта (код)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCurrencyBytes() {
       java.lang.Object ref = currency_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         currency_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;
+
     public static final int TOTALSINC_FIELD_NUMBER = 14;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff totalsInc_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     public boolean hasTotalsInc() {
       return ((bitField0_ & 0x00001000) == 0x00001000);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff getTotalsInc() {
       return totalsInc_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder getTotalsIncOrBuilder() {
       return totalsInc_;
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;
+
     public static final int TOTALSDEC_FIELD_NUMBER = 15;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff totalsDec_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     public boolean hasTotalsDec() {
       return ((bitField0_ & 0x00002000) == 0x00002000);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff getTotalsDec() {
       return totalsDec_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder getTotalsDecOrBuilder() {
       return totalsDec_;
     }
-    
-    // optional string AdditionalInfo = 16;
+
     public static final int ADDITIONALINFO_FIELD_NUMBER = 16;
     private java.lang.Object additionalInfo_;
+    /**
+     * <code>optional string AdditionalInfo = 16;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
     public boolean hasAdditionalInfo() {
       return ((bitField0_ & 0x00004000) == 0x00004000);
     }
-    public String getAdditionalInfo() {
+    /**
+     * <code>optional string AdditionalInfo = 16;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
+    public java.lang.String getAdditionalInfo() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           additionalInfo_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAdditionalInfoBytes() {
+    /**
+     * <code>optional string AdditionalInfo = 16;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.01
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAdditionalInfoBytes() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         additionalInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;
+
     public static final int ADDITIONALINFOS_FIELD_NUMBER = 17;
     private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> additionalInfos_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> getAdditionalInfosList() {
       return additionalInfos_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
         getAdditionalInfosOrBuilderList() {
       return additionalInfos_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public int getAdditionalInfosCount() {
       return additionalInfos_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index) {
       return additionalInfos_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
         int index) {
       return additionalInfos_.get(index);
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];
+
     public static final int VERSION_FIELD_NUMBER = 18;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion version_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+     *
+     * <pre>
+     * версия формата ФУФа (для тестирования систем в переходном периоде)
+     * </pre>
+     */
     public boolean hasVersion() {
       return ((bitField0_ & 0x00008000) == 0x00008000);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+     *
+     * <pre>
+     * версия формата ФУФа (для тестирования систем в переходном периоде)
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion getVersion() {
       return version_;
     }
-    
+
     private void initFields() {
       invoiceDate_ = "";
       invoiceNumber_ = "";
@@ -7561,8 +13513,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasInvoiceDate()) {
         memoizedIsInitialized = 0;
         return false;
@@ -7630,7 +13583,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -7690,12 +13643,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -7773,113 +13726,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceCorrectionInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionInfo)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -7897,7 +13843,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         invoiceDate_ = "";
@@ -7966,20 +13912,20 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00020000);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -7987,17 +13933,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo(this);
         int from_bitField0_ = bitField0_;
@@ -8108,7 +14044,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo)other);
@@ -8117,32 +14053,48 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.getDefaultInstance()) return this;
         if (other.hasInvoiceDate()) {
-          setInvoiceDate(other.getInvoiceDate());
+          bitField0_ |= 0x00000001;
+          invoiceDate_ = other.invoiceDate_;
+          onChanged();
         }
         if (other.hasInvoiceNumber()) {
-          setInvoiceNumber(other.getInvoiceNumber());
+          bitField0_ |= 0x00000002;
+          invoiceNumber_ = other.invoiceNumber_;
+          onChanged();
         }
         if (other.hasInvoiceRevisionDate()) {
-          setInvoiceRevisionDate(other.getInvoiceRevisionDate());
+          bitField0_ |= 0x00000004;
+          invoiceRevisionDate_ = other.invoiceRevisionDate_;
+          onChanged();
         }
         if (other.hasInvoiceRevisionNumber()) {
-          setInvoiceRevisionNumber(other.getInvoiceRevisionNumber());
+          bitField0_ |= 0x00000008;
+          invoiceRevisionNumber_ = other.invoiceRevisionNumber_;
+          onChanged();
         }
         if (other.hasInvoiceCorrectionDate()) {
-          setInvoiceCorrectionDate(other.getInvoiceCorrectionDate());
+          bitField0_ |= 0x00000010;
+          invoiceCorrectionDate_ = other.invoiceCorrectionDate_;
+          onChanged();
         }
         if (other.hasInvoiceCorrectionNumber()) {
-          setInvoiceCorrectionNumber(other.getInvoiceCorrectionNumber());
+          bitField0_ |= 0x00000020;
+          invoiceCorrectionNumber_ = other.invoiceCorrectionNumber_;
+          onChanged();
         }
         if (other.hasInvoiceCorrectionRevisionDate()) {
-          setInvoiceCorrectionRevisionDate(other.getInvoiceCorrectionRevisionDate());
+          bitField0_ |= 0x00000040;
+          invoiceCorrectionRevisionDate_ = other.invoiceCorrectionRevisionDate_;
+          onChanged();
         }
         if (other.hasInvoiceCorrectionRevisionNumber()) {
-          setInvoiceCorrectionRevisionNumber(other.getInvoiceCorrectionRevisionNumber());
+          bitField0_ |= 0x00000080;
+          invoiceCorrectionRevisionNumber_ = other.invoiceCorrectionRevisionNumber_;
+          onChanged();
         }
         if (other.hasSeller()) {
           mergeSeller(other.getSeller());
@@ -8180,7 +14132,9 @@ public final class InvoiceInfoProtos {
           }
         }
         if (other.hasCurrency()) {
-          setCurrency(other.getCurrency());
+          bitField0_ |= 0x00001000;
+          currency_ = other.currency_;
+          onChanged();
         }
         if (other.hasTotalsInc()) {
           mergeTotalsInc(other.getTotalsInc());
@@ -8189,7 +14143,9 @@ public final class InvoiceInfoProtos {
           mergeTotalsDec(other.getTotalsDec());
         }
         if (other.hasAdditionalInfo()) {
-          setAdditionalInfo(other.getAdditionalInfo());
+          bitField0_ |= 0x00008000;
+          additionalInfo_ = other.additionalInfo_;
+          onChanged();
         }
         if (additionalInfosBuilder_ == null) {
           if (!other.additionalInfos_.isEmpty()) {
@@ -8223,7 +14179,7 @@ public final class InvoiceInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasInvoiceDate()) {
           
@@ -8291,170 +14247,87 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              invoiceDate_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              invoiceNumber_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              invoiceRevisionDate_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              invoiceRevisionNumber_ = input.readBytes();
-              break;
-            }
-            case 42: {
-              bitField0_ |= 0x00000010;
-              invoiceCorrectionDate_ = input.readBytes();
-              break;
-            }
-            case 50: {
-              bitField0_ |= 0x00000020;
-              invoiceCorrectionNumber_ = input.readBytes();
-              break;
-            }
-            case 58: {
-              bitField0_ |= 0x00000040;
-              invoiceCorrectionRevisionDate_ = input.readBytes();
-              break;
-            }
-            case 66: {
-              bitField0_ |= 0x00000080;
-              invoiceCorrectionRevisionNumber_ = input.readBytes();
-              break;
-            }
-            case 74: {
-              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.newBuilder();
-              if (hasSeller()) {
-                subBuilder.mergeFrom(getSeller());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSeller(subBuilder.buildPartial());
-              break;
-            }
-            case 82: {
-              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.newBuilder();
-              if (hasBuyer()) {
-                subBuilder.mergeFrom(getBuyer());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setBuyer(subBuilder.buildPartial());
-              break;
-            }
-            case 90: {
-              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.newBuilder();
-              if (hasSigner()) {
-                subBuilder.mergeFrom(getSigner());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSigner(subBuilder.buildPartial());
-              break;
-            }
-            case 98: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addItems(subBuilder.buildPartial());
-              break;
-            }
-            case 106: {
-              bitField0_ |= 0x00001000;
-              currency_ = input.readBytes();
-              break;
-            }
-            case 114: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.newBuilder();
-              if (hasTotalsInc()) {
-                subBuilder.mergeFrom(getTotalsInc());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setTotalsInc(subBuilder.buildPartial());
-              break;
-            }
-            case 122: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.newBuilder();
-              if (hasTotalsDec()) {
-                subBuilder.mergeFrom(getTotalsDec());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setTotalsDec(subBuilder.buildPartial());
-              break;
-            }
-            case 130: {
-              bitField0_ |= 0x00008000;
-              additionalInfo_ = input.readBytes();
-              break;
-            }
-            case 138: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addAdditionalInfos(subBuilder.buildPartial());
-              break;
-            }
-            case 144: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion value = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(18, rawValue);
-              } else {
-                bitField0_ |= 0x00020000;
-                version_ = value;
-              }
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string InvoiceDate = 1;
+
       private java.lang.Object invoiceDate_ = "";
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
       public boolean hasInvoiceDate() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getInvoiceDate() {
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
+      public java.lang.String getInvoiceDate() {
         java.lang.Object ref = invoiceDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceDate(String value) {
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceDateBytes() {
+        java.lang.Object ref = invoiceDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
+      public Builder setInvoiceDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8463,34 +14336,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
       public Builder clearInvoiceDate() {
         bitField0_ = (bitField0_ & ~0x00000001);
         invoiceDate_ = getDefaultInstance().getInvoiceDate();
         onChanged();
         return this;
       }
-      void setInvoiceDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string InvoiceDate = 1;</code>
+       *
+       * <pre>
+       * дата СФ
+       * </pre>
+       */
+      public Builder setInvoiceDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         invoiceDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string InvoiceNumber = 2;
+
       private java.lang.Object invoiceNumber_ = "";
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
       public boolean hasInvoiceNumber() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getInvoiceNumber() {
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
+      public java.lang.String getInvoiceNumber() {
         java.lang.Object ref = invoiceNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceNumber(String value) {
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceNumberBytes() {
+        java.lang.Object ref = invoiceNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
+      public Builder setInvoiceNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8499,34 +14436,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
       public Builder clearInvoiceNumber() {
         bitField0_ = (bitField0_ & ~0x00000002);
         invoiceNumber_ = getDefaultInstance().getInvoiceNumber();
         onChanged();
         return this;
       }
-      void setInvoiceNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string InvoiceNumber = 2;</code>
+       *
+       * <pre>
+       * номер СФ
+       * </pre>
+       */
+      public Builder setInvoiceNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         invoiceNumber_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string InvoiceRevisionDate = 3;
+
       private java.lang.Object invoiceRevisionDate_ = "";
+      /**
+       * <code>optional string InvoiceRevisionDate = 3;</code>
+       *
+       * <pre>
+       * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
       public boolean hasInvoiceRevisionDate() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getInvoiceRevisionDate() {
+      /**
+       * <code>optional string InvoiceRevisionDate = 3;</code>
+       *
+       * <pre>
+       * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
+      public java.lang.String getInvoiceRevisionDate() {
         java.lang.Object ref = invoiceRevisionDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceRevisionDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceRevisionDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceRevisionDate(String value) {
+      /**
+       * <code>optional string InvoiceRevisionDate = 3;</code>
+       *
+       * <pre>
+       * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceRevisionDateBytes() {
+        java.lang.Object ref = invoiceRevisionDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceRevisionDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string InvoiceRevisionDate = 3;</code>
+       *
+       * <pre>
+       * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
+      public Builder setInvoiceRevisionDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8535,34 +14536,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string InvoiceRevisionDate = 3;</code>
+       *
+       * <pre>
+       * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
       public Builder clearInvoiceRevisionDate() {
         bitField0_ = (bitField0_ & ~0x00000004);
         invoiceRevisionDate_ = getDefaultInstance().getInvoiceRevisionDate();
         onChanged();
         return this;
       }
-      void setInvoiceRevisionDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string InvoiceRevisionDate = 3;</code>
+       *
+       * <pre>
+       * дата ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
+      public Builder setInvoiceRevisionDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         invoiceRevisionDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string InvoiceRevisionNumber = 4;
+
       private java.lang.Object invoiceRevisionNumber_ = "";
+      /**
+       * <code>optional string InvoiceRevisionNumber = 4;</code>
+       *
+       * <pre>
+       * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
       public boolean hasInvoiceRevisionNumber() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getInvoiceRevisionNumber() {
+      /**
+       * <code>optional string InvoiceRevisionNumber = 4;</code>
+       *
+       * <pre>
+       * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
+      public java.lang.String getInvoiceRevisionNumber() {
         java.lang.Object ref = invoiceRevisionNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceRevisionNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceRevisionNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceRevisionNumber(String value) {
+      /**
+       * <code>optional string InvoiceRevisionNumber = 4;</code>
+       *
+       * <pre>
+       * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceRevisionNumberBytes() {
+        java.lang.Object ref = invoiceRevisionNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceRevisionNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string InvoiceRevisionNumber = 4;</code>
+       *
+       * <pre>
+       * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
+      public Builder setInvoiceRevisionNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8571,34 +14636,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string InvoiceRevisionNumber = 4;</code>
+       *
+       * <pre>
+       * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
       public Builder clearInvoiceRevisionNumber() {
         bitField0_ = (bitField0_ & ~0x00000008);
         invoiceRevisionNumber_ = getDefaultInstance().getInvoiceRevisionNumber();
         onChanged();
         return this;
       }
-      void setInvoiceRevisionNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string InvoiceRevisionNumber = 4;</code>
+       *
+       * <pre>
+       * номер ИСФ (заполняется, если КСФ/ИКСФ формируется на исправленный СФ)
+       * </pre>
+       */
+      public Builder setInvoiceRevisionNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         invoiceRevisionNumber_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string InvoiceCorrectionDate = 5;
+
       private java.lang.Object invoiceCorrectionDate_ = "";
+      /**
+       * <code>required string InvoiceCorrectionDate = 5;</code>
+       *
+       * <pre>
+       * дата КСФ
+       * </pre>
+       */
       public boolean hasInvoiceCorrectionDate() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      public String getInvoiceCorrectionDate() {
+      /**
+       * <code>required string InvoiceCorrectionDate = 5;</code>
+       *
+       * <pre>
+       * дата КСФ
+       * </pre>
+       */
+      public java.lang.String getInvoiceCorrectionDate() {
         java.lang.Object ref = invoiceCorrectionDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceCorrectionDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceCorrectionDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceCorrectionDate(String value) {
+      /**
+       * <code>required string InvoiceCorrectionDate = 5;</code>
+       *
+       * <pre>
+       * дата КСФ
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceCorrectionDateBytes() {
+        java.lang.Object ref = invoiceCorrectionDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceCorrectionDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string InvoiceCorrectionDate = 5;</code>
+       *
+       * <pre>
+       * дата КСФ
+       * </pre>
+       */
+      public Builder setInvoiceCorrectionDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8607,34 +14736,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string InvoiceCorrectionDate = 5;</code>
+       *
+       * <pre>
+       * дата КСФ
+       * </pre>
+       */
       public Builder clearInvoiceCorrectionDate() {
         bitField0_ = (bitField0_ & ~0x00000010);
         invoiceCorrectionDate_ = getDefaultInstance().getInvoiceCorrectionDate();
         onChanged();
         return this;
       }
-      void setInvoiceCorrectionDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000010;
+      /**
+       * <code>required string InvoiceCorrectionDate = 5;</code>
+       *
+       * <pre>
+       * дата КСФ
+       * </pre>
+       */
+      public Builder setInvoiceCorrectionDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
         invoiceCorrectionDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string InvoiceCorrectionNumber = 6;
+
       private java.lang.Object invoiceCorrectionNumber_ = "";
+      /**
+       * <code>required string InvoiceCorrectionNumber = 6;</code>
+       *
+       * <pre>
+       * номер КСФ
+       * </pre>
+       */
       public boolean hasInvoiceCorrectionNumber() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
-      public String getInvoiceCorrectionNumber() {
+      /**
+       * <code>required string InvoiceCorrectionNumber = 6;</code>
+       *
+       * <pre>
+       * номер КСФ
+       * </pre>
+       */
+      public java.lang.String getInvoiceCorrectionNumber() {
         java.lang.Object ref = invoiceCorrectionNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceCorrectionNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceCorrectionNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceCorrectionNumber(String value) {
+      /**
+       * <code>required string InvoiceCorrectionNumber = 6;</code>
+       *
+       * <pre>
+       * номер КСФ
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceCorrectionNumberBytes() {
+        java.lang.Object ref = invoiceCorrectionNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceCorrectionNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string InvoiceCorrectionNumber = 6;</code>
+       *
+       * <pre>
+       * номер КСФ
+       * </pre>
+       */
+      public Builder setInvoiceCorrectionNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8643,34 +14836,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string InvoiceCorrectionNumber = 6;</code>
+       *
+       * <pre>
+       * номер КСФ
+       * </pre>
+       */
       public Builder clearInvoiceCorrectionNumber() {
         bitField0_ = (bitField0_ & ~0x00000020);
         invoiceCorrectionNumber_ = getDefaultInstance().getInvoiceCorrectionNumber();
         onChanged();
         return this;
       }
-      void setInvoiceCorrectionNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000020;
+      /**
+       * <code>required string InvoiceCorrectionNumber = 6;</code>
+       *
+       * <pre>
+       * номер КСФ
+       * </pre>
+       */
+      public Builder setInvoiceCorrectionNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
         invoiceCorrectionNumber_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string InvoiceCorrectionRevisionDate = 7;
+
       private java.lang.Object invoiceCorrectionRevisionDate_ = "";
+      /**
+       * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+       *
+       * <pre>
+       * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
       public boolean hasInvoiceCorrectionRevisionDate() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
-      public String getInvoiceCorrectionRevisionDate() {
+      /**
+       * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+       *
+       * <pre>
+       * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
+      public java.lang.String getInvoiceCorrectionRevisionDate() {
         java.lang.Object ref = invoiceCorrectionRevisionDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceCorrectionRevisionDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceCorrectionRevisionDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceCorrectionRevisionDate(String value) {
+      /**
+       * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+       *
+       * <pre>
+       * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceCorrectionRevisionDateBytes() {
+        java.lang.Object ref = invoiceCorrectionRevisionDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceCorrectionRevisionDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+       *
+       * <pre>
+       * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
+      public Builder setInvoiceCorrectionRevisionDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8679,34 +14936,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+       *
+       * <pre>
+       * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
       public Builder clearInvoiceCorrectionRevisionDate() {
         bitField0_ = (bitField0_ & ~0x00000040);
         invoiceCorrectionRevisionDate_ = getDefaultInstance().getInvoiceCorrectionRevisionDate();
         onChanged();
         return this;
       }
-      void setInvoiceCorrectionRevisionDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000040;
+      /**
+       * <code>optional string InvoiceCorrectionRevisionDate = 7;</code>
+       *
+       * <pre>
+       * дата ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
+      public Builder setInvoiceCorrectionRevisionDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
         invoiceCorrectionRevisionDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string InvoiceCorrectionRevisionNumber = 8;
+
       private java.lang.Object invoiceCorrectionRevisionNumber_ = "";
+      /**
+       * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+       *
+       * <pre>
+       * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
       public boolean hasInvoiceCorrectionRevisionNumber() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
-      public String getInvoiceCorrectionRevisionNumber() {
+      /**
+       * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+       *
+       * <pre>
+       * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
+      public java.lang.String getInvoiceCorrectionRevisionNumber() {
         java.lang.Object ref = invoiceCorrectionRevisionNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          invoiceCorrectionRevisionNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            invoiceCorrectionRevisionNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInvoiceCorrectionRevisionNumber(String value) {
+      /**
+       * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+       *
+       * <pre>
+       * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceCorrectionRevisionNumberBytes() {
+        java.lang.Object ref = invoiceCorrectionRevisionNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceCorrectionRevisionNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+       *
+       * <pre>
+       * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
+      public Builder setInvoiceCorrectionRevisionNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8715,25 +15036,57 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+       *
+       * <pre>
+       * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
       public Builder clearInvoiceCorrectionRevisionNumber() {
         bitField0_ = (bitField0_ & ~0x00000080);
         invoiceCorrectionRevisionNumber_ = getDefaultInstance().getInvoiceCorrectionRevisionNumber();
         onChanged();
         return this;
       }
-      void setInvoiceCorrectionRevisionNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000080;
+      /**
+       * <code>optional string InvoiceCorrectionRevisionNumber = 8;</code>
+       *
+       * <pre>
+       * номер ИКСФ (обязательно при формировании InvoiceCorrectionRevision)
+       * </pre>
+       */
+      public Builder setInvoiceCorrectionRevisionNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
         invoiceCorrectionRevisionNumber_ = value;
         onChanged();
+        return this;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;
+
       private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo seller_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> sellerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public boolean hasSeller() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getSeller() {
         if (sellerBuilder_ == null) {
           return seller_;
@@ -8741,6 +15094,13 @@ public final class InvoiceInfoProtos {
           return sellerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Builder setSeller(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (sellerBuilder_ == null) {
           if (value == null) {
@@ -8754,6 +15114,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000100;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Builder setSeller(
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder builderForValue) {
         if (sellerBuilder_ == null) {
@@ -8765,6 +15132,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000100;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Builder mergeSeller(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (sellerBuilder_ == null) {
           if (((bitField0_ & 0x00000100) == 0x00000100) &&
@@ -8781,6 +15155,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000100;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Builder clearSeller() {
         if (sellerBuilder_ == null) {
           seller_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
@@ -8791,11 +15172,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder getSellerBuilder() {
         bitField0_ |= 0x00000100;
         onChanged();
         return getSellerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getSellerOrBuilder() {
         if (sellerBuilder_ != null) {
           return sellerBuilder_.getMessageOrBuilder();
@@ -8803,27 +15198,47 @@ public final class InvoiceInfoProtos {
           return seller_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 9;</code>
+       *
+       * <pre>
+       * продавец
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> 
           getSellerFieldBuilder() {
         if (sellerBuilder_ == null) {
           sellerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder>(
-                  seller_,
+                  getSeller(),
                   getParentForChildren(),
                   isClean());
           seller_ = null;
         }
         return sellerBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;
+
       private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo buyer_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> buyerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public boolean hasBuyer() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getBuyer() {
         if (buyerBuilder_ == null) {
           return buyer_;
@@ -8831,6 +15246,13 @@ public final class InvoiceInfoProtos {
           return buyerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Builder setBuyer(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (buyerBuilder_ == null) {
           if (value == null) {
@@ -8844,6 +15266,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000200;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Builder setBuyer(
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder builderForValue) {
         if (buyerBuilder_ == null) {
@@ -8855,6 +15284,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000200;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Builder mergeBuyer(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (buyerBuilder_ == null) {
           if (((bitField0_ & 0x00000200) == 0x00000200) &&
@@ -8871,6 +15307,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000200;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Builder clearBuyer() {
         if (buyerBuilder_ == null) {
           buyer_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
@@ -8881,11 +15324,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder getBuyerBuilder() {
         bitField0_ |= 0x00000200;
         onChanged();
         return getBuyerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getBuyerOrBuilder() {
         if (buyerBuilder_ != null) {
           return buyerBuilder_.getMessageOrBuilder();
@@ -8893,27 +15350,47 @@ public final class InvoiceInfoProtos {
           return buyer_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Buyer = 10;</code>
+       *
+       * <pre>
+       * покупатель
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> 
           getBuyerFieldBuilder() {
         if (buyerBuilder_ == null) {
           buyerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder>(
-                  buyer_,
+                  getBuyer(),
                   getParentForChildren(),
                   isClean());
           buyer_ = null;
         }
         return buyerBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;
+
       private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> signerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public boolean hasSigner() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
         if (signerBuilder_ == null) {
           return signer_;
@@ -8921,6 +15398,13 @@ public final class InvoiceInfoProtos {
           return signerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder setSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (value == null) {
@@ -8934,6 +15418,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000400;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder setSigner(
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder builderForValue) {
         if (signerBuilder_ == null) {
@@ -8945,6 +15436,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000400;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder mergeSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (((bitField0_ & 0x00000400) == 0x00000400) &&
@@ -8961,6 +15459,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000400;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder clearSigner() {
         if (signerBuilder_ == null) {
           signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
@@ -8971,11 +15476,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder getSignerBuilder() {
         bitField0_ |= 0x00000400;
         onChanged();
         return getSignerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
         if (signerBuilder_ != null) {
           return signerBuilder_.getMessageOrBuilder();
@@ -8983,21 +15502,27 @@ public final class InvoiceInfoProtos {
           return signer_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 11;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> 
           getSignerFieldBuilder() {
         if (signerBuilder_ == null) {
           signerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder>(
-                  signer_,
+                  getSigner(),
                   getParentForChildren(),
                   isClean());
           signer_ = null;
         }
         return signerBuilder_;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem> items_ =
         java.util.Collections.emptyList();
       private void ensureItemsIsMutable() {
@@ -9006,10 +15531,17 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00000800;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItemOrBuilder> itemsBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem> getItemsList() {
         if (itemsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(items_);
@@ -9017,6 +15549,13 @@ public final class InvoiceInfoProtos {
           return itemsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public int getItemsCount() {
         if (itemsBuilder_ == null) {
           return items_.size();
@@ -9024,6 +15563,13 @@ public final class InvoiceInfoProtos {
           return itemsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem getItems(int index) {
         if (itemsBuilder_ == null) {
           return items_.get(index);
@@ -9031,6 +15577,13 @@ public final class InvoiceInfoProtos {
           return itemsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder setItems(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem value) {
         if (itemsBuilder_ == null) {
@@ -9045,6 +15598,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder setItems(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
@@ -9056,6 +15616,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addItems(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem value) {
         if (itemsBuilder_ == null) {
           if (value == null) {
@@ -9069,6 +15636,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addItems(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem value) {
         if (itemsBuilder_ == null) {
@@ -9083,6 +15657,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addItems(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
@@ -9094,6 +15675,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addItems(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
@@ -9105,17 +15693,32 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder addAllItems(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem> values) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
-          super.addAll(values, items_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, items_);
           onChanged();
         } else {
           itemsBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder clearItems() {
         if (itemsBuilder_ == null) {
           items_ = java.util.Collections.emptyList();
@@ -9126,6 +15729,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Builder removeItems(int index) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
@@ -9136,10 +15746,24 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder getItemsBuilder(
           int index) {
         return getItemsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItemOrBuilder getItemsOrBuilder(
           int index) {
         if (itemsBuilder_ == null) {
@@ -9147,6 +15771,13 @@ public final class InvoiceInfoProtos {
           return itemsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItemOrBuilder> 
            getItemsOrBuilderList() {
         if (itemsBuilder_ != null) {
@@ -9155,15 +15786,36 @@ public final class InvoiceInfoProtos {
           return java.util.Collections.unmodifiableList(items_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder addItemsBuilder() {
         return getItemsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder addItemsBuilder(
           int index) {
         return getItemsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem Items = 12;</code>
+       *
+       * <pre>
+       * информация о товарах
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder> 
            getItemsBuilderList() {
         return getItemsFieldBuilder().getBuilderList();
@@ -9182,23 +15834,68 @@ public final class InvoiceInfoProtos {
         }
         return itemsBuilder_;
       }
-      
-      // optional string Currency = 13;
+
       private java.lang.Object currency_ = "";
+      /**
+       * <code>optional string Currency = 13;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
       public boolean hasCurrency() {
         return ((bitField0_ & 0x00001000) == 0x00001000);
       }
-      public String getCurrency() {
+      /**
+       * <code>optional string Currency = 13;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
+      public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          currency_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setCurrency(String value) {
+      /**
+       * <code>optional string Currency = 13;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCurrencyBytes() {
+        java.lang.Object ref = currency_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          currency_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Currency = 13;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
+      public Builder setCurrency(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -9207,25 +15904,57 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Currency = 13;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
       public Builder clearCurrency() {
         bitField0_ = (bitField0_ & ~0x00001000);
         currency_ = getDefaultInstance().getCurrency();
         onChanged();
         return this;
       }
-      void setCurrency(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00001000;
+      /**
+       * <code>optional string Currency = 13;</code>
+       *
+       * <pre>
+       * валюта (код)
+       * </pre>
+       */
+      public Builder setCurrencyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
         currency_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff totalsInc_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder> totalsIncBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public boolean hasTotalsInc() {
         return ((bitField0_ & 0x00002000) == 0x00002000);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff getTotalsInc() {
         if (totalsIncBuilder_ == null) {
           return totalsInc_;
@@ -9233,6 +15962,13 @@ public final class InvoiceInfoProtos {
           return totalsIncBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Builder setTotalsInc(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff value) {
         if (totalsIncBuilder_ == null) {
           if (value == null) {
@@ -9246,6 +15982,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00002000;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Builder setTotalsInc(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder builderForValue) {
         if (totalsIncBuilder_ == null) {
@@ -9257,6 +16000,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00002000;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Builder mergeTotalsInc(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff value) {
         if (totalsIncBuilder_ == null) {
           if (((bitField0_ & 0x00002000) == 0x00002000) &&
@@ -9273,6 +16023,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00002000;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Builder clearTotalsInc() {
         if (totalsIncBuilder_ == null) {
           totalsInc_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.getDefaultInstance();
@@ -9283,11 +16040,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00002000);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder getTotalsIncBuilder() {
         bitField0_ |= 0x00002000;
         onChanged();
         return getTotalsIncFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder getTotalsIncOrBuilder() {
         if (totalsIncBuilder_ != null) {
           return totalsIncBuilder_.getMessageOrBuilder();
@@ -9295,27 +16066,47 @@ public final class InvoiceInfoProtos {
           return totalsInc_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsInc = 14;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder> 
           getTotalsIncFieldBuilder() {
         if (totalsIncBuilder_ == null) {
           totalsIncBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder>(
-                  totalsInc_,
+                  getTotalsInc(),
                   getParentForChildren(),
                   isClean());
           totalsInc_ = null;
         }
         return totalsIncBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff totalsDec_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder> totalsDecBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public boolean hasTotalsDec() {
         return ((bitField0_ & 0x00004000) == 0x00004000);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff getTotalsDec() {
         if (totalsDecBuilder_ == null) {
           return totalsDec_;
@@ -9323,6 +16114,13 @@ public final class InvoiceInfoProtos {
           return totalsDecBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Builder setTotalsDec(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff value) {
         if (totalsDecBuilder_ == null) {
           if (value == null) {
@@ -9336,6 +16134,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00004000;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Builder setTotalsDec(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder builderForValue) {
         if (totalsDecBuilder_ == null) {
@@ -9347,6 +16152,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00004000;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Builder mergeTotalsDec(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff value) {
         if (totalsDecBuilder_ == null) {
           if (((bitField0_ & 0x00004000) == 0x00004000) &&
@@ -9363,6 +16175,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00004000;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Builder clearTotalsDec() {
         if (totalsDecBuilder_ == null) {
           totalsDec_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.getDefaultInstance();
@@ -9373,11 +16192,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder getTotalsDecBuilder() {
         bitField0_ |= 0x00004000;
         onChanged();
         return getTotalsDecFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder getTotalsDecOrBuilder() {
         if (totalsDecBuilder_ != null) {
           return totalsDecBuilder_.getMessageOrBuilder();
@@ -9385,36 +16218,88 @@ public final class InvoiceInfoProtos {
           return totalsDec_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff TotalsDec = 15;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder> 
           getTotalsDecFieldBuilder() {
         if (totalsDecBuilder_ == null) {
           totalsDecBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder>(
-                  totalsDec_,
+                  getTotalsDec(),
                   getParentForChildren(),
                   isClean());
           totalsDec_ = null;
         }
         return totalsDecBuilder_;
       }
-      
-      // optional string AdditionalInfo = 16;
+
       private java.lang.Object additionalInfo_ = "";
+      /**
+       * <code>optional string AdditionalInfo = 16;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
       public boolean hasAdditionalInfo() {
         return ((bitField0_ & 0x00008000) == 0x00008000);
       }
-      public String getAdditionalInfo() {
+      /**
+       * <code>optional string AdditionalInfo = 16;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
+      public java.lang.String getAdditionalInfo() {
         java.lang.Object ref = additionalInfo_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          additionalInfo_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            additionalInfo_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAdditionalInfo(String value) {
+      /**
+       * <code>optional string AdditionalInfo = 16;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAdditionalInfoBytes() {
+        java.lang.Object ref = additionalInfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          additionalInfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AdditionalInfo = 16;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
+      public Builder setAdditionalInfo(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -9423,19 +16308,37 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string AdditionalInfo = 16;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
       public Builder clearAdditionalInfo() {
         bitField0_ = (bitField0_ & ~0x00008000);
         additionalInfo_ = getDefaultInstance().getAdditionalInfo();
         onChanged();
         return this;
       }
-      void setAdditionalInfo(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00008000;
+      /**
+       * <code>optional string AdditionalInfo = 16;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.01
+       * </pre>
+       */
+      public Builder setAdditionalInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00008000;
         additionalInfo_ = value;
         onChanged();
+        return this;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> additionalInfos_ =
         java.util.Collections.emptyList();
       private void ensureAdditionalInfosIsMutable() {
@@ -9444,10 +16347,17 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00010000;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> additionalInfosBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> getAdditionalInfosList() {
         if (additionalInfosBuilder_ == null) {
           return java.util.Collections.unmodifiableList(additionalInfos_);
@@ -9455,6 +16365,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public int getAdditionalInfosCount() {
         if (additionalInfosBuilder_ == null) {
           return additionalInfos_.size();
@@ -9462,6 +16379,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index) {
         if (additionalInfosBuilder_ == null) {
           return additionalInfos_.get(index);
@@ -9469,6 +16393,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder setAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
@@ -9483,6 +16414,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder setAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -9494,6 +16432,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
           if (value == null) {
@@ -9507,6 +16452,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
@@ -9521,6 +16473,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -9532,6 +16491,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -9543,17 +16509,32 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAllAdditionalInfos(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> values) {
         if (additionalInfosBuilder_ == null) {
           ensureAdditionalInfosIsMutable();
-          super.addAll(values, additionalInfos_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, additionalInfos_);
           onChanged();
         } else {
           additionalInfosBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder clearAdditionalInfos() {
         if (additionalInfosBuilder_ == null) {
           additionalInfos_ = java.util.Collections.emptyList();
@@ -9564,6 +16545,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder removeAdditionalInfos(int index) {
         if (additionalInfosBuilder_ == null) {
           ensureAdditionalInfosIsMutable();
@@ -9574,10 +16562,24 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder getAdditionalInfosBuilder(
           int index) {
         return getAdditionalInfosFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
           int index) {
         if (additionalInfosBuilder_ == null) {
@@ -9585,6 +16587,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
            getAdditionalInfosOrBuilderList() {
         if (additionalInfosBuilder_ != null) {
@@ -9593,15 +16602,36 @@ public final class InvoiceInfoProtos {
           return java.util.Collections.unmodifiableList(additionalInfos_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder addAdditionalInfosBuilder() {
         return getAdditionalInfosFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder addAdditionalInfosBuilder(
           int index) {
         return getAdditionalInfosFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 17;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder> 
            getAdditionalInfosBuilderList() {
         return getAdditionalInfosFieldBuilder().getBuilderList();
@@ -9620,15 +16650,35 @@ public final class InvoiceInfoProtos {
         }
         return additionalInfosBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion version_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion.DefaultInvoiceFormatVersion;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+       *
+       * <pre>
+       * версия формата ФУФа (для тестирования систем в переходном периоде)
+       * </pre>
+       */
       public boolean hasVersion() {
         return ((bitField0_ & 0x00020000) == 0x00020000);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+       *
+       * <pre>
+       * версия формата ФУФа (для тестирования систем в переходном периоде)
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion getVersion() {
         return version_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+       *
+       * <pre>
+       * версия формата ФУФа (для тестирования систем в переходном периоде)
+       * </pre>
+       */
       public Builder setVersion(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion value) {
         if (value == null) {
           throw new NullPointerException();
@@ -9638,164 +16688,385 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceFormatVersion Version = 18 [default = DefaultInvoiceFormatVersion];</code>
+       *
+       * <pre>
+       * версия формата ФУФа (для тестирования систем в переходном периоде)
+       * </pre>
+       */
       public Builder clearVersion() {
         bitField0_ = (bitField0_ & ~0x00020000);
         version_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceFormatVersion.DefaultInvoiceFormatVersion;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionInfo)
     }
-    
+
     static {
       defaultInstance = new InvoiceCorrectionInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionInfo)
   }
-  
-  public interface InvoiceTotalsDiffOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string TotalWithVatExcluded = 1;
+
+  public interface InvoiceTotalsDiffOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string TotalWithVatExcluded = 1;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     boolean hasTotalWithVatExcluded();
-    String getTotalWithVatExcluded();
-    
-    // optional string Vat = 2;
+    /**
+     * <code>optional string TotalWithVatExcluded = 1;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    java.lang.String getTotalWithVatExcluded();
+    /**
+     * <code>optional string TotalWithVatExcluded = 1;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTotalWithVatExcludedBytes();
+
+    /**
+     * <code>optional string Vat = 2;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     boolean hasVat();
-    String getVat();
-    
-    // required string Total = 3;
+    /**
+     * <code>optional string Vat = 2;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 2;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>required string Total = 3;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
     boolean hasTotal();
-    String getTotal();
+    /**
+     * <code>required string Total = 3;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    java.lang.String getTotal();
+    /**
+     * <code>required string Total = 3;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTotalBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff}
+   */
   public static final class InvoiceTotalsDiff extends
-      com.google.protobuf.GeneratedMessage
-      implements InvoiceTotalsDiffOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff)
+      InvoiceTotalsDiffOrBuilder {
     // Use InvoiceTotalsDiff.newBuilder() to construct.
-    private InvoiceTotalsDiff(Builder builder) {
+    private InvoiceTotalsDiff(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InvoiceTotalsDiff(boolean noInit) {}
-    
+    private InvoiceTotalsDiff(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InvoiceTotalsDiff defaultInstance;
     public static InvoiceTotalsDiff getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InvoiceTotalsDiff getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InvoiceTotalsDiff(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              totalWithVatExcluded_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              vat_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              total_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InvoiceTotalsDiff> PARSER =
+        new com.google.protobuf.AbstractParser<InvoiceTotalsDiff>() {
+      public InvoiceTotalsDiff parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InvoiceTotalsDiff(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InvoiceTotalsDiff> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string TotalWithVatExcluded = 1;
     public static final int TOTALWITHVATEXCLUDED_FIELD_NUMBER = 1;
     private java.lang.Object totalWithVatExcluded_;
+    /**
+     * <code>optional string TotalWithVatExcluded = 1;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     public boolean hasTotalWithVatExcluded() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getTotalWithVatExcluded() {
+    /**
+     * <code>optional string TotalWithVatExcluded = 1;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public java.lang.String getTotalWithVatExcluded() {
       java.lang.Object ref = totalWithVatExcluded_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           totalWithVatExcluded_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTotalWithVatExcludedBytes() {
+    /**
+     * <code>optional string TotalWithVatExcluded = 1;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTotalWithVatExcludedBytes() {
       java.lang.Object ref = totalWithVatExcluded_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         totalWithVatExcluded_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Vat = 2;
+
     public static final int VAT_FIELD_NUMBER = 2;
     private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 2;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     public boolean hasVat() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getVat() {
+    /**
+     * <code>optional string Vat = 2;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public java.lang.String getVat() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           vat_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getVatBytes() {
+    /**
+     * <code>optional string Vat = 2;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         vat_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Total = 3;
+
     public static final int TOTAL_FIELD_NUMBER = 3;
     private java.lang.Object total_;
+    /**
+     * <code>required string Total = 3;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
     public boolean hasTotal() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getTotal() {
+    /**
+     * <code>required string Total = 3;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    public java.lang.String getTotal() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           total_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTotalBytes() {
+    /**
+     * <code>required string Total = 3;</code>
+     *
+     * <pre>
+     * сумма всего
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTotalBytes() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         total_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       totalWithVatExcluded_ = "";
       vat_ = "";
@@ -9804,8 +17075,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasTotal()) {
         memoizedIsInitialized = 0;
         return false;
@@ -9813,7 +17085,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -9828,12 +17100,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -9851,113 +17123,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiffOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -9968,7 +17233,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         totalWithVatExcluded_ = "";
@@ -9979,20 +17244,20 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff result = buildPartial();
         if (!result.isInitialized()) {
@@ -10000,17 +17265,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff(this);
         int from_bitField0_ = bitField0_;
@@ -10031,7 +17286,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff)other);
@@ -10040,22 +17295,28 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.getDefaultInstance()) return this;
         if (other.hasTotalWithVatExcluded()) {
-          setTotalWithVatExcluded(other.getTotalWithVatExcluded());
+          bitField0_ |= 0x00000001;
+          totalWithVatExcluded_ = other.totalWithVatExcluded_;
+          onChanged();
         }
         if (other.hasVat()) {
-          setVat(other.getVat());
+          bitField0_ |= 0x00000002;
+          vat_ = other.vat_;
+          onChanged();
         }
         if (other.hasTotal()) {
-          setTotal(other.getTotal());
+          bitField0_ |= 0x00000004;
+          total_ = other.total_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasTotal()) {
           
@@ -10063,67 +17324,87 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              totalWithVatExcluded_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              vat_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              total_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string TotalWithVatExcluded = 1;
+
       private java.lang.Object totalWithVatExcluded_ = "";
+      /**
+       * <code>optional string TotalWithVatExcluded = 1;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public boolean hasTotalWithVatExcluded() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getTotalWithVatExcluded() {
+      /**
+       * <code>optional string TotalWithVatExcluded = 1;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public java.lang.String getTotalWithVatExcluded() {
         java.lang.Object ref = totalWithVatExcluded_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          totalWithVatExcluded_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            totalWithVatExcluded_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTotalWithVatExcluded(String value) {
+      /**
+       * <code>optional string TotalWithVatExcluded = 1;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTotalWithVatExcludedBytes() {
+        java.lang.Object ref = totalWithVatExcluded_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalWithVatExcluded_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string TotalWithVatExcluded = 1;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setTotalWithVatExcluded(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -10132,34 +17413,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string TotalWithVatExcluded = 1;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public Builder clearTotalWithVatExcluded() {
         bitField0_ = (bitField0_ & ~0x00000001);
         totalWithVatExcluded_ = getDefaultInstance().getTotalWithVatExcluded();
         onChanged();
         return this;
       }
-      void setTotalWithVatExcluded(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string TotalWithVatExcluded = 1;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setTotalWithVatExcludedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         totalWithVatExcluded_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Vat = 2;
+
       private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 2;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public boolean hasVat() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getVat() {
+      /**
+       * <code>optional string Vat = 2;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public java.lang.String getVat() {
         java.lang.Object ref = vat_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          vat_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setVat(String value) {
+      /**
+       * <code>optional string Vat = 2;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 2;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVat(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -10168,34 +17513,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Vat = 2;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public Builder clearVat() {
         bitField0_ = (bitField0_ & ~0x00000002);
         vat_ = getDefaultInstance().getVat();
         onChanged();
         return this;
       }
-      void setVat(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string Vat = 2;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         vat_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Total = 3;
+
       private java.lang.Object total_ = "";
+      /**
+       * <code>required string Total = 3;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
       public boolean hasTotal() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getTotal() {
+      /**
+       * <code>required string Total = 3;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public java.lang.String getTotal() {
         java.lang.Object ref = total_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          total_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            total_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTotal(String value) {
+      /**
+       * <code>required string Total = 3;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTotalBytes() {
+        java.lang.Object ref = total_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          total_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Total = 3;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public Builder setTotal(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -10204,236 +17613,710 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Total = 3;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
       public Builder clearTotal() {
         bitField0_ = (bitField0_ & ~0x00000004);
         total_ = getDefaultInstance().getTotal();
         onChanged();
         return this;
       }
-      void setTotal(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>required string Total = 3;</code>
+       *
+       * <pre>
+       * сумма всего
+       * </pre>
+       */
+      public Builder setTotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         total_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff)
     }
-    
+
     static {
       defaultInstance = new InvoiceTotalsDiff(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.InvoiceTotalsDiff)
   }
-  
-  public interface InvoiceCorrectionItemOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string Product = 1;
+
+  public interface InvoiceCorrectionItemOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
     boolean hasProduct();
-    String getProduct();
-    
-    // required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
+    java.lang.String getProduct();
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getProductBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+     *
+     * <pre>
+     * значения до изменения
+     * </pre>
+     */
     boolean hasOriginalValues();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+     *
+     * <pre>
+     * значения до изменения
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields getOriginalValues();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+     *
+     * <pre>
+     * значения до изменения
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder getOriginalValuesOrBuilder();
-    
-    // required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+     *
+     * <pre>
+     * значения после изменения
+     * </pre>
+     */
     boolean hasCorrectedValues();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+     *
+     * <pre>
+     * значения после изменения
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields getCorrectedValues();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+     *
+     * <pre>
+     * значения после изменения
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder getCorrectedValuesOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     boolean hasAmountsInc();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff getAmountsInc();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder getAmountsIncOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     boolean hasAmountsDec();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff getAmountsDec();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder getAmountsDecOrBuilder();
-    
-    // optional string AdditionalInfo = 6;
+
+    /**
+     * <code>optional string AdditionalInfo = 6;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01
+     * </pre>
+     */
     boolean hasAdditionalInfo();
-    String getAdditionalInfo();
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;
+    /**
+     * <code>optional string AdditionalInfo = 6;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01
+     * </pre>
+     */
+    java.lang.String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 6;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAdditionalInfoBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> 
         getAdditionalInfosList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     int getAdditionalInfosCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
         getAdditionalInfosOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem}
+   */
   public static final class InvoiceCorrectionItem extends
-      com.google.protobuf.GeneratedMessage
-      implements InvoiceCorrectionItemOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem)
+      InvoiceCorrectionItemOrBuilder {
     // Use InvoiceCorrectionItem.newBuilder() to construct.
-    private InvoiceCorrectionItem(Builder builder) {
+    private InvoiceCorrectionItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InvoiceCorrectionItem(boolean noInit) {}
-    
+    private InvoiceCorrectionItem(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InvoiceCorrectionItem defaultInstance;
     public static InvoiceCorrectionItem getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InvoiceCorrectionItem getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InvoiceCorrectionItem(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              product_ = bs;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = originalValues_.toBuilder();
+              }
+              originalValues_ = input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(originalValues_);
+                originalValues_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = correctedValues_.toBuilder();
+              }
+              correctedValues_ = input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(correctedValues_);
+                correctedValues_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = amountsInc_.toBuilder();
+              }
+              amountsInc_ = input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(amountsInc_);
+                amountsInc_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = amountsDec_.toBuilder();
+              }
+              amountsDec_ = input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(amountsDec_);
+                amountsDec_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              additionalInfo_ = bs;
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                additionalInfos_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              additionalInfos_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          additionalInfos_ = java.util.Collections.unmodifiableList(additionalInfos_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InvoiceCorrectionItem> PARSER =
+        new com.google.protobuf.AbstractParser<InvoiceCorrectionItem>() {
+      public InvoiceCorrectionItem parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InvoiceCorrectionItem(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InvoiceCorrectionItem> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string Product = 1;
     public static final int PRODUCT_FIELD_NUMBER = 1;
     private java.lang.Object product_;
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
     public boolean hasProduct() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getProduct() {
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
+    public java.lang.String getProduct() {
       java.lang.Object ref = product_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           product_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getProductBytes() {
+    /**
+     * <code>required string Product = 1;</code>
+     *
+     * <pre>
+     * наименование товара
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getProductBytes() {
       java.lang.Object ref = product_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         product_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;
+
     public static final int ORIGINALVALUES_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields originalValues_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+     *
+     * <pre>
+     * значения до изменения
+     * </pre>
+     */
     public boolean hasOriginalValues() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+     *
+     * <pre>
+     * значения до изменения
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields getOriginalValues() {
       return originalValues_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+     *
+     * <pre>
+     * значения до изменения
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder getOriginalValuesOrBuilder() {
       return originalValues_;
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;
+
     public static final int CORRECTEDVALUES_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields correctedValues_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+     *
+     * <pre>
+     * значения после изменения
+     * </pre>
+     */
     public boolean hasCorrectedValues() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+     *
+     * <pre>
+     * значения после изменения
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields getCorrectedValues() {
       return correctedValues_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+     *
+     * <pre>
+     * значения после изменения
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder getCorrectedValuesOrBuilder() {
       return correctedValues_;
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;
+
     public static final int AMOUNTSINC_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff amountsInc_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     public boolean hasAmountsInc() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff getAmountsInc() {
       return amountsInc_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+     *
+     * <pre>
+     * суммы к увеличению
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder getAmountsIncOrBuilder() {
       return amountsInc_;
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;
+
     public static final int AMOUNTSDEC_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff amountsDec_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     public boolean hasAmountsDec() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff getAmountsDec() {
       return amountsDec_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+     *
+     * <pre>
+     * суммы к уменьшению
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder getAmountsDecOrBuilder() {
       return amountsDec_;
     }
-    
-    // optional string AdditionalInfo = 6;
+
     public static final int ADDITIONALINFO_FIELD_NUMBER = 6;
     private java.lang.Object additionalInfo_;
+    /**
+     * <code>optional string AdditionalInfo = 6;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01
+     * </pre>
+     */
     public boolean hasAdditionalInfo() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
-    public String getAdditionalInfo() {
+    /**
+     * <code>optional string AdditionalInfo = 6;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01
+     * </pre>
+     */
+    public java.lang.String getAdditionalInfo() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           additionalInfo_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAdditionalInfoBytes() {
+    /**
+     * <code>optional string AdditionalInfo = 6;</code>
+     *
+     * <pre>
+     * информационное поле товара v5.01
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAdditionalInfoBytes() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         additionalInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;
+
     public static final int ADDITIONALINFOS_FIELD_NUMBER = 7;
     private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> additionalInfos_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> getAdditionalInfosList() {
       return additionalInfos_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
         getAdditionalInfosOrBuilderList() {
       return additionalInfos_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public int getAdditionalInfosCount() {
       return additionalInfos_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index) {
       return additionalInfos_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+     *
+     * <pre>
+     * информационное поле документа v5.02
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
         int index) {
       return additionalInfos_.get(index);
     }
-    
+
     private void initFields() {
       product_ = "";
       originalValues_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.getDefaultInstance();
@@ -10446,8 +18329,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasProduct()) {
         memoizedIsInitialized = 0;
         return false;
@@ -10489,7 +18373,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -10516,12 +18400,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -10555,113 +18439,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItemOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItemOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -10677,7 +18554,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         product_ = "";
@@ -10716,20 +18593,20 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem result = buildPartial();
         if (!result.isInitialized()) {
@@ -10737,17 +18614,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem(this);
         int from_bitField0_ = bitField0_;
@@ -10805,7 +18672,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem)other);
@@ -10814,11 +18681,13 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.getDefaultInstance()) return this;
         if (other.hasProduct()) {
-          setProduct(other.getProduct());
+          bitField0_ |= 0x00000001;
+          product_ = other.product_;
+          onChanged();
         }
         if (other.hasOriginalValues()) {
           mergeOriginalValues(other.getOriginalValues());
@@ -10833,7 +18702,9 @@ public final class InvoiceInfoProtos {
           mergeAmountsDec(other.getAmountsDec());
         }
         if (other.hasAdditionalInfo()) {
-          setAdditionalInfo(other.getAdditionalInfo());
+          bitField0_ |= 0x00000020;
+          additionalInfo_ = other.additionalInfo_;
+          onChanged();
         }
         if (additionalInfosBuilder_ == null) {
           if (!other.additionalInfos_.isEmpty()) {
@@ -10864,7 +18735,7 @@ public final class InvoiceInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasProduct()) {
           
@@ -10906,104 +18777,87 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              product_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.newBuilder();
-              if (hasOriginalValues()) {
-                subBuilder.mergeFrom(getOriginalValues());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setOriginalValues(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.newBuilder();
-              if (hasCorrectedValues()) {
-                subBuilder.mergeFrom(getCorrectedValues());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCorrectedValues(subBuilder.buildPartial());
-              break;
-            }
-            case 34: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.newBuilder();
-              if (hasAmountsInc()) {
-                subBuilder.mergeFrom(getAmountsInc());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setAmountsInc(subBuilder.buildPartial());
-              break;
-            }
-            case 42: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.newBuilder();
-              if (hasAmountsDec()) {
-                subBuilder.mergeFrom(getAmountsDec());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setAmountsDec(subBuilder.buildPartial());
-              break;
-            }
-            case 50: {
-              bitField0_ |= 0x00000020;
-              additionalInfo_ = input.readBytes();
-              break;
-            }
-            case 58: {
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addAdditionalInfos(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string Product = 1;
+
       private java.lang.Object product_ = "";
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
       public boolean hasProduct() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getProduct() {
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
+      public java.lang.String getProduct() {
         java.lang.Object ref = product_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          product_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            product_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setProduct(String value) {
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getProductBytes() {
+        java.lang.Object ref = product_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          product_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
+      public Builder setProduct(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -11012,25 +18866,57 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
       public Builder clearProduct() {
         bitField0_ = (bitField0_ & ~0x00000001);
         product_ = getDefaultInstance().getProduct();
         onChanged();
         return this;
       }
-      void setProduct(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string Product = 1;</code>
+       *
+       * <pre>
+       * наименование товара
+       * </pre>
+       */
+      public Builder setProductBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         product_ = value;
         onChanged();
+        return this;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields originalValues_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder> originalValuesBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+       *
+       * <pre>
+       * значения до изменения
+       * </pre>
+       */
       public boolean hasOriginalValues() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+       *
+       * <pre>
+       * значения до изменения
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields getOriginalValues() {
         if (originalValuesBuilder_ == null) {
           return originalValues_;
@@ -11038,6 +18924,13 @@ public final class InvoiceInfoProtos {
           return originalValuesBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+       *
+       * <pre>
+       * значения до изменения
+       * </pre>
+       */
       public Builder setOriginalValues(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields value) {
         if (originalValuesBuilder_ == null) {
           if (value == null) {
@@ -11051,6 +18944,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+       *
+       * <pre>
+       * значения до изменения
+       * </pre>
+       */
       public Builder setOriginalValues(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder builderForValue) {
         if (originalValuesBuilder_ == null) {
@@ -11062,6 +18962,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+       *
+       * <pre>
+       * значения до изменения
+       * </pre>
+       */
       public Builder mergeOriginalValues(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields value) {
         if (originalValuesBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -11078,6 +18985,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+       *
+       * <pre>
+       * значения до изменения
+       * </pre>
+       */
       public Builder clearOriginalValues() {
         if (originalValuesBuilder_ == null) {
           originalValues_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.getDefaultInstance();
@@ -11088,11 +19002,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+       *
+       * <pre>
+       * значения до изменения
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder getOriginalValuesBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getOriginalValuesFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+       *
+       * <pre>
+       * значения до изменения
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder getOriginalValuesOrBuilder() {
         if (originalValuesBuilder_ != null) {
           return originalValuesBuilder_.getMessageOrBuilder();
@@ -11100,27 +19028,47 @@ public final class InvoiceInfoProtos {
           return originalValues_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields OriginalValues = 2;</code>
+       *
+       * <pre>
+       * значения до изменения
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder> 
           getOriginalValuesFieldBuilder() {
         if (originalValuesBuilder_ == null) {
           originalValuesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder>(
-                  originalValues_,
+                  getOriginalValues(),
                   getParentForChildren(),
                   isClean());
           originalValues_ = null;
         }
         return originalValuesBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields correctedValues_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder> correctedValuesBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+       *
+       * <pre>
+       * значения после изменения
+       * </pre>
+       */
       public boolean hasCorrectedValues() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+       *
+       * <pre>
+       * значения после изменения
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields getCorrectedValues() {
         if (correctedValuesBuilder_ == null) {
           return correctedValues_;
@@ -11128,6 +19076,13 @@ public final class InvoiceInfoProtos {
           return correctedValuesBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+       *
+       * <pre>
+       * значения после изменения
+       * </pre>
+       */
       public Builder setCorrectedValues(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields value) {
         if (correctedValuesBuilder_ == null) {
           if (value == null) {
@@ -11141,6 +19096,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+       *
+       * <pre>
+       * значения после изменения
+       * </pre>
+       */
       public Builder setCorrectedValues(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder builderForValue) {
         if (correctedValuesBuilder_ == null) {
@@ -11152,6 +19114,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+       *
+       * <pre>
+       * значения после изменения
+       * </pre>
+       */
       public Builder mergeCorrectedValues(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields value) {
         if (correctedValuesBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -11168,6 +19137,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+       *
+       * <pre>
+       * значения после изменения
+       * </pre>
+       */
       public Builder clearCorrectedValues() {
         if (correctedValuesBuilder_ == null) {
           correctedValues_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.getDefaultInstance();
@@ -11178,11 +19154,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+       *
+       * <pre>
+       * значения после изменения
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder getCorrectedValuesBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getCorrectedValuesFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+       *
+       * <pre>
+       * значения после изменения
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder getCorrectedValuesOrBuilder() {
         if (correctedValuesBuilder_ != null) {
           return correctedValuesBuilder_.getMessageOrBuilder();
@@ -11190,27 +19180,47 @@ public final class InvoiceInfoProtos {
           return correctedValues_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields CorrectedValues = 3;</code>
+       *
+       * <pre>
+       * значения после изменения
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder> 
           getCorrectedValuesFieldBuilder() {
         if (correctedValuesBuilder_ == null) {
           correctedValuesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder>(
-                  correctedValues_,
+                  getCorrectedValues(),
                   getParentForChildren(),
                   isClean());
           correctedValues_ = null;
         }
         return correctedValuesBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff amountsInc_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder> amountsIncBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public boolean hasAmountsInc() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff getAmountsInc() {
         if (amountsIncBuilder_ == null) {
           return amountsInc_;
@@ -11218,6 +19228,13 @@ public final class InvoiceInfoProtos {
           return amountsIncBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Builder setAmountsInc(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff value) {
         if (amountsIncBuilder_ == null) {
           if (value == null) {
@@ -11231,6 +19248,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Builder setAmountsInc(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder builderForValue) {
         if (amountsIncBuilder_ == null) {
@@ -11242,6 +19266,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Builder mergeAmountsInc(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff value) {
         if (amountsIncBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
@@ -11258,6 +19289,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Builder clearAmountsInc() {
         if (amountsIncBuilder_ == null) {
           amountsInc_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.getDefaultInstance();
@@ -11268,11 +19306,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder getAmountsIncBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getAmountsIncFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder getAmountsIncOrBuilder() {
         if (amountsIncBuilder_ != null) {
           return amountsIncBuilder_.getMessageOrBuilder();
@@ -11280,27 +19332,47 @@ public final class InvoiceInfoProtos {
           return amountsInc_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsInc = 4;</code>
+       *
+       * <pre>
+       * суммы к увеличению
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder> 
           getAmountsIncFieldBuilder() {
         if (amountsIncBuilder_ == null) {
           amountsIncBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder>(
-                  amountsInc_,
+                  getAmountsInc(),
                   getParentForChildren(),
                   isClean());
           amountsInc_ = null;
         }
         return amountsIncBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff amountsDec_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder> amountsDecBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public boolean hasAmountsDec() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff getAmountsDec() {
         if (amountsDecBuilder_ == null) {
           return amountsDec_;
@@ -11308,6 +19380,13 @@ public final class InvoiceInfoProtos {
           return amountsDecBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Builder setAmountsDec(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff value) {
         if (amountsDecBuilder_ == null) {
           if (value == null) {
@@ -11321,6 +19400,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Builder setAmountsDec(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder builderForValue) {
         if (amountsDecBuilder_ == null) {
@@ -11332,6 +19418,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Builder mergeAmountsDec(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff value) {
         if (amountsDecBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010) &&
@@ -11348,6 +19441,13 @@ public final class InvoiceInfoProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Builder clearAmountsDec() {
         if (amountsDecBuilder_ == null) {
           amountsDec_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.getDefaultInstance();
@@ -11358,11 +19458,25 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder getAmountsDecBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
         return getAmountsDecFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder getAmountsDecOrBuilder() {
         if (amountsDecBuilder_ != null) {
           return amountsDecBuilder_.getMessageOrBuilder();
@@ -11370,36 +19484,88 @@ public final class InvoiceInfoProtos {
           return amountsDec_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff AmountsDec = 5;</code>
+       *
+       * <pre>
+       * суммы к уменьшению
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder> 
           getAmountsDecFieldBuilder() {
         if (amountsDecBuilder_ == null) {
           amountsDecBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder>(
-                  amountsDec_,
+                  getAmountsDec(),
                   getParentForChildren(),
                   isClean());
           amountsDec_ = null;
         }
         return amountsDecBuilder_;
       }
-      
-      // optional string AdditionalInfo = 6;
+
       private java.lang.Object additionalInfo_ = "";
+      /**
+       * <code>optional string AdditionalInfo = 6;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01
+       * </pre>
+       */
       public boolean hasAdditionalInfo() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
-      public String getAdditionalInfo() {
+      /**
+       * <code>optional string AdditionalInfo = 6;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01
+       * </pre>
+       */
+      public java.lang.String getAdditionalInfo() {
         java.lang.Object ref = additionalInfo_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          additionalInfo_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            additionalInfo_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAdditionalInfo(String value) {
+      /**
+       * <code>optional string AdditionalInfo = 6;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAdditionalInfoBytes() {
+        java.lang.Object ref = additionalInfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          additionalInfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AdditionalInfo = 6;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01
+       * </pre>
+       */
+      public Builder setAdditionalInfo(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -11408,19 +19574,37 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string AdditionalInfo = 6;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01
+       * </pre>
+       */
       public Builder clearAdditionalInfo() {
         bitField0_ = (bitField0_ & ~0x00000020);
         additionalInfo_ = getDefaultInstance().getAdditionalInfo();
         onChanged();
         return this;
       }
-      void setAdditionalInfo(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000020;
+      /**
+       * <code>optional string AdditionalInfo = 6;</code>
+       *
+       * <pre>
+       * информационное поле товара v5.01
+       * </pre>
+       */
+      public Builder setAdditionalInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
         additionalInfo_ = value;
         onChanged();
+        return this;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> additionalInfos_ =
         java.util.Collections.emptyList();
       private void ensureAdditionalInfosIsMutable() {
@@ -11429,10 +19613,17 @@ public final class InvoiceInfoProtos {
           bitField0_ |= 0x00000040;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> additionalInfosBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> getAdditionalInfosList() {
         if (additionalInfosBuilder_ == null) {
           return java.util.Collections.unmodifiableList(additionalInfos_);
@@ -11440,6 +19631,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public int getAdditionalInfosCount() {
         if (additionalInfosBuilder_ == null) {
           return additionalInfos_.size();
@@ -11447,6 +19645,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo getAdditionalInfos(int index) {
         if (additionalInfosBuilder_ == null) {
           return additionalInfos_.get(index);
@@ -11454,6 +19659,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder setAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
@@ -11468,6 +19680,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder setAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -11479,6 +19698,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
           if (value == null) {
@@ -11492,6 +19718,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo value) {
         if (additionalInfosBuilder_ == null) {
@@ -11506,6 +19739,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -11517,6 +19757,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAdditionalInfos(
           int index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder builderForValue) {
         if (additionalInfosBuilder_ == null) {
@@ -11528,17 +19775,32 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder addAllAdditionalInfos(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo> values) {
         if (additionalInfosBuilder_ == null) {
           ensureAdditionalInfosIsMutable();
-          super.addAll(values, additionalInfos_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, additionalInfos_);
           onChanged();
         } else {
           additionalInfosBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder clearAdditionalInfos() {
         if (additionalInfosBuilder_ == null) {
           additionalInfos_ = java.util.Collections.emptyList();
@@ -11549,6 +19811,13 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Builder removeAdditionalInfos(int index) {
         if (additionalInfosBuilder_ == null) {
           ensureAdditionalInfosIsMutable();
@@ -11559,10 +19828,24 @@ public final class InvoiceInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder getAdditionalInfosBuilder(
           int index) {
         return getAdditionalInfosFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder getAdditionalInfosOrBuilder(
           int index) {
         if (additionalInfosBuilder_ == null) {
@@ -11570,6 +19853,13 @@ public final class InvoiceInfoProtos {
           return additionalInfosBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfoOrBuilder> 
            getAdditionalInfosOrBuilderList() {
         if (additionalInfosBuilder_ != null) {
@@ -11578,15 +19868,36 @@ public final class InvoiceInfoProtos {
           return java.util.Collections.unmodifiableList(additionalInfos_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder addAdditionalInfosBuilder() {
         return getAdditionalInfosFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder addAdditionalInfosBuilder(
           int index) {
         return getAdditionalInfosFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.AdditionalInfo AdditionalInfos = 7;</code>
+       *
+       * <pre>
+       * информационное поле документа v5.02
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder> 
            getAdditionalInfosBuilderList() {
         return getAdditionalInfosFieldBuilder().getBuilderList();
@@ -11605,316 +19916,767 @@ public final class InvoiceInfoProtos {
         }
         return additionalInfosBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem)
     }
-    
+
     static {
       defaultInstance = new InvoiceCorrectionItem(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.InvoiceCorrectionItem)
   }
-  
-  public interface CorrectableInvoiceItemFieldsOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string Unit = 1;
+
+  public interface CorrectableInvoiceItemFieldsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Unit = 1;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
     boolean hasUnit();
-    String getUnit();
-    
-    // optional string Quantity = 2;
+    /**
+     * <code>optional string Unit = 1;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
+    java.lang.String getUnit();
+    /**
+     * <code>optional string Unit = 1;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUnitBytes();
+
+    /**
+     * <code>optional string Quantity = 2;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
     boolean hasQuantity();
-    String getQuantity();
-    
-    // optional string Price = 3;
+    /**
+     * <code>optional string Quantity = 2;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
+    java.lang.String getQuantity();
+    /**
+     * <code>optional string Quantity = 2;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getQuantityBytes();
+
+    /**
+     * <code>optional string Price = 3;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
     boolean hasPrice();
-    String getPrice();
-    
-    // optional string Excise = 4;
+    /**
+     * <code>optional string Price = 3;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
+    java.lang.String getPrice();
+    /**
+     * <code>optional string Price = 3;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPriceBytes();
+
+    /**
+     * <code>optional string Excise = 4;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
     boolean hasExcise();
-    String getExcise();
-    
-    // required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;
+    /**
+     * <code>optional string Excise = 4;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    java.lang.String getExcise();
+    /**
+     * <code>optional string Excise = 4;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getExciseBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+     *
+     * <pre>
+     * ставка налога
+     * </pre>
+     */
     boolean hasTaxRate();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+     *
+     * <pre>
+     * ставка налога
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate getTaxRate();
-    
-    // optional string SubtotalWithVatExcluded = 6;
+
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 6;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     boolean hasSubtotalWithVatExcluded();
-    String getSubtotalWithVatExcluded();
-    
-    // optional string Vat = 7;
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 6;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    java.lang.String getSubtotalWithVatExcluded();
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 6;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSubtotalWithVatExcludedBytes();
+
+    /**
+     * <code>optional string Vat = 7;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     boolean hasVat();
-    String getVat();
-    
-    // required string Subtotal = 8;
+    /**
+     * <code>optional string Vat = 7;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 7;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>required string Subtotal = 8;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
     boolean hasSubtotal();
-    String getSubtotal();
+    /**
+     * <code>required string Subtotal = 8;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
+    java.lang.String getSubtotal();
+    /**
+     * <code>required string Subtotal = 8;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSubtotalBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields}
+   */
   public static final class CorrectableInvoiceItemFields extends
-      com.google.protobuf.GeneratedMessage
-      implements CorrectableInvoiceItemFieldsOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields)
+      CorrectableInvoiceItemFieldsOrBuilder {
     // Use CorrectableInvoiceItemFields.newBuilder() to construct.
-    private CorrectableInvoiceItemFields(Builder builder) {
+    private CorrectableInvoiceItemFields(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CorrectableInvoiceItemFields(boolean noInit) {}
-    
+    private CorrectableInvoiceItemFields(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CorrectableInvoiceItemFields defaultInstance;
     public static CorrectableInvoiceItemFields getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CorrectableInvoiceItemFields getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CorrectableInvoiceItemFields(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              unit_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              quantity_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              price_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              excise_ = bs;
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate value = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000010;
+                taxRate_ = value;
+              }
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              subtotalWithVatExcluded_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              vat_ = bs;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              subtotal_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<CorrectableInvoiceItemFields> PARSER =
+        new com.google.protobuf.AbstractParser<CorrectableInvoiceItemFields>() {
+      public CorrectableInvoiceItemFields parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CorrectableInvoiceItemFields(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CorrectableInvoiceItemFields> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string Unit = 1;
     public static final int UNIT_FIELD_NUMBER = 1;
     private java.lang.Object unit_;
+    /**
+     * <code>optional string Unit = 1;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
     public boolean hasUnit() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getUnit() {
+    /**
+     * <code>optional string Unit = 1;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
+    public java.lang.String getUnit() {
       java.lang.Object ref = unit_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           unit_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getUnitBytes() {
+    /**
+     * <code>optional string Unit = 1;</code>
+     *
+     * <pre>
+     * единицы измерения товара (код)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUnitBytes() {
       java.lang.Object ref = unit_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         unit_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Quantity = 2;
+
     public static final int QUANTITY_FIELD_NUMBER = 2;
     private java.lang.Object quantity_;
+    /**
+     * <code>optional string Quantity = 2;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
     public boolean hasQuantity() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getQuantity() {
+    /**
+     * <code>optional string Quantity = 2;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
+    public java.lang.String getQuantity() {
       java.lang.Object ref = quantity_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           quantity_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getQuantityBytes() {
+    /**
+     * <code>optional string Quantity = 2;</code>
+     *
+     * <pre>
+     * количество единиц товара
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getQuantityBytes() {
       java.lang.Object ref = quantity_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         quantity_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Price = 3;
+
     public static final int PRICE_FIELD_NUMBER = 3;
     private java.lang.Object price_;
+    /**
+     * <code>optional string Price = 3;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
     public boolean hasPrice() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getPrice() {
+    /**
+     * <code>optional string Price = 3;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
+    public java.lang.String getPrice() {
       java.lang.Object ref = price_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           price_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getPriceBytes() {
+    /**
+     * <code>optional string Price = 3;</code>
+     *
+     * <pre>
+     * цена за единицу товара
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPriceBytes() {
       java.lang.Object ref = price_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         price_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Excise = 4;
+
     public static final int EXCISE_FIELD_NUMBER = 4;
     private java.lang.Object excise_;
+    /**
+     * <code>optional string Excise = 4;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
     public boolean hasExcise() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getExcise() {
+    /**
+     * <code>optional string Excise = 4;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    public java.lang.String getExcise() {
       java.lang.Object ref = excise_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           excise_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getExciseBytes() {
+    /**
+     * <code>optional string Excise = 4;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getExciseBytes() {
       java.lang.Object ref = excise_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         excise_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;
+
     public static final int TAXRATE_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+     *
+     * <pre>
+     * ставка налога
+     * </pre>
+     */
     public boolean hasTaxRate() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+     *
+     * <pre>
+     * ставка налога
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate getTaxRate() {
       return taxRate_;
     }
-    
-    // optional string SubtotalWithVatExcluded = 6;
+
     public static final int SUBTOTALWITHVATEXCLUDED_FIELD_NUMBER = 6;
     private java.lang.Object subtotalWithVatExcluded_;
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 6;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     public boolean hasSubtotalWithVatExcluded() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
-    public String getSubtotalWithVatExcluded() {
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 6;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public java.lang.String getSubtotalWithVatExcluded() {
       java.lang.Object ref = subtotalWithVatExcluded_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           subtotalWithVatExcluded_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSubtotalWithVatExcludedBytes() {
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 6;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSubtotalWithVatExcludedBytes() {
       java.lang.Object ref = subtotalWithVatExcluded_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         subtotalWithVatExcluded_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Vat = 7;
+
     public static final int VAT_FIELD_NUMBER = 7;
     private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 7;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     public boolean hasVat() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
-    public String getVat() {
+    /**
+     * <code>optional string Vat = 7;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public java.lang.String getVat() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           vat_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getVatBytes() {
+    /**
+     * <code>optional string Vat = 7;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         vat_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Subtotal = 8;
+
     public static final int SUBTOTAL_FIELD_NUMBER = 8;
     private java.lang.Object subtotal_;
+    /**
+     * <code>required string Subtotal = 8;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
     public boolean hasSubtotal() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
-    public String getSubtotal() {
+    /**
+     * <code>required string Subtotal = 8;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
+    public java.lang.String getSubtotal() {
       java.lang.Object ref = subtotal_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           subtotal_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSubtotalBytes() {
+    /**
+     * <code>required string Subtotal = 8;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSubtotalBytes() {
       java.lang.Object ref = subtotal_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         subtotal_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       unit_ = "";
       quantity_ = "";
@@ -11928,8 +20690,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasTaxRate()) {
         memoizedIsInitialized = 0;
         return false;
@@ -11941,7 +20704,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -11971,12 +20734,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -12014,113 +20777,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFieldsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -12131,7 +20887,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         unit_ = "";
@@ -12152,20 +20908,20 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields result = buildPartial();
         if (!result.isInitialized()) {
@@ -12173,17 +20929,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields(this);
         int from_bitField0_ = bitField0_;
@@ -12224,7 +20970,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields)other);
@@ -12233,37 +20979,51 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.getDefaultInstance()) return this;
         if (other.hasUnit()) {
-          setUnit(other.getUnit());
+          bitField0_ |= 0x00000001;
+          unit_ = other.unit_;
+          onChanged();
         }
         if (other.hasQuantity()) {
-          setQuantity(other.getQuantity());
+          bitField0_ |= 0x00000002;
+          quantity_ = other.quantity_;
+          onChanged();
         }
         if (other.hasPrice()) {
-          setPrice(other.getPrice());
+          bitField0_ |= 0x00000004;
+          price_ = other.price_;
+          onChanged();
         }
         if (other.hasExcise()) {
-          setExcise(other.getExcise());
+          bitField0_ |= 0x00000008;
+          excise_ = other.excise_;
+          onChanged();
         }
         if (other.hasTaxRate()) {
           setTaxRate(other.getTaxRate());
         }
         if (other.hasSubtotalWithVatExcluded()) {
-          setSubtotalWithVatExcluded(other.getSubtotalWithVatExcluded());
+          bitField0_ |= 0x00000020;
+          subtotalWithVatExcluded_ = other.subtotalWithVatExcluded_;
+          onChanged();
         }
         if (other.hasVat()) {
-          setVat(other.getVat());
+          bitField0_ |= 0x00000040;
+          vat_ = other.vat_;
+          onChanged();
         }
         if (other.hasSubtotal()) {
-          setSubtotal(other.getSubtotal());
+          bitField0_ |= 0x00000080;
+          subtotal_ = other.subtotal_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasTaxRate()) {
           
@@ -12275,98 +21035,87 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              unit_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              quantity_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              price_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              excise_ = input.readBytes();
-              break;
-            }
-            case 40: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate value = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(5, rawValue);
-              } else {
-                bitField0_ |= 0x00000010;
-                taxRate_ = value;
-              }
-              break;
-            }
-            case 50: {
-              bitField0_ |= 0x00000020;
-              subtotalWithVatExcluded_ = input.readBytes();
-              break;
-            }
-            case 58: {
-              bitField0_ |= 0x00000040;
-              vat_ = input.readBytes();
-              break;
-            }
-            case 66: {
-              bitField0_ |= 0x00000080;
-              subtotal_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string Unit = 1;
+
       private java.lang.Object unit_ = "";
+      /**
+       * <code>optional string Unit = 1;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
       public boolean hasUnit() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getUnit() {
+      /**
+       * <code>optional string Unit = 1;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
+      public java.lang.String getUnit() {
         java.lang.Object ref = unit_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          unit_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            unit_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setUnit(String value) {
+      /**
+       * <code>optional string Unit = 1;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUnitBytes() {
+        java.lang.Object ref = unit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Unit = 1;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
+      public Builder setUnit(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -12375,34 +21124,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Unit = 1;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
       public Builder clearUnit() {
         bitField0_ = (bitField0_ & ~0x00000001);
         unit_ = getDefaultInstance().getUnit();
         onChanged();
         return this;
       }
-      void setUnit(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string Unit = 1;</code>
+       *
+       * <pre>
+       * единицы измерения товара (код)
+       * </pre>
+       */
+      public Builder setUnitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         unit_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Quantity = 2;
+
       private java.lang.Object quantity_ = "";
+      /**
+       * <code>optional string Quantity = 2;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
       public boolean hasQuantity() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getQuantity() {
+      /**
+       * <code>optional string Quantity = 2;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
+      public java.lang.String getQuantity() {
         java.lang.Object ref = quantity_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          quantity_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            quantity_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setQuantity(String value) {
+      /**
+       * <code>optional string Quantity = 2;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getQuantityBytes() {
+        java.lang.Object ref = quantity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quantity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Quantity = 2;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
+      public Builder setQuantity(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -12411,34 +21224,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Quantity = 2;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
       public Builder clearQuantity() {
         bitField0_ = (bitField0_ & ~0x00000002);
         quantity_ = getDefaultInstance().getQuantity();
         onChanged();
         return this;
       }
-      void setQuantity(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string Quantity = 2;</code>
+       *
+       * <pre>
+       * количество единиц товара
+       * </pre>
+       */
+      public Builder setQuantityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         quantity_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Price = 3;
+
       private java.lang.Object price_ = "";
+      /**
+       * <code>optional string Price = 3;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
       public boolean hasPrice() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getPrice() {
+      /**
+       * <code>optional string Price = 3;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
+      public java.lang.String getPrice() {
         java.lang.Object ref = price_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          price_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            price_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setPrice(String value) {
+      /**
+       * <code>optional string Price = 3;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPriceBytes() {
+        java.lang.Object ref = price_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          price_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Price = 3;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
+      public Builder setPrice(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -12447,34 +21324,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Price = 3;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
       public Builder clearPrice() {
         bitField0_ = (bitField0_ & ~0x00000004);
         price_ = getDefaultInstance().getPrice();
         onChanged();
         return this;
       }
-      void setPrice(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string Price = 3;</code>
+       *
+       * <pre>
+       * цена за единицу товара
+       * </pre>
+       */
+      public Builder setPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         price_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Excise = 4;
+
       private java.lang.Object excise_ = "";
+      /**
+       * <code>optional string Excise = 4;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
       public boolean hasExcise() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getExcise() {
+      /**
+       * <code>optional string Excise = 4;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public java.lang.String getExcise() {
         java.lang.Object ref = excise_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          excise_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            excise_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setExcise(String value) {
+      /**
+       * <code>optional string Excise = 4;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getExciseBytes() {
+        java.lang.Object ref = excise_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          excise_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Excise = 4;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public Builder setExcise(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -12483,26 +21424,65 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Excise = 4;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
       public Builder clearExcise() {
         bitField0_ = (bitField0_ & ~0x00000008);
         excise_ = getDefaultInstance().getExcise();
         onChanged();
         return this;
       }
-      void setExcise(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string Excise = 4;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public Builder setExciseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         excise_ = value;
         onChanged();
+        return this;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;
+
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.NoVat;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+       *
+       * <pre>
+       * ставка налога
+       * </pre>
+       */
       public boolean hasTaxRate() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+       *
+       * <pre>
+       * ставка налога
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate getTaxRate() {
         return taxRate_;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+       *
+       * <pre>
+       * ставка налога
+       * </pre>
+       */
       public Builder setTaxRate(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate value) {
         if (value == null) {
           throw new NullPointerException();
@@ -12512,29 +21492,81 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+       *
+       * <pre>
+       * ставка налога
+       * </pre>
+       */
       public Builder clearTaxRate() {
         bitField0_ = (bitField0_ & ~0x00000010);
         taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.NoVat;
         onChanged();
         return this;
       }
-      
-      // optional string SubtotalWithVatExcluded = 6;
+
       private java.lang.Object subtotalWithVatExcluded_ = "";
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 6;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public boolean hasSubtotalWithVatExcluded() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
-      public String getSubtotalWithVatExcluded() {
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 6;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public java.lang.String getSubtotalWithVatExcluded() {
         java.lang.Object ref = subtotalWithVatExcluded_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          subtotalWithVatExcluded_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subtotalWithVatExcluded_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSubtotalWithVatExcluded(String value) {
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 6;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSubtotalWithVatExcludedBytes() {
+        java.lang.Object ref = subtotalWithVatExcluded_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subtotalWithVatExcluded_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 6;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setSubtotalWithVatExcluded(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -12543,34 +21575,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 6;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public Builder clearSubtotalWithVatExcluded() {
         bitField0_ = (bitField0_ & ~0x00000020);
         subtotalWithVatExcluded_ = getDefaultInstance().getSubtotalWithVatExcluded();
         onChanged();
         return this;
       }
-      void setSubtotalWithVatExcluded(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000020;
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 6;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setSubtotalWithVatExcludedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
         subtotalWithVatExcluded_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Vat = 7;
+
       private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 7;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public boolean hasVat() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
-      public String getVat() {
+      /**
+       * <code>optional string Vat = 7;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public java.lang.String getVat() {
         java.lang.Object ref = vat_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          vat_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setVat(String value) {
+      /**
+       * <code>optional string Vat = 7;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 7;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVat(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -12579,34 +21675,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Vat = 7;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public Builder clearVat() {
         bitField0_ = (bitField0_ & ~0x00000040);
         vat_ = getDefaultInstance().getVat();
         onChanged();
         return this;
       }
-      void setVat(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000040;
+      /**
+       * <code>optional string Vat = 7;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
         vat_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Subtotal = 8;
+
       private java.lang.Object subtotal_ = "";
+      /**
+       * <code>required string Subtotal = 8;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
       public boolean hasSubtotal() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
-      public String getSubtotal() {
+      /**
+       * <code>required string Subtotal = 8;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
+      public java.lang.String getSubtotal() {
         java.lang.Object ref = subtotal_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          subtotal_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subtotal_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSubtotal(String value) {
+      /**
+       * <code>required string Subtotal = 8;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSubtotalBytes() {
+        java.lang.Object ref = subtotal_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subtotal_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Subtotal = 8;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
+      public Builder setSubtotal(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -12615,205 +21775,488 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Subtotal = 8;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
       public Builder clearSubtotal() {
         bitField0_ = (bitField0_ & ~0x00000080);
         subtotal_ = getDefaultInstance().getSubtotal();
         onChanged();
         return this;
       }
-      void setSubtotal(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000080;
+      /**
+       * <code>required string Subtotal = 8;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
+      public Builder setSubtotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
         subtotal_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields)
     }
-    
+
     static {
       defaultInstance = new CorrectableInvoiceItemFields(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.CorrectableInvoiceItemFields)
   }
-  
-  public interface InvoiceItemAmountsDiffOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string Excise = 1;
+
+  public interface InvoiceItemAmountsDiffOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Excise = 1;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
     boolean hasExcise();
-    String getExcise();
-    
-    // optional string SubtotalWithVatExcluded = 2;
+    /**
+     * <code>optional string Excise = 1;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    java.lang.String getExcise();
+    /**
+     * <code>optional string Excise = 1;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getExciseBytes();
+
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 2;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     boolean hasSubtotalWithVatExcluded();
-    String getSubtotalWithVatExcluded();
-    
-    // optional string Vat = 3;
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 2;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    java.lang.String getSubtotalWithVatExcluded();
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 2;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSubtotalWithVatExcludedBytes();
+
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     boolean hasVat();
-    String getVat();
-    
-    // required string Subtotal = 4;
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>required string Subtotal = 4;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
     boolean hasSubtotal();
-    String getSubtotal();
+    /**
+     * <code>required string Subtotal = 4;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
+    java.lang.String getSubtotal();
+    /**
+     * <code>required string Subtotal = 4;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSubtotalBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff}
+   */
   public static final class InvoiceItemAmountsDiff extends
-      com.google.protobuf.GeneratedMessage
-      implements InvoiceItemAmountsDiffOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff)
+      InvoiceItemAmountsDiffOrBuilder {
     // Use InvoiceItemAmountsDiff.newBuilder() to construct.
-    private InvoiceItemAmountsDiff(Builder builder) {
+    private InvoiceItemAmountsDiff(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InvoiceItemAmountsDiff(boolean noInit) {}
-    
+    private InvoiceItemAmountsDiff(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InvoiceItemAmountsDiff defaultInstance;
     public static InvoiceItemAmountsDiff getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InvoiceItemAmountsDiff getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InvoiceItemAmountsDiff(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              excise_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              subtotalWithVatExcluded_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              vat_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              subtotal_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InvoiceItemAmountsDiff> PARSER =
+        new com.google.protobuf.AbstractParser<InvoiceItemAmountsDiff>() {
+      public InvoiceItemAmountsDiff parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InvoiceItemAmountsDiff(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InvoiceItemAmountsDiff> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string Excise = 1;
     public static final int EXCISE_FIELD_NUMBER = 1;
     private java.lang.Object excise_;
+    /**
+     * <code>optional string Excise = 1;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
     public boolean hasExcise() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getExcise() {
+    /**
+     * <code>optional string Excise = 1;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    public java.lang.String getExcise() {
       java.lang.Object ref = excise_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           excise_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getExciseBytes() {
+    /**
+     * <code>optional string Excise = 1;</code>
+     *
+     * <pre>
+     * акциз
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getExciseBytes() {
       java.lang.Object ref = excise_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         excise_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string SubtotalWithVatExcluded = 2;
+
     public static final int SUBTOTALWITHVATEXCLUDED_FIELD_NUMBER = 2;
     private java.lang.Object subtotalWithVatExcluded_;
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 2;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
     public boolean hasSubtotalWithVatExcluded() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getSubtotalWithVatExcluded() {
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 2;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public java.lang.String getSubtotalWithVatExcluded() {
       java.lang.Object ref = subtotalWithVatExcluded_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           subtotalWithVatExcluded_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSubtotalWithVatExcludedBytes() {
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 2;</code>
+     *
+     * <pre>
+     * сумма без учета налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSubtotalWithVatExcludedBytes() {
       java.lang.Object ref = subtotalWithVatExcluded_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         subtotalWithVatExcluded_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Vat = 3;
+
     public static final int VAT_FIELD_NUMBER = 3;
     private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
     public boolean hasVat() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getVat() {
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public java.lang.String getVat() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           vat_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getVatBytes() {
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     * сумма налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         vat_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Subtotal = 4;
+
     public static final int SUBTOTAL_FIELD_NUMBER = 4;
     private java.lang.Object subtotal_;
+    /**
+     * <code>required string Subtotal = 4;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
     public boolean hasSubtotal() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getSubtotal() {
+    /**
+     * <code>required string Subtotal = 4;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
+    public java.lang.String getSubtotal() {
       java.lang.Object ref = subtotal_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           subtotal_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSubtotalBytes() {
+    /**
+     * <code>required string Subtotal = 4;</code>
+     *
+     * <pre>
+     * сумма с учетом налога
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSubtotalBytes() {
       java.lang.Object ref = subtotal_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         subtotal_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       excise_ = "";
       subtotalWithVatExcluded_ = "";
@@ -12823,8 +22266,9 @@ public final class InvoiceInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasSubtotal()) {
         memoizedIsInitialized = 0;
         return false;
@@ -12832,7 +22276,7 @@ public final class InvoiceInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -12850,12 +22294,12 @@ public final class InvoiceInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -12877,113 +22321,106 @@ public final class InvoiceInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff)
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiffOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.class, Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -12994,7 +22431,7 @@ public final class InvoiceInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         excise_ = "";
@@ -13007,20 +22444,20 @@ public final class InvoiceInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff build() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff result = buildPartial();
         if (!result.isInitialized()) {
@@ -13028,17 +22465,7 @@ public final class InvoiceInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff buildPartial() {
         Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff result = new Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff(this);
         int from_bitField0_ = bitField0_;
@@ -13063,7 +22490,7 @@ public final class InvoiceInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff)other);
@@ -13072,25 +22499,33 @@ public final class InvoiceInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff other) {
         if (other == Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.getDefaultInstance()) return this;
         if (other.hasExcise()) {
-          setExcise(other.getExcise());
+          bitField0_ |= 0x00000001;
+          excise_ = other.excise_;
+          onChanged();
         }
         if (other.hasSubtotalWithVatExcluded()) {
-          setSubtotalWithVatExcluded(other.getSubtotalWithVatExcluded());
+          bitField0_ |= 0x00000002;
+          subtotalWithVatExcluded_ = other.subtotalWithVatExcluded_;
+          onChanged();
         }
         if (other.hasVat()) {
-          setVat(other.getVat());
+          bitField0_ |= 0x00000004;
+          vat_ = other.vat_;
+          onChanged();
         }
         if (other.hasSubtotal()) {
-          setSubtotal(other.getSubtotal());
+          bitField0_ |= 0x00000008;
+          subtotal_ = other.subtotal_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasSubtotal()) {
           
@@ -13098,72 +22533,87 @@ public final class InvoiceInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              excise_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              subtotalWithVatExcluded_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              vat_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              subtotal_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string Excise = 1;
+
       private java.lang.Object excise_ = "";
+      /**
+       * <code>optional string Excise = 1;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
       public boolean hasExcise() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getExcise() {
+      /**
+       * <code>optional string Excise = 1;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public java.lang.String getExcise() {
         java.lang.Object ref = excise_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          excise_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            excise_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setExcise(String value) {
+      /**
+       * <code>optional string Excise = 1;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getExciseBytes() {
+        java.lang.Object ref = excise_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          excise_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Excise = 1;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public Builder setExcise(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -13172,34 +22622,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Excise = 1;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
       public Builder clearExcise() {
         bitField0_ = (bitField0_ & ~0x00000001);
         excise_ = getDefaultInstance().getExcise();
         onChanged();
         return this;
       }
-      void setExcise(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string Excise = 1;</code>
+       *
+       * <pre>
+       * акциз
+       * </pre>
+       */
+      public Builder setExciseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         excise_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string SubtotalWithVatExcluded = 2;
+
       private java.lang.Object subtotalWithVatExcluded_ = "";
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 2;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public boolean hasSubtotalWithVatExcluded() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getSubtotalWithVatExcluded() {
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 2;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public java.lang.String getSubtotalWithVatExcluded() {
         java.lang.Object ref = subtotalWithVatExcluded_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          subtotalWithVatExcluded_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subtotalWithVatExcluded_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSubtotalWithVatExcluded(String value) {
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 2;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSubtotalWithVatExcludedBytes() {
+        java.lang.Object ref = subtotalWithVatExcluded_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subtotalWithVatExcluded_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 2;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setSubtotalWithVatExcluded(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -13208,34 +22722,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 2;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
       public Builder clearSubtotalWithVatExcluded() {
         bitField0_ = (bitField0_ & ~0x00000002);
         subtotalWithVatExcluded_ = getDefaultInstance().getSubtotalWithVatExcluded();
         onChanged();
         return this;
       }
-      void setSubtotalWithVatExcluded(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 2;</code>
+       *
+       * <pre>
+       * сумма без учета налога
+       * </pre>
+       */
+      public Builder setSubtotalWithVatExcludedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         subtotalWithVatExcluded_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Vat = 3;
+
       private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public boolean hasVat() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getVat() {
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public java.lang.String getVat() {
         java.lang.Object ref = vat_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          vat_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setVat(String value) {
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVat(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -13244,34 +22822,98 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
       public Builder clearVat() {
         bitField0_ = (bitField0_ & ~0x00000004);
         vat_ = getDefaultInstance().getVat();
         onChanged();
         return this;
       }
-      void setVat(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       * сумма налога
+       * </pre>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         vat_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Subtotal = 4;
+
       private java.lang.Object subtotal_ = "";
+      /**
+       * <code>required string Subtotal = 4;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
       public boolean hasSubtotal() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getSubtotal() {
+      /**
+       * <code>required string Subtotal = 4;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
+      public java.lang.String getSubtotal() {
         java.lang.Object ref = subtotal_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          subtotal_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subtotal_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSubtotal(String value) {
+      /**
+       * <code>required string Subtotal = 4;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSubtotalBytes() {
+        java.lang.Object ref = subtotal_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subtotal_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Subtotal = 4;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
+      public Builder setSubtotal(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -13280,85 +22922,104 @@ public final class InvoiceInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Subtotal = 4;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
       public Builder clearSubtotal() {
         bitField0_ = (bitField0_ & ~0x00000008);
         subtotal_ = getDefaultInstance().getSubtotal();
         onChanged();
         return this;
       }
-      void setSubtotal(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>required string Subtotal = 4;</code>
+       *
+       * <pre>
+       * сумма с учетом налога
+       * </pre>
+       */
+      public Builder setSubtotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         subtotal_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff)
     }
-    
+
     static {
       defaultInstance = new InvoiceItemAmountsDiff(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.InvoiceItemAmountsDiff)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -13460,108 +23121,88 @@ public final class InvoiceInfoProtos {
       "n_18_118\020\006B\023B\021InvoiceInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_descriptor,
-              new java.lang.String[] { "InvoiceDate", "InvoiceNumber", "Seller", "Buyer", "Shipper", "Consignee", "Signer", "PaymentDocuments", "Items", "Currency", "TotalWithVatExcluded", "Vat", "Total", "AdditionalInfo", "InvoiceRevisionDate", "InvoiceRevisionNumber", "AdditionalInfos", "Version", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_descriptor,
-              new java.lang.String[] { "Id", "Value", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.AdditionalInfo.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_descriptor,
-              new java.lang.String[] { "Product", "Unit", "Quantity", "Price", "CountriesOfOrigin", "CustomsDeclarationNumbers", "Excise", "TaxRate", "SubtotalWithVatExcluded", "Vat", "Subtotal", "AdditionalInfo", "CustomsDeclarations", "AdditionalInfos", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItem.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_descriptor,
-              new java.lang.String[] { "CountryCode", "DeclarationNumber", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CustomsDeclaration.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_descriptor,
-              new java.lang.String[] { "DocumentDate", "DocumentNumber", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.PaymentDocumentInfo.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_descriptor =
-            getDescriptor().getMessageTypes().get(5);
-          internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_descriptor,
-              new java.lang.String[] { "SameAsSellerOrBuyer", "OrgInfo", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.ShipperOrConsignee.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_descriptor =
-            getDescriptor().getMessageTypes().get(6);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_descriptor,
-              new java.lang.String[] { "InvoiceDate", "InvoiceNumber", "InvoiceRevisionDate", "InvoiceRevisionNumber", "InvoiceCorrectionDate", "InvoiceCorrectionNumber", "InvoiceCorrectionRevisionDate", "InvoiceCorrectionRevisionNumber", "Seller", "Buyer", "Signer", "Items", "Currency", "TotalsInc", "TotalsDec", "AdditionalInfo", "AdditionalInfos", "Version", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_descriptor =
-            getDescriptor().getMessageTypes().get(7);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_descriptor,
-              new java.lang.String[] { "TotalWithVatExcluded", "Vat", "Total", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceTotalsDiff.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_descriptor,
-              new java.lang.String[] { "Product", "OriginalValues", "CorrectedValues", "AmountsInc", "AmountsDec", "AdditionalInfo", "AdditionalInfos", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionItem.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_descriptor =
-            getDescriptor().getMessageTypes().get(9);
-          internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_descriptor,
-              new java.lang.String[] { "Unit", "Quantity", "Price", "Excise", "TaxRate", "SubtotalWithVatExcluded", "Vat", "Subtotal", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.CorrectableInvoiceItemFields.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_descriptor =
-            getDescriptor().getMessageTypes().get(10);
-          internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_descriptor,
-              new java.lang.String[] { "Excise", "SubtotalWithVatExcluded", "Vat", "Subtotal", },
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.class,
-              Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceItemAmountsDiff.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Invoicing.SignerProtos.getDescriptor(),
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_InvoiceInfo_descriptor,
+        new java.lang.String[] { "InvoiceDate", "InvoiceNumber", "Seller", "Buyer", "Shipper", "Consignee", "Signer", "PaymentDocuments", "Items", "Currency", "TotalWithVatExcluded", "Vat", "Total", "AdditionalInfo", "InvoiceRevisionDate", "InvoiceRevisionNumber", "AdditionalInfos", "Version", });
+    internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_AdditionalInfo_descriptor,
+        new java.lang.String[] { "Id", "Value", });
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItem_descriptor,
+        new java.lang.String[] { "Product", "Unit", "Quantity", "Price", "CountriesOfOrigin", "CustomsDeclarationNumbers", "Excise", "TaxRate", "SubtotalWithVatExcluded", "Vat", "Subtotal", "AdditionalInfo", "CustomsDeclarations", "AdditionalInfos", });
+    internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_CustomsDeclaration_descriptor,
+        new java.lang.String[] { "CountryCode", "DeclarationNumber", });
+    internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_PaymentDocumentInfo_descriptor,
+        new java.lang.String[] { "DocumentDate", "DocumentNumber", });
+    internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_ShipperOrConsignee_descriptor,
+        new java.lang.String[] { "SameAsSellerOrBuyer", "OrgInfo", });
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionInfo_descriptor,
+        new java.lang.String[] { "InvoiceDate", "InvoiceNumber", "InvoiceRevisionDate", "InvoiceRevisionNumber", "InvoiceCorrectionDate", "InvoiceCorrectionNumber", "InvoiceCorrectionRevisionDate", "InvoiceCorrectionRevisionNumber", "Seller", "Buyer", "Signer", "Items", "Currency", "TotalsInc", "TotalsDec", "AdditionalInfo", "AdditionalInfos", "Version", });
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_InvoiceTotalsDiff_descriptor,
+        new java.lang.String[] { "TotalWithVatExcluded", "Vat", "Total", });
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_InvoiceCorrectionItem_descriptor,
+        new java.lang.String[] { "Product", "OriginalValues", "CorrectedValues", "AmountsInc", "AmountsDec", "AdditionalInfo", "AdditionalInfos", });
+    internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_CorrectableInvoiceItemFields_descriptor,
+        new java.lang.String[] { "Unit", "Quantity", "Price", "Excise", "TaxRate", "SubtotalWithVatExcluded", "Vat", "Subtotal", });
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_InvoiceItemAmountsDiff_descriptor,
+        new java.lang.String[] { "Excise", "SubtotalWithVatExcluded", "Vat", "Subtotal", });
+    Diadoc.Api.Proto.Invoicing.SignerProtos.getDescriptor();
+    Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

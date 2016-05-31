@@ -8,24 +8,65 @@ public final class OrganizationUserPermissionsProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.DocumentAccessLevel}
+   */
   public enum DocumentAccessLevel
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownDocumentAccessLevel = -1;</code>
+     *
+     * <pre>
+     * Access level which is reported to legacy clients for newly introduced access levels
+     * </pre>
+     */
     UnknownDocumentAccessLevel(0, -1),
+    /**
+     * <code>DepartmentOnly = 0;</code>
+     */
     DepartmentOnly(1, 0),
+    /**
+     * <code>DepartmentAndSubdepartments = 1;</code>
+     */
     DepartmentAndSubdepartments(2, 1),
+    /**
+     * <code>AllDocuments = 2;</code>
+     */
     AllDocuments(3, 2),
+    /**
+     * <code>SelectedDepartments = 3;</code>
+     */
     SelectedDepartments(4, 3),
     ;
-    
+
+    /**
+     * <code>UnknownDocumentAccessLevel = -1;</code>
+     *
+     * <pre>
+     * Access level which is reported to legacy clients for newly introduced access levels
+     * </pre>
+     */
     public static final int UnknownDocumentAccessLevel_VALUE = -1;
+    /**
+     * <code>DepartmentOnly = 0;</code>
+     */
     public static final int DepartmentOnly_VALUE = 0;
+    /**
+     * <code>DepartmentAndSubdepartments = 1;</code>
+     */
     public static final int DepartmentAndSubdepartments_VALUE = 1;
+    /**
+     * <code>AllDocuments = 2;</code>
+     */
     public static final int AllDocuments_VALUE = 2;
+    /**
+     * <code>SelectedDepartments = 3;</code>
+     */
     public static final int SelectedDepartments_VALUE = 3;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static DocumentAccessLevel valueOf(int value) {
       switch (value) {
         case -1: return UnknownDocumentAccessLevel;
@@ -36,7 +77,7 @@ public final class OrganizationUserPermissionsProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<DocumentAccessLevel>
         internalGetValueMap() {
       return internalValueMap;
@@ -48,7 +89,7 @@ public final class OrganizationUserPermissionsProtos {
               return DocumentAccessLevel.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -61,11 +102,9 @@ public final class OrganizationUserPermissionsProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final DocumentAccessLevel[] VALUES = {
-      UnknownDocumentAccessLevel, DepartmentOnly, DepartmentAndSubdepartments, AllDocuments, SelectedDepartments, 
-    };
-    
+
+    private static final DocumentAccessLevel[] VALUES = values();
+
     public static DocumentAccessLevel valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -74,175 +113,387 @@ public final class OrganizationUserPermissionsProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private DocumentAccessLevel(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.DocumentAccessLevel)
   }
-  
-  public interface OrganizationUserPermissionsOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string UserDepartmentId = 1;
+
+  public interface OrganizationUserPermissionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.OrganizationUserPermissions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string UserDepartmentId = 1;</code>
+     */
     boolean hasUserDepartmentId();
-    String getUserDepartmentId();
-    
-    // required bool IsAdministrator = 2;
+    /**
+     * <code>required string UserDepartmentId = 1;</code>
+     */
+    java.lang.String getUserDepartmentId();
+    /**
+     * <code>required string UserDepartmentId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUserDepartmentIdBytes();
+
+    /**
+     * <code>required bool IsAdministrator = 2;</code>
+     */
     boolean hasIsAdministrator();
+    /**
+     * <code>required bool IsAdministrator = 2;</code>
+     */
     boolean getIsAdministrator();
-    
-    // optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+     */
     boolean hasDocumentAccessLevel();
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+     */
     Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel getDocumentAccessLevel();
-    
-    // required bool CanSignDocuments = 4;
+
+    /**
+     * <code>required bool CanSignDocuments = 4;</code>
+     */
     boolean hasCanSignDocuments();
+    /**
+     * <code>required bool CanSignDocuments = 4;</code>
+     */
     boolean getCanSignDocuments();
-    
-    // required bool CanAddResolutions = 7;
+
+    /**
+     * <code>required bool CanAddResolutions = 7;</code>
+     */
     boolean hasCanAddResolutions();
+    /**
+     * <code>required bool CanAddResolutions = 7;</code>
+     */
     boolean getCanAddResolutions();
-    
-    // required bool CanRequestResolutions = 8;
+
+    /**
+     * <code>required bool CanRequestResolutions = 8;</code>
+     */
     boolean hasCanRequestResolutions();
+    /**
+     * <code>required bool CanRequestResolutions = 8;</code>
+     */
     boolean getCanRequestResolutions();
-    
-    // repeated string SelectedDepartmentIds = 9;
-    java.util.List<String> getSelectedDepartmentIdsList();
+
+    /**
+     * <code>repeated string SelectedDepartmentIds = 9;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getSelectedDepartmentIdsList();
+    /**
+     * <code>repeated string SelectedDepartmentIds = 9;</code>
+     */
     int getSelectedDepartmentIdsCount();
-    String getSelectedDepartmentIds(int index);
+    /**
+     * <code>repeated string SelectedDepartmentIds = 9;</code>
+     */
+    java.lang.String getSelectedDepartmentIds(int index);
+    /**
+     * <code>repeated string SelectedDepartmentIds = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getSelectedDepartmentIdsBytes(int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.OrganizationUserPermissions}
+   */
   public static final class OrganizationUserPermissions extends
-      com.google.protobuf.GeneratedMessage
-      implements OrganizationUserPermissionsOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.OrganizationUserPermissions)
+      OrganizationUserPermissionsOrBuilder {
     // Use OrganizationUserPermissions.newBuilder() to construct.
-    private OrganizationUserPermissions(Builder builder) {
+    private OrganizationUserPermissions(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private OrganizationUserPermissions(boolean noInit) {}
-    
+    private OrganizationUserPermissions(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final OrganizationUserPermissions defaultInstance;
     public static OrganizationUserPermissions getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public OrganizationUserPermissions getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OrganizationUserPermissions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              userDepartmentId_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              isAdministrator_ = input.readBool();
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel value = Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                documentAccessLevel_ = value;
+              }
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              canSignDocuments_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000010;
+              canAddResolutions_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000020;
+              canRequestResolutions_ = input.readBool();
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                selectedDepartmentIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              selectedDepartmentIds_.add(bs);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          selectedDepartmentIds_ = selectedDepartmentIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable;
+      return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.class, Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<OrganizationUserPermissions> PARSER =
+        new com.google.protobuf.AbstractParser<OrganizationUserPermissions>() {
+      public OrganizationUserPermissions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OrganizationUserPermissions(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OrganizationUserPermissions> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string UserDepartmentId = 1;
     public static final int USERDEPARTMENTID_FIELD_NUMBER = 1;
     private java.lang.Object userDepartmentId_;
+    /**
+     * <code>required string UserDepartmentId = 1;</code>
+     */
     public boolean hasUserDepartmentId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getUserDepartmentId() {
+    /**
+     * <code>required string UserDepartmentId = 1;</code>
+     */
+    public java.lang.String getUserDepartmentId() {
       java.lang.Object ref = userDepartmentId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           userDepartmentId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getUserDepartmentIdBytes() {
+    /**
+     * <code>required string UserDepartmentId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUserDepartmentIdBytes() {
       java.lang.Object ref = userDepartmentId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         userDepartmentId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required bool IsAdministrator = 2;
+
     public static final int ISADMINISTRATOR_FIELD_NUMBER = 2;
     private boolean isAdministrator_;
+    /**
+     * <code>required bool IsAdministrator = 2;</code>
+     */
     public boolean hasIsAdministrator() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required bool IsAdministrator = 2;</code>
+     */
     public boolean getIsAdministrator() {
       return isAdministrator_;
     }
-    
-    // optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];
+
     public static final int DOCUMENTACCESSLEVEL_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel documentAccessLevel_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+     */
     public boolean hasDocumentAccessLevel() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+     */
     public Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel getDocumentAccessLevel() {
       return documentAccessLevel_;
     }
-    
-    // required bool CanSignDocuments = 4;
+
     public static final int CANSIGNDOCUMENTS_FIELD_NUMBER = 4;
     private boolean canSignDocuments_;
+    /**
+     * <code>required bool CanSignDocuments = 4;</code>
+     */
     public boolean hasCanSignDocuments() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>required bool CanSignDocuments = 4;</code>
+     */
     public boolean getCanSignDocuments() {
       return canSignDocuments_;
     }
-    
-    // required bool CanAddResolutions = 7;
+
     public static final int CANADDRESOLUTIONS_FIELD_NUMBER = 7;
     private boolean canAddResolutions_;
+    /**
+     * <code>required bool CanAddResolutions = 7;</code>
+     */
     public boolean hasCanAddResolutions() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>required bool CanAddResolutions = 7;</code>
+     */
     public boolean getCanAddResolutions() {
       return canAddResolutions_;
     }
-    
-    // required bool CanRequestResolutions = 8;
+
     public static final int CANREQUESTRESOLUTIONS_FIELD_NUMBER = 8;
     private boolean canRequestResolutions_;
+    /**
+     * <code>required bool CanRequestResolutions = 8;</code>
+     */
     public boolean hasCanRequestResolutions() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>required bool CanRequestResolutions = 8;</code>
+     */
     public boolean getCanRequestResolutions() {
       return canRequestResolutions_;
     }
-    
-    // repeated string SelectedDepartmentIds = 9;
+
     public static final int SELECTEDDEPARTMENTIDS_FIELD_NUMBER = 9;
     private com.google.protobuf.LazyStringList selectedDepartmentIds_;
-    public java.util.List<String>
+    /**
+     * <code>repeated string SelectedDepartmentIds = 9;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
         getSelectedDepartmentIdsList() {
       return selectedDepartmentIds_;
     }
+    /**
+     * <code>repeated string SelectedDepartmentIds = 9;</code>
+     */
     public int getSelectedDepartmentIdsCount() {
       return selectedDepartmentIds_.size();
     }
-    public String getSelectedDepartmentIds(int index) {
+    /**
+     * <code>repeated string SelectedDepartmentIds = 9;</code>
+     */
+    public java.lang.String getSelectedDepartmentIds(int index) {
       return selectedDepartmentIds_.get(index);
     }
-    
+    /**
+     * <code>repeated string SelectedDepartmentIds = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSelectedDepartmentIdsBytes(int index) {
+      return selectedDepartmentIds_.getByteString(index);
+    }
+
     private void initFields() {
       userDepartmentId_ = "";
       isAdministrator_ = false;
@@ -255,8 +506,9 @@ public final class OrganizationUserPermissionsProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasUserDepartmentId()) {
         memoizedIsInitialized = 0;
         return false;
@@ -280,7 +532,7 @@ public final class OrganizationUserPermissionsProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -307,12 +559,12 @@ public final class OrganizationUserPermissionsProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -351,113 +603,106 @@ public final class OrganizationUserPermissionsProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.OrganizationUserPermissions}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissionsOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.OrganizationUserPermissions)
+        Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable;
+        return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.class, Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -468,7 +713,7 @@ public final class OrganizationUserPermissionsProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         userDepartmentId_ = "";
@@ -487,20 +732,20 @@ public final class OrganizationUserPermissionsProtos {
         bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.getDescriptor();
+        return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions getDefaultInstanceForType() {
         return Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions build() {
         Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions result = buildPartial();
         if (!result.isInitialized()) {
@@ -508,17 +753,7 @@ public final class OrganizationUserPermissionsProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions buildPartial() {
         Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions result = new Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions(this);
         int from_bitField0_ = bitField0_;
@@ -548,8 +783,7 @@ public final class OrganizationUserPermissionsProtos {
         }
         result.canRequestResolutions_ = canRequestResolutions_;
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          selectedDepartmentIds_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              selectedDepartmentIds_);
+          selectedDepartmentIds_ = selectedDepartmentIds_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.selectedDepartmentIds_ = selectedDepartmentIds_;
@@ -557,7 +791,7 @@ public final class OrganizationUserPermissionsProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions) {
           return mergeFrom((Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions)other);
@@ -566,11 +800,13 @@ public final class OrganizationUserPermissionsProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions other) {
         if (other == Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.getDefaultInstance()) return this;
         if (other.hasUserDepartmentId()) {
-          setUserDepartmentId(other.getUserDepartmentId());
+          bitField0_ |= 0x00000001;
+          userDepartmentId_ = other.userDepartmentId_;
+          onChanged();
         }
         if (other.hasIsAdministrator()) {
           setIsAdministrator(other.getIsAdministrator());
@@ -600,7 +836,7 @@ public final class OrganizationUserPermissionsProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasUserDepartmentId()) {
           
@@ -624,93 +860,71 @@ public final class OrganizationUserPermissionsProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              userDepartmentId_ = input.readBytes();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              isAdministrator_ = input.readBool();
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel value = Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(3, rawValue);
-              } else {
-                bitField0_ |= 0x00000004;
-                documentAccessLevel_ = value;
-              }
-              break;
-            }
-            case 32: {
-              bitField0_ |= 0x00000008;
-              canSignDocuments_ = input.readBool();
-              break;
-            }
-            case 56: {
-              bitField0_ |= 0x00000010;
-              canAddResolutions_ = input.readBool();
-              break;
-            }
-            case 64: {
-              bitField0_ |= 0x00000020;
-              canRequestResolutions_ = input.readBool();
-              break;
-            }
-            case 74: {
-              ensureSelectedDepartmentIdsIsMutable();
-              selectedDepartmentIds_.add(input.readBytes());
-              break;
-            }
+        Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string UserDepartmentId = 1;
+
       private java.lang.Object userDepartmentId_ = "";
+      /**
+       * <code>required string UserDepartmentId = 1;</code>
+       */
       public boolean hasUserDepartmentId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getUserDepartmentId() {
+      /**
+       * <code>required string UserDepartmentId = 1;</code>
+       */
+      public java.lang.String getUserDepartmentId() {
         java.lang.Object ref = userDepartmentId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          userDepartmentId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            userDepartmentId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setUserDepartmentId(String value) {
+      /**
+       * <code>required string UserDepartmentId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUserDepartmentIdBytes() {
+        java.lang.Object ref = userDepartmentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userDepartmentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string UserDepartmentId = 1;</code>
+       */
+      public Builder setUserDepartmentId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -719,47 +933,77 @@ public final class OrganizationUserPermissionsProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string UserDepartmentId = 1;</code>
+       */
       public Builder clearUserDepartmentId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         userDepartmentId_ = getDefaultInstance().getUserDepartmentId();
         onChanged();
         return this;
       }
-      void setUserDepartmentId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string UserDepartmentId = 1;</code>
+       */
+      public Builder setUserDepartmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         userDepartmentId_ = value;
         onChanged();
+        return this;
       }
-      
-      // required bool IsAdministrator = 2;
+
       private boolean isAdministrator_ ;
+      /**
+       * <code>required bool IsAdministrator = 2;</code>
+       */
       public boolean hasIsAdministrator() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>required bool IsAdministrator = 2;</code>
+       */
       public boolean getIsAdministrator() {
         return isAdministrator_;
       }
+      /**
+       * <code>required bool IsAdministrator = 2;</code>
+       */
       public Builder setIsAdministrator(boolean value) {
         bitField0_ |= 0x00000002;
         isAdministrator_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required bool IsAdministrator = 2;</code>
+       */
       public Builder clearIsAdministrator() {
         bitField0_ = (bitField0_ & ~0x00000002);
         isAdministrator_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];
+
       private Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel documentAccessLevel_ = Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel.UnknownDocumentAccessLevel;
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+       */
       public boolean hasDocumentAccessLevel() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+       */
       public Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel getDocumentAccessLevel() {
         return documentAccessLevel_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+       */
       public Builder setDocumentAccessLevel(Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel value) {
         if (value == null) {
           throw new NullPointerException();
@@ -769,77 +1013,112 @@ public final class OrganizationUserPermissionsProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+       */
       public Builder clearDocumentAccessLevel() {
         bitField0_ = (bitField0_ & ~0x00000004);
         documentAccessLevel_ = Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel.UnknownDocumentAccessLevel;
         onChanged();
         return this;
       }
-      
-      // required bool CanSignDocuments = 4;
+
       private boolean canSignDocuments_ ;
+      /**
+       * <code>required bool CanSignDocuments = 4;</code>
+       */
       public boolean hasCanSignDocuments() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>required bool CanSignDocuments = 4;</code>
+       */
       public boolean getCanSignDocuments() {
         return canSignDocuments_;
       }
+      /**
+       * <code>required bool CanSignDocuments = 4;</code>
+       */
       public Builder setCanSignDocuments(boolean value) {
         bitField0_ |= 0x00000008;
         canSignDocuments_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required bool CanSignDocuments = 4;</code>
+       */
       public Builder clearCanSignDocuments() {
         bitField0_ = (bitField0_ & ~0x00000008);
         canSignDocuments_ = false;
         onChanged();
         return this;
       }
-      
-      // required bool CanAddResolutions = 7;
+
       private boolean canAddResolutions_ ;
+      /**
+       * <code>required bool CanAddResolutions = 7;</code>
+       */
       public boolean hasCanAddResolutions() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>required bool CanAddResolutions = 7;</code>
+       */
       public boolean getCanAddResolutions() {
         return canAddResolutions_;
       }
+      /**
+       * <code>required bool CanAddResolutions = 7;</code>
+       */
       public Builder setCanAddResolutions(boolean value) {
         bitField0_ |= 0x00000010;
         canAddResolutions_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required bool CanAddResolutions = 7;</code>
+       */
       public Builder clearCanAddResolutions() {
         bitField0_ = (bitField0_ & ~0x00000010);
         canAddResolutions_ = false;
         onChanged();
         return this;
       }
-      
-      // required bool CanRequestResolutions = 8;
+
       private boolean canRequestResolutions_ ;
+      /**
+       * <code>required bool CanRequestResolutions = 8;</code>
+       */
       public boolean hasCanRequestResolutions() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
+      /**
+       * <code>required bool CanRequestResolutions = 8;</code>
+       */
       public boolean getCanRequestResolutions() {
         return canRequestResolutions_;
       }
+      /**
+       * <code>required bool CanRequestResolutions = 8;</code>
+       */
       public Builder setCanRequestResolutions(boolean value) {
         bitField0_ |= 0x00000020;
         canRequestResolutions_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required bool CanRequestResolutions = 8;</code>
+       */
       public Builder clearCanRequestResolutions() {
         bitField0_ = (bitField0_ & ~0x00000020);
         canRequestResolutions_ = false;
         onChanged();
         return this;
       }
-      
-      // repeated string SelectedDepartmentIds = 9;
+
       private com.google.protobuf.LazyStringList selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSelectedDepartmentIdsIsMutable() {
         if (!((bitField0_ & 0x00000040) == 0x00000040)) {
@@ -847,18 +1126,37 @@ public final class OrganizationUserPermissionsProtos {
           bitField0_ |= 0x00000040;
          }
       }
-      public java.util.List<String>
+      /**
+       * <code>repeated string SelectedDepartmentIds = 9;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
           getSelectedDepartmentIdsList() {
-        return java.util.Collections.unmodifiableList(selectedDepartmentIds_);
+        return selectedDepartmentIds_.getUnmodifiableView();
       }
+      /**
+       * <code>repeated string SelectedDepartmentIds = 9;</code>
+       */
       public int getSelectedDepartmentIdsCount() {
         return selectedDepartmentIds_.size();
       }
-      public String getSelectedDepartmentIds(int index) {
+      /**
+       * <code>repeated string SelectedDepartmentIds = 9;</code>
+       */
+      public java.lang.String getSelectedDepartmentIds(int index) {
         return selectedDepartmentIds_.get(index);
       }
+      /**
+       * <code>repeated string SelectedDepartmentIds = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSelectedDepartmentIdsBytes(int index) {
+        return selectedDepartmentIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string SelectedDepartmentIds = 9;</code>
+       */
       public Builder setSelectedDepartmentIds(
-          int index, String value) {
+          int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -867,7 +1165,11 @@ public final class OrganizationUserPermissionsProtos {
         onChanged();
         return this;
       }
-      public Builder addSelectedDepartmentIds(String value) {
+      /**
+       * <code>repeated string SelectedDepartmentIds = 9;</code>
+       */
+      public Builder addSelectedDepartmentIds(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -876,42 +1178,57 @@ public final class OrganizationUserPermissionsProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string SelectedDepartmentIds = 9;</code>
+       */
       public Builder addAllSelectedDepartmentIds(
-          java.lang.Iterable<String> values) {
+          java.lang.Iterable<java.lang.String> values) {
         ensureSelectedDepartmentIdsIsMutable();
-        super.addAll(values, selectedDepartmentIds_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, selectedDepartmentIds_);
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string SelectedDepartmentIds = 9;</code>
+       */
       public Builder clearSelectedDepartmentIds() {
         selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
-      void addSelectedDepartmentIds(com.google.protobuf.ByteString value) {
-        ensureSelectedDepartmentIdsIsMutable();
+      /**
+       * <code>repeated string SelectedDepartmentIds = 9;</code>
+       */
+      public Builder addSelectedDepartmentIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSelectedDepartmentIdsIsMutable();
         selectedDepartmentIds_.add(value);
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationUserPermissions)
     }
-    
+
     static {
       defaultInstance = new OrganizationUserPermissions(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.OrganizationUserPermissions)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -936,26 +1253,24 @@ public final class OrganizationUserPermissionsProtos {
       "tionUserPermissionsProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor,
-              new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", },
-              Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.class,
-              Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor,
+        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

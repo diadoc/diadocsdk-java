@@ -8,285 +8,844 @@ public final class AcceptanceCertificateInfoProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface AcceptanceCertificateSellerTitleInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;
+  public interface AcceptanceCertificateSellerTitleInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSellerTitleInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+     *
+     * <pre>
+     * исполнитель (продавец услуг)
+     * </pre>
+     */
     boolean hasSeller();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+     *
+     * <pre>
+     * исполнитель (продавец услуг)
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getSeller();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+     *
+     * <pre>
+     * исполнитель (продавец услуг)
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getSellerOrBuilder();
-    
-    // required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+     *
+     * <pre>
+     * заказчик (покупатель услуг)
+     * </pre>
+     */
     boolean hasBuyer();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+     *
+     * <pre>
+     * заказчик (покупатель услуг)
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant getBuyer();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+     *
+     * <pre>
+     * заказчик (покупатель услуг)
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipantOrBuilder getBuyerOrBuilder();
-    
-    // required string DocumentDate = 3;
+
+    /**
+     * <code>required string DocumentDate = 3;</code>
+     *
+     * <pre>
+     * дата составления акта о выполнении
+     * </pre>
+     */
     boolean hasDocumentDate();
-    String getDocumentDate();
-    
-    // optional string DocumentNumber = 4;
+    /**
+     * <code>required string DocumentDate = 3;</code>
+     *
+     * <pre>
+     * дата составления акта о выполнении
+     * </pre>
+     */
+    java.lang.String getDocumentDate();
+    /**
+     * <code>required string DocumentDate = 3;</code>
+     *
+     * <pre>
+     * дата составления акта о выполнении
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDocumentDateBytes();
+
+    /**
+     * <code>optional string DocumentNumber = 4;</code>
+     *
+     * <pre>
+     * номер акта
+     * </pre>
+     */
     boolean hasDocumentNumber();
-    String getDocumentNumber();
-    
-    // required string DocumentTitle = 5;
+    /**
+     * <code>optional string DocumentNumber = 4;</code>
+     *
+     * <pre>
+     * номер акта
+     * </pre>
+     */
+    java.lang.String getDocumentNumber();
+    /**
+     * <code>optional string DocumentNumber = 4;</code>
+     *
+     * <pre>
+     * номер акта
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDocumentNumberBytes();
+
+    /**
+     * <code>required string DocumentTitle = 5;</code>
+     *
+     * <pre>
+     * заголовок документа
+     * </pre>
+     */
     boolean hasDocumentTitle();
-    String getDocumentTitle();
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;
+    /**
+     * <code>required string DocumentTitle = 5;</code>
+     *
+     * <pre>
+     * заголовок документа
+     * </pre>
+     */
+    java.lang.String getDocumentTitle();
+    /**
+     * <code>required string DocumentTitle = 5;</code>
+     *
+     * <pre>
+     * заголовок документа
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDocumentTitleBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription> 
         getWorksList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription getWorks(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     int getWorksCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescriptionOrBuilder> 
         getWorksOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescriptionOrBuilder getWorksOrBuilder(
         int index);
-    
-    // required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     boolean hasSignature();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo getSignature();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder getSignatureOrBuilder();
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     boolean hasSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder();
-    
-    // optional string AdditionalInfo = 9;
+
+    /**
+     * <code>optional string AdditionalInfo = 9;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
     boolean hasAdditionalInfo();
-    String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 9;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
+    java.lang.String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 9;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAdditionalInfoBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSellerTitleInfo}
+   *
+   * <pre>
+   * Со стороны исполнителя
+   * </pre>
+   */
   public static final class AcceptanceCertificateSellerTitleInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements AcceptanceCertificateSellerTitleInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSellerTitleInfo)
+      AcceptanceCertificateSellerTitleInfoOrBuilder {
     // Use AcceptanceCertificateSellerTitleInfo.newBuilder() to construct.
-    private AcceptanceCertificateSellerTitleInfo(Builder builder) {
+    private AcceptanceCertificateSellerTitleInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private AcceptanceCertificateSellerTitleInfo(boolean noInit) {}
-    
+    private AcceptanceCertificateSellerTitleInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final AcceptanceCertificateSellerTitleInfo defaultInstance;
     public static AcceptanceCertificateSellerTitleInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public AcceptanceCertificateSellerTitleInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AcceptanceCertificateSellerTitleInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = seller_.toBuilder();
+              }
+              seller_ = input.readMessage(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(seller_);
+                seller_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = buyer_.toBuilder();
+              }
+              buyer_ = input.readMessage(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(buyer_);
+                buyer_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              documentDate_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              documentNumber_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              documentTitle_ = bs;
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                works_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              works_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.PARSER, extensionRegistry));
+              break;
+            }
+            case 58: {
+              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = signature_.toBuilder();
+              }
+              signature_ = input.readMessage(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signature_);
+                signature_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 66: {
+              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = signer_.toBuilder();
+              }
+              signer_ = input.readMessage(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signer_);
+                signer_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              additionalInfo_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          works_ = java.util.Collections.unmodifiableList(works_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<AcceptanceCertificateSellerTitleInfo> PARSER =
+        new com.google.protobuf.AbstractParser<AcceptanceCertificateSellerTitleInfo>() {
+      public AcceptanceCertificateSellerTitleInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AcceptanceCertificateSellerTitleInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AcceptanceCertificateSellerTitleInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;
     public static final int SELLER_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo seller_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+     *
+     * <pre>
+     * исполнитель (продавец услуг)
+     * </pre>
+     */
     public boolean hasSeller() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+     *
+     * <pre>
+     * исполнитель (продавец услуг)
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getSeller() {
       return seller_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+     *
+     * <pre>
+     * исполнитель (продавец услуг)
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getSellerOrBuilder() {
       return seller_;
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;
+
     public static final int BUYER_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant buyer_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+     *
+     * <pre>
+     * заказчик (покупатель услуг)
+     * </pre>
+     */
     public boolean hasBuyer() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+     *
+     * <pre>
+     * заказчик (покупатель услуг)
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant getBuyer() {
       return buyer_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+     *
+     * <pre>
+     * заказчик (покупатель услуг)
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipantOrBuilder getBuyerOrBuilder() {
       return buyer_;
     }
-    
-    // required string DocumentDate = 3;
+
     public static final int DOCUMENTDATE_FIELD_NUMBER = 3;
     private java.lang.Object documentDate_;
+    /**
+     * <code>required string DocumentDate = 3;</code>
+     *
+     * <pre>
+     * дата составления акта о выполнении
+     * </pre>
+     */
     public boolean hasDocumentDate() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getDocumentDate() {
+    /**
+     * <code>required string DocumentDate = 3;</code>
+     *
+     * <pre>
+     * дата составления акта о выполнении
+     * </pre>
+     */
+    public java.lang.String getDocumentDate() {
       java.lang.Object ref = documentDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           documentDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDocumentDateBytes() {
+    /**
+     * <code>required string DocumentDate = 3;</code>
+     *
+     * <pre>
+     * дата составления акта о выполнении
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDocumentDateBytes() {
       java.lang.Object ref = documentDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         documentDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string DocumentNumber = 4;
+
     public static final int DOCUMENTNUMBER_FIELD_NUMBER = 4;
     private java.lang.Object documentNumber_;
+    /**
+     * <code>optional string DocumentNumber = 4;</code>
+     *
+     * <pre>
+     * номер акта
+     * </pre>
+     */
     public boolean hasDocumentNumber() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getDocumentNumber() {
+    /**
+     * <code>optional string DocumentNumber = 4;</code>
+     *
+     * <pre>
+     * номер акта
+     * </pre>
+     */
+    public java.lang.String getDocumentNumber() {
       java.lang.Object ref = documentNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           documentNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDocumentNumberBytes() {
+    /**
+     * <code>optional string DocumentNumber = 4;</code>
+     *
+     * <pre>
+     * номер акта
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDocumentNumberBytes() {
       java.lang.Object ref = documentNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         documentNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string DocumentTitle = 5;
+
     public static final int DOCUMENTTITLE_FIELD_NUMBER = 5;
     private java.lang.Object documentTitle_;
+    /**
+     * <code>required string DocumentTitle = 5;</code>
+     *
+     * <pre>
+     * заголовок документа
+     * </pre>
+     */
     public boolean hasDocumentTitle() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public String getDocumentTitle() {
+    /**
+     * <code>required string DocumentTitle = 5;</code>
+     *
+     * <pre>
+     * заголовок документа
+     * </pre>
+     */
+    public java.lang.String getDocumentTitle() {
       java.lang.Object ref = documentTitle_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           documentTitle_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDocumentTitleBytes() {
+    /**
+     * <code>required string DocumentTitle = 5;</code>
+     *
+     * <pre>
+     * заголовок документа
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDocumentTitleBytes() {
       java.lang.Object ref = documentTitle_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         documentTitle_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;
+
     public static final int WORKS_FIELD_NUMBER = 6;
     private java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription> works_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription> getWorksList() {
       return works_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescriptionOrBuilder> 
         getWorksOrBuilderList() {
       return works_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     public int getWorksCount() {
       return works_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription getWorks(int index) {
       return works_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+     *
+     * <pre>
+     * описание выполненных работ
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescriptionOrBuilder getWorksOrBuilder(
         int index) {
       return works_.get(index);
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;
+
     public static final int SIGNATURE_FIELD_NUMBER = 7;
     private Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo signature_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     public boolean hasSignature() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo getSignature() {
       return signature_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder getSignatureOrBuilder() {
       return signature_;
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;
+
     public static final int SIGNER_FIELD_NUMBER = 8;
     private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public boolean hasSigner() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
       return signer_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
       return signer_;
     }
-    
-    // optional string AdditionalInfo = 9;
+
     public static final int ADDITIONALINFO_FIELD_NUMBER = 9;
     private java.lang.Object additionalInfo_;
+    /**
+     * <code>optional string AdditionalInfo = 9;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
     public boolean hasAdditionalInfo() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
-    public String getAdditionalInfo() {
+    /**
+     * <code>optional string AdditionalInfo = 9;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
+    public java.lang.String getAdditionalInfo() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           additionalInfo_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAdditionalInfoBytes() {
+    /**
+     * <code>optional string AdditionalInfo = 9;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAdditionalInfoBytes() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         additionalInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       seller_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
       buyer_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.getDefaultInstance();
@@ -301,8 +860,9 @@ public final class AcceptanceCertificateInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasSeller()) {
         memoizedIsInitialized = 0;
         return false;
@@ -348,7 +908,7 @@ public final class AcceptanceCertificateInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -381,12 +941,12 @@ public final class AcceptanceCertificateInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -428,113 +988,110 @@ public final class AcceptanceCertificateInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSellerTitleInfo}
+     *
+     * <pre>
+     * Со стороны исполнителя
+     * </pre>
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSellerTitleInfo)
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -550,7 +1107,7 @@ public final class AcceptanceCertificateInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (sellerBuilder_ == null) {
@@ -593,20 +1150,20 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo build() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -614,17 +1171,7 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo buildPartial() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo result = new Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo(this);
         int from_bitField0_ = bitField0_;
@@ -690,7 +1237,7 @@ public final class AcceptanceCertificateInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo)other);
@@ -699,7 +1246,7 @@ public final class AcceptanceCertificateInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo other) {
         if (other == Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.getDefaultInstance()) return this;
         if (other.hasSeller()) {
@@ -709,13 +1256,19 @@ public final class AcceptanceCertificateInfoProtos {
           mergeBuyer(other.getBuyer());
         }
         if (other.hasDocumentDate()) {
-          setDocumentDate(other.getDocumentDate());
+          bitField0_ |= 0x00000004;
+          documentDate_ = other.documentDate_;
+          onChanged();
         }
         if (other.hasDocumentNumber()) {
-          setDocumentNumber(other.getDocumentNumber());
+          bitField0_ |= 0x00000008;
+          documentNumber_ = other.documentNumber_;
+          onChanged();
         }
         if (other.hasDocumentTitle()) {
-          setDocumentTitle(other.getDocumentTitle());
+          bitField0_ |= 0x00000010;
+          documentTitle_ = other.documentTitle_;
+          onChanged();
         }
         if (worksBuilder_ == null) {
           if (!other.works_.isEmpty()) {
@@ -750,12 +1303,14 @@ public final class AcceptanceCertificateInfoProtos {
           mergeSigner(other.getSigner());
         }
         if (other.hasAdditionalInfo()) {
-          setAdditionalInfo(other.getAdditionalInfo());
+          bitField0_ |= 0x00000100;
+          additionalInfo_ = other.additionalInfo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasSeller()) {
           
@@ -801,105 +1356,46 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.newBuilder();
-              if (hasSeller()) {
-                subBuilder.mergeFrom(getSeller());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSeller(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.Builder subBuilder = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.newBuilder();
-              if (hasBuyer()) {
-                subBuilder.mergeFrom(getBuyer());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setBuyer(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              documentDate_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              documentNumber_ = input.readBytes();
-              break;
-            }
-            case 42: {
-              bitField0_ |= 0x00000010;
-              documentTitle_ = input.readBytes();
-              break;
-            }
-            case 50: {
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder subBuilder = Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addWorks(subBuilder.buildPartial());
-              break;
-            }
-            case 58: {
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.newBuilder();
-              if (hasSignature()) {
-                subBuilder.mergeFrom(getSignature());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSignature(subBuilder.buildPartial());
-              break;
-            }
-            case 66: {
-              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.newBuilder();
-              if (hasSigner()) {
-                subBuilder.mergeFrom(getSigner());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSigner(subBuilder.buildPartial());
-              break;
-            }
-            case 74: {
-              bitField0_ |= 0x00000100;
-              additionalInfo_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;
+
       private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo seller_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> sellerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+       *
+       * <pre>
+       * исполнитель (продавец услуг)
+       * </pre>
+       */
       public boolean hasSeller() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+       *
+       * <pre>
+       * исполнитель (продавец услуг)
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo getSeller() {
         if (sellerBuilder_ == null) {
           return seller_;
@@ -907,6 +1403,13 @@ public final class AcceptanceCertificateInfoProtos {
           return sellerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+       *
+       * <pre>
+       * исполнитель (продавец услуг)
+       * </pre>
+       */
       public Builder setSeller(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (sellerBuilder_ == null) {
           if (value == null) {
@@ -920,6 +1423,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+       *
+       * <pre>
+       * исполнитель (продавец услуг)
+       * </pre>
+       */
       public Builder setSeller(
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder builderForValue) {
         if (sellerBuilder_ == null) {
@@ -931,6 +1441,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+       *
+       * <pre>
+       * исполнитель (продавец услуг)
+       * </pre>
+       */
       public Builder mergeSeller(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo value) {
         if (sellerBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -947,6 +1464,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+       *
+       * <pre>
+       * исполнитель (продавец услуг)
+       * </pre>
+       */
       public Builder clearSeller() {
         if (sellerBuilder_ == null) {
           seller_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.getDefaultInstance();
@@ -957,11 +1481,25 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+       *
+       * <pre>
+       * исполнитель (продавец услуг)
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder getSellerBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getSellerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+       *
+       * <pre>
+       * исполнитель (продавец услуг)
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder getSellerOrBuilder() {
         if (sellerBuilder_ != null) {
           return sellerBuilder_.getMessageOrBuilder();
@@ -969,27 +1507,47 @@ public final class AcceptanceCertificateInfoProtos {
           return seller_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo Seller = 1;</code>
+       *
+       * <pre>
+       * исполнитель (продавец услуг)
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder> 
           getSellerFieldBuilder() {
         if (sellerBuilder_ == null) {
           sellerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfo.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DiadocOrganizationInfoOrBuilder>(
-                  seller_,
+                  getSeller(),
                   getParentForChildren(),
                   isClean());
           seller_ = null;
         }
         return sellerBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;
+
       private Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant buyer_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipantOrBuilder> buyerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+       *
+       * <pre>
+       * заказчик (покупатель услуг)
+       * </pre>
+       */
       public boolean hasBuyer() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+       *
+       * <pre>
+       * заказчик (покупатель услуг)
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant getBuyer() {
         if (buyerBuilder_ == null) {
           return buyer_;
@@ -997,6 +1555,13 @@ public final class AcceptanceCertificateInfoProtos {
           return buyerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+       *
+       * <pre>
+       * заказчик (покупатель услуг)
+       * </pre>
+       */
       public Builder setBuyer(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant value) {
         if (buyerBuilder_ == null) {
           if (value == null) {
@@ -1010,6 +1575,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+       *
+       * <pre>
+       * заказчик (покупатель услуг)
+       * </pre>
+       */
       public Builder setBuyer(
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.Builder builderForValue) {
         if (buyerBuilder_ == null) {
@@ -1021,6 +1593,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+       *
+       * <pre>
+       * заказчик (покупатель услуг)
+       * </pre>
+       */
       public Builder mergeBuyer(Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant value) {
         if (buyerBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -1037,6 +1616,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+       *
+       * <pre>
+       * заказчик (покупатель услуг)
+       * </pre>
+       */
       public Builder clearBuyer() {
         if (buyerBuilder_ == null) {
           buyer_ = Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.getDefaultInstance();
@@ -1047,11 +1633,25 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+       *
+       * <pre>
+       * заказчик (покупатель услуг)
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.Builder getBuyerBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getBuyerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+       *
+       * <pre>
+       * заказчик (покупатель услуг)
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipantOrBuilder getBuyerOrBuilder() {
         if (buyerBuilder_ != null) {
           return buyerBuilder_.getMessageOrBuilder();
@@ -1059,36 +1659,88 @@ public final class AcceptanceCertificateInfoProtos {
           return buyer_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.DocflowParticipant Buyer = 2;</code>
+       *
+       * <pre>
+       * заказчик (покупатель услуг)
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipantOrBuilder> 
           getBuyerFieldBuilder() {
         if (buyerBuilder_ == null) {
           buyerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipant.Builder, Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.DocflowParticipantOrBuilder>(
-                  buyer_,
+                  getBuyer(),
                   getParentForChildren(),
                   isClean());
           buyer_ = null;
         }
         return buyerBuilder_;
       }
-      
-      // required string DocumentDate = 3;
+
       private java.lang.Object documentDate_ = "";
+      /**
+       * <code>required string DocumentDate = 3;</code>
+       *
+       * <pre>
+       * дата составления акта о выполнении
+       * </pre>
+       */
       public boolean hasDocumentDate() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getDocumentDate() {
+      /**
+       * <code>required string DocumentDate = 3;</code>
+       *
+       * <pre>
+       * дата составления акта о выполнении
+       * </pre>
+       */
+      public java.lang.String getDocumentDate() {
         java.lang.Object ref = documentDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          documentDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            documentDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setDocumentDate(String value) {
+      /**
+       * <code>required string DocumentDate = 3;</code>
+       *
+       * <pre>
+       * дата составления акта о выполнении
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDocumentDateBytes() {
+        java.lang.Object ref = documentDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          documentDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentDate = 3;</code>
+       *
+       * <pre>
+       * дата составления акта о выполнении
+       * </pre>
+       */
+      public Builder setDocumentDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1097,34 +1749,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string DocumentDate = 3;</code>
+       *
+       * <pre>
+       * дата составления акта о выполнении
+       * </pre>
+       */
       public Builder clearDocumentDate() {
         bitField0_ = (bitField0_ & ~0x00000004);
         documentDate_ = getDefaultInstance().getDocumentDate();
         onChanged();
         return this;
       }
-      void setDocumentDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>required string DocumentDate = 3;</code>
+       *
+       * <pre>
+       * дата составления акта о выполнении
+       * </pre>
+       */
+      public Builder setDocumentDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         documentDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string DocumentNumber = 4;
+
       private java.lang.Object documentNumber_ = "";
+      /**
+       * <code>optional string DocumentNumber = 4;</code>
+       *
+       * <pre>
+       * номер акта
+       * </pre>
+       */
       public boolean hasDocumentNumber() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getDocumentNumber() {
+      /**
+       * <code>optional string DocumentNumber = 4;</code>
+       *
+       * <pre>
+       * номер акта
+       * </pre>
+       */
+      public java.lang.String getDocumentNumber() {
         java.lang.Object ref = documentNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          documentNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            documentNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setDocumentNumber(String value) {
+      /**
+       * <code>optional string DocumentNumber = 4;</code>
+       *
+       * <pre>
+       * номер акта
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDocumentNumberBytes() {
+        java.lang.Object ref = documentNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          documentNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string DocumentNumber = 4;</code>
+       *
+       * <pre>
+       * номер акта
+       * </pre>
+       */
+      public Builder setDocumentNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1133,34 +1849,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string DocumentNumber = 4;</code>
+       *
+       * <pre>
+       * номер акта
+       * </pre>
+       */
       public Builder clearDocumentNumber() {
         bitField0_ = (bitField0_ & ~0x00000008);
         documentNumber_ = getDefaultInstance().getDocumentNumber();
         onChanged();
         return this;
       }
-      void setDocumentNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string DocumentNumber = 4;</code>
+       *
+       * <pre>
+       * номер акта
+       * </pre>
+       */
+      public Builder setDocumentNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         documentNumber_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string DocumentTitle = 5;
+
       private java.lang.Object documentTitle_ = "";
+      /**
+       * <code>required string DocumentTitle = 5;</code>
+       *
+       * <pre>
+       * заголовок документа
+       * </pre>
+       */
       public boolean hasDocumentTitle() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      public String getDocumentTitle() {
+      /**
+       * <code>required string DocumentTitle = 5;</code>
+       *
+       * <pre>
+       * заголовок документа
+       * </pre>
+       */
+      public java.lang.String getDocumentTitle() {
         java.lang.Object ref = documentTitle_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          documentTitle_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            documentTitle_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setDocumentTitle(String value) {
+      /**
+       * <code>required string DocumentTitle = 5;</code>
+       *
+       * <pre>
+       * заголовок документа
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDocumentTitleBytes() {
+        java.lang.Object ref = documentTitle_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          documentTitle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentTitle = 5;</code>
+       *
+       * <pre>
+       * заголовок документа
+       * </pre>
+       */
+      public Builder setDocumentTitle(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1169,19 +1949,37 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string DocumentTitle = 5;</code>
+       *
+       * <pre>
+       * заголовок документа
+       * </pre>
+       */
       public Builder clearDocumentTitle() {
         bitField0_ = (bitField0_ & ~0x00000010);
         documentTitle_ = getDefaultInstance().getDocumentTitle();
         onChanged();
         return this;
       }
-      void setDocumentTitle(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000010;
+      /**
+       * <code>required string DocumentTitle = 5;</code>
+       *
+       * <pre>
+       * заголовок документа
+       * </pre>
+       */
+      public Builder setDocumentTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
         documentTitle_ = value;
         onChanged();
+        return this;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription> works_ =
         java.util.Collections.emptyList();
       private void ensureWorksIsMutable() {
@@ -1190,10 +1988,17 @@ public final class AcceptanceCertificateInfoProtos {
           bitField0_ |= 0x00000020;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescriptionOrBuilder> worksBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription> getWorksList() {
         if (worksBuilder_ == null) {
           return java.util.Collections.unmodifiableList(works_);
@@ -1201,6 +2006,13 @@ public final class AcceptanceCertificateInfoProtos {
           return worksBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public int getWorksCount() {
         if (worksBuilder_ == null) {
           return works_.size();
@@ -1208,6 +2020,13 @@ public final class AcceptanceCertificateInfoProtos {
           return worksBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription getWorks(int index) {
         if (worksBuilder_ == null) {
           return works_.get(index);
@@ -1215,6 +2034,13 @@ public final class AcceptanceCertificateInfoProtos {
           return worksBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Builder setWorks(
           int index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription value) {
         if (worksBuilder_ == null) {
@@ -1229,6 +2055,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Builder setWorks(
           int index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder builderForValue) {
         if (worksBuilder_ == null) {
@@ -1240,6 +2073,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Builder addWorks(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription value) {
         if (worksBuilder_ == null) {
           if (value == null) {
@@ -1253,6 +2093,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Builder addWorks(
           int index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription value) {
         if (worksBuilder_ == null) {
@@ -1267,6 +2114,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Builder addWorks(
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder builderForValue) {
         if (worksBuilder_ == null) {
@@ -1278,6 +2132,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Builder addWorks(
           int index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder builderForValue) {
         if (worksBuilder_ == null) {
@@ -1289,17 +2150,32 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Builder addAllWorks(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription> values) {
         if (worksBuilder_ == null) {
           ensureWorksIsMutable();
-          super.addAll(values, works_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, works_);
           onChanged();
         } else {
           worksBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Builder clearWorks() {
         if (worksBuilder_ == null) {
           works_ = java.util.Collections.emptyList();
@@ -1310,6 +2186,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Builder removeWorks(int index) {
         if (worksBuilder_ == null) {
           ensureWorksIsMutable();
@@ -1320,10 +2203,24 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder getWorksBuilder(
           int index) {
         return getWorksFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescriptionOrBuilder getWorksOrBuilder(
           int index) {
         if (worksBuilder_ == null) {
@@ -1331,6 +2228,13 @@ public final class AcceptanceCertificateInfoProtos {
           return worksBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescriptionOrBuilder> 
            getWorksOrBuilderList() {
         if (worksBuilder_ != null) {
@@ -1339,15 +2243,36 @@ public final class AcceptanceCertificateInfoProtos {
           return java.util.Collections.unmodifiableList(works_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder addWorksBuilder() {
         return getWorksFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder addWorksBuilder(
           int index) {
         return getWorksFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkDescription Works = 6;</code>
+       *
+       * <pre>
+       * описание выполненных работ
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder> 
            getWorksBuilderList() {
         return getWorksFieldBuilder().getBuilderList();
@@ -1366,14 +2291,27 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return worksBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;
+
       private Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo signature_ = Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder> signatureBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public boolean hasSignature() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo getSignature() {
         if (signatureBuilder_ == null) {
           return signature_;
@@ -1381,6 +2319,13 @@ public final class AcceptanceCertificateInfoProtos {
           return signatureBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Builder setSignature(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo value) {
         if (signatureBuilder_ == null) {
           if (value == null) {
@@ -1394,6 +2339,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000040;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Builder setSignature(
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder builderForValue) {
         if (signatureBuilder_ == null) {
@@ -1405,6 +2357,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000040;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Builder mergeSignature(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo value) {
         if (signatureBuilder_ == null) {
           if (((bitField0_ & 0x00000040) == 0x00000040) &&
@@ -1421,6 +2380,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000040;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Builder clearSignature() {
         if (signatureBuilder_ == null) {
           signature_ = Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.getDefaultInstance();
@@ -1431,11 +2397,25 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder getSignatureBuilder() {
         bitField0_ |= 0x00000040;
         onChanged();
         return getSignatureFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder getSignatureOrBuilder() {
         if (signatureBuilder_ != null) {
           return signatureBuilder_.getMessageOrBuilder();
@@ -1443,27 +2423,47 @@ public final class AcceptanceCertificateInfoProtos {
           return signature_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 7;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder> 
           getSignatureFieldBuilder() {
         if (signatureBuilder_ == null) {
           signatureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder>(
-                  signature_,
+                  getSignature(),
                   getParentForChildren(),
                   isClean());
           signature_ = null;
         }
         return signatureBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;
+
       private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> signerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public boolean hasSigner() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
         if (signerBuilder_ == null) {
           return signer_;
@@ -1471,6 +2471,13 @@ public final class AcceptanceCertificateInfoProtos {
           return signerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder setSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (value == null) {
@@ -1484,6 +2491,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000080;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder setSigner(
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder builderForValue) {
         if (signerBuilder_ == null) {
@@ -1495,6 +2509,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000080;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder mergeSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (((bitField0_ & 0x00000080) == 0x00000080) &&
@@ -1511,6 +2532,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000080;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder clearSigner() {
         if (signerBuilder_ == null) {
           signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
@@ -1521,11 +2549,25 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder getSignerBuilder() {
         bitField0_ |= 0x00000080;
         onChanged();
         return getSignerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
         if (signerBuilder_ != null) {
           return signerBuilder_.getMessageOrBuilder();
@@ -1533,36 +2575,88 @@ public final class AcceptanceCertificateInfoProtos {
           return signer_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 8;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> 
           getSignerFieldBuilder() {
         if (signerBuilder_ == null) {
           signerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder>(
-                  signer_,
+                  getSigner(),
                   getParentForChildren(),
                   isClean());
           signer_ = null;
         }
         return signerBuilder_;
       }
-      
-      // optional string AdditionalInfo = 9;
+
       private java.lang.Object additionalInfo_ = "";
+      /**
+       * <code>optional string AdditionalInfo = 9;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
       public boolean hasAdditionalInfo() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
-      public String getAdditionalInfo() {
+      /**
+       * <code>optional string AdditionalInfo = 9;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
+      public java.lang.String getAdditionalInfo() {
         java.lang.Object ref = additionalInfo_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          additionalInfo_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            additionalInfo_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAdditionalInfo(String value) {
+      /**
+       * <code>optional string AdditionalInfo = 9;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAdditionalInfoBytes() {
+        java.lang.Object ref = additionalInfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          additionalInfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AdditionalInfo = 9;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
+      public Builder setAdditionalInfo(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1571,169 +2665,462 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string AdditionalInfo = 9;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
       public Builder clearAdditionalInfo() {
         bitField0_ = (bitField0_ & ~0x00000100);
         additionalInfo_ = getDefaultInstance().getAdditionalInfo();
         onChanged();
         return this;
       }
-      void setAdditionalInfo(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000100;
+      /**
+       * <code>optional string AdditionalInfo = 9;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
+      public Builder setAdditionalInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
         additionalInfo_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSellerTitleInfo)
     }
-    
+
     static {
       defaultInstance = new AcceptanceCertificateSellerTitleInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSellerTitleInfo)
   }
-  
-  public interface AcceptanceCertificateBuyerTitleInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string Complaints = 1;
+
+  public interface AcceptanceCertificateBuyerTitleInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateBuyerTitleInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Complaints = 1;</code>
+     *
+     * <pre>
+     * претензии
+     * </pre>
+     */
     boolean hasComplaints();
-    String getComplaints();
-    
-    // required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;
+    /**
+     * <code>optional string Complaints = 1;</code>
+     *
+     * <pre>
+     * претензии
+     * </pre>
+     */
+    java.lang.String getComplaints();
+    /**
+     * <code>optional string Complaints = 1;</code>
+     *
+     * <pre>
+     * претензии
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getComplaintsBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     boolean hasSignature();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo getSignature();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder getSignatureOrBuilder();
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     boolean hasSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder();
-    
-    // optional string AdditionalInfo = 4;
+
+    /**
+     * <code>optional string AdditionalInfo = 4;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
     boolean hasAdditionalInfo();
-    String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 4;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
+    java.lang.String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 4;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAdditionalInfoBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.AcceptanceCertificateBuyerTitleInfo}
+   *
+   * <pre>
+   * Со стороны заказчика
+   * </pre>
+   */
   public static final class AcceptanceCertificateBuyerTitleInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements AcceptanceCertificateBuyerTitleInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateBuyerTitleInfo)
+      AcceptanceCertificateBuyerTitleInfoOrBuilder {
     // Use AcceptanceCertificateBuyerTitleInfo.newBuilder() to construct.
-    private AcceptanceCertificateBuyerTitleInfo(Builder builder) {
+    private AcceptanceCertificateBuyerTitleInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private AcceptanceCertificateBuyerTitleInfo(boolean noInit) {}
-    
+    private AcceptanceCertificateBuyerTitleInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final AcceptanceCertificateBuyerTitleInfo defaultInstance;
     public static AcceptanceCertificateBuyerTitleInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public AcceptanceCertificateBuyerTitleInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AcceptanceCertificateBuyerTitleInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              complaints_ = bs;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = signature_.toBuilder();
+              }
+              signature_ = input.readMessage(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signature_);
+                signature_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = signer_.toBuilder();
+              }
+              signer_ = input.readMessage(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signer_);
+                signer_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              additionalInfo_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<AcceptanceCertificateBuyerTitleInfo> PARSER =
+        new com.google.protobuf.AbstractParser<AcceptanceCertificateBuyerTitleInfo>() {
+      public AcceptanceCertificateBuyerTitleInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AcceptanceCertificateBuyerTitleInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AcceptanceCertificateBuyerTitleInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string Complaints = 1;
     public static final int COMPLAINTS_FIELD_NUMBER = 1;
     private java.lang.Object complaints_;
+    /**
+     * <code>optional string Complaints = 1;</code>
+     *
+     * <pre>
+     * претензии
+     * </pre>
+     */
     public boolean hasComplaints() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getComplaints() {
+    /**
+     * <code>optional string Complaints = 1;</code>
+     *
+     * <pre>
+     * претензии
+     * </pre>
+     */
+    public java.lang.String getComplaints() {
       java.lang.Object ref = complaints_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           complaints_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getComplaintsBytes() {
+    /**
+     * <code>optional string Complaints = 1;</code>
+     *
+     * <pre>
+     * претензии
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getComplaintsBytes() {
       java.lang.Object ref = complaints_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         complaints_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;
+
     public static final int SIGNATURE_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo signature_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     public boolean hasSignature() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo getSignature() {
       return signature_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+     *
+     * <pre>
+     * сведения о подписи акта
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder getSignatureOrBuilder() {
       return signature_;
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;
+
     public static final int SIGNER_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public boolean hasSigner() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
       return signer_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+     *
+     * <pre>
+     * подписант
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
       return signer_;
     }
-    
-    // optional string AdditionalInfo = 4;
+
     public static final int ADDITIONALINFO_FIELD_NUMBER = 4;
     private java.lang.Object additionalInfo_;
+    /**
+     * <code>optional string AdditionalInfo = 4;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
     public boolean hasAdditionalInfo() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getAdditionalInfo() {
+    /**
+     * <code>optional string AdditionalInfo = 4;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
+    public java.lang.String getAdditionalInfo() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           additionalInfo_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAdditionalInfoBytes() {
+    /**
+     * <code>optional string AdditionalInfo = 4;</code>
+     *
+     * <pre>
+     * дополнительная информация
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAdditionalInfoBytes() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         additionalInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       complaints_ = "";
       signature_ = Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.getDefaultInstance();
@@ -1743,8 +3130,9 @@ public final class AcceptanceCertificateInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasSignature()) {
         memoizedIsInitialized = 0;
         return false;
@@ -1764,7 +3152,7 @@ public final class AcceptanceCertificateInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1782,12 +3170,12 @@ public final class AcceptanceCertificateInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1809,113 +3197,110 @@ public final class AcceptanceCertificateInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.AcceptanceCertificateBuyerTitleInfo}
+     *
+     * <pre>
+     * Со стороны заказчика
+     * </pre>
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateBuyerTitleInfo)
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1928,7 +3313,7 @@ public final class AcceptanceCertificateInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         complaints_ = "";
@@ -1949,20 +3334,20 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo build() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -1970,17 +3355,7 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo buildPartial() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo result = new Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo(this);
         int from_bitField0_ = bitField0_;
@@ -2013,7 +3388,7 @@ public final class AcceptanceCertificateInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo)other);
@@ -2022,11 +3397,13 @@ public final class AcceptanceCertificateInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo other) {
         if (other == Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.getDefaultInstance()) return this;
         if (other.hasComplaints()) {
-          setComplaints(other.getComplaints());
+          bitField0_ |= 0x00000001;
+          complaints_ = other.complaints_;
+          onChanged();
         }
         if (other.hasSignature()) {
           mergeSignature(other.getSignature());
@@ -2035,12 +3412,14 @@ public final class AcceptanceCertificateInfoProtos {
           mergeSigner(other.getSigner());
         }
         if (other.hasAdditionalInfo()) {
-          setAdditionalInfo(other.getAdditionalInfo());
+          bitField0_ |= 0x00000008;
+          additionalInfo_ = other.additionalInfo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasSignature()) {
           
@@ -2060,80 +3439,87 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              complaints_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder subBuilder = Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.newBuilder();
-              if (hasSignature()) {
-                subBuilder.mergeFrom(getSignature());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSignature(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.newBuilder();
-              if (hasSigner()) {
-                subBuilder.mergeFrom(getSigner());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSigner(subBuilder.buildPartial());
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              additionalInfo_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string Complaints = 1;
+
       private java.lang.Object complaints_ = "";
+      /**
+       * <code>optional string Complaints = 1;</code>
+       *
+       * <pre>
+       * претензии
+       * </pre>
+       */
       public boolean hasComplaints() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getComplaints() {
+      /**
+       * <code>optional string Complaints = 1;</code>
+       *
+       * <pre>
+       * претензии
+       * </pre>
+       */
+      public java.lang.String getComplaints() {
         java.lang.Object ref = complaints_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          complaints_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            complaints_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setComplaints(String value) {
+      /**
+       * <code>optional string Complaints = 1;</code>
+       *
+       * <pre>
+       * претензии
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getComplaintsBytes() {
+        java.lang.Object ref = complaints_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          complaints_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Complaints = 1;</code>
+       *
+       * <pre>
+       * претензии
+       * </pre>
+       */
+      public Builder setComplaints(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2142,25 +3528,57 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Complaints = 1;</code>
+       *
+       * <pre>
+       * претензии
+       * </pre>
+       */
       public Builder clearComplaints() {
         bitField0_ = (bitField0_ & ~0x00000001);
         complaints_ = getDefaultInstance().getComplaints();
         onChanged();
         return this;
       }
-      void setComplaints(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string Complaints = 1;</code>
+       *
+       * <pre>
+       * претензии
+       * </pre>
+       */
+      public Builder setComplaintsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         complaints_ = value;
         onChanged();
+        return this;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;
+
       private Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo signature_ = Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder> signatureBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public boolean hasSignature() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo getSignature() {
         if (signatureBuilder_ == null) {
           return signature_;
@@ -2168,6 +3586,13 @@ public final class AcceptanceCertificateInfoProtos {
           return signatureBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Builder setSignature(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo value) {
         if (signatureBuilder_ == null) {
           if (value == null) {
@@ -2181,6 +3606,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Builder setSignature(
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder builderForValue) {
         if (signatureBuilder_ == null) {
@@ -2192,6 +3624,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Builder mergeSignature(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo value) {
         if (signatureBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -2208,6 +3647,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Builder clearSignature() {
         if (signatureBuilder_ == null) {
           signature_ = Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.getDefaultInstance();
@@ -2218,11 +3664,25 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder getSignatureBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getSignatureFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder getSignatureOrBuilder() {
         if (signatureBuilder_ != null) {
           return signatureBuilder_.getMessageOrBuilder();
@@ -2230,27 +3690,47 @@ public final class AcceptanceCertificateInfoProtos {
           return signature_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo Signature = 2;</code>
+       *
+       * <pre>
+       * сведения о подписи акта
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder> 
           getSignatureFieldBuilder() {
         if (signatureBuilder_ == null) {
           signatureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder>(
-                  signature_,
+                  getSignature(),
                   getParentForChildren(),
                   isClean());
           signature_ = null;
         }
         return signatureBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;
+
       private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> signerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public boolean hasSigner() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
         if (signerBuilder_ == null) {
           return signer_;
@@ -2258,6 +3738,13 @@ public final class AcceptanceCertificateInfoProtos {
           return signerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder setSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (value == null) {
@@ -2271,6 +3758,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder setSigner(
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder builderForValue) {
         if (signerBuilder_ == null) {
@@ -2282,6 +3776,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder mergeSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -2298,6 +3799,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Builder clearSigner() {
         if (signerBuilder_ == null) {
           signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
@@ -2308,11 +3816,25 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder getSignerBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getSignerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
         if (signerBuilder_ != null) {
           return signerBuilder_.getMessageOrBuilder();
@@ -2320,36 +3842,88 @@ public final class AcceptanceCertificateInfoProtos {
           return signer_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 3;</code>
+       *
+       * <pre>
+       * подписант
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> 
           getSignerFieldBuilder() {
         if (signerBuilder_ == null) {
           signerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder>(
-                  signer_,
+                  getSigner(),
                   getParentForChildren(),
                   isClean());
           signer_ = null;
         }
         return signerBuilder_;
       }
-      
-      // optional string AdditionalInfo = 4;
+
       private java.lang.Object additionalInfo_ = "";
+      /**
+       * <code>optional string AdditionalInfo = 4;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
       public boolean hasAdditionalInfo() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getAdditionalInfo() {
+      /**
+       * <code>optional string AdditionalInfo = 4;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
+      public java.lang.String getAdditionalInfo() {
         java.lang.Object ref = additionalInfo_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          additionalInfo_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            additionalInfo_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAdditionalInfo(String value) {
+      /**
+       * <code>optional string AdditionalInfo = 4;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAdditionalInfoBytes() {
+        java.lang.Object ref = additionalInfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          additionalInfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AdditionalInfo = 4;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
+      public Builder setAdditionalInfo(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2358,133 +3932,372 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string AdditionalInfo = 4;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
       public Builder clearAdditionalInfo() {
         bitField0_ = (bitField0_ & ~0x00000008);
         additionalInfo_ = getDefaultInstance().getAdditionalInfo();
         onChanged();
         return this;
       }
-      void setAdditionalInfo(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string AdditionalInfo = 4;</code>
+       *
+       * <pre>
+       * дополнительная информация
+       * </pre>
+       */
+      public Builder setAdditionalInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         additionalInfo_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateBuyerTitleInfo)
     }
-    
+
     static {
       defaultInstance = new AcceptanceCertificateBuyerTitleInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateBuyerTitleInfo)
   }
-  
-  public interface AcceptanceCertificateSignatureInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string SignatureDate = 1;
+
+  public interface AcceptanceCertificateSignatureInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string SignatureDate = 1;</code>
+     *
+     * <pre>
+     * дата подписи акта исполнителем / заказчиком
+     * </pre>
+     */
     boolean hasSignatureDate();
-    String getSignatureDate();
-    
-    // optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;
+    /**
+     * <code>optional string SignatureDate = 1;</code>
+     *
+     * <pre>
+     * дата подписи акта исполнителем / заказчиком
+     * </pre>
+     */
+    java.lang.String getSignatureDate();
+    /**
+     * <code>optional string SignatureDate = 1;</code>
+     *
+     * <pre>
+     * дата подписи акта исполнителем / заказчиком
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSignatureDateBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+     *
+     * <pre>
+     * лицо, подписывающее со стороны исполнителя / заказчика
+     * </pre>
+     */
     boolean hasOfficial();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+     *
+     * <pre>
+     * лицо, подписывающее со стороны исполнителя / заказчика
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OfficialProtos.Official getOfficial();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+     *
+     * <pre>
+     * лицо, подписывающее со стороны исполнителя / заказчика
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OfficialProtos.OfficialOrBuilder getOfficialOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+     *
+     * <pre>
+     * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+     * </pre>
+     */
     boolean hasAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+     *
+     * <pre>
+     * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney getAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+     *
+     * <pre>
+     * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.OfficialProtos.AttorneyOrBuilder getAttorneyOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo}
+   */
   public static final class AcceptanceCertificateSignatureInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements AcceptanceCertificateSignatureInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo)
+      AcceptanceCertificateSignatureInfoOrBuilder {
     // Use AcceptanceCertificateSignatureInfo.newBuilder() to construct.
-    private AcceptanceCertificateSignatureInfo(Builder builder) {
+    private AcceptanceCertificateSignatureInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private AcceptanceCertificateSignatureInfo(boolean noInit) {}
-    
+    private AcceptanceCertificateSignatureInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final AcceptanceCertificateSignatureInfo defaultInstance;
     public static AcceptanceCertificateSignatureInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public AcceptanceCertificateSignatureInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AcceptanceCertificateSignatureInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              signatureDate_ = bs;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = official_.toBuilder();
+              }
+              official_ = input.readMessage(Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(official_);
+                official_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = attorney_.toBuilder();
+              }
+              attorney_ = input.readMessage(Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(attorney_);
+                attorney_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<AcceptanceCertificateSignatureInfo> PARSER =
+        new com.google.protobuf.AbstractParser<AcceptanceCertificateSignatureInfo>() {
+      public AcceptanceCertificateSignatureInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AcceptanceCertificateSignatureInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AcceptanceCertificateSignatureInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string SignatureDate = 1;
     public static final int SIGNATUREDATE_FIELD_NUMBER = 1;
     private java.lang.Object signatureDate_;
+    /**
+     * <code>optional string SignatureDate = 1;</code>
+     *
+     * <pre>
+     * дата подписи акта исполнителем / заказчиком
+     * </pre>
+     */
     public boolean hasSignatureDate() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getSignatureDate() {
+    /**
+     * <code>optional string SignatureDate = 1;</code>
+     *
+     * <pre>
+     * дата подписи акта исполнителем / заказчиком
+     * </pre>
+     */
+    public java.lang.String getSignatureDate() {
       java.lang.Object ref = signatureDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           signatureDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSignatureDateBytes() {
+    /**
+     * <code>optional string SignatureDate = 1;</code>
+     *
+     * <pre>
+     * дата подписи акта исполнителем / заказчиком
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSignatureDateBytes() {
       java.lang.Object ref = signatureDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         signatureDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;
+
     public static final int OFFICIAL_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Invoicing.OfficialProtos.Official official_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+     *
+     * <pre>
+     * лицо, подписывающее со стороны исполнителя / заказчика
+     * </pre>
+     */
     public boolean hasOfficial() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+     *
+     * <pre>
+     * лицо, подписывающее со стороны исполнителя / заказчика
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OfficialProtos.Official getOfficial() {
       return official_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+     *
+     * <pre>
+     * лицо, подписывающее со стороны исполнителя / заказчика
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OfficialProtos.OfficialOrBuilder getOfficialOrBuilder() {
       return official_;
     }
-    
-    // optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;
+
     public static final int ATTORNEY_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney attorney_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+     *
+     * <pre>
+     * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+     * </pre>
+     */
     public boolean hasAttorney() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+     *
+     * <pre>
+     * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney getAttorney() {
       return attorney_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+     *
+     * <pre>
+     * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.OfficialProtos.AttorneyOrBuilder getAttorneyOrBuilder() {
       return attorney_;
     }
-    
+
     private void initFields() {
       signatureDate_ = "";
       official_ = Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.getDefaultInstance();
@@ -2493,8 +4306,9 @@ public final class AcceptanceCertificateInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasOfficial()) {
         if (!getOfficial().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -2510,7 +4324,7 @@ public final class AcceptanceCertificateInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2525,12 +4339,12 @@ public final class AcceptanceCertificateInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2548,113 +4362,106 @@ public final class AcceptanceCertificateInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo)
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2667,7 +4474,7 @@ public final class AcceptanceCertificateInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         signatureDate_ = "";
@@ -2686,20 +4493,20 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo build() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -2707,17 +4514,7 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo buildPartial() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo result = new Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo(this);
         int from_bitField0_ = bitField0_;
@@ -2746,7 +4543,7 @@ public final class AcceptanceCertificateInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo)other);
@@ -2755,11 +4552,13 @@ public final class AcceptanceCertificateInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo other) {
         if (other == Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.getDefaultInstance()) return this;
         if (other.hasSignatureDate()) {
-          setSignatureDate(other.getSignatureDate());
+          bitField0_ |= 0x00000001;
+          signatureDate_ = other.signatureDate_;
+          onChanged();
         }
         if (other.hasOfficial()) {
           mergeOfficial(other.getOfficial());
@@ -2770,7 +4569,7 @@ public final class AcceptanceCertificateInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasOfficial()) {
           if (!getOfficial().isInitialized()) {
@@ -2786,75 +4585,87 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              signatureDate_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.Builder subBuilder = Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.newBuilder();
-              if (hasOfficial()) {
-                subBuilder.mergeFrom(getOfficial());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setOfficial(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.Builder subBuilder = Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.newBuilder();
-              if (hasAttorney()) {
-                subBuilder.mergeFrom(getAttorney());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setAttorney(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string SignatureDate = 1;
+
       private java.lang.Object signatureDate_ = "";
+      /**
+       * <code>optional string SignatureDate = 1;</code>
+       *
+       * <pre>
+       * дата подписи акта исполнителем / заказчиком
+       * </pre>
+       */
       public boolean hasSignatureDate() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getSignatureDate() {
+      /**
+       * <code>optional string SignatureDate = 1;</code>
+       *
+       * <pre>
+       * дата подписи акта исполнителем / заказчиком
+       * </pre>
+       */
+      public java.lang.String getSignatureDate() {
         java.lang.Object ref = signatureDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          signatureDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            signatureDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSignatureDate(String value) {
+      /**
+       * <code>optional string SignatureDate = 1;</code>
+       *
+       * <pre>
+       * дата подписи акта исполнителем / заказчиком
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSignatureDateBytes() {
+        java.lang.Object ref = signatureDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signatureDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SignatureDate = 1;</code>
+       *
+       * <pre>
+       * дата подписи акта исполнителем / заказчиком
+       * </pre>
+       */
+      public Builder setSignatureDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2863,25 +4674,57 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string SignatureDate = 1;</code>
+       *
+       * <pre>
+       * дата подписи акта исполнителем / заказчиком
+       * </pre>
+       */
       public Builder clearSignatureDate() {
         bitField0_ = (bitField0_ & ~0x00000001);
         signatureDate_ = getDefaultInstance().getSignatureDate();
         onChanged();
         return this;
       }
-      void setSignatureDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string SignatureDate = 1;</code>
+       *
+       * <pre>
+       * дата подписи акта исполнителем / заказчиком
+       * </pre>
+       */
+      public Builder setSignatureDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         signatureDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;
+
       private Diadoc.Api.Proto.Invoicing.OfficialProtos.Official official_ = Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OfficialProtos.Official, Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.Builder, Diadoc.Api.Proto.Invoicing.OfficialProtos.OfficialOrBuilder> officialBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+       *
+       * <pre>
+       * лицо, подписывающее со стороны исполнителя / заказчика
+       * </pre>
+       */
       public boolean hasOfficial() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+       *
+       * <pre>
+       * лицо, подписывающее со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OfficialProtos.Official getOfficial() {
         if (officialBuilder_ == null) {
           return official_;
@@ -2889,6 +4732,13 @@ public final class AcceptanceCertificateInfoProtos {
           return officialBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+       *
+       * <pre>
+       * лицо, подписывающее со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Builder setOfficial(Diadoc.Api.Proto.Invoicing.OfficialProtos.Official value) {
         if (officialBuilder_ == null) {
           if (value == null) {
@@ -2902,6 +4752,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+       *
+       * <pre>
+       * лицо, подписывающее со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Builder setOfficial(
           Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.Builder builderForValue) {
         if (officialBuilder_ == null) {
@@ -2913,6 +4770,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+       *
+       * <pre>
+       * лицо, подписывающее со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Builder mergeOfficial(Diadoc.Api.Proto.Invoicing.OfficialProtos.Official value) {
         if (officialBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -2929,6 +4793,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+       *
+       * <pre>
+       * лицо, подписывающее со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Builder clearOfficial() {
         if (officialBuilder_ == null) {
           official_ = Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.getDefaultInstance();
@@ -2939,11 +4810,25 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+       *
+       * <pre>
+       * лицо, подписывающее со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.Builder getOfficialBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getOfficialFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+       *
+       * <pre>
+       * лицо, подписывающее со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OfficialProtos.OfficialOrBuilder getOfficialOrBuilder() {
         if (officialBuilder_ != null) {
           return officialBuilder_.getMessageOrBuilder();
@@ -2951,27 +4836,47 @@ public final class AcceptanceCertificateInfoProtos {
           return official_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Official Official = 2;</code>
+       *
+       * <pre>
+       * лицо, подписывающее со стороны исполнителя / заказчика
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OfficialProtos.Official, Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.Builder, Diadoc.Api.Proto.Invoicing.OfficialProtos.OfficialOrBuilder> 
           getOfficialFieldBuilder() {
         if (officialBuilder_ == null) {
           officialBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.OfficialProtos.Official, Diadoc.Api.Proto.Invoicing.OfficialProtos.Official.Builder, Diadoc.Api.Proto.Invoicing.OfficialProtos.OfficialOrBuilder>(
-                  official_,
+                  getOfficial(),
                   getParentForChildren(),
                   isClean());
           official_ = null;
         }
         return officialBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;
+
       private Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney attorney_ = Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney, Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.Builder, Diadoc.Api.Proto.Invoicing.OfficialProtos.AttorneyOrBuilder> attorneyBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+       *
+       * <pre>
+       * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+       * </pre>
+       */
       public boolean hasAttorney() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+       *
+       * <pre>
+       * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney getAttorney() {
         if (attorneyBuilder_ == null) {
           return attorney_;
@@ -2979,6 +4884,13 @@ public final class AcceptanceCertificateInfoProtos {
           return attorneyBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+       *
+       * <pre>
+       * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Builder setAttorney(Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney value) {
         if (attorneyBuilder_ == null) {
           if (value == null) {
@@ -2992,6 +4904,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+       *
+       * <pre>
+       * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Builder setAttorney(
           Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.Builder builderForValue) {
         if (attorneyBuilder_ == null) {
@@ -3003,6 +4922,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+       *
+       * <pre>
+       * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Builder mergeAttorney(Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney value) {
         if (attorneyBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -3019,6 +4945,13 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+       *
+       * <pre>
+       * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Builder clearAttorney() {
         if (attorneyBuilder_ == null) {
           attorney_ = Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.getDefaultInstance();
@@ -3029,11 +4962,25 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+       *
+       * <pre>
+       * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.Builder getAttorneyBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getAttorneyFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+       *
+       * <pre>
+       * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.OfficialProtos.AttorneyOrBuilder getAttorneyOrBuilder() {
         if (attorneyBuilder_ != null) {
           return attorneyBuilder_.getMessageOrBuilder();
@@ -3041,274 +4988,678 @@ public final class AcceptanceCertificateInfoProtos {
           return attorney_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Attorney Attorney = 3;</code>
+       *
+       * <pre>
+       * сведения о доверенности подписывающего со стороны исполнителя / заказчика
+       * </pre>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney, Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.Builder, Diadoc.Api.Proto.Invoicing.OfficialProtos.AttorneyOrBuilder> 
           getAttorneyFieldBuilder() {
         if (attorneyBuilder_ == null) {
           attorneyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney, Diadoc.Api.Proto.Invoicing.OfficialProtos.Attorney.Builder, Diadoc.Api.Proto.Invoicing.OfficialProtos.AttorneyOrBuilder>(
-                  attorney_,
+                  getAttorney(),
                   getParentForChildren(),
                   isClean());
           attorney_ = null;
         }
         return attorneyBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo)
     }
-    
+
     static {
       defaultInstance = new AcceptanceCertificateSignatureInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.AcceptanceCertificateSignatureInfo)
   }
-  
-  public interface WorkDescriptionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string StartingDate = 1;
+
+  public interface WorkDescriptionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.WorkDescription)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string StartingDate = 1;</code>
+     *
+     * <pre>
+     * начало периода выполнения работ
+     * </pre>
+     */
     boolean hasStartingDate();
-    String getStartingDate();
-    
-    // optional string CompletionDate = 2;
+    /**
+     * <code>optional string StartingDate = 1;</code>
+     *
+     * <pre>
+     * начало периода выполнения работ
+     * </pre>
+     */
+    java.lang.String getStartingDate();
+    /**
+     * <code>optional string StartingDate = 1;</code>
+     *
+     * <pre>
+     * начало периода выполнения работ
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getStartingDateBytes();
+
+    /**
+     * <code>optional string CompletionDate = 2;</code>
+     *
+     * <pre>
+     * окончание периода выполнения работ
+     * </pre>
+     */
     boolean hasCompletionDate();
-    String getCompletionDate();
-    
-    // optional string TotalWithVatExcluded = 3;
+    /**
+     * <code>optional string CompletionDate = 2;</code>
+     *
+     * <pre>
+     * окончание периода выполнения работ
+     * </pre>
+     */
+    java.lang.String getCompletionDate();
+    /**
+     * <code>optional string CompletionDate = 2;</code>
+     *
+     * <pre>
+     * окончание периода выполнения работ
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCompletionDateBytes();
+
+    /**
+     * <code>optional string TotalWithVatExcluded = 3;</code>
+     *
+     * <pre>
+     * сумма без учета НДС - итого
+     * </pre>
+     */
     boolean hasTotalWithVatExcluded();
-    String getTotalWithVatExcluded();
-    
-    // optional string Vat = 4;
+    /**
+     * <code>optional string TotalWithVatExcluded = 3;</code>
+     *
+     * <pre>
+     * сумма без учета НДС - итого
+     * </pre>
+     */
+    java.lang.String getTotalWithVatExcluded();
+    /**
+     * <code>optional string TotalWithVatExcluded = 3;</code>
+     *
+     * <pre>
+     * сумма без учета НДС - итого
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTotalWithVatExcludedBytes();
+
+    /**
+     * <code>optional string Vat = 4;</code>
+     *
+     * <pre>
+     * сумма НДС - итого
+     * </pre>
+     */
     boolean hasVat();
-    String getVat();
-    
-    // required string Total = 5;
+    /**
+     * <code>optional string Vat = 4;</code>
+     *
+     * <pre>
+     * сумма НДС - итого
+     * </pre>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 4;</code>
+     *
+     * <pre>
+     * сумма НДС - итого
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>required string Total = 5;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС - итого
+     * </pre>
+     */
     boolean hasTotal();
-    String getTotal();
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;
+    /**
+     * <code>required string Total = 5;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС - итого
+     * </pre>
+     */
+    java.lang.String getTotal();
+    /**
+     * <code>required string Total = 5;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС - итого
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTotalBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem> 
         getItemsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem getItems(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     int getItemsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItemOrBuilder> 
         getItemsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItemOrBuilder getItemsOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.WorkDescription}
+   *
+   * <pre>
+   * Описание работ
+   * </pre>
+   */
   public static final class WorkDescription extends
-      com.google.protobuf.GeneratedMessage
-      implements WorkDescriptionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.WorkDescription)
+      WorkDescriptionOrBuilder {
     // Use WorkDescription.newBuilder() to construct.
-    private WorkDescription(Builder builder) {
+    private WorkDescription(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private WorkDescription(boolean noInit) {}
-    
+    private WorkDescription(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final WorkDescription defaultInstance;
     public static WorkDescription getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public WorkDescription getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkDescription(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              startingDate_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              completionDate_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              totalWithVatExcluded_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              vat_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              total_ = bs;
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                items_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              items_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          items_ = java.util.Collections.unmodifiableList(items_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<WorkDescription> PARSER =
+        new com.google.protobuf.AbstractParser<WorkDescription>() {
+      public WorkDescription parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkDescription(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkDescription> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string StartingDate = 1;
     public static final int STARTINGDATE_FIELD_NUMBER = 1;
     private java.lang.Object startingDate_;
+    /**
+     * <code>optional string StartingDate = 1;</code>
+     *
+     * <pre>
+     * начало периода выполнения работ
+     * </pre>
+     */
     public boolean hasStartingDate() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getStartingDate() {
+    /**
+     * <code>optional string StartingDate = 1;</code>
+     *
+     * <pre>
+     * начало периода выполнения работ
+     * </pre>
+     */
+    public java.lang.String getStartingDate() {
       java.lang.Object ref = startingDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           startingDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getStartingDateBytes() {
+    /**
+     * <code>optional string StartingDate = 1;</code>
+     *
+     * <pre>
+     * начало периода выполнения работ
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getStartingDateBytes() {
       java.lang.Object ref = startingDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         startingDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string CompletionDate = 2;
+
     public static final int COMPLETIONDATE_FIELD_NUMBER = 2;
     private java.lang.Object completionDate_;
+    /**
+     * <code>optional string CompletionDate = 2;</code>
+     *
+     * <pre>
+     * окончание периода выполнения работ
+     * </pre>
+     */
     public boolean hasCompletionDate() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getCompletionDate() {
+    /**
+     * <code>optional string CompletionDate = 2;</code>
+     *
+     * <pre>
+     * окончание периода выполнения работ
+     * </pre>
+     */
+    public java.lang.String getCompletionDate() {
       java.lang.Object ref = completionDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           completionDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getCompletionDateBytes() {
+    /**
+     * <code>optional string CompletionDate = 2;</code>
+     *
+     * <pre>
+     * окончание периода выполнения работ
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCompletionDateBytes() {
       java.lang.Object ref = completionDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         completionDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string TotalWithVatExcluded = 3;
+
     public static final int TOTALWITHVATEXCLUDED_FIELD_NUMBER = 3;
     private java.lang.Object totalWithVatExcluded_;
+    /**
+     * <code>optional string TotalWithVatExcluded = 3;</code>
+     *
+     * <pre>
+     * сумма без учета НДС - итого
+     * </pre>
+     */
     public boolean hasTotalWithVatExcluded() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getTotalWithVatExcluded() {
+    /**
+     * <code>optional string TotalWithVatExcluded = 3;</code>
+     *
+     * <pre>
+     * сумма без учета НДС - итого
+     * </pre>
+     */
+    public java.lang.String getTotalWithVatExcluded() {
       java.lang.Object ref = totalWithVatExcluded_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           totalWithVatExcluded_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTotalWithVatExcludedBytes() {
+    /**
+     * <code>optional string TotalWithVatExcluded = 3;</code>
+     *
+     * <pre>
+     * сумма без учета НДС - итого
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTotalWithVatExcludedBytes() {
       java.lang.Object ref = totalWithVatExcluded_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         totalWithVatExcluded_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Vat = 4;
+
     public static final int VAT_FIELD_NUMBER = 4;
     private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 4;</code>
+     *
+     * <pre>
+     * сумма НДС - итого
+     * </pre>
+     */
     public boolean hasVat() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getVat() {
+    /**
+     * <code>optional string Vat = 4;</code>
+     *
+     * <pre>
+     * сумма НДС - итого
+     * </pre>
+     */
+    public java.lang.String getVat() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           vat_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getVatBytes() {
+    /**
+     * <code>optional string Vat = 4;</code>
+     *
+     * <pre>
+     * сумма НДС - итого
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         vat_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Total = 5;
+
     public static final int TOTAL_FIELD_NUMBER = 5;
     private java.lang.Object total_;
+    /**
+     * <code>required string Total = 5;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС - итого
+     * </pre>
+     */
     public boolean hasTotal() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public String getTotal() {
+    /**
+     * <code>required string Total = 5;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС - итого
+     * </pre>
+     */
+    public java.lang.String getTotal() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           total_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTotalBytes() {
+    /**
+     * <code>required string Total = 5;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС - итого
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTotalBytes() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         total_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;
+
     public static final int ITEMS_FIELD_NUMBER = 6;
     private java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem> items_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem> getItemsList() {
       return items_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItemOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     public int getItemsCount() {
       return items_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem getItems(int index) {
       return items_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+     *
+     * <pre>
+     * сведения о произведенной работе
+     * </pre>
+     */
     public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
     }
-    
+
     private void initFields() {
       startingDate_ = "";
       completionDate_ = "";
@@ -3320,8 +5671,9 @@ public final class AcceptanceCertificateInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasTotal()) {
         memoizedIsInitialized = 0;
         return false;
@@ -3329,7 +5681,7 @@ public final class AcceptanceCertificateInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -3353,12 +5705,12 @@ public final class AcceptanceCertificateInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -3388,113 +5740,110 @@ public final class AcceptanceCertificateInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.WorkDescription}
+     *
+     * <pre>
+     * Описание работ
+     * </pre>
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescriptionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.WorkDescription)
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescriptionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3506,7 +5855,7 @@ public final class AcceptanceCertificateInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         startingDate_ = "";
@@ -3527,20 +5876,20 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription build() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription result = buildPartial();
         if (!result.isInitialized()) {
@@ -3548,17 +5897,7 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription buildPartial() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription result = new Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription(this);
         int from_bitField0_ = bitField0_;
@@ -3596,7 +5935,7 @@ public final class AcceptanceCertificateInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription)other);
@@ -3605,23 +5944,33 @@ public final class AcceptanceCertificateInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription other) {
         if (other == Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.getDefaultInstance()) return this;
         if (other.hasStartingDate()) {
-          setStartingDate(other.getStartingDate());
+          bitField0_ |= 0x00000001;
+          startingDate_ = other.startingDate_;
+          onChanged();
         }
         if (other.hasCompletionDate()) {
-          setCompletionDate(other.getCompletionDate());
+          bitField0_ |= 0x00000002;
+          completionDate_ = other.completionDate_;
+          onChanged();
         }
         if (other.hasTotalWithVatExcluded()) {
-          setTotalWithVatExcluded(other.getTotalWithVatExcluded());
+          bitField0_ |= 0x00000004;
+          totalWithVatExcluded_ = other.totalWithVatExcluded_;
+          onChanged();
         }
         if (other.hasVat()) {
-          setVat(other.getVat());
+          bitField0_ |= 0x00000008;
+          vat_ = other.vat_;
+          onChanged();
         }
         if (other.hasTotal()) {
-          setTotal(other.getTotal());
+          bitField0_ |= 0x00000010;
+          total_ = other.total_;
+          onChanged();
         }
         if (itemsBuilder_ == null) {
           if (!other.items_.isEmpty()) {
@@ -3652,7 +6001,7 @@ public final class AcceptanceCertificateInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasTotal()) {
           
@@ -3660,83 +6009,87 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              startingDate_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              completionDate_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              totalWithVatExcluded_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              vat_ = input.readBytes();
-              break;
-            }
-            case 42: {
-              bitField0_ |= 0x00000010;
-              total_ = input.readBytes();
-              break;
-            }
-            case 50: {
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder subBuilder = Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addItems(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string StartingDate = 1;
+
       private java.lang.Object startingDate_ = "";
+      /**
+       * <code>optional string StartingDate = 1;</code>
+       *
+       * <pre>
+       * начало периода выполнения работ
+       * </pre>
+       */
       public boolean hasStartingDate() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getStartingDate() {
+      /**
+       * <code>optional string StartingDate = 1;</code>
+       *
+       * <pre>
+       * начало периода выполнения работ
+       * </pre>
+       */
+      public java.lang.String getStartingDate() {
         java.lang.Object ref = startingDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          startingDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            startingDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setStartingDate(String value) {
+      /**
+       * <code>optional string StartingDate = 1;</code>
+       *
+       * <pre>
+       * начало периода выполнения работ
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getStartingDateBytes() {
+        java.lang.Object ref = startingDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startingDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string StartingDate = 1;</code>
+       *
+       * <pre>
+       * начало периода выполнения работ
+       * </pre>
+       */
+      public Builder setStartingDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3745,34 +6098,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string StartingDate = 1;</code>
+       *
+       * <pre>
+       * начало периода выполнения работ
+       * </pre>
+       */
       public Builder clearStartingDate() {
         bitField0_ = (bitField0_ & ~0x00000001);
         startingDate_ = getDefaultInstance().getStartingDate();
         onChanged();
         return this;
       }
-      void setStartingDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string StartingDate = 1;</code>
+       *
+       * <pre>
+       * начало периода выполнения работ
+       * </pre>
+       */
+      public Builder setStartingDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         startingDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string CompletionDate = 2;
+
       private java.lang.Object completionDate_ = "";
+      /**
+       * <code>optional string CompletionDate = 2;</code>
+       *
+       * <pre>
+       * окончание периода выполнения работ
+       * </pre>
+       */
       public boolean hasCompletionDate() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getCompletionDate() {
+      /**
+       * <code>optional string CompletionDate = 2;</code>
+       *
+       * <pre>
+       * окончание периода выполнения работ
+       * </pre>
+       */
+      public java.lang.String getCompletionDate() {
         java.lang.Object ref = completionDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          completionDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            completionDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setCompletionDate(String value) {
+      /**
+       * <code>optional string CompletionDate = 2;</code>
+       *
+       * <pre>
+       * окончание периода выполнения работ
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCompletionDateBytes() {
+        java.lang.Object ref = completionDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          completionDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string CompletionDate = 2;</code>
+       *
+       * <pre>
+       * окончание периода выполнения работ
+       * </pre>
+       */
+      public Builder setCompletionDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3781,34 +6198,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string CompletionDate = 2;</code>
+       *
+       * <pre>
+       * окончание периода выполнения работ
+       * </pre>
+       */
       public Builder clearCompletionDate() {
         bitField0_ = (bitField0_ & ~0x00000002);
         completionDate_ = getDefaultInstance().getCompletionDate();
         onChanged();
         return this;
       }
-      void setCompletionDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string CompletionDate = 2;</code>
+       *
+       * <pre>
+       * окончание периода выполнения работ
+       * </pre>
+       */
+      public Builder setCompletionDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         completionDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string TotalWithVatExcluded = 3;
+
       private java.lang.Object totalWithVatExcluded_ = "";
+      /**
+       * <code>optional string TotalWithVatExcluded = 3;</code>
+       *
+       * <pre>
+       * сумма без учета НДС - итого
+       * </pre>
+       */
       public boolean hasTotalWithVatExcluded() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getTotalWithVatExcluded() {
+      /**
+       * <code>optional string TotalWithVatExcluded = 3;</code>
+       *
+       * <pre>
+       * сумма без учета НДС - итого
+       * </pre>
+       */
+      public java.lang.String getTotalWithVatExcluded() {
         java.lang.Object ref = totalWithVatExcluded_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          totalWithVatExcluded_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            totalWithVatExcluded_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTotalWithVatExcluded(String value) {
+      /**
+       * <code>optional string TotalWithVatExcluded = 3;</code>
+       *
+       * <pre>
+       * сумма без учета НДС - итого
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTotalWithVatExcludedBytes() {
+        java.lang.Object ref = totalWithVatExcluded_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalWithVatExcluded_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string TotalWithVatExcluded = 3;</code>
+       *
+       * <pre>
+       * сумма без учета НДС - итого
+       * </pre>
+       */
+      public Builder setTotalWithVatExcluded(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3817,34 +6298,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string TotalWithVatExcluded = 3;</code>
+       *
+       * <pre>
+       * сумма без учета НДС - итого
+       * </pre>
+       */
       public Builder clearTotalWithVatExcluded() {
         bitField0_ = (bitField0_ & ~0x00000004);
         totalWithVatExcluded_ = getDefaultInstance().getTotalWithVatExcluded();
         onChanged();
         return this;
       }
-      void setTotalWithVatExcluded(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string TotalWithVatExcluded = 3;</code>
+       *
+       * <pre>
+       * сумма без учета НДС - итого
+       * </pre>
+       */
+      public Builder setTotalWithVatExcludedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         totalWithVatExcluded_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Vat = 4;
+
       private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 4;</code>
+       *
+       * <pre>
+       * сумма НДС - итого
+       * </pre>
+       */
       public boolean hasVat() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getVat() {
+      /**
+       * <code>optional string Vat = 4;</code>
+       *
+       * <pre>
+       * сумма НДС - итого
+       * </pre>
+       */
+      public java.lang.String getVat() {
         java.lang.Object ref = vat_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          vat_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setVat(String value) {
+      /**
+       * <code>optional string Vat = 4;</code>
+       *
+       * <pre>
+       * сумма НДС - итого
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 4;</code>
+       *
+       * <pre>
+       * сумма НДС - итого
+       * </pre>
+       */
+      public Builder setVat(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3853,34 +6398,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Vat = 4;</code>
+       *
+       * <pre>
+       * сумма НДС - итого
+       * </pre>
+       */
       public Builder clearVat() {
         bitField0_ = (bitField0_ & ~0x00000008);
         vat_ = getDefaultInstance().getVat();
         onChanged();
         return this;
       }
-      void setVat(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string Vat = 4;</code>
+       *
+       * <pre>
+       * сумма НДС - итого
+       * </pre>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         vat_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Total = 5;
+
       private java.lang.Object total_ = "";
+      /**
+       * <code>required string Total = 5;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС - итого
+       * </pre>
+       */
       public boolean hasTotal() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      public String getTotal() {
+      /**
+       * <code>required string Total = 5;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС - итого
+       * </pre>
+       */
+      public java.lang.String getTotal() {
         java.lang.Object ref = total_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          total_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            total_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTotal(String value) {
+      /**
+       * <code>required string Total = 5;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС - итого
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTotalBytes() {
+        java.lang.Object ref = total_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          total_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Total = 5;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС - итого
+       * </pre>
+       */
+      public Builder setTotal(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3889,19 +6498,37 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Total = 5;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС - итого
+       * </pre>
+       */
       public Builder clearTotal() {
         bitField0_ = (bitField0_ & ~0x00000010);
         total_ = getDefaultInstance().getTotal();
         onChanged();
         return this;
       }
-      void setTotal(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000010;
+      /**
+       * <code>required string Total = 5;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС - итого
+       * </pre>
+       */
+      public Builder setTotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
         total_ = value;
         onChanged();
+        return this;
       }
-      
-      // repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;
+
       private java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem> items_ =
         java.util.Collections.emptyList();
       private void ensureItemsIsMutable() {
@@ -3910,10 +6537,17 @@ public final class AcceptanceCertificateInfoProtos {
           bitField0_ |= 0x00000020;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItemOrBuilder> itemsBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem> getItemsList() {
         if (itemsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(items_);
@@ -3921,6 +6555,13 @@ public final class AcceptanceCertificateInfoProtos {
           return itemsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public int getItemsCount() {
         if (itemsBuilder_ == null) {
           return items_.size();
@@ -3928,6 +6569,13 @@ public final class AcceptanceCertificateInfoProtos {
           return itemsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem getItems(int index) {
         if (itemsBuilder_ == null) {
           return items_.get(index);
@@ -3935,6 +6583,13 @@ public final class AcceptanceCertificateInfoProtos {
           return itemsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Builder setItems(
           int index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem value) {
         if (itemsBuilder_ == null) {
@@ -3949,6 +6604,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Builder setItems(
           int index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
@@ -3960,6 +6622,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Builder addItems(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem value) {
         if (itemsBuilder_ == null) {
           if (value == null) {
@@ -3973,6 +6642,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Builder addItems(
           int index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem value) {
         if (itemsBuilder_ == null) {
@@ -3987,6 +6663,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Builder addItems(
           Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
@@ -3998,6 +6681,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Builder addItems(
           int index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
@@ -4009,17 +6699,32 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Builder addAllItems(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem> values) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
-          super.addAll(values, items_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, items_);
           onChanged();
         } else {
           itemsBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Builder clearItems() {
         if (itemsBuilder_ == null) {
           items_ = java.util.Collections.emptyList();
@@ -4030,6 +6735,13 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Builder removeItems(int index) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
@@ -4040,10 +6752,24 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder getItemsBuilder(
           int index) {
         return getItemsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItemOrBuilder getItemsOrBuilder(
           int index) {
         if (itemsBuilder_ == null) {
@@ -4051,6 +6777,13 @@ public final class AcceptanceCertificateInfoProtos {
           return itemsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItemOrBuilder> 
            getItemsOrBuilderList() {
         if (itemsBuilder_ != null) {
@@ -4059,15 +6792,36 @@ public final class AcceptanceCertificateInfoProtos {
           return java.util.Collections.unmodifiableList(items_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder addItemsBuilder() {
         return getItemsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder addItemsBuilder(
           int index) {
         return getItemsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.WorkItem Items = 6;</code>
+       *
+       * <pre>
+       * сведения о произведенной работе
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder> 
            getItemsBuilderList() {
         return getItemsFieldBuilder().getBuilderList();
@@ -4086,410 +6840,974 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return itemsBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.WorkDescription)
     }
-    
+
     static {
       defaultInstance = new WorkDescription(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.WorkDescription)
   }
-  
-  public interface WorkItemOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string Name = 1;
+
+  public interface WorkItemOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.WorkItem)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Name = 1;</code>
+     *
+     * <pre>
+     * наименование
+     * </pre>
+     */
     boolean hasName();
-    String getName();
-    
-    // optional string Description = 2;
+    /**
+     * <code>optional string Name = 1;</code>
+     *
+     * <pre>
+     * наименование
+     * </pre>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string Name = 1;</code>
+     *
+     * <pre>
+     * наименование
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional string Description = 2;</code>
+     *
+     * <pre>
+     * описание работы
+     * </pre>
+     */
     boolean hasDescription();
-    String getDescription();
-    
-    // optional string UnitCode = 3;
+    /**
+     * <code>optional string Description = 2;</code>
+     *
+     * <pre>
+     * описание работы
+     * </pre>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string Description = 2;</code>
+     *
+     * <pre>
+     * описание работы
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>optional string UnitCode = 3;</code>
+     *
+     * <pre>
+     * код единицы измерения
+     * </pre>
+     */
     boolean hasUnitCode();
-    String getUnitCode();
-    
-    // optional string UnitName = 4;
+    /**
+     * <code>optional string UnitCode = 3;</code>
+     *
+     * <pre>
+     * код единицы измерения
+     * </pre>
+     */
+    java.lang.String getUnitCode();
+    /**
+     * <code>optional string UnitCode = 3;</code>
+     *
+     * <pre>
+     * код единицы измерения
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUnitCodeBytes();
+
+    /**
+     * <code>optional string UnitName = 4;</code>
+     *
+     * <pre>
+     * наименование единицы измерения
+     * </pre>
+     */
     boolean hasUnitName();
-    String getUnitName();
-    
-    // optional string Price = 5;
+    /**
+     * <code>optional string UnitName = 4;</code>
+     *
+     * <pre>
+     * наименование единицы измерения
+     * </pre>
+     */
+    java.lang.String getUnitName();
+    /**
+     * <code>optional string UnitName = 4;</code>
+     *
+     * <pre>
+     * наименование единицы измерения
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUnitNameBytes();
+
+    /**
+     * <code>optional string Price = 5;</code>
+     *
+     * <pre>
+     * цена
+     * </pre>
+     */
     boolean hasPrice();
-    String getPrice();
-    
-    // optional string Quantity = 6;
+    /**
+     * <code>optional string Price = 5;</code>
+     *
+     * <pre>
+     * цена
+     * </pre>
+     */
+    java.lang.String getPrice();
+    /**
+     * <code>optional string Price = 5;</code>
+     *
+     * <pre>
+     * цена
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPriceBytes();
+
+    /**
+     * <code>optional string Quantity = 6;</code>
+     *
+     * <pre>
+     * количество
+     * </pre>
+     */
     boolean hasQuantity();
-    String getQuantity();
-    
-    // optional string SubtotalWithVatExcluded = 7;
+    /**
+     * <code>optional string Quantity = 6;</code>
+     *
+     * <pre>
+     * количество
+     * </pre>
+     */
+    java.lang.String getQuantity();
+    /**
+     * <code>optional string Quantity = 6;</code>
+     *
+     * <pre>
+     * количество
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getQuantityBytes();
+
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 7;</code>
+     *
+     * <pre>
+     * сумма без учета НДС
+     * </pre>
+     */
     boolean hasSubtotalWithVatExcluded();
-    String getSubtotalWithVatExcluded();
-    
-    // optional string Vat = 8;
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 7;</code>
+     *
+     * <pre>
+     * сумма без учета НДС
+     * </pre>
+     */
+    java.lang.String getSubtotalWithVatExcluded();
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 7;</code>
+     *
+     * <pre>
+     * сумма без учета НДС
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSubtotalWithVatExcludedBytes();
+
+    /**
+     * <code>optional string Vat = 8;</code>
+     *
+     * <pre>
+     * сумма НДС
+     * </pre>
+     */
     boolean hasVat();
-    String getVat();
-    
-    // optional string Subtotal = 9;
+    /**
+     * <code>optional string Vat = 8;</code>
+     *
+     * <pre>
+     * сумма НДС
+     * </pre>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 8;</code>
+     *
+     * <pre>
+     * сумма НДС
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>optional string Subtotal = 9;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС
+     * </pre>
+     */
     boolean hasSubtotal();
-    String getSubtotal();
-    
-    // optional string AdditionalInfo = 10;
+    /**
+     * <code>optional string Subtotal = 9;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС
+     * </pre>
+     */
+    java.lang.String getSubtotal();
+    /**
+     * <code>optional string Subtotal = 9;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSubtotalBytes();
+
+    /**
+     * <code>optional string AdditionalInfo = 10;</code>
+     *
+     * <pre>
+     * информационное поле сведений о работе (услуге)
+     * </pre>
+     */
     boolean hasAdditionalInfo();
-    String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 10;</code>
+     *
+     * <pre>
+     * информационное поле сведений о работе (услуге)
+     * </pre>
+     */
+    java.lang.String getAdditionalInfo();
+    /**
+     * <code>optional string AdditionalInfo = 10;</code>
+     *
+     * <pre>
+     * информационное поле сведений о работе (услуге)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAdditionalInfoBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.WorkItem}
+   */
   public static final class WorkItem extends
-      com.google.protobuf.GeneratedMessage
-      implements WorkItemOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.WorkItem)
+      WorkItemOrBuilder {
     // Use WorkItem.newBuilder() to construct.
-    private WorkItem(Builder builder) {
+    private WorkItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private WorkItem(boolean noInit) {}
-    
+    private WorkItem(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final WorkItem defaultInstance;
     public static WorkItem getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public WorkItem getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkItem(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              description_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              unitCode_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              unitName_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              price_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              quantity_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              subtotalWithVatExcluded_ = bs;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              vat_ = bs;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              subtotal_ = bs;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              additionalInfo_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<WorkItem> PARSER =
+        new com.google.protobuf.AbstractParser<WorkItem>() {
+      public WorkItem parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkItem(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkItem> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string Name = 1;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.Object name_;
+    /**
+     * <code>optional string Name = 1;</code>
+     *
+     * <pre>
+     * наименование
+     * </pre>
+     */
     public boolean hasName() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getName() {
+    /**
+     * <code>optional string Name = 1;</code>
+     *
+     * <pre>
+     * наименование
+     * </pre>
+     */
+    public java.lang.String getName() {
       java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           name_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getNameBytes() {
+    /**
+     * <code>optional string Name = 1;</code>
+     *
+     * <pre>
+     * наименование
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
       java.lang.Object ref = name_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Description = 2;
+
     public static final int DESCRIPTION_FIELD_NUMBER = 2;
     private java.lang.Object description_;
+    /**
+     * <code>optional string Description = 2;</code>
+     *
+     * <pre>
+     * описание работы
+     * </pre>
+     */
     public boolean hasDescription() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getDescription() {
+    /**
+     * <code>optional string Description = 2;</code>
+     *
+     * <pre>
+     * описание работы
+     * </pre>
+     */
+    public java.lang.String getDescription() {
       java.lang.Object ref = description_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           description_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDescriptionBytes() {
+    /**
+     * <code>optional string Description = 2;</code>
+     *
+     * <pre>
+     * описание работы
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
       java.lang.Object ref = description_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         description_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string UnitCode = 3;
+
     public static final int UNITCODE_FIELD_NUMBER = 3;
     private java.lang.Object unitCode_;
+    /**
+     * <code>optional string UnitCode = 3;</code>
+     *
+     * <pre>
+     * код единицы измерения
+     * </pre>
+     */
     public boolean hasUnitCode() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getUnitCode() {
+    /**
+     * <code>optional string UnitCode = 3;</code>
+     *
+     * <pre>
+     * код единицы измерения
+     * </pre>
+     */
+    public java.lang.String getUnitCode() {
       java.lang.Object ref = unitCode_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           unitCode_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getUnitCodeBytes() {
+    /**
+     * <code>optional string UnitCode = 3;</code>
+     *
+     * <pre>
+     * код единицы измерения
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUnitCodeBytes() {
       java.lang.Object ref = unitCode_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         unitCode_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string UnitName = 4;
+
     public static final int UNITNAME_FIELD_NUMBER = 4;
     private java.lang.Object unitName_;
+    /**
+     * <code>optional string UnitName = 4;</code>
+     *
+     * <pre>
+     * наименование единицы измерения
+     * </pre>
+     */
     public boolean hasUnitName() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getUnitName() {
+    /**
+     * <code>optional string UnitName = 4;</code>
+     *
+     * <pre>
+     * наименование единицы измерения
+     * </pre>
+     */
+    public java.lang.String getUnitName() {
       java.lang.Object ref = unitName_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           unitName_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getUnitNameBytes() {
+    /**
+     * <code>optional string UnitName = 4;</code>
+     *
+     * <pre>
+     * наименование единицы измерения
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUnitNameBytes() {
       java.lang.Object ref = unitName_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         unitName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Price = 5;
+
     public static final int PRICE_FIELD_NUMBER = 5;
     private java.lang.Object price_;
+    /**
+     * <code>optional string Price = 5;</code>
+     *
+     * <pre>
+     * цена
+     * </pre>
+     */
     public boolean hasPrice() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public String getPrice() {
+    /**
+     * <code>optional string Price = 5;</code>
+     *
+     * <pre>
+     * цена
+     * </pre>
+     */
+    public java.lang.String getPrice() {
       java.lang.Object ref = price_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           price_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getPriceBytes() {
+    /**
+     * <code>optional string Price = 5;</code>
+     *
+     * <pre>
+     * цена
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPriceBytes() {
       java.lang.Object ref = price_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         price_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Quantity = 6;
+
     public static final int QUANTITY_FIELD_NUMBER = 6;
     private java.lang.Object quantity_;
+    /**
+     * <code>optional string Quantity = 6;</code>
+     *
+     * <pre>
+     * количество
+     * </pre>
+     */
     public boolean hasQuantity() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
-    public String getQuantity() {
+    /**
+     * <code>optional string Quantity = 6;</code>
+     *
+     * <pre>
+     * количество
+     * </pre>
+     */
+    public java.lang.String getQuantity() {
       java.lang.Object ref = quantity_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           quantity_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getQuantityBytes() {
+    /**
+     * <code>optional string Quantity = 6;</code>
+     *
+     * <pre>
+     * количество
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getQuantityBytes() {
       java.lang.Object ref = quantity_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         quantity_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string SubtotalWithVatExcluded = 7;
+
     public static final int SUBTOTALWITHVATEXCLUDED_FIELD_NUMBER = 7;
     private java.lang.Object subtotalWithVatExcluded_;
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 7;</code>
+     *
+     * <pre>
+     * сумма без учета НДС
+     * </pre>
+     */
     public boolean hasSubtotalWithVatExcluded() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
-    public String getSubtotalWithVatExcluded() {
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 7;</code>
+     *
+     * <pre>
+     * сумма без учета НДС
+     * </pre>
+     */
+    public java.lang.String getSubtotalWithVatExcluded() {
       java.lang.Object ref = subtotalWithVatExcluded_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           subtotalWithVatExcluded_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSubtotalWithVatExcludedBytes() {
+    /**
+     * <code>optional string SubtotalWithVatExcluded = 7;</code>
+     *
+     * <pre>
+     * сумма без учета НДС
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSubtotalWithVatExcludedBytes() {
       java.lang.Object ref = subtotalWithVatExcluded_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         subtotalWithVatExcluded_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Vat = 8;
+
     public static final int VAT_FIELD_NUMBER = 8;
     private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 8;</code>
+     *
+     * <pre>
+     * сумма НДС
+     * </pre>
+     */
     public boolean hasVat() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
-    public String getVat() {
+    /**
+     * <code>optional string Vat = 8;</code>
+     *
+     * <pre>
+     * сумма НДС
+     * </pre>
+     */
+    public java.lang.String getVat() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           vat_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getVatBytes() {
+    /**
+     * <code>optional string Vat = 8;</code>
+     *
+     * <pre>
+     * сумма НДС
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         vat_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Subtotal = 9;
+
     public static final int SUBTOTAL_FIELD_NUMBER = 9;
     private java.lang.Object subtotal_;
+    /**
+     * <code>optional string Subtotal = 9;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС
+     * </pre>
+     */
     public boolean hasSubtotal() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
-    public String getSubtotal() {
+    /**
+     * <code>optional string Subtotal = 9;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС
+     * </pre>
+     */
+    public java.lang.String getSubtotal() {
       java.lang.Object ref = subtotal_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           subtotal_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSubtotalBytes() {
+    /**
+     * <code>optional string Subtotal = 9;</code>
+     *
+     * <pre>
+     * сумма с учетом НДС
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSubtotalBytes() {
       java.lang.Object ref = subtotal_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         subtotal_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string AdditionalInfo = 10;
+
     public static final int ADDITIONALINFO_FIELD_NUMBER = 10;
     private java.lang.Object additionalInfo_;
+    /**
+     * <code>optional string AdditionalInfo = 10;</code>
+     *
+     * <pre>
+     * информационное поле сведений о работе (услуге)
+     * </pre>
+     */
     public boolean hasAdditionalInfo() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
-    public String getAdditionalInfo() {
+    /**
+     * <code>optional string AdditionalInfo = 10;</code>
+     *
+     * <pre>
+     * информационное поле сведений о работе (услуге)
+     * </pre>
+     */
+    public java.lang.String getAdditionalInfo() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           additionalInfo_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAdditionalInfoBytes() {
+    /**
+     * <code>optional string AdditionalInfo = 10;</code>
+     *
+     * <pre>
+     * информационное поле сведений о работе (услуге)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAdditionalInfoBytes() {
       java.lang.Object ref = additionalInfo_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         additionalInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       name_ = "";
       description_ = "";
@@ -4505,12 +7823,13 @@ public final class AcceptanceCertificateInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -4546,12 +7865,12 @@ public final class AcceptanceCertificateInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -4597,113 +7916,106 @@ public final class AcceptanceCertificateInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.WorkItem}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItemOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.WorkItem)
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItemOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.class, Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -4714,7 +8026,7 @@ public final class AcceptanceCertificateInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -4739,20 +8051,20 @@ public final class AcceptanceCertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem build() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem result = buildPartial();
         if (!result.isInitialized()) {
@@ -4760,17 +8072,7 @@ public final class AcceptanceCertificateInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem buildPartial() {
         Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem result = new Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem(this);
         int from_bitField0_ = bitField0_;
@@ -4819,7 +8121,7 @@ public final class AcceptanceCertificateInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem)other);
@@ -4828,142 +8130,147 @@ public final class AcceptanceCertificateInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem other) {
         if (other == Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.getDefaultInstance()) return this;
         if (other.hasName()) {
-          setName(other.getName());
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
         }
         if (other.hasDescription()) {
-          setDescription(other.getDescription());
+          bitField0_ |= 0x00000002;
+          description_ = other.description_;
+          onChanged();
         }
         if (other.hasUnitCode()) {
-          setUnitCode(other.getUnitCode());
+          bitField0_ |= 0x00000004;
+          unitCode_ = other.unitCode_;
+          onChanged();
         }
         if (other.hasUnitName()) {
-          setUnitName(other.getUnitName());
+          bitField0_ |= 0x00000008;
+          unitName_ = other.unitName_;
+          onChanged();
         }
         if (other.hasPrice()) {
-          setPrice(other.getPrice());
+          bitField0_ |= 0x00000010;
+          price_ = other.price_;
+          onChanged();
         }
         if (other.hasQuantity()) {
-          setQuantity(other.getQuantity());
+          bitField0_ |= 0x00000020;
+          quantity_ = other.quantity_;
+          onChanged();
         }
         if (other.hasSubtotalWithVatExcluded()) {
-          setSubtotalWithVatExcluded(other.getSubtotalWithVatExcluded());
+          bitField0_ |= 0x00000040;
+          subtotalWithVatExcluded_ = other.subtotalWithVatExcluded_;
+          onChanged();
         }
         if (other.hasVat()) {
-          setVat(other.getVat());
+          bitField0_ |= 0x00000080;
+          vat_ = other.vat_;
+          onChanged();
         }
         if (other.hasSubtotal()) {
-          setSubtotal(other.getSubtotal());
+          bitField0_ |= 0x00000100;
+          subtotal_ = other.subtotal_;
+          onChanged();
         }
         if (other.hasAdditionalInfo()) {
-          setAdditionalInfo(other.getAdditionalInfo());
+          bitField0_ |= 0x00000200;
+          additionalInfo_ = other.additionalInfo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              name_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              description_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              unitCode_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              unitName_ = input.readBytes();
-              break;
-            }
-            case 42: {
-              bitField0_ |= 0x00000010;
-              price_ = input.readBytes();
-              break;
-            }
-            case 50: {
-              bitField0_ |= 0x00000020;
-              quantity_ = input.readBytes();
-              break;
-            }
-            case 58: {
-              bitField0_ |= 0x00000040;
-              subtotalWithVatExcluded_ = input.readBytes();
-              break;
-            }
-            case 66: {
-              bitField0_ |= 0x00000080;
-              vat_ = input.readBytes();
-              break;
-            }
-            case 74: {
-              bitField0_ |= 0x00000100;
-              subtotal_ = input.readBytes();
-              break;
-            }
-            case 82: {
-              bitField0_ |= 0x00000200;
-              additionalInfo_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string Name = 1;
+
       private java.lang.Object name_ = "";
+      /**
+       * <code>optional string Name = 1;</code>
+       *
+       * <pre>
+       * наименование
+       * </pre>
+       */
       public boolean hasName() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getName() {
+      /**
+       * <code>optional string Name = 1;</code>
+       *
+       * <pre>
+       * наименование
+       * </pre>
+       */
+      public java.lang.String getName() {
         java.lang.Object ref = name_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          name_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setName(String value) {
+      /**
+       * <code>optional string Name = 1;</code>
+       *
+       * <pre>
+       * наименование
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Name = 1;</code>
+       *
+       * <pre>
+       * наименование
+       * </pre>
+       */
+      public Builder setName(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4972,34 +8279,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Name = 1;</code>
+       *
+       * <pre>
+       * наименование
+       * </pre>
+       */
       public Builder clearName() {
         bitField0_ = (bitField0_ & ~0x00000001);
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
-      void setName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string Name = 1;</code>
+       *
+       * <pre>
+       * наименование
+       * </pre>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         name_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Description = 2;
+
       private java.lang.Object description_ = "";
+      /**
+       * <code>optional string Description = 2;</code>
+       *
+       * <pre>
+       * описание работы
+       * </pre>
+       */
       public boolean hasDescription() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getDescription() {
+      /**
+       * <code>optional string Description = 2;</code>
+       *
+       * <pre>
+       * описание работы
+       * </pre>
+       */
+      public java.lang.String getDescription() {
         java.lang.Object ref = description_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          description_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            description_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setDescription(String value) {
+      /**
+       * <code>optional string Description = 2;</code>
+       *
+       * <pre>
+       * описание работы
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Description = 2;</code>
+       *
+       * <pre>
+       * описание работы
+       * </pre>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5008,34 +8379,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Description = 2;</code>
+       *
+       * <pre>
+       * описание работы
+       * </pre>
+       */
       public Builder clearDescription() {
         bitField0_ = (bitField0_ & ~0x00000002);
         description_ = getDefaultInstance().getDescription();
         onChanged();
         return this;
       }
-      void setDescription(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string Description = 2;</code>
+       *
+       * <pre>
+       * описание работы
+       * </pre>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         description_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string UnitCode = 3;
+
       private java.lang.Object unitCode_ = "";
+      /**
+       * <code>optional string UnitCode = 3;</code>
+       *
+       * <pre>
+       * код единицы измерения
+       * </pre>
+       */
       public boolean hasUnitCode() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getUnitCode() {
+      /**
+       * <code>optional string UnitCode = 3;</code>
+       *
+       * <pre>
+       * код единицы измерения
+       * </pre>
+       */
+      public java.lang.String getUnitCode() {
         java.lang.Object ref = unitCode_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          unitCode_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            unitCode_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setUnitCode(String value) {
+      /**
+       * <code>optional string UnitCode = 3;</code>
+       *
+       * <pre>
+       * код единицы измерения
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUnitCodeBytes() {
+        java.lang.Object ref = unitCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unitCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string UnitCode = 3;</code>
+       *
+       * <pre>
+       * код единицы измерения
+       * </pre>
+       */
+      public Builder setUnitCode(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5044,34 +8479,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string UnitCode = 3;</code>
+       *
+       * <pre>
+       * код единицы измерения
+       * </pre>
+       */
       public Builder clearUnitCode() {
         bitField0_ = (bitField0_ & ~0x00000004);
         unitCode_ = getDefaultInstance().getUnitCode();
         onChanged();
         return this;
       }
-      void setUnitCode(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string UnitCode = 3;</code>
+       *
+       * <pre>
+       * код единицы измерения
+       * </pre>
+       */
+      public Builder setUnitCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         unitCode_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string UnitName = 4;
+
       private java.lang.Object unitName_ = "";
+      /**
+       * <code>optional string UnitName = 4;</code>
+       *
+       * <pre>
+       * наименование единицы измерения
+       * </pre>
+       */
       public boolean hasUnitName() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getUnitName() {
+      /**
+       * <code>optional string UnitName = 4;</code>
+       *
+       * <pre>
+       * наименование единицы измерения
+       * </pre>
+       */
+      public java.lang.String getUnitName() {
         java.lang.Object ref = unitName_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          unitName_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            unitName_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setUnitName(String value) {
+      /**
+       * <code>optional string UnitName = 4;</code>
+       *
+       * <pre>
+       * наименование единицы измерения
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUnitNameBytes() {
+        java.lang.Object ref = unitName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unitName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string UnitName = 4;</code>
+       *
+       * <pre>
+       * наименование единицы измерения
+       * </pre>
+       */
+      public Builder setUnitName(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5080,34 +8579,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string UnitName = 4;</code>
+       *
+       * <pre>
+       * наименование единицы измерения
+       * </pre>
+       */
       public Builder clearUnitName() {
         bitField0_ = (bitField0_ & ~0x00000008);
         unitName_ = getDefaultInstance().getUnitName();
         onChanged();
         return this;
       }
-      void setUnitName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string UnitName = 4;</code>
+       *
+       * <pre>
+       * наименование единицы измерения
+       * </pre>
+       */
+      public Builder setUnitNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         unitName_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Price = 5;
+
       private java.lang.Object price_ = "";
+      /**
+       * <code>optional string Price = 5;</code>
+       *
+       * <pre>
+       * цена
+       * </pre>
+       */
       public boolean hasPrice() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      public String getPrice() {
+      /**
+       * <code>optional string Price = 5;</code>
+       *
+       * <pre>
+       * цена
+       * </pre>
+       */
+      public java.lang.String getPrice() {
         java.lang.Object ref = price_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          price_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            price_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setPrice(String value) {
+      /**
+       * <code>optional string Price = 5;</code>
+       *
+       * <pre>
+       * цена
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPriceBytes() {
+        java.lang.Object ref = price_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          price_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Price = 5;</code>
+       *
+       * <pre>
+       * цена
+       * </pre>
+       */
+      public Builder setPrice(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5116,34 +8679,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Price = 5;</code>
+       *
+       * <pre>
+       * цена
+       * </pre>
+       */
       public Builder clearPrice() {
         bitField0_ = (bitField0_ & ~0x00000010);
         price_ = getDefaultInstance().getPrice();
         onChanged();
         return this;
       }
-      void setPrice(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000010;
+      /**
+       * <code>optional string Price = 5;</code>
+       *
+       * <pre>
+       * цена
+       * </pre>
+       */
+      public Builder setPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
         price_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Quantity = 6;
+
       private java.lang.Object quantity_ = "";
+      /**
+       * <code>optional string Quantity = 6;</code>
+       *
+       * <pre>
+       * количество
+       * </pre>
+       */
       public boolean hasQuantity() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
-      public String getQuantity() {
+      /**
+       * <code>optional string Quantity = 6;</code>
+       *
+       * <pre>
+       * количество
+       * </pre>
+       */
+      public java.lang.String getQuantity() {
         java.lang.Object ref = quantity_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          quantity_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            quantity_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setQuantity(String value) {
+      /**
+       * <code>optional string Quantity = 6;</code>
+       *
+       * <pre>
+       * количество
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getQuantityBytes() {
+        java.lang.Object ref = quantity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quantity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Quantity = 6;</code>
+       *
+       * <pre>
+       * количество
+       * </pre>
+       */
+      public Builder setQuantity(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5152,34 +8779,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Quantity = 6;</code>
+       *
+       * <pre>
+       * количество
+       * </pre>
+       */
       public Builder clearQuantity() {
         bitField0_ = (bitField0_ & ~0x00000020);
         quantity_ = getDefaultInstance().getQuantity();
         onChanged();
         return this;
       }
-      void setQuantity(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000020;
+      /**
+       * <code>optional string Quantity = 6;</code>
+       *
+       * <pre>
+       * количество
+       * </pre>
+       */
+      public Builder setQuantityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
         quantity_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string SubtotalWithVatExcluded = 7;
+
       private java.lang.Object subtotalWithVatExcluded_ = "";
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 7;</code>
+       *
+       * <pre>
+       * сумма без учета НДС
+       * </pre>
+       */
       public boolean hasSubtotalWithVatExcluded() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
-      public String getSubtotalWithVatExcluded() {
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 7;</code>
+       *
+       * <pre>
+       * сумма без учета НДС
+       * </pre>
+       */
+      public java.lang.String getSubtotalWithVatExcluded() {
         java.lang.Object ref = subtotalWithVatExcluded_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          subtotalWithVatExcluded_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subtotalWithVatExcluded_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSubtotalWithVatExcluded(String value) {
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 7;</code>
+       *
+       * <pre>
+       * сумма без учета НДС
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSubtotalWithVatExcludedBytes() {
+        java.lang.Object ref = subtotalWithVatExcluded_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subtotalWithVatExcluded_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 7;</code>
+       *
+       * <pre>
+       * сумма без учета НДС
+       * </pre>
+       */
+      public Builder setSubtotalWithVatExcluded(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5188,34 +8879,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 7;</code>
+       *
+       * <pre>
+       * сумма без учета НДС
+       * </pre>
+       */
       public Builder clearSubtotalWithVatExcluded() {
         bitField0_ = (bitField0_ & ~0x00000040);
         subtotalWithVatExcluded_ = getDefaultInstance().getSubtotalWithVatExcluded();
         onChanged();
         return this;
       }
-      void setSubtotalWithVatExcluded(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000040;
+      /**
+       * <code>optional string SubtotalWithVatExcluded = 7;</code>
+       *
+       * <pre>
+       * сумма без учета НДС
+       * </pre>
+       */
+      public Builder setSubtotalWithVatExcludedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
         subtotalWithVatExcluded_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Vat = 8;
+
       private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 8;</code>
+       *
+       * <pre>
+       * сумма НДС
+       * </pre>
+       */
       public boolean hasVat() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
-      public String getVat() {
+      /**
+       * <code>optional string Vat = 8;</code>
+       *
+       * <pre>
+       * сумма НДС
+       * </pre>
+       */
+      public java.lang.String getVat() {
         java.lang.Object ref = vat_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          vat_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setVat(String value) {
+      /**
+       * <code>optional string Vat = 8;</code>
+       *
+       * <pre>
+       * сумма НДС
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 8;</code>
+       *
+       * <pre>
+       * сумма НДС
+       * </pre>
+       */
+      public Builder setVat(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5224,34 +8979,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Vat = 8;</code>
+       *
+       * <pre>
+       * сумма НДС
+       * </pre>
+       */
       public Builder clearVat() {
         bitField0_ = (bitField0_ & ~0x00000080);
         vat_ = getDefaultInstance().getVat();
         onChanged();
         return this;
       }
-      void setVat(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000080;
+      /**
+       * <code>optional string Vat = 8;</code>
+       *
+       * <pre>
+       * сумма НДС
+       * </pre>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
         vat_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Subtotal = 9;
+
       private java.lang.Object subtotal_ = "";
+      /**
+       * <code>optional string Subtotal = 9;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС
+       * </pre>
+       */
       public boolean hasSubtotal() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
-      public String getSubtotal() {
+      /**
+       * <code>optional string Subtotal = 9;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС
+       * </pre>
+       */
+      public java.lang.String getSubtotal() {
         java.lang.Object ref = subtotal_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          subtotal_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subtotal_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSubtotal(String value) {
+      /**
+       * <code>optional string Subtotal = 9;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSubtotalBytes() {
+        java.lang.Object ref = subtotal_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subtotal_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Subtotal = 9;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС
+       * </pre>
+       */
+      public Builder setSubtotal(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5260,34 +9079,98 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Subtotal = 9;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС
+       * </pre>
+       */
       public Builder clearSubtotal() {
         bitField0_ = (bitField0_ & ~0x00000100);
         subtotal_ = getDefaultInstance().getSubtotal();
         onChanged();
         return this;
       }
-      void setSubtotal(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000100;
+      /**
+       * <code>optional string Subtotal = 9;</code>
+       *
+       * <pre>
+       * сумма с учетом НДС
+       * </pre>
+       */
+      public Builder setSubtotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
         subtotal_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string AdditionalInfo = 10;
+
       private java.lang.Object additionalInfo_ = "";
+      /**
+       * <code>optional string AdditionalInfo = 10;</code>
+       *
+       * <pre>
+       * информационное поле сведений о работе (услуге)
+       * </pre>
+       */
       public boolean hasAdditionalInfo() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
-      public String getAdditionalInfo() {
+      /**
+       * <code>optional string AdditionalInfo = 10;</code>
+       *
+       * <pre>
+       * информационное поле сведений о работе (услуге)
+       * </pre>
+       */
+      public java.lang.String getAdditionalInfo() {
         java.lang.Object ref = additionalInfo_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          additionalInfo_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            additionalInfo_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAdditionalInfo(String value) {
+      /**
+       * <code>optional string AdditionalInfo = 10;</code>
+       *
+       * <pre>
+       * информационное поле сведений о работе (услуге)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAdditionalInfoBytes() {
+        java.lang.Object ref = additionalInfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          additionalInfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AdditionalInfo = 10;</code>
+       *
+       * <pre>
+       * информационное поле сведений о работе (услуге)
+       * </pre>
+       */
+      public Builder setAdditionalInfo(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5296,55 +9179,74 @@ public final class AcceptanceCertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string AdditionalInfo = 10;</code>
+       *
+       * <pre>
+       * информационное поле сведений о работе (услуге)
+       * </pre>
+       */
       public Builder clearAdditionalInfo() {
         bitField0_ = (bitField0_ & ~0x00000200);
         additionalInfo_ = getDefaultInstance().getAdditionalInfo();
         onChanged();
         return this;
       }
-      void setAdditionalInfo(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000200;
+      /**
+       * <code>optional string AdditionalInfo = 10;</code>
+       *
+       * <pre>
+       * информационное поле сведений о работе (услуге)
+       * </pre>
+       */
+      public Builder setAdditionalInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
         additionalInfo_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.WorkItem)
     }
-    
+
     static {
       defaultInstance = new WorkItem(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.WorkItem)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -5391,53 +9293,13 @@ public final class AcceptanceCertificateInfoProtos {
       "anceCertificateInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_descriptor,
-              new java.lang.String[] { "Seller", "Buyer", "DocumentDate", "DocumentNumber", "DocumentTitle", "Works", "Signature", "Signer", "AdditionalInfo", },
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.class,
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_descriptor,
-              new java.lang.String[] { "Complaints", "Signature", "Signer", "AdditionalInfo", },
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.class,
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_descriptor,
-              new java.lang.String[] { "SignatureDate", "Official", "Attorney", },
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.class,
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSignatureInfo.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_descriptor,
-              new java.lang.String[] { "StartingDate", "CompletionDate", "TotalWithVatExcluded", "Vat", "Total", "Items", },
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.class,
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkDescription.Builder.class);
-          internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_descriptor,
-              new java.lang.String[] { "Name", "Description", "UnitCode", "UnitName", "Price", "Quantity", "SubtotalWithVatExcluded", "Vat", "Subtotal", "AdditionalInfo", },
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.class,
-              Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.WorkItem.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
@@ -5445,7 +9307,40 @@ public final class AcceptanceCertificateInfoProtos {
           Diadoc.Api.Proto.Invoicing.OfficialProtos.getDescriptor(),
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSellerTitleInfo_descriptor,
+        new java.lang.String[] { "Seller", "Buyer", "DocumentDate", "DocumentNumber", "DocumentTitle", "Works", "Signature", "Signer", "AdditionalInfo", });
+    internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateBuyerTitleInfo_descriptor,
+        new java.lang.String[] { "Complaints", "Signature", "Signer", "AdditionalInfo", });
+    internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificateSignatureInfo_descriptor,
+        new java.lang.String[] { "SignatureDate", "Official", "Attorney", });
+    internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_WorkDescription_descriptor,
+        new java.lang.String[] { "StartingDate", "CompletionDate", "TotalWithVatExcluded", "Vat", "Total", "Items", });
+    internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_WorkItem_descriptor,
+        new java.lang.String[] { "Name", "Description", "UnitCode", "UnitName", "Price", "Quantity", "SubtotalWithVatExcluded", "Vat", "Subtotal", "AdditionalInfo", });
+    Diadoc.Api.Proto.Invoicing.SignerProtos.getDescriptor();
+    Diadoc.Api.Proto.Invoicing.OfficialProtos.getDescriptor();
+    Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

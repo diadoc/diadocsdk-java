@@ -8,88 +8,225 @@ public final class SignatureVerificationResultProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface SignatureVerificationResultOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required bool IsValid = 1;
+  public interface SignatureVerificationResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.SignatureVerificationResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required bool IsValid = 1;</code>
+     */
     boolean hasIsValid();
+    /**
+     * <code>required bool IsValid = 1;</code>
+     */
     boolean getIsValid();
-    
-    // optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+     */
     boolean hasCertificateStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+     */
     Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult getCertificateStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+     */
     Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResultOrBuilder getCertificateStatusOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+     */
     boolean hasSignatureTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.Timestamp getSignatureTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getSignatureTimestampOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.SignatureVerificationResult}
+   */
   public static final class SignatureVerificationResult extends
-      com.google.protobuf.GeneratedMessage
-      implements SignatureVerificationResultOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.SignatureVerificationResult)
+      SignatureVerificationResultOrBuilder {
     // Use SignatureVerificationResult.newBuilder() to construct.
-    private SignatureVerificationResult(Builder builder) {
+    private SignatureVerificationResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private SignatureVerificationResult(boolean noInit) {}
-    
+    private SignatureVerificationResult(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final SignatureVerificationResult defaultInstance;
     public static SignatureVerificationResult getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public SignatureVerificationResult getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SignatureVerificationResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isValid_ = input.readBool();
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = certificateStatus_.toBuilder();
+              }
+              certificateStatus_ = input.readMessage(Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(certificateStatus_);
+                certificateStatus_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = signatureTimestamp_.toBuilder();
+              }
+              signatureTimestamp_ = input.readMessage(Diadoc.Api.Proto.TimestampProtos.Timestamp.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signatureTimestamp_);
+                signatureTimestamp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_SignatureVerificationResult_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_SignatureVerificationResult_fieldAccessorTable;
+      return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_SignatureVerificationResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.class, Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<SignatureVerificationResult> PARSER =
+        new com.google.protobuf.AbstractParser<SignatureVerificationResult>() {
+      public SignatureVerificationResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SignatureVerificationResult(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignatureVerificationResult> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required bool IsValid = 1;
     public static final int ISVALID_FIELD_NUMBER = 1;
     private boolean isValid_;
+    /**
+     * <code>required bool IsValid = 1;</code>
+     */
     public boolean hasIsValid() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required bool IsValid = 1;</code>
+     */
     public boolean getIsValid() {
       return isValid_;
     }
-    
-    // optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;
+
     public static final int CERTIFICATESTATUS_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult certificateStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+     */
     public boolean hasCertificateStatus() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+     */
     public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult getCertificateStatus() {
       return certificateStatus_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+     */
     public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResultOrBuilder getCertificateStatusOrBuilder() {
       return certificateStatus_;
     }
-    
-    // optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;
+
     public static final int SIGNATURETIMESTAMP_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.TimestampProtos.Timestamp signatureTimestamp_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+     */
     public boolean hasSignatureTimestamp() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.Timestamp getSignatureTimestamp() {
       return signatureTimestamp_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getSignatureTimestampOrBuilder() {
       return signatureTimestamp_;
     }
-    
+
     private void initFields() {
       isValid_ = false;
       certificateStatus_ = Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.getDefaultInstance();
@@ -98,8 +235,9 @@ public final class SignatureVerificationResultProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasIsValid()) {
         memoizedIsInitialized = 0;
         return false;
@@ -119,7 +257,7 @@ public final class SignatureVerificationResultProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -134,12 +272,12 @@ public final class SignatureVerificationResultProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -157,113 +295,106 @@ public final class SignatureVerificationResultProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.SignatureVerificationResult}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResultOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.SignatureVerificationResult)
+        Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_SignatureVerificationResult_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_SignatureVerificationResult_fieldAccessorTable;
+        return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_SignatureVerificationResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.class, Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -276,7 +407,7 @@ public final class SignatureVerificationResultProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         isValid_ = false;
@@ -295,20 +426,20 @@ public final class SignatureVerificationResultProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.getDescriptor();
+        return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_SignatureVerificationResult_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult getDefaultInstanceForType() {
         return Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult build() {
         Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -316,17 +447,7 @@ public final class SignatureVerificationResultProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult buildPartial() {
         Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult result = new Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult(this);
         int from_bitField0_ = bitField0_;
@@ -355,7 +476,7 @@ public final class SignatureVerificationResultProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult) {
           return mergeFrom((Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult)other);
@@ -364,7 +485,7 @@ public final class SignatureVerificationResultProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult other) {
         if (other == Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.getDefaultInstance()) return this;
         if (other.hasIsValid()) {
@@ -379,7 +500,7 @@ public final class SignatureVerificationResultProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasIsValid()) {
           
@@ -399,87 +520,70 @@ public final class SignatureVerificationResultProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isValid_ = input.readBool();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder subBuilder = Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.newBuilder();
-              if (hasCertificateStatus()) {
-                subBuilder.mergeFrom(getCertificateStatus());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCertificateStatus(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder();
-              if (hasSignatureTimestamp()) {
-                subBuilder.mergeFrom(getSignatureTimestamp());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSignatureTimestamp(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required bool IsValid = 1;
+
       private boolean isValid_ ;
+      /**
+       * <code>required bool IsValid = 1;</code>
+       */
       public boolean hasIsValid() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required bool IsValid = 1;</code>
+       */
       public boolean getIsValid() {
         return isValid_;
       }
+      /**
+       * <code>required bool IsValid = 1;</code>
+       */
       public Builder setIsValid(boolean value) {
         bitField0_ |= 0x00000001;
         isValid_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required bool IsValid = 1;</code>
+       */
       public Builder clearIsValid() {
         bitField0_ = (bitField0_ & ~0x00000001);
         isValid_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;
+
       private Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult certificateStatus_ = Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResultOrBuilder> certificateStatusBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+       */
       public boolean hasCertificateStatus() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult getCertificateStatus() {
         if (certificateStatusBuilder_ == null) {
           return certificateStatus_;
@@ -487,6 +591,9 @@ public final class SignatureVerificationResultProtos {
           return certificateStatusBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+       */
       public Builder setCertificateStatus(Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult value) {
         if (certificateStatusBuilder_ == null) {
           if (value == null) {
@@ -500,6 +607,9 @@ public final class SignatureVerificationResultProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+       */
       public Builder setCertificateStatus(
           Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder builderForValue) {
         if (certificateStatusBuilder_ == null) {
@@ -511,6 +621,9 @@ public final class SignatureVerificationResultProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+       */
       public Builder mergeCertificateStatus(Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult value) {
         if (certificateStatusBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -527,6 +640,9 @@ public final class SignatureVerificationResultProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+       */
       public Builder clearCertificateStatus() {
         if (certificateStatusBuilder_ == null) {
           certificateStatus_ = Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.getDefaultInstance();
@@ -537,11 +653,17 @@ public final class SignatureVerificationResultProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder getCertificateStatusBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getCertificateStatusFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResultOrBuilder getCertificateStatusOrBuilder() {
         if (certificateStatusBuilder_ != null) {
           return certificateStatusBuilder_.getMessageOrBuilder();
@@ -549,27 +671,35 @@ public final class SignatureVerificationResultProtos {
           return certificateStatus_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateVerificationResult CertificateStatus = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResultOrBuilder> 
           getCertificateStatusFieldBuilder() {
         if (certificateStatusBuilder_ == null) {
           certificateStatusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResultOrBuilder>(
-                  certificateStatus_,
+                  getCertificateStatus(),
                   getParentForChildren(),
                   isClean());
           certificateStatus_ = null;
         }
         return certificateStatusBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;
+
       private Diadoc.Api.Proto.TimestampProtos.Timestamp signatureTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> signatureTimestampBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+       */
       public boolean hasSignatureTimestamp() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp getSignatureTimestamp() {
         if (signatureTimestampBuilder_ == null) {
           return signatureTimestamp_;
@@ -577,6 +707,9 @@ public final class SignatureVerificationResultProtos {
           return signatureTimestampBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+       */
       public Builder setSignatureTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (signatureTimestampBuilder_ == null) {
           if (value == null) {
@@ -590,6 +723,9 @@ public final class SignatureVerificationResultProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+       */
       public Builder setSignatureTimestamp(
           Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder builderForValue) {
         if (signatureTimestampBuilder_ == null) {
@@ -601,6 +737,9 @@ public final class SignatureVerificationResultProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+       */
       public Builder mergeSignatureTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (signatureTimestampBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -617,6 +756,9 @@ public final class SignatureVerificationResultProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+       */
       public Builder clearSignatureTimestamp() {
         if (signatureTimestampBuilder_ == null) {
           signatureTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
@@ -627,11 +769,17 @@ public final class SignatureVerificationResultProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder getSignatureTimestampBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getSignatureTimestampFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getSignatureTimestampOrBuilder() {
         if (signatureTimestampBuilder_ != null) {
           return signatureTimestampBuilder_.getMessageOrBuilder();
@@ -639,126 +787,316 @@ public final class SignatureVerificationResultProtos {
           return signatureTimestamp_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp SignatureTimestamp = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> 
           getSignatureTimestampFieldBuilder() {
         if (signatureTimestampBuilder_ == null) {
           signatureTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder>(
-                  signatureTimestamp_,
+                  getSignatureTimestamp(),
                   getParentForChildren(),
                   isClean());
           signatureTimestamp_ = null;
         }
         return signatureTimestampBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.SignatureVerificationResult)
     }
-    
+
     static {
       defaultInstance = new SignatureVerificationResult(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.SignatureVerificationResult)
   }
-  
-  public interface CertificateVerificationResultOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required bool IsValid = 2;
+
+  public interface CertificateVerificationResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CertificateVerificationResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required bool IsValid = 2;</code>
+     */
     boolean hasIsValid();
+    /**
+     * <code>required bool IsValid = 2;</code>
+     */
     boolean getIsValid();
-    
-    // repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     java.util.List<Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement> 
         getCertificateChainList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement getCertificateChain(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     int getCertificateChainCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     java.util.List<? extends Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElementOrBuilder> 
         getCertificateChainOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElementOrBuilder getCertificateChainOrBuilder(
         int index);
-    
-    // required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+     */
     boolean hasVerificationTime();
+    /**
+     * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.Timestamp getVerificationTime();
+    /**
+     * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getVerificationTimeOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.CertificateVerificationResult}
+   */
   public static final class CertificateVerificationResult extends
-      com.google.protobuf.GeneratedMessage
-      implements CertificateVerificationResultOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CertificateVerificationResult)
+      CertificateVerificationResultOrBuilder {
     // Use CertificateVerificationResult.newBuilder() to construct.
-    private CertificateVerificationResult(Builder builder) {
+    private CertificateVerificationResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CertificateVerificationResult(boolean noInit) {}
-    
+    private CertificateVerificationResult(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CertificateVerificationResult defaultInstance;
     public static CertificateVerificationResult getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CertificateVerificationResult getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CertificateVerificationResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              isValid_ = input.readBool();
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                certificateChain_ = new java.util.ArrayList<Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              certificateChain_.add(input.readMessage(Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.PARSER, extensionRegistry));
+              break;
+            }
+            case 34: {
+              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = verificationTime_.toBuilder();
+              }
+              verificationTime_ = input.readMessage(Diadoc.Api.Proto.TimestampProtos.Timestamp.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(verificationTime_);
+                verificationTime_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          certificateChain_ = java.util.Collections.unmodifiableList(certificateChain_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateVerificationResult_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateVerificationResult_fieldAccessorTable;
+      return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateVerificationResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.class, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<CertificateVerificationResult> PARSER =
+        new com.google.protobuf.AbstractParser<CertificateVerificationResult>() {
+      public CertificateVerificationResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CertificateVerificationResult(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CertificateVerificationResult> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required bool IsValid = 2;
     public static final int ISVALID_FIELD_NUMBER = 2;
     private boolean isValid_;
+    /**
+     * <code>required bool IsValid = 2;</code>
+     */
     public boolean hasIsValid() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required bool IsValid = 2;</code>
+     */
     public boolean getIsValid() {
       return isValid_;
     }
-    
-    // repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;
+
     public static final int CERTIFICATECHAIN_FIELD_NUMBER = 3;
     private java.util.List<Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement> certificateChain_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     public java.util.List<Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement> getCertificateChainList() {
       return certificateChain_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElementOrBuilder> 
         getCertificateChainOrBuilderList() {
       return certificateChain_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     public int getCertificateChainCount() {
       return certificateChain_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement getCertificateChain(int index) {
       return certificateChain_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+     *
+     * <pre>
+     * first element corresponds to signer certificate
+     * </pre>
+     */
     public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElementOrBuilder getCertificateChainOrBuilder(
         int index) {
       return certificateChain_.get(index);
     }
-    
-    // required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;
+
     public static final int VERIFICATIONTIME_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.TimestampProtos.Timestamp verificationTime_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+     */
     public boolean hasVerificationTime() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.Timestamp getVerificationTime() {
       return verificationTime_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getVerificationTimeOrBuilder() {
       return verificationTime_;
     }
-    
+
     private void initFields() {
       isValid_ = false;
       certificateChain_ = java.util.Collections.emptyList();
@@ -767,8 +1105,9 @@ public final class SignatureVerificationResultProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasIsValid()) {
         memoizedIsInitialized = 0;
         return false;
@@ -790,7 +1129,7 @@ public final class SignatureVerificationResultProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -805,12 +1144,12 @@ public final class SignatureVerificationResultProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -828,113 +1167,106 @@ public final class SignatureVerificationResultProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.CertificateVerificationResult}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResultOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.CertificateVerificationResult)
+        Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateVerificationResult_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateVerificationResult_fieldAccessorTable;
+        return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateVerificationResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.class, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -947,7 +1279,7 @@ public final class SignatureVerificationResultProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         isValid_ = false;
@@ -966,20 +1298,20 @@ public final class SignatureVerificationResultProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.getDescriptor();
+        return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateVerificationResult_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult getDefaultInstanceForType() {
         return Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult build() {
         Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -987,17 +1319,7 @@ public final class SignatureVerificationResultProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult buildPartial() {
         Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult result = new Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult(this);
         int from_bitField0_ = bitField0_;
@@ -1027,7 +1349,7 @@ public final class SignatureVerificationResultProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult) {
           return mergeFrom((Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult)other);
@@ -1036,7 +1358,7 @@ public final class SignatureVerificationResultProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult other) {
         if (other == Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.getDefaultInstance()) return this;
         if (other.hasIsValid()) {
@@ -1074,7 +1396,7 @@ public final class SignatureVerificationResultProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasIsValid()) {
           
@@ -1096,78 +1418,58 @@ public final class SignatureVerificationResultProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000001;
-              isValid_ = input.readBool();
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder subBuilder = Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addCertificateChain(subBuilder.buildPartial());
-              break;
-            }
-            case 34: {
-              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder();
-              if (hasVerificationTime()) {
-                subBuilder.mergeFrom(getVerificationTime());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setVerificationTime(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required bool IsValid = 2;
+
       private boolean isValid_ ;
+      /**
+       * <code>required bool IsValid = 2;</code>
+       */
       public boolean hasIsValid() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required bool IsValid = 2;</code>
+       */
       public boolean getIsValid() {
         return isValid_;
       }
+      /**
+       * <code>required bool IsValid = 2;</code>
+       */
       public Builder setIsValid(boolean value) {
         bitField0_ |= 0x00000001;
         isValid_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required bool IsValid = 2;</code>
+       */
       public Builder clearIsValid() {
         bitField0_ = (bitField0_ & ~0x00000001);
         isValid_ = false;
         onChanged();
         return this;
       }
-      
-      // repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;
+
       private java.util.List<Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement> certificateChain_ =
         java.util.Collections.emptyList();
       private void ensureCertificateChainIsMutable() {
@@ -1176,10 +1478,17 @@ public final class SignatureVerificationResultProtos {
           bitField0_ |= 0x00000002;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElementOrBuilder> certificateChainBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement> getCertificateChainList() {
         if (certificateChainBuilder_ == null) {
           return java.util.Collections.unmodifiableList(certificateChain_);
@@ -1187,6 +1496,13 @@ public final class SignatureVerificationResultProtos {
           return certificateChainBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public int getCertificateChainCount() {
         if (certificateChainBuilder_ == null) {
           return certificateChain_.size();
@@ -1194,6 +1510,13 @@ public final class SignatureVerificationResultProtos {
           return certificateChainBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement getCertificateChain(int index) {
         if (certificateChainBuilder_ == null) {
           return certificateChain_.get(index);
@@ -1201,6 +1524,13 @@ public final class SignatureVerificationResultProtos {
           return certificateChainBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Builder setCertificateChain(
           int index, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement value) {
         if (certificateChainBuilder_ == null) {
@@ -1215,6 +1545,13 @@ public final class SignatureVerificationResultProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Builder setCertificateChain(
           int index, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder builderForValue) {
         if (certificateChainBuilder_ == null) {
@@ -1226,6 +1563,13 @@ public final class SignatureVerificationResultProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Builder addCertificateChain(Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement value) {
         if (certificateChainBuilder_ == null) {
           if (value == null) {
@@ -1239,6 +1583,13 @@ public final class SignatureVerificationResultProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Builder addCertificateChain(
           int index, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement value) {
         if (certificateChainBuilder_ == null) {
@@ -1253,6 +1604,13 @@ public final class SignatureVerificationResultProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Builder addCertificateChain(
           Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder builderForValue) {
         if (certificateChainBuilder_ == null) {
@@ -1264,6 +1622,13 @@ public final class SignatureVerificationResultProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Builder addCertificateChain(
           int index, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder builderForValue) {
         if (certificateChainBuilder_ == null) {
@@ -1275,17 +1640,32 @@ public final class SignatureVerificationResultProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Builder addAllCertificateChain(
           java.lang.Iterable<? extends Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement> values) {
         if (certificateChainBuilder_ == null) {
           ensureCertificateChainIsMutable();
-          super.addAll(values, certificateChain_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, certificateChain_);
           onChanged();
         } else {
           certificateChainBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Builder clearCertificateChain() {
         if (certificateChainBuilder_ == null) {
           certificateChain_ = java.util.Collections.emptyList();
@@ -1296,6 +1676,13 @@ public final class SignatureVerificationResultProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Builder removeCertificateChain(int index) {
         if (certificateChainBuilder_ == null) {
           ensureCertificateChainIsMutable();
@@ -1306,10 +1693,24 @@ public final class SignatureVerificationResultProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder getCertificateChainBuilder(
           int index) {
         return getCertificateChainFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElementOrBuilder getCertificateChainOrBuilder(
           int index) {
         if (certificateChainBuilder_ == null) {
@@ -1317,6 +1718,13 @@ public final class SignatureVerificationResultProtos {
           return certificateChainBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElementOrBuilder> 
            getCertificateChainOrBuilderList() {
         if (certificateChainBuilder_ != null) {
@@ -1325,15 +1733,36 @@ public final class SignatureVerificationResultProtos {
           return java.util.Collections.unmodifiableList(certificateChain_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder addCertificateChainBuilder() {
         return getCertificateChainFieldBuilder().addBuilder(
             Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder addCertificateChainBuilder(
           int index) {
         return getCertificateChainFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateChainElement CertificateChain = 3;</code>
+       *
+       * <pre>
+       * first element corresponds to signer certificate
+       * </pre>
+       */
       public java.util.List<Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder> 
            getCertificateChainBuilderList() {
         return getCertificateChainFieldBuilder().getBuilderList();
@@ -1352,14 +1781,19 @@ public final class SignatureVerificationResultProtos {
         }
         return certificateChainBuilder_;
       }
-      
-      // required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;
+
       private Diadoc.Api.Proto.TimestampProtos.Timestamp verificationTime_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> verificationTimeBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+       */
       public boolean hasVerificationTime() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp getVerificationTime() {
         if (verificationTimeBuilder_ == null) {
           return verificationTime_;
@@ -1367,6 +1801,9 @@ public final class SignatureVerificationResultProtos {
           return verificationTimeBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+       */
       public Builder setVerificationTime(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (verificationTimeBuilder_ == null) {
           if (value == null) {
@@ -1380,6 +1817,9 @@ public final class SignatureVerificationResultProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+       */
       public Builder setVerificationTime(
           Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder builderForValue) {
         if (verificationTimeBuilder_ == null) {
@@ -1391,6 +1831,9 @@ public final class SignatureVerificationResultProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+       */
       public Builder mergeVerificationTime(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (verificationTimeBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -1407,6 +1850,9 @@ public final class SignatureVerificationResultProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+       */
       public Builder clearVerificationTime() {
         if (verificationTimeBuilder_ == null) {
           verificationTime_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
@@ -1417,11 +1863,17 @@ public final class SignatureVerificationResultProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder getVerificationTimeBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getVerificationTimeFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getVerificationTimeOrBuilder() {
         if (verificationTimeBuilder_ != null) {
           return verificationTimeBuilder_.getMessageOrBuilder();
@@ -1429,91 +1881,204 @@ public final class SignatureVerificationResultProtos {
           return verificationTime_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Timestamp VerificationTime = 4;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> 
           getVerificationTimeFieldBuilder() {
         if (verificationTimeBuilder_ == null) {
           verificationTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder>(
-                  verificationTime_,
+                  getVerificationTime(),
                   getParentForChildren(),
                   isClean());
           verificationTime_ = null;
         }
         return verificationTimeBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CertificateVerificationResult)
     }
-    
+
     static {
       defaultInstance = new CertificateVerificationResult(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.CertificateVerificationResult)
   }
-  
-  public interface CertificateChainElementOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required int32 CertificateChainStatusFlags = 1;
+
+  public interface CertificateChainElementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CertificateChainElement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 CertificateChainStatusFlags = 1;</code>
+     *
+     * <pre>
+     * X509ChainStatusFlags value
+     * </pre>
+     */
     boolean hasCertificateChainStatusFlags();
+    /**
+     * <code>required int32 CertificateChainStatusFlags = 1;</code>
+     *
+     * <pre>
+     * X509ChainStatusFlags value
+     * </pre>
+     */
     int getCertificateChainStatusFlags();
-    
-    // required bytes DerCertificate = 2;
+
+    /**
+     * <code>required bytes DerCertificate = 2;</code>
+     */
     boolean hasDerCertificate();
+    /**
+     * <code>required bytes DerCertificate = 2;</code>
+     */
     com.google.protobuf.ByteString getDerCertificate();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.CertificateChainElement}
+   */
   public static final class CertificateChainElement extends
-      com.google.protobuf.GeneratedMessage
-      implements CertificateChainElementOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CertificateChainElement)
+      CertificateChainElementOrBuilder {
     // Use CertificateChainElement.newBuilder() to construct.
-    private CertificateChainElement(Builder builder) {
+    private CertificateChainElement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CertificateChainElement(boolean noInit) {}
-    
+    private CertificateChainElement(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CertificateChainElement defaultInstance;
     public static CertificateChainElement getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CertificateChainElement getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CertificateChainElement(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              certificateChainStatusFlags_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              derCertificate_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateChainElement_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateChainElement_fieldAccessorTable;
+      return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateChainElement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.class, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<CertificateChainElement> PARSER =
+        new com.google.protobuf.AbstractParser<CertificateChainElement>() {
+      public CertificateChainElement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CertificateChainElement(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CertificateChainElement> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required int32 CertificateChainStatusFlags = 1;
     public static final int CERTIFICATECHAINSTATUSFLAGS_FIELD_NUMBER = 1;
     private int certificateChainStatusFlags_;
+    /**
+     * <code>required int32 CertificateChainStatusFlags = 1;</code>
+     *
+     * <pre>
+     * X509ChainStatusFlags value
+     * </pre>
+     */
     public boolean hasCertificateChainStatusFlags() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required int32 CertificateChainStatusFlags = 1;</code>
+     *
+     * <pre>
+     * X509ChainStatusFlags value
+     * </pre>
+     */
     public int getCertificateChainStatusFlags() {
       return certificateChainStatusFlags_;
     }
-    
-    // required bytes DerCertificate = 2;
+
     public static final int DERCERTIFICATE_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString derCertificate_;
+    /**
+     * <code>required bytes DerCertificate = 2;</code>
+     */
     public boolean hasDerCertificate() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required bytes DerCertificate = 2;</code>
+     */
     public com.google.protobuf.ByteString getDerCertificate() {
       return derCertificate_;
     }
-    
+
     private void initFields() {
       certificateChainStatusFlags_ = 0;
       derCertificate_ = com.google.protobuf.ByteString.EMPTY;
@@ -1521,8 +2086,9 @@ public final class SignatureVerificationResultProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasCertificateChainStatusFlags()) {
         memoizedIsInitialized = 0;
         return false;
@@ -1534,7 +2100,7 @@ public final class SignatureVerificationResultProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1546,12 +2112,12 @@ public final class SignatureVerificationResultProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1565,113 +2131,106 @@ public final class SignatureVerificationResultProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.CertificateChainElement}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElementOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.CertificateChainElement)
+        Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElementOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateChainElement_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateChainElement_fieldAccessorTable;
+        return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateChainElement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.class, Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1682,7 +2241,7 @@ public final class SignatureVerificationResultProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         certificateChainStatusFlags_ = 0;
@@ -1691,20 +2250,20 @@ public final class SignatureVerificationResultProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.getDescriptor();
+        return Diadoc.Api.Proto.SignatureVerificationResultProtos.internal_static_Diadoc_Api_Proto_CertificateChainElement_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement getDefaultInstanceForType() {
         return Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement build() {
         Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement result = buildPartial();
         if (!result.isInitialized()) {
@@ -1712,17 +2271,7 @@ public final class SignatureVerificationResultProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement buildPartial() {
         Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement result = new Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement(this);
         int from_bitField0_ = bitField0_;
@@ -1739,7 +2288,7 @@ public final class SignatureVerificationResultProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement) {
           return mergeFrom((Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement)other);
@@ -1748,7 +2297,7 @@ public final class SignatureVerificationResultProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement other) {
         if (other == Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.getDefaultInstance()) return this;
         if (other.hasCertificateChainStatusFlags()) {
@@ -1760,7 +2309,7 @@ public final class SignatureVerificationResultProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasCertificateChainStatusFlags()) {
           
@@ -1772,75 +2321,90 @@ public final class SignatureVerificationResultProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              certificateChainStatusFlags_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              derCertificate_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required int32 CertificateChainStatusFlags = 1;
+
       private int certificateChainStatusFlags_ ;
+      /**
+       * <code>required int32 CertificateChainStatusFlags = 1;</code>
+       *
+       * <pre>
+       * X509ChainStatusFlags value
+       * </pre>
+       */
       public boolean hasCertificateChainStatusFlags() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required int32 CertificateChainStatusFlags = 1;</code>
+       *
+       * <pre>
+       * X509ChainStatusFlags value
+       * </pre>
+       */
       public int getCertificateChainStatusFlags() {
         return certificateChainStatusFlags_;
       }
+      /**
+       * <code>required int32 CertificateChainStatusFlags = 1;</code>
+       *
+       * <pre>
+       * X509ChainStatusFlags value
+       * </pre>
+       */
       public Builder setCertificateChainStatusFlags(int value) {
         bitField0_ |= 0x00000001;
         certificateChainStatusFlags_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required int32 CertificateChainStatusFlags = 1;</code>
+       *
+       * <pre>
+       * X509ChainStatusFlags value
+       * </pre>
+       */
       public Builder clearCertificateChainStatusFlags() {
         bitField0_ = (bitField0_ & ~0x00000001);
         certificateChainStatusFlags_ = 0;
         onChanged();
         return this;
       }
-      
-      // required bytes DerCertificate = 2;
+
       private com.google.protobuf.ByteString derCertificate_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>required bytes DerCertificate = 2;</code>
+       */
       public boolean hasDerCertificate() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>required bytes DerCertificate = 2;</code>
+       */
       public com.google.protobuf.ByteString getDerCertificate() {
         return derCertificate_;
       }
+      /**
+       * <code>required bytes DerCertificate = 2;</code>
+       */
       public Builder setDerCertificate(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -1850,40 +2414,43 @@ public final class SignatureVerificationResultProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required bytes DerCertificate = 2;</code>
+       */
       public Builder clearDerCertificate() {
         bitField0_ = (bitField0_ & ~0x00000002);
         derCertificate_ = getDefaultInstance().getDerCertificate();
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CertificateChainElement)
     }
-    
+
     static {
       defaultInstance = new CertificateChainElement(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.CertificateChainElement)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_SignatureVerificationResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_SignatureVerificationResult_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CertificateVerificationResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_CertificateVerificationResult_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CertificateChainElement_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_CertificateChainElement_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -1908,43 +2475,38 @@ public final class SignatureVerificationResultProtos {
       "ignatureVerificationResultProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_SignatureVerificationResult_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_SignatureVerificationResult_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_SignatureVerificationResult_descriptor,
-              new java.lang.String[] { "IsValid", "CertificateStatus", "SignatureTimestamp", },
-              Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.class,
-              Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder.class);
-          internal_static_Diadoc_Api_Proto_CertificateVerificationResult_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_CertificateVerificationResult_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_CertificateVerificationResult_descriptor,
-              new java.lang.String[] { "IsValid", "CertificateChain", "VerificationTime", },
-              Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.class,
-              Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateVerificationResult.Builder.class);
-          internal_static_Diadoc_Api_Proto_CertificateChainElement_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_CertificateChainElement_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_CertificateChainElement_descriptor,
-              new java.lang.String[] { "CertificateChainStatusFlags", "DerCertificate", },
-              Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.class,
-              Diadoc.Api.Proto.SignatureVerificationResultProtos.CertificateChainElement.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_SignatureVerificationResult_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_SignatureVerificationResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_SignatureVerificationResult_descriptor,
+        new java.lang.String[] { "IsValid", "CertificateStatus", "SignatureTimestamp", });
+    internal_static_Diadoc_Api_Proto_CertificateVerificationResult_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_CertificateVerificationResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_CertificateVerificationResult_descriptor,
+        new java.lang.String[] { "IsValid", "CertificateChain", "VerificationTime", });
+    internal_static_Diadoc_Api_Proto_CertificateChainElement_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_CertificateChainElement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_CertificateChainElement_descriptor,
+        new java.lang.String[] { "CertificateChainStatusFlags", "DerCertificate", });
+    Diadoc.Api.Proto.TimestampProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

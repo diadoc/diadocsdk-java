@@ -8,76 +8,180 @@ public final class ResolutionChainListProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface ResolutionChainListOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;
+  public interface ResolutionChainListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.ResolutionChainList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     java.util.List<Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain> 
         getResolutionChainsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain getResolutionChains(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     int getResolutionChainsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     java.util.List<? extends Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainOrBuilder> 
         getResolutionChainsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainOrBuilder getResolutionChainsOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.ResolutionChainList}
+   */
   public static final class ResolutionChainList extends
-      com.google.protobuf.GeneratedMessage
-      implements ResolutionChainListOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.ResolutionChainList)
+      ResolutionChainListOrBuilder {
     // Use ResolutionChainList.newBuilder() to construct.
-    private ResolutionChainList(Builder builder) {
+    private ResolutionChainList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private ResolutionChainList(boolean noInit) {}
-    
+    private ResolutionChainList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final ResolutionChainList defaultInstance;
     public static ResolutionChainList getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public ResolutionChainList getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResolutionChainList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                resolutionChains_ = new java.util.ArrayList<Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              resolutionChains_.add(input.readMessage(Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          resolutionChains_ = java.util.Collections.unmodifiableList(resolutionChains_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChainList_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChainList_fieldAccessorTable;
+      return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChainList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.class, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.Builder.class);
     }
-    
-    // repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;
+
+    public static com.google.protobuf.Parser<ResolutionChainList> PARSER =
+        new com.google.protobuf.AbstractParser<ResolutionChainList>() {
+      public ResolutionChainList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResolutionChainList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResolutionChainList> getParserForType() {
+      return PARSER;
+    }
+
     public static final int RESOLUTIONCHAINS_FIELD_NUMBER = 1;
     private java.util.List<Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain> resolutionChains_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     public java.util.List<Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain> getResolutionChainsList() {
       return resolutionChains_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainOrBuilder> 
         getResolutionChainsOrBuilderList() {
       return resolutionChains_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     public int getResolutionChainsCount() {
       return resolutionChains_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain getResolutionChains(int index) {
       return resolutionChains_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+     */
     public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainOrBuilder getResolutionChainsOrBuilder(
         int index) {
       return resolutionChains_.get(index);
     }
-    
+
     private void initFields() {
       resolutionChains_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       for (int i = 0; i < getResolutionChainsCount(); i++) {
         if (!getResolutionChains(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -87,7 +191,7 @@ public final class ResolutionChainListProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -96,12 +200,12 @@ public final class ResolutionChainListProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < resolutionChains_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -111,113 +215,106 @@ public final class ResolutionChainListProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.ResolutionChainList}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainListOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.ResolutionChainList)
+        Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChainList_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChainList_fieldAccessorTable;
+        return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChainList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.class, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -229,7 +326,7 @@ public final class ResolutionChainListProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (resolutionChainsBuilder_ == null) {
@@ -240,20 +337,20 @@ public final class ResolutionChainListProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.getDescriptor();
+        return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChainList_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList getDefaultInstanceForType() {
         return Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList build() {
         Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList result = buildPartial();
         if (!result.isInitialized()) {
@@ -261,17 +358,7 @@ public final class ResolutionChainListProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList buildPartial() {
         Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList result = new Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList(this);
         int from_bitField0_ = bitField0_;
@@ -287,7 +374,7 @@ public final class ResolutionChainListProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList) {
           return mergeFrom((Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList)other);
@@ -296,7 +383,7 @@ public final class ResolutionChainListProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList other) {
         if (other == Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.getDefaultInstance()) return this;
         if (resolutionChainsBuilder_ == null) {
@@ -328,7 +415,7 @@ public final class ResolutionChainListProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getResolutionChainsCount(); i++) {
           if (!getResolutionChains(i).isInitialized()) {
@@ -338,43 +425,26 @@ public final class ResolutionChainListProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder subBuilder = Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addResolutionChains(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;
+
       private java.util.List<Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain> resolutionChains_ =
         java.util.Collections.emptyList();
       private void ensureResolutionChainsIsMutable() {
@@ -383,10 +453,13 @@ public final class ResolutionChainListProtos {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainOrBuilder> resolutionChainsBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain> getResolutionChainsList() {
         if (resolutionChainsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(resolutionChains_);
@@ -394,6 +467,9 @@ public final class ResolutionChainListProtos {
           return resolutionChainsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public int getResolutionChainsCount() {
         if (resolutionChainsBuilder_ == null) {
           return resolutionChains_.size();
@@ -401,6 +477,9 @@ public final class ResolutionChainListProtos {
           return resolutionChainsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain getResolutionChains(int index) {
         if (resolutionChainsBuilder_ == null) {
           return resolutionChains_.get(index);
@@ -408,6 +487,9 @@ public final class ResolutionChainListProtos {
           return resolutionChainsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Builder setResolutionChains(
           int index, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain value) {
         if (resolutionChainsBuilder_ == null) {
@@ -422,6 +504,9 @@ public final class ResolutionChainListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Builder setResolutionChains(
           int index, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder builderForValue) {
         if (resolutionChainsBuilder_ == null) {
@@ -433,6 +518,9 @@ public final class ResolutionChainListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Builder addResolutionChains(Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain value) {
         if (resolutionChainsBuilder_ == null) {
           if (value == null) {
@@ -446,6 +534,9 @@ public final class ResolutionChainListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Builder addResolutionChains(
           int index, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain value) {
         if (resolutionChainsBuilder_ == null) {
@@ -460,6 +551,9 @@ public final class ResolutionChainListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Builder addResolutionChains(
           Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder builderForValue) {
         if (resolutionChainsBuilder_ == null) {
@@ -471,6 +565,9 @@ public final class ResolutionChainListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Builder addResolutionChains(
           int index, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder builderForValue) {
         if (resolutionChainsBuilder_ == null) {
@@ -482,17 +579,24 @@ public final class ResolutionChainListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Builder addAllResolutionChains(
           java.lang.Iterable<? extends Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain> values) {
         if (resolutionChainsBuilder_ == null) {
           ensureResolutionChainsIsMutable();
-          super.addAll(values, resolutionChains_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resolutionChains_);
           onChanged();
         } else {
           resolutionChainsBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Builder clearResolutionChains() {
         if (resolutionChainsBuilder_ == null) {
           resolutionChains_ = java.util.Collections.emptyList();
@@ -503,6 +607,9 @@ public final class ResolutionChainListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Builder removeResolutionChains(int index) {
         if (resolutionChainsBuilder_ == null) {
           ensureResolutionChainsIsMutable();
@@ -513,10 +620,16 @@ public final class ResolutionChainListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder getResolutionChainsBuilder(
           int index) {
         return getResolutionChainsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainOrBuilder getResolutionChainsOrBuilder(
           int index) {
         if (resolutionChainsBuilder_ == null) {
@@ -524,6 +637,9 @@ public final class ResolutionChainListProtos {
           return resolutionChainsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainOrBuilder> 
            getResolutionChainsOrBuilderList() {
         if (resolutionChainsBuilder_ != null) {
@@ -532,15 +648,24 @@ public final class ResolutionChainListProtos {
           return java.util.Collections.unmodifiableList(resolutionChains_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder addResolutionChainsBuilder() {
         return getResolutionChainsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder addResolutionChainsBuilder(
           int index) {
         return getResolutionChainsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionChain ResolutionChains = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder> 
            getResolutionChainsBuilderList() {
         return getResolutionChainsFieldBuilder().getBuilderList();
@@ -559,122 +684,238 @@ public final class ResolutionChainListProtos {
         }
         return resolutionChainsBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.ResolutionChainList)
     }
-    
+
     static {
       defaultInstance = new ResolutionChainList(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.ResolutionChainList)
   }
-  
-  public interface ResolutionChainOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string ChainId = 1;
+
+  public interface ResolutionChainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.ResolutionChain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string ChainId = 1;</code>
+     */
     boolean hasChainId();
-    String getChainId();
-    
-    // required string Name = 2;
+    /**
+     * <code>required string ChainId = 1;</code>
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>required string ChainId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>required string Name = 2;</code>
+     */
     boolean hasName();
-    String getName();
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.ResolutionChain}
+   */
   public static final class ResolutionChain extends
-      com.google.protobuf.GeneratedMessage
-      implements ResolutionChainOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.ResolutionChain)
+      ResolutionChainOrBuilder {
     // Use ResolutionChain.newBuilder() to construct.
-    private ResolutionChain(Builder builder) {
+    private ResolutionChain(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private ResolutionChain(boolean noInit) {}
-    
+    private ResolutionChain(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final ResolutionChain defaultInstance;
     public static ResolutionChain getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public ResolutionChain getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResolutionChain(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              chainId_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              name_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChain_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChain_fieldAccessorTable;
+      return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.class, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<ResolutionChain> PARSER =
+        new com.google.protobuf.AbstractParser<ResolutionChain>() {
+      public ResolutionChain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResolutionChain(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResolutionChain> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string ChainId = 1;
     public static final int CHAINID_FIELD_NUMBER = 1;
     private java.lang.Object chainId_;
+    /**
+     * <code>required string ChainId = 1;</code>
+     */
     public boolean hasChainId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getChainId() {
+    /**
+     * <code>required string ChainId = 1;</code>
+     */
+    public java.lang.String getChainId() {
       java.lang.Object ref = chainId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           chainId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getChainIdBytes() {
+    /**
+     * <code>required string ChainId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
       java.lang.Object ref = chainId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         chainId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Name = 2;
+
     public static final int NAME_FIELD_NUMBER = 2;
     private java.lang.Object name_;
+    /**
+     * <code>required string Name = 2;</code>
+     */
     public boolean hasName() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getName() {
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    public java.lang.String getName() {
       java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           name_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getNameBytes() {
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
       java.lang.Object ref = name_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       chainId_ = "";
       name_ = "";
@@ -682,8 +923,9 @@ public final class ResolutionChainListProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasChainId()) {
         memoizedIsInitialized = 0;
         return false;
@@ -695,7 +937,7 @@ public final class ResolutionChainListProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -707,12 +949,12 @@ public final class ResolutionChainListProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -726,113 +968,106 @@ public final class ResolutionChainListProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.ResolutionChain}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.ResolutionChain)
+        Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChain_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChain_fieldAccessorTable;
+        return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.class, Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -843,7 +1078,7 @@ public final class ResolutionChainListProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         chainId_ = "";
@@ -852,20 +1087,20 @@ public final class ResolutionChainListProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.getDescriptor();
+        return Diadoc.Api.Proto.ResolutionChainListProtos.internal_static_Diadoc_Api_Proto_ResolutionChain_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain getDefaultInstanceForType() {
         return Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain build() {
         Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain result = buildPartial();
         if (!result.isInitialized()) {
@@ -873,17 +1108,7 @@ public final class ResolutionChainListProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain buildPartial() {
         Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain result = new Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain(this);
         int from_bitField0_ = bitField0_;
@@ -900,7 +1125,7 @@ public final class ResolutionChainListProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain) {
           return mergeFrom((Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain)other);
@@ -909,19 +1134,23 @@ public final class ResolutionChainListProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain other) {
         if (other == Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.getDefaultInstance()) return this;
         if (other.hasChainId()) {
-          setChainId(other.getChainId());
+          bitField0_ |= 0x00000001;
+          chainId_ = other.chainId_;
+          onChanged();
         }
         if (other.hasName()) {
-          setName(other.getName());
+          bitField0_ |= 0x00000002;
+          name_ = other.name_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasChainId()) {
           
@@ -933,62 +1162,71 @@ public final class ResolutionChainListProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              chainId_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              name_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string ChainId = 1;
+
       private java.lang.Object chainId_ = "";
+      /**
+       * <code>required string ChainId = 1;</code>
+       */
       public boolean hasChainId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getChainId() {
+      /**
+       * <code>required string ChainId = 1;</code>
+       */
+      public java.lang.String getChainId() {
         java.lang.Object ref = chainId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          chainId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            chainId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setChainId(String value) {
+      /**
+       * <code>required string ChainId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ChainId = 1;</code>
+       */
+      public Builder setChainId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -997,34 +1235,74 @@ public final class ResolutionChainListProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string ChainId = 1;</code>
+       */
       public Builder clearChainId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         chainId_ = getDefaultInstance().getChainId();
         onChanged();
         return this;
       }
-      void setChainId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string ChainId = 1;</code>
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         chainId_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Name = 2;
+
       private java.lang.Object name_ = "";
+      /**
+       * <code>required string Name = 2;</code>
+       */
       public boolean hasName() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getName() {
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public java.lang.String getName() {
         java.lang.Object ref = name_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          name_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setName(String value) {
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1033,40 +1311,51 @@ public final class ResolutionChainListProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Name = 2;</code>
+       */
       public Builder clearName() {
         bitField0_ = (bitField0_ & ~0x00000002);
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
-      void setName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         name_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.ResolutionChain)
     }
-    
+
     static {
       defaultInstance = new ResolutionChain(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.ResolutionChain)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_ResolutionChainList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_ResolutionChainList_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_ResolutionChain_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_ResolutionChain_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -1083,34 +1372,30 @@ public final class ResolutionChainListProtos {
       "stProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_ResolutionChainList_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_ResolutionChainList_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_ResolutionChainList_descriptor,
-              new java.lang.String[] { "ResolutionChains", },
-              Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.class,
-              Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChainList.Builder.class);
-          internal_static_Diadoc_Api_Proto_ResolutionChain_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_ResolutionChain_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_ResolutionChain_descriptor,
-              new java.lang.String[] { "ChainId", "Name", },
-              Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.class,
-              Diadoc.Api.Proto.ResolutionChainListProtos.ResolutionChain.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_ResolutionChainList_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_ResolutionChainList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_ResolutionChainList_descriptor,
+        new java.lang.String[] { "ResolutionChains", });
+    internal_static_Diadoc_Api_Proto_ResolutionChain_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_ResolutionChain_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_ResolutionChain_descriptor,
+        new java.lang.String[] { "ChainId", "Name", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

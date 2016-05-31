@@ -8,24 +8,65 @@ public final class ReceiptStatusProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Documents.ReceiptStatus}
+   */
   public enum ReceiptStatus
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownReceiptStatus = 0;</code>
+     *
+     * <pre>
+     * Reserved state to report to legacy client for new statuses
+     * </pre>
+     */
     UnknownReceiptStatus(0, 0),
+    /**
+     * <code>ReceiptStatusNone = 1;</code>
+     */
     ReceiptStatusNone(1, 1),
+    /**
+     * <code>ReceiptStatusFinished = 2;</code>
+     */
     ReceiptStatusFinished(2, 2),
+    /**
+     * <code>ReceiptStatusHaveToCreateReceipt = 3;</code>
+     */
     ReceiptStatusHaveToCreateReceipt(3, 3),
+    /**
+     * <code>ReceiptStatusWaitingForReceipt = 4;</code>
+     */
     ReceiptStatusWaitingForReceipt(4, 4),
     ;
-    
+
+    /**
+     * <code>UnknownReceiptStatus = 0;</code>
+     *
+     * <pre>
+     * Reserved state to report to legacy client for new statuses
+     * </pre>
+     */
     public static final int UnknownReceiptStatus_VALUE = 0;
+    /**
+     * <code>ReceiptStatusNone = 1;</code>
+     */
     public static final int ReceiptStatusNone_VALUE = 1;
+    /**
+     * <code>ReceiptStatusFinished = 2;</code>
+     */
     public static final int ReceiptStatusFinished_VALUE = 2;
+    /**
+     * <code>ReceiptStatusHaveToCreateReceipt = 3;</code>
+     */
     public static final int ReceiptStatusHaveToCreateReceipt_VALUE = 3;
+    /**
+     * <code>ReceiptStatusWaitingForReceipt = 4;</code>
+     */
     public static final int ReceiptStatusWaitingForReceipt_VALUE = 4;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static ReceiptStatus valueOf(int value) {
       switch (value) {
         case 0: return UnknownReceiptStatus;
@@ -36,7 +77,7 @@ public final class ReceiptStatusProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<ReceiptStatus>
         internalGetValueMap() {
       return internalValueMap;
@@ -48,7 +89,7 @@ public final class ReceiptStatusProtos {
               return ReceiptStatus.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -61,11 +102,9 @@ public final class ReceiptStatusProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.ReceiptStatusProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final ReceiptStatus[] VALUES = {
-      UnknownReceiptStatus, ReceiptStatusNone, ReceiptStatusFinished, ReceiptStatusHaveToCreateReceipt, ReceiptStatusWaitingForReceipt, 
-    };
-    
+
+    private static final ReceiptStatus[] VALUES = values();
+
     public static ReceiptStatus valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -74,19 +113,19 @@ public final class ReceiptStatusProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private ReceiptStatus(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.ReceiptStatus)
   }
-  
-  
+
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -104,18 +143,18 @@ public final class ReceiptStatusProtos {
       "atusProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

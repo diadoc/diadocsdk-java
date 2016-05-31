@@ -8,66 +8,192 @@ public final class ContentProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface ContentOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required sfixed32 Size = 1;
+  public interface ContentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Content)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required sfixed32 Size = 1;</code>
+     *
+     * <pre>
+     * -1 if content size is unknown
+     * </pre>
+     */
     boolean hasSize();
+    /**
+     * <code>required sfixed32 Size = 1;</code>
+     *
+     * <pre>
+     * -1 if content size is unknown
+     * </pre>
+     */
     int getSize();
-    
-    // optional bytes Data = 2;
+
+    /**
+     * <code>optional bytes Data = 2;</code>
+     *
+     * <pre>
+     * null &lt;=&gt; entity content exists but is not included in proto buffer
+     * </pre>
+     */
     boolean hasData();
+    /**
+     * <code>optional bytes Data = 2;</code>
+     *
+     * <pre>
+     * null &lt;=&gt; entity content exists but is not included in proto buffer
+     * </pre>
+     */
     com.google.protobuf.ByteString getData();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Content}
+   */
   public static final class Content extends
-      com.google.protobuf.GeneratedMessage
-      implements ContentOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Content)
+      ContentOrBuilder {
     // Use Content.newBuilder() to construct.
-    private Content(Builder builder) {
+    private Content(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Content(boolean noInit) {}
-    
+    private Content(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Content defaultInstance;
     public static Content getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Content getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Content(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 13: {
+              bitField0_ |= 0x00000001;
+              size_ = input.readSFixed32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              data_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.ContentProtos.internal_static_Diadoc_Api_Proto_Content_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.ContentProtos.internal_static_Diadoc_Api_Proto_Content_fieldAccessorTable;
+      return Diadoc.Api.Proto.ContentProtos.internal_static_Diadoc_Api_Proto_Content_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.ContentProtos.Content.class, Diadoc.Api.Proto.ContentProtos.Content.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Content> PARSER =
+        new com.google.protobuf.AbstractParser<Content>() {
+      public Content parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Content(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Content> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required sfixed32 Size = 1;
     public static final int SIZE_FIELD_NUMBER = 1;
     private int size_;
+    /**
+     * <code>required sfixed32 Size = 1;</code>
+     *
+     * <pre>
+     * -1 if content size is unknown
+     * </pre>
+     */
     public boolean hasSize() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required sfixed32 Size = 1;</code>
+     *
+     * <pre>
+     * -1 if content size is unknown
+     * </pre>
+     */
     public int getSize() {
       return size_;
     }
-    
-    // optional bytes Data = 2;
+
     public static final int DATA_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString data_;
+    /**
+     * <code>optional bytes Data = 2;</code>
+     *
+     * <pre>
+     * null &lt;=&gt; entity content exists but is not included in proto buffer
+     * </pre>
+     */
     public boolean hasData() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional bytes Data = 2;</code>
+     *
+     * <pre>
+     * null &lt;=&gt; entity content exists but is not included in proto buffer
+     * </pre>
+     */
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
-    
+
     private void initFields() {
       size_ = 0;
       data_ = com.google.protobuf.ByteString.EMPTY;
@@ -75,8 +201,9 @@ public final class ContentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasSize()) {
         memoizedIsInitialized = 0;
         return false;
@@ -84,7 +211,7 @@ public final class ContentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -96,12 +223,12 @@ public final class ContentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -115,113 +242,106 @@ public final class ContentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.ContentProtos.Content parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.ContentProtos.Content parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ContentProtos.Content parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.ContentProtos.Content parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ContentProtos.Content parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.ContentProtos.Content parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ContentProtos.Content parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.ContentProtos.Content parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ContentProtos.Content parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.ContentProtos.Content parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.ContentProtos.Content prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Content}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.ContentProtos.ContentOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Content)
+        Diadoc.Api.Proto.ContentProtos.ContentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.ContentProtos.internal_static_Diadoc_Api_Proto_Content_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.ContentProtos.internal_static_Diadoc_Api_Proto_Content_fieldAccessorTable;
+        return Diadoc.Api.Proto.ContentProtos.internal_static_Diadoc_Api_Proto_Content_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.ContentProtos.Content.class, Diadoc.Api.Proto.ContentProtos.Content.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.ContentProtos.Content.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -232,7 +352,7 @@ public final class ContentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         size_ = 0;
@@ -241,20 +361,20 @@ public final class ContentProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.ContentProtos.Content.getDescriptor();
+        return Diadoc.Api.Proto.ContentProtos.internal_static_Diadoc_Api_Proto_Content_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.ContentProtos.Content getDefaultInstanceForType() {
         return Diadoc.Api.Proto.ContentProtos.Content.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.ContentProtos.Content build() {
         Diadoc.Api.Proto.ContentProtos.Content result = buildPartial();
         if (!result.isInitialized()) {
@@ -262,17 +382,7 @@ public final class ContentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.ContentProtos.Content buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.ContentProtos.Content result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.ContentProtos.Content buildPartial() {
         Diadoc.Api.Proto.ContentProtos.Content result = new Diadoc.Api.Proto.ContentProtos.Content(this);
         int from_bitField0_ = bitField0_;
@@ -289,7 +399,7 @@ public final class ContentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.ContentProtos.Content) {
           return mergeFrom((Diadoc.Api.Proto.ContentProtos.Content)other);
@@ -298,7 +408,7 @@ public final class ContentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.ContentProtos.Content other) {
         if (other == Diadoc.Api.Proto.ContentProtos.Content.getDefaultInstance()) return this;
         if (other.hasSize()) {
@@ -310,7 +420,7 @@ public final class ContentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasSize()) {
           
@@ -318,75 +428,102 @@ public final class ContentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 13: {
-              bitField0_ |= 0x00000001;
-              size_ = input.readSFixed32();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              data_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.ContentProtos.Content parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.ContentProtos.Content) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required sfixed32 Size = 1;
+
       private int size_ ;
+      /**
+       * <code>required sfixed32 Size = 1;</code>
+       *
+       * <pre>
+       * -1 if content size is unknown
+       * </pre>
+       */
       public boolean hasSize() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required sfixed32 Size = 1;</code>
+       *
+       * <pre>
+       * -1 if content size is unknown
+       * </pre>
+       */
       public int getSize() {
         return size_;
       }
+      /**
+       * <code>required sfixed32 Size = 1;</code>
+       *
+       * <pre>
+       * -1 if content size is unknown
+       * </pre>
+       */
       public Builder setSize(int value) {
         bitField0_ |= 0x00000001;
         size_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required sfixed32 Size = 1;</code>
+       *
+       * <pre>
+       * -1 if content size is unknown
+       * </pre>
+       */
       public Builder clearSize() {
         bitField0_ = (bitField0_ & ~0x00000001);
         size_ = 0;
         onChanged();
         return this;
       }
-      
-      // optional bytes Data = 2;
+
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes Data = 2;</code>
+       *
+       * <pre>
+       * null &lt;=&gt; entity content exists but is not included in proto buffer
+       * </pre>
+       */
       public boolean hasData() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional bytes Data = 2;</code>
+       *
+       * <pre>
+       * null &lt;=&gt; entity content exists but is not included in proto buffer
+       * </pre>
+       */
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
+      /**
+       * <code>optional bytes Data = 2;</code>
+       *
+       * <pre>
+       * null &lt;=&gt; entity content exists but is not included in proto buffer
+       * </pre>
+       */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -396,30 +533,37 @@ public final class ContentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bytes Data = 2;</code>
+       *
+       * <pre>
+       * null &lt;=&gt; entity content exists but is not included in proto buffer
+       * </pre>
+       */
       public Builder clearData() {
         bitField0_ = (bitField0_ & ~0x00000002);
         data_ = getDefaultInstance().getData();
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Content)
     }
-    
+
     static {
       defaultInstance = new Content(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Content)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Content_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Content_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -433,26 +577,24 @@ public final class ContentProtos {
       "entProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Content_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Content_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Content_descriptor,
-              new java.lang.String[] { "Size", "Data", },
-              Diadoc.Api.Proto.ContentProtos.Content.class,
-              Diadoc.Api.Proto.ContentProtos.Content.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Content_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Content_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Content_descriptor,
+        new java.lang.String[] { "Size", "Data", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

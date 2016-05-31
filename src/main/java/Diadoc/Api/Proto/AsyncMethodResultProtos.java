@@ -8,86 +8,177 @@ public final class AsyncMethodResultProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface AsyncMethodResultOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string TaskId = 1;
+  public interface AsyncMethodResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.AsyncMethodResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string TaskId = 1;</code>
+     */
     boolean hasTaskId();
-    String getTaskId();
+    /**
+     * <code>optional string TaskId = 1;</code>
+     */
+    java.lang.String getTaskId();
+    /**
+     * <code>optional string TaskId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTaskIdBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.AsyncMethodResult}
+   */
   public static final class AsyncMethodResult extends
-      com.google.protobuf.GeneratedMessage
-      implements AsyncMethodResultOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.AsyncMethodResult)
+      AsyncMethodResultOrBuilder {
     // Use AsyncMethodResult.newBuilder() to construct.
-    private AsyncMethodResult(Builder builder) {
+    private AsyncMethodResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private AsyncMethodResult(boolean noInit) {}
-    
+    private AsyncMethodResult(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final AsyncMethodResult defaultInstance;
     public static AsyncMethodResult getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public AsyncMethodResult getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AsyncMethodResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              taskId_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.AsyncMethodResultProtos.internal_static_Diadoc_Api_Proto_AsyncMethodResult_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.AsyncMethodResultProtos.internal_static_Diadoc_Api_Proto_AsyncMethodResult_fieldAccessorTable;
+      return Diadoc.Api.Proto.AsyncMethodResultProtos.internal_static_Diadoc_Api_Proto_AsyncMethodResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.class, Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<AsyncMethodResult> PARSER =
+        new com.google.protobuf.AbstractParser<AsyncMethodResult>() {
+      public AsyncMethodResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AsyncMethodResult(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AsyncMethodResult> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string TaskId = 1;
     public static final int TASKID_FIELD_NUMBER = 1;
     private java.lang.Object taskId_;
+    /**
+     * <code>optional string TaskId = 1;</code>
+     */
     public boolean hasTaskId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getTaskId() {
+    /**
+     * <code>optional string TaskId = 1;</code>
+     */
+    public java.lang.String getTaskId() {
       java.lang.Object ref = taskId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           taskId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTaskIdBytes() {
+    /**
+     * <code>optional string TaskId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTaskIdBytes() {
       java.lang.Object ref = taskId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         taskId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       taskId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -96,12 +187,12 @@ public final class AsyncMethodResultProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -111,113 +202,106 @@ public final class AsyncMethodResultProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.AsyncMethodResult}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResultOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.AsyncMethodResult)
+        Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.AsyncMethodResultProtos.internal_static_Diadoc_Api_Proto_AsyncMethodResult_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.AsyncMethodResultProtos.internal_static_Diadoc_Api_Proto_AsyncMethodResult_fieldAccessorTable;
+        return Diadoc.Api.Proto.AsyncMethodResultProtos.internal_static_Diadoc_Api_Proto_AsyncMethodResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.class, Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -228,27 +312,27 @@ public final class AsyncMethodResultProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         taskId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.getDescriptor();
+        return Diadoc.Api.Proto.AsyncMethodResultProtos.internal_static_Diadoc_Api_Proto_AsyncMethodResult_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult getDefaultInstanceForType() {
         return Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult build() {
         Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -256,17 +340,7 @@ public final class AsyncMethodResultProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult buildPartial() {
         Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult result = new Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult(this);
         int from_bitField0_ = bitField0_;
@@ -279,7 +353,7 @@ public final class AsyncMethodResultProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult) {
           return mergeFrom((Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult)other);
@@ -288,70 +362,86 @@ public final class AsyncMethodResultProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult other) {
         if (other == Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.getDefaultInstance()) return this;
         if (other.hasTaskId()) {
-          setTaskId(other.getTaskId());
+          bitField0_ |= 0x00000001;
+          taskId_ = other.taskId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              taskId_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string TaskId = 1;
+
       private java.lang.Object taskId_ = "";
+      /**
+       * <code>optional string TaskId = 1;</code>
+       */
       public boolean hasTaskId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getTaskId() {
+      /**
+       * <code>optional string TaskId = 1;</code>
+       */
+      public java.lang.String getTaskId() {
         java.lang.Object ref = taskId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          taskId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            taskId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTaskId(String value) {
+      /**
+       * <code>optional string TaskId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTaskIdBytes() {
+        java.lang.Object ref = taskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          taskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string TaskId = 1;</code>
+       */
+      public Builder setTaskId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -360,35 +450,46 @@ public final class AsyncMethodResultProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string TaskId = 1;</code>
+       */
       public Builder clearTaskId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         taskId_ = getDefaultInstance().getTaskId();
         onChanged();
         return this;
       }
-      void setTaskId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string TaskId = 1;</code>
+       */
+      public Builder setTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         taskId_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.AsyncMethodResult)
     }
-    
+
     static {
       defaultInstance = new AsyncMethodResult(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.AsyncMethodResult)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_AsyncMethodResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_AsyncMethodResult_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -402,26 +503,24 @@ public final class AsyncMethodResultProtos {
       "B\031B\027AsyncMethodResultProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_AsyncMethodResult_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_AsyncMethodResult_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_AsyncMethodResult_descriptor,
-              new java.lang.String[] { "TaskId", },
-              Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.class,
-              Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_AsyncMethodResult_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_AsyncMethodResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_AsyncMethodResult_descriptor,
+        new java.lang.String[] { "TaskId", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

@@ -8,86 +8,177 @@ public final class DocumentZipProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface DocumentZipGenerationResultOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string ZipFileNameOnShelf = 1;
+  public interface DocumentZipGenerationResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.DocumentZipGenerationResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string ZipFileNameOnShelf = 1;</code>
+     */
     boolean hasZipFileNameOnShelf();
-    String getZipFileNameOnShelf();
+    /**
+     * <code>optional string ZipFileNameOnShelf = 1;</code>
+     */
+    java.lang.String getZipFileNameOnShelf();
+    /**
+     * <code>optional string ZipFileNameOnShelf = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getZipFileNameOnShelfBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.DocumentZipGenerationResult}
+   */
   public static final class DocumentZipGenerationResult extends
-      com.google.protobuf.GeneratedMessage
-      implements DocumentZipGenerationResultOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.DocumentZipGenerationResult)
+      DocumentZipGenerationResultOrBuilder {
     // Use DocumentZipGenerationResult.newBuilder() to construct.
-    private DocumentZipGenerationResult(Builder builder) {
+    private DocumentZipGenerationResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private DocumentZipGenerationResult(boolean noInit) {}
-    
+    private DocumentZipGenerationResult(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final DocumentZipGenerationResult defaultInstance;
     public static DocumentZipGenerationResult getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public DocumentZipGenerationResult getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DocumentZipGenerationResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              zipFileNameOnShelf_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.DocumentZipProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.DocumentZipProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_fieldAccessorTable;
+      return Diadoc.Api.Proto.Documents.DocumentZipProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.class, Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<DocumentZipGenerationResult> PARSER =
+        new com.google.protobuf.AbstractParser<DocumentZipGenerationResult>() {
+      public DocumentZipGenerationResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DocumentZipGenerationResult(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DocumentZipGenerationResult> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string ZipFileNameOnShelf = 1;
     public static final int ZIPFILENAMEONSHELF_FIELD_NUMBER = 1;
     private java.lang.Object zipFileNameOnShelf_;
+    /**
+     * <code>optional string ZipFileNameOnShelf = 1;</code>
+     */
     public boolean hasZipFileNameOnShelf() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getZipFileNameOnShelf() {
+    /**
+     * <code>optional string ZipFileNameOnShelf = 1;</code>
+     */
+    public java.lang.String getZipFileNameOnShelf() {
       java.lang.Object ref = zipFileNameOnShelf_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           zipFileNameOnShelf_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getZipFileNameOnShelfBytes() {
+    /**
+     * <code>optional string ZipFileNameOnShelf = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getZipFileNameOnShelfBytes() {
       java.lang.Object ref = zipFileNameOnShelf_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         zipFileNameOnShelf_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       zipFileNameOnShelf_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -96,12 +187,12 @@ public final class DocumentZipProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -111,113 +202,106 @@ public final class DocumentZipProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.DocumentZipGenerationResult}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResultOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.DocumentZipGenerationResult)
+        Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Documents.DocumentZipProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.DocumentZipProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_fieldAccessorTable;
+        return Diadoc.Api.Proto.Documents.DocumentZipProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.class, Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -228,27 +312,27 @@ public final class DocumentZipProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         zipFileNameOnShelf_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.getDescriptor();
+        return Diadoc.Api.Proto.Documents.DocumentZipProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult build() {
         Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -256,17 +340,7 @@ public final class DocumentZipProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult buildPartial() {
         Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult result = new Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult(this);
         int from_bitField0_ = bitField0_;
@@ -279,7 +353,7 @@ public final class DocumentZipProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult) {
           return mergeFrom((Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult)other);
@@ -288,70 +362,86 @@ public final class DocumentZipProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult other) {
         if (other == Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.getDefaultInstance()) return this;
         if (other.hasZipFileNameOnShelf()) {
-          setZipFileNameOnShelf(other.getZipFileNameOnShelf());
+          bitField0_ |= 0x00000001;
+          zipFileNameOnShelf_ = other.zipFileNameOnShelf_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              zipFileNameOnShelf_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string ZipFileNameOnShelf = 1;
+
       private java.lang.Object zipFileNameOnShelf_ = "";
+      /**
+       * <code>optional string ZipFileNameOnShelf = 1;</code>
+       */
       public boolean hasZipFileNameOnShelf() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getZipFileNameOnShelf() {
+      /**
+       * <code>optional string ZipFileNameOnShelf = 1;</code>
+       */
+      public java.lang.String getZipFileNameOnShelf() {
         java.lang.Object ref = zipFileNameOnShelf_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          zipFileNameOnShelf_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            zipFileNameOnShelf_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setZipFileNameOnShelf(String value) {
+      /**
+       * <code>optional string ZipFileNameOnShelf = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getZipFileNameOnShelfBytes() {
+        java.lang.Object ref = zipFileNameOnShelf_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          zipFileNameOnShelf_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ZipFileNameOnShelf = 1;</code>
+       */
+      public Builder setZipFileNameOnShelf(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -360,35 +450,46 @@ public final class DocumentZipProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string ZipFileNameOnShelf = 1;</code>
+       */
       public Builder clearZipFileNameOnShelf() {
         bitField0_ = (bitField0_ & ~0x00000001);
         zipFileNameOnShelf_ = getDefaultInstance().getZipFileNameOnShelf();
         onChanged();
         return this;
       }
-      void setZipFileNameOnShelf(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string ZipFileNameOnShelf = 1;</code>
+       */
+      public Builder setZipFileNameOnShelfBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         zipFileNameOnShelf_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.DocumentZipGenerationResult)
     }
-    
+
     static {
       defaultInstance = new DocumentZipGenerationResult(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.DocumentZipGenerationResult)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -403,26 +504,24 @@ public final class DocumentZipProtos {
       "DocumentZipProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_descriptor,
-              new java.lang.String[] { "ZipFileNameOnShelf", },
-              Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.class,
-              Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_DocumentZipGenerationResult_descriptor,
+        new java.lang.String[] { "ZipFileNameOnShelf", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

@@ -8,204 +8,475 @@ public final class BilateralDocflowProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface BilateralDocflowOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional bool IsFinished = 1;
+  public interface BilateralDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.BilateralDocflow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean hasIsFinished();
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean getIsFinished();
-    
-    // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     boolean hasReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     boolean hasRecipientSignatureDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow getRecipientSignatureDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder getRecipientSignatureDocflowOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     boolean hasRecipientSignatureRejectionDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow getRecipientSignatureRejectionDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder getRecipientSignatureRejectionDocflowOrBuilder();
-    
-    // optional bool IsReceiptRequested = 5;
+
+    /**
+     * <code>optional bool IsReceiptRequested = 5;</code>
+     */
     boolean hasIsReceiptRequested();
+    /**
+     * <code>optional bool IsReceiptRequested = 5;</code>
+     */
     boolean getIsReceiptRequested();
-    
-    // optional bool IsRecipientSignatureRequested = 6;
+
+    /**
+     * <code>optional bool IsRecipientSignatureRequested = 6;</code>
+     */
     boolean hasIsRecipientSignatureRequested();
+    /**
+     * <code>optional bool IsRecipientSignatureRequested = 6;</code>
+     */
     boolean getIsRecipientSignatureRequested();
-    
-    // optional bool IsDocumentSignedByRecipient = 7;
+
+    /**
+     * <code>optional bool IsDocumentSignedByRecipient = 7;</code>
+     */
     boolean hasIsDocumentSignedByRecipient();
+    /**
+     * <code>optional bool IsDocumentSignedByRecipient = 7;</code>
+     */
     boolean getIsDocumentSignedByRecipient();
-    
-    // optional bool IsDocumentRejectedByRecipient = 8;
+
+    /**
+     * <code>optional bool IsDocumentRejectedByRecipient = 8;</code>
+     */
     boolean hasIsDocumentRejectedByRecipient();
+    /**
+     * <code>optional bool IsDocumentRejectedByRecipient = 8;</code>
+     */
     boolean getIsDocumentRejectedByRecipient();
-    
-    // optional bool CanDocumentBeReceipted = 9;
+
+    /**
+     * <code>optional bool CanDocumentBeReceipted = 9;</code>
+     */
     boolean hasCanDocumentBeReceipted();
+    /**
+     * <code>optional bool CanDocumentBeReceipted = 9;</code>
+     */
     boolean getCanDocumentBeReceipted();
-    
-    // optional bool CanDocumentBeSignedBySender = 10;
+
+    /**
+     * <code>optional bool CanDocumentBeSignedBySender = 10;</code>
+     */
     boolean hasCanDocumentBeSignedBySender();
+    /**
+     * <code>optional bool CanDocumentBeSignedBySender = 10;</code>
+     */
     boolean getCanDocumentBeSignedBySender();
-    
-    // optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;
+
+    /**
+     * <code>optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;</code>
+     */
     boolean hasCanDocumentBeSignedOrRejectedByRecipient();
+    /**
+     * <code>optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;</code>
+     */
     boolean getCanDocumentBeSignedOrRejectedByRecipient();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.BilateralDocflow}
+   */
   public static final class BilateralDocflow extends
-      com.google.protobuf.GeneratedMessage
-      implements BilateralDocflowOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.BilateralDocflow)
+      BilateralDocflowOrBuilder {
     // Use BilateralDocflow.newBuilder() to construct.
-    private BilateralDocflow(Builder builder) {
+    private BilateralDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private BilateralDocflow(boolean noInit) {}
-    
+    private BilateralDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final BilateralDocflow defaultInstance;
     public static BilateralDocflow getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public BilateralDocflow getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BilateralDocflow(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = receiptDocflow_.toBuilder();
+              }
+              receiptDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(receiptDocflow_);
+                receiptDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = recipientSignatureDocflow_.toBuilder();
+              }
+              recipientSignatureDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(recipientSignatureDocflow_);
+                recipientSignatureDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = recipientSignatureRejectionDocflow_.toBuilder();
+              }
+              recipientSignatureRejectionDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(recipientSignatureRejectionDocflow_);
+                recipientSignatureRejectionDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              isReceiptRequested_ = input.readBool();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              isRecipientSignatureRequested_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              isDocumentSignedByRecipient_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              isDocumentRejectedByRecipient_ = input.readBool();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              canDocumentBeReceipted_ = input.readBool();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              canDocumentBeSignedBySender_ = input.readBool();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000400;
+              canDocumentBeSignedOrRejectedByRecipient_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.class, Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<BilateralDocflow> PARSER =
+        new com.google.protobuf.AbstractParser<BilateralDocflow>() {
+      public BilateralDocflow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BilateralDocflow(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BilateralDocflow> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional bool IsFinished = 1;
     public static final int ISFINISHED_FIELD_NUMBER = 1;
     private boolean isFinished_;
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean hasIsFinished() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean getIsFinished() {
       return isFinished_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;
+
     public static final int RECEIPTDOCFLOW_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow receiptDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     public boolean hasReceiptDocflow() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow() {
       return receiptDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
       return receiptDocflow_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;
+
     public static final int RECIPIENTSIGNATUREDOCFLOW_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow recipientSignatureDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     public boolean hasRecipientSignatureDocflow() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow getRecipientSignatureDocflow() {
       return recipientSignatureDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder getRecipientSignatureDocflowOrBuilder() {
       return recipientSignatureDocflow_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;
+
     public static final int RECIPIENTSIGNATUREREJECTIONDOCFLOW_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow recipientSignatureRejectionDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     public boolean hasRecipientSignatureRejectionDocflow() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow getRecipientSignatureRejectionDocflow() {
       return recipientSignatureRejectionDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder getRecipientSignatureRejectionDocflowOrBuilder() {
       return recipientSignatureRejectionDocflow_;
     }
-    
-    // optional bool IsReceiptRequested = 5;
+
     public static final int ISRECEIPTREQUESTED_FIELD_NUMBER = 5;
     private boolean isReceiptRequested_;
+    /**
+     * <code>optional bool IsReceiptRequested = 5;</code>
+     */
     public boolean hasIsReceiptRequested() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional bool IsReceiptRequested = 5;</code>
+     */
     public boolean getIsReceiptRequested() {
       return isReceiptRequested_;
     }
-    
-    // optional bool IsRecipientSignatureRequested = 6;
+
     public static final int ISRECIPIENTSIGNATUREREQUESTED_FIELD_NUMBER = 6;
     private boolean isRecipientSignatureRequested_;
+    /**
+     * <code>optional bool IsRecipientSignatureRequested = 6;</code>
+     */
     public boolean hasIsRecipientSignatureRequested() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>optional bool IsRecipientSignatureRequested = 6;</code>
+     */
     public boolean getIsRecipientSignatureRequested() {
       return isRecipientSignatureRequested_;
     }
-    
-    // optional bool IsDocumentSignedByRecipient = 7;
+
     public static final int ISDOCUMENTSIGNEDBYRECIPIENT_FIELD_NUMBER = 7;
     private boolean isDocumentSignedByRecipient_;
+    /**
+     * <code>optional bool IsDocumentSignedByRecipient = 7;</code>
+     */
     public boolean hasIsDocumentSignedByRecipient() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
+    /**
+     * <code>optional bool IsDocumentSignedByRecipient = 7;</code>
+     */
     public boolean getIsDocumentSignedByRecipient() {
       return isDocumentSignedByRecipient_;
     }
-    
-    // optional bool IsDocumentRejectedByRecipient = 8;
+
     public static final int ISDOCUMENTREJECTEDBYRECIPIENT_FIELD_NUMBER = 8;
     private boolean isDocumentRejectedByRecipient_;
+    /**
+     * <code>optional bool IsDocumentRejectedByRecipient = 8;</code>
+     */
     public boolean hasIsDocumentRejectedByRecipient() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
+    /**
+     * <code>optional bool IsDocumentRejectedByRecipient = 8;</code>
+     */
     public boolean getIsDocumentRejectedByRecipient() {
       return isDocumentRejectedByRecipient_;
     }
-    
-    // optional bool CanDocumentBeReceipted = 9;
+
     public static final int CANDOCUMENTBERECEIPTED_FIELD_NUMBER = 9;
     private boolean canDocumentBeReceipted_;
+    /**
+     * <code>optional bool CanDocumentBeReceipted = 9;</code>
+     */
     public boolean hasCanDocumentBeReceipted() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
+    /**
+     * <code>optional bool CanDocumentBeReceipted = 9;</code>
+     */
     public boolean getCanDocumentBeReceipted() {
       return canDocumentBeReceipted_;
     }
-    
-    // optional bool CanDocumentBeSignedBySender = 10;
+
     public static final int CANDOCUMENTBESIGNEDBYSENDER_FIELD_NUMBER = 10;
     private boolean canDocumentBeSignedBySender_;
+    /**
+     * <code>optional bool CanDocumentBeSignedBySender = 10;</code>
+     */
     public boolean hasCanDocumentBeSignedBySender() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
+    /**
+     * <code>optional bool CanDocumentBeSignedBySender = 10;</code>
+     */
     public boolean getCanDocumentBeSignedBySender() {
       return canDocumentBeSignedBySender_;
     }
-    
-    // optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;
+
     public static final int CANDOCUMENTBESIGNEDORREJECTEDBYRECIPIENT_FIELD_NUMBER = 11;
     private boolean canDocumentBeSignedOrRejectedByRecipient_;
+    /**
+     * <code>optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;</code>
+     */
     public boolean hasCanDocumentBeSignedOrRejectedByRecipient() {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
+    /**
+     * <code>optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;</code>
+     */
     public boolean getCanDocumentBeSignedOrRejectedByRecipient() {
       return canDocumentBeSignedOrRejectedByRecipient_;
     }
-    
+
     private void initFields() {
       isFinished_ = false;
       receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
@@ -222,8 +493,9 @@ public final class BilateralDocflowProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasReceiptDocflow()) {
         if (!getReceiptDocflow().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -245,7 +517,7 @@ public final class BilateralDocflowProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -284,12 +556,12 @@ public final class BilateralDocflowProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -339,113 +611,106 @@ public final class BilateralDocflowProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.BilateralDocflow}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflowOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.BilateralDocflow)
+        Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.class, Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -459,7 +724,7 @@ public final class BilateralDocflowProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         isFinished_ = false;
@@ -498,20 +763,20 @@ public final class BilateralDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow build() {
         Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow result = buildPartial();
         if (!result.isInitialized()) {
@@ -519,17 +784,7 @@ public final class BilateralDocflowProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow buildPartial() {
         Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow result = new Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow(this);
         int from_bitField0_ = bitField0_;
@@ -594,7 +849,7 @@ public final class BilateralDocflowProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow)other);
@@ -603,7 +858,7 @@ public final class BilateralDocflowProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow other) {
         if (other == Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.getDefaultInstance()) return this;
         if (other.hasIsFinished()) {
@@ -642,7 +897,7 @@ public final class BilateralDocflowProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasReceiptDocflow()) {
           if (!getReceiptDocflow().isInitialized()) {
@@ -664,131 +919,70 @@ public final class BilateralDocflowProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.newBuilder();
-              if (hasReceiptDocflow()) {
-                subBuilder.mergeFrom(getReceiptDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setReceiptDocflow(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.newBuilder();
-              if (hasRecipientSignatureDocflow()) {
-                subBuilder.mergeFrom(getRecipientSignatureDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setRecipientSignatureDocflow(subBuilder.buildPartial());
-              break;
-            }
-            case 34: {
-              Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.newBuilder();
-              if (hasRecipientSignatureRejectionDocflow()) {
-                subBuilder.mergeFrom(getRecipientSignatureRejectionDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setRecipientSignatureRejectionDocflow(subBuilder.buildPartial());
-              break;
-            }
-            case 40: {
-              bitField0_ |= 0x00000010;
-              isReceiptRequested_ = input.readBool();
-              break;
-            }
-            case 48: {
-              bitField0_ |= 0x00000020;
-              isRecipientSignatureRequested_ = input.readBool();
-              break;
-            }
-            case 56: {
-              bitField0_ |= 0x00000040;
-              isDocumentSignedByRecipient_ = input.readBool();
-              break;
-            }
-            case 64: {
-              bitField0_ |= 0x00000080;
-              isDocumentRejectedByRecipient_ = input.readBool();
-              break;
-            }
-            case 72: {
-              bitField0_ |= 0x00000100;
-              canDocumentBeReceipted_ = input.readBool();
-              break;
-            }
-            case 80: {
-              bitField0_ |= 0x00000200;
-              canDocumentBeSignedBySender_ = input.readBool();
-              break;
-            }
-            case 88: {
-              bitField0_ |= 0x00000400;
-              canDocumentBeSignedOrRejectedByRecipient_ = input.readBool();
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional bool IsFinished = 1;
+
       private boolean isFinished_ ;
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean hasIsFinished() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean getIsFinished() {
         return isFinished_;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder setIsFinished(boolean value) {
         bitField0_ |= 0x00000001;
         isFinished_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder clearIsFinished() {
         bitField0_ = (bitField0_ & ~0x00000001);
         isFinished_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;
+
       private Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder> receiptDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public boolean hasReceiptDocflow() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow() {
         if (receiptDocflowBuilder_ == null) {
           return receiptDocflow_;
@@ -796,6 +990,9 @@ public final class BilateralDocflowProtos {
           return receiptDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Builder setReceiptDocflow(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow value) {
         if (receiptDocflowBuilder_ == null) {
           if (value == null) {
@@ -809,6 +1006,9 @@ public final class BilateralDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Builder setReceiptDocflow(
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder builderForValue) {
         if (receiptDocflowBuilder_ == null) {
@@ -820,6 +1020,9 @@ public final class BilateralDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Builder mergeReceiptDocflow(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow value) {
         if (receiptDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -836,6 +1039,9 @@ public final class BilateralDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Builder clearReceiptDocflow() {
         if (receiptDocflowBuilder_ == null) {
           receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
@@ -846,11 +1052,17 @@ public final class BilateralDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder getReceiptDocflowBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getReceiptDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
         if (receiptDocflowBuilder_ != null) {
           return receiptDocflowBuilder_.getMessageOrBuilder();
@@ -858,27 +1070,35 @@ public final class BilateralDocflowProtos {
           return receiptDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder> 
           getReceiptDocflowFieldBuilder() {
         if (receiptDocflowBuilder_ == null) {
           receiptDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder>(
-                  receiptDocflow_,
+                  getReceiptDocflow(),
                   getParentForChildren(),
                   isClean());
           receiptDocflow_ = null;
         }
         return receiptDocflowBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;
+
       private Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow recipientSignatureDocflow_ = Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder> recipientSignatureDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public boolean hasRecipientSignatureDocflow() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow getRecipientSignatureDocflow() {
         if (recipientSignatureDocflowBuilder_ == null) {
           return recipientSignatureDocflow_;
@@ -886,6 +1106,9 @@ public final class BilateralDocflowProtos {
           return recipientSignatureDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Builder setRecipientSignatureDocflow(Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow value) {
         if (recipientSignatureDocflowBuilder_ == null) {
           if (value == null) {
@@ -899,6 +1122,9 @@ public final class BilateralDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Builder setRecipientSignatureDocflow(
           Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder builderForValue) {
         if (recipientSignatureDocflowBuilder_ == null) {
@@ -910,6 +1136,9 @@ public final class BilateralDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Builder mergeRecipientSignatureDocflow(Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow value) {
         if (recipientSignatureDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -926,6 +1155,9 @@ public final class BilateralDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Builder clearRecipientSignatureDocflow() {
         if (recipientSignatureDocflowBuilder_ == null) {
           recipientSignatureDocflow_ = Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.getDefaultInstance();
@@ -936,11 +1168,17 @@ public final class BilateralDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder getRecipientSignatureDocflowBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getRecipientSignatureDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder getRecipientSignatureDocflowOrBuilder() {
         if (recipientSignatureDocflowBuilder_ != null) {
           return recipientSignatureDocflowBuilder_.getMessageOrBuilder();
@@ -948,27 +1186,35 @@ public final class BilateralDocflowProtos {
           return recipientSignatureDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder> 
           getRecipientSignatureDocflowFieldBuilder() {
         if (recipientSignatureDocflowBuilder_ == null) {
           recipientSignatureDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder>(
-                  recipientSignatureDocflow_,
+                  getRecipientSignatureDocflow(),
                   getParentForChildren(),
                   isClean());
           recipientSignatureDocflow_ = null;
         }
         return recipientSignatureDocflowBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;
+
       private Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow recipientSignatureRejectionDocflow_ = Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder> recipientSignatureRejectionDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public boolean hasRecipientSignatureRejectionDocflow() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow getRecipientSignatureRejectionDocflow() {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           return recipientSignatureRejectionDocflow_;
@@ -976,6 +1222,9 @@ public final class BilateralDocflowProtos {
           return recipientSignatureRejectionDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Builder setRecipientSignatureRejectionDocflow(Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow value) {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           if (value == null) {
@@ -989,6 +1238,9 @@ public final class BilateralDocflowProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Builder setRecipientSignatureRejectionDocflow(
           Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder builderForValue) {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
@@ -1000,6 +1252,9 @@ public final class BilateralDocflowProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Builder mergeRecipientSignatureRejectionDocflow(Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow value) {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
@@ -1016,6 +1271,9 @@ public final class BilateralDocflowProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Builder clearRecipientSignatureRejectionDocflow() {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           recipientSignatureRejectionDocflow_ = Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.getDefaultInstance();
@@ -1026,11 +1284,17 @@ public final class BilateralDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder getRecipientSignatureRejectionDocflowBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getRecipientSignatureRejectionDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder getRecipientSignatureRejectionDocflowOrBuilder() {
         if (recipientSignatureRejectionDocflowBuilder_ != null) {
           return recipientSignatureRejectionDocflowBuilder_.getMessageOrBuilder();
@@ -1038,184 +1302,264 @@ public final class BilateralDocflowProtos {
           return recipientSignatureRejectionDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder> 
           getRecipientSignatureRejectionDocflowFieldBuilder() {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           recipientSignatureRejectionDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder>(
-                  recipientSignatureRejectionDocflow_,
+                  getRecipientSignatureRejectionDocflow(),
                   getParentForChildren(),
                   isClean());
           recipientSignatureRejectionDocflow_ = null;
         }
         return recipientSignatureRejectionDocflowBuilder_;
       }
-      
-      // optional bool IsReceiptRequested = 5;
+
       private boolean isReceiptRequested_ ;
+      /**
+       * <code>optional bool IsReceiptRequested = 5;</code>
+       */
       public boolean hasIsReceiptRequested() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional bool IsReceiptRequested = 5;</code>
+       */
       public boolean getIsReceiptRequested() {
         return isReceiptRequested_;
       }
+      /**
+       * <code>optional bool IsReceiptRequested = 5;</code>
+       */
       public Builder setIsReceiptRequested(boolean value) {
         bitField0_ |= 0x00000010;
         isReceiptRequested_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsReceiptRequested = 5;</code>
+       */
       public Builder clearIsReceiptRequested() {
         bitField0_ = (bitField0_ & ~0x00000010);
         isReceiptRequested_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool IsRecipientSignatureRequested = 6;
+
       private boolean isRecipientSignatureRequested_ ;
+      /**
+       * <code>optional bool IsRecipientSignatureRequested = 6;</code>
+       */
       public boolean hasIsRecipientSignatureRequested() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
+      /**
+       * <code>optional bool IsRecipientSignatureRequested = 6;</code>
+       */
       public boolean getIsRecipientSignatureRequested() {
         return isRecipientSignatureRequested_;
       }
+      /**
+       * <code>optional bool IsRecipientSignatureRequested = 6;</code>
+       */
       public Builder setIsRecipientSignatureRequested(boolean value) {
         bitField0_ |= 0x00000020;
         isRecipientSignatureRequested_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsRecipientSignatureRequested = 6;</code>
+       */
       public Builder clearIsRecipientSignatureRequested() {
         bitField0_ = (bitField0_ & ~0x00000020);
         isRecipientSignatureRequested_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool IsDocumentSignedByRecipient = 7;
+
       private boolean isDocumentSignedByRecipient_ ;
+      /**
+       * <code>optional bool IsDocumentSignedByRecipient = 7;</code>
+       */
       public boolean hasIsDocumentSignedByRecipient() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
+      /**
+       * <code>optional bool IsDocumentSignedByRecipient = 7;</code>
+       */
       public boolean getIsDocumentSignedByRecipient() {
         return isDocumentSignedByRecipient_;
       }
+      /**
+       * <code>optional bool IsDocumentSignedByRecipient = 7;</code>
+       */
       public Builder setIsDocumentSignedByRecipient(boolean value) {
         bitField0_ |= 0x00000040;
         isDocumentSignedByRecipient_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsDocumentSignedByRecipient = 7;</code>
+       */
       public Builder clearIsDocumentSignedByRecipient() {
         bitField0_ = (bitField0_ & ~0x00000040);
         isDocumentSignedByRecipient_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool IsDocumentRejectedByRecipient = 8;
+
       private boolean isDocumentRejectedByRecipient_ ;
+      /**
+       * <code>optional bool IsDocumentRejectedByRecipient = 8;</code>
+       */
       public boolean hasIsDocumentRejectedByRecipient() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
+      /**
+       * <code>optional bool IsDocumentRejectedByRecipient = 8;</code>
+       */
       public boolean getIsDocumentRejectedByRecipient() {
         return isDocumentRejectedByRecipient_;
       }
+      /**
+       * <code>optional bool IsDocumentRejectedByRecipient = 8;</code>
+       */
       public Builder setIsDocumentRejectedByRecipient(boolean value) {
         bitField0_ |= 0x00000080;
         isDocumentRejectedByRecipient_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsDocumentRejectedByRecipient = 8;</code>
+       */
       public Builder clearIsDocumentRejectedByRecipient() {
         bitField0_ = (bitField0_ & ~0x00000080);
         isDocumentRejectedByRecipient_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool CanDocumentBeReceipted = 9;
+
       private boolean canDocumentBeReceipted_ ;
+      /**
+       * <code>optional bool CanDocumentBeReceipted = 9;</code>
+       */
       public boolean hasCanDocumentBeReceipted() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
+      /**
+       * <code>optional bool CanDocumentBeReceipted = 9;</code>
+       */
       public boolean getCanDocumentBeReceipted() {
         return canDocumentBeReceipted_;
       }
+      /**
+       * <code>optional bool CanDocumentBeReceipted = 9;</code>
+       */
       public Builder setCanDocumentBeReceipted(boolean value) {
         bitField0_ |= 0x00000100;
         canDocumentBeReceipted_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool CanDocumentBeReceipted = 9;</code>
+       */
       public Builder clearCanDocumentBeReceipted() {
         bitField0_ = (bitField0_ & ~0x00000100);
         canDocumentBeReceipted_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool CanDocumentBeSignedBySender = 10;
+
       private boolean canDocumentBeSignedBySender_ ;
+      /**
+       * <code>optional bool CanDocumentBeSignedBySender = 10;</code>
+       */
       public boolean hasCanDocumentBeSignedBySender() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
+      /**
+       * <code>optional bool CanDocumentBeSignedBySender = 10;</code>
+       */
       public boolean getCanDocumentBeSignedBySender() {
         return canDocumentBeSignedBySender_;
       }
+      /**
+       * <code>optional bool CanDocumentBeSignedBySender = 10;</code>
+       */
       public Builder setCanDocumentBeSignedBySender(boolean value) {
         bitField0_ |= 0x00000200;
         canDocumentBeSignedBySender_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool CanDocumentBeSignedBySender = 10;</code>
+       */
       public Builder clearCanDocumentBeSignedBySender() {
         bitField0_ = (bitField0_ & ~0x00000200);
         canDocumentBeSignedBySender_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;
+
       private boolean canDocumentBeSignedOrRejectedByRecipient_ ;
+      /**
+       * <code>optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;</code>
+       */
       public boolean hasCanDocumentBeSignedOrRejectedByRecipient() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
+      /**
+       * <code>optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;</code>
+       */
       public boolean getCanDocumentBeSignedOrRejectedByRecipient() {
         return canDocumentBeSignedOrRejectedByRecipient_;
       }
+      /**
+       * <code>optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;</code>
+       */
       public Builder setCanDocumentBeSignedOrRejectedByRecipient(boolean value) {
         bitField0_ |= 0x00000400;
         canDocumentBeSignedOrRejectedByRecipient_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool CanDocumentBeSignedOrRejectedByRecipient = 11;</code>
+       */
       public Builder clearCanDocumentBeSignedOrRejectedByRecipient() {
         bitField0_ = (bitField0_ & ~0x00000400);
         canDocumentBeSignedOrRejectedByRecipient_ = false;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.BilateralDocflow)
     }
-    
+
     static {
       defaultInstance = new BilateralDocflow(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.BilateralDocflow)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -1246,21 +1590,13 @@ public final class BilateralDocflowProtos {
       "owProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_descriptor,
-              new java.lang.String[] { "IsFinished", "ReceiptDocflow", "RecipientSignatureDocflow", "RecipientSignatureRejectionDocflow", "IsReceiptRequested", "IsRecipientSignatureRequested", "IsDocumentSignedByRecipient", "IsDocumentRejectedByRecipient", "CanDocumentBeReceipted", "CanDocumentBeSignedBySender", "CanDocumentBeSignedOrRejectedByRecipient", },
-              Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.class,
-              Diadoc.Api.Proto.Docflow.BilateralDocflowProtos.BilateralDocflow.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
@@ -1268,7 +1604,16 @@ public final class BilateralDocflowProtos {
           Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_BilateralDocflow_descriptor,
+        new java.lang.String[] { "IsFinished", "ReceiptDocflow", "RecipientSignatureDocflow", "RecipientSignatureRejectionDocflow", "IsReceiptRequested", "IsRecipientSignatureRequested", "IsDocumentSignedByRecipient", "IsDocumentRejectedByRecipient", "CanDocumentBeReceipted", "CanDocumentBeSignedBySender", "CanDocumentBeSignedOrRejectedByRecipient", });
+    Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

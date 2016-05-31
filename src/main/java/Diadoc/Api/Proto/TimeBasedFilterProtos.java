@@ -8,20 +8,49 @@ public final class TimeBasedFilterProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.SortDirection}
+   */
   public enum SortDirection
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownSortDirection = 0;</code>
+     *
+     * <pre>
+     * reserved for backward compatibility
+     * </pre>
+     */
     UnknownSortDirection(0, 0),
+    /**
+     * <code>Ascending = 1;</code>
+     */
     Ascending(1, 1),
+    /**
+     * <code>Descending = 2;</code>
+     */
     Descending(2, 2),
     ;
-    
+
+    /**
+     * <code>UnknownSortDirection = 0;</code>
+     *
+     * <pre>
+     * reserved for backward compatibility
+     * </pre>
+     */
     public static final int UnknownSortDirection_VALUE = 0;
+    /**
+     * <code>Ascending = 1;</code>
+     */
     public static final int Ascending_VALUE = 1;
+    /**
+     * <code>Descending = 2;</code>
+     */
     public static final int Descending_VALUE = 2;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static SortDirection valueOf(int value) {
       switch (value) {
         case 0: return UnknownSortDirection;
@@ -30,7 +59,7 @@ public final class TimeBasedFilterProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<SortDirection>
         internalGetValueMap() {
       return internalValueMap;
@@ -42,7 +71,7 @@ public final class TimeBasedFilterProtos {
               return SortDirection.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -55,11 +84,9 @@ public final class TimeBasedFilterProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.TimeBasedFilterProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final SortDirection[] VALUES = {
-      UnknownSortDirection, Ascending, Descending, 
-    };
-    
+
+    private static final SortDirection[] VALUES = values();
+
     public static SortDirection valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -68,100 +95,243 @@ public final class TimeBasedFilterProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private SortDirection(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.SortDirection)
   }
-  
-  public interface TimeBasedFilterOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;
+
+  public interface TimeBasedFilterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.TimeBasedFilter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+     */
     boolean hasFromTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.Timestamp getFromTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getFromTimestampOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+     */
     boolean hasToTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.Timestamp getToTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getToTimestampOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];</code>
+     */
     boolean hasSortDirection();
+    /**
+     * <code>optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];</code>
+     */
     Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection getSortDirection();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.TimeBasedFilter}
+   */
   public static final class TimeBasedFilter extends
-      com.google.protobuf.GeneratedMessage
-      implements TimeBasedFilterOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.TimeBasedFilter)
+      TimeBasedFilterOrBuilder {
     // Use TimeBasedFilter.newBuilder() to construct.
-    private TimeBasedFilter(Builder builder) {
+    private TimeBasedFilter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private TimeBasedFilter(boolean noInit) {}
-    
+    private TimeBasedFilter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final TimeBasedFilter defaultInstance;
     public static TimeBasedFilter getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public TimeBasedFilter getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TimeBasedFilter(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = fromTimestamp_.toBuilder();
+              }
+              fromTimestamp_ = input.readMessage(Diadoc.Api.Proto.TimestampProtos.Timestamp.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fromTimestamp_);
+                fromTimestamp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = toTimestamp_.toBuilder();
+              }
+              toTimestamp_ = input.readMessage(Diadoc.Api.Proto.TimestampProtos.Timestamp.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(toTimestamp_);
+                toTimestamp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection value = Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                sortDirection_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.TimeBasedFilterProtos.internal_static_Diadoc_Api_Proto_TimeBasedFilter_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.TimeBasedFilterProtos.internal_static_Diadoc_Api_Proto_TimeBasedFilter_fieldAccessorTable;
+      return Diadoc.Api.Proto.TimeBasedFilterProtos.internal_static_Diadoc_Api_Proto_TimeBasedFilter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.class, Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<TimeBasedFilter> PARSER =
+        new com.google.protobuf.AbstractParser<TimeBasedFilter>() {
+      public TimeBasedFilter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TimeBasedFilter(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TimeBasedFilter> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;
     public static final int FROMTIMESTAMP_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.TimestampProtos.Timestamp fromTimestamp_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+     */
     public boolean hasFromTimestamp() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.Timestamp getFromTimestamp() {
       return fromTimestamp_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getFromTimestampOrBuilder() {
       return fromTimestamp_;
     }
-    
-    // optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;
+
     public static final int TOTIMESTAMP_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.TimestampProtos.Timestamp toTimestamp_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+     */
     public boolean hasToTimestamp() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.Timestamp getToTimestamp() {
       return toTimestamp_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getToTimestampOrBuilder() {
       return toTimestamp_;
     }
-    
-    // optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];
+
     public static final int SORTDIRECTION_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection sortDirection_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];</code>
+     */
     public boolean hasSortDirection() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];</code>
+     */
     public Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection getSortDirection() {
       return sortDirection_;
     }
-    
+
     private void initFields() {
       fromTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       toTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
@@ -170,8 +340,9 @@ public final class TimeBasedFilterProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasFromTimestamp()) {
         if (!getFromTimestamp().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -187,7 +358,7 @@ public final class TimeBasedFilterProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -202,12 +373,12 @@ public final class TimeBasedFilterProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -225,113 +396,106 @@ public final class TimeBasedFilterProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.TimeBasedFilter}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilterOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.TimeBasedFilter)
+        Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilterOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.TimeBasedFilterProtos.internal_static_Diadoc_Api_Proto_TimeBasedFilter_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.TimeBasedFilterProtos.internal_static_Diadoc_Api_Proto_TimeBasedFilter_fieldAccessorTable;
+        return Diadoc.Api.Proto.TimeBasedFilterProtos.internal_static_Diadoc_Api_Proto_TimeBasedFilter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.class, Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -344,7 +508,7 @@ public final class TimeBasedFilterProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (fromTimestampBuilder_ == null) {
@@ -363,20 +527,20 @@ public final class TimeBasedFilterProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.getDescriptor();
+        return Diadoc.Api.Proto.TimeBasedFilterProtos.internal_static_Diadoc_Api_Proto_TimeBasedFilter_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter getDefaultInstanceForType() {
         return Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter build() {
         Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter result = buildPartial();
         if (!result.isInitialized()) {
@@ -384,17 +548,7 @@ public final class TimeBasedFilterProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter buildPartial() {
         Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter result = new Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter(this);
         int from_bitField0_ = bitField0_;
@@ -423,7 +577,7 @@ public final class TimeBasedFilterProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter) {
           return mergeFrom((Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter)other);
@@ -432,7 +586,7 @@ public final class TimeBasedFilterProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter other) {
         if (other == Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.getDefaultInstance()) return this;
         if (other.hasFromTimestamp()) {
@@ -447,7 +601,7 @@ public final class TimeBasedFilterProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasFromTimestamp()) {
           if (!getFromTimestamp().isInitialized()) {
@@ -463,72 +617,38 @@ public final class TimeBasedFilterProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder();
-              if (hasFromTimestamp()) {
-                subBuilder.mergeFrom(getFromTimestamp());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setFromTimestamp(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder();
-              if (hasToTimestamp()) {
-                subBuilder.mergeFrom(getToTimestamp());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setToTimestamp(subBuilder.buildPartial());
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection value = Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(3, rawValue);
-              } else {
-                bitField0_ |= 0x00000004;
-                sortDirection_ = value;
-              }
-              break;
-            }
+        Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;
+
       private Diadoc.Api.Proto.TimestampProtos.Timestamp fromTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> fromTimestampBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+       */
       public boolean hasFromTimestamp() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp getFromTimestamp() {
         if (fromTimestampBuilder_ == null) {
           return fromTimestamp_;
@@ -536,6 +656,9 @@ public final class TimeBasedFilterProtos {
           return fromTimestampBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+       */
       public Builder setFromTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (fromTimestampBuilder_ == null) {
           if (value == null) {
@@ -549,6 +672,9 @@ public final class TimeBasedFilterProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+       */
       public Builder setFromTimestamp(
           Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder builderForValue) {
         if (fromTimestampBuilder_ == null) {
@@ -560,6 +686,9 @@ public final class TimeBasedFilterProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+       */
       public Builder mergeFromTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (fromTimestampBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -576,6 +705,9 @@ public final class TimeBasedFilterProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+       */
       public Builder clearFromTimestamp() {
         if (fromTimestampBuilder_ == null) {
           fromTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
@@ -586,11 +718,17 @@ public final class TimeBasedFilterProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder getFromTimestampBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getFromTimestampFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getFromTimestampOrBuilder() {
         if (fromTimestampBuilder_ != null) {
           return fromTimestampBuilder_.getMessageOrBuilder();
@@ -598,27 +736,35 @@ public final class TimeBasedFilterProtos {
           return fromTimestamp_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp FromTimestamp = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> 
           getFromTimestampFieldBuilder() {
         if (fromTimestampBuilder_ == null) {
           fromTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder>(
-                  fromTimestamp_,
+                  getFromTimestamp(),
                   getParentForChildren(),
                   isClean());
           fromTimestamp_ = null;
         }
         return fromTimestampBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;
+
       private Diadoc.Api.Proto.TimestampProtos.Timestamp toTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> toTimestampBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+       */
       public boolean hasToTimestamp() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp getToTimestamp() {
         if (toTimestampBuilder_ == null) {
           return toTimestamp_;
@@ -626,6 +772,9 @@ public final class TimeBasedFilterProtos {
           return toTimestampBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+       */
       public Builder setToTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (toTimestampBuilder_ == null) {
           if (value == null) {
@@ -639,6 +788,9 @@ public final class TimeBasedFilterProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+       */
       public Builder setToTimestamp(
           Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder builderForValue) {
         if (toTimestampBuilder_ == null) {
@@ -650,6 +802,9 @@ public final class TimeBasedFilterProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+       */
       public Builder mergeToTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (toTimestampBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -666,6 +821,9 @@ public final class TimeBasedFilterProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+       */
       public Builder clearToTimestamp() {
         if (toTimestampBuilder_ == null) {
           toTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
@@ -676,11 +834,17 @@ public final class TimeBasedFilterProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder getToTimestampBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getToTimestampFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getToTimestampOrBuilder() {
         if (toTimestampBuilder_ != null) {
           return toTimestampBuilder_.getMessageOrBuilder();
@@ -688,28 +852,39 @@ public final class TimeBasedFilterProtos {
           return toTimestamp_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ToTimestamp = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> 
           getToTimestampFieldBuilder() {
         if (toTimestampBuilder_ == null) {
           toTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder>(
-                  toTimestamp_,
+                  getToTimestamp(),
                   getParentForChildren(),
                   isClean());
           toTimestamp_ = null;
         }
         return toTimestampBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];
+
       private Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection sortDirection_ = Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection.Ascending;
+      /**
+       * <code>optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];</code>
+       */
       public boolean hasSortDirection() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];</code>
+       */
       public Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection getSortDirection() {
         return sortDirection_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];</code>
+       */
       public Builder setSortDirection(Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection value) {
         if (value == null) {
           throw new NullPointerException();
@@ -719,30 +894,33 @@ public final class TimeBasedFilterProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SortDirection SortDirection = 3 [default = Ascending];</code>
+       */
       public Builder clearSortDirection() {
         bitField0_ = (bitField0_ & ~0x00000004);
         sortDirection_ = Diadoc.Api.Proto.TimeBasedFilterProtos.SortDirection.Ascending;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.TimeBasedFilter)
     }
-    
+
     static {
       defaultInstance = new TimeBasedFilter(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.TimeBasedFilter)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_TimeBasedFilter_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_TimeBasedFilter_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -762,27 +940,26 @@ public final class TimeBasedFilterProtos {
       "\002B\027B\025TimeBasedFilterProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_TimeBasedFilter_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_TimeBasedFilter_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_TimeBasedFilter_descriptor,
-              new java.lang.String[] { "FromTimestamp", "ToTimestamp", "SortDirection", },
-              Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.class,
-              Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_TimeBasedFilter_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_TimeBasedFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_TimeBasedFilter_descriptor,
+        new java.lang.String[] { "FromTimestamp", "ToTimestamp", "SortDirection", });
+    Diadoc.Api.Proto.TimestampProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

@@ -8,83 +8,201 @@ public final class DocumentListProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface DocumentListOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required int32 TotalCount = 1;
+  public interface DocumentListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.DocumentList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 TotalCount = 1;</code>
+     */
     boolean hasTotalCount();
+    /**
+     * <code>required int32 TotalCount = 1;</code>
+     */
     int getTotalCount();
-    
-    // repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.Document> 
         getDocumentsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     Diadoc.Api.Proto.Documents.DocumentProtos.Document getDocuments(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     int getDocumentsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Documents.DocumentProtos.DocumentOrBuilder> 
         getDocumentsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     Diadoc.Api.Proto.Documents.DocumentProtos.DocumentOrBuilder getDocumentsOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.DocumentList}
+   */
   public static final class DocumentList extends
-      com.google.protobuf.GeneratedMessage
-      implements DocumentListOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.DocumentList)
+      DocumentListOrBuilder {
     // Use DocumentList.newBuilder() to construct.
-    private DocumentList(Builder builder) {
+    private DocumentList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private DocumentList(boolean noInit) {}
-    
+    private DocumentList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final DocumentList defaultInstance;
     public static DocumentList getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public DocumentList getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DocumentList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              totalCount_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                documents_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.DocumentProtos.Document>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              documents_.add(input.readMessage(Diadoc.Api.Proto.Documents.DocumentProtos.Document.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          documents_ = java.util.Collections.unmodifiableList(documents_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.DocumentListProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentList_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.DocumentListProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentList_fieldAccessorTable;
+      return Diadoc.Api.Proto.Documents.DocumentListProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.class, Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<DocumentList> PARSER =
+        new com.google.protobuf.AbstractParser<DocumentList>() {
+      public DocumentList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DocumentList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DocumentList> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required int32 TotalCount = 1;
     public static final int TOTALCOUNT_FIELD_NUMBER = 1;
     private int totalCount_;
+    /**
+     * <code>required int32 TotalCount = 1;</code>
+     */
     public boolean hasTotalCount() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required int32 TotalCount = 1;</code>
+     */
     public int getTotalCount() {
       return totalCount_;
     }
-    
-    // repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;
+
     public static final int DOCUMENTS_FIELD_NUMBER = 2;
     private java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.Document> documents_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     public java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.Document> getDocumentsList() {
       return documents_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Documents.DocumentProtos.DocumentOrBuilder> 
         getDocumentsOrBuilderList() {
       return documents_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     public int getDocumentsCount() {
       return documents_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     public Diadoc.Api.Proto.Documents.DocumentProtos.Document getDocuments(int index) {
       return documents_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+     */
     public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentOrBuilder getDocumentsOrBuilder(
         int index) {
       return documents_.get(index);
     }
-    
+
     private void initFields() {
       totalCount_ = 0;
       documents_ = java.util.Collections.emptyList();
@@ -92,8 +210,9 @@ public final class DocumentListProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasTotalCount()) {
         memoizedIsInitialized = 0;
         return false;
@@ -107,7 +226,7 @@ public final class DocumentListProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -119,12 +238,12 @@ public final class DocumentListProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -138,113 +257,106 @@ public final class DocumentListProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.DocumentList}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentListOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.DocumentList)
+        Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Documents.DocumentListProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentList_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.DocumentListProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentList_fieldAccessorTable;
+        return Diadoc.Api.Proto.Documents.DocumentListProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.class, Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -256,7 +368,7 @@ public final class DocumentListProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         totalCount_ = 0;
@@ -269,20 +381,20 @@ public final class DocumentListProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.getDescriptor();
+        return Diadoc.Api.Proto.Documents.DocumentListProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentList_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList build() {
         Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList result = buildPartial();
         if (!result.isInitialized()) {
@@ -290,17 +402,7 @@ public final class DocumentListProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList buildPartial() {
         Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList result = new Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList(this);
         int from_bitField0_ = bitField0_;
@@ -322,7 +424,7 @@ public final class DocumentListProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList) {
           return mergeFrom((Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList)other);
@@ -331,7 +433,7 @@ public final class DocumentListProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList other) {
         if (other == Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.getDefaultInstance()) return this;
         if (other.hasTotalCount()) {
@@ -366,7 +468,7 @@ public final class DocumentListProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasTotalCount()) {
           
@@ -380,69 +482,58 @@ public final class DocumentListProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              totalCount_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Documents.DocumentProtos.Document.Builder subBuilder = Diadoc.Api.Proto.Documents.DocumentProtos.Document.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addDocuments(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required int32 TotalCount = 1;
+
       private int totalCount_ ;
+      /**
+       * <code>required int32 TotalCount = 1;</code>
+       */
       public boolean hasTotalCount() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required int32 TotalCount = 1;</code>
+       */
       public int getTotalCount() {
         return totalCount_;
       }
+      /**
+       * <code>required int32 TotalCount = 1;</code>
+       */
       public Builder setTotalCount(int value) {
         bitField0_ |= 0x00000001;
         totalCount_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required int32 TotalCount = 1;</code>
+       */
       public Builder clearTotalCount() {
         bitField0_ = (bitField0_ & ~0x00000001);
         totalCount_ = 0;
         onChanged();
         return this;
       }
-      
-      // repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;
+
       private java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.Document> documents_ =
         java.util.Collections.emptyList();
       private void ensureDocumentsIsMutable() {
@@ -451,10 +542,13 @@ public final class DocumentListProtos {
           bitField0_ |= 0x00000002;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Documents.DocumentProtos.Document, Diadoc.Api.Proto.Documents.DocumentProtos.Document.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentOrBuilder> documentsBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.Document> getDocumentsList() {
         if (documentsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(documents_);
@@ -462,6 +556,9 @@ public final class DocumentListProtos {
           return documentsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public int getDocumentsCount() {
         if (documentsBuilder_ == null) {
           return documents_.size();
@@ -469,6 +566,9 @@ public final class DocumentListProtos {
           return documentsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Diadoc.Api.Proto.Documents.DocumentProtos.Document getDocuments(int index) {
         if (documentsBuilder_ == null) {
           return documents_.get(index);
@@ -476,6 +576,9 @@ public final class DocumentListProtos {
           return documentsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Builder setDocuments(
           int index, Diadoc.Api.Proto.Documents.DocumentProtos.Document value) {
         if (documentsBuilder_ == null) {
@@ -490,6 +593,9 @@ public final class DocumentListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Builder setDocuments(
           int index, Diadoc.Api.Proto.Documents.DocumentProtos.Document.Builder builderForValue) {
         if (documentsBuilder_ == null) {
@@ -501,6 +607,9 @@ public final class DocumentListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Builder addDocuments(Diadoc.Api.Proto.Documents.DocumentProtos.Document value) {
         if (documentsBuilder_ == null) {
           if (value == null) {
@@ -514,6 +623,9 @@ public final class DocumentListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Builder addDocuments(
           int index, Diadoc.Api.Proto.Documents.DocumentProtos.Document value) {
         if (documentsBuilder_ == null) {
@@ -528,6 +640,9 @@ public final class DocumentListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Builder addDocuments(
           Diadoc.Api.Proto.Documents.DocumentProtos.Document.Builder builderForValue) {
         if (documentsBuilder_ == null) {
@@ -539,6 +654,9 @@ public final class DocumentListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Builder addDocuments(
           int index, Diadoc.Api.Proto.Documents.DocumentProtos.Document.Builder builderForValue) {
         if (documentsBuilder_ == null) {
@@ -550,17 +668,24 @@ public final class DocumentListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Builder addAllDocuments(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Documents.DocumentProtos.Document> values) {
         if (documentsBuilder_ == null) {
           ensureDocumentsIsMutable();
-          super.addAll(values, documents_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documents_);
           onChanged();
         } else {
           documentsBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Builder clearDocuments() {
         if (documentsBuilder_ == null) {
           documents_ = java.util.Collections.emptyList();
@@ -571,6 +696,9 @@ public final class DocumentListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Builder removeDocuments(int index) {
         if (documentsBuilder_ == null) {
           ensureDocumentsIsMutable();
@@ -581,10 +709,16 @@ public final class DocumentListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Diadoc.Api.Proto.Documents.DocumentProtos.Document.Builder getDocumentsBuilder(
           int index) {
         return getDocumentsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentOrBuilder getDocumentsOrBuilder(
           int index) {
         if (documentsBuilder_ == null) {
@@ -592,6 +726,9 @@ public final class DocumentListProtos {
           return documentsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Documents.DocumentProtos.DocumentOrBuilder> 
            getDocumentsOrBuilderList() {
         if (documentsBuilder_ != null) {
@@ -600,15 +737,24 @@ public final class DocumentListProtos {
           return java.util.Collections.unmodifiableList(documents_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Diadoc.Api.Proto.Documents.DocumentProtos.Document.Builder addDocumentsBuilder() {
         return getDocumentsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Documents.DocumentProtos.Document.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public Diadoc.Api.Proto.Documents.DocumentProtos.Document.Builder addDocumentsBuilder(
           int index) {
         return getDocumentsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Documents.DocumentProtos.Document.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Document Documents = 2;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.Document.Builder> 
            getDocumentsBuilderList() {
         return getDocumentsFieldBuilder().getBuilderList();
@@ -627,24 +773,24 @@ public final class DocumentListProtos {
         }
         return documentsBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.DocumentList)
     }
-    
+
     static {
       defaultInstance = new DocumentList(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.DocumentList)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_DocumentList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_DocumentList_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -660,27 +806,26 @@ public final class DocumentListProtos {
       "ocuments.DocumentB\024B\022DocumentListProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Documents_DocumentList_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Documents_DocumentList_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_DocumentList_descriptor,
-              new java.lang.String[] { "TotalCount", "Documents", },
-              Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.class,
-              Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Documents.DocumentProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Documents_DocumentList_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Documents_DocumentList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_DocumentList_descriptor,
+        new java.lang.String[] { "TotalCount", "Documents", });
+    Diadoc.Api.Proto.Documents.DocumentProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

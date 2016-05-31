@@ -8,46 +8,153 @@ public final class BilateralDocumentProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus}
+   */
   public enum BilateralDocumentStatus
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownBilateralDocumentStatus = 0;</code>
+     *
+     * <pre>
+     * Reserved status to report to legacy clients for newly introduced statuses
+     * </pre>
+     */
     UnknownBilateralDocumentStatus(0, 0),
+    /**
+     * <code>OutboundWaitingForRecipientSignature = 1;</code>
+     */
     OutboundWaitingForRecipientSignature(1, 1),
+    /**
+     * <code>OutboundWithRecipientSignature = 2;</code>
+     */
     OutboundWithRecipientSignature(2, 2),
+    /**
+     * <code>OutboundRecipientSignatureRequestRejected = 3;</code>
+     */
     OutboundRecipientSignatureRequestRejected(3, 3),
+    /**
+     * <code>OutboundWaitingForSenderSignature = 10;</code>
+     */
     OutboundWaitingForSenderSignature(4, 10),
+    /**
+     * <code>OutboundInvalidSenderSignature = 11;</code>
+     */
     OutboundInvalidSenderSignature(5, 11),
+    /**
+     * <code>InboundWaitingForRecipientSignature = 4;</code>
+     */
     InboundWaitingForRecipientSignature(6, 4),
+    /**
+     * <code>InboundWithRecipientSignature = 5;</code>
+     */
     InboundWithRecipientSignature(7, 5),
+    /**
+     * <code>InboundRecipientSignatureRequestRejected = 6;</code>
+     */
     InboundRecipientSignatureRequestRejected(8, 6),
+    /**
+     * <code>InboundInvalidRecipientSignature = 12;</code>
+     */
     InboundInvalidRecipientSignature(9, 12),
+    /**
+     * <code>InternalWaitingForRecipientSignature = 7;</code>
+     */
     InternalWaitingForRecipientSignature(10, 7),
+    /**
+     * <code>InternalWithRecipientSignature = 8;</code>
+     */
     InternalWithRecipientSignature(11, 8),
+    /**
+     * <code>InternalRecipientSignatureRequestRejected = 9;</code>
+     */
     InternalRecipientSignatureRequestRejected(12, 9),
+    /**
+     * <code>InternalWaitingForSenderSignature = 13;</code>
+     */
     InternalWaitingForSenderSignature(13, 13),
+    /**
+     * <code>InternalInvalidSenderSignature = 14;</code>
+     */
     InternalInvalidSenderSignature(14, 14),
+    /**
+     * <code>InternalInvalidRecipientSignature = 15;</code>
+     */
     InternalInvalidRecipientSignature(15, 15),
     ;
-    
+
+    /**
+     * <code>UnknownBilateralDocumentStatus = 0;</code>
+     *
+     * <pre>
+     * Reserved status to report to legacy clients for newly introduced statuses
+     * </pre>
+     */
     public static final int UnknownBilateralDocumentStatus_VALUE = 0;
+    /**
+     * <code>OutboundWaitingForRecipientSignature = 1;</code>
+     */
     public static final int OutboundWaitingForRecipientSignature_VALUE = 1;
+    /**
+     * <code>OutboundWithRecipientSignature = 2;</code>
+     */
     public static final int OutboundWithRecipientSignature_VALUE = 2;
+    /**
+     * <code>OutboundRecipientSignatureRequestRejected = 3;</code>
+     */
     public static final int OutboundRecipientSignatureRequestRejected_VALUE = 3;
+    /**
+     * <code>OutboundWaitingForSenderSignature = 10;</code>
+     */
     public static final int OutboundWaitingForSenderSignature_VALUE = 10;
+    /**
+     * <code>OutboundInvalidSenderSignature = 11;</code>
+     */
     public static final int OutboundInvalidSenderSignature_VALUE = 11;
+    /**
+     * <code>InboundWaitingForRecipientSignature = 4;</code>
+     */
     public static final int InboundWaitingForRecipientSignature_VALUE = 4;
+    /**
+     * <code>InboundWithRecipientSignature = 5;</code>
+     */
     public static final int InboundWithRecipientSignature_VALUE = 5;
+    /**
+     * <code>InboundRecipientSignatureRequestRejected = 6;</code>
+     */
     public static final int InboundRecipientSignatureRequestRejected_VALUE = 6;
+    /**
+     * <code>InboundInvalidRecipientSignature = 12;</code>
+     */
     public static final int InboundInvalidRecipientSignature_VALUE = 12;
+    /**
+     * <code>InternalWaitingForRecipientSignature = 7;</code>
+     */
     public static final int InternalWaitingForRecipientSignature_VALUE = 7;
+    /**
+     * <code>InternalWithRecipientSignature = 8;</code>
+     */
     public static final int InternalWithRecipientSignature_VALUE = 8;
+    /**
+     * <code>InternalRecipientSignatureRequestRejected = 9;</code>
+     */
     public static final int InternalRecipientSignatureRequestRejected_VALUE = 9;
+    /**
+     * <code>InternalWaitingForSenderSignature = 13;</code>
+     */
     public static final int InternalWaitingForSenderSignature_VALUE = 13;
+    /**
+     * <code>InternalInvalidSenderSignature = 14;</code>
+     */
     public static final int InternalInvalidSenderSignature_VALUE = 14;
+    /**
+     * <code>InternalInvalidRecipientSignature = 15;</code>
+     */
     public static final int InternalInvalidRecipientSignature_VALUE = 15;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static BilateralDocumentStatus valueOf(int value) {
       switch (value) {
         case 0: return UnknownBilateralDocumentStatus;
@@ -69,7 +176,7 @@ public final class BilateralDocumentProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<BilateralDocumentStatus>
         internalGetValueMap() {
       return internalValueMap;
@@ -81,7 +188,7 @@ public final class BilateralDocumentProtos {
               return BilateralDocumentStatus.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -94,11 +201,9 @@ public final class BilateralDocumentProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final BilateralDocumentStatus[] VALUES = {
-      UnknownBilateralDocumentStatus, OutboundWaitingForRecipientSignature, OutboundWithRecipientSignature, OutboundRecipientSignatureRequestRejected, OutboundWaitingForSenderSignature, OutboundInvalidSenderSignature, InboundWaitingForRecipientSignature, InboundWithRecipientSignature, InboundRecipientSignatureRequestRejected, InboundInvalidRecipientSignature, InternalWaitingForRecipientSignature, InternalWithRecipientSignature, InternalRecipientSignatureRequestRejected, InternalWaitingForSenderSignature, InternalInvalidSenderSignature, InternalInvalidRecipientSignature, 
-    };
-    
+
+    private static final BilateralDocumentStatus[] VALUES = values();
+
     public static BilateralDocumentStatus valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -107,310 +212,80 @@ public final class BilateralDocumentProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private BilateralDocumentStatus(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus)
   }
-  
-  public interface TrustConnectionRequestMetadataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];
+
+  public interface TrustConnectionRequestMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.BilateralDocument.TrustConnectionRequestMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     boolean hasTrustConnectionRequestStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getTrustConnectionRequestStatus();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.TrustConnectionRequestMetadata}
+   */
   public static final class TrustConnectionRequestMetadata extends
-      com.google.protobuf.GeneratedMessage
-      implements TrustConnectionRequestMetadataOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.BilateralDocument.TrustConnectionRequestMetadata)
+      TrustConnectionRequestMetadataOrBuilder {
     // Use TrustConnectionRequestMetadata.newBuilder() to construct.
-    private TrustConnectionRequestMetadata(Builder builder) {
+    private TrustConnectionRequestMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private TrustConnectionRequestMetadata(boolean noInit) {}
-    
+    private TrustConnectionRequestMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final TrustConnectionRequestMetadata defaultInstance;
     public static TrustConnectionRequestMetadata getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public TrustConnectionRequestMetadata getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];
-    public static final int TRUSTCONNECTIONREQUESTSTATUS_FIELD_NUMBER = 1;
-    private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus trustConnectionRequestStatus_;
-    public boolean hasTrustConnectionRequestStatus() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getTrustConnectionRequestStatus() {
-      return trustConnectionRequestStatus_;
-    }
-    
-    private void initFields() {
-      trustConnectionRequestStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, trustConnectionRequestStatus_.getNumber());
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, trustConnectionRequestStatus_.getNumber());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
     }
-    
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
+    private TrustConnectionRequestMetadata(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_fieldAccessorTable;
-      }
-      
-      // Construct using Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        trustConnectionRequestStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.getDescriptor();
-      }
-      
-      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata getDefaultInstanceForType() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.getDefaultInstance();
-      }
-      
-      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata build() {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata buildPartial() {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata result = new Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.trustConnectionRequestStatus_ = trustConnectionRequestStatus_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata) {
-          return mergeFrom((Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata other) {
-        if (other == Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.getDefaultInstance()) return this;
-        if (other.hasTrustConnectionRequestStatus()) {
-          setTrustConnectionRequestStatus(other.getTrustConnectionRequestStatus());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -427,18 +302,304 @@ public final class BilateralDocumentProtos {
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<TrustConnectionRequestMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<TrustConnectionRequestMetadata>() {
+      public TrustConnectionRequestMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TrustConnectionRequestMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrustConnectionRequestMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int TRUSTCONNECTIONREQUESTSTATUS_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus trustConnectionRequestStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    public boolean hasTrustConnectionRequestStatus() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getTrustConnectionRequestStatus() {
+      return trustConnectionRequestStatus_;
+    }
+
+    private void initFields() {
+      trustConnectionRequestStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, trustConnectionRequestStatus_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, trustConnectionRequestStatus_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.TrustConnectionRequestMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.BilateralDocument.TrustConnectionRequestMetadata)
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        trustConnectionRequestStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata build() {
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata buildPartial() {
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata result = new Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.trustConnectionRequestStatus_ = trustConnectionRequestStatus_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata) {
+          return mergeFrom((Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata other) {
+        if (other == Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.getDefaultInstance()) return this;
+        if (other.hasTrustConnectionRequestStatus()) {
+          setTrustConnectionRequestStatus(other.getTrustConnectionRequestStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];
+
       private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus trustConnectionRequestStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public boolean hasTrustConnectionRequestStatus() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getTrustConnectionRequestStatus() {
         return trustConnectionRequestStatus_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public Builder setTrustConnectionRequestStatus(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value) {
         if (value == null) {
           throw new NullPointerException();
@@ -448,192 +609,379 @@ public final class BilateralDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus TrustConnectionRequestStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public Builder clearTrustConnectionRequestStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
         trustConnectionRequestStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.BilateralDocument.TrustConnectionRequestMetadata)
     }
-    
+
     static {
       defaultInstance = new TrustConnectionRequestMetadata(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.BilateralDocument.TrustConnectionRequestMetadata)
   }
-  
-  public interface BasicDocumentMetadataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
+
+  public interface BasicDocumentMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     boolean hasDocumentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus();
-    
-    // required string Total = 2;
+
+    /**
+     * <code>required string Total = 2;</code>
+     */
     boolean hasTotal();
-    String getTotal();
-    
-    // optional string Vat = 3;
+    /**
+     * <code>required string Total = 2;</code>
+     */
+    java.lang.String getTotal();
+    /**
+     * <code>required string Total = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTotalBytes();
+
+    /**
+     * <code>optional string Vat = 3;</code>
+     */
     boolean hasVat();
-    String getVat();
-    
-    // optional string Grounds = 4;
+    /**
+     * <code>optional string Vat = 3;</code>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
     boolean hasGrounds();
-    String getGrounds();
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    java.lang.String getGrounds();
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getGroundsBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+     */
     boolean hasReceiptStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+     */
     Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata}
+   */
   public static final class BasicDocumentMetadata extends
-      com.google.protobuf.GeneratedMessage
-      implements BasicDocumentMetadataOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata)
+      BasicDocumentMetadataOrBuilder {
     // Use BasicDocumentMetadata.newBuilder() to construct.
-    private BasicDocumentMetadata(Builder builder) {
+    private BasicDocumentMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private BasicDocumentMetadata(boolean noInit) {}
-    
+    private BasicDocumentMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final BasicDocumentMetadata defaultInstance;
     public static BasicDocumentMetadata getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public BasicDocumentMetadata getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BasicDocumentMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                documentStatus_ = value;
+              }
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              total_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              vat_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              grounds_ = bs;
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000010;
+                receiptStatus_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_fieldAccessorTable;
+      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<BasicDocumentMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<BasicDocumentMetadata>() {
+      public BasicDocumentMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BasicDocumentMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BasicDocumentMetadata> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
     public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     public boolean hasDocumentStatus() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
       return documentStatus_;
     }
-    
-    // required string Total = 2;
+
     public static final int TOTAL_FIELD_NUMBER = 2;
     private java.lang.Object total_;
+    /**
+     * <code>required string Total = 2;</code>
+     */
     public boolean hasTotal() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getTotal() {
+    /**
+     * <code>required string Total = 2;</code>
+     */
+    public java.lang.String getTotal() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           total_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTotalBytes() {
+    /**
+     * <code>required string Total = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTotalBytes() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         total_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Vat = 3;
+
     public static final int VAT_FIELD_NUMBER = 3;
     private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 3;</code>
+     */
     public boolean hasVat() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getVat() {
+    /**
+     * <code>optional string Vat = 3;</code>
+     */
+    public java.lang.String getVat() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           vat_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getVatBytes() {
+    /**
+     * <code>optional string Vat = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
       java.lang.Object ref = vat_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         vat_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Grounds = 4;
+
     public static final int GROUNDS_FIELD_NUMBER = 4;
     private java.lang.Object grounds_;
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
     public boolean hasGrounds() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getGrounds() {
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    public java.lang.String getGrounds() {
       java.lang.Object ref = grounds_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           grounds_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getGroundsBytes() {
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGroundsBytes() {
       java.lang.Object ref = grounds_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         grounds_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];
+
     public static final int RECEIPTSTATUS_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+     */
     public boolean hasReceiptStatus() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+     */
     public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
       return receiptStatus_;
     }
-    
+
     private void initFields() {
       documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
       total_ = "";
@@ -644,8 +992,9 @@ public final class BilateralDocumentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasTotal()) {
         memoizedIsInitialized = 0;
         return false;
@@ -653,7 +1002,7 @@ public final class BilateralDocumentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -674,12 +1023,12 @@ public final class BilateralDocumentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -705,113 +1054,106 @@ public final class BilateralDocumentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadataOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata)
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_fieldAccessorTable;
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -822,7 +1164,7 @@ public final class BilateralDocumentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
@@ -837,20 +1179,20 @@ public final class BilateralDocumentProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.getDescriptor();
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata build() {
         Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata result = buildPartial();
         if (!result.isInitialized()) {
@@ -858,17 +1200,7 @@ public final class BilateralDocumentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata buildPartial() {
         Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata result = new Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata(this);
         int from_bitField0_ = bitField0_;
@@ -897,7 +1229,7 @@ public final class BilateralDocumentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata) {
           return mergeFrom((Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata)other);
@@ -906,20 +1238,26 @@ public final class BilateralDocumentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata other) {
         if (other == Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.getDefaultInstance()) return this;
         if (other.hasDocumentStatus()) {
           setDocumentStatus(other.getDocumentStatus());
         }
         if (other.hasTotal()) {
-          setTotal(other.getTotal());
+          bitField0_ |= 0x00000002;
+          total_ = other.total_;
+          onChanged();
         }
         if (other.hasVat()) {
-          setVat(other.getVat());
+          bitField0_ |= 0x00000004;
+          vat_ = other.vat_;
+          onChanged();
         }
         if (other.hasGrounds()) {
-          setGrounds(other.getGrounds());
+          bitField0_ |= 0x00000008;
+          grounds_ = other.grounds_;
+          onChanged();
         }
         if (other.hasReceiptStatus()) {
           setReceiptStatus(other.getReceiptStatus());
@@ -927,7 +1265,7 @@ public final class BilateralDocumentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasTotal()) {
           
@@ -935,27 +1273,448 @@ public final class BilateralDocumentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public boolean hasDocumentStatus() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
+        return documentStatus_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        documentStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public Builder clearDocumentStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object total_ = "";
+      /**
+       * <code>required string Total = 2;</code>
+       */
+      public boolean hasTotal() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       */
+      public java.lang.String getTotal() {
+        java.lang.Object ref = total_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            total_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTotalBytes() {
+        java.lang.Object ref = total_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          total_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       */
+      public Builder setTotal(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        total_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       */
+      public Builder clearTotal() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        total_ = getDefaultInstance().getTotal();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       */
+      public Builder setTotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        total_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 3;</code>
+       */
+      public boolean hasVat() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       */
+      public java.lang.String getVat() {
+        java.lang.Object ref = vat_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       */
+      public Builder setVat(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        vat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       */
+      public Builder clearVat() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        vat_ = getDefaultInstance().getVat();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        vat_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object grounds_ = "";
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public boolean hasGrounds() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public java.lang.String getGrounds() {
+        java.lang.Object ref = grounds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            grounds_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGroundsBytes() {
+        java.lang.Object ref = grounds_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          grounds_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public Builder setGrounds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public Builder clearGrounds() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        grounds_ = getDefaultInstance().getGrounds();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public Builder setGroundsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+       */
+      public boolean hasReceiptStatus() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+       */
+      public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
+        return receiptStatus_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+       */
+      public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        receiptStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+       */
+      public Builder clearReceiptStatus() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata)
+    }
+
+    static {
+      defaultInstance = new BasicDocumentMetadata(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata)
+  }
+
+  public interface PriceListMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.BilateralDocument.PriceListMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    boolean hasDocumentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus();
+
+    /**
+     * <code>optional string PriceListEffectiveDate = 2;</code>
+     */
+    boolean hasPriceListEffectiveDate();
+    /**
+     * <code>optional string PriceListEffectiveDate = 2;</code>
+     */
+    java.lang.String getPriceListEffectiveDate();
+    /**
+     * <code>optional string PriceListEffectiveDate = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getPriceListEffectiveDateBytes();
+
+    /**
+     * <code>optional string ContractDocumentDate = 3;</code>
+     */
+    boolean hasContractDocumentDate();
+    /**
+     * <code>optional string ContractDocumentDate = 3;</code>
+     */
+    java.lang.String getContractDocumentDate();
+    /**
+     * <code>optional string ContractDocumentDate = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getContractDocumentDateBytes();
+
+    /**
+     * <code>optional string ContractDocumentNumber = 4;</code>
+     */
+    boolean hasContractDocumentNumber();
+    /**
+     * <code>optional string ContractDocumentNumber = 4;</code>
+     */
+    java.lang.String getContractDocumentNumber();
+    /**
+     * <code>optional string ContractDocumentNumber = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getContractDocumentNumberBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+     */
+    boolean hasReceiptStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+     */
+    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.PriceListMetadata}
+   */
+  public static final class PriceListMetadata extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.BilateralDocument.PriceListMetadata)
+      PriceListMetadataOrBuilder {
+    // Use PriceListMetadata.newBuilder() to construct.
+    private PriceListMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PriceListMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PriceListMetadata defaultInstance;
+    public static PriceListMetadata getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PriceListMetadata getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PriceListMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -971,18 +1730,21 @@ public final class BilateralDocumentProtos {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              total_ = input.readBytes();
+              priceListEffectiveDate_ = bs;
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              vat_ = input.readBytes();
+              contractDocumentDate_ = bs;
               break;
             }
             case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              grounds_ = input.readBytes();
+              contractDocumentNumber_ = bs;
               break;
             }
             case 40: {
@@ -998,345 +1760,200 @@ public final class BilateralDocumentProtos {
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
-      private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
-      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-      public boolean hasDocumentStatus() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
-        return documentStatus_;
-      }
-      public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        documentStatus_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearDocumentStatus() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-        onChanged();
-        return this;
-      }
-      
-      // required string Total = 2;
-      private java.lang.Object total_ = "";
-      public boolean hasTotal() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      public String getTotal() {
-        java.lang.Object ref = total_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          total_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setTotal(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        total_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearTotal() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        total_ = getDefaultInstance().getTotal();
-        onChanged();
-        return this;
-      }
-      void setTotal(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
-        total_ = value;
-        onChanged();
-      }
-      
-      // optional string Vat = 3;
-      private java.lang.Object vat_ = "";
-      public boolean hasVat() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      public String getVat() {
-        java.lang.Object ref = vat_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          vat_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setVat(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        vat_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearVat() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        vat_ = getDefaultInstance().getVat();
-        onChanged();
-        return this;
-      }
-      void setVat(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
-        vat_ = value;
-        onChanged();
-      }
-      
-      // optional string Grounds = 4;
-      private java.lang.Object grounds_ = "";
-      public boolean hasGrounds() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      public String getGrounds() {
-        java.lang.Object ref = grounds_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          grounds_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setGrounds(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        grounds_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearGrounds() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        grounds_ = getDefaultInstance().getGrounds();
-        onChanged();
-        return this;
-      }
-      void setGrounds(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
-        grounds_ = value;
-        onChanged();
-      }
-      
-      // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];
-      private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-      public boolean hasReceiptStatus() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
-        return receiptStatus_;
-      }
-      public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000010;
-        receiptStatus_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearReceiptStatus() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-        onChanged();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata)
     }
-    
-    static {
-      defaultInstance = new BasicDocumentMetadata(true);
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata)
-  }
-  
-  public interface PriceListMetadataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
-    boolean hasDocumentStatus();
-    Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus();
-    
-    // optional string PriceListEffectiveDate = 2;
-    boolean hasPriceListEffectiveDate();
-    String getPriceListEffectiveDate();
-    
-    // optional string ContractDocumentDate = 3;
-    boolean hasContractDocumentDate();
-    String getContractDocumentDate();
-    
-    // optional string ContractDocumentNumber = 4;
-    boolean hasContractDocumentNumber();
-    String getContractDocumentNumber();
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];
-    boolean hasReceiptStatus();
-    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
-  }
-  public static final class PriceListMetadata extends
-      com.google.protobuf.GeneratedMessage
-      implements PriceListMetadataOrBuilder {
-    // Use PriceListMetadata.newBuilder() to construct.
-    private PriceListMetadata(Builder builder) {
-      super(builder);
-    }
-    private PriceListMetadata(boolean noInit) {}
-    
-    private static final PriceListMetadata defaultInstance;
-    public static PriceListMetadata getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public PriceListMetadata getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_fieldAccessorTable;
+      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<PriceListMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<PriceListMetadata>() {
+      public PriceListMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PriceListMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PriceListMetadata> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
     public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     public boolean hasDocumentStatus() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
       return documentStatus_;
     }
-    
-    // optional string PriceListEffectiveDate = 2;
+
     public static final int PRICELISTEFFECTIVEDATE_FIELD_NUMBER = 2;
     private java.lang.Object priceListEffectiveDate_;
+    /**
+     * <code>optional string PriceListEffectiveDate = 2;</code>
+     */
     public boolean hasPriceListEffectiveDate() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getPriceListEffectiveDate() {
+    /**
+     * <code>optional string PriceListEffectiveDate = 2;</code>
+     */
+    public java.lang.String getPriceListEffectiveDate() {
       java.lang.Object ref = priceListEffectiveDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           priceListEffectiveDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getPriceListEffectiveDateBytes() {
+    /**
+     * <code>optional string PriceListEffectiveDate = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPriceListEffectiveDateBytes() {
       java.lang.Object ref = priceListEffectiveDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         priceListEffectiveDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string ContractDocumentDate = 3;
+
     public static final int CONTRACTDOCUMENTDATE_FIELD_NUMBER = 3;
     private java.lang.Object contractDocumentDate_;
+    /**
+     * <code>optional string ContractDocumentDate = 3;</code>
+     */
     public boolean hasContractDocumentDate() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getContractDocumentDate() {
+    /**
+     * <code>optional string ContractDocumentDate = 3;</code>
+     */
+    public java.lang.String getContractDocumentDate() {
       java.lang.Object ref = contractDocumentDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           contractDocumentDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getContractDocumentDateBytes() {
+    /**
+     * <code>optional string ContractDocumentDate = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContractDocumentDateBytes() {
       java.lang.Object ref = contractDocumentDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         contractDocumentDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string ContractDocumentNumber = 4;
+
     public static final int CONTRACTDOCUMENTNUMBER_FIELD_NUMBER = 4;
     private java.lang.Object contractDocumentNumber_;
+    /**
+     * <code>optional string ContractDocumentNumber = 4;</code>
+     */
     public boolean hasContractDocumentNumber() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getContractDocumentNumber() {
+    /**
+     * <code>optional string ContractDocumentNumber = 4;</code>
+     */
+    public java.lang.String getContractDocumentNumber() {
       java.lang.Object ref = contractDocumentNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           contractDocumentNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getContractDocumentNumberBytes() {
+    /**
+     * <code>optional string ContractDocumentNumber = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContractDocumentNumberBytes() {
       java.lang.Object ref = contractDocumentNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         contractDocumentNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];
+
     public static final int RECEIPTSTATUS_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+     */
     public boolean hasReceiptStatus() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+     */
     public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
       return receiptStatus_;
     }
-    
+
     private void initFields() {
       documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
       priceListEffectiveDate_ = "";
@@ -1347,12 +1964,13 @@ public final class BilateralDocumentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1373,12 +1991,12 @@ public final class BilateralDocumentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1404,113 +2022,106 @@ public final class BilateralDocumentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.PriceListMetadata}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadataOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.BilateralDocument.PriceListMetadata)
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_fieldAccessorTable;
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1521,7 +2132,7 @@ public final class BilateralDocumentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
@@ -1536,20 +2147,20 @@ public final class BilateralDocumentProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.getDescriptor();
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata build() {
         Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata result = buildPartial();
         if (!result.isInitialized()) {
@@ -1557,17 +2168,7 @@ public final class BilateralDocumentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata buildPartial() {
         Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata result = new Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata(this);
         int from_bitField0_ = bitField0_;
@@ -1596,7 +2197,7 @@ public final class BilateralDocumentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata) {
           return mergeFrom((Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata)other);
@@ -1605,20 +2206,26 @@ public final class BilateralDocumentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata other) {
         if (other == Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.getDefaultInstance()) return this;
         if (other.hasDocumentStatus()) {
           setDocumentStatus(other.getDocumentStatus());
         }
         if (other.hasPriceListEffectiveDate()) {
-          setPriceListEffectiveDate(other.getPriceListEffectiveDate());
+          bitField0_ |= 0x00000002;
+          priceListEffectiveDate_ = other.priceListEffectiveDate_;
+          onChanged();
         }
         if (other.hasContractDocumentDate()) {
-          setContractDocumentDate(other.getContractDocumentDate());
+          bitField0_ |= 0x00000004;
+          contractDocumentDate_ = other.contractDocumentDate_;
+          onChanged();
         }
         if (other.hasContractDocumentNumber()) {
-          setContractDocumentNumber(other.getContractDocumentNumber());
+          bitField0_ |= 0x00000008;
+          contractDocumentNumber_ = other.contractDocumentNumber_;
+          onChanged();
         }
         if (other.hasReceiptStatus()) {
           setReceiptStatus(other.getReceiptStatus());
@@ -1626,31 +2233,438 @@ public final class BilateralDocumentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public boolean hasDocumentStatus() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
+        return documentStatus_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        documentStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public Builder clearDocumentStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object priceListEffectiveDate_ = "";
+      /**
+       * <code>optional string PriceListEffectiveDate = 2;</code>
+       */
+      public boolean hasPriceListEffectiveDate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string PriceListEffectiveDate = 2;</code>
+       */
+      public java.lang.String getPriceListEffectiveDate() {
+        java.lang.Object ref = priceListEffectiveDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            priceListEffectiveDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string PriceListEffectiveDate = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPriceListEffectiveDateBytes() {
+        java.lang.Object ref = priceListEffectiveDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          priceListEffectiveDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string PriceListEffectiveDate = 2;</code>
+       */
+      public Builder setPriceListEffectiveDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        priceListEffectiveDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PriceListEffectiveDate = 2;</code>
+       */
+      public Builder clearPriceListEffectiveDate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        priceListEffectiveDate_ = getDefaultInstance().getPriceListEffectiveDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PriceListEffectiveDate = 2;</code>
+       */
+      public Builder setPriceListEffectiveDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        priceListEffectiveDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractDocumentDate_ = "";
+      /**
+       * <code>optional string ContractDocumentDate = 3;</code>
+       */
+      public boolean hasContractDocumentDate() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string ContractDocumentDate = 3;</code>
+       */
+      public java.lang.String getContractDocumentDate() {
+        java.lang.Object ref = contractDocumentDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contractDocumentDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ContractDocumentDate = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContractDocumentDateBytes() {
+        java.lang.Object ref = contractDocumentDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractDocumentDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ContractDocumentDate = 3;</code>
+       */
+      public Builder setContractDocumentDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        contractDocumentDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ContractDocumentDate = 3;</code>
+       */
+      public Builder clearContractDocumentDate() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        contractDocumentDate_ = getDefaultInstance().getContractDocumentDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ContractDocumentDate = 3;</code>
+       */
+      public Builder setContractDocumentDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        contractDocumentDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractDocumentNumber_ = "";
+      /**
+       * <code>optional string ContractDocumentNumber = 4;</code>
+       */
+      public boolean hasContractDocumentNumber() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string ContractDocumentNumber = 4;</code>
+       */
+      public java.lang.String getContractDocumentNumber() {
+        java.lang.Object ref = contractDocumentNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contractDocumentNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ContractDocumentNumber = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContractDocumentNumberBytes() {
+        java.lang.Object ref = contractDocumentNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractDocumentNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ContractDocumentNumber = 4;</code>
+       */
+      public Builder setContractDocumentNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        contractDocumentNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ContractDocumentNumber = 4;</code>
+       */
+      public Builder clearContractDocumentNumber() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        contractDocumentNumber_ = getDefaultInstance().getContractDocumentNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ContractDocumentNumber = 4;</code>
+       */
+      public Builder setContractDocumentNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        contractDocumentNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+       */
+      public boolean hasReceiptStatus() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+       */
+      public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
+        return receiptStatus_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+       */
+      public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        receiptStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
+       */
+      public Builder clearReceiptStatus() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.BilateralDocument.PriceListMetadata)
+    }
+
+    static {
+      defaultInstance = new PriceListMetadata(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.BilateralDocument.PriceListMetadata)
+  }
+
+  public interface ContractMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.BilateralDocument.ContractMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    boolean hasDocumentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus();
+
+    /**
+     * <code>optional string ContractPrice = 2;</code>
+     */
+    boolean hasContractPrice();
+    /**
+     * <code>optional string ContractPrice = 2;</code>
+     */
+    java.lang.String getContractPrice();
+    /**
+     * <code>optional string ContractPrice = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getContractPriceBytes();
+
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    boolean hasContractType();
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    java.lang.String getContractType();
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getContractTypeBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];</code>
+     */
+    boolean hasReceiptStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];</code>
+     */
+    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.ContractMetadata}
+   */
+  public static final class ContractMetadata extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.BilateralDocument.ContractMetadata)
+      ContractMetadataOrBuilder {
+    // Use ContractMetadata.newBuilder() to construct.
+    private ContractMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ContractMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ContractMetadata defaultInstance;
+    public static ContractMetadata getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ContractMetadata getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ContractMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -1666,336 +2680,182 @@ public final class BilateralDocumentProtos {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              priceListEffectiveDate_ = input.readBytes();
+              contractPrice_ = bs;
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              contractDocumentDate_ = input.readBytes();
+              contractType_ = bs;
               break;
             }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              contractDocumentNumber_ = input.readBytes();
-              break;
-            }
-            case 40: {
+            case 32: {
               int rawValue = input.readEnum();
               Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.valueOf(rawValue);
               if (value == null) {
-                unknownFields.mergeVarintField(5, rawValue);
+                unknownFields.mergeVarintField(4, rawValue);
               } else {
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000008;
                 receiptStatus_ = value;
               }
               break;
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
-      private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
-      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-      public boolean hasDocumentStatus() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
-        return documentStatus_;
-      }
-      public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        documentStatus_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearDocumentStatus() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-        onChanged();
-        return this;
-      }
-      
-      // optional string PriceListEffectiveDate = 2;
-      private java.lang.Object priceListEffectiveDate_ = "";
-      public boolean hasPriceListEffectiveDate() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      public String getPriceListEffectiveDate() {
-        java.lang.Object ref = priceListEffectiveDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          priceListEffectiveDate_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setPriceListEffectiveDate(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        priceListEffectiveDate_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearPriceListEffectiveDate() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        priceListEffectiveDate_ = getDefaultInstance().getPriceListEffectiveDate();
-        onChanged();
-        return this;
-      }
-      void setPriceListEffectiveDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
-        priceListEffectiveDate_ = value;
-        onChanged();
-      }
-      
-      // optional string ContractDocumentDate = 3;
-      private java.lang.Object contractDocumentDate_ = "";
-      public boolean hasContractDocumentDate() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      public String getContractDocumentDate() {
-        java.lang.Object ref = contractDocumentDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          contractDocumentDate_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setContractDocumentDate(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        contractDocumentDate_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearContractDocumentDate() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        contractDocumentDate_ = getDefaultInstance().getContractDocumentDate();
-        onChanged();
-        return this;
-      }
-      void setContractDocumentDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
-        contractDocumentDate_ = value;
-        onChanged();
-      }
-      
-      // optional string ContractDocumentNumber = 4;
-      private java.lang.Object contractDocumentNumber_ = "";
-      public boolean hasContractDocumentNumber() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      public String getContractDocumentNumber() {
-        java.lang.Object ref = contractDocumentNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          contractDocumentNumber_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setContractDocumentNumber(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        contractDocumentNumber_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearContractDocumentNumber() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        contractDocumentNumber_ = getDefaultInstance().getContractDocumentNumber();
-        onChanged();
-        return this;
-      }
-      void setContractDocumentNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
-        contractDocumentNumber_ = value;
-        onChanged();
-      }
-      
-      // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];
-      private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-      public boolean hasReceiptStatus() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
-        return receiptStatus_;
-      }
-      public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000010;
-        receiptStatus_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearReceiptStatus() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-        onChanged();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.BilateralDocument.PriceListMetadata)
     }
-    
-    static {
-      defaultInstance = new PriceListMetadata(true);
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.BilateralDocument.PriceListMetadata)
-  }
-  
-  public interface ContractMetadataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
-    boolean hasDocumentStatus();
-    Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus();
-    
-    // optional string ContractPrice = 2;
-    boolean hasContractPrice();
-    String getContractPrice();
-    
-    // optional string ContractType = 3;
-    boolean hasContractType();
-    String getContractType();
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];
-    boolean hasReceiptStatus();
-    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
-  }
-  public static final class ContractMetadata extends
-      com.google.protobuf.GeneratedMessage
-      implements ContractMetadataOrBuilder {
-    // Use ContractMetadata.newBuilder() to construct.
-    private ContractMetadata(Builder builder) {
-      super(builder);
-    }
-    private ContractMetadata(boolean noInit) {}
-    
-    private static final ContractMetadata defaultInstance;
-    public static ContractMetadata getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public ContractMetadata getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_fieldAccessorTable;
+      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<ContractMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<ContractMetadata>() {
+      public ContractMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ContractMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContractMetadata> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
     public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     public boolean hasDocumentStatus() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
       return documentStatus_;
     }
-    
-    // optional string ContractPrice = 2;
+
     public static final int CONTRACTPRICE_FIELD_NUMBER = 2;
     private java.lang.Object contractPrice_;
+    /**
+     * <code>optional string ContractPrice = 2;</code>
+     */
     public boolean hasContractPrice() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getContractPrice() {
+    /**
+     * <code>optional string ContractPrice = 2;</code>
+     */
+    public java.lang.String getContractPrice() {
       java.lang.Object ref = contractPrice_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           contractPrice_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getContractPriceBytes() {
+    /**
+     * <code>optional string ContractPrice = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContractPriceBytes() {
       java.lang.Object ref = contractPrice_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         contractPrice_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string ContractType = 3;
+
     public static final int CONTRACTTYPE_FIELD_NUMBER = 3;
     private java.lang.Object contractType_;
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
     public boolean hasContractType() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getContractType() {
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    public java.lang.String getContractType() {
       java.lang.Object ref = contractType_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           contractType_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getContractTypeBytes() {
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContractTypeBytes() {
       java.lang.Object ref = contractType_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         contractType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];
+
     public static final int RECEIPTSTATUS_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];</code>
+     */
     public boolean hasReceiptStatus() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];</code>
+     */
     public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
       return receiptStatus_;
     }
-    
+
     private void initFields() {
       documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
       contractPrice_ = "";
@@ -2005,12 +2865,13 @@ public final class BilateralDocumentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2028,12 +2889,12 @@ public final class BilateralDocumentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2055,113 +2916,106 @@ public final class BilateralDocumentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.ContractMetadata}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadataOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.BilateralDocument.ContractMetadata)
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_fieldAccessorTable;
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2172,7 +3026,7 @@ public final class BilateralDocumentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
@@ -2185,20 +3039,20 @@ public final class BilateralDocumentProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.getDescriptor();
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata build() {
         Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata result = buildPartial();
         if (!result.isInitialized()) {
@@ -2206,17 +3060,7 @@ public final class BilateralDocumentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata buildPartial() {
         Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata result = new Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata(this);
         int from_bitField0_ = bitField0_;
@@ -2241,7 +3085,7 @@ public final class BilateralDocumentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata) {
           return mergeFrom((Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata)other);
@@ -2250,17 +3094,21 @@ public final class BilateralDocumentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata other) {
         if (other == Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.getDefaultInstance()) return this;
         if (other.hasDocumentStatus()) {
           setDocumentStatus(other.getDocumentStatus());
         }
         if (other.hasContractPrice()) {
-          setContractPrice(other.getContractPrice());
+          bitField0_ |= 0x00000002;
+          contractPrice_ = other.contractPrice_;
+          onChanged();
         }
         if (other.hasContractType()) {
-          setContractType(other.getContractType());
+          bitField0_ |= 0x00000004;
+          contractType_ = other.contractType_;
+          onChanged();
         }
         if (other.hasReceiptStatus()) {
           setReceiptStatus(other.getReceiptStatus());
@@ -2268,31 +3116,390 @@ public final class BilateralDocumentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public boolean hasDocumentStatus() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
+        return documentStatus_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        documentStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
+      public Builder clearDocumentStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractPrice_ = "";
+      /**
+       * <code>optional string ContractPrice = 2;</code>
+       */
+      public boolean hasContractPrice() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string ContractPrice = 2;</code>
+       */
+      public java.lang.String getContractPrice() {
+        java.lang.Object ref = contractPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contractPrice_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ContractPrice = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContractPriceBytes() {
+        java.lang.Object ref = contractPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ContractPrice = 2;</code>
+       */
+      public Builder setContractPrice(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        contractPrice_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ContractPrice = 2;</code>
+       */
+      public Builder clearContractPrice() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contractPrice_ = getDefaultInstance().getContractPrice();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ContractPrice = 2;</code>
+       */
+      public Builder setContractPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        contractPrice_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractType_ = "";
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public boolean hasContractType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public java.lang.String getContractType() {
+        java.lang.Object ref = contractType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contractType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContractTypeBytes() {
+        java.lang.Object ref = contractType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public Builder setContractType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        contractType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public Builder clearContractType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        contractType_ = getDefaultInstance().getContractType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public Builder setContractTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        contractType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];</code>
+       */
+      public boolean hasReceiptStatus() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];</code>
+       */
+      public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
+        return receiptStatus_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];</code>
+       */
+      public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        receiptStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];</code>
+       */
+      public Builder clearReceiptStatus() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.BilateralDocument.ContractMetadata)
+    }
+
+    static {
+      defaultInstance = new ContractMetadata(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.BilateralDocument.ContractMetadata)
+  }
+
+  public interface SupplementaryAgreementMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.BilateralDocument.SupplementaryAgreementMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    boolean hasDocumentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus();
+
+    /**
+     * <code>optional string Total = 2;</code>
+     */
+    boolean hasTotal();
+    /**
+     * <code>optional string Total = 2;</code>
+     */
+    java.lang.String getTotal();
+    /**
+     * <code>optional string Total = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTotalBytes();
+
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    boolean hasContractType();
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    java.lang.String getContractType();
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getContractTypeBytes();
+
+    /**
+     * <code>required string ContractNumber = 4;</code>
+     */
+    boolean hasContractNumber();
+    /**
+     * <code>required string ContractNumber = 4;</code>
+     */
+    java.lang.String getContractNumber();
+    /**
+     * <code>required string ContractNumber = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getContractNumberBytes();
+
+    /**
+     * <code>required string ContractDate = 5;</code>
+     */
+    boolean hasContractDate();
+    /**
+     * <code>required string ContractDate = 5;</code>
+     */
+    java.lang.String getContractDate();
+    /**
+     * <code>required string ContractDate = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getContractDateBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];</code>
+     */
+    boolean hasReceiptStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];</code>
+     */
+    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.SupplementaryAgreementMetadata}
+   */
+  public static final class SupplementaryAgreementMetadata extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.BilateralDocument.SupplementaryAgreementMetadata)
+      SupplementaryAgreementMetadataOrBuilder {
+    // Use SupplementaryAgreementMetadata.newBuilder() to construct.
+    private SupplementaryAgreementMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SupplementaryAgreementMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SupplementaryAgreementMetadata defaultInstance;
+    public static SupplementaryAgreementMetadata getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SupplementaryAgreementMetadata getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SupplementaryAgreementMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -2308,367 +3515,278 @@ public final class BilateralDocumentProtos {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              contractPrice_ = input.readBytes();
+              total_ = bs;
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              contractType_ = input.readBytes();
+              contractType_ = bs;
               break;
             }
-            case 32: {
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              contractNumber_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              contractDate_ = bs;
+              break;
+            }
+            case 48: {
               int rawValue = input.readEnum();
               Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.valueOf(rawValue);
               if (value == null) {
-                unknownFields.mergeVarintField(4, rawValue);
+                unknownFields.mergeVarintField(6, rawValue);
               } else {
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000020;
                 receiptStatus_ = value;
               }
               break;
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
-      private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
-      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-      public boolean hasDocumentStatus() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
-        return documentStatus_;
-      }
-      public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        documentStatus_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearDocumentStatus() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-        onChanged();
-        return this;
-      }
-      
-      // optional string ContractPrice = 2;
-      private java.lang.Object contractPrice_ = "";
-      public boolean hasContractPrice() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      public String getContractPrice() {
-        java.lang.Object ref = contractPrice_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          contractPrice_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setContractPrice(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        contractPrice_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearContractPrice() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        contractPrice_ = getDefaultInstance().getContractPrice();
-        onChanged();
-        return this;
-      }
-      void setContractPrice(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
-        contractPrice_ = value;
-        onChanged();
-      }
-      
-      // optional string ContractType = 3;
-      private java.lang.Object contractType_ = "";
-      public boolean hasContractType() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      public String getContractType() {
-        java.lang.Object ref = contractType_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          contractType_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setContractType(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        contractType_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearContractType() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        contractType_ = getDefaultInstance().getContractType();
-        onChanged();
-        return this;
-      }
-      void setContractType(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
-        contractType_ = value;
-        onChanged();
-      }
-      
-      // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 4 [default = UnknownReceiptStatus];
-      private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-      public boolean hasReceiptStatus() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
-        return receiptStatus_;
-      }
-      public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000008;
-        receiptStatus_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearReceiptStatus() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-        onChanged();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.BilateralDocument.ContractMetadata)
     }
-    
-    static {
-      defaultInstance = new ContractMetadata(true);
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.BilateralDocument.ContractMetadata)
-  }
-  
-  public interface SupplementaryAgreementMetadataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
-    boolean hasDocumentStatus();
-    Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus();
-    
-    // optional string Total = 2;
-    boolean hasTotal();
-    String getTotal();
-    
-    // optional string ContractType = 3;
-    boolean hasContractType();
-    String getContractType();
-    
-    // required string ContractNumber = 4;
-    boolean hasContractNumber();
-    String getContractNumber();
-    
-    // required string ContractDate = 5;
-    boolean hasContractDate();
-    String getContractDate();
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];
-    boolean hasReceiptStatus();
-    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
-  }
-  public static final class SupplementaryAgreementMetadata extends
-      com.google.protobuf.GeneratedMessage
-      implements SupplementaryAgreementMetadataOrBuilder {
-    // Use SupplementaryAgreementMetadata.newBuilder() to construct.
-    private SupplementaryAgreementMetadata(Builder builder) {
-      super(builder);
-    }
-    private SupplementaryAgreementMetadata(boolean noInit) {}
-    
-    private static final SupplementaryAgreementMetadata defaultInstance;
-    public static SupplementaryAgreementMetadata getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public SupplementaryAgreementMetadata getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_fieldAccessorTable;
+      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<SupplementaryAgreementMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<SupplementaryAgreementMetadata>() {
+      public SupplementaryAgreementMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SupplementaryAgreementMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SupplementaryAgreementMetadata> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
     public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     public boolean hasDocumentStatus() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
       return documentStatus_;
     }
-    
-    // optional string Total = 2;
+
     public static final int TOTAL_FIELD_NUMBER = 2;
     private java.lang.Object total_;
+    /**
+     * <code>optional string Total = 2;</code>
+     */
     public boolean hasTotal() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getTotal() {
+    /**
+     * <code>optional string Total = 2;</code>
+     */
+    public java.lang.String getTotal() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           total_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTotalBytes() {
+    /**
+     * <code>optional string Total = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTotalBytes() {
       java.lang.Object ref = total_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         total_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string ContractType = 3;
+
     public static final int CONTRACTTYPE_FIELD_NUMBER = 3;
     private java.lang.Object contractType_;
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
     public boolean hasContractType() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getContractType() {
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    public java.lang.String getContractType() {
       java.lang.Object ref = contractType_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           contractType_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getContractTypeBytes() {
+    /**
+     * <code>optional string ContractType = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContractTypeBytes() {
       java.lang.Object ref = contractType_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         contractType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string ContractNumber = 4;
+
     public static final int CONTRACTNUMBER_FIELD_NUMBER = 4;
     private java.lang.Object contractNumber_;
+    /**
+     * <code>required string ContractNumber = 4;</code>
+     */
     public boolean hasContractNumber() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getContractNumber() {
+    /**
+     * <code>required string ContractNumber = 4;</code>
+     */
+    public java.lang.String getContractNumber() {
       java.lang.Object ref = contractNumber_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           contractNumber_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getContractNumberBytes() {
+    /**
+     * <code>required string ContractNumber = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContractNumberBytes() {
       java.lang.Object ref = contractNumber_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         contractNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string ContractDate = 5;
+
     public static final int CONTRACTDATE_FIELD_NUMBER = 5;
     private java.lang.Object contractDate_;
+    /**
+     * <code>required string ContractDate = 5;</code>
+     */
     public boolean hasContractDate() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public String getContractDate() {
+    /**
+     * <code>required string ContractDate = 5;</code>
+     */
+    public java.lang.String getContractDate() {
       java.lang.Object ref = contractDate_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           contractDate_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getContractDateBytes() {
+    /**
+     * <code>required string ContractDate = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContractDateBytes() {
       java.lang.Object ref = contractDate_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         contractDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];
+
     public static final int RECEIPTSTATUS_FIELD_NUMBER = 6;
     private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];</code>
+     */
     public boolean hasReceiptStatus() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];</code>
+     */
     public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
       return receiptStatus_;
     }
-    
+
     private void initFields() {
       documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
       total_ = "";
@@ -2680,8 +3798,9 @@ public final class BilateralDocumentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasContractNumber()) {
         memoizedIsInitialized = 0;
         return false;
@@ -2693,7 +3812,7 @@ public final class BilateralDocumentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2717,12 +3836,12 @@ public final class BilateralDocumentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2752,113 +3871,106 @@ public final class BilateralDocumentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.SupplementaryAgreementMetadata}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadataOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.BilateralDocument.SupplementaryAgreementMetadata)
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_fieldAccessorTable;
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2869,7 +3981,7 @@ public final class BilateralDocumentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
@@ -2886,20 +3998,20 @@ public final class BilateralDocumentProtos {
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.getDescriptor();
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata build() {
         Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata result = buildPartial();
         if (!result.isInitialized()) {
@@ -2907,17 +4019,7 @@ public final class BilateralDocumentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata buildPartial() {
         Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata result = new Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata(this);
         int from_bitField0_ = bitField0_;
@@ -2950,7 +4052,7 @@ public final class BilateralDocumentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata) {
           return mergeFrom((Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata)other);
@@ -2959,23 +4061,31 @@ public final class BilateralDocumentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata other) {
         if (other == Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.getDefaultInstance()) return this;
         if (other.hasDocumentStatus()) {
           setDocumentStatus(other.getDocumentStatus());
         }
         if (other.hasTotal()) {
-          setTotal(other.getTotal());
+          bitField0_ |= 0x00000002;
+          total_ = other.total_;
+          onChanged();
         }
         if (other.hasContractType()) {
-          setContractType(other.getContractType());
+          bitField0_ |= 0x00000004;
+          contractType_ = other.contractType_;
+          onChanged();
         }
         if (other.hasContractNumber()) {
-          setContractNumber(other.getContractNumber());
+          bitField0_ |= 0x00000008;
+          contractNumber_ = other.contractNumber_;
+          onChanged();
         }
         if (other.hasContractDate()) {
-          setContractDate(other.getContractDate());
+          bitField0_ |= 0x00000010;
+          contractDate_ = other.contractDate_;
+          onChanged();
         }
         if (other.hasReceiptStatus()) {
           setReceiptStatus(other.getReceiptStatus());
@@ -2983,7 +4093,7 @@ public final class BilateralDocumentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasContractNumber()) {
           
@@ -2995,86 +4105,42 @@ public final class BilateralDocumentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(1, rawValue);
-              } else {
-                bitField0_ |= 0x00000001;
-                documentStatus_ = value;
-              }
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              total_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              contractType_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              contractNumber_ = input.readBytes();
-              break;
-            }
-            case 42: {
-              bitField0_ |= 0x00000010;
-              contractDate_ = input.readBytes();
-              break;
-            }
-            case 48: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(6, rawValue);
-              } else {
-                bitField0_ |= 0x00000020;
-                receiptStatus_ = value;
-              }
-              break;
-            }
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
+
       private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public boolean hasDocumentStatus() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
         return documentStatus_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value) {
         if (value == null) {
           throw new NullPointerException();
@@ -3084,29 +4150,61 @@ public final class BilateralDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public Builder clearDocumentStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
         documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
         onChanged();
         return this;
       }
-      
-      // optional string Total = 2;
+
       private java.lang.Object total_ = "";
+      /**
+       * <code>optional string Total = 2;</code>
+       */
       public boolean hasTotal() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getTotal() {
+      /**
+       * <code>optional string Total = 2;</code>
+       */
+      public java.lang.String getTotal() {
         java.lang.Object ref = total_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          total_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            total_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTotal(String value) {
+      /**
+       * <code>optional string Total = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTotalBytes() {
+        java.lang.Object ref = total_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          total_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Total = 2;</code>
+       */
+      public Builder setTotal(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3115,34 +4213,74 @@ public final class BilateralDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Total = 2;</code>
+       */
       public Builder clearTotal() {
         bitField0_ = (bitField0_ & ~0x00000002);
         total_ = getDefaultInstance().getTotal();
         onChanged();
         return this;
       }
-      void setTotal(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string Total = 2;</code>
+       */
+      public Builder setTotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         total_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string ContractType = 3;
+
       private java.lang.Object contractType_ = "";
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
       public boolean hasContractType() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getContractType() {
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public java.lang.String getContractType() {
         java.lang.Object ref = contractType_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          contractType_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contractType_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setContractType(String value) {
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContractTypeBytes() {
+        java.lang.Object ref = contractType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public Builder setContractType(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3151,34 +4289,74 @@ public final class BilateralDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
       public Builder clearContractType() {
         bitField0_ = (bitField0_ & ~0x00000004);
         contractType_ = getDefaultInstance().getContractType();
         onChanged();
         return this;
       }
-      void setContractType(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string ContractType = 3;</code>
+       */
+      public Builder setContractTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         contractType_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string ContractNumber = 4;
+
       private java.lang.Object contractNumber_ = "";
+      /**
+       * <code>required string ContractNumber = 4;</code>
+       */
       public boolean hasContractNumber() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getContractNumber() {
+      /**
+       * <code>required string ContractNumber = 4;</code>
+       */
+      public java.lang.String getContractNumber() {
         java.lang.Object ref = contractNumber_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          contractNumber_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contractNumber_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setContractNumber(String value) {
+      /**
+       * <code>required string ContractNumber = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContractNumberBytes() {
+        java.lang.Object ref = contractNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ContractNumber = 4;</code>
+       */
+      public Builder setContractNumber(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3187,34 +4365,74 @@ public final class BilateralDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string ContractNumber = 4;</code>
+       */
       public Builder clearContractNumber() {
         bitField0_ = (bitField0_ & ~0x00000008);
         contractNumber_ = getDefaultInstance().getContractNumber();
         onChanged();
         return this;
       }
-      void setContractNumber(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>required string ContractNumber = 4;</code>
+       */
+      public Builder setContractNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         contractNumber_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string ContractDate = 5;
+
       private java.lang.Object contractDate_ = "";
+      /**
+       * <code>required string ContractDate = 5;</code>
+       */
       public boolean hasContractDate() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      public String getContractDate() {
+      /**
+       * <code>required string ContractDate = 5;</code>
+       */
+      public java.lang.String getContractDate() {
         java.lang.Object ref = contractDate_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          contractDate_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contractDate_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setContractDate(String value) {
+      /**
+       * <code>required string ContractDate = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContractDateBytes() {
+        java.lang.Object ref = contractDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ContractDate = 5;</code>
+       */
+      public Builder setContractDate(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3223,26 +4441,45 @@ public final class BilateralDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string ContractDate = 5;</code>
+       */
       public Builder clearContractDate() {
         bitField0_ = (bitField0_ & ~0x00000010);
         contractDate_ = getDefaultInstance().getContractDate();
         onChanged();
         return this;
       }
-      void setContractDate(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000010;
+      /**
+       * <code>required string ContractDate = 5;</code>
+       */
+      public Builder setContractDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
         contractDate_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];
+
       private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];</code>
+       */
       public boolean hasReceiptStatus() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];</code>
+       */
       public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
         return receiptStatus_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];</code>
+       */
       public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
         if (value == null) {
           throw new NullPointerException();
@@ -3252,347 +4489,98 @@ public final class BilateralDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];</code>
+       */
       public Builder clearReceiptStatus() {
         bitField0_ = (bitField0_ & ~0x00000020);
         receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.BilateralDocument.SupplementaryAgreementMetadata)
     }
-    
+
     static {
       defaultInstance = new SupplementaryAgreementMetadata(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.BilateralDocument.SupplementaryAgreementMetadata)
   }
-  
-  public interface BilateralDocumentMetadataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
+
+  public interface BilateralDocumentMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     boolean hasDocumentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
     Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus();
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     */
     boolean hasReceiptStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     */
     Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata}
+   */
   public static final class BilateralDocumentMetadata extends
-      com.google.protobuf.GeneratedMessage
-      implements BilateralDocumentMetadataOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata)
+      BilateralDocumentMetadataOrBuilder {
     // Use BilateralDocumentMetadata.newBuilder() to construct.
-    private BilateralDocumentMetadata(Builder builder) {
+    private BilateralDocumentMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private BilateralDocumentMetadata(boolean noInit) {}
-    
+    private BilateralDocumentMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final BilateralDocumentMetadata defaultInstance;
     public static BilateralDocumentMetadata getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public BilateralDocumentMetadata getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
-    public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
-    private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_;
-    public boolean hasDocumentStatus() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
-      return documentStatus_;
-    }
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
-    public static final int RECEIPTSTATUS_FIELD_NUMBER = 2;
-    private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
-    public boolean hasReceiptStatus() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
-      return receiptStatus_;
-    }
-    
-    private void initFields() {
-      documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-      receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, documentStatus_.getNumber());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeEnum(2, receiptStatus_.getNumber());
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, documentStatus_.getNumber());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, receiptStatus_.getNumber());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
     }
-    
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
+    private BilateralDocumentMetadata(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_fieldAccessorTable;
-      }
-      
-      // Construct using Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.getDescriptor();
-      }
-      
-      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata getDefaultInstanceForType() {
-        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.getDefaultInstance();
-      }
-      
-      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata build() {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata buildPartial() {
-        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata result = new Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.documentStatus_ = documentStatus_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.receiptStatus_ = receiptStatus_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata) {
-          return mergeFrom((Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata other) {
-        if (other == Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.getDefaultInstance()) return this;
-        if (other.hasDocumentStatus()) {
-          setDocumentStatus(other.getDocumentStatus());
-        }
-        if (other.hasReceiptStatus()) {
-          setReceiptStatus(other.getReceiptStatus());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -3620,18 +4608,336 @@ public final class BilateralDocumentProtos {
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<BilateralDocumentMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<BilateralDocumentMetadata>() {
+      public BilateralDocumentMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BilateralDocumentMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BilateralDocumentMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    public boolean hasDocumentStatus() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+     */
+    public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
+      return documentStatus_;
+    }
+
+    public static final int RECEIPTSTATUS_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     */
+    public boolean hasReceiptStatus() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     */
+    public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
+      return receiptStatus_;
+    }
+
+    private void initFields() {
+      documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+      receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, receiptStatus_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, receiptStatus_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata)
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.class, Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata build() {
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata buildPartial() {
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata result = new Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.documentStatus_ = documentStatus_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.receiptStatus_ = receiptStatus_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata) {
+          return mergeFrom((Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata other) {
+        if (other == Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.getDefaultInstance()) return this;
+        if (other.hasDocumentStatus()) {
+          setDocumentStatus(other.getDocumentStatus());
+        }
+        if (other.hasReceiptStatus()) {
+          setReceiptStatus(other.getReceiptStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
+
       private Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public boolean hasDocumentStatus() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus getDocumentStatus() {
         return documentStatus_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus value) {
         if (value == null) {
           throw new NullPointerException();
@@ -3641,21 +4947,32 @@ public final class BilateralDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];</code>
+       */
       public Builder clearDocumentStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
         documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
+
       private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       */
       public boolean hasReceiptStatus() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       */
       public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
         return receiptStatus_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       */
       public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
         if (value == null) {
           throw new NullPointerException();
@@ -3665,55 +4982,58 @@ public final class BilateralDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       */
       public Builder clearReceiptStatus() {
         bitField0_ = (bitField0_ & ~0x00000002);
         receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata)
     }
-    
+
     static {
       defaultInstance = new BilateralDocumentMetadata(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -3786,67 +5106,56 @@ public final class BilateralDocumentProtos {
       "lDocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor,
-              new java.lang.String[] { "TrustConnectionRequestStatus", },
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.class,
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.TrustConnectionRequestMetadata.Builder.class);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_descriptor,
-              new java.lang.String[] { "DocumentStatus", "Total", "Vat", "Grounds", "ReceiptStatus", },
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.class,
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BasicDocumentMetadata.Builder.class);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_descriptor,
-              new java.lang.String[] { "DocumentStatus", "PriceListEffectiveDate", "ContractDocumentDate", "ContractDocumentNumber", "ReceiptStatus", },
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.class,
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.PriceListMetadata.Builder.class);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_descriptor,
-              new java.lang.String[] { "DocumentStatus", "ContractPrice", "ContractType", "ReceiptStatus", },
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.class,
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.ContractMetadata.Builder.class);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_descriptor,
-              new java.lang.String[] { "DocumentStatus", "Total", "ContractType", "ContractNumber", "ContractDate", "ReceiptStatus", },
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.class,
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.SupplementaryAgreementMetadata.Builder.class);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor =
-            getDescriptor().getMessageTypes().get(5);
-          internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor,
-              new java.lang.String[] { "DocumentStatus", "ReceiptStatus", },
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.class,
-              Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentMetadata.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Documents.ReceiptStatusProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_TrustConnectionRequestMetadata_descriptor,
+        new java.lang.String[] { "TrustConnectionRequestStatus", });
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_descriptor,
+        new java.lang.String[] { "DocumentStatus", "Total", "Vat", "Grounds", "ReceiptStatus", });
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_descriptor,
+        new java.lang.String[] { "DocumentStatus", "PriceListEffectiveDate", "ContractDocumentDate", "ContractDocumentNumber", "ReceiptStatus", });
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_ContractMetadata_descriptor,
+        new java.lang.String[] { "DocumentStatus", "ContractPrice", "ContractType", "ReceiptStatus", });
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_SupplementaryAgreementMetadata_descriptor,
+        new java.lang.String[] { "DocumentStatus", "Total", "ContractType", "ContractNumber", "ContractDate", "ReceiptStatus", });
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BilateralDocumentMetadata_descriptor,
+        new java.lang.String[] { "DocumentStatus", "ReceiptStatus", });
+    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

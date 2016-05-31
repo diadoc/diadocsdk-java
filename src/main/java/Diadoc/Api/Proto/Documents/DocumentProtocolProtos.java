@@ -8,66 +8,160 @@ public final class DocumentProtocolProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface DocumentProtocolOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required bytes PrintForm = 1;
+  public interface DocumentProtocolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.DocumentProtocol)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required bytes PrintForm = 1;</code>
+     */
     boolean hasPrintForm();
+    /**
+     * <code>required bytes PrintForm = 1;</code>
+     */
     com.google.protobuf.ByteString getPrintForm();
-    
-    // required bytes Signature = 2;
+
+    /**
+     * <code>required bytes Signature = 2;</code>
+     */
     boolean hasSignature();
+    /**
+     * <code>required bytes Signature = 2;</code>
+     */
     com.google.protobuf.ByteString getSignature();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.DocumentProtocol}
+   */
   public static final class DocumentProtocol extends
-      com.google.protobuf.GeneratedMessage
-      implements DocumentProtocolOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.DocumentProtocol)
+      DocumentProtocolOrBuilder {
     // Use DocumentProtocol.newBuilder() to construct.
-    private DocumentProtocol(Builder builder) {
+    private DocumentProtocol(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private DocumentProtocol(boolean noInit) {}
-    
+    private DocumentProtocol(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final DocumentProtocol defaultInstance;
     public static DocumentProtocol getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public DocumentProtocol getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DocumentProtocol(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              printForm_ = input.readBytes();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              signature_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.DocumentProtocolProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.DocumentProtocolProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_fieldAccessorTable;
+      return Diadoc.Api.Proto.Documents.DocumentProtocolProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.class, Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<DocumentProtocol> PARSER =
+        new com.google.protobuf.AbstractParser<DocumentProtocol>() {
+      public DocumentProtocol parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DocumentProtocol(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DocumentProtocol> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required bytes PrintForm = 1;
     public static final int PRINTFORM_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString printForm_;
+    /**
+     * <code>required bytes PrintForm = 1;</code>
+     */
     public boolean hasPrintForm() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required bytes PrintForm = 1;</code>
+     */
     public com.google.protobuf.ByteString getPrintForm() {
       return printForm_;
     }
-    
-    // required bytes Signature = 2;
+
     public static final int SIGNATURE_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString signature_;
+    /**
+     * <code>required bytes Signature = 2;</code>
+     */
     public boolean hasSignature() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required bytes Signature = 2;</code>
+     */
     public com.google.protobuf.ByteString getSignature() {
       return signature_;
     }
-    
+
     private void initFields() {
       printForm_ = com.google.protobuf.ByteString.EMPTY;
       signature_ = com.google.protobuf.ByteString.EMPTY;
@@ -75,8 +169,9 @@ public final class DocumentProtocolProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasPrintForm()) {
         memoizedIsInitialized = 0;
         return false;
@@ -88,7 +183,7 @@ public final class DocumentProtocolProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -100,12 +195,12 @@ public final class DocumentProtocolProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -119,113 +214,106 @@ public final class DocumentProtocolProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.DocumentProtocol}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocolOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.DocumentProtocol)
+        Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocolOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Documents.DocumentProtocolProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.DocumentProtocolProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_fieldAccessorTable;
+        return Diadoc.Api.Proto.Documents.DocumentProtocolProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.class, Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -236,7 +324,7 @@ public final class DocumentProtocolProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         printForm_ = com.google.protobuf.ByteString.EMPTY;
@@ -245,20 +333,20 @@ public final class DocumentProtocolProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.getDescriptor();
+        return Diadoc.Api.Proto.Documents.DocumentProtocolProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol build() {
         Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol result = buildPartial();
         if (!result.isInitialized()) {
@@ -266,17 +354,7 @@ public final class DocumentProtocolProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol buildPartial() {
         Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol result = new Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol(this);
         int from_bitField0_ = bitField0_;
@@ -293,7 +371,7 @@ public final class DocumentProtocolProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol) {
           return mergeFrom((Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol)other);
@@ -302,7 +380,7 @@ public final class DocumentProtocolProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol other) {
         if (other == Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.getDefaultInstance()) return this;
         if (other.hasPrintForm()) {
@@ -314,7 +392,7 @@ public final class DocumentProtocolProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasPrintForm()) {
           
@@ -326,54 +404,42 @@ public final class DocumentProtocolProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              printForm_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              signature_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required bytes PrintForm = 1;
+
       private com.google.protobuf.ByteString printForm_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>required bytes PrintForm = 1;</code>
+       */
       public boolean hasPrintForm() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required bytes PrintForm = 1;</code>
+       */
       public com.google.protobuf.ByteString getPrintForm() {
         return printForm_;
       }
+      /**
+       * <code>required bytes PrintForm = 1;</code>
+       */
       public Builder setPrintForm(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -383,21 +449,32 @@ public final class DocumentProtocolProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required bytes PrintForm = 1;</code>
+       */
       public Builder clearPrintForm() {
         bitField0_ = (bitField0_ & ~0x00000001);
         printForm_ = getDefaultInstance().getPrintForm();
         onChanged();
         return this;
       }
-      
-      // required bytes Signature = 2;
+
       private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>required bytes Signature = 2;</code>
+       */
       public boolean hasSignature() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>required bytes Signature = 2;</code>
+       */
       public com.google.protobuf.ByteString getSignature() {
         return signature_;
       }
+      /**
+       * <code>required bytes Signature = 2;</code>
+       */
       public Builder setSignature(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -407,30 +484,33 @@ public final class DocumentProtocolProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required bytes Signature = 2;</code>
+       */
       public Builder clearSignature() {
         bitField0_ = (bitField0_ & ~0x00000002);
         signature_ = getDefaultInstance().getSignature();
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.DocumentProtocol)
     }
-    
+
     static {
       defaultInstance = new DocumentProtocol(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.DocumentProtocol)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -445,26 +525,24 @@ public final class DocumentProtocolProtos {
       "B\030B\026DocumentProtocolProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_descriptor,
-              new java.lang.String[] { "PrintForm", "Signature", },
-              Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.class,
-              Diadoc.Api.Proto.Documents.DocumentProtocolProtos.DocumentProtocol.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_DocumentProtocol_descriptor,
+        new java.lang.String[] { "PrintForm", "Signature", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

@@ -8,166 +8,406 @@ public final class InvoiceDocflowProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface InboundInvoiceDocflowOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional bool IsFinished = 1;
+  public interface InboundInvoiceDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean hasIsFinished();
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean getIsFinished();
-    
-    // optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     boolean hasReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow getReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder getReceiptDocflowOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     boolean hasConfirmationDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
     boolean hasCorrectionRequestDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
     Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow getCorrectionRequestDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
     Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder getCorrectionRequestDocflowOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
     boolean hasConfirmationTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.Timestamp getConfirmationTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getConfirmationTimestampOrBuilder();
-    
-    // optional bool IsAmendmentRequested = 6;
+
+    /**
+     * <code>optional bool IsAmendmentRequested = 6;</code>
+     */
     boolean hasIsAmendmentRequested();
+    /**
+     * <code>optional bool IsAmendmentRequested = 6;</code>
+     */
     boolean getIsAmendmentRequested();
-    
-    // optional bool IsRevised = 7;
+
+    /**
+     * <code>optional bool IsRevised = 7;</code>
+     */
     boolean hasIsRevised();
+    /**
+     * <code>optional bool IsRevised = 7;</code>
+     */
     boolean getIsRevised();
-    
-    // optional bool IsCorrected = 8;
+
+    /**
+     * <code>optional bool IsCorrected = 8;</code>
+     */
     boolean hasIsCorrected();
+    /**
+     * <code>optional bool IsCorrected = 8;</code>
+     */
     boolean getIsCorrected();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow}
+   */
   public static final class InboundInvoiceDocflow extends
-      com.google.protobuf.GeneratedMessage
-      implements InboundInvoiceDocflowOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow)
+      InboundInvoiceDocflowOrBuilder {
     // Use InboundInvoiceDocflow.newBuilder() to construct.
-    private InboundInvoiceDocflow(Builder builder) {
+    private InboundInvoiceDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InboundInvoiceDocflow(boolean noInit) {}
-    
+    private InboundInvoiceDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InboundInvoiceDocflow defaultInstance;
     public static InboundInvoiceDocflow getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InboundInvoiceDocflow getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InboundInvoiceDocflow(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = receiptDocflow_.toBuilder();
+              }
+              receiptDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(receiptDocflow_);
+                receiptDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = confirmationDocflow_.toBuilder();
+              }
+              confirmationDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(confirmationDocflow_);
+                confirmationDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = correctionRequestDocflow_.toBuilder();
+              }
+              correctionRequestDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(correctionRequestDocflow_);
+                correctionRequestDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = confirmationTimestamp_.toBuilder();
+              }
+              confirmationTimestamp_ = input.readMessage(Diadoc.Api.Proto.TimestampProtos.Timestamp.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(confirmationTimestamp_);
+                confirmationTimestamp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              isAmendmentRequested_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              isRevised_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              isCorrected_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InboundInvoiceDocflow> PARSER =
+        new com.google.protobuf.AbstractParser<InboundInvoiceDocflow>() {
+      public InboundInvoiceDocflow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InboundInvoiceDocflow(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InboundInvoiceDocflow> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional bool IsFinished = 1;
     public static final int ISFINISHED_FIELD_NUMBER = 1;
     private boolean isFinished_;
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean hasIsFinished() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean getIsFinished() {
       return isFinished_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;
+
     public static final int RECEIPTDOCFLOW_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow receiptDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     public boolean hasReceiptDocflow() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow getReceiptDocflow() {
       return receiptDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
       return receiptDocflow_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;
+
     public static final int CONFIRMATIONDOCFLOW_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow confirmationDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     public boolean hasConfirmationDocflow() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow() {
       return confirmationDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder() {
       return confirmationDocflow_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;
+
     public static final int CORRECTIONREQUESTDOCFLOW_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow correctionRequestDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
     public boolean hasCorrectionRequestDocflow() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow getCorrectionRequestDocflow() {
       return correctionRequestDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder getCorrectionRequestDocflowOrBuilder() {
       return correctionRequestDocflow_;
     }
-    
-    // optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;
+
     public static final int CONFIRMATIONTIMESTAMP_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.TimestampProtos.Timestamp confirmationTimestamp_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
     public boolean hasConfirmationTimestamp() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.Timestamp getConfirmationTimestamp() {
       return confirmationTimestamp_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getConfirmationTimestampOrBuilder() {
       return confirmationTimestamp_;
     }
-    
-    // optional bool IsAmendmentRequested = 6;
+
     public static final int ISAMENDMENTREQUESTED_FIELD_NUMBER = 6;
     private boolean isAmendmentRequested_;
+    /**
+     * <code>optional bool IsAmendmentRequested = 6;</code>
+     */
     public boolean hasIsAmendmentRequested() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>optional bool IsAmendmentRequested = 6;</code>
+     */
     public boolean getIsAmendmentRequested() {
       return isAmendmentRequested_;
     }
-    
-    // optional bool IsRevised = 7;
+
     public static final int ISREVISED_FIELD_NUMBER = 7;
     private boolean isRevised_;
+    /**
+     * <code>optional bool IsRevised = 7;</code>
+     */
     public boolean hasIsRevised() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
+    /**
+     * <code>optional bool IsRevised = 7;</code>
+     */
     public boolean getIsRevised() {
       return isRevised_;
     }
-    
-    // optional bool IsCorrected = 8;
+
     public static final int ISCORRECTED_FIELD_NUMBER = 8;
     private boolean isCorrected_;
+    /**
+     * <code>optional bool IsCorrected = 8;</code>
+     */
     public boolean hasIsCorrected() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
+    /**
+     * <code>optional bool IsCorrected = 8;</code>
+     */
     public boolean getIsCorrected() {
       return isCorrected_;
     }
-    
+
     private void initFields() {
       isFinished_ = false;
       receiptDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDefaultInstance();
@@ -181,8 +421,9 @@ public final class InvoiceDocflowProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasReceiptDocflow()) {
         if (!getReceiptDocflow().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -210,7 +451,7 @@ public final class InvoiceDocflowProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -240,12 +481,12 @@ public final class InvoiceDocflowProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -283,113 +524,106 @@ public final class InvoiceDocflowProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflowOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow)
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -404,7 +638,7 @@ public final class InvoiceDocflowProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         isFinished_ = false;
@@ -441,20 +675,20 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow build() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow result = buildPartial();
         if (!result.isInitialized()) {
@@ -462,17 +696,7 @@ public final class InvoiceDocflowProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow buildPartial() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow result = new Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow(this);
         int from_bitField0_ = bitField0_;
@@ -529,7 +753,7 @@ public final class InvoiceDocflowProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow)other);
@@ -538,7 +762,7 @@ public final class InvoiceDocflowProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow other) {
         if (other == Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.getDefaultInstance()) return this;
         if (other.hasIsFinished()) {
@@ -568,7 +792,7 @@ public final class InvoiceDocflowProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasReceiptDocflow()) {
           if (!getReceiptDocflow().isInitialized()) {
@@ -596,27 +820,779 @@ public final class InvoiceDocflowProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isFinished_ ;
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
+      public boolean hasIsFinished() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
+      public boolean getIsFinished() {
+        return isFinished_;
+      }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
+      public Builder setIsFinished(boolean value) {
+        bitField0_ |= 0x00000001;
+        isFinished_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
+      public Builder clearIsFinished() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isFinished_ = false;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow receiptDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder> receiptDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+       */
+      public boolean hasReceiptDocflow() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow getReceiptDocflow() {
+        if (receiptDocflowBuilder_ == null) {
+          return receiptDocflow_;
+        } else {
+          return receiptDocflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+       */
+      public Builder setReceiptDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow value) {
+        if (receiptDocflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          receiptDocflow_ = value;
+          onChanged();
+        } else {
+          receiptDocflowBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+       */
+      public Builder setReceiptDocflow(
+          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder builderForValue) {
+        if (receiptDocflowBuilder_ == null) {
+          receiptDocflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          receiptDocflowBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+       */
+      public Builder mergeReceiptDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow value) {
+        if (receiptDocflowBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              receiptDocflow_ != Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDefaultInstance()) {
+            receiptDocflow_ =
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.newBuilder(receiptDocflow_).mergeFrom(value).buildPartial();
+          } else {
+            receiptDocflow_ = value;
+          }
+          onChanged();
+        } else {
+          receiptDocflowBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+       */
+      public Builder clearReceiptDocflow() {
+        if (receiptDocflowBuilder_ == null) {
+          receiptDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDefaultInstance();
+          onChanged();
+        } else {
+          receiptDocflowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder getReceiptDocflowBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getReceiptDocflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
+        if (receiptDocflowBuilder_ != null) {
+          return receiptDocflowBuilder_.getMessageOrBuilder();
+        } else {
+          return receiptDocflow_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder> 
+          getReceiptDocflowFieldBuilder() {
+        if (receiptDocflowBuilder_ == null) {
+          receiptDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder>(
+                  getReceiptDocflow(),
+                  getParentForChildren(),
+                  isClean());
+          receiptDocflow_ = null;
+        }
+        return receiptDocflowBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow confirmationDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder> confirmationDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
+      public boolean hasConfirmationDocflow() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow() {
+        if (confirmationDocflowBuilder_ == null) {
+          return confirmationDocflow_;
+        } else {
+          return confirmationDocflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
+      public Builder setConfirmationDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow value) {
+        if (confirmationDocflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          confirmationDocflow_ = value;
+          onChanged();
+        } else {
+          confirmationDocflowBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
+      public Builder setConfirmationDocflow(
+          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder builderForValue) {
+        if (confirmationDocflowBuilder_ == null) {
+          confirmationDocflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          confirmationDocflowBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
+      public Builder mergeConfirmationDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow value) {
+        if (confirmationDocflowBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              confirmationDocflow_ != Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance()) {
+            confirmationDocflow_ =
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.newBuilder(confirmationDocflow_).mergeFrom(value).buildPartial();
+          } else {
+            confirmationDocflow_ = value;
+          }
+          onChanged();
+        } else {
+          confirmationDocflowBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
+      public Builder clearConfirmationDocflow() {
+        if (confirmationDocflowBuilder_ == null) {
+          confirmationDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance();
+          onChanged();
+        } else {
+          confirmationDocflowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder getConfirmationDocflowBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getConfirmationDocflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder() {
+        if (confirmationDocflowBuilder_ != null) {
+          return confirmationDocflowBuilder_.getMessageOrBuilder();
+        } else {
+          return confirmationDocflow_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder> 
+          getConfirmationDocflowFieldBuilder() {
+        if (confirmationDocflowBuilder_ == null) {
+          confirmationDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder>(
+                  getConfirmationDocflow(),
+                  getParentForChildren(),
+                  isClean());
+          confirmationDocflow_ = null;
+        }
+        return confirmationDocflowBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow correctionRequestDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder> correctionRequestDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
+      public boolean hasCorrectionRequestDocflow() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow getCorrectionRequestDocflow() {
+        if (correctionRequestDocflowBuilder_ == null) {
+          return correctionRequestDocflow_;
+        } else {
+          return correctionRequestDocflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
+      public Builder setCorrectionRequestDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow value) {
+        if (correctionRequestDocflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          correctionRequestDocflow_ = value;
+          onChanged();
+        } else {
+          correctionRequestDocflowBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
+      public Builder setCorrectionRequestDocflow(
+          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder builderForValue) {
+        if (correctionRequestDocflowBuilder_ == null) {
+          correctionRequestDocflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          correctionRequestDocflowBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
+      public Builder mergeCorrectionRequestDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow value) {
+        if (correctionRequestDocflowBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              correctionRequestDocflow_ != Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance()) {
+            correctionRequestDocflow_ =
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.newBuilder(correctionRequestDocflow_).mergeFrom(value).buildPartial();
+          } else {
+            correctionRequestDocflow_ = value;
+          }
+          onChanged();
+        } else {
+          correctionRequestDocflowBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
+      public Builder clearCorrectionRequestDocflow() {
+        if (correctionRequestDocflowBuilder_ == null) {
+          correctionRequestDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance();
+          onChanged();
+        } else {
+          correctionRequestDocflowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder getCorrectionRequestDocflowBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getCorrectionRequestDocflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder getCorrectionRequestDocflowOrBuilder() {
+        if (correctionRequestDocflowBuilder_ != null) {
+          return correctionRequestDocflowBuilder_.getMessageOrBuilder();
+        } else {
+          return correctionRequestDocflow_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder> 
+          getCorrectionRequestDocflowFieldBuilder() {
+        if (correctionRequestDocflowBuilder_ == null) {
+          correctionRequestDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder>(
+                  getCorrectionRequestDocflow(),
+                  getParentForChildren(),
+                  isClean());
+          correctionRequestDocflow_ = null;
+        }
+        return correctionRequestDocflowBuilder_;
+      }
+
+      private Diadoc.Api.Proto.TimestampProtos.Timestamp confirmationTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> confirmationTimestampBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
+      public boolean hasConfirmationTimestamp() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
+      public Diadoc.Api.Proto.TimestampProtos.Timestamp getConfirmationTimestamp() {
+        if (confirmationTimestampBuilder_ == null) {
+          return confirmationTimestamp_;
+        } else {
+          return confirmationTimestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
+      public Builder setConfirmationTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
+        if (confirmationTimestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          confirmationTimestamp_ = value;
+          onChanged();
+        } else {
+          confirmationTimestampBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
+      public Builder setConfirmationTimestamp(
+          Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder builderForValue) {
+        if (confirmationTimestampBuilder_ == null) {
+          confirmationTimestamp_ = builderForValue.build();
+          onChanged();
+        } else {
+          confirmationTimestampBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
+      public Builder mergeConfirmationTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
+        if (confirmationTimestampBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              confirmationTimestamp_ != Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance()) {
+            confirmationTimestamp_ =
+              Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder(confirmationTimestamp_).mergeFrom(value).buildPartial();
+          } else {
+            confirmationTimestamp_ = value;
+          }
+          onChanged();
+        } else {
+          confirmationTimestampBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
+      public Builder clearConfirmationTimestamp() {
+        if (confirmationTimestampBuilder_ == null) {
+          confirmationTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
+          onChanged();
+        } else {
+          confirmationTimestampBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
+      public Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder getConfirmationTimestampBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getConfirmationTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
+      public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getConfirmationTimestampOrBuilder() {
+        if (confirmationTimestampBuilder_ != null) {
+          return confirmationTimestampBuilder_.getMessageOrBuilder();
+        } else {
+          return confirmationTimestamp_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> 
+          getConfirmationTimestampFieldBuilder() {
+        if (confirmationTimestampBuilder_ == null) {
+          confirmationTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder>(
+                  getConfirmationTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          confirmationTimestamp_ = null;
+        }
+        return confirmationTimestampBuilder_;
+      }
+
+      private boolean isAmendmentRequested_ ;
+      /**
+       * <code>optional bool IsAmendmentRequested = 6;</code>
+       */
+      public boolean hasIsAmendmentRequested() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bool IsAmendmentRequested = 6;</code>
+       */
+      public boolean getIsAmendmentRequested() {
+        return isAmendmentRequested_;
+      }
+      /**
+       * <code>optional bool IsAmendmentRequested = 6;</code>
+       */
+      public Builder setIsAmendmentRequested(boolean value) {
+        bitField0_ |= 0x00000020;
+        isAmendmentRequested_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsAmendmentRequested = 6;</code>
+       */
+      public Builder clearIsAmendmentRequested() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        isAmendmentRequested_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isRevised_ ;
+      /**
+       * <code>optional bool IsRevised = 7;</code>
+       */
+      public boolean hasIsRevised() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional bool IsRevised = 7;</code>
+       */
+      public boolean getIsRevised() {
+        return isRevised_;
+      }
+      /**
+       * <code>optional bool IsRevised = 7;</code>
+       */
+      public Builder setIsRevised(boolean value) {
+        bitField0_ |= 0x00000040;
+        isRevised_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsRevised = 7;</code>
+       */
+      public Builder clearIsRevised() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        isRevised_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isCorrected_ ;
+      /**
+       * <code>optional bool IsCorrected = 8;</code>
+       */
+      public boolean hasIsCorrected() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional bool IsCorrected = 8;</code>
+       */
+      public boolean getIsCorrected() {
+        return isCorrected_;
+      }
+      /**
+       * <code>optional bool IsCorrected = 8;</code>
+       */
+      public Builder setIsCorrected(boolean value) {
+        bitField0_ |= 0x00000080;
+        isCorrected_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsCorrected = 8;</code>
+       */
+      public Builder clearIsCorrected() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        isCorrected_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow)
+    }
+
+    static {
+      defaultInstance = new InboundInvoiceDocflow(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow)
+  }
+
+  public interface OutboundInvoiceDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
+    boolean hasIsFinished();
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
+    boolean getIsFinished();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
+    boolean hasReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
+    Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
+    Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
+    boolean hasConfirmationDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
+    Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
+    Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
+    boolean hasCorrectionRequestDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
+    Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow getCorrectionRequestDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
+    Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder getCorrectionRequestDocflowOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
+    boolean hasConfirmationTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
+    Diadoc.Api.Proto.TimestampProtos.Timestamp getConfirmationTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
+    Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getConfirmationTimestampOrBuilder();
+
+    /**
+     * <code>optional bool IsAmendmentRequested = 6;</code>
+     */
+    boolean hasIsAmendmentRequested();
+    /**
+     * <code>optional bool IsAmendmentRequested = 6;</code>
+     */
+    boolean getIsAmendmentRequested();
+
+    /**
+     * <code>optional bool IsRevised = 7;</code>
+     */
+    boolean hasIsRevised();
+    /**
+     * <code>optional bool IsRevised = 7;</code>
+     */
+    boolean getIsRevised();
+
+    /**
+     * <code>optional bool IsCorrected = 8;</code>
+     */
+    boolean hasIsCorrected();
+    /**
+     * <code>optional bool IsCorrected = 8;</code>
+     */
+    boolean getIsCorrected();
+
+    /**
+     * <code>optional bool CanDocumentBeSignedBySender = 9;</code>
+     */
+    boolean hasCanDocumentBeSignedBySender();
+    /**
+     * <code>optional bool CanDocumentBeSignedBySender = 9;</code>
+     */
+    boolean getCanDocumentBeSignedBySender();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow}
+   */
+  public static final class OutboundInvoiceDocflow extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow)
+      OutboundInvoiceDocflowOrBuilder {
+    // Use OutboundInvoiceDocflow.newBuilder() to construct.
+    private OutboundInvoiceDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private OutboundInvoiceDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final OutboundInvoiceDocflow defaultInstance;
+    public static OutboundInvoiceDocflow getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public OutboundInvoiceDocflow getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OutboundInvoiceDocflow(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -626,39 +1602,55 @@ public final class InvoiceDocflowProtos {
               break;
             }
             case 18: {
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.newBuilder();
-              if (hasReceiptDocflow()) {
-                subBuilder.mergeFrom(getReceiptDocflow());
+              Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = receiptDocflow_.toBuilder();
               }
-              input.readMessage(subBuilder, extensionRegistry);
-              setReceiptDocflow(subBuilder.buildPartial());
+              receiptDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(receiptDocflow_);
+                receiptDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
               break;
             }
             case 26: {
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.newBuilder();
-              if (hasConfirmationDocflow()) {
-                subBuilder.mergeFrom(getConfirmationDocflow());
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = confirmationDocflow_.toBuilder();
               }
-              input.readMessage(subBuilder, extensionRegistry);
-              setConfirmationDocflow(subBuilder.buildPartial());
+              confirmationDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(confirmationDocflow_);
+                confirmationDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
               break;
             }
             case 34: {
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.newBuilder();
-              if (hasCorrectionRequestDocflow()) {
-                subBuilder.mergeFrom(getCorrectionRequestDocflow());
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = correctionRequestDocflow_.toBuilder();
               }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCorrectionRequestDocflow(subBuilder.buildPartial());
+              correctionRequestDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(correctionRequestDocflow_);
+                correctionRequestDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
               break;
             }
             case 42: {
-              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder();
-              if (hasConfirmationTimestamp()) {
-                subBuilder.mergeFrom(getConfirmationTimestamp());
+              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = confirmationTimestamp_.toBuilder();
               }
-              input.readMessage(subBuilder, extensionRegistry);
-              setConfirmationTimestamp(subBuilder.buildPartial());
+              confirmationTimestamp_ = input.readMessage(Diadoc.Api.Proto.TimestampProtos.Timestamp.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(confirmationTimestamp_);
+                confirmationTimestamp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
               break;
             }
             case 48: {
@@ -676,641 +1668,210 @@ public final class InvoiceDocflowProtos {
               isCorrected_ = input.readBool();
               break;
             }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              canDocumentBeSignedBySender_ = input.readBool();
+              break;
+            }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
-      private int bitField0_;
-      
-      // optional bool IsFinished = 1;
-      private boolean isFinished_ ;
-      public boolean hasIsFinished() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public boolean getIsFinished() {
-        return isFinished_;
-      }
-      public Builder setIsFinished(boolean value) {
-        bitField0_ |= 0x00000001;
-        isFinished_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearIsFinished() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isFinished_ = false;
-        onChanged();
-        return this;
-      }
-      
-      // optional .Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow ReceiptDocflow = 2;
-      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow receiptDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder> receiptDocflowBuilder_;
-      public boolean hasReceiptDocflow() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow getReceiptDocflow() {
-        if (receiptDocflowBuilder_ == null) {
-          return receiptDocflow_;
-        } else {
-          return receiptDocflowBuilder_.getMessage();
-        }
-      }
-      public Builder setReceiptDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow value) {
-        if (receiptDocflowBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          receiptDocflow_ = value;
-          onChanged();
-        } else {
-          receiptDocflowBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      public Builder setReceiptDocflow(
-          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder builderForValue) {
-        if (receiptDocflowBuilder_ == null) {
-          receiptDocflow_ = builderForValue.build();
-          onChanged();
-        } else {
-          receiptDocflowBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      public Builder mergeReceiptDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow value) {
-        if (receiptDocflowBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              receiptDocflow_ != Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDefaultInstance()) {
-            receiptDocflow_ =
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.newBuilder(receiptDocflow_).mergeFrom(value).buildPartial();
-          } else {
-            receiptDocflow_ = value;
-          }
-          onChanged();
-        } else {
-          receiptDocflowBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      public Builder clearReceiptDocflow() {
-        if (receiptDocflowBuilder_ == null) {
-          receiptDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDefaultInstance();
-          onChanged();
-        } else {
-          receiptDocflowBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder getReceiptDocflowBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getReceiptDocflowFieldBuilder().getBuilder();
-      }
-      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
-        if (receiptDocflowBuilder_ != null) {
-          return receiptDocflowBuilder_.getMessageOrBuilder();
-        } else {
-          return receiptDocflow_;
-        }
-      }
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder> 
-          getReceiptDocflowFieldBuilder() {
-        if (receiptDocflowBuilder_ == null) {
-          receiptDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder>(
-                  receiptDocflow_,
-                  getParentForChildren(),
-                  isClean());
-          receiptDocflow_ = null;
-        }
-        return receiptDocflowBuilder_;
-      }
-      
-      // optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;
-      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow confirmationDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder> confirmationDocflowBuilder_;
-      public boolean hasConfirmationDocflow() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow() {
-        if (confirmationDocflowBuilder_ == null) {
-          return confirmationDocflow_;
-        } else {
-          return confirmationDocflowBuilder_.getMessage();
-        }
-      }
-      public Builder setConfirmationDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow value) {
-        if (confirmationDocflowBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          confirmationDocflow_ = value;
-          onChanged();
-        } else {
-          confirmationDocflowBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      public Builder setConfirmationDocflow(
-          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder builderForValue) {
-        if (confirmationDocflowBuilder_ == null) {
-          confirmationDocflow_ = builderForValue.build();
-          onChanged();
-        } else {
-          confirmationDocflowBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      public Builder mergeConfirmationDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow value) {
-        if (confirmationDocflowBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              confirmationDocflow_ != Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance()) {
-            confirmationDocflow_ =
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.newBuilder(confirmationDocflow_).mergeFrom(value).buildPartial();
-          } else {
-            confirmationDocflow_ = value;
-          }
-          onChanged();
-        } else {
-          confirmationDocflowBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      public Builder clearConfirmationDocflow() {
-        if (confirmationDocflowBuilder_ == null) {
-          confirmationDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance();
-          onChanged();
-        } else {
-          confirmationDocflowBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder getConfirmationDocflowBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getConfirmationDocflowFieldBuilder().getBuilder();
-      }
-      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder() {
-        if (confirmationDocflowBuilder_ != null) {
-          return confirmationDocflowBuilder_.getMessageOrBuilder();
-        } else {
-          return confirmationDocflow_;
-        }
-      }
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder> 
-          getConfirmationDocflowFieldBuilder() {
-        if (confirmationDocflowBuilder_ == null) {
-          confirmationDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder>(
-                  confirmationDocflow_,
-                  getParentForChildren(),
-                  isClean());
-          confirmationDocflow_ = null;
-        }
-        return confirmationDocflowBuilder_;
-      }
-      
-      // optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;
-      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow correctionRequestDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder> correctionRequestDocflowBuilder_;
-      public boolean hasCorrectionRequestDocflow() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow getCorrectionRequestDocflow() {
-        if (correctionRequestDocflowBuilder_ == null) {
-          return correctionRequestDocflow_;
-        } else {
-          return correctionRequestDocflowBuilder_.getMessage();
-        }
-      }
-      public Builder setCorrectionRequestDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow value) {
-        if (correctionRequestDocflowBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          correctionRequestDocflow_ = value;
-          onChanged();
-        } else {
-          correctionRequestDocflowBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        return this;
-      }
-      public Builder setCorrectionRequestDocflow(
-          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder builderForValue) {
-        if (correctionRequestDocflowBuilder_ == null) {
-          correctionRequestDocflow_ = builderForValue.build();
-          onChanged();
-        } else {
-          correctionRequestDocflowBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        return this;
-      }
-      public Builder mergeCorrectionRequestDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow value) {
-        if (correctionRequestDocflowBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008) &&
-              correctionRequestDocflow_ != Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance()) {
-            correctionRequestDocflow_ =
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.newBuilder(correctionRequestDocflow_).mergeFrom(value).buildPartial();
-          } else {
-            correctionRequestDocflow_ = value;
-          }
-          onChanged();
-        } else {
-          correctionRequestDocflowBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000008;
-        return this;
-      }
-      public Builder clearCorrectionRequestDocflow() {
-        if (correctionRequestDocflowBuilder_ == null) {
-          correctionRequestDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance();
-          onChanged();
-        } else {
-          correctionRequestDocflowBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000008);
-        return this;
-      }
-      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder getCorrectionRequestDocflowBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getCorrectionRequestDocflowFieldBuilder().getBuilder();
-      }
-      public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder getCorrectionRequestDocflowOrBuilder() {
-        if (correctionRequestDocflowBuilder_ != null) {
-          return correctionRequestDocflowBuilder_.getMessageOrBuilder();
-        } else {
-          return correctionRequestDocflow_;
-        }
-      }
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder> 
-          getCorrectionRequestDocflowFieldBuilder() {
-        if (correctionRequestDocflowBuilder_ == null) {
-          correctionRequestDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder>(
-                  correctionRequestDocflow_,
-                  getParentForChildren(),
-                  isClean());
-          correctionRequestDocflow_ = null;
-        }
-        return correctionRequestDocflowBuilder_;
-      }
-      
-      // optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;
-      private Diadoc.Api.Proto.TimestampProtos.Timestamp confirmationTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> confirmationTimestampBuilder_;
-      public boolean hasConfirmationTimestamp() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      public Diadoc.Api.Proto.TimestampProtos.Timestamp getConfirmationTimestamp() {
-        if (confirmationTimestampBuilder_ == null) {
-          return confirmationTimestamp_;
-        } else {
-          return confirmationTimestampBuilder_.getMessage();
-        }
-      }
-      public Builder setConfirmationTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
-        if (confirmationTimestampBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          confirmationTimestamp_ = value;
-          onChanged();
-        } else {
-          confirmationTimestampBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000010;
-        return this;
-      }
-      public Builder setConfirmationTimestamp(
-          Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder builderForValue) {
-        if (confirmationTimestampBuilder_ == null) {
-          confirmationTimestamp_ = builderForValue.build();
-          onChanged();
-        } else {
-          confirmationTimestampBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000010;
-        return this;
-      }
-      public Builder mergeConfirmationTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
-        if (confirmationTimestampBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010) &&
-              confirmationTimestamp_ != Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance()) {
-            confirmationTimestamp_ =
-              Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder(confirmationTimestamp_).mergeFrom(value).buildPartial();
-          } else {
-            confirmationTimestamp_ = value;
-          }
-          onChanged();
-        } else {
-          confirmationTimestampBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000010;
-        return this;
-      }
-      public Builder clearConfirmationTimestamp() {
-        if (confirmationTimestampBuilder_ == null) {
-          confirmationTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
-          onChanged();
-        } else {
-          confirmationTimestampBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000010);
-        return this;
-      }
-      public Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder getConfirmationTimestampBuilder() {
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return getConfirmationTimestampFieldBuilder().getBuilder();
-      }
-      public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getConfirmationTimestampOrBuilder() {
-        if (confirmationTimestampBuilder_ != null) {
-          return confirmationTimestampBuilder_.getMessageOrBuilder();
-        } else {
-          return confirmationTimestamp_;
-        }
-      }
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> 
-          getConfirmationTimestampFieldBuilder() {
-        if (confirmationTimestampBuilder_ == null) {
-          confirmationTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder>(
-                  confirmationTimestamp_,
-                  getParentForChildren(),
-                  isClean());
-          confirmationTimestamp_ = null;
-        }
-        return confirmationTimestampBuilder_;
-      }
-      
-      // optional bool IsAmendmentRequested = 6;
-      private boolean isAmendmentRequested_ ;
-      public boolean hasIsAmendmentRequested() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      public boolean getIsAmendmentRequested() {
-        return isAmendmentRequested_;
-      }
-      public Builder setIsAmendmentRequested(boolean value) {
-        bitField0_ |= 0x00000020;
-        isAmendmentRequested_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearIsAmendmentRequested() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        isAmendmentRequested_ = false;
-        onChanged();
-        return this;
-      }
-      
-      // optional bool IsRevised = 7;
-      private boolean isRevised_ ;
-      public boolean hasIsRevised() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      public boolean getIsRevised() {
-        return isRevised_;
-      }
-      public Builder setIsRevised(boolean value) {
-        bitField0_ |= 0x00000040;
-        isRevised_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearIsRevised() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        isRevised_ = false;
-        onChanged();
-        return this;
-      }
-      
-      // optional bool IsCorrected = 8;
-      private boolean isCorrected_ ;
-      public boolean hasIsCorrected() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
-      }
-      public boolean getIsCorrected() {
-        return isCorrected_;
-      }
-      public Builder setIsCorrected(boolean value) {
-        bitField0_ |= 0x00000080;
-        isCorrected_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearIsCorrected() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        isCorrected_ = false;
-        onChanged();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow)
     }
-    
-    static {
-      defaultInstance = new InboundInvoiceDocflow(true);
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow)
-  }
-  
-  public interface OutboundInvoiceDocflowOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional bool IsFinished = 1;
-    boolean hasIsFinished();
-    boolean getIsFinished();
-    
-    // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;
-    boolean hasReceiptDocflow();
-    Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow();
-    Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;
-    boolean hasConfirmationDocflow();
-    Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow();
-    Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;
-    boolean hasCorrectionRequestDocflow();
-    Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow getCorrectionRequestDocflow();
-    Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder getCorrectionRequestDocflowOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;
-    boolean hasConfirmationTimestamp();
-    Diadoc.Api.Proto.TimestampProtos.Timestamp getConfirmationTimestamp();
-    Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getConfirmationTimestampOrBuilder();
-    
-    // optional bool IsAmendmentRequested = 6;
-    boolean hasIsAmendmentRequested();
-    boolean getIsAmendmentRequested();
-    
-    // optional bool IsRevised = 7;
-    boolean hasIsRevised();
-    boolean getIsRevised();
-    
-    // optional bool IsCorrected = 8;
-    boolean hasIsCorrected();
-    boolean getIsCorrected();
-    
-    // optional bool CanDocumentBeSignedBySender = 9;
-    boolean hasCanDocumentBeSignedBySender();
-    boolean getCanDocumentBeSignedBySender();
-  }
-  public static final class OutboundInvoiceDocflow extends
-      com.google.protobuf.GeneratedMessage
-      implements OutboundInvoiceDocflowOrBuilder {
-    // Use OutboundInvoiceDocflow.newBuilder() to construct.
-    private OutboundInvoiceDocflow(Builder builder) {
-      super(builder);
-    }
-    private OutboundInvoiceDocflow(boolean noInit) {}
-    
-    private static final OutboundInvoiceDocflow defaultInstance;
-    public static OutboundInvoiceDocflow getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public OutboundInvoiceDocflow getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<OutboundInvoiceDocflow> PARSER =
+        new com.google.protobuf.AbstractParser<OutboundInvoiceDocflow>() {
+      public OutboundInvoiceDocflow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OutboundInvoiceDocflow(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OutboundInvoiceDocflow> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional bool IsFinished = 1;
     public static final int ISFINISHED_FIELD_NUMBER = 1;
     private boolean isFinished_;
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean hasIsFinished() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean getIsFinished() {
       return isFinished_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;
+
     public static final int RECEIPTDOCFLOW_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow receiptDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     public boolean hasReceiptDocflow() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow() {
       return receiptDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
       return receiptDocflow_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;
+
     public static final int CONFIRMATIONDOCFLOW_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow confirmationDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     public boolean hasConfirmationDocflow() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow() {
       return confirmationDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder() {
       return confirmationDocflow_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;
+
     public static final int CORRECTIONREQUESTDOCFLOW_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow correctionRequestDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
     public boolean hasCorrectionRequestDocflow() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow getCorrectionRequestDocflow() {
       return correctionRequestDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder getCorrectionRequestDocflowOrBuilder() {
       return correctionRequestDocflow_;
     }
-    
-    // optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;
+
     public static final int CONFIRMATIONTIMESTAMP_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.TimestampProtos.Timestamp confirmationTimestamp_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
     public boolean hasConfirmationTimestamp() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.Timestamp getConfirmationTimestamp() {
       return confirmationTimestamp_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getConfirmationTimestampOrBuilder() {
       return confirmationTimestamp_;
     }
-    
-    // optional bool IsAmendmentRequested = 6;
+
     public static final int ISAMENDMENTREQUESTED_FIELD_NUMBER = 6;
     private boolean isAmendmentRequested_;
+    /**
+     * <code>optional bool IsAmendmentRequested = 6;</code>
+     */
     public boolean hasIsAmendmentRequested() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>optional bool IsAmendmentRequested = 6;</code>
+     */
     public boolean getIsAmendmentRequested() {
       return isAmendmentRequested_;
     }
-    
-    // optional bool IsRevised = 7;
+
     public static final int ISREVISED_FIELD_NUMBER = 7;
     private boolean isRevised_;
+    /**
+     * <code>optional bool IsRevised = 7;</code>
+     */
     public boolean hasIsRevised() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
+    /**
+     * <code>optional bool IsRevised = 7;</code>
+     */
     public boolean getIsRevised() {
       return isRevised_;
     }
-    
-    // optional bool IsCorrected = 8;
+
     public static final int ISCORRECTED_FIELD_NUMBER = 8;
     private boolean isCorrected_;
+    /**
+     * <code>optional bool IsCorrected = 8;</code>
+     */
     public boolean hasIsCorrected() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
+    /**
+     * <code>optional bool IsCorrected = 8;</code>
+     */
     public boolean getIsCorrected() {
       return isCorrected_;
     }
-    
-    // optional bool CanDocumentBeSignedBySender = 9;
+
     public static final int CANDOCUMENTBESIGNEDBYSENDER_FIELD_NUMBER = 9;
     private boolean canDocumentBeSignedBySender_;
+    /**
+     * <code>optional bool CanDocumentBeSignedBySender = 9;</code>
+     */
     public boolean hasCanDocumentBeSignedBySender() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
+    /**
+     * <code>optional bool CanDocumentBeSignedBySender = 9;</code>
+     */
     public boolean getCanDocumentBeSignedBySender() {
       return canDocumentBeSignedBySender_;
     }
-    
+
     private void initFields() {
       isFinished_ = false;
       receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
@@ -1325,8 +1886,9 @@ public final class InvoiceDocflowProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasReceiptDocflow()) {
         if (!getReceiptDocflow().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1354,7 +1916,7 @@ public final class InvoiceDocflowProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1387,12 +1949,12 @@ public final class InvoiceDocflowProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1434,113 +1996,106 @@ public final class InvoiceDocflowProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflowOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow)
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1555,7 +2110,7 @@ public final class InvoiceDocflowProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         isFinished_ = false;
@@ -1594,20 +2149,20 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow build() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow result = buildPartial();
         if (!result.isInitialized()) {
@@ -1615,17 +2170,7 @@ public final class InvoiceDocflowProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow buildPartial() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow result = new Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow(this);
         int from_bitField0_ = bitField0_;
@@ -1686,7 +2231,7 @@ public final class InvoiceDocflowProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow)other);
@@ -1695,7 +2240,7 @@ public final class InvoiceDocflowProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow other) {
         if (other == Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.getDefaultInstance()) return this;
         if (other.hasIsFinished()) {
@@ -1728,7 +2273,7 @@ public final class InvoiceDocflowProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasReceiptDocflow()) {
           if (!getReceiptDocflow().isInitialized()) {
@@ -1756,125 +2301,70 @@ public final class InvoiceDocflowProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.newBuilder();
-              if (hasReceiptDocflow()) {
-                subBuilder.mergeFrom(getReceiptDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setReceiptDocflow(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.newBuilder();
-              if (hasConfirmationDocflow()) {
-                subBuilder.mergeFrom(getConfirmationDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setConfirmationDocflow(subBuilder.buildPartial());
-              break;
-            }
-            case 34: {
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.newBuilder();
-              if (hasCorrectionRequestDocflow()) {
-                subBuilder.mergeFrom(getCorrectionRequestDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCorrectionRequestDocflow(subBuilder.buildPartial());
-              break;
-            }
-            case 42: {
-              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder();
-              if (hasConfirmationTimestamp()) {
-                subBuilder.mergeFrom(getConfirmationTimestamp());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setConfirmationTimestamp(subBuilder.buildPartial());
-              break;
-            }
-            case 48: {
-              bitField0_ |= 0x00000020;
-              isAmendmentRequested_ = input.readBool();
-              break;
-            }
-            case 56: {
-              bitField0_ |= 0x00000040;
-              isRevised_ = input.readBool();
-              break;
-            }
-            case 64: {
-              bitField0_ |= 0x00000080;
-              isCorrected_ = input.readBool();
-              break;
-            }
-            case 72: {
-              bitField0_ |= 0x00000100;
-              canDocumentBeSignedBySender_ = input.readBool();
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional bool IsFinished = 1;
+
       private boolean isFinished_ ;
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean hasIsFinished() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean getIsFinished() {
         return isFinished_;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder setIsFinished(boolean value) {
         bitField0_ |= 0x00000001;
         isFinished_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder clearIsFinished() {
         bitField0_ = (bitField0_ & ~0x00000001);
         isFinished_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;
+
       private Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder> receiptDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public boolean hasReceiptDocflow() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow() {
         if (receiptDocflowBuilder_ == null) {
           return receiptDocflow_;
@@ -1882,6 +2372,9 @@ public final class InvoiceDocflowProtos {
           return receiptDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Builder setReceiptDocflow(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow value) {
         if (receiptDocflowBuilder_ == null) {
           if (value == null) {
@@ -1895,6 +2388,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Builder setReceiptDocflow(
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder builderForValue) {
         if (receiptDocflowBuilder_ == null) {
@@ -1906,6 +2402,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Builder mergeReceiptDocflow(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow value) {
         if (receiptDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -1922,6 +2421,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Builder clearReceiptDocflow() {
         if (receiptDocflowBuilder_ == null) {
           receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
@@ -1932,11 +2434,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder getReceiptDocflowBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getReceiptDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
         if (receiptDocflowBuilder_ != null) {
           return receiptDocflowBuilder_.getMessageOrBuilder();
@@ -1944,27 +2452,35 @@ public final class InvoiceDocflowProtos {
           return receiptDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder> 
           getReceiptDocflowFieldBuilder() {
         if (receiptDocflowBuilder_ == null) {
           receiptDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder>(
-                  receiptDocflow_,
+                  getReceiptDocflow(),
                   getParentForChildren(),
                   isClean());
           receiptDocflow_ = null;
         }
         return receiptDocflowBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;
+
       private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow confirmationDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder> confirmationDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public boolean hasConfirmationDocflow() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow() {
         if (confirmationDocflowBuilder_ == null) {
           return confirmationDocflow_;
@@ -1972,6 +2488,9 @@ public final class InvoiceDocflowProtos {
           return confirmationDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Builder setConfirmationDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow value) {
         if (confirmationDocflowBuilder_ == null) {
           if (value == null) {
@@ -1985,6 +2504,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Builder setConfirmationDocflow(
           Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder builderForValue) {
         if (confirmationDocflowBuilder_ == null) {
@@ -1996,6 +2518,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Builder mergeConfirmationDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow value) {
         if (confirmationDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -2012,6 +2537,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Builder clearConfirmationDocflow() {
         if (confirmationDocflowBuilder_ == null) {
           confirmationDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance();
@@ -2022,11 +2550,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder getConfirmationDocflowBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getConfirmationDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder() {
         if (confirmationDocflowBuilder_ != null) {
           return confirmationDocflowBuilder_.getMessageOrBuilder();
@@ -2034,27 +2568,35 @@ public final class InvoiceDocflowProtos {
           return confirmationDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder> 
           getConfirmationDocflowFieldBuilder() {
         if (confirmationDocflowBuilder_ == null) {
           confirmationDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder>(
-                  confirmationDocflow_,
+                  getConfirmationDocflow(),
                   getParentForChildren(),
                   isClean());
           confirmationDocflow_ = null;
         }
         return confirmationDocflowBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;
+
       private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow correctionRequestDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder> correctionRequestDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
       public boolean hasCorrectionRequestDocflow() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow getCorrectionRequestDocflow() {
         if (correctionRequestDocflowBuilder_ == null) {
           return correctionRequestDocflow_;
@@ -2062,6 +2604,9 @@ public final class InvoiceDocflowProtos {
           return correctionRequestDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
       public Builder setCorrectionRequestDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow value) {
         if (correctionRequestDocflowBuilder_ == null) {
           if (value == null) {
@@ -2075,6 +2620,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
       public Builder setCorrectionRequestDocflow(
           Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder builderForValue) {
         if (correctionRequestDocflowBuilder_ == null) {
@@ -2086,6 +2634,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
       public Builder mergeCorrectionRequestDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow value) {
         if (correctionRequestDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
@@ -2102,6 +2653,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
       public Builder clearCorrectionRequestDocflow() {
         if (correctionRequestDocflowBuilder_ == null) {
           correctionRequestDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance();
@@ -2112,11 +2666,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder getCorrectionRequestDocflowBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getCorrectionRequestDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder getCorrectionRequestDocflowOrBuilder() {
         if (correctionRequestDocflowBuilder_ != null) {
           return correctionRequestDocflowBuilder_.getMessageOrBuilder();
@@ -2124,27 +2684,35 @@ public final class InvoiceDocflowProtos {
           return correctionRequestDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow CorrectionRequestDocflow = 4;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder> 
           getCorrectionRequestDocflowFieldBuilder() {
         if (correctionRequestDocflowBuilder_ == null) {
           correctionRequestDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder>(
-                  correctionRequestDocflow_,
+                  getCorrectionRequestDocflow(),
                   getParentForChildren(),
                   isClean());
           correctionRequestDocflow_ = null;
         }
         return correctionRequestDocflowBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;
+
       private Diadoc.Api.Proto.TimestampProtos.Timestamp confirmationTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> confirmationTimestampBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
       public boolean hasConfirmationTimestamp() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp getConfirmationTimestamp() {
         if (confirmationTimestampBuilder_ == null) {
           return confirmationTimestamp_;
@@ -2152,6 +2720,9 @@ public final class InvoiceDocflowProtos {
           return confirmationTimestampBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
       public Builder setConfirmationTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (confirmationTimestampBuilder_ == null) {
           if (value == null) {
@@ -2165,6 +2736,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
       public Builder setConfirmationTimestamp(
           Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder builderForValue) {
         if (confirmationTimestampBuilder_ == null) {
@@ -2176,6 +2750,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
       public Builder mergeConfirmationTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (confirmationTimestampBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010) &&
@@ -2192,6 +2769,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
       public Builder clearConfirmationTimestamp() {
         if (confirmationTimestampBuilder_ == null) {
           confirmationTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
@@ -2202,11 +2782,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder getConfirmationTimestampBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
         return getConfirmationTimestampFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getConfirmationTimestampOrBuilder() {
         if (confirmationTimestampBuilder_ != null) {
           return confirmationTimestampBuilder_.getMessageOrBuilder();
@@ -2214,197 +2800,381 @@ public final class InvoiceDocflowProtos {
           return confirmationTimestamp_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp ConfirmationTimestamp = 5;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> 
           getConfirmationTimestampFieldBuilder() {
         if (confirmationTimestampBuilder_ == null) {
           confirmationTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder>(
-                  confirmationTimestamp_,
+                  getConfirmationTimestamp(),
                   getParentForChildren(),
                   isClean());
           confirmationTimestamp_ = null;
         }
         return confirmationTimestampBuilder_;
       }
-      
-      // optional bool IsAmendmentRequested = 6;
+
       private boolean isAmendmentRequested_ ;
+      /**
+       * <code>optional bool IsAmendmentRequested = 6;</code>
+       */
       public boolean hasIsAmendmentRequested() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
+      /**
+       * <code>optional bool IsAmendmentRequested = 6;</code>
+       */
       public boolean getIsAmendmentRequested() {
         return isAmendmentRequested_;
       }
+      /**
+       * <code>optional bool IsAmendmentRequested = 6;</code>
+       */
       public Builder setIsAmendmentRequested(boolean value) {
         bitField0_ |= 0x00000020;
         isAmendmentRequested_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsAmendmentRequested = 6;</code>
+       */
       public Builder clearIsAmendmentRequested() {
         bitField0_ = (bitField0_ & ~0x00000020);
         isAmendmentRequested_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool IsRevised = 7;
+
       private boolean isRevised_ ;
+      /**
+       * <code>optional bool IsRevised = 7;</code>
+       */
       public boolean hasIsRevised() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
+      /**
+       * <code>optional bool IsRevised = 7;</code>
+       */
       public boolean getIsRevised() {
         return isRevised_;
       }
+      /**
+       * <code>optional bool IsRevised = 7;</code>
+       */
       public Builder setIsRevised(boolean value) {
         bitField0_ |= 0x00000040;
         isRevised_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsRevised = 7;</code>
+       */
       public Builder clearIsRevised() {
         bitField0_ = (bitField0_ & ~0x00000040);
         isRevised_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool IsCorrected = 8;
+
       private boolean isCorrected_ ;
+      /**
+       * <code>optional bool IsCorrected = 8;</code>
+       */
       public boolean hasIsCorrected() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
+      /**
+       * <code>optional bool IsCorrected = 8;</code>
+       */
       public boolean getIsCorrected() {
         return isCorrected_;
       }
+      /**
+       * <code>optional bool IsCorrected = 8;</code>
+       */
       public Builder setIsCorrected(boolean value) {
         bitField0_ |= 0x00000080;
         isCorrected_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsCorrected = 8;</code>
+       */
       public Builder clearIsCorrected() {
         bitField0_ = (bitField0_ & ~0x00000080);
         isCorrected_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool CanDocumentBeSignedBySender = 9;
+
       private boolean canDocumentBeSignedBySender_ ;
+      /**
+       * <code>optional bool CanDocumentBeSignedBySender = 9;</code>
+       */
       public boolean hasCanDocumentBeSignedBySender() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
+      /**
+       * <code>optional bool CanDocumentBeSignedBySender = 9;</code>
+       */
       public boolean getCanDocumentBeSignedBySender() {
         return canDocumentBeSignedBySender_;
       }
+      /**
+       * <code>optional bool CanDocumentBeSignedBySender = 9;</code>
+       */
       public Builder setCanDocumentBeSignedBySender(boolean value) {
         bitField0_ |= 0x00000100;
         canDocumentBeSignedBySender_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool CanDocumentBeSignedBySender = 9;</code>
+       */
       public Builder clearCanDocumentBeSignedBySender() {
         bitField0_ = (bitField0_ & ~0x00000100);
         canDocumentBeSignedBySender_ = false;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow)
     }
-    
+
     static {
       defaultInstance = new OutboundInvoiceDocflow(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow)
   }
-  
-  public interface InvoiceConfirmationDocflowOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional bool IsFinished = 1;
+
+  public interface InvoiceConfirmationDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean hasIsFinished();
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean getIsFinished();
-    
-    // optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+     */
     boolean hasConfirmationAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getConfirmationAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getConfirmationAttachmentOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     boolean hasReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow}
+   */
   public static final class InvoiceConfirmationDocflow extends
-      com.google.protobuf.GeneratedMessage
-      implements InvoiceConfirmationDocflowOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow)
+      InvoiceConfirmationDocflowOrBuilder {
     // Use InvoiceConfirmationDocflow.newBuilder() to construct.
-    private InvoiceConfirmationDocflow(Builder builder) {
+    private InvoiceConfirmationDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InvoiceConfirmationDocflow(boolean noInit) {}
-    
+    private InvoiceConfirmationDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InvoiceConfirmationDocflow defaultInstance;
     public static InvoiceConfirmationDocflow getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InvoiceConfirmationDocflow getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InvoiceConfirmationDocflow(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = confirmationAttachment_.toBuilder();
+              }
+              confirmationAttachment_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(confirmationAttachment_);
+                confirmationAttachment_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = receiptDocflow_.toBuilder();
+              }
+              receiptDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(receiptDocflow_);
+                receiptDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InvoiceConfirmationDocflow> PARSER =
+        new com.google.protobuf.AbstractParser<InvoiceConfirmationDocflow>() {
+      public InvoiceConfirmationDocflow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InvoiceConfirmationDocflow(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InvoiceConfirmationDocflow> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional bool IsFinished = 1;
     public static final int ISFINISHED_FIELD_NUMBER = 1;
     private boolean isFinished_;
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean hasIsFinished() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean getIsFinished() {
       return isFinished_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;
+
     public static final int CONFIRMATIONATTACHMENT_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment confirmationAttachment_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+     */
     public boolean hasConfirmationAttachment() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getConfirmationAttachment() {
       return confirmationAttachment_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getConfirmationAttachmentOrBuilder() {
       return confirmationAttachment_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;
+
     public static final int RECEIPTDOCFLOW_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow receiptDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     public boolean hasReceiptDocflow() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow() {
       return receiptDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
       return receiptDocflow_;
     }
-    
+
     private void initFields() {
       isFinished_ = false;
       confirmationAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -2413,8 +3183,9 @@ public final class InvoiceDocflowProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasConfirmationAttachment()) {
         if (!getConfirmationAttachment().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -2430,7 +3201,7 @@ public final class InvoiceDocflowProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2445,12 +3216,12 @@ public final class InvoiceDocflowProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2468,113 +3239,106 @@ public final class InvoiceDocflowProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow)
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2587,7 +3351,7 @@ public final class InvoiceDocflowProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         isFinished_ = false;
@@ -2606,20 +3370,20 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow build() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow result = buildPartial();
         if (!result.isInitialized()) {
@@ -2627,17 +3391,7 @@ public final class InvoiceDocflowProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow buildPartial() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow result = new Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow(this);
         int from_bitField0_ = bitField0_;
@@ -2666,7 +3420,7 @@ public final class InvoiceDocflowProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow)other);
@@ -2675,7 +3429,7 @@ public final class InvoiceDocflowProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow other) {
         if (other == Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance()) return this;
         if (other.hasIsFinished()) {
@@ -2690,7 +3444,7 @@ public final class InvoiceDocflowProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasConfirmationAttachment()) {
           if (!getConfirmationAttachment().isInitialized()) {
@@ -2706,87 +3460,70 @@ public final class InvoiceDocflowProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder subBuilder = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.newBuilder();
-              if (hasConfirmationAttachment()) {
-                subBuilder.mergeFrom(getConfirmationAttachment());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setConfirmationAttachment(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.newBuilder();
-              if (hasReceiptDocflow()) {
-                subBuilder.mergeFrom(getReceiptDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setReceiptDocflow(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional bool IsFinished = 1;
+
       private boolean isFinished_ ;
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean hasIsFinished() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean getIsFinished() {
         return isFinished_;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder setIsFinished(boolean value) {
         bitField0_ |= 0x00000001;
         isFinished_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder clearIsFinished() {
         bitField0_ = (bitField0_ & ~0x00000001);
         isFinished_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;
+
       private Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment confirmationAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder> confirmationAttachmentBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+       */
       public boolean hasConfirmationAttachment() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getConfirmationAttachment() {
         if (confirmationAttachmentBuilder_ == null) {
           return confirmationAttachment_;
@@ -2794,6 +3531,9 @@ public final class InvoiceDocflowProtos {
           return confirmationAttachmentBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+       */
       public Builder setConfirmationAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment value) {
         if (confirmationAttachmentBuilder_ == null) {
           if (value == null) {
@@ -2807,6 +3547,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+       */
       public Builder setConfirmationAttachment(
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder builderForValue) {
         if (confirmationAttachmentBuilder_ == null) {
@@ -2818,6 +3561,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+       */
       public Builder mergeConfirmationAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment value) {
         if (confirmationAttachmentBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -2834,6 +3580,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+       */
       public Builder clearConfirmationAttachment() {
         if (confirmationAttachmentBuilder_ == null) {
           confirmationAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -2844,11 +3593,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder getConfirmationAttachmentBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getConfirmationAttachmentFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getConfirmationAttachmentOrBuilder() {
         if (confirmationAttachmentBuilder_ != null) {
           return confirmationAttachmentBuilder_.getMessageOrBuilder();
@@ -2856,27 +3611,35 @@ public final class InvoiceDocflowProtos {
           return confirmationAttachment_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ConfirmationAttachment = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder> 
           getConfirmationAttachmentFieldBuilder() {
         if (confirmationAttachmentBuilder_ == null) {
           confirmationAttachmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder>(
-                  confirmationAttachment_,
+                  getConfirmationAttachment(),
                   getParentForChildren(),
                   isClean());
           confirmationAttachment_ = null;
         }
         return confirmationAttachmentBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;
+
       private Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder> receiptDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public boolean hasReceiptDocflow() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow() {
         if (receiptDocflowBuilder_ == null) {
           return receiptDocflow_;
@@ -2884,6 +3647,9 @@ public final class InvoiceDocflowProtos {
           return receiptDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Builder setReceiptDocflow(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow value) {
         if (receiptDocflowBuilder_ == null) {
           if (value == null) {
@@ -2897,6 +3663,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Builder setReceiptDocflow(
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder builderForValue) {
         if (receiptDocflowBuilder_ == null) {
@@ -2908,6 +3677,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Builder mergeReceiptDocflow(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow value) {
         if (receiptDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -2924,6 +3696,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Builder clearReceiptDocflow() {
         if (receiptDocflowBuilder_ == null) {
           receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
@@ -2934,11 +3709,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder getReceiptDocflowBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getReceiptDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
         if (receiptDocflowBuilder_ != null) {
           return receiptDocflowBuilder_.getMessageOrBuilder();
@@ -2946,113 +3727,253 @@ public final class InvoiceDocflowProtos {
           return receiptDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder> 
           getReceiptDocflowFieldBuilder() {
         if (receiptDocflowBuilder_ == null) {
           receiptDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder>(
-                  receiptDocflow_,
+                  getReceiptDocflow(),
                   getParentForChildren(),
                   isClean());
           receiptDocflow_ = null;
         }
         return receiptDocflowBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow)
     }
-    
+
     static {
       defaultInstance = new InvoiceConfirmationDocflow(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow)
   }
-  
-  public interface InboundInvoiceReceiptDocflowOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional bool IsFinished = 1;
+
+  public interface InboundInvoiceReceiptDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean hasIsFinished();
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean getIsFinished();
-    
-    // optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+     */
     boolean hasReceiptAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getReceiptAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getReceiptAttachmentOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     boolean hasConfirmationDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow}
+   */
   public static final class InboundInvoiceReceiptDocflow extends
-      com.google.protobuf.GeneratedMessage
-      implements InboundInvoiceReceiptDocflowOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow)
+      InboundInvoiceReceiptDocflowOrBuilder {
     // Use InboundInvoiceReceiptDocflow.newBuilder() to construct.
-    private InboundInvoiceReceiptDocflow(Builder builder) {
+    private InboundInvoiceReceiptDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InboundInvoiceReceiptDocflow(boolean noInit) {}
-    
+    private InboundInvoiceReceiptDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InboundInvoiceReceiptDocflow defaultInstance;
     public static InboundInvoiceReceiptDocflow getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InboundInvoiceReceiptDocflow getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InboundInvoiceReceiptDocflow(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = receiptAttachment_.toBuilder();
+              }
+              receiptAttachment_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(receiptAttachment_);
+                receiptAttachment_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = confirmationDocflow_.toBuilder();
+              }
+              confirmationDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(confirmationDocflow_);
+                confirmationDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InboundInvoiceReceiptDocflow> PARSER =
+        new com.google.protobuf.AbstractParser<InboundInvoiceReceiptDocflow>() {
+      public InboundInvoiceReceiptDocflow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InboundInvoiceReceiptDocflow(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InboundInvoiceReceiptDocflow> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional bool IsFinished = 1;
     public static final int ISFINISHED_FIELD_NUMBER = 1;
     private boolean isFinished_;
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean hasIsFinished() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean getIsFinished() {
       return isFinished_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;
+
     public static final int RECEIPTATTACHMENT_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment receiptAttachment_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+     */
     public boolean hasReceiptAttachment() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getReceiptAttachment() {
       return receiptAttachment_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getReceiptAttachmentOrBuilder() {
       return receiptAttachment_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;
+
     public static final int CONFIRMATIONDOCFLOW_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow confirmationDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     public boolean hasConfirmationDocflow() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow() {
       return confirmationDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder() {
       return confirmationDocflow_;
     }
-    
+
     private void initFields() {
       isFinished_ = false;
       receiptAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -3061,8 +3982,9 @@ public final class InvoiceDocflowProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasReceiptAttachment()) {
         if (!getReceiptAttachment().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -3078,7 +4000,7 @@ public final class InvoiceDocflowProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -3093,12 +4015,12 @@ public final class InvoiceDocflowProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -3116,113 +4038,106 @@ public final class InvoiceDocflowProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow)
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3235,7 +4150,7 @@ public final class InvoiceDocflowProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         isFinished_ = false;
@@ -3254,20 +4169,20 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow build() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow result = buildPartial();
         if (!result.isInitialized()) {
@@ -3275,17 +4190,7 @@ public final class InvoiceDocflowProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow buildPartial() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow result = new Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow(this);
         int from_bitField0_ = bitField0_;
@@ -3314,7 +4219,7 @@ public final class InvoiceDocflowProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow)other);
@@ -3323,7 +4228,7 @@ public final class InvoiceDocflowProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow other) {
         if (other == Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.getDefaultInstance()) return this;
         if (other.hasIsFinished()) {
@@ -3338,7 +4243,7 @@ public final class InvoiceDocflowProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasReceiptAttachment()) {
           if (!getReceiptAttachment().isInitialized()) {
@@ -3354,87 +4259,70 @@ public final class InvoiceDocflowProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder subBuilder = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.newBuilder();
-              if (hasReceiptAttachment()) {
-                subBuilder.mergeFrom(getReceiptAttachment());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setReceiptAttachment(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.newBuilder();
-              if (hasConfirmationDocflow()) {
-                subBuilder.mergeFrom(getConfirmationDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setConfirmationDocflow(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional bool IsFinished = 1;
+
       private boolean isFinished_ ;
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean hasIsFinished() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean getIsFinished() {
         return isFinished_;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder setIsFinished(boolean value) {
         bitField0_ |= 0x00000001;
         isFinished_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder clearIsFinished() {
         bitField0_ = (bitField0_ & ~0x00000001);
         isFinished_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;
+
       private Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment receiptAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder> receiptAttachmentBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+       */
       public boolean hasReceiptAttachment() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getReceiptAttachment() {
         if (receiptAttachmentBuilder_ == null) {
           return receiptAttachment_;
@@ -3442,6 +4330,9 @@ public final class InvoiceDocflowProtos {
           return receiptAttachmentBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+       */
       public Builder setReceiptAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment value) {
         if (receiptAttachmentBuilder_ == null) {
           if (value == null) {
@@ -3455,6 +4346,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+       */
       public Builder setReceiptAttachment(
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder builderForValue) {
         if (receiptAttachmentBuilder_ == null) {
@@ -3466,6 +4360,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+       */
       public Builder mergeReceiptAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment value) {
         if (receiptAttachmentBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -3482,6 +4379,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+       */
       public Builder clearReceiptAttachment() {
         if (receiptAttachmentBuilder_ == null) {
           receiptAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -3492,11 +4392,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder getReceiptAttachmentBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getReceiptAttachmentFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getReceiptAttachmentOrBuilder() {
         if (receiptAttachmentBuilder_ != null) {
           return receiptAttachmentBuilder_.getMessageOrBuilder();
@@ -3504,27 +4410,35 @@ public final class InvoiceDocflowProtos {
           return receiptAttachment_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment ReceiptAttachment = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder> 
           getReceiptAttachmentFieldBuilder() {
         if (receiptAttachmentBuilder_ == null) {
           receiptAttachmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder>(
-                  receiptAttachment_,
+                  getReceiptAttachment(),
                   getParentForChildren(),
                   isClean());
           receiptAttachment_ = null;
         }
         return receiptAttachmentBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;
+
       private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow confirmationDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder> confirmationDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public boolean hasConfirmationDocflow() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow getConfirmationDocflow() {
         if (confirmationDocflowBuilder_ == null) {
           return confirmationDocflow_;
@@ -3532,6 +4446,9 @@ public final class InvoiceDocflowProtos {
           return confirmationDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Builder setConfirmationDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow value) {
         if (confirmationDocflowBuilder_ == null) {
           if (value == null) {
@@ -3545,6 +4462,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Builder setConfirmationDocflow(
           Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder builderForValue) {
         if (confirmationDocflowBuilder_ == null) {
@@ -3556,6 +4476,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Builder mergeConfirmationDocflow(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow value) {
         if (confirmationDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -3572,6 +4495,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Builder clearConfirmationDocflow() {
         if (confirmationDocflowBuilder_ == null) {
           confirmationDocflow_ = Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.getDefaultInstance();
@@ -3582,11 +4508,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder getConfirmationDocflowBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getConfirmationDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder() {
         if (confirmationDocflowBuilder_ != null) {
           return confirmationDocflowBuilder_.getMessageOrBuilder();
@@ -3594,113 +4526,253 @@ public final class InvoiceDocflowProtos {
           return confirmationDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow ConfirmationDocflow = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder> 
           getConfirmationDocflowFieldBuilder() {
         if (confirmationDocflowBuilder_ == null) {
           confirmationDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflowOrBuilder>(
-                  confirmationDocflow_,
+                  getConfirmationDocflow(),
                   getParentForChildren(),
                   isClean());
           confirmationDocflow_ = null;
         }
         return confirmationDocflowBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow)
     }
-    
+
     static {
       defaultInstance = new InboundInvoiceReceiptDocflow(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow)
   }
-  
-  public interface InvoiceCorrectionRequestDocflowOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional bool IsFinished = 1;
+
+  public interface InvoiceCorrectionRequestDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean hasIsFinished();
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean getIsFinished();
-    
-    // optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+     */
     boolean hasCorrectionRequestAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getCorrectionRequestAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getCorrectionRequestAttachmentOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     boolean hasReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow}
+   */
   public static final class InvoiceCorrectionRequestDocflow extends
-      com.google.protobuf.GeneratedMessage
-      implements InvoiceCorrectionRequestDocflowOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow)
+      InvoiceCorrectionRequestDocflowOrBuilder {
     // Use InvoiceCorrectionRequestDocflow.newBuilder() to construct.
-    private InvoiceCorrectionRequestDocflow(Builder builder) {
+    private InvoiceCorrectionRequestDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private InvoiceCorrectionRequestDocflow(boolean noInit) {}
-    
+    private InvoiceCorrectionRequestDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final InvoiceCorrectionRequestDocflow defaultInstance;
     public static InvoiceCorrectionRequestDocflow getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public InvoiceCorrectionRequestDocflow getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InvoiceCorrectionRequestDocflow(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = correctionRequestAttachment_.toBuilder();
+              }
+              correctionRequestAttachment_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(correctionRequestAttachment_);
+                correctionRequestAttachment_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = receiptDocflow_.toBuilder();
+              }
+              receiptDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(receiptDocflow_);
+                receiptDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<InvoiceCorrectionRequestDocflow> PARSER =
+        new com.google.protobuf.AbstractParser<InvoiceCorrectionRequestDocflow>() {
+      public InvoiceCorrectionRequestDocflow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InvoiceCorrectionRequestDocflow(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InvoiceCorrectionRequestDocflow> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional bool IsFinished = 1;
     public static final int ISFINISHED_FIELD_NUMBER = 1;
     private boolean isFinished_;
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean hasIsFinished() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean getIsFinished() {
       return isFinished_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;
+
     public static final int CORRECTIONREQUESTATTACHMENT_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment correctionRequestAttachment_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+     */
     public boolean hasCorrectionRequestAttachment() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getCorrectionRequestAttachment() {
       return correctionRequestAttachment_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getCorrectionRequestAttachmentOrBuilder() {
       return correctionRequestAttachment_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;
+
     public static final int RECEIPTDOCFLOW_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow receiptDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     public boolean hasReceiptDocflow() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow() {
       return receiptDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
       return receiptDocflow_;
     }
-    
+
     private void initFields() {
       isFinished_ = false;
       correctionRequestAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -3709,8 +4781,9 @@ public final class InvoiceDocflowProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasCorrectionRequestAttachment()) {
         if (!getCorrectionRequestAttachment().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -3726,7 +4799,7 @@ public final class InvoiceDocflowProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -3741,12 +4814,12 @@ public final class InvoiceDocflowProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -3764,113 +4837,106 @@ public final class InvoiceDocflowProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow)
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.class, Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3883,7 +4949,7 @@ public final class InvoiceDocflowProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         isFinished_ = false;
@@ -3902,20 +4968,20 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow build() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow result = buildPartial();
         if (!result.isInitialized()) {
@@ -3923,17 +4989,7 @@ public final class InvoiceDocflowProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow buildPartial() {
         Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow result = new Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow(this);
         int from_bitField0_ = bitField0_;
@@ -3962,7 +5018,7 @@ public final class InvoiceDocflowProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow)other);
@@ -3971,7 +5027,7 @@ public final class InvoiceDocflowProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow other) {
         if (other == Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.getDefaultInstance()) return this;
         if (other.hasIsFinished()) {
@@ -3986,7 +5042,7 @@ public final class InvoiceDocflowProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasCorrectionRequestAttachment()) {
           if (!getCorrectionRequestAttachment().isInitialized()) {
@@ -4002,87 +5058,70 @@ public final class InvoiceDocflowProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder subBuilder = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.newBuilder();
-              if (hasCorrectionRequestAttachment()) {
-                subBuilder.mergeFrom(getCorrectionRequestAttachment());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCorrectionRequestAttachment(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.newBuilder();
-              if (hasReceiptDocflow()) {
-                subBuilder.mergeFrom(getReceiptDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setReceiptDocflow(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional bool IsFinished = 1;
+
       private boolean isFinished_ ;
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean hasIsFinished() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean getIsFinished() {
         return isFinished_;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder setIsFinished(boolean value) {
         bitField0_ |= 0x00000001;
         isFinished_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder clearIsFinished() {
         bitField0_ = (bitField0_ & ~0x00000001);
         isFinished_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;
+
       private Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment correctionRequestAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder> correctionRequestAttachmentBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+       */
       public boolean hasCorrectionRequestAttachment() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getCorrectionRequestAttachment() {
         if (correctionRequestAttachmentBuilder_ == null) {
           return correctionRequestAttachment_;
@@ -4090,6 +5129,9 @@ public final class InvoiceDocflowProtos {
           return correctionRequestAttachmentBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+       */
       public Builder setCorrectionRequestAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment value) {
         if (correctionRequestAttachmentBuilder_ == null) {
           if (value == null) {
@@ -4103,6 +5145,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+       */
       public Builder setCorrectionRequestAttachment(
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder builderForValue) {
         if (correctionRequestAttachmentBuilder_ == null) {
@@ -4114,6 +5159,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+       */
       public Builder mergeCorrectionRequestAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment value) {
         if (correctionRequestAttachmentBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -4130,6 +5178,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+       */
       public Builder clearCorrectionRequestAttachment() {
         if (correctionRequestAttachmentBuilder_ == null) {
           correctionRequestAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -4140,11 +5191,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder getCorrectionRequestAttachmentBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getCorrectionRequestAttachmentFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getCorrectionRequestAttachmentOrBuilder() {
         if (correctionRequestAttachmentBuilder_ != null) {
           return correctionRequestAttachmentBuilder_.getMessageOrBuilder();
@@ -4152,27 +5209,35 @@ public final class InvoiceDocflowProtos {
           return correctionRequestAttachment_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment CorrectionRequestAttachment = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder> 
           getCorrectionRequestAttachmentFieldBuilder() {
         if (correctionRequestAttachmentBuilder_ == null) {
           correctionRequestAttachmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder>(
-                  correctionRequestAttachment_,
+                  getCorrectionRequestAttachment(),
                   getParentForChildren(),
                   isClean());
           correctionRequestAttachment_ = null;
         }
         return correctionRequestAttachmentBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;
+
       private Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder> receiptDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public boolean hasReceiptDocflow() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow getReceiptDocflow() {
         if (receiptDocflowBuilder_ == null) {
           return receiptDocflow_;
@@ -4180,6 +5245,9 @@ public final class InvoiceDocflowProtos {
           return receiptDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Builder setReceiptDocflow(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow value) {
         if (receiptDocflowBuilder_ == null) {
           if (value == null) {
@@ -4193,6 +5261,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Builder setReceiptDocflow(
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder builderForValue) {
         if (receiptDocflowBuilder_ == null) {
@@ -4204,6 +5275,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Builder mergeReceiptDocflow(Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow value) {
         if (receiptDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -4220,6 +5294,9 @@ public final class InvoiceDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Builder clearReceiptDocflow() {
         if (receiptDocflowBuilder_ == null) {
           receiptDocflow_ = Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.getDefaultInstance();
@@ -4230,11 +5307,17 @@ public final class InvoiceDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder getReceiptDocflowBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getReceiptDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder getReceiptDocflowOrBuilder() {
         if (receiptDocflowBuilder_ != null) {
           return receiptDocflowBuilder_.getMessageOrBuilder();
@@ -4242,57 +5325,60 @@ public final class InvoiceDocflowProtos {
           return receiptDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflow ReceiptDocflow = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder> 
           getReceiptDocflowFieldBuilder() {
         if (receiptDocflowBuilder_ == null) {
           receiptDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflow.Builder, Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.ReceiptDocflowOrBuilder>(
-                  receiptDocflow_,
+                  getReceiptDocflow(),
                   getParentForChildren(),
                   isClean());
           receiptDocflow_ = null;
         }
         return receiptDocflowBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow)
     }
-    
+
     static {
       defaultInstance = new InvoiceCorrectionRequestDocflow(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -4345,53 +5431,13 @@ public final class InvoiceDocflowProtos {
       "otos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_descriptor,
-              new java.lang.String[] { "IsFinished", "ReceiptDocflow", "ConfirmationDocflow", "CorrectionRequestDocflow", "ConfirmationTimestamp", "IsAmendmentRequested", "IsRevised", "IsCorrected", },
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.class,
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceDocflow.Builder.class);
-          internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_descriptor,
-              new java.lang.String[] { "IsFinished", "ReceiptDocflow", "ConfirmationDocflow", "CorrectionRequestDocflow", "ConfirmationTimestamp", "IsAmendmentRequested", "IsRevised", "IsCorrected", "CanDocumentBeSignedBySender", },
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.class,
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.OutboundInvoiceDocflow.Builder.class);
-          internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_descriptor,
-              new java.lang.String[] { "IsFinished", "ConfirmationAttachment", "ReceiptDocflow", },
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.class,
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceConfirmationDocflow.Builder.class);
-          internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_descriptor,
-              new java.lang.String[] { "IsFinished", "ReceiptAttachment", "ConfirmationDocflow", },
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.class,
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InboundInvoiceReceiptDocflow.Builder.class);
-          internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_descriptor,
-              new java.lang.String[] { "IsFinished", "CorrectionRequestAttachment", "ReceiptDocflow", },
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.class,
-              Diadoc.Api.Proto.Docflow.InvoiceDocflowProtos.InvoiceCorrectionRequestDocflow.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
@@ -4399,7 +5445,40 @@ public final class InvoiceDocflowProtos {
           Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceDocflow_descriptor,
+        new java.lang.String[] { "IsFinished", "ReceiptDocflow", "ConfirmationDocflow", "CorrectionRequestDocflow", "ConfirmationTimestamp", "IsAmendmentRequested", "IsRevised", "IsCorrected", });
+    internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_OutboundInvoiceDocflow_descriptor,
+        new java.lang.String[] { "IsFinished", "ReceiptDocflow", "ConfirmationDocflow", "CorrectionRequestDocflow", "ConfirmationTimestamp", "IsAmendmentRequested", "IsRevised", "IsCorrected", "CanDocumentBeSignedBySender", });
+    internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_InvoiceConfirmationDocflow_descriptor,
+        new java.lang.String[] { "IsFinished", "ConfirmationAttachment", "ReceiptDocflow", });
+    internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_InboundInvoiceReceiptDocflow_descriptor,
+        new java.lang.String[] { "IsFinished", "ReceiptAttachment", "ConfirmationDocflow", });
+    internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_InvoiceCorrectionRequestDocflow_descriptor,
+        new java.lang.String[] { "IsFinished", "CorrectionRequestAttachment", "ReceiptDocflow", });
+    Diadoc.Api.Proto.TimestampProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.ReceiptDocflowProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

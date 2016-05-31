@@ -8,110 +8,258 @@ public final class AttachmentProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface EntityOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string EntityId = 1;
+  public interface EntityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.Entity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string EntityId = 1;</code>
+     */
     boolean hasEntityId();
-    String getEntityId();
-    
-    // optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;
+    /**
+     * <code>optional string EntityId = 1;</code>
+     */
+    java.lang.String getEntityId();
+    /**
+     * <code>optional string EntityId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getEntityIdBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+     */
     boolean hasCreationTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.Timestamp getCreationTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getCreationTimestampOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Content Content = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+     */
     boolean hasContent();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+     */
     Diadoc.Api.Proto.ContentProtos.Content getContent();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+     */
     Diadoc.Api.Proto.ContentProtos.ContentOrBuilder getContentOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.Entity}
+   */
   public static final class Entity extends
-      com.google.protobuf.GeneratedMessage
-      implements EntityOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.Entity)
+      EntityOrBuilder {
     // Use Entity.newBuilder() to construct.
-    private Entity(Builder builder) {
+    private Entity(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Entity(boolean noInit) {}
-    
+    private Entity(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Entity defaultInstance;
     public static Entity getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Entity getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Entity(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              entityId_ = bs;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = creationTimestamp_.toBuilder();
+              }
+              creationTimestamp_ = input.readMessage(Diadoc.Api.Proto.TimestampProtos.Timestamp.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(creationTimestamp_);
+                creationTimestamp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.ContentProtos.Content.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = content_.toBuilder();
+              }
+              content_ = input.readMessage(Diadoc.Api.Proto.ContentProtos.Content.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(content_);
+                content_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Entity_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Entity_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Entity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.class, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Entity> PARSER =
+        new com.google.protobuf.AbstractParser<Entity>() {
+      public Entity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Entity(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Entity> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string EntityId = 1;
     public static final int ENTITYID_FIELD_NUMBER = 1;
     private java.lang.Object entityId_;
+    /**
+     * <code>optional string EntityId = 1;</code>
+     */
     public boolean hasEntityId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getEntityId() {
+    /**
+     * <code>optional string EntityId = 1;</code>
+     */
+    public java.lang.String getEntityId() {
       java.lang.Object ref = entityId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           entityId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getEntityIdBytes() {
+    /**
+     * <code>optional string EntityId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEntityIdBytes() {
       java.lang.Object ref = entityId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         entityId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;
+
     public static final int CREATIONTIMESTAMP_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.TimestampProtos.Timestamp creationTimestamp_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+     */
     public boolean hasCreationTimestamp() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.Timestamp getCreationTimestamp() {
       return creationTimestamp_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getCreationTimestampOrBuilder() {
       return creationTimestamp_;
     }
-    
-    // optional .Diadoc.Api.Proto.Content Content = 3;
+
     public static final int CONTENT_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.ContentProtos.Content content_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+     */
     public boolean hasContent() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+     */
     public Diadoc.Api.Proto.ContentProtos.Content getContent() {
       return content_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+     */
     public Diadoc.Api.Proto.ContentProtos.ContentOrBuilder getContentOrBuilder() {
       return content_;
     }
-    
+
     private void initFields() {
       entityId_ = "";
       creationTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
@@ -120,8 +268,9 @@ public final class AttachmentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasCreationTimestamp()) {
         if (!getCreationTimestamp().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -137,7 +286,7 @@ public final class AttachmentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -152,12 +301,12 @@ public final class AttachmentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -175,113 +324,106 @@ public final class AttachmentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.Entity}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.Entity)
+        Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Entity_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Entity_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Entity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.class, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -294,7 +436,7 @@ public final class AttachmentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         entityId_ = "";
@@ -313,20 +455,20 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Entity_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity build() {
         Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity result = buildPartial();
         if (!result.isInitialized()) {
@@ -334,17 +476,7 @@ public final class AttachmentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity buildPartial() {
         Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity result = new Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity(this);
         int from_bitField0_ = bitField0_;
@@ -373,7 +505,7 @@ public final class AttachmentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity)other);
@@ -382,11 +514,13 @@ public final class AttachmentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity other) {
         if (other == Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance()) return this;
         if (other.hasEntityId()) {
-          setEntityId(other.getEntityId());
+          bitField0_ |= 0x00000001;
+          entityId_ = other.entityId_;
+          onChanged();
         }
         if (other.hasCreationTimestamp()) {
           mergeCreationTimestamp(other.getCreationTimestamp());
@@ -397,7 +531,7 @@ public final class AttachmentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasCreationTimestamp()) {
           if (!getCreationTimestamp().isInitialized()) {
@@ -413,75 +547,71 @@ public final class AttachmentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              entityId_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder();
-              if (hasCreationTimestamp()) {
-                subBuilder.mergeFrom(getCreationTimestamp());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCreationTimestamp(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.ContentProtos.Content.Builder subBuilder = Diadoc.Api.Proto.ContentProtos.Content.newBuilder();
-              if (hasContent()) {
-                subBuilder.mergeFrom(getContent());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setContent(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string EntityId = 1;
+
       private java.lang.Object entityId_ = "";
+      /**
+       * <code>optional string EntityId = 1;</code>
+       */
       public boolean hasEntityId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getEntityId() {
+      /**
+       * <code>optional string EntityId = 1;</code>
+       */
+      public java.lang.String getEntityId() {
         java.lang.Object ref = entityId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          entityId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            entityId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setEntityId(String value) {
+      /**
+       * <code>optional string EntityId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEntityIdBytes() {
+        java.lang.Object ref = entityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          entityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string EntityId = 1;</code>
+       */
+      public Builder setEntityId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -490,25 +620,41 @@ public final class AttachmentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string EntityId = 1;</code>
+       */
       public Builder clearEntityId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         entityId_ = getDefaultInstance().getEntityId();
         onChanged();
         return this;
       }
-      void setEntityId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string EntityId = 1;</code>
+       */
+      public Builder setEntityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         entityId_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;
+
       private Diadoc.Api.Proto.TimestampProtos.Timestamp creationTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> creationTimestampBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+       */
       public boolean hasCreationTimestamp() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp getCreationTimestamp() {
         if (creationTimestampBuilder_ == null) {
           return creationTimestamp_;
@@ -516,6 +662,9 @@ public final class AttachmentProtos {
           return creationTimestampBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+       */
       public Builder setCreationTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (creationTimestampBuilder_ == null) {
           if (value == null) {
@@ -529,6 +678,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+       */
       public Builder setCreationTimestamp(
           Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder builderForValue) {
         if (creationTimestampBuilder_ == null) {
@@ -540,6 +692,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+       */
       public Builder mergeCreationTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (creationTimestampBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -556,6 +711,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+       */
       public Builder clearCreationTimestamp() {
         if (creationTimestampBuilder_ == null) {
           creationTimestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
@@ -566,11 +724,17 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder getCreationTimestampBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getCreationTimestampFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getCreationTimestampOrBuilder() {
         if (creationTimestampBuilder_ != null) {
           return creationTimestampBuilder_.getMessageOrBuilder();
@@ -578,27 +742,35 @@ public final class AttachmentProtos {
           return creationTimestamp_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> 
           getCreationTimestampFieldBuilder() {
         if (creationTimestampBuilder_ == null) {
           creationTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder>(
-                  creationTimestamp_,
+                  getCreationTimestamp(),
                   getParentForChildren(),
                   isClean());
           creationTimestamp_ = null;
         }
         return creationTimestampBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Content Content = 3;
+
       private Diadoc.Api.Proto.ContentProtos.Content content_ = Diadoc.Api.Proto.ContentProtos.Content.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.ContentProtos.Content, Diadoc.Api.Proto.ContentProtos.Content.Builder, Diadoc.Api.Proto.ContentProtos.ContentOrBuilder> contentBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+       */
       public boolean hasContent() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+       */
       public Diadoc.Api.Proto.ContentProtos.Content getContent() {
         if (contentBuilder_ == null) {
           return content_;
@@ -606,6 +778,9 @@ public final class AttachmentProtos {
           return contentBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+       */
       public Builder setContent(Diadoc.Api.Proto.ContentProtos.Content value) {
         if (contentBuilder_ == null) {
           if (value == null) {
@@ -619,6 +794,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+       */
       public Builder setContent(
           Diadoc.Api.Proto.ContentProtos.Content.Builder builderForValue) {
         if (contentBuilder_ == null) {
@@ -630,6 +808,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+       */
       public Builder mergeContent(Diadoc.Api.Proto.ContentProtos.Content value) {
         if (contentBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -646,6 +827,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+       */
       public Builder clearContent() {
         if (contentBuilder_ == null) {
           content_ = Diadoc.Api.Proto.ContentProtos.Content.getDefaultInstance();
@@ -656,11 +840,17 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+       */
       public Diadoc.Api.Proto.ContentProtos.Content.Builder getContentBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getContentFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+       */
       public Diadoc.Api.Proto.ContentProtos.ContentOrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
           return contentBuilder_.getMessageOrBuilder();
@@ -668,153 +858,301 @@ public final class AttachmentProtos {
           return content_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content Content = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.ContentProtos.Content, Diadoc.Api.Proto.ContentProtos.Content.Builder, Diadoc.Api.Proto.ContentProtos.ContentOrBuilder> 
           getContentFieldBuilder() {
         if (contentBuilder_ == null) {
           contentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.ContentProtos.Content, Diadoc.Api.Proto.ContentProtos.Content.Builder, Diadoc.Api.Proto.ContentProtos.ContentOrBuilder>(
-                  content_,
+                  getContent(),
                   getParentForChildren(),
                   isClean());
           content_ = null;
         }
         return contentBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.Entity)
     }
-    
+
     static {
       defaultInstance = new Entity(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.Entity)
   }
-  
-  public interface AttachmentOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;
+
+  public interface AttachmentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.Attachment)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     boolean hasEntity();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getEntity();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getEntityOrBuilder();
-    
-    // optional string AttachmentFilename = 2;
+
+    /**
+     * <code>optional string AttachmentFilename = 2;</code>
+     */
     boolean hasAttachmentFilename();
-    String getAttachmentFilename();
-    
-    // optional string DisplayFilename = 3;
+    /**
+     * <code>optional string AttachmentFilename = 2;</code>
+     */
+    java.lang.String getAttachmentFilename();
+    /**
+     * <code>optional string AttachmentFilename = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAttachmentFilenameBytes();
+
+    /**
+     * <code>optional string DisplayFilename = 3;</code>
+     */
     boolean hasDisplayFilename();
-    String getDisplayFilename();
+    /**
+     * <code>optional string DisplayFilename = 3;</code>
+     */
+    java.lang.String getDisplayFilename();
+    /**
+     * <code>optional string DisplayFilename = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDisplayFilenameBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.Attachment}
+   */
   public static final class Attachment extends
-      com.google.protobuf.GeneratedMessage
-      implements AttachmentOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.Attachment)
+      AttachmentOrBuilder {
     // Use Attachment.newBuilder() to construct.
-    private Attachment(Builder builder) {
+    private Attachment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Attachment(boolean noInit) {}
-    
+    private Attachment(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Attachment defaultInstance;
     public static Attachment getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Attachment getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Attachment(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = entity_.toBuilder();
+              }
+              entity_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(entity_);
+                entity_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              attachmentFilename_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              displayFilename_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Attachment_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Attachment_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Attachment_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.class, Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Attachment> PARSER =
+        new com.google.protobuf.AbstractParser<Attachment>() {
+      public Attachment parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Attachment(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Attachment> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;
     public static final int ENTITY_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity entity_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     public boolean hasEntity() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getEntity() {
       return entity_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getEntityOrBuilder() {
       return entity_;
     }
-    
-    // optional string AttachmentFilename = 2;
+
     public static final int ATTACHMENTFILENAME_FIELD_NUMBER = 2;
     private java.lang.Object attachmentFilename_;
+    /**
+     * <code>optional string AttachmentFilename = 2;</code>
+     */
     public boolean hasAttachmentFilename() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getAttachmentFilename() {
+    /**
+     * <code>optional string AttachmentFilename = 2;</code>
+     */
+    public java.lang.String getAttachmentFilename() {
       java.lang.Object ref = attachmentFilename_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           attachmentFilename_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAttachmentFilenameBytes() {
+    /**
+     * <code>optional string AttachmentFilename = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAttachmentFilenameBytes() {
       java.lang.Object ref = attachmentFilename_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         attachmentFilename_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string DisplayFilename = 3;
+
     public static final int DISPLAYFILENAME_FIELD_NUMBER = 3;
     private java.lang.Object displayFilename_;
+    /**
+     * <code>optional string DisplayFilename = 3;</code>
+     */
     public boolean hasDisplayFilename() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getDisplayFilename() {
+    /**
+     * <code>optional string DisplayFilename = 3;</code>
+     */
+    public java.lang.String getDisplayFilename() {
       java.lang.Object ref = displayFilename_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           displayFilename_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDisplayFilenameBytes() {
+    /**
+     * <code>optional string DisplayFilename = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDisplayFilenameBytes() {
       java.lang.Object ref = displayFilename_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         displayFilename_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       entity_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
       attachmentFilename_ = "";
@@ -823,8 +1161,9 @@ public final class AttachmentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasEntity()) {
         if (!getEntity().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -834,7 +1173,7 @@ public final class AttachmentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -849,12 +1188,12 @@ public final class AttachmentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -872,113 +1211,106 @@ public final class AttachmentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.Attachment}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.AttachmentProtos.AttachmentOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.Attachment)
+        Diadoc.Api.Proto.Docflow.AttachmentProtos.AttachmentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Attachment_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Attachment_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Attachment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.class, Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -990,7 +1322,7 @@ public final class AttachmentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (entityBuilder_ == null) {
@@ -1005,20 +1337,20 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Attachment_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment build() {
         Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment result = buildPartial();
         if (!result.isInitialized()) {
@@ -1026,17 +1358,7 @@ public final class AttachmentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment buildPartial() {
         Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment result = new Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment(this);
         int from_bitField0_ = bitField0_;
@@ -1061,7 +1383,7 @@ public final class AttachmentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment)other);
@@ -1070,22 +1392,26 @@ public final class AttachmentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment other) {
         if (other == Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.getDefaultInstance()) return this;
         if (other.hasEntity()) {
           mergeEntity(other.getEntity());
         }
         if (other.hasAttachmentFilename()) {
-          setAttachmentFilename(other.getAttachmentFilename());
+          bitField0_ |= 0x00000002;
+          attachmentFilename_ = other.attachmentFilename_;
+          onChanged();
         }
         if (other.hasDisplayFilename()) {
-          setDisplayFilename(other.getDisplayFilename());
+          bitField0_ |= 0x00000004;
+          displayFilename_ = other.displayFilename_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasEntity()) {
           if (!getEntity().isInitialized()) {
@@ -1095,62 +1421,38 @@ public final class AttachmentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder subBuilder = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.newBuilder();
-              if (hasEntity()) {
-                subBuilder.mergeFrom(getEntity());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setEntity(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              attachmentFilename_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              displayFilename_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;
+
       private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity entity_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> entityBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public boolean hasEntity() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getEntity() {
         if (entityBuilder_ == null) {
           return entity_;
@@ -1158,6 +1460,9 @@ public final class AttachmentProtos {
           return entityBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Builder setEntity(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
         if (entityBuilder_ == null) {
           if (value == null) {
@@ -1171,6 +1476,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Builder setEntity(
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder builderForValue) {
         if (entityBuilder_ == null) {
@@ -1182,6 +1490,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Builder mergeEntity(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
         if (entityBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -1198,6 +1509,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Builder clearEntity() {
         if (entityBuilder_ == null) {
           entity_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
@@ -1208,11 +1522,17 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder getEntityBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getEntityFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getEntityOrBuilder() {
         if (entityBuilder_ != null) {
           return entityBuilder_.getMessageOrBuilder();
@@ -1220,36 +1540,68 @@ public final class AttachmentProtos {
           return entity_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> 
           getEntityFieldBuilder() {
         if (entityBuilder_ == null) {
           entityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder>(
-                  entity_,
+                  getEntity(),
                   getParentForChildren(),
                   isClean());
           entity_ = null;
         }
         return entityBuilder_;
       }
-      
-      // optional string AttachmentFilename = 2;
+
       private java.lang.Object attachmentFilename_ = "";
+      /**
+       * <code>optional string AttachmentFilename = 2;</code>
+       */
       public boolean hasAttachmentFilename() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getAttachmentFilename() {
+      /**
+       * <code>optional string AttachmentFilename = 2;</code>
+       */
+      public java.lang.String getAttachmentFilename() {
         java.lang.Object ref = attachmentFilename_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          attachmentFilename_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            attachmentFilename_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAttachmentFilename(String value) {
+      /**
+       * <code>optional string AttachmentFilename = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAttachmentFilenameBytes() {
+        java.lang.Object ref = attachmentFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          attachmentFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AttachmentFilename = 2;</code>
+       */
+      public Builder setAttachmentFilename(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1258,34 +1610,74 @@ public final class AttachmentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string AttachmentFilename = 2;</code>
+       */
       public Builder clearAttachmentFilename() {
         bitField0_ = (bitField0_ & ~0x00000002);
         attachmentFilename_ = getDefaultInstance().getAttachmentFilename();
         onChanged();
         return this;
       }
-      void setAttachmentFilename(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string AttachmentFilename = 2;</code>
+       */
+      public Builder setAttachmentFilenameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         attachmentFilename_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string DisplayFilename = 3;
+
       private java.lang.Object displayFilename_ = "";
+      /**
+       * <code>optional string DisplayFilename = 3;</code>
+       */
       public boolean hasDisplayFilename() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getDisplayFilename() {
+      /**
+       * <code>optional string DisplayFilename = 3;</code>
+       */
+      public java.lang.String getDisplayFilename() {
         java.lang.Object ref = displayFilename_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          displayFilename_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            displayFilename_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setDisplayFilename(String value) {
+      /**
+       * <code>optional string DisplayFilename = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDisplayFilenameBytes() {
+        java.lang.Object ref = displayFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          displayFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string DisplayFilename = 3;</code>
+       */
+      public Builder setDisplayFilename(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1294,183 +1686,383 @@ public final class AttachmentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string DisplayFilename = 3;</code>
+       */
       public Builder clearDisplayFilename() {
         bitField0_ = (bitField0_ & ~0x00000004);
         displayFilename_ = getDefaultInstance().getDisplayFilename();
         onChanged();
         return this;
       }
-      void setDisplayFilename(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string DisplayFilename = 3;</code>
+       */
+      public Builder setDisplayFilenameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         displayFilename_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.Attachment)
     }
-    
+
     static {
       defaultInstance = new Attachment(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.Attachment)
   }
-  
-  public interface SignatureOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;
+
+  public interface SignatureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.Signature)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     boolean hasEntity();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getEntity();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getEntityOrBuilder();
-    
-    // optional string SignerBoxId = 2;
+
+    /**
+     * <code>optional string SignerBoxId = 2;</code>
+     */
     boolean hasSignerBoxId();
-    String getSignerBoxId();
-    
-    // optional string SignerDepartmentId = 3;
+    /**
+     * <code>optional string SignerBoxId = 2;</code>
+     */
+    java.lang.String getSignerBoxId();
+    /**
+     * <code>optional string SignerBoxId = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getSignerBoxIdBytes();
+
+    /**
+     * <code>optional string SignerDepartmentId = 3;</code>
+     */
     boolean hasSignerDepartmentId();
-    String getSignerDepartmentId();
-    
-    // optional bool IsValid = 4;
+    /**
+     * <code>optional string SignerDepartmentId = 3;</code>
+     */
+    java.lang.String getSignerDepartmentId();
+    /**
+     * <code>optional string SignerDepartmentId = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getSignerDepartmentIdBytes();
+
+    /**
+     * <code>optional bool IsValid = 4;</code>
+     */
     boolean hasIsValid();
+    /**
+     * <code>optional bool IsValid = 4;</code>
+     */
     boolean getIsValid();
-    
-    // optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+     */
     boolean hasVerificationResult();
+    /**
+     * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+     */
     Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult getVerificationResult();
+    /**
+     * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+     */
     Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResultOrBuilder getVerificationResultOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.Signature}
+   */
   public static final class Signature extends
-      com.google.protobuf.GeneratedMessage
-      implements SignatureOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.Signature)
+      SignatureOrBuilder {
     // Use Signature.newBuilder() to construct.
-    private Signature(Builder builder) {
+    private Signature(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Signature(boolean noInit) {}
-    
+    private Signature(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Signature defaultInstance;
     public static Signature getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Signature getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Signature(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = entity_.toBuilder();
+              }
+              entity_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(entity_);
+                entity_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              signerBoxId_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              signerDepartmentId_ = bs;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              isValid_ = input.readBool();
+              break;
+            }
+            case 42: {
+              Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = verificationResult_.toBuilder();
+              }
+              verificationResult_ = input.readMessage(Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(verificationResult_);
+                verificationResult_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Signature_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Signature_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Signature_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.class, Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Signature> PARSER =
+        new com.google.protobuf.AbstractParser<Signature>() {
+      public Signature parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Signature(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Signature> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;
     public static final int ENTITY_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity entity_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     public boolean hasEntity() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getEntity() {
       return entity_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getEntityOrBuilder() {
       return entity_;
     }
-    
-    // optional string SignerBoxId = 2;
+
     public static final int SIGNERBOXID_FIELD_NUMBER = 2;
     private java.lang.Object signerBoxId_;
+    /**
+     * <code>optional string SignerBoxId = 2;</code>
+     */
     public boolean hasSignerBoxId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getSignerBoxId() {
+    /**
+     * <code>optional string SignerBoxId = 2;</code>
+     */
+    public java.lang.String getSignerBoxId() {
       java.lang.Object ref = signerBoxId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           signerBoxId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSignerBoxIdBytes() {
+    /**
+     * <code>optional string SignerBoxId = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignerBoxIdBytes() {
       java.lang.Object ref = signerBoxId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         signerBoxId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string SignerDepartmentId = 3;
+
     public static final int SIGNERDEPARTMENTID_FIELD_NUMBER = 3;
     private java.lang.Object signerDepartmentId_;
+    /**
+     * <code>optional string SignerDepartmentId = 3;</code>
+     */
     public boolean hasSignerDepartmentId() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getSignerDepartmentId() {
+    /**
+     * <code>optional string SignerDepartmentId = 3;</code>
+     */
+    public java.lang.String getSignerDepartmentId() {
       java.lang.Object ref = signerDepartmentId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           signerDepartmentId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSignerDepartmentIdBytes() {
+    /**
+     * <code>optional string SignerDepartmentId = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignerDepartmentIdBytes() {
       java.lang.Object ref = signerDepartmentId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         signerDepartmentId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional bool IsValid = 4;
+
     public static final int ISVALID_FIELD_NUMBER = 4;
     private boolean isValid_;
+    /**
+     * <code>optional bool IsValid = 4;</code>
+     */
     public boolean hasIsValid() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional bool IsValid = 4;</code>
+     */
     public boolean getIsValid() {
       return isValid_;
     }
-    
-    // optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;
+
     public static final int VERIFICATIONRESULT_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult verificationResult_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+     */
     public boolean hasVerificationResult() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+     */
     public Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult getVerificationResult() {
       return verificationResult_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+     */
     public Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResultOrBuilder getVerificationResultOrBuilder() {
       return verificationResult_;
     }
-    
+
     private void initFields() {
       entity_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
       signerBoxId_ = "";
@@ -1481,8 +2073,9 @@ public final class AttachmentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasEntity()) {
         if (!getEntity().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1498,7 +2091,7 @@ public final class AttachmentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1519,12 +2112,12 @@ public final class AttachmentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1550,113 +2143,106 @@ public final class AttachmentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.Signature}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.AttachmentProtos.SignatureOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.Signature)
+        Diadoc.Api.Proto.Docflow.AttachmentProtos.SignatureOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Signature_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Signature_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Signature_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.class, Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1669,7 +2255,7 @@ public final class AttachmentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (entityBuilder_ == null) {
@@ -1692,20 +2278,20 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_Signature_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature build() {
         Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature result = buildPartial();
         if (!result.isInitialized()) {
@@ -1713,17 +2299,7 @@ public final class AttachmentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature buildPartial() {
         Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature result = new Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature(this);
         int from_bitField0_ = bitField0_;
@@ -1760,7 +2336,7 @@ public final class AttachmentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature)other);
@@ -1769,17 +2345,21 @@ public final class AttachmentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature other) {
         if (other == Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.getDefaultInstance()) return this;
         if (other.hasEntity()) {
           mergeEntity(other.getEntity());
         }
         if (other.hasSignerBoxId()) {
-          setSignerBoxId(other.getSignerBoxId());
+          bitField0_ |= 0x00000002;
+          signerBoxId_ = other.signerBoxId_;
+          onChanged();
         }
         if (other.hasSignerDepartmentId()) {
-          setSignerDepartmentId(other.getSignerDepartmentId());
+          bitField0_ |= 0x00000004;
+          signerDepartmentId_ = other.signerDepartmentId_;
+          onChanged();
         }
         if (other.hasIsValid()) {
           setIsValid(other.getIsValid());
@@ -1790,7 +2370,7 @@ public final class AttachmentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasEntity()) {
           if (!getEntity().isInitialized()) {
@@ -1806,76 +2386,38 @@ public final class AttachmentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder subBuilder = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.newBuilder();
-              if (hasEntity()) {
-                subBuilder.mergeFrom(getEntity());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setEntity(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              signerBoxId_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              signerDepartmentId_ = input.readBytes();
-              break;
-            }
-            case 32: {
-              bitField0_ |= 0x00000008;
-              isValid_ = input.readBool();
-              break;
-            }
-            case 42: {
-              Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder subBuilder = Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.newBuilder();
-              if (hasVerificationResult()) {
-                subBuilder.mergeFrom(getVerificationResult());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setVerificationResult(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;
+
       private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity entity_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> entityBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public boolean hasEntity() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getEntity() {
         if (entityBuilder_ == null) {
           return entity_;
@@ -1883,6 +2425,9 @@ public final class AttachmentProtos {
           return entityBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Builder setEntity(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
         if (entityBuilder_ == null) {
           if (value == null) {
@@ -1896,6 +2441,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Builder setEntity(
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder builderForValue) {
         if (entityBuilder_ == null) {
@@ -1907,6 +2455,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Builder mergeEntity(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
         if (entityBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -1923,6 +2474,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Builder clearEntity() {
         if (entityBuilder_ == null) {
           entity_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
@@ -1933,11 +2487,17 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder getEntityBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getEntityFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getEntityOrBuilder() {
         if (entityBuilder_ != null) {
           return entityBuilder_.getMessageOrBuilder();
@@ -1945,36 +2505,68 @@ public final class AttachmentProtos {
           return entity_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> 
           getEntityFieldBuilder() {
         if (entityBuilder_ == null) {
           entityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder>(
-                  entity_,
+                  getEntity(),
                   getParentForChildren(),
                   isClean());
           entity_ = null;
         }
         return entityBuilder_;
       }
-      
-      // optional string SignerBoxId = 2;
+
       private java.lang.Object signerBoxId_ = "";
+      /**
+       * <code>optional string SignerBoxId = 2;</code>
+       */
       public boolean hasSignerBoxId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getSignerBoxId() {
+      /**
+       * <code>optional string SignerBoxId = 2;</code>
+       */
+      public java.lang.String getSignerBoxId() {
         java.lang.Object ref = signerBoxId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          signerBoxId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            signerBoxId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSignerBoxId(String value) {
+      /**
+       * <code>optional string SignerBoxId = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignerBoxIdBytes() {
+        java.lang.Object ref = signerBoxId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signerBoxId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerBoxId = 2;</code>
+       */
+      public Builder setSignerBoxId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1983,34 +2575,74 @@ public final class AttachmentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string SignerBoxId = 2;</code>
+       */
       public Builder clearSignerBoxId() {
         bitField0_ = (bitField0_ & ~0x00000002);
         signerBoxId_ = getDefaultInstance().getSignerBoxId();
         onChanged();
         return this;
       }
-      void setSignerBoxId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string SignerBoxId = 2;</code>
+       */
+      public Builder setSignerBoxIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         signerBoxId_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string SignerDepartmentId = 3;
+
       private java.lang.Object signerDepartmentId_ = "";
+      /**
+       * <code>optional string SignerDepartmentId = 3;</code>
+       */
       public boolean hasSignerDepartmentId() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getSignerDepartmentId() {
+      /**
+       * <code>optional string SignerDepartmentId = 3;</code>
+       */
+      public java.lang.String getSignerDepartmentId() {
         java.lang.Object ref = signerDepartmentId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          signerDepartmentId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            signerDepartmentId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSignerDepartmentId(String value) {
+      /**
+       * <code>optional string SignerDepartmentId = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignerDepartmentIdBytes() {
+        java.lang.Object ref = signerDepartmentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signerDepartmentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerDepartmentId = 3;</code>
+       */
+      public Builder setSignerDepartmentId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2019,46 +2651,73 @@ public final class AttachmentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string SignerDepartmentId = 3;</code>
+       */
       public Builder clearSignerDepartmentId() {
         bitField0_ = (bitField0_ & ~0x00000004);
         signerDepartmentId_ = getDefaultInstance().getSignerDepartmentId();
         onChanged();
         return this;
       }
-      void setSignerDepartmentId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string SignerDepartmentId = 3;</code>
+       */
+      public Builder setSignerDepartmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         signerDepartmentId_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional bool IsValid = 4;
+
       private boolean isValid_ ;
+      /**
+       * <code>optional bool IsValid = 4;</code>
+       */
       public boolean hasIsValid() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>optional bool IsValid = 4;</code>
+       */
       public boolean getIsValid() {
         return isValid_;
       }
+      /**
+       * <code>optional bool IsValid = 4;</code>
+       */
       public Builder setIsValid(boolean value) {
         bitField0_ |= 0x00000008;
         isValid_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsValid = 4;</code>
+       */
       public Builder clearIsValid() {
         bitField0_ = (bitField0_ & ~0x00000008);
         isValid_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;
+
       private Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult verificationResult_ = Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult, Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder, Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResultOrBuilder> verificationResultBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+       */
       public boolean hasVerificationResult() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult getVerificationResult() {
         if (verificationResultBuilder_ == null) {
           return verificationResult_;
@@ -2066,6 +2725,9 @@ public final class AttachmentProtos {
           return verificationResultBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+       */
       public Builder setVerificationResult(Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult value) {
         if (verificationResultBuilder_ == null) {
           if (value == null) {
@@ -2079,6 +2741,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+       */
       public Builder setVerificationResult(
           Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder builderForValue) {
         if (verificationResultBuilder_ == null) {
@@ -2090,6 +2755,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+       */
       public Builder mergeVerificationResult(Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult value) {
         if (verificationResultBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010) &&
@@ -2106,6 +2774,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000010;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+       */
       public Builder clearVerificationResult() {
         if (verificationResultBuilder_ == null) {
           verificationResult_ = Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.getDefaultInstance();
@@ -2116,11 +2787,17 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder getVerificationResultBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
         return getVerificationResultFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+       */
       public Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResultOrBuilder getVerificationResultOrBuilder() {
         if (verificationResultBuilder_ != null) {
           return verificationResultBuilder_.getMessageOrBuilder();
@@ -2128,117 +2805,271 @@ public final class AttachmentProtos {
           return verificationResult_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.SignatureVerificationResult VerificationResult = 5;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult, Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder, Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResultOrBuilder> 
           getVerificationResultFieldBuilder() {
         if (verificationResultBuilder_ == null) {
           verificationResultBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult, Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.Builder, Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResultOrBuilder>(
-                  verificationResult_,
+                  getVerificationResult(),
                   getParentForChildren(),
                   isClean());
           verificationResult_ = null;
         }
         return verificationResultBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.Signature)
     }
-    
+
     static {
       defaultInstance = new Signature(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.Signature)
   }
-  
-  public interface SignedAttachmentOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;
+
+  public interface SignedAttachmentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.SignedAttachment)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+     */
     boolean hasAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment getAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.AttachmentOrBuilder getAttachmentOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+     */
     boolean hasSignature();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature getSignature();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.SignatureOrBuilder getSignatureOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+     */
     boolean hasComment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getComment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getCommentOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignedAttachment}
+   */
   public static final class SignedAttachment extends
-      com.google.protobuf.GeneratedMessage
-      implements SignedAttachmentOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.SignedAttachment)
+      SignedAttachmentOrBuilder {
     // Use SignedAttachment.newBuilder() to construct.
-    private SignedAttachment(Builder builder) {
+    private SignedAttachment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private SignedAttachment(boolean noInit) {}
-    
+    private SignedAttachment(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final SignedAttachment defaultInstance;
     public static SignedAttachment getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public SignedAttachment getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SignedAttachment(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = attachment_.toBuilder();
+              }
+              attachment_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(attachment_);
+                attachment_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = signature_.toBuilder();
+              }
+              signature_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signature_);
+                signature_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = comment_.toBuilder();
+              }
+              comment_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(comment_);
+                comment_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.class, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<SignedAttachment> PARSER =
+        new com.google.protobuf.AbstractParser<SignedAttachment>() {
+      public SignedAttachment parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SignedAttachment(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignedAttachment> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;
     public static final int ATTACHMENT_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment attachment_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+     */
     public boolean hasAttachment() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment getAttachment() {
       return attachment_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.AttachmentOrBuilder getAttachmentOrBuilder() {
       return attachment_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;
+
     public static final int SIGNATURE_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature signature_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+     */
     public boolean hasSignature() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature getSignature() {
       return signature_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignatureOrBuilder getSignatureOrBuilder() {
       return signature_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;
+
     public static final int COMMENT_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity comment_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+     */
     public boolean hasComment() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getComment() {
       return comment_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getCommentOrBuilder() {
       return comment_;
     }
-    
+
     private void initFields() {
       attachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.getDefaultInstance();
       signature_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.getDefaultInstance();
@@ -2247,8 +3078,9 @@ public final class AttachmentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasAttachment()) {
         if (!getAttachment().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -2270,7 +3102,7 @@ public final class AttachmentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2285,12 +3117,12 @@ public final class AttachmentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2308,113 +3140,106 @@ public final class AttachmentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignedAttachment}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.SignedAttachment)
+        Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.class, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2428,7 +3253,7 @@ public final class AttachmentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (attachmentBuilder_ == null) {
@@ -2451,20 +3276,20 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.AttachmentProtos.internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment build() {
         Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment result = buildPartial();
         if (!result.isInitialized()) {
@@ -2472,17 +3297,7 @@ public final class AttachmentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment buildPartial() {
         Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment result = new Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment(this);
         int from_bitField0_ = bitField0_;
@@ -2515,7 +3330,7 @@ public final class AttachmentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment)other);
@@ -2524,7 +3339,7 @@ public final class AttachmentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment other) {
         if (other == Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance()) return this;
         if (other.hasAttachment()) {
@@ -2539,7 +3354,7 @@ public final class AttachmentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasAttachment()) {
           if (!getAttachment().isInitialized()) {
@@ -2561,70 +3376,38 @@ public final class AttachmentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder subBuilder = Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.newBuilder();
-              if (hasAttachment()) {
-                subBuilder.mergeFrom(getAttachment());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setAttachment(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder subBuilder = Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.newBuilder();
-              if (hasSignature()) {
-                subBuilder.mergeFrom(getSignature());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSignature(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder subBuilder = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.newBuilder();
-              if (hasComment()) {
-                subBuilder.mergeFrom(getComment());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setComment(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;
+
       private Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment attachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.AttachmentOrBuilder> attachmentBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+       */
       public boolean hasAttachment() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment getAttachment() {
         if (attachmentBuilder_ == null) {
           return attachment_;
@@ -2632,6 +3415,9 @@ public final class AttachmentProtos {
           return attachmentBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+       */
       public Builder setAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment value) {
         if (attachmentBuilder_ == null) {
           if (value == null) {
@@ -2645,6 +3431,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+       */
       public Builder setAttachment(
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder builderForValue) {
         if (attachmentBuilder_ == null) {
@@ -2656,6 +3445,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+       */
       public Builder mergeAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment value) {
         if (attachmentBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -2672,6 +3464,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+       */
       public Builder clearAttachment() {
         if (attachmentBuilder_ == null) {
           attachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.getDefaultInstance();
@@ -2682,11 +3477,17 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder getAttachmentBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getAttachmentFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.AttachmentOrBuilder getAttachmentOrBuilder() {
         if (attachmentBuilder_ != null) {
           return attachmentBuilder_.getMessageOrBuilder();
@@ -2694,27 +3495,35 @@ public final class AttachmentProtos {
           return attachment_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Attachment Attachment = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.AttachmentOrBuilder> 
           getAttachmentFieldBuilder() {
         if (attachmentBuilder_ == null) {
           attachmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.AttachmentOrBuilder>(
-                  attachment_,
+                  getAttachment(),
                   getParentForChildren(),
                   isClean());
           attachment_ = null;
         }
         return attachmentBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;
+
       private Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature signature_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature, Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignatureOrBuilder> signatureBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+       */
       public boolean hasSignature() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature getSignature() {
         if (signatureBuilder_ == null) {
           return signature_;
@@ -2722,6 +3531,9 @@ public final class AttachmentProtos {
           return signatureBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+       */
       public Builder setSignature(Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature value) {
         if (signatureBuilder_ == null) {
           if (value == null) {
@@ -2735,6 +3547,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+       */
       public Builder setSignature(
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder builderForValue) {
         if (signatureBuilder_ == null) {
@@ -2746,6 +3561,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+       */
       public Builder mergeSignature(Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature value) {
         if (signatureBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -2762,6 +3580,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+       */
       public Builder clearSignature() {
         if (signatureBuilder_ == null) {
           signature_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.getDefaultInstance();
@@ -2772,11 +3593,17 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder getSignatureBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getSignatureFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignatureOrBuilder getSignatureOrBuilder() {
         if (signatureBuilder_ != null) {
           return signatureBuilder_.getMessageOrBuilder();
@@ -2784,27 +3611,35 @@ public final class AttachmentProtos {
           return signature_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Signature Signature = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature, Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignatureOrBuilder> 
           getSignatureFieldBuilder() {
         if (signatureBuilder_ == null) {
           signatureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature, Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignatureOrBuilder>(
-                  signature_,
+                  getSignature(),
                   getParentForChildren(),
                   isClean());
           signature_ = null;
         }
         return signatureBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;
+
       private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity comment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> commentBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+       */
       public boolean hasComment() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getComment() {
         if (commentBuilder_ == null) {
           return comment_;
@@ -2812,6 +3647,9 @@ public final class AttachmentProtos {
           return commentBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+       */
       public Builder setComment(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
         if (commentBuilder_ == null) {
           if (value == null) {
@@ -2825,6 +3663,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+       */
       public Builder setComment(
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder builderForValue) {
         if (commentBuilder_ == null) {
@@ -2836,6 +3677,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+       */
       public Builder mergeComment(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
         if (commentBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -2852,6 +3696,9 @@ public final class AttachmentProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+       */
       public Builder clearComment() {
         if (commentBuilder_ == null) {
           comment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
@@ -2862,11 +3709,17 @@ public final class AttachmentProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder getCommentBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getCommentFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getCommentOrBuilder() {
         if (commentBuilder_ != null) {
           return commentBuilder_.getMessageOrBuilder();
@@ -2874,52 +3727,55 @@ public final class AttachmentProtos {
           return comment_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> 
           getCommentFieldBuilder() {
         if (commentBuilder_ == null) {
           commentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder>(
-                  comment_,
+                  getComment(),
                   getParentForChildren(),
                   isClean());
           comment_ = null;
         }
         return commentBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.SignedAttachment)
     }
-    
+
     static {
       defaultInstance = new SignedAttachment(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.SignedAttachment)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_Entity_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_Entity_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_Attachment_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_Attachment_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_Signature_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_Signature_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -2950,45 +3806,13 @@ public final class AttachmentProtos {
       "ttachmentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Docflow_Entity_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Docflow_Entity_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_Entity_descriptor,
-              new java.lang.String[] { "EntityId", "CreationTimestamp", "Content", },
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.class,
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder.class);
-          internal_static_Diadoc_Api_Proto_Docflow_Attachment_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_Docflow_Attachment_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_Attachment_descriptor,
-              new java.lang.String[] { "Entity", "AttachmentFilename", "DisplayFilename", },
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.class,
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.Builder.class);
-          internal_static_Diadoc_Api_Proto_Docflow_Signature_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_Docflow_Signature_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_Signature_descriptor,
-              new java.lang.String[] { "Entity", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", },
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.class,
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.Signature.Builder.class);
-          internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_descriptor,
-              new java.lang.String[] { "Attachment", "Signature", "Comment", },
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.class,
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
@@ -2996,7 +3820,34 @@ public final class AttachmentProtos {
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
           Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Docflow_Entity_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Docflow_Entity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_Entity_descriptor,
+        new java.lang.String[] { "EntityId", "CreationTimestamp", "Content", });
+    internal_static_Diadoc_Api_Proto_Docflow_Attachment_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Docflow_Attachment_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_Attachment_descriptor,
+        new java.lang.String[] { "Entity", "AttachmentFilename", "DisplayFilename", });
+    internal_static_Diadoc_Api_Proto_Docflow_Signature_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Docflow_Signature_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_Signature_descriptor,
+        new java.lang.String[] { "Entity", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", });
+    internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_SignedAttachment_descriptor,
+        new java.lang.String[] { "Attachment", "Signature", "Comment", });
+    Diadoc.Api.Proto.ContentProtos.getDescriptor();
+    Diadoc.Api.Proto.TimestampProtos.getDescriptor();
+    Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

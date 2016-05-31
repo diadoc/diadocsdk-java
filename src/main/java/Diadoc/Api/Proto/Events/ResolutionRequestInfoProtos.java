@@ -8,22 +8,49 @@ public final class ResolutionRequestInfoProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Events.ResolutionRequestType}
+   */
   public enum ResolutionRequestType
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownResolutionRequestType = -1;</code>
+     */
     UnknownResolutionRequestType(0, -1),
+    /**
+     * <code>ApprovementRequest = 0;</code>
+     */
     ApprovementRequest(1, 0),
+    /**
+     * <code>SignatureRequest = 1;</code>
+     */
     SignatureRequest(2, 1),
+    /**
+     * <code>ApprovementSignatureRequest = 2;</code>
+     */
     ApprovementSignatureRequest(3, 2),
     ;
-    
+
+    /**
+     * <code>UnknownResolutionRequestType = -1;</code>
+     */
     public static final int UnknownResolutionRequestType_VALUE = -1;
+    /**
+     * <code>ApprovementRequest = 0;</code>
+     */
     public static final int ApprovementRequest_VALUE = 0;
+    /**
+     * <code>SignatureRequest = 1;</code>
+     */
     public static final int SignatureRequest_VALUE = 1;
+    /**
+     * <code>ApprovementSignatureRequest = 2;</code>
+     */
     public static final int ApprovementSignatureRequest_VALUE = 2;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static ResolutionRequestType valueOf(int value) {
       switch (value) {
         case -1: return UnknownResolutionRequestType;
@@ -33,7 +60,7 @@ public final class ResolutionRequestInfoProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<ResolutionRequestType>
         internalGetValueMap() {
       return internalValueMap;
@@ -45,7 +72,7 @@ public final class ResolutionRequestInfoProtos {
               return ResolutionRequestType.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -58,11 +85,9 @@ public final class ResolutionRequestInfoProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final ResolutionRequestType[] VALUES = {
-      UnknownResolutionRequestType, ApprovementRequest, SignatureRequest, ApprovementSignatureRequest, 
-    };
-    
+
+    private static final ResolutionRequestType[] VALUES = values();
+
     public static ResolutionRequestType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -71,154 +96,320 @@ public final class ResolutionRequestInfoProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private ResolutionRequestType(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Events.ResolutionRequestType)
   }
-  
-  public interface ResolutionRequestInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];
+
+  public interface ResolutionRequestInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Events.ResolutionRequestInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];</code>
+     */
     boolean hasRequestType();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];</code>
+     */
     Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType getRequestType();
-    
-    // required string Author = 2;
+
+    /**
+     * <code>required string Author = 2;</code>
+     */
     boolean hasAuthor();
-    String getAuthor();
-    
-    // optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;
+    /**
+     * <code>required string Author = 2;</code>
+     */
+    java.lang.String getAuthor();
+    /**
+     * <code>required string Author = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAuthorBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+     */
     boolean hasTarget();
+    /**
+     * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+     */
     Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget getTarget();
+    /**
+     * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+     */
     Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTargetOrBuilder getTargetOrBuilder();
-    
-    // optional string ResolvedWith = 4;
+
+    /**
+     * <code>optional string ResolvedWith = 4;</code>
+     */
     boolean hasResolvedWith();
-    String getResolvedWith();
+    /**
+     * <code>optional string ResolvedWith = 4;</code>
+     */
+    java.lang.String getResolvedWith();
+    /**
+     * <code>optional string ResolvedWith = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getResolvedWithBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionRequestInfo}
+   */
   public static final class ResolutionRequestInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements ResolutionRequestInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Events.ResolutionRequestInfo)
+      ResolutionRequestInfoOrBuilder {
     // Use ResolutionRequestInfo.newBuilder() to construct.
-    private ResolutionRequestInfo(Builder builder) {
+    private ResolutionRequestInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private ResolutionRequestInfo(boolean noInit) {}
-    
+    private ResolutionRequestInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final ResolutionRequestInfo defaultInstance;
     public static ResolutionRequestInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public ResolutionRequestInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResolutionRequestInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType value = Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                requestType_ = value;
+              }
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              author_ = bs;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = target_.toBuilder();
+              }
+              target_ = input.readMessage(Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(target_);
+                target_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              resolvedWith_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.class, Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<ResolutionRequestInfo> PARSER =
+        new com.google.protobuf.AbstractParser<ResolutionRequestInfo>() {
+      public ResolutionRequestInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResolutionRequestInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResolutionRequestInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];
     public static final int REQUESTTYPE_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType requestType_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];</code>
+     */
     public boolean hasRequestType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];</code>
+     */
     public Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType getRequestType() {
       return requestType_;
     }
-    
-    // required string Author = 2;
+
     public static final int AUTHOR_FIELD_NUMBER = 2;
     private java.lang.Object author_;
+    /**
+     * <code>required string Author = 2;</code>
+     */
     public boolean hasAuthor() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getAuthor() {
+    /**
+     * <code>required string Author = 2;</code>
+     */
+    public java.lang.String getAuthor() {
       java.lang.Object ref = author_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           author_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAuthorBytes() {
+    /**
+     * <code>required string Author = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAuthorBytes() {
       java.lang.Object ref = author_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         author_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;
+
     public static final int TARGET_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget target_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+     */
     public boolean hasTarget() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+     */
     public Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget getTarget() {
       return target_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+     */
     public Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTargetOrBuilder getTargetOrBuilder() {
       return target_;
     }
-    
-    // optional string ResolvedWith = 4;
+
     public static final int RESOLVEDWITH_FIELD_NUMBER = 4;
     private java.lang.Object resolvedWith_;
+    /**
+     * <code>optional string ResolvedWith = 4;</code>
+     */
     public boolean hasResolvedWith() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getResolvedWith() {
+    /**
+     * <code>optional string ResolvedWith = 4;</code>
+     */
+    public java.lang.String getResolvedWith() {
       java.lang.Object ref = resolvedWith_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           resolvedWith_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getResolvedWithBytes() {
+    /**
+     * <code>optional string ResolvedWith = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getResolvedWithBytes() {
       java.lang.Object ref = resolvedWith_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         resolvedWith_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       requestType_ = Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType.UnknownResolutionRequestType;
       author_ = "";
@@ -228,8 +419,9 @@ public final class ResolutionRequestInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasAuthor()) {
         memoizedIsInitialized = 0;
         return false;
@@ -237,7 +429,7 @@ public final class ResolutionRequestInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -255,12 +447,12 @@ public final class ResolutionRequestInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -282,113 +474,106 @@ public final class ResolutionRequestInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionRequestInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Events.ResolutionRequestInfo)
+        Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.class, Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -400,7 +585,7 @@ public final class ResolutionRequestInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         requestType_ = Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType.UnknownResolutionRequestType;
@@ -417,20 +602,20 @@ public final class ResolutionRequestInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.getDescriptor();
+        return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo build() {
         Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -438,17 +623,7 @@ public final class ResolutionRequestInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo buildPartial() {
         Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo result = new Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo(this);
         int from_bitField0_ = bitField0_;
@@ -477,7 +652,7 @@ public final class ResolutionRequestInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo) {
           return mergeFrom((Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo)other);
@@ -486,25 +661,29 @@ public final class ResolutionRequestInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo other) {
         if (other == Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.getDefaultInstance()) return this;
         if (other.hasRequestType()) {
           setRequestType(other.getRequestType());
         }
         if (other.hasAuthor()) {
-          setAuthor(other.getAuthor());
+          bitField0_ |= 0x00000002;
+          author_ = other.author_;
+          onChanged();
         }
         if (other.hasTarget()) {
           mergeTarget(other.getTarget());
         }
         if (other.hasResolvedWith()) {
-          setResolvedWith(other.getResolvedWith());
+          bitField0_ |= 0x00000008;
+          resolvedWith_ = other.resolvedWith_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasAuthor()) {
           
@@ -512,74 +691,42 @@ public final class ResolutionRequestInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType value = Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(1, rawValue);
-              } else {
-                bitField0_ |= 0x00000001;
-                requestType_ = value;
-              }
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              author_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.Builder subBuilder = Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.newBuilder();
-              if (hasTarget()) {
-                subBuilder.mergeFrom(getTarget());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setTarget(subBuilder.buildPartial());
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              resolvedWith_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];
+
       private Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType requestType_ = Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType.UnknownResolutionRequestType;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];</code>
+       */
       public boolean hasRequestType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];</code>
+       */
       public Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType getRequestType() {
         return requestType_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];</code>
+       */
       public Builder setRequestType(Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType value) {
         if (value == null) {
           throw new NullPointerException();
@@ -589,29 +736,61 @@ public final class ResolutionRequestInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.ResolutionRequestType RequestType = 1 [default = UnknownResolutionRequestType];</code>
+       */
       public Builder clearRequestType() {
         bitField0_ = (bitField0_ & ~0x00000001);
         requestType_ = Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestType.UnknownResolutionRequestType;
         onChanged();
         return this;
       }
-      
-      // required string Author = 2;
+
       private java.lang.Object author_ = "";
+      /**
+       * <code>required string Author = 2;</code>
+       */
       public boolean hasAuthor() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getAuthor() {
+      /**
+       * <code>required string Author = 2;</code>
+       */
+      public java.lang.String getAuthor() {
         java.lang.Object ref = author_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          author_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            author_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAuthor(String value) {
+      /**
+       * <code>required string Author = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAuthorBytes() {
+        java.lang.Object ref = author_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          author_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Author = 2;</code>
+       */
+      public Builder setAuthor(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -620,25 +799,41 @@ public final class ResolutionRequestInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Author = 2;</code>
+       */
       public Builder clearAuthor() {
         bitField0_ = (bitField0_ & ~0x00000002);
         author_ = getDefaultInstance().getAuthor();
         onChanged();
         return this;
       }
-      void setAuthor(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string Author = 2;</code>
+       */
+      public Builder setAuthorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         author_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;
+
       private Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget target_ = Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget, Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.Builder, Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTargetOrBuilder> targetBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+       */
       public boolean hasTarget() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+       */
       public Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget getTarget() {
         if (targetBuilder_ == null) {
           return target_;
@@ -646,6 +841,9 @@ public final class ResolutionRequestInfoProtos {
           return targetBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+       */
       public Builder setTarget(Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget value) {
         if (targetBuilder_ == null) {
           if (value == null) {
@@ -659,6 +857,9 @@ public final class ResolutionRequestInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+       */
       public Builder setTarget(
           Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.Builder builderForValue) {
         if (targetBuilder_ == null) {
@@ -670,6 +871,9 @@ public final class ResolutionRequestInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+       */
       public Builder mergeTarget(Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget value) {
         if (targetBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -686,6 +890,9 @@ public final class ResolutionRequestInfoProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+       */
       public Builder clearTarget() {
         if (targetBuilder_ == null) {
           target_ = Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.getDefaultInstance();
@@ -696,11 +903,17 @@ public final class ResolutionRequestInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+       */
       public Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.Builder getTargetBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getTargetFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+       */
       public Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTargetOrBuilder getTargetOrBuilder() {
         if (targetBuilder_ != null) {
           return targetBuilder_.getMessageOrBuilder();
@@ -708,36 +921,68 @@ public final class ResolutionRequestInfoProtos {
           return target_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ResolutionTarget Target = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget, Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.Builder, Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTargetOrBuilder> 
           getTargetFieldBuilder() {
         if (targetBuilder_ == null) {
           targetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget, Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.Builder, Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTargetOrBuilder>(
-                  target_,
+                  getTarget(),
                   getParentForChildren(),
                   isClean());
           target_ = null;
         }
         return targetBuilder_;
       }
-      
-      // optional string ResolvedWith = 4;
+
       private java.lang.Object resolvedWith_ = "";
+      /**
+       * <code>optional string ResolvedWith = 4;</code>
+       */
       public boolean hasResolvedWith() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getResolvedWith() {
+      /**
+       * <code>optional string ResolvedWith = 4;</code>
+       */
+      public java.lang.String getResolvedWith() {
         java.lang.Object ref = resolvedWith_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          resolvedWith_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            resolvedWith_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setResolvedWith(String value) {
+      /**
+       * <code>optional string ResolvedWith = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getResolvedWithBytes() {
+        java.lang.Object ref = resolvedWith_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resolvedWith_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ResolvedWith = 4;</code>
+       */
+      public Builder setResolvedWith(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -746,35 +991,46 @@ public final class ResolutionRequestInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string ResolvedWith = 4;</code>
+       */
       public Builder clearResolvedWith() {
         bitField0_ = (bitField0_ & ~0x00000008);
         resolvedWith_ = getDefaultInstance().getResolvedWith();
         onChanged();
         return this;
       }
-      void setResolvedWith(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string ResolvedWith = 4;</code>
+       */
+      public Builder setResolvedWithBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         resolvedWith_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.ResolutionRequestInfo)
     }
-    
+
     static {
       defaultInstance = new ResolutionRequestInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Events.ResolutionRequestInfo)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -797,27 +1053,26 @@ public final class ResolutionRequestInfoProtos {
       "equest\020\002B\035B\033ResolutionRequestInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_descriptor,
-              new java.lang.String[] { "RequestType", "Author", "Target", "ResolvedWith", },
-              Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.class,
-              Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.ResolutionRequestInfo.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.ResolutionTargetProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Events_ResolutionRequestInfo_descriptor,
+        new java.lang.String[] { "RequestType", "Author", "Target", "ResolvedWith", });
+    Diadoc.Api.Proto.ResolutionTargetProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

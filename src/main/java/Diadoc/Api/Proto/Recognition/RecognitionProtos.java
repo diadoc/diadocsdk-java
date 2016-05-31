@@ -8,18 +8,41 @@ public final class RecognitionProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Recognition.RecognizedDocumentType}
+   */
   public enum RecognizedDocumentType
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownRecognizedDocumentType = -1;</code>
+     *
+     * <pre>
+     * Reserved type to report to legacy clients for newly introduced types
+     * </pre>
+     */
     UnknownRecognizedDocumentType(0, -1),
+    /**
+     * <code>Invoice = 1;</code>
+     */
     Invoice(1, 1),
     ;
-    
+
+    /**
+     * <code>UnknownRecognizedDocumentType = -1;</code>
+     *
+     * <pre>
+     * Reserved type to report to legacy clients for newly introduced types
+     * </pre>
+     */
     public static final int UnknownRecognizedDocumentType_VALUE = -1;
+    /**
+     * <code>Invoice = 1;</code>
+     */
     public static final int Invoice_VALUE = 1;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static RecognizedDocumentType valueOf(int value) {
       switch (value) {
         case -1: return UnknownRecognizedDocumentType;
@@ -27,7 +50,7 @@ public final class RecognitionProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<RecognizedDocumentType>
         internalGetValueMap() {
       return internalValueMap;
@@ -39,7 +62,7 @@ public final class RecognitionProtos {
               return RecognizedDocumentType.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -52,11 +75,9 @@ public final class RecognitionProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.Recognition.RecognitionProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final RecognizedDocumentType[] VALUES = {
-      UnknownRecognizedDocumentType, Invoice, 
-    };
-    
+
+    private static final RecognizedDocumentType[] VALUES = values();
+
     public static RecognizedDocumentType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -65,204 +86,411 @@ public final class RecognitionProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private RecognizedDocumentType(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Recognition.RecognizedDocumentType)
   }
-  
-  public interface RecognizedOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string RecognitionId = 1;
+
+  public interface RecognizedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Recognition.Recognized)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string RecognitionId = 1;</code>
+     */
     boolean hasRecognitionId();
-    String getRecognitionId();
-    
-    // optional string ErrorMessage = 2;
+    /**
+     * <code>required string RecognitionId = 1;</code>
+     */
+    java.lang.String getRecognitionId();
+    /**
+     * <code>required string RecognitionId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getRecognitionIdBytes();
+
+    /**
+     * <code>optional string ErrorMessage = 2;</code>
+     */
     boolean hasErrorMessage();
-    String getErrorMessage();
-    
-    // optional string FileName = 3;
+    /**
+     * <code>optional string ErrorMessage = 2;</code>
+     */
+    java.lang.String getErrorMessage();
+    /**
+     * <code>optional string ErrorMessage = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getErrorMessageBytes();
+
+    /**
+     * <code>optional string FileName = 3;</code>
+     */
     boolean hasFileName();
-    String getFileName();
-    
-    // optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];
+    /**
+     * <code>optional string FileName = 3;</code>
+     */
+    java.lang.String getFileName();
+    /**
+     * <code>optional string FileName = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getFileNameBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];</code>
+     */
     boolean hasDocumentType();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];</code>
+     */
     Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType getDocumentType();
-    
-    // optional bytes Content = 5;
+
+    /**
+     * <code>optional bytes Content = 5;</code>
+     */
     boolean hasContent();
+    /**
+     * <code>optional bytes Content = 5;</code>
+     */
     com.google.protobuf.ByteString getContent();
-    
-    // optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+     */
     boolean hasInvoice();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+     */
     Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice getInvoice();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+     */
     Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoiceOrBuilder getInvoiceOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Recognition.Recognized}
+   */
   public static final class Recognized extends
-      com.google.protobuf.GeneratedMessage
-      implements RecognizedOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Recognition.Recognized)
+      RecognizedOrBuilder {
     // Use Recognized.newBuilder() to construct.
-    private Recognized(Builder builder) {
+    private Recognized(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Recognized(boolean noInit) {}
-    
+    private Recognized(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Recognized defaultInstance;
     public static Recognized getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Recognized getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Recognized(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              recognitionId_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              errorMessage_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              fileName_ = bs;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType value = Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(4, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                documentType_ = value;
+              }
+              break;
+            }
+            case 42: {
+              bitField0_ |= 0x00000010;
+              content_ = input.readBytes();
+              break;
+            }
+            case 50: {
+              Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = invoice_.toBuilder();
+              }
+              invoice_ = input.readMessage(Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(invoice_);
+                invoice_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_Recognized_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_Recognized_fieldAccessorTable;
+      return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_Recognized_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.class, Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Recognized> PARSER =
+        new com.google.protobuf.AbstractParser<Recognized>() {
+      public Recognized parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Recognized(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Recognized> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string RecognitionId = 1;
     public static final int RECOGNITIONID_FIELD_NUMBER = 1;
     private java.lang.Object recognitionId_;
+    /**
+     * <code>required string RecognitionId = 1;</code>
+     */
     public boolean hasRecognitionId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getRecognitionId() {
+    /**
+     * <code>required string RecognitionId = 1;</code>
+     */
+    public java.lang.String getRecognitionId() {
       java.lang.Object ref = recognitionId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           recognitionId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getRecognitionIdBytes() {
+    /**
+     * <code>required string RecognitionId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRecognitionIdBytes() {
       java.lang.Object ref = recognitionId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         recognitionId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string ErrorMessage = 2;
+
     public static final int ERRORMESSAGE_FIELD_NUMBER = 2;
     private java.lang.Object errorMessage_;
+    /**
+     * <code>optional string ErrorMessage = 2;</code>
+     */
     public boolean hasErrorMessage() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getErrorMessage() {
+    /**
+     * <code>optional string ErrorMessage = 2;</code>
+     */
+    public java.lang.String getErrorMessage() {
       java.lang.Object ref = errorMessage_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           errorMessage_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getErrorMessageBytes() {
+    /**
+     * <code>optional string ErrorMessage = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getErrorMessageBytes() {
       java.lang.Object ref = errorMessage_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         errorMessage_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string FileName = 3;
+
     public static final int FILENAME_FIELD_NUMBER = 3;
     private java.lang.Object fileName_;
+    /**
+     * <code>optional string FileName = 3;</code>
+     */
     public boolean hasFileName() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getFileName() {
+    /**
+     * <code>optional string FileName = 3;</code>
+     */
+    public java.lang.String getFileName() {
       java.lang.Object ref = fileName_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           fileName_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getFileNameBytes() {
+    /**
+     * <code>optional string FileName = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFileNameBytes() {
       java.lang.Object ref = fileName_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         fileName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];
+
     public static final int DOCUMENTTYPE_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType documentType_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];</code>
+     */
     public boolean hasDocumentType() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];</code>
+     */
     public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType getDocumentType() {
       return documentType_;
     }
-    
-    // optional bytes Content = 5;
+
     public static final int CONTENT_FIELD_NUMBER = 5;
     private com.google.protobuf.ByteString content_;
+    /**
+     * <code>optional bytes Content = 5;</code>
+     */
     public boolean hasContent() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional bytes Content = 5;</code>
+     */
     public com.google.protobuf.ByteString getContent() {
       return content_;
     }
-    
-    // optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;
+
     public static final int INVOICE_FIELD_NUMBER = 6;
     private Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice invoice_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+     */
     public boolean hasInvoice() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+     */
     public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice getInvoice() {
       return invoice_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+     */
     public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoiceOrBuilder getInvoiceOrBuilder() {
       return invoice_;
     }
-    
+
     private void initFields() {
       recognitionId_ = "";
       errorMessage_ = "";
@@ -274,8 +502,9 @@ public final class RecognitionProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasRecognitionId()) {
         memoizedIsInitialized = 0;
         return false;
@@ -289,7 +518,7 @@ public final class RecognitionProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -313,12 +542,12 @@ public final class RecognitionProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -348,113 +577,106 @@ public final class RecognitionProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Recognition.Recognized}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Recognition.Recognized)
+        Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_Recognized_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_Recognized_fieldAccessorTable;
+        return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_Recognized_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.class, Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -466,7 +688,7 @@ public final class RecognitionProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         recognitionId_ = "";
@@ -487,20 +709,20 @@ public final class RecognitionProtos {
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.getDescriptor();
+        return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_Recognized_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized build() {
         Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized result = buildPartial();
         if (!result.isInitialized()) {
@@ -508,17 +730,7 @@ public final class RecognitionProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized buildPartial() {
         Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized result = new Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized(this);
         int from_bitField0_ = bitField0_;
@@ -555,7 +767,7 @@ public final class RecognitionProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized) {
           return mergeFrom((Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized)other);
@@ -564,17 +776,23 @@ public final class RecognitionProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized other) {
         if (other == Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.getDefaultInstance()) return this;
         if (other.hasRecognitionId()) {
-          setRecognitionId(other.getRecognitionId());
+          bitField0_ |= 0x00000001;
+          recognitionId_ = other.recognitionId_;
+          onChanged();
         }
         if (other.hasErrorMessage()) {
-          setErrorMessage(other.getErrorMessage());
+          bitField0_ |= 0x00000002;
+          errorMessage_ = other.errorMessage_;
+          onChanged();
         }
         if (other.hasFileName()) {
-          setFileName(other.getFileName());
+          bitField0_ |= 0x00000004;
+          fileName_ = other.fileName_;
+          onChanged();
         }
         if (other.hasDocumentType()) {
           setDocumentType(other.getDocumentType());
@@ -588,7 +806,7 @@ public final class RecognitionProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasRecognitionId()) {
           
@@ -602,92 +820,71 @@ public final class RecognitionProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              recognitionId_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              errorMessage_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              fileName_ = input.readBytes();
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType value = Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(4, rawValue);
-              } else {
-                bitField0_ |= 0x00000008;
-                documentType_ = value;
-              }
-              break;
-            }
-            case 42: {
-              bitField0_ |= 0x00000010;
-              content_ = input.readBytes();
-              break;
-            }
-            case 50: {
-              Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder subBuilder = Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.newBuilder();
-              if (hasInvoice()) {
-                subBuilder.mergeFrom(getInvoice());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setInvoice(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string RecognitionId = 1;
+
       private java.lang.Object recognitionId_ = "";
+      /**
+       * <code>required string RecognitionId = 1;</code>
+       */
       public boolean hasRecognitionId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getRecognitionId() {
+      /**
+       * <code>required string RecognitionId = 1;</code>
+       */
+      public java.lang.String getRecognitionId() {
         java.lang.Object ref = recognitionId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          recognitionId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            recognitionId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setRecognitionId(String value) {
+      /**
+       * <code>required string RecognitionId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRecognitionIdBytes() {
+        java.lang.Object ref = recognitionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recognitionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string RecognitionId = 1;</code>
+       */
+      public Builder setRecognitionId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -696,34 +893,74 @@ public final class RecognitionProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string RecognitionId = 1;</code>
+       */
       public Builder clearRecognitionId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         recognitionId_ = getDefaultInstance().getRecognitionId();
         onChanged();
         return this;
       }
-      void setRecognitionId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string RecognitionId = 1;</code>
+       */
+      public Builder setRecognitionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         recognitionId_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string ErrorMessage = 2;
+
       private java.lang.Object errorMessage_ = "";
+      /**
+       * <code>optional string ErrorMessage = 2;</code>
+       */
       public boolean hasErrorMessage() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getErrorMessage() {
+      /**
+       * <code>optional string ErrorMessage = 2;</code>
+       */
+      public java.lang.String getErrorMessage() {
         java.lang.Object ref = errorMessage_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          errorMessage_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            errorMessage_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setErrorMessage(String value) {
+      /**
+       * <code>optional string ErrorMessage = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getErrorMessageBytes() {
+        java.lang.Object ref = errorMessage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errorMessage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ErrorMessage = 2;</code>
+       */
+      public Builder setErrorMessage(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -732,34 +969,74 @@ public final class RecognitionProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string ErrorMessage = 2;</code>
+       */
       public Builder clearErrorMessage() {
         bitField0_ = (bitField0_ & ~0x00000002);
         errorMessage_ = getDefaultInstance().getErrorMessage();
         onChanged();
         return this;
       }
-      void setErrorMessage(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string ErrorMessage = 2;</code>
+       */
+      public Builder setErrorMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         errorMessage_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string FileName = 3;
+
       private java.lang.Object fileName_ = "";
+      /**
+       * <code>optional string FileName = 3;</code>
+       */
       public boolean hasFileName() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getFileName() {
+      /**
+       * <code>optional string FileName = 3;</code>
+       */
+      public java.lang.String getFileName() {
         java.lang.Object ref = fileName_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          fileName_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fileName_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setFileName(String value) {
+      /**
+       * <code>optional string FileName = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFileNameBytes() {
+        java.lang.Object ref = fileName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fileName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string FileName = 3;</code>
+       */
+      public Builder setFileName(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -768,26 +1045,45 @@ public final class RecognitionProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string FileName = 3;</code>
+       */
       public Builder clearFileName() {
         bitField0_ = (bitField0_ & ~0x00000004);
         fileName_ = getDefaultInstance().getFileName();
         onChanged();
         return this;
       }
-      void setFileName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string FileName = 3;</code>
+       */
+      public Builder setFileNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         fileName_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];
+
       private Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType documentType_ = Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType.UnknownRecognizedDocumentType;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];</code>
+       */
       public boolean hasDocumentType() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];</code>
+       */
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType getDocumentType() {
         return documentType_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];</code>
+       */
       public Builder setDocumentType(Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType value) {
         if (value == null) {
           throw new NullPointerException();
@@ -797,21 +1093,32 @@ public final class RecognitionProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedDocumentType DocumentType = 4 [default = UnknownRecognizedDocumentType];</code>
+       */
       public Builder clearDocumentType() {
         bitField0_ = (bitField0_ & ~0x00000008);
         documentType_ = Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedDocumentType.UnknownRecognizedDocumentType;
         onChanged();
         return this;
       }
-      
-      // optional bytes Content = 5;
+
       private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes Content = 5;</code>
+       */
       public boolean hasContent() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional bytes Content = 5;</code>
+       */
       public com.google.protobuf.ByteString getContent() {
         return content_;
       }
+      /**
+       * <code>optional bytes Content = 5;</code>
+       */
       public Builder setContent(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -821,20 +1128,28 @@ public final class RecognitionProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bytes Content = 5;</code>
+       */
       public Builder clearContent() {
         bitField0_ = (bitField0_ & ~0x00000010);
         content_ = getDefaultInstance().getContent();
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;
+
       private Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice invoice_ = Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice, Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder, Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoiceOrBuilder> invoiceBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+       */
       public boolean hasInvoice() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+       */
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice getInvoice() {
         if (invoiceBuilder_ == null) {
           return invoice_;
@@ -842,6 +1157,9 @@ public final class RecognitionProtos {
           return invoiceBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+       */
       public Builder setInvoice(Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice value) {
         if (invoiceBuilder_ == null) {
           if (value == null) {
@@ -855,6 +1173,9 @@ public final class RecognitionProtos {
         bitField0_ |= 0x00000020;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+       */
       public Builder setInvoice(
           Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder builderForValue) {
         if (invoiceBuilder_ == null) {
@@ -866,6 +1187,9 @@ public final class RecognitionProtos {
         bitField0_ |= 0x00000020;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+       */
       public Builder mergeInvoice(Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice value) {
         if (invoiceBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020) &&
@@ -882,6 +1206,9 @@ public final class RecognitionProtos {
         bitField0_ |= 0x00000020;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+       */
       public Builder clearInvoice() {
         if (invoiceBuilder_ == null) {
           invoice_ = Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.getDefaultInstance();
@@ -892,11 +1219,17 @@ public final class RecognitionProtos {
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+       */
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder getInvoiceBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
         return getInvoiceFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+       */
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoiceOrBuilder getInvoiceOrBuilder() {
         if (invoiceBuilder_ != null) {
           return invoiceBuilder_.getMessageOrBuilder();
@@ -904,135 +1237,254 @@ public final class RecognitionProtos {
           return invoice_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Recognition.RecognizedInvoice Invoice = 6;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice, Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder, Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoiceOrBuilder> 
           getInvoiceFieldBuilder() {
         if (invoiceBuilder_ == null) {
           invoiceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice, Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder, Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoiceOrBuilder>(
-                  invoice_,
+                  getInvoice(),
                   getParentForChildren(),
                   isClean());
           invoice_ = null;
         }
         return invoiceBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Recognition.Recognized)
     }
-    
+
     static {
       defaultInstance = new Recognized(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Recognition.Recognized)
   }
-  
-  public interface RecognizedInvoiceOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string MetadataJson = 1;
+
+  public interface RecognizedInvoiceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Recognition.RecognizedInvoice)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string MetadataJson = 1;</code>
+     */
     boolean hasMetadataJson();
-    String getMetadataJson();
-    
-    // optional string ValidationErrorMessage = 2;
+    /**
+     * <code>required string MetadataJson = 1;</code>
+     */
+    java.lang.String getMetadataJson();
+    /**
+     * <code>required string MetadataJson = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getMetadataJsonBytes();
+
+    /**
+     * <code>optional string ValidationErrorMessage = 2;</code>
+     */
     boolean hasValidationErrorMessage();
-    String getValidationErrorMessage();
+    /**
+     * <code>optional string ValidationErrorMessage = 2;</code>
+     */
+    java.lang.String getValidationErrorMessage();
+    /**
+     * <code>optional string ValidationErrorMessage = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getValidationErrorMessageBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Recognition.RecognizedInvoice}
+   */
   public static final class RecognizedInvoice extends
-      com.google.protobuf.GeneratedMessage
-      implements RecognizedInvoiceOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Recognition.RecognizedInvoice)
+      RecognizedInvoiceOrBuilder {
     // Use RecognizedInvoice.newBuilder() to construct.
-    private RecognizedInvoice(Builder builder) {
+    private RecognizedInvoice(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private RecognizedInvoice(boolean noInit) {}
-    
+    private RecognizedInvoice(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final RecognizedInvoice defaultInstance;
     public static RecognizedInvoice getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public RecognizedInvoice getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecognizedInvoice(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              metadataJson_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              validationErrorMessage_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_fieldAccessorTable;
+      return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.class, Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<RecognizedInvoice> PARSER =
+        new com.google.protobuf.AbstractParser<RecognizedInvoice>() {
+      public RecognizedInvoice parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecognizedInvoice(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecognizedInvoice> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string MetadataJson = 1;
     public static final int METADATAJSON_FIELD_NUMBER = 1;
     private java.lang.Object metadataJson_;
+    /**
+     * <code>required string MetadataJson = 1;</code>
+     */
     public boolean hasMetadataJson() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getMetadataJson() {
+    /**
+     * <code>required string MetadataJson = 1;</code>
+     */
+    public java.lang.String getMetadataJson() {
       java.lang.Object ref = metadataJson_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           metadataJson_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getMetadataJsonBytes() {
+    /**
+     * <code>required string MetadataJson = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMetadataJsonBytes() {
       java.lang.Object ref = metadataJson_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         metadataJson_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string ValidationErrorMessage = 2;
+
     public static final int VALIDATIONERRORMESSAGE_FIELD_NUMBER = 2;
     private java.lang.Object validationErrorMessage_;
+    /**
+     * <code>optional string ValidationErrorMessage = 2;</code>
+     */
     public boolean hasValidationErrorMessage() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getValidationErrorMessage() {
+    /**
+     * <code>optional string ValidationErrorMessage = 2;</code>
+     */
+    public java.lang.String getValidationErrorMessage() {
       java.lang.Object ref = validationErrorMessage_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           validationErrorMessage_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getValidationErrorMessageBytes() {
+    /**
+     * <code>optional string ValidationErrorMessage = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValidationErrorMessageBytes() {
       java.lang.Object ref = validationErrorMessage_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         validationErrorMessage_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       metadataJson_ = "";
       validationErrorMessage_ = "";
@@ -1040,8 +1492,9 @@ public final class RecognitionProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasMetadataJson()) {
         memoizedIsInitialized = 0;
         return false;
@@ -1049,7 +1502,7 @@ public final class RecognitionProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1061,12 +1514,12 @@ public final class RecognitionProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1080,113 +1533,106 @@ public final class RecognitionProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Recognition.RecognizedInvoice}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoiceOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Recognition.RecognizedInvoice)
+        Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoiceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_fieldAccessorTable;
+        return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.class, Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1197,7 +1643,7 @@ public final class RecognitionProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         metadataJson_ = "";
@@ -1206,20 +1652,20 @@ public final class RecognitionProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.getDescriptor();
+        return Diadoc.Api.Proto.Recognition.RecognitionProtos.internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice build() {
         Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice result = buildPartial();
         if (!result.isInitialized()) {
@@ -1227,17 +1673,7 @@ public final class RecognitionProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice buildPartial() {
         Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice result = new Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice(this);
         int from_bitField0_ = bitField0_;
@@ -1254,7 +1690,7 @@ public final class RecognitionProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice) {
           return mergeFrom((Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice)other);
@@ -1263,19 +1699,23 @@ public final class RecognitionProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice other) {
         if (other == Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.getDefaultInstance()) return this;
         if (other.hasMetadataJson()) {
-          setMetadataJson(other.getMetadataJson());
+          bitField0_ |= 0x00000001;
+          metadataJson_ = other.metadataJson_;
+          onChanged();
         }
         if (other.hasValidationErrorMessage()) {
-          setValidationErrorMessage(other.getValidationErrorMessage());
+          bitField0_ |= 0x00000002;
+          validationErrorMessage_ = other.validationErrorMessage_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasMetadataJson()) {
           
@@ -1283,62 +1723,71 @@ public final class RecognitionProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              metadataJson_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              validationErrorMessage_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string MetadataJson = 1;
+
       private java.lang.Object metadataJson_ = "";
+      /**
+       * <code>required string MetadataJson = 1;</code>
+       */
       public boolean hasMetadataJson() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getMetadataJson() {
+      /**
+       * <code>required string MetadataJson = 1;</code>
+       */
+      public java.lang.String getMetadataJson() {
         java.lang.Object ref = metadataJson_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          metadataJson_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            metadataJson_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setMetadataJson(String value) {
+      /**
+       * <code>required string MetadataJson = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMetadataJsonBytes() {
+        java.lang.Object ref = metadataJson_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metadataJson_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string MetadataJson = 1;</code>
+       */
+      public Builder setMetadataJson(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1347,34 +1796,74 @@ public final class RecognitionProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string MetadataJson = 1;</code>
+       */
       public Builder clearMetadataJson() {
         bitField0_ = (bitField0_ & ~0x00000001);
         metadataJson_ = getDefaultInstance().getMetadataJson();
         onChanged();
         return this;
       }
-      void setMetadataJson(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string MetadataJson = 1;</code>
+       */
+      public Builder setMetadataJsonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         metadataJson_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string ValidationErrorMessage = 2;
+
       private java.lang.Object validationErrorMessage_ = "";
+      /**
+       * <code>optional string ValidationErrorMessage = 2;</code>
+       */
       public boolean hasValidationErrorMessage() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getValidationErrorMessage() {
+      /**
+       * <code>optional string ValidationErrorMessage = 2;</code>
+       */
+      public java.lang.String getValidationErrorMessage() {
         java.lang.Object ref = validationErrorMessage_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          validationErrorMessage_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            validationErrorMessage_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setValidationErrorMessage(String value) {
+      /**
+       * <code>optional string ValidationErrorMessage = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValidationErrorMessageBytes() {
+        java.lang.Object ref = validationErrorMessage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validationErrorMessage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ValidationErrorMessage = 2;</code>
+       */
+      public Builder setValidationErrorMessage(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1383,40 +1872,51 @@ public final class RecognitionProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string ValidationErrorMessage = 2;</code>
+       */
       public Builder clearValidationErrorMessage() {
         bitField0_ = (bitField0_ & ~0x00000002);
         validationErrorMessage_ = getDefaultInstance().getValidationErrorMessage();
         onChanged();
         return this;
       }
-      void setValidationErrorMessage(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string ValidationErrorMessage = 2;</code>
+       */
+      public Builder setValidationErrorMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         validationErrorMessage_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Recognition.RecognizedInvoice)
     }
-    
+
     static {
       defaultInstance = new RecognizedInvoice(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Recognition.RecognizedInvoice)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Recognition_Recognized_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Recognition_Recognized_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -1440,34 +1940,30 @@ public final class RecognitionProtos {
       "voice\020\001B\023B\021RecognitionProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Recognition_Recognized_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Recognition_Recognized_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Recognition_Recognized_descriptor,
-              new java.lang.String[] { "RecognitionId", "ErrorMessage", "FileName", "DocumentType", "Content", "Invoice", },
-              Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.class,
-              Diadoc.Api.Proto.Recognition.RecognitionProtos.Recognized.Builder.class);
-          internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_descriptor,
-              new java.lang.String[] { "MetadataJson", "ValidationErrorMessage", },
-              Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.class,
-              Diadoc.Api.Proto.Recognition.RecognitionProtos.RecognizedInvoice.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Recognition_Recognized_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Recognition_Recognized_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Recognition_Recognized_descriptor,
+        new java.lang.String[] { "RecognitionId", "ErrorMessage", "FileName", "DocumentType", "Content", "Invoice", });
+    internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Recognition_RecognizedInvoice_descriptor,
+        new java.lang.String[] { "MetadataJson", "ValidationErrorMessage", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

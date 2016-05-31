@@ -8,68 +8,174 @@ public final class GetOrganizationsByInnListProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface GetOrganizationsByInnListRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated string InnList = 1;
-    java.util.List<String> getInnListList();
+  public interface GetOrganizationsByInnListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.GetOrganizationsByInnListRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string InnList = 1;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getInnListList();
+    /**
+     * <code>repeated string InnList = 1;</code>
+     */
     int getInnListCount();
-    String getInnList(int index);
+    /**
+     * <code>repeated string InnList = 1;</code>
+     */
+    java.lang.String getInnList(int index);
+    /**
+     * <code>repeated string InnList = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getInnListBytes(int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.GetOrganizationsByInnListRequest}
+   */
   public static final class GetOrganizationsByInnListRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements GetOrganizationsByInnListRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.GetOrganizationsByInnListRequest)
+      GetOrganizationsByInnListRequestOrBuilder {
     // Use GetOrganizationsByInnListRequest.newBuilder() to construct.
-    private GetOrganizationsByInnListRequest(Builder builder) {
+    private GetOrganizationsByInnListRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private GetOrganizationsByInnListRequest(boolean noInit) {}
-    
+    private GetOrganizationsByInnListRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final GetOrganizationsByInnListRequest defaultInstance;
     public static GetOrganizationsByInnListRequest getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public GetOrganizationsByInnListRequest getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetOrganizationsByInnListRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                innList_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              innList_.add(bs);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          innList_ = innList_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_fieldAccessorTable;
+      return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.class, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.Builder.class);
     }
-    
-    // repeated string InnList = 1;
+
+    public static com.google.protobuf.Parser<GetOrganizationsByInnListRequest> PARSER =
+        new com.google.protobuf.AbstractParser<GetOrganizationsByInnListRequest>() {
+      public GetOrganizationsByInnListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetOrganizationsByInnListRequest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetOrganizationsByInnListRequest> getParserForType() {
+      return PARSER;
+    }
+
     public static final int INNLIST_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList innList_;
-    public java.util.List<String>
+    /**
+     * <code>repeated string InnList = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
         getInnListList() {
       return innList_;
     }
+    /**
+     * <code>repeated string InnList = 1;</code>
+     */
     public int getInnListCount() {
       return innList_.size();
     }
-    public String getInnList(int index) {
+    /**
+     * <code>repeated string InnList = 1;</code>
+     */
+    public java.lang.String getInnList(int index) {
       return innList_.get(index);
     }
-    
+    /**
+     * <code>repeated string InnList = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInnListBytes(int index) {
+      return innList_.getByteString(index);
+    }
+
     private void initFields() {
       innList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -78,12 +184,12 @@ public final class GetOrganizationsByInnListProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       {
         int dataSize = 0;
@@ -98,113 +204,106 @@ public final class GetOrganizationsByInnListProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.GetOrganizationsByInnListRequest}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.GetOrganizationsByInnListRequest)
+        Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_fieldAccessorTable;
+        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.class, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -215,27 +314,27 @@ public final class GetOrganizationsByInnListProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         innList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.getDescriptor();
+        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest getDefaultInstanceForType() {
         return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest build() {
         Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest result = buildPartial();
         if (!result.isInitialized()) {
@@ -243,30 +342,19 @@ public final class GetOrganizationsByInnListProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest buildPartial() {
         Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest result = new Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          innList_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              innList_);
+          innList_ = innList_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.innList_ = innList_;
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest) {
           return mergeFrom((Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest)other);
@@ -275,7 +363,7 @@ public final class GetOrganizationsByInnListProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest other) {
         if (other == Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.getDefaultInstance()) return this;
         if (!other.innList_.isEmpty()) {
@@ -291,46 +379,30 @@ public final class GetOrganizationsByInnListProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              ensureInnListIsMutable();
-              innList_.add(input.readBytes());
-              break;
-            }
+        Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated string InnList = 1;
+
       private com.google.protobuf.LazyStringList innList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureInnListIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -338,18 +410,37 @@ public final class GetOrganizationsByInnListProtos {
           bitField0_ |= 0x00000001;
          }
       }
-      public java.util.List<String>
+      /**
+       * <code>repeated string InnList = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
           getInnListList() {
-        return java.util.Collections.unmodifiableList(innList_);
+        return innList_.getUnmodifiableView();
       }
+      /**
+       * <code>repeated string InnList = 1;</code>
+       */
       public int getInnListCount() {
         return innList_.size();
       }
-      public String getInnList(int index) {
+      /**
+       * <code>repeated string InnList = 1;</code>
+       */
+      public java.lang.String getInnList(int index) {
         return innList_.get(index);
       }
+      /**
+       * <code>repeated string InnList = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInnListBytes(int index) {
+        return innList_.getByteString(index);
+      }
+      /**
+       * <code>repeated string InnList = 1;</code>
+       */
       public Builder setInnList(
-          int index, String value) {
+          int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -358,7 +449,11 @@ public final class GetOrganizationsByInnListProtos {
         onChanged();
         return this;
       }
-      public Builder addInnList(String value) {
+      /**
+       * <code>repeated string InnList = 1;</code>
+       */
+      public Builder addInnList(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -367,100 +462,229 @@ public final class GetOrganizationsByInnListProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string InnList = 1;</code>
+       */
       public Builder addAllInnList(
-          java.lang.Iterable<String> values) {
+          java.lang.Iterable<java.lang.String> values) {
         ensureInnListIsMutable();
-        super.addAll(values, innList_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, innList_);
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string InnList = 1;</code>
+       */
       public Builder clearInnList() {
         innList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
-      void addInnList(com.google.protobuf.ByteString value) {
-        ensureInnListIsMutable();
+      /**
+       * <code>repeated string InnList = 1;</code>
+       */
+      public Builder addInnListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureInnListIsMutable();
         innList_.add(value);
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.GetOrganizationsByInnListRequest)
     }
-    
+
     static {
       defaultInstance = new GetOrganizationsByInnListRequest(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.GetOrganizationsByInnListRequest)
   }
-  
-  public interface OrganizationWithCounteragentStatusOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required .Diadoc.Api.Proto.Organization Organization = 1;
+
+  public interface OrganizationWithCounteragentStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.OrganizationWithCounteragentStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+     */
     boolean hasOrganization();
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+     */
     Diadoc.Api.Proto.OrganizationProtos.Organization getOrganization();
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+     */
     Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder getOrganizationOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];</code>
+     */
     boolean hasCounteragentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];</code>
+     */
     Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus getCounteragentStatus();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.OrganizationWithCounteragentStatus}
+   */
   public static final class OrganizationWithCounteragentStatus extends
-      com.google.protobuf.GeneratedMessage
-      implements OrganizationWithCounteragentStatusOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.OrganizationWithCounteragentStatus)
+      OrganizationWithCounteragentStatusOrBuilder {
     // Use OrganizationWithCounteragentStatus.newBuilder() to construct.
-    private OrganizationWithCounteragentStatus(Builder builder) {
+    private OrganizationWithCounteragentStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private OrganizationWithCounteragentStatus(boolean noInit) {}
-    
+    private OrganizationWithCounteragentStatus(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final OrganizationWithCounteragentStatus defaultInstance;
     public static OrganizationWithCounteragentStatus getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public OrganizationWithCounteragentStatus getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OrganizationWithCounteragentStatus(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.OrganizationProtos.Organization.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = organization_.toBuilder();
+              }
+              organization_ = input.readMessage(Diadoc.Api.Proto.OrganizationProtos.Organization.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(organization_);
+                organization_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus value = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                counteragentStatus_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_fieldAccessorTable;
+      return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.class, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<OrganizationWithCounteragentStatus> PARSER =
+        new com.google.protobuf.AbstractParser<OrganizationWithCounteragentStatus>() {
+      public OrganizationWithCounteragentStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OrganizationWithCounteragentStatus(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OrganizationWithCounteragentStatus> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required .Diadoc.Api.Proto.Organization Organization = 1;
     public static final int ORGANIZATION_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.OrganizationProtos.Organization organization_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+     */
     public boolean hasOrganization() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+     */
     public Diadoc.Api.Proto.OrganizationProtos.Organization getOrganization() {
       return organization_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+     */
     public Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder getOrganizationOrBuilder() {
       return organization_;
     }
-    
-    // optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];
+
     public static final int COUNTERAGENTSTATUS_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus counteragentStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];</code>
+     */
     public boolean hasCounteragentStatus() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];</code>
+     */
     public Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus getCounteragentStatus() {
       return counteragentStatus_;
     }
-    
+
     private void initFields() {
       organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
       counteragentStatus_ = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.UnknownCounteragentStatus;
@@ -468,8 +692,9 @@ public final class GetOrganizationsByInnListProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasOrganization()) {
         memoizedIsInitialized = 0;
         return false;
@@ -481,7 +706,7 @@ public final class GetOrganizationsByInnListProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -493,12 +718,12 @@ public final class GetOrganizationsByInnListProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -512,113 +737,106 @@ public final class GetOrganizationsByInnListProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.OrganizationWithCounteragentStatus}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatusOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.OrganizationWithCounteragentStatus)
+        Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatusOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_fieldAccessorTable;
+        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.class, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -630,7 +848,7 @@ public final class GetOrganizationsByInnListProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (organizationBuilder_ == null) {
@@ -643,20 +861,20 @@ public final class GetOrganizationsByInnListProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.getDescriptor();
+        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus getDefaultInstanceForType() {
         return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus build() {
         Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus result = buildPartial();
         if (!result.isInitialized()) {
@@ -664,17 +882,7 @@ public final class GetOrganizationsByInnListProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus buildPartial() {
         Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus result = new Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus(this);
         int from_bitField0_ = bitField0_;
@@ -695,7 +903,7 @@ public final class GetOrganizationsByInnListProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus) {
           return mergeFrom((Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus)other);
@@ -704,7 +912,7 @@ public final class GetOrganizationsByInnListProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus other) {
         if (other == Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.getDefaultInstance()) return this;
         if (other.hasOrganization()) {
@@ -716,7 +924,7 @@ public final class GetOrganizationsByInnListProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasOrganization()) {
           
@@ -728,63 +936,38 @@ public final class GetOrganizationsByInnListProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.OrganizationProtos.Organization.Builder subBuilder = Diadoc.Api.Proto.OrganizationProtos.Organization.newBuilder();
-              if (hasOrganization()) {
-                subBuilder.mergeFrom(getOrganization());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setOrganization(subBuilder.buildPartial());
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus value = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(2, rawValue);
-              } else {
-                bitField0_ |= 0x00000002;
-                counteragentStatus_ = value;
-              }
-              break;
-            }
+        Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required .Diadoc.Api.Proto.Organization Organization = 1;
+
       private Diadoc.Api.Proto.OrganizationProtos.Organization organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationProtos.Organization, Diadoc.Api.Proto.OrganizationProtos.Organization.Builder, Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder> organizationBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+       */
       public boolean hasOrganization() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+       */
       public Diadoc.Api.Proto.OrganizationProtos.Organization getOrganization() {
         if (organizationBuilder_ == null) {
           return organization_;
@@ -792,6 +975,9 @@ public final class GetOrganizationsByInnListProtos {
           return organizationBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+       */
       public Builder setOrganization(Diadoc.Api.Proto.OrganizationProtos.Organization value) {
         if (organizationBuilder_ == null) {
           if (value == null) {
@@ -805,6 +991,9 @@ public final class GetOrganizationsByInnListProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+       */
       public Builder setOrganization(
           Diadoc.Api.Proto.OrganizationProtos.Organization.Builder builderForValue) {
         if (organizationBuilder_ == null) {
@@ -816,6 +1005,9 @@ public final class GetOrganizationsByInnListProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+       */
       public Builder mergeOrganization(Diadoc.Api.Proto.OrganizationProtos.Organization value) {
         if (organizationBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -832,6 +1024,9 @@ public final class GetOrganizationsByInnListProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+       */
       public Builder clearOrganization() {
         if (organizationBuilder_ == null) {
           organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
@@ -842,11 +1037,17 @@ public final class GetOrganizationsByInnListProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+       */
       public Diadoc.Api.Proto.OrganizationProtos.Organization.Builder getOrganizationBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getOrganizationFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+       */
       public Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder getOrganizationOrBuilder() {
         if (organizationBuilder_ != null) {
           return organizationBuilder_.getMessageOrBuilder();
@@ -854,28 +1055,39 @@ public final class GetOrganizationsByInnListProtos {
           return organization_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationProtos.Organization, Diadoc.Api.Proto.OrganizationProtos.Organization.Builder, Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder> 
           getOrganizationFieldBuilder() {
         if (organizationBuilder_ == null) {
           organizationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.OrganizationProtos.Organization, Diadoc.Api.Proto.OrganizationProtos.Organization.Builder, Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder>(
-                  organization_,
+                  getOrganization(),
                   getParentForChildren(),
                   isClean());
           organization_ = null;
         }
         return organizationBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];
+
       private Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus counteragentStatus_ = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.UnknownCounteragentStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];</code>
+       */
       public boolean hasCounteragentStatus() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus getCounteragentStatus() {
         return counteragentStatus_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];</code>
+       */
       public Builder setCounteragentStatus(Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus value) {
         if (value == null) {
           throw new NullPointerException();
@@ -885,94 +1097,201 @@ public final class GetOrganizationsByInnListProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];</code>
+       */
       public Builder clearCounteragentStatus() {
         bitField0_ = (bitField0_ & ~0x00000002);
         counteragentStatus_ = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.UnknownCounteragentStatus;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationWithCounteragentStatus)
     }
-    
+
     static {
       defaultInstance = new OrganizationWithCounteragentStatus(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.OrganizationWithCounteragentStatus)
   }
-  
-  public interface GetOrganizationsByInnListResponseOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;
+
+  public interface GetOrganizationsByInnListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.GetOrganizationsByInnListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     java.util.List<Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus> 
         getOrganizationsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus getOrganizations(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     int getOrganizationsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     java.util.List<? extends Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatusOrBuilder> 
         getOrganizationsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatusOrBuilder getOrganizationsOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.GetOrganizationsByInnListResponse}
+   */
   public static final class GetOrganizationsByInnListResponse extends
-      com.google.protobuf.GeneratedMessage
-      implements GetOrganizationsByInnListResponseOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.GetOrganizationsByInnListResponse)
+      GetOrganizationsByInnListResponseOrBuilder {
     // Use GetOrganizationsByInnListResponse.newBuilder() to construct.
-    private GetOrganizationsByInnListResponse(Builder builder) {
+    private GetOrganizationsByInnListResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private GetOrganizationsByInnListResponse(boolean noInit) {}
-    
+    private GetOrganizationsByInnListResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final GetOrganizationsByInnListResponse defaultInstance;
     public static GetOrganizationsByInnListResponse getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public GetOrganizationsByInnListResponse getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetOrganizationsByInnListResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                organizations_ = new java.util.ArrayList<Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              organizations_.add(input.readMessage(Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          organizations_ = java.util.Collections.unmodifiableList(organizations_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_fieldAccessorTable;
+      return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.class, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.Builder.class);
     }
-    
-    // repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;
+
+    public static com.google.protobuf.Parser<GetOrganizationsByInnListResponse> PARSER =
+        new com.google.protobuf.AbstractParser<GetOrganizationsByInnListResponse>() {
+      public GetOrganizationsByInnListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetOrganizationsByInnListResponse(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetOrganizationsByInnListResponse> getParserForType() {
+      return PARSER;
+    }
+
     public static final int ORGANIZATIONS_FIELD_NUMBER = 1;
     private java.util.List<Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus> organizations_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     public java.util.List<Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus> getOrganizationsList() {
       return organizations_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatusOrBuilder> 
         getOrganizationsOrBuilderList() {
       return organizations_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     public int getOrganizationsCount() {
       return organizations_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus getOrganizations(int index) {
       return organizations_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+     */
     public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatusOrBuilder getOrganizationsOrBuilder(
         int index) {
       return organizations_.get(index);
     }
-    
+
     private void initFields() {
       organizations_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       for (int i = 0; i < getOrganizationsCount(); i++) {
         if (!getOrganizations(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -982,7 +1301,7 @@ public final class GetOrganizationsByInnListProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -991,12 +1310,12 @@ public final class GetOrganizationsByInnListProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < organizations_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -1006,113 +1325,106 @@ public final class GetOrganizationsByInnListProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.GetOrganizationsByInnListResponse}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponseOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.GetOrganizationsByInnListResponse)
+        Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_fieldAccessorTable;
+        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.class, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1124,7 +1436,7 @@ public final class GetOrganizationsByInnListProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (organizationsBuilder_ == null) {
@@ -1135,20 +1447,20 @@ public final class GetOrganizationsByInnListProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.getDescriptor();
+        return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse getDefaultInstanceForType() {
         return Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse build() {
         Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse result = buildPartial();
         if (!result.isInitialized()) {
@@ -1156,17 +1468,7 @@ public final class GetOrganizationsByInnListProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse buildPartial() {
         Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse result = new Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse(this);
         int from_bitField0_ = bitField0_;
@@ -1182,7 +1484,7 @@ public final class GetOrganizationsByInnListProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse) {
           return mergeFrom((Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse)other);
@@ -1191,7 +1493,7 @@ public final class GetOrganizationsByInnListProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse other) {
         if (other == Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.getDefaultInstance()) return this;
         if (organizationsBuilder_ == null) {
@@ -1223,7 +1525,7 @@ public final class GetOrganizationsByInnListProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getOrganizationsCount(); i++) {
           if (!getOrganizations(i).isInitialized()) {
@@ -1233,43 +1535,26 @@ public final class GetOrganizationsByInnListProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder subBuilder = Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addOrganizations(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;
+
       private java.util.List<Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus> organizations_ =
         java.util.Collections.emptyList();
       private void ensureOrganizationsIsMutable() {
@@ -1278,10 +1563,13 @@ public final class GetOrganizationsByInnListProtos {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatusOrBuilder> organizationsBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus> getOrganizationsList() {
         if (organizationsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(organizations_);
@@ -1289,6 +1577,9 @@ public final class GetOrganizationsByInnListProtos {
           return organizationsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public int getOrganizationsCount() {
         if (organizationsBuilder_ == null) {
           return organizations_.size();
@@ -1296,6 +1587,9 @@ public final class GetOrganizationsByInnListProtos {
           return organizationsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus getOrganizations(int index) {
         if (organizationsBuilder_ == null) {
           return organizations_.get(index);
@@ -1303,6 +1597,9 @@ public final class GetOrganizationsByInnListProtos {
           return organizationsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Builder setOrganizations(
           int index, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus value) {
         if (organizationsBuilder_ == null) {
@@ -1317,6 +1614,9 @@ public final class GetOrganizationsByInnListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Builder setOrganizations(
           int index, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder builderForValue) {
         if (organizationsBuilder_ == null) {
@@ -1328,6 +1628,9 @@ public final class GetOrganizationsByInnListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Builder addOrganizations(Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus value) {
         if (organizationsBuilder_ == null) {
           if (value == null) {
@@ -1341,6 +1644,9 @@ public final class GetOrganizationsByInnListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Builder addOrganizations(
           int index, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus value) {
         if (organizationsBuilder_ == null) {
@@ -1355,6 +1661,9 @@ public final class GetOrganizationsByInnListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Builder addOrganizations(
           Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder builderForValue) {
         if (organizationsBuilder_ == null) {
@@ -1366,6 +1675,9 @@ public final class GetOrganizationsByInnListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Builder addOrganizations(
           int index, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder builderForValue) {
         if (organizationsBuilder_ == null) {
@@ -1377,17 +1689,24 @@ public final class GetOrganizationsByInnListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Builder addAllOrganizations(
           java.lang.Iterable<? extends Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus> values) {
         if (organizationsBuilder_ == null) {
           ensureOrganizationsIsMutable();
-          super.addAll(values, organizations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, organizations_);
           onChanged();
         } else {
           organizationsBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Builder clearOrganizations() {
         if (organizationsBuilder_ == null) {
           organizations_ = java.util.Collections.emptyList();
@@ -1398,6 +1717,9 @@ public final class GetOrganizationsByInnListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Builder removeOrganizations(int index) {
         if (organizationsBuilder_ == null) {
           ensureOrganizationsIsMutable();
@@ -1408,10 +1730,16 @@ public final class GetOrganizationsByInnListProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder getOrganizationsBuilder(
           int index) {
         return getOrganizationsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatusOrBuilder getOrganizationsOrBuilder(
           int index) {
         if (organizationsBuilder_ == null) {
@@ -1419,6 +1747,9 @@ public final class GetOrganizationsByInnListProtos {
           return organizationsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatusOrBuilder> 
            getOrganizationsOrBuilderList() {
         if (organizationsBuilder_ != null) {
@@ -1427,15 +1758,24 @@ public final class GetOrganizationsByInnListProtos {
           return java.util.Collections.unmodifiableList(organizations_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder addOrganizationsBuilder() {
         return getOrganizationsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder addOrganizationsBuilder(
           int index) {
         return getOrganizationsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.OrganizationWithCounteragentStatus Organizations = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder> 
            getOrganizationsBuilderList() {
         return getOrganizationsFieldBuilder().getBuilderList();
@@ -1454,34 +1794,34 @@ public final class GetOrganizationsByInnListProtos {
         }
         return organizationsBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.GetOrganizationsByInnListResponse)
     }
-    
+
     static {
       defaultInstance = new GetOrganizationsByInnListResponse(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.GetOrganizationsByInnListResponse)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -1504,44 +1844,40 @@ public final class GetOrganizationsByInnListProtos {
       "atusB!B\037GetOrganizationsByInnListProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_descriptor,
-              new java.lang.String[] { "InnList", },
-              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.class,
-              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListRequest.Builder.class);
-          internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor,
-              new java.lang.String[] { "Organization", "CounteragentStatus", },
-              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.class,
-              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.OrganizationWithCounteragentStatus.Builder.class);
-          internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor,
-              new java.lang.String[] { "Organizations", },
-              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.class,
-              Diadoc.Api.Proto.GetOrganizationsByInnListProtos.GetOrganizationsByInnListResponse.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.OrganizationProtos.getDescriptor(),
           Diadoc.Api.Proto.CounteragentProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListRequest_descriptor,
+        new java.lang.String[] { "InnList", });
+    internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor,
+        new java.lang.String[] { "Organization", "CounteragentStatus", });
+    internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor,
+        new java.lang.String[] { "Organizations", });
+    Diadoc.Api.Proto.OrganizationProtos.getDescriptor();
+    Diadoc.Api.Proto.CounteragentProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

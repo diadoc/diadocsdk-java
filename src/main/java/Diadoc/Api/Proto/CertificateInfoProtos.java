@@ -8,102 +8,222 @@ public final class CertificateInfoProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface CertificateInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string Thumbprint = 1;
+  public interface CertificateInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CertificateInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Thumbprint = 1;</code>
+     */
     boolean hasThumbprint();
-    String getThumbprint();
-    
-    // optional sfixed64 ValidFrom = 2;
+    /**
+     * <code>optional string Thumbprint = 1;</code>
+     */
+    java.lang.String getThumbprint();
+    /**
+     * <code>optional string Thumbprint = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getThumbprintBytes();
+
+    /**
+     * <code>optional sfixed64 ValidFrom = 2;</code>
+     */
     boolean hasValidFrom();
+    /**
+     * <code>optional sfixed64 ValidFrom = 2;</code>
+     */
     long getValidFrom();
-    
-    // optional sfixed64 ValidTo = 3;
+
+    /**
+     * <code>optional sfixed64 ValidTo = 3;</code>
+     */
     boolean hasValidTo();
+    /**
+     * <code>optional sfixed64 ValidTo = 3;</code>
+     */
     long getValidTo();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.CertificateInfo}
+   */
   public static final class CertificateInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements CertificateInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CertificateInfo)
+      CertificateInfoOrBuilder {
     // Use CertificateInfo.newBuilder() to construct.
-    private CertificateInfo(Builder builder) {
+    private CertificateInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CertificateInfo(boolean noInit) {}
-    
+    private CertificateInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CertificateInfo defaultInstance;
     public static CertificateInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CertificateInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CertificateInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              thumbprint_ = bs;
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              validFrom_ = input.readSFixed64();
+              break;
+            }
+            case 25: {
+              bitField0_ |= 0x00000004;
+              validTo_ = input.readSFixed64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.CertificateInfoProtos.internal_static_Diadoc_Api_Proto_CertificateInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.CertificateInfoProtos.internal_static_Diadoc_Api_Proto_CertificateInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.CertificateInfoProtos.internal_static_Diadoc_Api_Proto_CertificateInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.class, Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<CertificateInfo> PARSER =
+        new com.google.protobuf.AbstractParser<CertificateInfo>() {
+      public CertificateInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CertificateInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CertificateInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string Thumbprint = 1;
     public static final int THUMBPRINT_FIELD_NUMBER = 1;
     private java.lang.Object thumbprint_;
+    /**
+     * <code>optional string Thumbprint = 1;</code>
+     */
     public boolean hasThumbprint() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getThumbprint() {
+    /**
+     * <code>optional string Thumbprint = 1;</code>
+     */
+    public java.lang.String getThumbprint() {
       java.lang.Object ref = thumbprint_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           thumbprint_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getThumbprintBytes() {
+    /**
+     * <code>optional string Thumbprint = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getThumbprintBytes() {
       java.lang.Object ref = thumbprint_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         thumbprint_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional sfixed64 ValidFrom = 2;
+
     public static final int VALIDFROM_FIELD_NUMBER = 2;
     private long validFrom_;
+    /**
+     * <code>optional sfixed64 ValidFrom = 2;</code>
+     */
     public boolean hasValidFrom() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional sfixed64 ValidFrom = 2;</code>
+     */
     public long getValidFrom() {
       return validFrom_;
     }
-    
-    // optional sfixed64 ValidTo = 3;
+
     public static final int VALIDTO_FIELD_NUMBER = 3;
     private long validTo_;
+    /**
+     * <code>optional sfixed64 ValidTo = 3;</code>
+     */
     public boolean hasValidTo() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional sfixed64 ValidTo = 3;</code>
+     */
     public long getValidTo() {
       return validTo_;
     }
-    
+
     private void initFields() {
       thumbprint_ = "";
       validFrom_ = 0L;
@@ -112,12 +232,13 @@ public final class CertificateInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -132,12 +253,12 @@ public final class CertificateInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -155,113 +276,106 @@ public final class CertificateInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.CertificateInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.CertificateInfo)
+        Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.CertificateInfoProtos.internal_static_Diadoc_Api_Proto_CertificateInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.CertificateInfoProtos.internal_static_Diadoc_Api_Proto_CertificateInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.CertificateInfoProtos.internal_static_Diadoc_Api_Proto_CertificateInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.class, Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -272,7 +386,7 @@ public final class CertificateInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         thumbprint_ = "";
@@ -283,20 +397,20 @@ public final class CertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.getDescriptor();
+        return Diadoc.Api.Proto.CertificateInfoProtos.internal_static_Diadoc_Api_Proto_CertificateInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo build() {
         Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -304,17 +418,7 @@ public final class CertificateInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo buildPartial() {
         Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo result = new Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo(this);
         int from_bitField0_ = bitField0_;
@@ -335,7 +439,7 @@ public final class CertificateInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo) {
           return mergeFrom((Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo)other);
@@ -344,11 +448,13 @@ public final class CertificateInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo other) {
         if (other == Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.getDefaultInstance()) return this;
         if (other.hasThumbprint()) {
-          setThumbprint(other.getThumbprint());
+          bitField0_ |= 0x00000001;
+          thumbprint_ = other.thumbprint_;
+          onChanged();
         }
         if (other.hasValidFrom()) {
           setValidFrom(other.getValidFrom());
@@ -359,71 +465,75 @@ public final class CertificateInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              thumbprint_ = input.readBytes();
-              break;
-            }
-            case 17: {
-              bitField0_ |= 0x00000002;
-              validFrom_ = input.readSFixed64();
-              break;
-            }
-            case 25: {
-              bitField0_ |= 0x00000004;
-              validTo_ = input.readSFixed64();
-              break;
-            }
+        Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string Thumbprint = 1;
+
       private java.lang.Object thumbprint_ = "";
+      /**
+       * <code>optional string Thumbprint = 1;</code>
+       */
       public boolean hasThumbprint() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getThumbprint() {
+      /**
+       * <code>optional string Thumbprint = 1;</code>
+       */
+      public java.lang.String getThumbprint() {
         java.lang.Object ref = thumbprint_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          thumbprint_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            thumbprint_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setThumbprint(String value) {
+      /**
+       * <code>optional string Thumbprint = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getThumbprintBytes() {
+        java.lang.Object ref = thumbprint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          thumbprint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Thumbprint = 1;</code>
+       */
+      public Builder setThumbprint(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -432,77 +542,110 @@ public final class CertificateInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Thumbprint = 1;</code>
+       */
       public Builder clearThumbprint() {
         bitField0_ = (bitField0_ & ~0x00000001);
         thumbprint_ = getDefaultInstance().getThumbprint();
         onChanged();
         return this;
       }
-      void setThumbprint(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string Thumbprint = 1;</code>
+       */
+      public Builder setThumbprintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         thumbprint_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional sfixed64 ValidFrom = 2;
+
       private long validFrom_ ;
+      /**
+       * <code>optional sfixed64 ValidFrom = 2;</code>
+       */
       public boolean hasValidFrom() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional sfixed64 ValidFrom = 2;</code>
+       */
       public long getValidFrom() {
         return validFrom_;
       }
+      /**
+       * <code>optional sfixed64 ValidFrom = 2;</code>
+       */
       public Builder setValidFrom(long value) {
         bitField0_ |= 0x00000002;
         validFrom_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional sfixed64 ValidFrom = 2;</code>
+       */
       public Builder clearValidFrom() {
         bitField0_ = (bitField0_ & ~0x00000002);
         validFrom_ = 0L;
         onChanged();
         return this;
       }
-      
-      // optional sfixed64 ValidTo = 3;
+
       private long validTo_ ;
+      /**
+       * <code>optional sfixed64 ValidTo = 3;</code>
+       */
       public boolean hasValidTo() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional sfixed64 ValidTo = 3;</code>
+       */
       public long getValidTo() {
         return validTo_;
       }
+      /**
+       * <code>optional sfixed64 ValidTo = 3;</code>
+       */
       public Builder setValidTo(long value) {
         bitField0_ |= 0x00000004;
         validTo_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional sfixed64 ValidTo = 3;</code>
+       */
       public Builder clearValidTo() {
         bitField0_ = (bitField0_ & ~0x00000004);
         validTo_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CertificateInfo)
     }
-    
+
     static {
       defaultInstance = new CertificateInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.CertificateInfo)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CertificateInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_CertificateInfo_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -517,26 +660,24 @@ public final class CertificateInfoProtos {
       "CertificateInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_CertificateInfo_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_CertificateInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_CertificateInfo_descriptor,
-              new java.lang.String[] { "Thumbprint", "ValidFrom", "ValidTo", },
-              Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.class,
-              Diadoc.Api.Proto.CertificateInfoProtos.CertificateInfo.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_CertificateInfo_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_CertificateInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_CertificateInfo_descriptor,
+        new java.lang.String[] { "Thumbprint", "ValidFrom", "ValidTo", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

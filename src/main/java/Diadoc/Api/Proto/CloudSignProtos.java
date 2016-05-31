@@ -8,76 +8,180 @@ public final class CloudSignProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface CloudSignRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;
+  public interface CloudSignRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CloudSignRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> 
         getFilesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getFiles(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     int getFilesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     java.util.List<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> 
         getFilesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder getFilesOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.CloudSignRequest}
+   */
   public static final class CloudSignRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements CloudSignRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CloudSignRequest)
+      CloudSignRequestOrBuilder {
     // Use CloudSignRequest.newBuilder() to construct.
-    private CloudSignRequest(Builder builder) {
+    private CloudSignRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CloudSignRequest(boolean noInit) {}
-    
+    private CloudSignRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CloudSignRequest defaultInstance;
     public static CloudSignRequest getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CloudSignRequest getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CloudSignRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                files_ = new java.util.ArrayList<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              files_.add(input.readMessage(Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          files_ = java.util.Collections.unmodifiableList(files_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignRequest_fieldAccessorTable;
+      return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.class, Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.Builder.class);
     }
-    
-    // repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;
+
+    public static com.google.protobuf.Parser<CloudSignRequest> PARSER =
+        new com.google.protobuf.AbstractParser<CloudSignRequest>() {
+      public CloudSignRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CloudSignRequest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CloudSignRequest> getParserForType() {
+      return PARSER;
+    }
+
     public static final int FILES_FIELD_NUMBER = 1;
     private java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> files_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     public java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> getFilesList() {
       return files_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> 
         getFilesOrBuilderList() {
       return files_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     public int getFilesCount() {
       return files_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getFiles(int index) {
       return files_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+     */
     public Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder getFilesOrBuilder(
         int index) {
       return files_.get(index);
     }
-    
+
     private void initFields() {
       files_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       for (int i = 0; i < getFilesCount(); i++) {
         if (!getFiles(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -87,7 +191,7 @@ public final class CloudSignProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -96,12 +200,12 @@ public final class CloudSignProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < files_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -111,113 +215,106 @@ public final class CloudSignProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.CloudSignRequest}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.CloudSignProtos.CloudSignRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.CloudSignRequest)
+        Diadoc.Api.Proto.CloudSignProtos.CloudSignRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignRequest_fieldAccessorTable;
+        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.class, Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -229,7 +326,7 @@ public final class CloudSignProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (filesBuilder_ == null) {
@@ -240,20 +337,20 @@ public final class CloudSignProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.getDescriptor();
+        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest getDefaultInstanceForType() {
         return Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest build() {
         Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest result = buildPartial();
         if (!result.isInitialized()) {
@@ -261,17 +358,7 @@ public final class CloudSignProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest buildPartial() {
         Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest result = new Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest(this);
         int from_bitField0_ = bitField0_;
@@ -287,7 +374,7 @@ public final class CloudSignProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest) {
           return mergeFrom((Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest)other);
@@ -296,7 +383,7 @@ public final class CloudSignProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest other) {
         if (other == Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.getDefaultInstance()) return this;
         if (filesBuilder_ == null) {
@@ -328,7 +415,7 @@ public final class CloudSignProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getFilesCount(); i++) {
           if (!getFiles(i).isInitialized()) {
@@ -338,43 +425,26 @@ public final class CloudSignProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder subBuilder = Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addFiles(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;
+
       private java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> files_ =
         java.util.Collections.emptyList();
       private void ensureFilesIsMutable() {
@@ -383,10 +453,13 @@ public final class CloudSignProtos {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.CloudSignProtos.CloudSignFile, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder, Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> filesBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> getFilesList() {
         if (filesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(files_);
@@ -394,6 +467,9 @@ public final class CloudSignProtos {
           return filesBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public int getFilesCount() {
         if (filesBuilder_ == null) {
           return files_.size();
@@ -401,6 +477,9 @@ public final class CloudSignProtos {
           return filesBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getFiles(int index) {
         if (filesBuilder_ == null) {
           return files_.get(index);
@@ -408,6 +487,9 @@ public final class CloudSignProtos {
           return filesBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Builder setFiles(
           int index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile value) {
         if (filesBuilder_ == null) {
@@ -422,6 +504,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Builder setFiles(
           int index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder builderForValue) {
         if (filesBuilder_ == null) {
@@ -433,6 +518,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Builder addFiles(Diadoc.Api.Proto.CloudSignProtos.CloudSignFile value) {
         if (filesBuilder_ == null) {
           if (value == null) {
@@ -446,6 +534,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Builder addFiles(
           int index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile value) {
         if (filesBuilder_ == null) {
@@ -460,6 +551,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Builder addFiles(
           Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder builderForValue) {
         if (filesBuilder_ == null) {
@@ -471,6 +565,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Builder addFiles(
           int index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder builderForValue) {
         if (filesBuilder_ == null) {
@@ -482,17 +579,24 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Builder addAllFiles(
           java.lang.Iterable<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> values) {
         if (filesBuilder_ == null) {
           ensureFilesIsMutable();
-          super.addAll(values, files_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, files_);
           onChanged();
         } else {
           filesBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Builder clearFiles() {
         if (filesBuilder_ == null) {
           files_ = java.util.Collections.emptyList();
@@ -503,6 +607,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Builder removeFiles(int index) {
         if (filesBuilder_ == null) {
           ensureFilesIsMutable();
@@ -513,10 +620,16 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder getFilesBuilder(
           int index) {
         return getFilesFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder getFilesOrBuilder(
           int index) {
         if (filesBuilder_ == null) {
@@ -524,6 +637,9 @@ public final class CloudSignProtos {
           return filesBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> 
            getFilesOrBuilderList() {
         if (filesBuilder_ != null) {
@@ -532,15 +648,24 @@ public final class CloudSignProtos {
           return java.util.Collections.unmodifiableList(files_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder addFilesBuilder() {
         return getFilesFieldBuilder().addBuilder(
             Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder addFilesBuilder(
           int index) {
         return getFilesFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder> 
            getFilesBuilderList() {
         return getFilesFieldBuilder().getBuilderList();
@@ -559,104 +684,223 @@ public final class CloudSignProtos {
         }
         return filesBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CloudSignRequest)
     }
-    
+
     static {
       defaultInstance = new CloudSignRequest(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.CloudSignRequest)
   }
-  
-  public interface CloudSignFileOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Content_v2 Content = 1;
+
+  public interface CloudSignFileOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CloudSignFile)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+     */
     boolean hasContent();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+     */
     Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+     */
     Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder();
-    
-    // optional string FileName = 2;
+
+    /**
+     * <code>optional string FileName = 2;</code>
+     */
     boolean hasFileName();
-    String getFileName();
+    /**
+     * <code>optional string FileName = 2;</code>
+     */
+    java.lang.String getFileName();
+    /**
+     * <code>optional string FileName = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getFileNameBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.CloudSignFile}
+   */
   public static final class CloudSignFile extends
-      com.google.protobuf.GeneratedMessage
-      implements CloudSignFileOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CloudSignFile)
+      CloudSignFileOrBuilder {
     // Use CloudSignFile.newBuilder() to construct.
-    private CloudSignFile(Builder builder) {
+    private CloudSignFile(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CloudSignFile(boolean noInit) {}
-    
+    private CloudSignFile(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CloudSignFile defaultInstance;
     public static CloudSignFile getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CloudSignFile getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CloudSignFile(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = content_.toBuilder();
+              }
+              content_ = input.readMessage(Diadoc.Api.Proto.Content_v2Protos.Content_v2.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(content_);
+                content_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              fileName_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignFile_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignFile_fieldAccessorTable;
+      return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignFile_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.class, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<CloudSignFile> PARSER =
+        new com.google.protobuf.AbstractParser<CloudSignFile>() {
+      public CloudSignFile parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CloudSignFile(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CloudSignFile> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Content_v2 Content = 1;
     public static final int CONTENT_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Content_v2Protos.Content_v2 content_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+     */
     public boolean hasContent() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+     */
     public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent() {
       return content_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+     */
     public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder() {
       return content_;
     }
-    
-    // optional string FileName = 2;
+
     public static final int FILENAME_FIELD_NUMBER = 2;
     private java.lang.Object fileName_;
+    /**
+     * <code>optional string FileName = 2;</code>
+     */
     public boolean hasFileName() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getFileName() {
+    /**
+     * <code>optional string FileName = 2;</code>
+     */
+    public java.lang.String getFileName() {
       java.lang.Object ref = fileName_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           fileName_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getFileNameBytes() {
+    /**
+     * <code>optional string FileName = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFileNameBytes() {
       java.lang.Object ref = fileName_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         fileName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       content_ = Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance();
       fileName_ = "";
@@ -664,8 +908,9 @@ public final class CloudSignProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasContent()) {
         if (!getContent().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -675,7 +920,7 @@ public final class CloudSignProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -687,12 +932,12 @@ public final class CloudSignProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -706,113 +951,106 @@ public final class CloudSignProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.CloudSignProtos.CloudSignFile prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.CloudSignFile}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.CloudSignFile)
+        Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignFile_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignFile_fieldAccessorTable;
+        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignFile_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.class, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -824,7 +1062,7 @@ public final class CloudSignProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (contentBuilder_ == null) {
@@ -837,20 +1075,20 @@ public final class CloudSignProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.getDescriptor();
+        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignFile_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getDefaultInstanceForType() {
         return Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile build() {
         Diadoc.Api.Proto.CloudSignProtos.CloudSignFile result = buildPartial();
         if (!result.isInitialized()) {
@@ -858,17 +1096,7 @@ public final class CloudSignProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.CloudSignProtos.CloudSignFile buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.CloudSignProtos.CloudSignFile result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile buildPartial() {
         Diadoc.Api.Proto.CloudSignProtos.CloudSignFile result = new Diadoc.Api.Proto.CloudSignProtos.CloudSignFile(this);
         int from_bitField0_ = bitField0_;
@@ -889,7 +1117,7 @@ public final class CloudSignProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.CloudSignProtos.CloudSignFile) {
           return mergeFrom((Diadoc.Api.Proto.CloudSignProtos.CloudSignFile)other);
@@ -898,19 +1126,21 @@ public final class CloudSignProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.CloudSignProtos.CloudSignFile other) {
         if (other == Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.getDefaultInstance()) return this;
         if (other.hasContent()) {
           mergeContent(other.getContent());
         }
         if (other.hasFileName()) {
-          setFileName(other.getFileName());
+          bitField0_ |= 0x00000002;
+          fileName_ = other.fileName_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasContent()) {
           if (!getContent().isInitialized()) {
@@ -920,57 +1150,38 @@ public final class CloudSignProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder subBuilder = Diadoc.Api.Proto.Content_v2Protos.Content_v2.newBuilder();
-              if (hasContent()) {
-                subBuilder.mergeFrom(getContent());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setContent(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              fileName_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.CloudSignProtos.CloudSignFile parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.CloudSignProtos.CloudSignFile) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Content_v2 Content = 1;
+
       private Diadoc.Api.Proto.Content_v2Protos.Content_v2 content_ = Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> contentBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+       */
       public boolean hasContent() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+       */
       public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent() {
         if (contentBuilder_ == null) {
           return content_;
@@ -978,6 +1189,9 @@ public final class CloudSignProtos {
           return contentBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+       */
       public Builder setContent(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (contentBuilder_ == null) {
           if (value == null) {
@@ -991,6 +1205,9 @@ public final class CloudSignProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+       */
       public Builder setContent(
           Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
         if (contentBuilder_ == null) {
@@ -1002,6 +1219,9 @@ public final class CloudSignProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+       */
       public Builder mergeContent(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (contentBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -1018,6 +1238,9 @@ public final class CloudSignProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+       */
       public Builder clearContent() {
         if (contentBuilder_ == null) {
           content_ = Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance();
@@ -1028,11 +1251,17 @@ public final class CloudSignProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+       */
       public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder getContentBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getContentFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+       */
       public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
           return contentBuilder_.getMessageOrBuilder();
@@ -1040,36 +1269,68 @@ public final class CloudSignProtos {
           return content_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
           getContentFieldBuilder() {
         if (contentBuilder_ == null) {
           contentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder>(
-                  content_,
+                  getContent(),
                   getParentForChildren(),
                   isClean());
           content_ = null;
         }
         return contentBuilder_;
       }
-      
-      // optional string FileName = 2;
+
       private java.lang.Object fileName_ = "";
+      /**
+       * <code>optional string FileName = 2;</code>
+       */
       public boolean hasFileName() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getFileName() {
+      /**
+       * <code>optional string FileName = 2;</code>
+       */
+      public java.lang.String getFileName() {
         java.lang.Object ref = fileName_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          fileName_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fileName_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setFileName(String value) {
+      /**
+       * <code>optional string FileName = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFileNameBytes() {
+        java.lang.Object ref = fileName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fileName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string FileName = 2;</code>
+       */
+      public Builder setFileName(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1078,109 +1339,211 @@ public final class CloudSignProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string FileName = 2;</code>
+       */
       public Builder clearFileName() {
         bitField0_ = (bitField0_ & ~0x00000002);
         fileName_ = getDefaultInstance().getFileName();
         onChanged();
         return this;
       }
-      void setFileName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string FileName = 2;</code>
+       */
+      public Builder setFileNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         fileName_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CloudSignFile)
     }
-    
+
     static {
       defaultInstance = new CloudSignFile(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.CloudSignFile)
   }
-  
-  public interface CloudSignResultOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string Token = 1;
+
+  public interface CloudSignResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CloudSignResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Token = 1;</code>
+     */
     boolean hasToken();
-    String getToken();
+    /**
+     * <code>optional string Token = 1;</code>
+     */
+    java.lang.String getToken();
+    /**
+     * <code>optional string Token = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.CloudSignResult}
+   */
   public static final class CloudSignResult extends
-      com.google.protobuf.GeneratedMessage
-      implements CloudSignResultOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CloudSignResult)
+      CloudSignResultOrBuilder {
     // Use CloudSignResult.newBuilder() to construct.
-    private CloudSignResult(Builder builder) {
+    private CloudSignResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CloudSignResult(boolean noInit) {}
-    
+    private CloudSignResult(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CloudSignResult defaultInstance;
     public static CloudSignResult getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CloudSignResult getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CloudSignResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              token_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignResult_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignResult_fieldAccessorTable;
+      return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.class, Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<CloudSignResult> PARSER =
+        new com.google.protobuf.AbstractParser<CloudSignResult>() {
+      public CloudSignResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CloudSignResult(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CloudSignResult> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string Token = 1;
     public static final int TOKEN_FIELD_NUMBER = 1;
     private java.lang.Object token_;
+    /**
+     * <code>optional string Token = 1;</code>
+     */
     public boolean hasToken() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getToken() {
+    /**
+     * <code>optional string Token = 1;</code>
+     */
+    public java.lang.String getToken() {
       java.lang.Object ref = token_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           token_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTokenBytes() {
+    /**
+     * <code>optional string Token = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
       java.lang.Object ref = token_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         token_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       token_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1189,12 +1552,12 @@ public final class CloudSignProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1204,113 +1567,106 @@ public final class CloudSignProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.CloudSignProtos.CloudSignResult prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.CloudSignResult}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.CloudSignProtos.CloudSignResultOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.CloudSignResult)
+        Diadoc.Api.Proto.CloudSignProtos.CloudSignResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignResult_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignResult_fieldAccessorTable;
+        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.class, Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1321,27 +1677,27 @@ public final class CloudSignProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         token_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.getDescriptor();
+        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignResult_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignResult getDefaultInstanceForType() {
         return Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignResult build() {
         Diadoc.Api.Proto.CloudSignProtos.CloudSignResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -1349,17 +1705,7 @@ public final class CloudSignProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.CloudSignProtos.CloudSignResult buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.CloudSignProtos.CloudSignResult result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignResult buildPartial() {
         Diadoc.Api.Proto.CloudSignProtos.CloudSignResult result = new Diadoc.Api.Proto.CloudSignProtos.CloudSignResult(this);
         int from_bitField0_ = bitField0_;
@@ -1372,7 +1718,7 @@ public final class CloudSignProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.CloudSignProtos.CloudSignResult) {
           return mergeFrom((Diadoc.Api.Proto.CloudSignProtos.CloudSignResult)other);
@@ -1381,70 +1727,86 @@ public final class CloudSignProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.CloudSignProtos.CloudSignResult other) {
         if (other == Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.getDefaultInstance()) return this;
         if (other.hasToken()) {
-          setToken(other.getToken());
+          bitField0_ |= 0x00000001;
+          token_ = other.token_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              token_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.CloudSignProtos.CloudSignResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.CloudSignProtos.CloudSignResult) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string Token = 1;
+
       private java.lang.Object token_ = "";
+      /**
+       * <code>optional string Token = 1;</code>
+       */
       public boolean hasToken() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getToken() {
+      /**
+       * <code>optional string Token = 1;</code>
+       */
+      public java.lang.String getToken() {
         java.lang.Object ref = token_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          token_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            token_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setToken(String value) {
+      /**
+       * <code>optional string Token = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Token = 1;</code>
+       */
+      public Builder setToken(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1453,99 +1815,214 @@ public final class CloudSignProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Token = 1;</code>
+       */
       public Builder clearToken() {
         bitField0_ = (bitField0_ & ~0x00000001);
         token_ = getDefaultInstance().getToken();
         onChanged();
         return this;
       }
-      void setToken(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string Token = 1;</code>
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         token_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CloudSignResult)
     }
-    
+
     static {
       defaultInstance = new CloudSignResult(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.CloudSignResult)
   }
-  
-  public interface CloudSignConfirmResultOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;
+
+  public interface CloudSignConfirmResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CloudSignConfirmResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> 
         getSignaturesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     int getSignaturesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
         getSignaturesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.CloudSignConfirmResult}
+   */
   public static final class CloudSignConfirmResult extends
-      com.google.protobuf.GeneratedMessage
-      implements CloudSignConfirmResultOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CloudSignConfirmResult)
+      CloudSignConfirmResultOrBuilder {
     // Use CloudSignConfirmResult.newBuilder() to construct.
-    private CloudSignConfirmResult(Builder builder) {
+    private CloudSignConfirmResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CloudSignConfirmResult(boolean noInit) {}
-    
+    private CloudSignConfirmResult(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CloudSignConfirmResult defaultInstance;
     public static CloudSignConfirmResult getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CloudSignConfirmResult getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CloudSignConfirmResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                signatures_ = new java.util.ArrayList<Diadoc.Api.Proto.Content_v2Protos.Content_v2>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              signatures_.add(input.readMessage(Diadoc.Api.Proto.Content_v2Protos.Content_v2.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          signatures_ = java.util.Collections.unmodifiableList(signatures_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_fieldAccessorTable;
+      return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.class, Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.Builder.class);
     }
-    
-    // repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;
+
+    public static com.google.protobuf.Parser<CloudSignConfirmResult> PARSER =
+        new com.google.protobuf.AbstractParser<CloudSignConfirmResult>() {
+      public CloudSignConfirmResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CloudSignConfirmResult(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CloudSignConfirmResult> getParserForType() {
+      return PARSER;
+    }
+
     public static final int SIGNATURES_FIELD_NUMBER = 1;
     private java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> signatures_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> getSignaturesList() {
       return signatures_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
         getSignaturesOrBuilderList() {
       return signatures_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     public int getSignaturesCount() {
       return signatures_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index) {
       return signatures_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+     */
     public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
         int index) {
       return signatures_.get(index);
     }
-    
+
     private void initFields() {
       signatures_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       for (int i = 0; i < getSignaturesCount(); i++) {
         if (!getSignatures(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1555,7 +2032,7 @@ public final class CloudSignProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1564,12 +2041,12 @@ public final class CloudSignProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < signatures_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -1579,113 +2056,106 @@ public final class CloudSignProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.CloudSignConfirmResult}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResultOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.CloudSignConfirmResult)
+        Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_fieldAccessorTable;
+        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.class, Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1697,7 +2167,7 @@ public final class CloudSignProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (signaturesBuilder_ == null) {
@@ -1708,20 +2178,20 @@ public final class CloudSignProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.getDescriptor();
+        return Diadoc.Api.Proto.CloudSignProtos.internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult getDefaultInstanceForType() {
         return Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult build() {
         Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -1729,17 +2199,7 @@ public final class CloudSignProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult buildPartial() {
         Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult result = new Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult(this);
         int from_bitField0_ = bitField0_;
@@ -1755,7 +2215,7 @@ public final class CloudSignProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult) {
           return mergeFrom((Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult)other);
@@ -1764,7 +2224,7 @@ public final class CloudSignProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult other) {
         if (other == Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.getDefaultInstance()) return this;
         if (signaturesBuilder_ == null) {
@@ -1796,7 +2256,7 @@ public final class CloudSignProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getSignaturesCount(); i++) {
           if (!getSignatures(i).isInitialized()) {
@@ -1806,43 +2266,26 @@ public final class CloudSignProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder subBuilder = Diadoc.Api.Proto.Content_v2Protos.Content_v2.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addSignatures(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;
+
       private java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> signatures_ =
         java.util.Collections.emptyList();
       private void ensureSignaturesIsMutable() {
@@ -1851,10 +2294,13 @@ public final class CloudSignProtos {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> signaturesBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> getSignaturesList() {
         if (signaturesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(signatures_);
@@ -1862,6 +2308,9 @@ public final class CloudSignProtos {
           return signaturesBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public int getSignaturesCount() {
         if (signaturesBuilder_ == null) {
           return signatures_.size();
@@ -1869,6 +2318,9 @@ public final class CloudSignProtos {
           return signaturesBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index) {
         if (signaturesBuilder_ == null) {
           return signatures_.get(index);
@@ -1876,6 +2328,9 @@ public final class CloudSignProtos {
           return signaturesBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Builder setSignatures(
           int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (signaturesBuilder_ == null) {
@@ -1890,6 +2345,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Builder setSignatures(
           int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
         if (signaturesBuilder_ == null) {
@@ -1901,6 +2359,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Builder addSignatures(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (signaturesBuilder_ == null) {
           if (value == null) {
@@ -1914,6 +2375,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Builder addSignatures(
           int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (signaturesBuilder_ == null) {
@@ -1928,6 +2392,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Builder addSignatures(
           Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
         if (signaturesBuilder_ == null) {
@@ -1939,6 +2406,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Builder addSignatures(
           int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
         if (signaturesBuilder_ == null) {
@@ -1950,17 +2420,24 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Builder addAllSignatures(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2> values) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
-          super.addAll(values, signatures_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, signatures_);
           onChanged();
         } else {
           signaturesBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Builder clearSignatures() {
         if (signaturesBuilder_ == null) {
           signatures_ = java.util.Collections.emptyList();
@@ -1971,6 +2448,9 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Builder removeSignatures(int index) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
@@ -1981,10 +2461,16 @@ public final class CloudSignProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder getSignaturesBuilder(
           int index) {
         return getSignaturesFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
           int index) {
         if (signaturesBuilder_ == null) {
@@ -1992,6 +2478,9 @@ public final class CloudSignProtos {
           return signaturesBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
            getSignaturesOrBuilderList() {
         if (signaturesBuilder_ != null) {
@@ -2000,15 +2489,24 @@ public final class CloudSignProtos {
           return java.util.Collections.unmodifiableList(signatures_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder addSignaturesBuilder() {
         return getSignaturesFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder addSignaturesBuilder(
           int index) {
         return getSignaturesFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder> 
            getSignaturesBuilderList() {
         return getSignaturesFieldBuilder().getBuilderList();
@@ -2027,39 +2525,39 @@ public final class CloudSignProtos {
         }
         return signaturesBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CloudSignConfirmResult)
     }
-    
+
     static {
       defaultInstance = new CloudSignConfirmResult(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.CloudSignConfirmResult)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_CloudSignRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CloudSignFile_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_CloudSignFile_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CloudSignResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_CloudSignResult_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -2079,51 +2577,44 @@ public final class CloudSignProtos {
       "udSignProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_CloudSignRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor,
-              new java.lang.String[] { "Files", },
-              Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.class,
-              Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest.Builder.class);
-          internal_static_Diadoc_Api_Proto_CloudSignFile_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_CloudSignFile_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_CloudSignFile_descriptor,
-              new java.lang.String[] { "Content", "FileName", },
-              Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.class,
-              Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder.class);
-          internal_static_Diadoc_Api_Proto_CloudSignResult_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_CloudSignResult_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_CloudSignResult_descriptor,
-              new java.lang.String[] { "Token", },
-              Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.class,
-              Diadoc.Api.Proto.CloudSignProtos.CloudSignResult.Builder.class);
-          internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_descriptor,
-              new java.lang.String[] { "Signatures", },
-              Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.class,
-              Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Content_v2Protos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_CloudSignRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor,
+        new java.lang.String[] { "Files", });
+    internal_static_Diadoc_Api_Proto_CloudSignFile_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_CloudSignFile_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_CloudSignFile_descriptor,
+        new java.lang.String[] { "Content", "FileName", });
+    internal_static_Diadoc_Api_Proto_CloudSignResult_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_CloudSignResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_CloudSignResult_descriptor,
+        new java.lang.String[] { "Token", });
+    internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_CloudSignConfirmResult_descriptor,
+        new java.lang.String[] { "Signatures", });
+    Diadoc.Api.Proto.Content_v2Protos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

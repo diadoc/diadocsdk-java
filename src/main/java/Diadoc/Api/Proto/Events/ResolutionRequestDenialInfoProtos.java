@@ -8,110 +8,226 @@ public final class ResolutionRequestDenialInfoProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface ResolutionRequestDenialInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string Author = 1;
+  public interface ResolutionRequestDenialInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Events.ResolutionRequestDenialInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Author = 1;</code>
+     */
     boolean hasAuthor();
-    String getAuthor();
-    
-    // optional string InitialRequestId = 2;
+    /**
+     * <code>required string Author = 1;</code>
+     */
+    java.lang.String getAuthor();
+    /**
+     * <code>required string Author = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAuthorBytes();
+
+    /**
+     * <code>optional string InitialRequestId = 2;</code>
+     */
     boolean hasInitialRequestId();
-    String getInitialRequestId();
+    /**
+     * <code>optional string InitialRequestId = 2;</code>
+     */
+    java.lang.String getInitialRequestId();
+    /**
+     * <code>optional string InitialRequestId = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getInitialRequestIdBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionRequestDenialInfo}
+   */
   public static final class ResolutionRequestDenialInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements ResolutionRequestDenialInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Events.ResolutionRequestDenialInfo)
+      ResolutionRequestDenialInfoOrBuilder {
     // Use ResolutionRequestDenialInfo.newBuilder() to construct.
-    private ResolutionRequestDenialInfo(Builder builder) {
+    private ResolutionRequestDenialInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private ResolutionRequestDenialInfo(boolean noInit) {}
-    
+    private ResolutionRequestDenialInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final ResolutionRequestDenialInfo defaultInstance;
     public static ResolutionRequestDenialInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public ResolutionRequestDenialInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResolutionRequestDenialInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              author_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              initialRequestId_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.class, Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<ResolutionRequestDenialInfo> PARSER =
+        new com.google.protobuf.AbstractParser<ResolutionRequestDenialInfo>() {
+      public ResolutionRequestDenialInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResolutionRequestDenialInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResolutionRequestDenialInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string Author = 1;
     public static final int AUTHOR_FIELD_NUMBER = 1;
     private java.lang.Object author_;
+    /**
+     * <code>required string Author = 1;</code>
+     */
     public boolean hasAuthor() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getAuthor() {
+    /**
+     * <code>required string Author = 1;</code>
+     */
+    public java.lang.String getAuthor() {
       java.lang.Object ref = author_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           author_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAuthorBytes() {
+    /**
+     * <code>required string Author = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAuthorBytes() {
       java.lang.Object ref = author_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         author_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string InitialRequestId = 2;
+
     public static final int INITIALREQUESTID_FIELD_NUMBER = 2;
     private java.lang.Object initialRequestId_;
+    /**
+     * <code>optional string InitialRequestId = 2;</code>
+     */
     public boolean hasInitialRequestId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getInitialRequestId() {
+    /**
+     * <code>optional string InitialRequestId = 2;</code>
+     */
+    public java.lang.String getInitialRequestId() {
       java.lang.Object ref = initialRequestId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           initialRequestId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInitialRequestIdBytes() {
+    /**
+     * <code>optional string InitialRequestId = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInitialRequestIdBytes() {
       java.lang.Object ref = initialRequestId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         initialRequestId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       author_ = "";
       initialRequestId_ = "";
@@ -119,8 +235,9 @@ public final class ResolutionRequestDenialInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasAuthor()) {
         memoizedIsInitialized = 0;
         return false;
@@ -128,7 +245,7 @@ public final class ResolutionRequestDenialInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -140,12 +257,12 @@ public final class ResolutionRequestDenialInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -159,113 +276,106 @@ public final class ResolutionRequestDenialInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionRequestDenialInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Events.ResolutionRequestDenialInfo)
+        Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.class, Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -276,7 +386,7 @@ public final class ResolutionRequestDenialInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         author_ = "";
@@ -285,20 +395,20 @@ public final class ResolutionRequestDenialInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.getDescriptor();
+        return Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo build() {
         Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -306,17 +416,7 @@ public final class ResolutionRequestDenialInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo buildPartial() {
         Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo result = new Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo(this);
         int from_bitField0_ = bitField0_;
@@ -333,7 +433,7 @@ public final class ResolutionRequestDenialInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo) {
           return mergeFrom((Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo)other);
@@ -342,19 +442,23 @@ public final class ResolutionRequestDenialInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo other) {
         if (other == Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.getDefaultInstance()) return this;
         if (other.hasAuthor()) {
-          setAuthor(other.getAuthor());
+          bitField0_ |= 0x00000001;
+          author_ = other.author_;
+          onChanged();
         }
         if (other.hasInitialRequestId()) {
-          setInitialRequestId(other.getInitialRequestId());
+          bitField0_ |= 0x00000002;
+          initialRequestId_ = other.initialRequestId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasAuthor()) {
           
@@ -362,62 +466,71 @@ public final class ResolutionRequestDenialInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              author_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              initialRequestId_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string Author = 1;
+
       private java.lang.Object author_ = "";
+      /**
+       * <code>required string Author = 1;</code>
+       */
       public boolean hasAuthor() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getAuthor() {
+      /**
+       * <code>required string Author = 1;</code>
+       */
+      public java.lang.String getAuthor() {
         java.lang.Object ref = author_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          author_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            author_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAuthor(String value) {
+      /**
+       * <code>required string Author = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAuthorBytes() {
+        java.lang.Object ref = author_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          author_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Author = 1;</code>
+       */
+      public Builder setAuthor(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -426,34 +539,74 @@ public final class ResolutionRequestDenialInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Author = 1;</code>
+       */
       public Builder clearAuthor() {
         bitField0_ = (bitField0_ & ~0x00000001);
         author_ = getDefaultInstance().getAuthor();
         onChanged();
         return this;
       }
-      void setAuthor(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string Author = 1;</code>
+       */
+      public Builder setAuthorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         author_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string InitialRequestId = 2;
+
       private java.lang.Object initialRequestId_ = "";
+      /**
+       * <code>optional string InitialRequestId = 2;</code>
+       */
       public boolean hasInitialRequestId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getInitialRequestId() {
+      /**
+       * <code>optional string InitialRequestId = 2;</code>
+       */
+      public java.lang.String getInitialRequestId() {
         java.lang.Object ref = initialRequestId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          initialRequestId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            initialRequestId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInitialRequestId(String value) {
+      /**
+       * <code>optional string InitialRequestId = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInitialRequestIdBytes() {
+        java.lang.Object ref = initialRequestId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          initialRequestId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string InitialRequestId = 2;</code>
+       */
+      public Builder setInitialRequestId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -462,35 +615,46 @@ public final class ResolutionRequestDenialInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string InitialRequestId = 2;</code>
+       */
       public Builder clearInitialRequestId() {
         bitField0_ = (bitField0_ & ~0x00000002);
         initialRequestId_ = getDefaultInstance().getInitialRequestId();
         onChanged();
         return this;
       }
-      void setInitialRequestId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string InitialRequestId = 2;</code>
+       */
+      public Builder setInitialRequestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         initialRequestId_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.ResolutionRequestDenialInfo)
     }
-    
+
     static {
       defaultInstance = new ResolutionRequestDenialInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Events.ResolutionRequestDenialInfo)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -506,26 +670,24 @@ public final class ResolutionRequestDenialInfoProtos {
       "tDenialInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_descriptor,
-              new java.lang.String[] { "Author", "InitialRequestId", },
-              Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.class,
-              Diadoc.Api.Proto.Events.ResolutionRequestDenialInfoProtos.ResolutionRequestDenialInfo.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Events_ResolutionRequestDenialInfo_descriptor,
+        new java.lang.String[] { "Author", "InitialRequestId", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

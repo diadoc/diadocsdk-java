@@ -8,52 +8,177 @@ public final class NonformalizedDocumentProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus}
+   */
   public enum NonformalizedDocumentStatus
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownNonformalizedDocumentStatus = 0;</code>
+     *
+     * <pre>
+     * Reserved state to report to legacy client for new statuses
+     * </pre>
+     */
     UnknownNonformalizedDocumentStatus(0, 0),
+    /**
+     * <code>OutboundNoRecipientSignatureRequest = 1;</code>
+     */
     OutboundNoRecipientSignatureRequest(1, 1),
+    /**
+     * <code>OutboundWaitingForRecipientSignature = 2;</code>
+     */
     OutboundWaitingForRecipientSignature(2, 2),
+    /**
+     * <code>OutboundWithRecipientSignature = 3;</code>
+     */
     OutboundWithRecipientSignature(3, 3),
+    /**
+     * <code>OutboundRecipientSignatureRequestRejected = 4;</code>
+     */
     OutboundRecipientSignatureRequestRejected(4, 4),
+    /**
+     * <code>OutboundWaitingForSenderSignature = 13;</code>
+     */
     OutboundWaitingForSenderSignature(5, 13),
+    /**
+     * <code>OutboundInvalidSenderSignature = 14;</code>
+     */
     OutboundInvalidSenderSignature(6, 14),
+    /**
+     * <code>InboundNoRecipientSignatureRequest = 5;</code>
+     */
     InboundNoRecipientSignatureRequest(7, 5),
+    /**
+     * <code>InboundWaitingForRecipientSignature = 6;</code>
+     */
     InboundWaitingForRecipientSignature(8, 6),
+    /**
+     * <code>InboundWithRecipientSignature = 7;</code>
+     */
     InboundWithRecipientSignature(9, 7),
+    /**
+     * <code>InboundRecipientSignatureRequestRejected = 8;</code>
+     */
     InboundRecipientSignatureRequestRejected(10, 8),
+    /**
+     * <code>InboundInvalidRecipientSignature = 15;</code>
+     */
     InboundInvalidRecipientSignature(11, 15),
+    /**
+     * <code>InternalNoRecipientSignatureRequest = 9;</code>
+     */
     InternalNoRecipientSignatureRequest(12, 9),
+    /**
+     * <code>InternalWaitingForRecipientSignature = 10;</code>
+     */
     InternalWaitingForRecipientSignature(13, 10),
+    /**
+     * <code>InternalWithRecipientSignature = 11;</code>
+     */
     InternalWithRecipientSignature(14, 11),
+    /**
+     * <code>InternalRecipientSignatureRequestRejected = 12;</code>
+     */
     InternalRecipientSignatureRequestRejected(15, 12),
+    /**
+     * <code>InternalWaitingForSenderSignature = 16;</code>
+     */
     InternalWaitingForSenderSignature(16, 16),
+    /**
+     * <code>InternalInvalidSenderSignature = 17;</code>
+     */
     InternalInvalidSenderSignature(17, 17),
+    /**
+     * <code>InternalInvalidRecipientSignature = 18;</code>
+     */
     InternalInvalidRecipientSignature(18, 18),
     ;
-    
+
+    /**
+     * <code>UnknownNonformalizedDocumentStatus = 0;</code>
+     *
+     * <pre>
+     * Reserved state to report to legacy client for new statuses
+     * </pre>
+     */
     public static final int UnknownNonformalizedDocumentStatus_VALUE = 0;
+    /**
+     * <code>OutboundNoRecipientSignatureRequest = 1;</code>
+     */
     public static final int OutboundNoRecipientSignatureRequest_VALUE = 1;
+    /**
+     * <code>OutboundWaitingForRecipientSignature = 2;</code>
+     */
     public static final int OutboundWaitingForRecipientSignature_VALUE = 2;
+    /**
+     * <code>OutboundWithRecipientSignature = 3;</code>
+     */
     public static final int OutboundWithRecipientSignature_VALUE = 3;
+    /**
+     * <code>OutboundRecipientSignatureRequestRejected = 4;</code>
+     */
     public static final int OutboundRecipientSignatureRequestRejected_VALUE = 4;
+    /**
+     * <code>OutboundWaitingForSenderSignature = 13;</code>
+     */
     public static final int OutboundWaitingForSenderSignature_VALUE = 13;
+    /**
+     * <code>OutboundInvalidSenderSignature = 14;</code>
+     */
     public static final int OutboundInvalidSenderSignature_VALUE = 14;
+    /**
+     * <code>InboundNoRecipientSignatureRequest = 5;</code>
+     */
     public static final int InboundNoRecipientSignatureRequest_VALUE = 5;
+    /**
+     * <code>InboundWaitingForRecipientSignature = 6;</code>
+     */
     public static final int InboundWaitingForRecipientSignature_VALUE = 6;
+    /**
+     * <code>InboundWithRecipientSignature = 7;</code>
+     */
     public static final int InboundWithRecipientSignature_VALUE = 7;
+    /**
+     * <code>InboundRecipientSignatureRequestRejected = 8;</code>
+     */
     public static final int InboundRecipientSignatureRequestRejected_VALUE = 8;
+    /**
+     * <code>InboundInvalidRecipientSignature = 15;</code>
+     */
     public static final int InboundInvalidRecipientSignature_VALUE = 15;
+    /**
+     * <code>InternalNoRecipientSignatureRequest = 9;</code>
+     */
     public static final int InternalNoRecipientSignatureRequest_VALUE = 9;
+    /**
+     * <code>InternalWaitingForRecipientSignature = 10;</code>
+     */
     public static final int InternalWaitingForRecipientSignature_VALUE = 10;
+    /**
+     * <code>InternalWithRecipientSignature = 11;</code>
+     */
     public static final int InternalWithRecipientSignature_VALUE = 11;
+    /**
+     * <code>InternalRecipientSignatureRequestRejected = 12;</code>
+     */
     public static final int InternalRecipientSignatureRequestRejected_VALUE = 12;
+    /**
+     * <code>InternalWaitingForSenderSignature = 16;</code>
+     */
     public static final int InternalWaitingForSenderSignature_VALUE = 16;
+    /**
+     * <code>InternalInvalidSenderSignature = 17;</code>
+     */
     public static final int InternalInvalidSenderSignature_VALUE = 17;
+    /**
+     * <code>InternalInvalidRecipientSignature = 18;</code>
+     */
     public static final int InternalInvalidRecipientSignature_VALUE = 18;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static NonformalizedDocumentStatus valueOf(int value) {
       switch (value) {
         case 0: return UnknownNonformalizedDocumentStatus;
@@ -78,7 +203,7 @@ public final class NonformalizedDocumentProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<NonformalizedDocumentStatus>
         internalGetValueMap() {
       return internalValueMap;
@@ -90,7 +215,7 @@ public final class NonformalizedDocumentProtos {
               return NonformalizedDocumentStatus.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -103,11 +228,9 @@ public final class NonformalizedDocumentProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final NonformalizedDocumentStatus[] VALUES = {
-      UnknownNonformalizedDocumentStatus, OutboundNoRecipientSignatureRequest, OutboundWaitingForRecipientSignature, OutboundWithRecipientSignature, OutboundRecipientSignatureRequestRejected, OutboundWaitingForSenderSignature, OutboundInvalidSenderSignature, InboundNoRecipientSignatureRequest, InboundWaitingForRecipientSignature, InboundWithRecipientSignature, InboundRecipientSignatureRequestRejected, InboundInvalidRecipientSignature, InternalNoRecipientSignatureRequest, InternalWaitingForRecipientSignature, InternalWithRecipientSignature, InternalRecipientSignatureRequestRejected, InternalWaitingForSenderSignature, InternalInvalidSenderSignature, InternalInvalidRecipientSignature, 
-    };
-    
+
+    private static final NonformalizedDocumentStatus[] VALUES = values();
+
     public static NonformalizedDocumentStatus valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -116,341 +239,89 @@ public final class NonformalizedDocumentProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private NonformalizedDocumentStatus(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus)
   }
-  
-  public interface NonformalizedDocumentMetadataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];
+
+  public interface NonformalizedDocumentMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];</code>
+     */
     boolean hasDocumentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];</code>
+     */
     Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus getDocumentStatus();
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     */
     boolean hasReceiptStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     */
     Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata}
+   */
   public static final class NonformalizedDocumentMetadata extends
-      com.google.protobuf.GeneratedMessage
-      implements NonformalizedDocumentMetadataOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata)
+      NonformalizedDocumentMetadataOrBuilder {
     // Use NonformalizedDocumentMetadata.newBuilder() to construct.
-    private NonformalizedDocumentMetadata(Builder builder) {
+    private NonformalizedDocumentMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private NonformalizedDocumentMetadata(boolean noInit) {}
-    
+    private NonformalizedDocumentMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final NonformalizedDocumentMetadata defaultInstance;
     public static NonformalizedDocumentMetadata getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public NonformalizedDocumentMetadata getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];
-    public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
-    private Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus documentStatus_;
-    public boolean hasDocumentStatus() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus getDocumentStatus() {
-      return documentStatus_;
-    }
-    
-    // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
-    public static final int RECEIPTSTATUS_FIELD_NUMBER = 2;
-    private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
-    public boolean hasReceiptStatus() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
-      return receiptStatus_;
-    }
-    
-    private void initFields() {
-      documentStatus_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus.UnknownNonformalizedDocumentStatus;
-      receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, documentStatus_.getNumber());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeEnum(2, receiptStatus_.getNumber());
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, documentStatus_.getNumber());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, receiptStatus_.getNumber());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
     }
-    
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
+    private NonformalizedDocumentMetadata(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_fieldAccessorTable;
-      }
-      
-      // Construct using Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        documentStatus_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus.UnknownNonformalizedDocumentStatus;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.getDescriptor();
-      }
-      
-      public Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata getDefaultInstanceForType() {
-        return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.getDefaultInstance();
-      }
-      
-      public Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata build() {
-        Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata buildPartial() {
-        Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata result = new Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.documentStatus_ = documentStatus_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.receiptStatus_ = receiptStatus_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata) {
-          return mergeFrom((Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata other) {
-        if (other == Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.getDefaultInstance()) return this;
-        if (other.hasDocumentStatus()) {
-          setDocumentStatus(other.getDocumentStatus());
-        }
-        if (other.hasReceiptStatus()) {
-          setReceiptStatus(other.getReceiptStatus());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -478,18 +349,336 @@ public final class NonformalizedDocumentProtos {
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.class, Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<NonformalizedDocumentMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<NonformalizedDocumentMetadata>() {
+      public NonformalizedDocumentMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NonformalizedDocumentMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NonformalizedDocumentMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus documentStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];</code>
+     */
+    public boolean hasDocumentStatus() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];</code>
+     */
+    public Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus getDocumentStatus() {
+      return documentStatus_;
+    }
+
+    public static final int RECEIPTSTATUS_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     */
+    public boolean hasReceiptStatus() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     */
+    public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
+      return receiptStatus_;
+    }
+
+    private void initFields() {
+      documentStatus_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus.UnknownNonformalizedDocumentStatus;
+      receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, receiptStatus_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, receiptStatus_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata)
+        Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.class, Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        documentStatus_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus.UnknownNonformalizedDocumentStatus;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata build() {
+        Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata buildPartial() {
+        Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata result = new Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.documentStatus_ = documentStatus_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.receiptStatus_ = receiptStatus_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata) {
+          return mergeFrom((Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata other) {
+        if (other == Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.getDefaultInstance()) return this;
+        if (other.hasDocumentStatus()) {
+          setDocumentStatus(other.getDocumentStatus());
+        }
+        if (other.hasReceiptStatus()) {
+          setReceiptStatus(other.getReceiptStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];
+
       private Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus.UnknownNonformalizedDocumentStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];</code>
+       */
       public boolean hasDocumentStatus() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];</code>
+       */
       public Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus getDocumentStatus() {
         return documentStatus_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];</code>
+       */
       public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus value) {
         if (value == null) {
           throw new NullPointerException();
@@ -499,21 +688,32 @@ public final class NonformalizedDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];</code>
+       */
       public Builder clearDocumentStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
         documentStatus_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentStatus.UnknownNonformalizedDocumentStatus;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
+
       private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       */
       public boolean hasReceiptStatus() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       */
       public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
         return receiptStatus_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       */
       public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
         if (value == null) {
           throw new NullPointerException();
@@ -523,30 +723,33 @@ public final class NonformalizedDocumentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       */
       public Builder clearReceiptStatus() {
         bitField0_ = (bitField0_ & ~0x00000002);
         receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata)
     }
-    
+
     static {
       defaultInstance = new NonformalizedDocumentMetadata(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -588,27 +791,26 @@ public final class NonformalizedDocumentProtos {
       "Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor,
-              new java.lang.String[] { "DocumentStatus", "ReceiptStatus", },
-              Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.class,
-              Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Documents.ReceiptStatusProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_NonformalizedDocument_NonformalizedDocumentMetadata_descriptor,
+        new java.lang.String[] { "DocumentStatus", "ReceiptStatus", });
+    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

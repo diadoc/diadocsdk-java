@@ -8,92 +8,211 @@ public final class ForwardDocumentEventProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface ForwardDocumentEventOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;
+  public interface ForwardDocumentEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.ForwardDocumentEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+     */
     boolean hasTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.Timestamp getTimestamp();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+     */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getTimestampOrBuilder();
-    
-    // optional string ToBoxId = 2;
+
+    /**
+     * <code>optional string ToBoxId = 2;</code>
+     */
     boolean hasToBoxId();
-    String getToBoxId();
+    /**
+     * <code>optional string ToBoxId = 2;</code>
+     */
+    java.lang.String getToBoxId();
+    /**
+     * <code>optional string ToBoxId = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getToBoxIdBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.ForwardDocumentEvent}
+   */
   public static final class ForwardDocumentEvent extends
-      com.google.protobuf.GeneratedMessage
-      implements ForwardDocumentEventOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.ForwardDocumentEvent)
+      ForwardDocumentEventOrBuilder {
     // Use ForwardDocumentEvent.newBuilder() to construct.
-    private ForwardDocumentEvent(Builder builder) {
+    private ForwardDocumentEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private ForwardDocumentEvent(boolean noInit) {}
-    
+    private ForwardDocumentEvent(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final ForwardDocumentEvent defaultInstance;
     public static ForwardDocumentEvent getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public ForwardDocumentEvent getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ForwardDocumentEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = timestamp_.toBuilder();
+              }
+              timestamp_ = input.readMessage(Diadoc.Api.Proto.TimestampProtos.Timestamp.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timestamp_);
+                timestamp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              toBoxId_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.ForwardDocumentEventProtos.internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.ForwardDocumentEventProtos.internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_fieldAccessorTable;
+      return Diadoc.Api.Proto.ForwardDocumentEventProtos.internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.class, Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<ForwardDocumentEvent> PARSER =
+        new com.google.protobuf.AbstractParser<ForwardDocumentEvent>() {
+      public ForwardDocumentEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ForwardDocumentEvent(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ForwardDocumentEvent> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;
     public static final int TIMESTAMP_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.TimestampProtos.Timestamp timestamp_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+     */
     public boolean hasTimestamp() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.Timestamp getTimestamp() {
       return timestamp_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+     */
     public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getTimestampOrBuilder() {
       return timestamp_;
     }
-    
-    // optional string ToBoxId = 2;
+
     public static final int TOBOXID_FIELD_NUMBER = 2;
     private java.lang.Object toBoxId_;
+    /**
+     * <code>optional string ToBoxId = 2;</code>
+     */
     public boolean hasToBoxId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getToBoxId() {
+    /**
+     * <code>optional string ToBoxId = 2;</code>
+     */
+    public java.lang.String getToBoxId() {
       java.lang.Object ref = toBoxId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           toBoxId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getToBoxIdBytes() {
+    /**
+     * <code>optional string ToBoxId = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getToBoxIdBytes() {
       java.lang.Object ref = toBoxId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         toBoxId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       timestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       toBoxId_ = "";
@@ -101,8 +220,9 @@ public final class ForwardDocumentEventProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasTimestamp()) {
         if (!getTimestamp().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -112,7 +232,7 @@ public final class ForwardDocumentEventProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -124,12 +244,12 @@ public final class ForwardDocumentEventProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -143,113 +263,106 @@ public final class ForwardDocumentEventProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.ForwardDocumentEvent}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEventOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.ForwardDocumentEvent)
+        Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEventOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.ForwardDocumentEventProtos.internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.ForwardDocumentEventProtos.internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_fieldAccessorTable;
+        return Diadoc.Api.Proto.ForwardDocumentEventProtos.internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.class, Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -261,7 +374,7 @@ public final class ForwardDocumentEventProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (timestampBuilder_ == null) {
@@ -274,20 +387,20 @@ public final class ForwardDocumentEventProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.getDescriptor();
+        return Diadoc.Api.Proto.ForwardDocumentEventProtos.internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent getDefaultInstanceForType() {
         return Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent build() {
         Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent result = buildPartial();
         if (!result.isInitialized()) {
@@ -295,17 +408,7 @@ public final class ForwardDocumentEventProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent buildPartial() {
         Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent result = new Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent(this);
         int from_bitField0_ = bitField0_;
@@ -326,7 +429,7 @@ public final class ForwardDocumentEventProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent) {
           return mergeFrom((Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent)other);
@@ -335,19 +438,21 @@ public final class ForwardDocumentEventProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent other) {
         if (other == Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.getDefaultInstance()) return this;
         if (other.hasTimestamp()) {
           mergeTimestamp(other.getTimestamp());
         }
         if (other.hasToBoxId()) {
-          setToBoxId(other.getToBoxId());
+          bitField0_ |= 0x00000002;
+          toBoxId_ = other.toBoxId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasTimestamp()) {
           if (!getTimestamp().isInitialized()) {
@@ -357,57 +462,38 @@ public final class ForwardDocumentEventProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder subBuilder = Diadoc.Api.Proto.TimestampProtos.Timestamp.newBuilder();
-              if (hasTimestamp()) {
-                subBuilder.mergeFrom(getTimestamp());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setTimestamp(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              toBoxId_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;
+
       private Diadoc.Api.Proto.TimestampProtos.Timestamp timestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+       */
       public boolean hasTimestamp() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp getTimestamp() {
         if (timestampBuilder_ == null) {
           return timestamp_;
@@ -415,6 +501,9 @@ public final class ForwardDocumentEventProtos {
           return timestampBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+       */
       public Builder setTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (timestampBuilder_ == null) {
           if (value == null) {
@@ -428,6 +517,9 @@ public final class ForwardDocumentEventProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+       */
       public Builder setTimestamp(
           Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder builderForValue) {
         if (timestampBuilder_ == null) {
@@ -439,6 +531,9 @@ public final class ForwardDocumentEventProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+       */
       public Builder mergeTimestamp(Diadoc.Api.Proto.TimestampProtos.Timestamp value) {
         if (timestampBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -455,6 +550,9 @@ public final class ForwardDocumentEventProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+       */
       public Builder clearTimestamp() {
         if (timestampBuilder_ == null) {
           timestamp_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
@@ -465,11 +563,17 @@ public final class ForwardDocumentEventProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder getTimestampBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getTimestampFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+       */
       public Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getTimestampOrBuilder() {
         if (timestampBuilder_ != null) {
           return timestampBuilder_.getMessageOrBuilder();
@@ -477,36 +581,68 @@ public final class ForwardDocumentEventProtos {
           return timestamp_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Timestamp Timestamp = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder> 
           getTimestampFieldBuilder() {
         if (timestampBuilder_ == null) {
           timestampBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.TimestampProtos.Timestamp, Diadoc.Api.Proto.TimestampProtos.Timestamp.Builder, Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder>(
-                  timestamp_,
+                  getTimestamp(),
                   getParentForChildren(),
                   isClean());
           timestamp_ = null;
         }
         return timestampBuilder_;
       }
-      
-      // optional string ToBoxId = 2;
+
       private java.lang.Object toBoxId_ = "";
+      /**
+       * <code>optional string ToBoxId = 2;</code>
+       */
       public boolean hasToBoxId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getToBoxId() {
+      /**
+       * <code>optional string ToBoxId = 2;</code>
+       */
+      public java.lang.String getToBoxId() {
         java.lang.Object ref = toBoxId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          toBoxId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            toBoxId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setToBoxId(String value) {
+      /**
+       * <code>optional string ToBoxId = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getToBoxIdBytes() {
+        java.lang.Object ref = toBoxId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toBoxId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ToBoxId = 2;</code>
+       */
+      public Builder setToBoxId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -515,35 +651,46 @@ public final class ForwardDocumentEventProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string ToBoxId = 2;</code>
+       */
       public Builder clearToBoxId() {
         bitField0_ = (bitField0_ & ~0x00000002);
         toBoxId_ = getDefaultInstance().getToBoxId();
         onChanged();
         return this;
       }
-      void setToBoxId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string ToBoxId = 2;</code>
+       */
+      public Builder setToBoxIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         toBoxId_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.ForwardDocumentEvent)
     }
-    
+
     static {
       defaultInstance = new ForwardDocumentEvent(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.ForwardDocumentEvent)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -559,27 +706,26 @@ public final class ForwardDocumentEventProtos {
       "ardDocumentEventProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_descriptor,
-              new java.lang.String[] { "Timestamp", "ToBoxId", },
-              Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.class,
-              Diadoc.Api.Proto.ForwardDocumentEventProtos.ForwardDocumentEvent.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_ForwardDocumentEvent_descriptor,
+        new java.lang.String[] { "Timestamp", "ToBoxId", });
+    Diadoc.Api.Proto.TimestampProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

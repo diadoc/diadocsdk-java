@@ -8,28 +8,73 @@ public final class CounteragentProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.CounteragentStatus}
+   */
   public enum CounteragentStatus
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownCounteragentStatus = 0;</code>
+     */
     UnknownCounteragentStatus(0, 0),
+    /**
+     * <code>IsMyCounteragent = 1;</code>
+     */
     IsMyCounteragent(1, 1),
+    /**
+     * <code>InvitesMe = 2;</code>
+     */
     InvitesMe(2, 2),
+    /**
+     * <code>IsInvitedByMe = 3;</code>
+     */
     IsInvitedByMe(3, 3),
+    /**
+     * <code>RejectsMe = 5;</code>
+     */
     RejectsMe(4, 5),
+    /**
+     * <code>IsRejectedByMe = 6;</code>
+     */
     IsRejectedByMe(5, 6),
+    /**
+     * <code>NotInCounteragentList = 7;</code>
+     */
     NotInCounteragentList(6, 7),
     ;
-    
+
+    /**
+     * <code>UnknownCounteragentStatus = 0;</code>
+     */
     public static final int UnknownCounteragentStatus_VALUE = 0;
+    /**
+     * <code>IsMyCounteragent = 1;</code>
+     */
     public static final int IsMyCounteragent_VALUE = 1;
+    /**
+     * <code>InvitesMe = 2;</code>
+     */
     public static final int InvitesMe_VALUE = 2;
+    /**
+     * <code>IsInvitedByMe = 3;</code>
+     */
     public static final int IsInvitedByMe_VALUE = 3;
+    /**
+     * <code>RejectsMe = 5;</code>
+     */
     public static final int RejectsMe_VALUE = 5;
+    /**
+     * <code>IsRejectedByMe = 6;</code>
+     */
     public static final int IsRejectedByMe_VALUE = 6;
+    /**
+     * <code>NotInCounteragentList = 7;</code>
+     */
     public static final int NotInCounteragentList_VALUE = 7;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static CounteragentStatus valueOf(int value) {
       switch (value) {
         case 0: return UnknownCounteragentStatus;
@@ -42,7 +87,7 @@ public final class CounteragentProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<CounteragentStatus>
         internalGetValueMap() {
       return internalValueMap;
@@ -54,7 +99,7 @@ public final class CounteragentProtos {
               return CounteragentStatus.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -67,11 +112,9 @@ public final class CounteragentProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.CounteragentProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final CounteragentStatus[] VALUES = {
-      UnknownCounteragentStatus, IsMyCounteragent, InvitesMe, IsInvitedByMe, RejectsMe, IsRejectedByMe, NotInCounteragentList, 
-    };
-    
+
+    private static final CounteragentStatus[] VALUES = values();
+
     public static CounteragentStatus valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -80,95 +123,213 @@ public final class CounteragentProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private CounteragentStatus(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.CounteragentStatus)
   }
-  
-  public interface CounteragentListOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required int32 TotalCount = 1;
+
+  public interface CounteragentListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CounteragentList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 TotalCount = 1;</code>
+     */
     boolean hasTotalCount();
+    /**
+     * <code>required int32 TotalCount = 1;</code>
+     */
     int getTotalCount();
-    
-    // repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     java.util.List<Diadoc.Api.Proto.CounteragentProtos.Counteragent> 
         getCounteragentsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     Diadoc.Api.Proto.CounteragentProtos.Counteragent getCounteragents(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     int getCounteragentsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     java.util.List<? extends Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder> 
         getCounteragentsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder getCounteragentsOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.CounteragentList}
+   */
   public static final class CounteragentList extends
-      com.google.protobuf.GeneratedMessage
-      implements CounteragentListOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CounteragentList)
+      CounteragentListOrBuilder {
     // Use CounteragentList.newBuilder() to construct.
-    private CounteragentList(Builder builder) {
+    private CounteragentList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CounteragentList(boolean noInit) {}
-    
+    private CounteragentList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CounteragentList defaultInstance;
     public static CounteragentList getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CounteragentList getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CounteragentList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              totalCount_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                counteragents_ = new java.util.ArrayList<Diadoc.Api.Proto.CounteragentProtos.Counteragent>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              counteragents_.add(input.readMessage(Diadoc.Api.Proto.CounteragentProtos.Counteragent.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          counteragents_ = java.util.Collections.unmodifiableList(counteragents_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentList_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentList_fieldAccessorTable;
+      return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.CounteragentProtos.CounteragentList.class, Diadoc.Api.Proto.CounteragentProtos.CounteragentList.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<CounteragentList> PARSER =
+        new com.google.protobuf.AbstractParser<CounteragentList>() {
+      public CounteragentList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CounteragentList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CounteragentList> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required int32 TotalCount = 1;
     public static final int TOTALCOUNT_FIELD_NUMBER = 1;
     private int totalCount_;
+    /**
+     * <code>required int32 TotalCount = 1;</code>
+     */
     public boolean hasTotalCount() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required int32 TotalCount = 1;</code>
+     */
     public int getTotalCount() {
       return totalCount_;
     }
-    
-    // repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;
+
     public static final int COUNTERAGENTS_FIELD_NUMBER = 2;
     private java.util.List<Diadoc.Api.Proto.CounteragentProtos.Counteragent> counteragents_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     public java.util.List<Diadoc.Api.Proto.CounteragentProtos.Counteragent> getCounteragentsList() {
       return counteragents_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder> 
         getCounteragentsOrBuilderList() {
       return counteragents_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     public int getCounteragentsCount() {
       return counteragents_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     public Diadoc.Api.Proto.CounteragentProtos.Counteragent getCounteragents(int index) {
       return counteragents_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+     */
     public Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder getCounteragentsOrBuilder(
         int index) {
       return counteragents_.get(index);
     }
-    
+
     private void initFields() {
       totalCount_ = 0;
       counteragents_ = java.util.Collections.emptyList();
@@ -176,8 +337,9 @@ public final class CounteragentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasTotalCount()) {
         memoizedIsInitialized = 0;
         return false;
@@ -191,7 +353,7 @@ public final class CounteragentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -203,12 +365,12 @@ public final class CounteragentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -222,113 +384,106 @@ public final class CounteragentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentList parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.CounteragentProtos.CounteragentList prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.CounteragentList}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.CounteragentProtos.CounteragentListOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.CounteragentList)
+        Diadoc.Api.Proto.CounteragentProtos.CounteragentListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentList_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentList_fieldAccessorTable;
+        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.CounteragentProtos.CounteragentList.class, Diadoc.Api.Proto.CounteragentProtos.CounteragentList.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.CounteragentProtos.CounteragentList.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -340,7 +495,7 @@ public final class CounteragentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         totalCount_ = 0;
@@ -353,20 +508,20 @@ public final class CounteragentProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.CounteragentProtos.CounteragentList.getDescriptor();
+        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentList_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.CounteragentList getDefaultInstanceForType() {
         return Diadoc.Api.Proto.CounteragentProtos.CounteragentList.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.CounteragentList build() {
         Diadoc.Api.Proto.CounteragentProtos.CounteragentList result = buildPartial();
         if (!result.isInitialized()) {
@@ -374,17 +529,7 @@ public final class CounteragentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.CounteragentProtos.CounteragentList buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.CounteragentProtos.CounteragentList result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.CounteragentList buildPartial() {
         Diadoc.Api.Proto.CounteragentProtos.CounteragentList result = new Diadoc.Api.Proto.CounteragentProtos.CounteragentList(this);
         int from_bitField0_ = bitField0_;
@@ -406,7 +551,7 @@ public final class CounteragentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.CounteragentProtos.CounteragentList) {
           return mergeFrom((Diadoc.Api.Proto.CounteragentProtos.CounteragentList)other);
@@ -415,7 +560,7 @@ public final class CounteragentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.CounteragentProtos.CounteragentList other) {
         if (other == Diadoc.Api.Proto.CounteragentProtos.CounteragentList.getDefaultInstance()) return this;
         if (other.hasTotalCount()) {
@@ -450,7 +595,7 @@ public final class CounteragentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasTotalCount()) {
           
@@ -464,69 +609,58 @@ public final class CounteragentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              totalCount_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder subBuilder = Diadoc.Api.Proto.CounteragentProtos.Counteragent.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addCounteragents(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.CounteragentProtos.CounteragentList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.CounteragentProtos.CounteragentList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required int32 TotalCount = 1;
+
       private int totalCount_ ;
+      /**
+       * <code>required int32 TotalCount = 1;</code>
+       */
       public boolean hasTotalCount() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required int32 TotalCount = 1;</code>
+       */
       public int getTotalCount() {
         return totalCount_;
       }
+      /**
+       * <code>required int32 TotalCount = 1;</code>
+       */
       public Builder setTotalCount(int value) {
         bitField0_ |= 0x00000001;
         totalCount_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required int32 TotalCount = 1;</code>
+       */
       public Builder clearTotalCount() {
         bitField0_ = (bitField0_ & ~0x00000001);
         totalCount_ = 0;
         onChanged();
         return this;
       }
-      
-      // repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;
+
       private java.util.List<Diadoc.Api.Proto.CounteragentProtos.Counteragent> counteragents_ =
         java.util.Collections.emptyList();
       private void ensureCounteragentsIsMutable() {
@@ -535,10 +669,13 @@ public final class CounteragentProtos {
           bitField0_ |= 0x00000002;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.CounteragentProtos.Counteragent, Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder, Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder> counteragentsBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.CounteragentProtos.Counteragent> getCounteragentsList() {
         if (counteragentsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(counteragents_);
@@ -546,6 +683,9 @@ public final class CounteragentProtos {
           return counteragentsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public int getCounteragentsCount() {
         if (counteragentsBuilder_ == null) {
           return counteragents_.size();
@@ -553,6 +693,9 @@ public final class CounteragentProtos {
           return counteragentsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.Counteragent getCounteragents(int index) {
         if (counteragentsBuilder_ == null) {
           return counteragents_.get(index);
@@ -560,6 +703,9 @@ public final class CounteragentProtos {
           return counteragentsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Builder setCounteragents(
           int index, Diadoc.Api.Proto.CounteragentProtos.Counteragent value) {
         if (counteragentsBuilder_ == null) {
@@ -574,6 +720,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Builder setCounteragents(
           int index, Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder builderForValue) {
         if (counteragentsBuilder_ == null) {
@@ -585,6 +734,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Builder addCounteragents(Diadoc.Api.Proto.CounteragentProtos.Counteragent value) {
         if (counteragentsBuilder_ == null) {
           if (value == null) {
@@ -598,6 +750,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Builder addCounteragents(
           int index, Diadoc.Api.Proto.CounteragentProtos.Counteragent value) {
         if (counteragentsBuilder_ == null) {
@@ -612,6 +767,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Builder addCounteragents(
           Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder builderForValue) {
         if (counteragentsBuilder_ == null) {
@@ -623,6 +781,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Builder addCounteragents(
           int index, Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder builderForValue) {
         if (counteragentsBuilder_ == null) {
@@ -634,17 +795,24 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Builder addAllCounteragents(
           java.lang.Iterable<? extends Diadoc.Api.Proto.CounteragentProtos.Counteragent> values) {
         if (counteragentsBuilder_ == null) {
           ensureCounteragentsIsMutable();
-          super.addAll(values, counteragents_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, counteragents_);
           onChanged();
         } else {
           counteragentsBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Builder clearCounteragents() {
         if (counteragentsBuilder_ == null) {
           counteragents_ = java.util.Collections.emptyList();
@@ -655,6 +823,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Builder removeCounteragents(int index) {
         if (counteragentsBuilder_ == null) {
           ensureCounteragentsIsMutable();
@@ -665,10 +836,16 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder getCounteragentsBuilder(
           int index) {
         return getCounteragentsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder getCounteragentsOrBuilder(
           int index) {
         if (counteragentsBuilder_ == null) {
@@ -676,6 +853,9 @@ public final class CounteragentProtos {
           return counteragentsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder> 
            getCounteragentsOrBuilderList() {
         if (counteragentsBuilder_ != null) {
@@ -684,15 +864,24 @@ public final class CounteragentProtos {
           return java.util.Collections.unmodifiableList(counteragents_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder addCounteragentsBuilder() {
         return getCounteragentsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.CounteragentProtos.Counteragent.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder addCounteragentsBuilder(
           int index) {
         return getCounteragentsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.CounteragentProtos.Counteragent.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Counteragent Counteragents = 2;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder> 
            getCounteragentsBuilderList() {
         return getCounteragentsFieldBuilder().getBuilderList();
@@ -711,204 +900,411 @@ public final class CounteragentProtos {
         }
         return counteragentsBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CounteragentList)
     }
-    
+
     static {
       defaultInstance = new CounteragentList(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.CounteragentList)
   }
-  
-  public interface CounteragentOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string IndexKey = 1;
+
+  public interface CounteragentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Counteragent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string IndexKey = 1;</code>
+     */
     boolean hasIndexKey();
-    String getIndexKey();
-    
-    // required .Diadoc.Api.Proto.Organization Organization = 2;
+    /**
+     * <code>optional string IndexKey = 1;</code>
+     */
+    java.lang.String getIndexKey();
+    /**
+     * <code>optional string IndexKey = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIndexKeyBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+     */
     boolean hasOrganization();
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+     */
     Diadoc.Api.Proto.OrganizationProtos.Organization getOrganization();
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+     */
     Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder getOrganizationOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];</code>
+     */
     boolean hasCurrentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];</code>
+     */
     Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus getCurrentStatus();
-    
-    // required sfixed64 LastEventTimestampTicks = 4;
+
+    /**
+     * <code>required sfixed64 LastEventTimestampTicks = 4;</code>
+     */
     boolean hasLastEventTimestampTicks();
+    /**
+     * <code>required sfixed64 LastEventTimestampTicks = 4;</code>
+     */
     long getLastEventTimestampTicks();
-    
-    // optional string MessageFromCounteragent = 6;
+
+    /**
+     * <code>optional string MessageFromCounteragent = 6;</code>
+     */
     boolean hasMessageFromCounteragent();
-    String getMessageFromCounteragent();
-    
-    // optional string MessageToCounteragent = 7;
+    /**
+     * <code>optional string MessageFromCounteragent = 6;</code>
+     */
+    java.lang.String getMessageFromCounteragent();
+    /**
+     * <code>optional string MessageFromCounteragent = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageFromCounteragentBytes();
+
+    /**
+     * <code>optional string MessageToCounteragent = 7;</code>
+     */
     boolean hasMessageToCounteragent();
-    String getMessageToCounteragent();
+    /**
+     * <code>optional string MessageToCounteragent = 7;</code>
+     */
+    java.lang.String getMessageToCounteragent();
+    /**
+     * <code>optional string MessageToCounteragent = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageToCounteragentBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Counteragent}
+   */
   public static final class Counteragent extends
-      com.google.protobuf.GeneratedMessage
-      implements CounteragentOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Counteragent)
+      CounteragentOrBuilder {
     // Use Counteragent.newBuilder() to construct.
-    private Counteragent(Builder builder) {
+    private Counteragent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Counteragent(boolean noInit) {}
-    
+    private Counteragent(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Counteragent defaultInstance;
     public static Counteragent getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Counteragent getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Counteragent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              indexKey_ = bs;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.OrganizationProtos.Organization.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = organization_.toBuilder();
+              }
+              organization_ = input.readMessage(Diadoc.Api.Proto.OrganizationProtos.Organization.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(organization_);
+                organization_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus value = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                currentStatus_ = value;
+              }
+              break;
+            }
+            case 33: {
+              bitField0_ |= 0x00000008;
+              lastEventTimestampTicks_ = input.readSFixed64();
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              messageFromCounteragent_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              messageToCounteragent_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Counteragent_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Counteragent_fieldAccessorTable;
+      return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Counteragent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.CounteragentProtos.Counteragent.class, Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Counteragent> PARSER =
+        new com.google.protobuf.AbstractParser<Counteragent>() {
+      public Counteragent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Counteragent(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Counteragent> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string IndexKey = 1;
     public static final int INDEXKEY_FIELD_NUMBER = 1;
     private java.lang.Object indexKey_;
+    /**
+     * <code>optional string IndexKey = 1;</code>
+     */
     public boolean hasIndexKey() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getIndexKey() {
+    /**
+     * <code>optional string IndexKey = 1;</code>
+     */
+    public java.lang.String getIndexKey() {
       java.lang.Object ref = indexKey_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           indexKey_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getIndexKeyBytes() {
+    /**
+     * <code>optional string IndexKey = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIndexKeyBytes() {
       java.lang.Object ref = indexKey_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         indexKey_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required .Diadoc.Api.Proto.Organization Organization = 2;
+
     public static final int ORGANIZATION_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.OrganizationProtos.Organization organization_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+     */
     public boolean hasOrganization() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+     */
     public Diadoc.Api.Proto.OrganizationProtos.Organization getOrganization() {
       return organization_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+     */
     public Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder getOrganizationOrBuilder() {
       return organization_;
     }
-    
-    // optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];
+
     public static final int CURRENTSTATUS_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus currentStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];</code>
+     */
     public boolean hasCurrentStatus() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];</code>
+     */
     public Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus getCurrentStatus() {
       return currentStatus_;
     }
-    
-    // required sfixed64 LastEventTimestampTicks = 4;
+
     public static final int LASTEVENTTIMESTAMPTICKS_FIELD_NUMBER = 4;
     private long lastEventTimestampTicks_;
+    /**
+     * <code>required sfixed64 LastEventTimestampTicks = 4;</code>
+     */
     public boolean hasLastEventTimestampTicks() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>required sfixed64 LastEventTimestampTicks = 4;</code>
+     */
     public long getLastEventTimestampTicks() {
       return lastEventTimestampTicks_;
     }
-    
-    // optional string MessageFromCounteragent = 6;
+
     public static final int MESSAGEFROMCOUNTERAGENT_FIELD_NUMBER = 6;
     private java.lang.Object messageFromCounteragent_;
+    /**
+     * <code>optional string MessageFromCounteragent = 6;</code>
+     */
     public boolean hasMessageFromCounteragent() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public String getMessageFromCounteragent() {
+    /**
+     * <code>optional string MessageFromCounteragent = 6;</code>
+     */
+    public java.lang.String getMessageFromCounteragent() {
       java.lang.Object ref = messageFromCounteragent_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           messageFromCounteragent_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getMessageFromCounteragentBytes() {
+    /**
+     * <code>optional string MessageFromCounteragent = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageFromCounteragentBytes() {
       java.lang.Object ref = messageFromCounteragent_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         messageFromCounteragent_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string MessageToCounteragent = 7;
+
     public static final int MESSAGETOCOUNTERAGENT_FIELD_NUMBER = 7;
     private java.lang.Object messageToCounteragent_;
+    /**
+     * <code>optional string MessageToCounteragent = 7;</code>
+     */
     public boolean hasMessageToCounteragent() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
-    public String getMessageToCounteragent() {
+    /**
+     * <code>optional string MessageToCounteragent = 7;</code>
+     */
+    public java.lang.String getMessageToCounteragent() {
       java.lang.Object ref = messageToCounteragent_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           messageToCounteragent_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getMessageToCounteragentBytes() {
+    /**
+     * <code>optional string MessageToCounteragent = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageToCounteragentBytes() {
       java.lang.Object ref = messageToCounteragent_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         messageToCounteragent_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       indexKey_ = "";
       organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
@@ -920,8 +1316,9 @@ public final class CounteragentProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasOrganization()) {
         memoizedIsInitialized = 0;
         return false;
@@ -937,7 +1334,7 @@ public final class CounteragentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -961,12 +1358,12 @@ public final class CounteragentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -996,113 +1393,106 @@ public final class CounteragentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Counteragent parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.CounteragentProtos.Counteragent prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Counteragent}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Counteragent)
+        Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Counteragent_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Counteragent_fieldAccessorTable;
+        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Counteragent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.CounteragentProtos.Counteragent.class, Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.CounteragentProtos.Counteragent.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1114,7 +1504,7 @@ public final class CounteragentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         indexKey_ = "";
@@ -1135,20 +1525,20 @@ public final class CounteragentProtos {
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.CounteragentProtos.Counteragent.getDescriptor();
+        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Counteragent_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.Counteragent getDefaultInstanceForType() {
         return Diadoc.Api.Proto.CounteragentProtos.Counteragent.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.Counteragent build() {
         Diadoc.Api.Proto.CounteragentProtos.Counteragent result = buildPartial();
         if (!result.isInitialized()) {
@@ -1156,17 +1546,7 @@ public final class CounteragentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.CounteragentProtos.Counteragent buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.CounteragentProtos.Counteragent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.Counteragent buildPartial() {
         Diadoc.Api.Proto.CounteragentProtos.Counteragent result = new Diadoc.Api.Proto.CounteragentProtos.Counteragent(this);
         int from_bitField0_ = bitField0_;
@@ -1203,7 +1583,7 @@ public final class CounteragentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.CounteragentProtos.Counteragent) {
           return mergeFrom((Diadoc.Api.Proto.CounteragentProtos.Counteragent)other);
@@ -1212,11 +1592,13 @@ public final class CounteragentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.CounteragentProtos.Counteragent other) {
         if (other == Diadoc.Api.Proto.CounteragentProtos.Counteragent.getDefaultInstance()) return this;
         if (other.hasIndexKey()) {
-          setIndexKey(other.getIndexKey());
+          bitField0_ |= 0x00000001;
+          indexKey_ = other.indexKey_;
+          onChanged();
         }
         if (other.hasOrganization()) {
           mergeOrganization(other.getOrganization());
@@ -1228,15 +1610,19 @@ public final class CounteragentProtos {
           setLastEventTimestampTicks(other.getLastEventTimestampTicks());
         }
         if (other.hasMessageFromCounteragent()) {
-          setMessageFromCounteragent(other.getMessageFromCounteragent());
+          bitField0_ |= 0x00000010;
+          messageFromCounteragent_ = other.messageFromCounteragent_;
+          onChanged();
         }
         if (other.hasMessageToCounteragent()) {
-          setMessageToCounteragent(other.getMessageToCounteragent());
+          bitField0_ |= 0x00000020;
+          messageToCounteragent_ = other.messageToCounteragent_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasOrganization()) {
           
@@ -1252,92 +1638,71 @@ public final class CounteragentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              indexKey_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.OrganizationProtos.Organization.Builder subBuilder = Diadoc.Api.Proto.OrganizationProtos.Organization.newBuilder();
-              if (hasOrganization()) {
-                subBuilder.mergeFrom(getOrganization());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setOrganization(subBuilder.buildPartial());
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus value = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(3, rawValue);
-              } else {
-                bitField0_ |= 0x00000004;
-                currentStatus_ = value;
-              }
-              break;
-            }
-            case 33: {
-              bitField0_ |= 0x00000008;
-              lastEventTimestampTicks_ = input.readSFixed64();
-              break;
-            }
-            case 50: {
-              bitField0_ |= 0x00000010;
-              messageFromCounteragent_ = input.readBytes();
-              break;
-            }
-            case 58: {
-              bitField0_ |= 0x00000020;
-              messageToCounteragent_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.CounteragentProtos.Counteragent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.CounteragentProtos.Counteragent) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string IndexKey = 1;
+
       private java.lang.Object indexKey_ = "";
+      /**
+       * <code>optional string IndexKey = 1;</code>
+       */
       public boolean hasIndexKey() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getIndexKey() {
+      /**
+       * <code>optional string IndexKey = 1;</code>
+       */
+      public java.lang.String getIndexKey() {
         java.lang.Object ref = indexKey_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          indexKey_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            indexKey_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setIndexKey(String value) {
+      /**
+       * <code>optional string IndexKey = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIndexKeyBytes() {
+        java.lang.Object ref = indexKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          indexKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string IndexKey = 1;</code>
+       */
+      public Builder setIndexKey(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1346,25 +1711,41 @@ public final class CounteragentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string IndexKey = 1;</code>
+       */
       public Builder clearIndexKey() {
         bitField0_ = (bitField0_ & ~0x00000001);
         indexKey_ = getDefaultInstance().getIndexKey();
         onChanged();
         return this;
       }
-      void setIndexKey(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string IndexKey = 1;</code>
+       */
+      public Builder setIndexKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         indexKey_ = value;
         onChanged();
+        return this;
       }
-      
-      // required .Diadoc.Api.Proto.Organization Organization = 2;
+
       private Diadoc.Api.Proto.OrganizationProtos.Organization organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationProtos.Organization, Diadoc.Api.Proto.OrganizationProtos.Organization.Builder, Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder> organizationBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+       */
       public boolean hasOrganization() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+       */
       public Diadoc.Api.Proto.OrganizationProtos.Organization getOrganization() {
         if (organizationBuilder_ == null) {
           return organization_;
@@ -1372,6 +1753,9 @@ public final class CounteragentProtos {
           return organizationBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+       */
       public Builder setOrganization(Diadoc.Api.Proto.OrganizationProtos.Organization value) {
         if (organizationBuilder_ == null) {
           if (value == null) {
@@ -1385,6 +1769,9 @@ public final class CounteragentProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+       */
       public Builder setOrganization(
           Diadoc.Api.Proto.OrganizationProtos.Organization.Builder builderForValue) {
         if (organizationBuilder_ == null) {
@@ -1396,6 +1783,9 @@ public final class CounteragentProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+       */
       public Builder mergeOrganization(Diadoc.Api.Proto.OrganizationProtos.Organization value) {
         if (organizationBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -1412,6 +1802,9 @@ public final class CounteragentProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+       */
       public Builder clearOrganization() {
         if (organizationBuilder_ == null) {
           organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
@@ -1422,11 +1815,17 @@ public final class CounteragentProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+       */
       public Diadoc.Api.Proto.OrganizationProtos.Organization.Builder getOrganizationBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getOrganizationFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+       */
       public Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder getOrganizationOrBuilder() {
         if (organizationBuilder_ != null) {
           return organizationBuilder_.getMessageOrBuilder();
@@ -1434,28 +1833,39 @@ public final class CounteragentProtos {
           return organization_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Organization Organization = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.OrganizationProtos.Organization, Diadoc.Api.Proto.OrganizationProtos.Organization.Builder, Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder> 
           getOrganizationFieldBuilder() {
         if (organizationBuilder_ == null) {
           organizationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.OrganizationProtos.Organization, Diadoc.Api.Proto.OrganizationProtos.Organization.Builder, Diadoc.Api.Proto.OrganizationProtos.OrganizationOrBuilder>(
-                  organization_,
+                  getOrganization(),
                   getParentForChildren(),
                   isClean());
           organization_ = null;
         }
         return organizationBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];
+
       private Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus currentStatus_ = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.UnknownCounteragentStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];</code>
+       */
       public boolean hasCurrentStatus() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus getCurrentStatus() {
         return currentStatus_;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];</code>
+       */
       public Builder setCurrentStatus(Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus value) {
         if (value == null) {
           throw new NullPointerException();
@@ -1465,50 +1875,93 @@ public final class CounteragentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CounteragentStatus CurrentStatus = 3 [default = UnknownCounteragentStatus];</code>
+       */
       public Builder clearCurrentStatus() {
         bitField0_ = (bitField0_ & ~0x00000004);
         currentStatus_ = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.UnknownCounteragentStatus;
         onChanged();
         return this;
       }
-      
-      // required sfixed64 LastEventTimestampTicks = 4;
+
       private long lastEventTimestampTicks_ ;
+      /**
+       * <code>required sfixed64 LastEventTimestampTicks = 4;</code>
+       */
       public boolean hasLastEventTimestampTicks() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>required sfixed64 LastEventTimestampTicks = 4;</code>
+       */
       public long getLastEventTimestampTicks() {
         return lastEventTimestampTicks_;
       }
+      /**
+       * <code>required sfixed64 LastEventTimestampTicks = 4;</code>
+       */
       public Builder setLastEventTimestampTicks(long value) {
         bitField0_ |= 0x00000008;
         lastEventTimestampTicks_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>required sfixed64 LastEventTimestampTicks = 4;</code>
+       */
       public Builder clearLastEventTimestampTicks() {
         bitField0_ = (bitField0_ & ~0x00000008);
         lastEventTimestampTicks_ = 0L;
         onChanged();
         return this;
       }
-      
-      // optional string MessageFromCounteragent = 6;
+
       private java.lang.Object messageFromCounteragent_ = "";
+      /**
+       * <code>optional string MessageFromCounteragent = 6;</code>
+       */
       public boolean hasMessageFromCounteragent() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      public String getMessageFromCounteragent() {
+      /**
+       * <code>optional string MessageFromCounteragent = 6;</code>
+       */
+      public java.lang.String getMessageFromCounteragent() {
         java.lang.Object ref = messageFromCounteragent_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          messageFromCounteragent_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            messageFromCounteragent_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setMessageFromCounteragent(String value) {
+      /**
+       * <code>optional string MessageFromCounteragent = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageFromCounteragentBytes() {
+        java.lang.Object ref = messageFromCounteragent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          messageFromCounteragent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string MessageFromCounteragent = 6;</code>
+       */
+      public Builder setMessageFromCounteragent(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1517,34 +1970,74 @@ public final class CounteragentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string MessageFromCounteragent = 6;</code>
+       */
       public Builder clearMessageFromCounteragent() {
         bitField0_ = (bitField0_ & ~0x00000010);
         messageFromCounteragent_ = getDefaultInstance().getMessageFromCounteragent();
         onChanged();
         return this;
       }
-      void setMessageFromCounteragent(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000010;
+      /**
+       * <code>optional string MessageFromCounteragent = 6;</code>
+       */
+      public Builder setMessageFromCounteragentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
         messageFromCounteragent_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string MessageToCounteragent = 7;
+
       private java.lang.Object messageToCounteragent_ = "";
+      /**
+       * <code>optional string MessageToCounteragent = 7;</code>
+       */
       public boolean hasMessageToCounteragent() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
-      public String getMessageToCounteragent() {
+      /**
+       * <code>optional string MessageToCounteragent = 7;</code>
+       */
+      public java.lang.String getMessageToCounteragent() {
         java.lang.Object ref = messageToCounteragent_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          messageToCounteragent_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            messageToCounteragent_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setMessageToCounteragent(String value) {
+      /**
+       * <code>optional string MessageToCounteragent = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageToCounteragentBytes() {
+        java.lang.Object ref = messageToCounteragent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          messageToCounteragent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string MessageToCounteragent = 7;</code>
+       */
+      public Builder setMessageToCounteragent(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1553,99 +2046,214 @@ public final class CounteragentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string MessageToCounteragent = 7;</code>
+       */
       public Builder clearMessageToCounteragent() {
         bitField0_ = (bitField0_ & ~0x00000020);
         messageToCounteragent_ = getDefaultInstance().getMessageToCounteragent();
         onChanged();
         return this;
       }
-      void setMessageToCounteragent(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000020;
+      /**
+       * <code>optional string MessageToCounteragent = 7;</code>
+       */
+      public Builder setMessageToCounteragentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
         messageToCounteragent_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Counteragent)
     }
-    
+
     static {
       defaultInstance = new Counteragent(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Counteragent)
   }
-  
-  public interface CounteragentCertificateListOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated .Diadoc.Api.Proto.Certificate Certificates = 1;
+
+  public interface CounteragentCertificateListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CounteragentCertificateList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     java.util.List<Diadoc.Api.Proto.CounteragentProtos.Certificate> 
         getCertificatesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     Diadoc.Api.Proto.CounteragentProtos.Certificate getCertificates(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     int getCertificatesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     java.util.List<? extends Diadoc.Api.Proto.CounteragentProtos.CertificateOrBuilder> 
         getCertificatesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     Diadoc.Api.Proto.CounteragentProtos.CertificateOrBuilder getCertificatesOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.CounteragentCertificateList}
+   */
   public static final class CounteragentCertificateList extends
-      com.google.protobuf.GeneratedMessage
-      implements CounteragentCertificateListOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CounteragentCertificateList)
+      CounteragentCertificateListOrBuilder {
     // Use CounteragentCertificateList.newBuilder() to construct.
-    private CounteragentCertificateList(Builder builder) {
+    private CounteragentCertificateList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CounteragentCertificateList(boolean noInit) {}
-    
+    private CounteragentCertificateList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final CounteragentCertificateList defaultInstance;
     public static CounteragentCertificateList getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CounteragentCertificateList getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CounteragentCertificateList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                certificates_ = new java.util.ArrayList<Diadoc.Api.Proto.CounteragentProtos.Certificate>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              certificates_.add(input.readMessage(Diadoc.Api.Proto.CounteragentProtos.Certificate.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          certificates_ = java.util.Collections.unmodifiableList(certificates_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentCertificateList_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentCertificateList_fieldAccessorTable;
+      return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentCertificateList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.class, Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.Builder.class);
     }
-    
-    // repeated .Diadoc.Api.Proto.Certificate Certificates = 1;
+
+    public static com.google.protobuf.Parser<CounteragentCertificateList> PARSER =
+        new com.google.protobuf.AbstractParser<CounteragentCertificateList>() {
+      public CounteragentCertificateList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CounteragentCertificateList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CounteragentCertificateList> getParserForType() {
+      return PARSER;
+    }
+
     public static final int CERTIFICATES_FIELD_NUMBER = 1;
     private java.util.List<Diadoc.Api.Proto.CounteragentProtos.Certificate> certificates_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     public java.util.List<Diadoc.Api.Proto.CounteragentProtos.Certificate> getCertificatesList() {
       return certificates_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.CounteragentProtos.CertificateOrBuilder> 
         getCertificatesOrBuilderList() {
       return certificates_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     public int getCertificatesCount() {
       return certificates_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     public Diadoc.Api.Proto.CounteragentProtos.Certificate getCertificates(int index) {
       return certificates_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+     */
     public Diadoc.Api.Proto.CounteragentProtos.CertificateOrBuilder getCertificatesOrBuilder(
         int index) {
       return certificates_.get(index);
     }
-    
+
     private void initFields() {
       certificates_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       for (int i = 0; i < getCertificatesCount(); i++) {
         if (!getCertificates(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1655,7 +2263,7 @@ public final class CounteragentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1664,12 +2272,12 @@ public final class CounteragentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < certificates_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -1679,113 +2287,106 @@ public final class CounteragentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.CounteragentCertificateList}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateListOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.CounteragentCertificateList)
+        Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentCertificateList_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentCertificateList_fieldAccessorTable;
+        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentCertificateList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.class, Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1797,7 +2398,7 @@ public final class CounteragentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (certificatesBuilder_ == null) {
@@ -1808,20 +2409,20 @@ public final class CounteragentProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.getDescriptor();
+        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_CounteragentCertificateList_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList getDefaultInstanceForType() {
         return Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList build() {
         Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList result = buildPartial();
         if (!result.isInitialized()) {
@@ -1829,17 +2430,7 @@ public final class CounteragentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList buildPartial() {
         Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList result = new Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList(this);
         int from_bitField0_ = bitField0_;
@@ -1855,7 +2446,7 @@ public final class CounteragentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList) {
           return mergeFrom((Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList)other);
@@ -1864,7 +2455,7 @@ public final class CounteragentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList other) {
         if (other == Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.getDefaultInstance()) return this;
         if (certificatesBuilder_ == null) {
@@ -1896,7 +2487,7 @@ public final class CounteragentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getCertificatesCount(); i++) {
           if (!getCertificates(i).isInitialized()) {
@@ -1906,43 +2497,26 @@ public final class CounteragentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder subBuilder = Diadoc.Api.Proto.CounteragentProtos.Certificate.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addCertificates(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated .Diadoc.Api.Proto.Certificate Certificates = 1;
+
       private java.util.List<Diadoc.Api.Proto.CounteragentProtos.Certificate> certificates_ =
         java.util.Collections.emptyList();
       private void ensureCertificatesIsMutable() {
@@ -1951,10 +2525,13 @@ public final class CounteragentProtos {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.CounteragentProtos.Certificate, Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder, Diadoc.Api.Proto.CounteragentProtos.CertificateOrBuilder> certificatesBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.CounteragentProtos.Certificate> getCertificatesList() {
         if (certificatesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(certificates_);
@@ -1962,6 +2539,9 @@ public final class CounteragentProtos {
           return certificatesBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public int getCertificatesCount() {
         if (certificatesBuilder_ == null) {
           return certificates_.size();
@@ -1969,6 +2549,9 @@ public final class CounteragentProtos {
           return certificatesBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.Certificate getCertificates(int index) {
         if (certificatesBuilder_ == null) {
           return certificates_.get(index);
@@ -1976,6 +2559,9 @@ public final class CounteragentProtos {
           return certificatesBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Builder setCertificates(
           int index, Diadoc.Api.Proto.CounteragentProtos.Certificate value) {
         if (certificatesBuilder_ == null) {
@@ -1990,6 +2576,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Builder setCertificates(
           int index, Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder builderForValue) {
         if (certificatesBuilder_ == null) {
@@ -2001,6 +2590,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Builder addCertificates(Diadoc.Api.Proto.CounteragentProtos.Certificate value) {
         if (certificatesBuilder_ == null) {
           if (value == null) {
@@ -2014,6 +2606,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Builder addCertificates(
           int index, Diadoc.Api.Proto.CounteragentProtos.Certificate value) {
         if (certificatesBuilder_ == null) {
@@ -2028,6 +2623,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Builder addCertificates(
           Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder builderForValue) {
         if (certificatesBuilder_ == null) {
@@ -2039,6 +2637,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Builder addCertificates(
           int index, Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder builderForValue) {
         if (certificatesBuilder_ == null) {
@@ -2050,17 +2651,24 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Builder addAllCertificates(
           java.lang.Iterable<? extends Diadoc.Api.Proto.CounteragentProtos.Certificate> values) {
         if (certificatesBuilder_ == null) {
           ensureCertificatesIsMutable();
-          super.addAll(values, certificates_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, certificates_);
           onChanged();
         } else {
           certificatesBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Builder clearCertificates() {
         if (certificatesBuilder_ == null) {
           certificates_ = java.util.Collections.emptyList();
@@ -2071,6 +2679,9 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Builder removeCertificates(int index) {
         if (certificatesBuilder_ == null) {
           ensureCertificatesIsMutable();
@@ -2081,10 +2692,16 @@ public final class CounteragentProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder getCertificatesBuilder(
           int index) {
         return getCertificatesFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.CertificateOrBuilder getCertificatesOrBuilder(
           int index) {
         if (certificatesBuilder_ == null) {
@@ -2092,6 +2709,9 @@ public final class CounteragentProtos {
           return certificatesBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.CounteragentProtos.CertificateOrBuilder> 
            getCertificatesOrBuilderList() {
         if (certificatesBuilder_ != null) {
@@ -2100,15 +2720,24 @@ public final class CounteragentProtos {
           return java.util.Collections.unmodifiableList(certificates_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder addCertificatesBuilder() {
         return getCertificatesFieldBuilder().addBuilder(
             Diadoc.Api.Proto.CounteragentProtos.Certificate.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder addCertificatesBuilder(
           int index) {
         return getCertificatesFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.CounteragentProtos.Certificate.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Certificate Certificates = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder> 
            getCertificatesBuilderList() {
         return getCertificatesFieldBuilder().getBuilderList();
@@ -2127,72 +2756,152 @@ public final class CounteragentProtos {
         }
         return certificatesBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CounteragentCertificateList)
     }
-    
+
     static {
       defaultInstance = new CounteragentCertificateList(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.CounteragentCertificateList)
   }
-  
-  public interface CertificateOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required bytes RawCertificateData = 1;
+
+  public interface CertificateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Certificate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required bytes RawCertificateData = 1;</code>
+     */
     boolean hasRawCertificateData();
+    /**
+     * <code>required bytes RawCertificateData = 1;</code>
+     */
     com.google.protobuf.ByteString getRawCertificateData();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Certificate}
+   */
   public static final class Certificate extends
-      com.google.protobuf.GeneratedMessage
-      implements CertificateOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Certificate)
+      CertificateOrBuilder {
     // Use Certificate.newBuilder() to construct.
-    private Certificate(Builder builder) {
+    private Certificate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Certificate(boolean noInit) {}
-    
+    private Certificate(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Certificate defaultInstance;
     public static Certificate getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Certificate getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Certificate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              rawCertificateData_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Certificate_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Certificate_fieldAccessorTable;
+      return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Certificate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.CounteragentProtos.Certificate.class, Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Certificate> PARSER =
+        new com.google.protobuf.AbstractParser<Certificate>() {
+      public Certificate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Certificate(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Certificate> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required bytes RawCertificateData = 1;
     public static final int RAWCERTIFICATEDATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString rawCertificateData_;
+    /**
+     * <code>required bytes RawCertificateData = 1;</code>
+     */
     public boolean hasRawCertificateData() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required bytes RawCertificateData = 1;</code>
+     */
     public com.google.protobuf.ByteString getRawCertificateData() {
       return rawCertificateData_;
     }
-    
+
     private void initFields() {
       rawCertificateData_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasRawCertificateData()) {
         memoizedIsInitialized = 0;
         return false;
@@ -2200,7 +2909,7 @@ public final class CounteragentProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2209,12 +2918,12 @@ public final class CounteragentProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2224,113 +2933,106 @@ public final class CounteragentProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.CounteragentProtos.Certificate parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.CounteragentProtos.Certificate prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Certificate}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.CounteragentProtos.CertificateOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Certificate)
+        Diadoc.Api.Proto.CounteragentProtos.CertificateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Certificate_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Certificate_fieldAccessorTable;
+        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Certificate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.CounteragentProtos.Certificate.class, Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.CounteragentProtos.Certificate.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2341,27 +3043,27 @@ public final class CounteragentProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         rawCertificateData_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.CounteragentProtos.Certificate.getDescriptor();
+        return Diadoc.Api.Proto.CounteragentProtos.internal_static_Diadoc_Api_Proto_Certificate_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.Certificate getDefaultInstanceForType() {
         return Diadoc.Api.Proto.CounteragentProtos.Certificate.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.Certificate build() {
         Diadoc.Api.Proto.CounteragentProtos.Certificate result = buildPartial();
         if (!result.isInitialized()) {
@@ -2369,17 +3071,7 @@ public final class CounteragentProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.CounteragentProtos.Certificate buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.CounteragentProtos.Certificate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.CounteragentProtos.Certificate buildPartial() {
         Diadoc.Api.Proto.CounteragentProtos.Certificate result = new Diadoc.Api.Proto.CounteragentProtos.Certificate(this);
         int from_bitField0_ = bitField0_;
@@ -2392,7 +3084,7 @@ public final class CounteragentProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.CounteragentProtos.Certificate) {
           return mergeFrom((Diadoc.Api.Proto.CounteragentProtos.Certificate)other);
@@ -2401,7 +3093,7 @@ public final class CounteragentProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.CounteragentProtos.Certificate other) {
         if (other == Diadoc.Api.Proto.CounteragentProtos.Certificate.getDefaultInstance()) return this;
         if (other.hasRawCertificateData()) {
@@ -2410,7 +3102,7 @@ public final class CounteragentProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasRawCertificateData()) {
           
@@ -2418,49 +3110,42 @@ public final class CounteragentProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              rawCertificateData_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.CounteragentProtos.Certificate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.CounteragentProtos.Certificate) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required bytes RawCertificateData = 1;
+
       private com.google.protobuf.ByteString rawCertificateData_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>required bytes RawCertificateData = 1;</code>
+       */
       public boolean hasRawCertificateData() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required bytes RawCertificateData = 1;</code>
+       */
       public com.google.protobuf.ByteString getRawCertificateData() {
         return rawCertificateData_;
       }
+      /**
+       * <code>required bytes RawCertificateData = 1;</code>
+       */
       public Builder setRawCertificateData(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -2470,45 +3155,48 @@ public final class CounteragentProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required bytes RawCertificateData = 1;</code>
+       */
       public Builder clearRawCertificateData() {
         bitField0_ = (bitField0_ & ~0x00000001);
         rawCertificateData_ = getDefaultInstance().getRawCertificateData();
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Certificate)
     }
-    
+
     static {
       defaultInstance = new Certificate(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Certificate)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CounteragentList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_CounteragentList_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Counteragent_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Counteragent_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CounteragentCertificateList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_CounteragentCertificateList_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Certificate_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Certificate_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -2538,51 +3226,44 @@ public final class CounteragentProtos {
       "List\020\007B\024B\022CounteragentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_CounteragentList_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_CounteragentList_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_CounteragentList_descriptor,
-              new java.lang.String[] { "TotalCount", "Counteragents", },
-              Diadoc.Api.Proto.CounteragentProtos.CounteragentList.class,
-              Diadoc.Api.Proto.CounteragentProtos.CounteragentList.Builder.class);
-          internal_static_Diadoc_Api_Proto_Counteragent_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_Counteragent_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Counteragent_descriptor,
-              new java.lang.String[] { "IndexKey", "Organization", "CurrentStatus", "LastEventTimestampTicks", "MessageFromCounteragent", "MessageToCounteragent", },
-              Diadoc.Api.Proto.CounteragentProtos.Counteragent.class,
-              Diadoc.Api.Proto.CounteragentProtos.Counteragent.Builder.class);
-          internal_static_Diadoc_Api_Proto_CounteragentCertificateList_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_CounteragentCertificateList_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_CounteragentCertificateList_descriptor,
-              new java.lang.String[] { "Certificates", },
-              Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.class,
-              Diadoc.Api.Proto.CounteragentProtos.CounteragentCertificateList.Builder.class);
-          internal_static_Diadoc_Api_Proto_Certificate_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Diadoc_Api_Proto_Certificate_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Certificate_descriptor,
-              new java.lang.String[] { "RawCertificateData", },
-              Diadoc.Api.Proto.CounteragentProtos.Certificate.class,
-              Diadoc.Api.Proto.CounteragentProtos.Certificate.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.OrganizationProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_CounteragentList_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_CounteragentList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_CounteragentList_descriptor,
+        new java.lang.String[] { "TotalCount", "Counteragents", });
+    internal_static_Diadoc_Api_Proto_Counteragent_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Counteragent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Counteragent_descriptor,
+        new java.lang.String[] { "IndexKey", "Organization", "CurrentStatus", "LastEventTimestampTicks", "MessageFromCounteragent", "MessageToCounteragent", });
+    internal_static_Diadoc_Api_Proto_CounteragentCertificateList_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_CounteragentCertificateList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_CounteragentCertificateList_descriptor,
+        new java.lang.String[] { "Certificates", });
+    internal_static_Diadoc_Api_Proto_Certificate_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Certificate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Certificate_descriptor,
+        new java.lang.String[] { "RawCertificateData", });
+    Diadoc.Api.Proto.OrganizationProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

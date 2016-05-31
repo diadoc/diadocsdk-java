@@ -8,110 +8,230 @@ public final class KeyValueStorageProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface KeyValueStorageEntryOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string Key = 1;
+  public interface KeyValueStorageEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Key = 1;</code>
+     */
     boolean hasKey();
-    String getKey();
-    
-    // required string Value = 2;
+    /**
+     * <code>required string Key = 1;</code>
+     */
+    java.lang.String getKey();
+    /**
+     * <code>required string Key = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>required string Value = 2;</code>
+     */
     boolean hasValue();
-    String getValue();
+    /**
+     * <code>required string Value = 2;</code>
+     */
+    java.lang.String getValue();
+    /**
+     * <code>required string Value = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry}
+   *
+   * <pre>
+   * Пара (ключ, значение) для хранения в хранилище
+   * </pre>
+   */
   public static final class KeyValueStorageEntry extends
-      com.google.protobuf.GeneratedMessage
-      implements KeyValueStorageEntryOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry)
+      KeyValueStorageEntryOrBuilder {
     // Use KeyValueStorageEntry.newBuilder() to construct.
-    private KeyValueStorageEntry(Builder builder) {
+    private KeyValueStorageEntry(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private KeyValueStorageEntry(boolean noInit) {}
-    
+    private KeyValueStorageEntry(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final KeyValueStorageEntry defaultInstance;
     public static KeyValueStorageEntry getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public KeyValueStorageEntry getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private KeyValueStorageEntry(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              key_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              value_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_fieldAccessorTable;
+      return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.class, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<KeyValueStorageEntry> PARSER =
+        new com.google.protobuf.AbstractParser<KeyValueStorageEntry>() {
+      public KeyValueStorageEntry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new KeyValueStorageEntry(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyValueStorageEntry> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string Key = 1;
     public static final int KEY_FIELD_NUMBER = 1;
     private java.lang.Object key_;
+    /**
+     * <code>required string Key = 1;</code>
+     */
     public boolean hasKey() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getKey() {
+    /**
+     * <code>required string Key = 1;</code>
+     */
+    public java.lang.String getKey() {
       java.lang.Object ref = key_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           key_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getKeyBytes() {
+    /**
+     * <code>required string Key = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
       java.lang.Object ref = key_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         key_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Value = 2;
+
     public static final int VALUE_FIELD_NUMBER = 2;
     private java.lang.Object value_;
+    /**
+     * <code>required string Value = 2;</code>
+     */
     public boolean hasValue() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getValue() {
+    /**
+     * <code>required string Value = 2;</code>
+     */
+    public java.lang.String getValue() {
       java.lang.Object ref = value_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           value_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getValueBytes() {
+    /**
+     * <code>required string Value = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
       java.lang.Object ref = value_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         value_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       key_ = "";
       value_ = "";
@@ -119,8 +239,9 @@ public final class KeyValueStorageProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasKey()) {
         memoizedIsInitialized = 0;
         return false;
@@ -132,7 +253,7 @@ public final class KeyValueStorageProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -144,12 +265,12 @@ public final class KeyValueStorageProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -163,113 +284,110 @@ public final class KeyValueStorageProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry}
+     *
+     * <pre>
+     * Пара (ключ, значение) для хранения в хранилище
+     * </pre>
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry)
+        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_fieldAccessorTable;
+        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.class, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -280,7 +398,7 @@ public final class KeyValueStorageProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         key_ = "";
@@ -289,20 +407,20 @@ public final class KeyValueStorageProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.getDescriptor();
+        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry getDefaultInstanceForType() {
         return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry build() {
         Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry result = buildPartial();
         if (!result.isInitialized()) {
@@ -310,17 +428,7 @@ public final class KeyValueStorageProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry buildPartial() {
         Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry result = new Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry(this);
         int from_bitField0_ = bitField0_;
@@ -337,7 +445,7 @@ public final class KeyValueStorageProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry) {
           return mergeFrom((Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry)other);
@@ -346,19 +454,23 @@ public final class KeyValueStorageProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry other) {
         if (other == Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.getDefaultInstance()) return this;
         if (other.hasKey()) {
-          setKey(other.getKey());
+          bitField0_ |= 0x00000001;
+          key_ = other.key_;
+          onChanged();
         }
         if (other.hasValue()) {
-          setValue(other.getValue());
+          bitField0_ |= 0x00000002;
+          value_ = other.value_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasKey()) {
           
@@ -370,62 +482,71 @@ public final class KeyValueStorageProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              key_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              value_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string Key = 1;
+
       private java.lang.Object key_ = "";
+      /**
+       * <code>required string Key = 1;</code>
+       */
       public boolean hasKey() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getKey() {
+      /**
+       * <code>required string Key = 1;</code>
+       */
+      public java.lang.String getKey() {
         java.lang.Object ref = key_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          key_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            key_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setKey(String value) {
+      /**
+       * <code>required string Key = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Key = 1;</code>
+       */
+      public Builder setKey(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -434,34 +555,74 @@ public final class KeyValueStorageProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Key = 1;</code>
+       */
       public Builder clearKey() {
         bitField0_ = (bitField0_ & ~0x00000001);
         key_ = getDefaultInstance().getKey();
         onChanged();
         return this;
       }
-      void setKey(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string Key = 1;</code>
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         key_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Value = 2;
+
       private java.lang.Object value_ = "";
+      /**
+       * <code>required string Value = 2;</code>
+       */
       public boolean hasValue() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getValue() {
+      /**
+       * <code>required string Value = 2;</code>
+       */
+      public java.lang.String getValue() {
         java.lang.Object ref = value_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          value_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setValue(String value) {
+      /**
+       * <code>required string Value = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Value = 2;</code>
+       */
+      public Builder setValue(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -470,91 +631,208 @@ public final class KeyValueStorageProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Value = 2;</code>
+       */
       public Builder clearValue() {
         bitField0_ = (bitField0_ & ~0x00000002);
         value_ = getDefaultInstance().getValue();
         onChanged();
         return this;
       }
-      void setValue(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string Value = 2;</code>
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         value_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry)
     }
-    
+
     static {
       defaultInstance = new KeyValueStorageEntry(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry)
   }
-  
-  public interface KeyValueStorageApiGetRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated string Keys = 1;
-    java.util.List<String> getKeysList();
+
+  public interface KeyValueStorageApiGetRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string Keys = 1;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getKeysList();
+    /**
+     * <code>repeated string Keys = 1;</code>
+     */
     int getKeysCount();
-    String getKeys(int index);
+    /**
+     * <code>repeated string Keys = 1;</code>
+     */
+    java.lang.String getKeys(int index);
+    /**
+     * <code>repeated string Keys = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getKeysBytes(int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetRequest}
+   */
   public static final class KeyValueStorageApiGetRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements KeyValueStorageApiGetRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetRequest)
+      KeyValueStorageApiGetRequestOrBuilder {
     // Use KeyValueStorageApiGetRequest.newBuilder() to construct.
-    private KeyValueStorageApiGetRequest(Builder builder) {
+    private KeyValueStorageApiGetRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private KeyValueStorageApiGetRequest(boolean noInit) {}
-    
+    private KeyValueStorageApiGetRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final KeyValueStorageApiGetRequest defaultInstance;
     public static KeyValueStorageApiGetRequest getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public KeyValueStorageApiGetRequest getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private KeyValueStorageApiGetRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                keys_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              keys_.add(bs);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          keys_ = keys_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_fieldAccessorTable;
+      return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.class, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.Builder.class);
     }
-    
-    // repeated string Keys = 1;
+
+    public static com.google.protobuf.Parser<KeyValueStorageApiGetRequest> PARSER =
+        new com.google.protobuf.AbstractParser<KeyValueStorageApiGetRequest>() {
+      public KeyValueStorageApiGetRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new KeyValueStorageApiGetRequest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyValueStorageApiGetRequest> getParserForType() {
+      return PARSER;
+    }
+
     public static final int KEYS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList keys_;
-    public java.util.List<String>
+    /**
+     * <code>repeated string Keys = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
         getKeysList() {
       return keys_;
     }
+    /**
+     * <code>repeated string Keys = 1;</code>
+     */
     public int getKeysCount() {
       return keys_.size();
     }
-    public String getKeys(int index) {
+    /**
+     * <code>repeated string Keys = 1;</code>
+     */
+    public java.lang.String getKeys(int index) {
       return keys_.get(index);
     }
-    
+    /**
+     * <code>repeated string Keys = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeysBytes(int index) {
+      return keys_.getByteString(index);
+    }
+
     private void initFields() {
       keys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -563,12 +841,12 @@ public final class KeyValueStorageProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       {
         int dataSize = 0;
@@ -583,113 +861,106 @@ public final class KeyValueStorageProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetRequest}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetRequest)
+        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_fieldAccessorTable;
+        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.class, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -700,27 +971,27 @@ public final class KeyValueStorageProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         keys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.getDescriptor();
+        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest getDefaultInstanceForType() {
         return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest build() {
         Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest result = buildPartial();
         if (!result.isInitialized()) {
@@ -728,30 +999,19 @@ public final class KeyValueStorageProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest buildPartial() {
         Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest result = new Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          keys_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              keys_);
+          keys_ = keys_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.keys_ = keys_;
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest) {
           return mergeFrom((Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest)other);
@@ -760,7 +1020,7 @@ public final class KeyValueStorageProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest other) {
         if (other == Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.getDefaultInstance()) return this;
         if (!other.keys_.isEmpty()) {
@@ -776,46 +1036,30 @@ public final class KeyValueStorageProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              ensureKeysIsMutable();
-              keys_.add(input.readBytes());
-              break;
-            }
+        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated string Keys = 1;
+
       private com.google.protobuf.LazyStringList keys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureKeysIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -823,18 +1067,37 @@ public final class KeyValueStorageProtos {
           bitField0_ |= 0x00000001;
          }
       }
-      public java.util.List<String>
+      /**
+       * <code>repeated string Keys = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
           getKeysList() {
-        return java.util.Collections.unmodifiableList(keys_);
+        return keys_.getUnmodifiableView();
       }
+      /**
+       * <code>repeated string Keys = 1;</code>
+       */
       public int getKeysCount() {
         return keys_.size();
       }
-      public String getKeys(int index) {
+      /**
+       * <code>repeated string Keys = 1;</code>
+       */
+      public java.lang.String getKeys(int index) {
         return keys_.get(index);
       }
+      /**
+       * <code>repeated string Keys = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeysBytes(int index) {
+        return keys_.getByteString(index);
+      }
+      /**
+       * <code>repeated string Keys = 1;</code>
+       */
       public Builder setKeys(
-          int index, String value) {
+          int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -843,7 +1106,11 @@ public final class KeyValueStorageProtos {
         onChanged();
         return this;
       }
-      public Builder addKeys(String value) {
+      /**
+       * <code>repeated string Keys = 1;</code>
+       */
+      public Builder addKeys(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -852,106 +1119,225 @@ public final class KeyValueStorageProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string Keys = 1;</code>
+       */
       public Builder addAllKeys(
-          java.lang.Iterable<String> values) {
+          java.lang.Iterable<java.lang.String> values) {
         ensureKeysIsMutable();
-        super.addAll(values, keys_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, keys_);
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated string Keys = 1;</code>
+       */
       public Builder clearKeys() {
         keys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
-      void addKeys(com.google.protobuf.ByteString value) {
-        ensureKeysIsMutable();
+      /**
+       * <code>repeated string Keys = 1;</code>
+       */
+      public Builder addKeysBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureKeysIsMutable();
         keys_.add(value);
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetRequest)
     }
-    
+
     static {
       defaultInstance = new KeyValueStorageApiGetRequest(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetRequest)
   }
-  
-  public interface KeyValueStorageApiGetResponseOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;
+
+  public interface KeyValueStorageApiGetResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> 
         getEntriesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry getEntries(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     int getEntriesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     java.util.List<? extends Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder> 
         getEntriesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder getEntriesOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetResponse}
+   */
   public static final class KeyValueStorageApiGetResponse extends
-      com.google.protobuf.GeneratedMessage
-      implements KeyValueStorageApiGetResponseOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetResponse)
+      KeyValueStorageApiGetResponseOrBuilder {
     // Use KeyValueStorageApiGetResponse.newBuilder() to construct.
-    private KeyValueStorageApiGetResponse(Builder builder) {
+    private KeyValueStorageApiGetResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private KeyValueStorageApiGetResponse(boolean noInit) {}
-    
+    private KeyValueStorageApiGetResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final KeyValueStorageApiGetResponse defaultInstance;
     public static KeyValueStorageApiGetResponse getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public KeyValueStorageApiGetResponse getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private KeyValueStorageApiGetResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                entries_ = new java.util.ArrayList<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              entries_.add(input.readMessage(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          entries_ = java.util.Collections.unmodifiableList(entries_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_fieldAccessorTable;
+      return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.class, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.Builder.class);
     }
-    
-    // repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;
+
+    public static com.google.protobuf.Parser<KeyValueStorageApiGetResponse> PARSER =
+        new com.google.protobuf.AbstractParser<KeyValueStorageApiGetResponse>() {
+      public KeyValueStorageApiGetResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new KeyValueStorageApiGetResponse(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyValueStorageApiGetResponse> getParserForType() {
+      return PARSER;
+    }
+
     public static final int ENTRIES_FIELD_NUMBER = 1;
     private java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> entries_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> getEntriesList() {
       return entries_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder> 
         getEntriesOrBuilderList() {
       return entries_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public int getEntriesCount() {
       return entries_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry getEntries(int index) {
       return entries_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
     }
-    
+
     private void initFields() {
       entries_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       for (int i = 0; i < getEntriesCount(); i++) {
         if (!getEntries(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -961,7 +1347,7 @@ public final class KeyValueStorageProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -970,12 +1356,12 @@ public final class KeyValueStorageProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < entries_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -985,113 +1371,106 @@ public final class KeyValueStorageProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetResponse}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponseOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetResponse)
+        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_fieldAccessorTable;
+        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.class, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1103,7 +1482,7 @@ public final class KeyValueStorageProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (entriesBuilder_ == null) {
@@ -1114,20 +1493,20 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.getDescriptor();
+        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse getDefaultInstanceForType() {
         return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse build() {
         Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse result = buildPartial();
         if (!result.isInitialized()) {
@@ -1135,17 +1514,7 @@ public final class KeyValueStorageProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse buildPartial() {
         Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse result = new Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse(this);
         int from_bitField0_ = bitField0_;
@@ -1161,7 +1530,7 @@ public final class KeyValueStorageProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse) {
           return mergeFrom((Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse)other);
@@ -1170,7 +1539,7 @@ public final class KeyValueStorageProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse other) {
         if (other == Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.getDefaultInstance()) return this;
         if (entriesBuilder_ == null) {
@@ -1202,7 +1571,7 @@ public final class KeyValueStorageProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getEntriesCount(); i++) {
           if (!getEntries(i).isInitialized()) {
@@ -1212,43 +1581,26 @@ public final class KeyValueStorageProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder subBuilder = Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addEntries(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;
+
       private java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
@@ -1257,10 +1609,13 @@ public final class KeyValueStorageProtos {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder> entriesBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> getEntriesList() {
         if (entriesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(entries_);
@@ -1268,6 +1623,9 @@ public final class KeyValueStorageProtos {
           return entriesBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public int getEntriesCount() {
         if (entriesBuilder_ == null) {
           return entries_.size();
@@ -1275,6 +1633,9 @@ public final class KeyValueStorageProtos {
           return entriesBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry getEntries(int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);
@@ -1282,6 +1643,9 @@ public final class KeyValueStorageProtos {
           return entriesBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder setEntries(
           int index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry value) {
         if (entriesBuilder_ == null) {
@@ -1296,6 +1660,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder setEntries(
           int index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
@@ -1307,6 +1674,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addEntries(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
@@ -1320,6 +1690,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addEntries(
           int index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry value) {
         if (entriesBuilder_ == null) {
@@ -1334,6 +1707,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addEntries(
           Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
@@ -1345,6 +1721,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addEntries(
           int index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
@@ -1356,17 +1735,24 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addAllEntries(
           java.lang.Iterable<? extends Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> values) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
-          super.addAll(values, entries_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
           onChanged();
         } else {
           entriesBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
@@ -1377,6 +1763,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder removeEntries(int index) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
@@ -1387,10 +1776,16 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder getEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder getEntriesOrBuilder(
           int index) {
         if (entriesBuilder_ == null) {
@@ -1398,6 +1793,9 @@ public final class KeyValueStorageProtos {
           return entriesBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder> 
            getEntriesOrBuilderList() {
         if (entriesBuilder_ != null) {
@@ -1406,15 +1804,24 @@ public final class KeyValueStorageProtos {
           return java.util.Collections.unmodifiableList(entries_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder addEntriesBuilder() {
         return getEntriesFieldBuilder().addBuilder(
             Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder addEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder> 
            getEntriesBuilderList() {
         return getEntriesFieldBuilder().getBuilderList();
@@ -1433,88 +1840,192 @@ public final class KeyValueStorageProtos {
         }
         return entriesBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetResponse)
     }
-    
+
     static {
       defaultInstance = new KeyValueStorageApiGetResponse(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiGetResponse)
   }
-  
-  public interface KeyValueStorageApiPutRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;
+
+  public interface KeyValueStorageApiPutRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiPutRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> 
         getEntriesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry getEntries(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     int getEntriesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     java.util.List<? extends Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder> 
         getEntriesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder getEntriesOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiPutRequest}
+   */
   public static final class KeyValueStorageApiPutRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements KeyValueStorageApiPutRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiPutRequest)
+      KeyValueStorageApiPutRequestOrBuilder {
     // Use KeyValueStorageApiPutRequest.newBuilder() to construct.
-    private KeyValueStorageApiPutRequest(Builder builder) {
+    private KeyValueStorageApiPutRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private KeyValueStorageApiPutRequest(boolean noInit) {}
-    
+    private KeyValueStorageApiPutRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final KeyValueStorageApiPutRequest defaultInstance;
     public static KeyValueStorageApiPutRequest getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public KeyValueStorageApiPutRequest getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private KeyValueStorageApiPutRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                entries_ = new java.util.ArrayList<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              entries_.add(input.readMessage(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          entries_ = java.util.Collections.unmodifiableList(entries_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_fieldAccessorTable;
+      return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.class, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.Builder.class);
     }
-    
-    // repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;
+
+    public static com.google.protobuf.Parser<KeyValueStorageApiPutRequest> PARSER =
+        new com.google.protobuf.AbstractParser<KeyValueStorageApiPutRequest>() {
+      public KeyValueStorageApiPutRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new KeyValueStorageApiPutRequest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyValueStorageApiPutRequest> getParserForType() {
+      return PARSER;
+    }
+
     public static final int ENTRIES_FIELD_NUMBER = 1;
     private java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> entries_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> getEntriesList() {
       return entries_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public java.util.List<? extends Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder> 
         getEntriesOrBuilderList() {
       return entries_;
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public int getEntriesCount() {
       return entries_.size();
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry getEntries(int index) {
       return entries_.get(index);
     }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+     */
     public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
     }
-    
+
     private void initFields() {
       entries_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       for (int i = 0; i < getEntriesCount(); i++) {
         if (!getEntries(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1524,7 +2035,7 @@ public final class KeyValueStorageProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1533,12 +2044,12 @@ public final class KeyValueStorageProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < entries_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -1548,113 +2059,106 @@ public final class KeyValueStorageProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiPutRequest}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiPutRequest)
+        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_fieldAccessorTable;
+        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.class, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1666,7 +2170,7 @@ public final class KeyValueStorageProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (entriesBuilder_ == null) {
@@ -1677,20 +2181,20 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.getDescriptor();
+        return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest getDefaultInstanceForType() {
         return Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest build() {
         Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest result = buildPartial();
         if (!result.isInitialized()) {
@@ -1698,17 +2202,7 @@ public final class KeyValueStorageProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest buildPartial() {
         Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest result = new Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest(this);
         int from_bitField0_ = bitField0_;
@@ -1724,7 +2218,7 @@ public final class KeyValueStorageProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest) {
           return mergeFrom((Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest)other);
@@ -1733,7 +2227,7 @@ public final class KeyValueStorageProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest other) {
         if (other == Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.getDefaultInstance()) return this;
         if (entriesBuilder_ == null) {
@@ -1765,7 +2259,7 @@ public final class KeyValueStorageProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getEntriesCount(); i++) {
           if (!getEntries(i).isInitialized()) {
@@ -1775,43 +2269,26 @@ public final class KeyValueStorageProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder subBuilder = Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addEntries(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;
+
       private java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
@@ -1820,10 +2297,13 @@ public final class KeyValueStorageProtos {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder> entriesBuilder_;
-      
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> getEntriesList() {
         if (entriesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(entries_);
@@ -1831,6 +2311,9 @@ public final class KeyValueStorageProtos {
           return entriesBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public int getEntriesCount() {
         if (entriesBuilder_ == null) {
           return entries_.size();
@@ -1838,6 +2321,9 @@ public final class KeyValueStorageProtos {
           return entriesBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry getEntries(int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);
@@ -1845,6 +2331,9 @@ public final class KeyValueStorageProtos {
           return entriesBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder setEntries(
           int index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry value) {
         if (entriesBuilder_ == null) {
@@ -1859,6 +2348,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder setEntries(
           int index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
@@ -1870,6 +2362,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addEntries(Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
@@ -1883,6 +2378,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addEntries(
           int index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry value) {
         if (entriesBuilder_ == null) {
@@ -1897,6 +2395,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addEntries(
           Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
@@ -1908,6 +2409,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addEntries(
           int index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
@@ -1919,17 +2423,24 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder addAllEntries(
           java.lang.Iterable<? extends Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry> values) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
-          super.addAll(values, entries_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
           onChanged();
         } else {
           entriesBuilder_.addAllMessages(values);
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
@@ -1940,6 +2451,9 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Builder removeEntries(int index) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
@@ -1950,10 +2464,16 @@ public final class KeyValueStorageProtos {
         }
         return this;
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder getEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder getEntriesOrBuilder(
           int index) {
         if (entriesBuilder_ == null) {
@@ -1961,6 +2481,9 @@ public final class KeyValueStorageProtos {
           return entriesBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public java.util.List<? extends Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntryOrBuilder> 
            getEntriesOrBuilderList() {
         if (entriesBuilder_ != null) {
@@ -1969,15 +2492,24 @@ public final class KeyValueStorageProtos {
           return java.util.Collections.unmodifiableList(entries_);
         }
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder addEntriesBuilder() {
         return getEntriesFieldBuilder().addBuilder(
             Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder addEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.getDefaultInstance());
       }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageEntry Entries = 1;</code>
+       */
       public java.util.List<Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder> 
            getEntriesBuilderList() {
         return getEntriesFieldBuilder().getBuilderList();
@@ -1996,39 +2528,39 @@ public final class KeyValueStorageProtos {
         }
         return entriesBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiPutRequest)
     }
-    
+
     static {
       defaultInstance = new KeyValueStorageApiPutRequest(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageApiPutRequest)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -2050,50 +2582,42 @@ public final class KeyValueStorageProtos {
       "eProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_descriptor,
-              new java.lang.String[] { "Key", "Value", },
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.class,
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageEntry.Builder.class);
-          internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_descriptor,
-              new java.lang.String[] { "Keys", },
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.class,
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetRequest.Builder.class);
-          internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_descriptor,
-              new java.lang.String[] { "Entries", },
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.class,
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiGetResponse.Builder.class);
-          internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_descriptor,
-              new java.lang.String[] { "Entries", },
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.class,
-              Diadoc.Api.Proto.KeyValueStorage.KeyValueStorageProtos.KeyValueStorageApiPutRequest.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetRequest_descriptor,
+        new java.lang.String[] { "Keys", });
+    internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiGetResponse_descriptor,
+        new java.lang.String[] { "Entries", });
+    internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_KeyValueStorage_KeyValueStorageApiPutRequest_descriptor,
+        new java.lang.String[] { "Entries", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

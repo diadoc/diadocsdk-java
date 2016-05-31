@@ -8,170 +8,392 @@ public final class RevocationDocflowProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface RevocationDocflowOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional bool IsFinished = 1;
+  public interface RevocationDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.RevocationDocflow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean hasIsFinished();
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     boolean getIsFinished();
-    
-    // optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+     */
     boolean hasRevocationRequestAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getRevocationRequestAttachment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+     */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getRevocationRequestAttachmentOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     boolean hasRecipientSignatureDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow getRecipientSignatureDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder getRecipientSignatureDocflowOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     boolean hasRecipientSignatureRejectionDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow getRecipientSignatureRejectionDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder getRecipientSignatureRejectionDocflowOrBuilder();
-    
-    // optional string InitiatorBoxId = 5;
+
+    /**
+     * <code>optional string InitiatorBoxId = 5;</code>
+     */
     boolean hasInitiatorBoxId();
-    String getInitiatorBoxId();
-    
-    // optional bool IsRevocationAccepted = 6;
+    /**
+     * <code>optional string InitiatorBoxId = 5;</code>
+     */
+    java.lang.String getInitiatorBoxId();
+    /**
+     * <code>optional string InitiatorBoxId = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getInitiatorBoxIdBytes();
+
+    /**
+     * <code>optional bool IsRevocationAccepted = 6;</code>
+     */
     boolean hasIsRevocationAccepted();
+    /**
+     * <code>optional bool IsRevocationAccepted = 6;</code>
+     */
     boolean getIsRevocationAccepted();
-    
-    // optional bool IsRevocationRejected = 7;
+
+    /**
+     * <code>optional bool IsRevocationRejected = 7;</code>
+     */
     boolean hasIsRevocationRejected();
+    /**
+     * <code>optional bool IsRevocationRejected = 7;</code>
+     */
     boolean getIsRevocationRejected();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.RevocationDocflow}
+   */
   public static final class RevocationDocflow extends
-      com.google.protobuf.GeneratedMessage
-      implements RevocationDocflowOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.RevocationDocflow)
+      RevocationDocflowOrBuilder {
     // Use RevocationDocflow.newBuilder() to construct.
-    private RevocationDocflow(Builder builder) {
+    private RevocationDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private RevocationDocflow(boolean noInit) {}
-    
+    private RevocationDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final RevocationDocflow defaultInstance;
     public static RevocationDocflow getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public RevocationDocflow getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RevocationDocflow(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = revocationRequestAttachment_.toBuilder();
+              }
+              revocationRequestAttachment_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(revocationRequestAttachment_);
+                revocationRequestAttachment_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = recipientSignatureDocflow_.toBuilder();
+              }
+              recipientSignatureDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(recipientSignatureDocflow_);
+                recipientSignatureDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = recipientSignatureRejectionDocflow_.toBuilder();
+              }
+              recipientSignatureRejectionDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(recipientSignatureRejectionDocflow_);
+                recipientSignatureRejectionDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              initiatorBoxId_ = bs;
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              isRevocationAccepted_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              isRevocationRejected_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_fieldAccessorTable;
+      return Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.class, Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<RevocationDocflow> PARSER =
+        new com.google.protobuf.AbstractParser<RevocationDocflow>() {
+      public RevocationDocflow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RevocationDocflow(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RevocationDocflow> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional bool IsFinished = 1;
     public static final int ISFINISHED_FIELD_NUMBER = 1;
     private boolean isFinished_;
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean hasIsFinished() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional bool IsFinished = 1;</code>
+     */
     public boolean getIsFinished() {
       return isFinished_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;
+
     public static final int REVOCATIONREQUESTATTACHMENT_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment revocationRequestAttachment_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+     */
     public boolean hasRevocationRequestAttachment() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getRevocationRequestAttachment() {
       return revocationRequestAttachment_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+     */
     public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getRevocationRequestAttachmentOrBuilder() {
       return revocationRequestAttachment_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;
+
     public static final int RECIPIENTSIGNATUREDOCFLOW_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow recipientSignatureDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     public boolean hasRecipientSignatureDocflow() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow getRecipientSignatureDocflow() {
       return recipientSignatureDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+     */
     public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder getRecipientSignatureDocflowOrBuilder() {
       return recipientSignatureDocflow_;
     }
-    
-    // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;
+
     public static final int RECIPIENTSIGNATUREREJECTIONDOCFLOW_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow recipientSignatureRejectionDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     public boolean hasRecipientSignatureRejectionDocflow() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow getRecipientSignatureRejectionDocflow() {
       return recipientSignatureRejectionDocflow_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+     */
     public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder getRecipientSignatureRejectionDocflowOrBuilder() {
       return recipientSignatureRejectionDocflow_;
     }
-    
-    // optional string InitiatorBoxId = 5;
+
     public static final int INITIATORBOXID_FIELD_NUMBER = 5;
     private java.lang.Object initiatorBoxId_;
+    /**
+     * <code>optional string InitiatorBoxId = 5;</code>
+     */
     public boolean hasInitiatorBoxId() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public String getInitiatorBoxId() {
+    /**
+     * <code>optional string InitiatorBoxId = 5;</code>
+     */
+    public java.lang.String getInitiatorBoxId() {
       java.lang.Object ref = initiatorBoxId_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           initiatorBoxId_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getInitiatorBoxIdBytes() {
+    /**
+     * <code>optional string InitiatorBoxId = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInitiatorBoxIdBytes() {
       java.lang.Object ref = initiatorBoxId_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         initiatorBoxId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional bool IsRevocationAccepted = 6;
+
     public static final int ISREVOCATIONACCEPTED_FIELD_NUMBER = 6;
     private boolean isRevocationAccepted_;
+    /**
+     * <code>optional bool IsRevocationAccepted = 6;</code>
+     */
     public boolean hasIsRevocationAccepted() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>optional bool IsRevocationAccepted = 6;</code>
+     */
     public boolean getIsRevocationAccepted() {
       return isRevocationAccepted_;
     }
-    
-    // optional bool IsRevocationRejected = 7;
+
     public static final int ISREVOCATIONREJECTED_FIELD_NUMBER = 7;
     private boolean isRevocationRejected_;
+    /**
+     * <code>optional bool IsRevocationRejected = 7;</code>
+     */
     public boolean hasIsRevocationRejected() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
+    /**
+     * <code>optional bool IsRevocationRejected = 7;</code>
+     */
     public boolean getIsRevocationRejected() {
       return isRevocationRejected_;
     }
-    
+
     private void initFields() {
       isFinished_ = false;
       revocationRequestAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -184,8 +406,9 @@ public final class RevocationDocflowProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasRevocationRequestAttachment()) {
         if (!getRevocationRequestAttachment().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -207,7 +430,7 @@ public final class RevocationDocflowProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -234,12 +457,12 @@ public final class RevocationDocflowProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -273,113 +496,106 @@ public final class RevocationDocflowProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.RevocationDocflow}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflowOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.RevocationDocflow)
+        Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_fieldAccessorTable;
+        return Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.class, Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -393,7 +609,7 @@ public final class RevocationDocflowProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         isFinished_ = false;
@@ -424,20 +640,20 @@ public final class RevocationDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.getDescriptor();
+        return Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow build() {
         Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow result = buildPartial();
         if (!result.isInitialized()) {
@@ -445,17 +661,7 @@ public final class RevocationDocflowProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow buildPartial() {
         Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow result = new Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow(this);
         int from_bitField0_ = bitField0_;
@@ -504,7 +710,7 @@ public final class RevocationDocflowProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow) {
           return mergeFrom((Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow)other);
@@ -513,7 +719,7 @@ public final class RevocationDocflowProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow other) {
         if (other == Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.getDefaultInstance()) return this;
         if (other.hasIsFinished()) {
@@ -529,7 +735,9 @@ public final class RevocationDocflowProtos {
           mergeRecipientSignatureRejectionDocflow(other.getRecipientSignatureRejectionDocflow());
         }
         if (other.hasInitiatorBoxId()) {
-          setInitiatorBoxId(other.getInitiatorBoxId());
+          bitField0_ |= 0x00000010;
+          initiatorBoxId_ = other.initiatorBoxId_;
+          onChanged();
         }
         if (other.hasIsRevocationAccepted()) {
           setIsRevocationAccepted(other.getIsRevocationAccepted());
@@ -540,7 +748,7 @@ public final class RevocationDocflowProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasRevocationRequestAttachment()) {
           if (!getRevocationRequestAttachment().isInitialized()) {
@@ -562,111 +770,70 @@ public final class RevocationDocflowProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder subBuilder = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.newBuilder();
-              if (hasRevocationRequestAttachment()) {
-                subBuilder.mergeFrom(getRevocationRequestAttachment());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setRevocationRequestAttachment(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.newBuilder();
-              if (hasRecipientSignatureDocflow()) {
-                subBuilder.mergeFrom(getRecipientSignatureDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setRecipientSignatureDocflow(subBuilder.buildPartial());
-              break;
-            }
-            case 34: {
-              Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder subBuilder = Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.newBuilder();
-              if (hasRecipientSignatureRejectionDocflow()) {
-                subBuilder.mergeFrom(getRecipientSignatureRejectionDocflow());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setRecipientSignatureRejectionDocflow(subBuilder.buildPartial());
-              break;
-            }
-            case 42: {
-              bitField0_ |= 0x00000010;
-              initiatorBoxId_ = input.readBytes();
-              break;
-            }
-            case 48: {
-              bitField0_ |= 0x00000020;
-              isRevocationAccepted_ = input.readBool();
-              break;
-            }
-            case 56: {
-              bitField0_ |= 0x00000040;
-              isRevocationRejected_ = input.readBool();
-              break;
-            }
+        Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional bool IsFinished = 1;
+
       private boolean isFinished_ ;
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean hasIsFinished() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public boolean getIsFinished() {
         return isFinished_;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder setIsFinished(boolean value) {
         bitField0_ |= 0x00000001;
         isFinished_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsFinished = 1;</code>
+       */
       public Builder clearIsFinished() {
         bitField0_ = (bitField0_ & ~0x00000001);
         isFinished_ = false;
         onChanged();
         return this;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;
+
       private Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment revocationRequestAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder> revocationRequestAttachmentBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+       */
       public boolean hasRevocationRequestAttachment() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment getRevocationRequestAttachment() {
         if (revocationRequestAttachmentBuilder_ == null) {
           return revocationRequestAttachment_;
@@ -674,6 +841,9 @@ public final class RevocationDocflowProtos {
           return revocationRequestAttachmentBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+       */
       public Builder setRevocationRequestAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment value) {
         if (revocationRequestAttachmentBuilder_ == null) {
           if (value == null) {
@@ -687,6 +857,9 @@ public final class RevocationDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+       */
       public Builder setRevocationRequestAttachment(
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder builderForValue) {
         if (revocationRequestAttachmentBuilder_ == null) {
@@ -698,6 +871,9 @@ public final class RevocationDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+       */
       public Builder mergeRevocationRequestAttachment(Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment value) {
         if (revocationRequestAttachmentBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -714,6 +890,9 @@ public final class RevocationDocflowProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+       */
       public Builder clearRevocationRequestAttachment() {
         if (revocationRequestAttachmentBuilder_ == null) {
           revocationRequestAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -724,11 +903,17 @@ public final class RevocationDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder getRevocationRequestAttachmentBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getRevocationRequestAttachmentFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+       */
       public Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder getRevocationRequestAttachmentOrBuilder() {
         if (revocationRequestAttachmentBuilder_ != null) {
           return revocationRequestAttachmentBuilder_.getMessageOrBuilder();
@@ -736,27 +921,35 @@ public final class RevocationDocflowProtos {
           return revocationRequestAttachment_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachment RevocationRequestAttachment = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder> 
           getRevocationRequestAttachmentFieldBuilder() {
         if (revocationRequestAttachmentBuilder_ == null) {
           revocationRequestAttachmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachmentOrBuilder>(
-                  revocationRequestAttachment_,
+                  getRevocationRequestAttachment(),
                   getParentForChildren(),
                   isClean());
           revocationRequestAttachment_ = null;
         }
         return revocationRequestAttachmentBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;
+
       private Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow recipientSignatureDocflow_ = Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder> recipientSignatureDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public boolean hasRecipientSignatureDocflow() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow getRecipientSignatureDocflow() {
         if (recipientSignatureDocflowBuilder_ == null) {
           return recipientSignatureDocflow_;
@@ -764,6 +957,9 @@ public final class RevocationDocflowProtos {
           return recipientSignatureDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Builder setRecipientSignatureDocflow(Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow value) {
         if (recipientSignatureDocflowBuilder_ == null) {
           if (value == null) {
@@ -777,6 +973,9 @@ public final class RevocationDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Builder setRecipientSignatureDocflow(
           Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder builderForValue) {
         if (recipientSignatureDocflowBuilder_ == null) {
@@ -788,6 +987,9 @@ public final class RevocationDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Builder mergeRecipientSignatureDocflow(Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow value) {
         if (recipientSignatureDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -804,6 +1006,9 @@ public final class RevocationDocflowProtos {
         bitField0_ |= 0x00000004;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Builder clearRecipientSignatureDocflow() {
         if (recipientSignatureDocflowBuilder_ == null) {
           recipientSignatureDocflow_ = Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.getDefaultInstance();
@@ -814,11 +1019,17 @@ public final class RevocationDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder getRecipientSignatureDocflowBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getRecipientSignatureDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder getRecipientSignatureDocflowOrBuilder() {
         if (recipientSignatureDocflowBuilder_ != null) {
           return recipientSignatureDocflowBuilder_.getMessageOrBuilder();
@@ -826,27 +1037,35 @@ public final class RevocationDocflowProtos {
           return recipientSignatureDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow RecipientSignatureDocflow = 3;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder> 
           getRecipientSignatureDocflowFieldBuilder() {
         if (recipientSignatureDocflowBuilder_ == null) {
           recipientSignatureDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.RecipientSignatureDocflowOrBuilder>(
-                  recipientSignatureDocflow_,
+                  getRecipientSignatureDocflow(),
                   getParentForChildren(),
                   isClean());
           recipientSignatureDocflow_ = null;
         }
         return recipientSignatureDocflowBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;
+
       private Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow recipientSignatureRejectionDocflow_ = Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder> recipientSignatureRejectionDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public boolean hasRecipientSignatureRejectionDocflow() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow getRecipientSignatureRejectionDocflow() {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           return recipientSignatureRejectionDocflow_;
@@ -854,6 +1073,9 @@ public final class RevocationDocflowProtos {
           return recipientSignatureRejectionDocflowBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Builder setRecipientSignatureRejectionDocflow(Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow value) {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           if (value == null) {
@@ -867,6 +1089,9 @@ public final class RevocationDocflowProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Builder setRecipientSignatureRejectionDocflow(
           Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder builderForValue) {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
@@ -878,6 +1103,9 @@ public final class RevocationDocflowProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Builder mergeRecipientSignatureRejectionDocflow(Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow value) {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
@@ -894,6 +1122,9 @@ public final class RevocationDocflowProtos {
         bitField0_ |= 0x00000008;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Builder clearRecipientSignatureRejectionDocflow() {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           recipientSignatureRejectionDocflow_ = Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.getDefaultInstance();
@@ -904,11 +1135,17 @@ public final class RevocationDocflowProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder getRecipientSignatureRejectionDocflowBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getRecipientSignatureRejectionDocflowFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       public Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder getRecipientSignatureRejectionDocflowOrBuilder() {
         if (recipientSignatureRejectionDocflowBuilder_ != null) {
           return recipientSignatureRejectionDocflowBuilder_.getMessageOrBuilder();
@@ -916,36 +1153,68 @@ public final class RevocationDocflowProtos {
           return recipientSignatureRejectionDocflow_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow RecipientSignatureRejectionDocflow = 4;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder> 
           getRecipientSignatureRejectionDocflowFieldBuilder() {
         if (recipientSignatureRejectionDocflowBuilder_ == null) {
           recipientSignatureRejectionDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflow.Builder, Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.RecipientSignatureRejectionDocflowOrBuilder>(
-                  recipientSignatureRejectionDocflow_,
+                  getRecipientSignatureRejectionDocflow(),
                   getParentForChildren(),
                   isClean());
           recipientSignatureRejectionDocflow_ = null;
         }
         return recipientSignatureRejectionDocflowBuilder_;
       }
-      
-      // optional string InitiatorBoxId = 5;
+
       private java.lang.Object initiatorBoxId_ = "";
+      /**
+       * <code>optional string InitiatorBoxId = 5;</code>
+       */
       public boolean hasInitiatorBoxId() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      public String getInitiatorBoxId() {
+      /**
+       * <code>optional string InitiatorBoxId = 5;</code>
+       */
+      public java.lang.String getInitiatorBoxId() {
         java.lang.Object ref = initiatorBoxId_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          initiatorBoxId_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            initiatorBoxId_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setInitiatorBoxId(String value) {
+      /**
+       * <code>optional string InitiatorBoxId = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInitiatorBoxIdBytes() {
+        java.lang.Object ref = initiatorBoxId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          initiatorBoxId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string InitiatorBoxId = 5;</code>
+       */
+      public Builder setInitiatorBoxId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -954,77 +1223,110 @@ public final class RevocationDocflowProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string InitiatorBoxId = 5;</code>
+       */
       public Builder clearInitiatorBoxId() {
         bitField0_ = (bitField0_ & ~0x00000010);
         initiatorBoxId_ = getDefaultInstance().getInitiatorBoxId();
         onChanged();
         return this;
       }
-      void setInitiatorBoxId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000010;
+      /**
+       * <code>optional string InitiatorBoxId = 5;</code>
+       */
+      public Builder setInitiatorBoxIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
         initiatorBoxId_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional bool IsRevocationAccepted = 6;
+
       private boolean isRevocationAccepted_ ;
+      /**
+       * <code>optional bool IsRevocationAccepted = 6;</code>
+       */
       public boolean hasIsRevocationAccepted() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
+      /**
+       * <code>optional bool IsRevocationAccepted = 6;</code>
+       */
       public boolean getIsRevocationAccepted() {
         return isRevocationAccepted_;
       }
+      /**
+       * <code>optional bool IsRevocationAccepted = 6;</code>
+       */
       public Builder setIsRevocationAccepted(boolean value) {
         bitField0_ |= 0x00000020;
         isRevocationAccepted_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsRevocationAccepted = 6;</code>
+       */
       public Builder clearIsRevocationAccepted() {
         bitField0_ = (bitField0_ & ~0x00000020);
         isRevocationAccepted_ = false;
         onChanged();
         return this;
       }
-      
-      // optional bool IsRevocationRejected = 7;
+
       private boolean isRevocationRejected_ ;
+      /**
+       * <code>optional bool IsRevocationRejected = 7;</code>
+       */
       public boolean hasIsRevocationRejected() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
+      /**
+       * <code>optional bool IsRevocationRejected = 7;</code>
+       */
       public boolean getIsRevocationRejected() {
         return isRevocationRejected_;
       }
+      /**
+       * <code>optional bool IsRevocationRejected = 7;</code>
+       */
       public Builder setIsRevocationRejected(boolean value) {
         bitField0_ |= 0x00000040;
         isRevocationRejected_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool IsRevocationRejected = 7;</code>
+       */
       public Builder clearIsRevocationRejected() {
         bitField0_ = (bitField0_ & ~0x00000040);
         isRevocationRejected_ = false;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.RevocationDocflow)
     }
-    
+
     static {
       defaultInstance = new RevocationDocflow(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.RevocationDocflow)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -1051,21 +1353,13 @@ public final class RevocationDocflowProtos {
       "otos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_descriptor,
-              new java.lang.String[] { "IsFinished", "RevocationRequestAttachment", "RecipientSignatureDocflow", "RecipientSignatureRejectionDocflow", "InitiatorBoxId", "IsRevocationAccepted", "IsRevocationRejected", },
-              Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.class,
-              Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.RevocationDocflow.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
@@ -1073,7 +1367,16 @@ public final class RevocationDocflowProtos {
           Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflow_descriptor,
+        new java.lang.String[] { "IsFinished", "RevocationRequestAttachment", "RecipientSignatureDocflow", "RecipientSignatureRejectionDocflow", "InitiatorBoxId", "IsRevocationAccepted", "IsRevocationRejected", });
+    Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.RecipientSignatureDocflowProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflowProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

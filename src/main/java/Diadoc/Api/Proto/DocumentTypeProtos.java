@@ -8,54 +8,185 @@ public final class DocumentTypeProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.DocumentType}
+   */
   public enum DocumentType
       implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownDocumentType = -1;</code>
+     *
+     * <pre>
+     * reserved for backward compatibility
+     * </pre>
+     */
     UnknownDocumentType(0, -1),
+    /**
+     * <code>Nonformalized = 0;</code>
+     */
     Nonformalized(1, 0),
+    /**
+     * <code>Invoice = 1;</code>
+     */
     Invoice(2, 1),
+    /**
+     * <code>TrustConnectionRequest = 11;</code>
+     */
     TrustConnectionRequest(3, 11),
+    /**
+     * <code>Torg12 = 12;</code>
+     */
     Torg12(4, 12),
+    /**
+     * <code>InvoiceRevision = 13;</code>
+     */
     InvoiceRevision(5, 13),
+    /**
+     * <code>InvoiceCorrection = 14;</code>
+     */
     InvoiceCorrection(6, 14),
+    /**
+     * <code>InvoiceCorrectionRevision = 15;</code>
+     */
     InvoiceCorrectionRevision(7, 15),
+    /**
+     * <code>AcceptanceCertificate = 16;</code>
+     */
     AcceptanceCertificate(8, 16),
+    /**
+     * <code>ProformaInvoice = 18;</code>
+     */
     ProformaInvoice(9, 18),
+    /**
+     * <code>XmlTorg12 = 19;</code>
+     */
     XmlTorg12(10, 19),
+    /**
+     * <code>XmlAcceptanceCertificate = 20;</code>
+     */
     XmlAcceptanceCertificate(11, 20),
+    /**
+     * <code>PriceList = 26;</code>
+     */
     PriceList(12, 26),
+    /**
+     * <code>PriceListAgreement = 30;</code>
+     */
     PriceListAgreement(13, 30),
+    /**
+     * <code>CertificateRegistry = 34;</code>
+     */
     CertificateRegistry(14, 34),
+    /**
+     * <code>ReconciliationAct = 35;</code>
+     */
     ReconciliationAct(15, 35),
+    /**
+     * <code>Contract = 36;</code>
+     */
     Contract(16, 36),
+    /**
+     * <code>Torg13 = 37;</code>
+     */
     Torg13(17, 37),
+    /**
+     * <code>ServiceDetails = 38;</code>
+     */
     ServiceDetails(18, 38),
+    /**
+     * <code>SupplementaryAgreement = 40;</code>
+     */
     SupplementaryAgreement(19, 40),
     ;
-    
+
+    /**
+     * <code>UnknownDocumentType = -1;</code>
+     *
+     * <pre>
+     * reserved for backward compatibility
+     * </pre>
+     */
     public static final int UnknownDocumentType_VALUE = -1;
+    /**
+     * <code>Nonformalized = 0;</code>
+     */
     public static final int Nonformalized_VALUE = 0;
+    /**
+     * <code>Invoice = 1;</code>
+     */
     public static final int Invoice_VALUE = 1;
+    /**
+     * <code>TrustConnectionRequest = 11;</code>
+     */
     public static final int TrustConnectionRequest_VALUE = 11;
+    /**
+     * <code>Torg12 = 12;</code>
+     */
     public static final int Torg12_VALUE = 12;
+    /**
+     * <code>InvoiceRevision = 13;</code>
+     */
     public static final int InvoiceRevision_VALUE = 13;
+    /**
+     * <code>InvoiceCorrection = 14;</code>
+     */
     public static final int InvoiceCorrection_VALUE = 14;
+    /**
+     * <code>InvoiceCorrectionRevision = 15;</code>
+     */
     public static final int InvoiceCorrectionRevision_VALUE = 15;
+    /**
+     * <code>AcceptanceCertificate = 16;</code>
+     */
     public static final int AcceptanceCertificate_VALUE = 16;
+    /**
+     * <code>ProformaInvoice = 18;</code>
+     */
     public static final int ProformaInvoice_VALUE = 18;
+    /**
+     * <code>XmlTorg12 = 19;</code>
+     */
     public static final int XmlTorg12_VALUE = 19;
+    /**
+     * <code>XmlAcceptanceCertificate = 20;</code>
+     */
     public static final int XmlAcceptanceCertificate_VALUE = 20;
+    /**
+     * <code>PriceList = 26;</code>
+     */
     public static final int PriceList_VALUE = 26;
+    /**
+     * <code>PriceListAgreement = 30;</code>
+     */
     public static final int PriceListAgreement_VALUE = 30;
+    /**
+     * <code>CertificateRegistry = 34;</code>
+     */
     public static final int CertificateRegistry_VALUE = 34;
+    /**
+     * <code>ReconciliationAct = 35;</code>
+     */
     public static final int ReconciliationAct_VALUE = 35;
+    /**
+     * <code>Contract = 36;</code>
+     */
     public static final int Contract_VALUE = 36;
+    /**
+     * <code>Torg13 = 37;</code>
+     */
     public static final int Torg13_VALUE = 37;
+    /**
+     * <code>ServiceDetails = 38;</code>
+     */
     public static final int ServiceDetails_VALUE = 38;
+    /**
+     * <code>SupplementaryAgreement = 40;</code>
+     */
     public static final int SupplementaryAgreement_VALUE = 40;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static DocumentType valueOf(int value) {
       switch (value) {
         case -1: return UnknownDocumentType;
@@ -81,7 +212,7 @@ public final class DocumentTypeProtos {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<DocumentType>
         internalGetValueMap() {
       return internalValueMap;
@@ -93,7 +224,7 @@ public final class DocumentTypeProtos {
               return DocumentType.valueOf(number);
             }
           };
-    
+
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
@@ -106,11 +237,9 @@ public final class DocumentTypeProtos {
         getDescriptor() {
       return Diadoc.Api.Proto.DocumentTypeProtos.getDescriptor().getEnumTypes().get(0);
     }
-    
-    private static final DocumentType[] VALUES = {
-      UnknownDocumentType, Nonformalized, Invoice, TrustConnectionRequest, Torg12, InvoiceRevision, InvoiceCorrection, InvoiceCorrectionRevision, AcceptanceCertificate, ProformaInvoice, XmlTorg12, XmlAcceptanceCertificate, PriceList, PriceListAgreement, CertificateRegistry, ReconciliationAct, Contract, Torg13, ServiceDetails, SupplementaryAgreement, 
-    };
-    
+
+    private static final DocumentType[] VALUES = values();
+
     public static DocumentType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
@@ -119,19 +248,19 @@ public final class DocumentTypeProtos {
       }
       return VALUES[desc.getIndex()];
     }
-    
+
     private final int index;
     private final int value;
-    
+
     private DocumentType(int index, int value) {
       this.index = index;
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.DocumentType)
   }
-  
-  
+
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -155,18 +284,18 @@ public final class DocumentTypeProtos {
       "greement\020(B\024B\022DocumentTypeProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

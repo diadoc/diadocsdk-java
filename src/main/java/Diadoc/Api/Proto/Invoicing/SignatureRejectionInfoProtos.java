@@ -8,92 +8,211 @@ public final class SignatureRejectionInfoProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface SignatureRejectionInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string ErrorMessage = 1;
+  public interface SignatureRejectionInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.SignatureRejectionInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string ErrorMessage = 1;</code>
+     */
     boolean hasErrorMessage();
-    String getErrorMessage();
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;
+    /**
+     * <code>optional string ErrorMessage = 1;</code>
+     */
+    java.lang.String getErrorMessage();
+    /**
+     * <code>optional string ErrorMessage = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getErrorMessageBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+     */
     boolean hasSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+     */
     Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.SignatureRejectionInfo}
+   */
   public static final class SignatureRejectionInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements SignatureRejectionInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.SignatureRejectionInfo)
+      SignatureRejectionInfoOrBuilder {
     // Use SignatureRejectionInfo.newBuilder() to construct.
-    private SignatureRejectionInfo(Builder builder) {
+    private SignatureRejectionInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private SignatureRejectionInfo(boolean noInit) {}
-    
+    private SignatureRejectionInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final SignatureRejectionInfo defaultInstance;
     public static SignatureRejectionInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public SignatureRejectionInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SignatureRejectionInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              errorMessage_ = bs;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = signer_.toBuilder();
+              }
+              signer_ = input.readMessage(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signer_);
+                signer_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.class, Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<SignatureRejectionInfo> PARSER =
+        new com.google.protobuf.AbstractParser<SignatureRejectionInfo>() {
+      public SignatureRejectionInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SignatureRejectionInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignatureRejectionInfo> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string ErrorMessage = 1;
     public static final int ERRORMESSAGE_FIELD_NUMBER = 1;
     private java.lang.Object errorMessage_;
+    /**
+     * <code>optional string ErrorMessage = 1;</code>
+     */
     public boolean hasErrorMessage() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getErrorMessage() {
+    /**
+     * <code>optional string ErrorMessage = 1;</code>
+     */
+    public java.lang.String getErrorMessage() {
       java.lang.Object ref = errorMessage_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           errorMessage_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getErrorMessageBytes() {
+    /**
+     * <code>optional string ErrorMessage = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getErrorMessageBytes() {
       java.lang.Object ref = errorMessage_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         errorMessage_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;
+
     public static final int SIGNER_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+     */
     public boolean hasSigner() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
       return signer_;
     }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+     */
     public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
       return signer_;
     }
-    
+
     private void initFields() {
       errorMessage_ = "";
       signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
@@ -101,8 +220,9 @@ public final class SignatureRejectionInfoProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasSigner()) {
         memoizedIsInitialized = 0;
         return false;
@@ -114,7 +234,7 @@ public final class SignatureRejectionInfoProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -126,12 +246,12 @@ public final class SignatureRejectionInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -145,113 +265,106 @@ public final class SignatureRejectionInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.SignatureRejectionInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.SignatureRejectionInfo)
+        Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.class, Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -263,7 +376,7 @@ public final class SignatureRejectionInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         errorMessage_ = "";
@@ -276,20 +389,20 @@ public final class SignatureRejectionInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo build() {
         Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -297,17 +410,7 @@ public final class SignatureRejectionInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo buildPartial() {
         Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo result = new Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo(this);
         int from_bitField0_ = bitField0_;
@@ -328,7 +431,7 @@ public final class SignatureRejectionInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo)other);
@@ -337,11 +440,13 @@ public final class SignatureRejectionInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo other) {
         if (other == Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.getDefaultInstance()) return this;
         if (other.hasErrorMessage()) {
-          setErrorMessage(other.getErrorMessage());
+          bitField0_ |= 0x00000001;
+          errorMessage_ = other.errorMessage_;
+          onChanged();
         }
         if (other.hasSigner()) {
           mergeSigner(other.getSigner());
@@ -349,7 +454,7 @@ public final class SignatureRejectionInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasSigner()) {
           
@@ -361,66 +466,71 @@ public final class SignatureRejectionInfoProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              errorMessage_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder subBuilder = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.newBuilder();
-              if (hasSigner()) {
-                subBuilder.mergeFrom(getSigner());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setSigner(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string ErrorMessage = 1;
+
       private java.lang.Object errorMessage_ = "";
+      /**
+       * <code>optional string ErrorMessage = 1;</code>
+       */
       public boolean hasErrorMessage() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getErrorMessage() {
+      /**
+       * <code>optional string ErrorMessage = 1;</code>
+       */
+      public java.lang.String getErrorMessage() {
         java.lang.Object ref = errorMessage_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          errorMessage_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            errorMessage_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setErrorMessage(String value) {
+      /**
+       * <code>optional string ErrorMessage = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getErrorMessageBytes() {
+        java.lang.Object ref = errorMessage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errorMessage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ErrorMessage = 1;</code>
+       */
+      public Builder setErrorMessage(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -429,25 +539,41 @@ public final class SignatureRejectionInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string ErrorMessage = 1;</code>
+       */
       public Builder clearErrorMessage() {
         bitField0_ = (bitField0_ & ~0x00000001);
         errorMessage_ = getDefaultInstance().getErrorMessage();
         onChanged();
         return this;
       }
-      void setErrorMessage(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string ErrorMessage = 1;</code>
+       */
+      public Builder setErrorMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         errorMessage_ = value;
         onChanged();
+        return this;
       }
-      
-      // required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;
+
       private Diadoc.Api.Proto.Invoicing.SignerProtos.Signer signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> signerBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+       */
       public boolean hasSigner() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer getSigner() {
         if (signerBuilder_ == null) {
           return signer_;
@@ -455,6 +581,9 @@ public final class SignatureRejectionInfoProtos {
           return signerBuilder_.getMessage();
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+       */
       public Builder setSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (value == null) {
@@ -468,6 +597,9 @@ public final class SignatureRejectionInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+       */
       public Builder setSigner(
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder builderForValue) {
         if (signerBuilder_ == null) {
@@ -479,6 +611,9 @@ public final class SignatureRejectionInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+       */
       public Builder mergeSigner(Diadoc.Api.Proto.Invoicing.SignerProtos.Signer value) {
         if (signerBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -495,6 +630,9 @@ public final class SignatureRejectionInfoProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+       */
       public Builder clearSigner() {
         if (signerBuilder_ == null) {
           signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
@@ -505,11 +643,17 @@ public final class SignatureRejectionInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder getSignerBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getSignerFieldBuilder().getBuilder();
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+       */
       public Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder getSignerOrBuilder() {
         if (signerBuilder_ != null) {
           return signerBuilder_.getMessageOrBuilder();
@@ -517,37 +661,40 @@ public final class SignatureRejectionInfoProtos {
           return signer_;
         }
       }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signer Signer = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder> 
           getSignerFieldBuilder() {
         if (signerBuilder_ == null) {
           signerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Invoicing.SignerProtos.Signer, Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.Builder, Diadoc.Api.Proto.Invoicing.SignerProtos.SignerOrBuilder>(
-                  signer_,
+                  getSigner(),
                   getParentForChildren(),
                   isClean());
           signer_ = null;
         }
         return signerBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.SignatureRejectionInfo)
     }
-    
+
     static {
       defaultInstance = new SignatureRejectionInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.SignatureRejectionInfo)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -564,27 +711,26 @@ public final class SignatureRejectionInfoProtos {
       "atureRejectionInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_descriptor,
-              new java.lang.String[] { "ErrorMessage", "Signer", },
-              Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.class,
-              Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Invoicing.SignerProtos.getDescriptor(),
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_SignatureRejectionInfo_descriptor,
+        new java.lang.String[] { "ErrorMessage", "Signer", });
+    Diadoc.Api.Proto.Invoicing.SignerProtos.getDescriptor();
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

@@ -8,68 +8,160 @@ public final class FnsRegistrationMessageInfoProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface FnsRegistrationMessageInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // repeated bytes Certificates = 1;
+  public interface FnsRegistrationMessageInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated bytes Certificates = 1;</code>
+     */
     java.util.List<com.google.protobuf.ByteString> getCertificatesList();
+    /**
+     * <code>repeated bytes Certificates = 1;</code>
+     */
     int getCertificatesCount();
+    /**
+     * <code>repeated bytes Certificates = 1;</code>
+     */
     com.google.protobuf.ByteString getCertificates(int index);
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfo}
+   */
   public static final class FnsRegistrationMessageInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements FnsRegistrationMessageInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfo)
+      FnsRegistrationMessageInfoOrBuilder {
     // Use FnsRegistrationMessageInfo.newBuilder() to construct.
-    private FnsRegistrationMessageInfo(Builder builder) {
+    private FnsRegistrationMessageInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private FnsRegistrationMessageInfo(boolean noInit) {}
-    
+    private FnsRegistrationMessageInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final FnsRegistrationMessageInfo defaultInstance;
     public static FnsRegistrationMessageInfo getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public FnsRegistrationMessageInfo getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FnsRegistrationMessageInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                certificates_ = new java.util.ArrayList<com.google.protobuf.ByteString>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              certificates_.add(input.readBytes());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          certificates_ = java.util.Collections.unmodifiableList(certificates_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_fieldAccessorTable;
+      return Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.class, Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.Builder.class);
     }
-    
-    // repeated bytes Certificates = 1;
+
+    public static com.google.protobuf.Parser<FnsRegistrationMessageInfo> PARSER =
+        new com.google.protobuf.AbstractParser<FnsRegistrationMessageInfo>() {
+      public FnsRegistrationMessageInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FnsRegistrationMessageInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FnsRegistrationMessageInfo> getParserForType() {
+      return PARSER;
+    }
+
     public static final int CERTIFICATES_FIELD_NUMBER = 1;
     private java.util.List<com.google.protobuf.ByteString> certificates_;
+    /**
+     * <code>repeated bytes Certificates = 1;</code>
+     */
     public java.util.List<com.google.protobuf.ByteString>
         getCertificatesList() {
       return certificates_;
     }
+    /**
+     * <code>repeated bytes Certificates = 1;</code>
+     */
     public int getCertificatesCount() {
       return certificates_.size();
     }
+    /**
+     * <code>repeated bytes Certificates = 1;</code>
+     */
     public com.google.protobuf.ByteString getCertificates(int index) {
       return certificates_.get(index);
     }
-    
+
     private void initFields() {
-      certificates_ = java.util.Collections.emptyList();;
+      certificates_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -78,12 +170,12 @@ public final class FnsRegistrationMessageInfoProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       {
         int dataSize = 0;
@@ -98,113 +190,106 @@ public final class FnsRegistrationMessageInfoProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfo}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfo)
+        Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_fieldAccessorTable;
+        return Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.class, Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -215,27 +300,27 @@ public final class FnsRegistrationMessageInfoProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
-        certificates_ = java.util.Collections.emptyList();;
+        certificates_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.getDescriptor();
+        return Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo getDefaultInstanceForType() {
         return Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo build() {
         Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -243,17 +328,7 @@ public final class FnsRegistrationMessageInfoProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo buildPartial() {
         Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo result = new Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo(this);
         int from_bitField0_ = bitField0_;
@@ -265,7 +340,7 @@ public final class FnsRegistrationMessageInfoProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo) {
           return mergeFrom((Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo)other);
@@ -274,7 +349,7 @@ public final class FnsRegistrationMessageInfoProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo other) {
         if (other == Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.getDefaultInstance()) return this;
         if (!other.certificates_.isEmpty()) {
@@ -290,63 +365,59 @@ public final class FnsRegistrationMessageInfoProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              ensureCertificatesIsMutable();
-              certificates_.add(input.readBytes());
-              break;
-            }
+        Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated bytes Certificates = 1;
-      private java.util.List<com.google.protobuf.ByteString> certificates_ = java.util.Collections.emptyList();;
+
+      private java.util.List<com.google.protobuf.ByteString> certificates_ = java.util.Collections.emptyList();
       private void ensureCertificatesIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           certificates_ = new java.util.ArrayList<com.google.protobuf.ByteString>(certificates_);
           bitField0_ |= 0x00000001;
          }
       }
+      /**
+       * <code>repeated bytes Certificates = 1;</code>
+       */
       public java.util.List<com.google.protobuf.ByteString>
           getCertificatesList() {
         return java.util.Collections.unmodifiableList(certificates_);
       }
+      /**
+       * <code>repeated bytes Certificates = 1;</code>
+       */
       public int getCertificatesCount() {
         return certificates_.size();
       }
+      /**
+       * <code>repeated bytes Certificates = 1;</code>
+       */
       public com.google.protobuf.ByteString getCertificates(int index) {
         return certificates_.get(index);
       }
+      /**
+       * <code>repeated bytes Certificates = 1;</code>
+       */
       public Builder setCertificates(
           int index, com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -357,6 +428,9 @@ public final class FnsRegistrationMessageInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated bytes Certificates = 1;</code>
+       */
       public Builder addCertificates(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -366,37 +440,44 @@ public final class FnsRegistrationMessageInfoProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated bytes Certificates = 1;</code>
+       */
       public Builder addAllCertificates(
           java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
         ensureCertificatesIsMutable();
-        super.addAll(values, certificates_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, certificates_);
         onChanged();
         return this;
       }
+      /**
+       * <code>repeated bytes Certificates = 1;</code>
+       */
       public Builder clearCertificates() {
-        certificates_ = java.util.Collections.emptyList();;
+        certificates_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfo)
     }
-    
+
     static {
       defaultInstance = new FnsRegistrationMessageInfo(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfo)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -411,26 +492,24 @@ public final class FnsRegistrationMessageInfoProtos {
       " \003(\014B\"B FnsRegistrationMessageInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_descriptor,
-              new java.lang.String[] { "Certificates", },
-              Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.class,
-              Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_FnsRegistrationMessageInfo_descriptor,
+        new java.lang.String[] { "Certificates", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

@@ -8,74 +8,196 @@ public final class AddressProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface AddressOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;
+  public interface AddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Address)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+     */
     boolean hasRussianAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+     */
     Diadoc.Api.Proto.AddressProtos.RussianAddress getRussianAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+     */
     Diadoc.Api.Proto.AddressProtos.RussianAddressOrBuilder getRussianAddressOrBuilder();
-    
-    // optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+     */
     boolean hasForeignAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+     */
     Diadoc.Api.Proto.AddressProtos.ForeignAddress getForeignAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+     */
     Diadoc.Api.Proto.AddressProtos.ForeignAddressOrBuilder getForeignAddressOrBuilder();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Address}
+   */
   public static final class Address extends
-      com.google.protobuf.GeneratedMessage
-      implements AddressOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Address)
+      AddressOrBuilder {
     // Use Address.newBuilder() to construct.
-    private Address(Builder builder) {
+    private Address(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Address(boolean noInit) {}
-    
+    private Address(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Address defaultInstance;
     public static Address getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Address getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Address(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = russianAddress_.toBuilder();
+              }
+              russianAddress_ = input.readMessage(Diadoc.Api.Proto.AddressProtos.RussianAddress.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(russianAddress_);
+                russianAddress_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = foreignAddress_.toBuilder();
+              }
+              foreignAddress_ = input.readMessage(Diadoc.Api.Proto.AddressProtos.ForeignAddress.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(foreignAddress_);
+                foreignAddress_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_Address_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_Address_fieldAccessorTable;
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_Address_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.AddressProtos.Address.class, Diadoc.Api.Proto.AddressProtos.Address.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Address> PARSER =
+        new com.google.protobuf.AbstractParser<Address>() {
+      public Address parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Address(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Address> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;
     public static final int RUSSIANADDRESS_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.AddressProtos.RussianAddress russianAddress_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+     */
     public boolean hasRussianAddress() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+     */
     public Diadoc.Api.Proto.AddressProtos.RussianAddress getRussianAddress() {
       return russianAddress_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+     */
     public Diadoc.Api.Proto.AddressProtos.RussianAddressOrBuilder getRussianAddressOrBuilder() {
       return russianAddress_;
     }
-    
-    // optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;
+
     public static final int FOREIGNADDRESS_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.AddressProtos.ForeignAddress foreignAddress_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+     */
     public boolean hasForeignAddress() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+     */
     public Diadoc.Api.Proto.AddressProtos.ForeignAddress getForeignAddress() {
       return foreignAddress_;
     }
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+     */
     public Diadoc.Api.Proto.AddressProtos.ForeignAddressOrBuilder getForeignAddressOrBuilder() {
       return foreignAddress_;
     }
-    
+
     private void initFields() {
       russianAddress_ = Diadoc.Api.Proto.AddressProtos.RussianAddress.getDefaultInstance();
       foreignAddress_ = Diadoc.Api.Proto.AddressProtos.ForeignAddress.getDefaultInstance();
@@ -83,8 +205,9 @@ public final class AddressProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (hasRussianAddress()) {
         if (!getRussianAddress().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -100,7 +223,7 @@ public final class AddressProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -112,12 +235,12 @@ public final class AddressProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -131,113 +254,106 @@ public final class AddressProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.AddressProtos.Address parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.AddressProtos.Address parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.Address parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.AddressProtos.Address parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.Address parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.AddressProtos.Address parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.Address parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.AddressProtos.Address parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.Address parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.AddressProtos.Address parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.AddressProtos.Address prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Address}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.AddressProtos.AddressOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Address)
+        Diadoc.Api.Proto.AddressProtos.AddressOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_Address_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_Address_fieldAccessorTable;
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_Address_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.AddressProtos.Address.class, Diadoc.Api.Proto.AddressProtos.Address.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.AddressProtos.Address.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -250,7 +366,7 @@ public final class AddressProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (russianAddressBuilder_ == null) {
@@ -267,20 +383,20 @@ public final class AddressProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.AddressProtos.Address.getDescriptor();
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_Address_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.AddressProtos.Address getDefaultInstanceForType() {
         return Diadoc.Api.Proto.AddressProtos.Address.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.AddressProtos.Address build() {
         Diadoc.Api.Proto.AddressProtos.Address result = buildPartial();
         if (!result.isInitialized()) {
@@ -288,17 +404,7 @@ public final class AddressProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.AddressProtos.Address buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.AddressProtos.Address result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.AddressProtos.Address buildPartial() {
         Diadoc.Api.Proto.AddressProtos.Address result = new Diadoc.Api.Proto.AddressProtos.Address(this);
         int from_bitField0_ = bitField0_;
@@ -323,7 +429,7 @@ public final class AddressProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.AddressProtos.Address) {
           return mergeFrom((Diadoc.Api.Proto.AddressProtos.Address)other);
@@ -332,7 +438,7 @@ public final class AddressProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.AddressProtos.Address other) {
         if (other == Diadoc.Api.Proto.AddressProtos.Address.getDefaultInstance()) return this;
         if (other.hasRussianAddress()) {
@@ -344,7 +450,7 @@ public final class AddressProtos {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (hasRussianAddress()) {
           if (!getRussianAddress().isInitialized()) {
@@ -360,61 +466,38 @@ public final class AddressProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder subBuilder = Diadoc.Api.Proto.AddressProtos.RussianAddress.newBuilder();
-              if (hasRussianAddress()) {
-                subBuilder.mergeFrom(getRussianAddress());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setRussianAddress(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder subBuilder = Diadoc.Api.Proto.AddressProtos.ForeignAddress.newBuilder();
-              if (hasForeignAddress()) {
-                subBuilder.mergeFrom(getForeignAddress());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setForeignAddress(subBuilder.buildPartial());
-              break;
-            }
+        Diadoc.Api.Proto.AddressProtos.Address parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.AddressProtos.Address) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;
+
       private Diadoc.Api.Proto.AddressProtos.RussianAddress russianAddress_ = Diadoc.Api.Proto.AddressProtos.RussianAddress.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.AddressProtos.RussianAddress, Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder, Diadoc.Api.Proto.AddressProtos.RussianAddressOrBuilder> russianAddressBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+       */
       public boolean hasRussianAddress() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.RussianAddress getRussianAddress() {
         if (russianAddressBuilder_ == null) {
           return russianAddress_;
@@ -422,6 +505,9 @@ public final class AddressProtos {
           return russianAddressBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+       */
       public Builder setRussianAddress(Diadoc.Api.Proto.AddressProtos.RussianAddress value) {
         if (russianAddressBuilder_ == null) {
           if (value == null) {
@@ -435,6 +521,9 @@ public final class AddressProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+       */
       public Builder setRussianAddress(
           Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder builderForValue) {
         if (russianAddressBuilder_ == null) {
@@ -446,6 +535,9 @@ public final class AddressProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+       */
       public Builder mergeRussianAddress(Diadoc.Api.Proto.AddressProtos.RussianAddress value) {
         if (russianAddressBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -462,6 +554,9 @@ public final class AddressProtos {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+       */
       public Builder clearRussianAddress() {
         if (russianAddressBuilder_ == null) {
           russianAddress_ = Diadoc.Api.Proto.AddressProtos.RussianAddress.getDefaultInstance();
@@ -472,11 +567,17 @@ public final class AddressProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder getRussianAddressBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getRussianAddressFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.RussianAddressOrBuilder getRussianAddressOrBuilder() {
         if (russianAddressBuilder_ != null) {
           return russianAddressBuilder_.getMessageOrBuilder();
@@ -484,27 +585,35 @@ public final class AddressProtos {
           return russianAddress_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RussianAddress RussianAddress = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.AddressProtos.RussianAddress, Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder, Diadoc.Api.Proto.AddressProtos.RussianAddressOrBuilder> 
           getRussianAddressFieldBuilder() {
         if (russianAddressBuilder_ == null) {
           russianAddressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.AddressProtos.RussianAddress, Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder, Diadoc.Api.Proto.AddressProtos.RussianAddressOrBuilder>(
-                  russianAddress_,
+                  getRussianAddress(),
                   getParentForChildren(),
                   isClean());
           russianAddress_ = null;
         }
         return russianAddressBuilder_;
       }
-      
-      // optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;
+
       private Diadoc.Api.Proto.AddressProtos.ForeignAddress foreignAddress_ = Diadoc.Api.Proto.AddressProtos.ForeignAddress.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.AddressProtos.ForeignAddress, Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder, Diadoc.Api.Proto.AddressProtos.ForeignAddressOrBuilder> foreignAddressBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+       */
       public boolean hasForeignAddress() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.ForeignAddress getForeignAddress() {
         if (foreignAddressBuilder_ == null) {
           return foreignAddress_;
@@ -512,6 +621,9 @@ public final class AddressProtos {
           return foreignAddressBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+       */
       public Builder setForeignAddress(Diadoc.Api.Proto.AddressProtos.ForeignAddress value) {
         if (foreignAddressBuilder_ == null) {
           if (value == null) {
@@ -525,6 +637,9 @@ public final class AddressProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+       */
       public Builder setForeignAddress(
           Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder builderForValue) {
         if (foreignAddressBuilder_ == null) {
@@ -536,6 +651,9 @@ public final class AddressProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+       */
       public Builder mergeForeignAddress(Diadoc.Api.Proto.AddressProtos.ForeignAddress value) {
         if (foreignAddressBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -552,6 +670,9 @@ public final class AddressProtos {
         bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+       */
       public Builder clearForeignAddress() {
         if (foreignAddressBuilder_ == null) {
           foreignAddress_ = Diadoc.Api.Proto.AddressProtos.ForeignAddress.getDefaultInstance();
@@ -562,11 +683,17 @@ public final class AddressProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder getForeignAddressBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getForeignAddressFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+       */
       public Diadoc.Api.Proto.AddressProtos.ForeignAddressOrBuilder getForeignAddressOrBuilder() {
         if (foreignAddressBuilder_ != null) {
           return foreignAddressBuilder_.getMessageOrBuilder();
@@ -574,387 +701,904 @@ public final class AddressProtos {
           return foreignAddress_;
         }
       }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.AddressProtos.ForeignAddress, Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder, Diadoc.Api.Proto.AddressProtos.ForeignAddressOrBuilder> 
           getForeignAddressFieldBuilder() {
         if (foreignAddressBuilder_ == null) {
           foreignAddressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.AddressProtos.ForeignAddress, Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder, Diadoc.Api.Proto.AddressProtos.ForeignAddressOrBuilder>(
-                  foreignAddress_,
+                  getForeignAddress(),
                   getParentForChildren(),
                   isClean());
           foreignAddress_ = null;
         }
         return foreignAddressBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Address)
     }
-    
+
     static {
       defaultInstance = new Address(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Address)
   }
-  
-  public interface RussianAddressOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string ZipCode = 1;
+
+  public interface RussianAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.RussianAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string ZipCode = 1;</code>
+     *
+     * <pre>
+     * индекс
+     * </pre>
+     */
     boolean hasZipCode();
-    String getZipCode();
-    
-    // required string Region = 2;
+    /**
+     * <code>optional string ZipCode = 1;</code>
+     *
+     * <pre>
+     * индекс
+     * </pre>
+     */
+    java.lang.String getZipCode();
+    /**
+     * <code>optional string ZipCode = 1;</code>
+     *
+     * <pre>
+     * индекс
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getZipCodeBytes();
+
+    /**
+     * <code>required string Region = 2;</code>
+     *
+     * <pre>
+     * регион (код)
+     * </pre>
+     */
     boolean hasRegion();
-    String getRegion();
-    
-    // optional string Territory = 3;
+    /**
+     * <code>required string Region = 2;</code>
+     *
+     * <pre>
+     * регион (код)
+     * </pre>
+     */
+    java.lang.String getRegion();
+    /**
+     * <code>required string Region = 2;</code>
+     *
+     * <pre>
+     * регион (код)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes();
+
+    /**
+     * <code>optional string Territory = 3;</code>
+     *
+     * <pre>
+     * район
+     * </pre>
+     */
     boolean hasTerritory();
-    String getTerritory();
-    
-    // optional string City = 4;
+    /**
+     * <code>optional string Territory = 3;</code>
+     *
+     * <pre>
+     * район
+     * </pre>
+     */
+    java.lang.String getTerritory();
+    /**
+     * <code>optional string Territory = 3;</code>
+     *
+     * <pre>
+     * район
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTerritoryBytes();
+
+    /**
+     * <code>optional string City = 4;</code>
+     *
+     * <pre>
+     * город
+     * </pre>
+     */
     boolean hasCity();
-    String getCity();
-    
-    // optional string Locality = 5;
+    /**
+     * <code>optional string City = 4;</code>
+     *
+     * <pre>
+     * город
+     * </pre>
+     */
+    java.lang.String getCity();
+    /**
+     * <code>optional string City = 4;</code>
+     *
+     * <pre>
+     * город
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCityBytes();
+
+    /**
+     * <code>optional string Locality = 5;</code>
+     *
+     * <pre>
+     * населенный пункт
+     * </pre>
+     */
     boolean hasLocality();
-    String getLocality();
-    
-    // optional string Street = 6;
+    /**
+     * <code>optional string Locality = 5;</code>
+     *
+     * <pre>
+     * населенный пункт
+     * </pre>
+     */
+    java.lang.String getLocality();
+    /**
+     * <code>optional string Locality = 5;</code>
+     *
+     * <pre>
+     * населенный пункт
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getLocalityBytes();
+
+    /**
+     * <code>optional string Street = 6;</code>
+     *
+     * <pre>
+     * улица
+     * </pre>
+     */
     boolean hasStreet();
-    String getStreet();
-    
-    // optional string Building = 7;
+    /**
+     * <code>optional string Street = 6;</code>
+     *
+     * <pre>
+     * улица
+     * </pre>
+     */
+    java.lang.String getStreet();
+    /**
+     * <code>optional string Street = 6;</code>
+     *
+     * <pre>
+     * улица
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getStreetBytes();
+
+    /**
+     * <code>optional string Building = 7;</code>
+     *
+     * <pre>
+     * дом
+     * </pre>
+     */
     boolean hasBuilding();
-    String getBuilding();
-    
-    // optional string Block = 8;
+    /**
+     * <code>optional string Building = 7;</code>
+     *
+     * <pre>
+     * дом
+     * </pre>
+     */
+    java.lang.String getBuilding();
+    /**
+     * <code>optional string Building = 7;</code>
+     *
+     * <pre>
+     * дом
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getBuildingBytes();
+
+    /**
+     * <code>optional string Block = 8;</code>
+     *
+     * <pre>
+     * корпус
+     * </pre>
+     */
     boolean hasBlock();
-    String getBlock();
-    
-    // optional string Apartment = 9;
+    /**
+     * <code>optional string Block = 8;</code>
+     *
+     * <pre>
+     * корпус
+     * </pre>
+     */
+    java.lang.String getBlock();
+    /**
+     * <code>optional string Block = 8;</code>
+     *
+     * <pre>
+     * корпус
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getBlockBytes();
+
+    /**
+     * <code>optional string Apartment = 9;</code>
+     *
+     * <pre>
+     * квартира
+     * </pre>
+     */
     boolean hasApartment();
-    String getApartment();
+    /**
+     * <code>optional string Apartment = 9;</code>
+     *
+     * <pre>
+     * квартира
+     * </pre>
+     */
+    java.lang.String getApartment();
+    /**
+     * <code>optional string Apartment = 9;</code>
+     *
+     * <pre>
+     * квартира
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getApartmentBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.RussianAddress}
+   */
   public static final class RussianAddress extends
-      com.google.protobuf.GeneratedMessage
-      implements RussianAddressOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.RussianAddress)
+      RussianAddressOrBuilder {
     // Use RussianAddress.newBuilder() to construct.
-    private RussianAddress(Builder builder) {
+    private RussianAddress(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private RussianAddress(boolean noInit) {}
-    
+    private RussianAddress(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final RussianAddress defaultInstance;
     public static RussianAddress getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public RussianAddress getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RussianAddress(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              zipCode_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              region_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              territory_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              city_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              locality_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              street_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              building_ = bs;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              block_ = bs;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              apartment_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_RussianAddress_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_RussianAddress_fieldAccessorTable;
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_RussianAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.AddressProtos.RussianAddress.class, Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<RussianAddress> PARSER =
+        new com.google.protobuf.AbstractParser<RussianAddress>() {
+      public RussianAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RussianAddress(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RussianAddress> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string ZipCode = 1;
     public static final int ZIPCODE_FIELD_NUMBER = 1;
     private java.lang.Object zipCode_;
+    /**
+     * <code>optional string ZipCode = 1;</code>
+     *
+     * <pre>
+     * индекс
+     * </pre>
+     */
     public boolean hasZipCode() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getZipCode() {
+    /**
+     * <code>optional string ZipCode = 1;</code>
+     *
+     * <pre>
+     * индекс
+     * </pre>
+     */
+    public java.lang.String getZipCode() {
       java.lang.Object ref = zipCode_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           zipCode_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getZipCodeBytes() {
+    /**
+     * <code>optional string ZipCode = 1;</code>
+     *
+     * <pre>
+     * индекс
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getZipCodeBytes() {
       java.lang.Object ref = zipCode_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         zipCode_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Region = 2;
+
     public static final int REGION_FIELD_NUMBER = 2;
     private java.lang.Object region_;
+    /**
+     * <code>required string Region = 2;</code>
+     *
+     * <pre>
+     * регион (код)
+     * </pre>
+     */
     public boolean hasRegion() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getRegion() {
+    /**
+     * <code>required string Region = 2;</code>
+     *
+     * <pre>
+     * регион (код)
+     * </pre>
+     */
+    public java.lang.String getRegion() {
       java.lang.Object ref = region_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           region_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getRegionBytes() {
+    /**
+     * <code>required string Region = 2;</code>
+     *
+     * <pre>
+     * регион (код)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getRegionBytes() {
       java.lang.Object ref = region_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         region_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Territory = 3;
+
     public static final int TERRITORY_FIELD_NUMBER = 3;
     private java.lang.Object territory_;
+    /**
+     * <code>optional string Territory = 3;</code>
+     *
+     * <pre>
+     * район
+     * </pre>
+     */
     public boolean hasTerritory() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getTerritory() {
+    /**
+     * <code>optional string Territory = 3;</code>
+     *
+     * <pre>
+     * район
+     * </pre>
+     */
+    public java.lang.String getTerritory() {
       java.lang.Object ref = territory_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           territory_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTerritoryBytes() {
+    /**
+     * <code>optional string Territory = 3;</code>
+     *
+     * <pre>
+     * район
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTerritoryBytes() {
       java.lang.Object ref = territory_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         territory_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string City = 4;
+
     public static final int CITY_FIELD_NUMBER = 4;
     private java.lang.Object city_;
+    /**
+     * <code>optional string City = 4;</code>
+     *
+     * <pre>
+     * город
+     * </pre>
+     */
     public boolean hasCity() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getCity() {
+    /**
+     * <code>optional string City = 4;</code>
+     *
+     * <pre>
+     * город
+     * </pre>
+     */
+    public java.lang.String getCity() {
       java.lang.Object ref = city_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           city_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getCityBytes() {
+    /**
+     * <code>optional string City = 4;</code>
+     *
+     * <pre>
+     * город
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCityBytes() {
       java.lang.Object ref = city_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         city_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Locality = 5;
+
     public static final int LOCALITY_FIELD_NUMBER = 5;
     private java.lang.Object locality_;
+    /**
+     * <code>optional string Locality = 5;</code>
+     *
+     * <pre>
+     * населенный пункт
+     * </pre>
+     */
     public boolean hasLocality() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public String getLocality() {
+    /**
+     * <code>optional string Locality = 5;</code>
+     *
+     * <pre>
+     * населенный пункт
+     * </pre>
+     */
+    public java.lang.String getLocality() {
       java.lang.Object ref = locality_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           locality_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getLocalityBytes() {
+    /**
+     * <code>optional string Locality = 5;</code>
+     *
+     * <pre>
+     * населенный пункт
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getLocalityBytes() {
       java.lang.Object ref = locality_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         locality_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Street = 6;
+
     public static final int STREET_FIELD_NUMBER = 6;
     private java.lang.Object street_;
+    /**
+     * <code>optional string Street = 6;</code>
+     *
+     * <pre>
+     * улица
+     * </pre>
+     */
     public boolean hasStreet() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
-    public String getStreet() {
+    /**
+     * <code>optional string Street = 6;</code>
+     *
+     * <pre>
+     * улица
+     * </pre>
+     */
+    public java.lang.String getStreet() {
       java.lang.Object ref = street_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           street_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getStreetBytes() {
+    /**
+     * <code>optional string Street = 6;</code>
+     *
+     * <pre>
+     * улица
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getStreetBytes() {
       java.lang.Object ref = street_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         street_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Building = 7;
+
     public static final int BUILDING_FIELD_NUMBER = 7;
     private java.lang.Object building_;
+    /**
+     * <code>optional string Building = 7;</code>
+     *
+     * <pre>
+     * дом
+     * </pre>
+     */
     public boolean hasBuilding() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
-    public String getBuilding() {
+    /**
+     * <code>optional string Building = 7;</code>
+     *
+     * <pre>
+     * дом
+     * </pre>
+     */
+    public java.lang.String getBuilding() {
       java.lang.Object ref = building_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           building_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getBuildingBytes() {
+    /**
+     * <code>optional string Building = 7;</code>
+     *
+     * <pre>
+     * дом
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getBuildingBytes() {
       java.lang.Object ref = building_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         building_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Block = 8;
+
     public static final int BLOCK_FIELD_NUMBER = 8;
     private java.lang.Object block_;
+    /**
+     * <code>optional string Block = 8;</code>
+     *
+     * <pre>
+     * корпус
+     * </pre>
+     */
     public boolean hasBlock() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
-    public String getBlock() {
+    /**
+     * <code>optional string Block = 8;</code>
+     *
+     * <pre>
+     * корпус
+     * </pre>
+     */
+    public java.lang.String getBlock() {
       java.lang.Object ref = block_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           block_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getBlockBytes() {
+    /**
+     * <code>optional string Block = 8;</code>
+     *
+     * <pre>
+     * корпус
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getBlockBytes() {
       java.lang.Object ref = block_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         block_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string Apartment = 9;
+
     public static final int APARTMENT_FIELD_NUMBER = 9;
     private java.lang.Object apartment_;
+    /**
+     * <code>optional string Apartment = 9;</code>
+     *
+     * <pre>
+     * квартира
+     * </pre>
+     */
     public boolean hasApartment() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
-    public String getApartment() {
+    /**
+     * <code>optional string Apartment = 9;</code>
+     *
+     * <pre>
+     * квартира
+     * </pre>
+     */
+    public java.lang.String getApartment() {
       java.lang.Object ref = apartment_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           apartment_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getApartmentBytes() {
+    /**
+     * <code>optional string Apartment = 9;</code>
+     *
+     * <pre>
+     * квартира
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getApartmentBytes() {
       java.lang.Object ref = apartment_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         apartment_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       zipCode_ = "";
       region_ = "";
@@ -969,8 +1613,9 @@ public final class AddressProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasRegion()) {
         memoizedIsInitialized = 0;
         return false;
@@ -978,7 +1623,7 @@ public final class AddressProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1011,12 +1656,12 @@ public final class AddressProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1058,113 +1703,106 @@ public final class AddressProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.AddressProtos.RussianAddress parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.AddressProtos.RussianAddress prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.RussianAddress}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.AddressProtos.RussianAddressOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.RussianAddress)
+        Diadoc.Api.Proto.AddressProtos.RussianAddressOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_RussianAddress_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_RussianAddress_fieldAccessorTable;
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_RussianAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.AddressProtos.RussianAddress.class, Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.AddressProtos.RussianAddress.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1175,7 +1813,7 @@ public final class AddressProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         zipCode_ = "";
@@ -1198,20 +1836,20 @@ public final class AddressProtos {
         bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.AddressProtos.RussianAddress.getDescriptor();
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_RussianAddress_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.AddressProtos.RussianAddress getDefaultInstanceForType() {
         return Diadoc.Api.Proto.AddressProtos.RussianAddress.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.AddressProtos.RussianAddress build() {
         Diadoc.Api.Proto.AddressProtos.RussianAddress result = buildPartial();
         if (!result.isInitialized()) {
@@ -1219,17 +1857,7 @@ public final class AddressProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.AddressProtos.RussianAddress buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.AddressProtos.RussianAddress result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.AddressProtos.RussianAddress buildPartial() {
         Diadoc.Api.Proto.AddressProtos.RussianAddress result = new Diadoc.Api.Proto.AddressProtos.RussianAddress(this);
         int from_bitField0_ = bitField0_;
@@ -1274,7 +1902,7 @@ public final class AddressProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.AddressProtos.RussianAddress) {
           return mergeFrom((Diadoc.Api.Proto.AddressProtos.RussianAddress)other);
@@ -1283,40 +1911,58 @@ public final class AddressProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.AddressProtos.RussianAddress other) {
         if (other == Diadoc.Api.Proto.AddressProtos.RussianAddress.getDefaultInstance()) return this;
         if (other.hasZipCode()) {
-          setZipCode(other.getZipCode());
+          bitField0_ |= 0x00000001;
+          zipCode_ = other.zipCode_;
+          onChanged();
         }
         if (other.hasRegion()) {
-          setRegion(other.getRegion());
+          bitField0_ |= 0x00000002;
+          region_ = other.region_;
+          onChanged();
         }
         if (other.hasTerritory()) {
-          setTerritory(other.getTerritory());
+          bitField0_ |= 0x00000004;
+          territory_ = other.territory_;
+          onChanged();
         }
         if (other.hasCity()) {
-          setCity(other.getCity());
+          bitField0_ |= 0x00000008;
+          city_ = other.city_;
+          onChanged();
         }
         if (other.hasLocality()) {
-          setLocality(other.getLocality());
+          bitField0_ |= 0x00000010;
+          locality_ = other.locality_;
+          onChanged();
         }
         if (other.hasStreet()) {
-          setStreet(other.getStreet());
+          bitField0_ |= 0x00000020;
+          street_ = other.street_;
+          onChanged();
         }
         if (other.hasBuilding()) {
-          setBuilding(other.getBuilding());
+          bitField0_ |= 0x00000040;
+          building_ = other.building_;
+          onChanged();
         }
         if (other.hasBlock()) {
-          setBlock(other.getBlock());
+          bitField0_ |= 0x00000080;
+          block_ = other.block_;
+          onChanged();
         }
         if (other.hasApartment()) {
-          setApartment(other.getApartment());
+          bitField0_ |= 0x00000100;
+          apartment_ = other.apartment_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasRegion()) {
           
@@ -1324,97 +1970,87 @@ public final class AddressProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              zipCode_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              region_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              territory_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              city_ = input.readBytes();
-              break;
-            }
-            case 42: {
-              bitField0_ |= 0x00000010;
-              locality_ = input.readBytes();
-              break;
-            }
-            case 50: {
-              bitField0_ |= 0x00000020;
-              street_ = input.readBytes();
-              break;
-            }
-            case 58: {
-              bitField0_ |= 0x00000040;
-              building_ = input.readBytes();
-              break;
-            }
-            case 66: {
-              bitField0_ |= 0x00000080;
-              block_ = input.readBytes();
-              break;
-            }
-            case 74: {
-              bitField0_ |= 0x00000100;
-              apartment_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.AddressProtos.RussianAddress parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.AddressProtos.RussianAddress) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string ZipCode = 1;
+
       private java.lang.Object zipCode_ = "";
+      /**
+       * <code>optional string ZipCode = 1;</code>
+       *
+       * <pre>
+       * индекс
+       * </pre>
+       */
       public boolean hasZipCode() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getZipCode() {
+      /**
+       * <code>optional string ZipCode = 1;</code>
+       *
+       * <pre>
+       * индекс
+       * </pre>
+       */
+      public java.lang.String getZipCode() {
         java.lang.Object ref = zipCode_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          zipCode_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            zipCode_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setZipCode(String value) {
+      /**
+       * <code>optional string ZipCode = 1;</code>
+       *
+       * <pre>
+       * индекс
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getZipCodeBytes() {
+        java.lang.Object ref = zipCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          zipCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ZipCode = 1;</code>
+       *
+       * <pre>
+       * индекс
+       * </pre>
+       */
+      public Builder setZipCode(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1423,34 +2059,98 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string ZipCode = 1;</code>
+       *
+       * <pre>
+       * индекс
+       * </pre>
+       */
       public Builder clearZipCode() {
         bitField0_ = (bitField0_ & ~0x00000001);
         zipCode_ = getDefaultInstance().getZipCode();
         onChanged();
         return this;
       }
-      void setZipCode(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string ZipCode = 1;</code>
+       *
+       * <pre>
+       * индекс
+       * </pre>
+       */
+      public Builder setZipCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         zipCode_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Region = 2;
+
       private java.lang.Object region_ = "";
+      /**
+       * <code>required string Region = 2;</code>
+       *
+       * <pre>
+       * регион (код)
+       * </pre>
+       */
       public boolean hasRegion() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getRegion() {
+      /**
+       * <code>required string Region = 2;</code>
+       *
+       * <pre>
+       * регион (код)
+       * </pre>
+       */
+      public java.lang.String getRegion() {
         java.lang.Object ref = region_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          region_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            region_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setRegion(String value) {
+      /**
+       * <code>required string Region = 2;</code>
+       *
+       * <pre>
+       * регион (код)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes() {
+        java.lang.Object ref = region_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          region_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Region = 2;</code>
+       *
+       * <pre>
+       * регион (код)
+       * </pre>
+       */
+      public Builder setRegion(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1459,34 +2159,98 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Region = 2;</code>
+       *
+       * <pre>
+       * регион (код)
+       * </pre>
+       */
       public Builder clearRegion() {
         bitField0_ = (bitField0_ & ~0x00000002);
         region_ = getDefaultInstance().getRegion();
         onChanged();
         return this;
       }
-      void setRegion(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string Region = 2;</code>
+       *
+       * <pre>
+       * регион (код)
+       * </pre>
+       */
+      public Builder setRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         region_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Territory = 3;
+
       private java.lang.Object territory_ = "";
+      /**
+       * <code>optional string Territory = 3;</code>
+       *
+       * <pre>
+       * район
+       * </pre>
+       */
       public boolean hasTerritory() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getTerritory() {
+      /**
+       * <code>optional string Territory = 3;</code>
+       *
+       * <pre>
+       * район
+       * </pre>
+       */
+      public java.lang.String getTerritory() {
         java.lang.Object ref = territory_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          territory_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            territory_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTerritory(String value) {
+      /**
+       * <code>optional string Territory = 3;</code>
+       *
+       * <pre>
+       * район
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTerritoryBytes() {
+        java.lang.Object ref = territory_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          territory_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Territory = 3;</code>
+       *
+       * <pre>
+       * район
+       * </pre>
+       */
+      public Builder setTerritory(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1495,34 +2259,98 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Territory = 3;</code>
+       *
+       * <pre>
+       * район
+       * </pre>
+       */
       public Builder clearTerritory() {
         bitField0_ = (bitField0_ & ~0x00000004);
         territory_ = getDefaultInstance().getTerritory();
         onChanged();
         return this;
       }
-      void setTerritory(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string Territory = 3;</code>
+       *
+       * <pre>
+       * район
+       * </pre>
+       */
+      public Builder setTerritoryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         territory_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string City = 4;
+
       private java.lang.Object city_ = "";
+      /**
+       * <code>optional string City = 4;</code>
+       *
+       * <pre>
+       * город
+       * </pre>
+       */
       public boolean hasCity() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getCity() {
+      /**
+       * <code>optional string City = 4;</code>
+       *
+       * <pre>
+       * город
+       * </pre>
+       */
+      public java.lang.String getCity() {
         java.lang.Object ref = city_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          city_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            city_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setCity(String value) {
+      /**
+       * <code>optional string City = 4;</code>
+       *
+       * <pre>
+       * город
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = city_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          city_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string City = 4;</code>
+       *
+       * <pre>
+       * город
+       * </pre>
+       */
+      public Builder setCity(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1531,34 +2359,98 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string City = 4;</code>
+       *
+       * <pre>
+       * город
+       * </pre>
+       */
       public Builder clearCity() {
         bitField0_ = (bitField0_ & ~0x00000008);
         city_ = getDefaultInstance().getCity();
         onChanged();
         return this;
       }
-      void setCity(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string City = 4;</code>
+       *
+       * <pre>
+       * город
+       * </pre>
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         city_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Locality = 5;
+
       private java.lang.Object locality_ = "";
+      /**
+       * <code>optional string Locality = 5;</code>
+       *
+       * <pre>
+       * населенный пункт
+       * </pre>
+       */
       public boolean hasLocality() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      public String getLocality() {
+      /**
+       * <code>optional string Locality = 5;</code>
+       *
+       * <pre>
+       * населенный пункт
+       * </pre>
+       */
+      public java.lang.String getLocality() {
         java.lang.Object ref = locality_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          locality_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            locality_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setLocality(String value) {
+      /**
+       * <code>optional string Locality = 5;</code>
+       *
+       * <pre>
+       * населенный пункт
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getLocalityBytes() {
+        java.lang.Object ref = locality_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          locality_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Locality = 5;</code>
+       *
+       * <pre>
+       * населенный пункт
+       * </pre>
+       */
+      public Builder setLocality(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1567,34 +2459,98 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Locality = 5;</code>
+       *
+       * <pre>
+       * населенный пункт
+       * </pre>
+       */
       public Builder clearLocality() {
         bitField0_ = (bitField0_ & ~0x00000010);
         locality_ = getDefaultInstance().getLocality();
         onChanged();
         return this;
       }
-      void setLocality(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000010;
+      /**
+       * <code>optional string Locality = 5;</code>
+       *
+       * <pre>
+       * населенный пункт
+       * </pre>
+       */
+      public Builder setLocalityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
         locality_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Street = 6;
+
       private java.lang.Object street_ = "";
+      /**
+       * <code>optional string Street = 6;</code>
+       *
+       * <pre>
+       * улица
+       * </pre>
+       */
       public boolean hasStreet() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
-      public String getStreet() {
+      /**
+       * <code>optional string Street = 6;</code>
+       *
+       * <pre>
+       * улица
+       * </pre>
+       */
+      public java.lang.String getStreet() {
         java.lang.Object ref = street_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          street_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            street_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setStreet(String value) {
+      /**
+       * <code>optional string Street = 6;</code>
+       *
+       * <pre>
+       * улица
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getStreetBytes() {
+        java.lang.Object ref = street_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          street_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Street = 6;</code>
+       *
+       * <pre>
+       * улица
+       * </pre>
+       */
+      public Builder setStreet(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1603,34 +2559,98 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Street = 6;</code>
+       *
+       * <pre>
+       * улица
+       * </pre>
+       */
       public Builder clearStreet() {
         bitField0_ = (bitField0_ & ~0x00000020);
         street_ = getDefaultInstance().getStreet();
         onChanged();
         return this;
       }
-      void setStreet(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000020;
+      /**
+       * <code>optional string Street = 6;</code>
+       *
+       * <pre>
+       * улица
+       * </pre>
+       */
+      public Builder setStreetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
         street_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Building = 7;
+
       private java.lang.Object building_ = "";
+      /**
+       * <code>optional string Building = 7;</code>
+       *
+       * <pre>
+       * дом
+       * </pre>
+       */
       public boolean hasBuilding() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
-      public String getBuilding() {
+      /**
+       * <code>optional string Building = 7;</code>
+       *
+       * <pre>
+       * дом
+       * </pre>
+       */
+      public java.lang.String getBuilding() {
         java.lang.Object ref = building_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          building_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            building_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setBuilding(String value) {
+      /**
+       * <code>optional string Building = 7;</code>
+       *
+       * <pre>
+       * дом
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getBuildingBytes() {
+        java.lang.Object ref = building_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          building_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Building = 7;</code>
+       *
+       * <pre>
+       * дом
+       * </pre>
+       */
+      public Builder setBuilding(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1639,34 +2659,98 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Building = 7;</code>
+       *
+       * <pre>
+       * дом
+       * </pre>
+       */
       public Builder clearBuilding() {
         bitField0_ = (bitField0_ & ~0x00000040);
         building_ = getDefaultInstance().getBuilding();
         onChanged();
         return this;
       }
-      void setBuilding(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000040;
+      /**
+       * <code>optional string Building = 7;</code>
+       *
+       * <pre>
+       * дом
+       * </pre>
+       */
+      public Builder setBuildingBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
         building_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Block = 8;
+
       private java.lang.Object block_ = "";
+      /**
+       * <code>optional string Block = 8;</code>
+       *
+       * <pre>
+       * корпус
+       * </pre>
+       */
       public boolean hasBlock() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
-      public String getBlock() {
+      /**
+       * <code>optional string Block = 8;</code>
+       *
+       * <pre>
+       * корпус
+       * </pre>
+       */
+      public java.lang.String getBlock() {
         java.lang.Object ref = block_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          block_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            block_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setBlock(String value) {
+      /**
+       * <code>optional string Block = 8;</code>
+       *
+       * <pre>
+       * корпус
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getBlockBytes() {
+        java.lang.Object ref = block_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          block_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Block = 8;</code>
+       *
+       * <pre>
+       * корпус
+       * </pre>
+       */
+      public Builder setBlock(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1675,34 +2759,98 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Block = 8;</code>
+       *
+       * <pre>
+       * корпус
+       * </pre>
+       */
       public Builder clearBlock() {
         bitField0_ = (bitField0_ & ~0x00000080);
         block_ = getDefaultInstance().getBlock();
         onChanged();
         return this;
       }
-      void setBlock(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000080;
+      /**
+       * <code>optional string Block = 8;</code>
+       *
+       * <pre>
+       * корпус
+       * </pre>
+       */
+      public Builder setBlockBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
         block_ = value;
         onChanged();
+        return this;
       }
-      
-      // optional string Apartment = 9;
+
       private java.lang.Object apartment_ = "";
+      /**
+       * <code>optional string Apartment = 9;</code>
+       *
+       * <pre>
+       * квартира
+       * </pre>
+       */
       public boolean hasApartment() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
-      public String getApartment() {
+      /**
+       * <code>optional string Apartment = 9;</code>
+       *
+       * <pre>
+       * квартира
+       * </pre>
+       */
+      public java.lang.String getApartment() {
         java.lang.Object ref = apartment_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          apartment_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            apartment_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setApartment(String value) {
+      /**
+       * <code>optional string Apartment = 9;</code>
+       *
+       * <pre>
+       * квартира
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getApartmentBytes() {
+        java.lang.Object ref = apartment_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apartment_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Apartment = 9;</code>
+       *
+       * <pre>
+       * квартира
+       * </pre>
+       */
+      public Builder setApartment(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1711,133 +2859,316 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string Apartment = 9;</code>
+       *
+       * <pre>
+       * квартира
+       * </pre>
+       */
       public Builder clearApartment() {
         bitField0_ = (bitField0_ & ~0x00000100);
         apartment_ = getDefaultInstance().getApartment();
         onChanged();
         return this;
       }
-      void setApartment(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000100;
+      /**
+       * <code>optional string Apartment = 9;</code>
+       *
+       * <pre>
+       * квартира
+       * </pre>
+       */
+      public Builder setApartmentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
         apartment_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.RussianAddress)
     }
-    
+
     static {
       defaultInstance = new RussianAddress(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.RussianAddress)
   }
-  
-  public interface ForeignAddressOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string Country = 1;
+
+  public interface ForeignAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.ForeignAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Country = 1;</code>
+     *
+     * <pre>
+     * страна (код)
+     * </pre>
+     */
     boolean hasCountry();
-    String getCountry();
-    
-    // required string Address = 2;
+    /**
+     * <code>required string Country = 1;</code>
+     *
+     * <pre>
+     * страна (код)
+     * </pre>
+     */
+    java.lang.String getCountry();
+    /**
+     * <code>required string Country = 1;</code>
+     *
+     * <pre>
+     * страна (код)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCountryBytes();
+
+    /**
+     * <code>required string Address = 2;</code>
+     *
+     * <pre>
+     * текст адреса
+     * </pre>
+     */
     boolean hasAddress();
-    String getAddress();
+    /**
+     * <code>required string Address = 2;</code>
+     *
+     * <pre>
+     * текст адреса
+     * </pre>
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>required string Address = 2;</code>
+     *
+     * <pre>
+     * текст адреса
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
   }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.ForeignAddress}
+   */
   public static final class ForeignAddress extends
-      com.google.protobuf.GeneratedMessage
-      implements ForeignAddressOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.ForeignAddress)
+      ForeignAddressOrBuilder {
     // Use ForeignAddress.newBuilder() to construct.
-    private ForeignAddress(Builder builder) {
+    private ForeignAddress(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private ForeignAddress(boolean noInit) {}
-    
+    private ForeignAddress(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final ForeignAddress defaultInstance;
     public static ForeignAddress getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public ForeignAddress getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ForeignAddress(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              country_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              address_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_ForeignAddress_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_ForeignAddress_fieldAccessorTable;
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_ForeignAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.AddressProtos.ForeignAddress.class, Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<ForeignAddress> PARSER =
+        new com.google.protobuf.AbstractParser<ForeignAddress>() {
+      public ForeignAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ForeignAddress(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ForeignAddress> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required string Country = 1;
     public static final int COUNTRY_FIELD_NUMBER = 1;
     private java.lang.Object country_;
+    /**
+     * <code>required string Country = 1;</code>
+     *
+     * <pre>
+     * страна (код)
+     * </pre>
+     */
     public boolean hasCountry() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getCountry() {
+    /**
+     * <code>required string Country = 1;</code>
+     *
+     * <pre>
+     * страна (код)
+     * </pre>
+     */
+    public java.lang.String getCountry() {
       java.lang.Object ref = country_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           country_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getCountryBytes() {
+    /**
+     * <code>required string Country = 1;</code>
+     *
+     * <pre>
+     * страна (код)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCountryBytes() {
       java.lang.Object ref = country_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         country_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // required string Address = 2;
+
     public static final int ADDRESS_FIELD_NUMBER = 2;
     private java.lang.Object address_;
+    /**
+     * <code>required string Address = 2;</code>
+     *
+     * <pre>
+     * текст адреса
+     * </pre>
+     */
     public boolean hasAddress() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getAddress() {
+    /**
+     * <code>required string Address = 2;</code>
+     *
+     * <pre>
+     * текст адреса
+     * </pre>
+     */
+    public java.lang.String getAddress() {
       java.lang.Object ref = address_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           address_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getAddressBytes() {
+    /**
+     * <code>required string Address = 2;</code>
+     *
+     * <pre>
+     * текст адреса
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
       java.lang.Object ref = address_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         address_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       country_ = "";
       address_ = "";
@@ -1845,8 +3176,9 @@ public final class AddressProtos {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasCountry()) {
         memoizedIsInitialized = 0;
         return false;
@@ -1858,7 +3190,7 @@ public final class AddressProtos {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1870,12 +3202,12 @@ public final class AddressProtos {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1889,113 +3221,106 @@ public final class AddressProtos {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static Diadoc.Api.Proto.AddressProtos.ForeignAddress parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(Diadoc.Api.Proto.AddressProtos.ForeignAddress prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.ForeignAddress}
+     */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements Diadoc.Api.Proto.AddressProtos.ForeignAddressOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.ForeignAddress)
+        Diadoc.Api.Proto.AddressProtos.ForeignAddressOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_ForeignAddress_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_ForeignAddress_fieldAccessorTable;
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_ForeignAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.AddressProtos.ForeignAddress.class, Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder.class);
       }
-      
+
       // Construct using Diadoc.Api.Proto.AddressProtos.ForeignAddress.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2006,7 +3331,7 @@ public final class AddressProtos {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         country_ = "";
@@ -2015,20 +3340,20 @@ public final class AddressProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.AddressProtos.ForeignAddress.getDescriptor();
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_ForeignAddress_descriptor;
       }
-      
+
       public Diadoc.Api.Proto.AddressProtos.ForeignAddress getDefaultInstanceForType() {
         return Diadoc.Api.Proto.AddressProtos.ForeignAddress.getDefaultInstance();
       }
-      
+
       public Diadoc.Api.Proto.AddressProtos.ForeignAddress build() {
         Diadoc.Api.Proto.AddressProtos.ForeignAddress result = buildPartial();
         if (!result.isInitialized()) {
@@ -2036,17 +3361,7 @@ public final class AddressProtos {
         }
         return result;
       }
-      
-      private Diadoc.Api.Proto.AddressProtos.ForeignAddress buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Diadoc.Api.Proto.AddressProtos.ForeignAddress result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public Diadoc.Api.Proto.AddressProtos.ForeignAddress buildPartial() {
         Diadoc.Api.Proto.AddressProtos.ForeignAddress result = new Diadoc.Api.Proto.AddressProtos.ForeignAddress(this);
         int from_bitField0_ = bitField0_;
@@ -2063,7 +3378,7 @@ public final class AddressProtos {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Diadoc.Api.Proto.AddressProtos.ForeignAddress) {
           return mergeFrom((Diadoc.Api.Proto.AddressProtos.ForeignAddress)other);
@@ -2072,19 +3387,23 @@ public final class AddressProtos {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(Diadoc.Api.Proto.AddressProtos.ForeignAddress other) {
         if (other == Diadoc.Api.Proto.AddressProtos.ForeignAddress.getDefaultInstance()) return this;
         if (other.hasCountry()) {
-          setCountry(other.getCountry());
+          bitField0_ |= 0x00000001;
+          country_ = other.country_;
+          onChanged();
         }
         if (other.hasAddress()) {
-          setAddress(other.getAddress());
+          bitField0_ |= 0x00000002;
+          address_ = other.address_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasCountry()) {
           
@@ -2096,62 +3415,87 @@ public final class AddressProtos {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              country_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              address_ = input.readBytes();
-              break;
-            }
+        Diadoc.Api.Proto.AddressProtos.ForeignAddress parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.AddressProtos.ForeignAddress) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required string Country = 1;
+
       private java.lang.Object country_ = "";
+      /**
+       * <code>required string Country = 1;</code>
+       *
+       * <pre>
+       * страна (код)
+       * </pre>
+       */
       public boolean hasCountry() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getCountry() {
+      /**
+       * <code>required string Country = 1;</code>
+       *
+       * <pre>
+       * страна (код)
+       * </pre>
+       */
+      public java.lang.String getCountry() {
         java.lang.Object ref = country_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          country_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            country_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setCountry(String value) {
+      /**
+       * <code>required string Country = 1;</code>
+       *
+       * <pre>
+       * страна (код)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        java.lang.Object ref = country_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          country_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Country = 1;</code>
+       *
+       * <pre>
+       * страна (код)
+       * </pre>
+       */
+      public Builder setCountry(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2160,34 +3504,98 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Country = 1;</code>
+       *
+       * <pre>
+       * страна (код)
+       * </pre>
+       */
       public Builder clearCountry() {
         bitField0_ = (bitField0_ & ~0x00000001);
         country_ = getDefaultInstance().getCountry();
         onChanged();
         return this;
       }
-      void setCountry(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string Country = 1;</code>
+       *
+       * <pre>
+       * страна (код)
+       * </pre>
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         country_ = value;
         onChanged();
+        return this;
       }
-      
-      // required string Address = 2;
+
       private java.lang.Object address_ = "";
+      /**
+       * <code>required string Address = 2;</code>
+       *
+       * <pre>
+       * текст адреса
+       * </pre>
+       */
       public boolean hasAddress() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getAddress() {
+      /**
+       * <code>required string Address = 2;</code>
+       *
+       * <pre>
+       * текст адреса
+       * </pre>
+       */
+      public java.lang.String getAddress() {
         java.lang.Object ref = address_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          address_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            address_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setAddress(String value) {
+      /**
+       * <code>required string Address = 2;</code>
+       *
+       * <pre>
+       * текст адреса
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Address = 2;</code>
+       *
+       * <pre>
+       * текст адреса
+       * </pre>
+       */
+      public Builder setAddress(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2196,45 +3604,64 @@ public final class AddressProtos {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string Address = 2;</code>
+       *
+       * <pre>
+       * текст адреса
+       * </pre>
+       */
       public Builder clearAddress() {
         bitField0_ = (bitField0_ & ~0x00000002);
         address_ = getDefaultInstance().getAddress();
         onChanged();
         return this;
       }
-      void setAddress(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>required string Address = 2;</code>
+       *
+       * <pre>
+       * текст адреса
+       * </pre>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         address_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.ForeignAddress)
     }
-    
+
     static {
       defaultInstance = new ForeignAddress(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.ForeignAddress)
   }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Address_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Address_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_RussianAddress_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_RussianAddress_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_ForeignAddress_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_ForeignAddress_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -2255,42 +3682,36 @@ public final class AddressProtos {
       "\030\001 \002(\t\022\017\n\007Address\030\002 \002(\tB\017B\rAddressProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Diadoc_Api_Proto_Address_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Diadoc_Api_Proto_Address_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_Address_descriptor,
-              new java.lang.String[] { "RussianAddress", "ForeignAddress", },
-              Diadoc.Api.Proto.AddressProtos.Address.class,
-              Diadoc.Api.Proto.AddressProtos.Address.Builder.class);
-          internal_static_Diadoc_Api_Proto_RussianAddress_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Diadoc_Api_Proto_RussianAddress_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_RussianAddress_descriptor,
-              new java.lang.String[] { "ZipCode", "Region", "Territory", "City", "Locality", "Street", "Building", "Block", "Apartment", },
-              Diadoc.Api.Proto.AddressProtos.RussianAddress.class,
-              Diadoc.Api.Proto.AddressProtos.RussianAddress.Builder.class);
-          internal_static_Diadoc_Api_Proto_ForeignAddress_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Diadoc_Api_Proto_ForeignAddress_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Diadoc_Api_Proto_ForeignAddress_descriptor,
-              new java.lang.String[] { "Country", "Address", },
-              Diadoc.Api.Proto.AddressProtos.ForeignAddress.class,
-              Diadoc.Api.Proto.AddressProtos.ForeignAddress.Builder.class);
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Diadoc_Api_Proto_Address_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Address_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Address_descriptor,
+        new java.lang.String[] { "RussianAddress", "ForeignAddress", });
+    internal_static_Diadoc_Api_Proto_RussianAddress_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_RussianAddress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_RussianAddress_descriptor,
+        new java.lang.String[] { "ZipCode", "Region", "Territory", "City", "Locality", "Street", "Building", "Block", "Apartment", });
+    internal_static_Diadoc_Api_Proto_ForeignAddress_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_ForeignAddress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_ForeignAddress_descriptor,
+        new java.lang.String[] { "Country", "Address", });
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }
