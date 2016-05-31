@@ -26,6 +26,7 @@ Task("DownloadProtobuf")
 	.WithCriteria(!FileExists(protocArchive))
 	.Does(() =>
 	{
+		CreateDirectory(protocArchive.GetDirectory());
 		DownloadFile(protocLink, protocArchive);
 	});
 	
@@ -153,7 +154,10 @@ public IEnumerable<FilePath> PatchJavaProtoFiles(IEnumerable<FilePath> files, Di
 		}
 
 		CopyFile(file, destinationFile);
-		System.IO.File.AppendAllText(destinationFile.FullPath, string.Format("\n\noption java_outer_classname = \"{0}Protos\";", relativeFile.GetFilenameWithoutExtension()));
+		var javaOuterClassName = relativeFile.GetFilenameWithoutExtension().FullPath
+			.Replace("-", "_")
+			.Replace(".", "_");
+		System.IO.File.AppendAllText(destinationFile.FullPath, string.Format("\n\noption java_outer_classname = \"{0}Protos\";", javaOuterClassName));
 		yield return destinationFile;
 	}
 }
