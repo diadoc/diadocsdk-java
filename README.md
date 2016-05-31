@@ -1,3 +1,9 @@
+             | Build Status
+-------------|--------------
+master       | [![Build status (master)](https://ci.appveyor.com/api/projects/status/2m2fh6avlbaq6ydf/branch/master?svg=true)](https://ci.appveyor.com/project/diadoc-admin/diadocsdk-java/branch/master)
+lastest      | [![Build status (lastest)](https://ci.appveyor.com/api/projects/status/2m2fh6avlbaq6ydf?svg=true)](https://ci.appveyor.com/project/diadoc-admin/diadocsdk-java)
+
+
 # diadocsdk-java
 
 diadocsdk-java является официальной Java-реализацией клиента, использующего [публичный API Диадока](http://api-docs.diadoc.ru/).
