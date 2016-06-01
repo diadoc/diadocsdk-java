@@ -19,7 +19,7 @@ diadocsdk-java является официальной Java-реализацие
     <dependencies>
       <dependency>
         <groupId>ru.kontur.diadoc</groupId>
-        <artifactId>diadocsdk-java</artifactId>
+        <artifactId>diadocsdk</artifactId>
         <version>1.36.2</version>
       </dependency>
     </dependencies>
