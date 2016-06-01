@@ -30,6 +30,7 @@ import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.*;
 import ru.CryptoPro.Crypto.CryptoProvider;
 import ru.CryptoPro.Crypto.spec.GostCipherSpec;
 import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.ContentInfo;
@@ -74,99 +75,121 @@ public class DiadocApi {
 
 
     private String url;
-	private String apiClientId;
-	private DefaultHttpClient httpClient;
-	private boolean authenticated;
+    private String apiClientId;
+    private DefaultHttpClient httpClient;
+    private boolean authenticated;
 
-	public boolean IsAuthenticated() {
-		return authenticated;
-	}
+    public boolean IsAuthenticated() {
+        return authenticated;
+    }
 
-	public DiadocApi(String apiClientId, String url)
-			throws KeyManagementException, NoSuchAlgorithmException {
-		if (url == null)
-			throw new NullPointerException("url");
-		this.url = url;
-		this.apiClientId = apiClientId;
-		this.httpClient = createHttpClient();
+    public DiadocApi(String apiClientId, String url)
+            throws KeyManagementException, NoSuchAlgorithmException {
+        if (url == null)
+            throw new NullPointerException("url");
+        this.url = url;
+        this.apiClientId = apiClientId;
+        this.httpClient = createHttpClient();
         updateCredentials(null);
-	}
+    }
 
-	private static DefaultHttpClient createHttpClient()
-			throws NoSuchAlgorithmException, KeyManagementException {
-		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
-		defaultHttpClient = makeTrustfulHttpClient(defaultHttpClient);
-		defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
-		return defaultHttpClient;
-	}
+    private static DefaultHttpClient createHttpClient()
+            throws NoSuchAlgorithmException, KeyManagementException {
+        DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
+        HttpProtocolParams.setUserAgent(defaultHttpClient.getParams(), getUserAgentString());
+        defaultHttpClient = makeTrustfulHttpClient(defaultHttpClient);
+        defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
+        return defaultHttpClient;
+    }
 
-	private static DefaultHttpClient makeTrustfulHttpClient(HttpClient base)
-			throws NoSuchAlgorithmException, KeyManagementException {
-		SSLSocketFactory ssf = getTrustfulSslSocketFactory();
-		ClientConnectionManager ccm = base.getConnectionManager();
-		ccm.getSchemeRegistry().register(new Scheme("https", 443, ssf));
-		return new DefaultHttpClient(ccm, base.getParams());
-	}
+    private static String getUserAgentString()
+    {
+        return getDiadocSdkVersion() + ";" + getJavaRuntimeVersion();
+    }
 
-	private static SSLSocketFactory getTrustfulSslSocketFactory() throws NoSuchAlgorithmException, KeyManagementException {
-		SSLContext ctx = SSLContext.getInstance("TLS");
-		X509TrustManager tm = new X509TrustManager() {
-			public void checkClientTrusted(X509Certificate[] xcs, String string)
-					throws CertificateException {
-			}
+    private static String getDiadocSdkVersion(){
+        try
+        {
+            String version = DiadocApi.class.getPackage().getSpecificationVersion();
+            return "Diadoc SDK for Java v" + version;
+        }
+        catch (Exception e)
+        {
+            return "Diadoc SDK for Java";
+        }
+    }
 
-			public void checkServerTrusted(X509Certificate[] xcs, String string)
-					throws CertificateException {
-			}
+    private static String getJavaRuntimeVersion() {
+        return System.getProperty("java.version");
+    }
 
-			public X509Certificate[] getAcceptedIssuers() {
-				return null;
-			}
-		};
-		ctx.init(null, new TrustManager[]{tm}, null);
-		return new SSLSocketFactory(ctx, SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
-	}
+    private static DefaultHttpClient makeTrustfulHttpClient(HttpClient base)
+            throws NoSuchAlgorithmException, KeyManagementException {
+        SSLSocketFactory ssf = getTrustfulSslSocketFactory();
+        ClientConnectionManager ccm = base.getConnectionManager();
+        ccm.getSchemeRegistry().register(new Scheme("https", 443, ssf));
+        return new DefaultHttpClient(ccm, base.getParams());
+    }
 
-	public void Authenticate(String login, String password) throws IOException {
-		updateCredentials(null);
+    private static SSLSocketFactory getTrustfulSslSocketFactory() throws NoSuchAlgorithmException, KeyManagementException {
+        SSLContext ctx = SSLContext.getInstance("TLS");
+        X509TrustManager tm = new X509TrustManager() {
+            public void checkClientTrusted(X509Certificate[] xcs, String string)
+                    throws CertificateException {
+            }
+
+            public void checkServerTrusted(X509Certificate[] xcs, String string)
+                    throws CertificateException {
+            }
+
+            public X509Certificate[] getAcceptedIssuers() {
+                return null;
+            }
+        };
+        ctx.init(null, new TrustManager[]{tm}, null);
+        return new SSLSocketFactory(ctx, SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+    }
+
+    public void Authenticate(String login, String password) throws IOException {
+        updateCredentials(null);
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("login", login));
         parameters.add(new BasicNameValuePair("password", password));
-		byte[] httpResponse = PerformPostHttpRequest("/Authenticate", parameters, null);
-		String result;
-		try {
-			result = new String(httpResponse, "UTF8");
-		} catch (UnsupportedEncodingException e) {
-			result = e.toString();
-		}
-		updateCredentials(result);
-	}
+        byte[] httpResponse = PerformPostHttpRequest("/Authenticate", parameters, null);
+        String result;
+        try {
+            result = new String(httpResponse, "UTF8");
+        } catch (UnsupportedEncodingException e) {
+            result = e.toString();
+        }
+        updateCredentials(result);
+    }
 
-	public void Authenticate(X509Certificate currentCert) throws Exception {
-		updateCredentials(null);
-		byte[] responseBody = PerformPostHttpRequest("/Authenticate", null, currentCert.getEncoded());
-		String authToken = getAuthToken(responseBody, currentCert);
-		// System.out.println(authToken);
-		updateCredentials(authToken);
-	}
+    public void Authenticate(X509Certificate currentCert) throws Exception {
+        updateCredentials(null);
+        byte[] responseBody = PerformPostHttpRequest("/Authenticate", null, currentCert.getEncoded());
+        String authToken = getAuthToken(responseBody, currentCert);
+        // System.out.println(authToken);
+        updateCredentials(authToken);
+    }
 
-	private void updateCredentials(String authToken) {
-		authenticated = (authToken != null);
-		DiadocCredentials diadocCredentials = new DiadocCredentials(apiClientId, authToken);
-		httpClient.getCredentialsProvider().setCredentials(AuthScope.ANY, diadocCredentials);
-	}
+    private void updateCredentials(String authToken) {
+        authenticated = (authToken != null);
+        DiadocCredentials diadocCredentials = new DiadocCredentials(apiClientId, authToken);
+        httpClient.getCredentialsProvider().setCredentials(AuthScope.ANY, diadocCredentials);
+    }
 
-	public DiadocMessage_GetApiProtos.Message PostMessage(DiadocMessage_PostApiProtos.MessageToPost msg) throws IOException {
-		if (msg == null)
-			throw new NullPointerException("msg");
-		try {
+    public DiadocMessage_GetApiProtos.Message PostMessage(DiadocMessage_PostApiProtos.MessageToPost msg) throws IOException {
+        if (msg == null)
+            throw new NullPointerException("msg");
+        try {
             byte[] responseBytes = PerformPostHttpRequest("/V3/PostMessage", null, msg.toByteArray());
-			return DiadocMessage_GetApiProtos.Message.parseFrom(responseBytes);
-		} catch (InvalidProtocolBufferException e) {
-			e.printStackTrace();
-			return null;
-		}
-	}
+            return DiadocMessage_GetApiProtos.Message.parseFrom(responseBytes);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     public void Delete(String boxId, String messageId, String documentId) throws Exception {
         if (boxId == null) throw new NullPointerException("boxId");
@@ -179,10 +202,10 @@ public class DiadocApi {
         PerformPostHttpRequest("/Delete", params, new byte[]{});
     }
 
-	private String getAuthToken(byte[] encryptedToken, X509Certificate currentCert) throws Exception {
-		byte[] decryptedToken = decryptToken(encryptedToken, currentCert);
-		return StringUtils.newStringUtf8(Base64.encodeBase64(decryptedToken));
-	}
+    private String getAuthToken(byte[] encryptedToken, X509Certificate currentCert) throws Exception {
+        byte[] decryptedToken = decryptToken(encryptedToken, currentCert);
+        return StringUtils.newStringUtf8(Base64.encodeBase64(decryptedToken));
+    }
 
     private void decodeAsn1Bytes(Asn1Type obj, byte[] bytes) throws IOException, Asn1Exception {
         Asn1BerDecodeBuffer dbuf = new Asn1BerDecodeBuffer(bytes);
@@ -215,23 +238,23 @@ public class DiadocApi {
         return cipher.doFinal(encryptedContent, 0, encryptedContent.length);
     }
 
-	private byte[] decryptToken(byte[] encryptedToken, X509Certificate currentCert) throws Exception {
+    private byte[] decryptToken(byte[] encryptedToken, X509Certificate currentCert) throws Exception {
         ContentInfo contentInfo = new ContentInfo();
         decodeAsn1Bytes(contentInfo, encryptedToken);
-		EnvelopedData cms = (EnvelopedData) contentInfo.content;
-		KeyTransRecipientInfo recipientInfo = getKeyTransRecipientInfo(cms);
-		GostR3410_KeyTransport encrKey = new GostR3410_KeyTransport();
+        EnvelopedData cms = (EnvelopedData) contentInfo.content;
+        KeyTransRecipientInfo recipientInfo = getKeyTransRecipientInfo(cms);
+        GostR3410_KeyTransport encrKey = new GostR3410_KeyTransport();
         decodeAsn1Bytes(encrKey, recipientInfo.encryptedKey.value);
-		byte[] encodedPub = encodeAsn1(encrKey.transportParameters.ephemeralPublicKey);
-		X509EncodedKeySpec pspec = new X509EncodedKeySpec(encodedPub);
-		KeyFactory kf = KeyFactory.getInstance(JCP.GOST_DH_NAME);
-		PublicKey senderPublic = kf.generatePublic(pspec);
-		KeyAgreement responderKeyAgree = KeyAgreement.getInstance(JCP.GOST_DH_NAME);
+        byte[] encodedPub = encodeAsn1(encrKey.transportParameters.ephemeralPublicKey);
+        X509EncodedKeySpec pspec = new X509EncodedKeySpec(encodedPub);
+        KeyFactory kf = KeyFactory.getInstance(JCP.GOST_DH_NAME);
+        PublicKey senderPublic = kf.generatePublic(pspec);
+        KeyAgreement responderKeyAgree = KeyAgreement.getInstance(JCP.GOST_DH_NAME);
         byte[] sv = encrKey.transportParameters.ukm.value;
         PrivateKey privateKey = CertificateHelper.getPrivateKey(currentCert, null);
         responderKeyAgree.init(privateKey, new IvParameterSpec(sv));
-		responderKeyAgree.doPhase(senderPublic, true);
-		Key responderSecret = responderKeyAgree.generateSecret(CryptoProvider.GOST_CIPHER_NAME);
+        responderKeyAgree.doPhase(senderPublic, true);
+        Key responderSecret = responderKeyAgree.generateSecret(CryptoProvider.GOST_CIPHER_NAME);
         byte[] wrappedSimmKey = encodeAsn1(encrKey.sessionEncryptedKey);
         Key simmKey = gostUnwrapKey(wrappedSimmKey, responderSecret);
         Gost28147_89_Parameters params = (Gost28147_89_Parameters) cms.encryptedContentInfo.contentEncryptionAlgorithm.parameters;
@@ -239,7 +262,7 @@ public class DiadocApi {
         AlgorithmParameterSpec spec = new GostCipherSpec(iv, CryptParamsSpec.getInstance());
         byte[] encryptedContent = cms.encryptedContentInfo.encryptedContent.value;
         return gostDecrypt(encryptedContent, simmKey, spec);
-	}
+    }
 
     private URI BuildRequestURI(URI baseUri, String path, List<NameValuePair> parameters) throws URISyntaxException {
         String query = parameters != null ? URLEncodedUtils.format(parameters, "UTF-8") : null;
@@ -311,14 +334,14 @@ public class DiadocApi {
         return OrganizationUserProtos.OrganizationUsersList.parseFrom(PerformGetHttpRequest("/GetOrganizationUsers", parameters));
     }
 
-	public DiadocMessage_GetApiProtos.BoxEventList GetNewEvents(String currentBoxId, String eventIdCurrent) throws IOException {
+    public DiadocMessage_GetApiProtos.BoxEventList GetNewEvents(String currentBoxId, String eventIdCurrent) throws IOException {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("includeDrafts", null));
         parameters.add(new BasicNameValuePair("boxId", currentBoxId));
         if (eventIdCurrent != null)
             parameters.add(new BasicNameValuePair("afterEventId", eventIdCurrent));
-		return DiadocMessage_GetApiProtos.BoxEventList.parseFrom(PerformGetHttpRequest("/V4/GetNewEvents", parameters));
-	}
+        return DiadocMessage_GetApiProtos.BoxEventList.parseFrom(PerformGetHttpRequest("/V4/GetNewEvents", parameters));
+    }
 
     public OrganizationProtos.OrganizationList GetOrganizationsByInnKpp(String inn, String kpp) throws IOException {
         return GetOrganizationsByInnKpp(inn, kpp, false);
@@ -419,53 +442,53 @@ public class DiadocApi {
         return ExternalServiceAuthInfoProtos.ExternalServiceAuthInfo.parseFrom(PerformGetHttpRequest("/GetExternalServiceAuthInfo", parameters));
     }
 
-	public byte[] GetEntityContent(String currentBoxId, String messageId, String entityId) throws IOException {
-		if (currentBoxId == null)
-			throw new NullPointerException("boxId");
-		if (messageId == null)
-			throw new NullPointerException("messageId");
-		if (entityId == null)
-			throw new NullPointerException("entityId");
-        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-        parameters.add(new BasicNameValuePair("boxId", currentBoxId));
-        parameters.add(new BasicNameValuePair("messageId", messageId));
-        parameters.add(new BasicNameValuePair("entityId", entityId));
-		return PerformGetHttpRequest("/V4/GetEntityContent", parameters);
-	}
-
-	public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId) throws IOException {
-		if (currentBoxId == null)
-			throw new NullPointerException("boxId");
-		if (messageId == null)
-			throw new NullPointerException("messageId");
-        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-        parameters.add(new BasicNameValuePair("boxId", currentBoxId));
-        parameters.add(new BasicNameValuePair("messageId", messageId));
-		return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V3/GetMessage", parameters));
-	}
-
-	public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId, String entityId) throws IOException {
-		if (currentBoxId == null)
-			throw new NullPointerException("boxId");
-		if (messageId == null)
-			throw new NullPointerException("messageId");
+    public byte[] GetEntityContent(String currentBoxId, String messageId, String entityId) throws IOException {
+        if (currentBoxId == null)
+            throw new NullPointerException("boxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
         if (entityId == null)
             throw new NullPointerException("entityId");
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", currentBoxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
         parameters.add(new BasicNameValuePair("entityId", entityId));
-		return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V3/GetMessage", parameters));
-	}
+        return PerformGetHttpRequest("/V4/GetEntityContent", parameters);
+    }
 
-	public GeneratedFile GenerateInvoiceDocumentReceiptXml(String boxId, String messageId, String attachmentId, SignerProtos.Signer signer)
+    public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId) throws IOException {
+        if (currentBoxId == null)
+            throw new NullPointerException("boxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", currentBoxId));
+        parameters.add(new BasicNameValuePair("messageId", messageId));
+        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V3/GetMessage", parameters));
+    }
+
+    public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId, String entityId) throws IOException {
+        if (currentBoxId == null)
+            throw new NullPointerException("boxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        if (entityId == null)
+            throw new NullPointerException("entityId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", currentBoxId));
+        parameters.add(new BasicNameValuePair("messageId", messageId));
+        parameters.add(new BasicNameValuePair("entityId", entityId));
+        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V3/GetMessage", parameters));
+    }
+
+    public GeneratedFile GenerateInvoiceDocumentReceiptXml(String boxId, String messageId, String attachmentId, SignerProtos.Signer signer)
             throws IllegalStateException, IOException, ParseException {
-		if (boxId == null)
-			throw new NullPointerException("boxId");
-		if (messageId == null)
-			throw new NullPointerException("messageId");
-		if (attachmentId == null)
-			throw new NullPointerException("attachmentId");
+        if (boxId == null)
+            throw new NullPointerException("boxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        if (attachmentId == null)
+            throw new NullPointerException("attachmentId");
         if (signer == null)
             throw new NullPointerException("signer");
 
@@ -473,18 +496,18 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
         parameters.add(new BasicNameValuePair("attachmentId", attachmentId));
-		HttpResponse webResponse = ReceivePostHttpResponse("/GenerateInvoiceDocumentReceiptXml", parameters, signer.toByteArray());
+        HttpResponse webResponse = ReceivePostHttpResponse("/GenerateInvoiceDocumentReceiptXml", parameters, signer.toByteArray());
 
-		return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
-	}
-	public GeneratedFile GenerateDocumentReceiptXml(String boxId, String messageId, String attachmentId, SignerProtos.Signer signer)
+        return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
+    }
+    public GeneratedFile GenerateDocumentReceiptXml(String boxId, String messageId, String attachmentId, SignerProtos.Signer signer)
             throws IllegalStateException, IOException, ParseException {
-		if (boxId == null)
-			throw new NullPointerException("boxId");
-		if (messageId == null)
-			throw new NullPointerException("messageId");
-		if (attachmentId == null)
-			throw new NullPointerException("attachmentId");
+        if (boxId == null)
+            throw new NullPointerException("boxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        if (attachmentId == null)
+            throw new NullPointerException("attachmentId");
         if (signer == null)
             throw new NullPointerException("signer");
 
@@ -492,72 +515,72 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
         parameters.add(new BasicNameValuePair("attachmentId", attachmentId));
-		HttpResponse webResponse = ReceivePostHttpResponse("/GenerateDocumentReceiptXml", parameters, signer.toByteArray());
+        HttpResponse webResponse = ReceivePostHttpResponse("/GenerateDocumentReceiptXml", parameters, signer.toByteArray());
 
-		return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
-	}
+        return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
+    }
 
 
-	private static String GetHttpResponseFileName(HttpResponse webResponse) throws ParseException {
-		Header[] dispositions = webResponse.getHeaders("Content-Disposition");
-		if (dispositions == null || dispositions.length == 0)
-			return null;
+    private static String GetHttpResponseFileName(HttpResponse webResponse) throws ParseException {
+        Header[] dispositions = webResponse.getHeaders("Content-Disposition");
+        if (dispositions == null || dispositions.length == 0)
+            return null;
         return new ContentDisposition(dispositions[0].getValue()).getParameter("filename");
     }
 
-	public GeneratedFile GenerateInvoiceCorrectionRequestXml(String boxId, String messageId, String attachmentId,
+    public GeneratedFile GenerateInvoiceCorrectionRequestXml(String boxId, String messageId, String attachmentId,
             InvoiceCorrectionRequestInfoProtos.InvoiceCorrectionRequestInfo invoiceCorrectionInfo) throws IllegalStateException, IOException, ParseException {
-		if (boxId == null)
-			throw new NullPointerException("boxId");
-		if (messageId == null)
-			throw new NullPointerException("messageId");
-		if (attachmentId == null)
-			throw new NullPointerException("attachmentId");
+        if (boxId == null)
+            throw new NullPointerException("boxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        if (attachmentId == null)
+            throw new NullPointerException("attachmentId");
 
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
         parameters.add(new BasicNameValuePair("attachmentId", attachmentId));
-		HttpResponse webResponse = ReceivePostHttpResponse("/GenerateInvoiceCorrectionRequestXml", parameters, invoiceCorrectionInfo.toByteArray());
+        HttpResponse webResponse = ReceivePostHttpResponse("/GenerateInvoiceCorrectionRequestXml", parameters, invoiceCorrectionInfo.toByteArray());
 
-		return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
-	}
+        return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
+    }
 
-	public GeneratedFile GenerateRevocationRequestXml(String boxId, String messageId, String attachmentId,
+    public GeneratedFile GenerateRevocationRequestXml(String boxId, String messageId, String attachmentId,
             RevocationRequestInfoProtos.RevocationRequestInfo revocationRequestInfo) throws IllegalStateException, IOException, ParseException {
-		if (boxId == null)
-			throw new NullPointerException("boxId");
-		if (messageId == null)
-			throw new NullPointerException("messageId");
-		if (attachmentId == null)
-			throw new NullPointerException("attachmentId");
+        if (boxId == null)
+            throw new NullPointerException("boxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        if (attachmentId == null)
+            throw new NullPointerException("attachmentId");
 
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
         parameters.add(new BasicNameValuePair("attachmentId", attachmentId));
-		HttpResponse webResponse = ReceivePostHttpResponse("/GenerateRevocationRequestXml", parameters, revocationRequestInfo.toByteArray());
+        HttpResponse webResponse = ReceivePostHttpResponse("/GenerateRevocationRequestXml", parameters, revocationRequestInfo.toByteArray());
 
-		return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
-	}
+        return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
+    }
 
-	public GeneratedFile GenerateSignatureRejectionXml(String boxId, String messageId, String attachmentId,
+    public GeneratedFile GenerateSignatureRejectionXml(String boxId, String messageId, String attachmentId,
             SignatureRejectionInfoProtos.SignatureRejectionInfo signatureRejectionInfo) throws IllegalStateException, IOException, ParseException {
-		if (boxId == null)
-			throw new NullPointerException("boxId");
-		if (messageId == null)
-			throw new NullPointerException("messageId");
-		if (attachmentId == null)
-			throw new NullPointerException("attachmentId");
+        if (boxId == null)
+            throw new NullPointerException("boxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        if (attachmentId == null)
+            throw new NullPointerException("attachmentId");
 
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
         parameters.add(new BasicNameValuePair("attachmentId", attachmentId));
-		HttpResponse webResponse = ReceivePostHttpResponse("/GenerateSignatureRejectionXml", parameters, signatureRejectionInfo.toByteArray());
+        HttpResponse webResponse = ReceivePostHttpResponse("/GenerateSignatureRejectionXml", parameters, signatureRejectionInfo.toByteArray());
 
-		return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
-	}
+        return new GeneratedFile(GetHttpResponseFileName(webResponse), GetResponseBytes(webResponse));
+    }
 
     public GeneratedFile GenerateInvoiceXml(InvoiceInfoProtos.InvoiceInfo invoiceInfo) throws IOException, ParseException {
         return GenerateInvoiceXml(invoiceInfo, "Invoice", false);
@@ -684,80 +707,80 @@ public class DiadocApi {
         return InvoiceCorrectionRequestInfoProtos.InvoiceCorrectionRequestInfo.parseFrom(PerformGetHttpRequest("/GetInvoiceCorrectionRequestInfo", parameters));
     }
 
-	public DiadocMessage_GetApiProtos.MessagePatch PostMessagePatch(DiadocMessage_PostApiProtos.MessagePatchToPost patch) throws IOException {
-		if (patch == null)
-			throw new NullPointerException("patch");
-		return DiadocMessage_GetApiProtos.MessagePatch.parseFrom(PerformPostHttpRequest("/V3/PostMessagePatch", null, patch.toByteArray()));
-	}
+    public DiadocMessage_GetApiProtos.MessagePatch PostMessagePatch(DiadocMessage_PostApiProtos.MessagePatchToPost patch) throws IOException {
+        if (patch == null)
+            throw new NullPointerException("patch");
+        return DiadocMessage_GetApiProtos.MessagePatch.parseFrom(PerformPostHttpRequest("/V3/PostMessagePatch", null, patch.toByteArray()));
+    }
 
-	public DiadocMessage_GetApiProtos.BoxEvent GetEvent(String boxId, String eventId) throws IOException {
-		if (boxId == null) throw new NullPointerException("boxId");
-		if (eventId == null) throw new NullPointerException("eventId");
+    public DiadocMessage_GetApiProtos.BoxEvent GetEvent(String boxId, String eventId) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (eventId == null) throw new NullPointerException("eventId");
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("eventId", eventId));
-		return DiadocMessage_GetApiProtos.BoxEvent.parseFrom(PerformGetHttpRequest("/V2/GetEvent", parameters));
-	}
+        return DiadocMessage_GetApiProtos.BoxEvent.parseFrom(PerformGetHttpRequest("/V2/GetEvent", parameters));
+    }
 
-	public PrintFormResult GeneratePrintForm(String boxId, String messageId, String documentId) throws IllegalStateException, IOException, ParseException {
-		if (Tools.IsNullOrEmpty(boxId))
-			throw new NullPointerException("boxId");
-		if (Tools.IsNullOrEmpty(messageId))
-			throw new NullPointerException("messageId");
-		if (Tools.IsNullOrEmpty(documentId))
-			throw new NullPointerException("documentId");
+    public PrintFormResult GeneratePrintForm(String boxId, String messageId, String documentId) throws IllegalStateException, IOException, ParseException {
+        if (Tools.IsNullOrEmpty(boxId))
+            throw new NullPointerException("boxId");
+        if (Tools.IsNullOrEmpty(messageId))
+            throw new NullPointerException("messageId");
+        if (Tools.IsNullOrEmpty(documentId))
+            throw new NullPointerException("documentId");
 
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
         parameters.add(new BasicNameValuePair("documentId", documentId));
-		HttpResponse webResponse = ReceiveGetHttpResponse("/GeneratePrintForm", parameters);
+        HttpResponse webResponse = ReceiveGetHttpResponse("/GeneratePrintForm", parameters);
 
-		try {
-			if (webResponse.getStatusLine().getStatusCode() != HttpStatus.SC_OK)
-				throw new IllegalStateException(webResponse.getStatusLine().toString());
+        try {
+            if (webResponse.getStatusLine().getStatusCode() != HttpStatus.SC_OK)
+                throw new IllegalStateException(webResponse.getStatusLine().toString());
 
             Integer retryAfter = TryGetRetryAfter(webResponse);
             if (retryAfter != null)
                 return new PrintFormResult(retryAfter);
 
-			String fileName = GetHttpResponseFileName(webResponse);
-			byte[] content = GetResponseBytes(webResponse);
-			String contentType = webResponse.getEntity().getContentType().getValue();
-			return new PrintFormResult(new PrintFormContent(contentType, fileName, content));
-		} finally {
-			webResponse.getEntity().getContent().close();
-		}
-	}
+            String fileName = GetHttpResponseFileName(webResponse);
+            byte[] content = GetResponseBytes(webResponse);
+            String contentType = webResponse.getEntity().getContentType().getValue();
+            return new PrintFormResult(new PrintFormContent(contentType, fileName, content));
+        } finally {
+            webResponse.getEntity().getContent().close();
+        }
+    }
 
-	public DocumentProtocolResult GenerateDocumentProtocol(String boxId, String messageId, String documentId) throws IllegalStateException, IOException, ParseException {
-		if (Tools.IsNullOrEmpty(boxId))
-			throw new NullPointerException("boxId");
-		if (Tools.IsNullOrEmpty(messageId))
-			throw new NullPointerException("messageId");
-		if (Tools.IsNullOrEmpty(documentId))
-			throw new NullPointerException("documentId");
+    public DocumentProtocolResult GenerateDocumentProtocol(String boxId, String messageId, String documentId) throws IllegalStateException, IOException, ParseException {
+        if (Tools.IsNullOrEmpty(boxId))
+            throw new NullPointerException("boxId");
+        if (Tools.IsNullOrEmpty(messageId))
+            throw new NullPointerException("messageId");
+        if (Tools.IsNullOrEmpty(documentId))
+            throw new NullPointerException("documentId");
 
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
         parameters.add(new BasicNameValuePair("documentId", documentId));
-		HttpResponse webResponse = ReceiveGetHttpResponse("/GenerateDocumentProtocol", parameters);
+        HttpResponse webResponse = ReceiveGetHttpResponse("/GenerateDocumentProtocol", parameters);
 
-		try {
-			if (webResponse.getStatusLine().getStatusCode() != HttpStatus.SC_OK)
-				throw new IllegalStateException(webResponse.getStatusLine().toString());
+        try {
+            if (webResponse.getStatusLine().getStatusCode() != HttpStatus.SC_OK)
+                throw new IllegalStateException(webResponse.getStatusLine().toString());
 
             Integer retryAfter = TryGetRetryAfter(webResponse);
             if (retryAfter != null)
                 return new DocumentProtocolResult(retryAfter);
 
-			byte[] content = GetResponseBytes(webResponse);
-			return new DocumentProtocolResult(DocumentProtocolProtos.DocumentProtocol.parseFrom(content));
-		} finally {
-			webResponse.getEntity().getContent().close();
-		}
-	}
+            byte[] content = GetResponseBytes(webResponse);
+            return new DocumentProtocolResult(DocumentProtocolProtos.DocumentProtocol.parseFrom(content));
+        } finally {
+            webResponse.getEntity().getContent().close();
+        }
+    }
 
     public DocumentZipResult GenerateDocumentZip(String boxId, String messageId, String documentId, Boolean fullDocflow) throws IllegalStateException, IOException, ParseException {
         if (Tools.IsNullOrEmpty(boxId))
