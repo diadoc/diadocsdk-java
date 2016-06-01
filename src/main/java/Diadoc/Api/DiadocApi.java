@@ -110,7 +110,12 @@ public class DiadocApi {
     private static String getDiadocSdkVersion(){
         try
         {
-            String version = DiadocApi.class.getPackage().getSpecificationVersion();
+            Package currentPackage = DiadocApi.class.getPackage();
+            String version = currentPackage.getSpecificationVersion();
+            if (version == null || version.isEmpty())
+                version = currentPackage.getImplementationVersion();
+            if (version == null || version.isEmpty())
+                version = "Unknown";
             return "Diadoc SDK for Java v" + version;
         }
         catch (Exception e)
@@ -120,7 +125,10 @@ public class DiadocApi {
     }
 
     private static String getJavaRuntimeVersion() {
-        return System.getProperty("java.version");
+        return "JRE=" + System.getProperty("java.version")
+            +  ";Vendor=" + System.getProperty("java.vendor")
+            +  ";OS=" + System.getProperty("os.name") + " v" + System.getProperty("os.version")
+            +  ";Arch=" + System.getProperty("os.arch");
     }
 
     private static DefaultHttpClient makeTrustfulHttpClient(HttpClient base)
