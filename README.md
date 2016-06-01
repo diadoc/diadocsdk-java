@@ -9,7 +9,22 @@ lastest      | [![Build status (lastest)](https://ci.appveyor.com/api/projects/s
 diadocsdk-java является официальной Java-реализацией клиента, использующего [публичный API Диадока](http://api-docs.diadoc.ru/).
 На данный момент поддерживаются только JRE/JDK, на который установлен [КриптоПро JCP](https://www.cryptopro.ru/products/csp/jcp). Без КриптоПро JCP Diadoc SDK for Java работать не будет!
 
-## Сборка проектов
+
+## Как использовать?
+
+Вы можете [скачать готовый jar-файл diadocsdk-java со страницы релизов](https://github.com/diadoc/diadocsdk-java/releases).
+
+Его можно [установить в локальный репозиторий maven](https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html) и начать использовать как зависимость:
+
+    <dependencies>
+      <dependency>
+        <groupId>ru.kontur.diadoc</groupId>
+        <artifactId>diadocsdk-java</artifactId>
+        <version>1.36.2</version>
+      </dependency>
+    </dependencies>
+
+## Сборка проекта с помощью maven
 
 Для сборки проекта используется [maven](http://maven.apache.org/). Исполняемые файлы maven можно скачать [на официальном сайте](http://maven.apache.org/download.cgi) и установить [по инструкции](http://maven.apache.org/install.html). В качестве альтернативы, можно установить maven с помощью [Chocolatey](https://chocolatey.org/packages/maven). В итоге maven должен находиться в переменной среды PATH, чтобы его можно было вызвать из командной строки.
 
