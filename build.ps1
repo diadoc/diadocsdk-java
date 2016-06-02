@@ -77,7 +77,8 @@ Param(
 
 Write-Host "Preparing to run build script..."
 
-$PS_SCRIPT_ROOT = split-path -parent $MyInvocation.MyCommand.Definition;
+if (!$PSScriptRoot) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Definition -Parent }
+
 $TOOLS_DIR = Join-Path $PSScriptRoot "tools"
 $NUGET_EXE = Join-Path $TOOLS_DIR "nuget.exe"
 $NUGET_URL = "http://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
@@ -113,7 +114,10 @@ if ((Test-Path $PSScriptRoot) -and !(Test-Path $TOOLS_DIR)) {
 # Make sure that packages.config exist.
 if (!(Test-Path $PACKAGES_CONFIG)) {
     Write-Verbose -Message "Downloading packages.config..."
-    try { Invoke-WebRequest -Uri http://cakebuild.net/download/bootstrapper/packages -OutFile $PACKAGES_CONFIG } catch {
+    try {
+        $client = new-object System.Net.WebClient
+        $client.DownloadFile("http://cakebuild.net/download/bootstrapper/packages", $PACKAGES_CONFIG)
+    } catch {
         Throw "Could not download packages.config."
     }
 }
