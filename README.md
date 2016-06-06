@@ -52,3 +52,11 @@ mvn install
 - генерация версии на основе тега
 - компиляция proto-файлов
 - компиляция DiadocApi
+
+## Добавление функциональности
+
+- [Сделайте Fork](https://guides.github.com/activities/forking/)
+- Создайте ветку для новой фичи (git checkout -b my-new-feature)
+- Сделайте Commit изменений (git commit -am 'Add some feature')
+- Сделайте Push новой ветки (git push origin my-new-feature)
+- Создайте новый Pull Request
