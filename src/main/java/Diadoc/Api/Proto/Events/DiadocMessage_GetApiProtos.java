@@ -282,12 +282,20 @@ public final class DiadocMessage_GetApiProtos {
     SupplementaryAgreement(38, 40),
     /**
      * <code>CustomData = 64;</code>
+     */
+    CustomData(39, 64),
+    /**
+     * <code>MoveDocument = 65;</code>
+     */
+    MoveDocument(40, 65),
+    /**
+     * <code>ResolutionChainAssignmentAttachment = 66;</code>
      *
      * <pre>
      *Неизвестные типы должны обрабатываться как Nonformalized
      * </pre>
      */
-    CustomData(39, 64),
+    ResolutionChainAssignmentAttachment(41, 66),
     ;
 
     /**
@@ -452,12 +460,20 @@ public final class DiadocMessage_GetApiProtos {
     public static final int SupplementaryAgreement_VALUE = 40;
     /**
      * <code>CustomData = 64;</code>
+     */
+    public static final int CustomData_VALUE = 64;
+    /**
+     * <code>MoveDocument = 65;</code>
+     */
+    public static final int MoveDocument_VALUE = 65;
+    /**
+     * <code>ResolutionChainAssignmentAttachment = 66;</code>
      *
      * <pre>
      *Неизвестные типы должны обрабатываться как Nonformalized
      * </pre>
      */
-    public static final int CustomData_VALUE = 64;
+    public static final int ResolutionChainAssignmentAttachment_VALUE = 66;
 
 
     public final int getNumber() { return value; }
@@ -504,6 +520,8 @@ public final class DiadocMessage_GetApiProtos {
         case 39: return RoamingNotification;
         case 40: return SupplementaryAgreement;
         case 64: return CustomData;
+        case 65: return MoveDocument;
+        case 66: return ResolutionChainAssignmentAttachment;
         default: return null;
       }
     }
@@ -12112,7 +12130,7 @@ public final class DiadocMessage_GetApiProtos {
       ":\005false\022\037\n\020ContentIsPatched\030\005 \001(\010:\005false" +
       "\022\030\n\020ForwardedToBoxId\030\006 \001(\t*B\n\nEntityType" +
       "\022\025\n\021UnknownEntityType\020\000\022\016\n\nAttachment\020\001\022" +
-      "\r\n\tSignature\020\002*\305\007\n\016AttachmentType\022\"\n\025Unk" +
+      "\r\n\tSignature\020\002*\200\010\n\016AttachmentType\022\"\n\025Unk" +
       "nownAttachmentType\020\377\377\377\377\377\377\377\377\377\001\022\021\n\rNonform" +
       "alized\020\000\022\013\n\007Invoice\020\001\022\022\n\016InvoiceReceipt\020" +
       "\002\022\027\n\023InvoiceConfirmation\020\003\022\034\n\030InvoiceCor" +
@@ -12136,8 +12154,9 @@ public final class DiadocMessage_GetApiProtos {
       "ry\020\"\022\025\n\021ReconciliationAct\020#\022\014\n\010Contract\020" +
       "$\022\n\n\006Torg13\020%\022\022\n\016ServiceDetails\020&\022\027\n\023Roa" +
       "mingNotification\020\'\022\032\n\026SupplementaryAgree" +
-      "ment\020(\022\016\n\nCustomData\020@B\034B\032DiadocMessage_" +
-      "GetApiProtos"
+      "ment\020(\022\016\n\nCustomData\020@\022\020\n\014MoveDocument\020A" +
+      "\022\'\n#ResolutionChainAssignmentAttachment\020" +
+      "BB\034B\032DiadocMessage_GetApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
