@@ -206,6 +206,20 @@ public final class OrganizationUserPermissionsProtos {
      */
     com.google.protobuf.ByteString
         getSelectedDepartmentIdsBytes(int index);
+
+    /**
+     * <code>optional string JobTitle = 10;</code>
+     */
+    boolean hasJobTitle();
+    /**
+     * <code>optional string JobTitle = 10;</code>
+     */
+    java.lang.String getJobTitle();
+    /**
+     * <code>optional string JobTitle = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getJobTitleBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.OrganizationUserPermissions}
@@ -303,6 +317,12 @@ public final class OrganizationUserPermissionsProtos {
                 mutable_bitField0_ |= 0x00000040;
               }
               selectedDepartmentIds_.add(bs);
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              jobTitle_ = bs;
               break;
             }
           }
@@ -494,6 +514,48 @@ public final class OrganizationUserPermissionsProtos {
       return selectedDepartmentIds_.getByteString(index);
     }
 
+    public static final int JOBTITLE_FIELD_NUMBER = 10;
+    private java.lang.Object jobTitle_;
+    /**
+     * <code>optional string JobTitle = 10;</code>
+     */
+    public boolean hasJobTitle() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string JobTitle = 10;</code>
+     */
+    public java.lang.String getJobTitle() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          jobTitle_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string JobTitle = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getJobTitleBytes() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       userDepartmentId_ = "";
       isAdministrator_ = false;
@@ -502,6 +564,7 @@ public final class OrganizationUserPermissionsProtos {
       canAddResolutions_ = false;
       canRequestResolutions_ = false;
       selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      jobTitle_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -557,6 +620,9 @@ public final class OrganizationUserPermissionsProtos {
       for (int i = 0; i < selectedDepartmentIds_.size(); i++) {
         output.writeBytes(9, selectedDepartmentIds_.getByteString(i));
       }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(10, getJobTitleBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -598,6 +664,10 @@ public final class OrganizationUserPermissionsProtos {
         }
         size += dataSize;
         size += 1 * getSelectedDepartmentIdsList().size();
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(10, getJobTitleBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -730,6 +800,8 @@ public final class OrganizationUserPermissionsProtos {
         bitField0_ = (bitField0_ & ~0x00000020);
         selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000040);
+        jobTitle_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -787,6 +859,10 @@ public final class OrganizationUserPermissionsProtos {
           bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.selectedDepartmentIds_ = selectedDepartmentIds_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.jobTitle_ = jobTitle_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -831,6 +907,11 @@ public final class OrganizationUserPermissionsProtos {
             ensureSelectedDepartmentIdsIsMutable();
             selectedDepartmentIds_.addAll(other.selectedDepartmentIds_);
           }
+          onChanged();
+        }
+        if (other.hasJobTitle()) {
+          bitField0_ |= 0x00000080;
+          jobTitle_ = other.jobTitle_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1212,6 +1293,82 @@ public final class OrganizationUserPermissionsProtos {
         return this;
       }
 
+      private java.lang.Object jobTitle_ = "";
+      /**
+       * <code>optional string JobTitle = 10;</code>
+       */
+      public boolean hasJobTitle() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional string JobTitle = 10;</code>
+       */
+      public java.lang.String getJobTitle() {
+        java.lang.Object ref = jobTitle_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jobTitle_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string JobTitle = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getJobTitleBytes() {
+        java.lang.Object ref = jobTitle_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jobTitle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string JobTitle = 10;</code>
+       */
+      public Builder setJobTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string JobTitle = 10;</code>
+       */
+      public Builder clearJobTitle() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        jobTitle_ = getDefaultInstance().getJobTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string JobTitle = 10;</code>
+       */
+      public Builder setJobTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationUserPermissions)
     }
 
@@ -1238,19 +1395,20 @@ public final class OrganizationUserPermissionsProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n!OrganizationUserPermissions.proto\022\020Dia" +
-      "doc.Api.Proto\"\243\002\n\033OrganizationUserPermis" +
+      "doc.Api.Proto\"\265\002\n\033OrganizationUserPermis" +
       "sions\022\030\n\020UserDepartmentId\030\001 \002(\t\022\027\n\017IsAdm" +
       "inistrator\030\002 \002(\010\022^\n\023DocumentAccessLevel\030" +
       "\003 \001(\0162%.Diadoc.Api.Proto.DocumentAccessL" +
       "evel:\032UnknownDocumentAccessLevel\022\030\n\020CanS" +
       "ignDocuments\030\004 \002(\010\022\031\n\021CanAddResolutions\030" +
       "\007 \002(\010\022\035\n\025CanRequestResolutions\030\010 \002(\010\022\035\n\025" +
-      "SelectedDepartmentIds\030\t \003(\t*\236\001\n\023Document" +
-      "AccessLevel\022\'\n\032UnknownDocumentAccessLeve",
-      "l\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016DepartmentOnly\020\000\022\037\n\033Depa" +
-      "rtmentAndSubdepartments\020\001\022\020\n\014AllDocument" +
-      "s\020\002\022\027\n\023SelectedDepartments\020\003B#B!Organiza" +
-      "tionUserPermissionsProtos"
+      "SelectedDepartmentIds\030\t \003(\t\022\020\n\010JobTitle\030" +
+      "\n \001(\t*\236\001\n\023DocumentAccessLevel\022\'\n\032Unknown",
+      "DocumentAccessLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016Depart" +
+      "mentOnly\020\000\022\037\n\033DepartmentAndSubdepartment" +
+      "s\020\001\022\020\n\014AllDocuments\020\002\022\027\n\023SelectedDepartm" +
+      "ents\020\003B#B!OrganizationUserPermissionsPro" +
+      "tos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1269,7 +1427,7 @@ public final class OrganizationUserPermissionsProtos {
     internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor,
-        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", });
+        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
