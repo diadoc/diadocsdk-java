@@ -10,9 +10,17 @@ environment:
 install:
   - set JDK_HOME=C:\Program Files (x86)\Java\jdk1.7.0
   - set JAVA_HOME=C:\Program Files (x86)\Java\jdk1.7.0
-  - choco install maven -version 3.3.3
-  - set M2_HOME=C:\tools\apache-maven-3.3.3
-  - set PATH=%PATH%;C:\tools\apache-maven-3.3.3\bin
+  - ps: |
+      Add-Type -AssemblyName System.IO.Compression.FileSystem
+      if (!(Test-Path -Path "C:\maven" )) {
+        (new-object System.Net.WebClient).DownloadFile(
+          'http://www-us.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip',
+          'C:\maven-bin.zip'
+        )
+        [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\maven-bin.zip", "C:\maven")
+      }
+  - set M2_HOME=C:\maven\apache-maven-3.3.9
+  - set PATH=%PATH%;C:\maven\apache-maven-3.3.9\bin
 
   - nuget install secure-file -ExcludeVersion
   - secure-file\tools\secure-file -decrypt cryptopro-jcp-1.0.52.zip.enc -secret %diadoc_signing_secret%
