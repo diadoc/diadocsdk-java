@@ -112,9 +112,9 @@ public class DiadocApi {
         {
             Package currentPackage = DiadocApi.class.getPackage();
             String version = currentPackage.getSpecificationVersion();
-            if (version == null || version.isEmpty())
+            if (version == null || version.length() == 0)
                 version = currentPackage.getImplementationVersion();
-            if (version == null || version.isEmpty())
+            if (version == null || version.length() == 0)
                 version = "Unknown";
             return "Diadoc SDK for Java v" + version;
         }
