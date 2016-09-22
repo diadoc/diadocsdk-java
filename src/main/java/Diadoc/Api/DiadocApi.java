@@ -1,6 +1,7 @@
 package Diadoc.Api;
 
 import Diadoc.Api.Proto.*;
+import Diadoc.Api.Proto.Docflow.DocflowApiProtos;
 import Diadoc.Api.Proto.Documents.*;
 import Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos;
@@ -1164,6 +1165,14 @@ public class DiadocApi {
         params.add(new BasicNameValuePair("messageId", messageId));
         byte[] bytes = PerformGetHttpRequest("/GetDocumentsByMessageId", params);
         return DocumentListProtos.DocumentList.parseFrom(bytes);
+    }
+
+    public DocflowApiProtos.SearchDocflowsResponse SearchDocflows(String boxId, DocflowApiProtos.SearchDocflowsRequest request) throws IOException {
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        byte[] body = request.toByteArray();
+        byte[] bytes = PerformPostHttpRequest("/SearchDocflows", params, body);
+        return DocflowApiProtos.SearchDocflowsResponse.parseFrom(bytes);
     }
 
     public static int WaitTaskDefaultTimeoutInMillis = 5 * 60 * 1000;
