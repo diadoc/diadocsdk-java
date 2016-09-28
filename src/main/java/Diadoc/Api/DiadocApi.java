@@ -84,22 +84,32 @@ public class DiadocApi {
         return authenticated;
     }
 
-    public DiadocApi(String apiClientId, String url)
+    public DiadocApi(String apiClientId, String url, Map<String, Object> httpParams)
             throws KeyManagementException, NoSuchAlgorithmException {
         if (url == null)
             throw new NullPointerException("url");
         this.url = url;
         this.apiClientId = apiClientId;
-        this.httpClient = createHttpClient();
+        this.httpClient = createHttpClient(httpParams);
         updateCredentials(null);
     }
 
-    private static DefaultHttpClient createHttpClient()
+    public DiadocApi(String apiClientId, String url)
+            throws KeyManagementException, NoSuchAlgorithmException {
+        this(apiClientId, url, null);
+    }
+
+    private static DefaultHttpClient createHttpClient(Map<String, Object> httpParams)
             throws NoSuchAlgorithmException, KeyManagementException {
         DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
         HttpProtocolParams.setUserAgent(defaultHttpClient.getParams(), getUserAgentString());
         defaultHttpClient = makeTrustfulHttpClient(defaultHttpClient);
         defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
+        if (httpParams != null) {
+            for (Map.Entry<String, Object> httpParam : httpParams.entrySet()) {
+                defaultHttpClient.getParams().setParameter(httpParam.getKey(), httpParam.getValue());
+            }
+        }
         return defaultHttpClient;
     }
 
