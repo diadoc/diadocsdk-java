@@ -1159,6 +1159,24 @@ public class DiadocApi {
         return CloudSignProtos.CloudSignConfirmResult.parseFrom(data);
     }
 
+    public AsyncMethodResultProtos.AsyncMethodResult AutoSignReceipts(String boxId, String certificateThumbprint, String batchKey) throws Exception {
+        if (boxId == null) throw new NullPointerException("boxId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        if (certificateThumbprint != null)
+            params.add(new BasicNameValuePair("certificateThumbprint", certificateThumbprint));
+        if (batchKey != null)
+            params.add(new BasicNameValuePair("batchKey", batchKey));
+        byte[] responseBytes = PerformPostHttpRequest("/AutoSignReceipts", params, null);
+        return AsyncMethodResultProtos.AsyncMethodResult.parseFrom(responseBytes);
+    }
+
+    public CloudSignProtos.AutosignReceiptsResult WaitAutosignReceiptsResult(String taskId, Integer timeoutInMillis)
+            throws Exception {
+        byte[] data = WaitTaskResult("/AutosignReceiptsResult", taskId, timeoutInMillis);
+        return CloudSignProtos.AutosignReceiptsResult.parseFrom(data);
+    }
+
     public DocumentListProtos.DocumentList GetDocumentsByMessageId(String boxId, String messageId) throws IOException {
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("boxId", boxId));
