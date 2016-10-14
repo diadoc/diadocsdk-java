@@ -1,11 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
-// ����������� ��� ������� ������� API:
+// Протобуферы для пишущих методов API:
 //	PostMessage(MessageToPost message) : Message
 //	PostMessagePatch(MessagePatchToPost messagePatch) : MessagePatch
 
 import "DocumentId.proto";
 import "CustomDataItem.proto";
 import "Invoicing/Signer.proto";
+import "Invoicing/ExtendedSigner.proto";
 import "Events/ResolutionInfo.proto";
 import "Events/ResolutionRequestInfo.proto";
 import "Invoicing/OrganizationInfo.proto";
@@ -45,6 +46,8 @@ message MessageToPost {
 	repeated EncryptedXmlDocumentAttachment EncryptedXmlAcceptanceCertificateSellerTitles = 30;
 	repeated SupplementaryAgreementAttachment SupplementaryAgreements = 31;
 	optional bool LockPacket = 32 [default = false];
+	repeated XmlDocumentAttachment UniversalTransferDocumentSellerTitles = 33;
+	repeated CustomDocumentAttachment CustomDocumentAttachments = 34;
 }
 
 message EncryptedXmlDocumentAttachment {
@@ -255,6 +258,21 @@ message ServiceDetailsAttachment {
 	repeated CustomDataItem CustomData = 11;
 }
 
+message CustomDocumentAttachment {
+	required SignedContent SignedContent = 1;
+	required string FileName = 2;
+	optional string Comment = 3;
+	// reserved 4 for NeedRecipientSignature
+	repeated DocumentId InitialDocumentIds = 5;
+	repeated DocumentId SubordinateDocumentIds = 6;
+	// reserved 7 for DocumentDate
+	// reserved 8 for DocumentNumber
+	optional string CustomDocumentId = 9;
+	//reserved 10 for NeedReceipt
+	repeated CustomDataItem CustomData = 11;
+	required string Type = 12;
+}
+
 message MessagePatchToPost {
 	required string BoxId = 1;
 	required string MessageId = 2;
@@ -275,6 +293,7 @@ message MessagePatchToPost {
 	repeated ResolutionChainAssignment ResolutionChainAssignments = 17;
 	repeated SignatureVerification SignatureVerifications = 18;
 	repeated EditDocumentPacketCommand EditDocumentPacketCommands = 19;
+	repeated ReceiptAttachment UniversalTransferDocumentBuyerTitles = 20;
 }
 
 message SignatureVerification {
@@ -378,11 +397,13 @@ message DraftDocumentToPatch {
 	required DocumentId DocumentId = 1;
 	optional string ToBoxId = 2;
 	optional Invoicing.Signer Signer = 3;
+	repeated Invoicing.Signers.ExtendedSigner ExtendedSigner = 4;
 }
 
 message DocumentToPatch {
 	required DocumentId DocumentId = 1;
 	optional Invoicing.Signer Signer = 2;
+	repeated Invoicing.Signers.ExtendedSigner ExtendedSigner = 3;
 }
 
 message DocumentPatchedContent {
