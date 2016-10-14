@@ -151,12 +151,6 @@ public IEnumerable<FilePath> PatchJavaProtoFiles(IEnumerable<FilePath> files, Di
 		if (!DirectoryExists(destinationDirectory))
 			CreateDirectory(destinationDirectory);
 
-		if (!NeedUpdateFile(file, destinationFile))
-		{
-			Debug("Skip modification for file: {0}", file.FullPath);
-			continue;
-		}
-
 		CopyFile(file, destinationFile);
 		var javaOuterClassName = relativeFile.GetFilenameWithoutExtension().FullPath
 			.Replace("-", "_")
@@ -175,29 +169,16 @@ public void CompileProtoFiles(IEnumerable<FilePath> files, DirectoryPath sourceP
 			.Append("-I=" + sourceProtoDir.FullPath)
 			.Append("--java_out=" + destinationProtoDir.FullPath));
 
-	var dirtyFiles = files.ToArray();
-	if (dirtyFiles.Length == 0)
-	{
-		Information("All files are up to date");
-		return;
-	}
-	
-	foreach (var file in dirtyFiles)
+	foreach (var file in files)
 	{
 		protocArguments.WithArguments(args => args.Append(file.FullPath));
 	}
-	
+
 	var exitCode = StartProcess(protocExe, protocArguments);
 	if (exitCode != 0)
 	{
 		Error("Error processing proto files, protoc exit code: {0} ({1})", exitCode, protocArguments);
 	}
-}
-
-public bool NeedUpdateFile(FilePath file, FilePath destinationFile)
-{
-	return !(FileExists(destinationFile)
-		&& System.IO.File.GetLastWriteTime(file.FullPath) < System.IO.File.GetLastWriteTime(destinationFile.FullPath));
 }
 
 public string GetVersionFromTag()
