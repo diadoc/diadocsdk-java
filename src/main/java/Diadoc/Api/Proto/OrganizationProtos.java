@@ -90,6 +90,88 @@ public final class OrganizationProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.OrganizationInvoiceFormatVersion)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Sociability}
+   */
+  public enum Sociability
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>AllOrganizations = 0;</code>
+     */
+    AllOrganizations(0, 0),
+    /**
+     * <code>CounteragentsOnly = 1;</code>
+     */
+    CounteragentsOnly(1, 1),
+    ;
+
+    /**
+     * <code>AllOrganizations = 0;</code>
+     */
+    public static final int AllOrganizations_VALUE = 0;
+    /**
+     * <code>CounteragentsOnly = 1;</code>
+     */
+    public static final int CounteragentsOnly_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static Sociability valueOf(int value) {
+      switch (value) {
+        case 0: return AllOrganizations;
+        case 1: return CounteragentsOnly;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Sociability>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Sociability>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Sociability>() {
+            public Sociability findValueByNumber(int number) {
+              return Sociability.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.OrganizationProtos.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final Sociability[] VALUES = values();
+
+    public static Sociability valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Sociability(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Sociability)
+  }
+
   public interface OrganizationListOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.OrganizationList)
       com.google.protobuf.MessageOrBuilder {
@@ -1040,6 +1122,15 @@ public final class OrganizationProtos {
      * <code>optional int32 SearchCount = 21;</code>
      */
     int getSearchCount();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+     */
+    boolean hasSociability();
+    /**
+     * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+     */
+    Diadoc.Api.Proto.OrganizationProtos.Sociability getSociability();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Organization}
@@ -1214,6 +1305,17 @@ public final class OrganizationProtos {
             case 168: {
               bitField0_ |= 0x00020000;
               searchCount_ = input.readInt32();
+              break;
+            }
+            case 176: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.OrganizationProtos.Sociability value = Diadoc.Api.Proto.OrganizationProtos.Sociability.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(22, rawValue);
+              } else {
+                bitField0_ |= 0x00040000;
+                sociability_ = value;
+              }
               break;
             }
           }
@@ -1851,6 +1953,21 @@ public final class OrganizationProtos {
       return searchCount_;
     }
 
+    public static final int SOCIABILITY_FIELD_NUMBER = 22;
+    private Diadoc.Api.Proto.OrganizationProtos.Sociability sociability_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+     */
+    public boolean hasSociability() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+     */
+    public Diadoc.Api.Proto.OrganizationProtos.Sociability getSociability() {
+      return sociability_;
+    }
+
     private void initFields() {
       orgId_ = "";
       inn_ = "";
@@ -1872,6 +1989,7 @@ public final class OrganizationProtos {
       isEmployee_ = false;
       invitationCount_ = 0;
       searchCount_ = 0;
+      sociability_ = Diadoc.Api.Proto.OrganizationProtos.Sociability.AllOrganizations;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1888,6 +2006,10 @@ public final class OrganizationProtos {
         return false;
       }
       if (!hasFullName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSociability()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1975,6 +2097,9 @@ public final class OrganizationProtos {
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
         output.writeInt32(21, searchCount_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeEnum(22, sociability_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2064,6 +2189,10 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(21, searchCount_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(22, sociability_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2237,6 +2366,8 @@ public final class OrganizationProtos {
         bitField0_ = (bitField0_ & ~0x00040000);
         searchCount_ = 0;
         bitField0_ = (bitField0_ & ~0x00080000);
+        sociability_ = Diadoc.Api.Proto.OrganizationProtos.Sociability.AllOrganizations;
+        bitField0_ = (bitField0_ & ~0x00100000);
         return this;
       }
 
@@ -2359,6 +2490,10 @@ public final class OrganizationProtos {
           to_bitField0_ |= 0x00020000;
         }
         result.searchCount_ = searchCount_;
+        if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        result.sociability_ = sociability_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2499,6 +2634,9 @@ public final class OrganizationProtos {
         if (other.hasSearchCount()) {
           setSearchCount(other.getSearchCount());
         }
+        if (other.hasSociability()) {
+          setSociability(other.getSociability());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -2513,6 +2651,10 @@ public final class OrganizationProtos {
           return false;
         }
         if (!hasFullName()) {
+          
+          return false;
+        }
+        if (!hasSociability()) {
           
           return false;
         }
@@ -4088,6 +4230,41 @@ public final class OrganizationProtos {
       public Builder clearSearchCount() {
         bitField0_ = (bitField0_ & ~0x00080000);
         searchCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.OrganizationProtos.Sociability sociability_ = Diadoc.Api.Proto.OrganizationProtos.Sociability.AllOrganizations;
+      /**
+       * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+       */
+      public boolean hasSociability() {
+        return ((bitField0_ & 0x00100000) == 0x00100000);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+       */
+      public Diadoc.Api.Proto.OrganizationProtos.Sociability getSociability() {
+        return sociability_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+       */
+      public Builder setSociability(Diadoc.Api.Proto.OrganizationProtos.Sociability value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00100000;
+        sociability_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+       */
+      public Builder clearSociability() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        sociability_ = Diadoc.Api.Proto.OrganizationProtos.Sociability.AllOrganizations;
         onChanged();
         return this;
       }
@@ -6479,7 +6656,7 @@ public final class OrganizationProtos {
       "\n\022Organization.proto\022\020Diadoc.Api.Proto\032\r" +
       "Address.proto\"I\n\020OrganizationList\0225\n\rOrg" +
       "anizations\030\001 \003(\0132\036.Diadoc.Api.Proto.Orga" +
-      "nization\"\322\003\n\014Organization\022\r\n\005OrgId\030\001 \002(\t" +
+      "nization\"\206\004\n\014Organization\022\r\n\005OrgId\030\001 \002(\t" +
       "\022\013\n\003Inn\030\002 \002(\t\022\013\n\003Kpp\030\003 \001(\t\022\020\n\010FullName\030\004" +
       " \002(\t\022\021\n\tShortName\030\005 \001(\t\022$\n\005Boxes\030\007 \003(\0132\025" +
       ".Diadoc.Api.Proto.Box\022\014\n\004Ogrn\030\010 \001(\t\022\030\n\020F" +
@@ -6490,19 +6667,21 @@ public final class OrganizationProtos {
       "\001(\t\022\017\n\007IsPilot\030\016 \001(\010\022\020\n\010IsActive\030\017 \001(\010\022\016" +
       "\n\006IsTest\030\020 \001(\010\022\020\n\010IsBranch\030\021 \001(\010\022\021\n\tIsRo" +
       "aming\030\022 \001(\010\022\022\n\nIsEmployee\030\023 \001(\010\022\027\n\017Invit" +
-      "ationCount\030\024 \001(\005\022\023\n\013SearchCount\030\025 \001(\005\"\266\001" +
-      "\n\nDepartment\022\024\n\014DepartmentId\030\001 \002(\t\022\032\n\022Pa" +
-      "rentDepartmentId\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n\014" +
-      "Abbreviation\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Addre" +
-      "ss\030\006 \001(\0132\031.Diadoc.Api.Proto.Address\022\031\n\nI" +
-      "sDisabled\030\007 \001(\010:\005false\"\262\001\n\003Box\022\r\n\005BoxId\030",
-      "\001 \002(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Organization\030\003 \001" +
-      "(\0132\036.Diadoc.Api.Proto.Organization\022W\n\024In" +
-      "voiceFormatVersion\030\004 \001(\01622.Diadoc.Api.Pr" +
-      "oto.OrganizationInvoiceFormatVersion:\005v5" +
-      "_02*8\n OrganizationInvoiceFormatVersion\022" +
-      "\t\n\005v5_01\020\001\022\t\n\005v5_02\020\002B\024B\022OrganizationPro" +
-      "tos"
+      "ationCount\030\024 \001(\005\022\023\n\013SearchCount\030\025 \001(\005\0222\n" +
+      "\013Sociability\030\026 \002(\0162\035.Diadoc.Api.Proto.So" +
+      "ciability\"\266\001\n\nDepartment\022\024\n\014DepartmentId" +
+      "\030\001 \002(\t\022\032\n\022ParentDepartmentId\030\002 \002(\t\022\014\n\004Na" +
+      "me\030\003 \002(\t\022\024\n\014Abbreviation\030\004 \001(\t\022\013\n\003Kpp\030\005 " +
+      "\001(\t\022*\n\007Address\030\006 \001(\0132\031.Diadoc.Api.Proto.",
+      "Address\022\031\n\nIsDisabled\030\007 \001(\010:\005false\"\262\001\n\003B" +
+      "ox\022\r\n\005BoxId\030\001 \002(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Orga" +
+      "nization\030\003 \001(\0132\036.Diadoc.Api.Proto.Organi" +
+      "zation\022W\n\024InvoiceFormatVersion\030\004 \001(\01622.D" +
+      "iadoc.Api.Proto.OrganizationInvoiceForma" +
+      "tVersion:\005v5_02*8\n OrganizationInvoiceFo" +
+      "rmatVersion\022\t\n\005v5_01\020\001\022\t\n\005v5_02\020\002*:\n\013Soc" +
+      "iability\022\024\n\020AllOrganizations\020\000\022\025\n\021Counte" +
+      "ragentsOnly\020\001B\024B\022OrganizationProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6528,7 +6707,7 @@ public final class OrganizationProtos {
     internal_static_Diadoc_Api_Proto_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Organization_descriptor,
-        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", });
+        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", });
     internal_static_Diadoc_Api_Proto_Department_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Department_fieldAccessorTable = new

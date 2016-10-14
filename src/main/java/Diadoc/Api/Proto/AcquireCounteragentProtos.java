@@ -1038,6 +1038,20 @@ public final class AcquireCounteragentProtos {
      * <code>optional bool SignatureRequested = 3 [default = false];</code>
      */
     boolean getSignatureRequested();
+
+    /**
+     * <code>optional string Type = 4;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>optional string Type = 4;</code>
+     */
+    java.lang.String getType();
+    /**
+     * <code>optional string Type = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.InvitationDocument}
@@ -1113,6 +1127,12 @@ public final class AcquireCounteragentProtos {
             case 24: {
               bitField0_ |= 0x00000004;
               signatureRequested_ = input.readBool();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              type_ = bs;
               break;
             }
           }
@@ -1233,10 +1253,53 @@ public final class AcquireCounteragentProtos {
       return signatureRequested_;
     }
 
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private java.lang.Object type_;
+    /**
+     * <code>optional string Type = 4;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string Type = 4;</code>
+     */
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          type_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Type = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       signedContent_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.SignedContent.getDefaultInstance();
       fileName_ = "";
       signatureRequested_ = false;
+      type_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1268,6 +1331,9 @@ public final class AcquireCounteragentProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBool(3, signatureRequested_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getTypeBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1288,6 +1354,10 @@ public final class AcquireCounteragentProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, signatureRequested_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getTypeBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1417,6 +1487,8 @@ public final class AcquireCounteragentProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         signatureRequested_ = false;
         bitField0_ = (bitField0_ & ~0x00000004);
+        type_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -1461,6 +1533,10 @@ public final class AcquireCounteragentProtos {
           to_bitField0_ |= 0x00000004;
         }
         result.signatureRequested_ = signatureRequested_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.type_ = type_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1487,6 +1563,11 @@ public final class AcquireCounteragentProtos {
         }
         if (other.hasSignatureRequested()) {
           setSignatureRequested(other.getSignatureRequested());
+        }
+        if (other.hasType()) {
+          bitField0_ |= 0x00000008;
+          type_ = other.type_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1743,6 +1824,82 @@ public final class AcquireCounteragentProtos {
       public Builder clearSignatureRequested() {
         bitField0_ = (bitField0_ & ~0x00000004);
         signatureRequested_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>optional string Type = 4;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string Type = 4;</code>
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            type_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Type = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Type = 4;</code>
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Type = 4;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Type = 4;</code>
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        type_ = value;
         onChanged();
         return this;
       }
@@ -2271,13 +2428,13 @@ public final class AcquireCounteragentProtos {
       "o\"\231\001\n\032AcquireCounteragentRequest\022\r\n\005OrgI" +
       "d\030\001 \001(\t\022\013\n\003Inn\030\002 \001(\t\022\035\n\025MessageToCounter" +
       "agent\030\003 \001(\t\022@\n\022InvitationDocument\030\004 \001(\0132" +
-      "$.Diadoc.Api.Proto.InvitationDocument\"\210\001" +
+      "$.Diadoc.Api.Proto.InvitationDocument\"\226\001" +
       "\n\022InvitationDocument\022=\n\rSignedContent\030\001 " +
       "\002(\0132&.Diadoc.Api.Proto.Events.SignedCont" +
       "ent\022\020\n\010FileName\030\002 \002(\t\022!\n\022SignatureReques" +
-      "ted\030\003 \001(\010:\005false\"*\n\031AcquireCounteragentR",
-      "esult\022\r\n\005OrgId\030\001 \002(\tB\033B\031AcquireCounterag" +
-      "entProtos"
+      "ted\030\003 \001(\010:\005false\022\014\n\004Type\030\004 \001(\t\"*\n\031Acquir",
+      "eCounteragentResult\022\r\n\005OrgId\030\001 \002(\tB\033B\031Ac" +
+      "quireCounteragentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2303,7 +2460,7 @@ public final class AcquireCounteragentProtos {
     internal_static_Diadoc_Api_Proto_InvitationDocument_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_InvitationDocument_descriptor,
-        new java.lang.String[] { "SignedContent", "FileName", "SignatureRequested", });
+        new java.lang.String[] { "SignedContent", "FileName", "SignatureRequested", "Type", });
     internal_static_Diadoc_Api_Proto_AcquireCounteragentResult_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_AcquireCounteragentResult_fieldAccessorTable = new

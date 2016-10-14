@@ -1183,6 +1183,19 @@ public final class DocumentProtos {
      * <code>optional .Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata CertificateRegistryMetadata = 55;</code>
      */
     Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadataOrBuilder getCertificateRegistryMetadataOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+     */
+    boolean hasUniversalTransferDocumentMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata getUniversalTransferDocumentMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadataOrBuilder getUniversalTransferDocumentMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Document}
@@ -1723,6 +1736,19 @@ public final class DocumentProtos {
                 certificateRegistryMetadata_ = subBuilder.buildPartial();
               }
               bitField1_ |= 0x00010000;
+              break;
+            }
+            case 450: {
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.Builder subBuilder = null;
+              if (((bitField1_ & 0x00020000) == 0x00020000)) {
+                subBuilder = universalTransferDocumentMetadata_.toBuilder();
+              }
+              universalTransferDocumentMetadata_ = input.readMessage(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(universalTransferDocumentMetadata_);
+                universalTransferDocumentMetadata_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00020000;
               break;
             }
           }
@@ -3130,6 +3156,27 @@ public final class DocumentProtos {
       return certificateRegistryMetadata_;
     }
 
+    public static final int UNIVERSALTRANSFERDOCUMENTMETADATA_FIELD_NUMBER = 56;
+    private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata universalTransferDocumentMetadata_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+     */
+    public boolean hasUniversalTransferDocumentMetadata() {
+      return ((bitField1_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata getUniversalTransferDocumentMetadata() {
+      return universalTransferDocumentMetadata_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadataOrBuilder getUniversalTransferDocumentMetadataOrBuilder() {
+      return universalTransferDocumentMetadata_;
+    }
+
     private void initFields() {
       indexKey_ = "";
       messageId_ = "";
@@ -3184,6 +3231,7 @@ public final class DocumentProtos {
       packetIsLocked_ = false;
       priceListAgreementMetadata_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.getDefaultInstance();
       certificateRegistryMetadata_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.getDefaultInstance();
+      universalTransferDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3307,6 +3355,12 @@ public final class DocumentProtos {
       }
       if (hasSupplementaryAgreementMetadata()) {
         if (!getSupplementaryAgreementMetadata().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasUniversalTransferDocumentMetadata()) {
+        if (!getUniversalTransferDocumentMetadata().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -3476,6 +3530,9 @@ public final class DocumentProtos {
       }
       if (((bitField1_ & 0x00010000) == 0x00010000)) {
         output.writeMessage(55, certificateRegistryMetadata_);
+      }
+      if (((bitField1_ & 0x00020000) == 0x00020000)) {
+        output.writeMessage(56, universalTransferDocumentMetadata_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3698,6 +3755,10 @@ public final class DocumentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(55, certificateRegistryMetadata_);
       }
+      if (((bitField1_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(56, universalTransferDocumentMetadata_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -3832,6 +3893,7 @@ public final class DocumentProtos {
           getSupplementaryAgreementMetadataFieldBuilder();
           getPriceListAgreementMetadataFieldBuilder();
           getCertificateRegistryMetadataFieldBuilder();
+          getUniversalTransferDocumentMetadataFieldBuilder();
         }
       }
       private static Builder create() {
@@ -4046,6 +4108,12 @@ public final class DocumentProtos {
           certificateRegistryMetadataBuilder_.clear();
         }
         bitField1_ = (bitField1_ & ~0x00100000);
+        if (universalTransferDocumentMetadataBuilder_ == null) {
+          universalTransferDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.getDefaultInstance();
+        } else {
+          universalTransferDocumentMetadataBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00200000);
         return this;
       }
 
@@ -4392,6 +4460,14 @@ public final class DocumentProtos {
         } else {
           result.certificateRegistryMetadata_ = certificateRegistryMetadataBuilder_.build();
         }
+        if (((from_bitField1_ & 0x00200000) == 0x00200000)) {
+          to_bitField1_ |= 0x00020000;
+        }
+        if (universalTransferDocumentMetadataBuilder_ == null) {
+          result.universalTransferDocumentMetadata_ = universalTransferDocumentMetadata_;
+        } else {
+          result.universalTransferDocumentMetadata_ = universalTransferDocumentMetadataBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -4686,6 +4762,9 @@ public final class DocumentProtos {
         if (other.hasCertificateRegistryMetadata()) {
           mergeCertificateRegistryMetadata(other.getCertificateRegistryMetadata());
         }
+        if (other.hasUniversalTransferDocumentMetadata()) {
+          mergeUniversalTransferDocumentMetadata(other.getUniversalTransferDocumentMetadata());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -4807,6 +4886,12 @@ public final class DocumentProtos {
         }
         if (hasSupplementaryAgreementMetadata()) {
           if (!getSupplementaryAgreementMetadata().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasUniversalTransferDocumentMetadata()) {
+          if (!getUniversalTransferDocumentMetadata().isInitialized()) {
             
             return false;
           }
@@ -9713,6 +9798,122 @@ public final class DocumentProtos {
         return certificateRegistryMetadataBuilder_;
       }
 
+      private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata universalTransferDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadataOrBuilder> universalTransferDocumentMetadataBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+       */
+      public boolean hasUniversalTransferDocumentMetadata() {
+        return ((bitField1_ & 0x00200000) == 0x00200000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata getUniversalTransferDocumentMetadata() {
+        if (universalTransferDocumentMetadataBuilder_ == null) {
+          return universalTransferDocumentMetadata_;
+        } else {
+          return universalTransferDocumentMetadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+       */
+      public Builder setUniversalTransferDocumentMetadata(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata value) {
+        if (universalTransferDocumentMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          universalTransferDocumentMetadata_ = value;
+          onChanged();
+        } else {
+          universalTransferDocumentMetadataBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+       */
+      public Builder setUniversalTransferDocumentMetadata(
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.Builder builderForValue) {
+        if (universalTransferDocumentMetadataBuilder_ == null) {
+          universalTransferDocumentMetadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          universalTransferDocumentMetadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+       */
+      public Builder mergeUniversalTransferDocumentMetadata(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata value) {
+        if (universalTransferDocumentMetadataBuilder_ == null) {
+          if (((bitField1_ & 0x00200000) == 0x00200000) &&
+              universalTransferDocumentMetadata_ != Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.getDefaultInstance()) {
+            universalTransferDocumentMetadata_ =
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.newBuilder(universalTransferDocumentMetadata_).mergeFrom(value).buildPartial();
+          } else {
+            universalTransferDocumentMetadata_ = value;
+          }
+          onChanged();
+        } else {
+          universalTransferDocumentMetadataBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+       */
+      public Builder clearUniversalTransferDocumentMetadata() {
+        if (universalTransferDocumentMetadataBuilder_ == null) {
+          universalTransferDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.getDefaultInstance();
+          onChanged();
+        } else {
+          universalTransferDocumentMetadataBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00200000);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.Builder getUniversalTransferDocumentMetadataBuilder() {
+        bitField1_ |= 0x00200000;
+        onChanged();
+        return getUniversalTransferDocumentMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadataOrBuilder getUniversalTransferDocumentMetadataOrBuilder() {
+        if (universalTransferDocumentMetadataBuilder_ != null) {
+          return universalTransferDocumentMetadataBuilder_.getMessageOrBuilder();
+        } else {
+          return universalTransferDocumentMetadata_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadataOrBuilder> 
+          getUniversalTransferDocumentMetadataFieldBuilder() {
+        if (universalTransferDocumentMetadataBuilder_ == null) {
+          universalTransferDocumentMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadataOrBuilder>(
+                  getUniversalTransferDocumentMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          universalTransferDocumentMetadata_ = null;
+        }
+        return universalTransferDocumentMetadataBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Document)
     }
 
@@ -10671,125 +10872,129 @@ public final class DocumentProtos {
       "\n\030Documents/Document.proto\022\032Diadoc.Api.P" +
       "roto.Documents\032\rContent.proto\032\020DocumentI" +
       "d.proto\032\024CustomDataItem.proto\032\022DocumentT" +
-      "ype.proto\032\027DocumentDirection.proto\032\026Reso" +
-      "lutionTarget.proto\032\032ForwardDocumentEvent" +
-      ".proto\032\037Documents/InvoiceDocument.proto\032" +
-      "!Documents/BilateralDocument.proto\032\"Docu" +
-      "ments/UnilateralDocument.proto\032%Document" +
-      "s/NonformalizedDocument.proto\032-Documents" +
-      "/AcceptanceCertificateDocument.proto\"\255\033\n",
-      "\010Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessageId" +
-      "\030\002 \002(\t\022\020\n\010EntityId\030\003 \002(\t\022\036\n\026CreationTime" +
-      "stampTicks\030\004 \002(\020\022\031\n\021CounteragentBoxId\030\005 " +
-      "\001(\t\022I\n\014DocumentType\030\006 \001(\0162\036.Diadoc.Api.P" +
-      "roto.DocumentType:\023UnknownDocumentType\0228" +
-      "\n\022InitialDocumentIds\030\007 \003(\0132\034.Diadoc.Api." +
-      "Proto.DocumentId\022<\n\026SubordinateDocumentI" +
-      "ds\030\010 \003(\0132\034.Diadoc.Api.Proto.DocumentId\022*" +
-      "\n\007Content\030\t \001(\0132\031.Diadoc.Api.Proto.Conte" +
-      "nt\022\020\n\010FileName\030\n \001(\t\022\024\n\014DocumentDate\030\013 \001",
-      "(\t\022\026\n\016DocumentNumber\030\014 \001(\t\022v\n\035Nonformali" +
-      "zedDocumentMetadata\030\r \001(\0132O.Diadoc.Api.P" +
-      "roto.Documents.NonformalizedDocument.Non" +
-      "formalizedDocumentMetadata\022T\n\017InvoiceMet" +
-      "adata\030\016 \001(\0132;.Diadoc.Api.Proto.Documents" +
-      ".InvoiceDocument.InvoiceMetadata\022t\n\036Trus" +
-      "tConnectionRequestMetadata\030\017 \001(\0132L.Diado" +
-      "c.Api.Proto.Documents.BilateralDocument." +
-      "TrustConnectionRequestMetadata\022[\n\016Torg12" +
-      "Metadata\030\020 \001(\0132C.Diadoc.Api.Proto.Docume",
-      "nts.BilateralDocument.BasicDocumentMetad" +
-      "ata\022d\n\027InvoiceRevisionMetadata\030\021 \001(\0132C.D" +
-      "iadoc.Api.Proto.Documents.InvoiceDocumen" +
-      "t.InvoiceRevisionMetadata\022h\n\031InvoiceCorr" +
-      "ectionMetadata\030\022 \001(\0132E.Diadoc.Api.Proto." +
-      "Documents.InvoiceDocument.InvoiceCorrect" +
-      "ionMetadata\022x\n!InvoiceCorrectionRevision" +
-      "Metadata\030\023 \001(\0132M.Diadoc.Api.Proto.Docume" +
-      "nts.InvoiceDocument.InvoiceCorrectionRev" +
-      "isionMetadata\022~\n\035AcceptanceCertificateMe",
-      "tadata\030\024 \001(\0132W.Diadoc.Api.Proto.Document" +
-      "s.AcceptanceCertificateDocument.Acceptan" +
-      "ceCertificateMetadata\022g\n\027ProformaInvoice" +
-      "Metadata\030\025 \001(\0132F.Diadoc.Api.Proto.Docume" +
-      "nts.UnilateralDocument.ProformaInvoiceMe" +
-      "tadata\022^\n\021XmlTorg12Metadata\030\026 \001(\0132C.Diad" +
-      "oc.Api.Proto.Documents.BilateralDocument" +
-      ".BasicDocumentMetadata\022m\n XmlAcceptanceC" +
-      "ertificateMetadata\030\027 \001(\0132C.Diadoc.Api.Pr" +
-      "oto.Documents.BilateralDocument.BasicDoc",
-      "umentMetadata\022\030\n\tIsDeleted\030\030 \001(\010:\005false\022" +
-      "\024\n\014DepartmentId\030\031 \001(\t\022\025\n\006IsTest\030\032 \001(\010:\005f" +
-      "alse\022\030\n\020FromDepartmentId\030\033 \001(\t\022\026\n\016ToDepa" +
-      "rtmentId\030\034 \001(\t\022Z\n\021PriceListMetadata\030\035 \001(" +
-      "\0132?.Diadoc.Api.Proto.Documents.Bilateral" +
-      "Document.PriceListMetadata\022\030\n\020CustomDocu" +
-      "mentId\030\036 \001(\t\022F\n\020ResolutionStatus\030\037 \001(\0132," +
-      ".Diadoc.Api.Proto.Documents.ResolutionSt" +
-      "atus\022_\n\020RevocationStatus\030  \001(\0162,.Diadoc." +
-      "Api.Proto.Documents.RevocationStatus:\027Un",
-      "knownRevocationStatus\022\032\n\022SendTimestampTi" +
-      "cks\030! \001(\020\022\036\n\026DeliveryTimestampTicks\030\" \001(" +
-      "\020\022E\n\025ForwardDocumentEvents\030# \003(\0132&.Diado" +
-      "c.Api.Proto.ForwardDocumentEvent\022j\n\031Reco" +
-      "nciliationActMetadata\030& \001(\0132G.Diadoc.Api" +
-      ".Proto.Documents.BilateralDocument.Bilat" +
-      "eralDocumentMetadata\022X\n\020ContractMetadata" +
-      "\030\' \001(\0132>.Diadoc.Api.Proto.Documents.Bila" +
-      "teralDocument.ContractMetadata\022[\n\016Torg13" +
-      "Metadata\030( \001(\0132C.Diadoc.Api.Proto.Docume",
-      "nts.BilateralDocument.BasicDocumentMetad" +
-      "ata\022e\n\026ServiceDetailsMetadata\030) \001(\0132E.Di" +
-      "adoc.Api.Proto.Documents.UnilateralDocum" +
-      "ent.ServiceDetailsMetadata\022z\n\031RoamingNot" +
-      "ificationStatus\030* \001(\01625.Diadoc.Api.Proto" +
-      ".Documents.RoamingNotificationStatus: Un" +
-      "knownRoamingNotificationStatus\022!\n\022HasCus" +
-      "tomPrintForm\030+ \001(\010:\005false\0224\n\nCustomData\030" +
-      ", \003(\0132 .Diadoc.Api.Proto.CustomDataItem\022" +
-      "\020\n\010PacketId\030- \001(\t\022X\n\021DocumentDirection\030.",
-      " \001(\0162#.Diadoc.Api.Proto.DocumentDirectio" +
-      "n:\030UnknownDocumentDirection\022&\n\036LastModif" +
-      "icationTimestampTicks\030/ \001(\020\022\032\n\022IsEncrypt" +
-      "edContent\0300 \001(\010\022n\n\025SenderSignatureStatus" +
-      "\0301 \001(\01621.Diadoc.Api.Proto.Documents.Send" +
-      "erSignatureStatus:\034UnknownSenderSignatur" +
-      "eStatus\022t\n\036SupplementaryAgreementMetadat" +
-      "a\0302 \001(\0132L.Diadoc.Api.Proto.Documents.Bil" +
-      "ateralDocument.SupplementaryAgreementMet" +
-      "adata\022\025\n\006IsRead\0303 \001(\010:\005false\022,\n$RoamingN",
-      "otificationStatusDescription\0304 \001(\t\022\035\n\016Pa" +
-      "cketIsLocked\0305 \001(\010:\005false\022s\n\032PriceListAg" +
-      "reementMetadata\0306 \001(\0132O.Diadoc.Api.Proto" +
-      ".Documents.NonformalizedDocument.Nonform" +
-      "alizedDocumentMetadata\022t\n\033CertificateReg" +
-      "istryMetadata\0307 \001(\0132O.Diadoc.Api.Proto.D" +
-      "ocuments.NonformalizedDocument.Nonformal" +
-      "izedDocumentMetadata\"\310\001\n\020ResolutionStatu" +
-      "s\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.Proto.Docum" +
-      "ents.ResolutionStatusType:\027UnknownResolu",
-      "tionStatus\0222\n\006Target\030\002 \001(\0132\".Diadoc.Api." +
-      "Proto.ResolutionTarget\022\024\n\014AuthorUserId\030\003" +
-      " \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t*\254\001\n\024ResolutionSt" +
-      "atusType\022$\n\027UnknownResolutionStatus\020\377\377\377\377" +
-      "\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013Disapp" +
-      "roved\020\002\022\030\n\024ApprovementRequested\020\003\022\026\n\022Sig" +
-      "natureRequested\020\004\022\023\n\017SignatureDenied\020\005*\262" +
-      "\001\n\020RevocationStatus\022\033\n\027UnknownRevocation" +
-      "Status\020\000\022\030\n\024RevocationStatusNone\020\001\022\035\n\031Re" +
-      "vocationIsRequestedByMe\020\002\022\030\n\024RequestsMyR",
-      "evocation\020\003\022\026\n\022RevocationAccepted\020\004\022\026\n\022R" +
-      "evocationRejected\020\005*\256\001\n\031RoamingNotificat" +
-      "ionStatus\022$\n UnknownRoamingNotificationS" +
-      "tatus\020\000\022!\n\035RoamingNotificationStatusNone" +
-      "\020\001\022$\n RoamingNotificationStatusSuccess\020\002" +
-      "\022\"\n\036RoamingNotificationStatusError\020\003*\300\001\n" +
-      "\025SenderSignatureStatus\022 \n\034UnknownSenderS" +
-      "ignatureStatus\020\000\022\035\n\031WaitingForSenderSign" +
-      "ature\020\001\022\034\n\030SenderSignatureUnchecked\020\002\022\"\n" +
-      "\036SenderSignatureCheckedAndValid\020\003\022$\n Sen",
-      "derSignatureCheckedAndInvalid\020\004B\020B\016Docum" +
-      "entProtos"
+      "ype.proto\032\027DocumentDirection.proto\032-Docu" +
+      "ments/AcceptanceCertificateDocument.prot" +
+      "o\032!Documents/BilateralDocument.proto\032\037Do" +
+      "cuments/InvoiceDocument.proto\032%Documents" +
+      "/NonformalizedDocument.proto\032\"Documents/" +
+      "UnilateralDocument.proto\032)Documents/Univ" +
+      "ersalTransferDocument.proto\032\026ResolutionT",
+      "arget.proto\032\032ForwardDocumentEvent.proto\"" +
+      "\262\034\n\010Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessag" +
+      "eId\030\002 \002(\t\022\020\n\010EntityId\030\003 \002(\t\022\036\n\026CreationT" +
+      "imestampTicks\030\004 \002(\020\022\031\n\021CounteragentBoxId" +
+      "\030\005 \001(\t\022I\n\014DocumentType\030\006 \001(\0162\036.Diadoc.Ap" +
+      "i.Proto.DocumentType:\023UnknownDocumentTyp" +
+      "e\0228\n\022InitialDocumentIds\030\007 \003(\0132\034.Diadoc.A" +
+      "pi.Proto.DocumentId\022<\n\026SubordinateDocume" +
+      "ntIds\030\010 \003(\0132\034.Diadoc.Api.Proto.DocumentI" +
+      "d\022*\n\007Content\030\t \001(\0132\031.Diadoc.Api.Proto.Co",
+      "ntent\022\020\n\010FileName\030\n \001(\t\022\024\n\014DocumentDate\030" +
+      "\013 \001(\t\022\026\n\016DocumentNumber\030\014 \001(\t\022v\n\035Nonform" +
+      "alizedDocumentMetadata\030\r \001(\0132O.Diadoc.Ap" +
+      "i.Proto.Documents.NonformalizedDocument." +
+      "NonformalizedDocumentMetadata\022T\n\017Invoice" +
+      "Metadata\030\016 \001(\0132;.Diadoc.Api.Proto.Docume" +
+      "nts.InvoiceDocument.InvoiceMetadata\022t\n\036T" +
+      "rustConnectionRequestMetadata\030\017 \001(\0132L.Di" +
+      "adoc.Api.Proto.Documents.BilateralDocume" +
+      "nt.TrustConnectionRequestMetadata\022[\n\016Tor",
+      "g12Metadata\030\020 \001(\0132C.Diadoc.Api.Proto.Doc" +
+      "uments.BilateralDocument.BasicDocumentMe" +
+      "tadata\022d\n\027InvoiceRevisionMetadata\030\021 \001(\0132" +
+      "C.Diadoc.Api.Proto.Documents.InvoiceDocu" +
+      "ment.InvoiceRevisionMetadata\022h\n\031InvoiceC" +
+      "orrectionMetadata\030\022 \001(\0132E.Diadoc.Api.Pro" +
+      "to.Documents.InvoiceDocument.InvoiceCorr" +
+      "ectionMetadata\022x\n!InvoiceCorrectionRevis" +
+      "ionMetadata\030\023 \001(\0132M.Diadoc.Api.Proto.Doc" +
+      "uments.InvoiceDocument.InvoiceCorrection",
+      "RevisionMetadata\022~\n\035AcceptanceCertificat" +
+      "eMetadata\030\024 \001(\0132W.Diadoc.Api.Proto.Docum" +
+      "ents.AcceptanceCertificateDocument.Accep" +
+      "tanceCertificateMetadata\022g\n\027ProformaInvo" +
+      "iceMetadata\030\025 \001(\0132F.Diadoc.Api.Proto.Doc" +
+      "uments.UnilateralDocument.ProformaInvoic" +
+      "eMetadata\022^\n\021XmlTorg12Metadata\030\026 \001(\0132C.D" +
+      "iadoc.Api.Proto.Documents.BilateralDocum" +
+      "ent.BasicDocumentMetadata\022m\n XmlAcceptan" +
+      "ceCertificateMetadata\030\027 \001(\0132C.Diadoc.Api",
+      ".Proto.Documents.BilateralDocument.Basic" +
+      "DocumentMetadata\022\030\n\tIsDeleted\030\030 \001(\010:\005fal" +
+      "se\022\024\n\014DepartmentId\030\031 \001(\t\022\025\n\006IsTest\030\032 \001(\010" +
+      ":\005false\022\030\n\020FromDepartmentId\030\033 \001(\t\022\026\n\016ToD" +
+      "epartmentId\030\034 \001(\t\022Z\n\021PriceListMetadata\030\035" +
+      " \001(\0132?.Diadoc.Api.Proto.Documents.Bilate" +
+      "ralDocument.PriceListMetadata\022\030\n\020CustomD" +
+      "ocumentId\030\036 \001(\t\022F\n\020ResolutionStatus\030\037 \001(" +
+      "\0132,.Diadoc.Api.Proto.Documents.Resolutio" +
+      "nStatus\022_\n\020RevocationStatus\030  \001(\0162,.Diad",
+      "oc.Api.Proto.Documents.RevocationStatus:" +
+      "\027UnknownRevocationStatus\022\032\n\022SendTimestam" +
+      "pTicks\030! \001(\020\022\036\n\026DeliveryTimestampTicks\030\"" +
+      " \001(\020\022E\n\025ForwardDocumentEvents\030# \003(\0132&.Di" +
+      "adoc.Api.Proto.ForwardDocumentEvent\022j\n\031R" +
+      "econciliationActMetadata\030& \001(\0132G.Diadoc." +
+      "Api.Proto.Documents.BilateralDocument.Bi" +
+      "lateralDocumentMetadata\022X\n\020ContractMetad" +
+      "ata\030\' \001(\0132>.Diadoc.Api.Proto.Documents.B" +
+      "ilateralDocument.ContractMetadata\022[\n\016Tor",
+      "g13Metadata\030( \001(\0132C.Diadoc.Api.Proto.Doc" +
+      "uments.BilateralDocument.BasicDocumentMe" +
+      "tadata\022e\n\026ServiceDetailsMetadata\030) \001(\0132E" +
+      ".Diadoc.Api.Proto.Documents.UnilateralDo" +
+      "cument.ServiceDetailsMetadata\022z\n\031Roaming" +
+      "NotificationStatus\030* \001(\01625.Diadoc.Api.Pr" +
+      "oto.Documents.RoamingNotificationStatus:" +
+      " UnknownRoamingNotificationStatus\022!\n\022Has" +
+      "CustomPrintForm\030+ \001(\010:\005false\0224\n\nCustomDa" +
+      "ta\030, \003(\0132 .Diadoc.Api.Proto.CustomDataIt",
+      "em\022\020\n\010PacketId\030- \001(\t\022X\n\021DocumentDirectio" +
+      "n\030. \001(\0162#.Diadoc.Api.Proto.DocumentDirec" +
+      "tion:\030UnknownDocumentDirection\022&\n\036LastMo" +
+      "dificationTimestampTicks\030/ \001(\020\022\032\n\022IsEncr" +
+      "yptedContent\0300 \001(\010\022n\n\025SenderSignatureSta" +
+      "tus\0301 \001(\01621.Diadoc.Api.Proto.Documents.S" +
+      "enderSignatureStatus:\034UnknownSenderSigna" +
+      "tureStatus\022t\n\036SupplementaryAgreementMeta" +
+      "data\0302 \001(\0132L.Diadoc.Api.Proto.Documents." +
+      "BilateralDocument.SupplementaryAgreement",
+      "Metadata\022\025\n\006IsRead\0303 \001(\010:\005false\022,\n$Roami" +
+      "ngNotificationStatusDescription\0304 \001(\t\022\035\n" +
+      "\016PacketIsLocked\0305 \001(\010:\005false\022s\n\032PriceLis" +
+      "tAgreementMetadata\0306 \001(\0132O.Diadoc.Api.Pr" +
+      "oto.Documents.NonformalizedDocument.Nonf" +
+      "ormalizedDocumentMetadata\022t\n\033Certificate" +
+      "RegistryMetadata\0307 \001(\0132O.Diadoc.Api.Prot" +
+      "o.Documents.NonformalizedDocument.Nonfor" +
+      "malizedDocumentMetadata\022\202\001\n!UniversalTra" +
+      "nsferDocumentMetadata\0308 \001(\0132W.Diadoc.Api",
+      ".Proto.Documents.UniversalTransferDocume" +
+      "nt.UniversalTransferDocumentMetadata\"\310\001\n" +
+      "\020ResolutionStatus\022W\n\004Type\030\001 \001(\01620.Diadoc" +
+      ".Api.Proto.Documents.ResolutionStatusTyp" +
+      "e:\027UnknownResolutionStatus\0222\n\006Target\030\002 \001" +
+      "(\0132\".Diadoc.Api.Proto.ResolutionTarget\022\024" +
+      "\n\014AuthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t*" +
+      "\254\001\n\024ResolutionStatusType\022$\n\027UnknownResol" +
+      "utionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010Appr" +
+      "oved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024ApprovementRe",
+      "quested\020\003\022\026\n\022SignatureRequested\020\004\022\023\n\017Sig" +
+      "natureDenied\020\005*\262\001\n\020RevocationStatus\022\033\n\027U" +
+      "nknownRevocationStatus\020\000\022\030\n\024RevocationSt" +
+      "atusNone\020\001\022\035\n\031RevocationIsRequestedByMe\020" +
+      "\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revocatio" +
+      "nAccepted\020\004\022\026\n\022RevocationRejected\020\005*\256\001\n\031" +
+      "RoamingNotificationStatus\022$\n UnknownRoam" +
+      "ingNotificationStatus\020\000\022!\n\035RoamingNotifi" +
+      "cationStatusNone\020\001\022$\n RoamingNotificatio" +
+      "nStatusSuccess\020\002\022\"\n\036RoamingNotificationS",
+      "tatusError\020\003*\300\001\n\025SenderSignatureStatus\022 " +
+      "\n\034UnknownSenderSignatureStatus\020\000\022\035\n\031Wait" +
+      "ingForSenderSignature\020\001\022\034\n\030SenderSignatu" +
+      "reUnchecked\020\002\022\"\n\036SenderSignatureCheckedA" +
+      "ndValid\020\003\022$\n SenderSignatureCheckedAndIn" +
+      "valid\020\004B\020B\016DocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10807,20 +11012,21 @@ public final class DocumentProtos {
           Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor(),
           Diadoc.Api.Proto.DocumentTypeProtos.getDescriptor(),
           Diadoc.Api.Proto.DocumentDirectionProtos.getDescriptor(),
+          Diadoc.Api.Proto.Documents.AcceptanceCertificateDocument.AcceptanceCertificateDocumentProtos.getDescriptor(),
+          Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.getDescriptor(),
+          Diadoc.Api.Proto.Documents.InvoiceDocument.InvoiceDocumentProtos.getDescriptor(),
+          Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.getDescriptor(),
+          Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.getDescriptor(),
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.getDescriptor(),
           Diadoc.Api.Proto.ResolutionTargetProtos.getDescriptor(),
           Diadoc.Api.Proto.ForwardDocumentEventProtos.getDescriptor(),
-          Diadoc.Api.Proto.Documents.InvoiceDocument.InvoiceDocumentProtos.getDescriptor(),
-          Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.getDescriptor(),
-          Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.getDescriptor(),
-          Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.getDescriptor(),
-          Diadoc.Api.Proto.Documents.AcceptanceCertificateDocument.AcceptanceCertificateDocumentProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Documents_Document_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", });
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_fieldAccessorTable = new
@@ -10832,13 +11038,14 @@ public final class DocumentProtos {
     Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentTypeProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentDirectionProtos.getDescriptor();
+    Diadoc.Api.Proto.Documents.AcceptanceCertificateDocument.AcceptanceCertificateDocumentProtos.getDescriptor();
+    Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.getDescriptor();
+    Diadoc.Api.Proto.Documents.InvoiceDocument.InvoiceDocumentProtos.getDescriptor();
+    Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.getDescriptor();
+    Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.getDescriptor();
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.getDescriptor();
     Diadoc.Api.Proto.ResolutionTargetProtos.getDescriptor();
     Diadoc.Api.Proto.ForwardDocumentEventProtos.getDescriptor();
-    Diadoc.Api.Proto.Documents.InvoiceDocument.InvoiceDocumentProtos.getDescriptor();
-    Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.getDescriptor();
-    Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.getDescriptor();
-    Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.getDescriptor();
-    Diadoc.Api.Proto.Documents.AcceptanceCertificateDocument.AcceptanceCertificateDocumentProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

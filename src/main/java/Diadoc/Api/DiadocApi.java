@@ -677,6 +677,37 @@ public class DiadocApi {
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
+    public GeneratedFile GenerateUniversalTransferDocumentXmlForSeller(UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo utdInfo) throws IOException, ParseException {
+        return GenerateUniversalTransferDocumentXmlForSeller(utdInfo, false);
+    }
+
+    public GeneratedFile GenerateUniversalTransferDocumentXmlForSeller(UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo utdInfo, boolean disableValidation) throws IOException, ParseException {
+        if (utdInfo == null) throw new NullPointerException("info");
+        HttpResponse httpResponse = ReceivePostHttpResponse(
+            "/GenerateUniversalTransferDocumentXmlForSeller" + (disableValidation ? "?disableValidation" : ""),
+            null,
+            utdInfo.toByteArray());
+        return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
+    public GeneratedFile GenerateUniversalTransferDocumentXmlForBuyer(
+        UniversalTransferDocumentInfoProtos.UniversalTransferDocumentBuyerTitleInfo buyerTitleInfo,
+        String boxId,
+        String sellerTitleMessageId,
+        String sellerTitleAttachmentId
+    ) throws IOException, ParseException {
+        if (buyerTitleInfo == null) throw new NullPointerException("buyerTitleInfo");
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (sellerTitleMessageId == null) throw new NullPointerException("sellerTitleMessageId");
+        if (sellerTitleAttachmentId == null) throw new NullPointerException("sellerTitleAttachmentId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("sellerTitleMessageId", sellerTitleMessageId));
+        parameters.add(new BasicNameValuePair("sellerTitleAttachmentId", sellerTitleAttachmentId));
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateUniversalTransferDocumentXmlForBuyer", parameters, buyerTitleInfo.toByteArray());
+        return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
     public InvoiceInfoProtos.InvoiceInfo ParseInvoiceXml(byte[] invoiceXmlContent) throws IOException
     {
         return InvoiceInfoProtos.InvoiceInfo.parseFrom(PerformPostHttpRequest("/ParseInvoiceXml", null, invoiceXmlContent));
@@ -690,6 +721,18 @@ public class DiadocApi {
     public AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo ParseAcceptanceCertificateSellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
     {
         return AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseAcceptanceCertificateSellerTitleXml", null, sellerTitleXmlContent));
+    }
+
+    public UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo ParseUniversalTransferDocumentSellerTitleXml(byte[] utdXmlContent) throws IOException
+    {
+        byte[] response = PerformPostHttpRequest("/ParseUniversalTransferDocumentSellerTitleXml", null, utdXmlContent);
+        return UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo.parseFrom(response);
+    }
+
+    public UniversalTransferDocumentInfoProtos.UniversalTransferDocumentBuyerTitleInfo ParseUniversalTransferDocumentBuyerTitleXml(byte[] utdXmlContent) throws IOException
+    {
+        byte[] response = PerformPostHttpRequest("/ParseUniversalTransferDocumentBuyerTitleXml", null, utdXmlContent);
+        return UniversalTransferDocumentInfoProtos.UniversalTransferDocumentBuyerTitleInfo.parseFrom(response);
     }
 
     public RevocationRequestInfoProtos.RevocationRequestInfo ParseRevocationRequestXml(byte[] xmlContent) throws IOException

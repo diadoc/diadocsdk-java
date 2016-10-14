@@ -37,6 +37,20 @@ public final class AddressProtos {
      * <code>optional .Diadoc.Api.Proto.ForeignAddress ForeignAddress = 2;</code>
      */
     Diadoc.Api.Proto.AddressProtos.ForeignAddressOrBuilder getForeignAddressOrBuilder();
+
+    /**
+     * <code>optional string AddressCode = 3;</code>
+     */
+    boolean hasAddressCode();
+    /**
+     * <code>optional string AddressCode = 3;</code>
+     */
+    java.lang.String getAddressCode();
+    /**
+     * <code>optional string AddressCode = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressCodeBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Address}
@@ -114,6 +128,12 @@ public final class AddressProtos {
                 foreignAddress_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              addressCode_ = bs;
               break;
             }
           }
@@ -198,9 +218,52 @@ public final class AddressProtos {
       return foreignAddress_;
     }
 
+    public static final int ADDRESSCODE_FIELD_NUMBER = 3;
+    private java.lang.Object addressCode_;
+    /**
+     * <code>optional string AddressCode = 3;</code>
+     */
+    public boolean hasAddressCode() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string AddressCode = 3;</code>
+     */
+    public java.lang.String getAddressCode() {
+      java.lang.Object ref = addressCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          addressCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string AddressCode = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressCodeBytes() {
+      java.lang.Object ref = addressCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addressCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       russianAddress_ = Diadoc.Api.Proto.AddressProtos.RussianAddress.getDefaultInstance();
       foreignAddress_ = Diadoc.Api.Proto.AddressProtos.ForeignAddress.getDefaultInstance();
+      addressCode_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -233,6 +296,9 @@ public final class AddressProtos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeMessage(2, foreignAddress_);
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getAddressCodeBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -249,6 +315,10 @@ public final class AddressProtos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, foreignAddress_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getAddressCodeBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -381,6 +451,8 @@ public final class AddressProtos {
           foreignAddressBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
+        addressCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -425,6 +497,10 @@ public final class AddressProtos {
         } else {
           result.foreignAddress_ = foreignAddressBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.addressCode_ = addressCode_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -446,6 +522,11 @@ public final class AddressProtos {
         }
         if (other.hasForeignAddress()) {
           mergeForeignAddress(other.getForeignAddress());
+        }
+        if (other.hasAddressCode()) {
+          bitField0_ |= 0x00000004;
+          addressCode_ = other.addressCode_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -716,6 +797,82 @@ public final class AddressProtos {
           foreignAddress_ = null;
         }
         return foreignAddressBuilder_;
+      }
+
+      private java.lang.Object addressCode_ = "";
+      /**
+       * <code>optional string AddressCode = 3;</code>
+       */
+      public boolean hasAddressCode() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string AddressCode = 3;</code>
+       */
+      public java.lang.String getAddressCode() {
+        java.lang.Object ref = addressCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            addressCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string AddressCode = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressCodeBytes() {
+        java.lang.Object ref = addressCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addressCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AddressCode = 3;</code>
+       */
+      public Builder setAddressCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        addressCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddressCode = 3;</code>
+       */
+      public Builder clearAddressCode() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        addressCode_ = getDefaultInstance().getAddressCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddressCode = 3;</code>
+       */
+      public Builder setAddressCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        addressCode_ = value;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Address)
@@ -3670,16 +3827,17 @@ public final class AddressProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rAddress.proto\022\020Diadoc.Api.Proto\"}\n\007Add" +
-      "ress\0228\n\016RussianAddress\030\001 \001(\0132 .Diadoc.Ap" +
-      "i.Proto.RussianAddress\0228\n\016ForeignAddress" +
-      "\030\002 \001(\0132 .Diadoc.Api.Proto.ForeignAddress" +
-      "\"\250\001\n\016RussianAddress\022\017\n\007ZipCode\030\001 \001(\t\022\016\n\006" +
-      "Region\030\002 \002(\t\022\021\n\tTerritory\030\003 \001(\t\022\014\n\004City\030" +
-      "\004 \001(\t\022\020\n\010Locality\030\005 \001(\t\022\016\n\006Street\030\006 \001(\t\022" +
-      "\020\n\010Building\030\007 \001(\t\022\r\n\005Block\030\010 \001(\t\022\021\n\tApar" +
-      "tment\030\t \001(\t\"2\n\016ForeignAddress\022\017\n\007Country" +
-      "\030\001 \002(\t\022\017\n\007Address\030\002 \002(\tB\017B\rAddressProtos"
+      "\n\rAddress.proto\022\020Diadoc.Api.Proto\"\222\001\n\007Ad" +
+      "dress\0228\n\016RussianAddress\030\001 \001(\0132 .Diadoc.A" +
+      "pi.Proto.RussianAddress\0228\n\016ForeignAddres" +
+      "s\030\002 \001(\0132 .Diadoc.Api.Proto.ForeignAddres" +
+      "s\022\023\n\013AddressCode\030\003 \001(\t\"\250\001\n\016RussianAddres" +
+      "s\022\017\n\007ZipCode\030\001 \001(\t\022\016\n\006Region\030\002 \002(\t\022\021\n\tTe" +
+      "rritory\030\003 \001(\t\022\014\n\004City\030\004 \001(\t\022\020\n\010Locality\030" +
+      "\005 \001(\t\022\016\n\006Street\030\006 \001(\t\022\020\n\010Building\030\007 \001(\t\022" +
+      "\r\n\005Block\030\010 \001(\t\022\021\n\tApartment\030\t \001(\t\"2\n\016For" +
+      "eignAddress\022\017\n\007Country\030\001 \002(\t\022\017\n\007Address\030",
+      "\002 \002(\tB\017B\rAddressProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3698,7 +3856,7 @@ public final class AddressProtos {
     internal_static_Diadoc_Api_Proto_Address_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Address_descriptor,
-        new java.lang.String[] { "RussianAddress", "ForeignAddress", });
+        new java.lang.String[] { "RussianAddress", "ForeignAddress", "AddressCode", });
     internal_static_Diadoc_Api_Proto_RussianAddress_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_RussianAddress_fieldAccessorTable = new

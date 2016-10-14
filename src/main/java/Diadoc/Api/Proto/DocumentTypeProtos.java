@@ -97,6 +97,10 @@ public final class DocumentTypeProtos {
      * <code>SupplementaryAgreement = 40;</code>
      */
     SupplementaryAgreement(19, 40),
+    /**
+     * <code>UniversalTransferDocument = 41;</code>
+     */
+    UniversalTransferDocument(20, 41),
     ;
 
     /**
@@ -183,6 +187,10 @@ public final class DocumentTypeProtos {
      * <code>SupplementaryAgreement = 40;</code>
      */
     public static final int SupplementaryAgreement_VALUE = 40;
+    /**
+     * <code>UniversalTransferDocument = 41;</code>
+     */
+    public static final int UniversalTransferDocument_VALUE = 41;
 
 
     public final int getNumber() { return value; }
@@ -209,6 +217,7 @@ public final class DocumentTypeProtos {
         case 37: return Torg13;
         case 38: return ServiceDetails;
         case 40: return SupplementaryAgreement;
+        case 41: return UniversalTransferDocument;
         default: return null;
       }
     }
@@ -269,7 +278,7 @@ public final class DocumentTypeProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022DocumentType.proto\022\020Diadoc.Api.Proto*\301" +
+      "\n\022DocumentType.proto\022\020Diadoc.Api.Proto*\340" +
       "\003\n\014DocumentType\022 \n\023UnknownDocumentType\020\377" +
       "\377\377\377\377\377\377\377\377\001\022\021\n\rNonformalized\020\000\022\013\n\007Invoice\020" +
       "\001\022\032\n\026TrustConnectionRequest\020\013\022\n\n\006Torg12\020" +
@@ -281,7 +290,8 @@ public final class DocumentTypeProtos {
       "eement\020\036\022\027\n\023CertificateRegistry\020\"\022\025\n\021Rec",
       "onciliationAct\020#\022\014\n\010Contract\020$\022\n\n\006Torg13" +
       "\020%\022\022\n\016ServiceDetails\020&\022\032\n\026SupplementaryA" +
-      "greement\020(B\024B\022DocumentTypeProtos"
+      "greement\020(\022\035\n\031UniversalTransferDocument\020" +
+      ")B\024B\022DocumentTypeProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

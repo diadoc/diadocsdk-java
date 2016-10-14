@@ -281,13 +281,25 @@ public final class DiadocMessage_GetApiProtos {
      */
     SupplementaryAgreement(38, 40),
     /**
+     * <code>UniversalTransferDocument = 41;</code>
+     */
+    UniversalTransferDocument(39, 41),
+    /**
+     * <code>UniversalTransferDocumentBuyerTitle = 42;</code>
+     */
+    UniversalTransferDocumentBuyerTitle(40, 42),
+    /**
+     * <code>UniversalTransferDocumentRevision = 45;</code>
+     */
+    UniversalTransferDocumentRevision(41, 45),
+    /**
      * <code>CustomData = 64;</code>
      */
-    CustomData(39, 64),
+    CustomData(42, 64),
     /**
      * <code>MoveDocument = 65;</code>
      */
-    MoveDocument(40, 65),
+    MoveDocument(43, 65),
     /**
      * <code>ResolutionChainAssignmentAttachment = 66;</code>
      *
@@ -295,7 +307,7 @@ public final class DiadocMessage_GetApiProtos {
      *Неизвестные типы должны обрабатываться как Nonformalized
      * </pre>
      */
-    ResolutionChainAssignmentAttachment(41, 66),
+    ResolutionChainAssignmentAttachment(44, 66),
     ;
 
     /**
@@ -459,6 +471,18 @@ public final class DiadocMessage_GetApiProtos {
      */
     public static final int SupplementaryAgreement_VALUE = 40;
     /**
+     * <code>UniversalTransferDocument = 41;</code>
+     */
+    public static final int UniversalTransferDocument_VALUE = 41;
+    /**
+     * <code>UniversalTransferDocumentBuyerTitle = 42;</code>
+     */
+    public static final int UniversalTransferDocumentBuyerTitle_VALUE = 42;
+    /**
+     * <code>UniversalTransferDocumentRevision = 45;</code>
+     */
+    public static final int UniversalTransferDocumentRevision_VALUE = 45;
+    /**
      * <code>CustomData = 64;</code>
      */
     public static final int CustomData_VALUE = 64;
@@ -519,6 +543,9 @@ public final class DiadocMessage_GetApiProtos {
         case 38: return ServiceDetails;
         case 39: return RoamingNotification;
         case 40: return SupplementaryAgreement;
+        case 41: return UniversalTransferDocument;
+        case 42: return UniversalTransferDocumentBuyerTitle;
+        case 45: return UniversalTransferDocumentRevision;
         case 64: return CustomData;
         case 65: return MoveDocument;
         case 66: return ResolutionChainAssignmentAttachment;
@@ -12130,7 +12157,7 @@ public final class DiadocMessage_GetApiProtos {
       ":\005false\022\037\n\020ContentIsPatched\030\005 \001(\010:\005false" +
       "\022\030\n\020ForwardedToBoxId\030\006 \001(\t*B\n\nEntityType" +
       "\022\025\n\021UnknownEntityType\020\000\022\016\n\nAttachment\020\001\022" +
-      "\r\n\tSignature\020\002*\200\010\n\016AttachmentType\022\"\n\025Unk" +
+      "\r\n\tSignature\020\002*\357\010\n\016AttachmentType\022\"\n\025Unk" +
       "nownAttachmentType\020\377\377\377\377\377\377\377\377\377\001\022\021\n\rNonform" +
       "alized\020\000\022\013\n\007Invoice\020\001\022\022\n\016InvoiceReceipt\020" +
       "\002\022\027\n\023InvoiceConfirmation\020\003\022\034\n\030InvoiceCor" +
@@ -12154,9 +12181,12 @@ public final class DiadocMessage_GetApiProtos {
       "ry\020\"\022\025\n\021ReconciliationAct\020#\022\014\n\010Contract\020" +
       "$\022\n\n\006Torg13\020%\022\022\n\016ServiceDetails\020&\022\027\n\023Roa" +
       "mingNotification\020\'\022\032\n\026SupplementaryAgree" +
-      "ment\020(\022\016\n\nCustomData\020@\022\020\n\014MoveDocument\020A" +
-      "\022\'\n#ResolutionChainAssignmentAttachment\020" +
-      "BB\034B\032DiadocMessage_GetApiProtos"
+      "ment\020(\022\035\n\031UniversalTransferDocument\020)\022\'\n" +
+      "#UniversalTransferDocumentBuyerTitle\020*\022%" +
+      "\n!UniversalTransferDocumentRevision\020-\022\016\n",
+      "\nCustomData\020@\022\020\n\014MoveDocument\020A\022\'\n#Resol" +
+      "utionChainAssignmentAttachment\020BB\034B\032Diad" +
+      "ocMessage_GetApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
