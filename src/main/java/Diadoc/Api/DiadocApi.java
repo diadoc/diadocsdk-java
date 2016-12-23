@@ -6,6 +6,7 @@ import Diadoc.Api.Proto.Documents.*;
 import Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos;
 import Diadoc.Api.Proto.Invoicing.*;
+import Diadoc.Api.Proto.Invoicing.Signers.*;
 import Diadoc.Api.Proto.Recognition.RecognitionProtos;
 import com.google.gson.Gson;
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -690,6 +691,21 @@ public class DiadocApi {
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
+    public GeneratedFile GenerateUniversalCorrectionTransferDocumentXmlForSeller(UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo ucdInfo) throws IOException, ParseException {
+        return GenerateUniversalCorrectionTransferDocumentXmlForSeller(ucdInfo, false);
+    }
+
+    public GeneratedFile GenerateUniversalCorrectionTransferDocumentXmlForSeller(UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo ucdInfo, boolean disableValidation) throws IOException, ParseException {
+        if (ucdInfo == null) throw new NullPointerException("info");
+        HttpResponse httpResponse = ReceivePostHttpResponse(
+            "/GenerateUniversalTransferDocumentXmlForSeller"
+                + "?correction"
+                + (disableValidation ? "&disableValidation" : ""),
+            null,
+            ucdInfo.toByteArray());
+        return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
     public GeneratedFile GenerateUniversalTransferDocumentXmlForBuyer(
         UniversalTransferDocumentInfoProtos.UniversalTransferDocumentBuyerTitleInfo buyerTitleInfo,
         String boxId,
@@ -706,6 +722,34 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("sellerTitleAttachmentId", sellerTitleAttachmentId));
         HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateUniversalTransferDocumentXmlForBuyer", parameters, buyerTitleInfo.toByteArray());
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
+    public ExtendedSignerProtos.ExtendedSignerDetails GetExtendedSignerDetails(String boxId, String thumbprint, boolean forBuyer, boolean forCorrection) throws IOException
+    {
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("thumbprint", thumbprint));
+        if (forBuyer)
+            parameters.add(new BasicNameValuePair("buyer", "true"));
+        if (forCorrection)
+            parameters.add(new BasicNameValuePair("correction", "true"));
+        return ExtendedSignerProtos.ExtendedSignerDetails.parseFrom(
+            PerformGetHttpRequest("/ExtendedSignerDetails", parameters)
+        );
+    }
+
+    public ExtendedSignerProtos.ExtendedSignerDetails PostExtendedSignerDetails(String boxId, String thumbprint, boolean forBuyer, boolean forCorrection, ExtendedSignerProtos.ExtendedSignerDetailsToPost signerDetails) throws IOException
+    {
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("thumbprint", thumbprint));
+        if (forBuyer)
+            parameters.add(new BasicNameValuePair("buyer", "true"));
+        if (forCorrection)
+            parameters.add(new BasicNameValuePair("correction", "true"));
+        return ExtendedSignerProtos.ExtendedSignerDetails.parseFrom(
+            PerformPostHttpRequest("/ExtendedSignerDetails", parameters, signerDetails.toByteArray())
+        );
     }
 
     public InvoiceInfoProtos.InvoiceInfo ParseInvoiceXml(byte[] invoiceXmlContent) throws IOException
