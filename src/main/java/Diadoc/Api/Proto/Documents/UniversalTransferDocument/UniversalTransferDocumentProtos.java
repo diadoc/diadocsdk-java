@@ -38,29 +38,49 @@ public final class UniversalTransferDocumentProtos {
      */
     OutboundWaitingForRecipientSignature(4, 4),
     /**
-     * <code>OutboundInvalidSenderSignature = 5;</code>
+     * <code>OutboundWithRecipientSignature = 5;</code>
      */
-    OutboundInvalidSenderSignature(5, 5),
+    OutboundWithRecipientSignature(5, 5),
     /**
-     * <code>InboundWaitingForInvoiceReceiptAndRecipientSignature = 6;</code>
+     * <code>OutboundRecipientSignatureRequestRejected = 6;</code>
      */
-    InboundWaitingForInvoiceReceiptAndRecipientSignature(6, 6),
+    OutboundRecipientSignatureRequestRejected(6, 6),
     /**
-     * <code>InboundWaitingForRecipientSignature = 7;</code>
+     * <code>OutboundInvalidSenderSignature = 7;</code>
      */
-    InboundWaitingForRecipientSignature(7, 7),
+    OutboundInvalidSenderSignature(7, 7),
     /**
-     * <code>InboundWaitingForInvoiceReceipt = 8;</code>
+     * <code>OutboundNotFinished = 8;</code>
      */
-    InboundWaitingForInvoiceReceipt(8, 8),
+    OutboundNotFinished(8, 8),
     /**
-     * <code>InboundWithRecipientSignature = 9;</code>
+     * <code>OutboundFinished = 9;</code>
      */
-    InboundWithRecipientSignature(9, 9),
+    OutboundFinished(9, 9),
     /**
-     * <code>InboundInvalidRecipientSignature = 10;</code>
+     * <code>InboundWaitingForRecipientSignature = 16;</code>
      */
-    InboundInvalidRecipientSignature(10, 10),
+    InboundWaitingForRecipientSignature(10, 16),
+    /**
+     * <code>InboundWithRecipientSignature = 17;</code>
+     */
+    InboundWithRecipientSignature(11, 17),
+    /**
+     * <code>InboundRecipientSignatureRequestRejected = 18;</code>
+     */
+    InboundRecipientSignatureRequestRejected(12, 18),
+    /**
+     * <code>InboundInvalidRecipientSignature = 19;</code>
+     */
+    InboundInvalidRecipientSignature(13, 19),
+    /**
+     * <code>InboundNotFinished = 20;</code>
+     */
+    InboundNotFinished(14, 20),
+    /**
+     * <code>InboundFinished = 21;</code>
+     */
+    InboundFinished(15, 21),
     ;
 
     /**
@@ -88,29 +108,49 @@ public final class UniversalTransferDocumentProtos {
      */
     public static final int OutboundWaitingForRecipientSignature_VALUE = 4;
     /**
-     * <code>OutboundInvalidSenderSignature = 5;</code>
+     * <code>OutboundWithRecipientSignature = 5;</code>
      */
-    public static final int OutboundInvalidSenderSignature_VALUE = 5;
+    public static final int OutboundWithRecipientSignature_VALUE = 5;
     /**
-     * <code>InboundWaitingForInvoiceReceiptAndRecipientSignature = 6;</code>
+     * <code>OutboundRecipientSignatureRequestRejected = 6;</code>
      */
-    public static final int InboundWaitingForInvoiceReceiptAndRecipientSignature_VALUE = 6;
+    public static final int OutboundRecipientSignatureRequestRejected_VALUE = 6;
     /**
-     * <code>InboundWaitingForRecipientSignature = 7;</code>
+     * <code>OutboundInvalidSenderSignature = 7;</code>
      */
-    public static final int InboundWaitingForRecipientSignature_VALUE = 7;
+    public static final int OutboundInvalidSenderSignature_VALUE = 7;
     /**
-     * <code>InboundWaitingForInvoiceReceipt = 8;</code>
+     * <code>OutboundNotFinished = 8;</code>
      */
-    public static final int InboundWaitingForInvoiceReceipt_VALUE = 8;
+    public static final int OutboundNotFinished_VALUE = 8;
     /**
-     * <code>InboundWithRecipientSignature = 9;</code>
+     * <code>OutboundFinished = 9;</code>
      */
-    public static final int InboundWithRecipientSignature_VALUE = 9;
+    public static final int OutboundFinished_VALUE = 9;
     /**
-     * <code>InboundInvalidRecipientSignature = 10;</code>
+     * <code>InboundWaitingForRecipientSignature = 16;</code>
      */
-    public static final int InboundInvalidRecipientSignature_VALUE = 10;
+    public static final int InboundWaitingForRecipientSignature_VALUE = 16;
+    /**
+     * <code>InboundWithRecipientSignature = 17;</code>
+     */
+    public static final int InboundWithRecipientSignature_VALUE = 17;
+    /**
+     * <code>InboundRecipientSignatureRequestRejected = 18;</code>
+     */
+    public static final int InboundRecipientSignatureRequestRejected_VALUE = 18;
+    /**
+     * <code>InboundInvalidRecipientSignature = 19;</code>
+     */
+    public static final int InboundInvalidRecipientSignature_VALUE = 19;
+    /**
+     * <code>InboundNotFinished = 20;</code>
+     */
+    public static final int InboundNotFinished_VALUE = 20;
+    /**
+     * <code>InboundFinished = 21;</code>
+     */
+    public static final int InboundFinished_VALUE = 21;
 
 
     public final int getNumber() { return value; }
@@ -122,12 +162,17 @@ public final class UniversalTransferDocumentProtos {
         case 2: return OutboundWaitingForInvoiceReceiptAndRecipientSignature;
         case 3: return OutboundWaitingForInvoiceReceipt;
         case 4: return OutboundWaitingForRecipientSignature;
-        case 5: return OutboundInvalidSenderSignature;
-        case 6: return InboundWaitingForInvoiceReceiptAndRecipientSignature;
-        case 7: return InboundWaitingForRecipientSignature;
-        case 8: return InboundWaitingForInvoiceReceipt;
-        case 9: return InboundWithRecipientSignature;
-        case 10: return InboundInvalidRecipientSignature;
+        case 5: return OutboundWithRecipientSignature;
+        case 6: return OutboundRecipientSignatureRequestRejected;
+        case 7: return OutboundInvalidSenderSignature;
+        case 8: return OutboundNotFinished;
+        case 9: return OutboundFinished;
+        case 16: return InboundWaitingForRecipientSignature;
+        case 17: return InboundWithRecipientSignature;
+        case 18: return InboundRecipientSignatureRequestRejected;
+        case 19: return InboundInvalidRecipientSignature;
+        case 20: return InboundNotFinished;
+        case 21: return InboundFinished;
         default: return null;
       }
     }
@@ -294,13 +339,22 @@ public final class UniversalTransferDocumentProtos {
     int getCurrency();
 
     /**
-     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 7 [default = UnknownReceiptStatus];</code>
+     * <code>optional sfixed64 ConfirmationDateTimeTicks = 8;</code>
      */
-    boolean hasReceiptStatus();
+    boolean hasConfirmationDateTimeTicks();
     /**
-     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 7 [default = UnknownReceiptStatus];</code>
+     * <code>optional sfixed64 ConfirmationDateTimeTicks = 8;</code>
      */
-    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
+    long getConfirmationDateTimeTicks();
+
+    /**
+     * <code>optional int32 InvoiceAmendmentFlags = 9;</code>
+     */
+    boolean hasInvoiceAmendmentFlags();
+    /**
+     * <code>optional int32 InvoiceAmendmentFlags = 9;</code>
+     */
+    int getInvoiceAmendmentFlags();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata}
@@ -394,15 +448,14 @@ public final class UniversalTransferDocumentProtos {
               currency_ = input.readInt32();
               break;
             }
-            case 56: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(7, rawValue);
-              } else {
-                bitField0_ |= 0x00000040;
-                receiptStatus_ = value;
-              }
+            case 65: {
+              bitField0_ |= 0x00000040;
+              confirmationDateTimeTicks_ = input.readSFixed64();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000080;
+              invoiceAmendmentFlags_ = input.readInt32();
               break;
             }
           }
@@ -679,19 +732,34 @@ public final class UniversalTransferDocumentProtos {
       return currency_;
     }
 
-    public static final int RECEIPTSTATUS_FIELD_NUMBER = 7;
-    private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
+    public static final int CONFIRMATIONDATETIMETICKS_FIELD_NUMBER = 8;
+    private long confirmationDateTimeTicks_;
     /**
-     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 7 [default = UnknownReceiptStatus];</code>
+     * <code>optional sfixed64 ConfirmationDateTimeTicks = 8;</code>
      */
-    public boolean hasReceiptStatus() {
+    public boolean hasConfirmationDateTimeTicks() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 7 [default = UnknownReceiptStatus];</code>
+     * <code>optional sfixed64 ConfirmationDateTimeTicks = 8;</code>
      */
-    public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
-      return receiptStatus_;
+    public long getConfirmationDateTimeTicks() {
+      return confirmationDateTimeTicks_;
+    }
+
+    public static final int INVOICEAMENDMENTFLAGS_FIELD_NUMBER = 9;
+    private int invoiceAmendmentFlags_;
+    /**
+     * <code>optional int32 InvoiceAmendmentFlags = 9;</code>
+     */
+    public boolean hasInvoiceAmendmentFlags() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional int32 InvoiceAmendmentFlags = 9;</code>
+     */
+    public int getInvoiceAmendmentFlags() {
+      return invoiceAmendmentFlags_;
     }
 
     private void initFields() {
@@ -701,7 +769,8 @@ public final class UniversalTransferDocumentProtos {
       grounds_ = "";
       documentFunction_ = "";
       currency_ = 0;
-      receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+      confirmationDateTimeTicks_ = 0L;
+      invoiceAmendmentFlags_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -747,7 +816,10 @@ public final class UniversalTransferDocumentProtos {
         output.writeInt32(6, currency_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeEnum(7, receiptStatus_.getNumber());
+        output.writeSFixed64(8, confirmationDateTimeTicks_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(9, invoiceAmendmentFlags_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -784,7 +856,11 @@ public final class UniversalTransferDocumentProtos {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(7, receiptStatus_.getNumber());
+          .computeSFixed64Size(8, confirmationDateTimeTicks_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, invoiceAmendmentFlags_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -915,8 +991,10 @@ public final class UniversalTransferDocumentProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         currency_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+        confirmationDateTimeTicks_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000040);
+        invoiceAmendmentFlags_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -972,7 +1050,11 @@ public final class UniversalTransferDocumentProtos {
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.receiptStatus_ = receiptStatus_;
+        result.confirmationDateTimeTicks_ = confirmationDateTimeTicks_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.invoiceAmendmentFlags_ = invoiceAmendmentFlags_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1015,8 +1097,11 @@ public final class UniversalTransferDocumentProtos {
         if (other.hasCurrency()) {
           setCurrency(other.getCurrency());
         }
-        if (other.hasReceiptStatus()) {
-          setReceiptStatus(other.getReceiptStatus());
+        if (other.hasConfirmationDateTimeTicks()) {
+          setConfirmationDateTimeTicks(other.getConfirmationDateTimeTicks());
+        }
+        if (other.hasInvoiceAmendmentFlags()) {
+          setInvoiceAmendmentFlags(other.getInvoiceAmendmentFlags());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1500,37 +1585,66 @@ public final class UniversalTransferDocumentProtos {
         return this;
       }
 
-      private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+      private long confirmationDateTimeTicks_ ;
       /**
-       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 7 [default = UnknownReceiptStatus];</code>
+       * <code>optional sfixed64 ConfirmationDateTimeTicks = 8;</code>
        */
-      public boolean hasReceiptStatus() {
+      public boolean hasConfirmationDateTimeTicks() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 7 [default = UnknownReceiptStatus];</code>
+       * <code>optional sfixed64 ConfirmationDateTimeTicks = 8;</code>
        */
-      public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
-        return receiptStatus_;
+      public long getConfirmationDateTimeTicks() {
+        return confirmationDateTimeTicks_;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 7 [default = UnknownReceiptStatus];</code>
+       * <code>optional sfixed64 ConfirmationDateTimeTicks = 8;</code>
        */
-      public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder setConfirmationDateTimeTicks(long value) {
         bitField0_ |= 0x00000040;
-        receiptStatus_ = value;
+        confirmationDateTimeTicks_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 7 [default = UnknownReceiptStatus];</code>
+       * <code>optional sfixed64 ConfirmationDateTimeTicks = 8;</code>
        */
-      public Builder clearReceiptStatus() {
+      public Builder clearConfirmationDateTimeTicks() {
         bitField0_ = (bitField0_ & ~0x00000040);
-        receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+        confirmationDateTimeTicks_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int invoiceAmendmentFlags_ ;
+      /**
+       * <code>optional int32 InvoiceAmendmentFlags = 9;</code>
+       */
+      public boolean hasInvoiceAmendmentFlags() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional int32 InvoiceAmendmentFlags = 9;</code>
+       */
+      public int getInvoiceAmendmentFlags() {
+        return invoiceAmendmentFlags_;
+      }
+      /**
+       * <code>optional int32 InvoiceAmendmentFlags = 9;</code>
+       */
+      public Builder setInvoiceAmendmentFlags(int value) {
+        bitField0_ |= 0x00000080;
+        invoiceAmendmentFlags_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 InvoiceAmendmentFlags = 9;</code>
+       */
+      public Builder clearInvoiceAmendmentFlags() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        invoiceAmendmentFlags_ = 0;
         onChanged();
         return this;
       }
@@ -1546,11 +1660,6830 @@ public final class UniversalTransferDocumentProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata)
   }
 
+  public interface UniversalTransferDocumentRevisionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    boolean hasDocumentStatus();
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus getDocumentStatus();
+
+    /**
+     * <code>required string Total = 2;</code>
+     *
+     * <pre>
+     * TotalSum;
+     * </pre>
+     */
+    boolean hasTotal();
+    /**
+     * <code>required string Total = 2;</code>
+     *
+     * <pre>
+     * TotalSum;
+     * </pre>
+     */
+    java.lang.String getTotal();
+    /**
+     * <code>required string Total = 2;</code>
+     *
+     * <pre>
+     * TotalSum;
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTotalBytes();
+
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     *TotalVat;
+     * </pre>
+     */
+    boolean hasVat();
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     *TotalVat;
+     * </pre>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     *TotalVat;
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>optional string Grounds = 4;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    boolean hasGrounds();
+    /**
+     * <code>optional string Grounds = 4;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    java.lang.String getGrounds();
+    /**
+     * <code>optional string Grounds = 4;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getGroundsBytes();
+
+    /**
+     * <code>required string DocumentFunction = 5;</code>
+     */
+    boolean hasDocumentFunction();
+    /**
+     * <code>required string DocumentFunction = 5;</code>
+     */
+    java.lang.String getDocumentFunction();
+    /**
+     * <code>required string DocumentFunction = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getDocumentFunctionBytes();
+
+    /**
+     * <code>required int32 Currency = 6;</code>
+     */
+    boolean hasCurrency();
+    /**
+     * <code>required int32 Currency = 6;</code>
+     */
+    int getCurrency();
+
+    /**
+     * <code>optional sfixed64 ConfirmationDateTimeTicks = 7;</code>
+     */
+    boolean hasConfirmationDateTimeTicks();
+    /**
+     * <code>optional sfixed64 ConfirmationDateTimeTicks = 7;</code>
+     */
+    long getConfirmationDateTimeTicks();
+
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 8;</code>
+     */
+    boolean hasInvoiceAmendmentFlags();
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 8;</code>
+     */
+    int getInvoiceAmendmentFlags();
+
+    /**
+     * <code>required string OriginalInvoiceNumber = 9;</code>
+     */
+    boolean hasOriginalInvoiceNumber();
+    /**
+     * <code>required string OriginalInvoiceNumber = 9;</code>
+     */
+    java.lang.String getOriginalInvoiceNumber();
+    /**
+     * <code>required string OriginalInvoiceNumber = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceNumberBytes();
+
+    /**
+     * <code>required string OriginalInvoiceDate = 10;</code>
+     */
+    boolean hasOriginalInvoiceDate();
+    /**
+     * <code>required string OriginalInvoiceDate = 10;</code>
+     */
+    java.lang.String getOriginalInvoiceDate();
+    /**
+     * <code>required string OriginalInvoiceDate = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceDateBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata}
+   */
+  public static final class UniversalTransferDocumentRevisionMetadata extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata)
+      UniversalTransferDocumentRevisionMetadataOrBuilder {
+    // Use UniversalTransferDocumentRevisionMetadata.newBuilder() to construct.
+    private UniversalTransferDocumentRevisionMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private UniversalTransferDocumentRevisionMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final UniversalTransferDocumentRevisionMetadata defaultInstance;
+    public static UniversalTransferDocumentRevisionMetadata getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public UniversalTransferDocumentRevisionMetadata getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UniversalTransferDocumentRevisionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus value = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                documentStatus_ = value;
+              }
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              total_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              vat_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              grounds_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              documentFunction_ = bs;
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              currency_ = input.readInt32();
+              break;
+            }
+            case 57: {
+              bitField0_ |= 0x00000040;
+              confirmationDateTimeTicks_ = input.readSFixed64();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              invoiceAmendmentFlags_ = input.readInt32();
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              originalInvoiceNumber_ = bs;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              originalInvoiceDate_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.class, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<UniversalTransferDocumentRevisionMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<UniversalTransferDocumentRevisionMetadata>() {
+      public UniversalTransferDocumentRevisionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UniversalTransferDocumentRevisionMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UniversalTransferDocumentRevisionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus documentStatus_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    public boolean hasDocumentStatus() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus getDocumentStatus() {
+      return documentStatus_;
+    }
+
+    public static final int TOTAL_FIELD_NUMBER = 2;
+    private java.lang.Object total_;
+    /**
+     * <code>required string Total = 2;</code>
+     *
+     * <pre>
+     * TotalSum;
+     * </pre>
+     */
+    public boolean hasTotal() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string Total = 2;</code>
+     *
+     * <pre>
+     * TotalSum;
+     * </pre>
+     */
+    public java.lang.String getTotal() {
+      java.lang.Object ref = total_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          total_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Total = 2;</code>
+     *
+     * <pre>
+     * TotalSum;
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTotalBytes() {
+      java.lang.Object ref = total_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        total_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VAT_FIELD_NUMBER = 3;
+    private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     *TotalVat;
+     * </pre>
+     */
+    public boolean hasVat() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     *TotalVat;
+     * </pre>
+     */
+    public java.lang.String getVat() {
+      java.lang.Object ref = vat_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          vat_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Vat = 3;</code>
+     *
+     * <pre>
+     *TotalVat;
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
+      java.lang.Object ref = vat_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vat_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GROUNDS_FIELD_NUMBER = 4;
+    private java.lang.Object grounds_;
+    /**
+     * <code>optional string Grounds = 4;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    public boolean hasGrounds() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string Grounds = 4;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    public java.lang.String getGrounds() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          grounds_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Grounds = 4;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getGroundsBytes() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        grounds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOCUMENTFUNCTION_FIELD_NUMBER = 5;
+    private java.lang.Object documentFunction_;
+    /**
+     * <code>required string DocumentFunction = 5;</code>
+     */
+    public boolean hasDocumentFunction() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required string DocumentFunction = 5;</code>
+     */
+    public java.lang.String getDocumentFunction() {
+      java.lang.Object ref = documentFunction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          documentFunction_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string DocumentFunction = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDocumentFunctionBytes() {
+      java.lang.Object ref = documentFunction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        documentFunction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURRENCY_FIELD_NUMBER = 6;
+    private int currency_;
+    /**
+     * <code>required int32 Currency = 6;</code>
+     */
+    public boolean hasCurrency() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required int32 Currency = 6;</code>
+     */
+    public int getCurrency() {
+      return currency_;
+    }
+
+    public static final int CONFIRMATIONDATETIMETICKS_FIELD_NUMBER = 7;
+    private long confirmationDateTimeTicks_;
+    /**
+     * <code>optional sfixed64 ConfirmationDateTimeTicks = 7;</code>
+     */
+    public boolean hasConfirmationDateTimeTicks() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional sfixed64 ConfirmationDateTimeTicks = 7;</code>
+     */
+    public long getConfirmationDateTimeTicks() {
+      return confirmationDateTimeTicks_;
+    }
+
+    public static final int INVOICEAMENDMENTFLAGS_FIELD_NUMBER = 8;
+    private int invoiceAmendmentFlags_;
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 8;</code>
+     */
+    public boolean hasInvoiceAmendmentFlags() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 8;</code>
+     */
+    public int getInvoiceAmendmentFlags() {
+      return invoiceAmendmentFlags_;
+    }
+
+    public static final int ORIGINALINVOICENUMBER_FIELD_NUMBER = 9;
+    private java.lang.Object originalInvoiceNumber_;
+    /**
+     * <code>required string OriginalInvoiceNumber = 9;</code>
+     */
+    public boolean hasOriginalInvoiceNumber() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>required string OriginalInvoiceNumber = 9;</code>
+     */
+    public java.lang.String getOriginalInvoiceNumber() {
+      java.lang.Object ref = originalInvoiceNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string OriginalInvoiceNumber = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceNumberBytes() {
+      java.lang.Object ref = originalInvoiceNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINALINVOICEDATE_FIELD_NUMBER = 10;
+    private java.lang.Object originalInvoiceDate_;
+    /**
+     * <code>required string OriginalInvoiceDate = 10;</code>
+     */
+    public boolean hasOriginalInvoiceDate() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>required string OriginalInvoiceDate = 10;</code>
+     */
+    public java.lang.String getOriginalInvoiceDate() {
+      java.lang.Object ref = originalInvoiceDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string OriginalInvoiceDate = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceDateBytes() {
+      java.lang.Object ref = originalInvoiceDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+      total_ = "";
+      vat_ = "";
+      grounds_ = "";
+      documentFunction_ = "";
+      currency_ = 0;
+      confirmationDateTimeTicks_ = 0L;
+      invoiceAmendmentFlags_ = 0;
+      originalInvoiceNumber_ = "";
+      originalInvoiceDate_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDocumentStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTotal()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDocumentFunction()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCurrency()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasInvoiceAmendmentFlags()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOriginalInvoiceNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOriginalInvoiceDate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getTotalBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getVatBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getDocumentFunctionBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(6, currency_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeSFixed64(7, confirmationDateTimeTicks_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, invoiceAmendmentFlags_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBytes(9, getOriginalInvoiceNumberBytes());
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeBytes(10, getOriginalInvoiceDateBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTotalBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getVatBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getDocumentFunctionBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, currency_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeSFixed64Size(7, confirmationDateTimeTicks_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, invoiceAmendmentFlags_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getOriginalInvoiceNumberBytes());
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(10, getOriginalInvoiceDateBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata)
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.class, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        total_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        vat_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        grounds_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        documentFunction_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        currency_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        confirmationDateTimeTicks_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        invoiceAmendmentFlags_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        originalInvoiceNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00000100);
+        originalInvoiceDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata build() {
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata buildPartial() {
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata result = new Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.documentStatus_ = documentStatus_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.total_ = total_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.vat_ = vat_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.grounds_ = grounds_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.documentFunction_ = documentFunction_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.currency_ = currency_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.confirmationDateTimeTicks_ = confirmationDateTimeTicks_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.invoiceAmendmentFlags_ = invoiceAmendmentFlags_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.originalInvoiceNumber_ = originalInvoiceNumber_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.originalInvoiceDate_ = originalInvoiceDate_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata) {
+          return mergeFrom((Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata other) {
+        if (other == Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.getDefaultInstance()) return this;
+        if (other.hasDocumentStatus()) {
+          setDocumentStatus(other.getDocumentStatus());
+        }
+        if (other.hasTotal()) {
+          bitField0_ |= 0x00000002;
+          total_ = other.total_;
+          onChanged();
+        }
+        if (other.hasVat()) {
+          bitField0_ |= 0x00000004;
+          vat_ = other.vat_;
+          onChanged();
+        }
+        if (other.hasGrounds()) {
+          bitField0_ |= 0x00000008;
+          grounds_ = other.grounds_;
+          onChanged();
+        }
+        if (other.hasDocumentFunction()) {
+          bitField0_ |= 0x00000010;
+          documentFunction_ = other.documentFunction_;
+          onChanged();
+        }
+        if (other.hasCurrency()) {
+          setCurrency(other.getCurrency());
+        }
+        if (other.hasConfirmationDateTimeTicks()) {
+          setConfirmationDateTimeTicks(other.getConfirmationDateTimeTicks());
+        }
+        if (other.hasInvoiceAmendmentFlags()) {
+          setInvoiceAmendmentFlags(other.getInvoiceAmendmentFlags());
+        }
+        if (other.hasOriginalInvoiceNumber()) {
+          bitField0_ |= 0x00000100;
+          originalInvoiceNumber_ = other.originalInvoiceNumber_;
+          onChanged();
+        }
+        if (other.hasOriginalInvoiceDate()) {
+          bitField0_ |= 0x00000200;
+          originalInvoiceDate_ = other.originalInvoiceDate_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDocumentStatus()) {
+          
+          return false;
+        }
+        if (!hasTotal()) {
+          
+          return false;
+        }
+        if (!hasDocumentFunction()) {
+          
+          return false;
+        }
+        if (!hasCurrency()) {
+          
+          return false;
+        }
+        if (!hasInvoiceAmendmentFlags()) {
+          
+          return false;
+        }
+        if (!hasOriginalInvoiceNumber()) {
+          
+          return false;
+        }
+        if (!hasOriginalInvoiceDate()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public boolean hasDocumentStatus() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus getDocumentStatus() {
+        return documentStatus_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        documentStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public Builder clearDocumentStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object total_ = "";
+      /**
+       * <code>required string Total = 2;</code>
+       *
+       * <pre>
+       * TotalSum;
+       * </pre>
+       */
+      public boolean hasTotal() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       *
+       * <pre>
+       * TotalSum;
+       * </pre>
+       */
+      public java.lang.String getTotal() {
+        java.lang.Object ref = total_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            total_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       *
+       * <pre>
+       * TotalSum;
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTotalBytes() {
+        java.lang.Object ref = total_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          total_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       *
+       * <pre>
+       * TotalSum;
+       * </pre>
+       */
+      public Builder setTotal(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        total_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       *
+       * <pre>
+       * TotalSum;
+       * </pre>
+       */
+      public Builder clearTotal() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        total_ = getDefaultInstance().getTotal();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Total = 2;</code>
+       *
+       * <pre>
+       * TotalSum;
+       * </pre>
+       */
+      public Builder setTotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        total_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       *TotalVat;
+       * </pre>
+       */
+      public boolean hasVat() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       *TotalVat;
+       * </pre>
+       */
+      public java.lang.String getVat() {
+        java.lang.Object ref = vat_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       *TotalVat;
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       *TotalVat;
+       * </pre>
+       */
+      public Builder setVat(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        vat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       *TotalVat;
+       * </pre>
+       */
+      public Builder clearVat() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        vat_ = getDefaultInstance().getVat();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Vat = 3;</code>
+       *
+       * <pre>
+       *TotalVat;
+       * </pre>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        vat_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object grounds_ = "";
+      /**
+       * <code>optional string Grounds = 4;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public boolean hasGrounds() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public java.lang.String getGrounds() {
+        java.lang.Object ref = grounds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            grounds_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getGroundsBytes() {
+        java.lang.Object ref = grounds_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          grounds_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public Builder setGrounds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public Builder clearGrounds() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        grounds_ = getDefaultInstance().getGrounds();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public Builder setGroundsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object documentFunction_ = "";
+      /**
+       * <code>required string DocumentFunction = 5;</code>
+       */
+      public boolean hasDocumentFunction() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required string DocumentFunction = 5;</code>
+       */
+      public java.lang.String getDocumentFunction() {
+        java.lang.Object ref = documentFunction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            documentFunction_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentFunction = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDocumentFunctionBytes() {
+        java.lang.Object ref = documentFunction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          documentFunction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentFunction = 5;</code>
+       */
+      public Builder setDocumentFunction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        documentFunction_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocumentFunction = 5;</code>
+       */
+      public Builder clearDocumentFunction() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        documentFunction_ = getDefaultInstance().getDocumentFunction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocumentFunction = 5;</code>
+       */
+      public Builder setDocumentFunctionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        documentFunction_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int currency_ ;
+      /**
+       * <code>required int32 Currency = 6;</code>
+       */
+      public boolean hasCurrency() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required int32 Currency = 6;</code>
+       */
+      public int getCurrency() {
+        return currency_;
+      }
+      /**
+       * <code>required int32 Currency = 6;</code>
+       */
+      public Builder setCurrency(int value) {
+        bitField0_ |= 0x00000020;
+        currency_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 Currency = 6;</code>
+       */
+      public Builder clearCurrency() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        currency_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long confirmationDateTimeTicks_ ;
+      /**
+       * <code>optional sfixed64 ConfirmationDateTimeTicks = 7;</code>
+       */
+      public boolean hasConfirmationDateTimeTicks() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional sfixed64 ConfirmationDateTimeTicks = 7;</code>
+       */
+      public long getConfirmationDateTimeTicks() {
+        return confirmationDateTimeTicks_;
+      }
+      /**
+       * <code>optional sfixed64 ConfirmationDateTimeTicks = 7;</code>
+       */
+      public Builder setConfirmationDateTimeTicks(long value) {
+        bitField0_ |= 0x00000040;
+        confirmationDateTimeTicks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional sfixed64 ConfirmationDateTimeTicks = 7;</code>
+       */
+      public Builder clearConfirmationDateTimeTicks() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        confirmationDateTimeTicks_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int invoiceAmendmentFlags_ ;
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 8;</code>
+       */
+      public boolean hasInvoiceAmendmentFlags() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 8;</code>
+       */
+      public int getInvoiceAmendmentFlags() {
+        return invoiceAmendmentFlags_;
+      }
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 8;</code>
+       */
+      public Builder setInvoiceAmendmentFlags(int value) {
+        bitField0_ |= 0x00000080;
+        invoiceAmendmentFlags_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 8;</code>
+       */
+      public Builder clearInvoiceAmendmentFlags() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        invoiceAmendmentFlags_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceNumber_ = "";
+      /**
+       * <code>required string OriginalInvoiceNumber = 9;</code>
+       */
+      public boolean hasOriginalInvoiceNumber() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 9;</code>
+       */
+      public java.lang.String getOriginalInvoiceNumber() {
+        java.lang.Object ref = originalInvoiceNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceNumberBytes() {
+        java.lang.Object ref = originalInvoiceNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 9;</code>
+       */
+      public Builder setOriginalInvoiceNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        originalInvoiceNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 9;</code>
+       */
+      public Builder clearOriginalInvoiceNumber() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        originalInvoiceNumber_ = getDefaultInstance().getOriginalInvoiceNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 9;</code>
+       */
+      public Builder setOriginalInvoiceNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        originalInvoiceNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceDate_ = "";
+      /**
+       * <code>required string OriginalInvoiceDate = 10;</code>
+       */
+      public boolean hasOriginalInvoiceDate() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 10;</code>
+       */
+      public java.lang.String getOriginalInvoiceDate() {
+        java.lang.Object ref = originalInvoiceDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceDateBytes() {
+        java.lang.Object ref = originalInvoiceDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 10;</code>
+       */
+      public Builder setOriginalInvoiceDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        originalInvoiceDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 10;</code>
+       */
+      public Builder clearOriginalInvoiceDate() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        originalInvoiceDate_ = getDefaultInstance().getOriginalInvoiceDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 10;</code>
+       */
+      public Builder setOriginalInvoiceDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        originalInvoiceDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata)
+    }
+
+    static {
+      defaultInstance = new UniversalTransferDocumentRevisionMetadata(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata)
+  }
+
+  public interface UniversalCorrectionDocumentMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    boolean hasDocumentStatus();
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus getDocumentStatus();
+
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    boolean hasTotalInc();
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    java.lang.String getTotalInc();
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTotalIncBytes();
+
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    boolean hasTotalDec();
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    java.lang.String getTotalDec();
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getTotalDecBytes();
+
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    boolean hasVatInc();
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    java.lang.String getVatInc();
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getVatIncBytes();
+
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    boolean hasVatDec();
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    java.lang.String getVatDec();
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getVatDecBytes();
+
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    boolean hasGrounds();
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    java.lang.String getGrounds();
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getGroundsBytes();
+
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    boolean hasDocumentFunction();
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    java.lang.String getDocumentFunction();
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getDocumentFunctionBytes();
+
+    /**
+     * <code>required int32 Currency = 8;</code>
+     */
+    boolean hasCurrency();
+    /**
+     * <code>required int32 Currency = 8;</code>
+     */
+    int getCurrency();
+
+    /**
+     * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+     */
+    boolean hasConfirmationDateTimeTicks();
+    /**
+     * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+     */
+    long getConfirmationDateTimeTicks();
+
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+     */
+    boolean hasInvoiceAmendmentFlags();
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+     */
+    int getInvoiceAmendmentFlags();
+
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    boolean hasOriginalInvoiceNumber();
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    java.lang.String getOriginalInvoiceNumber();
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceNumberBytes();
+
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    boolean hasOriginalInvoiceDate();
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    java.lang.String getOriginalInvoiceDate();
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceDateBytes();
+
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    boolean hasOriginalInvoiceRevisionNumber();
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    java.lang.String getOriginalInvoiceRevisionNumber();
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceRevisionNumberBytes();
+
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    boolean hasOriginalInvoiceRevisionDate();
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    java.lang.String getOriginalInvoiceRevisionDate();
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceRevisionDateBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata}
+   */
+  public static final class UniversalCorrectionDocumentMetadata extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata)
+      UniversalCorrectionDocumentMetadataOrBuilder {
+    // Use UniversalCorrectionDocumentMetadata.newBuilder() to construct.
+    private UniversalCorrectionDocumentMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private UniversalCorrectionDocumentMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final UniversalCorrectionDocumentMetadata defaultInstance;
+    public static UniversalCorrectionDocumentMetadata getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public UniversalCorrectionDocumentMetadata getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UniversalCorrectionDocumentMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus value = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                documentStatus_ = value;
+              }
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              totalInc_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              totalDec_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              vatInc_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              vatDec_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              grounds_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              documentFunction_ = bs;
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              currency_ = input.readInt32();
+              break;
+            }
+            case 73: {
+              bitField0_ |= 0x00000100;
+              confirmationDateTimeTicks_ = input.readSFixed64();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              invoiceAmendmentFlags_ = input.readInt32();
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              originalInvoiceNumber_ = bs;
+              break;
+            }
+            case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000800;
+              originalInvoiceDate_ = bs;
+              break;
+            }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00001000;
+              originalInvoiceRevisionNumber_ = bs;
+              break;
+            }
+            case 114: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00002000;
+              originalInvoiceRevisionDate_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.class, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<UniversalCorrectionDocumentMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<UniversalCorrectionDocumentMetadata>() {
+      public UniversalCorrectionDocumentMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UniversalCorrectionDocumentMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UniversalCorrectionDocumentMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus documentStatus_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    public boolean hasDocumentStatus() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus getDocumentStatus() {
+      return documentStatus_;
+    }
+
+    public static final int TOTALINC_FIELD_NUMBER = 2;
+    private java.lang.Object totalInc_;
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    public boolean hasTotalInc() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    public java.lang.String getTotalInc() {
+      java.lang.Object ref = totalInc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          totalInc_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTotalIncBytes() {
+      java.lang.Object ref = totalInc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalInc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTALDEC_FIELD_NUMBER = 3;
+    private java.lang.Object totalDec_;
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    public boolean hasTotalDec() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    public java.lang.String getTotalDec() {
+      java.lang.Object ref = totalDec_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          totalDec_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTotalDecBytes() {
+      java.lang.Object ref = totalDec_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalDec_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VATINC_FIELD_NUMBER = 4;
+    private java.lang.Object vatInc_;
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    public boolean hasVatInc() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    public java.lang.String getVatInc() {
+      java.lang.Object ref = vatInc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          vatInc_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVatIncBytes() {
+      java.lang.Object ref = vatInc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vatInc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VATDEC_FIELD_NUMBER = 5;
+    private java.lang.Object vatDec_;
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    public boolean hasVatDec() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    public java.lang.String getVatDec() {
+      java.lang.Object ref = vatDec_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          vatDec_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVatDecBytes() {
+      java.lang.Object ref = vatDec_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vatDec_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GROUNDS_FIELD_NUMBER = 6;
+    private java.lang.Object grounds_;
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    public boolean hasGrounds() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    public java.lang.String getGrounds() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          grounds_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getGroundsBytes() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        grounds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOCUMENTFUNCTION_FIELD_NUMBER = 7;
+    private java.lang.Object documentFunction_;
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    public boolean hasDocumentFunction() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    public java.lang.String getDocumentFunction() {
+      java.lang.Object ref = documentFunction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          documentFunction_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDocumentFunctionBytes() {
+      java.lang.Object ref = documentFunction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        documentFunction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURRENCY_FIELD_NUMBER = 8;
+    private int currency_;
+    /**
+     * <code>required int32 Currency = 8;</code>
+     */
+    public boolean hasCurrency() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>required int32 Currency = 8;</code>
+     */
+    public int getCurrency() {
+      return currency_;
+    }
+
+    public static final int CONFIRMATIONDATETIMETICKS_FIELD_NUMBER = 9;
+    private long confirmationDateTimeTicks_;
+    /**
+     * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+     */
+    public boolean hasConfirmationDateTimeTicks() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+     */
+    public long getConfirmationDateTimeTicks() {
+      return confirmationDateTimeTicks_;
+    }
+
+    public static final int INVOICEAMENDMENTFLAGS_FIELD_NUMBER = 10;
+    private int invoiceAmendmentFlags_;
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+     */
+    public boolean hasInvoiceAmendmentFlags() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+     */
+    public int getInvoiceAmendmentFlags() {
+      return invoiceAmendmentFlags_;
+    }
+
+    public static final int ORIGINALINVOICENUMBER_FIELD_NUMBER = 11;
+    private java.lang.Object originalInvoiceNumber_;
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    public boolean hasOriginalInvoiceNumber() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    public java.lang.String getOriginalInvoiceNumber() {
+      java.lang.Object ref = originalInvoiceNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceNumberBytes() {
+      java.lang.Object ref = originalInvoiceNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINALINVOICEDATE_FIELD_NUMBER = 12;
+    private java.lang.Object originalInvoiceDate_;
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    public boolean hasOriginalInvoiceDate() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    public java.lang.String getOriginalInvoiceDate() {
+      java.lang.Object ref = originalInvoiceDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceDateBytes() {
+      java.lang.Object ref = originalInvoiceDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINALINVOICEREVISIONNUMBER_FIELD_NUMBER = 13;
+    private java.lang.Object originalInvoiceRevisionNumber_;
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    public boolean hasOriginalInvoiceRevisionNumber() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    public java.lang.String getOriginalInvoiceRevisionNumber() {
+      java.lang.Object ref = originalInvoiceRevisionNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceRevisionNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceRevisionNumberBytes() {
+      java.lang.Object ref = originalInvoiceRevisionNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceRevisionNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINALINVOICEREVISIONDATE_FIELD_NUMBER = 14;
+    private java.lang.Object originalInvoiceRevisionDate_;
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    public boolean hasOriginalInvoiceRevisionDate() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    public java.lang.String getOriginalInvoiceRevisionDate() {
+      java.lang.Object ref = originalInvoiceRevisionDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceRevisionDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceRevisionDateBytes() {
+      java.lang.Object ref = originalInvoiceRevisionDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceRevisionDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+      totalInc_ = "";
+      totalDec_ = "";
+      vatInc_ = "";
+      vatDec_ = "";
+      grounds_ = "";
+      documentFunction_ = "";
+      currency_ = 0;
+      confirmationDateTimeTicks_ = 0L;
+      invoiceAmendmentFlags_ = 0;
+      originalInvoiceNumber_ = "";
+      originalInvoiceDate_ = "";
+      originalInvoiceRevisionNumber_ = "";
+      originalInvoiceRevisionDate_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDocumentStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTotalInc()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTotalDec()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasVatInc()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasVatDec()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDocumentFunction()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCurrency()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasConfirmationDateTimeTicks()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasInvoiceAmendmentFlags()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOriginalInvoiceNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOriginalInvoiceDate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getTotalIncBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getTotalDecBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getVatIncBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getVatDecBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getDocumentFunctionBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, currency_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeSFixed64(9, confirmationDateTimeTicks_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeInt32(10, invoiceAmendmentFlags_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBytes(11, getOriginalInvoiceNumberBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeBytes(12, getOriginalInvoiceDateBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeBytes(13, getOriginalInvoiceRevisionNumberBytes());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeBytes(14, getOriginalInvoiceRevisionDateBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTotalIncBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getTotalDecBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getVatIncBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getVatDecBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getDocumentFunctionBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, currency_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeSFixed64Size(9, confirmationDateTimeTicks_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, invoiceAmendmentFlags_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, getOriginalInvoiceNumberBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(12, getOriginalInvoiceDateBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, getOriginalInvoiceRevisionNumberBytes());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(14, getOriginalInvoiceRevisionDateBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata)
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.class, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalInc_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalDec_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        vatInc_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        vatDec_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        grounds_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        documentFunction_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        currency_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        confirmationDateTimeTicks_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        invoiceAmendmentFlags_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        originalInvoiceNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00000400);
+        originalInvoiceDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
+        originalInvoiceRevisionNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
+        originalInvoiceRevisionDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00002000);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata build() {
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata buildPartial() {
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata result = new Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.documentStatus_ = documentStatus_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.totalInc_ = totalInc_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.totalDec_ = totalDec_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.vatInc_ = vatInc_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.vatDec_ = vatDec_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.grounds_ = grounds_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.documentFunction_ = documentFunction_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.currency_ = currency_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.confirmationDateTimeTicks_ = confirmationDateTimeTicks_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.invoiceAmendmentFlags_ = invoiceAmendmentFlags_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.originalInvoiceNumber_ = originalInvoiceNumber_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.originalInvoiceDate_ = originalInvoiceDate_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.originalInvoiceRevisionNumber_ = originalInvoiceRevisionNumber_;
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.originalInvoiceRevisionDate_ = originalInvoiceRevisionDate_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata) {
+          return mergeFrom((Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata other) {
+        if (other == Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.getDefaultInstance()) return this;
+        if (other.hasDocumentStatus()) {
+          setDocumentStatus(other.getDocumentStatus());
+        }
+        if (other.hasTotalInc()) {
+          bitField0_ |= 0x00000002;
+          totalInc_ = other.totalInc_;
+          onChanged();
+        }
+        if (other.hasTotalDec()) {
+          bitField0_ |= 0x00000004;
+          totalDec_ = other.totalDec_;
+          onChanged();
+        }
+        if (other.hasVatInc()) {
+          bitField0_ |= 0x00000008;
+          vatInc_ = other.vatInc_;
+          onChanged();
+        }
+        if (other.hasVatDec()) {
+          bitField0_ |= 0x00000010;
+          vatDec_ = other.vatDec_;
+          onChanged();
+        }
+        if (other.hasGrounds()) {
+          bitField0_ |= 0x00000020;
+          grounds_ = other.grounds_;
+          onChanged();
+        }
+        if (other.hasDocumentFunction()) {
+          bitField0_ |= 0x00000040;
+          documentFunction_ = other.documentFunction_;
+          onChanged();
+        }
+        if (other.hasCurrency()) {
+          setCurrency(other.getCurrency());
+        }
+        if (other.hasConfirmationDateTimeTicks()) {
+          setConfirmationDateTimeTicks(other.getConfirmationDateTimeTicks());
+        }
+        if (other.hasInvoiceAmendmentFlags()) {
+          setInvoiceAmendmentFlags(other.getInvoiceAmendmentFlags());
+        }
+        if (other.hasOriginalInvoiceNumber()) {
+          bitField0_ |= 0x00000400;
+          originalInvoiceNumber_ = other.originalInvoiceNumber_;
+          onChanged();
+        }
+        if (other.hasOriginalInvoiceDate()) {
+          bitField0_ |= 0x00000800;
+          originalInvoiceDate_ = other.originalInvoiceDate_;
+          onChanged();
+        }
+        if (other.hasOriginalInvoiceRevisionNumber()) {
+          bitField0_ |= 0x00001000;
+          originalInvoiceRevisionNumber_ = other.originalInvoiceRevisionNumber_;
+          onChanged();
+        }
+        if (other.hasOriginalInvoiceRevisionDate()) {
+          bitField0_ |= 0x00002000;
+          originalInvoiceRevisionDate_ = other.originalInvoiceRevisionDate_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDocumentStatus()) {
+          
+          return false;
+        }
+        if (!hasTotalInc()) {
+          
+          return false;
+        }
+        if (!hasTotalDec()) {
+          
+          return false;
+        }
+        if (!hasVatInc()) {
+          
+          return false;
+        }
+        if (!hasVatDec()) {
+          
+          return false;
+        }
+        if (!hasDocumentFunction()) {
+          
+          return false;
+        }
+        if (!hasCurrency()) {
+          
+          return false;
+        }
+        if (!hasConfirmationDateTimeTicks()) {
+          
+          return false;
+        }
+        if (!hasInvoiceAmendmentFlags()) {
+          
+          return false;
+        }
+        if (!hasOriginalInvoiceNumber()) {
+          
+          return false;
+        }
+        if (!hasOriginalInvoiceDate()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public boolean hasDocumentStatus() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus getDocumentStatus() {
+        return documentStatus_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        documentStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public Builder clearDocumentStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalInc_ = "";
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public boolean hasTotalInc() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public java.lang.String getTotalInc() {
+        java.lang.Object ref = totalInc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            totalInc_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTotalIncBytes() {
+        java.lang.Object ref = totalInc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalInc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public Builder setTotalInc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        totalInc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public Builder clearTotalInc() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalInc_ = getDefaultInstance().getTotalInc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public Builder setTotalIncBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        totalInc_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalDec_ = "";
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public boolean hasTotalDec() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public java.lang.String getTotalDec() {
+        java.lang.Object ref = totalDec_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            totalDec_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTotalDecBytes() {
+        java.lang.Object ref = totalDec_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalDec_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public Builder setTotalDec(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        totalDec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public Builder clearTotalDec() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalDec_ = getDefaultInstance().getTotalDec();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public Builder setTotalDecBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        totalDec_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vatInc_ = "";
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public boolean hasVatInc() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public java.lang.String getVatInc() {
+        java.lang.Object ref = vatInc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vatInc_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVatIncBytes() {
+        java.lang.Object ref = vatInc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vatInc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public Builder setVatInc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        vatInc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public Builder clearVatInc() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        vatInc_ = getDefaultInstance().getVatInc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public Builder setVatIncBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        vatInc_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vatDec_ = "";
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public boolean hasVatDec() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public java.lang.String getVatDec() {
+        java.lang.Object ref = vatDec_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vatDec_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVatDecBytes() {
+        java.lang.Object ref = vatDec_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vatDec_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public Builder setVatDec(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        vatDec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public Builder clearVatDec() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        vatDec_ = getDefaultInstance().getVatDec();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public Builder setVatDecBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        vatDec_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object grounds_ = "";
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public boolean hasGrounds() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public java.lang.String getGrounds() {
+        java.lang.Object ref = grounds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            grounds_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getGroundsBytes() {
+        java.lang.Object ref = grounds_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          grounds_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public Builder setGrounds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public Builder clearGrounds() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        grounds_ = getDefaultInstance().getGrounds();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public Builder setGroundsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object documentFunction_ = "";
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public boolean hasDocumentFunction() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public java.lang.String getDocumentFunction() {
+        java.lang.Object ref = documentFunction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            documentFunction_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDocumentFunctionBytes() {
+        java.lang.Object ref = documentFunction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          documentFunction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public Builder setDocumentFunction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        documentFunction_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public Builder clearDocumentFunction() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        documentFunction_ = getDefaultInstance().getDocumentFunction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public Builder setDocumentFunctionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        documentFunction_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int currency_ ;
+      /**
+       * <code>required int32 Currency = 8;</code>
+       */
+      public boolean hasCurrency() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>required int32 Currency = 8;</code>
+       */
+      public int getCurrency() {
+        return currency_;
+      }
+      /**
+       * <code>required int32 Currency = 8;</code>
+       */
+      public Builder setCurrency(int value) {
+        bitField0_ |= 0x00000080;
+        currency_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 Currency = 8;</code>
+       */
+      public Builder clearCurrency() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        currency_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long confirmationDateTimeTicks_ ;
+      /**
+       * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+       */
+      public boolean hasConfirmationDateTimeTicks() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+       */
+      public long getConfirmationDateTimeTicks() {
+        return confirmationDateTimeTicks_;
+      }
+      /**
+       * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+       */
+      public Builder setConfirmationDateTimeTicks(long value) {
+        bitField0_ |= 0x00000100;
+        confirmationDateTimeTicks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+       */
+      public Builder clearConfirmationDateTimeTicks() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        confirmationDateTimeTicks_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int invoiceAmendmentFlags_ ;
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+       */
+      public boolean hasInvoiceAmendmentFlags() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+       */
+      public int getInvoiceAmendmentFlags() {
+        return invoiceAmendmentFlags_;
+      }
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+       */
+      public Builder setInvoiceAmendmentFlags(int value) {
+        bitField0_ |= 0x00000200;
+        invoiceAmendmentFlags_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+       */
+      public Builder clearInvoiceAmendmentFlags() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        invoiceAmendmentFlags_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceNumber_ = "";
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public boolean hasOriginalInvoiceNumber() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public java.lang.String getOriginalInvoiceNumber() {
+        java.lang.Object ref = originalInvoiceNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceNumberBytes() {
+        java.lang.Object ref = originalInvoiceNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public Builder setOriginalInvoiceNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        originalInvoiceNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public Builder clearOriginalInvoiceNumber() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        originalInvoiceNumber_ = getDefaultInstance().getOriginalInvoiceNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public Builder setOriginalInvoiceNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        originalInvoiceNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceDate_ = "";
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public boolean hasOriginalInvoiceDate() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public java.lang.String getOriginalInvoiceDate() {
+        java.lang.Object ref = originalInvoiceDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceDateBytes() {
+        java.lang.Object ref = originalInvoiceDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public Builder setOriginalInvoiceDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        originalInvoiceDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public Builder clearOriginalInvoiceDate() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        originalInvoiceDate_ = getDefaultInstance().getOriginalInvoiceDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public Builder setOriginalInvoiceDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        originalInvoiceDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceRevisionNumber_ = "";
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public boolean hasOriginalInvoiceRevisionNumber() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public java.lang.String getOriginalInvoiceRevisionNumber() {
+        java.lang.Object ref = originalInvoiceRevisionNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceRevisionNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceRevisionNumberBytes() {
+        java.lang.Object ref = originalInvoiceRevisionNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceRevisionNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public Builder setOriginalInvoiceRevisionNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        originalInvoiceRevisionNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public Builder clearOriginalInvoiceRevisionNumber() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        originalInvoiceRevisionNumber_ = getDefaultInstance().getOriginalInvoiceRevisionNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public Builder setOriginalInvoiceRevisionNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        originalInvoiceRevisionNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceRevisionDate_ = "";
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public boolean hasOriginalInvoiceRevisionDate() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public java.lang.String getOriginalInvoiceRevisionDate() {
+        java.lang.Object ref = originalInvoiceRevisionDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceRevisionDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceRevisionDateBytes() {
+        java.lang.Object ref = originalInvoiceRevisionDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceRevisionDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public Builder setOriginalInvoiceRevisionDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        originalInvoiceRevisionDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public Builder clearOriginalInvoiceRevisionDate() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        originalInvoiceRevisionDate_ = getDefaultInstance().getOriginalInvoiceRevisionDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public Builder setOriginalInvoiceRevisionDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        originalInvoiceRevisionDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata)
+    }
+
+    static {
+      defaultInstance = new UniversalCorrectionDocumentMetadata(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata)
+  }
+
+  public interface UniversalCorrectionDocumentRevisionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    boolean hasDocumentStatus();
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus getDocumentStatus();
+
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    boolean hasTotalInc();
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    java.lang.String getTotalInc();
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTotalIncBytes();
+
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    boolean hasTotalDec();
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    java.lang.String getTotalDec();
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getTotalDecBytes();
+
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    boolean hasVatInc();
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    java.lang.String getVatInc();
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getVatIncBytes();
+
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    boolean hasVatDec();
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    java.lang.String getVatDec();
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getVatDecBytes();
+
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    boolean hasGrounds();
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    java.lang.String getGrounds();
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getGroundsBytes();
+
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    boolean hasDocumentFunction();
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    java.lang.String getDocumentFunction();
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getDocumentFunctionBytes();
+
+    /**
+     * <code>required int32 Currency = 8;</code>
+     */
+    boolean hasCurrency();
+    /**
+     * <code>required int32 Currency = 8;</code>
+     */
+    int getCurrency();
+
+    /**
+     * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+     */
+    boolean hasConfirmationDateTimeTicks();
+    /**
+     * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+     */
+    long getConfirmationDateTimeTicks();
+
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+     */
+    boolean hasInvoiceAmendmentFlags();
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+     */
+    int getInvoiceAmendmentFlags();
+
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    boolean hasOriginalInvoiceNumber();
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    java.lang.String getOriginalInvoiceNumber();
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceNumberBytes();
+
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    boolean hasOriginalInvoiceDate();
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    java.lang.String getOriginalInvoiceDate();
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceDateBytes();
+
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    boolean hasOriginalInvoiceRevisionNumber();
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    java.lang.String getOriginalInvoiceRevisionNumber();
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceRevisionNumberBytes();
+
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    boolean hasOriginalInvoiceRevisionDate();
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    java.lang.String getOriginalInvoiceRevisionDate();
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceRevisionDateBytes();
+
+    /**
+     * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+     */
+    boolean hasOriginalInvoiceCorrectionNumber();
+    /**
+     * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+     */
+    java.lang.String getOriginalInvoiceCorrectionNumber();
+    /**
+     * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceCorrectionNumberBytes();
+
+    /**
+     * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+     */
+    boolean hasOriginalInvoiceCorrectionDate();
+    /**
+     * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+     */
+    java.lang.String getOriginalInvoiceCorrectionDate();
+    /**
+     * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginalInvoiceCorrectionDateBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata}
+   */
+  public static final class UniversalCorrectionDocumentRevisionMetadata extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata)
+      UniversalCorrectionDocumentRevisionMetadataOrBuilder {
+    // Use UniversalCorrectionDocumentRevisionMetadata.newBuilder() to construct.
+    private UniversalCorrectionDocumentRevisionMetadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private UniversalCorrectionDocumentRevisionMetadata(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final UniversalCorrectionDocumentRevisionMetadata defaultInstance;
+    public static UniversalCorrectionDocumentRevisionMetadata getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public UniversalCorrectionDocumentRevisionMetadata getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UniversalCorrectionDocumentRevisionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus value = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                documentStatus_ = value;
+              }
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              totalInc_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              totalDec_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              vatInc_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              vatDec_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              grounds_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              documentFunction_ = bs;
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              currency_ = input.readInt32();
+              break;
+            }
+            case 73: {
+              bitField0_ |= 0x00000100;
+              confirmationDateTimeTicks_ = input.readSFixed64();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              invoiceAmendmentFlags_ = input.readInt32();
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              originalInvoiceNumber_ = bs;
+              break;
+            }
+            case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000800;
+              originalInvoiceDate_ = bs;
+              break;
+            }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00001000;
+              originalInvoiceRevisionNumber_ = bs;
+              break;
+            }
+            case 114: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00002000;
+              originalInvoiceRevisionDate_ = bs;
+              break;
+            }
+            case 122: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00004000;
+              originalInvoiceCorrectionNumber_ = bs;
+              break;
+            }
+            case 130: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00008000;
+              originalInvoiceCorrectionDate_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.class, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<UniversalCorrectionDocumentRevisionMetadata> PARSER =
+        new com.google.protobuf.AbstractParser<UniversalCorrectionDocumentRevisionMetadata>() {
+      public UniversalCorrectionDocumentRevisionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UniversalCorrectionDocumentRevisionMetadata(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UniversalCorrectionDocumentRevisionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus documentStatus_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    public boolean hasDocumentStatus() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus getDocumentStatus() {
+      return documentStatus_;
+    }
+
+    public static final int TOTALINC_FIELD_NUMBER = 2;
+    private java.lang.Object totalInc_;
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    public boolean hasTotalInc() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    public java.lang.String getTotalInc() {
+      java.lang.Object ref = totalInc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          totalInc_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string TotalInc = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTotalIncBytes() {
+      java.lang.Object ref = totalInc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalInc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTALDEC_FIELD_NUMBER = 3;
+    private java.lang.Object totalDec_;
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    public boolean hasTotalDec() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    public java.lang.String getTotalDec() {
+      java.lang.Object ref = totalDec_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          totalDec_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string TotalDec = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTotalDecBytes() {
+      java.lang.Object ref = totalDec_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalDec_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VATINC_FIELD_NUMBER = 4;
+    private java.lang.Object vatInc_;
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    public boolean hasVatInc() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    public java.lang.String getVatInc() {
+      java.lang.Object ref = vatInc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          vatInc_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string VatInc = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVatIncBytes() {
+      java.lang.Object ref = vatInc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vatInc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VATDEC_FIELD_NUMBER = 5;
+    private java.lang.Object vatDec_;
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    public boolean hasVatDec() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    public java.lang.String getVatDec() {
+      java.lang.Object ref = vatDec_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          vatDec_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string VatDec = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVatDecBytes() {
+      java.lang.Object ref = vatDec_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vatDec_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GROUNDS_FIELD_NUMBER = 6;
+    private java.lang.Object grounds_;
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    public boolean hasGrounds() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    public java.lang.String getGrounds() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          grounds_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Grounds = 6;</code>
+     *
+     * <pre>
+     * DocumentGrounds
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getGroundsBytes() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        grounds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOCUMENTFUNCTION_FIELD_NUMBER = 7;
+    private java.lang.Object documentFunction_;
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    public boolean hasDocumentFunction() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    public java.lang.String getDocumentFunction() {
+      java.lang.Object ref = documentFunction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          documentFunction_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string DocumentFunction = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDocumentFunctionBytes() {
+      java.lang.Object ref = documentFunction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        documentFunction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURRENCY_FIELD_NUMBER = 8;
+    private int currency_;
+    /**
+     * <code>required int32 Currency = 8;</code>
+     */
+    public boolean hasCurrency() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>required int32 Currency = 8;</code>
+     */
+    public int getCurrency() {
+      return currency_;
+    }
+
+    public static final int CONFIRMATIONDATETIMETICKS_FIELD_NUMBER = 9;
+    private long confirmationDateTimeTicks_;
+    /**
+     * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+     */
+    public boolean hasConfirmationDateTimeTicks() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+     */
+    public long getConfirmationDateTimeTicks() {
+      return confirmationDateTimeTicks_;
+    }
+
+    public static final int INVOICEAMENDMENTFLAGS_FIELD_NUMBER = 10;
+    private int invoiceAmendmentFlags_;
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+     */
+    public boolean hasInvoiceAmendmentFlags() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+     */
+    public int getInvoiceAmendmentFlags() {
+      return invoiceAmendmentFlags_;
+    }
+
+    public static final int ORIGINALINVOICENUMBER_FIELD_NUMBER = 11;
+    private java.lang.Object originalInvoiceNumber_;
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    public boolean hasOriginalInvoiceNumber() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    public java.lang.String getOriginalInvoiceNumber() {
+      java.lang.Object ref = originalInvoiceNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string OriginalInvoiceNumber = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceNumberBytes() {
+      java.lang.Object ref = originalInvoiceNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINALINVOICEDATE_FIELD_NUMBER = 12;
+    private java.lang.Object originalInvoiceDate_;
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    public boolean hasOriginalInvoiceDate() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    public java.lang.String getOriginalInvoiceDate() {
+      java.lang.Object ref = originalInvoiceDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string OriginalInvoiceDate = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceDateBytes() {
+      java.lang.Object ref = originalInvoiceDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINALINVOICEREVISIONNUMBER_FIELD_NUMBER = 13;
+    private java.lang.Object originalInvoiceRevisionNumber_;
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    public boolean hasOriginalInvoiceRevisionNumber() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    public java.lang.String getOriginalInvoiceRevisionNumber() {
+      java.lang.Object ref = originalInvoiceRevisionNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceRevisionNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceRevisionNumberBytes() {
+      java.lang.Object ref = originalInvoiceRevisionNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceRevisionNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINALINVOICEREVISIONDATE_FIELD_NUMBER = 14;
+    private java.lang.Object originalInvoiceRevisionDate_;
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    public boolean hasOriginalInvoiceRevisionDate() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    public java.lang.String getOriginalInvoiceRevisionDate() {
+      java.lang.Object ref = originalInvoiceRevisionDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceRevisionDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceRevisionDateBytes() {
+      java.lang.Object ref = originalInvoiceRevisionDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceRevisionDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINALINVOICECORRECTIONNUMBER_FIELD_NUMBER = 15;
+    private java.lang.Object originalInvoiceCorrectionNumber_;
+    /**
+     * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+     */
+    public boolean hasOriginalInvoiceCorrectionNumber() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+     */
+    public java.lang.String getOriginalInvoiceCorrectionNumber() {
+      java.lang.Object ref = originalInvoiceCorrectionNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceCorrectionNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceCorrectionNumberBytes() {
+      java.lang.Object ref = originalInvoiceCorrectionNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceCorrectionNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINALINVOICECORRECTIONDATE_FIELD_NUMBER = 16;
+    private java.lang.Object originalInvoiceCorrectionDate_;
+    /**
+     * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+     */
+    public boolean hasOriginalInvoiceCorrectionDate() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+     */
+    public java.lang.String getOriginalInvoiceCorrectionDate() {
+      java.lang.Object ref = originalInvoiceCorrectionDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          originalInvoiceCorrectionDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginalInvoiceCorrectionDateBytes() {
+      java.lang.Object ref = originalInvoiceCorrectionDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalInvoiceCorrectionDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+      totalInc_ = "";
+      totalDec_ = "";
+      vatInc_ = "";
+      vatDec_ = "";
+      grounds_ = "";
+      documentFunction_ = "";
+      currency_ = 0;
+      confirmationDateTimeTicks_ = 0L;
+      invoiceAmendmentFlags_ = 0;
+      originalInvoiceNumber_ = "";
+      originalInvoiceDate_ = "";
+      originalInvoiceRevisionNumber_ = "";
+      originalInvoiceRevisionDate_ = "";
+      originalInvoiceCorrectionNumber_ = "";
+      originalInvoiceCorrectionDate_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDocumentStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTotalInc()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTotalDec()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasVatInc()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasVatDec()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDocumentFunction()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCurrency()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasConfirmationDateTimeTicks()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasInvoiceAmendmentFlags()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOriginalInvoiceNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOriginalInvoiceDate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOriginalInvoiceCorrectionNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOriginalInvoiceCorrectionDate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getTotalIncBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getTotalDecBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getVatIncBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getVatDecBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getDocumentFunctionBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, currency_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeSFixed64(9, confirmationDateTimeTicks_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeInt32(10, invoiceAmendmentFlags_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBytes(11, getOriginalInvoiceNumberBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeBytes(12, getOriginalInvoiceDateBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeBytes(13, getOriginalInvoiceRevisionNumberBytes());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeBytes(14, getOriginalInvoiceRevisionDateBytes());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeBytes(15, getOriginalInvoiceCorrectionNumberBytes());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeBytes(16, getOriginalInvoiceCorrectionDateBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, documentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTotalIncBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getTotalDecBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getVatIncBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getVatDecBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getDocumentFunctionBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, currency_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeSFixed64Size(9, confirmationDateTimeTicks_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, invoiceAmendmentFlags_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, getOriginalInvoiceNumberBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(12, getOriginalInvoiceDateBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, getOriginalInvoiceRevisionNumberBytes());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(14, getOriginalInvoiceRevisionDateBytes());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(15, getOriginalInvoiceCorrectionNumberBytes());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(16, getOriginalInvoiceCorrectionDateBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata)
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.class, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalInc_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalDec_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        vatInc_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        vatDec_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        grounds_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        documentFunction_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        currency_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        confirmationDateTimeTicks_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        invoiceAmendmentFlags_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        originalInvoiceNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00000400);
+        originalInvoiceDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
+        originalInvoiceRevisionNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
+        originalInvoiceRevisionDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00002000);
+        originalInvoiceCorrectionNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00004000);
+        originalInvoiceCorrectionDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00008000);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata build() {
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata buildPartial() {
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata result = new Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.documentStatus_ = documentStatus_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.totalInc_ = totalInc_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.totalDec_ = totalDec_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.vatInc_ = vatInc_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.vatDec_ = vatDec_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.grounds_ = grounds_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.documentFunction_ = documentFunction_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.currency_ = currency_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.confirmationDateTimeTicks_ = confirmationDateTimeTicks_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.invoiceAmendmentFlags_ = invoiceAmendmentFlags_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.originalInvoiceNumber_ = originalInvoiceNumber_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.originalInvoiceDate_ = originalInvoiceDate_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.originalInvoiceRevisionNumber_ = originalInvoiceRevisionNumber_;
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.originalInvoiceRevisionDate_ = originalInvoiceRevisionDate_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.originalInvoiceCorrectionNumber_ = originalInvoiceCorrectionNumber_;
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.originalInvoiceCorrectionDate_ = originalInvoiceCorrectionDate_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata) {
+          return mergeFrom((Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata other) {
+        if (other == Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.getDefaultInstance()) return this;
+        if (other.hasDocumentStatus()) {
+          setDocumentStatus(other.getDocumentStatus());
+        }
+        if (other.hasTotalInc()) {
+          bitField0_ |= 0x00000002;
+          totalInc_ = other.totalInc_;
+          onChanged();
+        }
+        if (other.hasTotalDec()) {
+          bitField0_ |= 0x00000004;
+          totalDec_ = other.totalDec_;
+          onChanged();
+        }
+        if (other.hasVatInc()) {
+          bitField0_ |= 0x00000008;
+          vatInc_ = other.vatInc_;
+          onChanged();
+        }
+        if (other.hasVatDec()) {
+          bitField0_ |= 0x00000010;
+          vatDec_ = other.vatDec_;
+          onChanged();
+        }
+        if (other.hasGrounds()) {
+          bitField0_ |= 0x00000020;
+          grounds_ = other.grounds_;
+          onChanged();
+        }
+        if (other.hasDocumentFunction()) {
+          bitField0_ |= 0x00000040;
+          documentFunction_ = other.documentFunction_;
+          onChanged();
+        }
+        if (other.hasCurrency()) {
+          setCurrency(other.getCurrency());
+        }
+        if (other.hasConfirmationDateTimeTicks()) {
+          setConfirmationDateTimeTicks(other.getConfirmationDateTimeTicks());
+        }
+        if (other.hasInvoiceAmendmentFlags()) {
+          setInvoiceAmendmentFlags(other.getInvoiceAmendmentFlags());
+        }
+        if (other.hasOriginalInvoiceNumber()) {
+          bitField0_ |= 0x00000400;
+          originalInvoiceNumber_ = other.originalInvoiceNumber_;
+          onChanged();
+        }
+        if (other.hasOriginalInvoiceDate()) {
+          bitField0_ |= 0x00000800;
+          originalInvoiceDate_ = other.originalInvoiceDate_;
+          onChanged();
+        }
+        if (other.hasOriginalInvoiceRevisionNumber()) {
+          bitField0_ |= 0x00001000;
+          originalInvoiceRevisionNumber_ = other.originalInvoiceRevisionNumber_;
+          onChanged();
+        }
+        if (other.hasOriginalInvoiceRevisionDate()) {
+          bitField0_ |= 0x00002000;
+          originalInvoiceRevisionDate_ = other.originalInvoiceRevisionDate_;
+          onChanged();
+        }
+        if (other.hasOriginalInvoiceCorrectionNumber()) {
+          bitField0_ |= 0x00004000;
+          originalInvoiceCorrectionNumber_ = other.originalInvoiceCorrectionNumber_;
+          onChanged();
+        }
+        if (other.hasOriginalInvoiceCorrectionDate()) {
+          bitField0_ |= 0x00008000;
+          originalInvoiceCorrectionDate_ = other.originalInvoiceCorrectionDate_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDocumentStatus()) {
+          
+          return false;
+        }
+        if (!hasTotalInc()) {
+          
+          return false;
+        }
+        if (!hasTotalDec()) {
+          
+          return false;
+        }
+        if (!hasVatInc()) {
+          
+          return false;
+        }
+        if (!hasVatDec()) {
+          
+          return false;
+        }
+        if (!hasDocumentFunction()) {
+          
+          return false;
+        }
+        if (!hasCurrency()) {
+          
+          return false;
+        }
+        if (!hasConfirmationDateTimeTicks()) {
+          
+          return false;
+        }
+        if (!hasInvoiceAmendmentFlags()) {
+          
+          return false;
+        }
+        if (!hasOriginalInvoiceNumber()) {
+          
+          return false;
+        }
+        if (!hasOriginalInvoiceDate()) {
+          
+          return false;
+        }
+        if (!hasOriginalInvoiceCorrectionNumber()) {
+          
+          return false;
+        }
+        if (!hasOriginalInvoiceCorrectionDate()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public boolean hasDocumentStatus() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus getDocumentStatus() {
+        return documentStatus_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        documentStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentStatus DocumentStatus = 1;</code>
+       */
+      public Builder clearDocumentStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        documentStatus_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentStatus.UnknownDocumentStatus;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalInc_ = "";
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public boolean hasTotalInc() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public java.lang.String getTotalInc() {
+        java.lang.Object ref = totalInc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            totalInc_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTotalIncBytes() {
+        java.lang.Object ref = totalInc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalInc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public Builder setTotalInc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        totalInc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public Builder clearTotalInc() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalInc_ = getDefaultInstance().getTotalInc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TotalInc = 2;</code>
+       */
+      public Builder setTotalIncBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        totalInc_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalDec_ = "";
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public boolean hasTotalDec() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public java.lang.String getTotalDec() {
+        java.lang.Object ref = totalDec_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            totalDec_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTotalDecBytes() {
+        java.lang.Object ref = totalDec_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalDec_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public Builder setTotalDec(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        totalDec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public Builder clearTotalDec() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalDec_ = getDefaultInstance().getTotalDec();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TotalDec = 3;</code>
+       */
+      public Builder setTotalDecBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        totalDec_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vatInc_ = "";
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public boolean hasVatInc() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public java.lang.String getVatInc() {
+        java.lang.Object ref = vatInc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vatInc_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVatIncBytes() {
+        java.lang.Object ref = vatInc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vatInc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public Builder setVatInc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        vatInc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public Builder clearVatInc() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        vatInc_ = getDefaultInstance().getVatInc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string VatInc = 4;</code>
+       */
+      public Builder setVatIncBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        vatInc_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vatDec_ = "";
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public boolean hasVatDec() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public java.lang.String getVatDec() {
+        java.lang.Object ref = vatDec_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vatDec_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVatDecBytes() {
+        java.lang.Object ref = vatDec_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vatDec_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public Builder setVatDec(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        vatDec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public Builder clearVatDec() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        vatDec_ = getDefaultInstance().getVatDec();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string VatDec = 5;</code>
+       */
+      public Builder setVatDecBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        vatDec_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object grounds_ = "";
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public boolean hasGrounds() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public java.lang.String getGrounds() {
+        java.lang.Object ref = grounds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            grounds_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getGroundsBytes() {
+        java.lang.Object ref = grounds_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          grounds_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public Builder setGrounds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public Builder clearGrounds() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        grounds_ = getDefaultInstance().getGrounds();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       *
+       * <pre>
+       * DocumentGrounds
+       * </pre>
+       */
+      public Builder setGroundsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object documentFunction_ = "";
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public boolean hasDocumentFunction() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public java.lang.String getDocumentFunction() {
+        java.lang.Object ref = documentFunction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            documentFunction_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDocumentFunctionBytes() {
+        java.lang.Object ref = documentFunction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          documentFunction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public Builder setDocumentFunction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        documentFunction_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public Builder clearDocumentFunction() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        documentFunction_ = getDefaultInstance().getDocumentFunction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocumentFunction = 7;</code>
+       */
+      public Builder setDocumentFunctionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        documentFunction_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int currency_ ;
+      /**
+       * <code>required int32 Currency = 8;</code>
+       */
+      public boolean hasCurrency() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>required int32 Currency = 8;</code>
+       */
+      public int getCurrency() {
+        return currency_;
+      }
+      /**
+       * <code>required int32 Currency = 8;</code>
+       */
+      public Builder setCurrency(int value) {
+        bitField0_ |= 0x00000080;
+        currency_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 Currency = 8;</code>
+       */
+      public Builder clearCurrency() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        currency_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long confirmationDateTimeTicks_ ;
+      /**
+       * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+       */
+      public boolean hasConfirmationDateTimeTicks() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+       */
+      public long getConfirmationDateTimeTicks() {
+        return confirmationDateTimeTicks_;
+      }
+      /**
+       * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+       */
+      public Builder setConfirmationDateTimeTicks(long value) {
+        bitField0_ |= 0x00000100;
+        confirmationDateTimeTicks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required sfixed64 ConfirmationDateTimeTicks = 9;</code>
+       */
+      public Builder clearConfirmationDateTimeTicks() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        confirmationDateTimeTicks_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int invoiceAmendmentFlags_ ;
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+       */
+      public boolean hasInvoiceAmendmentFlags() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+       */
+      public int getInvoiceAmendmentFlags() {
+        return invoiceAmendmentFlags_;
+      }
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+       */
+      public Builder setInvoiceAmendmentFlags(int value) {
+        bitField0_ |= 0x00000200;
+        invoiceAmendmentFlags_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 InvoiceAmendmentFlags = 10;</code>
+       */
+      public Builder clearInvoiceAmendmentFlags() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        invoiceAmendmentFlags_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceNumber_ = "";
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public boolean hasOriginalInvoiceNumber() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public java.lang.String getOriginalInvoiceNumber() {
+        java.lang.Object ref = originalInvoiceNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceNumberBytes() {
+        java.lang.Object ref = originalInvoiceNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public Builder setOriginalInvoiceNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        originalInvoiceNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public Builder clearOriginalInvoiceNumber() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        originalInvoiceNumber_ = getDefaultInstance().getOriginalInvoiceNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceNumber = 11;</code>
+       */
+      public Builder setOriginalInvoiceNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        originalInvoiceNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceDate_ = "";
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public boolean hasOriginalInvoiceDate() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public java.lang.String getOriginalInvoiceDate() {
+        java.lang.Object ref = originalInvoiceDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceDateBytes() {
+        java.lang.Object ref = originalInvoiceDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public Builder setOriginalInvoiceDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        originalInvoiceDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public Builder clearOriginalInvoiceDate() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        originalInvoiceDate_ = getDefaultInstance().getOriginalInvoiceDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceDate = 12;</code>
+       */
+      public Builder setOriginalInvoiceDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        originalInvoiceDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceRevisionNumber_ = "";
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public boolean hasOriginalInvoiceRevisionNumber() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public java.lang.String getOriginalInvoiceRevisionNumber() {
+        java.lang.Object ref = originalInvoiceRevisionNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceRevisionNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceRevisionNumberBytes() {
+        java.lang.Object ref = originalInvoiceRevisionNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceRevisionNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public Builder setOriginalInvoiceRevisionNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        originalInvoiceRevisionNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public Builder clearOriginalInvoiceRevisionNumber() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        originalInvoiceRevisionNumber_ = getDefaultInstance().getOriginalInvoiceRevisionNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionNumber = 13;</code>
+       */
+      public Builder setOriginalInvoiceRevisionNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        originalInvoiceRevisionNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceRevisionDate_ = "";
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public boolean hasOriginalInvoiceRevisionDate() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public java.lang.String getOriginalInvoiceRevisionDate() {
+        java.lang.Object ref = originalInvoiceRevisionDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceRevisionDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceRevisionDateBytes() {
+        java.lang.Object ref = originalInvoiceRevisionDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceRevisionDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public Builder setOriginalInvoiceRevisionDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        originalInvoiceRevisionDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public Builder clearOriginalInvoiceRevisionDate() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        originalInvoiceRevisionDate_ = getDefaultInstance().getOriginalInvoiceRevisionDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OriginalInvoiceRevisionDate = 14;</code>
+       */
+      public Builder setOriginalInvoiceRevisionDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        originalInvoiceRevisionDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceCorrectionNumber_ = "";
+      /**
+       * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+       */
+      public boolean hasOriginalInvoiceCorrectionNumber() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+       */
+      public java.lang.String getOriginalInvoiceCorrectionNumber() {
+        java.lang.Object ref = originalInvoiceCorrectionNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceCorrectionNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceCorrectionNumberBytes() {
+        java.lang.Object ref = originalInvoiceCorrectionNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceCorrectionNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+       */
+      public Builder setOriginalInvoiceCorrectionNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
+        originalInvoiceCorrectionNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+       */
+      public Builder clearOriginalInvoiceCorrectionNumber() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        originalInvoiceCorrectionNumber_ = getDefaultInstance().getOriginalInvoiceCorrectionNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionNumber = 15;</code>
+       */
+      public Builder setOriginalInvoiceCorrectionNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
+        originalInvoiceCorrectionNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalInvoiceCorrectionDate_ = "";
+      /**
+       * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+       */
+      public boolean hasOriginalInvoiceCorrectionDate() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+       */
+      public java.lang.String getOriginalInvoiceCorrectionDate() {
+        java.lang.Object ref = originalInvoiceCorrectionDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            originalInvoiceCorrectionDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginalInvoiceCorrectionDateBytes() {
+        java.lang.Object ref = originalInvoiceCorrectionDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalInvoiceCorrectionDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+       */
+      public Builder setOriginalInvoiceCorrectionDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00008000;
+        originalInvoiceCorrectionDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+       */
+      public Builder clearOriginalInvoiceCorrectionDate() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        originalInvoiceCorrectionDate_ = getDefaultInstance().getOriginalInvoiceCorrectionDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OriginalInvoiceCorrectionDate = 16;</code>
+       */
+      public Builder setOriginalInvoiceCorrectionDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00008000;
+        originalInvoiceCorrectionDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata)
+    }
+
+    static {
+      defaultInstance = new UniversalCorrectionDocumentRevisionMetadata(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentMetadata_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1562,29 +8495,67 @@ public final class UniversalTransferDocumentProtos {
     java.lang.String[] descriptorData = {
       "\n)Documents/UniversalTransferDocument.pr" +
       "oto\0224Diadoc.Api.Proto.Documents.Universa" +
-      "lTransferDocument\032\035Documents/ReceiptStat" +
-      "us.proto\"\333\002\n!UniversalTransferDocumentMe" +
-      "tadata\022\204\001\n\016DocumentStatus\030\001 \001(\0162U.Diadoc" +
+      "lTransferDocument\"\305\002\n!UniversalTransferD" +
+      "ocumentMetadata\022\204\001\n\016DocumentStatus\030\001 \001(\016" +
+      "2U.Diadoc.Api.Proto.Documents.UniversalT" +
+      "ransferDocument.UniversalTransferDocumen" +
+      "tStatus:\025UnknownDocumentStatus\022\r\n\005Total\030" +
+      "\002 \002(\t\022\013\n\003Vat\030\003 \001(\t\022\017\n\007Grounds\030\004 \001(\t\022\030\n\020D" +
+      "ocumentFunction\030\005 \002(\t\022\020\n\010Currency\030\006 \002(\005\022" +
+      "!\n\031ConfirmationDateTimeTicks\030\010 \001(\020\022\035\n\025In",
+      "voiceAmendmentFlags\030\t \001(\005\"\361\002\n)UniversalT" +
+      "ransferDocumentRevisionMetadata\022m\n\016Docum" +
+      "entStatus\030\001 \002(\0162U.Diadoc.Api.Proto.Docum" +
+      "ents.UniversalTransferDocument.Universal" +
+      "TransferDocumentStatus\022\r\n\005Total\030\002 \002(\t\022\013\n" +
+      "\003Vat\030\003 \001(\t\022\017\n\007Grounds\030\004 \001(\t\022\030\n\020DocumentF" +
+      "unction\030\005 \002(\t\022\020\n\010Currency\030\006 \002(\005\022!\n\031Confi" +
+      "rmationDateTimeTicks\030\007 \001(\020\022\035\n\025InvoiceAme" +
+      "ndmentFlags\030\010 \002(\005\022\035\n\025OriginalInvoiceNumb" +
+      "er\030\t \002(\t\022\033\n\023OriginalInvoiceDate\030\n \002(\t\"\337\003",
+      "\n#UniversalCorrectionDocumentMetadata\022m\n" +
+      "\016DocumentStatus\030\001 \002(\0162U.Diadoc.Api.Proto" +
+      ".Documents.UniversalTransferDocument.Uni" +
+      "versalTransferDocumentStatus\022\020\n\010TotalInc" +
+      "\030\002 \002(\t\022\020\n\010TotalDec\030\003 \002(\t\022\016\n\006VatInc\030\004 \002(\t" +
+      "\022\016\n\006VatDec\030\005 \002(\t\022\017\n\007Grounds\030\006 \001(\t\022\030\n\020Doc" +
+      "umentFunction\030\007 \002(\t\022\020\n\010Currency\030\010 \002(\005\022!\n" +
+      "\031ConfirmationDateTimeTicks\030\t \002(\020\022\035\n\025Invo" +
+      "iceAmendmentFlags\030\n \002(\005\022\035\n\025OriginalInvoi" +
+      "ceNumber\030\013 \002(\t\022\033\n\023OriginalInvoiceDate\030\014 ",
+      "\002(\t\022%\n\035OriginalInvoiceRevisionNumber\030\r \001" +
+      "(\t\022#\n\033OriginalInvoiceRevisionDate\030\016 \001(\t\"" +
+      "\267\004\n+UniversalCorrectionDocumentRevisionM" +
+      "etadata\022m\n\016DocumentStatus\030\001 \002(\0162U.Diadoc" +
       ".Api.Proto.Documents.UniversalTransferDo" +
-      "cument.UniversalTransferDocumentStatus:\025" +
-      "UnknownDocumentStatus\022\r\n\005Total\030\002 \002(\t\022\013\n\003" +
-      "Vat\030\003 \001(\t\022\017\n\007Grounds\030\004 \001(\t\022\030\n\020DocumentFu" +
-      "nction\030\005 \002(\t\022\020\n\010Currency\030\006 \002(\005\022V\n\rReceip",
-      "tStatus\030\007 \001(\0162).Diadoc.Api.Proto.Documen" +
-      "ts.ReceiptStatus:\024UnknownReceiptStatus*\343" +
-      "\003\n\037UniversalTransferDocumentStatus\022\031\n\025Un" +
-      "knownDocumentStatus\020\000\022%\n!OutboundWaiting" +
-      "ForSenderSignature\020\001\0229\n5OutboundWaitingF" +
-      "orInvoiceReceiptAndRecipientSignature\020\002\022" +
-      "$\n OutboundWaitingForInvoiceReceipt\020\003\022(\n" +
-      "$OutboundWaitingForRecipientSignature\020\004\022" +
-      "\"\n\036OutboundInvalidSenderSignature\020\005\0228\n4I" +
-      "nboundWaitingForInvoiceReceiptAndRecipie",
-      "ntSignature\020\006\022\'\n#InboundWaitingForRecipi" +
-      "entSignature\020\007\022#\n\037InboundWaitingForInvoi" +
-      "ceReceipt\020\010\022!\n\035InboundWithRecipientSigna" +
-      "ture\020\t\022$\n InboundInvalidRecipientSignatu" +
-      "re\020\nB!B\037UniversalTransferDocumentProtos"
+      "cument.UniversalTransferDocumentStatus\022\020" +
+      "\n\010TotalInc\030\002 \002(\t\022\020\n\010TotalDec\030\003 \002(\t\022\016\n\006Va" +
+      "tInc\030\004 \002(\t\022\016\n\006VatDec\030\005 \002(\t\022\017\n\007Grounds\030\006 " +
+      "\001(\t\022\030\n\020DocumentFunction\030\007 \002(\t\022\020\n\010Currenc" +
+      "y\030\010 \002(\005\022!\n\031ConfirmationDateTimeTicks\030\t \002",
+      "(\020\022\035\n\025InvoiceAmendmentFlags\030\n \002(\005\022\035\n\025Ori" +
+      "ginalInvoiceNumber\030\013 \002(\t\022\033\n\023OriginalInvo" +
+      "iceDate\030\014 \002(\t\022%\n\035OriginalInvoiceRevision" +
+      "Number\030\r \001(\t\022#\n\033OriginalInvoiceRevisionD" +
+      "ate\030\016 \001(\t\022\'\n\037OriginalInvoiceCorrectionNu" +
+      "mber\030\017 \002(\t\022%\n\035OriginalInvoiceCorrectionD" +
+      "ate\030\020 \002(\t*\341\004\n\037UniversalTransferDocumentS" +
+      "tatus\022\031\n\025UnknownDocumentStatus\020\000\022%\n!Outb" +
+      "oundWaitingForSenderSignature\020\001\0229\n5Outbo" +
+      "undWaitingForInvoiceReceiptAndRecipientS",
+      "ignature\020\002\022$\n OutboundWaitingForInvoiceR" +
+      "eceipt\020\003\022(\n$OutboundWaitingForRecipientS" +
+      "ignature\020\004\022\"\n\036OutboundWithRecipientSigna" +
+      "ture\020\005\022-\n)OutboundRecipientSignatureRequ" +
+      "estRejected\020\006\022\"\n\036OutboundInvalidSenderSi" +
+      "gnature\020\007\022\027\n\023OutboundNotFinished\020\010\022\024\n\020Ou" +
+      "tboundFinished\020\t\022\'\n#InboundWaitingForRec" +
+      "ipientSignature\020\020\022!\n\035InboundWithRecipien" +
+      "tSignature\020\021\022,\n(InboundRecipientSignatur" +
+      "eRequestRejected\020\022\022$\n InboundInvalidReci",
+      "pientSignature\020\023\022\026\n\022InboundNotFinished\020\024" +
+      "\022\023\n\017InboundFinished\020\025B!B\037UniversalTransf" +
+      "erDocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1597,15 +8568,31 @@ public final class UniversalTransferDocumentProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          Diadoc.Api.Proto.Documents.ReceiptStatusProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentMetadata_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentMetadata_descriptor,
-        new java.lang.String[] { "DocumentStatus", "Total", "Vat", "Grounds", "DocumentFunction", "Currency", "ReceiptStatus", });
-    Diadoc.Api.Proto.Documents.ReceiptStatusProtos.getDescriptor();
+        new java.lang.String[] { "DocumentStatus", "Total", "Vat", "Grounds", "DocumentFunction", "Currency", "ConfirmationDateTimeTicks", "InvoiceAmendmentFlags", });
+    internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalTransferDocumentRevisionMetadata_descriptor,
+        new java.lang.String[] { "DocumentStatus", "Total", "Vat", "Grounds", "DocumentFunction", "Currency", "ConfirmationDateTimeTicks", "InvoiceAmendmentFlags", "OriginalInvoiceNumber", "OriginalInvoiceDate", });
+    internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentMetadata_descriptor,
+        new java.lang.String[] { "DocumentStatus", "TotalInc", "TotalDec", "VatInc", "VatDec", "Grounds", "DocumentFunction", "Currency", "ConfirmationDateTimeTicks", "InvoiceAmendmentFlags", "OriginalInvoiceNumber", "OriginalInvoiceDate", "OriginalInvoiceRevisionNumber", "OriginalInvoiceRevisionDate", });
+    internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_UniversalTransferDocument_UniversalCorrectionDocumentRevisionMetadata_descriptor,
+        new java.lang.String[] { "DocumentStatus", "TotalInc", "TotalDec", "VatInc", "VatDec", "Grounds", "DocumentFunction", "Currency", "ConfirmationDateTimeTicks", "InvoiceAmendmentFlags", "OriginalInvoiceNumber", "OriginalInvoiceDate", "OriginalInvoiceRevisionNumber", "OriginalInvoiceRevisionDate", "OriginalInvoiceCorrectionNumber", "OriginalInvoiceCorrectionDate", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

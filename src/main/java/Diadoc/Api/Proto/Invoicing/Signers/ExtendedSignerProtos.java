@@ -3831,6 +3831,1635 @@ public final class ExtendedSignerProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerDetails)
   }
 
+  public interface ExtendedSignerDetailsToPostOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerDetailsToPost)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string JobTitle = 1;</code>
+     */
+    boolean hasJobTitle();
+    /**
+     * <code>optional string JobTitle = 1;</code>
+     */
+    java.lang.String getJobTitle();
+    /**
+     * <code>optional string JobTitle = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getJobTitleBytes();
+
+    /**
+     * <code>optional string RegistrationCertificate = 2;</code>
+     */
+    boolean hasRegistrationCertificate();
+    /**
+     * <code>optional string RegistrationCertificate = 2;</code>
+     */
+    java.lang.String getRegistrationCertificate();
+    /**
+     * <code>optional string RegistrationCertificate = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getRegistrationCertificateBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 3;</code>
+     *
+     * <pre>
+     * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
+     * </pre>
+     */
+    boolean hasSignerType();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 3;</code>
+     *
+     * <pre>
+     * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
+     * </pre>
+     */
+    Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType getSignerType();
+
+    /**
+     * <code>optional string SignerInfo = 4;</code>
+     *
+     * <pre>
+     * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+     * </pre>
+     */
+    boolean hasSignerInfo();
+    /**
+     * <code>optional string SignerInfo = 4;</code>
+     *
+     * <pre>
+     * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+     * </pre>
+     */
+    java.lang.String getSignerInfo();
+    /**
+     * <code>optional string SignerInfo = 4;</code>
+     *
+     * <pre>
+     * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSignerInfoBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 5;</code>
+     *
+     * <pre>
+     * Область полномочий (ОблПолн)
+     * </pre>
+     */
+    boolean hasSignerPowers();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 5;</code>
+     *
+     * <pre>
+     * Область полномочий (ОблПолн)
+     * </pre>
+     */
+    Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers getSignerPowers();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 6;</code>
+     *
+     * <pre>
+     * Статус (Статус)
+     * </pre>
+     */
+    boolean hasSignerStatus();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 6;</code>
+     *
+     * <pre>
+     * Статус (Статус)
+     * </pre>
+     */
+    Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus getSignerStatus();
+
+    /**
+     * <code>optional string SignerPowersBase = 7;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) (ОснПолн)
+     * </pre>
+     */
+    boolean hasSignerPowersBase();
+    /**
+     * <code>optional string SignerPowersBase = 7;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) (ОснПолн)
+     * </pre>
+     */
+    java.lang.String getSignerPowersBase();
+    /**
+     * <code>optional string SignerPowersBase = 7;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) (ОснПолн)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSignerPowersBaseBytes();
+
+    /**
+     * <code>optional string SignerOrgPowersBase = 8;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) организации (ОснПолнОрг)
+     * </pre>
+     */
+    boolean hasSignerOrgPowersBase();
+    /**
+     * <code>optional string SignerOrgPowersBase = 8;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) организации (ОснПолнОрг)
+     * </pre>
+     */
+    java.lang.String getSignerOrgPowersBase();
+    /**
+     * <code>optional string SignerOrgPowersBase = 8;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) организации (ОснПолнОрг)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSignerOrgPowersBaseBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerDetailsToPost}
+   */
+  public static final class ExtendedSignerDetailsToPost extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerDetailsToPost)
+      ExtendedSignerDetailsToPostOrBuilder {
+    // Use ExtendedSignerDetailsToPost.newBuilder() to construct.
+    private ExtendedSignerDetailsToPost(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ExtendedSignerDetailsToPost(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ExtendedSignerDetailsToPost defaultInstance;
+    public static ExtendedSignerDetailsToPost getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ExtendedSignerDetailsToPost getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ExtendedSignerDetailsToPost(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              jobTitle_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              registrationCertificate_ = bs;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType value = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                signerType_ = value;
+              }
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              signerInfo_ = bs;
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers value = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000010;
+                signerPowers_ = value;
+              }
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus value = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(6, rawValue);
+              } else {
+                bitField0_ |= 0x00000020;
+                signerStatus_ = value;
+              }
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              signerPowersBase_ = bs;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              signerOrgPowersBase_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost.class, Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ExtendedSignerDetailsToPost> PARSER =
+        new com.google.protobuf.AbstractParser<ExtendedSignerDetailsToPost>() {
+      public ExtendedSignerDetailsToPost parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ExtendedSignerDetailsToPost(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExtendedSignerDetailsToPost> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int JOBTITLE_FIELD_NUMBER = 1;
+    private java.lang.Object jobTitle_;
+    /**
+     * <code>optional string JobTitle = 1;</code>
+     */
+    public boolean hasJobTitle() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string JobTitle = 1;</code>
+     */
+    public java.lang.String getJobTitle() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          jobTitle_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string JobTitle = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getJobTitleBytes() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTRATIONCERTIFICATE_FIELD_NUMBER = 2;
+    private java.lang.Object registrationCertificate_;
+    /**
+     * <code>optional string RegistrationCertificate = 2;</code>
+     */
+    public boolean hasRegistrationCertificate() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string RegistrationCertificate = 2;</code>
+     */
+    public java.lang.String getRegistrationCertificate() {
+      java.lang.Object ref = registrationCertificate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          registrationCertificate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string RegistrationCertificate = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRegistrationCertificateBytes() {
+      java.lang.Object ref = registrationCertificate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registrationCertificate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNERTYPE_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType signerType_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 3;</code>
+     *
+     * <pre>
+     * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
+     * </pre>
+     */
+    public boolean hasSignerType() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 3;</code>
+     *
+     * <pre>
+     * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType getSignerType() {
+      return signerType_;
+    }
+
+    public static final int SIGNERINFO_FIELD_NUMBER = 4;
+    private java.lang.Object signerInfo_;
+    /**
+     * <code>optional string SignerInfo = 4;</code>
+     *
+     * <pre>
+     * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+     * </pre>
+     */
+    public boolean hasSignerInfo() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string SignerInfo = 4;</code>
+     *
+     * <pre>
+     * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+     * </pre>
+     */
+    public java.lang.String getSignerInfo() {
+      java.lang.Object ref = signerInfo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          signerInfo_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string SignerInfo = 4;</code>
+     *
+     * <pre>
+     * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSignerInfoBytes() {
+      java.lang.Object ref = signerInfo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signerInfo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNERPOWERS_FIELD_NUMBER = 5;
+    private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers signerPowers_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 5;</code>
+     *
+     * <pre>
+     * Область полномочий (ОблПолн)
+     * </pre>
+     */
+    public boolean hasSignerPowers() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 5;</code>
+     *
+     * <pre>
+     * Область полномочий (ОблПолн)
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers getSignerPowers() {
+      return signerPowers_;
+    }
+
+    public static final int SIGNERSTATUS_FIELD_NUMBER = 6;
+    private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus signerStatus_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 6;</code>
+     *
+     * <pre>
+     * Статус (Статус)
+     * </pre>
+     */
+    public boolean hasSignerStatus() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 6;</code>
+     *
+     * <pre>
+     * Статус (Статус)
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus getSignerStatus() {
+      return signerStatus_;
+    }
+
+    public static final int SIGNERPOWERSBASE_FIELD_NUMBER = 7;
+    private java.lang.Object signerPowersBase_;
+    /**
+     * <code>optional string SignerPowersBase = 7;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) (ОснПолн)
+     * </pre>
+     */
+    public boolean hasSignerPowersBase() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string SignerPowersBase = 7;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) (ОснПолн)
+     * </pre>
+     */
+    public java.lang.String getSignerPowersBase() {
+      java.lang.Object ref = signerPowersBase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          signerPowersBase_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string SignerPowersBase = 7;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) (ОснПолн)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSignerPowersBaseBytes() {
+      java.lang.Object ref = signerPowersBase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signerPowersBase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNERORGPOWERSBASE_FIELD_NUMBER = 8;
+    private java.lang.Object signerOrgPowersBase_;
+    /**
+     * <code>optional string SignerOrgPowersBase = 8;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) организации (ОснПолнОрг)
+     * </pre>
+     */
+    public boolean hasSignerOrgPowersBase() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional string SignerOrgPowersBase = 8;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) организации (ОснПолнОрг)
+     * </pre>
+     */
+    public java.lang.String getSignerOrgPowersBase() {
+      java.lang.Object ref = signerOrgPowersBase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          signerOrgPowersBase_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string SignerOrgPowersBase = 8;</code>
+     *
+     * <pre>
+     * Основание полномочий (доверия) организации (ОснПолнОрг)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSignerOrgPowersBaseBytes() {
+      java.lang.Object ref = signerOrgPowersBase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signerOrgPowersBase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      jobTitle_ = "";
+      registrationCertificate_ = "";
+      signerType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType.LegalEntity;
+      signerInfo_ = "";
+      signerPowers_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers.InvoiceSigner;
+      signerStatus_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus.SellerEmployee;
+      signerPowersBase_ = "";
+      signerOrgPowersBase_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSignerType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSignerPowers()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSignerStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getJobTitleBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getRegistrationCertificateBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(3, signerType_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getSignerInfoBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeEnum(5, signerPowers_.getNumber());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeEnum(6, signerStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getSignerPowersBaseBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBytes(8, getSignerOrgPowersBaseBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getJobTitleBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getRegistrationCertificateBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, signerType_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getSignerInfoBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, signerPowers_.getNumber());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, signerStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getSignerPowersBaseBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getSignerOrgPowersBaseBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerDetailsToPost}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerDetailsToPost)
+        Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPostOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost.class, Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        jobTitle_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        registrationCertificate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signerType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType.LegalEntity;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        signerInfo_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        signerPowers_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers.InvoiceSigner;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        signerStatus_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus.SellerEmployee;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        signerPowersBase_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        signerOrgPowersBase_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost build() {
+        Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost buildPartial() {
+        Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost result = new Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.jobTitle_ = jobTitle_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.registrationCertificate_ = registrationCertificate_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.signerType_ = signerType_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.signerInfo_ = signerInfo_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.signerPowers_ = signerPowers_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.signerStatus_ = signerStatus_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.signerPowersBase_ = signerPowersBase_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.signerOrgPowersBase_ = signerOrgPowersBase_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost) {
+          return mergeFrom((Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost other) {
+        if (other == Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost.getDefaultInstance()) return this;
+        if (other.hasJobTitle()) {
+          bitField0_ |= 0x00000001;
+          jobTitle_ = other.jobTitle_;
+          onChanged();
+        }
+        if (other.hasRegistrationCertificate()) {
+          bitField0_ |= 0x00000002;
+          registrationCertificate_ = other.registrationCertificate_;
+          onChanged();
+        }
+        if (other.hasSignerType()) {
+          setSignerType(other.getSignerType());
+        }
+        if (other.hasSignerInfo()) {
+          bitField0_ |= 0x00000008;
+          signerInfo_ = other.signerInfo_;
+          onChanged();
+        }
+        if (other.hasSignerPowers()) {
+          setSignerPowers(other.getSignerPowers());
+        }
+        if (other.hasSignerStatus()) {
+          setSignerStatus(other.getSignerStatus());
+        }
+        if (other.hasSignerPowersBase()) {
+          bitField0_ |= 0x00000040;
+          signerPowersBase_ = other.signerPowersBase_;
+          onChanged();
+        }
+        if (other.hasSignerOrgPowersBase()) {
+          bitField0_ |= 0x00000080;
+          signerOrgPowersBase_ = other.signerOrgPowersBase_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasSignerType()) {
+          
+          return false;
+        }
+        if (!hasSignerPowers()) {
+          
+          return false;
+        }
+        if (!hasSignerStatus()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object jobTitle_ = "";
+      /**
+       * <code>optional string JobTitle = 1;</code>
+       */
+      public boolean hasJobTitle() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string JobTitle = 1;</code>
+       */
+      public java.lang.String getJobTitle() {
+        java.lang.Object ref = jobTitle_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jobTitle_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string JobTitle = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getJobTitleBytes() {
+        java.lang.Object ref = jobTitle_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jobTitle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string JobTitle = 1;</code>
+       */
+      public Builder setJobTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string JobTitle = 1;</code>
+       */
+      public Builder clearJobTitle() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        jobTitle_ = getDefaultInstance().getJobTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string JobTitle = 1;</code>
+       */
+      public Builder setJobTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registrationCertificate_ = "";
+      /**
+       * <code>optional string RegistrationCertificate = 2;</code>
+       */
+      public boolean hasRegistrationCertificate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string RegistrationCertificate = 2;</code>
+       */
+      public java.lang.String getRegistrationCertificate() {
+        java.lang.Object ref = registrationCertificate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            registrationCertificate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string RegistrationCertificate = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRegistrationCertificateBytes() {
+        java.lang.Object ref = registrationCertificate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registrationCertificate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string RegistrationCertificate = 2;</code>
+       */
+      public Builder setRegistrationCertificate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        registrationCertificate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string RegistrationCertificate = 2;</code>
+       */
+      public Builder clearRegistrationCertificate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        registrationCertificate_ = getDefaultInstance().getRegistrationCertificate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string RegistrationCertificate = 2;</code>
+       */
+      public Builder setRegistrationCertificateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        registrationCertificate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType signerType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType.LegalEntity;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 3;</code>
+       *
+       * <pre>
+       * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
+       * </pre>
+       */
+      public boolean hasSignerType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 3;</code>
+       *
+       * <pre>
+       * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType getSignerType() {
+        return signerType_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 3;</code>
+       *
+       * <pre>
+       * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
+       * </pre>
+       */
+      public Builder setSignerType(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        signerType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 3;</code>
+       *
+       * <pre>
+       * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
+       * </pre>
+       */
+      public Builder clearSignerType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        signerType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType.LegalEntity;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signerInfo_ = "";
+      /**
+       * <code>optional string SignerInfo = 4;</code>
+       *
+       * <pre>
+       * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+       * </pre>
+       */
+      public boolean hasSignerInfo() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string SignerInfo = 4;</code>
+       *
+       * <pre>
+       * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+       * </pre>
+       */
+      public java.lang.String getSignerInfo() {
+        java.lang.Object ref = signerInfo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            signerInfo_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerInfo = 4;</code>
+       *
+       * <pre>
+       * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSignerInfoBytes() {
+        java.lang.Object ref = signerInfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signerInfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerInfo = 4;</code>
+       *
+       * <pre>
+       * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+       * </pre>
+       */
+      public Builder setSignerInfo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        signerInfo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string SignerInfo = 4;</code>
+       *
+       * <pre>
+       * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+       * </pre>
+       */
+      public Builder clearSignerInfo() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        signerInfo_ = getDefaultInstance().getSignerInfo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string SignerInfo = 4;</code>
+       *
+       * <pre>
+       * Иные сведения, идентифицирующие лицо (Юл.ИныеСвед или СвИП.ИныеСвед  или ФЛ.ИныеСвед)
+       * </pre>
+       */
+      public Builder setSignerInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        signerInfo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers signerPowers_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers.InvoiceSigner;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 5;</code>
+       *
+       * <pre>
+       * Область полномочий (ОблПолн)
+       * </pre>
+       */
+      public boolean hasSignerPowers() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 5;</code>
+       *
+       * <pre>
+       * Область полномочий (ОблПолн)
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers getSignerPowers() {
+        return signerPowers_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 5;</code>
+       *
+       * <pre>
+       * Область полномочий (ОблПолн)
+       * </pre>
+       */
+      public Builder setSignerPowers(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        signerPowers_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 5;</code>
+       *
+       * <pre>
+       * Область полномочий (ОблПолн)
+       * </pre>
+       */
+      public Builder clearSignerPowers() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        signerPowers_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers.InvoiceSigner;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus signerStatus_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus.SellerEmployee;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 6;</code>
+       *
+       * <pre>
+       * Статус (Статус)
+       * </pre>
+       */
+      public boolean hasSignerStatus() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 6;</code>
+       *
+       * <pre>
+       * Статус (Статус)
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus getSignerStatus() {
+        return signerStatus_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 6;</code>
+       *
+       * <pre>
+       * Статус (Статус)
+       * </pre>
+       */
+      public Builder setSignerStatus(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000020;
+        signerStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 6;</code>
+       *
+       * <pre>
+       * Статус (Статус)
+       * </pre>
+       */
+      public Builder clearSignerStatus() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        signerStatus_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus.SellerEmployee;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signerPowersBase_ = "";
+      /**
+       * <code>optional string SignerPowersBase = 7;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) (ОснПолн)
+       * </pre>
+       */
+      public boolean hasSignerPowersBase() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string SignerPowersBase = 7;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) (ОснПолн)
+       * </pre>
+       */
+      public java.lang.String getSignerPowersBase() {
+        java.lang.Object ref = signerPowersBase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            signerPowersBase_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerPowersBase = 7;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) (ОснПолн)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSignerPowersBaseBytes() {
+        java.lang.Object ref = signerPowersBase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signerPowersBase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerPowersBase = 7;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) (ОснПолн)
+       * </pre>
+       */
+      public Builder setSignerPowersBase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        signerPowersBase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string SignerPowersBase = 7;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) (ОснПолн)
+       * </pre>
+       */
+      public Builder clearSignerPowersBase() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        signerPowersBase_ = getDefaultInstance().getSignerPowersBase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string SignerPowersBase = 7;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) (ОснПолн)
+       * </pre>
+       */
+      public Builder setSignerPowersBaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        signerPowersBase_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signerOrgPowersBase_ = "";
+      /**
+       * <code>optional string SignerOrgPowersBase = 8;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) организации (ОснПолнОрг)
+       * </pre>
+       */
+      public boolean hasSignerOrgPowersBase() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional string SignerOrgPowersBase = 8;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) организации (ОснПолнОрг)
+       * </pre>
+       */
+      public java.lang.String getSignerOrgPowersBase() {
+        java.lang.Object ref = signerOrgPowersBase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            signerOrgPowersBase_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerOrgPowersBase = 8;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) организации (ОснПолнОрг)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSignerOrgPowersBaseBytes() {
+        java.lang.Object ref = signerOrgPowersBase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signerOrgPowersBase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerOrgPowersBase = 8;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) организации (ОснПолнОрг)
+       * </pre>
+       */
+      public Builder setSignerOrgPowersBase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        signerOrgPowersBase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string SignerOrgPowersBase = 8;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) организации (ОснПолнОрг)
+       * </pre>
+       */
+      public Builder clearSignerOrgPowersBase() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        signerOrgPowersBase_ = getDefaultInstance().getSignerOrgPowersBase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string SignerOrgPowersBase = 8;</code>
+       *
+       * <pre>
+       * Основание полномочий (доверия) организации (ОснПолнОрг)
+       * </pre>
+       */
+      public Builder setSignerOrgPowersBaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        signerOrgPowersBase_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerDetailsToPost)
+    }
+
+    static {
+      defaultInstance = new ExtendedSignerDetailsToPost(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerDetailsToPost)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSigner_descriptor;
   private static
@@ -3841,6 +5470,11 @@ public final class ExtendedSignerProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetails_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3868,18 +5502,28 @@ public final class ExtendedSignerProtos {
       "F\n\014SignerStatus\030\013 \002(\01620.Diadoc.Api.Proto" +
       ".Invoicing.Signers.SignerStatus\022\030\n\020Signe" +
       "rPowersBase\030\014 \001(\t\022\033\n\023SignerOrgPowersBase" +
-      "\030\r \001(\t*G\n\nSignerType\022\017\n\013LegalEntity\020\001\022\024\n" +
-      "\020IndividualEntity\020\002\022\022\n\016PhysicalPerson\020\003*",
-      "\372\001\n\014SignerPowers\022\021\n\rInvoiceSigner\020\000\022\027\n\023P" +
-      "ersonMadeOperation\020\001\022\030\n\024MadeAndSignOpera" +
-      "tion\020\002\022\035\n\031PersonDocumentedOperation\020\003\022!\n" +
-      "\035MadeOperationAndSignedInvoice\020\004\0222\n.Made" +
-      "AndResponsibleForOperationAndSignedInvoi" +
-      "ce\020\005\022.\n*ResponsibleForOperationAndSigner" +
-      "ForInvoice\020\006*w\n\014SignerStatus\022\022\n\016SellerEm" +
-      "ployee\020\001\022\036\n\032InformationCreatorEmployee\020\002" +
-      "\022\035\n\031OtherOrganizationEmployee\020\003\022\024\n\020Autho" +
-      "rizedPerson\020\004B\026B\024ExtendedSignerProtos"
+      "\030\r \001(\t\"\357\002\n\033ExtendedSignerDetailsToPost\022\020" +
+      "\n\010JobTitle\030\001 \001(\t\022\037\n\027RegistrationCertific",
+      "ate\030\002 \001(\t\022B\n\nSignerType\030\003 \002(\0162..Diadoc.A" +
+      "pi.Proto.Invoicing.Signers.SignerType\022\022\n" +
+      "\nSignerInfo\030\004 \001(\t\022F\n\014SignerPowers\030\005 \002(\0162" +
+      "0.Diadoc.Api.Proto.Invoicing.Signers.Sig" +
+      "nerPowers\022F\n\014SignerStatus\030\006 \002(\01620.Diadoc" +
+      ".Api.Proto.Invoicing.Signers.SignerStatu" +
+      "s\022\030\n\020SignerPowersBase\030\007 \001(\t\022\033\n\023SignerOrg" +
+      "PowersBase\030\010 \001(\t*G\n\nSignerType\022\017\n\013LegalE" +
+      "ntity\020\001\022\024\n\020IndividualEntity\020\002\022\022\n\016Physica" +
+      "lPerson\020\003*\372\001\n\014SignerPowers\022\021\n\rInvoiceSig",
+      "ner\020\000\022\027\n\023PersonMadeOperation\020\001\022\030\n\024MadeAn" +
+      "dSignOperation\020\002\022\035\n\031PersonDocumentedOper" +
+      "ation\020\003\022!\n\035MadeOperationAndSignedInvoice" +
+      "\020\004\0222\n.MadeAndResponsibleForOperationAndS" +
+      "ignedInvoice\020\005\022.\n*ResponsibleForOperatio" +
+      "nAndSignerForInvoice\020\006*w\n\014SignerStatus\022\022" +
+      "\n\016SellerEmployee\020\001\022\036\n\032InformationCreator" +
+      "Employee\020\002\022\035\n\031OtherOrganizationEmployee\020" +
+      "\003\022\024\n\020AuthorizedPerson\020\004B\026B\024ExtendedSigne" +
+      "rProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3905,6 +5549,12 @@ public final class ExtendedSignerProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetails_descriptor,
         new java.lang.String[] { "Surname", "FirstName", "Patronymic", "JobTitle", "Inn", "RegistrationCertificate", "SignerType", "SignerOrganizationName", "SignerInfo", "SignerPowers", "SignerStatus", "SignerPowersBase", "SignerOrgPowersBase", });
+    internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_descriptor,
+        new java.lang.String[] { "JobTitle", "RegistrationCertificate", "SignerType", "SignerInfo", "SignerPowers", "SignerStatus", "SignerPowersBase", "SignerOrgPowersBase", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

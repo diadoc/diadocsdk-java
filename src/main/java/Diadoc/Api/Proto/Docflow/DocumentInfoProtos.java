@@ -221,6 +221,56 @@ public final class DocumentInfoProtos {
      * <code>optional .Diadoc.Api.Proto.Docflow.SupplementaryAgreementDocumentInfo SupplementaryAgreementInfo = 14;</code>
      */
     Diadoc.Api.Proto.Docflow.DocumentInfoProtos.SupplementaryAgreementDocumentInfoOrBuilder getSupplementaryAgreementInfoOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision
+     * </pre>
+     */
+    boolean hasUniversalTransferDocumentInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo getUniversalTransferDocumentInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfoOrBuilder getUniversalTransferDocumentInfoOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    boolean hasUniversalCorrectionDocumentInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo getUniversalCorrectionDocumentInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfoOrBuilder getUniversalCorrectionDocumentInfoOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentInfo}
@@ -414,6 +464,32 @@ public final class DocumentInfoProtos {
                 supplementaryAgreementInfo_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00002000;
+              break;
+            }
+            case 122: {
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00004000) == 0x00004000)) {
+                subBuilder = universalTransferDocumentInfo_.toBuilder();
+              }
+              universalTransferDocumentInfo_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(universalTransferDocumentInfo_);
+                universalTransferDocumentInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00004000;
+              break;
+            }
+            case 130: {
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00008000) == 0x00008000)) {
+                subBuilder = universalCorrectionDocumentInfo_.toBuilder();
+              }
+              universalCorrectionDocumentInfo_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(universalCorrectionDocumentInfo_);
+                universalCorrectionDocumentInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00008000;
               break;
             }
           }
@@ -852,6 +928,72 @@ public final class DocumentInfoProtos {
       return supplementaryAgreementInfo_;
     }
 
+    public static final int UNIVERSALTRANSFERDOCUMENTINFO_FIELD_NUMBER = 15;
+    private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo universalTransferDocumentInfo_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision
+     * </pre>
+     */
+    public boolean hasUniversalTransferDocumentInfo() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo getUniversalTransferDocumentInfo() {
+      return universalTransferDocumentInfo_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfoOrBuilder getUniversalTransferDocumentInfoOrBuilder() {
+      return universalTransferDocumentInfo_;
+    }
+
+    public static final int UNIVERSALCORRECTIONDOCUMENTINFO_FIELD_NUMBER = 16;
+    private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo universalCorrectionDocumentInfo_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    public boolean hasUniversalCorrectionDocumentInfo() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo getUniversalCorrectionDocumentInfo() {
+      return universalCorrectionDocumentInfo_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfoOrBuilder getUniversalCorrectionDocumentInfoOrBuilder() {
+      return universalCorrectionDocumentInfo_;
+    }
+
     private void initFields() {
       documentType_ = Diadoc.Api.Proto.DocumentTypeProtos.DocumentType.UnknownDocumentType;
       documentDirection_ = Diadoc.Api.Proto.DocumentDirectionProtos.DocumentDirection.UnknownDocumentDirection;
@@ -867,6 +1009,8 @@ public final class DocumentInfoProtos {
       priceListInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.PriceListDocumentInfo.getDefaultInstance();
       contractInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.ContractDocumentInfo.getDefaultInstance();
       supplementaryAgreementInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.SupplementaryAgreementDocumentInfo.getDefaultInstance();
+      universalTransferDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.getDefaultInstance();
+      universalCorrectionDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -874,6 +1018,18 @@ public final class DocumentInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (hasUniversalTransferDocumentInfo()) {
+        if (!getUniversalTransferDocumentInfo().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasUniversalCorrectionDocumentInfo()) {
+        if (!getUniversalCorrectionDocumentInfo().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -922,6 +1078,12 @@ public final class DocumentInfoProtos {
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeMessage(14, supplementaryAgreementInfo_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeMessage(15, universalTransferDocumentInfo_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeMessage(16, universalCorrectionDocumentInfo_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -987,6 +1149,14 @@ public final class DocumentInfoProtos {
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, supplementaryAgreementInfo_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, universalTransferDocumentInfo_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, universalCorrectionDocumentInfo_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1104,6 +1274,8 @@ public final class DocumentInfoProtos {
           getPriceListInfoFieldBuilder();
           getContractInfoFieldBuilder();
           getSupplementaryAgreementInfoFieldBuilder();
+          getUniversalTransferDocumentInfoFieldBuilder();
+          getUniversalCorrectionDocumentInfoFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1168,6 +1340,18 @@ public final class DocumentInfoProtos {
           supplementaryAgreementInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00002000);
+        if (universalTransferDocumentInfoBuilder_ == null) {
+          universalTransferDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.getDefaultInstance();
+        } else {
+          universalTransferDocumentInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
+        if (universalCorrectionDocumentInfoBuilder_ == null) {
+          universalCorrectionDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.getDefaultInstance();
+        } else {
+          universalCorrectionDocumentInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00008000);
         return this;
       }
 
@@ -1280,6 +1464,22 @@ public final class DocumentInfoProtos {
         } else {
           result.supplementaryAgreementInfo_ = supplementaryAgreementInfoBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        if (universalTransferDocumentInfoBuilder_ == null) {
+          result.universalTransferDocumentInfo_ = universalTransferDocumentInfo_;
+        } else {
+          result.universalTransferDocumentInfo_ = universalTransferDocumentInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        if (universalCorrectionDocumentInfoBuilder_ == null) {
+          result.universalCorrectionDocumentInfo_ = universalCorrectionDocumentInfo_;
+        } else {
+          result.universalCorrectionDocumentInfo_ = universalCorrectionDocumentInfoBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1346,11 +1546,29 @@ public final class DocumentInfoProtos {
         if (other.hasSupplementaryAgreementInfo()) {
           mergeSupplementaryAgreementInfo(other.getSupplementaryAgreementInfo());
         }
+        if (other.hasUniversalTransferDocumentInfo()) {
+          mergeUniversalTransferDocumentInfo(other.getUniversalTransferDocumentInfo());
+        }
+        if (other.hasUniversalCorrectionDocumentInfo()) {
+          mergeUniversalCorrectionDocumentInfo(other.getUniversalCorrectionDocumentInfo());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+        if (hasUniversalTransferDocumentInfo()) {
+          if (!getUniversalTransferDocumentInfo().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasUniversalCorrectionDocumentInfo()) {
+          if (!getUniversalCorrectionDocumentInfo().isInitialized()) {
+            
+            return false;
+          }
+        }
         return true;
       }
 
@@ -2697,6 +2915,310 @@ public final class DocumentInfoProtos {
           supplementaryAgreementInfo_ = null;
         }
         return supplementaryAgreementInfoBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo universalTransferDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfoOrBuilder> universalTransferDocumentInfoBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public boolean hasUniversalTransferDocumentInfo() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo getUniversalTransferDocumentInfo() {
+        if (universalTransferDocumentInfoBuilder_ == null) {
+          return universalTransferDocumentInfo_;
+        } else {
+          return universalTransferDocumentInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Builder setUniversalTransferDocumentInfo(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo value) {
+        if (universalTransferDocumentInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          universalTransferDocumentInfo_ = value;
+          onChanged();
+        } else {
+          universalTransferDocumentInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Builder setUniversalTransferDocumentInfo(
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.Builder builderForValue) {
+        if (universalTransferDocumentInfoBuilder_ == null) {
+          universalTransferDocumentInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          universalTransferDocumentInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Builder mergeUniversalTransferDocumentInfo(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo value) {
+        if (universalTransferDocumentInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) == 0x00004000) &&
+              universalTransferDocumentInfo_ != Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.getDefaultInstance()) {
+            universalTransferDocumentInfo_ =
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.newBuilder(universalTransferDocumentInfo_).mergeFrom(value).buildPartial();
+          } else {
+            universalTransferDocumentInfo_ = value;
+          }
+          onChanged();
+        } else {
+          universalTransferDocumentInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Builder clearUniversalTransferDocumentInfo() {
+        if (universalTransferDocumentInfoBuilder_ == null) {
+          universalTransferDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.getDefaultInstance();
+          onChanged();
+        } else {
+          universalTransferDocumentInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.Builder getUniversalTransferDocumentInfoBuilder() {
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return getUniversalTransferDocumentInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfoOrBuilder getUniversalTransferDocumentInfoOrBuilder() {
+        if (universalTransferDocumentInfoBuilder_ != null) {
+          return universalTransferDocumentInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return universalTransferDocumentInfo_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo UniversalTransferDocumentInfo = 15;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfoOrBuilder> 
+          getUniversalTransferDocumentInfoFieldBuilder() {
+        if (universalTransferDocumentInfoBuilder_ == null) {
+          universalTransferDocumentInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfoOrBuilder>(
+                  getUniversalTransferDocumentInfo(),
+                  getParentForChildren(),
+                  isClean());
+          universalTransferDocumentInfo_ = null;
+        }
+        return universalTransferDocumentInfoBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo universalCorrectionDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfoOrBuilder> universalCorrectionDocumentInfoBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public boolean hasUniversalCorrectionDocumentInfo() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo getUniversalCorrectionDocumentInfo() {
+        if (universalCorrectionDocumentInfoBuilder_ == null) {
+          return universalCorrectionDocumentInfo_;
+        } else {
+          return universalCorrectionDocumentInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Builder setUniversalCorrectionDocumentInfo(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo value) {
+        if (universalCorrectionDocumentInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          universalCorrectionDocumentInfo_ = value;
+          onChanged();
+        } else {
+          universalCorrectionDocumentInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00008000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Builder setUniversalCorrectionDocumentInfo(
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.Builder builderForValue) {
+        if (universalCorrectionDocumentInfoBuilder_ == null) {
+          universalCorrectionDocumentInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          universalCorrectionDocumentInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00008000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Builder mergeUniversalCorrectionDocumentInfo(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo value) {
+        if (universalCorrectionDocumentInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00008000) == 0x00008000) &&
+              universalCorrectionDocumentInfo_ != Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.getDefaultInstance()) {
+            universalCorrectionDocumentInfo_ =
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.newBuilder(universalCorrectionDocumentInfo_).mergeFrom(value).buildPartial();
+          } else {
+            universalCorrectionDocumentInfo_ = value;
+          }
+          onChanged();
+        } else {
+          universalCorrectionDocumentInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00008000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Builder clearUniversalCorrectionDocumentInfo() {
+        if (universalCorrectionDocumentInfoBuilder_ == null) {
+          universalCorrectionDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.getDefaultInstance();
+          onChanged();
+        } else {
+          universalCorrectionDocumentInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00008000);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.Builder getUniversalCorrectionDocumentInfoBuilder() {
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return getUniversalCorrectionDocumentInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfoOrBuilder getUniversalCorrectionDocumentInfoOrBuilder() {
+        if (universalCorrectionDocumentInfoBuilder_ != null) {
+          return universalCorrectionDocumentInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return universalCorrectionDocumentInfo_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo UniversalCorrectionDocumentInfo = 16;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocument, UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfoOrBuilder> 
+          getUniversalCorrectionDocumentInfoFieldBuilder() {
+        if (universalCorrectionDocumentInfoBuilder_ == null) {
+          universalCorrectionDocumentInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfoOrBuilder>(
+                  getUniversalCorrectionDocumentInfo(),
+                  getParentForChildren(),
+                  isClean());
+          universalCorrectionDocumentInfo_ = null;
+        }
+        return universalCorrectionDocumentInfoBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.DocumentInfo)
@@ -9068,6 +9590,3122 @@ public final class DocumentInfoProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.SupplementaryAgreementDocumentInfo)
   }
 
+  public interface UniversalTransferDocumentInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Total = 1;</code>
+     */
+    boolean hasTotal();
+    /**
+     * <code>optional string Total = 1;</code>
+     */
+    java.lang.String getTotal();
+    /**
+     * <code>optional string Total = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTotalBytes();
+
+    /**
+     * <code>optional string Vat = 2;</code>
+     */
+    boolean hasVat();
+    /**
+     * <code>optional string Vat = 2;</code>
+     */
+    java.lang.String getVat();
+    /**
+     * <code>optional string Vat = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getVatBytes();
+
+    /**
+     * <code>optional int32 CurrencyCode = 3;</code>
+     */
+    boolean hasCurrencyCode();
+    /**
+     * <code>optional int32 CurrencyCode = 3;</code>
+     */
+    int getCurrencyCode();
+
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    boolean hasGrounds();
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    java.lang.String getGrounds();
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getGroundsBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+     */
+    boolean hasFunction();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+     */
+    Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocumentRevision
+     * </pre>
+     */
+    boolean hasOriginalDocumentDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocumentRevision
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocumentRevision
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentDateAndNumberOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo}
+   */
+  public static final class UniversalTransferDocumentInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo)
+      UniversalTransferDocumentInfoOrBuilder {
+    // Use UniversalTransferDocumentInfo.newBuilder() to construct.
+    private UniversalTransferDocumentInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private UniversalTransferDocumentInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final UniversalTransferDocumentInfo defaultInstance;
+    public static UniversalTransferDocumentInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public UniversalTransferDocumentInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UniversalTransferDocumentInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              total_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              vat_ = bs;
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              currencyCode_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              grounds_ = bs;
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType value = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000010;
+                function_ = value;
+              }
+              break;
+            }
+            case 50: {
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = originalDocumentDateAndNumber_.toBuilder();
+              }
+              originalDocumentDateAndNumber_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(originalDocumentDateAndNumber_);
+                originalDocumentDateAndNumber_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.class, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<UniversalTransferDocumentInfo> PARSER =
+        new com.google.protobuf.AbstractParser<UniversalTransferDocumentInfo>() {
+      public UniversalTransferDocumentInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UniversalTransferDocumentInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UniversalTransferDocumentInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int TOTAL_FIELD_NUMBER = 1;
+    private java.lang.Object total_;
+    /**
+     * <code>optional string Total = 1;</code>
+     */
+    public boolean hasTotal() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string Total = 1;</code>
+     */
+    public java.lang.String getTotal() {
+      java.lang.Object ref = total_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          total_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Total = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTotalBytes() {
+      java.lang.Object ref = total_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        total_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VAT_FIELD_NUMBER = 2;
+    private java.lang.Object vat_;
+    /**
+     * <code>optional string Vat = 2;</code>
+     */
+    public boolean hasVat() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string Vat = 2;</code>
+     */
+    public java.lang.String getVat() {
+      java.lang.Object ref = vat_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          vat_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Vat = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVatBytes() {
+      java.lang.Object ref = vat_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vat_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURRENCYCODE_FIELD_NUMBER = 3;
+    private int currencyCode_;
+    /**
+     * <code>optional int32 CurrencyCode = 3;</code>
+     */
+    public boolean hasCurrencyCode() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 CurrencyCode = 3;</code>
+     */
+    public int getCurrencyCode() {
+      return currencyCode_;
+    }
+
+    public static final int GROUNDS_FIELD_NUMBER = 4;
+    private java.lang.Object grounds_;
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    public boolean hasGrounds() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    public java.lang.String getGrounds() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          grounds_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Grounds = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGroundsBytes() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        grounds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FUNCTION_FIELD_NUMBER = 5;
+    private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+     */
+    public boolean hasFunction() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+     */
+    public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction() {
+      return function_;
+    }
+
+    public static final int ORIGINALDOCUMENTDATEANDNUMBER_FIELD_NUMBER = 6;
+    private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber originalDocumentDateAndNumber_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocumentRevision
+     * </pre>
+     */
+    public boolean hasOriginalDocumentDateAndNumber() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocumentRevision
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentDateAndNumber() {
+      return originalDocumentDateAndNumber_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocumentRevision
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentDateAndNumberOrBuilder() {
+      return originalDocumentDateAndNumber_;
+    }
+
+    private void initFields() {
+      total_ = "";
+      vat_ = "";
+      currencyCode_ = 0;
+      grounds_ = "";
+      function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
+      originalDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasFunction()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getTotalBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getVatBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, currencyCode_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeEnum(5, function_.getNumber());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(6, originalDocumentDateAndNumber_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getTotalBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getVatBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, currencyCode_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, function_.getNumber());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, originalDocumentDateAndNumber_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo)
+        Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.class, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getOriginalDocumentDateAndNumberFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        total_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        vat_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        currencyCode_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        grounds_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          originalDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+        } else {
+          originalDocumentDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo build() {
+        Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo result = new Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.total_ = total_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.vat_ = vat_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.currencyCode_ = currencyCode_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.grounds_ = grounds_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.function_ = function_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          result.originalDocumentDateAndNumber_ = originalDocumentDateAndNumber_;
+        } else {
+          result.originalDocumentDateAndNumber_ = originalDocumentDateAndNumberBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.getDefaultInstance()) return this;
+        if (other.hasTotal()) {
+          bitField0_ |= 0x00000001;
+          total_ = other.total_;
+          onChanged();
+        }
+        if (other.hasVat()) {
+          bitField0_ |= 0x00000002;
+          vat_ = other.vat_;
+          onChanged();
+        }
+        if (other.hasCurrencyCode()) {
+          setCurrencyCode(other.getCurrencyCode());
+        }
+        if (other.hasGrounds()) {
+          bitField0_ |= 0x00000008;
+          grounds_ = other.grounds_;
+          onChanged();
+        }
+        if (other.hasFunction()) {
+          setFunction(other.getFunction());
+        }
+        if (other.hasOriginalDocumentDateAndNumber()) {
+          mergeOriginalDocumentDateAndNumber(other.getOriginalDocumentDateAndNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasFunction()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object total_ = "";
+      /**
+       * <code>optional string Total = 1;</code>
+       */
+      public boolean hasTotal() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string Total = 1;</code>
+       */
+      public java.lang.String getTotal() {
+        java.lang.Object ref = total_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            total_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Total = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTotalBytes() {
+        java.lang.Object ref = total_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          total_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Total = 1;</code>
+       */
+      public Builder setTotal(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        total_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Total = 1;</code>
+       */
+      public Builder clearTotal() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        total_ = getDefaultInstance().getTotal();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Total = 1;</code>
+       */
+      public Builder setTotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        total_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vat_ = "";
+      /**
+       * <code>optional string Vat = 2;</code>
+       */
+      public boolean hasVat() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string Vat = 2;</code>
+       */
+      public java.lang.String getVat() {
+        java.lang.Object ref = vat_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vat_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVatBytes() {
+        java.lang.Object ref = vat_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vat_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Vat = 2;</code>
+       */
+      public Builder setVat(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        vat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Vat = 2;</code>
+       */
+      public Builder clearVat() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        vat_ = getDefaultInstance().getVat();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Vat = 2;</code>
+       */
+      public Builder setVatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        vat_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int currencyCode_ ;
+      /**
+       * <code>optional int32 CurrencyCode = 3;</code>
+       */
+      public boolean hasCurrencyCode() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 CurrencyCode = 3;</code>
+       */
+      public int getCurrencyCode() {
+        return currencyCode_;
+      }
+      /**
+       * <code>optional int32 CurrencyCode = 3;</code>
+       */
+      public Builder setCurrencyCode(int value) {
+        bitField0_ |= 0x00000004;
+        currencyCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 CurrencyCode = 3;</code>
+       */
+      public Builder clearCurrencyCode() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        currencyCode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object grounds_ = "";
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public boolean hasGrounds() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public java.lang.String getGrounds() {
+        java.lang.Object ref = grounds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            grounds_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGroundsBytes() {
+        java.lang.Object ref = grounds_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          grounds_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public Builder setGrounds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public Builder clearGrounds() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        grounds_ = getDefaultInstance().getGrounds();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 4;</code>
+       */
+      public Builder setGroundsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+       */
+      public boolean hasFunction() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+       */
+      public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction() {
+        return function_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+       */
+      public Builder setFunction(Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        function_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+       */
+      public Builder clearFunction() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber originalDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> originalDocumentDateAndNumberBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public boolean hasOriginalDocumentDateAndNumber() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentDateAndNumber() {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          return originalDocumentDateAndNumber_;
+        } else {
+          return originalDocumentDateAndNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Builder setOriginalDocumentDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          originalDocumentDateAndNumber_ = value;
+          onChanged();
+        } else {
+          originalDocumentDateAndNumberBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Builder setOriginalDocumentDateAndNumber(
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder builderForValue) {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          originalDocumentDateAndNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          originalDocumentDateAndNumberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Builder mergeOriginalDocumentDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              originalDocumentDateAndNumber_ != Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance()) {
+            originalDocumentDateAndNumber_ =
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.newBuilder(originalDocumentDateAndNumber_).mergeFrom(value).buildPartial();
+          } else {
+            originalDocumentDateAndNumber_ = value;
+          }
+          onChanged();
+        } else {
+          originalDocumentDateAndNumberBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Builder clearOriginalDocumentDateAndNumber() {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          originalDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+          onChanged();
+        } else {
+          originalDocumentDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder getOriginalDocumentDateAndNumberBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getOriginalDocumentDateAndNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentDateAndNumberOrBuilder() {
+        if (originalDocumentDateAndNumberBuilder_ != null) {
+          return originalDocumentDateAndNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return originalDocumentDateAndNumber_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 6;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocumentRevision
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> 
+          getOriginalDocumentDateAndNumberFieldBuilder() {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          originalDocumentDateAndNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder>(
+                  getOriginalDocumentDateAndNumber(),
+                  getParentForChildren(),
+                  isClean());
+          originalDocumentDateAndNumber_ = null;
+        }
+        return originalDocumentDateAndNumberBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo)
+    }
+
+    static {
+      defaultInstance = new UniversalTransferDocumentInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo)
+  }
+
+  public interface UniversalCorrectionDocumentInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string TotalInc = 1;</code>
+     */
+    boolean hasTotalInc();
+    /**
+     * <code>optional string TotalInc = 1;</code>
+     */
+    java.lang.String getTotalInc();
+    /**
+     * <code>optional string TotalInc = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTotalIncBytes();
+
+    /**
+     * <code>optional string TotalDec = 2;</code>
+     */
+    boolean hasTotalDec();
+    /**
+     * <code>optional string TotalDec = 2;</code>
+     */
+    java.lang.String getTotalDec();
+    /**
+     * <code>optional string TotalDec = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTotalDecBytes();
+
+    /**
+     * <code>optional string VatInc = 3;</code>
+     */
+    boolean hasVatInc();
+    /**
+     * <code>optional string VatInc = 3;</code>
+     */
+    java.lang.String getVatInc();
+    /**
+     * <code>optional string VatInc = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getVatIncBytes();
+
+    /**
+     * <code>optional string VatDec = 4;</code>
+     */
+    boolean hasVatDec();
+    /**
+     * <code>optional string VatDec = 4;</code>
+     */
+    java.lang.String getVatDec();
+    /**
+     * <code>optional string VatDec = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getVatDecBytes();
+
+    /**
+     * <code>optional int32 CurrencyCode = 5;</code>
+     */
+    boolean hasCurrencyCode();
+    /**
+     * <code>optional int32 CurrencyCode = 5;</code>
+     */
+    int getCurrencyCode();
+
+    /**
+     * <code>optional string Grounds = 6;</code>
+     */
+    boolean hasGrounds();
+    /**
+     * <code>optional string Grounds = 6;</code>
+     */
+    java.lang.String getGrounds();
+    /**
+     * <code>optional string Grounds = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getGroundsBytes();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+     */
+    boolean hasFunction();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+     */
+    Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+     */
+    boolean hasOriginalDocumentDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentDateAndNumberOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+     */
+    boolean hasOriginalDocumentRevisionDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentRevisionDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentRevisionDateAndNumberOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    boolean hasOriginalDocumentCorrectionDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentCorrectionDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentCorrectionDateAndNumberOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo}
+   */
+  public static final class UniversalCorrectionDocumentInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo)
+      UniversalCorrectionDocumentInfoOrBuilder {
+    // Use UniversalCorrectionDocumentInfo.newBuilder() to construct.
+    private UniversalCorrectionDocumentInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private UniversalCorrectionDocumentInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final UniversalCorrectionDocumentInfo defaultInstance;
+    public static UniversalCorrectionDocumentInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public UniversalCorrectionDocumentInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UniversalCorrectionDocumentInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              totalInc_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              totalDec_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              vatInc_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              vatDec_ = bs;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              currencyCode_ = input.readInt32();
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              grounds_ = bs;
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType value = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(7, rawValue);
+              } else {
+                bitField0_ |= 0x00000040;
+                function_ = value;
+              }
+              break;
+            }
+            case 66: {
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = originalDocumentDateAndNumber_.toBuilder();
+              }
+              originalDocumentDateAndNumber_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(originalDocumentDateAndNumber_);
+                originalDocumentDateAndNumber_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
+              break;
+            }
+            case 74: {
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000100) == 0x00000100)) {
+                subBuilder = originalDocumentRevisionDateAndNumber_.toBuilder();
+              }
+              originalDocumentRevisionDateAndNumber_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(originalDocumentRevisionDateAndNumber_);
+                originalDocumentRevisionDateAndNumber_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000100;
+              break;
+            }
+            case 82: {
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000200) == 0x00000200)) {
+                subBuilder = originalDocumentCorrectionDateAndNumber_.toBuilder();
+              }
+              originalDocumentCorrectionDateAndNumber_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(originalDocumentCorrectionDateAndNumber_);
+                originalDocumentCorrectionDateAndNumber_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000200;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.class, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<UniversalCorrectionDocumentInfo> PARSER =
+        new com.google.protobuf.AbstractParser<UniversalCorrectionDocumentInfo>() {
+      public UniversalCorrectionDocumentInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UniversalCorrectionDocumentInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UniversalCorrectionDocumentInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int TOTALINC_FIELD_NUMBER = 1;
+    private java.lang.Object totalInc_;
+    /**
+     * <code>optional string TotalInc = 1;</code>
+     */
+    public boolean hasTotalInc() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string TotalInc = 1;</code>
+     */
+    public java.lang.String getTotalInc() {
+      java.lang.Object ref = totalInc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          totalInc_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string TotalInc = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTotalIncBytes() {
+      java.lang.Object ref = totalInc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalInc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTALDEC_FIELD_NUMBER = 2;
+    private java.lang.Object totalDec_;
+    /**
+     * <code>optional string TotalDec = 2;</code>
+     */
+    public boolean hasTotalDec() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string TotalDec = 2;</code>
+     */
+    public java.lang.String getTotalDec() {
+      java.lang.Object ref = totalDec_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          totalDec_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string TotalDec = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTotalDecBytes() {
+      java.lang.Object ref = totalDec_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalDec_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VATINC_FIELD_NUMBER = 3;
+    private java.lang.Object vatInc_;
+    /**
+     * <code>optional string VatInc = 3;</code>
+     */
+    public boolean hasVatInc() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string VatInc = 3;</code>
+     */
+    public java.lang.String getVatInc() {
+      java.lang.Object ref = vatInc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          vatInc_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string VatInc = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVatIncBytes() {
+      java.lang.Object ref = vatInc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vatInc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VATDEC_FIELD_NUMBER = 4;
+    private java.lang.Object vatDec_;
+    /**
+     * <code>optional string VatDec = 4;</code>
+     */
+    public boolean hasVatDec() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string VatDec = 4;</code>
+     */
+    public java.lang.String getVatDec() {
+      java.lang.Object ref = vatDec_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          vatDec_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string VatDec = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVatDecBytes() {
+      java.lang.Object ref = vatDec_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vatDec_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURRENCYCODE_FIELD_NUMBER = 5;
+    private int currencyCode_;
+    /**
+     * <code>optional int32 CurrencyCode = 5;</code>
+     */
+    public boolean hasCurrencyCode() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 CurrencyCode = 5;</code>
+     */
+    public int getCurrencyCode() {
+      return currencyCode_;
+    }
+
+    public static final int GROUNDS_FIELD_NUMBER = 6;
+    private java.lang.Object grounds_;
+    /**
+     * <code>optional string Grounds = 6;</code>
+     */
+    public boolean hasGrounds() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string Grounds = 6;</code>
+     */
+    public java.lang.String getGrounds() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          grounds_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Grounds = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGroundsBytes() {
+      java.lang.Object ref = grounds_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        grounds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FUNCTION_FIELD_NUMBER = 7;
+    private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+     */
+    public boolean hasFunction() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+     */
+    public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction() {
+      return function_;
+    }
+
+    public static final int ORIGINALDOCUMENTDATEANDNUMBER_FIELD_NUMBER = 8;
+    private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber originalDocumentDateAndNumber_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+     */
+    public boolean hasOriginalDocumentDateAndNumber() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentDateAndNumber() {
+      return originalDocumentDateAndNumber_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentDateAndNumberOrBuilder() {
+      return originalDocumentDateAndNumber_;
+    }
+
+    public static final int ORIGINALDOCUMENTREVISIONDATEANDNUMBER_FIELD_NUMBER = 9;
+    private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber originalDocumentRevisionDateAndNumber_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+     */
+    public boolean hasOriginalDocumentRevisionDateAndNumber() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentRevisionDateAndNumber() {
+      return originalDocumentRevisionDateAndNumber_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentRevisionDateAndNumberOrBuilder() {
+      return originalDocumentRevisionDateAndNumber_;
+    }
+
+    public static final int ORIGINALDOCUMENTCORRECTIONDATEANDNUMBER_FIELD_NUMBER = 10;
+    private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber originalDocumentCorrectionDateAndNumber_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    public boolean hasOriginalDocumentCorrectionDateAndNumber() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentCorrectionDateAndNumber() {
+      return originalDocumentCorrectionDateAndNumber_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+     *
+     * <pre>
+     * for UniversalCorrectionDocumentRevision
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentCorrectionDateAndNumberOrBuilder() {
+      return originalDocumentCorrectionDateAndNumber_;
+    }
+
+    private void initFields() {
+      totalInc_ = "";
+      totalDec_ = "";
+      vatInc_ = "";
+      vatDec_ = "";
+      currencyCode_ = 0;
+      grounds_ = "";
+      function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
+      originalDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      originalDocumentRevisionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      originalDocumentCorrectionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasFunction()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getTotalIncBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getTotalDecBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getVatIncBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getVatDecBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, currencyCode_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeEnum(7, function_.getNumber());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(8, originalDocumentDateAndNumber_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeMessage(9, originalDocumentRevisionDateAndNumber_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeMessage(10, originalDocumentCorrectionDateAndNumber_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getTotalIncBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTotalDecBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getVatIncBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getVatDecBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, currencyCode_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, function_.getNumber());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, originalDocumentDateAndNumber_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, originalDocumentRevisionDateAndNumber_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, originalDocumentCorrectionDateAndNumber_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo)
+        Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.class, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getOriginalDocumentDateAndNumberFieldBuilder();
+          getOriginalDocumentRevisionDateAndNumberFieldBuilder();
+          getOriginalDocumentCorrectionDateAndNumberFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        totalInc_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalDec_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        vatInc_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        vatDec_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        currencyCode_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        grounds_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          originalDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+        } else {
+          originalDocumentDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (originalDocumentRevisionDateAndNumberBuilder_ == null) {
+          originalDocumentRevisionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+        } else {
+          originalDocumentRevisionDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (originalDocumentCorrectionDateAndNumberBuilder_ == null) {
+          originalDocumentCorrectionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+        } else {
+          originalDocumentCorrectionDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo build() {
+        Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo result = new Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.totalInc_ = totalInc_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.totalDec_ = totalDec_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.vatInc_ = vatInc_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.vatDec_ = vatDec_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.currencyCode_ = currencyCode_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.grounds_ = grounds_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.function_ = function_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          result.originalDocumentDateAndNumber_ = originalDocumentDateAndNumber_;
+        } else {
+          result.originalDocumentDateAndNumber_ = originalDocumentDateAndNumberBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        if (originalDocumentRevisionDateAndNumberBuilder_ == null) {
+          result.originalDocumentRevisionDateAndNumber_ = originalDocumentRevisionDateAndNumber_;
+        } else {
+          result.originalDocumentRevisionDateAndNumber_ = originalDocumentRevisionDateAndNumberBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        if (originalDocumentCorrectionDateAndNumberBuilder_ == null) {
+          result.originalDocumentCorrectionDateAndNumber_ = originalDocumentCorrectionDateAndNumber_;
+        } else {
+          result.originalDocumentCorrectionDateAndNumber_ = originalDocumentCorrectionDateAndNumberBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.getDefaultInstance()) return this;
+        if (other.hasTotalInc()) {
+          bitField0_ |= 0x00000001;
+          totalInc_ = other.totalInc_;
+          onChanged();
+        }
+        if (other.hasTotalDec()) {
+          bitField0_ |= 0x00000002;
+          totalDec_ = other.totalDec_;
+          onChanged();
+        }
+        if (other.hasVatInc()) {
+          bitField0_ |= 0x00000004;
+          vatInc_ = other.vatInc_;
+          onChanged();
+        }
+        if (other.hasVatDec()) {
+          bitField0_ |= 0x00000008;
+          vatDec_ = other.vatDec_;
+          onChanged();
+        }
+        if (other.hasCurrencyCode()) {
+          setCurrencyCode(other.getCurrencyCode());
+        }
+        if (other.hasGrounds()) {
+          bitField0_ |= 0x00000020;
+          grounds_ = other.grounds_;
+          onChanged();
+        }
+        if (other.hasFunction()) {
+          setFunction(other.getFunction());
+        }
+        if (other.hasOriginalDocumentDateAndNumber()) {
+          mergeOriginalDocumentDateAndNumber(other.getOriginalDocumentDateAndNumber());
+        }
+        if (other.hasOriginalDocumentRevisionDateAndNumber()) {
+          mergeOriginalDocumentRevisionDateAndNumber(other.getOriginalDocumentRevisionDateAndNumber());
+        }
+        if (other.hasOriginalDocumentCorrectionDateAndNumber()) {
+          mergeOriginalDocumentCorrectionDateAndNumber(other.getOriginalDocumentCorrectionDateAndNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasFunction()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object totalInc_ = "";
+      /**
+       * <code>optional string TotalInc = 1;</code>
+       */
+      public boolean hasTotalInc() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string TotalInc = 1;</code>
+       */
+      public java.lang.String getTotalInc() {
+        java.lang.Object ref = totalInc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            totalInc_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string TotalInc = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTotalIncBytes() {
+        java.lang.Object ref = totalInc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalInc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string TotalInc = 1;</code>
+       */
+      public Builder setTotalInc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        totalInc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string TotalInc = 1;</code>
+       */
+      public Builder clearTotalInc() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalInc_ = getDefaultInstance().getTotalInc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string TotalInc = 1;</code>
+       */
+      public Builder setTotalIncBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        totalInc_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalDec_ = "";
+      /**
+       * <code>optional string TotalDec = 2;</code>
+       */
+      public boolean hasTotalDec() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string TotalDec = 2;</code>
+       */
+      public java.lang.String getTotalDec() {
+        java.lang.Object ref = totalDec_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            totalDec_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string TotalDec = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTotalDecBytes() {
+        java.lang.Object ref = totalDec_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalDec_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string TotalDec = 2;</code>
+       */
+      public Builder setTotalDec(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        totalDec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string TotalDec = 2;</code>
+       */
+      public Builder clearTotalDec() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalDec_ = getDefaultInstance().getTotalDec();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string TotalDec = 2;</code>
+       */
+      public Builder setTotalDecBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        totalDec_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vatInc_ = "";
+      /**
+       * <code>optional string VatInc = 3;</code>
+       */
+      public boolean hasVatInc() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string VatInc = 3;</code>
+       */
+      public java.lang.String getVatInc() {
+        java.lang.Object ref = vatInc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vatInc_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string VatInc = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVatIncBytes() {
+        java.lang.Object ref = vatInc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vatInc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string VatInc = 3;</code>
+       */
+      public Builder setVatInc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        vatInc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string VatInc = 3;</code>
+       */
+      public Builder clearVatInc() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        vatInc_ = getDefaultInstance().getVatInc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string VatInc = 3;</code>
+       */
+      public Builder setVatIncBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        vatInc_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vatDec_ = "";
+      /**
+       * <code>optional string VatDec = 4;</code>
+       */
+      public boolean hasVatDec() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string VatDec = 4;</code>
+       */
+      public java.lang.String getVatDec() {
+        java.lang.Object ref = vatDec_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vatDec_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string VatDec = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVatDecBytes() {
+        java.lang.Object ref = vatDec_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vatDec_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string VatDec = 4;</code>
+       */
+      public Builder setVatDec(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        vatDec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string VatDec = 4;</code>
+       */
+      public Builder clearVatDec() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        vatDec_ = getDefaultInstance().getVatDec();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string VatDec = 4;</code>
+       */
+      public Builder setVatDecBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        vatDec_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int currencyCode_ ;
+      /**
+       * <code>optional int32 CurrencyCode = 5;</code>
+       */
+      public boolean hasCurrencyCode() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 CurrencyCode = 5;</code>
+       */
+      public int getCurrencyCode() {
+        return currencyCode_;
+      }
+      /**
+       * <code>optional int32 CurrencyCode = 5;</code>
+       */
+      public Builder setCurrencyCode(int value) {
+        bitField0_ |= 0x00000010;
+        currencyCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 CurrencyCode = 5;</code>
+       */
+      public Builder clearCurrencyCode() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        currencyCode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object grounds_ = "";
+      /**
+       * <code>optional string Grounds = 6;</code>
+       */
+      public boolean hasGrounds() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       */
+      public java.lang.String getGrounds() {
+        java.lang.Object ref = grounds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            grounds_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGroundsBytes() {
+        java.lang.Object ref = grounds_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          grounds_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       */
+      public Builder setGrounds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       */
+      public Builder clearGrounds() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        grounds_ = getDefaultInstance().getGrounds();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Grounds = 6;</code>
+       */
+      public Builder setGroundsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        grounds_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+       */
+      public boolean hasFunction() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+       */
+      public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction() {
+        return function_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+       */
+      public Builder setFunction(Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000040;
+        function_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+       */
+      public Builder clearFunction() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber originalDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> originalDocumentDateAndNumberBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+       */
+      public boolean hasOriginalDocumentDateAndNumber() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentDateAndNumber() {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          return originalDocumentDateAndNumber_;
+        } else {
+          return originalDocumentDateAndNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+       */
+      public Builder setOriginalDocumentDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          originalDocumentDateAndNumber_ = value;
+          onChanged();
+        } else {
+          originalDocumentDateAndNumberBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+       */
+      public Builder setOriginalDocumentDateAndNumber(
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder builderForValue) {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          originalDocumentDateAndNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          originalDocumentDateAndNumberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+       */
+      public Builder mergeOriginalDocumentDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              originalDocumentDateAndNumber_ != Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance()) {
+            originalDocumentDateAndNumber_ =
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.newBuilder(originalDocumentDateAndNumber_).mergeFrom(value).buildPartial();
+          } else {
+            originalDocumentDateAndNumber_ = value;
+          }
+          onChanged();
+        } else {
+          originalDocumentDateAndNumberBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+       */
+      public Builder clearOriginalDocumentDateAndNumber() {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          originalDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+          onChanged();
+        } else {
+          originalDocumentDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder getOriginalDocumentDateAndNumberBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getOriginalDocumentDateAndNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentDateAndNumberOrBuilder() {
+        if (originalDocumentDateAndNumberBuilder_ != null) {
+          return originalDocumentDateAndNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return originalDocumentDateAndNumber_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentDateAndNumber = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> 
+          getOriginalDocumentDateAndNumberFieldBuilder() {
+        if (originalDocumentDateAndNumberBuilder_ == null) {
+          originalDocumentDateAndNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder>(
+                  getOriginalDocumentDateAndNumber(),
+                  getParentForChildren(),
+                  isClean());
+          originalDocumentDateAndNumber_ = null;
+        }
+        return originalDocumentDateAndNumberBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber originalDocumentRevisionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> originalDocumentRevisionDateAndNumberBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+       */
+      public boolean hasOriginalDocumentRevisionDateAndNumber() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentRevisionDateAndNumber() {
+        if (originalDocumentRevisionDateAndNumberBuilder_ == null) {
+          return originalDocumentRevisionDateAndNumber_;
+        } else {
+          return originalDocumentRevisionDateAndNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+       */
+      public Builder setOriginalDocumentRevisionDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (originalDocumentRevisionDateAndNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          originalDocumentRevisionDateAndNumber_ = value;
+          onChanged();
+        } else {
+          originalDocumentRevisionDateAndNumberBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+       */
+      public Builder setOriginalDocumentRevisionDateAndNumber(
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder builderForValue) {
+        if (originalDocumentRevisionDateAndNumberBuilder_ == null) {
+          originalDocumentRevisionDateAndNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          originalDocumentRevisionDateAndNumberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+       */
+      public Builder mergeOriginalDocumentRevisionDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (originalDocumentRevisionDateAndNumberBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) == 0x00000100) &&
+              originalDocumentRevisionDateAndNumber_ != Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance()) {
+            originalDocumentRevisionDateAndNumber_ =
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.newBuilder(originalDocumentRevisionDateAndNumber_).mergeFrom(value).buildPartial();
+          } else {
+            originalDocumentRevisionDateAndNumber_ = value;
+          }
+          onChanged();
+        } else {
+          originalDocumentRevisionDateAndNumberBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+       */
+      public Builder clearOriginalDocumentRevisionDateAndNumber() {
+        if (originalDocumentRevisionDateAndNumberBuilder_ == null) {
+          originalDocumentRevisionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+          onChanged();
+        } else {
+          originalDocumentRevisionDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder getOriginalDocumentRevisionDateAndNumberBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getOriginalDocumentRevisionDateAndNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentRevisionDateAndNumberOrBuilder() {
+        if (originalDocumentRevisionDateAndNumberBuilder_ != null) {
+          return originalDocumentRevisionDateAndNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return originalDocumentRevisionDateAndNumber_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentRevisionDateAndNumber = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> 
+          getOriginalDocumentRevisionDateAndNumberFieldBuilder() {
+        if (originalDocumentRevisionDateAndNumberBuilder_ == null) {
+          originalDocumentRevisionDateAndNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder>(
+                  getOriginalDocumentRevisionDateAndNumber(),
+                  getParentForChildren(),
+                  isClean());
+          originalDocumentRevisionDateAndNumber_ = null;
+        }
+        return originalDocumentRevisionDateAndNumberBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber originalDocumentCorrectionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> originalDocumentCorrectionDateAndNumberBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public boolean hasOriginalDocumentCorrectionDateAndNumber() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getOriginalDocumentCorrectionDateAndNumber() {
+        if (originalDocumentCorrectionDateAndNumberBuilder_ == null) {
+          return originalDocumentCorrectionDateAndNumber_;
+        } else {
+          return originalDocumentCorrectionDateAndNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Builder setOriginalDocumentCorrectionDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (originalDocumentCorrectionDateAndNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          originalDocumentCorrectionDateAndNumber_ = value;
+          onChanged();
+        } else {
+          originalDocumentCorrectionDateAndNumberBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Builder setOriginalDocumentCorrectionDateAndNumber(
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder builderForValue) {
+        if (originalDocumentCorrectionDateAndNumberBuilder_ == null) {
+          originalDocumentCorrectionDateAndNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          originalDocumentCorrectionDateAndNumberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Builder mergeOriginalDocumentCorrectionDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (originalDocumentCorrectionDateAndNumberBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) == 0x00000200) &&
+              originalDocumentCorrectionDateAndNumber_ != Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance()) {
+            originalDocumentCorrectionDateAndNumber_ =
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.newBuilder(originalDocumentCorrectionDateAndNumber_).mergeFrom(value).buildPartial();
+          } else {
+            originalDocumentCorrectionDateAndNumber_ = value;
+          }
+          onChanged();
+        } else {
+          originalDocumentCorrectionDateAndNumberBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Builder clearOriginalDocumentCorrectionDateAndNumber() {
+        if (originalDocumentCorrectionDateAndNumberBuilder_ == null) {
+          originalDocumentCorrectionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+          onChanged();
+        } else {
+          originalDocumentCorrectionDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder getOriginalDocumentCorrectionDateAndNumberBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getOriginalDocumentCorrectionDateAndNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getOriginalDocumentCorrectionDateAndNumberOrBuilder() {
+        if (originalDocumentCorrectionDateAndNumberBuilder_ != null) {
+          return originalDocumentCorrectionDateAndNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return originalDocumentCorrectionDateAndNumber_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber OriginalDocumentCorrectionDateAndNumber = 10;</code>
+       *
+       * <pre>
+       * for UniversalCorrectionDocumentRevision
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> 
+          getOriginalDocumentCorrectionDateAndNumberFieldBuilder() {
+        if (originalDocumentCorrectionDateAndNumberBuilder_ == null) {
+          originalDocumentCorrectionDateAndNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder>(
+                  getOriginalDocumentCorrectionDateAndNumber(),
+                  getParentForChildren(),
+                  isClean());
+          originalDocumentCorrectionDateAndNumber_ = null;
+        }
+        return originalDocumentCorrectionDateAndNumberBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo)
+    }
+
+    static {
+      defaultInstance = new UniversalCorrectionDocumentInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_DocumentInfo_descriptor;
   private static
@@ -9108,6 +12746,16 @@ public final class DocumentInfoProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_SupplementaryAgreementDocumentInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9119,55 +12767,79 @@ public final class DocumentInfoProtos {
     java.lang.String[] descriptorData = {
       "\n\032Docflow/DocumentInfo.proto\022\030Diadoc.Api" +
       ".Proto.Docflow\032\022DocumentType.proto\032\027Docu" +
-      "mentDirection.proto\"\316\006\n\014DocumentInfo\022I\n\014" +
-      "DocumentType\030\001 \001(\0162\036.Diadoc.Api.Proto.Do" +
-      "cumentType:\023UnknownDocumentType\022X\n\021Docum" +
-      "entDirection\030\002 \001(\0162#.Diadoc.Api.Proto.Do" +
-      "cumentDirection:\030UnknownDocumentDirectio" +
-      "n\022\016\n\006IsTest\030\003 \001(\010\022\030\n\020CustomDocumentId\030\004 " +
-      "\001(\t\022\030\n\020FromDepartmentId\030\005 \001(\t\022\026\n\016ToDepar" +
-      "tmentId\030\006 \001(\t\022\031\n\021CounteragentBoxId\030\007 \001(\t",
-      "\022N\n\025DocumentDateAndNumber\030\010 \001(\0132/.Diadoc" +
-      ".Api.Proto.Docflow.DocumentDateAndNumber" +
-      "\022F\n\021BasicDocumentInfo\030\t \001(\0132+.Diadoc.Api" +
-      ".Proto.Docflow.BasicDocumentInfo\022B\n\013Invo" +
-      "iceInfo\030\n \001(\0132-.Diadoc.Api.Proto.Docflow" +
-      ".InvoiceDocumentInfo\022V\n\025InvoiceCorrectio" +
-      "nInfo\030\013 \001(\01327.Diadoc.Api.Proto.Docflow.I" +
-      "nvoiceCorrectionDocumentInfo\022F\n\rPriceLis" +
-      "tInfo\030\014 \001(\0132/.Diadoc.Api.Proto.Docflow.P" +
-      "riceListDocumentInfo\022D\n\014ContractInfo\030\r \001",
-      "(\0132..Diadoc.Api.Proto.Docflow.ContractDo" +
-      "cumentInfo\022`\n\032SupplementaryAgreementInfo" +
-      "\030\016 \001(\0132<.Diadoc.Api.Proto.Docflow.Supple" +
-      "mentaryAgreementDocumentInfo\"E\n\025Document" +
-      "DateAndNumber\022\024\n\014DocumentDate\030\001 \001(\t\022\026\n\016D" +
-      "ocumentNumber\030\002 \001(\t\"O\n\021BasicDocumentInfo" +
-      "\022\r\n\005Total\030\001 \001(\t\022\r\n\005NoVat\030\002 \001(\010\022\013\n\003Vat\030\003 " +
-      "\001(\t\022\017\n\007Grounds\030\004 \001(\t\"\236\001\n\023InvoiceDocument" +
-      "Info\022\r\n\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014Curr" +
-      "encyCode\030\003 \001(\005\022U\n\034OriginalInvoiceDateAnd",
-      "Number\030\004 \001(\0132/.Diadoc.Api.Proto.Docflow." +
-      "DocumentDateAndNumber\"\220\003\n\035InvoiceCorrect" +
-      "ionDocumentInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010Tot" +
-      "alDec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004 " +
-      "\001(\t\022\024\n\014CurrencyCode\030\005 \001(\005\022U\n\034OriginalInv" +
-      "oiceDateAndNumber\030\006 \001(\0132/.Diadoc.Api.Pro" +
-      "to.Docflow.DocumentDateAndNumber\022]\n$Orig" +
-      "inalInvoiceRevisionDateAndNumber\030\007 \001(\0132/" +
+      "mentDirection.proto\032-Invoicing/Universal" +
+      "TransferDocumentInfo.proto\"\222\010\n\014DocumentI" +
+      "nfo\022I\n\014DocumentType\030\001 \001(\0162\036.Diadoc.Api.P" +
+      "roto.DocumentType:\023UnknownDocumentType\022X" +
+      "\n\021DocumentDirection\030\002 \001(\0162#.Diadoc.Api.P" +
+      "roto.DocumentDirection:\030UnknownDocumentD" +
+      "irection\022\016\n\006IsTest\030\003 \001(\010\022\030\n\020CustomDocume" +
+      "ntId\030\004 \001(\t\022\030\n\020FromDepartmentId\030\005 \001(\t\022\026\n\016",
+      "ToDepartmentId\030\006 \001(\t\022\031\n\021CounteragentBoxI" +
+      "d\030\007 \001(\t\022N\n\025DocumentDateAndNumber\030\010 \001(\0132/" +
       ".Diadoc.Api.Proto.Docflow.DocumentDateAn" +
-      "dNumber\022_\n&OriginalInvoiceCorrectionDate",
-      "AndNumber\030\010 \001(\0132/.Diadoc.Api.Proto.Docfl" +
-      "ow.DocumentDateAndNumber\"\217\001\n\025PriceListDo" +
-      "cumentInfo\022\036\n\026PriceListEffectiveDate\030\001 \001" +
-      "(\t\022V\n\035ContractDocumentDateAndNumber\030\002 \001(" +
+      "dNumber\022F\n\021BasicDocumentInfo\030\t \001(\0132+.Dia" +
+      "doc.Api.Proto.Docflow.BasicDocumentInfo\022" +
+      "B\n\013InvoiceInfo\030\n \001(\0132-.Diadoc.Api.Proto." +
+      "Docflow.InvoiceDocumentInfo\022V\n\025InvoiceCo" +
+      "rrectionInfo\030\013 \001(\01327.Diadoc.Api.Proto.Do" +
+      "cflow.InvoiceCorrectionDocumentInfo\022F\n\rP" +
+      "riceListInfo\030\014 \001(\0132/.Diadoc.Api.Proto.Do",
+      "cflow.PriceListDocumentInfo\022D\n\014ContractI" +
+      "nfo\030\r \001(\0132..Diadoc.Api.Proto.Docflow.Con" +
+      "tractDocumentInfo\022`\n\032SupplementaryAgreem" +
+      "entInfo\030\016 \001(\0132<.Diadoc.Api.Proto.Docflow" +
+      ".SupplementaryAgreementDocumentInfo\022^\n\035U" +
+      "niversalTransferDocumentInfo\030\017 \001(\01327.Dia" +
+      "doc.Api.Proto.Docflow.UniversalTransferD" +
+      "ocumentInfo\022b\n\037UniversalCorrectionDocume" +
+      "ntInfo\030\020 \001(\01329.Diadoc.Api.Proto.Docflow." +
+      "UniversalCorrectionDocumentInfo\"E\n\025Docum",
+      "entDateAndNumber\022\024\n\014DocumentDate\030\001 \001(\t\022\026" +
+      "\n\016DocumentNumber\030\002 \001(\t\"O\n\021BasicDocumentI" +
+      "nfo\022\r\n\005Total\030\001 \001(\t\022\r\n\005NoVat\030\002 \001(\010\022\013\n\003Vat" +
+      "\030\003 \001(\t\022\017\n\007Grounds\030\004 \001(\t\"\236\001\n\023InvoiceDocum" +
+      "entInfo\022\r\n\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014C" +
+      "urrencyCode\030\003 \001(\005\022U\n\034OriginalInvoiceDate" +
+      "AndNumber\030\004 \001(\0132/.Diadoc.Api.Proto.Docfl" +
+      "ow.DocumentDateAndNumber\"\220\003\n\035InvoiceCorr" +
+      "ectionDocumentInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010" +
+      "TotalDec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec",
+      "\030\004 \001(\t\022\024\n\014CurrencyCode\030\005 \001(\005\022U\n\034Original" +
+      "InvoiceDateAndNumber\030\006 \001(\0132/.Diadoc.Api." +
+      "Proto.Docflow.DocumentDateAndNumber\022]\n$O" +
+      "riginalInvoiceRevisionDateAndNumber\030\007 \001(" +
       "\0132/.Diadoc.Api.Proto.Docflow.DocumentDat" +
-      "eAndNumber\"C\n\024ContractDocumentInfo\022\025\n\rCo" +
-      "ntractPrice\030\001 \001(\t\022\024\n\014ContractType\030\002 \001(\t\"" +
-      "w\n\"SupplementaryAgreementDocumentInfo\022\r\n" +
-      "\005Total\030\001 \001(\t\022\024\n\014ContractType\030\002 \001(\t\022\026\n\016Co" +
-      "ntractNumber\030\003 \001(\t\022\024\n\014ContractDate\030\004 \001(\t",
-      "B\024B\022DocumentInfoProtos"
+      "eAndNumber\022_\n&OriginalInvoiceCorrectionD" +
+      "ateAndNumber\030\010 \001(\0132/.Diadoc.Api.Proto.Do" +
+      "cflow.DocumentDateAndNumber\"\217\001\n\025PriceLis" +
+      "tDocumentInfo\022\036\n\026PriceListEffectiveDate\030" +
+      "\001 \001(\t\022V\n\035ContractDocumentDateAndNumber\030\002",
+      " \001(\0132/.Diadoc.Api.Proto.Docflow.Document" +
+      "DateAndNumber\"C\n\024ContractDocumentInfo\022\025\n" +
+      "\rContractPrice\030\001 \001(\t\022\024\n\014ContractType\030\002 \001" +
+      "(\t\"w\n\"SupplementaryAgreementDocumentInfo" +
+      "\022\r\n\005Total\030\001 \001(\t\022\024\n\014ContractType\030\002 \001(\t\022\026\n" +
+      "\016ContractNumber\030\003 \001(\t\022\024\n\014ContractDate\030\004 " +
+      "\001(\t\"\366\001\n\035UniversalTransferDocumentInfo\022\r\n" +
+      "\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014CurrencyCod" +
+      "e\030\003 \001(\005\022\017\n\007Grounds\030\004 \001(\t\022:\n\010Function\030\005 \002" +
+      "(\0162(.Diadoc.Api.Proto.Invoicing.Function",
+      "Type\022V\n\035OriginalDocumentDateAndNumber\030\006 " +
+      "\001(\0132/.Diadoc.Api.Proto.Docflow.DocumentD" +
+      "ateAndNumber\"\342\003\n\037UniversalCorrectionDocu" +
+      "mentInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010TotalDec\030\002" +
+      " \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(\t\022\024\n\014" +
+      "CurrencyCode\030\005 \001(\005\022\017\n\007Grounds\030\006 \001(\t\022:\n\010F" +
+      "unction\030\007 \002(\0162(.Diadoc.Api.Proto.Invoici" +
+      "ng.FunctionType\022V\n\035OriginalDocumentDateA" +
+      "ndNumber\030\010 \001(\0132/.Diadoc.Api.Proto.Docflo" +
+      "w.DocumentDateAndNumber\022^\n%OriginalDocum",
+      "entRevisionDateAndNumber\030\t \001(\0132/.Diadoc." +
+      "Api.Proto.Docflow.DocumentDateAndNumber\022" +
+      "`\n\'OriginalDocumentCorrectionDateAndNumb" +
+      "er\030\n \001(\0132/.Diadoc.Api.Proto.Docflow.Docu" +
+      "mentDateAndNumberB\024B\022DocumentInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9182,13 +12854,14 @@ public final class DocumentInfoProtos {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.DocumentTypeProtos.getDescriptor(),
           Diadoc.Api.Proto.DocumentDirectionProtos.getDescriptor(),
+          Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Docflow_DocumentInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_Docflow_DocumentInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocumentInfo_descriptor,
-        new java.lang.String[] { "DocumentType", "DocumentDirection", "IsTest", "CustomDocumentId", "FromDepartmentId", "ToDepartmentId", "CounteragentBoxId", "DocumentDateAndNumber", "BasicDocumentInfo", "InvoiceInfo", "InvoiceCorrectionInfo", "PriceListInfo", "ContractInfo", "SupplementaryAgreementInfo", });
+        new java.lang.String[] { "DocumentType", "DocumentDirection", "IsTest", "CustomDocumentId", "FromDepartmentId", "ToDepartmentId", "CounteragentBoxId", "DocumentDateAndNumber", "BasicDocumentInfo", "InvoiceInfo", "InvoiceCorrectionInfo", "PriceListInfo", "ContractInfo", "SupplementaryAgreementInfo", "UniversalTransferDocumentInfo", "UniversalCorrectionDocumentInfo", });
     internal_static_Diadoc_Api_Proto_Docflow_DocumentDateAndNumber_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_DocumentDateAndNumber_fieldAccessorTable = new
@@ -9231,8 +12904,21 @@ public final class DocumentInfoProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SupplementaryAgreementDocumentInfo_descriptor,
         new java.lang.String[] { "Total", "ContractType", "ContractNumber", "ContractDate", });
+    internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_descriptor,
+        new java.lang.String[] { "Total", "Vat", "CurrencyCode", "Grounds", "Function", "OriginalDocumentDateAndNumber", });
+    internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_UniversalCorrectionDocumentInfo_descriptor,
+        new java.lang.String[] { "TotalInc", "TotalDec", "VatInc", "VatDec", "CurrencyCode", "Grounds", "Function", "OriginalDocumentDateAndNumber", "OriginalDocumentRevisionDateAndNumber", "OriginalDocumentCorrectionDateAndNumber", });
     Diadoc.Api.Proto.DocumentTypeProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentDirectionProtos.getDescriptor();
+    Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

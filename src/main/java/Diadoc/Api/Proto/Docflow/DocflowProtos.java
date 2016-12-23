@@ -410,6 +410,56 @@ public final class DocflowProtos {
      */
     Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder getCustomDataOrBuilder(
         int index);
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    boolean hasInboundUniversalTransferDocumentDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow getInboundUniversalTransferDocumentDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflowOrBuilder getInboundUniversalTransferDocumentDocflowOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    boolean hasOutboundUniversalTransferDocumentDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow getOutboundUniversalTransferDocumentDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflowOrBuilder getOutboundUniversalTransferDocumentDocflowOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.Docflow}
@@ -639,6 +689,32 @@ public final class DocflowProtos {
                 mutable_bitField0_ |= 0x00010000;
               }
               customData_.add(input.readMessage(Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.PARSER, extensionRegistry));
+              break;
+            }
+            case 146: {
+              Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00010000) == 0x00010000)) {
+                subBuilder = inboundUniversalTransferDocumentDocflow_.toBuilder();
+              }
+              inboundUniversalTransferDocumentDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(inboundUniversalTransferDocumentDocflow_);
+                inboundUniversalTransferDocumentDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00010000;
+              break;
+            }
+            case 154: {
+              Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00020000) == 0x00020000)) {
+                subBuilder = outboundUniversalTransferDocumentDocflow_.toBuilder();
+              }
+              outboundUniversalTransferDocumentDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(outboundUniversalTransferDocumentDocflow_);
+                outboundUniversalTransferDocumentDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00020000;
               break;
             }
           }
@@ -1139,6 +1215,72 @@ public final class DocflowProtos {
       return customData_.get(index);
     }
 
+    public static final int INBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW_FIELD_NUMBER = 18;
+    private Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow inboundUniversalTransferDocumentDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    public boolean hasInboundUniversalTransferDocumentDocflow() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow getInboundUniversalTransferDocumentDocflow() {
+      return inboundUniversalTransferDocumentDocflow_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflowOrBuilder getInboundUniversalTransferDocumentDocflowOrBuilder() {
+      return inboundUniversalTransferDocumentDocflow_;
+    }
+
+    public static final int OUTBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW_FIELD_NUMBER = 19;
+    private Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow outboundUniversalTransferDocumentDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    public boolean hasOutboundUniversalTransferDocumentDocflow() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow getOutboundUniversalTransferDocumentDocflow() {
+      return outboundUniversalTransferDocumentDocflow_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+     *
+     * <pre>
+     * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+     * </pre>
+     */
+    public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflowOrBuilder getOutboundUniversalTransferDocumentDocflowOrBuilder() {
+      return outboundUniversalTransferDocumentDocflow_;
+    }
+
     private void initFields() {
       isFinished_ = false;
       documentAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -1157,6 +1299,8 @@ public final class DocflowProtos {
       canDocumentBeRevokedUnilaterallyBySender_ = false;
       packetId_ = "";
       customData_ = java.util.Collections.emptyList();
+      inboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.getDefaultInstance();
+      outboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1224,6 +1368,18 @@ public final class DocflowProtos {
           return false;
         }
       }
+      if (hasInboundUniversalTransferDocumentDocflow()) {
+        if (!getInboundUniversalTransferDocumentDocflow().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasOutboundUniversalTransferDocumentDocflow()) {
+        if (!getOutboundUniversalTransferDocumentDocflow().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1281,6 +1437,12 @@ public final class DocflowProtos {
       }
       for (int i = 0; i < customData_.size(); i++) {
         output.writeMessage(17, customData_.get(i));
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeMessage(18, inboundUniversalTransferDocumentDocflow_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeMessage(19, outboundUniversalTransferDocumentDocflow_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1358,6 +1520,14 @@ public final class DocflowProtos {
       for (int i = 0; i < customData_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, customData_.get(i));
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, inboundUniversalTransferDocumentDocflow_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, outboundUniversalTransferDocumentDocflow_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1480,6 +1650,8 @@ public final class DocflowProtos {
           getRevocationDocflowFieldBuilder();
           getResolutionDocflowFieldBuilder();
           getCustomDataFieldBuilder();
+          getInboundUniversalTransferDocumentDocflowFieldBuilder();
+          getOutboundUniversalTransferDocumentDocflowFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1570,6 +1742,18 @@ public final class DocflowProtos {
         } else {
           customDataBuilder_.clear();
         }
+        if (inboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          inboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.getDefaultInstance();
+        } else {
+          inboundUniversalTransferDocumentDocflowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00020000);
+        if (outboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          outboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.getDefaultInstance();
+        } else {
+          outboundUniversalTransferDocumentDocflowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00040000);
         return this;
       }
 
@@ -1715,6 +1899,22 @@ public final class DocflowProtos {
         } else {
           result.customData_ = customDataBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        if (inboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          result.inboundUniversalTransferDocumentDocflow_ = inboundUniversalTransferDocumentDocflow_;
+        } else {
+          result.inboundUniversalTransferDocumentDocflow_ = inboundUniversalTransferDocumentDocflowBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        if (outboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          result.outboundUniversalTransferDocumentDocflow_ = outboundUniversalTransferDocumentDocflow_;
+        } else {
+          result.outboundUniversalTransferDocumentDocflow_ = outboundUniversalTransferDocumentDocflowBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1809,6 +2009,12 @@ public final class DocflowProtos {
             }
           }
         }
+        if (other.hasInboundUniversalTransferDocumentDocflow()) {
+          mergeInboundUniversalTransferDocumentDocflow(other.getInboundUniversalTransferDocumentDocflow());
+        }
+        if (other.hasOutboundUniversalTransferDocumentDocflow()) {
+          mergeOutboundUniversalTransferDocumentDocflow(other.getOutboundUniversalTransferDocumentDocflow());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -1870,6 +2076,18 @@ public final class DocflowProtos {
         }
         for (int i = 0; i < getCustomDataCount(); i++) {
           if (!getCustomData(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasInboundUniversalTransferDocumentDocflow()) {
+          if (!getInboundUniversalTransferDocumentDocflow().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasOutboundUniversalTransferDocumentDocflow()) {
+          if (!getOutboundUniversalTransferDocumentDocflow().isInitialized()) {
             
             return false;
           }
@@ -3840,6 +4058,310 @@ public final class DocflowProtos {
         return customDataBuilder_;
       }
 
+      private Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow inboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.Builder, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflowOrBuilder> inboundUniversalTransferDocumentDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public boolean hasInboundUniversalTransferDocumentDocflow() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow getInboundUniversalTransferDocumentDocflow() {
+        if (inboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          return inboundUniversalTransferDocumentDocflow_;
+        } else {
+          return inboundUniversalTransferDocumentDocflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Builder setInboundUniversalTransferDocumentDocflow(Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow value) {
+        if (inboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inboundUniversalTransferDocumentDocflow_ = value;
+          onChanged();
+        } else {
+          inboundUniversalTransferDocumentDocflowBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00020000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Builder setInboundUniversalTransferDocumentDocflow(
+          Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.Builder builderForValue) {
+        if (inboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          inboundUniversalTransferDocumentDocflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          inboundUniversalTransferDocumentDocflowBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00020000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Builder mergeInboundUniversalTransferDocumentDocflow(Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow value) {
+        if (inboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          if (((bitField0_ & 0x00020000) == 0x00020000) &&
+              inboundUniversalTransferDocumentDocflow_ != Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.getDefaultInstance()) {
+            inboundUniversalTransferDocumentDocflow_ =
+              Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.newBuilder(inboundUniversalTransferDocumentDocflow_).mergeFrom(value).buildPartial();
+          } else {
+            inboundUniversalTransferDocumentDocflow_ = value;
+          }
+          onChanged();
+        } else {
+          inboundUniversalTransferDocumentDocflowBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00020000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Builder clearInboundUniversalTransferDocumentDocflow() {
+        if (inboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          inboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.getDefaultInstance();
+          onChanged();
+        } else {
+          inboundUniversalTransferDocumentDocflowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00020000);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.Builder getInboundUniversalTransferDocumentDocflowBuilder() {
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return getInboundUniversalTransferDocumentDocflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflowOrBuilder getInboundUniversalTransferDocumentDocflowOrBuilder() {
+        if (inboundUniversalTransferDocumentDocflowBuilder_ != null) {
+          return inboundUniversalTransferDocumentDocflowBuilder_.getMessageOrBuilder();
+        } else {
+          return inboundUniversalTransferDocumentDocflow_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow InboundUniversalTransferDocumentDocflow = 18;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.Builder, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflowOrBuilder> 
+          getInboundUniversalTransferDocumentDocflowFieldBuilder() {
+        if (inboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          inboundUniversalTransferDocumentDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.Builder, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflowOrBuilder>(
+                  getInboundUniversalTransferDocumentDocflow(),
+                  getParentForChildren(),
+                  isClean());
+          inboundUniversalTransferDocumentDocflow_ = null;
+        }
+        return inboundUniversalTransferDocumentDocflowBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow outboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.Builder, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflowOrBuilder> outboundUniversalTransferDocumentDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public boolean hasOutboundUniversalTransferDocumentDocflow() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow getOutboundUniversalTransferDocumentDocflow() {
+        if (outboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          return outboundUniversalTransferDocumentDocflow_;
+        } else {
+          return outboundUniversalTransferDocumentDocflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Builder setOutboundUniversalTransferDocumentDocflow(Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow value) {
+        if (outboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outboundUniversalTransferDocumentDocflow_ = value;
+          onChanged();
+        } else {
+          outboundUniversalTransferDocumentDocflowBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Builder setOutboundUniversalTransferDocumentDocflow(
+          Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.Builder builderForValue) {
+        if (outboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          outboundUniversalTransferDocumentDocflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          outboundUniversalTransferDocumentDocflowBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Builder mergeOutboundUniversalTransferDocumentDocflow(Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow value) {
+        if (outboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          if (((bitField0_ & 0x00040000) == 0x00040000) &&
+              outboundUniversalTransferDocumentDocflow_ != Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.getDefaultInstance()) {
+            outboundUniversalTransferDocumentDocflow_ =
+              Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.newBuilder(outboundUniversalTransferDocumentDocflow_).mergeFrom(value).buildPartial();
+          } else {
+            outboundUniversalTransferDocumentDocflow_ = value;
+          }
+          onChanged();
+        } else {
+          outboundUniversalTransferDocumentDocflowBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Builder clearOutboundUniversalTransferDocumentDocflow() {
+        if (outboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          outboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.getDefaultInstance();
+          onChanged();
+        } else {
+          outboundUniversalTransferDocumentDocflowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00040000);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.Builder getOutboundUniversalTransferDocumentDocflowBuilder() {
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return getOutboundUniversalTransferDocumentDocflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      public Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflowOrBuilder getOutboundUniversalTransferDocumentDocflowOrBuilder() {
+        if (outboundUniversalTransferDocumentDocflowBuilder_ != null) {
+          return outboundUniversalTransferDocumentDocflowBuilder_.getMessageOrBuilder();
+        } else {
+          return outboundUniversalTransferDocumentDocflow_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow OutboundUniversalTransferDocumentDocflow = 19;</code>
+       *
+       * <pre>
+       * for UniversalTransferDocument, UniversalTransferDocumentRevision, UniversalCorrectionDocument
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.Builder, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflowOrBuilder> 
+          getOutboundUniversalTransferDocumentDocflowFieldBuilder() {
+        if (outboundUniversalTransferDocumentDocflowBuilder_ == null) {
+          outboundUniversalTransferDocumentDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.Builder, Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflowOrBuilder>(
+                  getOutboundUniversalTransferDocumentDocflow(),
+                  getParentForChildren(),
+                  isClean());
+          outboundUniversalTransferDocumentDocflow_ = null;
+        }
+        return outboundUniversalTransferDocumentDocflowBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.Docflow)
     }
 
@@ -5299,43 +5821,50 @@ public final class DocflowProtos {
       "eralDocflow.proto\032\036Docflow/BilateralDocf" +
       "low.proto\032!Docflow/XmlBilateralDocflow.p" +
       "roto\032\037Docflow/RevocationDocflow.proto\032\037D" +
-      "ocflow/ResolutionDocflow.proto\"\310\007\n\007Docfl" +
-      "ow\022\022\n\nIsFinished\030\001 \001(\010\022F\n\022DocumentAttach" +
-      "ment\030\002 \001(\0132*.Diadoc.Api.Proto.Docflow.Si",
-      "gnedAttachment\022\024\n\014DepartmentId\030\003 \001(\t\022\031\n\021" +
-      "DocumentIsDeleted\030\004 \001(\010\022>\n\rDocflowStatus" +
-      "\030\005 \001(\0132\'.Diadoc.Api.Proto.Docflow.Docflo" +
-      "wStatus\0222\n\rSendTimestamp\030\006 \001(\0132\033.Diadoc." +
-      "Api.Proto.Timestamp\0226\n\021DeliveryTimestamp" +
-      "\030\007 \001(\0132\033.Diadoc.Api.Proto.Timestamp\022N\n\025I" +
-      "nboundInvoiceDocflow\030\010 \001(\0132/.Diadoc.Api." +
-      "Proto.Docflow.InboundInvoiceDocflow\022P\n\026O" +
-      "utboundInvoiceDocflow\030\t \001(\01320.Diadoc.Api" +
-      ".Proto.Docflow.OutboundInvoiceDocflow\022J\n",
-      "\023XmlBilateralDocflow\030\n \001(\0132-.Diadoc.Api." +
-      "Proto.Docflow.XmlBilateralDocflow\022D\n\020Bil" +
-      "ateralDocflow\030\013 \001(\0132*.Diadoc.Api.Proto.D" +
-      "ocflow.BilateralDocflow\022F\n\021UnilateralDoc" +
-      "flow\030\014 \001(\0132+.Diadoc.Api.Proto.Docflow.Un" +
-      "ilateralDocflow\022F\n\021RevocationDocflow\030\r \001" +
-      "(\0132+.Diadoc.Api.Proto.Docflow.Revocation" +
-      "Docflow\022F\n\021ResolutionDocflow\030\016 \001(\0132+.Dia" +
-      "doc.Api.Proto.Docflow.ResolutionDocflow\022" +
-      "0\n(CanDocumentBeRevokedUnilaterallyBySen",
-      "der\030\017 \001(\010\022\020\n\010PacketId\030\020 \001(\t\0224\n\nCustomDat" +
-      "a\030\021 \003(\0132 .Diadoc.Api.Proto.CustomDataIte" +
-      "m\"\233\001\n\rDocflowStatus\022C\n\rPrimaryStatus\030\001 \001" +
-      "(\0132,.Diadoc.Api.Proto.Docflow.DocflowSta" +
-      "tusModel\022E\n\017SecondaryStatus\030\002 \001(\0132,.Diad" +
-      "oc.Api.Proto.Docflow.DocflowStatusModel\"" +
-      "\235\001\n\022DocflowStatusModel\022_\n\010Severity\030\001 \001(\016" +
-      "2/.Diadoc.Api.Proto.Docflow.DocflowStatu" +
-      "sSeverity:\034UnknownDocflowStatusSeverity\022" +
-      "\022\n\nStatusText\030\002 \001(\t\022\022\n\nStatusHint\030\003 \001(\t*",
-      "h\n\025DocflowStatusSeverity\022 \n\034UnknownDocfl" +
-      "owStatusSeverity\020\000\022\010\n\004Info\020\001\022\013\n\007Success\020" +
-      "\002\022\013\n\007Warning\020\003\022\t\n\005Error\020\004B\017B\rDocflowProt" +
-      "os"
+      "ocflow/ResolutionDocflow.proto\032.Docflow/" +
+      "UniversalTransferDocumentDocflow.proto\"\262" +
+      "\t\n\007Docflow\022\022\n\nIsFinished\030\001 \001(\010\022F\n\022Docume",
+      "ntAttachment\030\002 \001(\0132*.Diadoc.Api.Proto.Do" +
+      "cflow.SignedAttachment\022\024\n\014DepartmentId\030\003" +
+      " \001(\t\022\031\n\021DocumentIsDeleted\030\004 \001(\010\022>\n\rDocfl" +
+      "owStatus\030\005 \001(\0132\'.Diadoc.Api.Proto.Docflo" +
+      "w.DocflowStatus\0222\n\rSendTimestamp\030\006 \001(\0132\033" +
+      ".Diadoc.Api.Proto.Timestamp\0226\n\021DeliveryT" +
+      "imestamp\030\007 \001(\0132\033.Diadoc.Api.Proto.Timest" +
+      "amp\022N\n\025InboundInvoiceDocflow\030\010 \001(\0132/.Dia" +
+      "doc.Api.Proto.Docflow.InboundInvoiceDocf" +
+      "low\022P\n\026OutboundInvoiceDocflow\030\t \001(\01320.Di",
+      "adoc.Api.Proto.Docflow.OutboundInvoiceDo" +
+      "cflow\022J\n\023XmlBilateralDocflow\030\n \001(\0132-.Dia" +
+      "doc.Api.Proto.Docflow.XmlBilateralDocflo" +
+      "w\022D\n\020BilateralDocflow\030\013 \001(\0132*.Diadoc.Api" +
+      ".Proto.Docflow.BilateralDocflow\022F\n\021Unila" +
+      "teralDocflow\030\014 \001(\0132+.Diadoc.Api.Proto.Do" +
+      "cflow.UnilateralDocflow\022F\n\021RevocationDoc" +
+      "flow\030\r \001(\0132+.Diadoc.Api.Proto.Docflow.Re" +
+      "vocationDocflow\022F\n\021ResolutionDocflow\030\016 \001" +
+      "(\0132+.Diadoc.Api.Proto.Docflow.Resolution",
+      "Docflow\0220\n(CanDocumentBeRevokedUnilatera" +
+      "llyBySender\030\017 \001(\010\022\020\n\010PacketId\030\020 \001(\t\0224\n\nC" +
+      "ustomData\030\021 \003(\0132 .Diadoc.Api.Proto.Custo" +
+      "mDataItem\022r\n\'InboundUniversalTransferDoc" +
+      "umentDocflow\030\022 \001(\0132A.Diadoc.Api.Proto.Do" +
+      "cflow.InboundUniversalTransferDocumentDo" +
+      "cflow\022t\n(OutboundUniversalTransferDocume" +
+      "ntDocflow\030\023 \001(\0132B.Diadoc.Api.Proto.Docfl" +
+      "ow.OutboundUniversalTransferDocumentDocf" +
+      "low\"\233\001\n\rDocflowStatus\022C\n\rPrimaryStatus\030\001",
+      " \001(\0132,.Diadoc.Api.Proto.Docflow.DocflowS" +
+      "tatusModel\022E\n\017SecondaryStatus\030\002 \001(\0132,.Di" +
+      "adoc.Api.Proto.Docflow.DocflowStatusMode" +
+      "l\"\235\001\n\022DocflowStatusModel\022_\n\010Severity\030\001 \001" +
+      "(\0162/.Diadoc.Api.Proto.Docflow.DocflowSta" +
+      "tusSeverity:\034UnknownDocflowStatusSeverit" +
+      "y\022\022\n\nStatusText\030\002 \001(\t\022\022\n\nStatusHint\030\003 \001(" +
+      "\t*h\n\025DocflowStatusSeverity\022 \n\034UnknownDoc" +
+      "flowStatusSeverity\020\000\022\010\n\004Info\020\001\022\013\n\007Succes" +
+      "s\020\002\022\013\n\007Warning\020\003\022\t\n\005Error\020\004B\017B\rDocflowPr",
+      "otos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5357,13 +5886,14 @@ public final class DocflowProtos {
           Diadoc.Api.Proto.Docflow.XmlBilateralDocflowProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.ResolutionDocflowProtos.getDescriptor(),
+          Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Docflow_Docflow_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_Docflow_Docflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_Docflow_descriptor,
-        new java.lang.String[] { "IsFinished", "DocumentAttachment", "DepartmentId", "DocumentIsDeleted", "DocflowStatus", "SendTimestamp", "DeliveryTimestamp", "InboundInvoiceDocflow", "OutboundInvoiceDocflow", "XmlBilateralDocflow", "BilateralDocflow", "UnilateralDocflow", "RevocationDocflow", "ResolutionDocflow", "CanDocumentBeRevokedUnilaterallyBySender", "PacketId", "CustomData", });
+        new java.lang.String[] { "IsFinished", "DocumentAttachment", "DepartmentId", "DocumentIsDeleted", "DocflowStatus", "SendTimestamp", "DeliveryTimestamp", "InboundInvoiceDocflow", "OutboundInvoiceDocflow", "XmlBilateralDocflow", "BilateralDocflow", "UnilateralDocflow", "RevocationDocflow", "ResolutionDocflow", "CanDocumentBeRevokedUnilaterallyBySender", "PacketId", "CustomData", "InboundUniversalTransferDocumentDocflow", "OutboundUniversalTransferDocumentDocflow", });
     internal_static_Diadoc_Api_Proto_Docflow_DocflowStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_DocflowStatus_fieldAccessorTable = new
@@ -5385,6 +5915,7 @@ public final class DocflowProtos {
     Diadoc.Api.Proto.Docflow.XmlBilateralDocflowProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.RevocationDocflowProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.ResolutionDocflowProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
