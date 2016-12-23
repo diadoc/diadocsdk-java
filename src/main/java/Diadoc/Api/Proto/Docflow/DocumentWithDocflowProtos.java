@@ -592,6 +592,12 @@ public final class DocumentWithDocflowProtos {
           return false;
         }
       }
+      if (hasDocumentInfo()) {
+        if (!getDocumentInfo().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       if (hasDocflow()) {
         if (!getDocflow().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1071,6 +1077,12 @@ public final class DocumentWithDocflowProtos {
         }
         if (hasLastEventTimestamp()) {
           if (!getLastEventTimestamp().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasDocumentInfo()) {
+          if (!getDocumentInfo().isInitialized()) {
             
             return false;
           }

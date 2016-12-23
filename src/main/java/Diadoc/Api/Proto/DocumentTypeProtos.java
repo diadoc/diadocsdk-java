@@ -101,6 +101,18 @@ public final class DocumentTypeProtos {
      * <code>UniversalTransferDocument = 41;</code>
      */
     UniversalTransferDocument(20, 41),
+    /**
+     * <code>UniversalTransferDocumentRevision = 45;</code>
+     */
+    UniversalTransferDocumentRevision(21, 45),
+    /**
+     * <code>UniversalCorrectionDocument = 49;</code>
+     */
+    UniversalCorrectionDocument(22, 49),
+    /**
+     * <code>UniversalCorrectionDocumentRevision = 50;</code>
+     */
+    UniversalCorrectionDocumentRevision(23, 50),
     ;
 
     /**
@@ -191,6 +203,18 @@ public final class DocumentTypeProtos {
      * <code>UniversalTransferDocument = 41;</code>
      */
     public static final int UniversalTransferDocument_VALUE = 41;
+    /**
+     * <code>UniversalTransferDocumentRevision = 45;</code>
+     */
+    public static final int UniversalTransferDocumentRevision_VALUE = 45;
+    /**
+     * <code>UniversalCorrectionDocument = 49;</code>
+     */
+    public static final int UniversalCorrectionDocument_VALUE = 49;
+    /**
+     * <code>UniversalCorrectionDocumentRevision = 50;</code>
+     */
+    public static final int UniversalCorrectionDocumentRevision_VALUE = 50;
 
 
     public final int getNumber() { return value; }
@@ -218,6 +242,9 @@ public final class DocumentTypeProtos {
         case 38: return ServiceDetails;
         case 40: return SupplementaryAgreement;
         case 41: return UniversalTransferDocument;
+        case 45: return UniversalTransferDocumentRevision;
+        case 49: return UniversalCorrectionDocument;
+        case 50: return UniversalCorrectionDocumentRevision;
         default: return null;
       }
     }
@@ -278,8 +305,8 @@ public final class DocumentTypeProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022DocumentType.proto\022\020Diadoc.Api.Proto*\340" +
-      "\003\n\014DocumentType\022 \n\023UnknownDocumentType\020\377" +
+      "\n\022DocumentType.proto\022\020Diadoc.Api.Proto*\321" +
+      "\004\n\014DocumentType\022 \n\023UnknownDocumentType\020\377" +
       "\377\377\377\377\377\377\377\377\001\022\021\n\rNonformalized\020\000\022\013\n\007Invoice\020" +
       "\001\022\032\n\026TrustConnectionRequest\020\013\022\n\n\006Torg12\020" +
       "\014\022\023\n\017InvoiceRevision\020\r\022\025\n\021InvoiceCorrect" +
@@ -291,7 +318,10 @@ public final class DocumentTypeProtos {
       "onciliationAct\020#\022\014\n\010Contract\020$\022\n\n\006Torg13" +
       "\020%\022\022\n\016ServiceDetails\020&\022\032\n\026SupplementaryA" +
       "greement\020(\022\035\n\031UniversalTransferDocument\020" +
-      ")B\024B\022DocumentTypeProtos"
+      ")\022%\n!UniversalTransferDocumentRevision\020-" +
+      "\022\037\n\033UniversalCorrectionDocument\0201\022\'\n#Uni" +
+      "versalCorrectionDocumentRevision\0202B\024B\022Do" +
+      "cumentTypeProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

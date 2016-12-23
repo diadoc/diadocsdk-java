@@ -1196,6 +1196,45 @@ public final class DocumentProtos {
      * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentMetadata UniversalTransferDocumentMetadata = 56;</code>
      */
     Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadataOrBuilder getUniversalTransferDocumentMetadataOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+     */
+    boolean hasUniversalTransferDocumentRevisionMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata getUniversalTransferDocumentRevisionMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadataOrBuilder getUniversalTransferDocumentRevisionMetadataOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+     */
+    boolean hasUniversalCorrectionDocumentMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata getUniversalCorrectionDocumentMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadataOrBuilder getUniversalCorrectionDocumentMetadataOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+     */
+    boolean hasUniversalCorrectionDocumentRevisionMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata getUniversalCorrectionDocumentRevisionMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+     */
+    Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadataOrBuilder getUniversalCorrectionDocumentRevisionMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Document}
@@ -1749,6 +1788,45 @@ public final class DocumentProtos {
                 universalTransferDocumentMetadata_ = subBuilder.buildPartial();
               }
               bitField1_ |= 0x00020000;
+              break;
+            }
+            case 458: {
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.Builder subBuilder = null;
+              if (((bitField1_ & 0x00040000) == 0x00040000)) {
+                subBuilder = universalTransferDocumentRevisionMetadata_.toBuilder();
+              }
+              universalTransferDocumentRevisionMetadata_ = input.readMessage(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(universalTransferDocumentRevisionMetadata_);
+                universalTransferDocumentRevisionMetadata_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00040000;
+              break;
+            }
+            case 466: {
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.Builder subBuilder = null;
+              if (((bitField1_ & 0x00080000) == 0x00080000)) {
+                subBuilder = universalCorrectionDocumentMetadata_.toBuilder();
+              }
+              universalCorrectionDocumentMetadata_ = input.readMessage(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(universalCorrectionDocumentMetadata_);
+                universalCorrectionDocumentMetadata_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00080000;
+              break;
+            }
+            case 474: {
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.Builder subBuilder = null;
+              if (((bitField1_ & 0x00100000) == 0x00100000)) {
+                subBuilder = universalCorrectionDocumentRevisionMetadata_.toBuilder();
+              }
+              universalCorrectionDocumentRevisionMetadata_ = input.readMessage(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(universalCorrectionDocumentRevisionMetadata_);
+                universalCorrectionDocumentRevisionMetadata_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00100000;
               break;
             }
           }
@@ -3177,6 +3255,69 @@ public final class DocumentProtos {
       return universalTransferDocumentMetadata_;
     }
 
+    public static final int UNIVERSALTRANSFERDOCUMENTREVISIONMETADATA_FIELD_NUMBER = 57;
+    private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata universalTransferDocumentRevisionMetadata_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+     */
+    public boolean hasUniversalTransferDocumentRevisionMetadata() {
+      return ((bitField1_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata getUniversalTransferDocumentRevisionMetadata() {
+      return universalTransferDocumentRevisionMetadata_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadataOrBuilder getUniversalTransferDocumentRevisionMetadataOrBuilder() {
+      return universalTransferDocumentRevisionMetadata_;
+    }
+
+    public static final int UNIVERSALCORRECTIONDOCUMENTMETADATA_FIELD_NUMBER = 58;
+    private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata universalCorrectionDocumentMetadata_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+     */
+    public boolean hasUniversalCorrectionDocumentMetadata() {
+      return ((bitField1_ & 0x00080000) == 0x00080000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata getUniversalCorrectionDocumentMetadata() {
+      return universalCorrectionDocumentMetadata_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadataOrBuilder getUniversalCorrectionDocumentMetadataOrBuilder() {
+      return universalCorrectionDocumentMetadata_;
+    }
+
+    public static final int UNIVERSALCORRECTIONDOCUMENTREVISIONMETADATA_FIELD_NUMBER = 59;
+    private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata universalCorrectionDocumentRevisionMetadata_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+     */
+    public boolean hasUniversalCorrectionDocumentRevisionMetadata() {
+      return ((bitField1_ & 0x00100000) == 0x00100000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata getUniversalCorrectionDocumentRevisionMetadata() {
+      return universalCorrectionDocumentRevisionMetadata_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+     */
+    public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadataOrBuilder getUniversalCorrectionDocumentRevisionMetadataOrBuilder() {
+      return universalCorrectionDocumentRevisionMetadata_;
+    }
+
     private void initFields() {
       indexKey_ = "";
       messageId_ = "";
@@ -3232,6 +3373,9 @@ public final class DocumentProtos {
       priceListAgreementMetadata_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.getDefaultInstance();
       certificateRegistryMetadata_ = Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.NonformalizedDocumentMetadata.getDefaultInstance();
       universalTransferDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentMetadata.getDefaultInstance();
+      universalTransferDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.getDefaultInstance();
+      universalCorrectionDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.getDefaultInstance();
+      universalCorrectionDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3361,6 +3505,24 @@ public final class DocumentProtos {
       }
       if (hasUniversalTransferDocumentMetadata()) {
         if (!getUniversalTransferDocumentMetadata().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasUniversalTransferDocumentRevisionMetadata()) {
+        if (!getUniversalTransferDocumentRevisionMetadata().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasUniversalCorrectionDocumentMetadata()) {
+        if (!getUniversalCorrectionDocumentMetadata().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasUniversalCorrectionDocumentRevisionMetadata()) {
+        if (!getUniversalCorrectionDocumentRevisionMetadata().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -3533,6 +3695,15 @@ public final class DocumentProtos {
       }
       if (((bitField1_ & 0x00020000) == 0x00020000)) {
         output.writeMessage(56, universalTransferDocumentMetadata_);
+      }
+      if (((bitField1_ & 0x00040000) == 0x00040000)) {
+        output.writeMessage(57, universalTransferDocumentRevisionMetadata_);
+      }
+      if (((bitField1_ & 0x00080000) == 0x00080000)) {
+        output.writeMessage(58, universalCorrectionDocumentMetadata_);
+      }
+      if (((bitField1_ & 0x00100000) == 0x00100000)) {
+        output.writeMessage(59, universalCorrectionDocumentRevisionMetadata_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3759,6 +3930,18 @@ public final class DocumentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(56, universalTransferDocumentMetadata_);
       }
+      if (((bitField1_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(57, universalTransferDocumentRevisionMetadata_);
+      }
+      if (((bitField1_ & 0x00080000) == 0x00080000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(58, universalCorrectionDocumentMetadata_);
+      }
+      if (((bitField1_ & 0x00100000) == 0x00100000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(59, universalCorrectionDocumentRevisionMetadata_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -3894,6 +4077,9 @@ public final class DocumentProtos {
           getPriceListAgreementMetadataFieldBuilder();
           getCertificateRegistryMetadataFieldBuilder();
           getUniversalTransferDocumentMetadataFieldBuilder();
+          getUniversalTransferDocumentRevisionMetadataFieldBuilder();
+          getUniversalCorrectionDocumentMetadataFieldBuilder();
+          getUniversalCorrectionDocumentRevisionMetadataFieldBuilder();
         }
       }
       private static Builder create() {
@@ -4114,6 +4300,24 @@ public final class DocumentProtos {
           universalTransferDocumentMetadataBuilder_.clear();
         }
         bitField1_ = (bitField1_ & ~0x00200000);
+        if (universalTransferDocumentRevisionMetadataBuilder_ == null) {
+          universalTransferDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.getDefaultInstance();
+        } else {
+          universalTransferDocumentRevisionMetadataBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00400000);
+        if (universalCorrectionDocumentMetadataBuilder_ == null) {
+          universalCorrectionDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.getDefaultInstance();
+        } else {
+          universalCorrectionDocumentMetadataBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00800000);
+        if (universalCorrectionDocumentRevisionMetadataBuilder_ == null) {
+          universalCorrectionDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.getDefaultInstance();
+        } else {
+          universalCorrectionDocumentRevisionMetadataBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x01000000);
         return this;
       }
 
@@ -4468,6 +4672,30 @@ public final class DocumentProtos {
         } else {
           result.universalTransferDocumentMetadata_ = universalTransferDocumentMetadataBuilder_.build();
         }
+        if (((from_bitField1_ & 0x00400000) == 0x00400000)) {
+          to_bitField1_ |= 0x00040000;
+        }
+        if (universalTransferDocumentRevisionMetadataBuilder_ == null) {
+          result.universalTransferDocumentRevisionMetadata_ = universalTransferDocumentRevisionMetadata_;
+        } else {
+          result.universalTransferDocumentRevisionMetadata_ = universalTransferDocumentRevisionMetadataBuilder_.build();
+        }
+        if (((from_bitField1_ & 0x00800000) == 0x00800000)) {
+          to_bitField1_ |= 0x00080000;
+        }
+        if (universalCorrectionDocumentMetadataBuilder_ == null) {
+          result.universalCorrectionDocumentMetadata_ = universalCorrectionDocumentMetadata_;
+        } else {
+          result.universalCorrectionDocumentMetadata_ = universalCorrectionDocumentMetadataBuilder_.build();
+        }
+        if (((from_bitField1_ & 0x01000000) == 0x01000000)) {
+          to_bitField1_ |= 0x00100000;
+        }
+        if (universalCorrectionDocumentRevisionMetadataBuilder_ == null) {
+          result.universalCorrectionDocumentRevisionMetadata_ = universalCorrectionDocumentRevisionMetadata_;
+        } else {
+          result.universalCorrectionDocumentRevisionMetadata_ = universalCorrectionDocumentRevisionMetadataBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -4765,6 +4993,15 @@ public final class DocumentProtos {
         if (other.hasUniversalTransferDocumentMetadata()) {
           mergeUniversalTransferDocumentMetadata(other.getUniversalTransferDocumentMetadata());
         }
+        if (other.hasUniversalTransferDocumentRevisionMetadata()) {
+          mergeUniversalTransferDocumentRevisionMetadata(other.getUniversalTransferDocumentRevisionMetadata());
+        }
+        if (other.hasUniversalCorrectionDocumentMetadata()) {
+          mergeUniversalCorrectionDocumentMetadata(other.getUniversalCorrectionDocumentMetadata());
+        }
+        if (other.hasUniversalCorrectionDocumentRevisionMetadata()) {
+          mergeUniversalCorrectionDocumentRevisionMetadata(other.getUniversalCorrectionDocumentRevisionMetadata());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -4892,6 +5129,24 @@ public final class DocumentProtos {
         }
         if (hasUniversalTransferDocumentMetadata()) {
           if (!getUniversalTransferDocumentMetadata().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasUniversalTransferDocumentRevisionMetadata()) {
+          if (!getUniversalTransferDocumentRevisionMetadata().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasUniversalCorrectionDocumentMetadata()) {
+          if (!getUniversalCorrectionDocumentMetadata().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasUniversalCorrectionDocumentRevisionMetadata()) {
+          if (!getUniversalCorrectionDocumentRevisionMetadata().isInitialized()) {
             
             return false;
           }
@@ -9914,6 +10169,354 @@ public final class DocumentProtos {
         return universalTransferDocumentMetadataBuilder_;
       }
 
+      private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata universalTransferDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadataOrBuilder> universalTransferDocumentRevisionMetadataBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+       */
+      public boolean hasUniversalTransferDocumentRevisionMetadata() {
+        return ((bitField1_ & 0x00400000) == 0x00400000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata getUniversalTransferDocumentRevisionMetadata() {
+        if (universalTransferDocumentRevisionMetadataBuilder_ == null) {
+          return universalTransferDocumentRevisionMetadata_;
+        } else {
+          return universalTransferDocumentRevisionMetadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+       */
+      public Builder setUniversalTransferDocumentRevisionMetadata(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata value) {
+        if (universalTransferDocumentRevisionMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          universalTransferDocumentRevisionMetadata_ = value;
+          onChanged();
+        } else {
+          universalTransferDocumentRevisionMetadataBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00400000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+       */
+      public Builder setUniversalTransferDocumentRevisionMetadata(
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.Builder builderForValue) {
+        if (universalTransferDocumentRevisionMetadataBuilder_ == null) {
+          universalTransferDocumentRevisionMetadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          universalTransferDocumentRevisionMetadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00400000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+       */
+      public Builder mergeUniversalTransferDocumentRevisionMetadata(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata value) {
+        if (universalTransferDocumentRevisionMetadataBuilder_ == null) {
+          if (((bitField1_ & 0x00400000) == 0x00400000) &&
+              universalTransferDocumentRevisionMetadata_ != Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.getDefaultInstance()) {
+            universalTransferDocumentRevisionMetadata_ =
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.newBuilder(universalTransferDocumentRevisionMetadata_).mergeFrom(value).buildPartial();
+          } else {
+            universalTransferDocumentRevisionMetadata_ = value;
+          }
+          onChanged();
+        } else {
+          universalTransferDocumentRevisionMetadataBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00400000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+       */
+      public Builder clearUniversalTransferDocumentRevisionMetadata() {
+        if (universalTransferDocumentRevisionMetadataBuilder_ == null) {
+          universalTransferDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.getDefaultInstance();
+          onChanged();
+        } else {
+          universalTransferDocumentRevisionMetadataBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00400000);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.Builder getUniversalTransferDocumentRevisionMetadataBuilder() {
+        bitField1_ |= 0x00400000;
+        onChanged();
+        return getUniversalTransferDocumentRevisionMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadataOrBuilder getUniversalTransferDocumentRevisionMetadataOrBuilder() {
+        if (universalTransferDocumentRevisionMetadataBuilder_ != null) {
+          return universalTransferDocumentRevisionMetadataBuilder_.getMessageOrBuilder();
+        } else {
+          return universalTransferDocumentRevisionMetadata_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentRevisionMetadata UniversalTransferDocumentRevisionMetadata = 57;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadataOrBuilder> 
+          getUniversalTransferDocumentRevisionMetadataFieldBuilder() {
+        if (universalTransferDocumentRevisionMetadataBuilder_ == null) {
+          universalTransferDocumentRevisionMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadataOrBuilder>(
+                  getUniversalTransferDocumentRevisionMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          universalTransferDocumentRevisionMetadata_ = null;
+        }
+        return universalTransferDocumentRevisionMetadataBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata universalCorrectionDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadataOrBuilder> universalCorrectionDocumentMetadataBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+       */
+      public boolean hasUniversalCorrectionDocumentMetadata() {
+        return ((bitField1_ & 0x00800000) == 0x00800000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata getUniversalCorrectionDocumentMetadata() {
+        if (universalCorrectionDocumentMetadataBuilder_ == null) {
+          return universalCorrectionDocumentMetadata_;
+        } else {
+          return universalCorrectionDocumentMetadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+       */
+      public Builder setUniversalCorrectionDocumentMetadata(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata value) {
+        if (universalCorrectionDocumentMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          universalCorrectionDocumentMetadata_ = value;
+          onChanged();
+        } else {
+          universalCorrectionDocumentMetadataBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00800000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+       */
+      public Builder setUniversalCorrectionDocumentMetadata(
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.Builder builderForValue) {
+        if (universalCorrectionDocumentMetadataBuilder_ == null) {
+          universalCorrectionDocumentMetadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          universalCorrectionDocumentMetadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00800000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+       */
+      public Builder mergeUniversalCorrectionDocumentMetadata(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata value) {
+        if (universalCorrectionDocumentMetadataBuilder_ == null) {
+          if (((bitField1_ & 0x00800000) == 0x00800000) &&
+              universalCorrectionDocumentMetadata_ != Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.getDefaultInstance()) {
+            universalCorrectionDocumentMetadata_ =
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.newBuilder(universalCorrectionDocumentMetadata_).mergeFrom(value).buildPartial();
+          } else {
+            universalCorrectionDocumentMetadata_ = value;
+          }
+          onChanged();
+        } else {
+          universalCorrectionDocumentMetadataBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00800000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+       */
+      public Builder clearUniversalCorrectionDocumentMetadata() {
+        if (universalCorrectionDocumentMetadataBuilder_ == null) {
+          universalCorrectionDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.getDefaultInstance();
+          onChanged();
+        } else {
+          universalCorrectionDocumentMetadataBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00800000);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.Builder getUniversalCorrectionDocumentMetadataBuilder() {
+        bitField1_ |= 0x00800000;
+        onChanged();
+        return getUniversalCorrectionDocumentMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadataOrBuilder getUniversalCorrectionDocumentMetadataOrBuilder() {
+        if (universalCorrectionDocumentMetadataBuilder_ != null) {
+          return universalCorrectionDocumentMetadataBuilder_.getMessageOrBuilder();
+        } else {
+          return universalCorrectionDocumentMetadata_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentMetadata UniversalCorrectionDocumentMetadata = 58;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadataOrBuilder> 
+          getUniversalCorrectionDocumentMetadataFieldBuilder() {
+        if (universalCorrectionDocumentMetadataBuilder_ == null) {
+          universalCorrectionDocumentMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadataOrBuilder>(
+                  getUniversalCorrectionDocumentMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          universalCorrectionDocumentMetadata_ = null;
+        }
+        return universalCorrectionDocumentMetadataBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata universalCorrectionDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadataOrBuilder> universalCorrectionDocumentRevisionMetadataBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+       */
+      public boolean hasUniversalCorrectionDocumentRevisionMetadata() {
+        return ((bitField1_ & 0x01000000) == 0x01000000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata getUniversalCorrectionDocumentRevisionMetadata() {
+        if (universalCorrectionDocumentRevisionMetadataBuilder_ == null) {
+          return universalCorrectionDocumentRevisionMetadata_;
+        } else {
+          return universalCorrectionDocumentRevisionMetadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+       */
+      public Builder setUniversalCorrectionDocumentRevisionMetadata(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata value) {
+        if (universalCorrectionDocumentRevisionMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          universalCorrectionDocumentRevisionMetadata_ = value;
+          onChanged();
+        } else {
+          universalCorrectionDocumentRevisionMetadataBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x01000000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+       */
+      public Builder setUniversalCorrectionDocumentRevisionMetadata(
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.Builder builderForValue) {
+        if (universalCorrectionDocumentRevisionMetadataBuilder_ == null) {
+          universalCorrectionDocumentRevisionMetadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          universalCorrectionDocumentRevisionMetadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x01000000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+       */
+      public Builder mergeUniversalCorrectionDocumentRevisionMetadata(Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata value) {
+        if (universalCorrectionDocumentRevisionMetadataBuilder_ == null) {
+          if (((bitField1_ & 0x01000000) == 0x01000000) &&
+              universalCorrectionDocumentRevisionMetadata_ != Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.getDefaultInstance()) {
+            universalCorrectionDocumentRevisionMetadata_ =
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.newBuilder(universalCorrectionDocumentRevisionMetadata_).mergeFrom(value).buildPartial();
+          } else {
+            universalCorrectionDocumentRevisionMetadata_ = value;
+          }
+          onChanged();
+        } else {
+          universalCorrectionDocumentRevisionMetadataBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x01000000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+       */
+      public Builder clearUniversalCorrectionDocumentRevisionMetadata() {
+        if (universalCorrectionDocumentRevisionMetadataBuilder_ == null) {
+          universalCorrectionDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.getDefaultInstance();
+          onChanged();
+        } else {
+          universalCorrectionDocumentRevisionMetadataBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x01000000);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.Builder getUniversalCorrectionDocumentRevisionMetadataBuilder() {
+        bitField1_ |= 0x01000000;
+        onChanged();
+        return getUniversalCorrectionDocumentRevisionMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+       */
+      public Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadataOrBuilder getUniversalCorrectionDocumentRevisionMetadataOrBuilder() {
+        if (universalCorrectionDocumentRevisionMetadataBuilder_ != null) {
+          return universalCorrectionDocumentRevisionMetadataBuilder_.getMessageOrBuilder();
+        } else {
+          return universalCorrectionDocumentRevisionMetadata_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadataOrBuilder> 
+          getUniversalCorrectionDocumentRevisionMetadataFieldBuilder() {
+        if (universalCorrectionDocumentRevisionMetadataBuilder_ == null) {
+          universalCorrectionDocumentRevisionMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.Builder, Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadataOrBuilder>(
+                  getUniversalCorrectionDocumentRevisionMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          universalCorrectionDocumentRevisionMetadata_ = null;
+        }
+        return universalCorrectionDocumentRevisionMetadataBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Document)
     }
 
@@ -10880,7 +11483,7 @@ public final class DocumentProtos {
       "UnilateralDocument.proto\032)Documents/Univ" +
       "ersalTransferDocument.proto\032\026ResolutionT",
       "arget.proto\032\032ForwardDocumentEvent.proto\"" +
-      "\262\034\n\010Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessag" +
+      "\351\037\n\010Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessag" +
       "eId\030\002 \002(\t\022\020\n\010EntityId\030\003 \002(\t\022\036\n\026CreationT" +
       "imestampTicks\030\004 \002(\020\022\031\n\021CounteragentBoxId" +
       "\030\005 \001(\t\022I\n\014DocumentType\030\006 \001(\0162\036.Diadoc.Ap" +
@@ -10970,31 +11573,42 @@ public final class DocumentProtos {
       "malizedDocumentMetadata\022\202\001\n!UniversalTra" +
       "nsferDocumentMetadata\0308 \001(\0132W.Diadoc.Api",
       ".Proto.Documents.UniversalTransferDocume" +
-      "nt.UniversalTransferDocumentMetadata\"\310\001\n" +
-      "\020ResolutionStatus\022W\n\004Type\030\001 \001(\01620.Diadoc" +
-      ".Api.Proto.Documents.ResolutionStatusTyp" +
-      "e:\027UnknownResolutionStatus\0222\n\006Target\030\002 \001" +
-      "(\0132\".Diadoc.Api.Proto.ResolutionTarget\022\024" +
-      "\n\014AuthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t*" +
-      "\254\001\n\024ResolutionStatusType\022$\n\027UnknownResol" +
-      "utionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010Appr" +
-      "oved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024ApprovementRe",
-      "quested\020\003\022\026\n\022SignatureRequested\020\004\022\023\n\017Sig" +
-      "natureDenied\020\005*\262\001\n\020RevocationStatus\022\033\n\027U" +
-      "nknownRevocationStatus\020\000\022\030\n\024RevocationSt" +
-      "atusNone\020\001\022\035\n\031RevocationIsRequestedByMe\020" +
-      "\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revocatio" +
-      "nAccepted\020\004\022\026\n\022RevocationRejected\020\005*\256\001\n\031" +
-      "RoamingNotificationStatus\022$\n UnknownRoam" +
-      "ingNotificationStatus\020\000\022!\n\035RoamingNotifi" +
-      "cationStatusNone\020\001\022$\n RoamingNotificatio" +
-      "nStatusSuccess\020\002\022\"\n\036RoamingNotificationS",
-      "tatusError\020\003*\300\001\n\025SenderSignatureStatus\022 " +
-      "\n\034UnknownSenderSignatureStatus\020\000\022\035\n\031Wait" +
-      "ingForSenderSignature\020\001\022\034\n\030SenderSignatu" +
-      "reUnchecked\020\002\022\"\n\036SenderSignatureCheckedA" +
-      "ndValid\020\003\022$\n SenderSignatureCheckedAndIn" +
-      "valid\020\004B\020B\016DocumentProtos"
+      "nt.UniversalTransferDocumentMetadata\022\222\001\n" +
+      ")UniversalTransferDocumentRevisionMetada" +
+      "ta\0309 \001(\0132_.Diadoc.Api.Proto.Documents.Un" +
+      "iversalTransferDocument.UniversalTransfe" +
+      "rDocumentRevisionMetadata\022\206\001\n#UniversalC" +
+      "orrectionDocumentMetadata\030: \001(\0132Y.Diadoc" +
+      ".Api.Proto.Documents.UniversalTransferDo" +
+      "cument.UniversalCorrectionDocumentMetada" +
+      "ta\022\226\001\n+UniversalCorrectionDocumentRevisi",
+      "onMetadata\030; \001(\0132a.Diadoc.Api.Proto.Docu" +
+      "ments.UniversalTransferDocument.Universa" +
+      "lCorrectionDocumentRevisionMetadata\"\310\001\n\020" +
+      "ResolutionStatus\022W\n\004Type\030\001 \001(\01620.Diadoc." +
+      "Api.Proto.Documents.ResolutionStatusType" +
+      ":\027UnknownResolutionStatus\0222\n\006Target\030\002 \001(" +
+      "\0132\".Diadoc.Api.Proto.ResolutionTarget\022\024\n" +
+      "\014AuthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t*\254" +
+      "\001\n\024ResolutionStatusType\022$\n\027UnknownResolu" +
+      "tionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010Appro",
+      "ved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024ApprovementReq" +
+      "uested\020\003\022\026\n\022SignatureRequested\020\004\022\023\n\017Sign" +
+      "atureDenied\020\005*\262\001\n\020RevocationStatus\022\033\n\027Un" +
+      "knownRevocationStatus\020\000\022\030\n\024RevocationSta" +
+      "tusNone\020\001\022\035\n\031RevocationIsRequestedByMe\020\002" +
+      "\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revocation" +
+      "Accepted\020\004\022\026\n\022RevocationRejected\020\005*\256\001\n\031R" +
+      "oamingNotificationStatus\022$\n UnknownRoami" +
+      "ngNotificationStatus\020\000\022!\n\035RoamingNotific" +
+      "ationStatusNone\020\001\022$\n RoamingNotification",
+      "StatusSuccess\020\002\022\"\n\036RoamingNotificationSt" +
+      "atusError\020\003*\300\001\n\025SenderSignatureStatus\022 \n" +
+      "\034UnknownSenderSignatureStatus\020\000\022\035\n\031Waiti" +
+      "ngForSenderSignature\020\001\022\034\n\030SenderSignatur" +
+      "eUnchecked\020\002\022\"\n\036SenderSignatureCheckedAn" +
+      "dValid\020\003\022$\n SenderSignatureCheckedAndInv" +
+      "alid\020\004B\020B\016DocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11026,7 +11640,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", });
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_fieldAccessorTable = new
