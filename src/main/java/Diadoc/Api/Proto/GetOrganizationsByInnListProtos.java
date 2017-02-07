@@ -532,6 +532,15 @@ public final class GetOrganizationsByInnListProtos {
      * <code>optional .Diadoc.Api.Proto.CounteragentStatus CounteragentStatus = 2 [default = UnknownCounteragentStatus];</code>
      */
     Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus getCounteragentStatus();
+
+    /**
+     * <code>optional sfixed64 LastEventTimestampTicks = 3;</code>
+     */
+    boolean hasLastEventTimestampTicks();
+    /**
+     * <code>optional sfixed64 LastEventTimestampTicks = 3;</code>
+     */
+    long getLastEventTimestampTicks();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.OrganizationWithCounteragentStatus}
@@ -607,6 +616,11 @@ public final class GetOrganizationsByInnListProtos {
                 bitField0_ |= 0x00000002;
                 counteragentStatus_ = value;
               }
+              break;
+            }
+            case 25: {
+              bitField0_ |= 0x00000004;
+              lastEventTimestampTicks_ = input.readSFixed64();
               break;
             }
           }
@@ -685,9 +699,25 @@ public final class GetOrganizationsByInnListProtos {
       return counteragentStatus_;
     }
 
+    public static final int LASTEVENTTIMESTAMPTICKS_FIELD_NUMBER = 3;
+    private long lastEventTimestampTicks_;
+    /**
+     * <code>optional sfixed64 LastEventTimestampTicks = 3;</code>
+     */
+    public boolean hasLastEventTimestampTicks() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional sfixed64 LastEventTimestampTicks = 3;</code>
+     */
+    public long getLastEventTimestampTicks() {
+      return lastEventTimestampTicks_;
+    }
+
     private void initFields() {
       organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
       counteragentStatus_ = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.UnknownCounteragentStatus;
+      lastEventTimestampTicks_ = 0L;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -716,6 +746,9 @@ public final class GetOrganizationsByInnListProtos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeEnum(2, counteragentStatus_.getNumber());
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeSFixed64(3, lastEventTimestampTicks_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -732,6 +765,10 @@ public final class GetOrganizationsByInnListProtos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, counteragentStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeSFixed64Size(3, lastEventTimestampTicks_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -859,6 +896,8 @@ public final class GetOrganizationsByInnListProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         counteragentStatus_ = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.UnknownCounteragentStatus;
         bitField0_ = (bitField0_ & ~0x00000002);
+        lastEventTimestampTicks_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -899,6 +938,10 @@ public final class GetOrganizationsByInnListProtos {
           to_bitField0_ |= 0x00000002;
         }
         result.counteragentStatus_ = counteragentStatus_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.lastEventTimestampTicks_ = lastEventTimestampTicks_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -920,6 +963,9 @@ public final class GetOrganizationsByInnListProtos {
         }
         if (other.hasCounteragentStatus()) {
           setCounteragentStatus(other.getCounteragentStatus());
+        }
+        if (other.hasLastEventTimestampTicks()) {
+          setLastEventTimestampTicks(other.getLastEventTimestampTicks());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1103,6 +1149,38 @@ public final class GetOrganizationsByInnListProtos {
       public Builder clearCounteragentStatus() {
         bitField0_ = (bitField0_ & ~0x00000002);
         counteragentStatus_ = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.UnknownCounteragentStatus;
+        onChanged();
+        return this;
+      }
+
+      private long lastEventTimestampTicks_ ;
+      /**
+       * <code>optional sfixed64 LastEventTimestampTicks = 3;</code>
+       */
+      public boolean hasLastEventTimestampTicks() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional sfixed64 LastEventTimestampTicks = 3;</code>
+       */
+      public long getLastEventTimestampTicks() {
+        return lastEventTimestampTicks_;
+      }
+      /**
+       * <code>optional sfixed64 LastEventTimestampTicks = 3;</code>
+       */
+      public Builder setLastEventTimestampTicks(long value) {
+        bitField0_ |= 0x00000004;
+        lastEventTimestampTicks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional sfixed64 LastEventTimestampTicks = 3;</code>
+       */
+      public Builder clearLastEventTimestampTicks() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lastEventTimestampTicks_ = 0L;
         onChanged();
         return this;
       }
@@ -1833,15 +1911,16 @@ public final class GetOrganizationsByInnListProtos {
       "\n\037GetOrganizationsByInnList.proto\022\020Diado" +
       "c.Api.Proto\032\022Organization.proto\032\022Counter" +
       "agent.proto\"3\n GetOrganizationsByInnList" +
-      "Request\022\017\n\007InnList\030\001 \003(\t\"\267\001\n\"Organizatio" +
+      "Request\022\017\n\007InnList\030\001 \003(\t\"\330\001\n\"Organizatio" +
       "nWithCounteragentStatus\0224\n\014Organization\030" +
       "\001 \002(\0132\036.Diadoc.Api.Proto.Organization\022[\n" +
       "\022CounteragentStatus\030\002 \001(\0162$.Diadoc.Api.P" +
       "roto.CounteragentStatus:\031UnknownCountera" +
-      "gentStatus\"p\n!GetOrganizationsByInnListR" +
-      "esponse\022K\n\rOrganizations\030\001 \003(\01324.Diadoc.",
-      "Api.Proto.OrganizationWithCounteragentSt" +
-      "atusB!B\037GetOrganizationsByInnListProtos"
+      "gentStatus\022\037\n\027LastEventTimestampTicks\030\003 " +
+      "\001(\020\"p\n!GetOrganizationsByInnListResponse",
+      "\022K\n\rOrganizations\030\001 \003(\01324.Diadoc.Api.Pro" +
+      "to.OrganizationWithCounteragentStatusB!B" +
+      "\037GetOrganizationsByInnListProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1868,7 +1947,7 @@ public final class GetOrganizationsByInnListProtos {
     internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor,
-        new java.lang.String[] { "Organization", "CounteragentStatus", });
+        new java.lang.String[] { "Organization", "CounteragentStatus", "LastEventTimestampTicks", });
     internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_fieldAccessorTable = new
