@@ -350,7 +350,7 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("boxId", currentBoxId));
         if (eventIdCurrent != null)
             parameters.add(new BasicNameValuePair("afterEventId", eventIdCurrent));
-        return DiadocMessage_GetApiProtos.BoxEventList.parseFrom(PerformGetHttpRequest("/V4/GetNewEvents", parameters));
+        return DiadocMessage_GetApiProtos.BoxEventList.parseFrom(PerformGetHttpRequest("/V5/GetNewEvents", parameters));
     }
 
     public OrganizationProtos.OrganizationList GetOrganizationsByInnKpp(String inn, String kpp) throws IOException {
