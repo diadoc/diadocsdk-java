@@ -779,6 +779,18 @@ public class DiadocApi {
         return UniversalTransferDocumentInfoProtos.UniversalTransferDocumentBuyerTitleInfo.parseFrom(response);
     }
 
+    public UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo ParseUniversalCorrectionDocumentSellerTitleXml(byte[] utdXmlContent) throws IOException
+    {
+        byte[] response = PerformPostHttpRequest("/ParseUniversalCorrectionDocumentSellerTitleXml", null, utdXmlContent);
+        return UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo.parseFrom(response);
+    }
+
+    public UniversalTransferDocumentInfoProtos.UniversalTransferDocumentBuyerTitleInfo ParseUniversalCorrectionDocumentBuyerTitleXml(byte[] utdXmlContent) throws IOException
+    {
+        byte[] response = PerformPostHttpRequest("/ParseUniversalCorrectionDocumentBuyerTitleXml", null, utdXmlContent);
+        return UniversalTransferDocumentInfoProtos.UniversalTransferDocumentBuyerTitleInfo.parseFrom(response);
+    }
+
     public RevocationRequestInfoProtos.RevocationRequestInfo ParseRevocationRequestXml(byte[] xmlContent) throws IOException
     {
         return RevocationRequestInfoProtos.RevocationRequestInfo.parseFrom(PerformPostHttpRequest("/ParseRevocationRequestXml", null, xmlContent));
