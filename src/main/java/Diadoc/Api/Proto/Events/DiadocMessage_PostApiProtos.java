@@ -50459,27 +50459,27 @@ public final class DiadocMessage_PostApiProtos {
         int index);
 
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment> 
-        getResolutionChainAssignmentsList();
+    java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment> 
+        getResolutionRouteAssignmentsList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment getResolutionChainAssignments(int index);
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment getResolutionRouteAssignments(int index);
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    int getResolutionChainAssignmentsCount();
+    int getResolutionRouteAssignmentsCount();
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder> 
-        getResolutionChainAssignmentsOrBuilderList();
+    java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder> 
+        getResolutionRouteAssignmentsOrBuilderList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder getResolutionChainAssignmentsOrBuilder(
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder getResolutionRouteAssignmentsOrBuilder(
         int index);
 
     /**
@@ -50552,6 +50552,30 @@ public final class DiadocMessage_PostApiProtos {
      * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment UniversalTransferDocumentBuyerTitles = 20;</code>
      */
     Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder getUniversalTransferDocumentBuyerTitlesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval> 
+        getResolutionRouteRemovalsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval getResolutionRouteRemovals(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    int getResolutionRouteRemovalsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder> 
+        getResolutionRouteRemovalsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder getResolutionRouteRemovalsOrBuilder(
         int index);
   }
   /**
@@ -50732,10 +50756,10 @@ public final class DiadocMessage_PostApiProtos {
             }
             case 138: {
               if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
-                resolutionChainAssignments_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment>();
+                resolutionRouteAssignments_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment>();
                 mutable_bitField0_ |= 0x00010000;
               }
-              resolutionChainAssignments_.add(input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.PARSER, extensionRegistry));
+              resolutionRouteAssignments_.add(input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.PARSER, extensionRegistry));
               break;
             }
             case 146: {
@@ -50760,6 +50784,14 @@ public final class DiadocMessage_PostApiProtos {
                 mutable_bitField0_ |= 0x00080000;
               }
               universalTransferDocumentBuyerTitles_.add(input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.PARSER, extensionRegistry));
+              break;
+            }
+            case 170: {
+              if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+                resolutionRouteRemovals_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval>();
+                mutable_bitField0_ |= 0x00100000;
+              }
+              resolutionRouteRemovals_.add(input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.PARSER, extensionRegistry));
               break;
             }
           }
@@ -50813,7 +50845,7 @@ public final class DiadocMessage_PostApiProtos {
           customDataPatches_ = java.util.Collections.unmodifiableList(customDataPatches_);
         }
         if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
-          resolutionChainAssignments_ = java.util.Collections.unmodifiableList(resolutionChainAssignments_);
+          resolutionRouteAssignments_ = java.util.Collections.unmodifiableList(resolutionRouteAssignments_);
         }
         if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
           signatureVerifications_ = java.util.Collections.unmodifiableList(signatureVerifications_);
@@ -50823,6 +50855,9 @@ public final class DiadocMessage_PostApiProtos {
         }
         if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
           universalTransferDocumentBuyerTitles_ = java.util.Collections.unmodifiableList(universalTransferDocumentBuyerTitles_);
+        }
+        if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+          resolutionRouteRemovals_ = java.util.Collections.unmodifiableList(resolutionRouteRemovals_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -51430,39 +51465,39 @@ public final class DiadocMessage_PostApiProtos {
       return customDataPatches_.get(index);
     }
 
-    public static final int RESOLUTIONCHAINASSIGNMENTS_FIELD_NUMBER = 17;
-    private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment> resolutionChainAssignments_;
+    public static final int RESOLUTIONROUTEASSIGNMENTS_FIELD_NUMBER = 17;
+    private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment> resolutionRouteAssignments_;
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment> getResolutionChainAssignmentsList() {
-      return resolutionChainAssignments_;
+    public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment> getResolutionRouteAssignmentsList() {
+      return resolutionRouteAssignments_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder> 
-        getResolutionChainAssignmentsOrBuilderList() {
-      return resolutionChainAssignments_;
+    public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder> 
+        getResolutionRouteAssignmentsOrBuilderList() {
+      return resolutionRouteAssignments_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    public int getResolutionChainAssignmentsCount() {
-      return resolutionChainAssignments_.size();
+    public int getResolutionRouteAssignmentsCount() {
+      return resolutionRouteAssignments_.size();
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment getResolutionChainAssignments(int index) {
-      return resolutionChainAssignments_.get(index);
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment getResolutionRouteAssignments(int index) {
+      return resolutionRouteAssignments_.get(index);
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
      */
-    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder getResolutionChainAssignmentsOrBuilder(
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder getResolutionRouteAssignmentsOrBuilder(
         int index) {
-      return resolutionChainAssignments_.get(index);
+      return resolutionRouteAssignments_.get(index);
     }
 
     public static final int SIGNATUREVERIFICATIONS_FIELD_NUMBER = 18;
@@ -51570,6 +51605,41 @@ public final class DiadocMessage_PostApiProtos {
       return universalTransferDocumentBuyerTitles_.get(index);
     }
 
+    public static final int RESOLUTIONROUTEREMOVALS_FIELD_NUMBER = 21;
+    private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval> resolutionRouteRemovals_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval> getResolutionRouteRemovalsList() {
+      return resolutionRouteRemovals_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder> 
+        getResolutionRouteRemovalsOrBuilderList() {
+      return resolutionRouteRemovals_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    public int getResolutionRouteRemovalsCount() {
+      return resolutionRouteRemovals_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval getResolutionRouteRemovals(int index) {
+      return resolutionRouteRemovals_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder getResolutionRouteRemovalsOrBuilder(
+        int index) {
+      return resolutionRouteRemovals_.get(index);
+    }
+
     private void initFields() {
       boxId_ = "";
       messageId_ = "";
@@ -51587,10 +51657,11 @@ public final class DiadocMessage_PostApiProtos {
       revocationRequests_ = java.util.Collections.emptyList();
       xmlSignatureRejections_ = java.util.Collections.emptyList();
       customDataPatches_ = java.util.Collections.emptyList();
-      resolutionChainAssignments_ = java.util.Collections.emptyList();
+      resolutionRouteAssignments_ = java.util.Collections.emptyList();
       signatureVerifications_ = java.util.Collections.emptyList();
       editDocumentPacketCommands_ = java.util.Collections.emptyList();
       universalTransferDocumentBuyerTitles_ = java.util.Collections.emptyList();
+      resolutionRouteRemovals_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -51690,8 +51761,8 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
       }
-      for (int i = 0; i < getResolutionChainAssignmentsCount(); i++) {
-        if (!getResolutionChainAssignments(i).isInitialized()) {
+      for (int i = 0; i < getResolutionRouteAssignmentsCount(); i++) {
+        if (!getResolutionRouteAssignments(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -51710,6 +51781,12 @@ public final class DiadocMessage_PostApiProtos {
       }
       for (int i = 0; i < getUniversalTransferDocumentBuyerTitlesCount(); i++) {
         if (!getUniversalTransferDocumentBuyerTitles(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getResolutionRouteRemovalsCount(); i++) {
+        if (!getResolutionRouteRemovals(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -51769,8 +51846,8 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < customDataPatches_.size(); i++) {
         output.writeMessage(16, customDataPatches_.get(i));
       }
-      for (int i = 0; i < resolutionChainAssignments_.size(); i++) {
-        output.writeMessage(17, resolutionChainAssignments_.get(i));
+      for (int i = 0; i < resolutionRouteAssignments_.size(); i++) {
+        output.writeMessage(17, resolutionRouteAssignments_.get(i));
       }
       for (int i = 0; i < signatureVerifications_.size(); i++) {
         output.writeMessage(18, signatureVerifications_.get(i));
@@ -51780,6 +51857,9 @@ public final class DiadocMessage_PostApiProtos {
       }
       for (int i = 0; i < universalTransferDocumentBuyerTitles_.size(); i++) {
         output.writeMessage(20, universalTransferDocumentBuyerTitles_.get(i));
+      }
+      for (int i = 0; i < resolutionRouteRemovals_.size(); i++) {
+        output.writeMessage(21, resolutionRouteRemovals_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -51854,9 +51934,9 @@ public final class DiadocMessage_PostApiProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, customDataPatches_.get(i));
       }
-      for (int i = 0; i < resolutionChainAssignments_.size(); i++) {
+      for (int i = 0; i < resolutionRouteAssignments_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(17, resolutionChainAssignments_.get(i));
+          .computeMessageSize(17, resolutionRouteAssignments_.get(i));
       }
       for (int i = 0; i < signatureVerifications_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -51869,6 +51949,10 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < universalTransferDocumentBuyerTitles_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(20, universalTransferDocumentBuyerTitles_.get(i));
+      }
+      for (int i = 0; i < resolutionRouteRemovals_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, resolutionRouteRemovals_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -51993,10 +52077,11 @@ public final class DiadocMessage_PostApiProtos {
           getRevocationRequestsFieldBuilder();
           getXmlSignatureRejectionsFieldBuilder();
           getCustomDataPatchesFieldBuilder();
-          getResolutionChainAssignmentsFieldBuilder();
+          getResolutionRouteAssignmentsFieldBuilder();
           getSignatureVerificationsFieldBuilder();
           getEditDocumentPacketCommandsFieldBuilder();
           getUniversalTransferDocumentBuyerTitlesFieldBuilder();
+          getResolutionRouteRemovalsFieldBuilder();
         }
       }
       private static Builder create() {
@@ -52093,11 +52178,11 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           customDataPatchesBuilder_.clear();
         }
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          resolutionChainAssignments_ = java.util.Collections.emptyList();
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          resolutionRouteAssignments_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00010000);
         } else {
-          resolutionChainAssignmentsBuilder_.clear();
+          resolutionRouteAssignmentsBuilder_.clear();
         }
         if (signatureVerificationsBuilder_ == null) {
           signatureVerifications_ = java.util.Collections.emptyList();
@@ -52116,6 +52201,12 @@ public final class DiadocMessage_PostApiProtos {
           bitField0_ = (bitField0_ & ~0x00080000);
         } else {
           universalTransferDocumentBuyerTitlesBuilder_.clear();
+        }
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          resolutionRouteRemovals_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00100000);
+        } else {
+          resolutionRouteRemovalsBuilder_.clear();
         }
         return this;
       }
@@ -52279,14 +52370,14 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           result.customDataPatches_ = customDataPatchesBuilder_.build();
         }
-        if (resolutionChainAssignmentsBuilder_ == null) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
           if (((bitField0_ & 0x00010000) == 0x00010000)) {
-            resolutionChainAssignments_ = java.util.Collections.unmodifiableList(resolutionChainAssignments_);
+            resolutionRouteAssignments_ = java.util.Collections.unmodifiableList(resolutionRouteAssignments_);
             bitField0_ = (bitField0_ & ~0x00010000);
           }
-          result.resolutionChainAssignments_ = resolutionChainAssignments_;
+          result.resolutionRouteAssignments_ = resolutionRouteAssignments_;
         } else {
-          result.resolutionChainAssignments_ = resolutionChainAssignmentsBuilder_.build();
+          result.resolutionRouteAssignments_ = resolutionRouteAssignmentsBuilder_.build();
         }
         if (signatureVerificationsBuilder_ == null) {
           if (((bitField0_ & 0x00020000) == 0x00020000)) {
@@ -52314,6 +52405,15 @@ public final class DiadocMessage_PostApiProtos {
           result.universalTransferDocumentBuyerTitles_ = universalTransferDocumentBuyerTitles_;
         } else {
           result.universalTransferDocumentBuyerTitles_ = universalTransferDocumentBuyerTitlesBuilder_.build();
+        }
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          if (((bitField0_ & 0x00100000) == 0x00100000)) {
+            resolutionRouteRemovals_ = java.util.Collections.unmodifiableList(resolutionRouteRemovals_);
+            bitField0_ = (bitField0_ & ~0x00100000);
+          }
+          result.resolutionRouteRemovals_ = resolutionRouteRemovals_;
+        } else {
+          result.resolutionRouteRemovals_ = resolutionRouteRemovalsBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -52705,29 +52805,29 @@ public final class DiadocMessage_PostApiProtos {
             }
           }
         }
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          if (!other.resolutionChainAssignments_.isEmpty()) {
-            if (resolutionChainAssignments_.isEmpty()) {
-              resolutionChainAssignments_ = other.resolutionChainAssignments_;
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          if (!other.resolutionRouteAssignments_.isEmpty()) {
+            if (resolutionRouteAssignments_.isEmpty()) {
+              resolutionRouteAssignments_ = other.resolutionRouteAssignments_;
               bitField0_ = (bitField0_ & ~0x00010000);
             } else {
-              ensureResolutionChainAssignmentsIsMutable();
-              resolutionChainAssignments_.addAll(other.resolutionChainAssignments_);
+              ensureResolutionRouteAssignmentsIsMutable();
+              resolutionRouteAssignments_.addAll(other.resolutionRouteAssignments_);
             }
             onChanged();
           }
         } else {
-          if (!other.resolutionChainAssignments_.isEmpty()) {
-            if (resolutionChainAssignmentsBuilder_.isEmpty()) {
-              resolutionChainAssignmentsBuilder_.dispose();
-              resolutionChainAssignmentsBuilder_ = null;
-              resolutionChainAssignments_ = other.resolutionChainAssignments_;
+          if (!other.resolutionRouteAssignments_.isEmpty()) {
+            if (resolutionRouteAssignmentsBuilder_.isEmpty()) {
+              resolutionRouteAssignmentsBuilder_.dispose();
+              resolutionRouteAssignmentsBuilder_ = null;
+              resolutionRouteAssignments_ = other.resolutionRouteAssignments_;
               bitField0_ = (bitField0_ & ~0x00010000);
-              resolutionChainAssignmentsBuilder_ = 
+              resolutionRouteAssignmentsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getResolutionChainAssignmentsFieldBuilder() : null;
+                   getResolutionRouteAssignmentsFieldBuilder() : null;
             } else {
-              resolutionChainAssignmentsBuilder_.addAllMessages(other.resolutionChainAssignments_);
+              resolutionRouteAssignmentsBuilder_.addAllMessages(other.resolutionRouteAssignments_);
             }
           }
         }
@@ -52806,6 +52906,32 @@ public final class DiadocMessage_PostApiProtos {
                    getUniversalTransferDocumentBuyerTitlesFieldBuilder() : null;
             } else {
               universalTransferDocumentBuyerTitlesBuilder_.addAllMessages(other.universalTransferDocumentBuyerTitles_);
+            }
+          }
+        }
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          if (!other.resolutionRouteRemovals_.isEmpty()) {
+            if (resolutionRouteRemovals_.isEmpty()) {
+              resolutionRouteRemovals_ = other.resolutionRouteRemovals_;
+              bitField0_ = (bitField0_ & ~0x00100000);
+            } else {
+              ensureResolutionRouteRemovalsIsMutable();
+              resolutionRouteRemovals_.addAll(other.resolutionRouteRemovals_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.resolutionRouteRemovals_.isEmpty()) {
+            if (resolutionRouteRemovalsBuilder_.isEmpty()) {
+              resolutionRouteRemovalsBuilder_.dispose();
+              resolutionRouteRemovalsBuilder_ = null;
+              resolutionRouteRemovals_ = other.resolutionRouteRemovals_;
+              bitField0_ = (bitField0_ & ~0x00100000);
+              resolutionRouteRemovalsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getResolutionRouteRemovalsFieldBuilder() : null;
+            } else {
+              resolutionRouteRemovalsBuilder_.addAllMessages(other.resolutionRouteRemovals_);
             }
           }
         }
@@ -52906,8 +53032,8 @@ public final class DiadocMessage_PostApiProtos {
             return false;
           }
         }
-        for (int i = 0; i < getResolutionChainAssignmentsCount(); i++) {
-          if (!getResolutionChainAssignments(i).isInitialized()) {
+        for (int i = 0; i < getResolutionRouteAssignmentsCount(); i++) {
+          if (!getResolutionRouteAssignments(i).isInitialized()) {
             
             return false;
           }
@@ -52926,6 +53052,12 @@ public final class DiadocMessage_PostApiProtos {
         }
         for (int i = 0; i < getUniversalTransferDocumentBuyerTitlesCount(); i++) {
           if (!getUniversalTransferDocumentBuyerTitles(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getResolutionRouteRemovalsCount(); i++) {
+          if (!getResolutionRouteRemovals(i).isInitialized()) {
             
             return false;
           }
@@ -56464,244 +56596,244 @@ public final class DiadocMessage_PostApiProtos {
         return customDataPatchesBuilder_;
       }
 
-      private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment> resolutionChainAssignments_ =
+      private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment> resolutionRouteAssignments_ =
         java.util.Collections.emptyList();
-      private void ensureResolutionChainAssignmentsIsMutable() {
+      private void ensureResolutionRouteAssignmentsIsMutable() {
         if (!((bitField0_ & 0x00010000) == 0x00010000)) {
-          resolutionChainAssignments_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment>(resolutionChainAssignments_);
+          resolutionRouteAssignments_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment>(resolutionRouteAssignments_);
           bitField0_ |= 0x00010000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder> resolutionChainAssignmentsBuilder_;
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder> resolutionRouteAssignmentsBuilder_;
 
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment> getResolutionChainAssignmentsList() {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(resolutionChainAssignments_);
+      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment> getResolutionRouteAssignmentsList() {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(resolutionRouteAssignments_);
         } else {
-          return resolutionChainAssignmentsBuilder_.getMessageList();
+          return resolutionRouteAssignmentsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public int getResolutionChainAssignmentsCount() {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          return resolutionChainAssignments_.size();
+      public int getResolutionRouteAssignmentsCount() {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          return resolutionRouteAssignments_.size();
         } else {
-          return resolutionChainAssignmentsBuilder_.getCount();
+          return resolutionRouteAssignmentsBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment getResolutionChainAssignments(int index) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          return resolutionChainAssignments_.get(index);
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment getResolutionRouteAssignments(int index) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          return resolutionRouteAssignments_.get(index);
         } else {
-          return resolutionChainAssignmentsBuilder_.getMessage(index);
+          return resolutionRouteAssignmentsBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Builder setResolutionChainAssignments(
-          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment value) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
+      public Builder setResolutionRouteAssignments(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment value) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureResolutionChainAssignmentsIsMutable();
-          resolutionChainAssignments_.set(index, value);
+          ensureResolutionRouteAssignmentsIsMutable();
+          resolutionRouteAssignments_.set(index, value);
           onChanged();
         } else {
-          resolutionChainAssignmentsBuilder_.setMessage(index, value);
+          resolutionRouteAssignmentsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Builder setResolutionChainAssignments(
-          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder builderForValue) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          ensureResolutionChainAssignmentsIsMutable();
-          resolutionChainAssignments_.set(index, builderForValue.build());
+      public Builder setResolutionRouteAssignments(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder builderForValue) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          ensureResolutionRouteAssignmentsIsMutable();
+          resolutionRouteAssignments_.set(index, builderForValue.build());
           onChanged();
         } else {
-          resolutionChainAssignmentsBuilder_.setMessage(index, builderForValue.build());
+          resolutionRouteAssignmentsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Builder addResolutionChainAssignments(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment value) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
+      public Builder addResolutionRouteAssignments(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment value) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureResolutionChainAssignmentsIsMutable();
-          resolutionChainAssignments_.add(value);
+          ensureResolutionRouteAssignmentsIsMutable();
+          resolutionRouteAssignments_.add(value);
           onChanged();
         } else {
-          resolutionChainAssignmentsBuilder_.addMessage(value);
+          resolutionRouteAssignmentsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Builder addResolutionChainAssignments(
-          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment value) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
+      public Builder addResolutionRouteAssignments(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment value) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureResolutionChainAssignmentsIsMutable();
-          resolutionChainAssignments_.add(index, value);
+          ensureResolutionRouteAssignmentsIsMutable();
+          resolutionRouteAssignments_.add(index, value);
           onChanged();
         } else {
-          resolutionChainAssignmentsBuilder_.addMessage(index, value);
+          resolutionRouteAssignmentsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Builder addResolutionChainAssignments(
-          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder builderForValue) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          ensureResolutionChainAssignmentsIsMutable();
-          resolutionChainAssignments_.add(builderForValue.build());
+      public Builder addResolutionRouteAssignments(
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder builderForValue) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          ensureResolutionRouteAssignmentsIsMutable();
+          resolutionRouteAssignments_.add(builderForValue.build());
           onChanged();
         } else {
-          resolutionChainAssignmentsBuilder_.addMessage(builderForValue.build());
+          resolutionRouteAssignmentsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Builder addResolutionChainAssignments(
-          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder builderForValue) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          ensureResolutionChainAssignmentsIsMutable();
-          resolutionChainAssignments_.add(index, builderForValue.build());
+      public Builder addResolutionRouteAssignments(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder builderForValue) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          ensureResolutionRouteAssignmentsIsMutable();
+          resolutionRouteAssignments_.add(index, builderForValue.build());
           onChanged();
         } else {
-          resolutionChainAssignmentsBuilder_.addMessage(index, builderForValue.build());
+          resolutionRouteAssignmentsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Builder addAllResolutionChainAssignments(
-          java.lang.Iterable<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment> values) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          ensureResolutionChainAssignmentsIsMutable();
+      public Builder addAllResolutionRouteAssignments(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment> values) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          ensureResolutionRouteAssignmentsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, resolutionChainAssignments_);
+              values, resolutionRouteAssignments_);
           onChanged();
         } else {
-          resolutionChainAssignmentsBuilder_.addAllMessages(values);
+          resolutionRouteAssignmentsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Builder clearResolutionChainAssignments() {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          resolutionChainAssignments_ = java.util.Collections.emptyList();
+      public Builder clearResolutionRouteAssignments() {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          resolutionRouteAssignments_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00010000);
           onChanged();
         } else {
-          resolutionChainAssignmentsBuilder_.clear();
+          resolutionRouteAssignmentsBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Builder removeResolutionChainAssignments(int index) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          ensureResolutionChainAssignmentsIsMutable();
-          resolutionChainAssignments_.remove(index);
+      public Builder removeResolutionRouteAssignments(int index) {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          ensureResolutionRouteAssignmentsIsMutable();
+          resolutionRouteAssignments_.remove(index);
           onChanged();
         } else {
-          resolutionChainAssignmentsBuilder_.remove(index);
+          resolutionRouteAssignmentsBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder getResolutionChainAssignmentsBuilder(
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder getResolutionRouteAssignmentsBuilder(
           int index) {
-        return getResolutionChainAssignmentsFieldBuilder().getBuilder(index);
+        return getResolutionRouteAssignmentsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder getResolutionChainAssignmentsOrBuilder(
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder getResolutionRouteAssignmentsOrBuilder(
           int index) {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          return resolutionChainAssignments_.get(index);  } else {
-          return resolutionChainAssignmentsBuilder_.getMessageOrBuilder(index);
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          return resolutionRouteAssignments_.get(index);  } else {
+          return resolutionRouteAssignmentsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder> 
-           getResolutionChainAssignmentsOrBuilderList() {
-        if (resolutionChainAssignmentsBuilder_ != null) {
-          return resolutionChainAssignmentsBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder> 
+           getResolutionRouteAssignmentsOrBuilderList() {
+        if (resolutionRouteAssignmentsBuilder_ != null) {
+          return resolutionRouteAssignmentsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(resolutionChainAssignments_);
+          return java.util.Collections.unmodifiableList(resolutionRouteAssignments_);
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder addResolutionChainAssignmentsBuilder() {
-        return getResolutionChainAssignmentsFieldBuilder().addBuilder(
-            Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.getDefaultInstance());
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder addResolutionRouteAssignmentsBuilder() {
+        return getResolutionRouteAssignmentsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder addResolutionChainAssignmentsBuilder(
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder addResolutionRouteAssignmentsBuilder(
           int index) {
-        return getResolutionChainAssignmentsFieldBuilder().addBuilder(
-            index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.getDefaultInstance());
+        return getResolutionRouteAssignmentsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionChainAssignment ResolutionChainAssignments = 17;</code>
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteAssignment ResolutionRouteAssignments = 17;</code>
        */
-      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder> 
-           getResolutionChainAssignmentsBuilderList() {
-        return getResolutionChainAssignmentsFieldBuilder().getBuilderList();
+      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder> 
+           getResolutionRouteAssignmentsBuilderList() {
+        return getResolutionRouteAssignmentsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder> 
-          getResolutionChainAssignmentsFieldBuilder() {
-        if (resolutionChainAssignmentsBuilder_ == null) {
-          resolutionChainAssignmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder>(
-                  resolutionChainAssignments_,
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder> 
+          getResolutionRouteAssignmentsFieldBuilder() {
+        if (resolutionRouteAssignmentsBuilder_ == null) {
+          resolutionRouteAssignmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder>(
+                  resolutionRouteAssignments_,
                   ((bitField0_ & 0x00010000) == 0x00010000),
                   getParentForChildren(),
                   isClean());
-          resolutionChainAssignments_ = null;
+          resolutionRouteAssignments_ = null;
         }
-        return resolutionChainAssignmentsBuilder_;
+        return resolutionRouteAssignmentsBuilder_;
       }
 
       private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.SignatureVerification> signatureVerifications_ =
@@ -57422,6 +57554,246 @@ public final class DiadocMessage_PostApiProtos {
           universalTransferDocumentBuyerTitles_ = null;
         }
         return universalTransferDocumentBuyerTitlesBuilder_;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval> resolutionRouteRemovals_ =
+        java.util.Collections.emptyList();
+      private void ensureResolutionRouteRemovalsIsMutable() {
+        if (!((bitField0_ & 0x00100000) == 0x00100000)) {
+          resolutionRouteRemovals_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval>(resolutionRouteRemovals_);
+          bitField0_ |= 0x00100000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder> resolutionRouteRemovalsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval> getResolutionRouteRemovalsList() {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(resolutionRouteRemovals_);
+        } else {
+          return resolutionRouteRemovalsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public int getResolutionRouteRemovalsCount() {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          return resolutionRouteRemovals_.size();
+        } else {
+          return resolutionRouteRemovalsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval getResolutionRouteRemovals(int index) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          return resolutionRouteRemovals_.get(index);
+        } else {
+          return resolutionRouteRemovalsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Builder setResolutionRouteRemovals(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval value) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResolutionRouteRemovalsIsMutable();
+          resolutionRouteRemovals_.set(index, value);
+          onChanged();
+        } else {
+          resolutionRouteRemovalsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Builder setResolutionRouteRemovals(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder builderForValue) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          ensureResolutionRouteRemovalsIsMutable();
+          resolutionRouteRemovals_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resolutionRouteRemovalsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Builder addResolutionRouteRemovals(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval value) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResolutionRouteRemovalsIsMutable();
+          resolutionRouteRemovals_.add(value);
+          onChanged();
+        } else {
+          resolutionRouteRemovalsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Builder addResolutionRouteRemovals(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval value) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResolutionRouteRemovalsIsMutable();
+          resolutionRouteRemovals_.add(index, value);
+          onChanged();
+        } else {
+          resolutionRouteRemovalsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Builder addResolutionRouteRemovals(
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder builderForValue) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          ensureResolutionRouteRemovalsIsMutable();
+          resolutionRouteRemovals_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resolutionRouteRemovalsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Builder addResolutionRouteRemovals(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder builderForValue) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          ensureResolutionRouteRemovalsIsMutable();
+          resolutionRouteRemovals_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resolutionRouteRemovalsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Builder addAllResolutionRouteRemovals(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval> values) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          ensureResolutionRouteRemovalsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resolutionRouteRemovals_);
+          onChanged();
+        } else {
+          resolutionRouteRemovalsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Builder clearResolutionRouteRemovals() {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          resolutionRouteRemovals_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00100000);
+          onChanged();
+        } else {
+          resolutionRouteRemovalsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Builder removeResolutionRouteRemovals(int index) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          ensureResolutionRouteRemovalsIsMutable();
+          resolutionRouteRemovals_.remove(index);
+          onChanged();
+        } else {
+          resolutionRouteRemovalsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder getResolutionRouteRemovalsBuilder(
+          int index) {
+        return getResolutionRouteRemovalsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder getResolutionRouteRemovalsOrBuilder(
+          int index) {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          return resolutionRouteRemovals_.get(index);  } else {
+          return resolutionRouteRemovalsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder> 
+           getResolutionRouteRemovalsOrBuilderList() {
+        if (resolutionRouteRemovalsBuilder_ != null) {
+          return resolutionRouteRemovalsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(resolutionRouteRemovals_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder addResolutionRouteRemovalsBuilder() {
+        return getResolutionRouteRemovalsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder addResolutionRouteRemovalsBuilder(
+          int index) {
+        return getResolutionRouteRemovalsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ResolutionRouteRemoval ResolutionRouteRemovals = 21;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder> 
+           getResolutionRouteRemovalsBuilderList() {
+        return getResolutionRouteRemovalsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder> 
+          getResolutionRouteRemovalsFieldBuilder() {
+        if (resolutionRouteRemovalsBuilder_ == null) {
+          resolutionRouteRemovalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder>(
+                  resolutionRouteRemovals_,
+                  ((bitField0_ & 0x00100000) == 0x00100000),
+                  getParentForChildren(),
+                  isClean());
+          resolutionRouteRemovals_ = null;
+        }
+        return resolutionRouteRemovalsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.MessagePatchToPost)
@@ -59212,8 +59584,8 @@ public final class DiadocMessage_PostApiProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Events.ResolutionRequestAttachment)
   }
 
-  public interface ResolutionChainAssignmentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Events.ResolutionChainAssignment)
+  public interface ResolutionRouteAssignmentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Events.ResolutionRouteAssignment)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -59231,18 +59603,18 @@ public final class DiadocMessage_PostApiProtos {
         getInitialDocumentIdBytes();
 
     /**
-     * <code>required string ChainId = 2;</code>
+     * <code>required string RouteId = 2;</code>
      */
-    boolean hasChainId();
+    boolean hasRouteId();
     /**
-     * <code>required string ChainId = 2;</code>
+     * <code>required string RouteId = 2;</code>
      */
-    java.lang.String getChainId();
+    java.lang.String getRouteId();
     /**
-     * <code>required string ChainId = 2;</code>
+     * <code>required string RouteId = 2;</code>
      */
     com.google.protobuf.ByteString
-        getChainIdBytes();
+        getRouteIdBytes();
 
     /**
      * <code>optional string Comment = 3;</code>
@@ -59259,25 +59631,25 @@ public final class DiadocMessage_PostApiProtos {
         getCommentBytes();
   }
   /**
-   * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionChainAssignment}
+   * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionRouteAssignment}
    */
-  public static final class ResolutionChainAssignment extends
+  public static final class ResolutionRouteAssignment extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Events.ResolutionChainAssignment)
-      ResolutionChainAssignmentOrBuilder {
-    // Use ResolutionChainAssignment.newBuilder() to construct.
-    private ResolutionChainAssignment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Events.ResolutionRouteAssignment)
+      ResolutionRouteAssignmentOrBuilder {
+    // Use ResolutionRouteAssignment.newBuilder() to construct.
+    private ResolutionRouteAssignment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private ResolutionChainAssignment(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private ResolutionRouteAssignment(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final ResolutionChainAssignment defaultInstance;
-    public static ResolutionChainAssignment getDefaultInstance() {
+    private static final ResolutionRouteAssignment defaultInstance;
+    public static ResolutionRouteAssignment getDefaultInstance() {
       return defaultInstance;
     }
 
-    public ResolutionChainAssignment getDefaultInstanceForType() {
+    public ResolutionRouteAssignment getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -59287,7 +59659,7 @@ public final class DiadocMessage_PostApiProtos {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private ResolutionChainAssignment(
+    private ResolutionRouteAssignment(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -59319,7 +59691,7 @@ public final class DiadocMessage_PostApiProtos {
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              chainId_ = bs;
+              routeId_ = bs;
               break;
             }
             case 26: {
@@ -59342,28 +59714,28 @@ public final class DiadocMessage_PostApiProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_descriptor;
+      return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_fieldAccessorTable
+      return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.class, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder.class);
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.class, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<ResolutionChainAssignment> PARSER =
-        new com.google.protobuf.AbstractParser<ResolutionChainAssignment>() {
-      public ResolutionChainAssignment parsePartialFrom(
+    public static com.google.protobuf.Parser<ResolutionRouteAssignment> PARSER =
+        new com.google.protobuf.AbstractParser<ResolutionRouteAssignment>() {
+      public ResolutionRouteAssignment parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ResolutionChainAssignment(input, extensionRegistry);
+        return new ResolutionRouteAssignment(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ResolutionChainAssignment> getParserForType() {
+    public com.google.protobuf.Parser<ResolutionRouteAssignment> getParserForType() {
       return PARSER;
     }
 
@@ -59410,19 +59782,19 @@ public final class DiadocMessage_PostApiProtos {
       }
     }
 
-    public static final int CHAINID_FIELD_NUMBER = 2;
-    private java.lang.Object chainId_;
+    public static final int ROUTEID_FIELD_NUMBER = 2;
+    private java.lang.Object routeId_;
     /**
-     * <code>required string ChainId = 2;</code>
+     * <code>required string RouteId = 2;</code>
      */
-    public boolean hasChainId() {
+    public boolean hasRouteId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required string ChainId = 2;</code>
+     * <code>required string RouteId = 2;</code>
      */
-    public java.lang.String getChainId() {
-      java.lang.Object ref = chainId_;
+    public java.lang.String getRouteId() {
+      java.lang.Object ref = routeId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -59430,22 +59802,22 @@ public final class DiadocMessage_PostApiProtos {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          chainId_ = s;
+          routeId_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>required string ChainId = 2;</code>
+     * <code>required string RouteId = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getChainIdBytes() {
-      java.lang.Object ref = chainId_;
+        getRouteIdBytes() {
+      java.lang.Object ref = routeId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        chainId_ = b;
+        routeId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -59496,7 +59868,7 @@ public final class DiadocMessage_PostApiProtos {
 
     private void initFields() {
       initialDocumentId_ = "";
-      chainId_ = "";
+      routeId_ = "";
       comment_ = "";
     }
     private byte memoizedIsInitialized = -1;
@@ -59509,7 +59881,7 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasChainId()) {
+      if (!hasRouteId()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -59524,7 +59896,7 @@ public final class DiadocMessage_PostApiProtos {
         output.writeBytes(1, getInitialDocumentIdBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getChainIdBytes());
+        output.writeBytes(2, getRouteIdBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getCommentBytes());
@@ -59544,7 +59916,7 @@ public final class DiadocMessage_PostApiProtos {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getChainIdBytes());
+          .computeBytesSize(2, getRouteIdBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
@@ -59562,53 +59934,53 @@ public final class DiadocMessage_PostApiProtos {
       return super.writeReplace();
     }
 
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseFrom(
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseFrom(
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseFrom(byte[] data)
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseFrom(
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseFrom(java.io.InputStream input)
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseFrom(
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseDelimitedFrom(java.io.InputStream input)
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseDelimitedFrom(
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseFrom(
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parseFrom(
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -59617,7 +59989,7 @@ public final class DiadocMessage_PostApiProtos {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment prototype) {
+    public static Builder newBuilder(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -59629,25 +60001,25 @@ public final class DiadocMessage_PostApiProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionChainAssignment}
+     * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionRouteAssignment}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Events.ResolutionChainAssignment)
-        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignmentOrBuilder {
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Events.ResolutionRouteAssignment)
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignmentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_descriptor;
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_fieldAccessorTable
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.class, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.Builder.class);
+                Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.class, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.Builder.class);
       }
 
-      // Construct using Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.newBuilder()
+      // Construct using Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -59669,7 +60041,7 @@ public final class DiadocMessage_PostApiProtos {
         super.clear();
         initialDocumentId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        chainId_ = "";
+        routeId_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
         comment_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -59682,23 +60054,23 @@ public final class DiadocMessage_PostApiProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_descriptor;
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_descriptor;
       }
 
-      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment getDefaultInstanceForType() {
-        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.getDefaultInstance();
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.getDefaultInstance();
       }
 
-      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment build() {
-        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment result = buildPartial();
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment build() {
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment buildPartial() {
-        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment result = new Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment(this);
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment buildPartial() {
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment result = new Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -59708,7 +60080,7 @@ public final class DiadocMessage_PostApiProtos {
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.chainId_ = chainId_;
+        result.routeId_ = routeId_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
@@ -59719,24 +60091,24 @@ public final class DiadocMessage_PostApiProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment) {
-          return mergeFrom((Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment)other);
+        if (other instanceof Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment) {
+          return mergeFrom((Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment other) {
-        if (other == Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment.getDefaultInstance()) return this;
+      public Builder mergeFrom(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment other) {
+        if (other == Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment.getDefaultInstance()) return this;
         if (other.hasInitialDocumentId()) {
           bitField0_ |= 0x00000001;
           initialDocumentId_ = other.initialDocumentId_;
           onChanged();
         }
-        if (other.hasChainId()) {
+        if (other.hasRouteId()) {
           bitField0_ |= 0x00000002;
-          chainId_ = other.chainId_;
+          routeId_ = other.routeId_;
           onChanged();
         }
         if (other.hasComment()) {
@@ -59753,7 +60125,7 @@ public final class DiadocMessage_PostApiProtos {
           
           return false;
         }
-        if (!hasChainId()) {
+        if (!hasRouteId()) {
           
           return false;
         }
@@ -59764,11 +60136,11 @@ public final class DiadocMessage_PostApiProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment parsedMessage = null;
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionChainAssignment) e.getUnfinishedMessage();
+          parsedMessage = (Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteAssignment) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -59855,24 +60227,24 @@ public final class DiadocMessage_PostApiProtos {
         return this;
       }
 
-      private java.lang.Object chainId_ = "";
+      private java.lang.Object routeId_ = "";
       /**
-       * <code>required string ChainId = 2;</code>
+       * <code>required string RouteId = 2;</code>
        */
-      public boolean hasChainId() {
+      public boolean hasRouteId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required string ChainId = 2;</code>
+       * <code>required string RouteId = 2;</code>
        */
-      public java.lang.String getChainId() {
-        java.lang.Object ref = chainId_;
+      public java.lang.String getRouteId() {
+        java.lang.Object ref = routeId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            chainId_ = s;
+            routeId_ = s;
           }
           return s;
         } else {
@@ -59880,53 +60252,53 @@ public final class DiadocMessage_PostApiProtos {
         }
       }
       /**
-       * <code>required string ChainId = 2;</code>
+       * <code>required string RouteId = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getChainIdBytes() {
-        java.lang.Object ref = chainId_;
+          getRouteIdBytes() {
+        java.lang.Object ref = routeId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          chainId_ = b;
+          routeId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>required string ChainId = 2;</code>
+       * <code>required string RouteId = 2;</code>
        */
-      public Builder setChainId(
+      public Builder setRouteId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        chainId_ = value;
+        routeId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string ChainId = 2;</code>
+       * <code>required string RouteId = 2;</code>
        */
-      public Builder clearChainId() {
+      public Builder clearRouteId() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        chainId_ = getDefaultInstance().getChainId();
+        routeId_ = getDefaultInstance().getRouteId();
         onChanged();
         return this;
       }
       /**
-       * <code>required string ChainId = 2;</code>
+       * <code>required string RouteId = 2;</code>
        */
-      public Builder setChainIdBytes(
+      public Builder setRouteIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        chainId_ = value;
+        routeId_ = value;
         onChanged();
         return this;
       }
@@ -60007,15 +60379,15 @@ public final class DiadocMessage_PostApiProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.ResolutionChainAssignment)
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.ResolutionRouteAssignment)
     }
 
     static {
-      defaultInstance = new ResolutionChainAssignment(true);
+      defaultInstance = new ResolutionRouteAssignment(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Events.ResolutionChainAssignment)
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Events.ResolutionRouteAssignment)
   }
 
   public interface ResolutionRequestCancellationAttachmentOrBuilder extends
@@ -79324,6 +79696,956 @@ public final class DiadocMessage_PostApiProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Events.EditDocumentPacketCommand)
   }
 
+  public interface ResolutionRouteRemovalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Events.ResolutionRouteRemoval)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string ParentEntityId = 1;</code>
+     *
+     * <pre>
+     * EntityId документа, который нужно снять с маршрута согласования
+     * </pre>
+     */
+    boolean hasParentEntityId();
+    /**
+     * <code>required string ParentEntityId = 1;</code>
+     *
+     * <pre>
+     * EntityId документа, который нужно снять с маршрута согласования
+     * </pre>
+     */
+    java.lang.String getParentEntityId();
+    /**
+     * <code>required string ParentEntityId = 1;</code>
+     *
+     * <pre>
+     * EntityId документа, который нужно снять с маршрута согласования
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getParentEntityIdBytes();
+
+    /**
+     * <code>required string RouteId = 2;</code>
+     *
+     * <pre>
+     * Идентификатор маршрута, с которого нужно снять документ
+     * </pre>
+     */
+    boolean hasRouteId();
+    /**
+     * <code>required string RouteId = 2;</code>
+     *
+     * <pre>
+     * Идентификатор маршрута, с которого нужно снять документ
+     * </pre>
+     */
+    java.lang.String getRouteId();
+    /**
+     * <code>required string RouteId = 2;</code>
+     *
+     * <pre>
+     * Идентификатор маршрута, с которого нужно снять документ
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getRouteIdBytes();
+
+    /**
+     * <code>optional string Comment = 3 [default = ""];</code>
+     *
+     * <pre>
+     * Текстовый комментарий, ограничение - 256 символов
+     * </pre>
+     */
+    boolean hasComment();
+    /**
+     * <code>optional string Comment = 3 [default = ""];</code>
+     *
+     * <pre>
+     * Текстовый комментарий, ограничение - 256 символов
+     * </pre>
+     */
+    java.lang.String getComment();
+    /**
+     * <code>optional string Comment = 3 [default = ""];</code>
+     *
+     * <pre>
+     * Текстовый комментарий, ограничение - 256 символов
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommentBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionRouteRemoval}
+   */
+  public static final class ResolutionRouteRemoval extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Events.ResolutionRouteRemoval)
+      ResolutionRouteRemovalOrBuilder {
+    // Use ResolutionRouteRemoval.newBuilder() to construct.
+    private ResolutionRouteRemoval(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ResolutionRouteRemoval(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ResolutionRouteRemoval defaultInstance;
+    public static ResolutionRouteRemoval getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ResolutionRouteRemoval getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResolutionRouteRemoval(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              parentEntityId_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              routeId_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              comment_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.class, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ResolutionRouteRemoval> PARSER =
+        new com.google.protobuf.AbstractParser<ResolutionRouteRemoval>() {
+      public ResolutionRouteRemoval parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResolutionRouteRemoval(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResolutionRouteRemoval> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int PARENTENTITYID_FIELD_NUMBER = 1;
+    private java.lang.Object parentEntityId_;
+    /**
+     * <code>required string ParentEntityId = 1;</code>
+     *
+     * <pre>
+     * EntityId документа, который нужно снять с маршрута согласования
+     * </pre>
+     */
+    public boolean hasParentEntityId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string ParentEntityId = 1;</code>
+     *
+     * <pre>
+     * EntityId документа, который нужно снять с маршрута согласования
+     * </pre>
+     */
+    public java.lang.String getParentEntityId() {
+      java.lang.Object ref = parentEntityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          parentEntityId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string ParentEntityId = 1;</code>
+     *
+     * <pre>
+     * EntityId документа, который нужно снять с маршрута согласования
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getParentEntityIdBytes() {
+      java.lang.Object ref = parentEntityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentEntityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROUTEID_FIELD_NUMBER = 2;
+    private java.lang.Object routeId_;
+    /**
+     * <code>required string RouteId = 2;</code>
+     *
+     * <pre>
+     * Идентификатор маршрута, с которого нужно снять документ
+     * </pre>
+     */
+    public boolean hasRouteId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string RouteId = 2;</code>
+     *
+     * <pre>
+     * Идентификатор маршрута, с которого нужно снять документ
+     * </pre>
+     */
+    public java.lang.String getRouteId() {
+      java.lang.Object ref = routeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          routeId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string RouteId = 2;</code>
+     *
+     * <pre>
+     * Идентификатор маршрута, с которого нужно снять документ
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getRouteIdBytes() {
+      java.lang.Object ref = routeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        routeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMENT_FIELD_NUMBER = 3;
+    private java.lang.Object comment_;
+    /**
+     * <code>optional string Comment = 3 [default = ""];</code>
+     *
+     * <pre>
+     * Текстовый комментарий, ограничение - 256 символов
+     * </pre>
+     */
+    public boolean hasComment() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string Comment = 3 [default = ""];</code>
+     *
+     * <pre>
+     * Текстовый комментарий, ограничение - 256 символов
+     * </pre>
+     */
+    public java.lang.String getComment() {
+      java.lang.Object ref = comment_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          comment_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Comment = 3 [default = ""];</code>
+     *
+     * <pre>
+     * Текстовый комментарий, ограничение - 256 символов
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommentBytes() {
+      java.lang.Object ref = comment_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        comment_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      parentEntityId_ = "";
+      routeId_ = "";
+      comment_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasParentEntityId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRouteId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getParentEntityIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getRouteIdBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getCommentBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getParentEntityIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getRouteIdBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getCommentBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Events.ResolutionRouteRemoval}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Events.ResolutionRouteRemoval)
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.class, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        parentEntityId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        routeId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        comment_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval build() {
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval buildPartial() {
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval result = new Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.parentEntityId_ = parentEntityId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.routeId_ = routeId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.comment_ = comment_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval) {
+          return mergeFrom((Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval other) {
+        if (other == Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.getDefaultInstance()) return this;
+        if (other.hasParentEntityId()) {
+          bitField0_ |= 0x00000001;
+          parentEntityId_ = other.parentEntityId_;
+          onChanged();
+        }
+        if (other.hasRouteId()) {
+          bitField0_ |= 0x00000002;
+          routeId_ = other.routeId_;
+          onChanged();
+        }
+        if (other.hasComment()) {
+          bitField0_ |= 0x00000004;
+          comment_ = other.comment_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasParentEntityId()) {
+          
+          return false;
+        }
+        if (!hasRouteId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object parentEntityId_ = "";
+      /**
+       * <code>required string ParentEntityId = 1;</code>
+       *
+       * <pre>
+       * EntityId документа, который нужно снять с маршрута согласования
+       * </pre>
+       */
+      public boolean hasParentEntityId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string ParentEntityId = 1;</code>
+       *
+       * <pre>
+       * EntityId документа, который нужно снять с маршрута согласования
+       * </pre>
+       */
+      public java.lang.String getParentEntityId() {
+        java.lang.Object ref = parentEntityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            parentEntityId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string ParentEntityId = 1;</code>
+       *
+       * <pre>
+       * EntityId документа, который нужно снять с маршрута согласования
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getParentEntityIdBytes() {
+        java.lang.Object ref = parentEntityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentEntityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ParentEntityId = 1;</code>
+       *
+       * <pre>
+       * EntityId документа, который нужно снять с маршрута согласования
+       * </pre>
+       */
+      public Builder setParentEntityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        parentEntityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ParentEntityId = 1;</code>
+       *
+       * <pre>
+       * EntityId документа, который нужно снять с маршрута согласования
+       * </pre>
+       */
+      public Builder clearParentEntityId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        parentEntityId_ = getDefaultInstance().getParentEntityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ParentEntityId = 1;</code>
+       *
+       * <pre>
+       * EntityId документа, который нужно снять с маршрута согласования
+       * </pre>
+       */
+      public Builder setParentEntityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        parentEntityId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object routeId_ = "";
+      /**
+       * <code>required string RouteId = 2;</code>
+       *
+       * <pre>
+       * Идентификатор маршрута, с которого нужно снять документ
+       * </pre>
+       */
+      public boolean hasRouteId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string RouteId = 2;</code>
+       *
+       * <pre>
+       * Идентификатор маршрута, с которого нужно снять документ
+       * </pre>
+       */
+      public java.lang.String getRouteId() {
+        java.lang.Object ref = routeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            routeId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string RouteId = 2;</code>
+       *
+       * <pre>
+       * Идентификатор маршрута, с которого нужно снять документ
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRouteIdBytes() {
+        java.lang.Object ref = routeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          routeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string RouteId = 2;</code>
+       *
+       * <pre>
+       * Идентификатор маршрута, с которого нужно снять документ
+       * </pre>
+       */
+      public Builder setRouteId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        routeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string RouteId = 2;</code>
+       *
+       * <pre>
+       * Идентификатор маршрута, с которого нужно снять документ
+       * </pre>
+       */
+      public Builder clearRouteId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        routeId_ = getDefaultInstance().getRouteId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string RouteId = 2;</code>
+       *
+       * <pre>
+       * Идентификатор маршрута, с которого нужно снять документ
+       * </pre>
+       */
+      public Builder setRouteIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        routeId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object comment_ = "";
+      /**
+       * <code>optional string Comment = 3 [default = ""];</code>
+       *
+       * <pre>
+       * Текстовый комментарий, ограничение - 256 символов
+       * </pre>
+       */
+      public boolean hasComment() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string Comment = 3 [default = ""];</code>
+       *
+       * <pre>
+       * Текстовый комментарий, ограничение - 256 символов
+       * </pre>
+       */
+      public java.lang.String getComment() {
+        java.lang.Object ref = comment_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            comment_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Comment = 3 [default = ""];</code>
+       *
+       * <pre>
+       * Текстовый комментарий, ограничение - 256 символов
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommentBytes() {
+        java.lang.Object ref = comment_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          comment_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Comment = 3 [default = ""];</code>
+       *
+       * <pre>
+       * Текстовый комментарий, ограничение - 256 символов
+       * </pre>
+       */
+      public Builder setComment(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        comment_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Comment = 3 [default = ""];</code>
+       *
+       * <pre>
+       * Текстовый комментарий, ограничение - 256 символов
+       * </pre>
+       */
+      public Builder clearComment() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        comment_ = getDefaultInstance().getComment();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Comment = 3 [default = ""];</code>
+       *
+       * <pre>
+       * Текстовый комментарий, ограничение - 256 символов
+       * </pre>
+       */
+      public Builder setCommentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        comment_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.ResolutionRouteRemoval)
+    }
+
+    static {
+      defaultInstance = new ResolutionRouteRemoval(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Events.ResolutionRouteRemoval)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Events_MessageToPost_descriptor;
   private static
@@ -79440,10 +80762,10 @@ public final class DiadocMessage_PostApiProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Events_ResolutionRequestAttachment_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_descriptor;
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_fieldAccessorTable;
+      internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Events_ResolutionRequestCancellationAttachment_descriptor;
   private static
@@ -79554,6 +80876,11 @@ public final class DiadocMessage_PostApiProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Events_EditDocumentPacketCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -79789,7 +81116,7 @@ public final class DiadocMessage_PostApiProtos {
       "bordinateDocumentIds\030\006 \003(\0132\034.Diadoc.Api." +
       "Proto.DocumentId\022\030\n\020CustomDocumentId\030\t \001" +
       "(\t\0224\n\nCustomData\030\013 \003(\0132 .Diadoc.Api.Prot" +
-      "o.CustomDataItem\022\014\n\004Type\030\014 \002(\t\"\244\014\n\022Messa" +
+      "o.CustomDataItem\022\014\n\004Type\030\014 \002(\t\"\366\014\n\022Messa" +
       "gePatchToPost\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageI" +
       "d\030\002 \002(\t\022<\n\010Receipts\030\003 \003(\0132*.Diadoc.Api.P" +
       "roto.Events.ReceiptAttachment\022P\n\022Correct",
@@ -79820,103 +81147,107 @@ public final class DiadocMessage_PostApiProtos {
       "ctions\030\017 \003(\01328.Diadoc.Api.Proto.Events.X" +
       "mlSignatureRejectionAttachment\022C\n\021Custom" +
       "DataPatches\030\020 \003(\0132(.Diadoc.Api.Proto.Eve" +
-      "nts.CustomDataPatch\022V\n\032ResolutionChainAs" +
+      "nts.CustomDataPatch\022V\n\032ResolutionRouteAs" +
       "signments\030\021 \003(\01322.Diadoc.Api.Proto.Event" +
-      "s.ResolutionChainAssignment\022N\n\026Signature",
+      "s.ResolutionRouteAssignment\022N\n\026Signature",
       "Verifications\030\022 \003(\0132..Diadoc.Api.Proto.E" +
       "vents.SignatureVerification\022V\n\032EditDocum" +
       "entPacketCommands\030\023 \003(\01322.Diadoc.Api.Pro" +
       "to.Events.EditDocumentPacketCommand\022X\n$U" +
       "niversalTransferDocumentBuyerTitles\030\024 \003(" +
       "\0132*.Diadoc.Api.Proto.Events.ReceiptAttac" +
-      "hment\"Y\n\025SignatureVerification\022\031\n\021Initia" +
-      "lDocumentId\030\001 \002(\t\022\017\n\007IsValid\030\002 \002(\010\022\024\n\014Er" +
-      "rorMessage\030\003 \001(\t\"\271\001\n\033ResolutionRequestAt" +
-      "tachment\022\031\n\021InitialDocumentId\030\001 \002(\t\022<\n\004T",
-      "ype\030\002 \002(\0162..Diadoc.Api.Proto.Events.Reso" +
-      "lutionRequestType\022\024\n\014TargetUserId\030\003 \001(\t\022" +
-      "\032\n\022TargetDepartmentId\030\004 \001(\t\022\017\n\007Comment\030\005" +
-      " \001(\t\"X\n\031ResolutionChainAssignment\022\031\n\021Ini" +
-      "tialDocumentId\030\001 \002(\t\022\017\n\007ChainId\030\002 \002(\t\022\017\n" +
-      "\007Comment\030\003 \001(\t\"M\n\'ResolutionRequestCance" +
-      "llationAttachment\022\"\n\032InitialResolutionRe" +
-      "questId\030\001 \002(\t\"Y\n-ResolutionRequestDenial" +
-      "CancellationAttachment\022(\n InitialResolut" +
-      "ionRequestDenialId\030\001 \002(\t\"X\n!ResolutionRe",
-      "questDenialAttachment\022\"\n\032InitialResoluti" +
-      "onRequestId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\"\203\001\n\024R" +
-      "esolutionAttachment\022\031\n\021InitialDocumentId" +
-      "\030\001 \002(\t\022?\n\016ResolutionType\030\002 \002(\0162\'.Diadoc." +
-      "Api.Proto.Events.ResolutionType\022\017\n\007Comme" +
-      "nt\030\003 \001(\t\"j\n\021ReceiptAttachment\022\026\n\016ParentE" +
+      "hment\022P\n\027ResolutionRouteRemovals\030\025 \003(\0132/" +
+      ".Diadoc.Api.Proto.Events.ResolutionRoute" +
+      "Removal\"Y\n\025SignatureVerification\022\031\n\021Init" +
+      "ialDocumentId\030\001 \002(\t\022\017\n\007IsValid\030\002 \002(\010\022\024\n\014",
+      "ErrorMessage\030\003 \001(\t\"\271\001\n\033ResolutionRequest" +
+      "Attachment\022\031\n\021InitialDocumentId\030\001 \002(\t\022<\n" +
+      "\004Type\030\002 \002(\0162..Diadoc.Api.Proto.Events.Re" +
+      "solutionRequestType\022\024\n\014TargetUserId\030\003 \001(" +
+      "\t\022\032\n\022TargetDepartmentId\030\004 \001(\t\022\017\n\007Comment" +
+      "\030\005 \001(\t\"X\n\031ResolutionRouteAssignment\022\031\n\021I" +
+      "nitialDocumentId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022" +
+      "\017\n\007Comment\030\003 \001(\t\"M\n\'ResolutionRequestCan" +
+      "cellationAttachment\022\"\n\032InitialResolution" +
+      "RequestId\030\001 \002(\t\"Y\n-ResolutionRequestDeni",
+      "alCancellationAttachment\022(\n InitialResol" +
+      "utionRequestDenialId\030\001 \002(\t\"X\n!Resolution" +
+      "RequestDenialAttachment\022\"\n\032InitialResolu" +
+      "tionRequestId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\"\203\001\n" +
+      "\024ResolutionAttachment\022\031\n\021InitialDocument" +
+      "Id\030\001 \002(\t\022?\n\016ResolutionType\030\002 \002(\0162\'.Diado" +
+      "c.Api.Proto.Events.ResolutionType\022\017\n\007Com" +
+      "ment\030\003 \001(\t\"j\n\021ReceiptAttachment\022\026\n\016Paren" +
+      "tEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&" +
+      ".Diadoc.Api.Proto.Events.SignedContent\"t",
+      "\n\033CorrectionRequestAttachment\022\026\n\016ParentE" +
       "ntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.D" +
-      "iadoc.Api.Proto.Events.SignedContent\"t\n\033" +
-      "CorrectionRequestAttachment\022\026\n\016ParentEnt" +
-      "ityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Dia",
-      "doc.Api.Proto.Events.SignedContent\"\303\001\n\021D" +
-      "ocumentSignature\022\026\n\016ParentEntityId\030\001 \002(\t" +
-      "\022\021\n\tSignature\030\002 \001(\014\022$\n\025SignWithTestSigna" +
-      "ture\030\004 \001(\010:\005false\022%\n\026IsApprovementSignat" +
-      "ure\030\005 \001(\010:\005false\022\034\n\024SignatureNameOnShelf" +
-      "\030\006 \001(\t\022\030\n\020PatchedContentId\030\007 \001(\t\"\204\001\n\027Doc" +
-      "umentSenderSignature\022\026\n\016ParentEntityId\030\001" +
-      " \002(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025SignWithTestS" +
-      "ignature\030\004 \001(\010:\005false\022\030\n\020PatchedContentI" +
-      "d\030\005 \001(\t\"t\n\033RequestedSignatureRejection\022\026",
-      "\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedContent\030" +
-      "\002 \002(\0132&.Diadoc.Api.Proto.Events.SignedCo" +
-      "ntent\"\214\001\n\rSignedContent\022\017\n\007Content\030\001 \001(\014" +
-      "\022\021\n\tSignature\030\002 \001(\014\022\023\n\013NameOnShelf\030\004 \001(\t" +
-      "\022$\n\025SignWithTestSignature\030\005 \001(\010:\005false\022\034" +
-      "\n\024SignatureNameOnShelf\030\006 \001(\t\"\323\001\n\013DraftTo" +
-      "Send\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007DraftId\030\002 \002(\t\022\017\n\007" +
-      "ToBoxId\030\003 \001(\t\022\026\n\016ToDepartmentId\030\004 \001(\t\022L\n" +
-      "\022DocumentSignatures\030\005 \003(\01320.Diadoc.Api.P" +
-      "roto.Events.DocumentSenderSignature\022\022\n\nP",
-      "roxyBoxId\030\006 \001(\t\022\031\n\021ProxyDepartmentId\030\007 \001" +
-      "(\t\"\262\001\n\035PrepareDocumentsToSignRequest\022\r\n\005" +
-      "BoxId\030\001 \002(\t\022E\n\016DraftDocuments\030\002 \003(\0132-.Di" +
-      "adoc.Api.Proto.Events.DraftDocumentToPat" +
-      "ch\022;\n\tDocuments\030\003 \003(\0132(.Diadoc.Api.Proto" +
-      ".Events.DocumentToPatch\"\331\001\n\024DraftDocumen" +
-      "tToPatch\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc.Ap" +
-      "i.Proto.DocumentId\022\017\n\007ToBoxId\030\002 \001(\t\0222\n\006S" +
-      "igner\030\003 \001(\0132\".Diadoc.Api.Proto.Invoicing" +
-      ".Signer\022J\n\016ExtendedSigner\030\004 \003(\01322.Diadoc",
+      "iadoc.Api.Proto.Events.SignedContent\"\303\001\n" +
+      "\021DocumentSignature\022\026\n\016ParentEntityId\030\001 \002" +
+      "(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025SignWithTestSig" +
+      "nature\030\004 \001(\010:\005false\022%\n\026IsApprovementSign" +
+      "ature\030\005 \001(\010:\005false\022\034\n\024SignatureNameOnShe" +
+      "lf\030\006 \001(\t\022\030\n\020PatchedContentId\030\007 \001(\t\"\204\001\n\027D" +
+      "ocumentSenderSignature\022\026\n\016ParentEntityId" +
+      "\030\001 \002(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025SignWithTes",
+      "tSignature\030\004 \001(\010:\005false\022\030\n\020PatchedConten" +
+      "tId\030\005 \001(\t\"t\n\033RequestedSignatureRejection" +
+      "\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedConten" +
+      "t\030\002 \002(\0132&.Diadoc.Api.Proto.Events.Signed" +
+      "Content\"\214\001\n\rSignedContent\022\017\n\007Content\030\001 \001" +
+      "(\014\022\021\n\tSignature\030\002 \001(\014\022\023\n\013NameOnShelf\030\004 \001" +
+      "(\t\022$\n\025SignWithTestSignature\030\005 \001(\010:\005false" +
+      "\022\034\n\024SignatureNameOnShelf\030\006 \001(\t\"\323\001\n\013Draft" +
+      "ToSend\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007DraftId\030\002 \002(\t\022\017" +
+      "\n\007ToBoxId\030\003 \001(\t\022\026\n\016ToDepartmentId\030\004 \001(\t\022",
+      "L\n\022DocumentSignatures\030\005 \003(\01320.Diadoc.Api" +
+      ".Proto.Events.DocumentSenderSignature\022\022\n" +
+      "\nProxyBoxId\030\006 \001(\t\022\031\n\021ProxyDepartmentId\030\007" +
+      " \001(\t\"\262\001\n\035PrepareDocumentsToSignRequest\022\r" +
+      "\n\005BoxId\030\001 \002(\t\022E\n\016DraftDocuments\030\002 \003(\0132-." +
+      "Diadoc.Api.Proto.Events.DraftDocumentToP" +
+      "atch\022;\n\tDocuments\030\003 \003(\0132(.Diadoc.Api.Pro" +
+      "to.Events.DocumentToPatch\"\331\001\n\024DraftDocum" +
+      "entToPatch\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc." +
+      "Api.Proto.DocumentId\022\017\n\007ToBoxId\030\002 \001(\t\0222\n",
+      "\006Signer\030\003 \001(\0132\".Diadoc.Api.Proto.Invoici" +
+      "ng.Signer\022J\n\016ExtendedSigner\030\004 \003(\01322.Diad" +
+      "oc.Api.Proto.Invoicing.Signers.ExtendedS" +
+      "igner\"\303\001\n\017DocumentToPatch\0220\n\nDocumentId\030" +
+      "\001 \002(\0132\034.Diadoc.Api.Proto.DocumentId\0222\n\006S" +
+      "igner\030\002 \001(\0132\".Diadoc.Api.Proto.Invoicing" +
+      ".Signer\022J\n\016ExtendedSigner\030\003 \003(\01322.Diadoc" +
       ".Api.Proto.Invoicing.Signers.ExtendedSig" +
-      "ner\"\303\001\n\017DocumentToPatch\0220\n\nDocumentId\030\001 " +
-      "\002(\0132\034.Diadoc.Api.Proto.DocumentId\0222\n\006Sig" +
-      "ner\030\002 \001(\0132\".Diadoc.Api.Proto.Invoicing.S" +
-      "igner\022J\n\016ExtendedSigner\030\003 \003(\01322.Diadoc.A" +
-      "pi.Proto.Invoicing.Signers.ExtendedSigne" +
-      "r\"u\n\026DocumentPatchedContent\0220\n\nDocumentI" +
-      "d\030\001 \002(\0132\034.Diadoc.Api.Proto.DocumentId\022\030\n" +
-      "\020PatchedContentId\030\002 \002(\t\022\017\n\007Content\030\003 \001(\014" +
-      "\"r\n\036PrepareDocumentsToSignResponse\022P\n\027Do",
-      "cumentPatchedContents\030\001 \003(\0132/.Diadoc.Api" +
-      ".Proto.Events.DocumentPatchedContent\"y\n\r" +
-      "MessageToSend\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageI" +
-      "d\030\002 \002(\t\022F\n\022DocumentSignatures\030\003 \003(\0132*.Di" +
-      "adoc.Api.Proto.Events.DocumentSignature\"" +
-      "t\n\033RevocationRequestAttachment\022\026\n\016Parent" +
-      "EntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&." +
-      "Diadoc.Api.Proto.Events.SignedContent\"x\n" +
-      "\037XmlSignatureRejectionAttachment\022\026\n\016Pare" +
-      "ntEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132",
-      "&.Diadoc.Api.Proto.Events.SignedContent\"" +
-      "a\n\031RoamingNotificationToPost\022\r\n\005BoxId\030\001 " +
-      "\002(\t\022\017\n\007EventId\030\002 \002(\t\022\017\n\007Success\030\003 \002(\010\022\023\n" +
-      "\013Description\030\004 \001(\t\"\213\001\n\017CustomDataPatch\022\026" +
-      "\n\016ParentEntityId\030\001 \002(\t\022D\n\tOperation\030\002 \002(" +
-      "\01621.Diadoc.Api.Proto.Events.CustomDataPa" +
-      "tchOperation\022\013\n\003Key\030\003 \002(\t\022\r\n\005Value\030\004 \001(\t" +
-      "\"\254\001\n\031EditDocumentPacketCommand\022\022\n\nDocume" +
-      "ntId\030\001 \002(\t\022:\n\024AddDocumentsToPacket\030\002 \003(\013" +
-      "2\034.Diadoc.Api.Proto.DocumentId\022?\n\031Remove",
-      "DocumentsFromPacket\030\003 \003(\0132\034.Diadoc.Api.P" +
-      "roto.DocumentId*/\n\030CustomDataPatchOperat" +
-      "ion\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessag" +
-      "e_PostApiProtos"
+      "ner\"u\n\026DocumentPatchedContent\0220\n\nDocumen" +
+      "tId\030\001 \002(\0132\034.Diadoc.Api.Proto.DocumentId\022",
+      "\030\n\020PatchedContentId\030\002 \002(\t\022\017\n\007Content\030\003 \001" +
+      "(\014\"r\n\036PrepareDocumentsToSignResponse\022P\n\027" +
+      "DocumentPatchedContents\030\001 \003(\0132/.Diadoc.A" +
+      "pi.Proto.Events.DocumentPatchedContent\"y" +
+      "\n\rMessageToSend\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessag" +
+      "eId\030\002 \002(\t\022F\n\022DocumentSignatures\030\003 \003(\0132*." +
+      "Diadoc.Api.Proto.Events.DocumentSignatur" +
+      "e\"t\n\033RevocationRequestAttachment\022\026\n\016Pare" +
+      "ntEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132" +
+      "&.Diadoc.Api.Proto.Events.SignedContent\"",
+      "x\n\037XmlSignatureRejectionAttachment\022\026\n\016Pa" +
+      "rentEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(" +
+      "\0132&.Diadoc.Api.Proto.Events.SignedConten" +
+      "t\"a\n\031RoamingNotificationToPost\022\r\n\005BoxId\030" +
+      "\001 \002(\t\022\017\n\007EventId\030\002 \002(\t\022\017\n\007Success\030\003 \002(\010\022" +
+      "\023\n\013Description\030\004 \001(\t\"\213\001\n\017CustomDataPatch" +
+      "\022\026\n\016ParentEntityId\030\001 \002(\t\022D\n\tOperation\030\002 " +
+      "\002(\01621.Diadoc.Api.Proto.Events.CustomData" +
+      "PatchOperation\022\013\n\003Key\030\003 \002(\t\022\r\n\005Value\030\004 \001" +
+      "(\t\"\254\001\n\031EditDocumentPacketCommand\022\022\n\nDocu",
+      "mentId\030\001 \002(\t\022:\n\024AddDocumentsToPacket\030\002 \003" +
+      "(\0132\034.Diadoc.Api.Proto.DocumentId\022?\n\031Remo" +
+      "veDocumentsFromPacket\030\003 \003(\0132\034.Diadoc.Api" +
+      ".Proto.DocumentId\"T\n\026ResolutionRouteRemo" +
+      "val\022\026\n\016ParentEntityId\030\001 \002(\t\022\017\n\007RouteId\030\002" +
+      " \002(\t\022\021\n\007Comment\030\003 \001(\t:\000*/\n\030CustomDataPat" +
+      "chOperation\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033Diad" +
+      "ocMessage_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -80063,7 +81394,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_MessagePatchToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_MessagePatchToPost_descriptor,
-        new java.lang.String[] { "BoxId", "MessageId", "Receipts", "CorrectionRequests", "Signatures", "RequestedSignatureRejections", "XmlTorg12BuyerTitles", "XmlAcceptanceCertificateBuyerTitles", "Resolutions", "ResolutionRequests", "ResolutionRequestCancellations", "ResolutionRequestDenials", "ResolutionRequestDenialCancellations", "RevocationRequests", "XmlSignatureRejections", "CustomDataPatches", "ResolutionChainAssignments", "SignatureVerifications", "EditDocumentPacketCommands", "UniversalTransferDocumentBuyerTitles", });
+        new java.lang.String[] { "BoxId", "MessageId", "Receipts", "CorrectionRequests", "Signatures", "RequestedSignatureRejections", "XmlTorg12BuyerTitles", "XmlAcceptanceCertificateBuyerTitles", "Resolutions", "ResolutionRequests", "ResolutionRequestCancellations", "ResolutionRequestDenials", "ResolutionRequestDenialCancellations", "RevocationRequests", "XmlSignatureRejections", "CustomDataPatches", "ResolutionRouteAssignments", "SignatureVerifications", "EditDocumentPacketCommands", "UniversalTransferDocumentBuyerTitles", "ResolutionRouteRemovals", });
     internal_static_Diadoc_Api_Proto_Events_SignatureVerification_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_Diadoc_Api_Proto_Events_SignatureVerification_fieldAccessorTable = new
@@ -80076,12 +81407,12 @@ public final class DiadocMessage_PostApiProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_ResolutionRequestAttachment_descriptor,
         new java.lang.String[] { "InitialDocumentId", "Type", "TargetUserId", "TargetDepartmentId", "Comment", });
-    internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_descriptor =
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_descriptor =
       getDescriptor().getMessageTypes().get(23);
-    internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_fieldAccessorTable = new
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_Diadoc_Api_Proto_Events_ResolutionChainAssignment_descriptor,
-        new java.lang.String[] { "InitialDocumentId", "ChainId", "Comment", });
+        internal_static_Diadoc_Api_Proto_Events_ResolutionRouteAssignment_descriptor,
+        new java.lang.String[] { "InitialDocumentId", "RouteId", "Comment", });
     internal_static_Diadoc_Api_Proto_Events_ResolutionRequestCancellationAttachment_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_Diadoc_Api_Proto_Events_ResolutionRequestCancellationAttachment_fieldAccessorTable = new
@@ -80214,6 +81545,12 @@ public final class DiadocMessage_PostApiProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_EditDocumentPacketCommand_descriptor,
         new java.lang.String[] { "DocumentId", "AddDocumentsToPacket", "RemoveDocumentsFromPacket", });
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Events_ResolutionRouteRemoval_descriptor,
+        new java.lang.String[] { "ParentEntityId", "RouteId", "Comment", });
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
     Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor();
     Diadoc.Api.Proto.Invoicing.SignerProtos.getDescriptor();

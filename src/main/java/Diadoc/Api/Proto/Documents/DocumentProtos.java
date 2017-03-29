@@ -1235,6 +1235,20 @@ public final class DocumentProtos {
      * <code>optional .Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalCorrectionDocumentRevisionMetadata UniversalCorrectionDocumentRevisionMetadata = 59;</code>
      */
     Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadataOrBuilder getUniversalCorrectionDocumentRevisionMetadataOrBuilder();
+
+    /**
+     * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+     */
+    boolean hasResolutionRouteId();
+    /**
+     * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+     */
+    java.lang.String getResolutionRouteId();
+    /**
+     * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+     */
+    com.google.protobuf.ByteString
+        getResolutionRouteIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Document}
@@ -1827,6 +1841,12 @@ public final class DocumentProtos {
                 universalCorrectionDocumentRevisionMetadata_ = subBuilder.buildPartial();
               }
               bitField1_ |= 0x00100000;
+              break;
+            }
+            case 482: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField1_ |= 0x00200000;
+              resolutionRouteId_ = bs;
               break;
             }
           }
@@ -3318,6 +3338,48 @@ public final class DocumentProtos {
       return universalCorrectionDocumentRevisionMetadata_;
     }
 
+    public static final int RESOLUTIONROUTEID_FIELD_NUMBER = 60;
+    private java.lang.Object resolutionRouteId_;
+    /**
+     * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+     */
+    public boolean hasResolutionRouteId() {
+      return ((bitField1_ & 0x00200000) == 0x00200000);
+    }
+    /**
+     * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+     */
+    public java.lang.String getResolutionRouteId() {
+      java.lang.Object ref = resolutionRouteId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          resolutionRouteId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+     */
+    public com.google.protobuf.ByteString
+        getResolutionRouteIdBytes() {
+      java.lang.Object ref = resolutionRouteId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resolutionRouteId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       indexKey_ = "";
       messageId_ = "";
@@ -3376,6 +3438,7 @@ public final class DocumentProtos {
       universalTransferDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalTransferDocumentRevisionMetadata.getDefaultInstance();
       universalCorrectionDocumentMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentMetadata.getDefaultInstance();
       universalCorrectionDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.getDefaultInstance();
+      resolutionRouteId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3705,6 +3768,9 @@ public final class DocumentProtos {
       if (((bitField1_ & 0x00100000) == 0x00100000)) {
         output.writeMessage(59, universalCorrectionDocumentRevisionMetadata_);
       }
+      if (((bitField1_ & 0x00200000) == 0x00200000)) {
+        output.writeBytes(60, getResolutionRouteIdBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3941,6 +4007,10 @@ public final class DocumentProtos {
       if (((bitField1_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(59, universalCorrectionDocumentRevisionMetadata_);
+      }
+      if (((bitField1_ & 0x00200000) == 0x00200000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(60, getResolutionRouteIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4318,6 +4388,8 @@ public final class DocumentProtos {
           universalCorrectionDocumentRevisionMetadataBuilder_.clear();
         }
         bitField1_ = (bitField1_ & ~0x01000000);
+        resolutionRouteId_ = "";
+        bitField1_ = (bitField1_ & ~0x02000000);
         return this;
       }
 
@@ -4696,6 +4768,10 @@ public final class DocumentProtos {
         } else {
           result.universalCorrectionDocumentRevisionMetadata_ = universalCorrectionDocumentRevisionMetadataBuilder_.build();
         }
+        if (((from_bitField1_ & 0x02000000) == 0x02000000)) {
+          to_bitField1_ |= 0x00200000;
+        }
+        result.resolutionRouteId_ = resolutionRouteId_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -5001,6 +5077,11 @@ public final class DocumentProtos {
         }
         if (other.hasUniversalCorrectionDocumentRevisionMetadata()) {
           mergeUniversalCorrectionDocumentRevisionMetadata(other.getUniversalCorrectionDocumentRevisionMetadata());
+        }
+        if (other.hasResolutionRouteId()) {
+          bitField1_ |= 0x02000000;
+          resolutionRouteId_ = other.resolutionRouteId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -10517,6 +10598,82 @@ public final class DocumentProtos {
         return universalCorrectionDocumentRevisionMetadataBuilder_;
       }
 
+      private java.lang.Object resolutionRouteId_ = "";
+      /**
+       * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+       */
+      public boolean hasResolutionRouteId() {
+        return ((bitField1_ & 0x02000000) == 0x02000000);
+      }
+      /**
+       * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+       */
+      public java.lang.String getResolutionRouteId() {
+        java.lang.Object ref = resolutionRouteId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            resolutionRouteId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+       */
+      public com.google.protobuf.ByteString
+          getResolutionRouteIdBytes() {
+        java.lang.Object ref = resolutionRouteId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resolutionRouteId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+       */
+      public Builder setResolutionRouteId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x02000000;
+        resolutionRouteId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+       */
+      public Builder clearResolutionRouteId() {
+        bitField1_ = (bitField1_ & ~0x02000000);
+        resolutionRouteId_ = getDefaultInstance().getResolutionRouteId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ResolutionRouteId = 60 [default = ""];</code>
+       */
+      public Builder setResolutionRouteIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x02000000;
+        resolutionRouteId_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Document)
     }
 
@@ -11483,7 +11640,7 @@ public final class DocumentProtos {
       "UnilateralDocument.proto\032)Documents/Univ" +
       "ersalTransferDocument.proto\032\026ResolutionT",
       "arget.proto\032\032ForwardDocumentEvent.proto\"" +
-      "\351\037\n\010Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessag" +
+      "\206 \n\010Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessag" +
       "eId\030\002 \002(\t\022\020\n\010EntityId\030\003 \002(\t\022\036\n\026CreationT" +
       "imestampTicks\030\004 \002(\020\022\031\n\021CounteragentBoxId" +
       "\030\005 \001(\t\022I\n\014DocumentType\030\006 \001(\0162\036.Diadoc.Ap" +
@@ -11584,31 +11741,32 @@ public final class DocumentProtos {
       "ta\022\226\001\n+UniversalCorrectionDocumentRevisi",
       "onMetadata\030; \001(\0132a.Diadoc.Api.Proto.Docu" +
       "ments.UniversalTransferDocument.Universa" +
-      "lCorrectionDocumentRevisionMetadata\"\310\001\n\020" +
-      "ResolutionStatus\022W\n\004Type\030\001 \001(\01620.Diadoc." +
-      "Api.Proto.Documents.ResolutionStatusType" +
-      ":\027UnknownResolutionStatus\0222\n\006Target\030\002 \001(" +
-      "\0132\".Diadoc.Api.Proto.ResolutionTarget\022\024\n" +
-      "\014AuthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t*\254" +
-      "\001\n\024ResolutionStatusType\022$\n\027UnknownResolu" +
-      "tionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010Appro",
-      "ved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024ApprovementReq" +
-      "uested\020\003\022\026\n\022SignatureRequested\020\004\022\023\n\017Sign" +
-      "atureDenied\020\005*\262\001\n\020RevocationStatus\022\033\n\027Un" +
-      "knownRevocationStatus\020\000\022\030\n\024RevocationSta" +
-      "tusNone\020\001\022\035\n\031RevocationIsRequestedByMe\020\002" +
-      "\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revocation" +
-      "Accepted\020\004\022\026\n\022RevocationRejected\020\005*\256\001\n\031R" +
-      "oamingNotificationStatus\022$\n UnknownRoami" +
-      "ngNotificationStatus\020\000\022!\n\035RoamingNotific" +
-      "ationStatusNone\020\001\022$\n RoamingNotification",
-      "StatusSuccess\020\002\022\"\n\036RoamingNotificationSt" +
-      "atusError\020\003*\300\001\n\025SenderSignatureStatus\022 \n" +
-      "\034UnknownSenderSignatureStatus\020\000\022\035\n\031Waiti" +
-      "ngForSenderSignature\020\001\022\034\n\030SenderSignatur" +
-      "eUnchecked\020\002\022\"\n\036SenderSignatureCheckedAn" +
-      "dValid\020\003\022$\n SenderSignatureCheckedAndInv" +
-      "alid\020\004B\020B\016DocumentProtos"
+      "lCorrectionDocumentRevisionMetadata\022\033\n\021R" +
+      "esolutionRouteId\030< \001(\t:\000\"\310\001\n\020ResolutionS" +
+      "tatus\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.Proto.D" +
+      "ocuments.ResolutionStatusType:\027UnknownRe" +
+      "solutionStatus\0222\n\006Target\030\002 \001(\0132\".Diadoc." +
+      "Api.Proto.ResolutionTarget\022\024\n\014AuthorUser" +
+      "Id\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t*\254\001\n\024Resoluti" +
+      "onStatusType\022$\n\027UnknownResolutionStatus\020",
+      "\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013Di" +
+      "sapproved\020\002\022\030\n\024ApprovementRequested\020\003\022\026\n" +
+      "\022SignatureRequested\020\004\022\023\n\017SignatureDenied" +
+      "\020\005*\262\001\n\020RevocationStatus\022\033\n\027UnknownRevoca" +
+      "tionStatus\020\000\022\030\n\024RevocationStatusNone\020\001\022\035" +
+      "\n\031RevocationIsRequestedByMe\020\002\022\030\n\024Request" +
+      "sMyRevocation\020\003\022\026\n\022RevocationAccepted\020\004\022" +
+      "\026\n\022RevocationRejected\020\005*\256\001\n\031RoamingNotif" +
+      "icationStatus\022$\n UnknownRoamingNotificat" +
+      "ionStatus\020\000\022!\n\035RoamingNotificationStatus",
+      "None\020\001\022$\n RoamingNotificationStatusSucce" +
+      "ss\020\002\022\"\n\036RoamingNotificationStatusError\020\003" +
+      "*\300\001\n\025SenderSignatureStatus\022 \n\034UnknownSen" +
+      "derSignatureStatus\020\000\022\035\n\031WaitingForSender" +
+      "Signature\020\001\022\034\n\030SenderSignatureUnchecked\020" +
+      "\002\022\"\n\036SenderSignatureCheckedAndValid\020\003\022$\n" +
+      " SenderSignatureCheckedAndInvalid\020\004B\020B\016D" +
+      "ocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11640,7 +11798,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", });
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_fieldAccessorTable = new
