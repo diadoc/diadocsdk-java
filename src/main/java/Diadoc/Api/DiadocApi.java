@@ -1292,6 +1292,12 @@ public class DiadocApi {
         return DocflowApiProtos.SearchDocflowsResponse.parseFrom(bytes);
     }
 
+    public DiadocMessage_PostApiProtos.PrepareDocumentsToSignResponse PrepareDocumentsToSign(DiadocMessage_PostApiProtos.PrepareDocumentsToSignRequest request) throws IOException {
+        byte[] body = request.toByteArray();
+        byte[] bytes = PerformPostHttpRequest("/PrepareDocumentsToSign", null, body);
+        return DiadocMessage_PostApiProtos.PrepareDocumentsToSignResponse.parseFrom(bytes);
+    }
+
     public static int WaitTaskDefaultTimeoutInMillis = 5 * 60 * 1000;
 
     protected byte[] WaitTaskResult(String url, String taskId, Integer timeoutInMillis) throws Exception  {
