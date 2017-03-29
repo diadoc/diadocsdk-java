@@ -83,7 +83,7 @@ Task("Generate-Version-Info")
 Task("Check-Maven-Installed")
 	.Does(() =>
 	{
-		var exitCode = StartProcess("mvn.cmd", "-v");
+		var exitCode = StartProcess("mvn", "-v");
 		if (exitCode != 0)
 			throw new Exception("mvn -v exit code = "+ exitCode);
 	});
@@ -94,7 +94,7 @@ Task("Package-With-Maven")
 	.IsDependentOn("GenerateProtoFiles")
 	.Does(() =>
 	{
-		var exitCode = StartProcess("mvn.cmd", "package");
+		var exitCode = StartProcess("mvn", "package");
 		if (exitCode != 0)
 			throw new Exception("mvn package exit code = "+ exitCode);
 	});
