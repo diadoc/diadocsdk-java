@@ -10,6 +10,7 @@ var protocLink = "https://github.com/google/protobuf/releases/download/v2.6.1/pr
 var protocArchive = buildDir.CombineWithFilePath("protoc-2.6.1-win32.zip");
 var protocBinDir = buildDir.Combine("protoc");
 var protocExe = protocBinDir.CombineWithFilePath("protoc.exe");
+var mvnTool = new [] { "mvn.cmd", "mvn.exe" }.Select(x => Context.Tools.Resolve(x)).Where(x => x != null).FirstOrDefault();
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
@@ -83,9 +84,11 @@ Task("Generate-Version-Info")
 Task("Check-Maven-Installed")
 	.Does(() =>
 	{
-		var exitCode = StartProcess("mvn", "-v");
+		if (mvnTool == null)
+			throw new Exception($"mvn not found ({mvnTool})");
+		var exitCode = StartProcess(mvnTool, "-v");
 		if (exitCode != 0)
-			throw new Exception("mvn -v exit code = "+ exitCode);
+			throw new Exception($"{mvnTool} -v failed, exitCode=" + exitCode);
 	});
 	
 Task("Package-With-Maven")
@@ -94,7 +97,7 @@ Task("Package-With-Maven")
 	.IsDependentOn("GenerateProtoFiles")
 	.Does(() =>
 	{
-		var exitCode = StartProcess("mvn", "package");
+		var exitCode = StartProcess(mvnTool, "package");
 		if (exitCode != 0)
 			throw new Exception("mvn package exit code = "+ exitCode);
 	});
