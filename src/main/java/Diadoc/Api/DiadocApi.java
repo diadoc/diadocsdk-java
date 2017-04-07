@@ -189,10 +189,9 @@ public class DiadocApi {
         httpClient.getCredentialsProvider().setCredentials(AuthScope.ANY, diadocCredentials);
     }
 
-    public byte[] ShelfDownload(String authToken, String nameOnShelf)
-    {
-        if (!nameOnShelf.Contains("__userId__"))
-            nameOnShelf = string.Format("__userId__/{0}", nameOnShelf);
+    public byte[] ShelfDownload(String authToken, String nameOnShelf) throws IOException {
+        if (!nameOnShelf.contains("__userId__"))
+            nameOnShelf = "__userId__/" + nameOnShelf;
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("nameOnShelf", nameOnShelf));
         return PerformGetHttpRequest("/ShelfDownload", params);
