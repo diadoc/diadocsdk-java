@@ -189,7 +189,7 @@ public class DiadocApi {
         httpClient.getCredentialsProvider().setCredentials(AuthScope.ANY, diadocCredentials);
     }
 
-    public byte[] ShelfDownload(string authToken, string nameOnShelf)
+    public byte[] ShelfDownload(String authToken, String nameOnShelf)
     {
         if (!nameOnShelf.Contains("__userId__"))
             nameOnShelf = string.Format("__userId__/{0}", nameOnShelf);
