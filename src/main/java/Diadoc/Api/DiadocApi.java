@@ -189,6 +189,15 @@ public class DiadocApi {
         httpClient.getCredentialsProvider().setCredentials(AuthScope.ANY, diadocCredentials);
     }
 
+    public byte[] ShelfDownload(string authToken, string nameOnShelf)
+    {
+        if (!nameOnShelf.Contains("__userId__"))
+            nameOnShelf = string.Format("__userId__/{0}", nameOnShelf);
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("nameOnShelf", nameOnShelf));
+        return PerformGetHttpRequest("/ShelfDownload", params);
+    }
+
     public DiadocMessage_GetApiProtos.Message PostMessage(DiadocMessage_PostApiProtos.MessageToPost msg) throws IOException {
         if (msg == null)
             throw new NullPointerException("msg");
