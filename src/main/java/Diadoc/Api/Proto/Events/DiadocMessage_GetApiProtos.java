@@ -7959,18 +7959,18 @@ public final class DiadocMessage_GetApiProtos {
     boolean getIsEncryptedContent();
 
     /**
-     * <code>optional string AttachmentFormat = 21;</code>
+     * <code>optional string AttachmentVersion = 21;</code>
      */
-    boolean hasAttachmentFormat();
+    boolean hasAttachmentVersion();
     /**
-     * <code>optional string AttachmentFormat = 21;</code>
+     * <code>optional string AttachmentVersion = 21;</code>
      */
-    java.lang.String getAttachmentFormat();
+    java.lang.String getAttachmentVersion();
     /**
-     * <code>optional string AttachmentFormat = 21;</code>
+     * <code>optional string AttachmentVersion = 21;</code>
      */
     com.google.protobuf.ByteString
-        getAttachmentFormatBytes();
+        getAttachmentVersionBytes();
 
     /**
      * <code>optional .Diadoc.Api.Proto.Events.ResolutionRouteAssignmentInfo ResolutionRouteAssignmentInfo = 22;</code>
@@ -8231,7 +8231,7 @@ public final class DiadocMessage_GetApiProtos {
             case 170: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00080000;
-              attachmentFormat_ = bs;
+              attachmentVersion_ = bs;
               break;
             }
             case 178: {
@@ -8908,19 +8908,19 @@ public final class DiadocMessage_GetApiProtos {
       return isEncryptedContent_;
     }
 
-    public static final int ATTACHMENTFORMAT_FIELD_NUMBER = 21;
-    private java.lang.Object attachmentFormat_;
+    public static final int ATTACHMENTVERSION_FIELD_NUMBER = 21;
+    private java.lang.Object attachmentVersion_;
     /**
-     * <code>optional string AttachmentFormat = 21;</code>
+     * <code>optional string AttachmentVersion = 21;</code>
      */
-    public boolean hasAttachmentFormat() {
+    public boolean hasAttachmentVersion() {
       return ((bitField0_ & 0x00080000) == 0x00080000);
     }
     /**
-     * <code>optional string AttachmentFormat = 21;</code>
+     * <code>optional string AttachmentVersion = 21;</code>
      */
-    public java.lang.String getAttachmentFormat() {
-      java.lang.Object ref = attachmentFormat_;
+    public java.lang.String getAttachmentVersion() {
+      java.lang.Object ref = attachmentVersion_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -8928,22 +8928,22 @@ public final class DiadocMessage_GetApiProtos {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          attachmentFormat_ = s;
+          attachmentVersion_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string AttachmentFormat = 21;</code>
+     * <code>optional string AttachmentVersion = 21;</code>
      */
     public com.google.protobuf.ByteString
-        getAttachmentFormatBytes() {
-      java.lang.Object ref = attachmentFormat_;
+        getAttachmentVersionBytes() {
+      java.lang.Object ref = attachmentVersion_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        attachmentFormat_ = b;
+        attachmentVersion_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9036,7 +9036,7 @@ public final class DiadocMessage_GetApiProtos {
       packetId_ = "";
       isApprovementSignature_ = false;
       isEncryptedContent_ = false;
-      attachmentFormat_ = "";
+      attachmentVersion_ = "";
       resolutionRouteAssignmentInfo_ = Diadoc.Api.Proto.Events.ResolutionRouteInfoProtos.ResolutionRouteAssignmentInfo.getDefaultInstance();
       resolutionRouteRemovalInfo_ = Diadoc.Api.Proto.Events.ResolutionRouteInfoProtos.ResolutionRouteRemovalInfo.getDefaultInstance();
     }
@@ -9157,7 +9157,7 @@ public final class DiadocMessage_GetApiProtos {
         output.writeBool(20, isEncryptedContent_);
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        output.writeBytes(21, getAttachmentFormatBytes());
+        output.writeBytes(21, getAttachmentVersionBytes());
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
         output.writeMessage(22, resolutionRouteAssignmentInfo_);
@@ -9252,7 +9252,7 @@ public final class DiadocMessage_GetApiProtos {
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(21, getAttachmentFormatBytes());
+          .computeBytesSize(21, getAttachmentVersionBytes());
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
@@ -9444,7 +9444,7 @@ public final class DiadocMessage_GetApiProtos {
         bitField0_ = (bitField0_ & ~0x00020000);
         isEncryptedContent_ = false;
         bitField0_ = (bitField0_ & ~0x00040000);
-        attachmentFormat_ = "";
+        attachmentVersion_ = "";
         bitField0_ = (bitField0_ & ~0x00080000);
         if (resolutionRouteAssignmentInfoBuilder_ == null) {
           resolutionRouteAssignmentInfo_ = Diadoc.Api.Proto.Events.ResolutionRouteInfoProtos.ResolutionRouteAssignmentInfo.getDefaultInstance();
@@ -9585,7 +9585,7 @@ public final class DiadocMessage_GetApiProtos {
         if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
           to_bitField0_ |= 0x00080000;
         }
-        result.attachmentFormat_ = attachmentFormat_;
+        result.attachmentVersion_ = attachmentVersion_;
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00100000;
         }
@@ -9689,9 +9689,9 @@ public final class DiadocMessage_GetApiProtos {
         if (other.hasIsEncryptedContent()) {
           setIsEncryptedContent(other.getIsEncryptedContent());
         }
-        if (other.hasAttachmentFormat()) {
+        if (other.hasAttachmentVersion()) {
           bitField0_ |= 0x00080000;
-          attachmentFormat_ = other.attachmentFormat_;
+          attachmentVersion_ = other.attachmentVersion_;
           onChanged();
         }
         if (other.hasResolutionRouteAssignmentInfo()) {
@@ -11347,24 +11347,24 @@ public final class DiadocMessage_GetApiProtos {
         return this;
       }
 
-      private java.lang.Object attachmentFormat_ = "";
+      private java.lang.Object attachmentVersion_ = "";
       /**
-       * <code>optional string AttachmentFormat = 21;</code>
+       * <code>optional string AttachmentVersion = 21;</code>
        */
-      public boolean hasAttachmentFormat() {
+      public boolean hasAttachmentVersion() {
         return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
-       * <code>optional string AttachmentFormat = 21;</code>
+       * <code>optional string AttachmentVersion = 21;</code>
        */
-      public java.lang.String getAttachmentFormat() {
-        java.lang.Object ref = attachmentFormat_;
+      public java.lang.String getAttachmentVersion() {
+        java.lang.Object ref = attachmentVersion_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            attachmentFormat_ = s;
+            attachmentVersion_ = s;
           }
           return s;
         } else {
@@ -11372,53 +11372,53 @@ public final class DiadocMessage_GetApiProtos {
         }
       }
       /**
-       * <code>optional string AttachmentFormat = 21;</code>
+       * <code>optional string AttachmentVersion = 21;</code>
        */
       public com.google.protobuf.ByteString
-          getAttachmentFormatBytes() {
-        java.lang.Object ref = attachmentFormat_;
+          getAttachmentVersionBytes() {
+        java.lang.Object ref = attachmentVersion_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          attachmentFormat_ = b;
+          attachmentVersion_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string AttachmentFormat = 21;</code>
+       * <code>optional string AttachmentVersion = 21;</code>
        */
-      public Builder setAttachmentFormat(
+      public Builder setAttachmentVersion(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00080000;
-        attachmentFormat_ = value;
+        attachmentVersion_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string AttachmentFormat = 21;</code>
+       * <code>optional string AttachmentVersion = 21;</code>
        */
-      public Builder clearAttachmentFormat() {
+      public Builder clearAttachmentVersion() {
         bitField0_ = (bitField0_ & ~0x00080000);
-        attachmentFormat_ = getDefaultInstance().getAttachmentFormat();
+        attachmentVersion_ = getDefaultInstance().getAttachmentVersion();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string AttachmentFormat = 21;</code>
+       * <code>optional string AttachmentVersion = 21;</code>
        */
-      public Builder setAttachmentFormatBytes(
+      public Builder setAttachmentVersionBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00080000;
-        attachmentFormat_ = value;
+        attachmentVersion_ = value;
         onChanged();
         return this;
       }
@@ -12845,7 +12845,7 @@ public final class DiadocMessage_GetApiProtos {
       "(\0132$.Diadoc.Api.Proto.Events.EntityPatch" +
       "\022 \n\021MessageIsRestored\030\n \001(\010:\005false\022!\n\022Me" +
       "ssageIsDelivered\030\013 \001(\010:\005false\022\030\n\020Deliver" +
-      "edPatchId\030\014 \001(\t\022\017\n\007PatchId\030\r \002(\t\"\226\010\n\006Ent" +
+      "edPatchId\030\014 \001(\t\022\017\n\007PatchId\030\r \002(\t\"\227\010\n\006Ent" +
       "ity\022J\n\nEntityType\030\001 \001(\0162#.Diadoc.Api.Pro" +
       "to.Events.EntityType:\021UnknownEntityType\022" +
       "\020\n\010EntityId\030\002 \002(\t\022\026\n\016ParentEntityId\030\003 \001(",
@@ -12866,52 +12866,52 @@ public final class DiadocMessage_GetApiProtos {
       "nts.ResolutionRequestDenialInfo\022\032\n\013NeedR" +
       "eceipt\030\021 \001(\010:\005false\022\020\n\010PacketId\030\022 \001(\t\022%\n" +
       "\026IsApprovementSignature\030\023 \001(\010:\005false\022!\n\022" +
-      "IsEncryptedContent\030\024 \001(\010:\005false\022\030\n\020Attac" +
-      "hmentFormat\030\025 \001(\t\022]\n\035ResolutionRouteAssi" +
-      "gnmentInfo\030\026 \001(\01326.Diadoc.Api.Proto.Even",
-      "ts.ResolutionRouteAssignmentInfo\022W\n\032Reso" +
-      "lutionRouteRemovalInfo\030\027 \001(\01323.Diadoc.Ap" +
-      "i.Proto.Events.ResolutionRouteRemovalInf" +
-      "o\"\272\001\n\013EntityPatch\022\020\n\010EntityId\030\001 \002(\t\022 \n\021D" +
-      "ocumentIsDeleted\030\002 \001(\010:\005false\022\031\n\021MovedTo" +
-      "Department\030\003 \001(\t\022!\n\022DocumentIsRestored\030\004" +
-      " \001(\010:\005false\022\037\n\020ContentIsPatched\030\005 \001(\010:\005f" +
-      "alse\022\030\n\020ForwardedToBoxId\030\006 \001(\t*B\n\nEntity" +
-      "Type\022\025\n\021UnknownEntityType\020\000\022\016\n\nAttachmen" +
-      "t\020\001\022\r\n\tSignature\020\002*\212\n\n\016AttachmentType\022\"\n",
-      "\025UnknownAttachmentType\020\377\377\377\377\377\377\377\377\377\001\022\021\n\rNon" +
-      "formalized\020\000\022\013\n\007Invoice\020\001\022\022\n\016InvoiceRece" +
-      "ipt\020\002\022\027\n\023InvoiceConfirmation\020\003\022\034\n\030Invoic" +
-      "eCorrectionRequest\020\004\022\025\n\021AttachmentCommen" +
-      "t\020\005\022\037\n\033DeliveryFailureNotification\020\006\022\020\n\014" +
-      "EancomInvoic\020\007\022\035\n\031SignatureRequestReject" +
-      "ion\020\010\022(\n$EcrCatConformanceCertificateMet" +
-      "adata\020\t\022\037\n\033SignatureVerificationReport\020\n" +
-      "\022\032\n\026TrustConnectionRequest\020\013\022\n\n\006Torg12\020\014" +
-      "\022\023\n\017InvoiceRevision\020\r\022\025\n\021InvoiceCorrecti",
-      "on\020\016\022\035\n\031InvoiceCorrectionRevision\020\017\022\031\n\025A" +
-      "cceptanceCertificate\020\020\022\022\n\016StructuredData" +
-      "\020\021\022\023\n\017ProformaInvoice\020\022\022\r\n\tXmlTorg12\020\023\022\034" +
-      "\n\030XmlAcceptanceCertificate\020\024\022\027\n\023XmlTorg1" +
-      "2BuyerTitle\020\025\022&\n\"XmlAcceptanceCertificat" +
-      "eBuyerTitle\020\026\022\016\n\nResolution\020\027\022\025\n\021Resolut" +
-      "ionRequest\020\030\022\033\n\027ResolutionRequestDenial\020" +
-      "\031\022\r\n\tPriceList\020\032\022\013\n\007Receipt\020\033\022\031\n\025XmlSign" +
-      "atureRejection\020\034\022\025\n\021RevocationRequest\020\035\022" +
-      "\026\n\022PriceListAgreement\020\036\022\027\n\023CertificateRe",
-      "gistry\020\"\022\025\n\021ReconciliationAct\020#\022\014\n\010Contr" +
-      "act\020$\022\n\n\006Torg13\020%\022\022\n\016ServiceDetails\020&\022\027\n" +
-      "\023RoamingNotification\020\'\022\032\n\026SupplementaryA" +
-      "greement\020(\022\035\n\031UniversalTransferDocument\020" +
-      ")\022\'\n#UniversalTransferDocumentBuyerTitle" +
-      "\020*\022%\n!UniversalTransferDocumentRevision\020" +
-      "-\022\037\n\033UniversalCorrectionDocument\0201\022\'\n#Un" +
-      "iversalCorrectionDocumentRevision\0202\022)\n%U" +
-      "niversalCorrectionDocumentBuyerTitle\0203\022\016" +
-      "\n\nCustomData\020@\022\020\n\014MoveDocument\020A\022\'\n#Reso",
-      "lutionRouteAssignmentAttachment\020B\022$\n Res" +
-      "olutionRouteRemovalAttachment\020CB\034B\032Diado" +
-      "cMessage_GetApiProtos"
+      "IsEncryptedContent\030\024 \001(\010:\005false\022\031\n\021Attac" +
+      "hmentVersion\030\025 \001(\t\022]\n\035ResolutionRouteAss" +
+      "ignmentInfo\030\026 \001(\01326.Diadoc.Api.Proto.Eve",
+      "nts.ResolutionRouteAssignmentInfo\022W\n\032Res" +
+      "olutionRouteRemovalInfo\030\027 \001(\01323.Diadoc.A" +
+      "pi.Proto.Events.ResolutionRouteRemovalIn" +
+      "fo\"\272\001\n\013EntityPatch\022\020\n\010EntityId\030\001 \002(\t\022 \n\021" +
+      "DocumentIsDeleted\030\002 \001(\010:\005false\022\031\n\021MovedT" +
+      "oDepartment\030\003 \001(\t\022!\n\022DocumentIsRestored\030" +
+      "\004 \001(\010:\005false\022\037\n\020ContentIsPatched\030\005 \001(\010:\005" +
+      "false\022\030\n\020ForwardedToBoxId\030\006 \001(\t*B\n\nEntit" +
+      "yType\022\025\n\021UnknownEntityType\020\000\022\016\n\nAttachme" +
+      "nt\020\001\022\r\n\tSignature\020\002*\212\n\n\016AttachmentType\022\"",
+      "\n\025UnknownAttachmentType\020\377\377\377\377\377\377\377\377\377\001\022\021\n\rNo" +
+      "nformalized\020\000\022\013\n\007Invoice\020\001\022\022\n\016InvoiceRec" +
+      "eipt\020\002\022\027\n\023InvoiceConfirmation\020\003\022\034\n\030Invoi" +
+      "ceCorrectionRequest\020\004\022\025\n\021AttachmentComme" +
+      "nt\020\005\022\037\n\033DeliveryFailureNotification\020\006\022\020\n" +
+      "\014EancomInvoic\020\007\022\035\n\031SignatureRequestRejec" +
+      "tion\020\010\022(\n$EcrCatConformanceCertificateMe" +
+      "tadata\020\t\022\037\n\033SignatureVerificationReport\020" +
+      "\n\022\032\n\026TrustConnectionRequest\020\013\022\n\n\006Torg12\020" +
+      "\014\022\023\n\017InvoiceRevision\020\r\022\025\n\021InvoiceCorrect",
+      "ion\020\016\022\035\n\031InvoiceCorrectionRevision\020\017\022\031\n\025" +
+      "AcceptanceCertificate\020\020\022\022\n\016StructuredDat" +
+      "a\020\021\022\023\n\017ProformaInvoice\020\022\022\r\n\tXmlTorg12\020\023\022" +
+      "\034\n\030XmlAcceptanceCertificate\020\024\022\027\n\023XmlTorg" +
+      "12BuyerTitle\020\025\022&\n\"XmlAcceptanceCertifica" +
+      "teBuyerTitle\020\026\022\016\n\nResolution\020\027\022\025\n\021Resolu" +
+      "tionRequest\020\030\022\033\n\027ResolutionRequestDenial" +
+      "\020\031\022\r\n\tPriceList\020\032\022\013\n\007Receipt\020\033\022\031\n\025XmlSig" +
+      "natureRejection\020\034\022\025\n\021RevocationRequest\020\035" +
+      "\022\026\n\022PriceListAgreement\020\036\022\027\n\023CertificateR",
+      "egistry\020\"\022\025\n\021ReconciliationAct\020#\022\014\n\010Cont" +
+      "ract\020$\022\n\n\006Torg13\020%\022\022\n\016ServiceDetails\020&\022\027" +
+      "\n\023RoamingNotification\020\'\022\032\n\026Supplementary" +
+      "Agreement\020(\022\035\n\031UniversalTransferDocument" +
+      "\020)\022\'\n#UniversalTransferDocumentBuyerTitl" +
+      "e\020*\022%\n!UniversalTransferDocumentRevision" +
+      "\020-\022\037\n\033UniversalCorrectionDocument\0201\022\'\n#U" +
+      "niversalCorrectionDocumentRevision\0202\022)\n%" +
+      "UniversalCorrectionDocumentBuyerTitle\0203\022" +
+      "\016\n\nCustomData\020@\022\020\n\014MoveDocument\020A\022\'\n#Res",
+      "olutionRouteAssignmentAttachment\020B\022$\n Re" +
+      "solutionRouteRemovalAttachment\020CB\034B\032Diad" +
+      "ocMessage_GetApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12961,7 +12961,7 @@ public final class DiadocMessage_GetApiProtos {
     internal_static_Diadoc_Api_Proto_Events_Entity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_Entity_descriptor,
-        new java.lang.String[] { "EntityType", "EntityId", "ParentEntityId", "Content", "AttachmentType", "FileName", "NeedRecipientSignature", "SignerBoxId", "NotDeliveredEventId", "DocumentInfo", "RawCreationDate", "ResolutionInfo", "SignerDepartmentId", "ResolutionRequestInfo", "ResolutionRequestDenialInfo", "NeedReceipt", "PacketId", "IsApprovementSignature", "IsEncryptedContent", "AttachmentFormat", "ResolutionRouteAssignmentInfo", "ResolutionRouteRemovalInfo", });
+        new java.lang.String[] { "EntityType", "EntityId", "ParentEntityId", "Content", "AttachmentType", "FileName", "NeedRecipientSignature", "SignerBoxId", "NotDeliveredEventId", "DocumentInfo", "RawCreationDate", "ResolutionInfo", "SignerDepartmentId", "ResolutionRequestInfo", "ResolutionRequestDenialInfo", "NeedReceipt", "PacketId", "IsApprovementSignature", "IsEncryptedContent", "AttachmentVersion", "ResolutionRouteAssignmentInfo", "ResolutionRouteRemovalInfo", });
     internal_static_Diadoc_Api_Proto_Events_EntityPatch_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_Diadoc_Api_Proto_Events_EntityPatch_fieldAccessorTable = new
