@@ -189,7 +189,7 @@ public class DiadocApi {
         httpClient.getCredentialsProvider().setCredentials(AuthScope.ANY, diadocCredentials);
     }
 
-    public byte[] ShelfDownload(String authToken, String nameOnShelf) throws IOException {
+    public byte[] ShelfDownload(String nameOnShelf) throws IOException {
         if (!nameOnShelf.contains("__userId__"))
             nameOnShelf = "__userId__/" + nameOnShelf;
         List<NameValuePair> params = new ArrayList<NameValuePair>();
