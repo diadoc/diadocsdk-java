@@ -494,6 +494,124 @@ public final class DocumentProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.SenderSignatureStatus)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Documents.ProxySignatureStatus}
+   */
+  public enum ProxySignatureStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownProxySignatureStatus = 0;</code>
+     */
+    UnknownProxySignatureStatus(0, 0),
+    /**
+     * <code>ProxySignatureStatusNone = 1;</code>
+     */
+    ProxySignatureStatusNone(1, 1),
+    /**
+     * <code>WaitingForProxySignature = 2;</code>
+     */
+    WaitingForProxySignature(2, 2),
+    /**
+     * <code>WithProxySignature = 3;</code>
+     */
+    WithProxySignature(3, 3),
+    /**
+     * <code>ProxySignatureRejected = 4;</code>
+     */
+    ProxySignatureRejected(4, 4),
+    /**
+     * <code>InvalidProxySignature = 5;</code>
+     */
+    InvalidProxySignature(5, 5),
+    ;
+
+    /**
+     * <code>UnknownProxySignatureStatus = 0;</code>
+     */
+    public static final int UnknownProxySignatureStatus_VALUE = 0;
+    /**
+     * <code>ProxySignatureStatusNone = 1;</code>
+     */
+    public static final int ProxySignatureStatusNone_VALUE = 1;
+    /**
+     * <code>WaitingForProxySignature = 2;</code>
+     */
+    public static final int WaitingForProxySignature_VALUE = 2;
+    /**
+     * <code>WithProxySignature = 3;</code>
+     */
+    public static final int WithProxySignature_VALUE = 3;
+    /**
+     * <code>ProxySignatureRejected = 4;</code>
+     */
+    public static final int ProxySignatureRejected_VALUE = 4;
+    /**
+     * <code>InvalidProxySignature = 5;</code>
+     */
+    public static final int InvalidProxySignature_VALUE = 5;
+
+
+    public final int getNumber() { return value; }
+
+    public static ProxySignatureStatus valueOf(int value) {
+      switch (value) {
+        case 0: return UnknownProxySignatureStatus;
+        case 1: return ProxySignatureStatusNone;
+        case 2: return WaitingForProxySignature;
+        case 3: return WithProxySignature;
+        case 4: return ProxySignatureRejected;
+        case 5: return InvalidProxySignature;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ProxySignatureStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<ProxySignatureStatus>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ProxySignatureStatus>() {
+            public ProxySignatureStatus findValueByNumber(int number) {
+              return ProxySignatureStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.DocumentProtos.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final ProxySignatureStatus[] VALUES = values();
+
+    public static ProxySignatureStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ProxySignatureStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.ProxySignatureStatus)
+  }
+
   public interface DocumentOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.Document)
       com.google.protobuf.MessageOrBuilder {
@@ -1263,6 +1381,15 @@ public final class DocumentProtos {
      */
     com.google.protobuf.ByteString
         getAttachmentVersionBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 62;</code>
+     */
+    boolean hasProxySignatureStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 62;</code>
+     */
+    Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus getProxySignatureStatus();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Document}
@@ -1867,6 +1994,17 @@ public final class DocumentProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00400000;
               attachmentVersion_ = bs;
+              break;
+            }
+            case 496: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus value = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(62, rawValue);
+              } else {
+                bitField1_ |= 0x00800000;
+                proxySignatureStatus_ = value;
+              }
               break;
             }
           }
@@ -3442,6 +3580,21 @@ public final class DocumentProtos {
       }
     }
 
+    public static final int PROXYSIGNATURESTATUS_FIELD_NUMBER = 62;
+    private Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus proxySignatureStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 62;</code>
+     */
+    public boolean hasProxySignatureStatus() {
+      return ((bitField1_ & 0x00800000) == 0x00800000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 62;</code>
+     */
+    public Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus getProxySignatureStatus() {
+      return proxySignatureStatus_;
+    }
+
     private void initFields() {
       indexKey_ = "";
       messageId_ = "";
@@ -3502,6 +3655,7 @@ public final class DocumentProtos {
       universalCorrectionDocumentRevisionMetadata_ = Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.UniversalCorrectionDocumentRevisionMetadata.getDefaultInstance();
       resolutionRouteId_ = "";
       attachmentVersion_ = "";
+      proxySignatureStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.UnknownProxySignatureStatus;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3837,6 +3991,9 @@ public final class DocumentProtos {
       if (((bitField1_ & 0x00400000) == 0x00400000)) {
         output.writeBytes(61, getAttachmentVersionBytes());
       }
+      if (((bitField1_ & 0x00800000) == 0x00800000)) {
+        output.writeEnum(62, proxySignatureStatus_.getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4081,6 +4238,10 @@ public final class DocumentProtos {
       if (((bitField1_ & 0x00400000) == 0x00400000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(61, getAttachmentVersionBytes());
+      }
+      if (((bitField1_ & 0x00800000) == 0x00800000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(62, proxySignatureStatus_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4462,6 +4623,8 @@ public final class DocumentProtos {
         bitField1_ = (bitField1_ & ~0x02000000);
         attachmentVersion_ = "";
         bitField1_ = (bitField1_ & ~0x04000000);
+        proxySignatureStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.UnknownProxySignatureStatus;
+        bitField1_ = (bitField1_ & ~0x08000000);
         return this;
       }
 
@@ -4848,6 +5011,10 @@ public final class DocumentProtos {
           to_bitField1_ |= 0x00400000;
         }
         result.attachmentVersion_ = attachmentVersion_;
+        if (((from_bitField1_ & 0x08000000) == 0x08000000)) {
+          to_bitField1_ |= 0x00800000;
+        }
+        result.proxySignatureStatus_ = proxySignatureStatus_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -5163,6 +5330,9 @@ public final class DocumentProtos {
           bitField1_ |= 0x04000000;
           attachmentVersion_ = other.attachmentVersion_;
           onChanged();
+        }
+        if (other.hasProxySignatureStatus()) {
+          setProxySignatureStatus(other.getProxySignatureStatus());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -10831,6 +11001,41 @@ public final class DocumentProtos {
         return this;
       }
 
+      private Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus proxySignatureStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.UnknownProxySignatureStatus;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 62;</code>
+       */
+      public boolean hasProxySignatureStatus() {
+        return ((bitField1_ & 0x08000000) == 0x08000000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 62;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus getProxySignatureStatus() {
+        return proxySignatureStatus_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 62;</code>
+       */
+      public Builder setProxySignatureStatus(Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField1_ |= 0x08000000;
+        proxySignatureStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 62;</code>
+       */
+      public Builder clearProxySignatureStatus() {
+        bitField1_ = (bitField1_ & ~0x08000000);
+        proxySignatureStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.UnknownProxySignatureStatus;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Document)
     }
 
@@ -11797,7 +12002,7 @@ public final class DocumentProtos {
       "UnilateralDocument.proto\032)Documents/Univ" +
       "ersalTransferDocument.proto\032\026ResolutionT",
       "arget.proto\032\032ForwardDocumentEvent.proto\"" +
-      "\241 \n\010Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessag" +
+      "\361 \n\010Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessag" +
       "eId\030\002 \002(\t\022\020\n\010EntityId\030\003 \002(\t\022\036\n\026CreationT" +
       "imestampTicks\030\004 \002(\020\022\031\n\021CounteragentBoxId" +
       "\030\005 \001(\t\022I\n\014DocumentType\030\006 \001(\0162\036.Diadoc.Ap" +
@@ -11900,12 +12105,14 @@ public final class DocumentProtos {
       "ments.UniversalTransferDocument.Universa" +
       "lCorrectionDocumentRevisionMetadata\022\033\n\021R" +
       "esolutionRouteId\030< \001(\t:\000\022\031\n\021AttachmentVe" +
-      "rsion\030= \001(\t\"\310\001\n\020ResolutionStatus\022W\n\004Type" +
+      "rsion\030= \001(\t\022N\n\024ProxySignatureStatus\030> \001(" +
+      "\01620.Diadoc.Api.Proto.Documents.ProxySign" +
+      "atureStatus\"\310\001\n\020ResolutionStatus\022W\n\004Type" +
       "\030\001 \001(\01620.Diadoc.Api.Proto.Documents.Reso" +
       "lutionStatusType:\027UnknownResolutionStatu" +
-      "s\0222\n\006Target\030\002 \001(\0132\".Diadoc.Api.Proto.Res" +
+      "s\0222\n\006Target\030\002 \001(\0132\".Diadoc.Api.Proto.Res",
       "olutionTarget\022\024\n\014AuthorUserId\030\003 \002(\t\022\021\n\tA" +
-      "uthorFIO\030\004 \002(\t*\254\001\n\024ResolutionStatusType\022",
+      "uthorFIO\030\004 \002(\t*\254\001\n\024ResolutionStatusType\022" +
       "$\n\027UnknownResolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n" +
       "\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013Disapproved\020\002\022\030" +
       "\n\024ApprovementRequested\020\003\022\026\n\022SignatureReq" +
@@ -11913,9 +12120,9 @@ public final class DocumentProtos {
       "tionStatus\022\033\n\027UnknownRevocationStatus\020\000\022" +
       "\030\n\024RevocationStatusNone\020\001\022\035\n\031RevocationI" +
       "sRequestedByMe\020\002\022\030\n\024RequestsMyRevocation" +
-      "\020\003\022\026\n\022RevocationAccepted\020\004\022\026\n\022Revocation" +
+      "\020\003\022\026\n\022RevocationAccepted\020\004\022\026\n\022Revocation",
       "Rejected\020\005*\256\001\n\031RoamingNotificationStatus" +
-      "\022$\n UnknownRoamingNotificationStatus\020\000\022!",
+      "\022$\n UnknownRoamingNotificationStatus\020\000\022!" +
       "\n\035RoamingNotificationStatusNone\020\001\022$\n Roa" +
       "mingNotificationStatusSuccess\020\002\022\"\n\036Roami" +
       "ngNotificationStatusError\020\003*\300\001\n\025SenderSi" +
@@ -11923,7 +12130,12 @@ public final class DocumentProtos {
       "tatus\020\000\022\035\n\031WaitingForSenderSignature\020\001\022\034" +
       "\n\030SenderSignatureUnchecked\020\002\022\"\n\036SenderSi" +
       "gnatureCheckedAndValid\020\003\022$\n SenderSignat" +
-      "ureCheckedAndInvalid\020\004B\020B\016DocumentProtos"
+      "ureCheckedAndInvalid\020\004*\302\001\n\024ProxySignatur",
+      "eStatus\022\037\n\033UnknownProxySignatureStatus\020\000" +
+      "\022\034\n\030ProxySignatureStatusNone\020\001\022\034\n\030Waitin" +
+      "gForProxySignature\020\002\022\026\n\022WithProxySignatu" +
+      "re\020\003\022\032\n\026ProxySignatureRejected\020\004\022\031\n\025Inva" +
+      "lidProxySignature\020\005B\020B\016DocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11955,7 +12167,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", });
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_fieldAccessorTable = new
