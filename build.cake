@@ -180,7 +180,7 @@ public void CompileProtoFiles(IEnumerable<FilePath> files, DirectoryPath sourceP
 	var exitCode = StartProcess(protocExe, protocArguments);
 	if (exitCode != 0)
 	{
-		Error("Error processing proto files, protoc exit code: {0} ({1})", exitCode, protocArguments);
+		throw new Exception($"Error processing proto files, protoc exit code: {exitCode} ({protocArguments})");
 	}
 }
 
