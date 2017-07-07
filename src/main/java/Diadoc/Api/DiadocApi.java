@@ -96,6 +96,8 @@ public class DiadocApi {
         updateCredentials(null);
     }
     
+    
+    
     public DiadocApi(String apiClientId, String url, String proxyAddress, int port)
             throws KeyManagementException, NoSuchAlgorithmException {
         if (url == null)
