@@ -62,6 +62,7 @@ import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.*;
 import java.util.concurrent.TimeoutException;
+import org.apache.http.conn.params.ConnRoutePNames;
 
 public class DiadocApi {
 
@@ -94,6 +95,29 @@ public class DiadocApi {
         this.httpClient = createHttpClient();
         updateCredentials(null);
     }
+    
+    public DiadocApi(String apiClientId, String url, String proxyAddress, int port)
+            throws KeyManagementException, NoSuchAlgorithmException {
+        if (url == null)
+            throw new NullPointerException(url);
+        if (proxyAddress == null)
+            throw new NullPointerException(proxyAddress);
+        this.url = url;
+        this.apiClientId = apiClientId;
+        this.httpClient = createHttpClientByProxy(proxyAddress, port);
+        updateCredentials(null);
+    }
+    
+    private static DefaultHttpClient createHttpClientByProxy(String proxyAddress, int port)
+            throws NoSuchAlgorithmException, KeyManagementException {
+        HttpHost proxy = new HttpHost(proxyAddress, port);
+        DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
+        defaultHttpClient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, proxy);
+        defaultHttpClient = makeTrustfulHttpClient(defaultHttpClient);
+        defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
+        return defaultHttpClient;
+    }
+    
 
     private static DefaultHttpClient createHttpClient()
             throws NoSuchAlgorithmException, KeyManagementException {
