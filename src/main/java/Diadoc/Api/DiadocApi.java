@@ -114,6 +114,7 @@ public class DiadocApi {
             throws NoSuchAlgorithmException, KeyManagementException {
         HttpHost proxy = new HttpHost(proxyAddress, port);
         DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
+        HttpProtocolParams.setUserAgent(defaultHttpClient.getParams(), getUserAgentString());
         defaultHttpClient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, proxy);
         defaultHttpClient = makeTrustfulHttpClient(defaultHttpClient);
         defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
