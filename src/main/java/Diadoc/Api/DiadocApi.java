@@ -43,7 +43,6 @@ import ru.CryptoPro.JCP.ASN.Gost28147_89_EncryptionSyntax.Gost28147_89_Parameter
 import ru.CryptoPro.JCP.ASN.GostR3410_EncryptionSyntax.GostR3410_KeyTransport;
 import ru.CryptoPro.JCP.JCP;
 import ru.CryptoPro.JCP.params.CryptParamsSpec;
-
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.mail.internet.ContentDisposition;
@@ -62,7 +61,6 @@ import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.*;
 import java.util.concurrent.TimeoutException;
-import org.apache.http.conn.params.ConnRoutePNames;
 
 public class DiadocApi {
 
