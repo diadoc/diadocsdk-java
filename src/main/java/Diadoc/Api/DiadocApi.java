@@ -43,7 +43,6 @@ import ru.CryptoPro.JCP.ASN.Gost28147_89_EncryptionSyntax.Gost28147_89_Parameter
 import ru.CryptoPro.JCP.ASN.GostR3410_EncryptionSyntax.GostR3410_KeyTransport;
 import ru.CryptoPro.JCP.JCP;
 import ru.CryptoPro.JCP.params.CryptParamsSpec;
-
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.mail.internet.ContentDisposition;
@@ -94,7 +93,7 @@ public class DiadocApi {
         this.httpClient = createHttpClient();
         updateCredentials(null);
     }
-
+    
     private static DefaultHttpClient createHttpClient()
             throws NoSuchAlgorithmException, KeyManagementException {
         DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
@@ -102,6 +101,15 @@ public class DiadocApi {
         defaultHttpClient = makeTrustfulHttpClient(defaultHttpClient);
         defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
         return defaultHttpClient;
+    }
+    
+    public void setHttpParameter(String httpParameterKey, Object httpParameterValue){
+        if (httpParameterKey == null)
+            throw new NullPointerException("httpParameterKey");
+        if (httpParameterValue == null)
+            throw new NullPointerException("httpParameterValue");
+        
+        this.httpClient.getParams().setParameter(httpParameterKey, httpParameterValue);
     }
 
     private static String getUserAgentString()
