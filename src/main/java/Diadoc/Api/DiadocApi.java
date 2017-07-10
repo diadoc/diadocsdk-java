@@ -96,32 +96,6 @@ public class DiadocApi {
         updateCredentials(null);
     }
     
-    
-    
-    public DiadocApi(String apiClientId, String url, String proxyAddress, int port)
-            throws KeyManagementException, NoSuchAlgorithmException {
-        if (url == null)
-            throw new NullPointerException(url);
-        if (proxyAddress == null)
-            throw new NullPointerException(proxyAddress);
-        this.url = url;
-        this.apiClientId = apiClientId;
-        this.httpClient = createHttpClientByProxy(proxyAddress, port);
-        updateCredentials(null);
-    }
-    
-    private static DefaultHttpClient createHttpClientByProxy(String proxyAddress, int port)
-            throws NoSuchAlgorithmException, KeyManagementException {
-        HttpHost proxy = new HttpHost(proxyAddress, port);
-        DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
-        HttpProtocolParams.setUserAgent(defaultHttpClient.getParams(), getUserAgentString());
-        defaultHttpClient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, proxy);
-        defaultHttpClient = makeTrustfulHttpClient(defaultHttpClient);
-        defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
-        return defaultHttpClient;
-    }
-    
-
     private static DefaultHttpClient createHttpClient()
             throws NoSuchAlgorithmException, KeyManagementException {
         DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
@@ -129,6 +103,15 @@ public class DiadocApi {
         defaultHttpClient = makeTrustfulHttpClient(defaultHttpClient);
         defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
         return defaultHttpClient;
+    }
+    
+    public void setHttpParameter(String httpParameterKey, Object httpParameterValue){
+        if (httpParameterKey == null)
+            throw new NullPointerException("httpParameterKey");
+        if (httpParameterValue == null)
+            throw new NullPointerException("httpParameterValue");
+        
+        this.httpClient.getParams().setParameter(httpParameterKey, httpParameterValue);
     }
 
     private static String getUserAgentString()
