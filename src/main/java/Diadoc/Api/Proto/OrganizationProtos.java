@@ -1145,6 +1145,20 @@ public final class OrganizationProtos {
      */
     com.google.protobuf.ByteString
         getLiquidationDateBytes();
+
+    /**
+     * <code>optional string CertificateOfRegistryInfo = 24;</code>
+     */
+    boolean hasCertificateOfRegistryInfo();
+    /**
+     * <code>optional string CertificateOfRegistryInfo = 24;</code>
+     */
+    java.lang.String getCertificateOfRegistryInfo();
+    /**
+     * <code>optional string CertificateOfRegistryInfo = 24;</code>
+     */
+    com.google.protobuf.ByteString
+        getCertificateOfRegistryInfoBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Organization}
@@ -1336,6 +1350,12 @@ public final class OrganizationProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00080000;
               liquidationDate_ = bs;
+              break;
+            }
+            case 194: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00100000;
+              certificateOfRegistryInfo_ = bs;
               break;
             }
           }
@@ -2030,6 +2050,48 @@ public final class OrganizationProtos {
       }
     }
 
+    public static final int CERTIFICATEOFREGISTRYINFO_FIELD_NUMBER = 24;
+    private java.lang.Object certificateOfRegistryInfo_;
+    /**
+     * <code>optional string CertificateOfRegistryInfo = 24;</code>
+     */
+    public boolean hasCertificateOfRegistryInfo() {
+      return ((bitField0_ & 0x00100000) == 0x00100000);
+    }
+    /**
+     * <code>optional string CertificateOfRegistryInfo = 24;</code>
+     */
+    public java.lang.String getCertificateOfRegistryInfo() {
+      java.lang.Object ref = certificateOfRegistryInfo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          certificateOfRegistryInfo_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string CertificateOfRegistryInfo = 24;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCertificateOfRegistryInfoBytes() {
+      java.lang.Object ref = certificateOfRegistryInfo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        certificateOfRegistryInfo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       orgId_ = "";
       inn_ = "";
@@ -2053,6 +2115,7 @@ public final class OrganizationProtos {
       searchCount_ = 0;
       sociability_ = Diadoc.Api.Proto.OrganizationProtos.Sociability.AllOrganizations;
       liquidationDate_ = "";
+      certificateOfRegistryInfo_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2167,6 +2230,9 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         output.writeBytes(23, getLiquidationDateBytes());
       }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        output.writeBytes(24, getCertificateOfRegistryInfoBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2263,6 +2329,10 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(23, getLiquidationDateBytes());
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(24, getCertificateOfRegistryInfoBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2440,6 +2510,8 @@ public final class OrganizationProtos {
         bitField0_ = (bitField0_ & ~0x00100000);
         liquidationDate_ = "";
         bitField0_ = (bitField0_ & ~0x00200000);
+        certificateOfRegistryInfo_ = "";
+        bitField0_ = (bitField0_ & ~0x00400000);
         return this;
       }
 
@@ -2570,6 +2642,10 @@ public final class OrganizationProtos {
           to_bitField0_ |= 0x00080000;
         }
         result.liquidationDate_ = liquidationDate_;
+        if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
+          to_bitField0_ |= 0x00100000;
+        }
+        result.certificateOfRegistryInfo_ = certificateOfRegistryInfo_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2716,6 +2792,11 @@ public final class OrganizationProtos {
         if (other.hasLiquidationDate()) {
           bitField0_ |= 0x00200000;
           liquidationDate_ = other.liquidationDate_;
+          onChanged();
+        }
+        if (other.hasCertificateOfRegistryInfo()) {
+          bitField0_ |= 0x00400000;
+          certificateOfRegistryInfo_ = other.certificateOfRegistryInfo_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4422,6 +4503,82 @@ public final class OrganizationProtos {
   }
   bitField0_ |= 0x00200000;
         liquidationDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object certificateOfRegistryInfo_ = "";
+      /**
+       * <code>optional string CertificateOfRegistryInfo = 24;</code>
+       */
+      public boolean hasCertificateOfRegistryInfo() {
+        return ((bitField0_ & 0x00400000) == 0x00400000);
+      }
+      /**
+       * <code>optional string CertificateOfRegistryInfo = 24;</code>
+       */
+      public java.lang.String getCertificateOfRegistryInfo() {
+        java.lang.Object ref = certificateOfRegistryInfo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            certificateOfRegistryInfo_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string CertificateOfRegistryInfo = 24;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCertificateOfRegistryInfoBytes() {
+        java.lang.Object ref = certificateOfRegistryInfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          certificateOfRegistryInfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string CertificateOfRegistryInfo = 24;</code>
+       */
+      public Builder setCertificateOfRegistryInfo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00400000;
+        certificateOfRegistryInfo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string CertificateOfRegistryInfo = 24;</code>
+       */
+      public Builder clearCertificateOfRegistryInfo() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        certificateOfRegistryInfo_ = getDefaultInstance().getCertificateOfRegistryInfo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string CertificateOfRegistryInfo = 24;</code>
+       */
+      public Builder setCertificateOfRegistryInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00400000;
+        certificateOfRegistryInfo_ = value;
         onChanged();
         return this;
       }
@@ -6891,7 +7048,7 @@ public final class OrganizationProtos {
       "\n\022Organization.proto\022\020Diadoc.Api.Proto\032\r" +
       "Address.proto\"I\n\020OrganizationList\0225\n\rOrg" +
       "anizations\030\001 \003(\0132\036.Diadoc.Api.Proto.Orga" +
-      "nization\"\237\004\n\014Organization\022\r\n\005OrgId\030\001 \002(\t" +
+      "nization\"\302\004\n\014Organization\022\r\n\005OrgId\030\001 \002(\t" +
       "\022\013\n\003Inn\030\002 \002(\t\022\013\n\003Kpp\030\003 \001(\t\022\020\n\010FullName\030\004" +
       " \002(\t\022\021\n\tShortName\030\005 \001(\t\022$\n\005Boxes\030\007 \003(\0132\025" +
       ".Diadoc.Api.Proto.Box\022\014\n\004Ogrn\030\010 \001(\t\022\030\n\020F" +
@@ -6904,21 +7061,22 @@ public final class OrganizationProtos {
       "aming\030\022 \001(\010\022\022\n\nIsEmployee\030\023 \001(\010\022\027\n\017Invit" +
       "ationCount\030\024 \001(\005\022\023\n\013SearchCount\030\025 \001(\005\0222\n" +
       "\013Sociability\030\026 \002(\0162\035.Diadoc.Api.Proto.So" +
-      "ciability\022\027\n\017LiquidationDate\030\027 \001(\t\"\266\001\n\nD" +
-      "epartment\022\024\n\014DepartmentId\030\001 \002(\t\022\032\n\022Paren" +
-      "tDepartmentId\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n\014Abb" +
-      "reviation\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Address\030",
-      "\006 \001(\0132\031.Diadoc.Api.Proto.Address\022\031\n\nIsDi" +
-      "sabled\030\007 \001(\010:\005false\"\325\001\n\003Box\022\r\n\005BoxId\030\001 \002" +
-      "(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Organization\030\003 \001(\0132" +
-      "\036.Diadoc.Api.Proto.Organization\022W\n\024Invoi" +
-      "ceFormatVersion\030\004 \001(\01622.Diadoc.Api.Proto" +
-      ".OrganizationInvoiceFormatVersion:\005v5_02" +
-      "\022!\n\031EncryptedDocumentsAllowed\030\005 \001(\010*8\n O" +
-      "rganizationInvoiceFormatVersion\022\t\n\005v5_01" +
-      "\020\001\022\t\n\005v5_02\020\002*:\n\013Sociability\022\024\n\020AllOrgan" +
-      "izations\020\000\022\025\n\021CounteragentsOnly\020\001B\024B\022Org",
-      "anizationProtos"
+      "ciability\022\027\n\017LiquidationDate\030\027 \001(\t\022!\n\031Ce" +
+      "rtificateOfRegistryInfo\030\030 \001(\t\"\266\001\n\nDepart" +
+      "ment\022\024\n\014DepartmentId\030\001 \002(\t\022\032\n\022ParentDepa" +
+      "rtmentId\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n\014Abbrevia",
+      "tion\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Address\030\006 \001(\013" +
+      "2\031.Diadoc.Api.Proto.Address\022\031\n\nIsDisable" +
+      "d\030\007 \001(\010:\005false\"\325\001\n\003Box\022\r\n\005BoxId\030\001 \002(\t\022\r\n" +
+      "\005Title\030\002 \002(\t\0224\n\014Organization\030\003 \001(\0132\036.Dia" +
+      "doc.Api.Proto.Organization\022W\n\024InvoiceFor" +
+      "matVersion\030\004 \001(\01622.Diadoc.Api.Proto.Orga" +
+      "nizationInvoiceFormatVersion:\005v5_02\022!\n\031E" +
+      "ncryptedDocumentsAllowed\030\005 \001(\010*8\n Organi" +
+      "zationInvoiceFormatVersion\022\t\n\005v5_01\020\001\022\t\n" +
+      "\005v5_02\020\002*:\n\013Sociability\022\024\n\020AllOrganizati",
+      "ons\020\000\022\025\n\021CounteragentsOnly\020\001B\024B\022Organiza" +
+      "tionProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6944,7 +7102,7 @@ public final class OrganizationProtos {
     internal_static_Diadoc_Api_Proto_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Organization_descriptor,
-        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", });
+        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", });
     internal_static_Diadoc_Api_Proto_Department_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Department_fieldAccessorTable = new
