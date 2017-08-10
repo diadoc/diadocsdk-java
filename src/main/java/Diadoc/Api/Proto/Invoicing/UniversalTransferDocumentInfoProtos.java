@@ -36698,18 +36698,6 @@ public final class UniversalTransferDocumentInfoProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (hasAmountsInc()) {
-        if (!getAmountsInc().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasAmountsDec()) {
-        if (!getAmountsDec().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       for (int i = 0; i < getAdditionalInfoCount(); i++) {
         if (!getAdditionalInfo(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -37120,18 +37108,6 @@ public final class UniversalTransferDocumentInfoProtos {
         if (!getCorrectedValues().isInitialized()) {
           
           return false;
-        }
-        if (hasAmountsInc()) {
-          if (!getAmountsInc().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasAmountsDec()) {
-          if (!getAmountsDec().isInitialized()) {
-            
-            return false;
-          }
         }
         for (int i = 0; i < getAdditionalInfoCount(); i++) {
           if (!getAdditionalInfo(i).isInitialized()) {

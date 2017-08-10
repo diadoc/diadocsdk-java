@@ -18352,18 +18352,6 @@ public final class InvoiceInfoProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (hasAmountsInc()) {
-        if (!getAmountsInc().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasAmountsDec()) {
-        if (!getAmountsDec().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       for (int i = 0; i < getAdditionalInfosCount(); i++) {
         if (!getAdditionalInfos(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -18756,18 +18744,6 @@ public final class InvoiceInfoProtos {
         if (!getCorrectedValues().isInitialized()) {
           
           return false;
-        }
-        if (hasAmountsInc()) {
-          if (!getAmountsInc().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasAmountsDec()) {
-          if (!getAmountsDec().isInitialized()) {
-            
-            return false;
-          }
         }
         for (int i = 0; i < getAdditionalInfosCount(); i++) {
           if (!getAdditionalInfos(i).isInitialized()) {
@@ -21900,7 +21876,7 @@ public final class InvoiceInfoProtos {
         getVatBytes();
 
     /**
-     * <code>required string Subtotal = 4;</code>
+     * <code>optional string Subtotal = 4;</code>
      *
      * <pre>
      * сумма с учетом налога
@@ -21908,7 +21884,7 @@ public final class InvoiceInfoProtos {
      */
     boolean hasSubtotal();
     /**
-     * <code>required string Subtotal = 4;</code>
+     * <code>optional string Subtotal = 4;</code>
      *
      * <pre>
      * сумма с учетом налога
@@ -21916,7 +21892,7 @@ public final class InvoiceInfoProtos {
      */
     java.lang.String getSubtotal();
     /**
-     * <code>required string Subtotal = 4;</code>
+     * <code>optional string Subtotal = 4;</code>
      *
      * <pre>
      * сумма с учетом налога
@@ -22206,7 +22182,7 @@ public final class InvoiceInfoProtos {
     public static final int SUBTOTAL_FIELD_NUMBER = 4;
     private java.lang.Object subtotal_;
     /**
-     * <code>required string Subtotal = 4;</code>
+     * <code>optional string Subtotal = 4;</code>
      *
      * <pre>
      * сумма с учетом налога
@@ -22216,7 +22192,7 @@ public final class InvoiceInfoProtos {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>required string Subtotal = 4;</code>
+     * <code>optional string Subtotal = 4;</code>
      *
      * <pre>
      * сумма с учетом налога
@@ -22237,7 +22213,7 @@ public final class InvoiceInfoProtos {
       }
     }
     /**
-     * <code>required string Subtotal = 4;</code>
+     * <code>optional string Subtotal = 4;</code>
      *
      * <pre>
      * сумма с учетом налога
@@ -22269,10 +22245,6 @@ public final class InvoiceInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasSubtotal()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -22527,10 +22499,6 @@ public final class InvoiceInfoProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasSubtotal()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -22855,7 +22823,7 @@ public final class InvoiceInfoProtos {
 
       private java.lang.Object subtotal_ = "";
       /**
-       * <code>required string Subtotal = 4;</code>
+       * <code>optional string Subtotal = 4;</code>
        *
        * <pre>
        * сумма с учетом налога
@@ -22865,7 +22833,7 @@ public final class InvoiceInfoProtos {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>required string Subtotal = 4;</code>
+       * <code>optional string Subtotal = 4;</code>
        *
        * <pre>
        * сумма с учетом налога
@@ -22886,7 +22854,7 @@ public final class InvoiceInfoProtos {
         }
       }
       /**
-       * <code>required string Subtotal = 4;</code>
+       * <code>optional string Subtotal = 4;</code>
        *
        * <pre>
        * сумма с учетом налога
@@ -22906,7 +22874,7 @@ public final class InvoiceInfoProtos {
         }
       }
       /**
-       * <code>required string Subtotal = 4;</code>
+       * <code>optional string Subtotal = 4;</code>
        *
        * <pre>
        * сумма с учетом налога
@@ -22923,7 +22891,7 @@ public final class InvoiceInfoProtos {
         return this;
       }
       /**
-       * <code>required string Subtotal = 4;</code>
+       * <code>optional string Subtotal = 4;</code>
        *
        * <pre>
        * сумма с учетом налога
@@ -22936,7 +22904,7 @@ public final class InvoiceInfoProtos {
         return this;
       }
       /**
-       * <code>required string Subtotal = 4;</code>
+       * <code>optional string Subtotal = 4;</code>
        *
        * <pre>
        * сумма с учетом налога
@@ -23113,7 +23081,7 @@ public final class InvoiceInfoProtos {
       "\022\020\n\010Subtotal\030\010 \002(\t\"h\n\026InvoiceItemAmounts" +
       "Diff\022\016\n\006Excise\030\001 \001(\t\022\037\n\027SubtotalWithVatE" +
       "xcluded\030\002 \001(\t\022\013\n\003Vat\030\003 \001(\t\022\020\n\010Subtotal\030\004" +
-      " \002(\t*M\n\024InvoiceFormatVersion\022\037\n\033DefaultI" +
+      " \001(\t*M\n\024InvoiceFormatVersion\022\037\n\033DefaultI" +
       "nvoiceFormatVersion\020\000\022\t\n\005v5_01\020\001\022\t\n\005v5_0" +
       "2\020\002*}\n\007TaxRate\022\t\n\005NoVat\020\000\022\r\n\tPercent_0\020\001" +
       "\022\016\n\nPercent_10\020\002\022\016\n\nPercent_18\020\003\022\016\n\nPerc" +
