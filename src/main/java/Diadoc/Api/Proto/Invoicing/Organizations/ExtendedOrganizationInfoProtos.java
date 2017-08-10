@@ -37,6 +37,14 @@ public final class ExtendedOrganizationInfoProtos {
      * </pre>
      */
     ForeignEntity(2, 3),
+    /**
+     * <code>PhysicalEntity = 4;</code>
+     *
+     * <pre>
+     * Сведения о физическом лице // СвФл
+     * </pre>
+     */
+    PhysicalEntity(3, 4),
     ;
 
     /**
@@ -63,6 +71,14 @@ public final class ExtendedOrganizationInfoProtos {
      * </pre>
      */
     public static final int ForeignEntity_VALUE = 3;
+    /**
+     * <code>PhysicalEntity = 4;</code>
+     *
+     * <pre>
+     * Сведения о физическом лице // СвФл
+     * </pre>
+     */
+    public static final int PhysicalEntity_VALUE = 4;
 
 
     public final int getNumber() { return value; }
@@ -72,6 +88,7 @@ public final class ExtendedOrganizationInfoProtos {
         case 1: return LegalEntity;
         case 2: return IndividualEntity;
         case 3: return ForeignEntity;
+        case 4: return PhysicalEntity;
         default: return null;
       }
     }
@@ -636,6 +653,32 @@ public final class ExtendedOrganizationInfoProtos {
      */
     com.google.protobuf.ByteString
         getIndividualEntityRegistrationCertificateBytes();
+
+    /**
+     * <code>optional string Country = 21;</code>
+     *
+     * <pre>
+     * Страна //Страна
+     * </pre>
+     */
+    boolean hasCountry();
+    /**
+     * <code>optional string Country = 21;</code>
+     *
+     * <pre>
+     * Страна //Страна
+     * </pre>
+     */
+    java.lang.String getCountry();
+    /**
+     * <code>optional string Country = 21;</code>
+     *
+     * <pre>
+     * Страна //Страна
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCountryBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfo}
@@ -819,6 +862,12 @@ public final class ExtendedOrganizationInfoProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00080000;
               individualEntityRegistrationCertificate_ = bs;
+              break;
+            }
+            case 170: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00100000;
+              country_ = bs;
               break;
             }
           }
@@ -1889,6 +1938,60 @@ public final class ExtendedOrganizationInfoProtos {
       }
     }
 
+    public static final int COUNTRY_FIELD_NUMBER = 21;
+    private java.lang.Object country_;
+    /**
+     * <code>optional string Country = 21;</code>
+     *
+     * <pre>
+     * Страна //Страна
+     * </pre>
+     */
+    public boolean hasCountry() {
+      return ((bitField0_ & 0x00100000) == 0x00100000);
+    }
+    /**
+     * <code>optional string Country = 21;</code>
+     *
+     * <pre>
+     * Страна //Страна
+     * </pre>
+     */
+    public java.lang.String getCountry() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          country_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Country = 21;</code>
+     *
+     * <pre>
+     * Страна //Страна
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCountryBytes() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        country_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       boxId_ = "";
       orgName_ = "";
@@ -1910,6 +2013,7 @@ public final class ExtendedOrganizationInfoProtos {
       organizationAdditionalInfo_ = "";
       organizationOrPersonInfo_ = "";
       individualEntityRegistrationCertificate_ = "";
+      country_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1993,6 +2097,9 @@ public final class ExtendedOrganizationInfoProtos {
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         output.writeBytes(20, getIndividualEntityRegistrationCertificateBytes());
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        output.writeBytes(21, getCountryBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2082,6 +2189,10 @@ public final class ExtendedOrganizationInfoProtos {
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(20, getIndividualEntityRegistrationCertificateBytes());
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(21, getCountryBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2245,6 +2356,8 @@ public final class ExtendedOrganizationInfoProtos {
         bitField0_ = (bitField0_ & ~0x00040000);
         individualEntityRegistrationCertificate_ = "";
         bitField0_ = (bitField0_ & ~0x00080000);
+        country_ = "";
+        bitField0_ = (bitField0_ & ~0x00100000);
         return this;
       }
 
@@ -2357,6 +2470,10 @@ public final class ExtendedOrganizationInfoProtos {
           to_bitField0_ |= 0x00080000;
         }
         result.individualEntityRegistrationCertificate_ = individualEntityRegistrationCertificate_;
+        if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
+          to_bitField0_ |= 0x00100000;
+        }
+        result.country_ = country_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2467,6 +2584,11 @@ public final class ExtendedOrganizationInfoProtos {
         if (other.hasIndividualEntityRegistrationCertificate()) {
           bitField0_ |= 0x00080000;
           individualEntityRegistrationCertificate_ = other.individualEntityRegistrationCertificate_;
+          onChanged();
+        }
+        if (other.hasCountry()) {
+          bitField0_ |= 0x00100000;
+          country_ = other.country_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4509,6 +4631,106 @@ public final class ExtendedOrganizationInfoProtos {
         return this;
       }
 
+      private java.lang.Object country_ = "";
+      /**
+       * <code>optional string Country = 21;</code>
+       *
+       * <pre>
+       * Страна //Страна
+       * </pre>
+       */
+      public boolean hasCountry() {
+        return ((bitField0_ & 0x00100000) == 0x00100000);
+      }
+      /**
+       * <code>optional string Country = 21;</code>
+       *
+       * <pre>
+       * Страна //Страна
+       * </pre>
+       */
+      public java.lang.String getCountry() {
+        java.lang.Object ref = country_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            country_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Country = 21;</code>
+       *
+       * <pre>
+       * Страна //Страна
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        java.lang.Object ref = country_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          country_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Country = 21;</code>
+       *
+       * <pre>
+       * Страна //Страна
+       * </pre>
+       */
+      public Builder setCountry(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00100000;
+        country_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Country = 21;</code>
+       *
+       * <pre>
+       * Страна //Страна
+       * </pre>
+       */
+      public Builder clearCountry() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        country_ = getDefaultInstance().getCountry();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Country = 21;</code>
+       *
+       * <pre>
+       * Страна //Страна
+       * </pre>
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00100000;
+        country_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfo)
     }
 
@@ -4536,7 +4758,7 @@ public final class ExtendedOrganizationInfoProtos {
     java.lang.String[] descriptorData = {
       "\n(Invoicing/ExtendedOrganizationInfo.pro" +
       "to\022(Diadoc.Api.Proto.Invoicing.Organizat" +
-      "ions\032\rAddress.proto\"\215\004\n\030ExtendedOrganiza" +
+      "ions\032\rAddress.proto\"\236\004\n\030ExtendedOrganiza" +
       "tionInfo\022\r\n\005BoxId\030\001 \001(\t\022\017\n\007OrgName\030\002 \001(\t" +
       "\022\013\n\003Inn\030\003 \001(\t\022\013\n\003Kpp\030\004 \001(\t\022*\n\007Address\030\005 " +
       "\001(\0132\031.Diadoc.Api.Proto.Address\022\030\n\020FnsPar" +
@@ -4549,10 +4771,11 @@ public final class ExtendedOrganizationInfoProtos {
       "Id\030\020 \001(\t\022\022\n\nDepartment\030\021 \001(\t\022\"\n\032Organiza" +
       "tionAdditionalInfo\030\022 \001(\t\022 \n\030Organization" +
       "OrPersonInfo\030\023 \001(\t\022/\n\'IndividualEntityRe" +
-      "gistrationCertificate\030\024 \001(\t*C\n\007OrgType\022\017" +
-      "\n\013LegalEntity\020\001\022\024\n\020IndividualEntity\020\002\022\021\n" +
-      "\rForeignEntity\020\003B B\036ExtendedOrganization" +
-      "InfoProtos"
+      "gistrationCertificate\030\024 \001(\t\022\017\n\007Country\030\025" +
+      " \001(\t*W\n\007OrgType\022\017\n\013LegalEntity\020\001\022\024\n\020Indi" +
+      "vidualEntity\020\002\022\021\n\rForeignEntity\020\003\022\022\n\016Phy" +
+      "sicalEntity\020\004B B\036ExtendedOrganizationInf" +
+      "oProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4572,7 +4795,7 @@ public final class ExtendedOrganizationInfoProtos {
     internal_static_Diadoc_Api_Proto_Invoicing_Organizations_ExtendedOrganizationInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Invoicing_Organizations_ExtendedOrganizationInfo_descriptor,
-        new java.lang.String[] { "BoxId", "OrgName", "Inn", "Kpp", "Address", "FnsParticipantId", "OrgType", "Okopf", "Okpo", "Okdp", "Phone", "Email", "CorrespondentAccount", "BankAccountNumber", "BankName", "BankId", "Department", "OrganizationAdditionalInfo", "OrganizationOrPersonInfo", "IndividualEntityRegistrationCertificate", });
+        new java.lang.String[] { "BoxId", "OrgName", "Inn", "Kpp", "Address", "FnsParticipantId", "OrgType", "Okopf", "Okpo", "Okdp", "Phone", "Email", "CorrespondentAccount", "BankAccountNumber", "BankName", "BankId", "Department", "OrganizationAdditionalInfo", "OrganizationOrPersonInfo", "IndividualEntityRegistrationCertificate", "Country", });
     Diadoc.Api.Proto.AddressProtos.getDescriptor();
   }
 
