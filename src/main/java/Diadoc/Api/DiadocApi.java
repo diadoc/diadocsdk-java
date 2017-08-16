@@ -780,8 +780,8 @@ public class DiadocApi {
 
     private static ExtendedSignerProtos.DocumentTitleType CreateDocumentTitleType(boolean forBuyer, boolean forCorrection) {
         return forBuyer
-            ? (forCorrection ? ExtendedSignerProtos.DocumentTitleType.BuyerUCD : ExtendedSignerProtos.DocumentTitleType.BuyerUTD)
-            : (forCorrection ? ExtendedSignerProtos.DocumentTitleType.SellerUCD : ExtendedSignerProtos.DocumentTitleType.SellerUTD);
+            ? (forCorrection ? ExtendedSignerProtos.DocumentTitleType.UcdBuyer : ExtendedSignerProtos.DocumentTitleType.UtdBuyer)
+            : (forCorrection ? ExtendedSignerProtos.DocumentTitleType.UcdSeller : ExtendedSignerProtos.DocumentTitleType.UtdSeller);
     }
 
     public InvoiceInfoProtos.InvoiceInfo ParseInvoiceXml(byte[] invoiceXmlContent) throws IOException

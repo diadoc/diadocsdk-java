@@ -444,37 +444,37 @@ public final class ExtendedSignerProtos {
   public enum DocumentTitleType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>SellerUTD = 0;</code>
+     * <code>UtdSeller = 0;</code>
      *
      * <pre>
      * Данные для титула продавца УПД
      * </pre>
      */
-    SellerUTD(0, 0),
+    UtdSeller(0, 0),
     /**
-     * <code>BuyerUTD = 1;</code>
+     * <code>UtdBuyer = 1;</code>
      *
      * <pre>
      * Данные для титула покупателя УПД
      * </pre>
      */
-    BuyerUTD(1, 1),
+    UtdBuyer(1, 1),
     /**
-     * <code>SellerUCD = 2;</code>
+     * <code>UcdSeller = 2;</code>
      *
      * <pre>
      * Данные для титула продавца УКД
      * </pre>
      */
-    SellerUCD(2, 2),
+    UcdSeller(2, 2),
     /**
-     * <code>BuyerUCD = 3;</code>
+     * <code>UcdBuyer = 3;</code>
      *
      * <pre>
      * Данные для титула покупателя УКД
      * </pre>
      */
-    BuyerUCD(3, 3),
+    UcdBuyer(3, 3),
     /**
      * <code>TovTorg551Seller = 4;</code>
      *
@@ -510,37 +510,37 @@ public final class ExtendedSignerProtos {
     ;
 
     /**
-     * <code>SellerUTD = 0;</code>
+     * <code>UtdSeller = 0;</code>
      *
      * <pre>
      * Данные для титула продавца УПД
      * </pre>
      */
-    public static final int SellerUTD_VALUE = 0;
+    public static final int UtdSeller_VALUE = 0;
     /**
-     * <code>BuyerUTD = 1;</code>
+     * <code>UtdBuyer = 1;</code>
      *
      * <pre>
      * Данные для титула покупателя УПД
      * </pre>
      */
-    public static final int BuyerUTD_VALUE = 1;
+    public static final int UtdBuyer_VALUE = 1;
     /**
-     * <code>SellerUCD = 2;</code>
+     * <code>UcdSeller = 2;</code>
      *
      * <pre>
      * Данные для титула продавца УКД
      * </pre>
      */
-    public static final int SellerUCD_VALUE = 2;
+    public static final int UcdSeller_VALUE = 2;
     /**
-     * <code>BuyerUCD = 3;</code>
+     * <code>UcdBuyer = 3;</code>
      *
      * <pre>
      * Данные для титула покупателя УКД
      * </pre>
      */
-    public static final int BuyerUCD_VALUE = 3;
+    public static final int UcdBuyer_VALUE = 3;
     /**
      * <code>TovTorg551Seller = 4;</code>
      *
@@ -579,10 +579,10 @@ public final class ExtendedSignerProtos {
 
     public static DocumentTitleType valueOf(int value) {
       switch (value) {
-        case 0: return SellerUTD;
-        case 1: return BuyerUTD;
-        case 2: return SellerUCD;
-        case 3: return BuyerUCD;
+        case 0: return UtdSeller;
+        case 1: return UtdBuyer;
+        case 2: return UcdSeller;
+        case 3: return UcdBuyer;
         case 4: return TovTorg551Seller;
         case 5: return TovTorg551Buyer;
         case 6: return AccCert552Seller;
@@ -5723,8 +5723,8 @@ public final class ExtendedSignerProtos {
       "\n\016SellerEmployee\020\001\022\036\n\032InformationCreator" +
       "Employee\020\002\022\035\n\031OtherOrganizationEmployee\020" +
       "\003\022\024\n\020AuthorizedPerson\020\004*\243\001\n\021DocumentTitl" +
-      "eType\022\r\n\tSellerUTD\020\000\022\014\n\010BuyerUTD\020\001\022\r\n\tSe",
-      "llerUCD\020\002\022\014\n\010BuyerUCD\020\003\022\024\n\020TovTorg551Sel" +
+      "eType\022\r\n\tUtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUc",
+      "dSeller\020\002\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg551Sel" +
       "ler\020\004\022\023\n\017TovTorg551Buyer\020\005\022\024\n\020AccCert552" +
       "Seller\020\006\022\023\n\017AccCert552Buyer\020\007B\026B\024Extende" +
       "dSignerProtos"
