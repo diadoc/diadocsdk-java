@@ -743,7 +743,7 @@ public class DiadocApi {
     @Deprecated
     public ExtendedSignerProtos.ExtendedSignerDetails GetExtendedSignerDetails(String boxId, String thumbprint, boolean forBuyer, boolean forCorrection) throws IOException
     {
-        ExtendedSignerProtos.DocumentTitleType documentTitleType = CreateDocumentTitleType(forBuyer, forCorrection);
+        ExtendedSignerProtos.DocumentTitleType documentTitleType = CreateUtdDocumentTitleType(forBuyer, forCorrection);
         return GetExtendedSignerDetails(boxId, thumbprint, documentTitleType);
     }
 
@@ -762,7 +762,7 @@ public class DiadocApi {
     @Deprecated
     public ExtendedSignerProtos.ExtendedSignerDetails PostExtendedSignerDetails(String boxId, String thumbprint, boolean forBuyer, boolean forCorrection, ExtendedSignerProtos.ExtendedSignerDetailsToPost signerDetails) throws IOException
     {
-        ExtendedSignerProtos.DocumentTitleType documentTitleType = CreateDocumentTitleType(forBuyer, forCorrection);
+        ExtendedSignerProtos.DocumentTitleType documentTitleType = CreateUtdDocumentTitleType(forBuyer, forCorrection);
         return PostExtendedSignerDetails(boxId, thumbprint, documentTitleType, signerDetails);
     }
 
@@ -778,7 +778,7 @@ public class DiadocApi {
         );
     }
 
-    private static ExtendedSignerProtos.DocumentTitleType CreateDocumentTitleType(boolean forBuyer, boolean forCorrection) {
+    private static ExtendedSignerProtos.DocumentTitleType CreateUtdDocumentTitleType(boolean forBuyer, boolean forCorrection) {
         return forBuyer
             ? (forCorrection ? ExtendedSignerProtos.DocumentTitleType.UcdBuyer : ExtendedSignerProtos.DocumentTitleType.UtdBuyer)
             : (forCorrection ? ExtendedSignerProtos.DocumentTitleType.UcdSeller : ExtendedSignerProtos.DocumentTitleType.UtdSeller);
