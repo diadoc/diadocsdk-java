@@ -182,47 +182,47 @@ public final class TovTorgInfoProtos {
         int index);
 
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    java.util.List<Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase> 
-        getBasesList();
+    java.util.List<Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo> 
+        getGroundsList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase getBases(int index);
+    Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo getGrounds(int index);
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    int getBasesCount();
+    int getGroundsCount();
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    java.util.List<? extends Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBaseOrBuilder> 
-        getBasesOrBuilderList();
+    java.util.List<? extends Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder> 
+        getGroundsOrBuilderList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBaseOrBuilder getBasesOrBuilder(
+    Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder getGroundsOrBuilder(
         int index);
 
     /**
@@ -713,10 +713,10 @@ public final class TovTorgInfoProtos {
             }
             case 58: {
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-                bases_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase>();
+                grounds_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo>();
                 mutable_bitField0_ |= 0x00000040;
               }
-              bases_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.PARSER, extensionRegistry));
+              grounds_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.PARSER, extensionRegistry));
               break;
             }
             case 66: {
@@ -836,7 +836,7 @@ public final class TovTorgInfoProtos {
           signers_ = java.util.Collections.unmodifiableList(signers_);
         }
         if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-          bases_ = java.util.Collections.unmodifiableList(bases_);
+          grounds_ = java.util.Collections.unmodifiableList(grounds_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1090,59 +1090,59 @@ public final class TovTorgInfoProtos {
       return signers_.get(index);
     }
 
-    public static final int BASES_FIELD_NUMBER = 7;
-    private java.util.List<Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase> bases_;
+    public static final int GROUNDS_FIELD_NUMBER = 7;
+    private java.util.List<Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo> grounds_;
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    public java.util.List<Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase> getBasesList() {
-      return bases_;
+    public java.util.List<Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo> getGroundsList() {
+      return grounds_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    public java.util.List<? extends Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBaseOrBuilder> 
-        getBasesOrBuilderList() {
-      return bases_;
+    public java.util.List<? extends Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder> 
+        getGroundsOrBuilderList() {
+      return grounds_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    public int getBasesCount() {
-      return bases_.size();
+    public int getGroundsCount() {
+      return grounds_.size();
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase getBases(int index) {
-      return bases_.get(index);
+    public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo getGrounds(int index) {
+      return grounds_.get(index);
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+     * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
      *
      * <pre>
      * Основание // Основание
      * </pre>
      */
-    public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBaseOrBuilder getBasesOrBuilder(
+    public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder getGroundsOrBuilder(
         int index) {
-      return bases_.get(index);
+      return grounds_.get(index);
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 8;
@@ -1845,7 +1845,7 @@ public final class TovTorgInfoProtos {
       consignee_ = Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfoProtos.ExtendedOrganizationInfo.getDefaultInstance();
       carrier_ = Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfoProtos.ExtendedOrganizationInfo.getDefaultInstance();
       signers_ = java.util.Collections.emptyList();
-      bases_ = java.util.Collections.emptyList();
+      grounds_ = java.util.Collections.emptyList();
       currency_ = "";
       currencyRate_ = "";
       documentDate_ = "";
@@ -1927,8 +1927,8 @@ public final class TovTorgInfoProtos {
           return false;
         }
       }
-      for (int i = 0; i < getBasesCount(); i++) {
-        if (!getBases(i).isInitialized()) {
+      for (int i = 0; i < getGroundsCount(); i++) {
+        if (!getGrounds(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -1974,8 +1974,8 @@ public final class TovTorgInfoProtos {
       for (int i = 0; i < signers_.size(); i++) {
         output.writeMessage(6, signers_.get(i));
       }
-      for (int i = 0; i < bases_.size(); i++) {
-        output.writeMessage(7, bases_.get(i));
+      for (int i = 0; i < grounds_.size(); i++) {
+        output.writeMessage(7, grounds_.get(i));
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeBytes(8, getCurrencyBytes());
@@ -2052,9 +2052,9 @@ public final class TovTorgInfoProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, signers_.get(i));
       }
-      for (int i = 0; i < bases_.size(); i++) {
+      for (int i = 0; i < grounds_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, bases_.get(i));
+          .computeMessageSize(7, grounds_.get(i));
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2227,7 +2227,7 @@ public final class TovTorgInfoProtos {
           getConsigneeFieldBuilder();
           getCarrierFieldBuilder();
           getSignersFieldBuilder();
-          getBasesFieldBuilder();
+          getGroundsFieldBuilder();
           getTransferInfoFieldBuilder();
           getTableFieldBuilder();
           getAdditionalInfoIdFieldBuilder();
@@ -2275,11 +2275,11 @@ public final class TovTorgInfoProtos {
         } else {
           signersBuilder_.clear();
         }
-        if (basesBuilder_ == null) {
-          bases_ = java.util.Collections.emptyList();
+        if (groundsBuilder_ == null) {
+          grounds_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000040);
         } else {
-          basesBuilder_.clear();
+          groundsBuilder_.clear();
         }
         currency_ = "";
         bitField0_ = (bitField0_ & ~0x00000080);
@@ -2398,14 +2398,14 @@ public final class TovTorgInfoProtos {
         } else {
           result.signers_ = signersBuilder_.build();
         }
-        if (basesBuilder_ == null) {
+        if (groundsBuilder_ == null) {
           if (((bitField0_ & 0x00000040) == 0x00000040)) {
-            bases_ = java.util.Collections.unmodifiableList(bases_);
+            grounds_ = java.util.Collections.unmodifiableList(grounds_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
-          result.bases_ = bases_;
+          result.grounds_ = grounds_;
         } else {
-          result.bases_ = basesBuilder_.build();
+          result.grounds_ = groundsBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000020;
@@ -2532,29 +2532,29 @@ public final class TovTorgInfoProtos {
             }
           }
         }
-        if (basesBuilder_ == null) {
-          if (!other.bases_.isEmpty()) {
-            if (bases_.isEmpty()) {
-              bases_ = other.bases_;
+        if (groundsBuilder_ == null) {
+          if (!other.grounds_.isEmpty()) {
+            if (grounds_.isEmpty()) {
+              grounds_ = other.grounds_;
               bitField0_ = (bitField0_ & ~0x00000040);
             } else {
-              ensureBasesIsMutable();
-              bases_.addAll(other.bases_);
+              ensureGroundsIsMutable();
+              grounds_.addAll(other.grounds_);
             }
             onChanged();
           }
         } else {
-          if (!other.bases_.isEmpty()) {
-            if (basesBuilder_.isEmpty()) {
-              basesBuilder_.dispose();
-              basesBuilder_ = null;
-              bases_ = other.bases_;
+          if (!other.grounds_.isEmpty()) {
+            if (groundsBuilder_.isEmpty()) {
+              groundsBuilder_.dispose();
+              groundsBuilder_ = null;
+              grounds_ = other.grounds_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              basesBuilder_ = 
+              groundsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getBasesFieldBuilder() : null;
+                   getGroundsFieldBuilder() : null;
             } else {
-              basesBuilder_.addAllMessages(other.bases_);
+              groundsBuilder_.addAllMessages(other.grounds_);
             }
           }
         }
@@ -2687,8 +2687,8 @@ public final class TovTorgInfoProtos {
             return false;
           }
         }
-        for (int i = 0; i < getBasesCount(); i++) {
-          if (!getBases(i).isInitialized()) {
+        for (int i = 0; i < getGroundsCount(); i++) {
+          if (!getGrounds(i).isInitialized()) {
             
             return false;
           }
@@ -3803,316 +3803,316 @@ public final class TovTorgInfoProtos {
         return signersBuilder_;
       }
 
-      private java.util.List<Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase> bases_ =
+      private java.util.List<Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo> grounds_ =
         java.util.Collections.emptyList();
-      private void ensureBasesIsMutable() {
+      private void ensureGroundsIsMutable() {
         if (!((bitField0_ & 0x00000040) == 0x00000040)) {
-          bases_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase>(bases_);
+          grounds_ = new java.util.ArrayList<Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo>(grounds_);
           bitField0_ |= 0x00000040;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBaseOrBuilder> basesBuilder_;
+          Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder> groundsBuilder_;
 
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public java.util.List<Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase> getBasesList() {
-        if (basesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(bases_);
+      public java.util.List<Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo> getGroundsList() {
+        if (groundsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(grounds_);
         } else {
-          return basesBuilder_.getMessageList();
+          return groundsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public int getBasesCount() {
-        if (basesBuilder_ == null) {
-          return bases_.size();
+      public int getGroundsCount() {
+        if (groundsBuilder_ == null) {
+          return grounds_.size();
         } else {
-          return basesBuilder_.getCount();
+          return groundsBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase getBases(int index) {
-        if (basesBuilder_ == null) {
-          return bases_.get(index);
+      public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo getGrounds(int index) {
+        if (groundsBuilder_ == null) {
+          return grounds_.get(index);
         } else {
-          return basesBuilder_.getMessage(index);
+          return groundsBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Builder setBases(
-          int index, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase value) {
-        if (basesBuilder_ == null) {
+      public Builder setGrounds(
+          int index, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo value) {
+        if (groundsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureBasesIsMutable();
-          bases_.set(index, value);
+          ensureGroundsIsMutable();
+          grounds_.set(index, value);
           onChanged();
         } else {
-          basesBuilder_.setMessage(index, value);
+          groundsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Builder setBases(
-          int index, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder builderForValue) {
-        if (basesBuilder_ == null) {
-          ensureBasesIsMutable();
-          bases_.set(index, builderForValue.build());
+      public Builder setGrounds(
+          int index, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder builderForValue) {
+        if (groundsBuilder_ == null) {
+          ensureGroundsIsMutable();
+          grounds_.set(index, builderForValue.build());
           onChanged();
         } else {
-          basesBuilder_.setMessage(index, builderForValue.build());
+          groundsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Builder addBases(Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase value) {
-        if (basesBuilder_ == null) {
+      public Builder addGrounds(Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo value) {
+        if (groundsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureBasesIsMutable();
-          bases_.add(value);
+          ensureGroundsIsMutable();
+          grounds_.add(value);
           onChanged();
         } else {
-          basesBuilder_.addMessage(value);
+          groundsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Builder addBases(
-          int index, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase value) {
-        if (basesBuilder_ == null) {
+      public Builder addGrounds(
+          int index, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo value) {
+        if (groundsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureBasesIsMutable();
-          bases_.add(index, value);
+          ensureGroundsIsMutable();
+          grounds_.add(index, value);
           onChanged();
         } else {
-          basesBuilder_.addMessage(index, value);
+          groundsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Builder addBases(
-          Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder builderForValue) {
-        if (basesBuilder_ == null) {
-          ensureBasesIsMutable();
-          bases_.add(builderForValue.build());
+      public Builder addGrounds(
+          Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder builderForValue) {
+        if (groundsBuilder_ == null) {
+          ensureGroundsIsMutable();
+          grounds_.add(builderForValue.build());
           onChanged();
         } else {
-          basesBuilder_.addMessage(builderForValue.build());
+          groundsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Builder addBases(
-          int index, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder builderForValue) {
-        if (basesBuilder_ == null) {
-          ensureBasesIsMutable();
-          bases_.add(index, builderForValue.build());
+      public Builder addGrounds(
+          int index, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder builderForValue) {
+        if (groundsBuilder_ == null) {
+          ensureGroundsIsMutable();
+          grounds_.add(index, builderForValue.build());
           onChanged();
         } else {
-          basesBuilder_.addMessage(index, builderForValue.build());
+          groundsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Builder addAllBases(
-          java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase> values) {
-        if (basesBuilder_ == null) {
-          ensureBasesIsMutable();
+      public Builder addAllGrounds(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo> values) {
+        if (groundsBuilder_ == null) {
+          ensureGroundsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, bases_);
+              values, grounds_);
           onChanged();
         } else {
-          basesBuilder_.addAllMessages(values);
+          groundsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Builder clearBases() {
-        if (basesBuilder_ == null) {
-          bases_ = java.util.Collections.emptyList();
+      public Builder clearGrounds() {
+        if (groundsBuilder_ == null) {
+          grounds_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
-          basesBuilder_.clear();
+          groundsBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Builder removeBases(int index) {
-        if (basesBuilder_ == null) {
-          ensureBasesIsMutable();
-          bases_.remove(index);
+      public Builder removeGrounds(int index) {
+        if (groundsBuilder_ == null) {
+          ensureGroundsIsMutable();
+          grounds_.remove(index);
           onChanged();
         } else {
-          basesBuilder_.remove(index);
+          groundsBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder getBasesBuilder(
+      public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder getGroundsBuilder(
           int index) {
-        return getBasesFieldBuilder().getBuilder(index);
+        return getGroundsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBaseOrBuilder getBasesOrBuilder(
+      public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder getGroundsOrBuilder(
           int index) {
-        if (basesBuilder_ == null) {
-          return bases_.get(index);  } else {
-          return basesBuilder_.getMessageOrBuilder(index);
+        if (groundsBuilder_ == null) {
+          return grounds_.get(index);  } else {
+          return groundsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public java.util.List<? extends Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBaseOrBuilder> 
-           getBasesOrBuilderList() {
-        if (basesBuilder_ != null) {
-          return basesBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder> 
+           getGroundsOrBuilderList() {
+        if (groundsBuilder_ != null) {
+          return groundsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(bases_);
+          return java.util.Collections.unmodifiableList(grounds_);
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder addBasesBuilder() {
-        return getBasesFieldBuilder().addBuilder(
-            Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.getDefaultInstance());
+      public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder addGroundsBuilder() {
+        return getGroundsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder addBasesBuilder(
+      public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder addGroundsBuilder(
           int index) {
-        return getBasesFieldBuilder().addBuilder(
-            index, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.getDefaultInstance());
+        return getGroundsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Invoicing.TransferBase Bases = 7;</code>
+       * <code>repeated .Diadoc.Api.Proto.Invoicing.GroundInfo Grounds = 7;</code>
        *
        * <pre>
        * Основание // Основание
        * </pre>
        */
-      public java.util.List<Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder> 
-           getBasesBuilderList() {
-        return getBasesFieldBuilder().getBuilderList();
+      public java.util.List<Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder> 
+           getGroundsBuilderList() {
+        return getGroundsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBaseOrBuilder> 
-          getBasesFieldBuilder() {
-        if (basesBuilder_ == null) {
-          basesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBase.Builder, Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.TransferBaseOrBuilder>(
-                  bases_,
+          Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder> 
+          getGroundsFieldBuilder() {
+        if (groundsBuilder_ == null) {
+          groundsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder>(
+                  grounds_,
                   ((bitField0_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
                   isClean());
-          bases_ = null;
+          grounds_ = null;
         }
-        return basesBuilder_;
+        return groundsBuilder_;
       }
 
       private java.lang.Object currency_ = "";
@@ -17615,6 +17615,1153 @@ public final class TovTorgInfoProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.TovTorgTransferInfo)
   }
 
+  public interface GroundInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.GroundInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Name = 1;</code>
+     *
+     * <pre>
+     * НаимОсн
+     * </pre>
+     */
+    boolean hasName();
+    /**
+     * <code>required string Name = 1;</code>
+     *
+     * <pre>
+     * НаимОсн
+     * </pre>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string Name = 1;</code>
+     *
+     * <pre>
+     * НаимОсн
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional string Number = 2;</code>
+     *
+     * <pre>
+     * НомОсн
+     * </pre>
+     */
+    boolean hasNumber();
+    /**
+     * <code>optional string Number = 2;</code>
+     *
+     * <pre>
+     * НомОсн
+     * </pre>
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>optional string Number = 2;</code>
+     *
+     * <pre>
+     * НомОсн
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+
+    /**
+     * <code>optional string Date = 3;</code>
+     *
+     * <pre>
+     * ДатаОсн
+     * </pre>
+     */
+    boolean hasDate();
+    /**
+     * <code>optional string Date = 3;</code>
+     *
+     * <pre>
+     * ДатаОсн
+     * </pre>
+     */
+    java.lang.String getDate();
+    /**
+     * <code>optional string Date = 3;</code>
+     *
+     * <pre>
+     * ДатаОсн
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDateBytes();
+
+    /**
+     * <code>optional string Info = 4;</code>
+     *
+     * <pre>
+     * ДопСвОсн
+     * </pre>
+     */
+    boolean hasInfo();
+    /**
+     * <code>optional string Info = 4;</code>
+     *
+     * <pre>
+     * ДопСвОсн
+     * </pre>
+     */
+    java.lang.String getInfo();
+    /**
+     * <code>optional string Info = 4;</code>
+     *
+     * <pre>
+     * ДопСвОсн
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getInfoBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Invoicing.GroundInfo}
+   */
+  public static final class GroundInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.GroundInfo)
+      GroundInfoOrBuilder {
+    // Use GroundInfo.newBuilder() to construct.
+    private GroundInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private GroundInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final GroundInfo defaultInstance;
+    public static GroundInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public GroundInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GroundInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              number_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              date_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              info_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.class, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<GroundInfo> PARSER =
+        new com.google.protobuf.AbstractParser<GroundInfo>() {
+      public GroundInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GroundInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GroundInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.Object name_;
+    /**
+     * <code>required string Name = 1;</code>
+     *
+     * <pre>
+     * НаимОсн
+     * </pre>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string Name = 1;</code>
+     *
+     * <pre>
+     * НаимОсн
+     * </pre>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Name = 1;</code>
+     *
+     * <pre>
+     * НаимОсн
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 2;
+    private java.lang.Object number_;
+    /**
+     * <code>optional string Number = 2;</code>
+     *
+     * <pre>
+     * НомОсн
+     * </pre>
+     */
+    public boolean hasNumber() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string Number = 2;</code>
+     *
+     * <pre>
+     * НомОсн
+     * </pre>
+     */
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Number = 2;</code>
+     *
+     * <pre>
+     * НомОсн
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATE_FIELD_NUMBER = 3;
+    private java.lang.Object date_;
+    /**
+     * <code>optional string Date = 3;</code>
+     *
+     * <pre>
+     * ДатаОсн
+     * </pre>
+     */
+    public boolean hasDate() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string Date = 3;</code>
+     *
+     * <pre>
+     * ДатаОсн
+     * </pre>
+     */
+    public java.lang.String getDate() {
+      java.lang.Object ref = date_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          date_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Date = 3;</code>
+     *
+     * <pre>
+     * ДатаОсн
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDateBytes() {
+      java.lang.Object ref = date_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        date_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INFO_FIELD_NUMBER = 4;
+    private java.lang.Object info_;
+    /**
+     * <code>optional string Info = 4;</code>
+     *
+     * <pre>
+     * ДопСвОсн
+     * </pre>
+     */
+    public boolean hasInfo() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string Info = 4;</code>
+     *
+     * <pre>
+     * ДопСвОсн
+     * </pre>
+     */
+    public java.lang.String getInfo() {
+      java.lang.Object ref = info_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          info_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Info = 4;</code>
+     *
+     * <pre>
+     * ДопСвОсн
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getInfoBytes() {
+      java.lang.Object ref = info_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        info_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      name_ = "";
+      number_ = "";
+      date_ = "";
+      info_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getNumberBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getDateBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getInfoBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getNumberBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getDateBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getInfoBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Invoicing.GroundInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Invoicing.GroundInfo)
+        Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.class, Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        number_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        date_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        info_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo build() {
+        Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo buildPartial() {
+        Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo result = new Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.number_ = number_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.date_ = date_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.info_ = info_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo) {
+          return mergeFrom((Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo other) {
+        if (other == Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasNumber()) {
+          bitField0_ |= 0x00000002;
+          number_ = other.number_;
+          onChanged();
+        }
+        if (other.hasDate()) {
+          bitField0_ |= 0x00000004;
+          date_ = other.date_;
+          onChanged();
+        }
+        if (other.hasInfo()) {
+          bitField0_ |= 0x00000008;
+          info_ = other.info_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasName()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos.GroundInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string Name = 1;</code>
+       *
+       * <pre>
+       * НаимОсн
+       * </pre>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string Name = 1;</code>
+       *
+       * <pre>
+       * НаимОсн
+       * </pre>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 1;</code>
+       *
+       * <pre>
+       * НаимОсн
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 1;</code>
+       *
+       * <pre>
+       * НаимОсн
+       * </pre>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 1;</code>
+       *
+       * <pre>
+       * НаимОсн
+       * </pre>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 1;</code>
+       *
+       * <pre>
+       * НаимОсн
+       * </pre>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>optional string Number = 2;</code>
+       *
+       * <pre>
+       * НомОсн
+       * </pre>
+       */
+      public boolean hasNumber() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string Number = 2;</code>
+       *
+       * <pre>
+       * НомОсн
+       * </pre>
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Number = 2;</code>
+       *
+       * <pre>
+       * НомОсн
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Number = 2;</code>
+       *
+       * <pre>
+       * НомОсн
+       * </pre>
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Number = 2;</code>
+       *
+       * <pre>
+       * НомОсн
+       * </pre>
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        number_ = getDefaultInstance().getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Number = 2;</code>
+       *
+       * <pre>
+       * НомОсн
+       * </pre>
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object date_ = "";
+      /**
+       * <code>optional string Date = 3;</code>
+       *
+       * <pre>
+       * ДатаОсн
+       * </pre>
+       */
+      public boolean hasDate() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string Date = 3;</code>
+       *
+       * <pre>
+       * ДатаОсн
+       * </pre>
+       */
+      public java.lang.String getDate() {
+        java.lang.Object ref = date_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            date_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Date = 3;</code>
+       *
+       * <pre>
+       * ДатаОсн
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDateBytes() {
+        java.lang.Object ref = date_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          date_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Date = 3;</code>
+       *
+       * <pre>
+       * ДатаОсн
+       * </pre>
+       */
+      public Builder setDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        date_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Date = 3;</code>
+       *
+       * <pre>
+       * ДатаОсн
+       * </pre>
+       */
+      public Builder clearDate() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        date_ = getDefaultInstance().getDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Date = 3;</code>
+       *
+       * <pre>
+       * ДатаОсн
+       * </pre>
+       */
+      public Builder setDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        date_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object info_ = "";
+      /**
+       * <code>optional string Info = 4;</code>
+       *
+       * <pre>
+       * ДопСвОсн
+       * </pre>
+       */
+      public boolean hasInfo() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string Info = 4;</code>
+       *
+       * <pre>
+       * ДопСвОсн
+       * </pre>
+       */
+      public java.lang.String getInfo() {
+        java.lang.Object ref = info_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            info_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Info = 4;</code>
+       *
+       * <pre>
+       * ДопСвОсн
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getInfoBytes() {
+        java.lang.Object ref = info_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          info_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Info = 4;</code>
+       *
+       * <pre>
+       * ДопСвОсн
+       * </pre>
+       */
+      public Builder setInfo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        info_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Info = 4;</code>
+       *
+       * <pre>
+       * ДопСвОсн
+       * </pre>
+       */
+      public Builder clearInfo() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        info_ = getDefaultInstance().getInfo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Info = 4;</code>
+       *
+       * <pre>
+       * ДопСвОсн
+       * </pre>
+       */
+      public Builder setInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        info_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.GroundInfo)
+    }
+
+    static {
+      defaultInstance = new GroundInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Invoicing.GroundInfo)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Invoicing_TovTorgSellerTitleInfo_descriptor;
   private static
@@ -17640,6 +18787,11 @@ public final class TovTorgInfoProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Invoicing_TovTorgTransferInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17667,8 +18819,8 @@ public final class TovTorgInfoProtos {
       "Api.Proto.Invoicing.Organizations.Extend" +
       "edOrganizationInfo\022C\n\007Signers\030\006 \003(\01322.Di" +
       "adoc.Api.Proto.Invoicing.Signers.Extende" +
-      "dSigner\0227\n\005Bases\030\007 \003(\0132(.Diadoc.Api.Prot" +
-      "o.Invoicing.TransferBase\022\020\n\010Currency\030\010 \002",
+      "dSigner\0227\n\007Grounds\030\007 \003(\0132&.Diadoc.Api.Pr" +
+      "oto.Invoicing.GroundInfo\022\020\n\010Currency\030\010 \002",
       "(\t\022\024\n\014CurrencyRate\030\t \001(\t\022\024\n\014DocumentDate" +
       "\030\n \002(\t\022\026\n\016DocumentNumber\030\013 \001(\t\022\024\n\014Revisi" +
       "onDate\030\014 \001(\t\022\026\n\016RevisionNumber\030\r \001(\t\022E\n\014" +
@@ -17716,8 +18868,9 @@ public final class TovTorgInfoProtos {
       "icing.Employee\022<\n\013OtherIssuer\030\006 \001(\0132\'.Di" +
       "adoc.Api.Proto.Invoicing.OtherIssuer\022C\n\017" +
       "AdditionalInfos\030\007 \003(\0132*.Diadoc.Api.Proto" +
-      ".Invoicing.AdditionalInfoB\023B\021TovTorgInfo" +
-      "Protos"
+      ".Invoicing.AdditionalInfo\"F\n\nGroundInfo\022" +
+      "\014\n\004Name\030\001 \002(\t\022\016\n\006Number\030\002 \001(\t\022\014\n\004Date\030\003 " +
+      "\001(\t\022\014\n\004Info\030\004 \001(\tB\023B\021TovTorgInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17740,7 +18893,7 @@ public final class TovTorgInfoProtos {
     internal_static_Diadoc_Api_Proto_Invoicing_TovTorgSellerTitleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Invoicing_TovTorgSellerTitleInfo_descriptor,
-        new java.lang.String[] { "Seller", "Buyer", "Shipper", "Consignee", "Carrier", "Signers", "Bases", "Currency", "CurrencyRate", "DocumentDate", "DocumentNumber", "RevisionDate", "RevisionNumber", "TransferInfo", "DocumentCreator", "DocumentCreatorBase", "OperationType", "GovernmentContractInfo", "Table", "AdditionalInfoId", "DocumentName", });
+        new java.lang.String[] { "Seller", "Buyer", "Shipper", "Consignee", "Carrier", "Signers", "Grounds", "Currency", "CurrencyRate", "DocumentDate", "DocumentNumber", "RevisionDate", "RevisionNumber", "TransferInfo", "DocumentCreator", "DocumentCreatorBase", "OperationType", "GovernmentContractInfo", "Table", "AdditionalInfoId", "DocumentName", });
     internal_static_Diadoc_Api_Proto_Invoicing_TovTorgBuyerTitleInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Invoicing_TovTorgBuyerTitleInfo_fieldAccessorTable = new
@@ -17765,6 +18918,12 @@ public final class TovTorgInfoProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Invoicing_TovTorgTransferInfo_descriptor,
         new java.lang.String[] { "OperationInfo", "TransferDate", "Attachment", "Waybills", "Employee", "OtherIssuer", "AdditionalInfos", });
+    internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Invoicing_GroundInfo_descriptor,
+        new java.lang.String[] { "Name", "Number", "Date", "Info", });
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.getDescriptor();
     Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.getDescriptor();
     Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfoProtos.getDescriptor();

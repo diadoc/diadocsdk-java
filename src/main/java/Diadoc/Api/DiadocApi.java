@@ -718,6 +718,31 @@ public class DiadocApi {
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
+    public GeneratedFile GenerateAcceptanceCertificate552XmlForSeller(AcceptanceCertificate552InfoProtos.AcceptanceCertificate552SellerTitleInfo sellerTitleInfo) throws IOException, ParseException {
+        return GenerateAcceptanceCertificate552XmlForSeller(sellerTitleInfo, false);
+    }
+
+    public GeneratedFile GenerateAcceptanceCertificate552XmlForSeller(AcceptanceCertificate552InfoProtos.AcceptanceCertificate552SellerTitleInfo sellerTitleInfo, boolean disableValidation) throws IOException, ParseException {
+        if (sellerTitleInfo == null) throw new NullPointerException("sellerTitleInfo");
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateAcceptanceCertificateXmlForSeller?documentVersion=rezru_05_01_01" + (disableValidation?"&disableValidation":""), null, sellerTitleInfo.toByteArray());
+        return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
+    public GeneratedFile GenerateAcceptanceCertificate552XmlForBuyer(AcceptanceCertificate552InfoProtos.AcceptanceCertificate552BuyerTitleInfo buyerTitleInfo, String boxId, String sellerTitleMessageId,
+                                                                  String sellerTitleAttachmentId) throws IOException, ParseException {
+        if (buyerTitleInfo == null) throw new NullPointerException("buyerTitleInfo");
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (sellerTitleMessageId == null) throw new NullPointerException("sellerTitleMessageId");
+        if (sellerTitleAttachmentId == null) throw new NullPointerException("sellerTitleAttachmentId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("sellerTitleMessageId", sellerTitleMessageId));
+        parameters.add(new BasicNameValuePair("sellerTitleAttachmentId", sellerTitleAttachmentId));
+        parameters.add(new BasicNameValuePair("documentVersion", "rezru_05_01_01"));
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateAcceptanceCertificateXmlForBuyer", parameters, buyerTitleInfo.toByteArray());
+        return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
     public GeneratedFile GenerateUniversalTransferDocumentXmlForSeller(UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo utdInfo) throws IOException, ParseException {
         return GenerateUniversalTransferDocumentXmlForSeller(utdInfo, false);
     }
@@ -836,6 +861,21 @@ public class DiadocApi {
     public AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo ParseAcceptanceCertificateSellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
     {
         return AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseAcceptanceCertificateSellerTitleXml", null, sellerTitleXmlContent));
+    }
+
+    public AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo ParseAcceptanceCertificateBuyerTitleXml(byte[] buyerTitleXmlContent) throws IOException
+    {
+        return AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseAcceptanceCertificateBuyerTitleXml", null, buyerTitleXmlContent));
+    }
+
+    public AcceptanceCertificate552InfoProtos.AcceptanceCertificate552SellerTitleInfo ParseAcceptanceCertificate552SellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
+    {
+        return AcceptanceCertificate552InfoProtos.AcceptanceCertificate552SellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseAcceptanceCertificateSellerTitleXml?documentVersion=rezru_05_01_01", null, sellerTitleXmlContent));
+    }
+
+    public AcceptanceCertificate552InfoProtos.AcceptanceCertificate552BuyerTitleInfo ParseAcceptanceCertificate552BuyerTitleXml(byte[] buyerTitleXmlContent) throws IOException
+    {
+        return AcceptanceCertificate552InfoProtos.AcceptanceCertificate552BuyerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseAcceptanceCertificateBuyerTitleXml?documentVersion=rezru_05_01_01", null, buyerTitleXmlContent));
     }
 
     public UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo ParseUniversalTransferDocumentSellerTitleXml(byte[] utdXmlContent) throws IOException
