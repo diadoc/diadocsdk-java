@@ -43,6 +43,7 @@ import ru.CryptoPro.JCP.ASN.Gost28147_89_EncryptionSyntax.Gost28147_89_Parameter
 import ru.CryptoPro.JCP.ASN.GostR3410_EncryptionSyntax.GostR3410_KeyTransport;
 import ru.CryptoPro.JCP.JCP;
 import ru.CryptoPro.JCP.params.CryptParamsSpec;
+
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.mail.internet.ContentDisposition;
@@ -670,6 +671,29 @@ public class DiadocApi {
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
+    public GeneratedFile GenerateTovTorg551XmlForSeller(TovTorgInfoProtos.TovTorgSellerTitleInfo sellerTitleInfo) throws IOException, ParseException {
+        return GenerateTovTorgXmlForSeller(sellerTitleInfo, false);
+    }
+
+    public GeneratedFile GenerateTovTorg551XmlForSeller(TovTorgInfoProtos.TovTorgSellerTitleInfo sellerTitleInfo, boolean disableValidation) throws IOException, ParseException {
+        if (sellerTitleInfo == null) throw new NullPointerException("sellerTitleInfo");
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateTorg12XmlForSeller?documentVersion=tovtorg_05_01_02" + (disableValidation?"&disableValidation":""), null, sellerTitleInfo.toByteArray());
+        return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
+    public GeneratedFile GenerateTovTorg551XmlForBuyer(TovTorgInfoProtos.TovTorgBuyerTitleInfo buyerTitleInfo, String boxId, String sellerTitleMessageId, String sellerTitleAttachmentId) throws IOException, ParseException {
+        if (buyerTitleInfo == null) throw new NullPointerException("buyerTitleInfo");
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (sellerTitleMessageId == null) throw new NullPointerException("sellerTitleMessageId");
+        if (sellerTitleAttachmentId == null) throw new NullPointerException("sellerTitleAttachmentId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("sellerTitleMessageId", sellerTitleMessageId));
+        parameters.add(new BasicNameValuePair("sellerTitleAttachmentId", sellerTitleAttachmentId));
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateTorg12XmlForBuyer?documentVersion=tovtorg_05_01_02", parameters, buyerTitleInfo.toByteArray());
+        return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
     public GeneratedFile GenerateAcceptanceCertificateXmlForSeller(AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo sellerTitleInfo) throws IOException, ParseException {
         return GenerateAcceptanceCertificateXmlForSeller(sellerTitleInfo, false);
     }
@@ -792,6 +816,21 @@ public class DiadocApi {
     public Torg12InfoProtos.Torg12SellerTitleInfo ParseTorg12SellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
     {
         return Torg12InfoProtos.Torg12SellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12SellerTitleXml", null, sellerTitleXmlContent));
+    }
+
+    public Torg12InfoProtos.Torg12BuyerTitleInfo ParseTorg12BuyerTitleXml(byte[] buyerTitleXmlContent) throws IOException
+    {
+        return Torg12InfoProtos.Torg12BuyerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12BuyerTitleXml", null, buyerTitleXmlContent));
+    }
+
+    public TovTorgInfoProtos.TovTorgSellerTitleInfo ParseTovTorg551SellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
+    {
+        return TovTorgInfoProtos.TovTorgSellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12SellerTitleXml?documentVersion=tovtorg_05_01_02", null, sellerTitleXmlContent));
+    }
+
+    public TovTorgInfoProtos.TovTorgBuyerTitleInfo ParseTovTorg551BuyerTitleXml(byte[] buyerTitleXmlContent) throws IOException
+    {
+        return TovTorgInfoProtos.TovTorgBuyerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12BuyerTitleXml?documentVersion=tovtorg_05_01_02", null, buyerTitleXmlContent));
     }
 
     public AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo ParseAcceptanceCertificateSellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
