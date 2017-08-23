@@ -740,32 +740,48 @@ public class DiadocApi {
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
+    @Deprecated
     public ExtendedSignerProtos.ExtendedSignerDetails GetExtendedSignerDetails(String boxId, String thumbprint, boolean forBuyer, boolean forCorrection) throws IOException
+    {
+        ExtendedSignerProtos.DocumentTitleType documentTitleType = CreateUtdDocumentTitleType(forBuyer, forCorrection);
+        return GetExtendedSignerDetails(boxId, thumbprint, documentTitleType);
+    }
+
+    public ExtendedSignerProtos.ExtendedSignerDetails GetExtendedSignerDetails(String boxId, String thumbprint, ExtendedSignerProtos.DocumentTitleType documentTitleType) throws IOException
     {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("thumbprint", thumbprint));
-        if (forBuyer)
-            parameters.add(new BasicNameValuePair("buyer", "true"));
-        if (forCorrection)
-            parameters.add(new BasicNameValuePair("correction", "true"));
+        parameters.add(new BasicNameValuePair("documentTitleType", Integer.toString(documentTitleType.getNumber())));
+
         return ExtendedSignerProtos.ExtendedSignerDetails.parseFrom(
-            PerformGetHttpRequest("/ExtendedSignerDetails", parameters)
+            PerformGetHttpRequest("/V2/ExtendedSignerDetails", parameters)
         );
     }
 
+    @Deprecated
     public ExtendedSignerProtos.ExtendedSignerDetails PostExtendedSignerDetails(String boxId, String thumbprint, boolean forBuyer, boolean forCorrection, ExtendedSignerProtos.ExtendedSignerDetailsToPost signerDetails) throws IOException
+    {
+        ExtendedSignerProtos.DocumentTitleType documentTitleType = CreateUtdDocumentTitleType(forBuyer, forCorrection);
+        return PostExtendedSignerDetails(boxId, thumbprint, documentTitleType, signerDetails);
+    }
+
+    public ExtendedSignerProtos.ExtendedSignerDetails PostExtendedSignerDetails(String boxId, String thumbprint, ExtendedSignerProtos.DocumentTitleType documentTitleType, ExtendedSignerProtos.ExtendedSignerDetailsToPost signerDetails) throws IOException
     {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("thumbprint", thumbprint));
-        if (forBuyer)
-            parameters.add(new BasicNameValuePair("buyer", "true"));
-        if (forCorrection)
-            parameters.add(new BasicNameValuePair("correction", "true"));
+        parameters.add(new BasicNameValuePair("documentTitleType", Integer.toString(documentTitleType.getNumber())));
+
         return ExtendedSignerProtos.ExtendedSignerDetails.parseFrom(
-            PerformPostHttpRequest("/ExtendedSignerDetails", parameters, signerDetails.toByteArray())
+            PerformPostHttpRequest("/V2/ExtendedSignerDetails", parameters, signerDetails.toByteArray())
         );
+    }
+
+    private static ExtendedSignerProtos.DocumentTitleType CreateUtdDocumentTitleType(boolean forBuyer, boolean forCorrection) {
+        return forBuyer
+            ? (forCorrection ? ExtendedSignerProtos.DocumentTitleType.UcdBuyer : ExtendedSignerProtos.DocumentTitleType.UtdBuyer)
+            : (forCorrection ? ExtendedSignerProtos.DocumentTitleType.UcdSeller : ExtendedSignerProtos.DocumentTitleType.UtdSeller);
     }
 
     public InvoiceInfoProtos.InvoiceInfo ParseInvoiceXml(byte[] invoiceXmlContent) throws IOException

@@ -438,6 +438,206 @@ public final class ExtendedSignerProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Invoicing.Signers.SignerStatus)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType}
+   */
+  public enum DocumentTitleType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UtdSeller = 0;</code>
+     *
+     * <pre>
+     * Данные для титула продавца УПД
+     * </pre>
+     */
+    UtdSeller(0, 0),
+    /**
+     * <code>UtdBuyer = 1;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя УПД
+     * </pre>
+     */
+    UtdBuyer(1, 1),
+    /**
+     * <code>UcdSeller = 2;</code>
+     *
+     * <pre>
+     * Данные для титула продавца УКД
+     * </pre>
+     */
+    UcdSeller(2, 2),
+    /**
+     * <code>UcdBuyer = 3;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя УКД
+     * </pre>
+     */
+    UcdBuyer(3, 3),
+    /**
+     * <code>TovTorg551Seller = 4;</code>
+     *
+     * <pre>
+     * Данные для титула продавца 551
+     * </pre>
+     */
+    TovTorg551Seller(4, 4),
+    /**
+     * <code>TovTorg551Buyer = 5;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя 551
+     * </pre>
+     */
+    TovTorg551Buyer(5, 5),
+    /**
+     * <code>AccCert552Seller = 6;</code>
+     *
+     * <pre>
+     * Данные для титула исполнителя 552
+     * </pre>
+     */
+    AccCert552Seller(6, 6),
+    /**
+     * <code>AccCert552Buyer = 7;</code>
+     *
+     * <pre>
+     * Данные для титула заказчика 552
+     * </pre>
+     */
+    AccCert552Buyer(7, 7),
+    ;
+
+    /**
+     * <code>UtdSeller = 0;</code>
+     *
+     * <pre>
+     * Данные для титула продавца УПД
+     * </pre>
+     */
+    public static final int UtdSeller_VALUE = 0;
+    /**
+     * <code>UtdBuyer = 1;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя УПД
+     * </pre>
+     */
+    public static final int UtdBuyer_VALUE = 1;
+    /**
+     * <code>UcdSeller = 2;</code>
+     *
+     * <pre>
+     * Данные для титула продавца УКД
+     * </pre>
+     */
+    public static final int UcdSeller_VALUE = 2;
+    /**
+     * <code>UcdBuyer = 3;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя УКД
+     * </pre>
+     */
+    public static final int UcdBuyer_VALUE = 3;
+    /**
+     * <code>TovTorg551Seller = 4;</code>
+     *
+     * <pre>
+     * Данные для титула продавца 551
+     * </pre>
+     */
+    public static final int TovTorg551Seller_VALUE = 4;
+    /**
+     * <code>TovTorg551Buyer = 5;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя 551
+     * </pre>
+     */
+    public static final int TovTorg551Buyer_VALUE = 5;
+    /**
+     * <code>AccCert552Seller = 6;</code>
+     *
+     * <pre>
+     * Данные для титула исполнителя 552
+     * </pre>
+     */
+    public static final int AccCert552Seller_VALUE = 6;
+    /**
+     * <code>AccCert552Buyer = 7;</code>
+     *
+     * <pre>
+     * Данные для титула заказчика 552
+     * </pre>
+     */
+    public static final int AccCert552Buyer_VALUE = 7;
+
+
+    public final int getNumber() { return value; }
+
+    public static DocumentTitleType valueOf(int value) {
+      switch (value) {
+        case 0: return UtdSeller;
+        case 1: return UtdBuyer;
+        case 2: return UcdSeller;
+        case 3: return UcdBuyer;
+        case 4: return TovTorg551Seller;
+        case 5: return TovTorg551Buyer;
+        case 6: return AccCert552Seller;
+        case 7: return AccCert552Buyer;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DocumentTitleType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DocumentTitleType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DocumentTitleType>() {
+            public DocumentTitleType findValueByNumber(int number) {
+              return DocumentTitleType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final DocumentTitleType[] VALUES = values();
+
+    public static DocumentTitleType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DocumentTitleType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType)
+  }
+
   public interface ExtendedSignerOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.Signers.ExtendedSigner)
       com.google.protobuf.MessageOrBuilder {
@@ -5522,8 +5722,12 @@ public final class ExtendedSignerProtos {
       "nAndSignerForInvoice\020\006*w\n\014SignerStatus\022\022" +
       "\n\016SellerEmployee\020\001\022\036\n\032InformationCreator" +
       "Employee\020\002\022\035\n\031OtherOrganizationEmployee\020" +
-      "\003\022\024\n\020AuthorizedPerson\020\004B\026B\024ExtendedSigne" +
-      "rProtos"
+      "\003\022\024\n\020AuthorizedPerson\020\004*\243\001\n\021DocumentTitl" +
+      "eType\022\r\n\tUtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUc",
+      "dSeller\020\002\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg551Sel" +
+      "ler\020\004\022\023\n\017TovTorg551Buyer\020\005\022\024\n\020AccCert552" +
+      "Seller\020\006\022\023\n\017AccCert552Buyer\020\007B\026B\024Extende" +
+      "dSignerProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
