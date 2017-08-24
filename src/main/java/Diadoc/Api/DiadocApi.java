@@ -1009,6 +1009,17 @@ public class DiadocApi {
         return DocumentProtos.Document.parseFrom(PerformGetHttpRequest("/V3/GetDocument", parameters));
     }
 
+    public SignatureInfoProtos.SignatureInfo GetSignatureInfo(String boxId, String messageId, String entityId) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (messageId == null) throw new NullPointerException("messageId");
+        if (entityId == null) throw new NullPointerException("entityId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("messageId", messageId));
+        parameters.add(new BasicNameValuePair("entityId", entityId));
+        return SignatureInfoProtos.SignatureInfo.parseFrom(PerformGetHttpRequest("GetSignatureInfo", parameters));
+    }
+
     public CounteragentProtos.Counteragent GetCounteragent(String myOrgId, String counteragentOrgId) throws IOException {
         if (Tools.IsNullOrEmpty(myOrgId)) throw new NullPointerException("myOrgId");
         if (Tools.IsNullOrEmpty(counteragentOrgId)) throw new NullPointerException("counteragentOrgId");
