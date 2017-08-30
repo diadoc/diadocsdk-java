@@ -672,7 +672,7 @@ public class DiadocApi {
     }
 
     public GeneratedFile GenerateTovTorg551XmlForSeller(TovTorgInfoProtos.TovTorgSellerTitleInfo sellerTitleInfo) throws IOException, ParseException {
-        return GenerateTovTorgXmlForSeller(sellerTitleInfo, false);
+        return GenerateTovTorg551XmlForSeller(sellerTitleInfo, false);
     }
 
     public GeneratedFile GenerateTovTorg551XmlForSeller(TovTorgInfoProtos.TovTorgSellerTitleInfo sellerTitleInfo, boolean disableValidation) throws IOException, ParseException {
