@@ -4076,6 +4076,19 @@ public final class DocumentInfoProtos {
      */
     com.google.protobuf.ByteString
         getGroundsBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+     */
+    boolean hasRevisionDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getRevisionDateAndNumber();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getRevisionDateAndNumberOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.BasicDocumentInfo}
@@ -4150,6 +4163,19 @@ public final class DocumentInfoProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
               grounds_ = bs;
+              break;
+            }
+            case 42: {
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = revisionDateAndNumber_.toBuilder();
+              }
+              revisionDateAndNumber_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(revisionDateAndNumber_);
+                revisionDateAndNumber_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
               break;
             }
           }
@@ -4333,11 +4359,33 @@ public final class DocumentInfoProtos {
       }
     }
 
+    public static final int REVISIONDATEANDNUMBER_FIELD_NUMBER = 5;
+    private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber revisionDateAndNumber_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+     */
+    public boolean hasRevisionDateAndNumber() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getRevisionDateAndNumber() {
+      return revisionDateAndNumber_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getRevisionDateAndNumberOrBuilder() {
+      return revisionDateAndNumber_;
+    }
+
     private void initFields() {
       total_ = "";
       noVat_ = false;
       vat_ = "";
       grounds_ = "";
+      revisionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4364,6 +4412,9 @@ public final class DocumentInfoProtos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(4, getGroundsBytes());
       }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, revisionDateAndNumber_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4388,6 +4439,10 @@ public final class DocumentInfoProtos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, getGroundsBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, revisionDateAndNumber_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4498,6 +4553,7 @@ public final class DocumentInfoProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getRevisionDateAndNumberFieldBuilder();
         }
       }
       private static Builder create() {
@@ -4514,6 +4570,12 @@ public final class DocumentInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         grounds_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
+        if (revisionDateAndNumberBuilder_ == null) {
+          revisionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+        } else {
+          revisionDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -4558,6 +4620,14 @@ public final class DocumentInfoProtos {
           to_bitField0_ |= 0x00000008;
         }
         result.grounds_ = grounds_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (revisionDateAndNumberBuilder_ == null) {
+          result.revisionDateAndNumber_ = revisionDateAndNumber_;
+        } else {
+          result.revisionDateAndNumber_ = revisionDateAndNumberBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4591,6 +4661,9 @@ public final class DocumentInfoProtos {
           bitField0_ |= 0x00000008;
           grounds_ = other.grounds_;
           onChanged();
+        }
+        if (other.hasRevisionDateAndNumber()) {
+          mergeRevisionDateAndNumber(other.getRevisionDateAndNumber());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4877,6 +4950,122 @@ public final class DocumentInfoProtos {
         grounds_ = value;
         onChanged();
         return this;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber revisionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> revisionDateAndNumberBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+       */
+      public boolean hasRevisionDateAndNumber() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getRevisionDateAndNumber() {
+        if (revisionDateAndNumberBuilder_ == null) {
+          return revisionDateAndNumber_;
+        } else {
+          return revisionDateAndNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+       */
+      public Builder setRevisionDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (revisionDateAndNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          revisionDateAndNumber_ = value;
+          onChanged();
+        } else {
+          revisionDateAndNumberBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+       */
+      public Builder setRevisionDateAndNumber(
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder builderForValue) {
+        if (revisionDateAndNumberBuilder_ == null) {
+          revisionDateAndNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          revisionDateAndNumberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+       */
+      public Builder mergeRevisionDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (revisionDateAndNumberBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              revisionDateAndNumber_ != Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance()) {
+            revisionDateAndNumber_ =
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.newBuilder(revisionDateAndNumber_).mergeFrom(value).buildPartial();
+          } else {
+            revisionDateAndNumber_ = value;
+          }
+          onChanged();
+        } else {
+          revisionDateAndNumberBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+       */
+      public Builder clearRevisionDateAndNumber() {
+        if (revisionDateAndNumberBuilder_ == null) {
+          revisionDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+          onChanged();
+        } else {
+          revisionDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder getRevisionDateAndNumberBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getRevisionDateAndNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getRevisionDateAndNumberOrBuilder() {
+        if (revisionDateAndNumberBuilder_ != null) {
+          return revisionDateAndNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return revisionDateAndNumber_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber RevisionDateAndNumber = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> 
+          getRevisionDateAndNumberFieldBuilder() {
+        if (revisionDateAndNumberBuilder_ == null) {
+          revisionDateAndNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder>(
+                  getRevisionDateAndNumber(),
+                  getParentForChildren(),
+                  isClean());
+          revisionDateAndNumber_ = null;
+        }
+        return revisionDateAndNumberBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.BasicDocumentInfo)
@@ -12954,50 +13143,52 @@ public final class DocumentInfoProtos {
       "UniversalCorrectionDocumentInfo\022\031\n\021Attac",
       "hmentVersion\030\021 \001(\t\"E\n\025DocumentDateAndNum" +
       "ber\022\024\n\014DocumentDate\030\001 \001(\t\022\026\n\016DocumentNum" +
-      "ber\030\002 \001(\t\"O\n\021BasicDocumentInfo\022\r\n\005Total\030" +
-      "\001 \001(\t\022\r\n\005NoVat\030\002 \001(\010\022\013\n\003Vat\030\003 \001(\t\022\017\n\007Gro" +
-      "unds\030\004 \001(\t\"\236\001\n\023InvoiceDocumentInfo\022\r\n\005To" +
-      "tal\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014CurrencyCode\030\003" +
-      " \001(\005\022U\n\034OriginalInvoiceDateAndNumber\030\004 \001" +
+      "ber\030\002 \001(\t\"\237\001\n\021BasicDocumentInfo\022\r\n\005Total" +
+      "\030\001 \001(\t\022\r\n\005NoVat\030\002 \001(\010\022\013\n\003Vat\030\003 \001(\t\022\017\n\007Gr" +
+      "ounds\030\004 \001(\t\022N\n\025RevisionDateAndNumber\030\005 \001" +
       "(\0132/.Diadoc.Api.Proto.Docflow.DocumentDa" +
-      "teAndNumber\"\220\003\n\035InvoiceCorrectionDocumen" +
-      "tInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010TotalDec\030\002 \001(",
-      "\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(\t\022\024\n\014Cur" +
-      "rencyCode\030\005 \001(\005\022U\n\034OriginalInvoiceDateAn" +
-      "dNumber\030\006 \001(\0132/.Diadoc.Api.Proto.Docflow" +
-      ".DocumentDateAndNumber\022]\n$OriginalInvoic" +
-      "eRevisionDateAndNumber\030\007 \001(\0132/.Diadoc.Ap" +
-      "i.Proto.Docflow.DocumentDateAndNumber\022_\n" +
-      "&OriginalInvoiceCorrectionDateAndNumber\030" +
-      "\010 \001(\0132/.Diadoc.Api.Proto.Docflow.Documen" +
-      "tDateAndNumber\"\217\001\n\025PriceListDocumentInfo" +
-      "\022\036\n\026PriceListEffectiveDate\030\001 \001(\t\022V\n\035Cont",
-      "ractDocumentDateAndNumber\030\002 \001(\0132/.Diadoc" +
+      "teAndNumber\"\236\001\n\023InvoiceDocumentInfo\022\r\n\005T" +
+      "otal\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014CurrencyCode\030" +
+      "\003 \001(\005\022U\n\034OriginalInvoiceDateAndNumber\030\004 " +
+      "\001(\0132/.Diadoc.Api.Proto.Docflow.DocumentD",
+      "ateAndNumber\"\220\003\n\035InvoiceCorrectionDocume" +
+      "ntInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010TotalDec\030\002 \001" +
+      "(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(\t\022\024\n\014Cu" +
+      "rrencyCode\030\005 \001(\005\022U\n\034OriginalInvoiceDateA" +
+      "ndNumber\030\006 \001(\0132/.Diadoc.Api.Proto.Docflo" +
+      "w.DocumentDateAndNumber\022]\n$OriginalInvoi" +
+      "ceRevisionDateAndNumber\030\007 \001(\0132/.Diadoc.A" +
+      "pi.Proto.Docflow.DocumentDateAndNumber\022_" +
+      "\n&OriginalInvoiceCorrectionDateAndNumber" +
+      "\030\010 \001(\0132/.Diadoc.Api.Proto.Docflow.Docume",
+      "ntDateAndNumber\"\217\001\n\025PriceListDocumentInf" +
+      "o\022\036\n\026PriceListEffectiveDate\030\001 \001(\t\022V\n\035Con" +
+      "tractDocumentDateAndNumber\030\002 \001(\0132/.Diado" +
+      "c.Api.Proto.Docflow.DocumentDateAndNumbe" +
+      "r\"C\n\024ContractDocumentInfo\022\025\n\rContractPri" +
+      "ce\030\001 \001(\t\022\024\n\014ContractType\030\002 \001(\t\"w\n\"Supple" +
+      "mentaryAgreementDocumentInfo\022\r\n\005Total\030\001 " +
+      "\001(\t\022\024\n\014ContractType\030\002 \001(\t\022\026\n\016ContractNum" +
+      "ber\030\003 \001(\t\022\024\n\014ContractDate\030\004 \001(\t\"\366\001\n\035Univ" +
+      "ersalTransferDocumentInfo\022\r\n\005Total\030\001 \001(\t",
+      "\022\013\n\003Vat\030\002 \001(\t\022\024\n\014CurrencyCode\030\003 \001(\005\022\017\n\007G" +
+      "rounds\030\004 \001(\t\022:\n\010Function\030\005 \002(\0162(.Diadoc." +
+      "Api.Proto.Invoicing.FunctionType\022V\n\035Orig" +
+      "inalDocumentDateAndNumber\030\006 \001(\0132/.Diadoc" +
       ".Api.Proto.Docflow.DocumentDateAndNumber" +
-      "\"C\n\024ContractDocumentInfo\022\025\n\rContractPric" +
-      "e\030\001 \001(\t\022\024\n\014ContractType\030\002 \001(\t\"w\n\"Supplem" +
-      "entaryAgreementDocumentInfo\022\r\n\005Total\030\001 \001" +
-      "(\t\022\024\n\014ContractType\030\002 \001(\t\022\026\n\016ContractNumb" +
-      "er\030\003 \001(\t\022\024\n\014ContractDate\030\004 \001(\t\"\366\001\n\035Unive" +
-      "rsalTransferDocumentInfo\022\r\n\005Total\030\001 \001(\t\022" +
-      "\013\n\003Vat\030\002 \001(\t\022\024\n\014CurrencyCode\030\003 \001(\005\022\017\n\007Gr" +
-      "ounds\030\004 \001(\t\022:\n\010Function\030\005 \002(\0162(.Diadoc.A",
-      "pi.Proto.Invoicing.FunctionType\022V\n\035Origi" +
-      "nalDocumentDateAndNumber\030\006 \001(\0132/.Diadoc." +
-      "Api.Proto.Docflow.DocumentDateAndNumber\"" +
-      "\342\003\n\037UniversalCorrectionDocumentInfo\022\020\n\010T" +
-      "otalInc\030\001 \001(\t\022\020\n\010TotalDec\030\002 \001(\t\022\016\n\006VatIn" +
-      "c\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(\t\022\024\n\014CurrencyCode\030" +
-      "\005 \001(\005\022\017\n\007Grounds\030\006 \001(\t\022:\n\010Function\030\007 \002(\016" +
-      "2(.Diadoc.Api.Proto.Invoicing.FunctionTy" +
-      "pe\022V\n\035OriginalDocumentDateAndNumber\030\010 \001(" +
-      "\0132/.Diadoc.Api.Proto.Docflow.DocumentDat",
-      "eAndNumber\022^\n%OriginalDocumentRevisionDa" +
-      "teAndNumber\030\t \001(\0132/.Diadoc.Api.Proto.Doc" +
-      "flow.DocumentDateAndNumber\022`\n\'OriginalDo" +
-      "cumentCorrectionDateAndNumber\030\n \001(\0132/.Di" +
-      "adoc.Api.Proto.Docflow.DocumentDateAndNu" +
-      "mberB\024B\022DocumentInfoProtos"
+      "\"\342\003\n\037UniversalCorrectionDocumentInfo\022\020\n\010" +
+      "TotalInc\030\001 \001(\t\022\020\n\010TotalDec\030\002 \001(\t\022\016\n\006VatI" +
+      "nc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(\t\022\024\n\014CurrencyCode" +
+      "\030\005 \001(\005\022\017\n\007Grounds\030\006 \001(\t\022:\n\010Function\030\007 \002(" +
+      "\0162(.Diadoc.Api.Proto.Invoicing.FunctionT",
+      "ype\022V\n\035OriginalDocumentDateAndNumber\030\010 \001" +
+      "(\0132/.Diadoc.Api.Proto.Docflow.DocumentDa" +
+      "teAndNumber\022^\n%OriginalDocumentRevisionD" +
+      "ateAndNumber\030\t \001(\0132/.Diadoc.Api.Proto.Do" +
+      "cflow.DocumentDateAndNumber\022`\n\'OriginalD" +
+      "ocumentCorrectionDateAndNumber\030\n \001(\0132/.D" +
+      "iadoc.Api.Proto.Docflow.DocumentDateAndN" +
+      "umberB\024B\022DocumentInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13031,7 +13222,7 @@ public final class DocumentInfoProtos {
     internal_static_Diadoc_Api_Proto_Docflow_BasicDocumentInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_BasicDocumentInfo_descriptor,
-        new java.lang.String[] { "Total", "NoVat", "Vat", "Grounds", });
+        new java.lang.String[] { "Total", "NoVat", "Vat", "Grounds", "RevisionDateAndNumber", });
     internal_static_Diadoc_Api_Proto_Docflow_InvoiceDocumentInfo_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Docflow_InvoiceDocumentInfo_fieldAccessorTable = new

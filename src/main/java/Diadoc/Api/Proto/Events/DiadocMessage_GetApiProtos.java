@@ -324,7 +324,7 @@ public final class DiadocMessage_GetApiProtos {
      * <code>Cancellation = 69;</code>
      *
      * <pre>
-     * 68 - Зарезервировано
+     *Неизвестные типы должны обрабатываться как Nonformalized
      * </pre>
      */
     Cancellation(49, 69),
@@ -534,7 +534,7 @@ public final class DiadocMessage_GetApiProtos {
      * <code>Cancellation = 69;</code>
      *
      * <pre>
-     * 68 - Зарезервировано
+     *Неизвестные типы должны обрабатываться как Nonformalized
      * </pre>
      */
     public static final int Cancellation_VALUE = 69;

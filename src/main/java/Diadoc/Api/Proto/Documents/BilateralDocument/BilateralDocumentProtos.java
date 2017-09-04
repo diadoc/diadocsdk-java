@@ -693,6 +693,34 @@ public final class BilateralDocumentProtos {
      * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 5 [default = UnknownReceiptStatus];</code>
      */
     Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
+
+    /**
+     * <code>optional string RevisionDate = 6;</code>
+     */
+    boolean hasRevisionDate();
+    /**
+     * <code>optional string RevisionDate = 6;</code>
+     */
+    java.lang.String getRevisionDate();
+    /**
+     * <code>optional string RevisionDate = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getRevisionDateBytes();
+
+    /**
+     * <code>optional string RevisionNumber = 7;</code>
+     */
+    boolean hasRevisionNumber();
+    /**
+     * <code>optional string RevisionNumber = 7;</code>
+     */
+    java.lang.String getRevisionNumber();
+    /**
+     * <code>optional string RevisionNumber = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getRevisionNumberBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.BasicDocumentMetadata}
@@ -784,6 +812,18 @@ public final class BilateralDocumentProtos {
                 bitField0_ |= 0x00000010;
                 receiptStatus_ = value;
               }
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              revisionDate_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              revisionNumber_ = bs;
               break;
             }
           }
@@ -982,12 +1022,98 @@ public final class BilateralDocumentProtos {
       return receiptStatus_;
     }
 
+    public static final int REVISIONDATE_FIELD_NUMBER = 6;
+    private java.lang.Object revisionDate_;
+    /**
+     * <code>optional string RevisionDate = 6;</code>
+     */
+    public boolean hasRevisionDate() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string RevisionDate = 6;</code>
+     */
+    public java.lang.String getRevisionDate() {
+      java.lang.Object ref = revisionDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          revisionDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string RevisionDate = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRevisionDateBytes() {
+      java.lang.Object ref = revisionDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        revisionDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REVISIONNUMBER_FIELD_NUMBER = 7;
+    private java.lang.Object revisionNumber_;
+    /**
+     * <code>optional string RevisionNumber = 7;</code>
+     */
+    public boolean hasRevisionNumber() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string RevisionNumber = 7;</code>
+     */
+    public java.lang.String getRevisionNumber() {
+      java.lang.Object ref = revisionNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          revisionNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string RevisionNumber = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRevisionNumberBytes() {
+      java.lang.Object ref = revisionNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        revisionNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       documentStatus_ = Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentProtos.BilateralDocumentStatus.UnknownBilateralDocumentStatus;
       total_ = "";
       vat_ = "";
       grounds_ = "";
       receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+      revisionDate_ = "";
+      revisionNumber_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1021,6 +1147,12 @@ public final class BilateralDocumentProtos {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeEnum(5, receiptStatus_.getNumber());
       }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getRevisionDateBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getRevisionNumberBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1049,6 +1181,14 @@ public final class BilateralDocumentProtos {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, receiptStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getRevisionDateBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getRevisionNumberBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1177,6 +1317,10 @@ public final class BilateralDocumentProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
         bitField0_ = (bitField0_ & ~0x00000010);
+        revisionDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        revisionNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -1225,6 +1369,14 @@ public final class BilateralDocumentProtos {
           to_bitField0_ |= 0x00000010;
         }
         result.receiptStatus_ = receiptStatus_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.revisionDate_ = revisionDate_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.revisionNumber_ = revisionNumber_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1261,6 +1413,16 @@ public final class BilateralDocumentProtos {
         }
         if (other.hasReceiptStatus()) {
           setReceiptStatus(other.getReceiptStatus());
+        }
+        if (other.hasRevisionDate()) {
+          bitField0_ |= 0x00000020;
+          revisionDate_ = other.revisionDate_;
+          onChanged();
+        }
+        if (other.hasRevisionNumber()) {
+          bitField0_ |= 0x00000040;
+          revisionNumber_ = other.revisionNumber_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1587,6 +1749,158 @@ public final class BilateralDocumentProtos {
       public Builder clearReceiptStatus() {
         bitField0_ = (bitField0_ & ~0x00000010);
         receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object revisionDate_ = "";
+      /**
+       * <code>optional string RevisionDate = 6;</code>
+       */
+      public boolean hasRevisionDate() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string RevisionDate = 6;</code>
+       */
+      public java.lang.String getRevisionDate() {
+        java.lang.Object ref = revisionDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            revisionDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string RevisionDate = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRevisionDateBytes() {
+        java.lang.Object ref = revisionDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          revisionDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string RevisionDate = 6;</code>
+       */
+      public Builder setRevisionDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        revisionDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string RevisionDate = 6;</code>
+       */
+      public Builder clearRevisionDate() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        revisionDate_ = getDefaultInstance().getRevisionDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string RevisionDate = 6;</code>
+       */
+      public Builder setRevisionDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        revisionDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object revisionNumber_ = "";
+      /**
+       * <code>optional string RevisionNumber = 7;</code>
+       */
+      public boolean hasRevisionNumber() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string RevisionNumber = 7;</code>
+       */
+      public java.lang.String getRevisionNumber() {
+        java.lang.Object ref = revisionNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            revisionNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string RevisionNumber = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRevisionNumberBytes() {
+        java.lang.Object ref = revisionNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          revisionNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string RevisionNumber = 7;</code>
+       */
+      public Builder setRevisionNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        revisionNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string RevisionNumber = 7;</code>
+       */
+      public Builder clearRevisionNumber() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        revisionNumber_ = getDefaultInstance().getRevisionNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string RevisionNumber = 7;</code>
+       */
+      public Builder setRevisionNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        revisionNumber_ = value;
         onChanged();
         return this;
       }
@@ -5049,61 +5363,62 @@ public final class BilateralDocumentProtos {
       "nectionRequestStatus\030\001 \001(\0162E.Diadoc.Api." +
       "Proto.Documents.BilateralDocument.Bilate" +
       "ralDocumentStatus:\036UnknownBilateralDocum" +
-      "entStatus\"\233\002\n\025BasicDocumentMetadata\022}\n\016D" +
+      "entStatus\"\311\002\n\025BasicDocumentMetadata\022}\n\016D" +
       "ocumentStatus\030\001 \001(\0162E.Diadoc.Api.Proto.D" +
       "ocuments.BilateralDocument.BilateralDocu",
       "mentStatus:\036UnknownBilateralDocumentStat" +
       "us\022\r\n\005Total\030\002 \002(\t\022\013\n\003Vat\030\003 \001(\t\022\017\n\007Ground" +
       "s\030\004 \001(\t\022V\n\rReceiptStatus\030\005 \001(\0162).Diadoc." +
       "Api.Proto.Documents.ReceiptStatus:\024Unkno" +
-      "wnReceiptStatus\"\310\002\n\021PriceListMetadata\022}\n" +
-      "\016DocumentStatus\030\001 \001(\0162E.Diadoc.Api.Proto" +
-      ".Documents.BilateralDocument.BilateralDo" +
-      "cumentStatus:\036UnknownBilateralDocumentSt" +
-      "atus\022\036\n\026PriceListEffectiveDate\030\002 \001(\t\022\034\n\024" +
-      "ContractDocumentDate\030\003 \001(\t\022\036\n\026ContractDo",
-      "cumentNumber\030\004 \001(\t\022V\n\rReceiptStatus\030\005 \001(" +
-      "\0162).Diadoc.Api.Proto.Documents.ReceiptSt" +
-      "atus:\024UnknownReceiptStatus\"\226\002\n\020ContractM" +
-      "etadata\022}\n\016DocumentStatus\030\001 \001(\0162E.Diadoc" +
-      ".Api.Proto.Documents.BilateralDocument.B" +
-      "ilateralDocumentStatus:\036UnknownBilateral" +
-      "DocumentStatus\022\025\n\rContractPrice\030\002 \001(\t\022\024\n" +
-      "\014ContractType\030\003 \001(\t\022V\n\rReceiptStatus\030\004 \001" +
-      "(\0162).Diadoc.Api.Proto.Documents.ReceiptS" +
-      "tatus:\024UnknownReceiptStatus\"\312\002\n\036Suppleme",
-      "ntaryAgreementMetadata\022}\n\016DocumentStatus" +
-      "\030\001 \001(\0162E.Diadoc.Api.Proto.Documents.Bila" +
-      "teralDocument.BilateralDocumentStatus:\036U" +
-      "nknownBilateralDocumentStatus\022\r\n\005Total\030\002" +
-      " \001(\t\022\024\n\014ContractType\030\003 \001(\t\022\026\n\016ContractNu" +
-      "mber\030\004 \002(\t\022\024\n\014ContractDate\030\005 \002(\t\022V\n\rRece" +
-      "iptStatus\030\006 \001(\0162).Diadoc.Api.Proto.Docum" +
-      "ents.ReceiptStatus:\024UnknownReceiptStatus" +
-      "\"\362\001\n\031BilateralDocumentMetadata\022}\n\016Docume" +
-      "ntStatus\030\001 \001(\0162E.Diadoc.Api.Proto.Docume",
-      "nts.BilateralDocument.BilateralDocumentS" +
-      "tatus:\036UnknownBilateralDocumentStatus\022V\n" +
-      "\rReceiptStatus\030\002 \001(\0162).Diadoc.Api.Proto." +
-      "Documents.ReceiptStatus:\024UnknownReceiptS" +
-      "tatus*\224\005\n\027BilateralDocumentStatus\022\"\n\036Unk" +
-      "nownBilateralDocumentStatus\020\000\022(\n$Outboun" +
-      "dWaitingForRecipientSignature\020\001\022\"\n\036Outbo" +
-      "undWithRecipientSignature\020\002\022-\n)OutboundR" +
-      "ecipientSignatureRequestRejected\020\003\022%\n!Ou" +
-      "tboundWaitingForSenderSignature\020\n\022\"\n\036Out",
-      "boundInvalidSenderSignature\020\013\022\'\n#Inbound" +
-      "WaitingForRecipientSignature\020\004\022!\n\035Inboun" +
-      "dWithRecipientSignature\020\005\022,\n(InboundReci" +
-      "pientSignatureRequestRejected\020\006\022$\n Inbou" +
-      "ndInvalidRecipientSignature\020\014\022(\n$Interna" +
-      "lWaitingForRecipientSignature\020\007\022\"\n\036Inter" +
-      "nalWithRecipientSignature\020\010\022-\n)InternalR" +
-      "ecipientSignatureRequestRejected\020\t\022%\n!In" +
-      "ternalWaitingForSenderSignature\020\r\022\"\n\036Int" +
-      "ernalInvalidSenderSignature\020\016\022%\n!Interna",
-      "lInvalidRecipientSignature\020\017B\031B\027Bilatera" +
-      "lDocumentProtos"
+      "wnReceiptStatus\022\024\n\014RevisionDate\030\006 \001(\t\022\026\n" +
+      "\016RevisionNumber\030\007 \001(\t\"\310\002\n\021PriceListMetad" +
+      "ata\022}\n\016DocumentStatus\030\001 \001(\0162E.Diadoc.Api" +
+      ".Proto.Documents.BilateralDocument.Bilat" +
+      "eralDocumentStatus:\036UnknownBilateralDocu" +
+      "mentStatus\022\036\n\026PriceListEffectiveDate\030\002 \001",
+      "(\t\022\034\n\024ContractDocumentDate\030\003 \001(\t\022\036\n\026Cont" +
+      "ractDocumentNumber\030\004 \001(\t\022V\n\rReceiptStatu" +
+      "s\030\005 \001(\0162).Diadoc.Api.Proto.Documents.Rec" +
+      "eiptStatus:\024UnknownReceiptStatus\"\226\002\n\020Con" +
+      "tractMetadata\022}\n\016DocumentStatus\030\001 \001(\0162E." +
+      "Diadoc.Api.Proto.Documents.BilateralDocu" +
+      "ment.BilateralDocumentStatus:\036UnknownBil" +
+      "ateralDocumentStatus\022\025\n\rContractPrice\030\002 " +
+      "\001(\t\022\024\n\014ContractType\030\003 \001(\t\022V\n\rReceiptStat" +
+      "us\030\004 \001(\0162).Diadoc.Api.Proto.Documents.Re",
+      "ceiptStatus:\024UnknownReceiptStatus\"\312\002\n\036Su" +
+      "pplementaryAgreementMetadata\022}\n\016Document" +
+      "Status\030\001 \001(\0162E.Diadoc.Api.Proto.Document" +
+      "s.BilateralDocument.BilateralDocumentSta" +
+      "tus:\036UnknownBilateralDocumentStatus\022\r\n\005T" +
+      "otal\030\002 \001(\t\022\024\n\014ContractType\030\003 \001(\t\022\026\n\016Cont" +
+      "ractNumber\030\004 \002(\t\022\024\n\014ContractDate\030\005 \002(\t\022V" +
+      "\n\rReceiptStatus\030\006 \001(\0162).Diadoc.Api.Proto" +
+      ".Documents.ReceiptStatus:\024UnknownReceipt" +
+      "Status\"\362\001\n\031BilateralDocumentMetadata\022}\n\016",
+      "DocumentStatus\030\001 \001(\0162E.Diadoc.Api.Proto." +
+      "Documents.BilateralDocument.BilateralDoc" +
+      "umentStatus:\036UnknownBilateralDocumentSta" +
+      "tus\022V\n\rReceiptStatus\030\002 \001(\0162).Diadoc.Api." +
+      "Proto.Documents.ReceiptStatus:\024UnknownRe" +
+      "ceiptStatus*\224\005\n\027BilateralDocumentStatus\022" +
+      "\"\n\036UnknownBilateralDocumentStatus\020\000\022(\n$O" +
+      "utboundWaitingForRecipientSignature\020\001\022\"\n" +
+      "\036OutboundWithRecipientSignature\020\002\022-\n)Out" +
+      "boundRecipientSignatureRequestRejected\020\003",
+      "\022%\n!OutboundWaitingForSenderSignature\020\n\022" +
+      "\"\n\036OutboundInvalidSenderSignature\020\013\022\'\n#I" +
+      "nboundWaitingForRecipientSignature\020\004\022!\n\035" +
+      "InboundWithRecipientSignature\020\005\022,\n(Inbou" +
+      "ndRecipientSignatureRequestRejected\020\006\022$\n" +
+      " InboundInvalidRecipientSignature\020\014\022(\n$I" +
+      "nternalWaitingForRecipientSignature\020\007\022\"\n" +
+      "\036InternalWithRecipientSignature\020\010\022-\n)Int" +
+      "ernalRecipientSignatureRequestRejected\020\t" +
+      "\022%\n!InternalWaitingForSenderSignature\020\r\022",
+      "\"\n\036InternalInvalidSenderSignature\020\016\022%\n!I" +
+      "nternalInvalidRecipientSignature\020\017B\031B\027Bi" +
+      "lateralDocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5129,7 +5444,7 @@ public final class BilateralDocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_BasicDocumentMetadata_descriptor,
-        new java.lang.String[] { "DocumentStatus", "Total", "Vat", "Grounds", "ReceiptStatus", });
+        new java.lang.String[] { "DocumentStatus", "Total", "Vat", "Grounds", "ReceiptStatus", "RevisionDate", "RevisionNumber", });
     internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Documents_BilateralDocument_PriceListMetadata_fieldAccessorTable = new
