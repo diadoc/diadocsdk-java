@@ -484,6 +484,12 @@ public class DiadocApi {
     }
 
     public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId) throws IOException {
+        return GetMessage(currentBoxId, messageId, false, false);
+    }
+    public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId, boolean withOriginalSignature) throws IOException {
+        return GetMessage(currentBoxId, messageId, withOriginalSignature, false);
+    }
+    public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId, boolean withOriginalSignature, boolean injectEntityContent) throws IOException {
         if (currentBoxId == null)
             throw new NullPointerException("boxId");
         if (messageId == null)
@@ -491,10 +497,19 @@ public class DiadocApi {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", currentBoxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
-        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V3/GetMessage", parameters));
-    }
 
+        if (withOriginalSignature) parameters.add(new BasicNameValuePair("originalSignature", null));
+        parameters.add(new BasicNameValuePair("injectEntityContent", String.valueOf(injectEntityContent)));
+
+        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V4/GetMessage", parameters));
+    }
     public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId, String entityId) throws IOException {
+        return GetMessage(currentBoxId, messageId, entityId, false, false);
+    }
+    public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId, String entityId, boolean withOriginalSignature) throws IOException {
+        return GetMessage(currentBoxId, messageId, entityId, withOriginalSignature, false);
+    }
+    public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId, String entityId, boolean withOriginalSignature, boolean injectEntityContent) throws IOException {
         if (currentBoxId == null)
             throw new NullPointerException("boxId");
         if (messageId == null)
@@ -505,7 +520,11 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("boxId", currentBoxId));
         parameters.add(new BasicNameValuePair("messageId", messageId));
         parameters.add(new BasicNameValuePair("entityId", entityId));
-        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V3/GetMessage", parameters));
+
+        if (withOriginalSignature) parameters.add(new BasicNameValuePair("originalSignature", null));
+        parameters.add(new BasicNameValuePair("injectEntityContent", String.valueOf(injectEntityContent)));
+
+        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V4/GetMessage", parameters));
     }
 
     public GeneratedFile GenerateInvoiceDocumentReceiptXml(String boxId, String messageId, String attachmentId, SignerProtos.Signer signer)
