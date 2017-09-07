@@ -9077,7 +9077,7 @@ public final class AcceptanceCertificate552InfoProtos {
         int index);
 
     /**
-     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = TaxRateNotSpecified];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = Percent_18];</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -9085,7 +9085,7 @@ public final class AcceptanceCertificate552InfoProtos {
      */
     boolean hasTaxRate();
     /**
-     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = TaxRateNotSpecified];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = Percent_18];</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -9869,7 +9869,7 @@ public final class AcceptanceCertificate552InfoProtos {
     public static final int TAXRATE_FIELD_NUMBER = 11;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_;
     /**
-     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = TaxRateNotSpecified];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = Percent_18];</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -9879,7 +9879,7 @@ public final class AcceptanceCertificate552InfoProtos {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = TaxRateNotSpecified];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = Percent_18];</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -10008,7 +10008,7 @@ public final class AcceptanceCertificate552InfoProtos {
       vat_ = "";
       subtotal_ = "";
       additionalInfos_ = java.util.Collections.emptyList();
-      taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.TaxRateNotSpecified;
+      taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.Percent_18;
       itemAccountDebit_ = "";
       itemAccountCredit_ = "";
     }
@@ -10273,7 +10273,7 @@ public final class AcceptanceCertificate552InfoProtos {
         } else {
           additionalInfosBuilder_.clear();
         }
-        taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.TaxRateNotSpecified;
+        taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.Percent_18;
         bitField0_ = (bitField0_ & ~0x00000400);
         itemAccountDebit_ = "";
         bitField0_ = (bitField0_ & ~0x00000800);
@@ -11709,9 +11709,9 @@ public final class AcceptanceCertificate552InfoProtos {
         return additionalInfosBuilder_;
       }
 
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.TaxRateNotSpecified;
+      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.Percent_18;
       /**
-       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = TaxRateNotSpecified];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = Percent_18];</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -11721,7 +11721,7 @@ public final class AcceptanceCertificate552InfoProtos {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = TaxRateNotSpecified];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = Percent_18];</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -11731,7 +11731,7 @@ public final class AcceptanceCertificate552InfoProtos {
         return taxRate_;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = TaxRateNotSpecified];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = Percent_18];</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -11747,7 +11747,7 @@ public final class AcceptanceCertificate552InfoProtos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = TaxRateNotSpecified];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 11 [default = Percent_18];</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -11755,7 +11755,7 @@ public final class AcceptanceCertificate552InfoProtos {
        */
       public Builder clearTaxRate() {
         bitField0_ = (bitField0_ & ~0x00000400);
-        taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.TaxRateNotSpecified;
+        taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.Percent_18;
         onChanged();
         return this;
       }
@@ -14772,27 +14772,27 @@ public final class AcceptanceCertificate552InfoProtos {
       "atExcluded\030\003 \001(\t\022\020\n\010TotalVat\030\004 \001(\t\022\r\n\005To" +
       "tal\030\005 \002(\t\022K\n\005Items\030\006 \003(\0132<.Diadoc.Api.Pr" +
       "oto.Invoicing.AcceptanceCertificate552Wo" +
-      "rkItem\"\217\003\n AcceptanceCertificate552WorkI",
+      "rkItem\"\206\003\n AcceptanceCertificate552WorkI",
       "tem\022\014\n\004Name\030\001 \001(\t\022\023\n\013Description\030\002 \001(\t\022\020" +
       "\n\010UnitCode\030\003 \001(\t\022\020\n\010UnitName\030\004 \001(\t\022\r\n\005Pr" +
       "ice\030\005 \001(\t\022\020\n\010Quantity\030\006 \001(\t\022\037\n\027SubtotalW" +
       "ithVatExcluded\030\007 \001(\t\022\013\n\003Vat\030\010 \001(\t\022\020\n\010Sub" +
       "total\030\t \001(\t\022C\n\017AdditionalInfos\030\n \003(\0132*.D" +
       "iadoc.Api.Proto.Invoicing.AdditionalInfo" +
-      "\022I\n\007TaxRate\030\013 \001(\0162#.Diadoc.Api.Proto.Inv" +
-      "oicing.TaxRate:\023TaxRateNotSpecified\022\030\n\020I" +
-      "temAccountDebit\030\014 \001(\t\022\031\n\021ItemAccountCred" +
-      "it\030\r \001(\t\"\375\002\n&AcceptanceCertificate552Buy",
-      "erTitleInfo\022C\n\007Signers\030\001 \003(\01322.Diadoc.Ap" +
-      "i.Proto.Invoicing.Signers.ExtendedSigner" +
-      "\022\027\n\017DocumentCreator\030\002 \002(\t\022\033\n\023DocumentCre" +
-      "atorBase\030\003 \001(\t\022\025\n\rOperationType\030\004 \001(\t\022\024\n" +
-      "\014DocumentName\030\005 \002(\t\022\025\n\rOperationInfo\030\006 \002" +
-      "(\t\022\022\n\nAcceptDate\030\007 \001(\t\022\036\n\026CreatedThingAc" +
-      "ceptDate\030\010 \001(\t\022\030\n\020CreatedThingInfo\030\t \001(\t" +
-      "\022F\n\020AdditionalInfoId\030\n \001(\0132,.Diadoc.Api." +
-      "Proto.Invoicing.AdditionalInfoIdB$B\"Acce" +
-      "ptanceCertificate552InfoProtos"
+      "\022@\n\007TaxRate\030\013 \001(\0162#.Diadoc.Api.Proto.Inv" +
+      "oicing.TaxRate:\nPercent_18\022\030\n\020ItemAccoun" +
+      "tDebit\030\014 \001(\t\022\031\n\021ItemAccountCredit\030\r \001(\t\"" +
+      "\375\002\n&AcceptanceCertificate552BuyerTitleIn",
+      "fo\022C\n\007Signers\030\001 \003(\01322.Diadoc.Api.Proto.I" +
+      "nvoicing.Signers.ExtendedSigner\022\027\n\017Docum" +
+      "entCreator\030\002 \002(\t\022\033\n\023DocumentCreatorBase\030" +
+      "\003 \001(\t\022\025\n\rOperationType\030\004 \001(\t\022\024\n\014Document" +
+      "Name\030\005 \002(\t\022\025\n\rOperationInfo\030\006 \002(\t\022\022\n\nAcc" +
+      "eptDate\030\007 \001(\t\022\036\n\026CreatedThingAcceptDate\030" +
+      "\010 \001(\t\022\030\n\020CreatedThingInfo\030\t \001(\t\022F\n\020Addit" +
+      "ionalInfoId\030\n \001(\0132,.Diadoc.Api.Proto.Inv" +
+      "oicing.AdditionalInfoIdB$B\"AcceptanceCer" +
+      "tificate552InfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

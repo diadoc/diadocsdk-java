@@ -10737,7 +10737,7 @@ public final class TovTorgInfoProtos {
         getSubtotalWithVatExcludedBytes();
 
     /**
-     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = TaxRateNotSpecified];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = Percent_18];</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -10745,7 +10745,7 @@ public final class TovTorgInfoProtos {
      */
     boolean hasTaxRate();
     /**
-     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = TaxRateNotSpecified];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = Percent_18];</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -11942,7 +11942,7 @@ public final class TovTorgInfoProtos {
     public static final int TAXRATE_FIELD_NUMBER = 16;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_;
     /**
-     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = TaxRateNotSpecified];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = Percent_18];</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -11952,7 +11952,7 @@ public final class TovTorgInfoProtos {
       return ((bitField0_ & 0x00008000) == 0x00008000);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = TaxRateNotSpecified];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = Percent_18];</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -12249,7 +12249,7 @@ public final class TovTorgInfoProtos {
       itemToRelease_ = "";
       price_ = "";
       subtotalWithVatExcluded_ = "";
-      taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.TaxRateNotSpecified;
+      taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.Percent_18;
       vat_ = "";
       subtotal_ = "";
       itemAccountDebit_ = "";
@@ -12591,7 +12591,7 @@ public final class TovTorgInfoProtos {
         bitField0_ = (bitField0_ & ~0x00002000);
         subtotalWithVatExcluded_ = "";
         bitField0_ = (bitField0_ & ~0x00004000);
-        taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.TaxRateNotSpecified;
+        taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.Percent_18;
         bitField0_ = (bitField0_ & ~0x00008000);
         vat_ = "";
         bitField0_ = (bitField0_ & ~0x00010000);
@@ -14409,9 +14409,9 @@ public final class TovTorgInfoProtos {
         return this;
       }
 
-      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.TaxRateNotSpecified;
+      private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.Percent_18;
       /**
-       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = TaxRateNotSpecified];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = Percent_18];</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -14421,7 +14421,7 @@ public final class TovTorgInfoProtos {
         return ((bitField0_ & 0x00008000) == 0x00008000);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = TaxRateNotSpecified];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = Percent_18];</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -14431,7 +14431,7 @@ public final class TovTorgInfoProtos {
         return taxRate_;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = TaxRateNotSpecified];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = Percent_18];</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -14447,7 +14447,7 @@ public final class TovTorgInfoProtos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = TaxRateNotSpecified];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 16 [default = Percent_18];</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -14455,7 +14455,7 @@ public final class TovTorgInfoProtos {
        */
       public Builder clearTaxRate() {
         bitField0_ = (bitField0_ & ~0x00008000);
-        taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.TaxRateNotSpecified;
+        taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.Percent_18;
         onChanged();
         return this;
       }
@@ -18847,31 +18847,30 @@ public final class TovTorgInfoProtos {
       ".TovTorgItem\022\025\n\rTotalQuantity\030\002 \001(\t\022\022\n\nT" +
       "otalGross\030\003 \001(\t\022\020\n\010TotalNet\030\004 \001(\t\022\034\n\024Tot" +
       "alWithVatExcluded\030\005 \001(\t\022\020\n\010TotalVat\030\006 \001(" +
-      "\t\022\r\n\005Total\030\007 \001(\t\"\214\004\n\013TovTorgItem\022\017\n\007Prod" +
+      "\t\022\r\n\005Total\030\007 \001(\t\"\203\004\n\013TovTorgItem\022\017\n\007Prod" +
       "uct\030\001 \001(\t\022\017\n\007Feature\030\002 \001(\t\022\014\n\004Sort\030\003 \001(\t" +
       "\022\022\n\nVendorCode\030\004 \001(\t\022\023\n\013ProductCode\030\005 \001(" +
       "\t\022\020\n\010UnitName\030\006 \001(\t\022\014\n\004Unit\030\007 \002(\t\022\023\n\013Pac",
       "kageType\030\010 \001(\t\022\026\n\016QuantityInPack\030\t \001(\t\022\020" +
       "\n\010Quantity\030\n \001(\t\022\r\n\005Gross\030\013 \001(\t\022\013\n\003Net\030\014" +
       " \002(\t\022\025\n\rItemToRelease\030\r \001(\t\022\r\n\005Price\030\016 \001" +
-      "(\t\022\037\n\027SubtotalWithVatExcluded\030\017 \001(\t\022I\n\007T" +
+      "(\t\022\037\n\027SubtotalWithVatExcluded\030\017 \001(\t\022@\n\007T" +
       "axRate\030\020 \001(\0162#.Diadoc.Api.Proto.Invoicin" +
-      "g.TaxRate:\023TaxRateNotSpecified\022\013\n\003Vat\030\021 " +
-      "\001(\t\022\020\n\010Subtotal\030\022 \002(\t\022\030\n\020ItemAccountDebi" +
-      "t\030\023 \001(\t\022\031\n\021ItemAccountCredit\030\024 \001(\t\022C\n\017Ad" +
-      "ditionalInfos\030\025 \003(\0132*.Diadoc.Api.Proto.I" +
-      "nvoicing.AdditionalInfo\"\310\002\n\023TovTorgTrans",
-      "ferInfo\022\025\n\rOperationInfo\030\001 \002(\t\022\024\n\014Transf" +
-      "erDate\030\002 \001(\t\022\022\n\nAttachment\030\003 \001(\t\0225\n\010Wayb" +
-      "ills\030\004 \003(\0132#.Diadoc.Api.Proto.Invoicing." +
-      "Waybill\0226\n\010Employee\030\005 \001(\0132$.Diadoc.Api.P" +
-      "roto.Invoicing.Employee\022<\n\013OtherIssuer\030\006" +
-      " \001(\0132\'.Diadoc.Api.Proto.Invoicing.OtherI" +
-      "ssuer\022C\n\017AdditionalInfos\030\007 \003(\0132*.Diadoc." +
-      "Api.Proto.Invoicing.AdditionalInfo\"F\n\nGr" +
-      "oundInfo\022\014\n\004Name\030\001 \002(\t\022\016\n\006Number\030\002 \001(\t\022\014" +
-      "\n\004Date\030\003 \001(\t\022\014\n\004Info\030\004 \001(\tB\023B\021TovTorgInf",
-      "oProtos"
+      "g.TaxRate:\nPercent_18\022\013\n\003Vat\030\021 \001(\t\022\020\n\010Su" +
+      "btotal\030\022 \002(\t\022\030\n\020ItemAccountDebit\030\023 \001(\t\022\031" +
+      "\n\021ItemAccountCredit\030\024 \001(\t\022C\n\017AdditionalI" +
+      "nfos\030\025 \003(\0132*.Diadoc.Api.Proto.Invoicing." +
+      "AdditionalInfo\"\310\002\n\023TovTorgTransferInfo\022\025",
+      "\n\rOperationInfo\030\001 \002(\t\022\024\n\014TransferDate\030\002 " +
+      "\001(\t\022\022\n\nAttachment\030\003 \001(\t\0225\n\010Waybills\030\004 \003(" +
+      "\0132#.Diadoc.Api.Proto.Invoicing.Waybill\0226" +
+      "\n\010Employee\030\005 \001(\0132$.Diadoc.Api.Proto.Invo" +
+      "icing.Employee\022<\n\013OtherIssuer\030\006 \001(\0132\'.Di" +
+      "adoc.Api.Proto.Invoicing.OtherIssuer\022C\n\017" +
+      "AdditionalInfos\030\007 \003(\0132*.Diadoc.Api.Proto" +
+      ".Invoicing.AdditionalInfo\"F\n\nGroundInfo\022" +
+      "\014\n\004Name\030\001 \002(\t\022\016\n\006Number\030\002 \001(\t\022\014\n\004Date\030\003 " +
+      "\001(\t\022\014\n\004Info\030\004 \001(\tB\023B\021TovTorgInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
