@@ -43,6 +43,34 @@ public final class CertificateInfoProtos {
      * <code>optional sfixed64 ValidTo = 3;</code>
      */
     long getValidTo();
+
+    /**
+     * <code>optional string OrganizationName = 4;</code>
+     */
+    boolean hasOrganizationName();
+    /**
+     * <code>optional string OrganizationName = 4;</code>
+     */
+    java.lang.String getOrganizationName();
+    /**
+     * <code>optional string OrganizationName = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getOrganizationNameBytes();
+
+    /**
+     * <code>optional string Inn = 5;</code>
+     */
+    boolean hasInn();
+    /**
+     * <code>optional string Inn = 5;</code>
+     */
+    java.lang.String getInn();
+    /**
+     * <code>optional string Inn = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getInnBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.CertificateInfo}
@@ -110,6 +138,18 @@ public final class CertificateInfoProtos {
             case 25: {
               bitField0_ |= 0x00000004;
               validTo_ = input.readSFixed64();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              organizationName_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              inn_ = bs;
               break;
             }
           }
@@ -224,10 +264,96 @@ public final class CertificateInfoProtos {
       return validTo_;
     }
 
+    public static final int ORGANIZATIONNAME_FIELD_NUMBER = 4;
+    private java.lang.Object organizationName_;
+    /**
+     * <code>optional string OrganizationName = 4;</code>
+     */
+    public boolean hasOrganizationName() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string OrganizationName = 4;</code>
+     */
+    public java.lang.String getOrganizationName() {
+      java.lang.Object ref = organizationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          organizationName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string OrganizationName = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOrganizationNameBytes() {
+      java.lang.Object ref = organizationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        organizationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INN_FIELD_NUMBER = 5;
+    private java.lang.Object inn_;
+    /**
+     * <code>optional string Inn = 5;</code>
+     */
+    public boolean hasInn() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string Inn = 5;</code>
+     */
+    public java.lang.String getInn() {
+      java.lang.Object ref = inn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          inn_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Inn = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInnBytes() {
+      java.lang.Object ref = inn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       thumbprint_ = "";
       validFrom_ = 0L;
       validTo_ = 0L;
+      organizationName_ = "";
+      inn_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -251,6 +377,12 @@ public final class CertificateInfoProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeSFixed64(3, validTo_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getOrganizationNameBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getInnBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -271,6 +403,14 @@ public final class CertificateInfoProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeSFixed64Size(3, validTo_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getOrganizationNameBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getInnBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -395,6 +535,10 @@ public final class CertificateInfoProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         validTo_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
+        organizationName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        inn_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -435,6 +579,14 @@ public final class CertificateInfoProtos {
           to_bitField0_ |= 0x00000004;
         }
         result.validTo_ = validTo_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.organizationName_ = organizationName_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.inn_ = inn_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -461,6 +613,16 @@ public final class CertificateInfoProtos {
         }
         if (other.hasValidTo()) {
           setValidTo(other.getValidTo());
+        }
+        if (other.hasOrganizationName()) {
+          bitField0_ |= 0x00000008;
+          organizationName_ = other.organizationName_;
+          onChanged();
+        }
+        if (other.hasInn()) {
+          bitField0_ |= 0x00000010;
+          inn_ = other.inn_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -629,6 +791,158 @@ public final class CertificateInfoProtos {
         return this;
       }
 
+      private java.lang.Object organizationName_ = "";
+      /**
+       * <code>optional string OrganizationName = 4;</code>
+       */
+      public boolean hasOrganizationName() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string OrganizationName = 4;</code>
+       */
+      public java.lang.String getOrganizationName() {
+        java.lang.Object ref = organizationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            organizationName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string OrganizationName = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOrganizationNameBytes() {
+        java.lang.Object ref = organizationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          organizationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string OrganizationName = 4;</code>
+       */
+      public Builder setOrganizationName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        organizationName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OrganizationName = 4;</code>
+       */
+      public Builder clearOrganizationName() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        organizationName_ = getDefaultInstance().getOrganizationName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OrganizationName = 4;</code>
+       */
+      public Builder setOrganizationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        organizationName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object inn_ = "";
+      /**
+       * <code>optional string Inn = 5;</code>
+       */
+      public boolean hasInn() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string Inn = 5;</code>
+       */
+      public java.lang.String getInn() {
+        java.lang.Object ref = inn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            inn_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Inn = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInnBytes() {
+        java.lang.Object ref = inn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Inn = 5;</code>
+       */
+      public Builder setInn(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        inn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Inn = 5;</code>
+       */
+      public Builder clearInn() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        inn_ = getDefaultInstance().getInn();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Inn = 5;</code>
+       */
+      public Builder setInnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        inn_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CertificateInfo)
     }
 
@@ -655,9 +969,10 @@ public final class CertificateInfoProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\025CertificateInfo.proto\022\020Diadoc.Api.Prot" +
-      "o\"I\n\017CertificateInfo\022\022\n\nThumbprint\030\001 \001(\t" +
-      "\022\021\n\tValidFrom\030\002 \001(\020\022\017\n\007ValidTo\030\003 \001(\020B\027B\025" +
-      "CertificateInfoProtos"
+      "o\"p\n\017CertificateInfo\022\022\n\nThumbprint\030\001 \001(\t" +
+      "\022\021\n\tValidFrom\030\002 \001(\020\022\017\n\007ValidTo\030\003 \001(\020\022\030\n\020" +
+      "OrganizationName\030\004 \001(\t\022\013\n\003Inn\030\005 \001(\tB\027B\025C" +
+      "ertificateInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -676,7 +991,7 @@ public final class CertificateInfoProtos {
     internal_static_Diadoc_Api_Proto_CertificateInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_CertificateInfo_descriptor,
-        new java.lang.String[] { "Thumbprint", "ValidFrom", "ValidTo", });
+        new java.lang.String[] { "Thumbprint", "ValidFrom", "ValidTo", "OrganizationName", "Inn", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
