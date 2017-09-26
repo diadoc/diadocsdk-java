@@ -12098,82 +12098,56 @@ public final class AcceptanceCertificate552InfoProtos {
         getOperationTypeBytes();
 
     /**
-     * <code>required string DocumentName = 5;</code>
+     * <code>required string OperationContent = 6;</code>
      *
      * <pre>
-     * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
+     * Содержание операции // СодОпер
      * </pre>
      */
-    boolean hasDocumentName();
+    boolean hasOperationContent();
     /**
-     * <code>required string DocumentName = 5;</code>
+     * <code>required string OperationContent = 6;</code>
      *
      * <pre>
-     * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
+     * Содержание операции // СодОпер
      * </pre>
      */
-    java.lang.String getDocumentName();
+    java.lang.String getOperationContent();
     /**
-     * <code>required string DocumentName = 5;</code>
+     * <code>required string OperationContent = 6;</code>
      *
      * <pre>
-     * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
+     * Содержание операции // СодОпер
      * </pre>
      */
     com.google.protobuf.ByteString
-        getDocumentNameBytes();
+        getOperationContentBytes();
 
     /**
-     * <code>required string OperationInfo = 6;</code>
-     *
-     * <pre>
-     * Содержание операции // СодОпер
-     * </pre>
-     */
-    boolean hasOperationInfo();
-    /**
-     * <code>required string OperationInfo = 6;</code>
-     *
-     * <pre>
-     * Содержание операции // СодОпер
-     * </pre>
-     */
-    java.lang.String getOperationInfo();
-    /**
-     * <code>required string OperationInfo = 6;</code>
-     *
-     * <pre>
-     * Содержание операции // СодОпер
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getOperationInfoBytes();
-
-    /**
-     * <code>optional string AcceptDate = 7;</code>
+     * <code>optional string AcceptanceDate = 7;</code>
      *
      * <pre>
      * Дата приемки результатов работ // ДатаПрием
      * </pre>
      */
-    boolean hasAcceptDate();
+    boolean hasAcceptanceDate();
     /**
-     * <code>optional string AcceptDate = 7;</code>
+     * <code>optional string AcceptanceDate = 7;</code>
      *
      * <pre>
      * Дата приемки результатов работ // ДатаПрием
      * </pre>
      */
-    java.lang.String getAcceptDate();
+    java.lang.String getAcceptanceDate();
     /**
-     * <code>optional string AcceptDate = 7;</code>
+     * <code>optional string AcceptanceDate = 7;</code>
      *
      * <pre>
      * Дата приемки результатов работ // ДатаПрием
      * </pre>
      */
     com.google.protobuf.ByteString
-        getAcceptDateBytes();
+        getAcceptanceDateBytes();
 
     /**
      * <code>optional string CreatedThingAcceptDate = 8;</code>
@@ -12330,39 +12304,33 @@ public final class AcceptanceCertificate552InfoProtos {
               operationType_ = bs;
               break;
             }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
-              documentName_ = bs;
-              break;
-            }
             case 50: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
-              operationInfo_ = bs;
+              bitField0_ |= 0x00000008;
+              operationContent_ = bs;
               break;
             }
             case 58: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000020;
-              acceptDate_ = bs;
+              bitField0_ |= 0x00000010;
+              acceptanceDate_ = bs;
               break;
             }
             case 66: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               createdThingAcceptDate_ = bs;
               break;
             }
             case 74: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               createdThingInfo_ = bs;
               break;
             }
             case 82: {
               Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.AdditionalInfoId.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000100) == 0x00000100)) {
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
                 subBuilder = additionalInfoId_.toBuilder();
               }
               additionalInfoId_ = input.readMessage(Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.AdditionalInfoId.PARSER, extensionRegistry);
@@ -12370,7 +12338,7 @@ public final class AcceptanceCertificate552InfoProtos {
                 subBuilder.mergeFrom(additionalInfoId_);
                 additionalInfoId_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000080;
               break;
             }
           }
@@ -12633,27 +12601,27 @@ public final class AcceptanceCertificate552InfoProtos {
       }
     }
 
-    public static final int DOCUMENTNAME_FIELD_NUMBER = 5;
-    private java.lang.Object documentName_;
+    public static final int OPERATIONCONTENT_FIELD_NUMBER = 6;
+    private java.lang.Object operationContent_;
     /**
-     * <code>required string DocumentName = 5;</code>
+     * <code>required string OperationContent = 6;</code>
      *
      * <pre>
-     * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
+     * Содержание операции // СодОпер
      * </pre>
      */
-    public boolean hasDocumentName() {
+    public boolean hasOperationContent() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>required string DocumentName = 5;</code>
+     * <code>required string OperationContent = 6;</code>
      *
      * <pre>
-     * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
+     * Содержание операции // СодОпер
      * </pre>
      */
-    public java.lang.String getDocumentName() {
-      java.lang.Object ref = documentName_;
+    public java.lang.String getOperationContent() {
+      java.lang.Object ref = operationContent_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -12661,53 +12629,53 @@ public final class AcceptanceCertificate552InfoProtos {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          documentName_ = s;
+          operationContent_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>required string DocumentName = 5;</code>
+     * <code>required string OperationContent = 6;</code>
      *
      * <pre>
-     * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
+     * Содержание операции // СодОпер
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getDocumentNameBytes() {
-      java.lang.Object ref = documentName_;
+        getOperationContentBytes() {
+      java.lang.Object ref = operationContent_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        documentName_ = b;
+        operationContent_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int OPERATIONINFO_FIELD_NUMBER = 6;
-    private java.lang.Object operationInfo_;
+    public static final int ACCEPTANCEDATE_FIELD_NUMBER = 7;
+    private java.lang.Object acceptanceDate_;
     /**
-     * <code>required string OperationInfo = 6;</code>
+     * <code>optional string AcceptanceDate = 7;</code>
      *
      * <pre>
-     * Содержание операции // СодОпер
+     * Дата приемки результатов работ // ДатаПрием
      * </pre>
      */
-    public boolean hasOperationInfo() {
+    public boolean hasAcceptanceDate() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>required string OperationInfo = 6;</code>
+     * <code>optional string AcceptanceDate = 7;</code>
      *
      * <pre>
-     * Содержание операции // СодОпер
+     * Дата приемки результатов работ // ДатаПрием
      * </pre>
      */
-    public java.lang.String getOperationInfo() {
-      java.lang.Object ref = operationInfo_;
+    public java.lang.String getAcceptanceDate() {
+      java.lang.Object ref = acceptanceDate_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -12715,80 +12683,26 @@ public final class AcceptanceCertificate552InfoProtos {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          operationInfo_ = s;
+          acceptanceDate_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>required string OperationInfo = 6;</code>
-     *
-     * <pre>
-     * Содержание операции // СодОпер
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getOperationInfoBytes() {
-      java.lang.Object ref = operationInfo_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        operationInfo_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ACCEPTDATE_FIELD_NUMBER = 7;
-    private java.lang.Object acceptDate_;
-    /**
-     * <code>optional string AcceptDate = 7;</code>
-     *
-     * <pre>
-     * Дата приемки результатов работ // ДатаПрием
-     * </pre>
-     */
-    public boolean hasAcceptDate() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional string AcceptDate = 7;</code>
-     *
-     * <pre>
-     * Дата приемки результатов работ // ДатаПрием
-     * </pre>
-     */
-    public java.lang.String getAcceptDate() {
-      java.lang.Object ref = acceptDate_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          acceptDate_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string AcceptDate = 7;</code>
+     * <code>optional string AcceptanceDate = 7;</code>
      *
      * <pre>
      * Дата приемки результатов работ // ДатаПрием
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getAcceptDateBytes() {
-      java.lang.Object ref = acceptDate_;
+        getAcceptanceDateBytes() {
+      java.lang.Object ref = acceptanceDate_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        acceptDate_ = b;
+        acceptanceDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -12805,7 +12719,7 @@ public final class AcceptanceCertificate552InfoProtos {
      * </pre>
      */
     public boolean hasCreatedThingAcceptDate() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
      * <code>optional string CreatedThingAcceptDate = 8;</code>
@@ -12859,7 +12773,7 @@ public final class AcceptanceCertificate552InfoProtos {
      * </pre>
      */
     public boolean hasCreatedThingInfo() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
      * <code>optional string CreatedThingInfo = 9;</code>
@@ -12913,7 +12827,7 @@ public final class AcceptanceCertificate552InfoProtos {
      * </pre>
      */
     public boolean hasAdditionalInfoId() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
+      return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
      * <code>optional .Diadoc.Api.Proto.Invoicing.AdditionalInfoId AdditionalInfoId = 10;</code>
@@ -12941,9 +12855,8 @@ public final class AcceptanceCertificate552InfoProtos {
       documentCreator_ = "";
       documentCreatorBase_ = "";
       operationType_ = "";
-      documentName_ = "";
-      operationInfo_ = "";
-      acceptDate_ = "";
+      operationContent_ = "";
+      acceptanceDate_ = "";
       createdThingAcceptDate_ = "";
       createdThingInfo_ = "";
       additionalInfoId_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.AdditionalInfoId.getDefaultInstance();
@@ -12958,11 +12871,7 @@ public final class AcceptanceCertificate552InfoProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasDocumentName()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasOperationInfo()) {
+      if (!hasOperationContent()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -12998,21 +12907,18 @@ public final class AcceptanceCertificate552InfoProtos {
         output.writeBytes(4, getOperationTypeBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(5, getDocumentNameBytes());
+        output.writeBytes(6, getOperationContentBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBytes(6, getOperationInfoBytes());
+        output.writeBytes(7, getAcceptanceDateBytes());
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeBytes(7, getAcceptDateBytes());
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeBytes(8, getCreatedThingAcceptDateBytes());
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeBytes(9, getCreatedThingInfoBytes());
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeMessage(10, additionalInfoId_);
       }
       getUnknownFields().writeTo(output);
@@ -13042,25 +12948,21 @@ public final class AcceptanceCertificate552InfoProtos {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getDocumentNameBytes());
+          .computeBytesSize(6, getOperationContentBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getOperationInfoBytes());
+          .computeBytesSize(7, getAcceptanceDateBytes());
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getAcceptDateBytes());
+          .computeBytesSize(8, getCreatedThingAcceptDateBytes());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getCreatedThingAcceptDateBytes());
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(9, getCreatedThingInfoBytes());
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, additionalInfoId_);
       }
@@ -13195,22 +13097,20 @@ public final class AcceptanceCertificate552InfoProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         operationType_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
-        documentName_ = "";
+        operationContent_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
-        operationInfo_ = "";
+        acceptanceDate_ = "";
         bitField0_ = (bitField0_ & ~0x00000020);
-        acceptDate_ = "";
-        bitField0_ = (bitField0_ & ~0x00000040);
         createdThingAcceptDate_ = "";
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         createdThingInfo_ = "";
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         if (additionalInfoIdBuilder_ == null) {
           additionalInfoId_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.AdditionalInfoId.getDefaultInstance();
         } else {
           additionalInfoIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -13263,25 +13163,21 @@ public final class AcceptanceCertificate552InfoProtos {
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.documentName_ = documentName_;
+        result.operationContent_ = operationContent_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.operationInfo_ = operationInfo_;
+        result.acceptanceDate_ = acceptanceDate_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.acceptDate_ = acceptDate_;
+        result.createdThingAcceptDate_ = createdThingAcceptDate_;
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.createdThingAcceptDate_ = createdThingAcceptDate_;
+        result.createdThingInfo_ = createdThingInfo_;
         if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
           to_bitField0_ |= 0x00000080;
-        }
-        result.createdThingInfo_ = createdThingInfo_;
-        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
-          to_bitField0_ |= 0x00000100;
         }
         if (additionalInfoIdBuilder_ == null) {
           result.additionalInfoId_ = additionalInfoId_;
@@ -13345,28 +13241,23 @@ public final class AcceptanceCertificate552InfoProtos {
           operationType_ = other.operationType_;
           onChanged();
         }
-        if (other.hasDocumentName()) {
+        if (other.hasOperationContent()) {
           bitField0_ |= 0x00000010;
-          documentName_ = other.documentName_;
+          operationContent_ = other.operationContent_;
           onChanged();
         }
-        if (other.hasOperationInfo()) {
+        if (other.hasAcceptanceDate()) {
           bitField0_ |= 0x00000020;
-          operationInfo_ = other.operationInfo_;
-          onChanged();
-        }
-        if (other.hasAcceptDate()) {
-          bitField0_ |= 0x00000040;
-          acceptDate_ = other.acceptDate_;
+          acceptanceDate_ = other.acceptanceDate_;
           onChanged();
         }
         if (other.hasCreatedThingAcceptDate()) {
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
           createdThingAcceptDate_ = other.createdThingAcceptDate_;
           onChanged();
         }
         if (other.hasCreatedThingInfo()) {
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000080;
           createdThingInfo_ = other.createdThingInfo_;
           onChanged();
         }
@@ -13382,11 +13273,7 @@ public final class AcceptanceCertificate552InfoProtos {
           
           return false;
         }
-        if (!hasDocumentName()) {
-          
-          return false;
-        }
-        if (!hasOperationInfo()) {
+        if (!hasOperationContent()) {
           
           return false;
         }
@@ -14036,32 +13923,32 @@ public final class AcceptanceCertificate552InfoProtos {
         return this;
       }
 
-      private java.lang.Object documentName_ = "";
+      private java.lang.Object operationContent_ = "";
       /**
-       * <code>required string DocumentName = 5;</code>
+       * <code>required string OperationContent = 6;</code>
        *
        * <pre>
-       * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
+       * Содержание операции // СодОпер
        * </pre>
        */
-      public boolean hasDocumentName() {
+      public boolean hasOperationContent() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>required string DocumentName = 5;</code>
+       * <code>required string OperationContent = 6;</code>
        *
        * <pre>
-       * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
+       * Содержание операции // СодОпер
        * </pre>
        */
-      public java.lang.String getDocumentName() {
-        java.lang.Object ref = documentName_;
+      public java.lang.String getOperationContent() {
+        java.lang.Object ref = operationContent_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            documentName_ = s;
+            operationContent_ = s;
           }
           return s;
         } else {
@@ -14069,99 +13956,99 @@ public final class AcceptanceCertificate552InfoProtos {
         }
       }
       /**
-       * <code>required string DocumentName = 5;</code>
+       * <code>required string OperationContent = 6;</code>
        *
        * <pre>
-       * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
+       * Содержание операции // СодОпер
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getDocumentNameBytes() {
-        java.lang.Object ref = documentName_;
+          getOperationContentBytes() {
+        java.lang.Object ref = operationContent_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          documentName_ = b;
+          operationContent_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>required string DocumentName = 5;</code>
-       *
-       * <pre>
-       * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
-       * </pre>
-       */
-      public Builder setDocumentName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        documentName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string DocumentName = 5;</code>
-       *
-       * <pre>
-       * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
-       * </pre>
-       */
-      public Builder clearDocumentName() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        documentName_ = getDefaultInstance().getDocumentName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string DocumentName = 5;</code>
-       *
-       * <pre>
-       * Наименование первичного документа, определенное организацией // НаимДокОпрИсп
-       * </pre>
-       */
-      public Builder setDocumentNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        documentName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object operationInfo_ = "";
-      /**
-       * <code>required string OperationInfo = 6;</code>
+       * <code>required string OperationContent = 6;</code>
        *
        * <pre>
        * Содержание операции // СодОпер
        * </pre>
        */
-      public boolean hasOperationInfo() {
+      public Builder setOperationContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        operationContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OperationContent = 6;</code>
+       *
+       * <pre>
+       * Содержание операции // СодОпер
+       * </pre>
+       */
+      public Builder clearOperationContent() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        operationContent_ = getDefaultInstance().getOperationContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OperationContent = 6;</code>
+       *
+       * <pre>
+       * Содержание операции // СодОпер
+       * </pre>
+       */
+      public Builder setOperationContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        operationContent_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object acceptanceDate_ = "";
+      /**
+       * <code>optional string AcceptanceDate = 7;</code>
+       *
+       * <pre>
+       * Дата приемки результатов работ // ДатаПрием
+       * </pre>
+       */
+      public boolean hasAcceptanceDate() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>required string OperationInfo = 6;</code>
+       * <code>optional string AcceptanceDate = 7;</code>
        *
        * <pre>
-       * Содержание операции // СодОпер
+       * Дата приемки результатов работ // ДатаПрием
        * </pre>
        */
-      public java.lang.String getOperationInfo() {
-        java.lang.Object ref = operationInfo_;
+      public java.lang.String getAcceptanceDate() {
+        java.lang.Object ref = acceptanceDate_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            operationInfo_ = s;
+            acceptanceDate_ = s;
           }
           return s;
         } else {
@@ -14169,169 +14056,69 @@ public final class AcceptanceCertificate552InfoProtos {
         }
       }
       /**
-       * <code>required string OperationInfo = 6;</code>
+       * <code>optional string AcceptanceDate = 7;</code>
        *
        * <pre>
-       * Содержание операции // СодОпер
+       * Дата приемки результатов работ // ДатаПрием
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getOperationInfoBytes() {
-        java.lang.Object ref = operationInfo_;
+          getAcceptanceDateBytes() {
+        java.lang.Object ref = acceptanceDate_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          operationInfo_ = b;
+          acceptanceDate_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>required string OperationInfo = 6;</code>
+       * <code>optional string AcceptanceDate = 7;</code>
        *
        * <pre>
-       * Содержание операции // СодОпер
+       * Дата приемки результатов работ // ДатаПрием
        * </pre>
        */
-      public Builder setOperationInfo(
+      public Builder setAcceptanceDate(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000020;
-        operationInfo_ = value;
+        acceptanceDate_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string OperationInfo = 6;</code>
+       * <code>optional string AcceptanceDate = 7;</code>
        *
        * <pre>
-       * Содержание операции // СодОпер
+       * Дата приемки результатов работ // ДатаПрием
        * </pre>
        */
-      public Builder clearOperationInfo() {
+      public Builder clearAcceptanceDate() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        operationInfo_ = getDefaultInstance().getOperationInfo();
+        acceptanceDate_ = getDefaultInstance().getAcceptanceDate();
         onChanged();
         return this;
       }
       /**
-       * <code>required string OperationInfo = 6;</code>
+       * <code>optional string AcceptanceDate = 7;</code>
        *
        * <pre>
-       * Содержание операции // СодОпер
+       * Дата приемки результатов работ // ДатаПрием
        * </pre>
        */
-      public Builder setOperationInfoBytes(
+      public Builder setAcceptanceDateBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000020;
-        operationInfo_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object acceptDate_ = "";
-      /**
-       * <code>optional string AcceptDate = 7;</code>
-       *
-       * <pre>
-       * Дата приемки результатов работ // ДатаПрием
-       * </pre>
-       */
-      public boolean hasAcceptDate() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional string AcceptDate = 7;</code>
-       *
-       * <pre>
-       * Дата приемки результатов работ // ДатаПрием
-       * </pre>
-       */
-      public java.lang.String getAcceptDate() {
-        java.lang.Object ref = acceptDate_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            acceptDate_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string AcceptDate = 7;</code>
-       *
-       * <pre>
-       * Дата приемки результатов работ // ДатаПрием
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getAcceptDateBytes() {
-        java.lang.Object ref = acceptDate_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          acceptDate_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string AcceptDate = 7;</code>
-       *
-       * <pre>
-       * Дата приемки результатов работ // ДатаПрием
-       * </pre>
-       */
-      public Builder setAcceptDate(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
-        acceptDate_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string AcceptDate = 7;</code>
-       *
-       * <pre>
-       * Дата приемки результатов работ // ДатаПрием
-       * </pre>
-       */
-      public Builder clearAcceptDate() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        acceptDate_ = getDefaultInstance().getAcceptDate();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string AcceptDate = 7;</code>
-       *
-       * <pre>
-       * Дата приемки результатов работ // ДатаПрием
-       * </pre>
-       */
-      public Builder setAcceptDateBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
-        acceptDate_ = value;
+        acceptanceDate_ = value;
         onChanged();
         return this;
       }
@@ -14345,7 +14132,7 @@ public final class AcceptanceCertificate552InfoProtos {
        * </pre>
        */
       public boolean hasCreatedThingAcceptDate() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
        * <code>optional string CreatedThingAcceptDate = 8;</code>
@@ -14400,7 +14187,7 @@ public final class AcceptanceCertificate552InfoProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000040;
         createdThingAcceptDate_ = value;
         onChanged();
         return this;
@@ -14413,7 +14200,7 @@ public final class AcceptanceCertificate552InfoProtos {
        * </pre>
        */
       public Builder clearCreatedThingAcceptDate() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         createdThingAcceptDate_ = getDefaultInstance().getCreatedThingAcceptDate();
         onChanged();
         return this;
@@ -14430,7 +14217,7 @@ public final class AcceptanceCertificate552InfoProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000040;
         createdThingAcceptDate_ = value;
         onChanged();
         return this;
@@ -14445,7 +14232,7 @@ public final class AcceptanceCertificate552InfoProtos {
        * </pre>
        */
       public boolean hasCreatedThingInfo() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
+        return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
        * <code>optional string CreatedThingInfo = 9;</code>
@@ -14500,7 +14287,7 @@ public final class AcceptanceCertificate552InfoProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000100;
+  bitField0_ |= 0x00000080;
         createdThingInfo_ = value;
         onChanged();
         return this;
@@ -14513,7 +14300,7 @@ public final class AcceptanceCertificate552InfoProtos {
        * </pre>
        */
       public Builder clearCreatedThingInfo() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         createdThingInfo_ = getDefaultInstance().getCreatedThingInfo();
         onChanged();
         return this;
@@ -14530,7 +14317,7 @@ public final class AcceptanceCertificate552InfoProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000100;
+  bitField0_ |= 0x00000080;
         createdThingInfo_ = value;
         onChanged();
         return this;
@@ -14547,7 +14334,7 @@ public final class AcceptanceCertificate552InfoProtos {
        * </pre>
        */
       public boolean hasAdditionalInfoId() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
+        return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
        * <code>optional .Diadoc.Api.Proto.Invoicing.AdditionalInfoId AdditionalInfoId = 10;</code>
@@ -14580,7 +14367,7 @@ public final class AcceptanceCertificate552InfoProtos {
         } else {
           additionalInfoIdBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -14598,7 +14385,7 @@ public final class AcceptanceCertificate552InfoProtos {
         } else {
           additionalInfoIdBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -14610,7 +14397,7 @@ public final class AcceptanceCertificate552InfoProtos {
        */
       public Builder mergeAdditionalInfoId(Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.AdditionalInfoId value) {
         if (additionalInfoIdBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200) &&
+          if (((bitField0_ & 0x00000100) == 0x00000100) &&
               additionalInfoId_ != Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.AdditionalInfoId.getDefaultInstance()) {
             additionalInfoId_ =
               Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.AdditionalInfoId.newBuilder(additionalInfoId_).mergeFrom(value).buildPartial();
@@ -14621,7 +14408,7 @@ public final class AcceptanceCertificate552InfoProtos {
         } else {
           additionalInfoIdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -14638,7 +14425,7 @@ public final class AcceptanceCertificate552InfoProtos {
         } else {
           additionalInfoIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
       /**
@@ -14649,7 +14436,7 @@ public final class AcceptanceCertificate552InfoProtos {
        * </pre>
        */
       public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.AdditionalInfoId.Builder getAdditionalInfoIdBuilder() {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
         onChanged();
         return getAdditionalInfoIdFieldBuilder().getBuilder();
       }
@@ -14782,17 +14569,17 @@ public final class AcceptanceCertificate552InfoProtos {
       "\022@\n\007TaxRate\030\013 \001(\0162#.Diadoc.Api.Proto.Inv" +
       "oicing.TaxRate:\nPercent_18\022\030\n\020ItemAccoun" +
       "tDebit\030\014 \001(\t\022\031\n\021ItemAccountCredit\030\r \001(\t\"" +
-      "\375\002\n&AcceptanceCertificate552BuyerTitleIn",
+      "\356\002\n&AcceptanceCertificate552BuyerTitleIn",
       "fo\022C\n\007Signers\030\001 \003(\01322.Diadoc.Api.Proto.I" +
       "nvoicing.Signers.ExtendedSigner\022\027\n\017Docum" +
       "entCreator\030\002 \002(\t\022\033\n\023DocumentCreatorBase\030" +
-      "\003 \001(\t\022\025\n\rOperationType\030\004 \001(\t\022\024\n\014Document" +
-      "Name\030\005 \002(\t\022\025\n\rOperationInfo\030\006 \002(\t\022\022\n\nAcc" +
-      "eptDate\030\007 \001(\t\022\036\n\026CreatedThingAcceptDate\030" +
-      "\010 \001(\t\022\030\n\020CreatedThingInfo\030\t \001(\t\022F\n\020Addit" +
-      "ionalInfoId\030\n \001(\0132,.Diadoc.Api.Proto.Inv" +
-      "oicing.AdditionalInfoIdB$B\"AcceptanceCer" +
-      "tificate552InfoProtos"
+      "\003 \001(\t\022\025\n\rOperationType\030\004 \001(\t\022\030\n\020Operatio" +
+      "nContent\030\006 \002(\t\022\026\n\016AcceptanceDate\030\007 \001(\t\022\036" +
+      "\n\026CreatedThingAcceptDate\030\010 \001(\t\022\030\n\020Create" +
+      "dThingInfo\030\t \001(\t\022F\n\020AdditionalInfoId\030\n \001" +
+      "(\0132,.Diadoc.Api.Proto.Invoicing.Addition" +
+      "alInfoIdB$B\"AcceptanceCertificate552Info" +
+      "Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14840,7 +14627,7 @@ public final class AcceptanceCertificate552InfoProtos {
     internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificate552BuyerTitleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Invoicing_AcceptanceCertificate552BuyerTitleInfo_descriptor,
-        new java.lang.String[] { "Signers", "DocumentCreator", "DocumentCreatorBase", "OperationType", "DocumentName", "OperationInfo", "AcceptDate", "CreatedThingAcceptDate", "CreatedThingInfo", "AdditionalInfoId", });
+        new java.lang.String[] { "Signers", "DocumentCreator", "DocumentCreatorBase", "OperationType", "OperationContent", "AcceptanceDate", "CreatedThingAcceptDate", "CreatedThingInfo", "AdditionalInfoId", });
     Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.getDescriptor();
     Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.getDescriptor();
     Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfoProtos.getDescriptor();
