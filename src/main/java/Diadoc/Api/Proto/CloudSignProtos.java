@@ -2542,27 +2542,27 @@ public final class CloudSignProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string NextBatchKey = 1;</code>
-     */
-    boolean hasNextBatchKey();
-    /**
-     * <code>required string NextBatchKey = 1;</code>
-     */
-    java.lang.String getNextBatchKey();
-    /**
-     * <code>required string NextBatchKey = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getNextBatchKeyBytes();
-
-    /**
-     * <code>required int32 SignedReceiptsCount = 2;</code>
+     * <code>required int64 SignedReceiptsCount = 1;</code>
      */
     boolean hasSignedReceiptsCount();
     /**
-     * <code>required int32 SignedReceiptsCount = 2;</code>
+     * <code>required int64 SignedReceiptsCount = 1;</code>
      */
-    int getSignedReceiptsCount();
+    long getSignedReceiptsCount();
+
+    /**
+     * <code>required string NextBatchKey = 2;</code>
+     */
+    boolean hasNextBatchKey();
+    /**
+     * <code>required string NextBatchKey = 2;</code>
+     */
+    java.lang.String getNextBatchKey();
+    /**
+     * <code>required string NextBatchKey = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextBatchKeyBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.AutosignReceiptsResult}
@@ -2616,15 +2616,15 @@ public final class CloudSignProtos {
               }
               break;
             }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 8: {
               bitField0_ |= 0x00000001;
-              nextBatchKey_ = bs;
+              signedReceiptsCount_ = input.readInt64();
               break;
             }
-            case 16: {
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              signedReceiptsCount_ = input.readInt32();
+              nextBatchKey_ = bs;
               break;
             }
           }
@@ -2667,16 +2667,31 @@ public final class CloudSignProtos {
     }
 
     private int bitField0_;
-    public static final int NEXTBATCHKEY_FIELD_NUMBER = 1;
-    private java.lang.Object nextBatchKey_;
+    public static final int SIGNEDRECEIPTSCOUNT_FIELD_NUMBER = 1;
+    private long signedReceiptsCount_;
     /**
-     * <code>required string NextBatchKey = 1;</code>
+     * <code>required int64 SignedReceiptsCount = 1;</code>
      */
-    public boolean hasNextBatchKey() {
+    public boolean hasSignedReceiptsCount() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required string NextBatchKey = 1;</code>
+     * <code>required int64 SignedReceiptsCount = 1;</code>
+     */
+    public long getSignedReceiptsCount() {
+      return signedReceiptsCount_;
+    }
+
+    public static final int NEXTBATCHKEY_FIELD_NUMBER = 2;
+    private java.lang.Object nextBatchKey_;
+    /**
+     * <code>required string NextBatchKey = 2;</code>
+     */
+    public boolean hasNextBatchKey() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string NextBatchKey = 2;</code>
      */
     public java.lang.String getNextBatchKey() {
       java.lang.Object ref = nextBatchKey_;
@@ -2693,7 +2708,7 @@ public final class CloudSignProtos {
       }
     }
     /**
-     * <code>required string NextBatchKey = 1;</code>
+     * <code>required string NextBatchKey = 2;</code>
      */
     public com.google.protobuf.ByteString
         getNextBatchKeyBytes() {
@@ -2709,24 +2724,9 @@ public final class CloudSignProtos {
       }
     }
 
-    public static final int SIGNEDRECEIPTSCOUNT_FIELD_NUMBER = 2;
-    private int signedReceiptsCount_;
-    /**
-     * <code>required int32 SignedReceiptsCount = 2;</code>
-     */
-    public boolean hasSignedReceiptsCount() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required int32 SignedReceiptsCount = 2;</code>
-     */
-    public int getSignedReceiptsCount() {
-      return signedReceiptsCount_;
-    }
-
     private void initFields() {
+      signedReceiptsCount_ = 0L;
       nextBatchKey_ = "";
-      signedReceiptsCount_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2734,11 +2734,11 @@ public final class CloudSignProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasNextBatchKey()) {
+      if (!hasSignedReceiptsCount()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasSignedReceiptsCount()) {
+      if (!hasNextBatchKey()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -2750,10 +2750,10 @@ public final class CloudSignProtos {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getNextBatchKeyBytes());
+        output.writeInt64(1, signedReceiptsCount_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, signedReceiptsCount_);
+        output.writeBytes(2, getNextBatchKeyBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2766,11 +2766,11 @@ public final class CloudSignProtos {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getNextBatchKeyBytes());
+          .computeInt64Size(1, signedReceiptsCount_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, signedReceiptsCount_);
+          .computeBytesSize(2, getNextBatchKeyBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2889,9 +2889,9 @@ public final class CloudSignProtos {
 
       public Builder clear() {
         super.clear();
-        nextBatchKey_ = "";
+        signedReceiptsCount_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
-        signedReceiptsCount_ = 0;
+        nextBatchKey_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -2924,11 +2924,11 @@ public final class CloudSignProtos {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.nextBatchKey_ = nextBatchKey_;
+        result.signedReceiptsCount_ = signedReceiptsCount_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.signedReceiptsCount_ = signedReceiptsCount_;
+        result.nextBatchKey_ = nextBatchKey_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2945,24 +2945,24 @@ public final class CloudSignProtos {
 
       public Builder mergeFrom(Diadoc.Api.Proto.CloudSignProtos.AutosignReceiptsResult other) {
         if (other == Diadoc.Api.Proto.CloudSignProtos.AutosignReceiptsResult.getDefaultInstance()) return this;
-        if (other.hasNextBatchKey()) {
-          bitField0_ |= 0x00000001;
-          nextBatchKey_ = other.nextBatchKey_;
-          onChanged();
-        }
         if (other.hasSignedReceiptsCount()) {
           setSignedReceiptsCount(other.getSignedReceiptsCount());
+        }
+        if (other.hasNextBatchKey()) {
+          bitField0_ |= 0x00000002;
+          nextBatchKey_ = other.nextBatchKey_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
-        if (!hasNextBatchKey()) {
+        if (!hasSignedReceiptsCount()) {
           
           return false;
         }
-        if (!hasSignedReceiptsCount()) {
+        if (!hasNextBatchKey()) {
           
           return false;
         }
@@ -2988,15 +2988,47 @@ public final class CloudSignProtos {
       }
       private int bitField0_;
 
-      private java.lang.Object nextBatchKey_ = "";
+      private long signedReceiptsCount_ ;
       /**
-       * <code>required string NextBatchKey = 1;</code>
+       * <code>required int64 SignedReceiptsCount = 1;</code>
        */
-      public boolean hasNextBatchKey() {
+      public boolean hasSignedReceiptsCount() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string NextBatchKey = 1;</code>
+       * <code>required int64 SignedReceiptsCount = 1;</code>
+       */
+      public long getSignedReceiptsCount() {
+        return signedReceiptsCount_;
+      }
+      /**
+       * <code>required int64 SignedReceiptsCount = 1;</code>
+       */
+      public Builder setSignedReceiptsCount(long value) {
+        bitField0_ |= 0x00000001;
+        signedReceiptsCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 SignedReceiptsCount = 1;</code>
+       */
+      public Builder clearSignedReceiptsCount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signedReceiptsCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nextBatchKey_ = "";
+      /**
+       * <code>required string NextBatchKey = 2;</code>
+       */
+      public boolean hasNextBatchKey() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string NextBatchKey = 2;</code>
        */
       public java.lang.String getNextBatchKey() {
         java.lang.Object ref = nextBatchKey_;
@@ -3013,7 +3045,7 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>required string NextBatchKey = 1;</code>
+       * <code>required string NextBatchKey = 2;</code>
        */
       public com.google.protobuf.ByteString
           getNextBatchKeyBytes() {
@@ -3029,69 +3061,37 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>required string NextBatchKey = 1;</code>
+       * <code>required string NextBatchKey = 2;</code>
        */
       public Builder setNextBatchKey(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
+  bitField0_ |= 0x00000002;
         nextBatchKey_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string NextBatchKey = 1;</code>
+       * <code>required string NextBatchKey = 2;</code>
        */
       public Builder clearNextBatchKey() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         nextBatchKey_ = getDefaultInstance().getNextBatchKey();
         onChanged();
         return this;
       }
       /**
-       * <code>required string NextBatchKey = 1;</code>
+       * <code>required string NextBatchKey = 2;</code>
        */
       public Builder setNextBatchKeyBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
+  bitField0_ |= 0x00000002;
         nextBatchKey_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int signedReceiptsCount_ ;
-      /**
-       * <code>required int32 SignedReceiptsCount = 2;</code>
-       */
-      public boolean hasSignedReceiptsCount() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required int32 SignedReceiptsCount = 2;</code>
-       */
-      public int getSignedReceiptsCount() {
-        return signedReceiptsCount_;
-      }
-      /**
-       * <code>required int32 SignedReceiptsCount = 2;</code>
-       */
-      public Builder setSignedReceiptsCount(int value) {
-        bitField0_ |= 0x00000002;
-        signedReceiptsCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 SignedReceiptsCount = 2;</code>
-       */
-      public Builder clearSignedReceiptsCount() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        signedReceiptsCount_ = 0;
         onChanged();
         return this;
       }
@@ -3149,8 +3149,8 @@ public final class CloudSignProtos {
       "\001(\t\" \n\017CloudSignResult\022\r\n\005Token\030\001 \001(\t\"J\n" +
       "\026CloudSignConfirmResult\0220\n\nSignatures\030\001 " +
       "\003(\0132\034.Diadoc.Api.Proto.Content_v2\"K\n\026Aut" +
-      "osignReceiptsResult\022\024\n\014NextBatchKey\030\001 \002(" +
-      "\t\022\033\n\023SignedReceiptsCount\030\002 \002(\005B\021B\017CloudS",
+      "osignReceiptsResult\022\033\n\023SignedReceiptsCou" +
+      "nt\030\001 \002(\003\022\024\n\014NextBatchKey\030\002 \002(\tB\021B\017CloudS",
       "ignProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
@@ -3195,7 +3195,7 @@ public final class CloudSignProtos {
     internal_static_Diadoc_Api_Proto_AutosignReceiptsResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_AutosignReceiptsResult_descriptor,
-        new java.lang.String[] { "NextBatchKey", "SignedReceiptsCount", });
+        new java.lang.String[] { "SignedReceiptsCount", "NextBatchKey", });
     Diadoc.Api.Proto.Content_v2Protos.getDescriptor();
   }
 
