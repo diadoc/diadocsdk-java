@@ -293,7 +293,8 @@ public class DiadocApi {
 
     private URI BuildRequestURI(URI baseUri, String path, List<NameValuePair> parameters) throws URISyntaxException {
         String query = parameters != null ? URLEncodedUtils.format(parameters, "UTF-8") : null;
-        return URIUtils.createURI(baseUri.getScheme(), baseUri.getHost(), baseUri.getPort(), path, query, null);
+        String uriPath = Tools.concatUriPath(baseUri.getPath(), path);
+        return URIUtils.createURI(baseUri.getScheme(), baseUri.getHost(), baseUri.getPort(), uriPath, query, null);
     }
 
     private HttpResponse ReceiveGetHttpResponse(String path, List<NameValuePair> parameters) throws IOException {
