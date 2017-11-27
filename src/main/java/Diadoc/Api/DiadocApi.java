@@ -3,6 +3,7 @@ package Diadoc.Api;
 import Diadoc.Api.Proto.*;
 import Diadoc.Api.Proto.Docflow.DocflowApiProtos;
 import Diadoc.Api.Proto.Documents.*;
+import Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos;
 import Diadoc.Api.Proto.Invoicing.*;
@@ -1438,6 +1439,34 @@ public class DiadocApi {
         byte[] body = request.toByteArray();
         byte[] bytes = PerformPostHttpRequest("/PrepareDocumentsToSign", null, body);
         return DiadocMessage_PostApiProtos.PrepareDocumentsToSignResponse.parseFrom(bytes);
+    }
+
+    public DocumentTypeDescriptionProtos.GetDocumentTypesResponse GetDocumentTypes(String boxId) throws IOException {
+        if (Tools.IsNullOrEmpty(boxId)) throw new NullPointerException("boxId");
+
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+
+        return DocumentTypeDescriptionProtos.GetDocumentTypesResponse.parseFrom(PerformGetHttpRequest("/GetDocumentTypes", parameters));
+    }
+
+    public FileContent GetContent(String typeNamedId, String function, String version, int titleIndex) throws IOException {
+        if (Tools.IsNullOrEmpty(typeNamedId)) throw new NullPointerException("typeNamedId");
+        if (Tools.IsNullOrEmpty(function)) throw new NullPointerException("function");
+        if (Tools.IsNullOrEmpty(version)) throw new NullPointerException("version");
+        if (titleIndex < 0) throw new IllegalArgumentException("titleIndex should be non-negative");
+
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("typeNamedId", typeNamedId));
+        parameters.add(new BasicNameValuePair("function", function));
+        parameters.add(new BasicNameValuePair("version", version));
+        parameters.add(new BasicNameValuePair("titleIndex", Integer.toString(titleIndex)));
+
+        HttpResponse response = ReceiveGetHttpResponse("/GetContent", parameters);
+        byte[] bytes = GetResponseBytes(response);
+
+        Header fileNameHeader = response.getFirstHeader("X-Diadoc-FileName");
+        return new FileContent(bytes, fileNameHeader == null ? null : fileNameHeader.getValue());
     }
 
     public static int WaitTaskDefaultTimeoutInMillis = 5 * 60 * 1000;
