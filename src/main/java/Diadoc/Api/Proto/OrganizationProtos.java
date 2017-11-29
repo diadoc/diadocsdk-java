@@ -1159,6 +1159,15 @@ public final class OrganizationProtos {
      */
     com.google.protobuf.ByteString
         getCertificateOfRegistryInfoBytes();
+
+    /**
+     * <code>optional bool IsForeign = 25;</code>
+     */
+    boolean hasIsForeign();
+    /**
+     * <code>optional bool IsForeign = 25;</code>
+     */
+    boolean getIsForeign();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Organization}
@@ -1356,6 +1365,11 @@ public final class OrganizationProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00100000;
               certificateOfRegistryInfo_ = bs;
+              break;
+            }
+            case 200: {
+              bitField0_ |= 0x00200000;
+              isForeign_ = input.readBool();
               break;
             }
           }
@@ -2092,6 +2106,21 @@ public final class OrganizationProtos {
       }
     }
 
+    public static final int ISFOREIGN_FIELD_NUMBER = 25;
+    private boolean isForeign_;
+    /**
+     * <code>optional bool IsForeign = 25;</code>
+     */
+    public boolean hasIsForeign() {
+      return ((bitField0_ & 0x00200000) == 0x00200000);
+    }
+    /**
+     * <code>optional bool IsForeign = 25;</code>
+     */
+    public boolean getIsForeign() {
+      return isForeign_;
+    }
+
     private void initFields() {
       orgId_ = "";
       inn_ = "";
@@ -2116,6 +2145,7 @@ public final class OrganizationProtos {
       sociability_ = Diadoc.Api.Proto.OrganizationProtos.Sociability.AllOrganizations;
       liquidationDate_ = "";
       certificateOfRegistryInfo_ = "";
+      isForeign_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2233,6 +2263,9 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
         output.writeBytes(24, getCertificateOfRegistryInfoBytes());
       }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        output.writeBool(25, isForeign_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2333,6 +2366,10 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(24, getCertificateOfRegistryInfoBytes());
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(25, isForeign_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2512,6 +2549,8 @@ public final class OrganizationProtos {
         bitField0_ = (bitField0_ & ~0x00200000);
         certificateOfRegistryInfo_ = "";
         bitField0_ = (bitField0_ & ~0x00400000);
+        isForeign_ = false;
+        bitField0_ = (bitField0_ & ~0x00800000);
         return this;
       }
 
@@ -2646,6 +2685,10 @@ public final class OrganizationProtos {
           to_bitField0_ |= 0x00100000;
         }
         result.certificateOfRegistryInfo_ = certificateOfRegistryInfo_;
+        if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
+          to_bitField0_ |= 0x00200000;
+        }
+        result.isForeign_ = isForeign_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2798,6 +2841,9 @@ public final class OrganizationProtos {
           bitField0_ |= 0x00400000;
           certificateOfRegistryInfo_ = other.certificateOfRegistryInfo_;
           onChanged();
+        }
+        if (other.hasIsForeign()) {
+          setIsForeign(other.getIsForeign());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4579,6 +4625,38 @@ public final class OrganizationProtos {
   }
   bitField0_ |= 0x00400000;
         certificateOfRegistryInfo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean isForeign_ ;
+      /**
+       * <code>optional bool IsForeign = 25;</code>
+       */
+      public boolean hasIsForeign() {
+        return ((bitField0_ & 0x00800000) == 0x00800000);
+      }
+      /**
+       * <code>optional bool IsForeign = 25;</code>
+       */
+      public boolean getIsForeign() {
+        return isForeign_;
+      }
+      /**
+       * <code>optional bool IsForeign = 25;</code>
+       */
+      public Builder setIsForeign(boolean value) {
+        bitField0_ |= 0x00800000;
+        isForeign_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsForeign = 25;</code>
+       */
+      public Builder clearIsForeign() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        isForeign_ = false;
         onChanged();
         return this;
       }
@@ -7048,7 +7126,7 @@ public final class OrganizationProtos {
       "\n\022Organization.proto\022\020Diadoc.Api.Proto\032\r" +
       "Address.proto\"I\n\020OrganizationList\0225\n\rOrg" +
       "anizations\030\001 \003(\0132\036.Diadoc.Api.Proto.Orga" +
-      "nization\"\302\004\n\014Organization\022\r\n\005OrgId\030\001 \002(\t" +
+      "nization\"\325\004\n\014Organization\022\r\n\005OrgId\030\001 \002(\t" +
       "\022\013\n\003Inn\030\002 \002(\t\022\013\n\003Kpp\030\003 \001(\t\022\020\n\010FullName\030\004" +
       " \002(\t\022\021\n\tShortName\030\005 \001(\t\022$\n\005Boxes\030\007 \003(\0132\025" +
       ".Diadoc.Api.Proto.Box\022\014\n\004Ogrn\030\010 \001(\t\022\030\n\020F" +
@@ -7062,21 +7140,21 @@ public final class OrganizationProtos {
       "ationCount\030\024 \001(\005\022\023\n\013SearchCount\030\025 \001(\005\0222\n" +
       "\013Sociability\030\026 \002(\0162\035.Diadoc.Api.Proto.So" +
       "ciability\022\027\n\017LiquidationDate\030\027 \001(\t\022!\n\031Ce" +
-      "rtificateOfRegistryInfo\030\030 \001(\t\"\266\001\n\nDepart" +
-      "ment\022\024\n\014DepartmentId\030\001 \002(\t\022\032\n\022ParentDepa" +
-      "rtmentId\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n\014Abbrevia",
-      "tion\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Address\030\006 \001(\013" +
-      "2\031.Diadoc.Api.Proto.Address\022\031\n\nIsDisable" +
-      "d\030\007 \001(\010:\005false\"\325\001\n\003Box\022\r\n\005BoxId\030\001 \002(\t\022\r\n" +
-      "\005Title\030\002 \002(\t\0224\n\014Organization\030\003 \001(\0132\036.Dia" +
-      "doc.Api.Proto.Organization\022W\n\024InvoiceFor" +
-      "matVersion\030\004 \001(\01622.Diadoc.Api.Proto.Orga" +
-      "nizationInvoiceFormatVersion:\005v5_02\022!\n\031E" +
-      "ncryptedDocumentsAllowed\030\005 \001(\010*8\n Organi" +
-      "zationInvoiceFormatVersion\022\t\n\005v5_01\020\001\022\t\n" +
-      "\005v5_02\020\002*:\n\013Sociability\022\024\n\020AllOrganizati",
-      "ons\020\000\022\025\n\021CounteragentsOnly\020\001B\024B\022Organiza" +
-      "tionProtos"
+      "rtificateOfRegistryInfo\030\030 \001(\t\022\021\n\tIsForei" +
+      "gn\030\031 \001(\010\"\266\001\n\nDepartment\022\024\n\014DepartmentId\030" +
+      "\001 \002(\t\022\032\n\022ParentDepartmentId\030\002 \002(\t\022\014\n\004Nam",
+      "e\030\003 \002(\t\022\024\n\014Abbreviation\030\004 \001(\t\022\013\n\003Kpp\030\005 \001" +
+      "(\t\022*\n\007Address\030\006 \001(\0132\031.Diadoc.Api.Proto.A" +
+      "ddress\022\031\n\nIsDisabled\030\007 \001(\010:\005false\"\325\001\n\003Bo" +
+      "x\022\r\n\005BoxId\030\001 \002(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Organ" +
+      "ization\030\003 \001(\0132\036.Diadoc.Api.Proto.Organiz" +
+      "ation\022W\n\024InvoiceFormatVersion\030\004 \001(\01622.Di" +
+      "adoc.Api.Proto.OrganizationInvoiceFormat" +
+      "Version:\005v5_02\022!\n\031EncryptedDocumentsAllo" +
+      "wed\030\005 \001(\010*8\n OrganizationInvoiceFormatVe" +
+      "rsion\022\t\n\005v5_01\020\001\022\t\n\005v5_02\020\002*:\n\013Sociabili",
+      "ty\022\024\n\020AllOrganizations\020\000\022\025\n\021Counteragent" +
+      "sOnly\020\001B\024B\022OrganizationProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7102,7 +7180,7 @@ public final class OrganizationProtos {
     internal_static_Diadoc_Api_Proto_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Organization_descriptor,
-        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", });
+        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", });
     internal_static_Diadoc_Api_Proto_Department_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Department_fieldAccessorTable = new
