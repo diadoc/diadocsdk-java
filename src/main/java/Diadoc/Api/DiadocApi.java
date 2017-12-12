@@ -1450,6 +1450,15 @@ public class DiadocApi {
         return DocumentTypeDescriptionProtos.GetDocumentTypesResponse.parseFrom(PerformGetHttpRequest("/GetDocumentTypes", parameters));
     }
 
+    public DocumentTypeDescriptionProtos.DetectDocumentTypesResponse DetectDocumentTypes(String boxId, byte[] content) throws IOException {
+        if (Tools.IsNullOrEmpty(boxId)) throw new NullPointerException("boxId");
+
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+
+        return DocumentTypeDescriptionProtos.DetectDocumentTypesResponse.parseFrom(PerformPostHttpRequest("/DetectDocumentTypes", parameters, content));
+    }
+
     public FileContent GetContent(String typeNamedId, String function, String version, int titleIndex) throws IOException {
         if (Tools.IsNullOrEmpty(typeNamedId)) throw new NullPointerException("typeNamedId");
         if (Tools.IsNullOrEmpty(function)) throw new NullPointerException("function");
