@@ -2289,30 +2289,6 @@ public final class DocumentTypeDescriptionProtos {
      */
     Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentVersionOrBuilder getVersionsOrBuilder(
         int index);
-
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> 
-        getWorkflowsList();
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow getWorkflows(int index);
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    int getWorkflowsCount();
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    java.util.List<? extends Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> 
-        getWorkflowsOrBuilderList();
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder getWorkflowsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Types.DocumentFunction}
@@ -2380,14 +2356,6 @@ public final class DocumentTypeDescriptionProtos {
               versions_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentVersion.PARSER, extensionRegistry));
               break;
             }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                workflows_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              workflows_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.PARSER, extensionRegistry));
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2398,9 +2366,6 @@ public final class DocumentTypeDescriptionProtos {
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           versions_ = java.util.Collections.unmodifiableList(versions_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          workflows_ = java.util.Collections.unmodifiableList(workflows_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2511,45 +2476,9 @@ public final class DocumentTypeDescriptionProtos {
       return versions_.get(index);
     }
 
-    public static final int WORKFLOWS_FIELD_NUMBER = 3;
-    private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> workflows_;
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    public java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> getWorkflowsList() {
-      return workflows_;
-    }
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    public java.util.List<? extends Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> 
-        getWorkflowsOrBuilderList() {
-      return workflows_;
-    }
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    public int getWorkflowsCount() {
-      return workflows_.size();
-    }
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow getWorkflows(int index) {
-      return workflows_.get(index);
-    }
-    /**
-     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-     */
-    public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder getWorkflowsOrBuilder(
-        int index) {
-      return workflows_.get(index);
-    }
-
     private void initFields() {
       name_ = "";
       versions_ = java.util.Collections.emptyList();
-      workflows_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2567,12 +2496,6 @@ public final class DocumentTypeDescriptionProtos {
           return false;
         }
       }
-      for (int i = 0; i < getWorkflowsCount(); i++) {
-        if (!getWorkflows(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -2585,9 +2508,6 @@ public final class DocumentTypeDescriptionProtos {
       }
       for (int i = 0; i < versions_.size(); i++) {
         output.writeMessage(2, versions_.get(i));
-      }
-      for (int i = 0; i < workflows_.size(); i++) {
-        output.writeMessage(3, workflows_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -2605,10 +2525,6 @@ public final class DocumentTypeDescriptionProtos {
       for (int i = 0; i < versions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, versions_.get(i));
-      }
-      for (int i = 0; i < workflows_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, workflows_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2720,7 +2636,6 @@ public final class DocumentTypeDescriptionProtos {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getVersionsFieldBuilder();
-          getWorkflowsFieldBuilder();
         }
       }
       private static Builder create() {
@@ -2736,12 +2651,6 @@ public final class DocumentTypeDescriptionProtos {
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           versionsBuilder_.clear();
-        }
-        if (workflowsBuilder_ == null) {
-          workflows_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          workflowsBuilder_.clear();
         }
         return this;
       }
@@ -2783,15 +2692,6 @@ public final class DocumentTypeDescriptionProtos {
           result.versions_ = versions_;
         } else {
           result.versions_ = versionsBuilder_.build();
-        }
-        if (workflowsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            workflows_ = java.util.Collections.unmodifiableList(workflows_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.workflows_ = workflows_;
-        } else {
-          result.workflows_ = workflowsBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -2840,32 +2740,6 @@ public final class DocumentTypeDescriptionProtos {
             }
           }
         }
-        if (workflowsBuilder_ == null) {
-          if (!other.workflows_.isEmpty()) {
-            if (workflows_.isEmpty()) {
-              workflows_ = other.workflows_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureWorkflowsIsMutable();
-              workflows_.addAll(other.workflows_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.workflows_.isEmpty()) {
-            if (workflowsBuilder_.isEmpty()) {
-              workflowsBuilder_.dispose();
-              workflowsBuilder_ = null;
-              workflows_ = other.workflows_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              workflowsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getWorkflowsFieldBuilder() : null;
-            } else {
-              workflowsBuilder_.addAllMessages(other.workflows_);
-            }
-          }
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -2877,12 +2751,6 @@ public final class DocumentTypeDescriptionProtos {
         }
         for (int i = 0; i < getVersionsCount(); i++) {
           if (!getVersions(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        for (int i = 0; i < getWorkflowsCount(); i++) {
-          if (!getWorkflows(i).isInitialized()) {
             
             return false;
           }
@@ -3225,246 +3093,6 @@ public final class DocumentTypeDescriptionProtos {
         return versionsBuilder_;
       }
 
-      private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> workflows_ =
-        java.util.Collections.emptyList();
-      private void ensureWorkflowsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          workflows_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow>(workflows_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> workflowsBuilder_;
-
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> getWorkflowsList() {
-        if (workflowsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(workflows_);
-        } else {
-          return workflowsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public int getWorkflowsCount() {
-        if (workflowsBuilder_ == null) {
-          return workflows_.size();
-        } else {
-          return workflowsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow getWorkflows(int index) {
-        if (workflowsBuilder_ == null) {
-          return workflows_.get(index);
-        } else {
-          return workflowsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Builder setWorkflows(
-          int index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow value) {
-        if (workflowsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWorkflowsIsMutable();
-          workflows_.set(index, value);
-          onChanged();
-        } else {
-          workflowsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Builder setWorkflows(
-          int index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder builderForValue) {
-        if (workflowsBuilder_ == null) {
-          ensureWorkflowsIsMutable();
-          workflows_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          workflowsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Builder addWorkflows(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow value) {
-        if (workflowsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWorkflowsIsMutable();
-          workflows_.add(value);
-          onChanged();
-        } else {
-          workflowsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Builder addWorkflows(
-          int index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow value) {
-        if (workflowsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWorkflowsIsMutable();
-          workflows_.add(index, value);
-          onChanged();
-        } else {
-          workflowsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Builder addWorkflows(
-          Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder builderForValue) {
-        if (workflowsBuilder_ == null) {
-          ensureWorkflowsIsMutable();
-          workflows_.add(builderForValue.build());
-          onChanged();
-        } else {
-          workflowsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Builder addWorkflows(
-          int index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder builderForValue) {
-        if (workflowsBuilder_ == null) {
-          ensureWorkflowsIsMutable();
-          workflows_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          workflowsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Builder addAllWorkflows(
-          java.lang.Iterable<? extends Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> values) {
-        if (workflowsBuilder_ == null) {
-          ensureWorkflowsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, workflows_);
-          onChanged();
-        } else {
-          workflowsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Builder clearWorkflows() {
-        if (workflowsBuilder_ == null) {
-          workflows_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          workflowsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Builder removeWorkflows(int index) {
-        if (workflowsBuilder_ == null) {
-          ensureWorkflowsIsMutable();
-          workflows_.remove(index);
-          onChanged();
-        } else {
-          workflowsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder getWorkflowsBuilder(
-          int index) {
-        return getWorkflowsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder getWorkflowsOrBuilder(
-          int index) {
-        if (workflowsBuilder_ == null) {
-          return workflows_.get(index);  } else {
-          return workflowsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public java.util.List<? extends Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> 
-           getWorkflowsOrBuilderList() {
-        if (workflowsBuilder_ != null) {
-          return workflowsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(workflows_);
-        }
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder addWorkflowsBuilder() {
-        return getWorkflowsFieldBuilder().addBuilder(
-            Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder addWorkflowsBuilder(
-          int index) {
-        return getWorkflowsFieldBuilder().addBuilder(
-            index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 3;</code>
-       */
-      public java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder> 
-           getWorkflowsBuilderList() {
-        return getWorkflowsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> 
-          getWorkflowsFieldBuilder() {
-        if (workflowsBuilder_ == null) {
-          workflowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder>(
-                  workflows_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
-                  getParentForChildren(),
-                  isClean());
-          workflows_ = null;
-        }
-        return workflowsBuilder_;
-      }
-
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Types.DocumentFunction)
     }
 
@@ -3544,6 +3172,30 @@ public final class DocumentTypeDescriptionProtos {
      * <code>required bool IsActual = 5;</code>
      */
     boolean getIsActual();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> 
+        getWorkflowsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow getWorkflows(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    int getWorkflowsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> 
+        getWorkflowsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder getWorkflowsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Types.DocumentVersion}
@@ -3626,6 +3278,14 @@ public final class DocumentTypeDescriptionProtos {
               isActual_ = input.readBool();
               break;
             }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                workflows_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              workflows_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3636,6 +3296,9 @@ public final class DocumentTypeDescriptionProtos {
       } finally {
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           titles_ = java.util.Collections.unmodifiableList(titles_);
+        }
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          workflows_ = java.util.Collections.unmodifiableList(workflows_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3791,12 +3454,48 @@ public final class DocumentTypeDescriptionProtos {
       return isActual_;
     }
 
+    public static final int WORKFLOWS_FIELD_NUMBER = 6;
+    private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> workflows_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> getWorkflowsList() {
+      return workflows_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> 
+        getWorkflowsOrBuilderList() {
+      return workflows_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    public int getWorkflowsCount() {
+      return workflows_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow getWorkflows(int index) {
+      return workflows_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+     */
+    public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder getWorkflowsOrBuilder(
+        int index) {
+      return workflows_.get(index);
+    }
+
     private void initFields() {
       version_ = "";
       supportsContentPatching_ = false;
       supportsEncrypting_ = false;
       titles_ = java.util.Collections.emptyList();
       isActual_ = false;
+      workflows_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3826,6 +3525,12 @@ public final class DocumentTypeDescriptionProtos {
           return false;
         }
       }
+      for (int i = 0; i < getWorkflowsCount(); i++) {
+        if (!getWorkflows(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -3847,6 +3552,9 @@ public final class DocumentTypeDescriptionProtos {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBool(5, isActual_);
+      }
+      for (int i = 0; i < workflows_.size(); i++) {
+        output.writeMessage(6, workflows_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -3876,6 +3584,10 @@ public final class DocumentTypeDescriptionProtos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, isActual_);
+      }
+      for (int i = 0; i < workflows_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, workflows_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3987,6 +3699,7 @@ public final class DocumentTypeDescriptionProtos {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getTitlesFieldBuilder();
+          getWorkflowsFieldBuilder();
         }
       }
       private static Builder create() {
@@ -4009,6 +3722,12 @@ public final class DocumentTypeDescriptionProtos {
         }
         isActual_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
+        if (workflowsBuilder_ == null) {
+          workflows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          workflowsBuilder_.clear();
+        }
         return this;
       }
 
@@ -4062,6 +3781,15 @@ public final class DocumentTypeDescriptionProtos {
           to_bitField0_ |= 0x00000008;
         }
         result.isActual_ = isActual_;
+        if (workflowsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+            workflows_ = java.util.Collections.unmodifiableList(workflows_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.workflows_ = workflows_;
+        } else {
+          result.workflows_ = workflowsBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4118,6 +3846,32 @@ public final class DocumentTypeDescriptionProtos {
         if (other.hasIsActual()) {
           setIsActual(other.getIsActual());
         }
+        if (workflowsBuilder_ == null) {
+          if (!other.workflows_.isEmpty()) {
+            if (workflows_.isEmpty()) {
+              workflows_ = other.workflows_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureWorkflowsIsMutable();
+              workflows_.addAll(other.workflows_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.workflows_.isEmpty()) {
+            if (workflowsBuilder_.isEmpty()) {
+              workflowsBuilder_.dispose();
+              workflowsBuilder_ = null;
+              workflows_ = other.workflows_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              workflowsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getWorkflowsFieldBuilder() : null;
+            } else {
+              workflowsBuilder_.addAllMessages(other.workflows_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -4141,6 +3895,12 @@ public final class DocumentTypeDescriptionProtos {
         }
         for (int i = 0; i < getTitlesCount(); i++) {
           if (!getTitles(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getWorkflowsCount(); i++) {
+          if (!getWorkflows(i).isInitialized()) {
             
             return false;
           }
@@ -4577,6 +4337,246 @@ public final class DocumentTypeDescriptionProtos {
         isActual_ = false;
         onChanged();
         return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> workflows_ =
+        java.util.Collections.emptyList();
+      private void ensureWorkflowsIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          workflows_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow>(workflows_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> workflowsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> getWorkflowsList() {
+        if (workflowsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(workflows_);
+        } else {
+          return workflowsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public int getWorkflowsCount() {
+        if (workflowsBuilder_ == null) {
+          return workflows_.size();
+        } else {
+          return workflowsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow getWorkflows(int index) {
+        if (workflowsBuilder_ == null) {
+          return workflows_.get(index);
+        } else {
+          return workflowsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Builder setWorkflows(
+          int index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow value) {
+        if (workflowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWorkflowsIsMutable();
+          workflows_.set(index, value);
+          onChanged();
+        } else {
+          workflowsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Builder setWorkflows(
+          int index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder builderForValue) {
+        if (workflowsBuilder_ == null) {
+          ensureWorkflowsIsMutable();
+          workflows_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          workflowsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Builder addWorkflows(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow value) {
+        if (workflowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWorkflowsIsMutable();
+          workflows_.add(value);
+          onChanged();
+        } else {
+          workflowsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Builder addWorkflows(
+          int index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow value) {
+        if (workflowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWorkflowsIsMutable();
+          workflows_.add(index, value);
+          onChanged();
+        } else {
+          workflowsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Builder addWorkflows(
+          Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder builderForValue) {
+        if (workflowsBuilder_ == null) {
+          ensureWorkflowsIsMutable();
+          workflows_.add(builderForValue.build());
+          onChanged();
+        } else {
+          workflowsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Builder addWorkflows(
+          int index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder builderForValue) {
+        if (workflowsBuilder_ == null) {
+          ensureWorkflowsIsMutable();
+          workflows_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          workflowsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Builder addAllWorkflows(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> values) {
+        if (workflowsBuilder_ == null) {
+          ensureWorkflowsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, workflows_);
+          onChanged();
+        } else {
+          workflowsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Builder clearWorkflows() {
+        if (workflowsBuilder_ == null) {
+          workflows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          workflowsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Builder removeWorkflows(int index) {
+        if (workflowsBuilder_ == null) {
+          ensureWorkflowsIsMutable();
+          workflows_.remove(index);
+          onChanged();
+        } else {
+          workflowsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder getWorkflowsBuilder(
+          int index) {
+        return getWorkflowsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder getWorkflowsOrBuilder(
+          int index) {
+        if (workflowsBuilder_ == null) {
+          return workflows_.get(index);  } else {
+          return workflowsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> 
+           getWorkflowsOrBuilderList() {
+        if (workflowsBuilder_ != null) {
+          return workflowsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(workflows_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder addWorkflowsBuilder() {
+        return getWorkflowsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder addWorkflowsBuilder(
+          int index) {
+        return getWorkflowsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentWorkflow Workflows = 6;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder> 
+           getWorkflowsBuilderList() {
+        return getWorkflowsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder> 
+          getWorkflowsFieldBuilder() {
+        if (workflowsBuilder_ == null) {
+          workflowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder>(
+                  workflows_,
+                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  getParentForChildren(),
+                  isClean());
+          workflows_ = null;
+        }
+        return workflowsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Types.DocumentVersion)
@@ -8713,38 +8713,38 @@ public final class DocumentTypeDescriptionProtos {
       "i.Proto.Documents.Types.DocumentFunction" +
       "\"l\n\030GetDocumentTypesResponse\022P\n\rDocument" +
       "Types\030\001 \003(\01329.Diadoc.Api.Proto.Documents",
-      ".Types.DocumentTypeDescription\"\254\001\n\020Docum" +
-      "entFunction\022\014\n\004Name\030\001 \002(\t\022C\n\010Versions\030\002 " +
-      "\003(\01321.Diadoc.Api.Proto.Documents.Types.D" +
-      "ocumentVersion\022E\n\tWorkflows\030\003 \003(\01322.Diad" +
-      "oc.Api.Proto.Documents.Types.DocumentWor" +
-      "kflow\"\262\001\n\017DocumentVersion\022\017\n\007Version\030\001 \002" +
-      "(\t\022\037\n\027SupportsContentPatching\030\002 \002(\010\022\032\n\022S" +
-      "upportsEncrypting\030\003 \002(\010\022?\n\006Titles\030\004 \003(\0132" +
-      "/.Diadoc.Api.Proto.Documents.Types.Docum" +
-      "entTitle\022\020\n\010IsActual\030\005 \002(\010\"1\n\020DocumentWo",
-      "rkflow\022\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\330\001" +
-      "\n\rDocumentTitle\022\020\n\010IsFormal\030\001 \002(\010\022\016\n\006Xsd" +
-      "Url\030\002 \001(\t\022M\n\rMetadataItems\030\003 \003(\01326.Diado" +
-      "c.Api.Proto.Documents.Types.DocumentMeta" +
-      "dataItem\022V\n\026EncryptedMetadataItems\030\004 \003(\013" +
-      "26.Diadoc.Api.Proto.Documents.Types.Docu" +
-      "mentMetadataItem\"\312\001\n\024DocumentMetadataIte" +
-      "m\022\n\n\002Id\030\001 \002(\t\022H\n\004Type\030\002 \002(\0162:.Diadoc.Api" +
-      ".Proto.Documents.Types.DocumentMetadataI" +
-      "temType\022\022\n\nIsRequired\030\003 \002(\010\022H\n\006Source\030\004 ",
-      "\002(\01628.Diadoc.Api.Proto.Documents.Types.D" +
-      "ocumentMetadataSource\"N\n\024DetectedDocumen" +
-      "tType\022\023\n\013TypeNamedId\030\001 \002(\t\022\020\n\010Function\030\002" +
-      " \002(\t\022\017\n\007Version\030\003 \002(\t\"l\n\033DetectDocumentT" +
-      "ypesResponse\022M\n\rDocumentTypes\030\001 \003(\01326.Di" +
-      "adoc.Api.Proto.Documents.Types.DetectedD" +
-      "ocumentType*-\n\017DocumentDocflow\022\014\n\010Extern" +
-      "al\020\000\022\014\n\010Internal\020\001*T\n\030DocumentMetadataIt" +
-      "emType\022\n\n\006String\020\000\022\013\n\007Integer\020\001\022\013\n\007Decim" +
-      "al\020\002\022\010\n\004Date\020\003\022\010\n\004Time\020\004*+\n\026DocumentMeta",
-      "dataSource\022\007\n\003Xml\020\000\022\010\n\004User\020\001B\037B\035Documen" +
-      "tTypeDescriptionProtos"
+      ".Types.DocumentTypeDescription\"e\n\020Docume" +
+      "ntFunction\022\014\n\004Name\030\001 \002(\t\022C\n\010Versions\030\002 \003" +
+      "(\01321.Diadoc.Api.Proto.Documents.Types.Do" +
+      "cumentVersion\"\371\001\n\017DocumentVersion\022\017\n\007Ver" +
+      "sion\030\001 \002(\t\022\037\n\027SupportsContentPatching\030\002 " +
+      "\002(\010\022\032\n\022SupportsEncrypting\030\003 \002(\010\022?\n\006Title" +
+      "s\030\004 \003(\0132/.Diadoc.Api.Proto.Documents.Typ" +
+      "es.DocumentTitle\022\020\n\010IsActual\030\005 \002(\010\022E\n\tWo" +
+      "rkflows\030\006 \003(\01322.Diadoc.Api.Proto.Documen" +
+      "ts.Types.DocumentWorkflow\"1\n\020DocumentWor",
+      "kflow\022\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\330\001\n" +
+      "\rDocumentTitle\022\020\n\010IsFormal\030\001 \002(\010\022\016\n\006XsdU" +
+      "rl\030\002 \001(\t\022M\n\rMetadataItems\030\003 \003(\01326.Diadoc" +
+      ".Api.Proto.Documents.Types.DocumentMetad" +
+      "ataItem\022V\n\026EncryptedMetadataItems\030\004 \003(\0132" +
+      "6.Diadoc.Api.Proto.Documents.Types.Docum" +
+      "entMetadataItem\"\312\001\n\024DocumentMetadataItem" +
+      "\022\n\n\002Id\030\001 \002(\t\022H\n\004Type\030\002 \002(\0162:.Diadoc.Api." +
+      "Proto.Documents.Types.DocumentMetadataIt" +
+      "emType\022\022\n\nIsRequired\030\003 \002(\010\022H\n\006Source\030\004 \002",
+      "(\01628.Diadoc.Api.Proto.Documents.Types.Do" +
+      "cumentMetadataSource\"N\n\024DetectedDocument" +
+      "Type\022\023\n\013TypeNamedId\030\001 \002(\t\022\020\n\010Function\030\002 " +
+      "\002(\t\022\017\n\007Version\030\003 \002(\t\"l\n\033DetectDocumentTy" +
+      "pesResponse\022M\n\rDocumentTypes\030\001 \003(\01326.Dia" +
+      "doc.Api.Proto.Documents.Types.DetectedDo" +
+      "cumentType*-\n\017DocumentDocflow\022\014\n\010Externa" +
+      "l\020\000\022\014\n\010Internal\020\001*T\n\030DocumentMetadataIte" +
+      "mType\022\n\n\006String\020\000\022\013\n\007Integer\020\001\022\013\n\007Decima" +
+      "l\020\002\022\010\n\004Date\020\003\022\010\n\004Time\020\004*+\n\026DocumentMetad",
+      "ataSource\022\007\n\003Xml\020\000\022\010\n\004User\020\001B\037B\035Document" +
+      "TypeDescriptionProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8775,13 +8775,13 @@ public final class DocumentTypeDescriptionProtos {
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentFunction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DocumentFunction_descriptor,
-        new java.lang.String[] { "Name", "Versions", "Workflows", });
+        new java.lang.String[] { "Name", "Versions", });
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentVersion_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentVersion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DocumentVersion_descriptor,
-        new java.lang.String[] { "Version", "SupportsContentPatching", "SupportsEncrypting", "Titles", "IsActual", });
+        new java.lang.String[] { "Version", "SupportsContentPatching", "SupportsEncrypting", "Titles", "IsActual", "Workflows", });
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentWorkflow_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentWorkflow_fieldAccessorTable = new
