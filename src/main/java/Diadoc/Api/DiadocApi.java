@@ -1096,10 +1096,16 @@ public class DiadocApi {
             parameters.add(new BasicNameValuePair("sortDirection", filter.sortDirection));
         if (filter.afterIndexKey != null)
             parameters.add(new BasicNameValuePair("afterIndexKey", filter.afterIndexKey));
+        if (filter.count != null)
+            parameters.add(new BasicNameValuePair("count", filter.count.toString()));
         return DocumentListProtos.DocumentList.parseFrom(PerformGetHttpRequest("/V3/GetDocuments", parameters));
     }
 
     public DocumentListProtos.DocumentList GetDocuments(String boxId, String filterCategory, String counteragentBoxId, Date timestampFrom, Date timestampTo, String fromDocumentDate, String toDocumentDate, String departmentId, boolean excludeSubdepartments, String afterIndexKey) throws IOException {
+        return GetDocuments(boxId, filterCategory, counteragentBoxId, timestampFrom, timestampTo, fromDocumentDate, toDocumentDate, departmentId, excludeSubdepartments, afterIndexKey, null);
+    }
+
+    public DocumentListProtos.DocumentList GetDocuments(String boxId, String filterCategory, String counteragentBoxId, Date timestampFrom, Date timestampTo, String fromDocumentDate, String toDocumentDate, String departmentId, boolean excludeSubdepartments, String afterIndexKey, Integer count) throws IOException {
         DocumentsFilter documentsFilter = new DocumentsFilter();
         documentsFilter.boxId = boxId;
         documentsFilter.filterCategory = filterCategory;
@@ -1111,6 +1117,7 @@ public class DiadocApi {
         documentsFilter.departmentId = departmentId;
         documentsFilter.excludeSubdepartments = excludeSubdepartments;
         documentsFilter.afterIndexKey = afterIndexKey;
+        documentsFilter.count = count;
         return GetDocuments(documentsFilter);
     }
 
