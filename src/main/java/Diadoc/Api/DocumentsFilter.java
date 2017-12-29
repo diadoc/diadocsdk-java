@@ -14,4 +14,5 @@ public class DocumentsFilter {
     public boolean excludeSubdepartments;
     public String sortDirection;
     public String afterIndexKey;
+    public Integer count;
 }
