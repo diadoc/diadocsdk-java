@@ -52024,6 +52024,30 @@ public final class DiadocMessage_PostApiProtos {
      */
     Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemovalOrBuilder getResolutionRouteRemovalsOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment> 
+        getRecipientTitlesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment getRecipientTitles(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    int getRecipientTitlesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder> 
+        getRecipientTitlesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder getRecipientTitlesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.MessagePatchToPost}
@@ -52241,6 +52265,14 @@ public final class DiadocMessage_PostApiProtos {
               resolutionRouteRemovals_.add(input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ResolutionRouteRemoval.PARSER, extensionRegistry));
               break;
             }
+            case 178: {
+              if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+                recipientTitles_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment>();
+                mutable_bitField0_ |= 0x00200000;
+              }
+              recipientTitles_.add(input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -52305,6 +52337,9 @@ public final class DiadocMessage_PostApiProtos {
         }
         if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
           resolutionRouteRemovals_ = java.util.Collections.unmodifiableList(resolutionRouteRemovals_);
+        }
+        if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+          recipientTitles_ = java.util.Collections.unmodifiableList(recipientTitles_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -53087,6 +53122,41 @@ public final class DiadocMessage_PostApiProtos {
       return resolutionRouteRemovals_.get(index);
     }
 
+    public static final int RECIPIENTTITLES_FIELD_NUMBER = 22;
+    private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment> recipientTitles_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment> getRecipientTitlesList() {
+      return recipientTitles_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder> 
+        getRecipientTitlesOrBuilderList() {
+      return recipientTitles_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    public int getRecipientTitlesCount() {
+      return recipientTitles_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment getRecipientTitles(int index) {
+      return recipientTitles_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder getRecipientTitlesOrBuilder(
+        int index) {
+      return recipientTitles_.get(index);
+    }
+
     private void initFields() {
       boxId_ = "";
       messageId_ = "";
@@ -53109,6 +53179,7 @@ public final class DiadocMessage_PostApiProtos {
       editDocumentPacketCommands_ = java.util.Collections.emptyList();
       universalTransferDocumentBuyerTitles_ = java.util.Collections.emptyList();
       resolutionRouteRemovals_ = java.util.Collections.emptyList();
+      recipientTitles_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -53238,6 +53309,12 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
       }
+      for (int i = 0; i < getRecipientTitlesCount(); i++) {
+        if (!getRecipientTitles(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -53307,6 +53384,9 @@ public final class DiadocMessage_PostApiProtos {
       }
       for (int i = 0; i < resolutionRouteRemovals_.size(); i++) {
         output.writeMessage(21, resolutionRouteRemovals_.get(i));
+      }
+      for (int i = 0; i < recipientTitles_.size(); i++) {
+        output.writeMessage(22, recipientTitles_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -53400,6 +53480,10 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < resolutionRouteRemovals_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(21, resolutionRouteRemovals_.get(i));
+      }
+      for (int i = 0; i < recipientTitles_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(22, recipientTitles_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -53529,6 +53613,7 @@ public final class DiadocMessage_PostApiProtos {
           getEditDocumentPacketCommandsFieldBuilder();
           getUniversalTransferDocumentBuyerTitlesFieldBuilder();
           getResolutionRouteRemovalsFieldBuilder();
+          getRecipientTitlesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -53654,6 +53739,12 @@ public final class DiadocMessage_PostApiProtos {
           bitField0_ = (bitField0_ & ~0x00100000);
         } else {
           resolutionRouteRemovalsBuilder_.clear();
+        }
+        if (recipientTitlesBuilder_ == null) {
+          recipientTitles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00200000);
+        } else {
+          recipientTitlesBuilder_.clear();
         }
         return this;
       }
@@ -53861,6 +53952,15 @@ public final class DiadocMessage_PostApiProtos {
           result.resolutionRouteRemovals_ = resolutionRouteRemovals_;
         } else {
           result.resolutionRouteRemovals_ = resolutionRouteRemovalsBuilder_.build();
+        }
+        if (recipientTitlesBuilder_ == null) {
+          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+            recipientTitles_ = java.util.Collections.unmodifiableList(recipientTitles_);
+            bitField0_ = (bitField0_ & ~0x00200000);
+          }
+          result.recipientTitles_ = recipientTitles_;
+        } else {
+          result.recipientTitles_ = recipientTitlesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -54382,6 +54482,32 @@ public final class DiadocMessage_PostApiProtos {
             }
           }
         }
+        if (recipientTitlesBuilder_ == null) {
+          if (!other.recipientTitles_.isEmpty()) {
+            if (recipientTitles_.isEmpty()) {
+              recipientTitles_ = other.recipientTitles_;
+              bitField0_ = (bitField0_ & ~0x00200000);
+            } else {
+              ensureRecipientTitlesIsMutable();
+              recipientTitles_.addAll(other.recipientTitles_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.recipientTitles_.isEmpty()) {
+            if (recipientTitlesBuilder_.isEmpty()) {
+              recipientTitlesBuilder_.dispose();
+              recipientTitlesBuilder_ = null;
+              recipientTitles_ = other.recipientTitles_;
+              bitField0_ = (bitField0_ & ~0x00200000);
+              recipientTitlesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRecipientTitlesFieldBuilder() : null;
+            } else {
+              recipientTitlesBuilder_.addAllMessages(other.recipientTitles_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -54505,6 +54631,12 @@ public final class DiadocMessage_PostApiProtos {
         }
         for (int i = 0; i < getResolutionRouteRemovalsCount(); i++) {
           if (!getResolutionRouteRemovals(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getRecipientTitlesCount(); i++) {
+          if (!getRecipientTitles(i).isInitialized()) {
             
             return false;
           }
@@ -59241,6 +59373,246 @@ public final class DiadocMessage_PostApiProtos {
           resolutionRouteRemovals_ = null;
         }
         return resolutionRouteRemovalsBuilder_;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment> recipientTitles_ =
+        java.util.Collections.emptyList();
+      private void ensureRecipientTitlesIsMutable() {
+        if (!((bitField0_ & 0x00200000) == 0x00200000)) {
+          recipientTitles_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment>(recipientTitles_);
+          bitField0_ |= 0x00200000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder> recipientTitlesBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment> getRecipientTitlesList() {
+        if (recipientTitlesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(recipientTitles_);
+        } else {
+          return recipientTitlesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public int getRecipientTitlesCount() {
+        if (recipientTitlesBuilder_ == null) {
+          return recipientTitles_.size();
+        } else {
+          return recipientTitlesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment getRecipientTitles(int index) {
+        if (recipientTitlesBuilder_ == null) {
+          return recipientTitles_.get(index);
+        } else {
+          return recipientTitlesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Builder setRecipientTitles(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment value) {
+        if (recipientTitlesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecipientTitlesIsMutable();
+          recipientTitles_.set(index, value);
+          onChanged();
+        } else {
+          recipientTitlesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Builder setRecipientTitles(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder builderForValue) {
+        if (recipientTitlesBuilder_ == null) {
+          ensureRecipientTitlesIsMutable();
+          recipientTitles_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          recipientTitlesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Builder addRecipientTitles(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment value) {
+        if (recipientTitlesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecipientTitlesIsMutable();
+          recipientTitles_.add(value);
+          onChanged();
+        } else {
+          recipientTitlesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Builder addRecipientTitles(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment value) {
+        if (recipientTitlesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecipientTitlesIsMutable();
+          recipientTitles_.add(index, value);
+          onChanged();
+        } else {
+          recipientTitlesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Builder addRecipientTitles(
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder builderForValue) {
+        if (recipientTitlesBuilder_ == null) {
+          ensureRecipientTitlesIsMutable();
+          recipientTitles_.add(builderForValue.build());
+          onChanged();
+        } else {
+          recipientTitlesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Builder addRecipientTitles(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder builderForValue) {
+        if (recipientTitlesBuilder_ == null) {
+          ensureRecipientTitlesIsMutable();
+          recipientTitles_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          recipientTitlesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Builder addAllRecipientTitles(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment> values) {
+        if (recipientTitlesBuilder_ == null) {
+          ensureRecipientTitlesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, recipientTitles_);
+          onChanged();
+        } else {
+          recipientTitlesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Builder clearRecipientTitles() {
+        if (recipientTitlesBuilder_ == null) {
+          recipientTitles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00200000);
+          onChanged();
+        } else {
+          recipientTitlesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Builder removeRecipientTitles(int index) {
+        if (recipientTitlesBuilder_ == null) {
+          ensureRecipientTitlesIsMutable();
+          recipientTitles_.remove(index);
+          onChanged();
+        } else {
+          recipientTitlesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder getRecipientTitlesBuilder(
+          int index) {
+        return getRecipientTitlesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder getRecipientTitlesOrBuilder(
+          int index) {
+        if (recipientTitlesBuilder_ == null) {
+          return recipientTitles_.get(index);  } else {
+          return recipientTitlesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder> 
+           getRecipientTitlesOrBuilderList() {
+        if (recipientTitlesBuilder_ != null) {
+          return recipientTitlesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(recipientTitles_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder addRecipientTitlesBuilder() {
+        return getRecipientTitlesFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder addRecipientTitlesBuilder(
+          int index) {
+        return getRecipientTitlesFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.ReceiptAttachment RecipientTitles = 22;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder> 
+           getRecipientTitlesBuilderList() {
+        return getRecipientTitlesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder> 
+          getRecipientTitlesFieldBuilder() {
+        if (recipientTitlesBuilder_ == null) {
+          recipientTitlesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder>(
+                  recipientTitles_,
+                  ((bitField0_ & 0x00200000) == 0x00200000),
+                  getParentForChildren(),
+                  isClean());
+          recipientTitles_ = null;
+        }
+        return recipientTitlesBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.MessagePatchToPost)
@@ -82731,8 +83103,8 @@ public final class DiadocMessage_PostApiProtos {
       "ion\030\016 \001(\t\0227\n\010Metadata\030\017 \003(\0132%.Diadoc.Api",
       ".Proto.Events.MetadataItem\022\022\n\nWorkflowId" +
       "\030\020 \001(\005\022\032\n\013IsEncrypted\030\021 \001(\010:\005false\"*\n\014Me" +
-      "tadataItem\022\013\n\003Key\030\001 \002(\t\022\r\n\005Value\030\002 \002(\t\"\366" +
-      "\014\n\022MessagePatchToPost\022\r\n\005BoxId\030\001 \002(\t\022\021\n\t" +
+      "tadataItem\022\013\n\003Key\030\001 \002(\t\022\r\n\005Value\030\002 \002(\t\"\273" +
+      "\r\n\022MessagePatchToPost\022\r\n\005BoxId\030\001 \002(\t\022\021\n\t" +
       "MessageId\030\002 \002(\t\022<\n\010Receipts\030\003 \003(\0132*.Diad" +
       "oc.Api.Proto.Events.ReceiptAttachment\022P\n" +
       "\022CorrectionRequests\030\004 \003(\01324.Diadoc.Api.P" +
@@ -82773,97 +83145,98 @@ public final class DiadocMessage_PostApiProtos {
       "les\030\024 \003(\0132*.Diadoc.Api.Proto.Events.Rece" +
       "iptAttachment\022P\n\027ResolutionRouteRemovals" +
       "\030\025 \003(\0132/.Diadoc.Api.Proto.Events.Resolut" +
-      "ionRouteRemoval\"Y\n\025SignatureVerification" +
-      "\022\031\n\021InitialDocumentId\030\001 \002(\t\022\017\n\007IsValid\030\002" +
-      " \002(\010\022\024\n\014ErrorMessage\030\003 \001(\t\"\271\001\n\033Resolutio" +
-      "nRequestAttachment\022\031\n\021InitialDocumentId\030" +
-      "\001 \002(\t\022<\n\004Type\030\002 \002(\0162..Diadoc.Api.Proto.E" +
-      "vents.ResolutionRequestType\022\024\n\014TargetUse",
-      "rId\030\003 \001(\t\022\032\n\022TargetDepartmentId\030\004 \001(\t\022\017\n" +
-      "\007Comment\030\005 \001(\t\"X\n\031ResolutionRouteAssignm" +
-      "ent\022\031\n\021InitialDocumentId\030\001 \002(\t\022\017\n\007RouteI" +
-      "d\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t\"^\n\'ResolutionRe" +
-      "questCancellationAttachment\022\"\n\032InitialRe" +
-      "solutionRequestId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t" +
-      "\"Y\n-ResolutionRequestDenialCancellationA" +
-      "ttachment\022(\n InitialResolutionRequestDen" +
-      "ialId\030\001 \002(\t\"X\n!ResolutionRequestDenialAt" +
-      "tachment\022\"\n\032InitialResolutionRequestId\030\001",
-      " \002(\t\022\017\n\007Comment\030\002 \001(\t\"\203\001\n\024ResolutionAtta" +
-      "chment\022\031\n\021InitialDocumentId\030\001 \002(\t\022?\n\016Res" +
-      "olutionType\030\002 \002(\0162\'.Diadoc.Api.Proto.Eve" +
-      "nts.ResolutionType\022\017\n\007Comment\030\003 \001(\t\"j\n\021R" +
-      "eceiptAttachment\022\026\n\016ParentEntityId\030\001 \002(\t" +
-      "\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.Api.Pro" +
-      "to.Events.SignedContent\"t\n\033CorrectionReq" +
-      "uestAttachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=" +
+      "ionRouteRemoval\022C\n\017RecipientTitles\030\026 \003(\013" +
+      "2*.Diadoc.Api.Proto.Events.ReceiptAttach" +
+      "ment\"Y\n\025SignatureVerification\022\031\n\021Initial" +
+      "DocumentId\030\001 \002(\t\022\017\n\007IsValid\030\002 \002(\010\022\024\n\014Err" +
+      "orMessage\030\003 \001(\t\"\271\001\n\033ResolutionRequestAtt" +
+      "achment\022\031\n\021InitialDocumentId\030\001 \002(\t\022<\n\004Ty",
+      "pe\030\002 \002(\0162..Diadoc.Api.Proto.Events.Resol" +
+      "utionRequestType\022\024\n\014TargetUserId\030\003 \001(\t\022\032" +
+      "\n\022TargetDepartmentId\030\004 \001(\t\022\017\n\007Comment\030\005 " +
+      "\001(\t\"X\n\031ResolutionRouteAssignment\022\031\n\021Init" +
+      "ialDocumentId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\017\n\007" +
+      "Comment\030\003 \001(\t\"^\n\'ResolutionRequestCancel" +
+      "lationAttachment\022\"\n\032InitialResolutionReq" +
+      "uestId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\"Y\n-Resolut" +
+      "ionRequestDenialCancellationAttachment\022(" +
+      "\n InitialResolutionRequestDenialId\030\001 \002(\t",
+      "\"X\n!ResolutionRequestDenialAttachment\022\"\n" +
+      "\032InitialResolutionRequestId\030\001 \002(\t\022\017\n\007Com" +
+      "ment\030\002 \001(\t\"\203\001\n\024ResolutionAttachment\022\031\n\021I" +
+      "nitialDocumentId\030\001 \002(\t\022?\n\016ResolutionType" +
+      "\030\002 \002(\0162\'.Diadoc.Api.Proto.Events.Resolut" +
+      "ionType\022\017\n\007Comment\030\003 \001(\t\"j\n\021ReceiptAttac" +
+      "hment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedC" +
+      "ontent\030\002 \002(\0132&.Diadoc.Api.Proto.Events.S" +
+      "ignedContent\"t\n\033CorrectionRequestAttachm" +
+      "ent\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedCon",
+      "tent\030\002 \002(\0132&.Diadoc.Api.Proto.Events.Sig" +
+      "nedContent\"\303\001\n\021DocumentSignature\022\026\n\016Pare" +
+      "ntEntityId\030\001 \002(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025S" +
+      "ignWithTestSignature\030\004 \001(\010:\005false\022%\n\026IsA" +
+      "pprovementSignature\030\005 \001(\010:\005false\022\034\n\024Sign" +
+      "atureNameOnShelf\030\006 \001(\t\022\030\n\020PatchedContent" +
+      "Id\030\007 \001(\t\"\204\001\n\027DocumentSenderSignature\022\026\n\016" +
+      "ParentEntityId\030\001 \002(\t\022\021\n\tSignature\030\002 \001(\014\022" +
+      "$\n\025SignWithTestSignature\030\004 \001(\010:\005false\022\030\n" +
+      "\020PatchedContentId\030\005 \001(\t\"t\n\033RequestedSign",
+      "atureRejection\022\026\n\016ParentEntityId\030\001 \002(\t\022=" +
       "\n\rSignedContent\030\002 \002(\0132&.Diadoc.Api.Proto" +
-      ".Events.SignedContent\"\303\001\n\021DocumentSignat",
-      "ure\022\026\n\016ParentEntityId\030\001 \002(\t\022\021\n\tSignature" +
-      "\030\002 \001(\014\022$\n\025SignWithTestSignature\030\004 \001(\010:\005f" +
-      "alse\022%\n\026IsApprovementSignature\030\005 \001(\010:\005fa" +
-      "lse\022\034\n\024SignatureNameOnShelf\030\006 \001(\t\022\030\n\020Pat" +
-      "chedContentId\030\007 \001(\t\"\204\001\n\027DocumentSenderSi" +
-      "gnature\022\026\n\016ParentEntityId\030\001 \002(\t\022\021\n\tSigna" +
-      "ture\030\002 \001(\014\022$\n\025SignWithTestSignature\030\004 \001(" +
-      "\010:\005false\022\030\n\020PatchedContentId\030\005 \001(\t\"t\n\033Re" +
-      "questedSignatureRejection\022\026\n\016ParentEntit" +
-      "yId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diado",
-      "c.Api.Proto.Events.SignedContent\"\214\001\n\rSig" +
-      "nedContent\022\017\n\007Content\030\001 \001(\014\022\021\n\tSignature" +
-      "\030\002 \001(\014\022\023\n\013NameOnShelf\030\004 \001(\t\022$\n\025SignWithT" +
-      "estSignature\030\005 \001(\010:\005false\022\034\n\024SignatureNa" +
-      "meOnShelf\030\006 \001(\t\"\323\001\n\013DraftToSend\022\r\n\005BoxId" +
-      "\030\001 \002(\t\022\017\n\007DraftId\030\002 \002(\t\022\017\n\007ToBoxId\030\003 \001(\t" +
-      "\022\026\n\016ToDepartmentId\030\004 \001(\t\022L\n\022DocumentSign" +
-      "atures\030\005 \003(\01320.Diadoc.Api.Proto.Events.D" +
-      "ocumentSenderSignature\022\022\n\nProxyBoxId\030\006 \001" +
-      "(\t\022\031\n\021ProxyDepartmentId\030\007 \001(\t\"\262\001\n\035Prepar",
-      "eDocumentsToSignRequest\022\r\n\005BoxId\030\001 \002(\t\022E" +
-      "\n\016DraftDocuments\030\002 \003(\0132-.Diadoc.Api.Prot" +
-      "o.Events.DraftDocumentToPatch\022;\n\tDocumen" +
-      "ts\030\003 \003(\0132(.Diadoc.Api.Proto.Events.Docum" +
-      "entToPatch\"\331\001\n\024DraftDocumentToPatch\0220\n\nD" +
-      "ocumentId\030\001 \002(\0132\034.Diadoc.Api.Proto.Docum" +
-      "entId\022\017\n\007ToBoxId\030\002 \001(\t\0222\n\006Signer\030\003 \001(\0132\"" +
-      ".Diadoc.Api.Proto.Invoicing.Signer\022J\n\016Ex" +
-      "tendedSigner\030\004 \003(\01322.Diadoc.Api.Proto.In" +
-      "voicing.Signers.ExtendedSigner\"\303\001\n\017Docum",
-      "entToPatch\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc." +
-      "Api.Proto.DocumentId\0222\n\006Signer\030\002 \001(\0132\".D" +
-      "iadoc.Api.Proto.Invoicing.Signer\022J\n\016Exte" +
-      "ndedSigner\030\003 \003(\01322.Diadoc.Api.Proto.Invo" +
-      "icing.Signers.ExtendedSigner\"u\n\026Document" +
-      "PatchedContent\0220\n\nDocumentId\030\001 \002(\0132\034.Dia" +
-      "doc.Api.Proto.DocumentId\022\030\n\020PatchedConte" +
-      "ntId\030\002 \002(\t\022\017\n\007Content\030\003 \001(\014\"r\n\036PrepareDo" +
-      "cumentsToSignResponse\022P\n\027DocumentPatched" +
-      "Contents\030\001 \003(\0132/.Diadoc.Api.Proto.Events",
-      ".DocumentPatchedContent\"y\n\rMessageToSend" +
-      "\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageId\030\002 \002(\t\022F\n\022Do" +
-      "cumentSignatures\030\003 \003(\0132*.Diadoc.Api.Prot" +
-      "o.Events.DocumentSignature\"t\n\033Revocation" +
-      "RequestAttachment\022\026\n\016ParentEntityId\030\001 \002(" +
-      "\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.Api.Pr" +
-      "oto.Events.SignedContent\"x\n\037XmlSignature" +
-      "RejectionAttachment\022\026\n\016ParentEntityId\030\001 " +
-      "\002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.Api." +
-      "Proto.Events.SignedContent\"a\n\031RoamingNot",
-      "ificationToPost\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007EventI" +
-      "d\030\002 \002(\t\022\017\n\007Success\030\003 \002(\010\022\023\n\013Description\030" +
-      "\004 \001(\t\"\213\001\n\017CustomDataPatch\022\026\n\016ParentEntit" +
-      "yId\030\001 \002(\t\022D\n\tOperation\030\002 \002(\01621.Diadoc.Ap" +
-      "i.Proto.Events.CustomDataPatchOperation\022" +
-      "\013\n\003Key\030\003 \002(\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditDocu" +
-      "mentPacketCommand\022\022\n\nDocumentId\030\001 \002(\t\022:\n" +
-      "\024AddDocumentsToPacket\030\002 \003(\0132\034.Diadoc.Api" +
-      ".Proto.DocumentId\022?\n\031RemoveDocumentsFrom" +
-      "Packet\030\003 \003(\0132\034.Diadoc.Api.Proto.Document",
-      "Id\"T\n\026ResolutionRouteRemoval\022\026\n\016ParentEn" +
-      "tityId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comment" +
-      "\030\003 \001(\t:\000*/\n\030CustomDataPatchOperation\022\007\n\003" +
-      "Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessage_PostA" +
-      "piProtos"
+      ".Events.SignedContent\"\214\001\n\rSignedContent\022" +
+      "\017\n\007Content\030\001 \001(\014\022\021\n\tSignature\030\002 \001(\014\022\023\n\013N" +
+      "ameOnShelf\030\004 \001(\t\022$\n\025SignWithTestSignatur" +
+      "e\030\005 \001(\010:\005false\022\034\n\024SignatureNameOnShelf\030\006" +
+      " \001(\t\"\323\001\n\013DraftToSend\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007D" +
+      "raftId\030\002 \002(\t\022\017\n\007ToBoxId\030\003 \001(\t\022\026\n\016ToDepar" +
+      "tmentId\030\004 \001(\t\022L\n\022DocumentSignatures\030\005 \003(" +
+      "\01320.Diadoc.Api.Proto.Events.DocumentSend",
+      "erSignature\022\022\n\nProxyBoxId\030\006 \001(\t\022\031\n\021Proxy" +
+      "DepartmentId\030\007 \001(\t\"\262\001\n\035PrepareDocumentsT" +
+      "oSignRequest\022\r\n\005BoxId\030\001 \002(\t\022E\n\016DraftDocu" +
+      "ments\030\002 \003(\0132-.Diadoc.Api.Proto.Events.Dr" +
+      "aftDocumentToPatch\022;\n\tDocuments\030\003 \003(\0132(." +
+      "Diadoc.Api.Proto.Events.DocumentToPatch\"" +
+      "\331\001\n\024DraftDocumentToPatch\0220\n\nDocumentId\030\001" +
+      " \002(\0132\034.Diadoc.Api.Proto.DocumentId\022\017\n\007To" +
+      "BoxId\030\002 \001(\t\0222\n\006Signer\030\003 \001(\0132\".Diadoc.Api" +
+      ".Proto.Invoicing.Signer\022J\n\016ExtendedSigne",
+      "r\030\004 \003(\01322.Diadoc.Api.Proto.Invoicing.Sig" +
+      "ners.ExtendedSigner\"\303\001\n\017DocumentToPatch\022" +
+      "0\n\nDocumentId\030\001 \002(\0132\034.Diadoc.Api.Proto.D" +
+      "ocumentId\0222\n\006Signer\030\002 \001(\0132\".Diadoc.Api.P" +
+      "roto.Invoicing.Signer\022J\n\016ExtendedSigner\030" +
+      "\003 \003(\01322.Diadoc.Api.Proto.Invoicing.Signe" +
+      "rs.ExtendedSigner\"u\n\026DocumentPatchedCont" +
+      "ent\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc.Api.Pro" +
+      "to.DocumentId\022\030\n\020PatchedContentId\030\002 \002(\t\022" +
+      "\017\n\007Content\030\003 \001(\014\"r\n\036PrepareDocumentsToSi",
+      "gnResponse\022P\n\027DocumentPatchedContents\030\001 " +
+      "\003(\0132/.Diadoc.Api.Proto.Events.DocumentPa" +
+      "tchedContent\"y\n\rMessageToSend\022\r\n\005BoxId\030\001" +
+      " \002(\t\022\021\n\tMessageId\030\002 \002(\t\022F\n\022DocumentSigna" +
+      "tures\030\003 \003(\0132*.Diadoc.Api.Proto.Events.Do" +
+      "cumentSignature\"t\n\033RevocationRequestAtta" +
+      "chment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSigned" +
+      "Content\030\002 \002(\0132&.Diadoc.Api.Proto.Events." +
+      "SignedContent\"x\n\037XmlSignatureRejectionAt" +
+      "tachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSign",
+      "edContent\030\002 \002(\0132&.Diadoc.Api.Proto.Event" +
+      "s.SignedContent\"a\n\031RoamingNotificationTo" +
+      "Post\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 \002(\t\022\017\n\007" +
+      "Success\030\003 \002(\010\022\023\n\013Description\030\004 \001(\t\"\213\001\n\017C" +
+      "ustomDataPatch\022\026\n\016ParentEntityId\030\001 \002(\t\022D" +
+      "\n\tOperation\030\002 \002(\01621.Diadoc.Api.Proto.Eve" +
+      "nts.CustomDataPatchOperation\022\013\n\003Key\030\003 \002(" +
+      "\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditDocumentPacketC" +
+      "ommand\022\022\n\nDocumentId\030\001 \002(\t\022:\n\024AddDocumen" +
+      "tsToPacket\030\002 \003(\0132\034.Diadoc.Api.Proto.Docu",
+      "mentId\022?\n\031RemoveDocumentsFromPacket\030\003 \003(" +
+      "\0132\034.Diadoc.Api.Proto.DocumentId\"T\n\026Resol" +
+      "utionRouteRemoval\022\026\n\016ParentEntityId\030\001 \002(" +
+      "\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comment\030\003 \001(\t:\000*/\n" +
+      "\030CustomDataPatchOperation\022\007\n\003Set\020\000\022\n\n\006Re" +
+      "move\020\001B\035B\033DiadocMessage_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -83016,7 +83389,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_MessagePatchToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_MessagePatchToPost_descriptor,
-        new java.lang.String[] { "BoxId", "MessageId", "Receipts", "CorrectionRequests", "Signatures", "RequestedSignatureRejections", "XmlTorg12BuyerTitles", "XmlAcceptanceCertificateBuyerTitles", "Resolutions", "ResolutionRequests", "ResolutionRequestCancellations", "ResolutionRequestDenials", "ResolutionRequestDenialCancellations", "RevocationRequests", "XmlSignatureRejections", "CustomDataPatches", "ResolutionRouteAssignments", "SignatureVerifications", "EditDocumentPacketCommands", "UniversalTransferDocumentBuyerTitles", "ResolutionRouteRemovals", });
+        new java.lang.String[] { "BoxId", "MessageId", "Receipts", "CorrectionRequests", "Signatures", "RequestedSignatureRejections", "XmlTorg12BuyerTitles", "XmlAcceptanceCertificateBuyerTitles", "Resolutions", "ResolutionRequests", "ResolutionRequestCancellations", "ResolutionRequestDenials", "ResolutionRequestDenialCancellations", "RevocationRequests", "XmlSignatureRejections", "CustomDataPatches", "ResolutionRouteAssignments", "SignatureVerifications", "EditDocumentPacketCommands", "UniversalTransferDocumentBuyerTitles", "ResolutionRouteRemovals", "RecipientTitles", });
     internal_static_Diadoc_Api_Proto_Events_SignatureVerification_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_Diadoc_Api_Proto_Events_SignatureVerification_fieldAccessorTable = new
