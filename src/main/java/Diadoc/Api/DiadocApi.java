@@ -95,7 +95,7 @@ public class DiadocApi {
         this.httpClient = createHttpClient();
         updateCredentials(null);
     }
-    
+
     private static DefaultHttpClient createHttpClient()
             throws NoSuchAlgorithmException, KeyManagementException {
         DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
@@ -104,13 +104,13 @@ public class DiadocApi {
         defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
         return defaultHttpClient;
     }
-    
+
     public void setHttpParameter(String httpParameterKey, Object httpParameterValue){
         if (httpParameterKey == null)
             throw new NullPointerException("httpParameterKey");
         if (httpParameterValue == null)
             throw new NullPointerException("httpParameterValue");
-        
+
         this.httpClient.getParams().setParameter(httpParameterKey, httpParameterValue);
     }
 
@@ -217,6 +217,56 @@ public class DiadocApi {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public DiadocMessage_GetApiProtos.Template PostTemplate(DiadocMessage_PostApiProtos.TemplateToPost templateToPost) throws IOException {
+    {
+        if (templateToPost == null)
+            throw new NullPointerException("templateToPost");
+        try {
+            byte[] responseBytes = PerformPostHttpRequest("/PostTemplate", null, templateToPost.toByteArray());
+            return DiadocMessage_GetApiProtos.Template.parseFrom(responseBytes);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public DiadocMessage_GetApiProtos.Message TransformTemplateToMessage(DiadocMessage_PostApiProtos.TemplateTransformationToPost templateTransformationToPost) throws IOException {
+        if (templateTransformationToPost == null)
+            throw new NullPointerException("templateTransformationToPost");
+        try {
+            byte[] responseBytes = PerformPostHttpRequest("/TransformTemplateToMessage", null, templateTransformationToPost.toByteArray());
+            return DiadocMessage_GetApiProtos.Message.parseFrom(responseBytes);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public DiadocMessage_GetApiProtos.Template GetTemplate(String currentBoxId, String messageId) throws IOException {
+        if (currentBoxId == null)
+            throw new NullPointerException("currentBoxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", currentBoxId));
+        parameters.add(new BasicNameValuePair("messageId", messageId));
+        return DiadocMessage_GetApiProtos.Template.parseFrom(PerformGetHttpRequest("/GetTemplate", parameters));
+    }
+
+    public DiadocMessage_GetApiProtos.Template GetTemplate(String currentBoxId, String messageId, String entityId) throws IOException {
+        if (currentBoxId == null)
+            throw new NullPointerException("currentBoxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        if (entityId == null)
+            throw new NullPointerException("entityId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", currentBoxId));
+        parameters.add(new BasicNameValuePair("messageId", messageId));
+        parameters.add(new BasicNameValuePair("entityId", entityId));
+        return DiadocMessage_GetApiProtos.Template.parseFrom(PerformGetHttpRequest("/GetTemplate", parameters));
     }
 
     public void Delete(String boxId, String messageId, String documentId) throws Exception {
