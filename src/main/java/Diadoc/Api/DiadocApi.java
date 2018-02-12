@@ -220,7 +220,6 @@ public class DiadocApi {
     }
 
     public DiadocMessage_GetApiProtos.Template PostTemplate(DiadocMessage_PostApiProtos.TemplateToPost templateToPost) throws IOException {
-    {
         if (templateToPost == null)
             throw new NullPointerException("templateToPost");
         try {
