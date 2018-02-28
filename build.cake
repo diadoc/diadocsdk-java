@@ -1,4 +1,4 @@
-#addin "Cake.Git"
+#addin "nuget:?package=Cake.Git&version=0.16.0"
 using Cake.Common.Diagnostics;
 using System.Text.RegularExpressions;
 
@@ -30,7 +30,7 @@ Task("DownloadProtobuf")
 		CreateDirectory(protocArchive.GetDirectory());
 		DownloadFile(protocLink, protocArchive);
 	});
-	
+
 Task("ExtractProtobuf")
 	.WithCriteria(!FileExists(protocExe))
 	.IsDependentOn("DownloadProtobuf")
@@ -38,7 +38,7 @@ Task("ExtractProtobuf")
 	{
 		Unzip(protocArchive, protocBinDir);
 	});
-	
+
 Task("GenerateProtoFiles")
 	.IsDependentOn("ExtractProtobuf")
 	.Does(() =>
@@ -52,14 +52,14 @@ Task("GenerateProtoFiles")
 
 		CompileProtoFiles(patchedProtoFiles, modifiedProtoDir, destinationProtoDir);
 	});
-	
+
 Task("Generate-Version-Info")
 	.Does(() =>
 	{
 		var clearVersion = ClearVersionTag(GetVersionFromTag()) ?? "1.0.0";
 		var semanticVersion = GetSemanticVersionV2(clearVersion);
 		var appveyorVersion = GetAppVeyorBuildVersion(clearVersion);
-		
+
 		if (!string.IsNullOrEmpty(clearVersion))
 		{
 			Information("Version from tag: {0}", clearVersion);
@@ -67,7 +67,7 @@ Task("Generate-Version-Info")
 			Information("AppVeyor version: {0}", appveyorVersion);
 		}
 
-		var xmlPokeSettings = new XmlPokeSettings 
+		var xmlPokeSettings = new XmlPokeSettings
 		{
 			Namespaces = new Dictionary<string, string> {
 				{ "mvn", "http://maven.apache.org/POM/4.0.0" },
@@ -80,7 +80,7 @@ Task("Generate-Version-Info")
 			AppVeyor.UpdateBuildVersion(appveyorVersion);
 		}
 	});
-	
+
 Task("Check-Maven-Installed")
 	.Does(() =>
 	{
@@ -90,7 +90,7 @@ Task("Check-Maven-Installed")
 		if (exitCode != 0)
 			throw new Exception($"{mvnTool} -v failed, exitCode=" + exitCode);
 	});
-	
+
 Task("Package-With-Maven")
 	.IsDependentOn("Generate-Version-Info")
 	.IsDependentOn("Check-Maven-Installed")
@@ -101,7 +101,7 @@ Task("Package-With-Maven")
 		if (exitCode != 0)
 			throw new Exception("mvn package exit code = "+ exitCode);
 	});
-	
+
 Task("PublishArtifactsToAppVeyor")
 	.IsDependentOn("Package-With-Maven")
 	.WithCriteria(x => BuildSystem.IsRunningOnAppVeyor)
@@ -113,14 +113,14 @@ Task("PublishArtifactsToAppVeyor")
 			AppVeyor.UploadArtifact(jar);
 		}
 	});
-	
+
 //////////////////////////////////////////////////////////////////////
 // TASK TARGETS
 //////////////////////////////////////////////////////////////////////
 
 Task("Default")
 	.IsDependentOn("AppVeyor");
-	
+
 Task("AppVeyor")
 	.IsDependentOn("PublishArtifactsToAppVeyor");
 
@@ -140,7 +140,7 @@ public ProcessSettings GetBuildCMakeSettings()
 		.WithArguments(x => x
 			.AppendSwitchQuoted("--build", buildDir.FullPath)
 			.AppendSwitch("--config", configuration));
-			
+
 	return cmakeBuildSettings;
 }
 
@@ -195,7 +195,7 @@ public string GetVersionFromTag()
 			return tag.Name;
 		}
 	}
-	
+
 	if (string.IsNullOrEmpty(lastestTag))
 	{
 		try
@@ -214,12 +214,12 @@ public static string ClearVersionTag(string lastestTag)
 {
 	if (string.IsNullOrEmpty(lastestTag))
 		return null;
-		
+
 	if (lastestTag.StartsWith("versions/"))
 	{
 		lastestTag = lastestTag.Substring("versions/".Length);
 	}
-	
+
 	var match = Regex.Match(lastestTag, @"^([0-9]+.[0-9]+.[0-9]*)");
 	return match.Success
 		? match.Value
@@ -236,13 +236,13 @@ public string GetSemanticVersionV2(string clearVersion)
 			return clearVersion;
 		}
 
-		return GetAppVeyorBuildVersion(clearVersion);		
+		return GetAppVeyorBuildVersion(clearVersion);
 	}
 
 	var currentDate = DateTime.Now;
 	var daysPart = (currentDate - new DateTime(2010, 01, 01)).Days;
 	var secondsPart = Math.Floor((currentDate - currentDate.Date).TotalSeconds/2);
-	return string.Format("{0}-dev.{1}.{2}", clearVersion, daysPart, secondsPart); 
+	return string.Format("{0}-dev.{1}.{2}", clearVersion, daysPart, secondsPart);
 }
 
 public string GetAppVeyorBuildVersion(string clearVersion)
