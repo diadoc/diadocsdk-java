@@ -1,4 +1,4 @@
-#addin "nuget:?package=Cake.Git&version=0.16.0"
+#addin "nuget:?package=Cake.Git&version=0.14.0"
 using Cake.Common.Diagnostics;
 using System.Text.RegularExpressions;
 
