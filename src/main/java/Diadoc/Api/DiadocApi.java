@@ -189,8 +189,21 @@ public class DiadocApi {
         updateCredentials(null);
         byte[] responseBody = PerformPostHttpRequest("/Authenticate", null, currentCert.getEncoded());
         String authToken = getAuthToken(responseBody, currentCert);
-        // System.out.println(authToken);
         updateCredentials(authToken);
+    }
+
+    public void Authenticate(String sid) throws Exception {
+        updateCredentials(null);
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("sid", sid));
+        byte[] responseBody = PerformPostHttpRequest("/V2/Authenticate", parameters, null);
+        String result;
+        try {
+            result = new String(responseBody, "UTF8");
+        } catch (UnsupportedEncodingException e) {
+            result = e.toString();
+        }
+        updateCredentials(result);
     }
 
     private void updateCredentials(String authToken) {
