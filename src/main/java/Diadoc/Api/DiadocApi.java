@@ -760,20 +760,35 @@ public class DiadocApi {
 
     public GeneratedFile GenerateTovTorg551XmlForSeller(TovTorgInfoProtos.TovTorgSellerTitleInfo sellerTitleInfo, boolean disableValidation) throws IOException, ParseException {
         if (sellerTitleInfo == null) throw new NullPointerException("sellerTitleInfo");
-        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateTorg12XmlForSeller?documentVersion=tovtorg_05_01_02" + (disableValidation?"&disableValidation":""), null, sellerTitleInfo.toByteArray());
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateTorg12XmlForSeller?documentVersion=tovtorg_05_01_03" + (disableValidation?"&disableValidation":""), null, sellerTitleInfo.toByteArray());
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
-    public GeneratedFile GenerateTovTorg551XmlForBuyer(TovTorgInfoProtos.TovTorgBuyerTitleInfo buyerTitleInfo, String boxId, String sellerTitleMessageId, String sellerTitleAttachmentId) throws IOException, ParseException {
+    public GeneratedFile GenerateTovTorg551XmlForBuyer(
+            TovTorgInfoProtos.TovTorgBuyerTitleInfo buyerTitleInfo,
+            String boxId,
+            String sellerTitleMessageId,
+            String sellerTitleAttachmentId) throws IOException, ParseException {
+        return GenerateTovTorg551XmlForBuyer(buyerTitleInfo, boxId, sellerTitleMessageId, sellerTitleAttachmentId, "tovtorg_05_01_02");
+    }
+
+    public GeneratedFile GenerateTovTorg551XmlForBuyer(
+            TovTorgInfoProtos.TovTorgBuyerTitleInfo buyerTitleInfo,
+            String boxId,
+            String sellerTitleMessageId,
+            String sellerTitleAttachmentId,
+            String documentVersion) throws IOException, ParseException {
         if (buyerTitleInfo == null) throw new NullPointerException("buyerTitleInfo");
         if (boxId == null) throw new NullPointerException("boxId");
         if (sellerTitleMessageId == null) throw new NullPointerException("sellerTitleMessageId");
         if (sellerTitleAttachmentId == null) throw new NullPointerException("sellerTitleAttachmentId");
+        if (documentVersion == null) throw new NullPointerException("documentVersion");
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("sellerTitleMessageId", sellerTitleMessageId));
         parameters.add(new BasicNameValuePair("sellerTitleAttachmentId", sellerTitleAttachmentId));
-        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateTorg12XmlForBuyer?documentVersion=tovtorg_05_01_02", parameters, buyerTitleInfo.toByteArray());
+        parameters.add(new BasicNameValuePair("documentVersion", documentVersion));
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateTorg12XmlForBuyer", parameters, buyerTitleInfo.toByteArray());
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
@@ -933,7 +948,7 @@ public class DiadocApi {
 
     public TovTorgInfoProtos.TovTorgSellerTitleInfo ParseTovTorg551SellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
     {
-        return TovTorgInfoProtos.TovTorgSellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12SellerTitleXml?documentVersion=tovtorg_05_01_02", null, sellerTitleXmlContent));
+        return TovTorgInfoProtos.TovTorgSellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12SellerTitleXml?documentVersion=tovtorg_05_01_03", null, sellerTitleXmlContent));
     }
 
     public TovTorgInfoProtos.TovTorgBuyerTitleInfo ParseTovTorg551BuyerTitleXml(byte[] buyerTitleXmlContent) throws IOException
@@ -963,7 +978,9 @@ public class DiadocApi {
 
     public UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo ParseUniversalTransferDocumentSellerTitleXml(byte[] utdXmlContent) throws IOException
     {
-        byte[] response = PerformPostHttpRequest("/ParseUniversalTransferDocumentSellerTitleXml", null, utdXmlContent);
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("documentVersion", "utd_05_01_04"));
+        byte[] response = PerformPostHttpRequest("/ParseUniversalTransferDocumentSellerTitleXml", parameters, utdXmlContent);
         return UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo.parseFrom(response);
     }
 
@@ -975,7 +992,9 @@ public class DiadocApi {
 
     public UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo ParseUniversalCorrectionDocumentSellerTitleXml(byte[] utdXmlContent) throws IOException
     {
-        byte[] response = PerformPostHttpRequest("/ParseUniversalCorrectionDocumentSellerTitleXml", null, utdXmlContent);
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("documentVersion", "ucd_05_01_02"));
+        byte[] response = PerformPostHttpRequest("/ParseUniversalCorrectionDocumentSellerTitleXml", parameters, utdXmlContent);
         return UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo.parseFrom(response);
     }
 
