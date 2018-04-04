@@ -1213,6 +1213,22 @@ public class DiadocApi {
         return DocumentProtos.Document.parseFrom(PerformGetHttpRequest("/V3/GetDocument", parameters));
     }
 
+    public DocflowApiProtos.GetDocflowBatchResponse GetDocflows(String boxId, DocflowApiProtos.GetDocflowBatchRequest request) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (request == null) throw new NullPointerException("request");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        return DocflowApiProtos.GetDocflowBatchResponse.parseFrom(PerformPostHttpRequest("/V2/GetDocflows", parameters, request.toByteArray()));
+    }
+
+    public DocflowApiProtos.GetDocflowEventsResponse GetDocflowEvents(String boxId, DocflowApiProtos.GetDocflowEventsRequest request) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (request == null) throw new NullPointerException("request");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        return DocflowApiProtos.GetDocflowEventsResponse.parseFrom(PerformPostHttpRequest("/V2/GetDocflowEvents", parameters, request.toByteArray()));
+    }
+
     public SignatureInfoProtos.SignatureInfo GetSignatureInfo(String boxId, String messageId, String entityId) throws IOException {
         if (boxId == null) throw new NullPointerException("boxId");
         if (messageId == null) throw new NullPointerException("messageId");
