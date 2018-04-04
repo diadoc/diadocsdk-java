@@ -50,15 +50,15 @@ message Message {
 }
 
 message Template {
-	required string MessageId = 1;
-	required sfixed64 TimestampTicks = 2;
-	required string FromBoxId = 3;
-	required string ToBoxId = 4;
-	required string MessageFromBoxId = 5;
-	required string MessageToBoxId = 6;
-	repeated Entity Entities = 7;
-	optional bool IsDeleted = 8 [default = false];
-	optional string MessageToDepartmentId = 9;
+    required string MessageId = 1;
+    required sfixed64 TimestampTicks = 2;
+    required string FromBoxId = 3;
+    required string ToBoxId = 4;
+    required string MessageFromBoxId = 5;
+    required string MessageToBoxId = 6;
+    repeated Entity Entities = 7;
+    optional bool IsDeleted = 8 [default = false];
+    optional string MessageToDepartmentId = 9;
 }
 
 message MessagePatch {
@@ -101,6 +101,7 @@ message Entity {
 	optional ResolutionRouteAssignmentInfo ResolutionRouteAssignmentInfo = 22; // only for AttachmentType.ResolutionRouteAssignmentAttachment
 	optional ResolutionRouteRemovalInfo ResolutionRouteRemovalInfo = 23;	// only for AttachmentType.ResolutionRouteRemovalAttachment
 	optional CancellationInfo CancellationInfo = 24;						// only for AttachmentType.Cancellation
+	repeated string Labels = 25;
 }
 
 message EntityPatch {
