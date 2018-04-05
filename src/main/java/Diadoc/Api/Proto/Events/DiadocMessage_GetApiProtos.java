@@ -328,7 +328,7 @@ public final class DiadocMessage_GetApiProtos {
      * <code>Cancellation = 69;</code>
      *
      * <pre>
-     *Неизвестные типы должны обрабатываться как Nonformalized
+     *Неизвестные типы должны обрабатываться как Title
      * </pre>
      */
     Cancellation(50, 69),
@@ -542,7 +542,7 @@ public final class DiadocMessage_GetApiProtos {
      * <code>Cancellation = 69;</code>
      *
      * <pre>
-     *Неизвестные типы должны обрабатываться как Nonformalized
+     *Неизвестные типы должны обрабатываться как Title
      * </pre>
      */
     public static final int Cancellation_VALUE = 69;
@@ -9901,6 +9901,25 @@ public final class DiadocMessage_GetApiProtos {
      * </pre>
      */
     Diadoc.Api.Proto.Events.CancellationInfoProtos.CancellationInfoOrBuilder getCancellationInfoOrBuilder();
+
+    /**
+     * <code>repeated string Labels = 25;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getLabelsList();
+    /**
+     * <code>repeated string Labels = 25;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>repeated string Labels = 25;</code>
+     */
+    java.lang.String getLabels(int index);
+    /**
+     * <code>repeated string Labels = 25;</code>
+     */
+    com.google.protobuf.ByteString
+        getLabelsBytes(int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.Entity}
@@ -10153,6 +10172,15 @@ public final class DiadocMessage_GetApiProtos {
               bitField0_ |= 0x00400000;
               break;
             }
+            case 202: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+                labels_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00800000;
+              }
+              labels_.add(bs);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -10161,6 +10189,9 @@ public final class DiadocMessage_GetApiProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+          labels_ = labels_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -10942,6 +10973,35 @@ public final class DiadocMessage_GetApiProtos {
       return cancellationInfo_;
     }
 
+    public static final int LABELS_FIELD_NUMBER = 25;
+    private com.google.protobuf.LazyStringList labels_;
+    /**
+     * <code>repeated string Labels = 25;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLabelsList() {
+      return labels_;
+    }
+    /**
+     * <code>repeated string Labels = 25;</code>
+     */
+    public int getLabelsCount() {
+      return labels_.size();
+    }
+    /**
+     * <code>repeated string Labels = 25;</code>
+     */
+    public java.lang.String getLabels(int index) {
+      return labels_.get(index);
+    }
+    /**
+     * <code>repeated string Labels = 25;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLabelsBytes(int index) {
+      return labels_.getByteString(index);
+    }
+
     private void initFields() {
       entityType_ = Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.EntityType.UnknownEntityType;
       entityId_ = "";
@@ -10966,6 +11026,7 @@ public final class DiadocMessage_GetApiProtos {
       resolutionRouteAssignmentInfo_ = Diadoc.Api.Proto.Events.ResolutionRouteInfoProtos.ResolutionRouteAssignmentInfo.getDefaultInstance();
       resolutionRouteRemovalInfo_ = Diadoc.Api.Proto.Events.ResolutionRouteInfoProtos.ResolutionRouteRemovalInfo.getDefaultInstance();
       cancellationInfo_ = Diadoc.Api.Proto.Events.CancellationInfoProtos.CancellationInfo.getDefaultInstance();
+      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -11101,6 +11162,9 @@ public final class DiadocMessage_GetApiProtos {
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
         output.writeMessage(24, cancellationInfo_);
       }
+      for (int i = 0; i < labels_.size(); i++) {
+        output.writeBytes(25, labels_.getByteString(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -11201,6 +11265,15 @@ public final class DiadocMessage_GetApiProtos {
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(24, cancellationInfo_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < labels_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(labels_.getByteString(i));
+        }
+        size += dataSize;
+        size += 2 * getLabelsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -11405,6 +11478,8 @@ public final class DiadocMessage_GetApiProtos {
           cancellationInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00400000);
+        labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00800000);
         return this;
       }
 
@@ -11557,6 +11632,11 @@ public final class DiadocMessage_GetApiProtos {
         } else {
           result.cancellationInfo_ = cancellationInfoBuilder_.build();
         }
+        if (((bitField0_ & 0x00800000) == 0x00800000)) {
+          labels_ = labels_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00800000);
+        }
+        result.labels_ = labels_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -11657,6 +11737,16 @@ public final class DiadocMessage_GetApiProtos {
         }
         if (other.hasCancellationInfo()) {
           mergeCancellationInfo(other.getCancellationInfo());
+        }
+        if (!other.labels_.isEmpty()) {
+          if (labels_.isEmpty()) {
+            labels_ = other.labels_;
+            bitField0_ = (bitField0_ & ~0x00800000);
+          } else {
+            ensureLabelsIsMutable();
+            labels_.addAll(other.labels_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -13843,6 +13933,99 @@ public final class DiadocMessage_GetApiProtos {
         return cancellationInfoBuilder_;
       }
 
+      private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureLabelsIsMutable() {
+        if (!((bitField0_ & 0x00800000) == 0x00800000)) {
+          labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
+          bitField0_ |= 0x00800000;
+         }
+      }
+      /**
+       * <code>repeated string Labels = 25;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getLabelsList() {
+        return labels_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string Labels = 25;</code>
+       */
+      public int getLabelsCount() {
+        return labels_.size();
+      }
+      /**
+       * <code>repeated string Labels = 25;</code>
+       */
+      public java.lang.String getLabels(int index) {
+        return labels_.get(index);
+      }
+      /**
+       * <code>repeated string Labels = 25;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLabelsBytes(int index) {
+        return labels_.getByteString(index);
+      }
+      /**
+       * <code>repeated string Labels = 25;</code>
+       */
+      public Builder setLabels(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLabelsIsMutable();
+        labels_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Labels = 25;</code>
+       */
+      public Builder addLabels(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLabelsIsMutable();
+        labels_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Labels = 25;</code>
+       */
+      public Builder addAllLabels(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureLabelsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, labels_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Labels = 25;</code>
+       */
+      public Builder clearLabels() {
+        labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00800000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Labels = 25;</code>
+       */
+      public Builder addLabelsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLabelsIsMutable();
+        labels_.add(value);
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.Entity)
     }
 
@@ -14973,7 +15156,7 @@ public final class DiadocMessage_GetApiProtos {
       "\003(\0132$.Diadoc.Api.Proto.Events.EntityPatc" +
       "h\022 \n\021MessageIsRestored\030\n \001(\010:\005false\022!\n\022M" +
       "essageIsDelivered\030\013 \001(\010:\005false\022\030\n\020Delive" +
-      "redPatchId\030\014 \001(\t\022\017\n\007PatchId\030\r \002(\t\"\334\010\n\006En" +
+      "redPatchId\030\014 \001(\t\022\017\n\007PatchId\030\r \002(\t\"\354\010\n\006En" +
       "tity\022J\n\nEntityType\030\001 \001(\0162#.Diadoc.Api.Pr" +
       "oto.Events.EntityType:\021UnknownEntityType" +
       "\022\020\n\010EntityId\030\002 \002(\t\022\026\n\016ParentEntityId\030\003 \001" +
@@ -15001,48 +15184,48 @@ public final class DiadocMessage_GetApiProtos {
       "solutionRouteRemovalInfo\030\027 \001(\01323.Diadoc." +
       "Api.Proto.Events.ResolutionRouteRemovalI",
       "nfo\022C\n\020CancellationInfo\030\030 \001(\0132).Diadoc.A" +
-      "pi.Proto.Events.CancellationInfo\"\272\001\n\013Ent" +
-      "ityPatch\022\020\n\010EntityId\030\001 \002(\t\022 \n\021DocumentIs" +
-      "Deleted\030\002 \001(\010:\005false\022\031\n\021MovedToDepartmen" +
-      "t\030\003 \001(\t\022!\n\022DocumentIsRestored\030\004 \001(\010:\005fal" +
-      "se\022\037\n\020ContentIsPatched\030\005 \001(\010:\005false\022\030\n\020F" +
-      "orwardedToBoxId\030\006 \001(\t*B\n\nEntityType\022\025\n\021U" +
-      "nknownEntityType\020\000\022\016\n\nAttachment\020\001\022\r\n\tSi" +
-      "gnature\020\002*\247\n\n\016AttachmentType\022\"\n\025UnknownA" +
-      "ttachmentType\020\377\377\377\377\377\377\377\377\377\001\022\021\n\rNonformalize",
-      "d\020\000\022\013\n\007Invoice\020\001\022\022\n\016InvoiceReceipt\020\002\022\027\n\023" +
-      "InvoiceConfirmation\020\003\022\034\n\030InvoiceCorrecti" +
-      "onRequest\020\004\022\025\n\021AttachmentComment\020\005\022\037\n\033De" +
-      "liveryFailureNotification\020\006\022\020\n\014EancomInv" +
-      "oic\020\007\022\035\n\031SignatureRequestRejection\020\010\022(\n$" +
-      "EcrCatConformanceCertificateMetadata\020\t\022\037" +
-      "\n\033SignatureVerificationReport\020\n\022\032\n\026Trust" +
-      "ConnectionRequest\020\013\022\n\n\006Torg12\020\014\022\023\n\017Invoi" +
-      "ceRevision\020\r\022\025\n\021InvoiceCorrection\020\016\022\035\n\031I" +
-      "nvoiceCorrectionRevision\020\017\022\031\n\025Acceptance",
-      "Certificate\020\020\022\022\n\016StructuredData\020\021\022\023\n\017Pro" +
-      "formaInvoice\020\022\022\r\n\tXmlTorg12\020\023\022\034\n\030XmlAcce" +
-      "ptanceCertificate\020\024\022\027\n\023XmlTorg12BuyerTit" +
-      "le\020\025\022&\n\"XmlAcceptanceCertificateBuyerTit" +
-      "le\020\026\022\016\n\nResolution\020\027\022\025\n\021ResolutionReques" +
-      "t\020\030\022\033\n\027ResolutionRequestDenial\020\031\022\r\n\tPric" +
-      "eList\020\032\022\013\n\007Receipt\020\033\022\031\n\025XmlSignatureReje" +
-      "ction\020\034\022\025\n\021RevocationRequest\020\035\022\026\n\022PriceL" +
-      "istAgreement\020\036\022\027\n\023CertificateRegistry\020\"\022" +
-      "\025\n\021ReconciliationAct\020#\022\014\n\010Contract\020$\022\n\n\006",
-      "Torg13\020%\022\022\n\016ServiceDetails\020&\022\027\n\023RoamingN" +
-      "otification\020\'\022\032\n\026SupplementaryAgreement\020" +
-      "(\022\035\n\031UniversalTransferDocument\020)\022\'\n#Univ" +
-      "ersalTransferDocumentBuyerTitle\020*\022%\n!Uni" +
-      "versalTransferDocumentRevision\020-\022\037\n\033Univ" +
-      "ersalCorrectionDocument\0201\022\'\n#UniversalCo" +
-      "rrectionDocumentRevision\0202\022)\n%UniversalC" +
-      "orrectionDocumentBuyerTitle\0203\022\016\n\nCustomD" +
-      "ata\020@\022\020\n\014MoveDocument\020A\022\'\n#ResolutionRou" +
-      "teAssignmentAttachment\020B\022$\n ResolutionRo",
-      "uteRemovalAttachment\020C\022\t\n\005Title\020D\022\020\n\014Can" +
-      "cellation\020EB\034B\032DiadocMessage_GetApiProto" +
-      "s"
+      "pi.Proto.Events.CancellationInfo\022\016\n\006Labe" +
+      "ls\030\031 \003(\t\"\272\001\n\013EntityPatch\022\020\n\010EntityId\030\001 \002" +
+      "(\t\022 \n\021DocumentIsDeleted\030\002 \001(\010:\005false\022\031\n\021" +
+      "MovedToDepartment\030\003 \001(\t\022!\n\022DocumentIsRes" +
+      "tored\030\004 \001(\010:\005false\022\037\n\020ContentIsPatched\030\005" +
+      " \001(\010:\005false\022\030\n\020ForwardedToBoxId\030\006 \001(\t*B\n" +
+      "\nEntityType\022\025\n\021UnknownEntityType\020\000\022\016\n\nAt" +
+      "tachment\020\001\022\r\n\tSignature\020\002*\247\n\n\016Attachment" +
+      "Type\022\"\n\025UnknownAttachmentType\020\377\377\377\377\377\377\377\377\377\001",
+      "\022\021\n\rNonformalized\020\000\022\013\n\007Invoice\020\001\022\022\n\016Invo" +
+      "iceReceipt\020\002\022\027\n\023InvoiceConfirmation\020\003\022\034\n" +
+      "\030InvoiceCorrectionRequest\020\004\022\025\n\021Attachmen" +
+      "tComment\020\005\022\037\n\033DeliveryFailureNotificatio" +
+      "n\020\006\022\020\n\014EancomInvoic\020\007\022\035\n\031SignatureReques" +
+      "tRejection\020\010\022(\n$EcrCatConformanceCertifi" +
+      "cateMetadata\020\t\022\037\n\033SignatureVerificationR" +
+      "eport\020\n\022\032\n\026TrustConnectionRequest\020\013\022\n\n\006T" +
+      "org12\020\014\022\023\n\017InvoiceRevision\020\r\022\025\n\021InvoiceC" +
+      "orrection\020\016\022\035\n\031InvoiceCorrectionRevision",
+      "\020\017\022\031\n\025AcceptanceCertificate\020\020\022\022\n\016Structu" +
+      "redData\020\021\022\023\n\017ProformaInvoice\020\022\022\r\n\tXmlTor" +
+      "g12\020\023\022\034\n\030XmlAcceptanceCertificate\020\024\022\027\n\023X" +
+      "mlTorg12BuyerTitle\020\025\022&\n\"XmlAcceptanceCer" +
+      "tificateBuyerTitle\020\026\022\016\n\nResolution\020\027\022\025\n\021" +
+      "ResolutionRequest\020\030\022\033\n\027ResolutionRequest" +
+      "Denial\020\031\022\r\n\tPriceList\020\032\022\013\n\007Receipt\020\033\022\031\n\025" +
+      "XmlSignatureRejection\020\034\022\025\n\021RevocationReq" +
+      "uest\020\035\022\026\n\022PriceListAgreement\020\036\022\027\n\023Certif" +
+      "icateRegistry\020\"\022\025\n\021ReconciliationAct\020#\022\014",
+      "\n\010Contract\020$\022\n\n\006Torg13\020%\022\022\n\016ServiceDetai" +
+      "ls\020&\022\027\n\023RoamingNotification\020\'\022\032\n\026Supplem" +
+      "entaryAgreement\020(\022\035\n\031UniversalTransferDo" +
+      "cument\020)\022\'\n#UniversalTransferDocumentBuy" +
+      "erTitle\020*\022%\n!UniversalTransferDocumentRe" +
+      "vision\020-\022\037\n\033UniversalCorrectionDocument\020" +
+      "1\022\'\n#UniversalCorrectionDocumentRevision" +
+      "\0202\022)\n%UniversalCorrectionDocumentBuyerTi" +
+      "tle\0203\022\016\n\nCustomData\020@\022\020\n\014MoveDocument\020A\022" +
+      "\'\n#ResolutionRouteAssignmentAttachment\020B",
+      "\022$\n ResolutionRouteRemovalAttachment\020C\022\t" +
+      "\n\005Title\020D\022\020\n\014Cancellation\020EB\034B\032DiadocMes" +
+      "sage_GetApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15099,7 +15282,7 @@ public final class DiadocMessage_GetApiProtos {
     internal_static_Diadoc_Api_Proto_Events_Entity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_Entity_descriptor,
-        new java.lang.String[] { "EntityType", "EntityId", "ParentEntityId", "Content", "AttachmentType", "FileName", "NeedRecipientSignature", "SignerBoxId", "NotDeliveredEventId", "DocumentInfo", "RawCreationDate", "ResolutionInfo", "SignerDepartmentId", "ResolutionRequestInfo", "ResolutionRequestDenialInfo", "NeedReceipt", "PacketId", "IsApprovementSignature", "IsEncryptedContent", "AttachmentVersion", "ResolutionRouteAssignmentInfo", "ResolutionRouteRemovalInfo", "CancellationInfo", });
+        new java.lang.String[] { "EntityType", "EntityId", "ParentEntityId", "Content", "AttachmentType", "FileName", "NeedRecipientSignature", "SignerBoxId", "NotDeliveredEventId", "DocumentInfo", "RawCreationDate", "ResolutionInfo", "SignerDepartmentId", "ResolutionRequestInfo", "ResolutionRequestDenialInfo", "NeedReceipt", "PacketId", "IsApprovementSignature", "IsEncryptedContent", "AttachmentVersion", "ResolutionRouteAssignmentInfo", "ResolutionRouteRemovalInfo", "CancellationInfo", "Labels", });
     internal_static_Diadoc_Api_Proto_Events_EntityPatch_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_Events_EntityPatch_fieldAccessorTable = new
