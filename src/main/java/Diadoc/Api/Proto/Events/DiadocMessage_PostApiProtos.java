@@ -88771,6 +88771,15 @@ public final class DiadocMessage_PostApiProtos {
      */
     com.google.protobuf.ByteString
         getEditingSettingIdBytes();
+
+    /**
+     * <code>optional bool NeedRecipientSignature = 10 [default = false];</code>
+     */
+    boolean hasNeedRecipientSignature();
+    /**
+     * <code>optional bool NeedRecipientSignature = 10 [default = false];</code>
+     */
+    boolean getNeedRecipientSignature();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.TemplateDocumentAttachment}
@@ -88884,6 +88893,11 @@ public final class DiadocMessage_PostApiProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
               editingSettingId_ = bs;
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000100;
+              needRecipientSignature_ = input.readBool();
               break;
             }
           }
@@ -89252,6 +89266,21 @@ public final class DiadocMessage_PostApiProtos {
       }
     }
 
+    public static final int NEEDRECIPIENTSIGNATURE_FIELD_NUMBER = 10;
+    private boolean needRecipientSignature_;
+    /**
+     * <code>optional bool NeedRecipientSignature = 10 [default = false];</code>
+     */
+    public boolean hasNeedRecipientSignature() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional bool NeedRecipientSignature = 10 [default = false];</code>
+     */
+    public boolean getNeedRecipientSignature() {
+      return needRecipientSignature_;
+    }
+
     private void initFields() {
       unsignedContent_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.getDefaultInstance();
       comment_ = "";
@@ -89262,6 +89291,7 @@ public final class DiadocMessage_PostApiProtos {
       workflowId_ = 0;
       customDocumentId_ = "";
       editingSettingId_ = "";
+      needRecipientSignature_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -89317,6 +89347,9 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeBytes(9, getEditingSettingIdBytes());
       }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBool(10, needRecipientSignature_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -89361,6 +89394,10 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(9, getEditingSettingIdBytes());
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, needRecipientSignature_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -89507,6 +89544,8 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00000080);
         editingSettingId_ = "";
         bitField0_ = (bitField0_ & ~0x00000100);
+        needRecipientSignature_ = false;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -89580,6 +89619,10 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000080;
         }
         result.editingSettingId_ = editingSettingId_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.needRecipientSignature_ = needRecipientSignature_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -89657,6 +89700,9 @@ public final class DiadocMessage_PostApiProtos {
           bitField0_ |= 0x00000100;
           editingSettingId_ = other.editingSettingId_;
           onChanged();
+        }
+        if (other.hasNeedRecipientSignature()) {
+          setNeedRecipientSignature(other.getNeedRecipientSignature());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -90539,6 +90585,38 @@ public final class DiadocMessage_PostApiProtos {
   }
   bitField0_ |= 0x00000100;
         editingSettingId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean needRecipientSignature_ ;
+      /**
+       * <code>optional bool NeedRecipientSignature = 10 [default = false];</code>
+       */
+      public boolean hasNeedRecipientSignature() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional bool NeedRecipientSignature = 10 [default = false];</code>
+       */
+      public boolean getNeedRecipientSignature() {
+        return needRecipientSignature_;
+      }
+      /**
+       * <code>optional bool NeedRecipientSignature = 10 [default = false];</code>
+       */
+      public Builder setNeedRecipientSignature(boolean value) {
+        bitField0_ |= 0x00000200;
+        needRecipientSignature_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool NeedRecipientSignature = 10 [default = false];</code>
+       */
+      public Builder clearNeedRecipientSignature() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        needRecipientSignature_ = false;
         onChanged();
         return this;
       }
@@ -93435,23 +93513,24 @@ public final class DiadocMessage_PostApiProtos {
       "oBoxId\030\004 \002(\t\022\035\n\025MessageToDepartmentId\030\005 " +
       "\001(\t\022P\n\023DocumentAttachments\030\006 \003(\01323.Diado" +
       "c.Api.Proto.Events.TemplateDocumentAttac" +
-      "hment\"\251\002\n\032TemplateDocumentAttachment\022A\n\017" +
+      "hment\"\320\002\n\032TemplateDocumentAttachment\022A\n\017" +
       "UnsignedContent\030\001 \002(\0132(.Diadoc.Api.Proto" +
       ".Events.UnsignedContent\022\017\n\007Comment\030\002 \001(\t" +
       "\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n\010Function\030\004 \001(\t\022" +
       "\017\n\007Version\030\005 \001(\t\0227\n\010Metadata\030\006 \003(\0132%.Dia" +
       "doc.Api.Proto.Events.MetadataItem\022\022\n\nWor" +
       "kflowId\030\007 \001(\005\022\030\n\020CustomDocumentId\030\010 \001(\t\022",
-      "\030\n\020EditingSettingId\030\t \001(\t\"7\n\017UnsignedCon" +
-      "tent\022\017\n\007Content\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001" +
-      "(\t\"\223\001\n\034TemplateTransformationToPost\022\r\n\005B" +
-      "oxId\030\001 \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027Docume" +
-      "ntTransformations\030\003 \003(\0132/.Diadoc.Api.Pro" +
-      "to.Events.DocumentTransformation\"F\n\026Docu" +
-      "mentTransformation\022\022\n\nDocumentId\030\001 \002(\t\022\030" +
-      "\n\020CustomDocumentId\030\002 \001(\t*/\n\030CustomDataPa" +
-      "tchOperation\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033Dia" +
-      "docMessage_PostApiProtos"
+      "\030\n\020EditingSettingId\030\t \001(\t\022%\n\026NeedRecipie" +
+      "ntSignature\030\n \001(\010:\005false\"7\n\017UnsignedCont" +
+      "ent\022\017\n\007Content\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(" +
+      "\t\"\223\001\n\034TemplateTransformationToPost\022\r\n\005Bo" +
+      "xId\030\001 \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027Documen" +
+      "tTransformations\030\003 \003(\0132/.Diadoc.Api.Prot" +
+      "o.Events.DocumentTransformation\"F\n\026Docum" +
+      "entTransformation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n" +
+      "\020CustomDocumentId\030\002 \001(\t*/\n\030CustomDataPat" +
+      "chOperation\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033Diad",
+      "ocMessage_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -93778,7 +93857,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_descriptor,
-        new java.lang.String[] { "UnsignedContent", "Comment", "TypeNamedId", "Function", "Version", "Metadata", "WorkflowId", "CustomDocumentId", "EditingSettingId", });
+        new java.lang.String[] { "UnsignedContent", "Comment", "TypeNamedId", "Function", "Version", "Metadata", "WorkflowId", "CustomDocumentId", "EditingSettingId", "NeedRecipientSignature", });
     internal_static_Diadoc_Api_Proto_Events_UnsignedContent_descriptor =
       getDescriptor().getMessageTypes().get(51);
     internal_static_Diadoc_Api_Proto_Events_UnsignedContent_fieldAccessorTable = new
