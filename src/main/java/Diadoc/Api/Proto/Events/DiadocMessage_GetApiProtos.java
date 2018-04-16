@@ -326,12 +326,16 @@ public final class DiadocMessage_GetApiProtos {
     Title(49, 68),
     /**
      * <code>Cancellation = 69;</code>
+     */
+    Cancellation(50, 69),
+    /**
+     * <code>Edition = 71;</code>
      *
      * <pre>
      *Неизвестные типы должны обрабатываться как Title
      * </pre>
      */
-    Cancellation(50, 69),
+    Edition(51, 71),
     ;
 
     /**
@@ -540,12 +544,16 @@ public final class DiadocMessage_GetApiProtos {
     public static final int Title_VALUE = 68;
     /**
      * <code>Cancellation = 69;</code>
+     */
+    public static final int Cancellation_VALUE = 69;
+    /**
+     * <code>Edition = 71;</code>
      *
      * <pre>
      *Неизвестные типы должны обрабатываться как Title
      * </pre>
      */
-    public static final int Cancellation_VALUE = 69;
+    public static final int Edition_VALUE = 71;
 
 
     public final int getNumber() { return value; }
@@ -603,6 +611,7 @@ public final class DiadocMessage_GetApiProtos {
         case 67: return ResolutionRouteRemovalAttachment;
         case 68: return Title;
         case 69: return Cancellation;
+        case 71: return Edition;
         default: return null;
       }
     }
@@ -15191,7 +15200,7 @@ public final class DiadocMessage_GetApiProtos {
       "tored\030\004 \001(\010:\005false\022\037\n\020ContentIsPatched\030\005" +
       " \001(\010:\005false\022\030\n\020ForwardedToBoxId\030\006 \001(\t*B\n" +
       "\nEntityType\022\025\n\021UnknownEntityType\020\000\022\016\n\nAt" +
-      "tachment\020\001\022\r\n\tSignature\020\002*\247\n\n\016Attachment" +
+      "tachment\020\001\022\r\n\tSignature\020\002*\264\n\n\016Attachment" +
       "Type\022\"\n\025UnknownAttachmentType\020\377\377\377\377\377\377\377\377\377\001",
       "\022\021\n\rNonformalized\020\000\022\013\n\007Invoice\020\001\022\022\n\016Invo" +
       "iceReceipt\020\002\022\027\n\023InvoiceConfirmation\020\003\022\034\n" +
@@ -15224,8 +15233,8 @@ public final class DiadocMessage_GetApiProtos {
       "tle\0203\022\016\n\nCustomData\020@\022\020\n\014MoveDocument\020A\022" +
       "\'\n#ResolutionRouteAssignmentAttachment\020B",
       "\022$\n ResolutionRouteRemovalAttachment\020C\022\t" +
-      "\n\005Title\020D\022\020\n\014Cancellation\020EB\034B\032DiadocMes" +
-      "sage_GetApiProtos"
+      "\n\005Title\020D\022\020\n\014Cancellation\020E\022\013\n\007Edition\020G" +
+      "B\034B\032DiadocMessage_GetApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -52048,6 +52048,30 @@ public final class DiadocMessage_PostApiProtos {
      */
     Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachmentOrBuilder getRecipientTitlesOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch> 
+        getEditingPatchesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch getEditingPatches(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    int getEditingPatchesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatchOrBuilder> 
+        getEditingPatchesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatchOrBuilder getEditingPatchesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.MessagePatchToPost}
@@ -52273,6 +52297,14 @@ public final class DiadocMessage_PostApiProtos {
               recipientTitles_.add(input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.ReceiptAttachment.PARSER, extensionRegistry));
               break;
             }
+            case 186: {
+              if (!((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+                editingPatches_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch>();
+                mutable_bitField0_ |= 0x00400000;
+              }
+              editingPatches_.add(input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -52340,6 +52372,9 @@ public final class DiadocMessage_PostApiProtos {
         }
         if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
           recipientTitles_ = java.util.Collections.unmodifiableList(recipientTitles_);
+        }
+        if (((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+          editingPatches_ = java.util.Collections.unmodifiableList(editingPatches_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -53157,6 +53192,41 @@ public final class DiadocMessage_PostApiProtos {
       return recipientTitles_.get(index);
     }
 
+    public static final int EDITINGPATCHES_FIELD_NUMBER = 23;
+    private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch> editingPatches_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch> getEditingPatchesList() {
+      return editingPatches_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatchOrBuilder> 
+        getEditingPatchesOrBuilderList() {
+      return editingPatches_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    public int getEditingPatchesCount() {
+      return editingPatches_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch getEditingPatches(int index) {
+      return editingPatches_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatchOrBuilder getEditingPatchesOrBuilder(
+        int index) {
+      return editingPatches_.get(index);
+    }
+
     private void initFields() {
       boxId_ = "";
       messageId_ = "";
@@ -53180,6 +53250,7 @@ public final class DiadocMessage_PostApiProtos {
       universalTransferDocumentBuyerTitles_ = java.util.Collections.emptyList();
       resolutionRouteRemovals_ = java.util.Collections.emptyList();
       recipientTitles_ = java.util.Collections.emptyList();
+      editingPatches_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -53315,6 +53386,12 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
       }
+      for (int i = 0; i < getEditingPatchesCount(); i++) {
+        if (!getEditingPatches(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -53387,6 +53464,9 @@ public final class DiadocMessage_PostApiProtos {
       }
       for (int i = 0; i < recipientTitles_.size(); i++) {
         output.writeMessage(22, recipientTitles_.get(i));
+      }
+      for (int i = 0; i < editingPatches_.size(); i++) {
+        output.writeMessage(23, editingPatches_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -53484,6 +53564,10 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < recipientTitles_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, recipientTitles_.get(i));
+      }
+      for (int i = 0; i < editingPatches_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, editingPatches_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -53614,6 +53698,7 @@ public final class DiadocMessage_PostApiProtos {
           getUniversalTransferDocumentBuyerTitlesFieldBuilder();
           getResolutionRouteRemovalsFieldBuilder();
           getRecipientTitlesFieldBuilder();
+          getEditingPatchesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -53745,6 +53830,12 @@ public final class DiadocMessage_PostApiProtos {
           bitField0_ = (bitField0_ & ~0x00200000);
         } else {
           recipientTitlesBuilder_.clear();
+        }
+        if (editingPatchesBuilder_ == null) {
+          editingPatches_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00400000);
+        } else {
+          editingPatchesBuilder_.clear();
         }
         return this;
       }
@@ -53961,6 +54052,15 @@ public final class DiadocMessage_PostApiProtos {
           result.recipientTitles_ = recipientTitles_;
         } else {
           result.recipientTitles_ = recipientTitlesBuilder_.build();
+        }
+        if (editingPatchesBuilder_ == null) {
+          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+            editingPatches_ = java.util.Collections.unmodifiableList(editingPatches_);
+            bitField0_ = (bitField0_ & ~0x00400000);
+          }
+          result.editingPatches_ = editingPatches_;
+        } else {
+          result.editingPatches_ = editingPatchesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -54508,6 +54608,32 @@ public final class DiadocMessage_PostApiProtos {
             }
           }
         }
+        if (editingPatchesBuilder_ == null) {
+          if (!other.editingPatches_.isEmpty()) {
+            if (editingPatches_.isEmpty()) {
+              editingPatches_ = other.editingPatches_;
+              bitField0_ = (bitField0_ & ~0x00400000);
+            } else {
+              ensureEditingPatchesIsMutable();
+              editingPatches_.addAll(other.editingPatches_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.editingPatches_.isEmpty()) {
+            if (editingPatchesBuilder_.isEmpty()) {
+              editingPatchesBuilder_.dispose();
+              editingPatchesBuilder_ = null;
+              editingPatches_ = other.editingPatches_;
+              bitField0_ = (bitField0_ & ~0x00400000);
+              editingPatchesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getEditingPatchesFieldBuilder() : null;
+            } else {
+              editingPatchesBuilder_.addAllMessages(other.editingPatches_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -54637,6 +54763,12 @@ public final class DiadocMessage_PostApiProtos {
         }
         for (int i = 0; i < getRecipientTitlesCount(); i++) {
           if (!getRecipientTitles(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getEditingPatchesCount(); i++) {
+          if (!getEditingPatches(i).isInitialized()) {
             
             return false;
           }
@@ -59613,6 +59745,246 @@ public final class DiadocMessage_PostApiProtos {
           recipientTitles_ = null;
         }
         return recipientTitlesBuilder_;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch> editingPatches_ =
+        java.util.Collections.emptyList();
+      private void ensureEditingPatchesIsMutable() {
+        if (!((bitField0_ & 0x00400000) == 0x00400000)) {
+          editingPatches_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch>(editingPatches_);
+          bitField0_ |= 0x00400000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatchOrBuilder> editingPatchesBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch> getEditingPatchesList() {
+        if (editingPatchesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(editingPatches_);
+        } else {
+          return editingPatchesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public int getEditingPatchesCount() {
+        if (editingPatchesBuilder_ == null) {
+          return editingPatches_.size();
+        } else {
+          return editingPatchesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch getEditingPatches(int index) {
+        if (editingPatchesBuilder_ == null) {
+          return editingPatches_.get(index);
+        } else {
+          return editingPatchesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Builder setEditingPatches(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch value) {
+        if (editingPatchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEditingPatchesIsMutable();
+          editingPatches_.set(index, value);
+          onChanged();
+        } else {
+          editingPatchesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Builder setEditingPatches(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder builderForValue) {
+        if (editingPatchesBuilder_ == null) {
+          ensureEditingPatchesIsMutable();
+          editingPatches_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          editingPatchesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Builder addEditingPatches(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch value) {
+        if (editingPatchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEditingPatchesIsMutable();
+          editingPatches_.add(value);
+          onChanged();
+        } else {
+          editingPatchesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Builder addEditingPatches(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch value) {
+        if (editingPatchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEditingPatchesIsMutable();
+          editingPatches_.add(index, value);
+          onChanged();
+        } else {
+          editingPatchesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Builder addEditingPatches(
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder builderForValue) {
+        if (editingPatchesBuilder_ == null) {
+          ensureEditingPatchesIsMutable();
+          editingPatches_.add(builderForValue.build());
+          onChanged();
+        } else {
+          editingPatchesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Builder addEditingPatches(
+          int index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder builderForValue) {
+        if (editingPatchesBuilder_ == null) {
+          ensureEditingPatchesIsMutable();
+          editingPatches_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          editingPatchesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Builder addAllEditingPatches(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch> values) {
+        if (editingPatchesBuilder_ == null) {
+          ensureEditingPatchesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, editingPatches_);
+          onChanged();
+        } else {
+          editingPatchesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Builder clearEditingPatches() {
+        if (editingPatchesBuilder_ == null) {
+          editingPatches_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00400000);
+          onChanged();
+        } else {
+          editingPatchesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Builder removeEditingPatches(int index) {
+        if (editingPatchesBuilder_ == null) {
+          ensureEditingPatchesIsMutable();
+          editingPatches_.remove(index);
+          onChanged();
+        } else {
+          editingPatchesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder getEditingPatchesBuilder(
+          int index) {
+        return getEditingPatchesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatchOrBuilder getEditingPatchesOrBuilder(
+          int index) {
+        if (editingPatchesBuilder_ == null) {
+          return editingPatches_.get(index);  } else {
+          return editingPatchesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatchOrBuilder> 
+           getEditingPatchesOrBuilderList() {
+        if (editingPatchesBuilder_ != null) {
+          return editingPatchesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(editingPatches_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder addEditingPatchesBuilder() {
+        return getEditingPatchesFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder addEditingPatchesBuilder(
+          int index) {
+        return getEditingPatchesFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CustomDataPatch EditingPatches = 23;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder> 
+           getEditingPatchesBuilderList() {
+        return getEditingPatchesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatchOrBuilder> 
+          getEditingPatchesFieldBuilder() {
+        if (editingPatchesBuilder_ == null) {
+          editingPatchesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatch.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.CustomDataPatchOrBuilder>(
+                  editingPatches_,
+                  ((bitField0_ & 0x00400000) == 0x00400000),
+                  getParentForChildren(),
+                  isClean());
+          editingPatches_ = null;
+        }
+        return editingPatchesBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.MessagePatchToPost)
@@ -93362,7 +93734,7 @@ public final class DiadocMessage_PostApiProtos {
       "ion\030\016 \001(\t\0227\n\010Metadata\030\017 \003(\0132%.Diadoc.Api",
       ".Proto.Events.MetadataItem\022\022\n\nWorkflowId" +
       "\030\020 \001(\005\022\032\n\013IsEncrypted\030\021 \001(\010:\005false\"*\n\014Me" +
-      "tadataItem\022\013\n\003Key\030\001 \002(\t\022\r\n\005Value\030\002 \002(\t\"\273" +
+      "tadataItem\022\013\n\003Key\030\001 \002(\t\022\r\n\005Value\030\002 \002(\t\"\375" +
       "\r\n\022MessagePatchToPost\022\r\n\005BoxId\030\001 \002(\t\022\021\n\t" +
       "MessageId\030\002 \002(\t\022<\n\010Receipts\030\003 \003(\0132*.Diad" +
       "oc.Api.Proto.Events.ReceiptAttachment\022P\n" +
@@ -93406,131 +93778,133 @@ public final class DiadocMessage_PostApiProtos {
       "\030\025 \003(\0132/.Diadoc.Api.Proto.Events.Resolut" +
       "ionRouteRemoval\022C\n\017RecipientTitles\030\026 \003(\013" +
       "2*.Diadoc.Api.Proto.Events.ReceiptAttach" +
-      "ment\"i\n\025SignatureVerification\022\031\n\021Initial" +
-      "DocumentId\030\001 \002(\t\022\017\n\007IsValid\030\002 \002(\010\022\024\n\014Err" +
-      "orMessage\030\003 \001(\t\022\016\n\006Labels\030\004 \003(\t\"\311\001\n\033Reso" +
-      "lutionRequestAttachment\022\031\n\021InitialDocume",
-      "ntId\030\001 \002(\t\022<\n\004Type\030\002 \002(\0162..Diadoc.Api.Pr" +
-      "oto.Events.ResolutionRequestType\022\024\n\014Targ" +
-      "etUserId\030\003 \001(\t\022\032\n\022TargetDepartmentId\030\004 \001" +
-      "(\t\022\017\n\007Comment\030\005 \001(\t\022\016\n\006Labels\030\006 \003(\t\"h\n\031R" +
-      "esolutionRouteAssignment\022\031\n\021InitialDocum" +
-      "entId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\017\n\007Comment\030" +
-      "\003 \001(\t\022\016\n\006Labels\030\004 \003(\t\"n\n\'ResolutionReque" +
-      "stCancellationAttachment\022\"\n\032InitialResol" +
-      "utionRequestId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n" +
-      "\006Labels\030\003 \003(\t\"Y\n-ResolutionRequestDenial",
-      "CancellationAttachment\022(\n InitialResolut" +
-      "ionRequestDenialId\030\001 \002(\t\"h\n!ResolutionRe" +
-      "questDenialAttachment\022\"\n\032InitialResoluti" +
-      "onRequestId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006La" +
-      "bels\030\003 \003(\t\"\223\001\n\024ResolutionAttachment\022\031\n\021I" +
-      "nitialDocumentId\030\001 \002(\t\022?\n\016ResolutionType" +
-      "\030\002 \002(\0162\'.Diadoc.Api.Proto.Events.Resolut" +
-      "ionType\022\017\n\007Comment\030\003 \001(\t\022\016\n\006Labels\030\004 \003(\t" +
-      "\"z\n\021ReceiptAttachment\022\026\n\016ParentEntityId\030" +
-      "\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.Ap",
-      "i.Proto.Events.SignedContent\022\016\n\006Labels\030\004" +
-      " \003(\t\"\204\001\n\033CorrectionRequestAttachment\022\026\n\016" +
-      "ParentEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 " +
-      "\002(\0132&.Diadoc.Api.Proto.Events.SignedCont" +
-      "ent\022\016\n\006Labels\030\004 \003(\t\"\323\001\n\021DocumentSignatur" +
-      "e\022\026\n\016ParentEntityId\030\001 \002(\t\022\021\n\tSignature\030\002" +
-      " \001(\014\022$\n\025SignWithTestSignature\030\004 \001(\010:\005fal" +
-      "se\022%\n\026IsApprovementSignature\030\005 \001(\010:\005fals" +
-      "e\022\034\n\024SignatureNameOnShelf\030\006 \001(\t\022\030\n\020Patch" +
-      "edContentId\030\007 \001(\t\022\016\n\006Labels\030\010 \003(\t\"\204\001\n\027Do",
-      "cumentSenderSignature\022\026\n\016ParentEntityId\030" +
-      "\001 \002(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025SignWithTest" +
-      "Signature\030\004 \001(\010:\005false\022\030\n\020PatchedContent" +
-      "Id\030\005 \001(\t\"\204\001\n\033RequestedSignatureRejection" +
-      "\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedConten" +
-      "t\030\002 \002(\0132&.Diadoc.Api.Proto.Events.Signed" +
-      "Content\022\016\n\006Labels\030\003 \003(\t\"\214\001\n\rSignedConten" +
-      "t\022\017\n\007Content\030\001 \001(\014\022\021\n\tSignature\030\002 \001(\014\022\023\n" +
-      "\013NameOnShelf\030\004 \001(\t\022$\n\025SignWithTestSignat" +
-      "ure\030\005 \001(\010:\005false\022\034\n\024SignatureNameOnShelf",
-      "\030\006 \001(\t\"\323\001\n\013DraftToSend\022\r\n\005BoxId\030\001 \002(\t\022\017\n" +
-      "\007DraftId\030\002 \002(\t\022\017\n\007ToBoxId\030\003 \001(\t\022\026\n\016ToDep" +
-      "artmentId\030\004 \001(\t\022L\n\022DocumentSignatures\030\005 " +
-      "\003(\01320.Diadoc.Api.Proto.Events.DocumentSe" +
-      "nderSignature\022\022\n\nProxyBoxId\030\006 \001(\t\022\031\n\021Pro" +
-      "xyDepartmentId\030\007 \001(\t\"\355\001\n\035PrepareDocument" +
-      "sToSignRequest\022\r\n\005BoxId\030\001 \002(\t\022E\n\016DraftDo" +
-      "cuments\030\002 \003(\0132-.Diadoc.Api.Proto.Events." +
-      "DraftDocumentToPatch\022;\n\tDocuments\030\003 \003(\0132" +
-      "(.Diadoc.Api.Proto.Events.DocumentToPatc",
-      "h\0229\n\010Contents\030\004 \003(\0132\'.Diadoc.Api.Proto.E" +
-      "vents.ContentToPatch\"\331\001\n\024DraftDocumentTo" +
+      "ment\022@\n\016EditingPatches\030\027 \003(\0132(.Diadoc.Ap" +
+      "i.Proto.Events.CustomDataPatch\"i\n\025Signat" +
+      "ureVerification\022\031\n\021InitialDocumentId\030\001 \002" +
+      "(\t\022\017\n\007IsValid\030\002 \002(\010\022\024\n\014ErrorMessage\030\003 \001(",
+      "\t\022\016\n\006Labels\030\004 \003(\t\"\311\001\n\033ResolutionRequestA" +
+      "ttachment\022\031\n\021InitialDocumentId\030\001 \002(\t\022<\n\004" +
+      "Type\030\002 \002(\0162..Diadoc.Api.Proto.Events.Res" +
+      "olutionRequestType\022\024\n\014TargetUserId\030\003 \001(\t" +
+      "\022\032\n\022TargetDepartmentId\030\004 \001(\t\022\017\n\007Comment\030" +
+      "\005 \001(\t\022\016\n\006Labels\030\006 \003(\t\"h\n\031ResolutionRoute" +
+      "Assignment\022\031\n\021InitialDocumentId\030\001 \002(\t\022\017\n" +
+      "\007RouteId\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t\022\016\n\006Label" +
+      "s\030\004 \003(\t\"n\n\'ResolutionRequestCancellation" +
+      "Attachment\022\"\n\032InitialResolutionRequestId",
+      "\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"" +
+      "Y\n-ResolutionRequestDenialCancellationAt" +
+      "tachment\022(\n InitialResolutionRequestDeni" +
+      "alId\030\001 \002(\t\"h\n!ResolutionRequestDenialAtt" +
+      "achment\022\"\n\032InitialResolutionRequestId\030\001 " +
+      "\002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"\223\001\n" +
+      "\024ResolutionAttachment\022\031\n\021InitialDocument" +
+      "Id\030\001 \002(\t\022?\n\016ResolutionType\030\002 \002(\0162\'.Diado" +
+      "c.Api.Proto.Events.ResolutionType\022\017\n\007Com" +
+      "ment\030\003 \001(\t\022\016\n\006Labels\030\004 \003(\t\"z\n\021ReceiptAtt",
+      "achment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSigne" +
+      "dContent\030\002 \002(\0132&.Diadoc.Api.Proto.Events" +
+      ".SignedContent\022\016\n\006Labels\030\004 \003(\t\"\204\001\n\033Corre" +
+      "ctionRequestAttachment\022\026\n\016ParentEntityId" +
+      "\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.A" +
+      "pi.Proto.Events.SignedContent\022\016\n\006Labels\030" +
+      "\004 \003(\t\"\323\001\n\021DocumentSignature\022\026\n\016ParentEnt" +
+      "ityId\030\001 \002(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025SignWi" +
+      "thTestSignature\030\004 \001(\010:\005false\022%\n\026IsApprov" +
+      "ementSignature\030\005 \001(\010:\005false\022\034\n\024Signature",
+      "NameOnShelf\030\006 \001(\t\022\030\n\020PatchedContentId\030\007 " +
+      "\001(\t\022\016\n\006Labels\030\010 \003(\t\"\204\001\n\027DocumentSenderSi" +
+      "gnature\022\026\n\016ParentEntityId\030\001 \002(\t\022\021\n\tSigna" +
+      "ture\030\002 \001(\014\022$\n\025SignWithTestSignature\030\004 \001(" +
+      "\010:\005false\022\030\n\020PatchedContentId\030\005 \001(\t\"\204\001\n\033R" +
+      "equestedSignatureRejection\022\026\n\016ParentEnti" +
+      "tyId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diad" +
+      "oc.Api.Proto.Events.SignedContent\022\016\n\006Lab" +
+      "els\030\003 \003(\t\"\214\001\n\rSignedContent\022\017\n\007Content\030\001" +
+      " \001(\014\022\021\n\tSignature\030\002 \001(\014\022\023\n\013NameOnShelf\030\004",
+      " \001(\t\022$\n\025SignWithTestSignature\030\005 \001(\010:\005fal" +
+      "se\022\034\n\024SignatureNameOnShelf\030\006 \001(\t\"\323\001\n\013Dra" +
+      "ftToSend\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007DraftId\030\002 \002(\t" +
+      "\022\017\n\007ToBoxId\030\003 \001(\t\022\026\n\016ToDepartmentId\030\004 \001(" +
+      "\t\022L\n\022DocumentSignatures\030\005 \003(\01320.Diadoc.A" +
+      "pi.Proto.Events.DocumentSenderSignature\022" +
+      "\022\n\nProxyBoxId\030\006 \001(\t\022\031\n\021ProxyDepartmentId" +
+      "\030\007 \001(\t\"\355\001\n\035PrepareDocumentsToSignRequest" +
+      "\022\r\n\005BoxId\030\001 \002(\t\022E\n\016DraftDocuments\030\002 \003(\0132" +
+      "-.Diadoc.Api.Proto.Events.DraftDocumentT",
+      "oPatch\022;\n\tDocuments\030\003 \003(\0132(.Diadoc.Api.P" +
+      "roto.Events.DocumentToPatch\0229\n\010Contents\030" +
+      "\004 \003(\0132\'.Diadoc.Api.Proto.Events.ContentT" +
+      "oPatch\"\331\001\n\024DraftDocumentToPatch\0220\n\nDocum" +
+      "entId\030\001 \002(\0132\034.Diadoc.Api.Proto.DocumentI" +
+      "d\022\017\n\007ToBoxId\030\002 \001(\t\0222\n\006Signer\030\003 \001(\0132\".Dia" +
+      "doc.Api.Proto.Invoicing.Signer\022J\n\016Extend" +
+      "edSigner\030\004 \003(\01322.Diadoc.Api.Proto.Invoic" +
+      "ing.Signers.ExtendedSigner\"\224\002\n\016ContentTo" +
+      "Patch\022\023\n\013TypeNamedId\030\001 \002(\t\022\020\n\010Function\030\002",
+      " \002(\t\022\017\n\007Version\030\003 \002(\t\0229\n\007Content\030\004 \002(\0132(" +
+      ".Diadoc.Api.Proto.Events.UnsignedContent" +
+      "\022\017\n\007ToBoxId\030\005 \001(\t\0222\n\006Signer\030\006 \001(\0132\".Diad" +
+      "oc.Api.Proto.Invoicing.Signer\022J\n\016Extende" +
+      "dSigner\030\007 \003(\01322.Diadoc.Api.Proto.Invoici" +
+      "ng.Signers.ExtendedSigner\"\303\001\n\017DocumentTo" +
       "Patch\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc.Api.P" +
-      "roto.DocumentId\022\017\n\007ToBoxId\030\002 \001(\t\0222\n\006Sign" +
-      "er\030\003 \001(\0132\".Diadoc.Api.Proto.Invoicing.Si" +
-      "gner\022J\n\016ExtendedSigner\030\004 \003(\01322.Diadoc.Ap" +
-      "i.Proto.Invoicing.Signers.ExtendedSigner" +
-      "\"\224\002\n\016ContentToPatch\022\023\n\013TypeNamedId\030\001 \002(\t" +
-      "\022\020\n\010Function\030\002 \002(\t\022\017\n\007Version\030\003 \002(\t\0229\n\007C" +
-      "ontent\030\004 \002(\0132(.Diadoc.Api.Proto.Events.U",
-      "nsignedContent\022\017\n\007ToBoxId\030\005 \001(\t\0222\n\006Signe" +
-      "r\030\006 \001(\0132\".Diadoc.Api.Proto.Invoicing.Sig" +
-      "ner\022J\n\016ExtendedSigner\030\007 \003(\01322.Diadoc.Api" +
-      ".Proto.Invoicing.Signers.ExtendedSigner\"" +
-      "\303\001\n\017DocumentToPatch\0220\n\nDocumentId\030\001 \002(\0132" +
-      "\034.Diadoc.Api.Proto.DocumentId\0222\n\006Signer\030" +
-      "\002 \001(\0132\".Diadoc.Api.Proto.Invoicing.Signe" +
-      "r\022J\n\016ExtendedSigner\030\003 \003(\01322.Diadoc.Api.P" +
-      "roto.Invoicing.Signers.ExtendedSigner\"u\n" +
-      "\026DocumentPatchedContent\0220\n\nDocumentId\030\001 ",
-      "\002(\0132\034.Diadoc.Api.Proto.DocumentId\022\030\n\020Pat" +
-      "chedContentId\030\002 \002(\t\022\017\n\007Content\030\003 \001(\014\"r\n\036" +
-      "PrepareDocumentsToSignResponse\022P\n\027Docume" +
-      "ntPatchedContents\030\001 \003(\0132/.Diadoc.Api.Pro" +
-      "to.Events.DocumentPatchedContent\"y\n\rMess" +
-      "ageToSend\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageId\030\002 " +
-      "\002(\t\022F\n\022DocumentSignatures\030\003 \003(\0132*.Diadoc" +
-      ".Api.Proto.Events.DocumentSignature\"\204\001\n\033" +
-      "RevocationRequestAttachment\022\026\n\016ParentEnt" +
-      "ityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Dia",
-      "doc.Api.Proto.Events.SignedContent\022\016\n\006La" +
-      "bels\030\003 \003(\t\"\210\001\n\037XmlSignatureRejectionAtta" +
-      "chment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSigned" +
-      "Content\030\002 \002(\0132&.Diadoc.Api.Proto.Events." +
-      "SignedContent\022\016\n\006Labels\030\003 \003(\t\"a\n\031Roaming" +
-      "NotificationToPost\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007Eve" +
-      "ntId\030\002 \002(\t\022\017\n\007Success\030\003 \002(\010\022\023\n\013Descripti" +
-      "on\030\004 \001(\t\"\213\001\n\017CustomDataPatch\022\026\n\016ParentEn" +
-      "tityId\030\001 \002(\t\022D\n\tOperation\030\002 \002(\01621.Diadoc" +
-      ".Api.Proto.Events.CustomDataPatchOperati",
-      "on\022\013\n\003Key\030\003 \002(\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditD" +
-      "ocumentPacketCommand\022\022\n\nDocumentId\030\001 \002(\t" +
-      "\022:\n\024AddDocumentsToPacket\030\002 \003(\0132\034.Diadoc." +
-      "Api.Proto.DocumentId\022?\n\031RemoveDocumentsF" +
-      "romPacket\030\003 \003(\0132\034.Diadoc.Api.Proto.Docum" +
-      "entId\"d\n\026ResolutionRouteRemoval\022\026\n\016Paren" +
-      "tEntityId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comm" +
-      "ent\030\003 \001(\t:\000\022\016\n\006Labels\030\004 \003(\t\"\327\001\n\016Template" +
-      "ToPost\022\021\n\tFromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002" +
-      "(\t\022\030\n\020MessageFromBoxId\030\003 \002(\t\022\026\n\016MessageT",
-      "oBoxId\030\004 \002(\t\022\035\n\025MessageToDepartmentId\030\005 " +
-      "\001(\t\022P\n\023DocumentAttachments\030\006 \003(\01323.Diado" +
-      "c.Api.Proto.Events.TemplateDocumentAttac" +
-      "hment\"\320\002\n\032TemplateDocumentAttachment\022A\n\017" +
-      "UnsignedContent\030\001 \002(\0132(.Diadoc.Api.Proto" +
-      ".Events.UnsignedContent\022\017\n\007Comment\030\002 \001(\t" +
-      "\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n\010Function\030\004 \001(\t\022" +
-      "\017\n\007Version\030\005 \001(\t\0227\n\010Metadata\030\006 \003(\0132%.Dia" +
-      "doc.Api.Proto.Events.MetadataItem\022\022\n\nWor" +
-      "kflowId\030\007 \001(\005\022\030\n\020CustomDocumentId\030\010 \001(\t\022",
-      "\030\n\020EditingSettingId\030\t \001(\t\022%\n\026NeedRecipie" +
-      "ntSignature\030\n \001(\010:\005false\"7\n\017UnsignedCont" +
-      "ent\022\017\n\007Content\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(" +
-      "\t\"\223\001\n\034TemplateTransformationToPost\022\r\n\005Bo" +
-      "xId\030\001 \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027Documen" +
-      "tTransformations\030\003 \003(\0132/.Diadoc.Api.Prot" +
-      "o.Events.DocumentTransformation\"F\n\026Docum" +
-      "entTransformation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n" +
-      "\020CustomDocumentId\030\002 \001(\t*/\n\030CustomDataPat" +
-      "chOperation\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033Diad",
-      "ocMessage_PostApiProtos"
+      "roto.DocumentId\0222\n\006Signer\030\002 \001(\0132\".Diadoc" +
+      ".Api.Proto.Invoicing.Signer\022J\n\016ExtendedS" +
+      "igner\030\003 \003(\01322.Diadoc.Api.Proto.Invoicing",
+      ".Signers.ExtendedSigner\"u\n\026DocumentPatch" +
+      "edContent\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc.A" +
+      "pi.Proto.DocumentId\022\030\n\020PatchedContentId\030" +
+      "\002 \002(\t\022\017\n\007Content\030\003 \001(\014\"r\n\036PrepareDocumen" +
+      "tsToSignResponse\022P\n\027DocumentPatchedConte" +
+      "nts\030\001 \003(\0132/.Diadoc.Api.Proto.Events.Docu" +
+      "mentPatchedContent\"y\n\rMessageToSend\022\r\n\005B" +
+      "oxId\030\001 \002(\t\022\021\n\tMessageId\030\002 \002(\t\022F\n\022Documen" +
+      "tSignatures\030\003 \003(\0132*.Diadoc.Api.Proto.Eve" +
+      "nts.DocumentSignature\"\204\001\n\033RevocationRequ",
+      "estAttachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n" +
+      "\rSignedContent\030\002 \002(\0132&.Diadoc.Api.Proto." +
+      "Events.SignedContent\022\016\n\006Labels\030\003 \003(\t\"\210\001\n" +
+      "\037XmlSignatureRejectionAttachment\022\026\n\016Pare" +
+      "ntEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132" +
+      "&.Diadoc.Api.Proto.Events.SignedContent\022" +
+      "\016\n\006Labels\030\003 \003(\t\"a\n\031RoamingNotificationTo" +
+      "Post\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 \002(\t\022\017\n\007" +
+      "Success\030\003 \002(\010\022\023\n\013Description\030\004 \001(\t\"\213\001\n\017C" +
+      "ustomDataPatch\022\026\n\016ParentEntityId\030\001 \002(\t\022D",
+      "\n\tOperation\030\002 \002(\01621.Diadoc.Api.Proto.Eve" +
+      "nts.CustomDataPatchOperation\022\013\n\003Key\030\003 \002(" +
+      "\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditDocumentPacketC" +
+      "ommand\022\022\n\nDocumentId\030\001 \002(\t\022:\n\024AddDocumen" +
+      "tsToPacket\030\002 \003(\0132\034.Diadoc.Api.Proto.Docu" +
+      "mentId\022?\n\031RemoveDocumentsFromPacket\030\003 \003(" +
+      "\0132\034.Diadoc.Api.Proto.DocumentId\"d\n\026Resol" +
+      "utionRouteRemoval\022\026\n\016ParentEntityId\030\001 \002(" +
+      "\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comment\030\003 \001(\t:\000\022\016\n" +
+      "\006Labels\030\004 \003(\t\"\327\001\n\016TemplateToPost\022\021\n\tFrom",
+      "BoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002(\t\022\030\n\020MessageF" +
+      "romBoxId\030\003 \002(\t\022\026\n\016MessageToBoxId\030\004 \002(\t\022\035" +
+      "\n\025MessageToDepartmentId\030\005 \001(\t\022P\n\023Documen" +
+      "tAttachments\030\006 \003(\01323.Diadoc.Api.Proto.Ev" +
+      "ents.TemplateDocumentAttachment\"\320\002\n\032Temp" +
+      "lateDocumentAttachment\022A\n\017UnsignedConten" +
+      "t\030\001 \002(\0132(.Diadoc.Api.Proto.Events.Unsign" +
+      "edContent\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNamedI" +
+      "d\030\003 \002(\t\022\020\n\010Function\030\004 \001(\t\022\017\n\007Version\030\005 \001" +
+      "(\t\0227\n\010Metadata\030\006 \003(\0132%.Diadoc.Api.Proto.",
+      "Events.MetadataItem\022\022\n\nWorkflowId\030\007 \001(\005\022" +
+      "\030\n\020CustomDocumentId\030\010 \001(\t\022\030\n\020EditingSett" +
+      "ingId\030\t \001(\t\022%\n\026NeedRecipientSignature\030\n " +
+      "\001(\010:\005false\"7\n\017UnsignedContent\022\017\n\007Content" +
+      "\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034Template" +
+      "TransformationToPost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nT" +
+      "emplateId\030\002 \002(\t\022P\n\027DocumentTransformatio" +
+      "ns\030\003 \003(\0132/.Diadoc.Api.Proto.Events.Docum" +
+      "entTransformation\"F\n\026DocumentTransformat" +
+      "ion\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomDocumen",
+      "tId\030\002 \001(\t*/\n\030CustomDataPatchOperation\022\007\n" +
+      "\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessage_Post" +
+      "ApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -93683,7 +94057,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_MessagePatchToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_MessagePatchToPost_descriptor,
-        new java.lang.String[] { "BoxId", "MessageId", "Receipts", "CorrectionRequests", "Signatures", "RequestedSignatureRejections", "XmlTorg12BuyerTitles", "XmlAcceptanceCertificateBuyerTitles", "Resolutions", "ResolutionRequests", "ResolutionRequestCancellations", "ResolutionRequestDenials", "ResolutionRequestDenialCancellations", "RevocationRequests", "XmlSignatureRejections", "CustomDataPatches", "ResolutionRouteAssignments", "SignatureVerifications", "EditDocumentPacketCommands", "UniversalTransferDocumentBuyerTitles", "ResolutionRouteRemovals", "RecipientTitles", });
+        new java.lang.String[] { "BoxId", "MessageId", "Receipts", "CorrectionRequests", "Signatures", "RequestedSignatureRejections", "XmlTorg12BuyerTitles", "XmlAcceptanceCertificateBuyerTitles", "Resolutions", "ResolutionRequests", "ResolutionRequestCancellations", "ResolutionRequestDenials", "ResolutionRequestDenialCancellations", "RevocationRequests", "XmlSignatureRejections", "CustomDataPatches", "ResolutionRouteAssignments", "SignatureVerifications", "EditDocumentPacketCommands", "UniversalTransferDocumentBuyerTitles", "ResolutionRouteRemovals", "RecipientTitles", "EditingPatches", });
     internal_static_Diadoc_Api_Proto_Events_SignatureVerification_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_Diadoc_Api_Proto_Events_SignatureVerification_fieldAccessorTable = new
