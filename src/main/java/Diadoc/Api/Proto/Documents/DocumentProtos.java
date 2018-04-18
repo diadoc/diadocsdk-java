@@ -839,6 +839,106 @@ public final class DocumentProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.RecipientResponseStatus)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Documents.LetterType}
+   */
+  public enum LetterType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>Unknown = 0;</code>
+     */
+    Unknown(0, 0),
+    /**
+     * <code>Letter = 1;</code>
+     */
+    Letter(1, 1),
+    /**
+     * <code>Draft = 2;</code>
+     */
+    Draft(2, 2),
+    /**
+     * <code>Template = 3;</code>
+     */
+    Template(3, 3),
+    ;
+
+    /**
+     * <code>Unknown = 0;</code>
+     */
+    public static final int Unknown_VALUE = 0;
+    /**
+     * <code>Letter = 1;</code>
+     */
+    public static final int Letter_VALUE = 1;
+    /**
+     * <code>Draft = 2;</code>
+     */
+    public static final int Draft_VALUE = 2;
+    /**
+     * <code>Template = 3;</code>
+     */
+    public static final int Template_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static LetterType valueOf(int value) {
+      switch (value) {
+        case 0: return Unknown;
+        case 1: return Letter;
+        case 2: return Draft;
+        case 3: return Template;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LetterType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<LetterType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LetterType>() {
+            public LetterType findValueByNumber(int number) {
+              return LetterType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.DocumentProtos.getDescriptor().getEnumTypes().get(7);
+    }
+
+    private static final LetterType[] VALUES = values();
+
+    public static LetterType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private LetterType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.LetterType)
+  }
+
   public interface DocumentOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.Document)
       com.google.protobuf.MessageOrBuilder {
@@ -1740,6 +1840,19 @@ public final class DocumentProtos {
      * <code>required .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata AmendmentRequestMetadata = 71;</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadataOrBuilder getAmendmentRequestMetadataOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+     */
+    boolean hasOrigin();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+     */
+    Diadoc.Api.Proto.Documents.DocumentProtos.Origin getOrigin();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+     */
+    Diadoc.Api.Proto.Documents.DocumentProtos.OriginOrBuilder getOriginOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Document}
@@ -2439,6 +2552,19 @@ public final class DocumentProtos {
               bitField1_ |= 0x80000000;
               break;
             }
+            case 578: {
+              Diadoc.Api.Proto.Documents.DocumentProtos.Origin.Builder subBuilder = null;
+              if (((bitField2_ & 0x00000001) == 0x00000001)) {
+                subBuilder = origin_.toBuilder();
+              }
+              origin_ = input.readMessage(Diadoc.Api.Proto.Documents.DocumentProtos.Origin.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(origin_);
+                origin_ = subBuilder.buildPartial();
+              }
+              bitField2_ |= 0x00000001;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2495,6 +2621,7 @@ public final class DocumentProtos {
 
     private int bitField0_;
     private int bitField1_;
+    private int bitField2_;
     public static final int INDEXKEY_FIELD_NUMBER = 1;
     private java.lang.Object indexKey_;
     /**
@@ -4284,6 +4411,27 @@ public final class DocumentProtos {
       return amendmentRequestMetadata_;
     }
 
+    public static final int ORIGIN_FIELD_NUMBER = 72;
+    private Diadoc.Api.Proto.Documents.DocumentProtos.Origin origin_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+     */
+    public boolean hasOrigin() {
+      return ((bitField2_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+     */
+    public Diadoc.Api.Proto.Documents.DocumentProtos.Origin getOrigin() {
+      return origin_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+     */
+    public Diadoc.Api.Proto.Documents.DocumentProtos.OriginOrBuilder getOriginOrBuilder() {
+      return origin_;
+    }
+
     private void initFields() {
       indexKey_ = "";
       messageId_ = "";
@@ -4354,6 +4502,7 @@ public final class DocumentProtos {
       confirmationMetadata_ = Diadoc.Api.Proto.Documents.DocumentProtos.ConfirmationMetadata.getDefaultInstance();
       recipientResponseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
       amendmentRequestMetadata_ = Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.getDefaultInstance();
+      origin_ = Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4554,6 +4703,12 @@ public final class DocumentProtos {
       if (!getAmendmentRequestMetadata().isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
+      }
+      if (hasOrigin()) {
+        if (!getOrigin().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -4768,6 +4923,9 @@ public final class DocumentProtos {
       }
       if (((bitField1_ & 0x80000000) == 0x80000000)) {
         output.writeMessage(71, amendmentRequestMetadata_);
+      }
+      if (((bitField2_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(72, origin_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5054,6 +5212,10 @@ public final class DocumentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(71, amendmentRequestMetadata_);
       }
+      if (((bitField2_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(72, origin_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -5196,6 +5358,7 @@ public final class DocumentProtos {
           getRecipientReceiptMetadataFieldBuilder();
           getConfirmationMetadataFieldBuilder();
           getAmendmentRequestMetadataFieldBuilder();
+          getOriginFieldBuilder();
         }
       }
       private static Builder create() {
@@ -5474,6 +5637,12 @@ public final class DocumentProtos {
           amendmentRequestMetadataBuilder_.clear();
         }
         bitField2_ = (bitField2_ & ~0x00000010);
+        if (originBuilder_ == null) {
+          origin_ = Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance();
+        } else {
+          originBuilder_.clear();
+        }
+        bitField2_ = (bitField2_ & ~0x00000020);
         return this;
       }
 
@@ -5505,6 +5674,7 @@ public final class DocumentProtos {
         int from_bitField2_ = bitField2_;
         int to_bitField0_ = 0;
         int to_bitField1_ = 0;
+        int to_bitField2_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
@@ -5918,8 +6088,17 @@ public final class DocumentProtos {
         } else {
           result.amendmentRequestMetadata_ = amendmentRequestMetadataBuilder_.build();
         }
+        if (((from_bitField2_ & 0x00000020) == 0x00000020)) {
+          to_bitField2_ |= 0x00000001;
+        }
+        if (originBuilder_ == null) {
+          result.origin_ = origin_;
+        } else {
+          result.origin_ = originBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
+        result.bitField2_ = to_bitField2_;
         onBuilt();
         return result;
       }
@@ -6293,6 +6472,9 @@ public final class DocumentProtos {
         if (other.hasAmendmentRequestMetadata()) {
           mergeAmendmentRequestMetadata(other.getAmendmentRequestMetadata());
         }
+        if (other.hasOrigin()) {
+          mergeOrigin(other.getOrigin());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -6491,6 +6673,12 @@ public final class DocumentProtos {
         if (!getAmendmentRequestMetadata().isInitialized()) {
           
           return false;
+        }
+        if (hasOrigin()) {
+          if (!getOrigin().isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -12929,6 +13117,122 @@ public final class DocumentProtos {
         return amendmentRequestMetadataBuilder_;
       }
 
+      private Diadoc.Api.Proto.Documents.DocumentProtos.Origin origin_ = Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.DocumentProtos.Origin, Diadoc.Api.Proto.Documents.DocumentProtos.Origin.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.OriginOrBuilder> originBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+       */
+      public boolean hasOrigin() {
+        return ((bitField2_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.Origin getOrigin() {
+        if (originBuilder_ == null) {
+          return origin_;
+        } else {
+          return originBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+       */
+      public Builder setOrigin(Diadoc.Api.Proto.Documents.DocumentProtos.Origin value) {
+        if (originBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          origin_ = value;
+          onChanged();
+        } else {
+          originBuilder_.setMessage(value);
+        }
+        bitField2_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+       */
+      public Builder setOrigin(
+          Diadoc.Api.Proto.Documents.DocumentProtos.Origin.Builder builderForValue) {
+        if (originBuilder_ == null) {
+          origin_ = builderForValue.build();
+          onChanged();
+        } else {
+          originBuilder_.setMessage(builderForValue.build());
+        }
+        bitField2_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+       */
+      public Builder mergeOrigin(Diadoc.Api.Proto.Documents.DocumentProtos.Origin value) {
+        if (originBuilder_ == null) {
+          if (((bitField2_ & 0x00000020) == 0x00000020) &&
+              origin_ != Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance()) {
+            origin_ =
+              Diadoc.Api.Proto.Documents.DocumentProtos.Origin.newBuilder(origin_).mergeFrom(value).buildPartial();
+          } else {
+            origin_ = value;
+          }
+          onChanged();
+        } else {
+          originBuilder_.mergeFrom(value);
+        }
+        bitField2_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+       */
+      public Builder clearOrigin() {
+        if (originBuilder_ == null) {
+          origin_ = Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance();
+          onChanged();
+        } else {
+          originBuilder_.clear();
+        }
+        bitField2_ = (bitField2_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.Origin.Builder getOriginBuilder() {
+        bitField2_ |= 0x00000020;
+        onChanged();
+        return getOriginFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.OriginOrBuilder getOriginOrBuilder() {
+        if (originBuilder_ != null) {
+          return originBuilder_.getMessageOrBuilder();
+        } else {
+          return origin_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.DocumentProtos.Origin, Diadoc.Api.Proto.Documents.DocumentProtos.Origin.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.OriginOrBuilder> 
+          getOriginFieldBuilder() {
+        if (originBuilder_ == null) {
+          originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Documents.DocumentProtos.Origin, Diadoc.Api.Proto.Documents.DocumentProtos.Origin.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.OriginOrBuilder>(
+                  getOrigin(),
+                  getParentForChildren(),
+                  isClean());
+          origin_ = null;
+        }
+        return originBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Document)
     }
 
@@ -15480,6 +15784,585 @@ public final class DocumentProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.AmendmentRequestMetadata)
   }
 
+  public interface OriginOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.Origin)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+     */
+    boolean hasLetterType();
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+     */
+    Diadoc.Api.Proto.Documents.DocumentProtos.LetterType getLetterType();
+
+    /**
+     * <code>required string LetterId = 2;</code>
+     */
+    boolean hasLetterId();
+    /**
+     * <code>required string LetterId = 2;</code>
+     */
+    java.lang.String getLetterId();
+    /**
+     * <code>required string LetterId = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getLetterIdBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.Origin}
+   */
+  public static final class Origin extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.Origin)
+      OriginOrBuilder {
+    // Use Origin.newBuilder() to construct.
+    private Origin(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Origin(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Origin defaultInstance;
+    public static Origin getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Origin getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Origin(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Documents.DocumentProtos.LetterType value = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                letterType_ = value;
+              }
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              letterId_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_Origin_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_Origin_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.DocumentProtos.Origin.class, Diadoc.Api.Proto.Documents.DocumentProtos.Origin.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Origin> PARSER =
+        new com.google.protobuf.AbstractParser<Origin>() {
+      public Origin parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Origin(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Origin> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int LETTERTYPE_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.DocumentProtos.LetterType letterType_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+     */
+    public boolean hasLetterType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+     */
+    public Diadoc.Api.Proto.Documents.DocumentProtos.LetterType getLetterType() {
+      return letterType_;
+    }
+
+    public static final int LETTERID_FIELD_NUMBER = 2;
+    private java.lang.Object letterId_;
+    /**
+     * <code>required string LetterId = 2;</code>
+     */
+    public boolean hasLetterId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string LetterId = 2;</code>
+     */
+    public java.lang.String getLetterId() {
+      java.lang.Object ref = letterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          letterId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string LetterId = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLetterIdBytes() {
+      java.lang.Object ref = letterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        letterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      letterType_ = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.Unknown;
+      letterId_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasLetterType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasLetterId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, letterType_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getLetterIdBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, letterType_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getLetterIdBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.Origin parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Documents.DocumentProtos.Origin prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.Origin}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.Origin)
+        Diadoc.Api.Proto.Documents.DocumentProtos.OriginOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_Origin_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_Origin_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.DocumentProtos.Origin.class, Diadoc.Api.Proto.Documents.DocumentProtos.Origin.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Documents.DocumentProtos.Origin.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        letterType_ = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.Unknown;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        letterId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_Origin_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Documents.DocumentProtos.Origin getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Documents.DocumentProtos.Origin build() {
+        Diadoc.Api.Proto.Documents.DocumentProtos.Origin result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Documents.DocumentProtos.Origin buildPartial() {
+        Diadoc.Api.Proto.Documents.DocumentProtos.Origin result = new Diadoc.Api.Proto.Documents.DocumentProtos.Origin(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.letterType_ = letterType_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.letterId_ = letterId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Documents.DocumentProtos.Origin) {
+          return mergeFrom((Diadoc.Api.Proto.Documents.DocumentProtos.Origin)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Documents.DocumentProtos.Origin other) {
+        if (other == Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance()) return this;
+        if (other.hasLetterType()) {
+          setLetterType(other.getLetterType());
+        }
+        if (other.hasLetterId()) {
+          bitField0_ |= 0x00000002;
+          letterId_ = other.letterId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasLetterType()) {
+          
+          return false;
+        }
+        if (!hasLetterId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Documents.DocumentProtos.Origin parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.DocumentProtos.Origin) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Documents.DocumentProtos.LetterType letterType_ = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.Unknown;
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+       */
+      public boolean hasLetterType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.LetterType getLetterType() {
+        return letterType_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+       */
+      public Builder setLetterType(Diadoc.Api.Proto.Documents.DocumentProtos.LetterType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        letterType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+       */
+      public Builder clearLetterType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        letterType_ = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.Unknown;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object letterId_ = "";
+      /**
+       * <code>required string LetterId = 2;</code>
+       */
+      public boolean hasLetterId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string LetterId = 2;</code>
+       */
+      public java.lang.String getLetterId() {
+        java.lang.Object ref = letterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            letterId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string LetterId = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLetterIdBytes() {
+        java.lang.Object ref = letterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          letterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string LetterId = 2;</code>
+       */
+      public Builder setLetterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        letterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string LetterId = 2;</code>
+       */
+      public Builder clearLetterId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        letterId_ = getDefaultInstance().getLetterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string LetterId = 2;</code>
+       */
+      public Builder setLetterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        letterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Origin)
+    }
+
+    static {
+      defaultInstance = new Origin(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.Origin)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_Document_descriptor;
   private static
@@ -15505,6 +16388,11 @@ public final class DocumentProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_AmendmentRequestMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Documents_Origin_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Documents_Origin_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -15525,7 +16413,7 @@ public final class DocumentProtos {
       "UnilateralDocument.proto\032)Documents/Univ" +
       "ersalTransferDocument.proto\032\026ResolutionT",
       "arget.proto\032\032ForwardDocumentEvent.proto\032" +
-      "\"Events/DiadocMessage-PostApi.proto\"\207%\n\010" +
+      "\"Events/DiadocMessage-PostApi.proto\"\273%\n\010" +
       "Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessageId\030" +
       "\002 \002(\t\022\020\n\010EntityId\030\003 \002(\t\022\036\n\026CreationTimes" +
       "tampTicks\030\004 \002(\020\022\031\n\021CounteragentBoxId\030\005 \001" +
@@ -15644,58 +16532,64 @@ public final class DocumentProtos {
       "cipientResponseStatus:\036RecipientResponse" +
       "StatusUnknown\022V\n\030AmendmentRequestMetadat" +
       "a\030G \002(\01324.Diadoc.Api.Proto.Documents.Ame",
-      "ndmentRequestMetadata\"\310\001\n\020ResolutionStat" +
-      "us\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.Proto.Docu" +
-      "ments.ResolutionStatusType:\027UnknownResol" +
-      "utionStatus\0222\n\006Target\030\002 \001(\0132\".Diadoc.Api" +
-      ".Proto.ResolutionTarget\022\024\n\014AuthorUserId\030" +
-      "\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n\030RecipientRe" +
-      "ceiptMetadata\022d\n\rReceiptStatus\030\001 \002(\01620.D" +
-      "iadoc.Api.Proto.Documents.GeneralReceipt" +
-      "Status:\033GeneralReceiptStatusUnknown\022N\n\024C" +
-      "onfirmationMetadata\030\002 \001(\01320.Diadoc.Api.P",
-      "roto.Documents.ConfirmationMetadata\"\223\001\n\024" +
-      "ConfirmationMetadata\022d\n\rReceiptStatus\030\001 " +
-      "\002(\01620.Diadoc.Api.Proto.Documents.General" +
-      "ReceiptStatus:\033GeneralReceiptStatusUnkno" +
-      "wn\022\025\n\rDateTimeTicks\030\002 \002(\020\"\230\001\n\030AmendmentR" +
-      "equestMetadata\022\026\n\016AmendmentFlags\030\001 \002(\005\022d" +
-      "\n\rReceiptStatus\030\002 \002(\01620.Diadoc.Api.Proto" +
-      ".Documents.GeneralReceiptStatus:\033General" +
-      "ReceiptStatusUnknown*\254\001\n\024ResolutionStatu" +
-      "sType\022$\n\027UnknownResolutionStatus\020\377\377\377\377\377\377\377",
-      "\377\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013Disapprov" +
-      "ed\020\002\022\030\n\024ApprovementRequested\020\003\022\026\n\022Signat" +
-      "ureRequested\020\004\022\023\n\017SignatureDenied\020\005*\262\001\n\020" +
-      "RevocationStatus\022\033\n\027UnknownRevocationSta" +
-      "tus\020\000\022\030\n\024RevocationStatusNone\020\001\022\035\n\031Revoc" +
-      "ationIsRequestedByMe\020\002\022\030\n\024RequestsMyRevo" +
-      "cation\020\003\022\026\n\022RevocationAccepted\020\004\022\026\n\022Revo" +
-      "cationRejected\020\005*\256\001\n\031RoamingNotification" +
-      "Status\022$\n UnknownRoamingNotificationStat" +
-      "us\020\000\022!\n\035RoamingNotificationStatusNone\020\001\022",
-      "$\n RoamingNotificationStatusSuccess\020\002\022\"\n" +
-      "\036RoamingNotificationStatusError\020\003*\300\001\n\025Se" +
-      "nderSignatureStatus\022 \n\034UnknownSenderSign" +
-      "atureStatus\020\000\022\035\n\031WaitingForSenderSignatu" +
-      "re\020\001\022\034\n\030SenderSignatureUnchecked\020\002\022\"\n\036Se" +
-      "nderSignatureCheckedAndValid\020\003\022$\n Sender" +
-      "SignatureCheckedAndInvalid\020\004*\302\001\n\024ProxySi" +
-      "gnatureStatus\022\037\n\033UnknownProxySignatureSt" +
-      "atus\020\000\022\034\n\030ProxySignatureStatusNone\020\001\022\034\n\030" +
-      "WaitingForProxySignature\020\002\022\026\n\022WithProxyS",
-      "ignature\020\003\022\032\n\026ProxySignatureRejected\020\004\022\031" +
-      "\n\025InvalidProxySignature\020\005*\234\001\n\024GeneralRec" +
-      "eiptStatus\022\037\n\033GeneralReceiptStatusUnknow" +
-      "n\020\000\022%\n!GeneralReceiptStatusNotAcceptable" +
-      "\020\001\022\027\n\023HaveToCreateReceipt\020\002\022\025\n\021WaitingFo" +
-      "rReceipt\020\003\022\014\n\010Finished\020\004*\353\001\n\027RecipientRe" +
-      "sponseStatus\022\"\n\036RecipientResponseStatusU" +
-      "nknown\020\000\022(\n$RecipientResponseStatusNotAc" +
-      "ceptable\020\001\022 \n\034WaitingForRecipientSignatu" +
-      "re\020\002\022\032\n\026WithRecipientSignature\020\003\022%\n!Reci",
-      "pientSignatureRequestRejected\020\004\022\035\n\031Inval" +
-      "idRecipientSignature\020\005B\020B\016DocumentProtos"
+      "ndmentRequestMetadata\0222\n\006Origin\030H \001(\0132\"." +
+      "Diadoc.Api.Proto.Documents.Origin\"\310\001\n\020Re" +
+      "solutionStatus\022W\n\004Type\030\001 \001(\01620.Diadoc.Ap" +
+      "i.Proto.Documents.ResolutionStatusType:\027" +
+      "UnknownResolutionStatus\0222\n\006Target\030\002 \001(\0132" +
+      "\".Diadoc.Api.Proto.ResolutionTarget\022\024\n\014A" +
+      "uthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n" +
+      "\030RecipientReceiptMetadata\022d\n\rReceiptStat" +
+      "us\030\001 \002(\01620.Diadoc.Api.Proto.Documents.Ge" +
+      "neralReceiptStatus:\033GeneralReceiptStatus",
+      "Unknown\022N\n\024ConfirmationMetadata\030\002 \001(\01320." +
+      "Diadoc.Api.Proto.Documents.ConfirmationM" +
+      "etadata\"\223\001\n\024ConfirmationMetadata\022d\n\rRece" +
+      "iptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Docum" +
+      "ents.GeneralReceiptStatus:\033GeneralReceip" +
+      "tStatusUnknown\022\025\n\rDateTimeTicks\030\002 \002(\020\"\230\001" +
+      "\n\030AmendmentRequestMetadata\022\026\n\016AmendmentF" +
+      "lags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620.Diad" +
+      "oc.Api.Proto.Documents.GeneralReceiptSta" +
+      "tus:\033GeneralReceiptStatusUnknown\"V\n\006Orig",
+      "in\022:\n\nLetterType\030\001 \002(\0162&.Diadoc.Api.Prot" +
+      "o.Documents.LetterType\022\020\n\010LetterId\030\002 \002(\t" +
+      "*\254\001\n\024ResolutionStatusType\022$\n\027UnknownReso" +
+      "lutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010App" +
+      "roved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024ApprovementR" +
+      "equested\020\003\022\026\n\022SignatureRequested\020\004\022\023\n\017Si" +
+      "gnatureDenied\020\005*\262\001\n\020RevocationStatus\022\033\n\027" +
+      "UnknownRevocationStatus\020\000\022\030\n\024RevocationS" +
+      "tatusNone\020\001\022\035\n\031RevocationIsRequestedByMe" +
+      "\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revocati",
+      "onAccepted\020\004\022\026\n\022RevocationRejected\020\005*\256\001\n" +
+      "\031RoamingNotificationStatus\022$\n UnknownRoa" +
+      "mingNotificationStatus\020\000\022!\n\035RoamingNotif" +
+      "icationStatusNone\020\001\022$\n RoamingNotificati" +
+      "onStatusSuccess\020\002\022\"\n\036RoamingNotification" +
+      "StatusError\020\003*\300\001\n\025SenderSignatureStatus\022" +
+      " \n\034UnknownSenderSignatureStatus\020\000\022\035\n\031Wai" +
+      "tingForSenderSignature\020\001\022\034\n\030SenderSignat" +
+      "ureUnchecked\020\002\022\"\n\036SenderSignatureChecked" +
+      "AndValid\020\003\022$\n SenderSignatureCheckedAndI",
+      "nvalid\020\004*\302\001\n\024ProxySignatureStatus\022\037\n\033Unk" +
+      "nownProxySignatureStatus\020\000\022\034\n\030ProxySigna" +
+      "tureStatusNone\020\001\022\034\n\030WaitingForProxySigna" +
+      "ture\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026ProxyS" +
+      "ignatureRejected\020\004\022\031\n\025InvalidProxySignat" +
+      "ure\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033Genera" +
+      "lReceiptStatusUnknown\020\000\022%\n!GeneralReceip" +
+      "tStatusNotAcceptable\020\001\022\027\n\023HaveToCreateRe" +
+      "ceipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010Finish" +
+      "ed\020\004*\353\001\n\027RecipientResponseStatus\022\"\n\036Reci",
+      "pientResponseStatusUnknown\020\000\022(\n$Recipien" +
+      "tResponseStatusNotAcceptable\020\001\022 \n\034Waitin" +
+      "gForRecipientSignature\020\002\022\032\n\026WithRecipien" +
+      "tSignature\020\003\022%\n!RecipientSignatureReques" +
+      "tRejected\020\004\022\035\n\031InvalidRecipientSignature" +
+      "\020\005*>\n\nLetterType\022\013\n\007Unknown\020\000\022\n\n\006Letter\020" +
+      "\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016DocumentPr" +
+      "otos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15728,7 +16622,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", });
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_fieldAccessorTable = new
@@ -15753,6 +16647,12 @@ public final class DocumentProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_AmendmentRequestMetadata_descriptor,
         new java.lang.String[] { "AmendmentFlags", "ReceiptStatus", });
+    internal_static_Diadoc_Api_Proto_Documents_Origin_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_Diadoc_Api_Proto_Documents_Origin_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_Origin_descriptor,
+        new java.lang.String[] { "LetterType", "LetterId", });
     Diadoc.Api.Proto.ContentProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
     Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor();
