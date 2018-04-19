@@ -840,18 +840,18 @@ public final class DocumentProtos {
   }
 
   /**
-   * Protobuf enum {@code Diadoc.Api.Proto.Documents.LetterType}
+   * Protobuf enum {@code Diadoc.Api.Proto.Documents.MessageType}
    */
-  public enum LetterType
+  public enum MessageType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <code>Unknown = 0;</code>
      */
     Unknown(0, 0),
     /**
-     * <code>Letter = 1;</code>
+     * <code>Message = 1;</code>
      */
-    Letter(1, 1),
+    Message(1, 1),
     /**
      * <code>Draft = 2;</code>
      */
@@ -867,9 +867,9 @@ public final class DocumentProtos {
      */
     public static final int Unknown_VALUE = 0;
     /**
-     * <code>Letter = 1;</code>
+     * <code>Message = 1;</code>
      */
-    public static final int Letter_VALUE = 1;
+    public static final int Message_VALUE = 1;
     /**
      * <code>Draft = 2;</code>
      */
@@ -882,25 +882,25 @@ public final class DocumentProtos {
 
     public final int getNumber() { return value; }
 
-    public static LetterType valueOf(int value) {
+    public static MessageType valueOf(int value) {
       switch (value) {
         case 0: return Unknown;
-        case 1: return Letter;
+        case 1: return Message;
         case 2: return Draft;
         case 3: return Template;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<LetterType>
+    public static com.google.protobuf.Internal.EnumLiteMap<MessageType>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<LetterType>
+    private static com.google.protobuf.Internal.EnumLiteMap<MessageType>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<LetterType>() {
-            public LetterType findValueByNumber(int number) {
-              return LetterType.valueOf(number);
+          new com.google.protobuf.Internal.EnumLiteMap<MessageType>() {
+            public MessageType findValueByNumber(int number) {
+              return MessageType.valueOf(number);
             }
           };
 
@@ -917,9 +917,9 @@ public final class DocumentProtos {
       return Diadoc.Api.Proto.Documents.DocumentProtos.getDescriptor().getEnumTypes().get(7);
     }
 
-    private static final LetterType[] VALUES = values();
+    private static final MessageType[] VALUES = values();
 
-    public static LetterType valueOf(
+    public static MessageType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -931,12 +931,12 @@ public final class DocumentProtos {
     private final int index;
     private final int value;
 
-    private LetterType(int index, int value) {
+    private MessageType(int index, int value) {
       this.index = index;
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.LetterType)
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.MessageType)
   }
 
   public interface DocumentOrBuilder extends
@@ -15789,27 +15789,27 @@ public final class DocumentProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+     * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
      */
-    boolean hasLetterType();
+    boolean hasMessageType();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+     * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
      */
-    Diadoc.Api.Proto.Documents.DocumentProtos.LetterType getLetterType();
+    Diadoc.Api.Proto.Documents.DocumentProtos.MessageType getMessageType();
 
     /**
-     * <code>required string LetterId = 2;</code>
+     * <code>required string MessageId = 2;</code>
      */
-    boolean hasLetterId();
+    boolean hasMessageId();
     /**
-     * <code>required string LetterId = 2;</code>
+     * <code>required string MessageId = 2;</code>
      */
-    java.lang.String getLetterId();
+    java.lang.String getMessageId();
     /**
-     * <code>required string LetterId = 2;</code>
+     * <code>required string MessageId = 2;</code>
      */
     com.google.protobuf.ByteString
-        getLetterIdBytes();
+        getMessageIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Origin}
@@ -15865,19 +15865,19 @@ public final class DocumentProtos {
             }
             case 8: {
               int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Documents.DocumentProtos.LetterType value = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.valueOf(rawValue);
+              Diadoc.Api.Proto.Documents.DocumentProtos.MessageType value = Diadoc.Api.Proto.Documents.DocumentProtos.MessageType.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
               } else {
                 bitField0_ |= 0x00000001;
-                letterType_ = value;
+                messageType_ = value;
               }
               break;
             }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              letterId_ = bs;
+              messageId_ = bs;
               break;
             }
           }
@@ -15920,34 +15920,34 @@ public final class DocumentProtos {
     }
 
     private int bitField0_;
-    public static final int LETTERTYPE_FIELD_NUMBER = 1;
-    private Diadoc.Api.Proto.Documents.DocumentProtos.LetterType letterType_;
+    public static final int MESSAGETYPE_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.DocumentProtos.MessageType messageType_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+     * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
      */
-    public boolean hasLetterType() {
+    public boolean hasMessageType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+     * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
      */
-    public Diadoc.Api.Proto.Documents.DocumentProtos.LetterType getLetterType() {
-      return letterType_;
+    public Diadoc.Api.Proto.Documents.DocumentProtos.MessageType getMessageType() {
+      return messageType_;
     }
 
-    public static final int LETTERID_FIELD_NUMBER = 2;
-    private java.lang.Object letterId_;
+    public static final int MESSAGEID_FIELD_NUMBER = 2;
+    private java.lang.Object messageId_;
     /**
-     * <code>required string LetterId = 2;</code>
+     * <code>required string MessageId = 2;</code>
      */
-    public boolean hasLetterId() {
+    public boolean hasMessageId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required string LetterId = 2;</code>
+     * <code>required string MessageId = 2;</code>
      */
-    public java.lang.String getLetterId() {
-      java.lang.Object ref = letterId_;
+    public java.lang.String getMessageId() {
+      java.lang.Object ref = messageId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -15955,22 +15955,22 @@ public final class DocumentProtos {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          letterId_ = s;
+          messageId_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>required string LetterId = 2;</code>
+     * <code>required string MessageId = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getLetterIdBytes() {
-      java.lang.Object ref = letterId_;
+        getMessageIdBytes() {
+      java.lang.Object ref = messageId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        letterId_ = b;
+        messageId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -15978,8 +15978,8 @@ public final class DocumentProtos {
     }
 
     private void initFields() {
-      letterType_ = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.Unknown;
-      letterId_ = "";
+      messageType_ = Diadoc.Api.Proto.Documents.DocumentProtos.MessageType.Unknown;
+      messageId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -15987,11 +15987,11 @@ public final class DocumentProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasLetterType()) {
+      if (!hasMessageType()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasLetterId()) {
+      if (!hasMessageId()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -16003,10 +16003,10 @@ public final class DocumentProtos {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, letterType_.getNumber());
+        output.writeEnum(1, messageType_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getLetterIdBytes());
+        output.writeBytes(2, getMessageIdBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -16019,11 +16019,11 @@ public final class DocumentProtos {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, letterType_.getNumber());
+          .computeEnumSize(1, messageType_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getLetterIdBytes());
+          .computeBytesSize(2, getMessageIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -16142,9 +16142,9 @@ public final class DocumentProtos {
 
       public Builder clear() {
         super.clear();
-        letterType_ = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.Unknown;
+        messageType_ = Diadoc.Api.Proto.Documents.DocumentProtos.MessageType.Unknown;
         bitField0_ = (bitField0_ & ~0x00000001);
-        letterId_ = "";
+        messageId_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -16177,11 +16177,11 @@ public final class DocumentProtos {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.letterType_ = letterType_;
+        result.messageType_ = messageType_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.letterId_ = letterId_;
+        result.messageId_ = messageId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -16198,12 +16198,12 @@ public final class DocumentProtos {
 
       public Builder mergeFrom(Diadoc.Api.Proto.Documents.DocumentProtos.Origin other) {
         if (other == Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance()) return this;
-        if (other.hasLetterType()) {
-          setLetterType(other.getLetterType());
+        if (other.hasMessageType()) {
+          setMessageType(other.getMessageType());
         }
-        if (other.hasLetterId()) {
+        if (other.hasMessageId()) {
           bitField0_ |= 0x00000002;
-          letterId_ = other.letterId_;
+          messageId_ = other.messageId_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -16211,11 +16211,11 @@ public final class DocumentProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasLetterType()) {
+        if (!hasMessageType()) {
           
           return false;
         }
-        if (!hasLetterId()) {
+        if (!hasMessageId()) {
           
           return false;
         }
@@ -16241,59 +16241,59 @@ public final class DocumentProtos {
       }
       private int bitField0_;
 
-      private Diadoc.Api.Proto.Documents.DocumentProtos.LetterType letterType_ = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.Unknown;
+      private Diadoc.Api.Proto.Documents.DocumentProtos.MessageType messageType_ = Diadoc.Api.Proto.Documents.DocumentProtos.MessageType.Unknown;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+       * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
        */
-      public boolean hasLetterType() {
+      public boolean hasMessageType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+       * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
        */
-      public Diadoc.Api.Proto.Documents.DocumentProtos.LetterType getLetterType() {
-        return letterType_;
+      public Diadoc.Api.Proto.Documents.DocumentProtos.MessageType getMessageType() {
+        return messageType_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+       * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
        */
-      public Builder setLetterType(Diadoc.Api.Proto.Documents.DocumentProtos.LetterType value) {
+      public Builder setMessageType(Diadoc.Api.Proto.Documents.DocumentProtos.MessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
         bitField0_ |= 0x00000001;
-        letterType_ = value;
+        messageType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.LetterType LetterType = 1;</code>
+       * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
        */
-      public Builder clearLetterType() {
+      public Builder clearMessageType() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        letterType_ = Diadoc.Api.Proto.Documents.DocumentProtos.LetterType.Unknown;
+        messageType_ = Diadoc.Api.Proto.Documents.DocumentProtos.MessageType.Unknown;
         onChanged();
         return this;
       }
 
-      private java.lang.Object letterId_ = "";
+      private java.lang.Object messageId_ = "";
       /**
-       * <code>required string LetterId = 2;</code>
+       * <code>required string MessageId = 2;</code>
        */
-      public boolean hasLetterId() {
+      public boolean hasMessageId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required string LetterId = 2;</code>
+       * <code>required string MessageId = 2;</code>
        */
-      public java.lang.String getLetterId() {
-        java.lang.Object ref = letterId_;
+      public java.lang.String getMessageId() {
+        java.lang.Object ref = messageId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            letterId_ = s;
+            messageId_ = s;
           }
           return s;
         } else {
@@ -16301,53 +16301,53 @@ public final class DocumentProtos {
         }
       }
       /**
-       * <code>required string LetterId = 2;</code>
+       * <code>required string MessageId = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getLetterIdBytes() {
-        java.lang.Object ref = letterId_;
+          getMessageIdBytes() {
+        java.lang.Object ref = messageId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          letterId_ = b;
+          messageId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>required string LetterId = 2;</code>
+       * <code>required string MessageId = 2;</code>
        */
-      public Builder setLetterId(
+      public Builder setMessageId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        letterId_ = value;
+        messageId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string LetterId = 2;</code>
+       * <code>required string MessageId = 2;</code>
        */
-      public Builder clearLetterId() {
+      public Builder clearMessageId() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        letterId_ = getDefaultInstance().getLetterId();
+        messageId_ = getDefaultInstance().getMessageId();
         onChanged();
         return this;
       }
       /**
-       * <code>required string LetterId = 2;</code>
+       * <code>required string MessageId = 2;</code>
        */
-      public Builder setLetterIdBytes(
+      public Builder setMessageIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        letterId_ = value;
+        messageId_ = value;
         onChanged();
         return this;
       }
@@ -16551,45 +16551,45 @@ public final class DocumentProtos {
       "\n\030AmendmentRequestMetadata\022\026\n\016AmendmentF" +
       "lags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620.Diad" +
       "oc.Api.Proto.Documents.GeneralReceiptSta" +
-      "tus:\033GeneralReceiptStatusUnknown\"V\n\006Orig",
-      "in\022:\n\nLetterType\030\001 \002(\0162&.Diadoc.Api.Prot" +
-      "o.Documents.LetterType\022\020\n\010LetterId\030\002 \002(\t" +
-      "*\254\001\n\024ResolutionStatusType\022$\n\027UnknownReso" +
-      "lutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010App" +
-      "roved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024ApprovementR" +
-      "equested\020\003\022\026\n\022SignatureRequested\020\004\022\023\n\017Si" +
-      "gnatureDenied\020\005*\262\001\n\020RevocationStatus\022\033\n\027" +
-      "UnknownRevocationStatus\020\000\022\030\n\024RevocationS" +
-      "tatusNone\020\001\022\035\n\031RevocationIsRequestedByMe" +
-      "\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revocati",
-      "onAccepted\020\004\022\026\n\022RevocationRejected\020\005*\256\001\n" +
-      "\031RoamingNotificationStatus\022$\n UnknownRoa" +
-      "mingNotificationStatus\020\000\022!\n\035RoamingNotif" +
-      "icationStatusNone\020\001\022$\n RoamingNotificati" +
-      "onStatusSuccess\020\002\022\"\n\036RoamingNotification" +
-      "StatusError\020\003*\300\001\n\025SenderSignatureStatus\022" +
-      " \n\034UnknownSenderSignatureStatus\020\000\022\035\n\031Wai" +
-      "tingForSenderSignature\020\001\022\034\n\030SenderSignat" +
-      "ureUnchecked\020\002\022\"\n\036SenderSignatureChecked" +
-      "AndValid\020\003\022$\n SenderSignatureCheckedAndI",
-      "nvalid\020\004*\302\001\n\024ProxySignatureStatus\022\037\n\033Unk" +
-      "nownProxySignatureStatus\020\000\022\034\n\030ProxySigna" +
-      "tureStatusNone\020\001\022\034\n\030WaitingForProxySigna" +
-      "ture\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026ProxyS" +
-      "ignatureRejected\020\004\022\031\n\025InvalidProxySignat" +
-      "ure\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033Genera" +
-      "lReceiptStatusUnknown\020\000\022%\n!GeneralReceip" +
-      "tStatusNotAcceptable\020\001\022\027\n\023HaveToCreateRe" +
-      "ceipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010Finish" +
-      "ed\020\004*\353\001\n\027RecipientResponseStatus\022\"\n\036Reci",
-      "pientResponseStatusUnknown\020\000\022(\n$Recipien" +
-      "tResponseStatusNotAcceptable\020\001\022 \n\034Waitin" +
-      "gForRecipientSignature\020\002\022\032\n\026WithRecipien" +
-      "tSignature\020\003\022%\n!RecipientSignatureReques" +
-      "tRejected\020\004\022\035\n\031InvalidRecipientSignature" +
-      "\020\005*>\n\nLetterType\022\013\n\007Unknown\020\000\022\n\n\006Letter\020" +
-      "\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016DocumentPr" +
-      "otos"
+      "tus:\033GeneralReceiptStatusUnknown\"Y\n\006Orig",
+      "in\022<\n\013MessageType\030\001 \002(\0162\'.Diadoc.Api.Pro" +
+      "to.Documents.MessageType\022\021\n\tMessageId\030\002 " +
+      "\002(\t*\254\001\n\024ResolutionStatusType\022$\n\027UnknownR" +
+      "esolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010" +
+      "Approved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024Approveme" +
+      "ntRequested\020\003\022\026\n\022SignatureRequested\020\004\022\023\n" +
+      "\017SignatureDenied\020\005*\262\001\n\020RevocationStatus\022" +
+      "\033\n\027UnknownRevocationStatus\020\000\022\030\n\024Revocati" +
+      "onStatusNone\020\001\022\035\n\031RevocationIsRequestedB" +
+      "yMe\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revoc",
+      "ationAccepted\020\004\022\026\n\022RevocationRejected\020\005*" +
+      "\256\001\n\031RoamingNotificationStatus\022$\n Unknown" +
+      "RoamingNotificationStatus\020\000\022!\n\035RoamingNo" +
+      "tificationStatusNone\020\001\022$\n RoamingNotific" +
+      "ationStatusSuccess\020\002\022\"\n\036RoamingNotificat" +
+      "ionStatusError\020\003*\300\001\n\025SenderSignatureStat" +
+      "us\022 \n\034UnknownSenderSignatureStatus\020\000\022\035\n\031" +
+      "WaitingForSenderSignature\020\001\022\034\n\030SenderSig" +
+      "natureUnchecked\020\002\022\"\n\036SenderSignatureChec" +
+      "kedAndValid\020\003\022$\n SenderSignatureCheckedA",
+      "ndInvalid\020\004*\302\001\n\024ProxySignatureStatus\022\037\n\033" +
+      "UnknownProxySignatureStatus\020\000\022\034\n\030ProxySi" +
+      "gnatureStatusNone\020\001\022\034\n\030WaitingForProxySi" +
+      "gnature\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026Pro" +
+      "xySignatureRejected\020\004\022\031\n\025InvalidProxySig" +
+      "nature\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033Gen" +
+      "eralReceiptStatusUnknown\020\000\022%\n!GeneralRec" +
+      "eiptStatusNotAcceptable\020\001\022\027\n\023HaveToCreat" +
+      "eReceipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010Fin" +
+      "ished\020\004*\353\001\n\027RecipientResponseStatus\022\"\n\036R",
+      "ecipientResponseStatusUnknown\020\000\022(\n$Recip" +
+      "ientResponseStatusNotAcceptable\020\001\022 \n\034Wai" +
+      "tingForRecipientSignature\020\002\022\032\n\026WithRecip" +
+      "ientSignature\020\003\022%\n!RecipientSignatureReq" +
+      "uestRejected\020\004\022\035\n\031InvalidRecipientSignat" +
+      "ure\020\005*@\n\013MessageType\022\013\n\007Unknown\020\000\022\013\n\007Mes" +
+      "sage\020\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016Docum" +
+      "entProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16652,7 +16652,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Origin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Origin_descriptor,
-        new java.lang.String[] { "LetterType", "LetterId", });
+        new java.lang.String[] { "MessageType", "MessageId", });
     Diadoc.Api.Proto.ContentProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
     Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor();
