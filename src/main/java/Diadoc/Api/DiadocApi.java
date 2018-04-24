@@ -921,6 +921,34 @@ public class DiadocApi {
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
+    public GeneratedFile GenerateRecipientTitleXml(
+            String boxId,
+            String senderTitleMessageId,
+            String senderTitleAttachmentId,
+            byte[] userContractData
+    ) throws IOException, ParseException {
+        return GenerateRecipientTitleXml(boxId, senderTitleMessageId, senderTitleAttachmentId, userContractData, null);
+    }
+
+    public GeneratedFile GenerateRecipientTitleXml(
+            String boxId,
+            String senderTitleMessageId,
+            String senderTitleAttachmentId,
+            byte[] userContractData,
+            String documentVersion
+    ) throws IOException, ParseException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (senderTitleMessageId == null) throw new NullPointerException("senderTitleMessageId");
+        if (senderTitleAttachmentId == null) throw new NullPointerException("senderTitleAttachmentId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("senderTitleMessageId", senderTitleMessageId));
+        parameters.add(new BasicNameValuePair("senderTitleAttachmentId", senderTitleAttachmentId));
+        parameters.add(new BasicNameValuePair("documentVersion", documentVersion));
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateRecipientTitleXml", parameters, userContractData);
+        return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
     @Deprecated
     public ExtendedSignerProtos.ExtendedSignerDetails GetExtendedSignerDetails(String boxId, String thumbprint, boolean forBuyer, boolean forCorrection) throws IOException
     {
