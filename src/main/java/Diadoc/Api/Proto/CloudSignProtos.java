@@ -2542,24 +2542,24 @@ public final class CloudSignProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required int64 SignedReceiptsCount = 1;</code>
+     * <code>optional int64 SignedReceiptsCount = 1;</code>
      */
     boolean hasSignedReceiptsCount();
     /**
-     * <code>required int64 SignedReceiptsCount = 1;</code>
+     * <code>optional int64 SignedReceiptsCount = 1;</code>
      */
     long getSignedReceiptsCount();
 
     /**
-     * <code>required string NextBatchKey = 2;</code>
+     * <code>optional string NextBatchKey = 2;</code>
      */
     boolean hasNextBatchKey();
     /**
-     * <code>required string NextBatchKey = 2;</code>
+     * <code>optional string NextBatchKey = 2;</code>
      */
     java.lang.String getNextBatchKey();
     /**
-     * <code>required string NextBatchKey = 2;</code>
+     * <code>optional string NextBatchKey = 2;</code>
      */
     com.google.protobuf.ByteString
         getNextBatchKeyBytes();
@@ -2670,13 +2670,13 @@ public final class CloudSignProtos {
     public static final int SIGNEDRECEIPTSCOUNT_FIELD_NUMBER = 1;
     private long signedReceiptsCount_;
     /**
-     * <code>required int64 SignedReceiptsCount = 1;</code>
+     * <code>optional int64 SignedReceiptsCount = 1;</code>
      */
     public boolean hasSignedReceiptsCount() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int64 SignedReceiptsCount = 1;</code>
+     * <code>optional int64 SignedReceiptsCount = 1;</code>
      */
     public long getSignedReceiptsCount() {
       return signedReceiptsCount_;
@@ -2685,13 +2685,13 @@ public final class CloudSignProtos {
     public static final int NEXTBATCHKEY_FIELD_NUMBER = 2;
     private java.lang.Object nextBatchKey_;
     /**
-     * <code>required string NextBatchKey = 2;</code>
+     * <code>optional string NextBatchKey = 2;</code>
      */
     public boolean hasNextBatchKey() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required string NextBatchKey = 2;</code>
+     * <code>optional string NextBatchKey = 2;</code>
      */
     public java.lang.String getNextBatchKey() {
       java.lang.Object ref = nextBatchKey_;
@@ -2708,7 +2708,7 @@ public final class CloudSignProtos {
       }
     }
     /**
-     * <code>required string NextBatchKey = 2;</code>
+     * <code>optional string NextBatchKey = 2;</code>
      */
     public com.google.protobuf.ByteString
         getNextBatchKeyBytes() {
@@ -2734,14 +2734,6 @@ public final class CloudSignProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasSignedReceiptsCount()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasNextBatchKey()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -2958,14 +2950,6 @@ public final class CloudSignProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasSignedReceiptsCount()) {
-          
-          return false;
-        }
-        if (!hasNextBatchKey()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -2990,19 +2974,19 @@ public final class CloudSignProtos {
 
       private long signedReceiptsCount_ ;
       /**
-       * <code>required int64 SignedReceiptsCount = 1;</code>
+       * <code>optional int64 SignedReceiptsCount = 1;</code>
        */
       public boolean hasSignedReceiptsCount() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int64 SignedReceiptsCount = 1;</code>
+       * <code>optional int64 SignedReceiptsCount = 1;</code>
        */
       public long getSignedReceiptsCount() {
         return signedReceiptsCount_;
       }
       /**
-       * <code>required int64 SignedReceiptsCount = 1;</code>
+       * <code>optional int64 SignedReceiptsCount = 1;</code>
        */
       public Builder setSignedReceiptsCount(long value) {
         bitField0_ |= 0x00000001;
@@ -3011,7 +2995,7 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>required int64 SignedReceiptsCount = 1;</code>
+       * <code>optional int64 SignedReceiptsCount = 1;</code>
        */
       public Builder clearSignedReceiptsCount() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -3022,13 +3006,13 @@ public final class CloudSignProtos {
 
       private java.lang.Object nextBatchKey_ = "";
       /**
-       * <code>required string NextBatchKey = 2;</code>
+       * <code>optional string NextBatchKey = 2;</code>
        */
       public boolean hasNextBatchKey() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required string NextBatchKey = 2;</code>
+       * <code>optional string NextBatchKey = 2;</code>
        */
       public java.lang.String getNextBatchKey() {
         java.lang.Object ref = nextBatchKey_;
@@ -3045,7 +3029,7 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>required string NextBatchKey = 2;</code>
+       * <code>optional string NextBatchKey = 2;</code>
        */
       public com.google.protobuf.ByteString
           getNextBatchKeyBytes() {
@@ -3061,7 +3045,7 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>required string NextBatchKey = 2;</code>
+       * <code>optional string NextBatchKey = 2;</code>
        */
       public Builder setNextBatchKey(
           java.lang.String value) {
@@ -3074,7 +3058,7 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>required string NextBatchKey = 2;</code>
+       * <code>optional string NextBatchKey = 2;</code>
        */
       public Builder clearNextBatchKey() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -3083,7 +3067,7 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>required string NextBatchKey = 2;</code>
+       * <code>optional string NextBatchKey = 2;</code>
        */
       public Builder setNextBatchKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -3150,7 +3134,7 @@ public final class CloudSignProtos {
       "\026CloudSignConfirmResult\0220\n\nSignatures\030\001 " +
       "\003(\0132\034.Diadoc.Api.Proto.Content_v2\"K\n\026Aut" +
       "osignReceiptsResult\022\033\n\023SignedReceiptsCou" +
-      "nt\030\001 \002(\003\022\024\n\014NextBatchKey\030\002 \002(\tB\021B\017CloudS",
+      "nt\030\001 \001(\003\022\024\n\014NextBatchKey\030\002 \001(\tB\021B\017CloudS",
       "ignProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
