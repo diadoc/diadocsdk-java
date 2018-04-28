@@ -20,6 +20,6 @@ message CloudSignConfirmResult {
 }
 
 message AutosignReceiptsResult {
-	required int64 SignedReceiptsCount = 1;
-	required string NextBatchKey = 2;
+	optional int64 SignedReceiptsCount = 1;
+	optional string NextBatchKey = 2;
 }
