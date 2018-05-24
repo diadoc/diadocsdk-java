@@ -460,6 +460,19 @@ public final class DocflowProtos {
      * </pre>
      */
     Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflowOrBuilder getOutboundUniversalTransferDocumentDocflowOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+     */
+    boolean hasRoamingNotification();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification getRoamingNotification();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotificationOrBuilder getRoamingNotificationOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.Docflow}
@@ -715,6 +728,19 @@ public final class DocflowProtos {
                 outboundUniversalTransferDocumentDocflow_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00020000;
+              break;
+            }
+            case 162: {
+              Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.Builder subBuilder = null;
+              if (((bitField0_ & 0x00040000) == 0x00040000)) {
+                subBuilder = roamingNotification_.toBuilder();
+              }
+              roamingNotification_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(roamingNotification_);
+                roamingNotification_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00040000;
               break;
             }
           }
@@ -1281,6 +1307,27 @@ public final class DocflowProtos {
       return outboundUniversalTransferDocumentDocflow_;
     }
 
+    public static final int ROAMINGNOTIFICATION_FIELD_NUMBER = 20;
+    private Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification roamingNotification_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+     */
+    public boolean hasRoamingNotification() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification getRoamingNotification() {
+      return roamingNotification_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotificationOrBuilder getRoamingNotificationOrBuilder() {
+      return roamingNotification_;
+    }
+
     private void initFields() {
       isFinished_ = false;
       documentAttachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.SignedAttachment.getDefaultInstance();
@@ -1301,6 +1348,7 @@ public final class DocflowProtos {
       customData_ = java.util.Collections.emptyList();
       inboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.InboundUniversalTransferDocumentDocflow.getDefaultInstance();
       outboundUniversalTransferDocumentDocflow_ = Diadoc.Api.Proto.Docflow.UniversalTransferDocumentDocflowProtos.OutboundUniversalTransferDocumentDocflow.getDefaultInstance();
+      roamingNotification_ = Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1380,6 +1428,12 @@ public final class DocflowProtos {
           return false;
         }
       }
+      if (hasRoamingNotification()) {
+        if (!getRoamingNotification().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1443,6 +1497,9 @@ public final class DocflowProtos {
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
         output.writeMessage(19, outboundUniversalTransferDocumentDocflow_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeMessage(20, roamingNotification_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1528,6 +1585,10 @@ public final class DocflowProtos {
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, outboundUniversalTransferDocumentDocflow_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, roamingNotification_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1652,6 +1713,7 @@ public final class DocflowProtos {
           getCustomDataFieldBuilder();
           getInboundUniversalTransferDocumentDocflowFieldBuilder();
           getOutboundUniversalTransferDocumentDocflowFieldBuilder();
+          getRoamingNotificationFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1754,6 +1816,12 @@ public final class DocflowProtos {
           outboundUniversalTransferDocumentDocflowBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00040000);
+        if (roamingNotificationBuilder_ == null) {
+          roamingNotification_ = Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.getDefaultInstance();
+        } else {
+          roamingNotificationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00080000);
         return this;
       }
 
@@ -1915,6 +1983,14 @@ public final class DocflowProtos {
         } else {
           result.outboundUniversalTransferDocumentDocflow_ = outboundUniversalTransferDocumentDocflowBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        if (roamingNotificationBuilder_ == null) {
+          result.roamingNotification_ = roamingNotification_;
+        } else {
+          result.roamingNotification_ = roamingNotificationBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2015,6 +2091,9 @@ public final class DocflowProtos {
         if (other.hasOutboundUniversalTransferDocumentDocflow()) {
           mergeOutboundUniversalTransferDocumentDocflow(other.getOutboundUniversalTransferDocumentDocflow());
         }
+        if (other.hasRoamingNotification()) {
+          mergeRoamingNotification(other.getRoamingNotification());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -2088,6 +2167,12 @@ public final class DocflowProtos {
         }
         if (hasOutboundUniversalTransferDocumentDocflow()) {
           if (!getOutboundUniversalTransferDocumentDocflow().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasRoamingNotification()) {
+          if (!getRoamingNotification().isInitialized()) {
             
             return false;
           }
@@ -4362,6 +4447,122 @@ public final class DocflowProtos {
         return outboundUniversalTransferDocumentDocflowBuilder_;
       }
 
+      private Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification roamingNotification_ = Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification, Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.Builder, Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotificationOrBuilder> roamingNotificationBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+       */
+      public boolean hasRoamingNotification() {
+        return ((bitField0_ & 0x00080000) == 0x00080000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification getRoamingNotification() {
+        if (roamingNotificationBuilder_ == null) {
+          return roamingNotification_;
+        } else {
+          return roamingNotificationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+       */
+      public Builder setRoamingNotification(Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification value) {
+        if (roamingNotificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          roamingNotification_ = value;
+          onChanged();
+        } else {
+          roamingNotificationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00080000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+       */
+      public Builder setRoamingNotification(
+          Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.Builder builderForValue) {
+        if (roamingNotificationBuilder_ == null) {
+          roamingNotification_ = builderForValue.build();
+          onChanged();
+        } else {
+          roamingNotificationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00080000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+       */
+      public Builder mergeRoamingNotification(Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification value) {
+        if (roamingNotificationBuilder_ == null) {
+          if (((bitField0_ & 0x00080000) == 0x00080000) &&
+              roamingNotification_ != Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.getDefaultInstance()) {
+            roamingNotification_ =
+              Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.newBuilder(roamingNotification_).mergeFrom(value).buildPartial();
+          } else {
+            roamingNotification_ = value;
+          }
+          onChanged();
+        } else {
+          roamingNotificationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00080000;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+       */
+      public Builder clearRoamingNotification() {
+        if (roamingNotificationBuilder_ == null) {
+          roamingNotification_ = Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.getDefaultInstance();
+          onChanged();
+        } else {
+          roamingNotificationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00080000);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.Builder getRoamingNotificationBuilder() {
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return getRoamingNotificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotificationOrBuilder getRoamingNotificationOrBuilder() {
+        if (roamingNotificationBuilder_ != null) {
+          return roamingNotificationBuilder_.getMessageOrBuilder();
+        } else {
+          return roamingNotification_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification, Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.Builder, Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotificationOrBuilder> 
+          getRoamingNotificationFieldBuilder() {
+        if (roamingNotificationBuilder_ == null) {
+          roamingNotificationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification, Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.Builder, Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotificationOrBuilder>(
+                  getRoamingNotification(),
+                  getParentForChildren(),
+                  isClean());
+          roamingNotification_ = null;
+        }
+        return roamingNotificationBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.Docflow)
     }
 
@@ -5790,6 +5991,616 @@ public final class DocflowProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.DocflowStatusModel)
   }
 
+  public interface RoamingNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.RoamingNotification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+     */
+    boolean hasNotification();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getNotification();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getNotificationOrBuilder();
+
+    /**
+     * <code>required bool IsSuccess = 2;</code>
+     */
+    boolean hasIsSuccess();
+    /**
+     * <code>required bool IsSuccess = 2;</code>
+     */
+    boolean getIsSuccess();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.RoamingNotification}
+   */
+  public static final class RoamingNotification extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.RoamingNotification)
+      RoamingNotificationOrBuilder {
+    // Use RoamingNotification.newBuilder() to construct.
+    private RoamingNotification(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private RoamingNotification(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final RoamingNotification defaultInstance;
+    public static RoamingNotification getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public RoamingNotification getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RoamingNotification(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = notification_.toBuilder();
+              }
+              notification_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(notification_);
+                notification_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              isSuccess_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.DocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.DocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.class, Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<RoamingNotification> PARSER =
+        new com.google.protobuf.AbstractParser<RoamingNotification>() {
+      public RoamingNotification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RoamingNotification(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RoamingNotification> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int NOTIFICATION_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity notification_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+     */
+    public boolean hasNotification() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getNotification() {
+      return notification_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getNotificationOrBuilder() {
+      return notification_;
+    }
+
+    public static final int ISSUCCESS_FIELD_NUMBER = 2;
+    private boolean isSuccess_;
+    /**
+     * <code>required bool IsSuccess = 2;</code>
+     */
+    public boolean hasIsSuccess() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required bool IsSuccess = 2;</code>
+     */
+    public boolean getIsSuccess() {
+      return isSuccess_;
+    }
+
+    private void initFields() {
+      notification_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
+      isSuccess_ = false;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasNotification()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasIsSuccess()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getNotification().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, notification_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBool(2, isSuccess_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, notification_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, isSuccess_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.RoamingNotification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.RoamingNotification)
+        Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.DocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.DocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.class, Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getNotificationFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (notificationBuilder_ == null) {
+          notification_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
+        } else {
+          notificationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isSuccess_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowProtos.internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification build() {
+        Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification result = new Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (notificationBuilder_ == null) {
+          result.notification_ = notification_;
+        } else {
+          result.notification_ = notificationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.isSuccess_ = isSuccess_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification.getDefaultInstance()) return this;
+        if (other.hasNotification()) {
+          mergeNotification(other.getNotification());
+        }
+        if (other.hasIsSuccess()) {
+          setIsSuccess(other.getIsSuccess());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasNotification()) {
+          
+          return false;
+        }
+        if (!hasIsSuccess()) {
+          
+          return false;
+        }
+        if (!getNotification().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.DocflowProtos.RoamingNotification) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity notification_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> notificationBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+       */
+      public boolean hasNotification() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getNotification() {
+        if (notificationBuilder_ == null) {
+          return notification_;
+        } else {
+          return notificationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+       */
+      public Builder setNotification(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
+        if (notificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          notification_ = value;
+          onChanged();
+        } else {
+          notificationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+       */
+      public Builder setNotification(
+          Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder builderForValue) {
+        if (notificationBuilder_ == null) {
+          notification_ = builderForValue.build();
+          onChanged();
+        } else {
+          notificationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+       */
+      public Builder mergeNotification(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
+        if (notificationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              notification_ != Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance()) {
+            notification_ =
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.newBuilder(notification_).mergeFrom(value).buildPartial();
+          } else {
+            notification_ = value;
+          }
+          onChanged();
+        } else {
+          notificationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+       */
+      public Builder clearNotification() {
+        if (notificationBuilder_ == null) {
+          notification_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
+          onChanged();
+        } else {
+          notificationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder getNotificationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getNotificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getNotificationOrBuilder() {
+        if (notificationBuilder_ != null) {
+          return notificationBuilder_.getMessageOrBuilder();
+        } else {
+          return notification_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Notification = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> 
+          getNotificationFieldBuilder() {
+        if (notificationBuilder_ == null) {
+          notificationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder>(
+                  getNotification(),
+                  getParentForChildren(),
+                  isClean());
+          notification_ = null;
+        }
+        return notificationBuilder_;
+      }
+
+      private boolean isSuccess_ ;
+      /**
+       * <code>required bool IsSuccess = 2;</code>
+       */
+      public boolean hasIsSuccess() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required bool IsSuccess = 2;</code>
+       */
+      public boolean getIsSuccess() {
+        return isSuccess_;
+      }
+      /**
+       * <code>required bool IsSuccess = 2;</code>
+       */
+      public Builder setIsSuccess(boolean value) {
+        bitField0_ |= 0x00000002;
+        isSuccess_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool IsSuccess = 2;</code>
+       */
+      public Builder clearIsSuccess() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        isSuccess_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.RoamingNotification)
+    }
+
+    static {
+      defaultInstance = new RoamingNotification(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.RoamingNotification)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_Docflow_descriptor;
   private static
@@ -5805,6 +6616,11 @@ public final class DocflowProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_DocflowStatusModel_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5822,7 +6638,7 @@ public final class DocflowProtos {
       "low.proto\032!Docflow/XmlBilateralDocflow.p" +
       "roto\032\037Docflow/RevocationDocflow.proto\032\037D" +
       "ocflow/ResolutionDocflow.proto\032.Docflow/" +
-      "UniversalTransferDocumentDocflow.proto\"\262" +
+      "UniversalTransferDocumentDocflow.proto\"\376" +
       "\t\n\007Docflow\022\022\n\nIsFinished\030\001 \001(\010\022F\n\022Docume",
       "ntAttachment\030\002 \001(\0132*.Diadoc.Api.Proto.Do" +
       "cflow.SignedAttachment\022\024\n\014DepartmentId\030\003" +
@@ -5853,18 +6669,22 @@ public final class DocflowProtos {
       "cflow\022t\n(OutboundUniversalTransferDocume" +
       "ntDocflow\030\023 \001(\0132B.Diadoc.Api.Proto.Docfl" +
       "ow.OutboundUniversalTransferDocumentDocf" +
-      "low\"\233\001\n\rDocflowStatus\022C\n\rPrimaryStatus\030\001",
-      " \001(\0132,.Diadoc.Api.Proto.Docflow.DocflowS" +
-      "tatusModel\022E\n\017SecondaryStatus\030\002 \001(\0132,.Di" +
-      "adoc.Api.Proto.Docflow.DocflowStatusMode" +
-      "l\"\235\001\n\022DocflowStatusModel\022_\n\010Severity\030\001 \001" +
-      "(\0162/.Diadoc.Api.Proto.Docflow.DocflowSta" +
-      "tusSeverity:\034UnknownDocflowStatusSeverit" +
-      "y\022\022\n\nStatusText\030\002 \001(\t\022\022\n\nStatusHint\030\003 \001(" +
-      "\t*h\n\025DocflowStatusSeverity\022 \n\034UnknownDoc" +
-      "flowStatusSeverity\020\000\022\010\n\004Info\020\001\022\013\n\007Succes" +
-      "s\020\002\022\013\n\007Warning\020\003\022\t\n\005Error\020\004B\017B\rDocflowPr",
-      "otos"
+      "low\022J\n\023RoamingNotification\030\024 \001(\0132-.Diado",
+      "c.Api.Proto.Docflow.RoamingNotification\"" +
+      "\233\001\n\rDocflowStatus\022C\n\rPrimaryStatus\030\001 \001(\013" +
+      "2,.Diadoc.Api.Proto.Docflow.DocflowStatu" +
+      "sModel\022E\n\017SecondaryStatus\030\002 \001(\0132,.Diadoc" +
+      ".Api.Proto.Docflow.DocflowStatusModel\"\235\001" +
+      "\n\022DocflowStatusModel\022_\n\010Severity\030\001 \001(\0162/" +
+      ".Diadoc.Api.Proto.Docflow.DocflowStatusS" +
+      "everity:\034UnknownDocflowStatusSeverity\022\022\n" +
+      "\nStatusText\030\002 \001(\t\022\022\n\nStatusHint\030\003 \001(\t\"`\n" +
+      "\023RoamingNotification\0226\n\014Notification\030\001 \002",
+      "(\0132 .Diadoc.Api.Proto.Docflow.Entity\022\021\n\t" +
+      "IsSuccess\030\002 \002(\010*h\n\025DocflowStatusSeverity" +
+      "\022 \n\034UnknownDocflowStatusSeverity\020\000\022\010\n\004In" +
+      "fo\020\001\022\013\n\007Success\020\002\022\013\n\007Warning\020\003\022\t\n\005Error\020" +
+      "\004B\017B\rDocflowProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5893,7 +6713,7 @@ public final class DocflowProtos {
     internal_static_Diadoc_Api_Proto_Docflow_Docflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_Docflow_descriptor,
-        new java.lang.String[] { "IsFinished", "DocumentAttachment", "DepartmentId", "DocumentIsDeleted", "DocflowStatus", "SendTimestamp", "DeliveryTimestamp", "InboundInvoiceDocflow", "OutboundInvoiceDocflow", "XmlBilateralDocflow", "BilateralDocflow", "UnilateralDocflow", "RevocationDocflow", "ResolutionDocflow", "CanDocumentBeRevokedUnilaterallyBySender", "PacketId", "CustomData", "InboundUniversalTransferDocumentDocflow", "OutboundUniversalTransferDocumentDocflow", });
+        new java.lang.String[] { "IsFinished", "DocumentAttachment", "DepartmentId", "DocumentIsDeleted", "DocflowStatus", "SendTimestamp", "DeliveryTimestamp", "InboundInvoiceDocflow", "OutboundInvoiceDocflow", "XmlBilateralDocflow", "BilateralDocflow", "UnilateralDocflow", "RevocationDocflow", "ResolutionDocflow", "CanDocumentBeRevokedUnilaterallyBySender", "PacketId", "CustomData", "InboundUniversalTransferDocumentDocflow", "OutboundUniversalTransferDocumentDocflow", "RoamingNotification", });
     internal_static_Diadoc_Api_Proto_Docflow_DocflowStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_DocflowStatus_fieldAccessorTable = new
@@ -5906,6 +6726,12 @@ public final class DocflowProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocflowStatusModel_descriptor,
         new java.lang.String[] { "Severity", "StatusText", "StatusHint", });
+    internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_RoamingNotification_descriptor,
+        new java.lang.String[] { "Notification", "IsSuccess", });
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor();
