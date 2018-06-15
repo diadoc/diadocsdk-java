@@ -220,6 +220,15 @@ public final class OrganizationUserPermissionsProtos {
      */
     com.google.protobuf.ByteString
         getJobTitleBytes();
+
+    /**
+     * <code>required bool CanCreateDocuments = 11;</code>
+     */
+    boolean hasCanCreateDocuments();
+    /**
+     * <code>required bool CanCreateDocuments = 11;</code>
+     */
+    boolean getCanCreateDocuments();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.OrganizationUserPermissions}
@@ -323,6 +332,11 @@ public final class OrganizationUserPermissionsProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000040;
               jobTitle_ = bs;
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000080;
+              canCreateDocuments_ = input.readBool();
               break;
             }
           }
@@ -556,6 +570,21 @@ public final class OrganizationUserPermissionsProtos {
       }
     }
 
+    public static final int CANCREATEDOCUMENTS_FIELD_NUMBER = 11;
+    private boolean canCreateDocuments_;
+    /**
+     * <code>required bool CanCreateDocuments = 11;</code>
+     */
+    public boolean hasCanCreateDocuments() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>required bool CanCreateDocuments = 11;</code>
+     */
+    public boolean getCanCreateDocuments() {
+      return canCreateDocuments_;
+    }
+
     private void initFields() {
       userDepartmentId_ = "";
       isAdministrator_ = false;
@@ -565,6 +594,7 @@ public final class OrganizationUserPermissionsProtos {
       canRequestResolutions_ = false;
       selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       jobTitle_ = "";
+      canCreateDocuments_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -589,6 +619,10 @@ public final class OrganizationUserPermissionsProtos {
         return false;
       }
       if (!hasCanRequestResolutions()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCanCreateDocuments()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -622,6 +656,9 @@ public final class OrganizationUserPermissionsProtos {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeBytes(10, getJobTitleBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBool(11, canCreateDocuments_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -668,6 +705,10 @@ public final class OrganizationUserPermissionsProtos {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(10, getJobTitleBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, canCreateDocuments_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -802,6 +843,8 @@ public final class OrganizationUserPermissionsProtos {
         bitField0_ = (bitField0_ & ~0x00000040);
         jobTitle_ = "";
         bitField0_ = (bitField0_ & ~0x00000080);
+        canCreateDocuments_ = false;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -863,6 +906,10 @@ public final class OrganizationUserPermissionsProtos {
           to_bitField0_ |= 0x00000040;
         }
         result.jobTitle_ = jobTitle_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.canCreateDocuments_ = canCreateDocuments_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -914,6 +961,9 @@ public final class OrganizationUserPermissionsProtos {
           jobTitle_ = other.jobTitle_;
           onChanged();
         }
+        if (other.hasCanCreateDocuments()) {
+          setCanCreateDocuments(other.getCanCreateDocuments());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -936,6 +986,10 @@ public final class OrganizationUserPermissionsProtos {
           return false;
         }
         if (!hasCanRequestResolutions()) {
+          
+          return false;
+        }
+        if (!hasCanCreateDocuments()) {
           
           return false;
         }
@@ -1369,6 +1423,38 @@ public final class OrganizationUserPermissionsProtos {
         return this;
       }
 
+      private boolean canCreateDocuments_ ;
+      /**
+       * <code>required bool CanCreateDocuments = 11;</code>
+       */
+      public boolean hasCanCreateDocuments() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>required bool CanCreateDocuments = 11;</code>
+       */
+      public boolean getCanCreateDocuments() {
+        return canCreateDocuments_;
+      }
+      /**
+       * <code>required bool CanCreateDocuments = 11;</code>
+       */
+      public Builder setCanCreateDocuments(boolean value) {
+        bitField0_ |= 0x00000100;
+        canCreateDocuments_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool CanCreateDocuments = 11;</code>
+       */
+      public Builder clearCanCreateDocuments() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        canCreateDocuments_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationUserPermissions)
     }
 
@@ -1395,7 +1481,7 @@ public final class OrganizationUserPermissionsProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n!OrganizationUserPermissions.proto\022\020Dia" +
-      "doc.Api.Proto\"\265\002\n\033OrganizationUserPermis" +
+      "doc.Api.Proto\"\321\002\n\033OrganizationUserPermis" +
       "sions\022\030\n\020UserDepartmentId\030\001 \002(\t\022\027\n\017IsAdm" +
       "inistrator\030\002 \002(\010\022^\n\023DocumentAccessLevel\030" +
       "\003 \001(\0162%.Diadoc.Api.Proto.DocumentAccessL" +
@@ -1403,12 +1489,12 @@ public final class OrganizationUserPermissionsProtos {
       "ignDocuments\030\004 \002(\010\022\031\n\021CanAddResolutions\030" +
       "\007 \002(\010\022\035\n\025CanRequestResolutions\030\010 \002(\010\022\035\n\025" +
       "SelectedDepartmentIds\030\t \003(\t\022\020\n\010JobTitle\030" +
-      "\n \001(\t*\236\001\n\023DocumentAccessLevel\022\'\n\032Unknown",
-      "DocumentAccessLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016Depart" +
-      "mentOnly\020\000\022\037\n\033DepartmentAndSubdepartment" +
-      "s\020\001\022\020\n\014AllDocuments\020\002\022\027\n\023SelectedDepartm" +
-      "ents\020\003B#B!OrganizationUserPermissionsPro" +
-      "tos"
+      "\n \001(\t\022\032\n\022CanCreateDocuments\030\013 \002(\010*\236\001\n\023Do",
+      "cumentAccessLevel\022\'\n\032UnknownDocumentAcce" +
+      "ssLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016DepartmentOnly\020\000\022\037" +
+      "\n\033DepartmentAndSubdepartments\020\001\022\020\n\014AllDo" +
+      "cuments\020\002\022\027\n\023SelectedDepartments\020\003B#B!Or" +
+      "ganizationUserPermissionsProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1427,7 +1513,7 @@ public final class OrganizationUserPermissionsProtos {
     internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor,
-        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", });
+        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

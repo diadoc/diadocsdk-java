@@ -1853,6 +1853,20 @@ public final class DocumentProtos {
      * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 72;</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.OriginOrBuilder getOriginOrBuilder();
+
+    /**
+     * <code>optional string EditingSettingId = 73 [default = ""];</code>
+     */
+    boolean hasEditingSettingId();
+    /**
+     * <code>optional string EditingSettingId = 73 [default = ""];</code>
+     */
+    java.lang.String getEditingSettingId();
+    /**
+     * <code>optional string EditingSettingId = 73 [default = ""];</code>
+     */
+    com.google.protobuf.ByteString
+        getEditingSettingIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Document}
@@ -2563,6 +2577,12 @@ public final class DocumentProtos {
                 origin_ = subBuilder.buildPartial();
               }
               bitField2_ |= 0x00000001;
+              break;
+            }
+            case 586: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField2_ |= 0x00000002;
+              editingSettingId_ = bs;
               break;
             }
           }
@@ -4432,6 +4452,48 @@ public final class DocumentProtos {
       return origin_;
     }
 
+    public static final int EDITINGSETTINGID_FIELD_NUMBER = 73;
+    private java.lang.Object editingSettingId_;
+    /**
+     * <code>optional string EditingSettingId = 73 [default = ""];</code>
+     */
+    public boolean hasEditingSettingId() {
+      return ((bitField2_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string EditingSettingId = 73 [default = ""];</code>
+     */
+    public java.lang.String getEditingSettingId() {
+      java.lang.Object ref = editingSettingId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          editingSettingId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string EditingSettingId = 73 [default = ""];</code>
+     */
+    public com.google.protobuf.ByteString
+        getEditingSettingIdBytes() {
+      java.lang.Object ref = editingSettingId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        editingSettingId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       indexKey_ = "";
       messageId_ = "";
@@ -4503,6 +4565,7 @@ public final class DocumentProtos {
       recipientResponseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
       amendmentRequestMetadata_ = Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.getDefaultInstance();
       origin_ = Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance();
+      editingSettingId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4927,6 +4990,9 @@ public final class DocumentProtos {
       if (((bitField2_ & 0x00000001) == 0x00000001)) {
         output.writeMessage(72, origin_);
       }
+      if (((bitField2_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(73, getEditingSettingIdBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5215,6 +5281,10 @@ public final class DocumentProtos {
       if (((bitField2_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(72, origin_);
+      }
+      if (((bitField2_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(73, getEditingSettingIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5643,6 +5713,8 @@ public final class DocumentProtos {
           originBuilder_.clear();
         }
         bitField2_ = (bitField2_ & ~0x00000020);
+        editingSettingId_ = "";
+        bitField2_ = (bitField2_ & ~0x00000040);
         return this;
       }
 
@@ -6096,6 +6168,10 @@ public final class DocumentProtos {
         } else {
           result.origin_ = originBuilder_.build();
         }
+        if (((from_bitField2_ & 0x00000040) == 0x00000040)) {
+          to_bitField2_ |= 0x00000002;
+        }
+        result.editingSettingId_ = editingSettingId_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         result.bitField2_ = to_bitField2_;
@@ -6474,6 +6550,11 @@ public final class DocumentProtos {
         }
         if (other.hasOrigin()) {
           mergeOrigin(other.getOrigin());
+        }
+        if (other.hasEditingSettingId()) {
+          bitField2_ |= 0x00000040;
+          editingSettingId_ = other.editingSettingId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -13233,6 +13314,82 @@ public final class DocumentProtos {
         return originBuilder_;
       }
 
+      private java.lang.Object editingSettingId_ = "";
+      /**
+       * <code>optional string EditingSettingId = 73 [default = ""];</code>
+       */
+      public boolean hasEditingSettingId() {
+        return ((bitField2_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string EditingSettingId = 73 [default = ""];</code>
+       */
+      public java.lang.String getEditingSettingId() {
+        java.lang.Object ref = editingSettingId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            editingSettingId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string EditingSettingId = 73 [default = ""];</code>
+       */
+      public com.google.protobuf.ByteString
+          getEditingSettingIdBytes() {
+        java.lang.Object ref = editingSettingId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          editingSettingId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string EditingSettingId = 73 [default = ""];</code>
+       */
+      public Builder setEditingSettingId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField2_ |= 0x00000040;
+        editingSettingId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string EditingSettingId = 73 [default = ""];</code>
+       */
+      public Builder clearEditingSettingId() {
+        bitField2_ = (bitField2_ & ~0x00000040);
+        editingSettingId_ = getDefaultInstance().getEditingSettingId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string EditingSettingId = 73 [default = ""];</code>
+       */
+      public Builder setEditingSettingIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField2_ |= 0x00000040;
+        editingSettingId_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Document)
     }
 
@@ -16413,7 +16570,7 @@ public final class DocumentProtos {
       "UnilateralDocument.proto\032)Documents/Univ" +
       "ersalTransferDocument.proto\032\026ResolutionT",
       "arget.proto\032\032ForwardDocumentEvent.proto\032" +
-      "\"Events/DiadocMessage-PostApi.proto\"\273%\n\010" +
+      "\"Events/DiadocMessage-PostApi.proto\"\327%\n\010" +
       "Document\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessageId\030" +
       "\002 \002(\t\022\020\n\010EntityId\030\003 \002(\t\022\036\n\026CreationTimes" +
       "tampTicks\030\004 \002(\020\022\031\n\021CounteragentBoxId\030\005 \001" +
@@ -16533,63 +16690,63 @@ public final class DocumentProtos {
       "StatusUnknown\022V\n\030AmendmentRequestMetadat" +
       "a\030G \002(\01324.Diadoc.Api.Proto.Documents.Ame",
       "ndmentRequestMetadata\0222\n\006Origin\030H \001(\0132\"." +
-      "Diadoc.Api.Proto.Documents.Origin\"\310\001\n\020Re" +
-      "solutionStatus\022W\n\004Type\030\001 \001(\01620.Diadoc.Ap" +
-      "i.Proto.Documents.ResolutionStatusType:\027" +
-      "UnknownResolutionStatus\0222\n\006Target\030\002 \001(\0132" +
-      "\".Diadoc.Api.Proto.ResolutionTarget\022\024\n\014A" +
-      "uthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n" +
-      "\030RecipientReceiptMetadata\022d\n\rReceiptStat" +
-      "us\030\001 \002(\01620.Diadoc.Api.Proto.Documents.Ge" +
-      "neralReceiptStatus:\033GeneralReceiptStatus",
-      "Unknown\022N\n\024ConfirmationMetadata\030\002 \001(\01320." +
-      "Diadoc.Api.Proto.Documents.ConfirmationM" +
-      "etadata\"\223\001\n\024ConfirmationMetadata\022d\n\rRece" +
-      "iptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Docum" +
-      "ents.GeneralReceiptStatus:\033GeneralReceip" +
-      "tStatusUnknown\022\025\n\rDateTimeTicks\030\002 \002(\020\"\230\001" +
-      "\n\030AmendmentRequestMetadata\022\026\n\016AmendmentF" +
-      "lags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620.Diad" +
-      "oc.Api.Proto.Documents.GeneralReceiptSta" +
-      "tus:\033GeneralReceiptStatusUnknown\"Y\n\006Orig",
-      "in\022<\n\013MessageType\030\001 \002(\0162\'.Diadoc.Api.Pro" +
-      "to.Documents.MessageType\022\021\n\tMessageId\030\002 " +
-      "\002(\t*\254\001\n\024ResolutionStatusType\022$\n\027UnknownR" +
-      "esolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010" +
-      "Approved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024Approveme" +
-      "ntRequested\020\003\022\026\n\022SignatureRequested\020\004\022\023\n" +
-      "\017SignatureDenied\020\005*\262\001\n\020RevocationStatus\022" +
-      "\033\n\027UnknownRevocationStatus\020\000\022\030\n\024Revocati" +
-      "onStatusNone\020\001\022\035\n\031RevocationIsRequestedB" +
-      "yMe\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revoc",
-      "ationAccepted\020\004\022\026\n\022RevocationRejected\020\005*" +
-      "\256\001\n\031RoamingNotificationStatus\022$\n Unknown" +
-      "RoamingNotificationStatus\020\000\022!\n\035RoamingNo" +
-      "tificationStatusNone\020\001\022$\n RoamingNotific" +
-      "ationStatusSuccess\020\002\022\"\n\036RoamingNotificat" +
-      "ionStatusError\020\003*\300\001\n\025SenderSignatureStat" +
-      "us\022 \n\034UnknownSenderSignatureStatus\020\000\022\035\n\031" +
-      "WaitingForSenderSignature\020\001\022\034\n\030SenderSig" +
-      "natureUnchecked\020\002\022\"\n\036SenderSignatureChec" +
-      "kedAndValid\020\003\022$\n SenderSignatureCheckedA",
-      "ndInvalid\020\004*\302\001\n\024ProxySignatureStatus\022\037\n\033" +
-      "UnknownProxySignatureStatus\020\000\022\034\n\030ProxySi" +
-      "gnatureStatusNone\020\001\022\034\n\030WaitingForProxySi" +
-      "gnature\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026Pro" +
-      "xySignatureRejected\020\004\022\031\n\025InvalidProxySig" +
-      "nature\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033Gen" +
-      "eralReceiptStatusUnknown\020\000\022%\n!GeneralRec" +
-      "eiptStatusNotAcceptable\020\001\022\027\n\023HaveToCreat" +
-      "eReceipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010Fin" +
-      "ished\020\004*\353\001\n\027RecipientResponseStatus\022\"\n\036R",
-      "ecipientResponseStatusUnknown\020\000\022(\n$Recip" +
-      "ientResponseStatusNotAcceptable\020\001\022 \n\034Wai" +
-      "tingForRecipientSignature\020\002\022\032\n\026WithRecip" +
-      "ientSignature\020\003\022%\n!RecipientSignatureReq" +
-      "uestRejected\020\004\022\035\n\031InvalidRecipientSignat" +
-      "ure\020\005*@\n\013MessageType\022\013\n\007Unknown\020\000\022\013\n\007Mes" +
-      "sage\020\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016Docum" +
-      "entProtos"
+      "Diadoc.Api.Proto.Documents.Origin\022\032\n\020Edi" +
+      "tingSettingId\030I \001(\t:\000\"\310\001\n\020ResolutionStat" +
+      "us\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.Proto.Docu" +
+      "ments.ResolutionStatusType:\027UnknownResol" +
+      "utionStatus\0222\n\006Target\030\002 \001(\0132\".Diadoc.Api" +
+      ".Proto.ResolutionTarget\022\024\n\014AuthorUserId\030" +
+      "\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n\030RecipientRe" +
+      "ceiptMetadata\022d\n\rReceiptStatus\030\001 \002(\01620.D" +
+      "iadoc.Api.Proto.Documents.GeneralReceipt",
+      "Status:\033GeneralReceiptStatusUnknown\022N\n\024C" +
+      "onfirmationMetadata\030\002 \001(\01320.Diadoc.Api.P" +
+      "roto.Documents.ConfirmationMetadata\"\223\001\n\024" +
+      "ConfirmationMetadata\022d\n\rReceiptStatus\030\001 " +
+      "\002(\01620.Diadoc.Api.Proto.Documents.General" +
+      "ReceiptStatus:\033GeneralReceiptStatusUnkno" +
+      "wn\022\025\n\rDateTimeTicks\030\002 \002(\020\"\230\001\n\030AmendmentR" +
+      "equestMetadata\022\026\n\016AmendmentFlags\030\001 \002(\005\022d" +
+      "\n\rReceiptStatus\030\002 \002(\01620.Diadoc.Api.Proto" +
+      ".Documents.GeneralReceiptStatus:\033General",
+      "ReceiptStatusUnknown\"Y\n\006Origin\022<\n\013Messag" +
+      "eType\030\001 \002(\0162\'.Diadoc.Api.Proto.Documents" +
+      ".MessageType\022\021\n\tMessageId\030\002 \002(\t*\254\001\n\024Reso" +
+      "lutionStatusType\022$\n\027UnknownResolutionSta" +
+      "tus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017" +
+      "\n\013Disapproved\020\002\022\030\n\024ApprovementRequested\020" +
+      "\003\022\026\n\022SignatureRequested\020\004\022\023\n\017SignatureDe" +
+      "nied\020\005*\262\001\n\020RevocationStatus\022\033\n\027UnknownRe" +
+      "vocationStatus\020\000\022\030\n\024RevocationStatusNone" +
+      "\020\001\022\035\n\031RevocationIsRequestedByMe\020\002\022\030\n\024Req",
+      "uestsMyRevocation\020\003\022\026\n\022RevocationAccepte" +
+      "d\020\004\022\026\n\022RevocationRejected\020\005*\256\001\n\031RoamingN" +
+      "otificationStatus\022$\n UnknownRoamingNotif" +
+      "icationStatus\020\000\022!\n\035RoamingNotificationSt" +
+      "atusNone\020\001\022$\n RoamingNotificationStatusS" +
+      "uccess\020\002\022\"\n\036RoamingNotificationStatusErr" +
+      "or\020\003*\300\001\n\025SenderSignatureStatus\022 \n\034Unknow" +
+      "nSenderSignatureStatus\020\000\022\035\n\031WaitingForSe" +
+      "nderSignature\020\001\022\034\n\030SenderSignatureUnchec" +
+      "ked\020\002\022\"\n\036SenderSignatureCheckedAndValid\020",
+      "\003\022$\n SenderSignatureCheckedAndInvalid\020\004*" +
+      "\302\001\n\024ProxySignatureStatus\022\037\n\033UnknownProxy" +
+      "SignatureStatus\020\000\022\034\n\030ProxySignatureStatu" +
+      "sNone\020\001\022\034\n\030WaitingForProxySignature\020\002\022\026\n" +
+      "\022WithProxySignature\020\003\022\032\n\026ProxySignatureR" +
+      "ejected\020\004\022\031\n\025InvalidProxySignature\020\005*\234\001\n" +
+      "\024GeneralReceiptStatus\022\037\n\033GeneralReceiptS" +
+      "tatusUnknown\020\000\022%\n!GeneralReceiptStatusNo" +
+      "tAcceptable\020\001\022\027\n\023HaveToCreateReceipt\020\002\022\025" +
+      "\n\021WaitingForReceipt\020\003\022\014\n\010Finished\020\004*\353\001\n\027",
+      "RecipientResponseStatus\022\"\n\036RecipientResp" +
+      "onseStatusUnknown\020\000\022(\n$RecipientResponse" +
+      "StatusNotAcceptable\020\001\022 \n\034WaitingForRecip" +
+      "ientSignature\020\002\022\032\n\026WithRecipientSignatur" +
+      "e\020\003\022%\n!RecipientSignatureRequestRejected" +
+      "\020\004\022\035\n\031InvalidRecipientSignature\020\005*@\n\013Mes" +
+      "sageType\022\013\n\007Unknown\020\000\022\013\n\007Message\020\001\022\t\n\005Dr" +
+      "aft\020\002\022\014\n\010Template\020\003B\020B\016DocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16622,7 +16779,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", "EditingSettingId", });
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_fieldAccessorTable = new
