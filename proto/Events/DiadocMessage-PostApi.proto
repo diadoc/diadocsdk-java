@@ -5,6 +5,7 @@
 
 import "DocumentId.proto";
 import "CustomDataItem.proto";
+import "LockMode.proto";
 import "Invoicing/Signer.proto";
 import "Invoicing/ExtendedSigner.proto";
 import "Events/ResolutionInfo.proto";
@@ -48,6 +49,7 @@ message MessageToPost {
 	optional bool LockPacket = 32 [default = false];
 	repeated XmlDocumentAttachment UniversalTransferDocumentSellerTitles = 33;
 	repeated DocumentAttachment DocumentAttachments = 34;
+	optional LockMode LockMode = 35 [default = None];
 }
 
 message EncryptedXmlDocumentAttachment {
