@@ -87686,6 +87686,15 @@ public final class DiadocMessage_PostApiProtos {
      */
     Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.TemplateDocumentAttachmentOrBuilder getDocumentAttachmentsOrBuilder(
         int index);
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 7 [default = None];</code>
+     */
+    boolean hasLockMode();
+    /**
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 7 [default = None];</code>
+     */
+    Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.TemplateToPost}
@@ -87775,6 +87784,17 @@ public final class DiadocMessage_PostApiProtos {
                 mutable_bitField0_ |= 0x00000020;
               }
               documentAttachments_.add(input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.TemplateDocumentAttachment.PARSER, extensionRegistry));
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.LockModeProtos.LockMode value = Diadoc.Api.Proto.LockModeProtos.LockMode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(7, rawValue);
+              } else {
+                bitField0_ |= 0x00000020;
+                lockMode_ = value;
+              }
               break;
             }
           }
@@ -88065,6 +88085,21 @@ public final class DiadocMessage_PostApiProtos {
       return documentAttachments_.get(index);
     }
 
+    public static final int LOCKMODE_FIELD_NUMBER = 7;
+    private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 7 [default = None];</code>
+     */
+    public boolean hasLockMode() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 7 [default = None];</code>
+     */
+    public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
+      return lockMode_;
+    }
+
     private void initFields() {
       fromBoxId_ = "";
       toBoxId_ = "";
@@ -88072,6 +88107,7 @@ public final class DiadocMessage_PostApiProtos {
       messageToBoxId_ = "";
       messageToDepartmentId_ = "";
       documentAttachments_ = java.util.Collections.emptyList();
+      lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -88126,6 +88162,9 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < documentAttachments_.size(); i++) {
         output.writeMessage(6, documentAttachments_.get(i));
       }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeEnum(7, lockMode_.getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -88158,6 +88197,10 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < documentAttachments_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, documentAttachments_.get(i));
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, lockMode_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -88293,6 +88336,8 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           documentAttachmentsBuilder_.clear();
         }
+        lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -88350,6 +88395,10 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           result.documentAttachments_ = documentAttachmentsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.lockMode_ = lockMode_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -88416,6 +88465,9 @@ public final class DiadocMessage_PostApiProtos {
               documentAttachmentsBuilder_.addAllMessages(other.documentAttachments_);
             }
           }
+        }
+        if (other.hasLockMode()) {
+          setLockMode(other.getLockMode());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -89084,6 +89136,41 @@ public final class DiadocMessage_PostApiProtos {
           documentAttachments_ = null;
         }
         return documentAttachmentsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
+      /**
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 7 [default = None];</code>
+       */
+      public boolean hasLockMode() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 7 [default = None];</code>
+       */
+      public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
+        return lockMode_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 7 [default = None];</code>
+       */
+      public Builder setLockMode(Diadoc.Api.Proto.LockModeProtos.LockMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000040;
+        lockMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 7 [default = None];</code>
+       */
+      public Builder clearLockMode() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.TemplateToPost)
@@ -93970,29 +94057,31 @@ public final class DiadocMessage_PostApiProtos {
       "pi.Proto.DocumentId\"d\n\026ResolutionRouteRe" +
       "moval\022\026\n\016ParentEntityId\030\001 \002(\t\022\017\n\007RouteId",
       "\030\002 \002(\t\022\021\n\007Comment\030\003 \001(\t:\000\022\016\n\006Labels\030\004 \003(" +
-      "\t\"\327\001\n\016TemplateToPost\022\021\n\tFromBoxId\030\001 \002(\t\022" +
+      "\t\"\213\002\n\016TemplateToPost\022\021\n\tFromBoxId\030\001 \002(\t\022" +
       "\017\n\007ToBoxId\030\002 \002(\t\022\030\n\020MessageFromBoxId\030\003 \002" +
       "(\t\022\026\n\016MessageToBoxId\030\004 \002(\t\022\035\n\025MessageToD" +
       "epartmentId\030\005 \001(\t\022P\n\023DocumentAttachments" +
       "\030\006 \003(\01323.Diadoc.Api.Proto.Events.Templat" +
-      "eDocumentAttachment\"\320\002\n\032TemplateDocument" +
-      "Attachment\022A\n\017UnsignedContent\030\001 \002(\0132(.Di" +
-      "adoc.Api.Proto.Events.UnsignedContent\022\017\n" +
-      "\007Comment\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n\010F",
-      "unction\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227\n\010Metada" +
-      "ta\030\006 \003(\0132%.Diadoc.Api.Proto.Events.Metad" +
-      "ataItem\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020CustomDoc" +
-      "umentId\030\010 \001(\t\022\030\n\020EditingSettingId\030\t \001(\t\022" +
-      "%\n\026NeedRecipientSignature\030\n \001(\010:\005false\"7" +
-      "\n\017UnsignedContent\022\017\n\007Content\030\001 \001(\014\022\023\n\013Na" +
-      "meOnShelf\030\002 \001(\t\"\223\001\n\034TemplateTransformati" +
-      "onToPost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nTemplateId\030\002 " +
-      "\002(\t\022P\n\027DocumentTransformations\030\003 \003(\0132/.D" +
-      "iadoc.Api.Proto.Events.DocumentTransform",
-      "ation\"F\n\026DocumentTransformation\022\022\n\nDocum" +
-      "entId\030\001 \002(\t\022\030\n\020CustomDocumentId\030\002 \001(\t*/\n" +
-      "\030CustomDataPatchOperation\022\007\n\003Set\020\000\022\n\n\006Re" +
-      "move\020\001B\035B\033DiadocMessage_PostApiProtos"
+      "eDocumentAttachment\0222\n\010LockMode\030\007 \001(\0162\032." +
+      "Diadoc.Api.Proto.LockMode:\004None\"\320\002\n\032Temp" +
+      "lateDocumentAttachment\022A\n\017UnsignedConten" +
+      "t\030\001 \002(\0132(.Diadoc.Api.Proto.Events.Unsign",
+      "edContent\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNamedI" +
+      "d\030\003 \002(\t\022\020\n\010Function\030\004 \001(\t\022\017\n\007Version\030\005 \001" +
+      "(\t\0227\n\010Metadata\030\006 \003(\0132%.Diadoc.Api.Proto." +
+      "Events.MetadataItem\022\022\n\nWorkflowId\030\007 \001(\005\022" +
+      "\030\n\020CustomDocumentId\030\010 \001(\t\022\030\n\020EditingSett" +
+      "ingId\030\t \001(\t\022%\n\026NeedRecipientSignature\030\n " +
+      "\001(\010:\005false\"7\n\017UnsignedContent\022\017\n\007Content" +
+      "\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034Template" +
+      "TransformationToPost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nT" +
+      "emplateId\030\002 \002(\t\022P\n\027DocumentTransformatio",
+      "ns\030\003 \003(\0132/.Diadoc.Api.Proto.Events.Docum" +
+      "entTransformation\"F\n\026DocumentTransformat" +
+      "ion\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomDocumen" +
+      "tId\030\002 \001(\t*/\n\030CustomDataPatchOperation\022\007\n" +
+      "\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessage_Post" +
+      "ApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -94314,7 +94403,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_TemplateToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_TemplateToPost_descriptor,
-        new java.lang.String[] { "FromBoxId", "ToBoxId", "MessageFromBoxId", "MessageToBoxId", "MessageToDepartmentId", "DocumentAttachments", });
+        new java.lang.String[] { "FromBoxId", "ToBoxId", "MessageFromBoxId", "MessageToBoxId", "MessageToDepartmentId", "DocumentAttachments", "LockMode", });
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_descriptor =
       getDescriptor().getMessageTypes().get(50);
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_fieldAccessorTable = new
