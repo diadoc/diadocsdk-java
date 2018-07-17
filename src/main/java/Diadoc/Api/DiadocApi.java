@@ -888,6 +888,39 @@ public class DiadocApi {
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
+    public GeneratedFile GenerateSenderTitleXml(
+            String boxId,
+            String documentTypeNamedId,
+            String documentFunction,
+            String documentVersion,
+            byte[] userContractData) throws IOException, ParseException {
+        return GenerateSenderTitleXml(boxId, documentTypeNamedId, documentFunction, documentVersion, userContractData, null, false);
+    }
+
+    public GeneratedFile GenerateSenderTitleXml(
+            String boxId,
+            String documentTypeNamedId,
+            String documentFunction,
+            String documentVersion,
+            byte[] userContractData,
+            String editingSettingId,
+            boolean disableValidation) throws IOException, ParseException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (documentTypeNamedId == null) throw new NullPointerException("documentTypeNamedId");
+        if (documentFunction == null) throw new NullPointerException("documentFunction");
+        if (documentVersion == null) throw new NullPointerException("documentVersion");
+        if (userContractData == null) throw new NullPointerException("userContractData");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("documentTypeNamedId", documentTypeNamedId));
+        parameters.add(new BasicNameValuePair("documentFunction", documentFunction));
+        parameters.add(new BasicNameValuePair("documentVersion", documentVersion));
+        parameters.add(new BasicNameValuePair("editingSettingId", editingSettingId));
+        parameters.add(new BasicNameValuePair("disableValidation", Boolean.toString(disableValidation)));
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateSenderTitleXml", parameters, userContractData);
+        return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
+    }
+
     @Deprecated
     public ExtendedSignerProtos.ExtendedSignerDetails GetExtendedSignerDetails(String boxId, String thumbprint, boolean forBuyer, boolean forCorrection) throws IOException
     {
