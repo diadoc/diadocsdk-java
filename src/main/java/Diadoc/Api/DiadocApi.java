@@ -4,6 +4,7 @@ import Diadoc.Api.Proto.*;
 import Diadoc.Api.Proto.Docflow.DocflowApiProtos;
 import Diadoc.Api.Proto.Documents.*;
 import Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos;
+import Diadoc.Api.Proto.Employees.EmployeeProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos;
 import Diadoc.Api.Proto.Invoicing.*;
@@ -1454,6 +1455,21 @@ public class DiadocApi {
     public UserProtos.User GetMyUser() throws IOException {
         byte[] responseBytes = PerformGetHttpRequest("/GetMyUser", null);
         return UserProtos.User.parseFrom(responseBytes);
+    }
+
+    public UserProtos.UserV2 GetMyUserV2() throws IOException {
+        byte[] responseBytes = PerformGetHttpRequest("/V2/GetMyUser", null);
+        return UserProtos.UserV2.parseFrom(responseBytes);
+    }
+
+    public EmployeeProtos.Employee GetEmployee(String boxId, String userId) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (userId == null) throw new NullPointerException("userId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("userId", userId));
+        byte[] responseBytes = PerformGetHttpRequest("/GetEmployee", params);
+        return EmployeeProtos.Employee.parseFrom(responseBytes);
     }
 
     public AsyncMethodResultProtos.AsyncMethodResult CloudSign(CloudSignProtos.CloudSignRequest request) throws Exception {

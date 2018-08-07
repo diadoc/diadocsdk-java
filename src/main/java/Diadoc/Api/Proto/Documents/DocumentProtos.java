@@ -1869,11 +1869,11 @@ public final class DocumentProtos {
         getEditingSettingIdBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74;</code>
+     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
      */
     boolean hasLockMode();
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74;</code>
+     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
      */
     Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode();
   }
@@ -4517,13 +4517,13 @@ public final class DocumentProtos {
     public static final int LOCKMODE_FIELD_NUMBER = 74;
     private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_;
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74;</code>
+     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
      */
     public boolean hasLockMode() {
       return ((bitField2_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74;</code>
+     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
      */
     public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
       return lockMode_;
@@ -4601,7 +4601,7 @@ public final class DocumentProtos {
       amendmentRequestMetadata_ = Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.getDefaultInstance();
       origin_ = Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance();
       editingSettingId_ = "";
-      lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.Unknown;
+      lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5762,7 +5762,7 @@ public final class DocumentProtos {
         bitField2_ = (bitField2_ & ~0x00000020);
         editingSettingId_ = "";
         bitField2_ = (bitField2_ & ~0x00000040);
-        lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.Unknown;
+        lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
         bitField2_ = (bitField2_ & ~0x00000080);
         return this;
       }
@@ -13450,21 +13450,21 @@ public final class DocumentProtos {
         return this;
       }
 
-      private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.Unknown;
+      private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74;</code>
+       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
        */
       public boolean hasLockMode() {
         return ((bitField2_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74;</code>
+       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
        */
       public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
         return lockMode_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74;</code>
+       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
        */
       public Builder setLockMode(Diadoc.Api.Proto.LockModeProtos.LockMode value) {
         if (value == null) {
@@ -13476,11 +13476,11 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74;</code>
+       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
        */
       public Builder clearLockMode() {
         bitField2_ = (bitField2_ & ~0x00000080);
-        lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.Unknown;
+        lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
         onChanged();
         return this;
       }
@@ -16666,7 +16666,7 @@ public final class DocumentProtos {
       "\032)Documents/UniversalTransferDocument.pr",
       "oto\032\026ResolutionTarget.proto\032\032ForwardDocu" +
       "mentEvent.proto\032\"Events/DiadocMessage-Po" +
-      "stApi.proto\"\205&\n\010Document\022\020\n\010IndexKey\030\001 \001" +
+      "stApi.proto\"\213&\n\010Document\022\020\n\010IndexKey\030\001 \001" +
       "(\t\022\021\n\tMessageId\030\002 \002(\t\022\020\n\010EntityId\030\003 \002(\t\022" +
       "\036\n\026CreationTimestampTicks\030\004 \002(\020\022\031\n\021Count" +
       "eragentBoxId\030\005 \001(\t\022I\n\014DocumentType\030\006 \001(\016" +
@@ -16786,64 +16786,64 @@ public final class DocumentProtos {
       "ntRequestMetadata\030G \002(\01324.Diadoc.Api.Pro",
       "to.Documents.AmendmentRequestMetadata\0222\n" +
       "\006Origin\030H \001(\0132\".Diadoc.Api.Proto.Documen" +
-      "ts.Origin\022\032\n\020EditingSettingId\030I \001(\t:\000\022,\n" +
+      "ts.Origin\022\032\n\020EditingSettingId\030I \001(\t:\000\0222\n" +
       "\010LockMode\030J \002(\0162\032.Diadoc.Api.Proto.LockM" +
-      "ode\"\310\001\n\020ResolutionStatus\022W\n\004Type\030\001 \001(\01620" +
-      ".Diadoc.Api.Proto.Documents.ResolutionSt" +
-      "atusType:\027UnknownResolutionStatus\0222\n\006Tar" +
-      "get\030\002 \001(\0132\".Diadoc.Api.Proto.ResolutionT" +
-      "arget\022\024\n\014AuthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO" +
-      "\030\004 \002(\t\"\320\001\n\030RecipientReceiptMetadata\022d\n\rR",
-      "eceiptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Do" +
-      "cuments.GeneralReceiptStatus:\033GeneralRec" +
-      "eiptStatusUnknown\022N\n\024ConfirmationMetadat" +
-      "a\030\002 \001(\01320.Diadoc.Api.Proto.Documents.Con" +
-      "firmationMetadata\"\223\001\n\024ConfirmationMetada" +
-      "ta\022d\n\rReceiptStatus\030\001 \002(\01620.Diadoc.Api.P" +
-      "roto.Documents.GeneralReceiptStatus:\033Gen" +
-      "eralReceiptStatusUnknown\022\025\n\rDateTimeTick" +
-      "s\030\002 \002(\020\"\230\001\n\030AmendmentRequestMetadata\022\026\n\016" +
-      "AmendmentFlags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 ",
-      "\002(\01620.Diadoc.Api.Proto.Documents.General" +
-      "ReceiptStatus:\033GeneralReceiptStatusUnkno" +
-      "wn\"Y\n\006Origin\022<\n\013MessageType\030\001 \002(\0162\'.Diad" +
-      "oc.Api.Proto.Documents.MessageType\022\021\n\tMe" +
-      "ssageId\030\002 \002(\t*\254\001\n\024ResolutionStatusType\022$" +
-      "\n\027UnknownResolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004" +
-      "None\020\000\022\014\n\010Approved\020\001\022\017\n\013Disapproved\020\002\022\030\n" +
-      "\024ApprovementRequested\020\003\022\026\n\022SignatureRequ" +
-      "ested\020\004\022\023\n\017SignatureDenied\020\005*\262\001\n\020Revocat" +
-      "ionStatus\022\033\n\027UnknownRevocationStatus\020\000\022\030",
-      "\n\024RevocationStatusNone\020\001\022\035\n\031RevocationIs" +
-      "RequestedByMe\020\002\022\030\n\024RequestsMyRevocation\020" +
-      "\003\022\026\n\022RevocationAccepted\020\004\022\026\n\022RevocationR" +
-      "ejected\020\005*\256\001\n\031RoamingNotificationStatus\022" +
-      "$\n UnknownRoamingNotificationStatus\020\000\022!\n" +
-      "\035RoamingNotificationStatusNone\020\001\022$\n Roam" +
-      "ingNotificationStatusSuccess\020\002\022\"\n\036Roamin" +
-      "gNotificationStatusError\020\003*\300\001\n\025SenderSig" +
-      "natureStatus\022 \n\034UnknownSenderSignatureSt" +
-      "atus\020\000\022\035\n\031WaitingForSenderSignature\020\001\022\034\n",
-      "\030SenderSignatureUnchecked\020\002\022\"\n\036SenderSig" +
-      "natureCheckedAndValid\020\003\022$\n SenderSignatu" +
-      "reCheckedAndInvalid\020\004*\302\001\n\024ProxySignature" +
-      "Status\022\037\n\033UnknownProxySignatureStatus\020\000\022" +
-      "\034\n\030ProxySignatureStatusNone\020\001\022\034\n\030Waiting" +
-      "ForProxySignature\020\002\022\026\n\022WithProxySignatur" +
-      "e\020\003\022\032\n\026ProxySignatureRejected\020\004\022\031\n\025Inval" +
-      "idProxySignature\020\005*\234\001\n\024GeneralReceiptSta" +
-      "tus\022\037\n\033GeneralReceiptStatusUnknown\020\000\022%\n!" +
-      "GeneralReceiptStatusNotAcceptable\020\001\022\027\n\023H",
-      "aveToCreateReceipt\020\002\022\025\n\021WaitingForReceip" +
-      "t\020\003\022\014\n\010Finished\020\004*\353\001\n\027RecipientResponseS" +
-      "tatus\022\"\n\036RecipientResponseStatusUnknown\020" +
-      "\000\022(\n$RecipientResponseStatusNotAcceptabl" +
-      "e\020\001\022 \n\034WaitingForRecipientSignature\020\002\022\032\n" +
-      "\026WithRecipientSignature\020\003\022%\n!RecipientSi" +
-      "gnatureRequestRejected\020\004\022\035\n\031InvalidRecip" +
-      "ientSignature\020\005*@\n\013MessageType\022\013\n\007Unknow" +
-      "n\020\000\022\013\n\007Message\020\001\022\t\n\005Draft\020\002\022\014\n\010Template\020" +
-      "\003B\020B\016DocumentProtos"
+      "ode:\004None\"\310\001\n\020ResolutionStatus\022W\n\004Type\030\001" +
+      " \001(\01620.Diadoc.Api.Proto.Documents.Resolu" +
+      "tionStatusType:\027UnknownResolutionStatus\022" +
+      "2\n\006Target\030\002 \001(\0132\".Diadoc.Api.Proto.Resol" +
+      "utionTarget\022\024\n\014AuthorUserId\030\003 \002(\t\022\021\n\tAut" +
+      "horFIO\030\004 \002(\t\"\320\001\n\030RecipientReceiptMetadat",
+      "a\022d\n\rReceiptStatus\030\001 \002(\01620.Diadoc.Api.Pr" +
+      "oto.Documents.GeneralReceiptStatus:\033Gene" +
+      "ralReceiptStatusUnknown\022N\n\024ConfirmationM" +
+      "etadata\030\002 \001(\01320.Diadoc.Api.Proto.Documen" +
+      "ts.ConfirmationMetadata\"\223\001\n\024Confirmation" +
+      "Metadata\022d\n\rReceiptStatus\030\001 \002(\01620.Diadoc" +
+      ".Api.Proto.Documents.GeneralReceiptStatu" +
+      "s:\033GeneralReceiptStatusUnknown\022\025\n\rDateTi" +
+      "meTicks\030\002 \002(\020\"\230\001\n\030AmendmentRequestMetada" +
+      "ta\022\026\n\016AmendmentFlags\030\001 \002(\005\022d\n\rReceiptSta",
+      "tus\030\002 \002(\01620.Diadoc.Api.Proto.Documents.G" +
+      "eneralReceiptStatus:\033GeneralReceiptStatu" +
+      "sUnknown\"Y\n\006Origin\022<\n\013MessageType\030\001 \002(\0162" +
+      "\'.Diadoc.Api.Proto.Documents.MessageType" +
+      "\022\021\n\tMessageId\030\002 \002(\t*\254\001\n\024ResolutionStatus" +
+      "Type\022$\n\027UnknownResolutionStatus\020\377\377\377\377\377\377\377\377" +
+      "\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013Disapprove" +
+      "d\020\002\022\030\n\024ApprovementRequested\020\003\022\026\n\022Signatu" +
+      "reRequested\020\004\022\023\n\017SignatureDenied\020\005*\262\001\n\020R" +
+      "evocationStatus\022\033\n\027UnknownRevocationStat",
+      "us\020\000\022\030\n\024RevocationStatusNone\020\001\022\035\n\031Revoca" +
+      "tionIsRequestedByMe\020\002\022\030\n\024RequestsMyRevoc" +
+      "ation\020\003\022\026\n\022RevocationAccepted\020\004\022\026\n\022Revoc" +
+      "ationRejected\020\005*\256\001\n\031RoamingNotificationS" +
+      "tatus\022$\n UnknownRoamingNotificationStatu" +
+      "s\020\000\022!\n\035RoamingNotificationStatusNone\020\001\022$" +
+      "\n RoamingNotificationStatusSuccess\020\002\022\"\n\036" +
+      "RoamingNotificationStatusError\020\003*\300\001\n\025Sen" +
+      "derSignatureStatus\022 \n\034UnknownSenderSigna" +
+      "tureStatus\020\000\022\035\n\031WaitingForSenderSignatur",
+      "e\020\001\022\034\n\030SenderSignatureUnchecked\020\002\022\"\n\036Sen" +
+      "derSignatureCheckedAndValid\020\003\022$\n SenderS" +
+      "ignatureCheckedAndInvalid\020\004*\302\001\n\024ProxySig" +
+      "natureStatus\022\037\n\033UnknownProxySignatureSta" +
+      "tus\020\000\022\034\n\030ProxySignatureStatusNone\020\001\022\034\n\030W" +
+      "aitingForProxySignature\020\002\022\026\n\022WithProxySi" +
+      "gnature\020\003\022\032\n\026ProxySignatureRejected\020\004\022\031\n" +
+      "\025InvalidProxySignature\020\005*\234\001\n\024GeneralRece" +
+      "iptStatus\022\037\n\033GeneralReceiptStatusUnknown" +
+      "\020\000\022%\n!GeneralReceiptStatusNotAcceptable\020",
+      "\001\022\027\n\023HaveToCreateReceipt\020\002\022\025\n\021WaitingFor" +
+      "Receipt\020\003\022\014\n\010Finished\020\004*\353\001\n\027RecipientRes" +
+      "ponseStatus\022\"\n\036RecipientResponseStatusUn" +
+      "known\020\000\022(\n$RecipientResponseStatusNotAcc" +
+      "eptable\020\001\022 \n\034WaitingForRecipientSignatur" +
+      "e\020\002\022\032\n\026WithRecipientSignature\020\003\022%\n!Recip" +
+      "ientSignatureRequestRejected\020\004\022\035\n\031Invali" +
+      "dRecipientSignature\020\005*@\n\013MessageType\022\013\n\007" +
+      "Unknown\020\000\022\013\n\007Message\020\001\022\t\n\005Draft\020\002\022\014\n\010Tem" +
+      "plate\020\003B\020B\016DocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

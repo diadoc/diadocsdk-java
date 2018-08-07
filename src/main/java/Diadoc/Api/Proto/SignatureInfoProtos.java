@@ -117,7 +117,7 @@ public final class SignatureInfoProtos {
      * <code>required string SerialNumber = 5;</code>
      *
      * <pre>
-     *Серийный номер
+     *Серийный номер 
      * </pre>
      */
     boolean hasSerialNumber();
@@ -125,7 +125,7 @@ public final class SignatureInfoProtos {
      * <code>required string SerialNumber = 5;</code>
      *
      * <pre>
-     *Серийный номер
+     *Серийный номер 
      * </pre>
      */
     java.lang.String getSerialNumber();
@@ -133,7 +133,7 @@ public final class SignatureInfoProtos {
      * <code>required string SerialNumber = 5;</code>
      *
      * <pre>
-     *Серийный номер
+     *Серийный номер 
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -377,7 +377,7 @@ public final class SignatureInfoProtos {
      * <code>optional string Email = 15;</code>
      *
      * <pre>
-     *Email
+     *Email 
      * </pre>
      */
     boolean hasEmail();
@@ -385,7 +385,7 @@ public final class SignatureInfoProtos {
      * <code>optional string Email = 15;</code>
      *
      * <pre>
-     *Email
+     *Email 
      * </pre>
      */
     java.lang.String getEmail();
@@ -393,7 +393,7 @@ public final class SignatureInfoProtos {
      * <code>optional string Email = 15;</code>
      *
      * <pre>
-     *Email
+     *Email 
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -761,7 +761,7 @@ public final class SignatureInfoProtos {
      * <code>required string SerialNumber = 5;</code>
      *
      * <pre>
-     *Серийный номер
+     *Серийный номер 
      * </pre>
      */
     public boolean hasSerialNumber() {
@@ -771,7 +771,7 @@ public final class SignatureInfoProtos {
      * <code>required string SerialNumber = 5;</code>
      *
      * <pre>
-     *Серийный номер
+     *Серийный номер 
      * </pre>
      */
     public java.lang.String getSerialNumber() {
@@ -792,7 +792,7 @@ public final class SignatureInfoProtos {
      * <code>required string SerialNumber = 5;</code>
      *
      * <pre>
-     *Серийный номер
+     *Серийный номер 
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -1301,7 +1301,7 @@ public final class SignatureInfoProtos {
      * <code>optional string Email = 15;</code>
      *
      * <pre>
-     *Email
+     *Email 
      * </pre>
      */
     public boolean hasEmail() {
@@ -1311,7 +1311,7 @@ public final class SignatureInfoProtos {
      * <code>optional string Email = 15;</code>
      *
      * <pre>
-     *Email
+     *Email 
      * </pre>
      */
     public java.lang.String getEmail() {
@@ -1332,7 +1332,7 @@ public final class SignatureInfoProtos {
      * <code>optional string Email = 15;</code>
      *
      * <pre>
-     *Email
+     *Email 
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -2484,7 +2484,7 @@ public final class SignatureInfoProtos {
        * <code>required string SerialNumber = 5;</code>
        *
        * <pre>
-       *Серийный номер
+       *Серийный номер 
        * </pre>
        */
       public boolean hasSerialNumber() {
@@ -2494,7 +2494,7 @@ public final class SignatureInfoProtos {
        * <code>required string SerialNumber = 5;</code>
        *
        * <pre>
-       *Серийный номер
+       *Серийный номер 
        * </pre>
        */
       public java.lang.String getSerialNumber() {
@@ -2515,7 +2515,7 @@ public final class SignatureInfoProtos {
        * <code>required string SerialNumber = 5;</code>
        *
        * <pre>
-       *Серийный номер
+       *Серийный номер 
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -2535,7 +2535,7 @@ public final class SignatureInfoProtos {
        * <code>required string SerialNumber = 5;</code>
        *
        * <pre>
-       *Серийный номер
+       *Серийный номер 
        * </pre>
        */
       public Builder setSerialNumber(
@@ -2552,7 +2552,7 @@ public final class SignatureInfoProtos {
        * <code>required string SerialNumber = 5;</code>
        *
        * <pre>
-       *Серийный номер
+       *Серийный номер 
        * </pre>
        */
       public Builder clearSerialNumber() {
@@ -2565,7 +2565,7 @@ public final class SignatureInfoProtos {
        * <code>required string SerialNumber = 5;</code>
        *
        * <pre>
-       *Серийный номер
+       *Серийный номер 
        * </pre>
        */
       public Builder setSerialNumberBytes(
@@ -3484,7 +3484,7 @@ public final class SignatureInfoProtos {
        * <code>optional string Email = 15;</code>
        *
        * <pre>
-       *Email
+       *Email 
        * </pre>
        */
       public boolean hasEmail() {
@@ -3494,7 +3494,7 @@ public final class SignatureInfoProtos {
        * <code>optional string Email = 15;</code>
        *
        * <pre>
-       *Email
+       *Email 
        * </pre>
        */
       public java.lang.String getEmail() {
@@ -3515,7 +3515,7 @@ public final class SignatureInfoProtos {
        * <code>optional string Email = 15;</code>
        *
        * <pre>
-       *Email
+       *Email 
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -3535,7 +3535,7 @@ public final class SignatureInfoProtos {
        * <code>optional string Email = 15;</code>
        *
        * <pre>
-       *Email
+       *Email 
        * </pre>
        */
       public Builder setEmail(
@@ -3552,7 +3552,7 @@ public final class SignatureInfoProtos {
        * <code>optional string Email = 15;</code>
        *
        * <pre>
-       *Email
+       *Email 
        * </pre>
        */
       public Builder clearEmail() {
@@ -3565,7 +3565,7 @@ public final class SignatureInfoProtos {
        * <code>optional string Email = 15;</code>
        *
        * <pre>
-       *Email
+       *Email 
        * </pre>
        */
       public Builder setEmailBytes(
