@@ -1523,6 +1523,14 @@ public class DiadocApi {
         return DocflowApiProtos.SearchDocflowsResponse.parseFrom(bytes);
     }
 
+    public DocflowApiProtos.GetDocflowsByPacketIdResponse GetDocflowsByPacketId(String boxId, DocflowApiProtos.GetDocflowsByPacketIdRequest request) throws IOException {
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        byte[] body = request.toByteArray();
+        byte[] bytes = PerformPostHttpRequest("/V2/GetDocflowsByPacketId", params, body);
+        return DocflowApiProtos.GetDocflowsByPacketIdResponse.parseFrom(bytes);
+    }
+
     public DiadocMessage_PostApiProtos.PrepareDocumentsToSignResponse PrepareDocumentsToSign(DiadocMessage_PostApiProtos.PrepareDocumentsToSignRequest request) throws IOException {
         byte[] body = request.toByteArray();
         byte[] bytes = PerformPostHttpRequest("/PrepareDocumentsToSign", null, body);
