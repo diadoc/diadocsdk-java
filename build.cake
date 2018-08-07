@@ -97,9 +97,9 @@ Task("Package-With-Maven")
 	.IsDependentOn("GenerateProtoFiles")
 	.Does(() =>
 	{
-		var exitCode = StartProcess(mvnTool, "package");
+		var exitCode = StartProcess(mvnTool, "-Dhttps.protocols=TLSv1.2 package");
 		if (exitCode != 0)
-			throw new Exception("mvn package exit code = "+ exitCode);
+			throw new Exception("mvn package exit code = " + exitCode);
 	});
 
 Task("PublishArtifactsToAppVeyor")
