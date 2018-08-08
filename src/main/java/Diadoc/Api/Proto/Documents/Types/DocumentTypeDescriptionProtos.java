@@ -5109,6 +5109,20 @@ public final class DocumentTypeDescriptionProtos {
         getXsdUrlBytes();
 
     /**
+     * <code>optional string UserDataXsdUrl = 5;</code>
+     */
+    boolean hasUserDataXsdUrl();
+    /**
+     * <code>optional string UserDataXsdUrl = 5;</code>
+     */
+    java.lang.String getUserDataXsdUrl();
+    /**
+     * <code>optional string UserDataXsdUrl = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getUserDataXsdUrlBytes();
+
+    /**
      * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItem MetadataItems = 3;</code>
      */
     java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> 
@@ -5220,19 +5234,25 @@ public final class DocumentTypeDescriptionProtos {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 metadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000008;
               }
               metadataItems_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.PARSER, extensionRegistry));
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 encryptedMetadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000010;
               }
               encryptedMetadataItems_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.PARSER, extensionRegistry));
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              userDataXsdUrl_ = bs;
               break;
             }
           }
@@ -5243,10 +5263,10 @@ public final class DocumentTypeDescriptionProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           metadataItems_ = java.util.Collections.unmodifiableList(metadataItems_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           encryptedMetadataItems_ = java.util.Collections.unmodifiableList(encryptedMetadataItems_);
         }
         this.unknownFields = unknownFields.build();
@@ -5338,6 +5358,48 @@ public final class DocumentTypeDescriptionProtos {
       }
     }
 
+    public static final int USERDATAXSDURL_FIELD_NUMBER = 5;
+    private java.lang.Object userDataXsdUrl_;
+    /**
+     * <code>optional string UserDataXsdUrl = 5;</code>
+     */
+    public boolean hasUserDataXsdUrl() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string UserDataXsdUrl = 5;</code>
+     */
+    public java.lang.String getUserDataXsdUrl() {
+      java.lang.Object ref = userDataXsdUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          userDataXsdUrl_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string UserDataXsdUrl = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUserDataXsdUrlBytes() {
+      java.lang.Object ref = userDataXsdUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userDataXsdUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int METADATAITEMS_FIELD_NUMBER = 3;
     private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> metadataItems_;
     /**
@@ -5411,6 +5473,7 @@ public final class DocumentTypeDescriptionProtos {
     private void initFields() {
       isFormal_ = false;
       xsdUrl_ = "";
+      userDataXsdUrl_ = "";
       metadataItems_ = java.util.Collections.emptyList();
       encryptedMetadataItems_ = java.util.Collections.emptyList();
     }
@@ -5455,6 +5518,9 @@ public final class DocumentTypeDescriptionProtos {
       for (int i = 0; i < encryptedMetadataItems_.size(); i++) {
         output.writeMessage(4, encryptedMetadataItems_.get(i));
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(5, getUserDataXsdUrlBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5479,6 +5545,10 @@ public final class DocumentTypeDescriptionProtos {
       for (int i = 0; i < encryptedMetadataItems_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, encryptedMetadataItems_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getUserDataXsdUrlBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5603,15 +5673,17 @@ public final class DocumentTypeDescriptionProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         xsdUrl_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
+        userDataXsdUrl_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (metadataItemsBuilder_ == null) {
           metadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           metadataItemsBuilder_.clear();
         }
         if (encryptedMetadataItemsBuilder_ == null) {
           encryptedMetadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           encryptedMetadataItemsBuilder_.clear();
         }
@@ -5651,19 +5723,23 @@ public final class DocumentTypeDescriptionProtos {
           to_bitField0_ |= 0x00000002;
         }
         result.xsdUrl_ = xsdUrl_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.userDataXsdUrl_ = userDataXsdUrl_;
         if (metadataItemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             metadataItems_ = java.util.Collections.unmodifiableList(metadataItems_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.metadataItems_ = metadataItems_;
         } else {
           result.metadataItems_ = metadataItemsBuilder_.build();
         }
         if (encryptedMetadataItemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
             encryptedMetadataItems_ = java.util.Collections.unmodifiableList(encryptedMetadataItems_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.encryptedMetadataItems_ = encryptedMetadataItems_;
         } else {
@@ -5693,11 +5769,16 @@ public final class DocumentTypeDescriptionProtos {
           xsdUrl_ = other.xsdUrl_;
           onChanged();
         }
+        if (other.hasUserDataXsdUrl()) {
+          bitField0_ |= 0x00000004;
+          userDataXsdUrl_ = other.userDataXsdUrl_;
+          onChanged();
+        }
         if (metadataItemsBuilder_ == null) {
           if (!other.metadataItems_.isEmpty()) {
             if (metadataItems_.isEmpty()) {
               metadataItems_ = other.metadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureMetadataItemsIsMutable();
               metadataItems_.addAll(other.metadataItems_);
@@ -5710,7 +5791,7 @@ public final class DocumentTypeDescriptionProtos {
               metadataItemsBuilder_.dispose();
               metadataItemsBuilder_ = null;
               metadataItems_ = other.metadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               metadataItemsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getMetadataItemsFieldBuilder() : null;
@@ -5723,7 +5804,7 @@ public final class DocumentTypeDescriptionProtos {
           if (!other.encryptedMetadataItems_.isEmpty()) {
             if (encryptedMetadataItems_.isEmpty()) {
               encryptedMetadataItems_ = other.encryptedMetadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureEncryptedMetadataItemsIsMutable();
               encryptedMetadataItems_.addAll(other.encryptedMetadataItems_);
@@ -5736,7 +5817,7 @@ public final class DocumentTypeDescriptionProtos {
               encryptedMetadataItemsBuilder_.dispose();
               encryptedMetadataItemsBuilder_ = null;
               encryptedMetadataItems_ = other.encryptedMetadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               encryptedMetadataItemsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getEncryptedMetadataItemsFieldBuilder() : null;
@@ -5896,12 +5977,88 @@ public final class DocumentTypeDescriptionProtos {
         return this;
       }
 
+      private java.lang.Object userDataXsdUrl_ = "";
+      /**
+       * <code>optional string UserDataXsdUrl = 5;</code>
+       */
+      public boolean hasUserDataXsdUrl() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string UserDataXsdUrl = 5;</code>
+       */
+      public java.lang.String getUserDataXsdUrl() {
+        java.lang.Object ref = userDataXsdUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            userDataXsdUrl_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string UserDataXsdUrl = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUserDataXsdUrlBytes() {
+        java.lang.Object ref = userDataXsdUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userDataXsdUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string UserDataXsdUrl = 5;</code>
+       */
+      public Builder setUserDataXsdUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        userDataXsdUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string UserDataXsdUrl = 5;</code>
+       */
+      public Builder clearUserDataXsdUrl() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        userDataXsdUrl_ = getDefaultInstance().getUserDataXsdUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string UserDataXsdUrl = 5;</code>
+       */
+      public Builder setUserDataXsdUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        userDataXsdUrl_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> metadataItems_ =
         java.util.Collections.emptyList();
       private void ensureMetadataItemsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           metadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>(metadataItems_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -6051,7 +6208,7 @@ public final class DocumentTypeDescriptionProtos {
       public Builder clearMetadataItems() {
         if (metadataItemsBuilder_ == null) {
           metadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           metadataItemsBuilder_.clear();
@@ -6128,7 +6285,7 @@ public final class DocumentTypeDescriptionProtos {
           metadataItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemOrBuilder>(
                   metadataItems_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           metadataItems_ = null;
@@ -6139,9 +6296,9 @@ public final class DocumentTypeDescriptionProtos {
       private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> encryptedMetadataItems_ =
         java.util.Collections.emptyList();
       private void ensureEncryptedMetadataItemsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           encryptedMetadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>(encryptedMetadataItems_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -6291,7 +6448,7 @@ public final class DocumentTypeDescriptionProtos {
       public Builder clearEncryptedMetadataItems() {
         if (encryptedMetadataItemsBuilder_ == null) {
           encryptedMetadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           encryptedMetadataItemsBuilder_.clear();
@@ -6368,7 +6525,7 @@ public final class DocumentTypeDescriptionProtos {
           encryptedMetadataItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemOrBuilder>(
                   encryptedMetadataItems_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
           encryptedMetadataItems_ = null;
@@ -8723,28 +8880,29 @@ public final class DocumentTypeDescriptionProtos {
       "es.DocumentTitle\022\020\n\010IsActual\030\005 \002(\010\022E\n\tWo" +
       "rkflows\030\006 \003(\01322.Diadoc.Api.Proto.Documen" +
       "ts.Types.DocumentWorkflow\"1\n\020DocumentWor",
-      "kflow\022\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\330\001\n" +
+      "kflow\022\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\360\001\n" +
       "\rDocumentTitle\022\020\n\010IsFormal\030\001 \002(\010\022\016\n\006XsdU" +
-      "rl\030\002 \001(\t\022M\n\rMetadataItems\030\003 \003(\01326.Diadoc" +
-      ".Api.Proto.Documents.Types.DocumentMetad" +
-      "ataItem\022V\n\026EncryptedMetadataItems\030\004 \003(\0132" +
-      "6.Diadoc.Api.Proto.Documents.Types.Docum" +
-      "entMetadataItem\"\312\001\n\024DocumentMetadataItem" +
-      "\022\n\n\002Id\030\001 \002(\t\022H\n\004Type\030\002 \002(\0162:.Diadoc.Api." +
-      "Proto.Documents.Types.DocumentMetadataIt" +
-      "emType\022\022\n\nIsRequired\030\003 \002(\010\022H\n\006Source\030\004 \002",
-      "(\01628.Diadoc.Api.Proto.Documents.Types.Do" +
-      "cumentMetadataSource\"N\n\024DetectedDocument" +
-      "Type\022\023\n\013TypeNamedId\030\001 \002(\t\022\020\n\010Function\030\002 " +
-      "\002(\t\022\017\n\007Version\030\003 \002(\t\"l\n\033DetectDocumentTy" +
-      "pesResponse\022M\n\rDocumentTypes\030\001 \003(\01326.Dia" +
-      "doc.Api.Proto.Documents.Types.DetectedDo" +
-      "cumentType*-\n\017DocumentDocflow\022\014\n\010Externa" +
-      "l\020\000\022\014\n\010Internal\020\001*T\n\030DocumentMetadataIte" +
-      "mType\022\n\n\006String\020\000\022\013\n\007Integer\020\001\022\013\n\007Decima" +
-      "l\020\002\022\010\n\004Date\020\003\022\010\n\004Time\020\004*+\n\026DocumentMetad",
-      "ataSource\022\007\n\003Xml\020\000\022\010\n\004User\020\001B\037B\035Document" +
-      "TypeDescriptionProtos"
+      "rl\030\002 \001(\t\022\026\n\016UserDataXsdUrl\030\005 \001(\t\022M\n\rMeta" +
+      "dataItems\030\003 \003(\01326.Diadoc.Api.Proto.Docum" +
+      "ents.Types.DocumentMetadataItem\022V\n\026Encry" +
+      "ptedMetadataItems\030\004 \003(\01326.Diadoc.Api.Pro" +
+      "to.Documents.Types.DocumentMetadataItem\"" +
+      "\312\001\n\024DocumentMetadataItem\022\n\n\002Id\030\001 \002(\t\022H\n\004" +
+      "Type\030\002 \002(\0162:.Diadoc.Api.Proto.Documents." +
+      "Types.DocumentMetadataItemType\022\022\n\nIsRequ",
+      "ired\030\003 \002(\010\022H\n\006Source\030\004 \002(\01628.Diadoc.Api." +
+      "Proto.Documents.Types.DocumentMetadataSo" +
+      "urce\"N\n\024DetectedDocumentType\022\023\n\013TypeName" +
+      "dId\030\001 \002(\t\022\020\n\010Function\030\002 \002(\t\022\017\n\007Version\030\003" +
+      " \002(\t\"l\n\033DetectDocumentTypesResponse\022M\n\rD" +
+      "ocumentTypes\030\001 \003(\01326.Diadoc.Api.Proto.Do" +
+      "cuments.Types.DetectedDocumentType*-\n\017Do" +
+      "cumentDocflow\022\014\n\010External\020\000\022\014\n\010Internal\020" +
+      "\001*T\n\030DocumentMetadataItemType\022\n\n\006String\020" +
+      "\000\022\013\n\007Integer\020\001\022\013\n\007Decimal\020\002\022\010\n\004Date\020\003\022\010\n",
+      "\004Time\020\004*+\n\026DocumentMetadataSource\022\007\n\003Xml" +
+      "\020\000\022\010\n\004User\020\001B\037B\035DocumentTypeDescriptionP" +
+      "rotos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8793,7 +8951,7 @@ public final class DocumentTypeDescriptionProtos {
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTitle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTitle_descriptor,
-        new java.lang.String[] { "IsFormal", "XsdUrl", "MetadataItems", "EncryptedMetadataItems", });
+        new java.lang.String[] { "IsFormal", "XsdUrl", "UserDataXsdUrl", "MetadataItems", "EncryptedMetadataItems", });
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentMetadataItem_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentMetadataItem_fieldAccessorTable = new

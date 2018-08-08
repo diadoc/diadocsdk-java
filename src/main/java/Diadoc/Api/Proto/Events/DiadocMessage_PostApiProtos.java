@@ -93678,7 +93678,7 @@ public final class DiadocMessage_PostApiProtos {
     java.lang.String[] descriptorData = {
       "\n\"Events/DiadocMessage-PostApi.proto\022\027Di" +
       "adoc.Api.Proto.Events\032\020DocumentId.proto\032" +
-      "\024CustomDataItem.proto\032\016LockMode.proto\032\026I" +
+      "\016LockMode.proto\032\024CustomDataItem.proto\032\026I" +
       "nvoicing/Signer.proto\032\036Invoicing/Extende" +
       "dSigner.proto\032\033Events/ResolutionInfo.pro" +
       "to\032\"Events/ResolutionRequestInfo.proto\032 " +
@@ -94095,8 +94095,8 @@ public final class DiadocMessage_PostApiProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.DocumentIdProtos.getDescriptor(),
-          Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor(),
           Diadoc.Api.Proto.LockModeProtos.getDescriptor(),
+          Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor(),
           Diadoc.Api.Proto.Invoicing.SignerProtos.getDescriptor(),
           Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.getDescriptor(),
           Diadoc.Api.Proto.Events.ResolutionInfoProtos.getDescriptor(),
@@ -94429,8 +94429,8 @@ public final class DiadocMessage_PostApiProtos {
         internal_static_Diadoc_Api_Proto_Events_DocumentTransformation_descriptor,
         new java.lang.String[] { "DocumentId", "CustomDocumentId", });
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
-    Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor();
     Diadoc.Api.Proto.LockModeProtos.getDescriptor();
+    Diadoc.Api.Proto.CustomDataItemProtos.getDescriptor();
     Diadoc.Api.Proto.Invoicing.SignerProtos.getDescriptor();
     Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.getDescriptor();
     Diadoc.Api.Proto.Events.ResolutionInfoProtos.getDescriptor();
