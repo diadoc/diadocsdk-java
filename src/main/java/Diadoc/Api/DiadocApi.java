@@ -5,6 +5,7 @@ import Diadoc.Api.Proto.Docflow.DocflowApiProtos;
 import Diadoc.Api.Proto.Documents.*;
 import Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos;
 import Diadoc.Api.Proto.Employees.EmployeeProtos;
+import Diadoc.Api.Proto.Employees.Subscriptions.SubscriptionProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos;
 import Diadoc.Api.Proto.Invoicing.*;
@@ -1531,6 +1532,27 @@ public class DiadocApi {
         params.add(new BasicNameValuePair("userId", userId));
         byte[] responseBytes = PerformGetHttpRequest("/GetEmployee", params);
         return EmployeeProtos.Employee.parseFrom(responseBytes);
+    }
+
+    public SubscriptionProtos.EmployeeSubscriptions GetSubscriptions(String boxId, String userId) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (userId == null) throw new NullPointerException("userId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("userId", userId));
+        byte[] responseBytes = PerformGetHttpRequest("/GetSubscriptions", params);
+        return SubscriptionProtos.EmployeeSubscriptions.parseFrom(responseBytes);
+    }
+
+    public SubscriptionProtos.EmployeeSubscriptions UpdateSubscriptions(String boxId, String userId, SubscriptionProtos.SubscriptionsToUpdate subscriptionsToUpdate) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (userId == null) throw new NullPointerException("userId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("userId", userId));
+        byte[] body = subscriptionsToUpdate.toByteArray();
+        byte[] responseBytes = PerformPostHttpRequest("/UpdateSubscriptions", params, body);
+        return SubscriptionProtos.EmployeeSubscriptions.parseFrom(responseBytes);
     }
 
     public AsyncMethodResultProtos.AsyncMethodResult CloudSign(CloudSignProtos.CloudSignRequest request) throws Exception {
