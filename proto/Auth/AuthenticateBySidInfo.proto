@@ -1,0 +1,5 @@
+package Diadoc.Api.Proto.Auth;
+
+message AuthenticateBySidInfo {
+    required string Sid = 1;
+}
