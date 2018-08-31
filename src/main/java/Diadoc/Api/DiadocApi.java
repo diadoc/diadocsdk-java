@@ -339,11 +339,11 @@ public class DiadocApi {
         decodeAsn1Bytes(encrKey, recipientInfo.encryptedKey.value);
         byte[] encodedPub = encodeAsn1(encrKey.transportParameters.ephemeralPublicKey);
         X509EncodedKeySpec pspec = new X509EncodedKeySpec(encodedPub);
-        KeyFactory kf = KeyFactory.getInstance(JCP.GOST_DH_NAME);
-        PublicKey senderPublic = kf.generatePublic(pspec);
-        KeyAgreement responderKeyAgree = KeyAgreement.getInstance(JCP.GOST_DH_NAME);
-        byte[] sv = encrKey.transportParameters.ukm.value;
         PrivateKey privateKey = CertificateHelper.getPrivateKey(currentCert, null);
+        KeyFactory kf = KeyFactory.getInstance(privateKey.getAlgorithm());
+        PublicKey senderPublic = kf.generatePublic(pspec);
+        KeyAgreement responderKeyAgree = KeyAgreement.getInstance(privateKey.getAlgorithm());
+        byte[] sv = encrKey.transportParameters.ukm.value;
         responderKeyAgree.init(privateKey, new IvParameterSpec(sv));
         responderKeyAgree.doPhase(senderPublic, true);
         Key responderSecret = responderKeyAgree.generateSecret(CryptoProvider.GOST_CIPHER_NAME);
