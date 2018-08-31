@@ -171,6 +171,15 @@ public final class OrganizationUserPermissionsProtos {
     boolean getCanSignDocuments();
 
     /**
+     * <code>required bool CanManageCounteragents = 6;</code>
+     */
+    boolean hasCanManageCounteragents();
+    /**
+     * <code>required bool CanManageCounteragents = 6;</code>
+     */
+    boolean getCanManageCounteragents();
+
+    /**
      * <code>required bool CanAddResolutions = 7;</code>
      */
     boolean hasCanAddResolutions();
@@ -309,33 +318,38 @@ public final class OrganizationUserPermissionsProtos {
               canSignDocuments_ = input.readBool();
               break;
             }
-            case 56: {
+            case 48: {
               bitField0_ |= 0x00000010;
+              canManageCounteragents_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000020;
               canAddResolutions_ = input.readBool();
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               canRequestResolutions_ = input.readBool();
               break;
             }
             case 74: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                 selectedDepartmentIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000080;
               }
               selectedDepartmentIds_.add(bs);
               break;
             }
             case 82: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               jobTitle_ = bs;
               break;
             }
             case 88: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               canCreateDocuments_ = input.readBool();
               break;
             }
@@ -347,7 +361,7 @@ public final class OrganizationUserPermissionsProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           selectedDepartmentIds_ = selectedDepartmentIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -469,13 +483,28 @@ public final class OrganizationUserPermissionsProtos {
       return canSignDocuments_;
     }
 
+    public static final int CANMANAGECOUNTERAGENTS_FIELD_NUMBER = 6;
+    private boolean canManageCounteragents_;
+    /**
+     * <code>required bool CanManageCounteragents = 6;</code>
+     */
+    public boolean hasCanManageCounteragents() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required bool CanManageCounteragents = 6;</code>
+     */
+    public boolean getCanManageCounteragents() {
+      return canManageCounteragents_;
+    }
+
     public static final int CANADDRESOLUTIONS_FIELD_NUMBER = 7;
     private boolean canAddResolutions_;
     /**
      * <code>required bool CanAddResolutions = 7;</code>
      */
     public boolean hasCanAddResolutions() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
      * <code>required bool CanAddResolutions = 7;</code>
@@ -490,7 +519,7 @@ public final class OrganizationUserPermissionsProtos {
      * <code>required bool CanRequestResolutions = 8;</code>
      */
     public boolean hasCanRequestResolutions() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
+      return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
      * <code>required bool CanRequestResolutions = 8;</code>
@@ -534,7 +563,7 @@ public final class OrganizationUserPermissionsProtos {
      * <code>optional string JobTitle = 10;</code>
      */
     public boolean hasJobTitle() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+      return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
      * <code>optional string JobTitle = 10;</code>
@@ -576,7 +605,7 @@ public final class OrganizationUserPermissionsProtos {
      * <code>required bool CanCreateDocuments = 11;</code>
      */
     public boolean hasCanCreateDocuments() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
      * <code>required bool CanCreateDocuments = 11;</code>
@@ -590,6 +619,7 @@ public final class OrganizationUserPermissionsProtos {
       isAdministrator_ = false;
       documentAccessLevel_ = Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel.UnknownDocumentAccessLevel;
       canSignDocuments_ = false;
+      canManageCounteragents_ = false;
       canAddResolutions_ = false;
       canRequestResolutions_ = false;
       selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -611,6 +641,10 @@ public final class OrganizationUserPermissionsProtos {
         return false;
       }
       if (!hasCanSignDocuments()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCanManageCounteragents()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -646,18 +680,21 @@ public final class OrganizationUserPermissionsProtos {
         output.writeBool(4, canSignDocuments_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBool(7, canAddResolutions_);
+        output.writeBool(6, canManageCounteragents_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBool(7, canAddResolutions_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeBool(8, canRequestResolutions_);
       }
       for (int i = 0; i < selectedDepartmentIds_.size(); i++) {
         output.writeBytes(9, selectedDepartmentIds_.getByteString(i));
       }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeBytes(10, getJobTitleBytes());
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeBool(11, canCreateDocuments_);
       }
       getUnknownFields().writeTo(output);
@@ -687,9 +724,13 @@ public final class OrganizationUserPermissionsProtos {
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, canAddResolutions_);
+          .computeBoolSize(6, canManageCounteragents_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, canAddResolutions_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, canRequestResolutions_);
       }
@@ -702,11 +743,11 @@ public final class OrganizationUserPermissionsProtos {
         size += dataSize;
         size += 1 * getSelectedDepartmentIdsList().size();
       }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(10, getJobTitleBytes());
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, canCreateDocuments_);
       }
@@ -835,16 +876,18 @@ public final class OrganizationUserPermissionsProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         canSignDocuments_ = false;
         bitField0_ = (bitField0_ & ~0x00000008);
-        canAddResolutions_ = false;
+        canManageCounteragents_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
-        canRequestResolutions_ = false;
+        canAddResolutions_ = false;
         bitField0_ = (bitField0_ & ~0x00000020);
-        selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        canRequestResolutions_ = false;
         bitField0_ = (bitField0_ & ~0x00000040);
-        jobTitle_ = "";
+        selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000080);
-        canCreateDocuments_ = false;
+        jobTitle_ = "";
         bitField0_ = (bitField0_ & ~0x00000100);
+        canCreateDocuments_ = false;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -892,22 +935,26 @@ public final class OrganizationUserPermissionsProtos {
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.canAddResolutions_ = canAddResolutions_;
+        result.canManageCounteragents_ = canManageCounteragents_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.canRequestResolutions_ = canRequestResolutions_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          selectedDepartmentIds_ = selectedDepartmentIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
-        }
-        result.selectedDepartmentIds_ = selectedDepartmentIds_;
-        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+        result.canAddResolutions_ = canAddResolutions_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.jobTitle_ = jobTitle_;
+        result.canRequestResolutions_ = canRequestResolutions_;
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          selectedDepartmentIds_ = selectedDepartmentIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.selectedDepartmentIds_ = selectedDepartmentIds_;
         if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
           to_bitField0_ |= 0x00000080;
+        }
+        result.jobTitle_ = jobTitle_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000100;
         }
         result.canCreateDocuments_ = canCreateDocuments_;
         result.bitField0_ = to_bitField0_;
@@ -940,6 +987,9 @@ public final class OrganizationUserPermissionsProtos {
         if (other.hasCanSignDocuments()) {
           setCanSignDocuments(other.getCanSignDocuments());
         }
+        if (other.hasCanManageCounteragents()) {
+          setCanManageCounteragents(other.getCanManageCounteragents());
+        }
         if (other.hasCanAddResolutions()) {
           setCanAddResolutions(other.getCanAddResolutions());
         }
@@ -949,7 +999,7 @@ public final class OrganizationUserPermissionsProtos {
         if (!other.selectedDepartmentIds_.isEmpty()) {
           if (selectedDepartmentIds_.isEmpty()) {
             selectedDepartmentIds_ = other.selectedDepartmentIds_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureSelectedDepartmentIdsIsMutable();
             selectedDepartmentIds_.addAll(other.selectedDepartmentIds_);
@@ -957,7 +1007,7 @@ public final class OrganizationUserPermissionsProtos {
           onChanged();
         }
         if (other.hasJobTitle()) {
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
           jobTitle_ = other.jobTitle_;
           onChanged();
         }
@@ -978,6 +1028,10 @@ public final class OrganizationUserPermissionsProtos {
           return false;
         }
         if (!hasCanSignDocuments()) {
+          
+          return false;
+        }
+        if (!hasCanManageCounteragents()) {
           
           return false;
         }
@@ -1190,12 +1244,44 @@ public final class OrganizationUserPermissionsProtos {
         return this;
       }
 
+      private boolean canManageCounteragents_ ;
+      /**
+       * <code>required bool CanManageCounteragents = 6;</code>
+       */
+      public boolean hasCanManageCounteragents() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required bool CanManageCounteragents = 6;</code>
+       */
+      public boolean getCanManageCounteragents() {
+        return canManageCounteragents_;
+      }
+      /**
+       * <code>required bool CanManageCounteragents = 6;</code>
+       */
+      public Builder setCanManageCounteragents(boolean value) {
+        bitField0_ |= 0x00000010;
+        canManageCounteragents_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool CanManageCounteragents = 6;</code>
+       */
+      public Builder clearCanManageCounteragents() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        canManageCounteragents_ = false;
+        onChanged();
+        return this;
+      }
+
       private boolean canAddResolutions_ ;
       /**
        * <code>required bool CanAddResolutions = 7;</code>
        */
       public boolean hasCanAddResolutions() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
        * <code>required bool CanAddResolutions = 7;</code>
@@ -1207,7 +1293,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>required bool CanAddResolutions = 7;</code>
        */
       public Builder setCanAddResolutions(boolean value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         canAddResolutions_ = value;
         onChanged();
         return this;
@@ -1216,7 +1302,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>required bool CanAddResolutions = 7;</code>
        */
       public Builder clearCanAddResolutions() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         canAddResolutions_ = false;
         onChanged();
         return this;
@@ -1227,7 +1313,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>required bool CanRequestResolutions = 8;</code>
        */
       public boolean hasCanRequestResolutions() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
        * <code>required bool CanRequestResolutions = 8;</code>
@@ -1239,7 +1325,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>required bool CanRequestResolutions = 8;</code>
        */
       public Builder setCanRequestResolutions(boolean value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         canRequestResolutions_ = value;
         onChanged();
         return this;
@@ -1248,7 +1334,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>required bool CanRequestResolutions = 8;</code>
        */
       public Builder clearCanRequestResolutions() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         canRequestResolutions_ = false;
         onChanged();
         return this;
@@ -1256,9 +1342,9 @@ public final class OrganizationUserPermissionsProtos {
 
       private com.google.protobuf.LazyStringList selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSelectedDepartmentIdsIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
           selectedDepartmentIds_ = new com.google.protobuf.LazyStringArrayList(selectedDepartmentIds_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
          }
       }
       /**
@@ -1329,7 +1415,7 @@ public final class OrganizationUserPermissionsProtos {
        */
       public Builder clearSelectedDepartmentIds() {
         selectedDepartmentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -1352,7 +1438,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>optional string JobTitle = 10;</code>
        */
       public boolean hasJobTitle() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
        * <code>optional string JobTitle = 10;</code>
@@ -1395,7 +1481,7 @@ public final class OrganizationUserPermissionsProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000100;
         jobTitle_ = value;
         onChanged();
         return this;
@@ -1404,7 +1490,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>optional string JobTitle = 10;</code>
        */
       public Builder clearJobTitle() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         jobTitle_ = getDefaultInstance().getJobTitle();
         onChanged();
         return this;
@@ -1417,7 +1503,7 @@ public final class OrganizationUserPermissionsProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000100;
         jobTitle_ = value;
         onChanged();
         return this;
@@ -1428,7 +1514,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>required bool CanCreateDocuments = 11;</code>
        */
       public boolean hasCanCreateDocuments() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
+        return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
        * <code>required bool CanCreateDocuments = 11;</code>
@@ -1440,7 +1526,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>required bool CanCreateDocuments = 11;</code>
        */
       public Builder setCanCreateDocuments(boolean value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         canCreateDocuments_ = value;
         onChanged();
         return this;
@@ -1449,7 +1535,7 @@ public final class OrganizationUserPermissionsProtos {
        * <code>required bool CanCreateDocuments = 11;</code>
        */
       public Builder clearCanCreateDocuments() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         canCreateDocuments_ = false;
         onChanged();
         return this;
@@ -1481,20 +1567,21 @@ public final class OrganizationUserPermissionsProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n!OrganizationUserPermissions.proto\022\020Dia" +
-      "doc.Api.Proto\"\321\002\n\033OrganizationUserPermis" +
+      "doc.Api.Proto\"\361\002\n\033OrganizationUserPermis" +
       "sions\022\030\n\020UserDepartmentId\030\001 \002(\t\022\027\n\017IsAdm" +
       "inistrator\030\002 \002(\010\022^\n\023DocumentAccessLevel\030" +
       "\003 \001(\0162%.Diadoc.Api.Proto.DocumentAccessL" +
       "evel:\032UnknownDocumentAccessLevel\022\030\n\020CanS" +
-      "ignDocuments\030\004 \002(\010\022\031\n\021CanAddResolutions\030" +
-      "\007 \002(\010\022\035\n\025CanRequestResolutions\030\010 \002(\010\022\035\n\025" +
-      "SelectedDepartmentIds\030\t \003(\t\022\020\n\010JobTitle\030" +
-      "\n \001(\t\022\032\n\022CanCreateDocuments\030\013 \002(\010*\236\001\n\023Do",
-      "cumentAccessLevel\022\'\n\032UnknownDocumentAcce" +
-      "ssLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016DepartmentOnly\020\000\022\037" +
-      "\n\033DepartmentAndSubdepartments\020\001\022\020\n\014AllDo" +
-      "cuments\020\002\022\027\n\023SelectedDepartments\020\003B#B!Or" +
-      "ganizationUserPermissionsProtos"
+      "ignDocuments\030\004 \002(\010\022\036\n\026CanManageCounterag" +
+      "ents\030\006 \002(\010\022\031\n\021CanAddResolutions\030\007 \002(\010\022\035\n" +
+      "\025CanRequestResolutions\030\010 \002(\010\022\035\n\025Selected" +
+      "DepartmentIds\030\t \003(\t\022\020\n\010JobTitle\030\n \001(\t\022\032\n",
+      "\022CanCreateDocuments\030\013 \002(\010*\236\001\n\023DocumentAc" +
+      "cessLevel\022\'\n\032UnknownDocumentAccessLevel\020" +
+      "\377\377\377\377\377\377\377\377\377\001\022\022\n\016DepartmentOnly\020\000\022\037\n\033Depart" +
+      "mentAndSubdepartments\020\001\022\020\n\014AllDocuments\020" +
+      "\002\022\027\n\023SelectedDepartments\020\003B#B!Organizati" +
+      "onUserPermissionsProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1513,7 +1600,7 @@ public final class OrganizationUserPermissionsProtos {
     internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor,
-        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", });
+        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanManageCounteragents", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
