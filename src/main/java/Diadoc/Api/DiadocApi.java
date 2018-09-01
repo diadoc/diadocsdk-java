@@ -37,7 +37,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.*;
 import ru.CryptoPro.Crypto.CryptoProvider;
-import ru.CryptoPro.Crypto.spec.GostCipherSpec;
+import ru.CryptoPro.JCP.spec.GostCipherSpec;
 import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.ContentInfo;
 import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.EnvelopedData;
 import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.KeyTransRecipientInfo;
