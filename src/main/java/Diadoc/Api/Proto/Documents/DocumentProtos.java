@@ -4759,12 +4759,6 @@ public final class DocumentProtos {
           return false;
         }
       }
-      if (hasSupplementaryAgreementMetadata()) {
-        if (!getSupplementaryAgreementMetadata().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       if (hasUniversalTransferDocumentMetadata()) {
         if (!getUniversalTransferDocumentMetadata().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -6763,12 +6757,6 @@ public final class DocumentProtos {
         }
         for (int i = 0; i < getCustomDataCount(); i++) {
           if (!getCustomData(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasSupplementaryAgreementMetadata()) {
-          if (!getSupplementaryAgreementMetadata().isInitialized()) {
             
             return false;
           }
