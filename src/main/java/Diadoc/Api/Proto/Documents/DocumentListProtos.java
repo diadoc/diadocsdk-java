@@ -44,6 +44,15 @@ public final class DocumentListProtos {
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.DocumentOrBuilder getDocumentsOrBuilder(
         int index);
+
+    /**
+     * <code>optional bool HasMoreResults = 3;</code>
+     */
+    boolean hasHasMoreResults();
+    /**
+     * <code>optional bool HasMoreResults = 3;</code>
+     */
+    boolean getHasMoreResults();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.DocumentList}
@@ -108,6 +117,11 @@ public final class DocumentListProtos {
                 mutable_bitField0_ |= 0x00000002;
               }
               documents_.add(input.readMessage(Diadoc.Api.Proto.Documents.DocumentProtos.Document.PARSER, extensionRegistry));
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              hasMoreResults_ = input.readBool();
               break;
             }
           }
@@ -203,9 +217,25 @@ public final class DocumentListProtos {
       return documents_.get(index);
     }
 
+    public static final int HASMORERESULTS_FIELD_NUMBER = 3;
+    private boolean hasMoreResults_;
+    /**
+     * <code>optional bool HasMoreResults = 3;</code>
+     */
+    public boolean hasHasMoreResults() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional bool HasMoreResults = 3;</code>
+     */
+    public boolean getHasMoreResults() {
+      return hasMoreResults_;
+    }
+
     private void initFields() {
       totalCount_ = 0;
       documents_ = java.util.Collections.emptyList();
+      hasMoreResults_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -236,6 +266,9 @@ public final class DocumentListProtos {
       for (int i = 0; i < documents_.size(); i++) {
         output.writeMessage(2, documents_.get(i));
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBool(3, hasMoreResults_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -252,6 +285,10 @@ public final class DocumentListProtos {
       for (int i = 0; i < documents_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, documents_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, hasMoreResults_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -379,6 +416,8 @@ public final class DocumentListProtos {
         } else {
           documentsBuilder_.clear();
         }
+        hasMoreResults_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -420,6 +459,10 @@ public final class DocumentListProtos {
         } else {
           result.documents_ = documentsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.hasMoreResults_ = hasMoreResults_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -464,6 +507,9 @@ public final class DocumentListProtos {
               documentsBuilder_.addAllMessages(other.documents_);
             }
           }
+        }
+        if (other.hasHasMoreResults()) {
+          setHasMoreResults(other.getHasMoreResults());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -774,6 +820,38 @@ public final class DocumentListProtos {
         return documentsBuilder_;
       }
 
+      private boolean hasMoreResults_ ;
+      /**
+       * <code>optional bool HasMoreResults = 3;</code>
+       */
+      public boolean hasHasMoreResults() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool HasMoreResults = 3;</code>
+       */
+      public boolean getHasMoreResults() {
+        return hasMoreResults_;
+      }
+      /**
+       * <code>optional bool HasMoreResults = 3;</code>
+       */
+      public Builder setHasMoreResults(boolean value) {
+        bitField0_ |= 0x00000004;
+        hasMoreResults_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool HasMoreResults = 3;</code>
+       */
+      public Builder clearHasMoreResults() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        hasMoreResults_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.DocumentList)
     }
 
@@ -801,9 +879,10 @@ public final class DocumentListProtos {
     java.lang.String[] descriptorData = {
       "\n\034Documents/DocumentList.proto\022\032Diadoc.A" +
       "pi.Proto.Documents\032\030Documents/Document.p" +
-      "roto\"[\n\014DocumentList\022\022\n\nTotalCount\030\001 \002(\005" +
+      "roto\"s\n\014DocumentList\022\022\n\nTotalCount\030\001 \002(\005" +
       "\0227\n\tDocuments\030\002 \003(\0132$.Diadoc.Api.Proto.D" +
-      "ocuments.DocumentB\024B\022DocumentListProtos"
+      "ocuments.Document\022\026\n\016HasMoreResults\030\003 \001(" +
+      "\010B\024B\022DocumentListProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -823,7 +902,7 @@ public final class DocumentListProtos {
     internal_static_Diadoc_Api_Proto_Documents_DocumentList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_DocumentList_descriptor,
-        new java.lang.String[] { "TotalCount", "Documents", });
+        new java.lang.String[] { "TotalCount", "Documents", "HasMoreResults", });
     Diadoc.Api.Proto.Documents.DocumentProtos.getDescriptor();
   }
 
