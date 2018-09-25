@@ -12,6 +12,7 @@ import Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos;
 import Diadoc.Api.Proto.Invoicing.*;
 import Diadoc.Api.Proto.Invoicing.Signers.*;
 import Diadoc.Api.Proto.Recognition.RecognitionProtos;
+import Diadoc.Api.Proto.Users.UserToUpdateProtos;
 import com.google.gson.Gson;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
@@ -1522,6 +1523,13 @@ public class DiadocApi {
 
     public UserProtos.UserV2 GetMyUserV2() throws IOException {
         byte[] responseBytes = PerformGetHttpRequest("/V2/GetMyUser", null);
+        return UserProtos.UserV2.parseFrom(responseBytes);
+    }
+
+    public UserProtos.UserV2 UpdateMyUser(UserToUpdateProtos.UserToUpdate userToUpdate) throws IOException {
+        if (userToUpdate == null) throw new NullPointerException("userToUpdate");
+        byte[] body = userToUpdate.toByteArray();
+        byte[] responseBytes = PerformPostHttpRequest("/UpdateMyUser", null, body);
         return UserProtos.UserV2.parseFrom(responseBytes);
     }
 
