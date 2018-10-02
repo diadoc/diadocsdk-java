@@ -90190,6 +90190,19 @@ public final class DiadocMessage_PostApiProtos {
      * <code>optional bool NeedRecipientSignature = 10 [default = false];</code>
      */
     boolean getNeedRecipientSignature();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+     */
+    boolean hasPredefinedRecipientTitle();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle getPredefinedRecipientTitle();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitleOrBuilder getPredefinedRecipientTitleOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.TemplateDocumentAttachment}
@@ -90308,6 +90321,19 @@ public final class DiadocMessage_PostApiProtos {
             case 80: {
               bitField0_ |= 0x00000100;
               needRecipientSignature_ = input.readBool();
+              break;
+            }
+            case 90: {
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000200) == 0x00000200)) {
+                subBuilder = predefinedRecipientTitle_.toBuilder();
+              }
+              predefinedRecipientTitle_ = input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(predefinedRecipientTitle_);
+                predefinedRecipientTitle_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000200;
               break;
             }
           }
@@ -90691,6 +90717,27 @@ public final class DiadocMessage_PostApiProtos {
       return needRecipientSignature_;
     }
 
+    public static final int PREDEFINEDRECIPIENTTITLE_FIELD_NUMBER = 11;
+    private Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle predefinedRecipientTitle_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+     */
+    public boolean hasPredefinedRecipientTitle() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle getPredefinedRecipientTitle() {
+      return predefinedRecipientTitle_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitleOrBuilder getPredefinedRecipientTitleOrBuilder() {
+      return predefinedRecipientTitle_;
+    }
+
     private void initFields() {
       unsignedContent_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.getDefaultInstance();
       comment_ = "";
@@ -90702,6 +90749,7 @@ public final class DiadocMessage_PostApiProtos {
       customDocumentId_ = "";
       editingSettingId_ = "";
       needRecipientSignature_ = false;
+      predefinedRecipientTitle_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -90719,6 +90767,12 @@ public final class DiadocMessage_PostApiProtos {
       }
       for (int i = 0; i < getMetadataCount(); i++) {
         if (!getMetadata(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasPredefinedRecipientTitle()) {
+        if (!getPredefinedRecipientTitle().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -90759,6 +90813,9 @@ public final class DiadocMessage_PostApiProtos {
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeBool(10, needRecipientSignature_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeMessage(11, predefinedRecipientTitle_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -90808,6 +90865,10 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, needRecipientSignature_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, predefinedRecipientTitle_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -90920,6 +90981,7 @@ public final class DiadocMessage_PostApiProtos {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getUnsignedContentFieldBuilder();
           getMetadataFieldBuilder();
+          getPredefinedRecipientTitleFieldBuilder();
         }
       }
       private static Builder create() {
@@ -90956,6 +91018,12 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00000100);
         needRecipientSignature_ = false;
         bitField0_ = (bitField0_ & ~0x00000200);
+        if (predefinedRecipientTitleBuilder_ == null) {
+          predefinedRecipientTitle_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.getDefaultInstance();
+        } else {
+          predefinedRecipientTitleBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -91033,6 +91101,14 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000100;
         }
         result.needRecipientSignature_ = needRecipientSignature_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        if (predefinedRecipientTitleBuilder_ == null) {
+          result.predefinedRecipientTitle_ = predefinedRecipientTitle_;
+        } else {
+          result.predefinedRecipientTitle_ = predefinedRecipientTitleBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -91114,6 +91190,9 @@ public final class DiadocMessage_PostApiProtos {
         if (other.hasNeedRecipientSignature()) {
           setNeedRecipientSignature(other.getNeedRecipientSignature());
         }
+        if (other.hasPredefinedRecipientTitle()) {
+          mergePredefinedRecipientTitle(other.getPredefinedRecipientTitle());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -91129,6 +91208,12 @@ public final class DiadocMessage_PostApiProtos {
         }
         for (int i = 0; i < getMetadataCount(); i++) {
           if (!getMetadata(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasPredefinedRecipientTitle()) {
+          if (!getPredefinedRecipientTitle().isInitialized()) {
             
             return false;
           }
@@ -92031,6 +92116,122 @@ public final class DiadocMessage_PostApiProtos {
         return this;
       }
 
+      private Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle predefinedRecipientTitle_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitleOrBuilder> predefinedRecipientTitleBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+       */
+      public boolean hasPredefinedRecipientTitle() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle getPredefinedRecipientTitle() {
+        if (predefinedRecipientTitleBuilder_ == null) {
+          return predefinedRecipientTitle_;
+        } else {
+          return predefinedRecipientTitleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+       */
+      public Builder setPredefinedRecipientTitle(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle value) {
+        if (predefinedRecipientTitleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          predefinedRecipientTitle_ = value;
+          onChanged();
+        } else {
+          predefinedRecipientTitleBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+       */
+      public Builder setPredefinedRecipientTitle(
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.Builder builderForValue) {
+        if (predefinedRecipientTitleBuilder_ == null) {
+          predefinedRecipientTitle_ = builderForValue.build();
+          onChanged();
+        } else {
+          predefinedRecipientTitleBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+       */
+      public Builder mergePredefinedRecipientTitle(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle value) {
+        if (predefinedRecipientTitleBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400) &&
+              predefinedRecipientTitle_ != Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.getDefaultInstance()) {
+            predefinedRecipientTitle_ =
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.newBuilder(predefinedRecipientTitle_).mergeFrom(value).buildPartial();
+          } else {
+            predefinedRecipientTitle_ = value;
+          }
+          onChanged();
+        } else {
+          predefinedRecipientTitleBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+       */
+      public Builder clearPredefinedRecipientTitle() {
+        if (predefinedRecipientTitleBuilder_ == null) {
+          predefinedRecipientTitle_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.getDefaultInstance();
+          onChanged();
+        } else {
+          predefinedRecipientTitleBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.Builder getPredefinedRecipientTitleBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getPredefinedRecipientTitleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitleOrBuilder getPredefinedRecipientTitleOrBuilder() {
+        if (predefinedRecipientTitleBuilder_ != null) {
+          return predefinedRecipientTitleBuilder_.getMessageOrBuilder();
+        } else {
+          return predefinedRecipientTitle_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PredefinedRecipientTitle PredefinedRecipientTitle = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitleOrBuilder> 
+          getPredefinedRecipientTitleFieldBuilder() {
+        if (predefinedRecipientTitleBuilder_ == null) {
+          predefinedRecipientTitleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitleOrBuilder>(
+                  getPredefinedRecipientTitle(),
+                  getParentForChildren(),
+                  isClean());
+          predefinedRecipientTitle_ = null;
+        }
+        return predefinedRecipientTitleBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.TemplateDocumentAttachment)
     }
 
@@ -92040,6 +92241,522 @@ public final class DiadocMessage_PostApiProtos {
     }
 
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Events.TemplateDocumentAttachment)
+  }
+
+  public interface PredefinedRecipientTitleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Events.PredefinedRecipientTitle)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+     */
+    boolean hasUnsignedContent();
+    /**
+     * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent getUnsignedContent();
+    /**
+     * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+     */
+    Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContentOrBuilder getUnsignedContentOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Events.PredefinedRecipientTitle}
+   */
+  public static final class PredefinedRecipientTitle extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Events.PredefinedRecipientTitle)
+      PredefinedRecipientTitleOrBuilder {
+    // Use PredefinedRecipientTitle.newBuilder() to construct.
+    private PredefinedRecipientTitle(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PredefinedRecipientTitle(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PredefinedRecipientTitle defaultInstance;
+    public static PredefinedRecipientTitle getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PredefinedRecipientTitle getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PredefinedRecipientTitle(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = unsignedContent_.toBuilder();
+              }
+              unsignedContent_ = input.readMessage(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(unsignedContent_);
+                unsignedContent_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.class, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PredefinedRecipientTitle> PARSER =
+        new com.google.protobuf.AbstractParser<PredefinedRecipientTitle>() {
+      public PredefinedRecipientTitle parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PredefinedRecipientTitle(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PredefinedRecipientTitle> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int UNSIGNEDCONTENT_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent unsignedContent_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+     */
+    public boolean hasUnsignedContent() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent getUnsignedContent() {
+      return unsignedContent_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+     */
+    public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContentOrBuilder getUnsignedContentOrBuilder() {
+      return unsignedContent_;
+    }
+
+    private void initFields() {
+      unsignedContent_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasUnsignedContent()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, unsignedContent_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, unsignedContent_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Events.PredefinedRecipientTitle}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Events.PredefinedRecipientTitle)
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.class, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getUnsignedContentFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (unsignedContentBuilder_ == null) {
+          unsignedContent_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.getDefaultInstance();
+        } else {
+          unsignedContentBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle build() {
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle buildPartial() {
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle result = new Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (unsignedContentBuilder_ == null) {
+          result.unsignedContent_ = unsignedContent_;
+        } else {
+          result.unsignedContent_ = unsignedContentBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle) {
+          return mergeFrom((Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle other) {
+        if (other == Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.getDefaultInstance()) return this;
+        if (other.hasUnsignedContent()) {
+          mergeUnsignedContent(other.getUnsignedContent());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUnsignedContent()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent unsignedContent_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContentOrBuilder> unsignedContentBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+       */
+      public boolean hasUnsignedContent() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent getUnsignedContent() {
+        if (unsignedContentBuilder_ == null) {
+          return unsignedContent_;
+        } else {
+          return unsignedContentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+       */
+      public Builder setUnsignedContent(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent value) {
+        if (unsignedContentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unsignedContent_ = value;
+          onChanged();
+        } else {
+          unsignedContentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+       */
+      public Builder setUnsignedContent(
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.Builder builderForValue) {
+        if (unsignedContentBuilder_ == null) {
+          unsignedContent_ = builderForValue.build();
+          onChanged();
+        } else {
+          unsignedContentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+       */
+      public Builder mergeUnsignedContent(Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent value) {
+        if (unsignedContentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              unsignedContent_ != Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.getDefaultInstance()) {
+            unsignedContent_ =
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.newBuilder(unsignedContent_).mergeFrom(value).buildPartial();
+          } else {
+            unsignedContent_ = value;
+          }
+          onChanged();
+        } else {
+          unsignedContentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+       */
+      public Builder clearUnsignedContent() {
+        if (unsignedContentBuilder_ == null) {
+          unsignedContent_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.getDefaultInstance();
+          onChanged();
+        } else {
+          unsignedContentBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.Builder getUnsignedContentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getUnsignedContentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+       */
+      public Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContentOrBuilder getUnsignedContentOrBuilder() {
+        if (unsignedContentBuilder_ != null) {
+          return unsignedContentBuilder_.getMessageOrBuilder();
+        } else {
+          return unsignedContent_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Events.UnsignedContent UnsignedContent = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContentOrBuilder> 
+          getUnsignedContentFieldBuilder() {
+        if (unsignedContentBuilder_ == null) {
+          unsignedContentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.Builder, Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContentOrBuilder>(
+                  getUnsignedContent(),
+                  getParentForChildren(),
+                  isClean());
+          unsignedContent_ = null;
+        }
+        return unsignedContentBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.PredefinedRecipientTitle)
+    }
+
+    static {
+      defaultInstance = new PredefinedRecipientTitle(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Events.PredefinedRecipientTitle)
   }
 
   public interface UnsignedContentOrBuilder extends
@@ -94522,6 +95239,11 @@ public final class DiadocMessage_PostApiProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Events_UnsignedContent_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -94935,7 +95657,7 @@ public final class DiadocMessage_PostApiProtos {
       "tId\030\005 \001(\t\022P\n\023DocumentAttachments\030\006 \003(\01323" +
       ".Diadoc.Api.Proto.Events.TemplateDocumen" +
       "tAttachment\0222\n\010LockMode\030\007 \001(\0162\032.Diadoc.A",
-      "pi.Proto.LockMode:\004None\"\320\002\n\032TemplateDocu" +
+      "pi.Proto.LockMode:\004None\"\245\003\n\032TemplateDocu" +
       "mentAttachment\022A\n\017UnsignedContent\030\001 \002(\0132" +
       "(.Diadoc.Api.Proto.Events.UnsignedConten" +
       "t\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022" +
@@ -94944,16 +95666,20 @@ public final class DiadocMessage_PostApiProtos {
       "etadataItem\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020Custo" +
       "mDocumentId\030\010 \001(\t\022\030\n\020EditingSettingId\030\t " +
       "\001(\t\022%\n\026NeedRecipientSignature\030\n \001(\010:\005fal" +
-      "se\"7\n\017UnsignedContent\022\017\n\007Content\030\001 \001(\014\022\023",
-      "\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034TemplateTransfor" +
-      "mationToPost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nTemplateI" +
-      "d\030\002 \002(\t\022P\n\027DocumentTransformations\030\003 \003(\013" +
-      "2/.Diadoc.Api.Proto.Events.DocumentTrans" +
-      "formation\"F\n\026DocumentTransformation\022\022\n\nD" +
-      "ocumentId\030\001 \002(\t\022\030\n\020CustomDocumentId\030\002 \001(" +
-      "\t*/\n\030CustomDataPatchOperation\022\007\n\003Set\020\000\022\n" +
-      "\n\006Remove\020\001B\035B\033DiadocMessage_PostApiProto" +
-      "s"
+      "se\022S\n\030PredefinedRecipientTitle\030\013 \001(\01321.D",
+      "iadoc.Api.Proto.Events.PredefinedRecipie" +
+      "ntTitle\"]\n\030PredefinedRecipientTitle\022A\n\017U" +
+      "nsignedContent\030\001 \002(\0132(.Diadoc.Api.Proto." +
+      "Events.UnsignedContent\"7\n\017UnsignedConten" +
+      "t\022\017\n\007Content\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"" +
+      "\223\001\n\034TemplateTransformationToPost\022\r\n\005BoxI" +
+      "d\030\001 \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027DocumentT" +
+      "ransformations\030\003 \003(\0132/.Diadoc.Api.Proto." +
+      "Events.DocumentTransformation\"F\n\026Documen" +
+      "tTransformation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020C",
+      "ustomDocumentId\030\002 \001(\t*/\n\030CustomDataPatch" +
+      "Operation\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033Diadoc" +
+      "Message_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -95287,21 +96013,27 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_descriptor,
-        new java.lang.String[] { "UnsignedContent", "Comment", "TypeNamedId", "Function", "Version", "Metadata", "WorkflowId", "CustomDocumentId", "EditingSettingId", "NeedRecipientSignature", });
-    internal_static_Diadoc_Api_Proto_Events_UnsignedContent_descriptor =
+        new java.lang.String[] { "UnsignedContent", "Comment", "TypeNamedId", "Function", "Version", "Metadata", "WorkflowId", "CustomDocumentId", "EditingSettingId", "NeedRecipientSignature", "PredefinedRecipientTitle", });
+    internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_descriptor =
       getDescriptor().getMessageTypes().get(52);
+    internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Events_PredefinedRecipientTitle_descriptor,
+        new java.lang.String[] { "UnsignedContent", });
+    internal_static_Diadoc_Api_Proto_Events_UnsignedContent_descriptor =
+      getDescriptor().getMessageTypes().get(53);
     internal_static_Diadoc_Api_Proto_Events_UnsignedContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_UnsignedContent_descriptor,
         new java.lang.String[] { "Content", "NameOnShelf", });
     internal_static_Diadoc_Api_Proto_Events_TemplateTransformationToPost_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_Diadoc_Api_Proto_Events_TemplateTransformationToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_TemplateTransformationToPost_descriptor,
         new java.lang.String[] { "BoxId", "TemplateId", "DocumentTransformations", });
     internal_static_Diadoc_Api_Proto_Events_DocumentTransformation_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_Diadoc_Api_Proto_Events_DocumentTransformation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_DocumentTransformation_descriptor,
