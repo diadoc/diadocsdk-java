@@ -444,13 +444,17 @@ public final class ExtendedSignerProtos {
   public enum DocumentTitleType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <code>Absent = -1;</code>
+     */
+    Absent(0, -1),
+    /**
      * <code>UtdSeller = 0;</code>
      *
      * <pre>
      * Данные для титула продавца УПД
      * </pre>
      */
-    UtdSeller(0, 0),
+    UtdSeller(1, 0),
     /**
      * <code>UtdBuyer = 1;</code>
      *
@@ -458,7 +462,7 @@ public final class ExtendedSignerProtos {
      * Данные для титула покупателя УПД
      * </pre>
      */
-    UtdBuyer(1, 1),
+    UtdBuyer(2, 1),
     /**
      * <code>UcdSeller = 2;</code>
      *
@@ -466,7 +470,7 @@ public final class ExtendedSignerProtos {
      * Данные для титула продавца УКД
      * </pre>
      */
-    UcdSeller(2, 2),
+    UcdSeller(3, 2),
     /**
      * <code>UcdBuyer = 3;</code>
      *
@@ -474,7 +478,7 @@ public final class ExtendedSignerProtos {
      * Данные для титула покупателя УКД
      * </pre>
      */
-    UcdBuyer(3, 3),
+    UcdBuyer(4, 3),
     /**
      * <code>TovTorg551Seller = 4;</code>
      *
@@ -482,7 +486,7 @@ public final class ExtendedSignerProtos {
      * Данные для титула продавца 551
      * </pre>
      */
-    TovTorg551Seller(4, 4),
+    TovTorg551Seller(5, 4),
     /**
      * <code>TovTorg551Buyer = 5;</code>
      *
@@ -490,7 +494,7 @@ public final class ExtendedSignerProtos {
      * Данные для титула покупателя 551
      * </pre>
      */
-    TovTorg551Buyer(5, 5),
+    TovTorg551Buyer(6, 5),
     /**
      * <code>AccCert552Seller = 6;</code>
      *
@@ -498,7 +502,7 @@ public final class ExtendedSignerProtos {
      * Данные для титула исполнителя 552
      * </pre>
      */
-    AccCert552Seller(6, 6),
+    AccCert552Seller(7, 6),
     /**
      * <code>AccCert552Buyer = 7;</code>
      *
@@ -506,9 +510,13 @@ public final class ExtendedSignerProtos {
      * Данные для титула заказчика 552
      * </pre>
      */
-    AccCert552Buyer(7, 7),
+    AccCert552Buyer(8, 7),
     ;
 
+    /**
+     * <code>Absent = -1;</code>
+     */
+    public static final int Absent_VALUE = -1;
     /**
      * <code>UtdSeller = 0;</code>
      *
@@ -579,6 +587,7 @@ public final class ExtendedSignerProtos {
 
     public static DocumentTitleType valueOf(int value) {
       switch (value) {
+        case -1: return Absent;
         case 0: return UtdSeller;
         case 1: return UtdBuyer;
         case 2: return UcdSeller;
@@ -5722,12 +5731,12 @@ public final class ExtendedSignerProtos {
       "nAndSignerForInvoice\020\006*w\n\014SignerStatus\022\022" +
       "\n\016SellerEmployee\020\001\022\036\n\032InformationCreator" +
       "Employee\020\002\022\035\n\031OtherOrganizationEmployee\020" +
-      "\003\022\024\n\020AuthorizedPerson\020\004*\243\001\n\021DocumentTitl" +
-      "eType\022\r\n\tUtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUc",
-      "dSeller\020\002\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg551Sel" +
-      "ler\020\004\022\023\n\017TovTorg551Buyer\020\005\022\024\n\020AccCert552" +
-      "Seller\020\006\022\023\n\017AccCert552Buyer\020\007B\026B\024Extende" +
-      "dSignerProtos"
+      "\003\022\024\n\020AuthorizedPerson\020\004*\270\001\n\021DocumentTitl" +
+      "eType\022\023\n\006Absent\020\377\377\377\377\377\377\377\377\377\001\022\r\n\tUtdSeller\020",
+      "\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUcdSeller\020\002\022\014\n\010UcdBuy" +
+      "er\020\003\022\024\n\020TovTorg551Seller\020\004\022\023\n\017TovTorg551" +
+      "Buyer\020\005\022\024\n\020AccCert552Seller\020\006\022\023\n\017AccCert" +
+      "552Buyer\020\007B\026B\024ExtendedSignerProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
