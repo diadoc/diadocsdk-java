@@ -1,6 +1,9 @@
 package Diadoc.Api;
 
 import Diadoc.Api.Proto.*;
+import Diadoc.Api.Proto.Auth.AuthenticateByCertificateInfoProtos;
+import Diadoc.Api.Proto.Auth.AuthenticateByLoginInfoProtos;
+import Diadoc.Api.Proto.Auth.AuthenticateBySidInfoProtos;
 import Diadoc.Api.Proto.Docflow.DocflowApiProtos;
 import Diadoc.Api.Proto.Documents.*;
 import Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos;
@@ -14,6 +17,7 @@ import Diadoc.Api.Proto.Invoicing.Signers.*;
 import Diadoc.Api.Proto.Recognition.RecognitionProtos;
 import Diadoc.Api.Proto.Users.UserToUpdateProtos;
 import com.google.gson.Gson;
+import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
 import com.objsys.asn1j.runtime.Asn1BerDecodeBuffer;
@@ -176,10 +180,16 @@ public class DiadocApi {
 
     public void Authenticate(String login, String password) throws IOException {
         updateCredentials(null);
-        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-        parameters.add(new BasicNameValuePair("login", login));
-        parameters.add(new BasicNameValuePair("password", password));
-        byte[] httpResponse = PerformPostHttpRequest("/Authenticate", parameters, null);
+        AuthenticateByLoginInfoProtos.AuthenticateByLoginInfo authenticateByLoginInfo =
+                AuthenticateByLoginInfoProtos.AuthenticateByLoginInfo
+                        .newBuilder()
+                        .setLogin(login)
+                        .setPassword(password)
+                        .build();
+        byte[] httpResponse = PerformPostHttpRequest(
+                "/AuthenticateByLogin",
+                null,
+                authenticateByLoginInfo.toByteArray());
         String result;
         try {
             result = new String(httpResponse, "UTF8");
@@ -189,6 +199,11 @@ public class DiadocApi {
         updateCredentials(result);
     }
 
+    /**
+     * @deprecated
+     * Use /AuthenticateByCertificate
+     */
+    @Deprecated
     public void Authenticate(X509Certificate currentCert) throws Exception {
         updateCredentials(null);
         byte[] responseBody = PerformPostHttpRequest("/Authenticate", null, currentCert.getEncoded());
@@ -196,11 +211,32 @@ public class DiadocApi {
         updateCredentials(authToken);
     }
 
+    public void AuthenticateByCertificate(X509Certificate currentCert) throws Exception {
+        updateCredentials(null);
+        AuthenticateByCertificateInfoProtos.AuthenticateByCertificateInfo authenticateByCertificateInfo =
+                AuthenticateByCertificateInfoProtos.AuthenticateByCertificateInfo
+                        .newBuilder()
+                        .setCertificate(ByteString.copyFrom(currentCert.getEncoded()))
+                        .build();
+        byte[] responseBody = PerformPostHttpRequest(
+                "/AuthenticateByCertificate",
+                null,
+                authenticateByCertificateInfo.toByteArray());
+        String authToken = getAuthToken(responseBody, currentCert);
+        updateCredentials(authToken);
+    }
+
     public void Authenticate(String sid) throws Exception {
         updateCredentials(null);
-        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-        parameters.add(new BasicNameValuePair("sid", sid));
-        byte[] responseBody = PerformPostHttpRequest("/V2/Authenticate", parameters, null);
+        AuthenticateBySidInfoProtos.AuthenticateBySidInfo authenticateBySidInfo =
+                AuthenticateBySidInfoProtos.AuthenticateBySidInfo
+                        .newBuilder()
+                        .setSid(sid)
+                        .build();
+        byte[] responseBody = PerformPostHttpRequest(
+                "/AuthenticateBySid",
+                null,
+                authenticateBySidInfo.toByteArray());
         String result;
         try {
             result = new String(responseBody, "UTF8");
