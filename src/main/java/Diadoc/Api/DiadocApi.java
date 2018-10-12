@@ -1551,6 +1551,36 @@ public class DiadocApi {
         return EmployeeProtos.Employee.parseFrom(responseBytes);
     }
 
+    public EmployeeProtos.EmployeeList GetEmployees(String boxId) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        byte[] responseBytes = PerformGetHttpRequest("/GetEmployees", params);
+        return EmployeeProtos.EmployeeList.parseFrom(responseBytes);
+    }
+
+    public EmployeeProtos.EmployeeList GetEmployees(String boxId, int page) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (page < 1) throw new IllegalArgumentException("page must be 1 or greater");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("page", Integer.toString(page)));
+        byte[] responseBytes = PerformGetHttpRequest("/GetEmployees", params);
+        return EmployeeProtos.EmployeeList.parseFrom(responseBytes);
+    }
+
+    public EmployeeProtos.EmployeeList GetEmployees(String boxId, int page, int count) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (page < 1) throw new IllegalArgumentException("page must be 1 or greater");
+        if (count < 1) throw new IllegalArgumentException("count must be 1 or greater");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("page", Integer.toString(page)));
+        params.add(new BasicNameValuePair("count", Integer.toString(count)));
+        byte[] responseBytes = PerformGetHttpRequest("/GetEmployees", params);
+        return EmployeeProtos.EmployeeList.parseFrom(responseBytes);
+    }
+
     public EmployeeProtos.Employee CreateEmployee(String boxId, EmployeeToCreateProtos.EmployeeToCreate employeeToCreate) throws IOException {
         if (boxId == null) throw new NullPointerException("boxId");
         if (employeeToCreate == null) throw new NullPointerException("employeeToCreate");
