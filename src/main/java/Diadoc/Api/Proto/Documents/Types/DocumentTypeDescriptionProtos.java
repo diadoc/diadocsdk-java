@@ -91,6 +91,97 @@ public final class DocumentTypeDescriptionProtos {
   }
 
   /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Documents.Types.SignerType}
+   */
+  public enum SignerType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>None = 0;</code>
+     */
+    None(0, 0),
+    /**
+     * <code>Signer = 1;</code>
+     */
+    Signer(1, 1),
+    /**
+     * <code>ExtendedSigner = 2;</code>
+     */
+    ExtendedSigner(2, 2),
+    ;
+
+    /**
+     * <code>None = 0;</code>
+     */
+    public static final int None_VALUE = 0;
+    /**
+     * <code>Signer = 1;</code>
+     */
+    public static final int Signer_VALUE = 1;
+    /**
+     * <code>ExtendedSigner = 2;</code>
+     */
+    public static final int ExtendedSigner_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static SignerType valueOf(int value) {
+      switch (value) {
+        case 0: return None;
+        case 1: return Signer;
+        case 2: return ExtendedSigner;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SignerType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<SignerType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SignerType>() {
+            public SignerType findValueByNumber(int number) {
+              return SignerType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final SignerType[] VALUES = values();
+
+    public static SignerType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private SignerType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.Types.SignerType)
+  }
+
+  /**
    * Protobuf enum {@code Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType}
    */
   public enum DocumentMetadataItemType
@@ -174,7 +265,7 @@ public final class DocumentTypeDescriptionProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.getDescriptor().getEnumTypes().get(1);
+      return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final DocumentMetadataItemType[] VALUES = values();
@@ -256,7 +347,7 @@ public final class DocumentTypeDescriptionProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.getDescriptor().getEnumTypes().get(2);
+      return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final DocumentMetadataSource[] VALUES = values();
@@ -5209,6 +5300,19 @@ public final class DocumentTypeDescriptionProtos {
         getUserDataXsdUrlBytes();
 
     /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+     */
+    boolean hasSignerInfo();
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+     */
+    Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo getSignerInfo();
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+     */
+    Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfoOrBuilder getSignerInfoOrBuilder();
+
+    /**
      * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItem MetadataItems = 3;</code>
      */
     java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> 
@@ -5320,17 +5424,17 @@ public final class DocumentTypeDescriptionProtos {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 metadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000010;
               }
               metadataItems_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.PARSER, extensionRegistry));
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 encryptedMetadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000020;
               }
               encryptedMetadataItems_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.PARSER, extensionRegistry));
               break;
@@ -5341,6 +5445,19 @@ public final class DocumentTypeDescriptionProtos {
               userDataXsdUrl_ = bs;
               break;
             }
+            case 50: {
+              Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = signerInfo_.toBuilder();
+              }
+              signerInfo_ = input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signerInfo_);
+                signerInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5349,10 +5466,10 @@ public final class DocumentTypeDescriptionProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           metadataItems_ = java.util.Collections.unmodifiableList(metadataItems_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           encryptedMetadataItems_ = java.util.Collections.unmodifiableList(encryptedMetadataItems_);
         }
         this.unknownFields = unknownFields.build();
@@ -5486,6 +5603,27 @@ public final class DocumentTypeDescriptionProtos {
       }
     }
 
+    public static final int SIGNERINFO_FIELD_NUMBER = 6;
+    private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo signerInfo_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+     */
+    public boolean hasSignerInfo() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+     */
+    public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo getSignerInfo() {
+      return signerInfo_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+     */
+    public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfoOrBuilder getSignerInfoOrBuilder() {
+      return signerInfo_;
+    }
+
     public static final int METADATAITEMS_FIELD_NUMBER = 3;
     private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> metadataItems_;
     /**
@@ -5560,6 +5698,7 @@ public final class DocumentTypeDescriptionProtos {
       isFormal_ = false;
       xsdUrl_ = "";
       userDataXsdUrl_ = "";
+      signerInfo_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.getDefaultInstance();
       metadataItems_ = java.util.Collections.emptyList();
       encryptedMetadataItems_ = java.util.Collections.emptyList();
     }
@@ -5570,6 +5709,14 @@ public final class DocumentTypeDescriptionProtos {
       if (isInitialized == 0) return false;
 
       if (!hasIsFormal()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSignerInfo()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getSignerInfo().isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -5607,6 +5754,9 @@ public final class DocumentTypeDescriptionProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(5, getUserDataXsdUrlBytes());
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(6, signerInfo_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5635,6 +5785,10 @@ public final class DocumentTypeDescriptionProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, getUserDataXsdUrlBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, signerInfo_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5745,6 +5899,7 @@ public final class DocumentTypeDescriptionProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getSignerInfoFieldBuilder();
           getMetadataItemsFieldBuilder();
           getEncryptedMetadataItemsFieldBuilder();
         }
@@ -5761,15 +5916,21 @@ public final class DocumentTypeDescriptionProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         userDataXsdUrl_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+        if (signerInfoBuilder_ == null) {
+          signerInfo_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.getDefaultInstance();
+        } else {
+          signerInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (metadataItemsBuilder_ == null) {
           metadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           metadataItemsBuilder_.clear();
         }
         if (encryptedMetadataItemsBuilder_ == null) {
           encryptedMetadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           encryptedMetadataItemsBuilder_.clear();
         }
@@ -5813,19 +5974,27 @@ public final class DocumentTypeDescriptionProtos {
           to_bitField0_ |= 0x00000004;
         }
         result.userDataXsdUrl_ = userDataXsdUrl_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (signerInfoBuilder_ == null) {
+          result.signerInfo_ = signerInfo_;
+        } else {
+          result.signerInfo_ = signerInfoBuilder_.build();
+        }
         if (metadataItemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
             metadataItems_ = java.util.Collections.unmodifiableList(metadataItems_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.metadataItems_ = metadataItems_;
         } else {
           result.metadataItems_ = metadataItemsBuilder_.build();
         }
         if (encryptedMetadataItemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
             encryptedMetadataItems_ = java.util.Collections.unmodifiableList(encryptedMetadataItems_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.encryptedMetadataItems_ = encryptedMetadataItems_;
         } else {
@@ -5860,11 +6029,14 @@ public final class DocumentTypeDescriptionProtos {
           userDataXsdUrl_ = other.userDataXsdUrl_;
           onChanged();
         }
+        if (other.hasSignerInfo()) {
+          mergeSignerInfo(other.getSignerInfo());
+        }
         if (metadataItemsBuilder_ == null) {
           if (!other.metadataItems_.isEmpty()) {
             if (metadataItems_.isEmpty()) {
               metadataItems_ = other.metadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureMetadataItemsIsMutable();
               metadataItems_.addAll(other.metadataItems_);
@@ -5877,7 +6049,7 @@ public final class DocumentTypeDescriptionProtos {
               metadataItemsBuilder_.dispose();
               metadataItemsBuilder_ = null;
               metadataItems_ = other.metadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               metadataItemsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getMetadataItemsFieldBuilder() : null;
@@ -5890,7 +6062,7 @@ public final class DocumentTypeDescriptionProtos {
           if (!other.encryptedMetadataItems_.isEmpty()) {
             if (encryptedMetadataItems_.isEmpty()) {
               encryptedMetadataItems_ = other.encryptedMetadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureEncryptedMetadataItemsIsMutable();
               encryptedMetadataItems_.addAll(other.encryptedMetadataItems_);
@@ -5903,7 +6075,7 @@ public final class DocumentTypeDescriptionProtos {
               encryptedMetadataItemsBuilder_.dispose();
               encryptedMetadataItemsBuilder_ = null;
               encryptedMetadataItems_ = other.encryptedMetadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
               encryptedMetadataItemsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getEncryptedMetadataItemsFieldBuilder() : null;
@@ -5918,6 +6090,14 @@ public final class DocumentTypeDescriptionProtos {
 
       public final boolean isInitialized() {
         if (!hasIsFormal()) {
+          
+          return false;
+        }
+        if (!hasSignerInfo()) {
+          
+          return false;
+        }
+        if (!getSignerInfo().isInitialized()) {
           
           return false;
         }
@@ -6139,12 +6319,128 @@ public final class DocumentTypeDescriptionProtos {
         return this;
       }
 
+      private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo signerInfo_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfoOrBuilder> signerInfoBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+       */
+      public boolean hasSignerInfo() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+       */
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo getSignerInfo() {
+        if (signerInfoBuilder_ == null) {
+          return signerInfo_;
+        } else {
+          return signerInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+       */
+      public Builder setSignerInfo(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo value) {
+        if (signerInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signerInfo_ = value;
+          onChanged();
+        } else {
+          signerInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+       */
+      public Builder setSignerInfo(
+          Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder builderForValue) {
+        if (signerInfoBuilder_ == null) {
+          signerInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          signerInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+       */
+      public Builder mergeSignerInfo(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo value) {
+        if (signerInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              signerInfo_ != Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.getDefaultInstance()) {
+            signerInfo_ =
+              Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.newBuilder(signerInfo_).mergeFrom(value).buildPartial();
+          } else {
+            signerInfo_ = value;
+          }
+          onChanged();
+        } else {
+          signerInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+       */
+      public Builder clearSignerInfo() {
+        if (signerInfoBuilder_ == null) {
+          signerInfo_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.getDefaultInstance();
+          onChanged();
+        } else {
+          signerInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+       */
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder getSignerInfoBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getSignerInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+       */
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfoOrBuilder getSignerInfoOrBuilder() {
+        if (signerInfoBuilder_ != null) {
+          return signerInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return signerInfo_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfoOrBuilder> 
+          getSignerInfoFieldBuilder() {
+        if (signerInfoBuilder_ == null) {
+          signerInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfoOrBuilder>(
+                  getSignerInfo(),
+                  getParentForChildren(),
+                  isClean());
+          signerInfo_ = null;
+        }
+        return signerInfoBuilder_;
+      }
+
       private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> metadataItems_ =
         java.util.Collections.emptyList();
       private void ensureMetadataItemsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           metadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>(metadataItems_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -6294,7 +6590,7 @@ public final class DocumentTypeDescriptionProtos {
       public Builder clearMetadataItems() {
         if (metadataItemsBuilder_ == null) {
           metadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           metadataItemsBuilder_.clear();
@@ -6371,7 +6667,7 @@ public final class DocumentTypeDescriptionProtos {
           metadataItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemOrBuilder>(
                   metadataItems_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
           metadataItems_ = null;
@@ -6382,9 +6678,9 @@ public final class DocumentTypeDescriptionProtos {
       private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> encryptedMetadataItems_ =
         java.util.Collections.emptyList();
       private void ensureEncryptedMetadataItemsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
           encryptedMetadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>(encryptedMetadataItems_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -6534,7 +6830,7 @@ public final class DocumentTypeDescriptionProtos {
       public Builder clearEncryptedMetadataItems() {
         if (encryptedMetadataItemsBuilder_ == null) {
           encryptedMetadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           encryptedMetadataItemsBuilder_.clear();
@@ -6611,7 +6907,7 @@ public final class DocumentTypeDescriptionProtos {
           encryptedMetadataItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemOrBuilder>(
                   encryptedMetadataItems_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
                   isClean());
           encryptedMetadataItems_ = null;
@@ -6628,6 +6924,515 @@ public final class DocumentTypeDescriptionProtos {
     }
 
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.Types.DocumentTitle)
+  }
+
+  public interface SignerInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.Types.SignerInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+     */
+    boolean hasSignerType();
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+     */
+    Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType getSignerType();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+     */
+    boolean hasExtendedDocumentTitleType();
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+     */
+    Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType getExtendedDocumentTitleType();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.Types.SignerInfo}
+   */
+  public static final class SignerInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.Types.SignerInfo)
+      SignerInfoOrBuilder {
+    // Use SignerInfo.newBuilder() to construct.
+    private SignerInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SignerInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SignerInfo defaultInstance;
+    public static SignerInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SignerInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SignerInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType value = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                signerType_ = value;
+              }
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType value = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                extendedDocumentTitleType_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.class, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SignerInfo> PARSER =
+        new com.google.protobuf.AbstractParser<SignerInfo>() {
+      public SignerInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SignerInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignerInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int SIGNERTYPE_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType signerType_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+     */
+    public boolean hasSignerType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+     */
+    public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType getSignerType() {
+      return signerType_;
+    }
+
+    public static final int EXTENDEDDOCUMENTTITLETYPE_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType extendedDocumentTitleType_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+     */
+    public boolean hasExtendedDocumentTitleType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+     */
+    public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType getExtendedDocumentTitleType() {
+      return extendedDocumentTitleType_;
+    }
+
+    private void initFields() {
+      signerType_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType.None;
+      extendedDocumentTitleType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType.Absent;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSignerType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasExtendedDocumentTitleType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, signerType_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, extendedDocumentTitleType_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, signerType_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, extendedDocumentTitleType_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.Types.SignerInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.Types.SignerInfo)
+        Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.class, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        signerType_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType.None;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        extendedDocumentTitleType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType.Absent;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo build() {
+        Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo buildPartial() {
+        Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo result = new Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.signerType_ = signerType_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.extendedDocumentTitleType_ = extendedDocumentTitleType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo) {
+          return mergeFrom((Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo other) {
+        if (other == Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.getDefaultInstance()) return this;
+        if (other.hasSignerType()) {
+          setSignerType(other.getSignerType());
+        }
+        if (other.hasExtendedDocumentTitleType()) {
+          setExtendedDocumentTitleType(other.getExtendedDocumentTitleType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasSignerType()) {
+          
+          return false;
+        }
+        if (!hasExtendedDocumentTitleType()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType signerType_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType.None;
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+       */
+      public boolean hasSignerType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+       */
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType getSignerType() {
+        return signerType_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+       */
+      public Builder setSignerType(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        signerType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+       */
+      public Builder clearSignerType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signerType_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType.None;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType extendedDocumentTitleType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType.Absent;
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+       */
+      public boolean hasExtendedDocumentTitleType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+       */
+      public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType getExtendedDocumentTitleType() {
+        return extendedDocumentTitleType_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+       */
+      public Builder setExtendedDocumentTitleType(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        extendedDocumentTitleType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+       */
+      public Builder clearExtendedDocumentTitleType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        extendedDocumentTitleType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType.Absent;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Types.SignerInfo)
+    }
+
+    static {
+      defaultInstance = new SignerInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.Types.SignerInfo)
   }
 
   public interface DocumentMetadataItemOrBuilder extends
@@ -8923,6 +9728,11 @@ public final class DocumentTypeDescriptionProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTitle_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentMetadataItem_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -8948,48 +9758,56 @@ public final class DocumentTypeDescriptionProtos {
     java.lang.String[] descriptorData = {
       "\n-Documents/Types/DocumentTypeDescriptio" +
       "n.proto\022 Diadoc.Api.Proto.Documents.Type" +
-      "s\"\354\001\n\027DocumentTypeDescription\022\014\n\004Name\030\001 " +
-      "\002(\t\022\r\n\005Title\030\002 \002(\t\022L\n\021SupportedDocflows\030" +
-      "\003 \003(\01621.Diadoc.Api.Proto.Documents.Types" +
-      ".DocumentDocflow\022\037\n\027RequiresFnsRegistrat" +
-      "ion\030\004 \002(\010\022E\n\tFunctions\030\t \003(\01322.Diadoc.Ap" +
-      "i.Proto.Documents.Types.DocumentFunction" +
-      "\"l\n\030GetDocumentTypesResponse\022P\n\rDocument" +
-      "Types\030\001 \003(\01329.Diadoc.Api.Proto.Documents",
-      ".Types.DocumentTypeDescription\"e\n\020Docume" +
-      "ntFunction\022\014\n\004Name\030\001 \002(\t\022C\n\010Versions\030\002 \003" +
-      "(\01321.Diadoc.Api.Proto.Documents.Types.Do" +
-      "cumentVersion\"\243\002\n\017DocumentVersion\022\017\n\007Ver" +
-      "sion\030\001 \002(\t\022\037\n\027SupportsContentPatching\030\002 " +
-      "\002(\010\022\032\n\022SupportsEncrypting\030\003 \002(\010\022?\n\006Title" +
-      "s\030\004 \003(\0132/.Diadoc.Api.Proto.Documents.Typ" +
-      "es.DocumentTitle\022\020\n\010IsActual\030\005 \002(\010\022E\n\tWo" +
-      "rkflows\030\006 \003(\01322.Diadoc.Api.Proto.Documen" +
-      "ts.Types.DocumentWorkflow\022(\n SupportsPre",
-      "definedRecipientTitle\030\007 \002(\010\"1\n\020DocumentW" +
-      "orkflow\022\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\360" +
-      "\001\n\rDocumentTitle\022\020\n\010IsFormal\030\001 \002(\010\022\016\n\006Xs" +
-      "dUrl\030\002 \001(\t\022\026\n\016UserDataXsdUrl\030\005 \001(\t\022M\n\rMe" +
-      "tadataItems\030\003 \003(\01326.Diadoc.Api.Proto.Doc" +
-      "uments.Types.DocumentMetadataItem\022V\n\026Enc" +
-      "ryptedMetadataItems\030\004 \003(\01326.Diadoc.Api.P" +
-      "roto.Documents.Types.DocumentMetadataIte" +
-      "m\"\312\001\n\024DocumentMetadataItem\022\n\n\002Id\030\001 \002(\t\022H" +
-      "\n\004Type\030\002 \002(\0162:.Diadoc.Api.Proto.Document",
-      "s.Types.DocumentMetadataItemType\022\022\n\nIsRe" +
-      "quired\030\003 \002(\010\022H\n\006Source\030\004 \002(\01628.Diadoc.Ap" +
-      "i.Proto.Documents.Types.DocumentMetadata" +
-      "Source\"N\n\024DetectedDocumentType\022\023\n\013TypeNa" +
-      "medId\030\001 \002(\t\022\020\n\010Function\030\002 \002(\t\022\017\n\007Version" +
-      "\030\003 \002(\t\"l\n\033DetectDocumentTypesResponse\022M\n" +
-      "\rDocumentTypes\030\001 \003(\01326.Diadoc.Api.Proto." +
-      "Documents.Types.DetectedDocumentType*-\n\017" +
-      "DocumentDocflow\022\014\n\010External\020\000\022\014\n\010Interna" +
-      "l\020\001*T\n\030DocumentMetadataItemType\022\n\n\006Strin",
-      "g\020\000\022\013\n\007Integer\020\001\022\013\n\007Decimal\020\002\022\010\n\004Date\020\003\022" +
-      "\010\n\004Time\020\004*+\n\026DocumentMetadataSource\022\007\n\003X" +
-      "ml\020\000\022\010\n\004User\020\001B\037B\035DocumentTypeDescriptio" +
-      "nProtos"
+      "s\032\036Invoicing/ExtendedSigner.proto\"\354\001\n\027Do" +
+      "cumentTypeDescription\022\014\n\004Name\030\001 \002(\t\022\r\n\005T" +
+      "itle\030\002 \002(\t\022L\n\021SupportedDocflows\030\003 \003(\01621." +
+      "Diadoc.Api.Proto.Documents.Types.Documen" +
+      "tDocflow\022\037\n\027RequiresFnsRegistration\030\004 \002(" +
+      "\010\022E\n\tFunctions\030\t \003(\01322.Diadoc.Api.Proto." +
+      "Documents.Types.DocumentFunction\"l\n\030GetD" +
+      "ocumentTypesResponse\022P\n\rDocumentTypes\030\001 ",
+      "\003(\01329.Diadoc.Api.Proto.Documents.Types.D" +
+      "ocumentTypeDescription\"e\n\020DocumentFuncti" +
+      "on\022\014\n\004Name\030\001 \002(\t\022C\n\010Versions\030\002 \003(\01321.Dia" +
+      "doc.Api.Proto.Documents.Types.DocumentVe" +
+      "rsion\"\243\002\n\017DocumentVersion\022\017\n\007Version\030\001 \002" +
+      "(\t\022\037\n\027SupportsContentPatching\030\002 \002(\010\022\032\n\022S" +
+      "upportsEncrypting\030\003 \002(\010\022?\n\006Titles\030\004 \003(\0132" +
+      "/.Diadoc.Api.Proto.Documents.Types.Docum" +
+      "entTitle\022\020\n\010IsActual\030\005 \002(\010\022E\n\tWorkflows\030" +
+      "\006 \003(\01322.Diadoc.Api.Proto.Documents.Types",
+      ".DocumentWorkflow\022(\n SupportsPredefinedR" +
+      "ecipientTitle\030\007 \002(\010\"1\n\020DocumentWorkflow\022" +
+      "\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\262\002\n\rDocum" +
+      "entTitle\022\020\n\010IsFormal\030\001 \002(\010\022\016\n\006XsdUrl\030\002 \001" +
+      "(\t\022\026\n\016UserDataXsdUrl\030\005 \001(\t\022@\n\nSignerInfo" +
+      "\030\006 \002(\0132,.Diadoc.Api.Proto.Documents.Type" +
+      "s.SignerInfo\022M\n\rMetadataItems\030\003 \003(\01326.Di" +
+      "adoc.Api.Proto.Documents.Types.DocumentM" +
+      "etadataItem\022V\n\026EncryptedMetadataItems\030\004 " +
+      "\003(\01326.Diadoc.Api.Proto.Documents.Types.D",
+      "ocumentMetadataItem\"\260\001\n\nSignerInfo\022@\n\nSi" +
+      "gnerType\030\001 \002(\0162,.Diadoc.Api.Proto.Docume" +
+      "nts.Types.SignerType\022`\n\031ExtendedDocument" +
+      "TitleType\030\002 \002(\01625.Diadoc.Api.Proto.Invoi" +
+      "cing.Signers.DocumentTitleType:\006Absent\"\312" +
+      "\001\n\024DocumentMetadataItem\022\n\n\002Id\030\001 \002(\t\022H\n\004T" +
+      "ype\030\002 \002(\0162:.Diadoc.Api.Proto.Documents.T" +
+      "ypes.DocumentMetadataItemType\022\022\n\nIsRequi" +
+      "red\030\003 \002(\010\022H\n\006Source\030\004 \002(\01628.Diadoc.Api.P" +
+      "roto.Documents.Types.DocumentMetadataSou",
+      "rce\"N\n\024DetectedDocumentType\022\023\n\013TypeNamed" +
+      "Id\030\001 \002(\t\022\020\n\010Function\030\002 \002(\t\022\017\n\007Version\030\003 " +
+      "\002(\t\"l\n\033DetectDocumentTypesResponse\022M\n\rDo" +
+      "cumentTypes\030\001 \003(\01326.Diadoc.Api.Proto.Doc" +
+      "uments.Types.DetectedDocumentType*-\n\017Doc" +
+      "umentDocflow\022\014\n\010External\020\000\022\014\n\010Internal\020\001" +
+      "*6\n\nSignerType\022\010\n\004None\020\000\022\n\n\006Signer\020\001\022\022\n\016" +
+      "ExtendedSigner\020\002*T\n\030DocumentMetadataItem" +
+      "Type\022\n\n\006String\020\000\022\013\n\007Integer\020\001\022\013\n\007Decimal" +
+      "\020\002\022\010\n\004Date\020\003\022\010\n\004Time\020\004*+\n\026DocumentMetada",
+      "taSource\022\007\n\003Xml\020\000\022\010\n\004User\020\001B\037B\035DocumentT" +
+      "ypeDescriptionProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9002,6 +9820,7 @@ public final class DocumentTypeDescriptionProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTypeDescription_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9038,25 +9857,32 @@ public final class DocumentTypeDescriptionProtos {
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTitle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTitle_descriptor,
-        new java.lang.String[] { "IsFormal", "XsdUrl", "UserDataXsdUrl", "MetadataItems", "EncryptedMetadataItems", });
-    internal_static_Diadoc_Api_Proto_Documents_Types_DocumentMetadataItem_descriptor =
+        new java.lang.String[] { "IsFormal", "XsdUrl", "UserDataXsdUrl", "SignerInfo", "MetadataItems", "EncryptedMetadataItems", });
+    internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_descriptor,
+        new java.lang.String[] { "SignerType", "ExtendedDocumentTitleType", });
+    internal_static_Diadoc_Api_Proto_Documents_Types_DocumentMetadataItem_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentMetadataItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DocumentMetadataItem_descriptor,
         new java.lang.String[] { "Id", "Type", "IsRequired", "Source", });
     internal_static_Diadoc_Api_Proto_Documents_Types_DetectedDocumentType_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_Diadoc_Api_Proto_Documents_Types_DetectedDocumentType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DetectedDocumentType_descriptor,
         new java.lang.String[] { "TypeNamedId", "Function", "Version", });
     internal_static_Diadoc_Api_Proto_Documents_Types_DetectDocumentTypesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_Diadoc_Api_Proto_Documents_Types_DetectDocumentTypesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DetectDocumentTypesResponse_descriptor,
         new java.lang.String[] { "DocumentTypes", });
+    Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
