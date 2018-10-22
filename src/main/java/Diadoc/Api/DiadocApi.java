@@ -7,6 +7,7 @@ import Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos;
 import Diadoc.Api.Proto.Employees.EmployeeProtos;
 import Diadoc.Api.Proto.Employees.Subscriptions.SubscriptionProtos;
 import Diadoc.Api.Proto.Employees.EmployeeToCreateProtos;
+import Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos;
 import Diadoc.Api.Proto.Invoicing.*;
@@ -1550,6 +1551,18 @@ public class DiadocApi {
         params.add(new BasicNameValuePair("boxId", boxId));
         byte[] body = employeeToCreate.toByteArray();
         byte[] responseBytes = PerformPostHttpRequest("/CreateEmployee", params, body);
+        return EmployeeProtos.Employee.parseFrom(responseBytes);
+    }
+
+    public EmployeeProtos.Employee UpdateEmployee(String boxId, String userId, EmployeeToUpdateProtos.EmployeeToUpdate employeeToUpdate) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (userId == null) throw new NullPointerException("userId");
+        if (employeeToUpdate == null) throw new NullPointerException("employeeToUpdate");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("userId", userId));
+        byte[] body = employeeToUpdate.toByteArray();
+        byte[] responseBytes = PerformPostHttpRequest("/UpdateEmployee", params, body);
         return EmployeeProtos.Employee.parseFrom(responseBytes);
     }
 
