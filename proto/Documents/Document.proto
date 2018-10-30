@@ -90,6 +90,7 @@ message Document {
 	optional Origin Origin = 72;
 	optional string EditingSettingId = 73 [default = ""];
 	required LockMode LockMode = 74 [default = None];
+	required SenderReceiptMetadata SenderReceiptMetadata = 75; 
 }
 
 message ResolutionStatus {
@@ -154,6 +155,10 @@ enum GeneralReceiptStatus {
 message RecipientReceiptMetadata {
 	required GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];
 	optional ConfirmationMetadata ConfirmationMetadata = 2;
+}
+
+message SenderReceiptMetadata {
+	required GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];
 }
 
 message ConfirmationMetadata {
