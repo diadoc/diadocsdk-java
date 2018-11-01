@@ -37,6 +37,7 @@ import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.*;
 import ru.CryptoPro.Crypto.CryptoProvider;
@@ -105,7 +106,7 @@ public class DiadocApi {
             throws NoSuchAlgorithmException, KeyManagementException {
         DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
         HttpProtocolParams.setUserAgent(defaultHttpClient.getParams(), getUserAgentString());
-        defaultHttpClient = makeTrustfulHttpClient(defaultHttpClient);
+        defaultHttpClient = makeThreadSafeClient(makeTrustfulHttpClient(defaultHttpClient));
         defaultHttpClient.addRequestInterceptor(new DiadocPreemptiveAuthRequestInterceptor(), 0);
         return defaultHttpClient;
     }
@@ -154,6 +155,12 @@ public class DiadocApi {
         ClientConnectionManager ccm = base.getConnectionManager();
         ccm.getSchemeRegistry().register(new Scheme("https", 443, ssf));
         return new DefaultHttpClient(ccm, base.getParams());
+    }
+
+    private static DefaultHttpClient makeThreadSafeClient(HttpClient httpClient) {
+        ClientConnectionManager mgr = httpClient.getConnectionManager();
+        HttpParams params = httpClient.getParams();
+        return new DefaultHttpClient(new ThreadSafeClientConnManager(mgr.getSchemeRegistry()), params);
     }
 
     private static SSLSocketFactory getTrustfulSslSocketFactory() throws NoSuchAlgorithmException, KeyManagementException {
