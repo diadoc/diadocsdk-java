@@ -136,6 +136,10 @@ public final class InvoiceInfoProtos {
      * <code>TaxedByAgent = 7;</code>
      */
     TaxedByAgent(7, 7),
+    /**
+     * <code>Fraction_20_120 = 8;</code>
+     */
+    Fraction_20_120(8, 8),
     ;
 
     /**
@@ -170,6 +174,10 @@ public final class InvoiceInfoProtos {
      * <code>TaxedByAgent = 7;</code>
      */
     public static final int TaxedByAgent_VALUE = 7;
+    /**
+     * <code>Fraction_20_120 = 8;</code>
+     */
+    public static final int Fraction_20_120_VALUE = 8;
 
 
     public final int getNumber() { return value; }
@@ -184,6 +192,7 @@ public final class InvoiceInfoProtos {
         case 5: return Fraction_10_110;
         case 6: return Fraction_18_118;
         case 7: return TaxedByAgent;
+        case 8: return Fraction_20_120;
         default: return null;
       }
     }
@@ -23092,11 +23101,11 @@ public final class InvoiceInfoProtos {
       "xcluded\030\002 \001(\t\022\013\n\003Vat\030\003 \001(\t\022\020\n\010Subtotal\030\004" +
       " \001(\t*M\n\024InvoiceFormatVersion\022\037\n\033DefaultI" +
       "nvoiceFormatVersion\020\000\022\t\n\005v5_01\020\001\022\t\n\005v5_0" +
-      "2\020\002*\217\001\n\007TaxRate\022\t\n\005NoVat\020\000\022\r\n\tPercent_0\020" +
+      "2\020\002*\244\001\n\007TaxRate\022\t\n\005NoVat\020\000\022\r\n\tPercent_0\020" +
       "\001\022\016\n\nPercent_10\020\002\022\016\n\nPercent_18\020\003\022\016\n\nPer" +
       "cent_20\020\004\022\023\n\017Fraction_10_110\020\005\022\023\n\017Fracti",
-      "on_18_118\020\006\022\020\n\014TaxedByAgent\020\007B\023B\021Invoice" +
-      "InfoProtos"
+      "on_18_118\020\006\022\020\n\014TaxedByAgent\020\007\022\023\n\017Fractio" +
+      "n_20_120\020\010B\023B\021InvoiceInfoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
