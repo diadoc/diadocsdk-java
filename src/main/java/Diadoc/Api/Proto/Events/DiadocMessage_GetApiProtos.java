@@ -10119,6 +10119,20 @@ public final class DiadocMessage_GetApiProtos {
      */
     com.google.protobuf.ByteString
         getLabelsBytes(int index);
+
+    /**
+     * <code>optional string Version = 26;</code>
+     */
+    boolean hasVersion();
+    /**
+     * <code>optional string Version = 26;</code>
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>optional string Version = 26;</code>
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.Entity}
@@ -10378,6 +10392,12 @@ public final class DiadocMessage_GetApiProtos {
                 mutable_bitField0_ |= 0x00800000;
               }
               labels_.add(bs);
+              break;
+            }
+            case 210: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00800000;
+              version_ = bs;
               break;
             }
           }
@@ -11201,6 +11221,48 @@ public final class DiadocMessage_GetApiProtos {
       return labels_.getByteString(index);
     }
 
+    public static final int VERSION_FIELD_NUMBER = 26;
+    private java.lang.Object version_;
+    /**
+     * <code>optional string Version = 26;</code>
+     */
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00800000) == 0x00800000);
+    }
+    /**
+     * <code>optional string Version = 26;</code>
+     */
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          version_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Version = 26;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       entityType_ = Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.EntityType.UnknownEntityType;
       entityId_ = "";
@@ -11226,6 +11288,7 @@ public final class DiadocMessage_GetApiProtos {
       resolutionRouteRemovalInfo_ = Diadoc.Api.Proto.Events.ResolutionRouteInfoProtos.ResolutionRouteRemovalInfo.getDefaultInstance();
       cancellationInfo_ = Diadoc.Api.Proto.Events.CancellationInfoProtos.CancellationInfo.getDefaultInstance();
       labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      version_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -11364,6 +11427,9 @@ public final class DiadocMessage_GetApiProtos {
       for (int i = 0; i < labels_.size(); i++) {
         output.writeBytes(25, labels_.getByteString(i));
       }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        output.writeBytes(26, getVersionBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -11473,6 +11539,10 @@ public final class DiadocMessage_GetApiProtos {
         }
         size += dataSize;
         size += 2 * getLabelsList().size();
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(26, getVersionBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -11679,6 +11749,8 @@ public final class DiadocMessage_GetApiProtos {
         bitField0_ = (bitField0_ & ~0x00400000);
         labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00800000);
+        version_ = "";
+        bitField0_ = (bitField0_ & ~0x01000000);
         return this;
       }
 
@@ -11836,6 +11908,10 @@ public final class DiadocMessage_GetApiProtos {
           bitField0_ = (bitField0_ & ~0x00800000);
         }
         result.labels_ = labels_;
+        if (((from_bitField0_ & 0x01000000) == 0x01000000)) {
+          to_bitField0_ |= 0x00800000;
+        }
+        result.version_ = version_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -11945,6 +12021,11 @@ public final class DiadocMessage_GetApiProtos {
             ensureLabelsIsMutable();
             labels_.addAll(other.labels_);
           }
+          onChanged();
+        }
+        if (other.hasVersion()) {
+          bitField0_ |= 0x01000000;
+          version_ = other.version_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -14225,6 +14306,82 @@ public final class DiadocMessage_GetApiProtos {
         return this;
       }
 
+      private java.lang.Object version_ = "";
+      /**
+       * <code>optional string Version = 26;</code>
+       */
+      public boolean hasVersion() {
+        return ((bitField0_ & 0x01000000) == 0x01000000);
+      }
+      /**
+       * <code>optional string Version = 26;</code>
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            version_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Version = 26;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Version = 26;</code>
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x01000000;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Version = 26;</code>
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Version = 26;</code>
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x01000000;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.Entity)
     }
 
@@ -15358,7 +15515,7 @@ public final class DiadocMessage_GetApiProtos {
       "Diadoc.Api.Proto.Events.EntityPatch\022 \n\021M" +
       "essageIsRestored\030\n \001(\010:\005false\022!\n\022Message" +
       "IsDelivered\030\013 \001(\010:\005false\022\030\n\020DeliveredPat" +
-      "chId\030\014 \001(\t\022\017\n\007PatchId\030\r \002(\t\"\354\010\n\006Entity\022J" +
+      "chId\030\014 \001(\t\022\017\n\007PatchId\030\r \002(\t\"\375\010\n\006Entity\022J" +
       "\n\nEntityType\030\001 \001(\0162#.Diadoc.Api.Proto.Ev" +
       "ents.EntityType:\021UnknownEntityType\022\020\n\010En" +
       "tityId\030\002 \002(\t\022\026\n\016ParentEntityId\030\003 \001(\t\022*\n\007",
@@ -15387,47 +15544,48 @@ public final class DiadocMessage_GetApiProtos {
       "oto.Events.ResolutionRouteRemovalInfo\022C\n" +
       "\020CancellationInfo\030\030 \001(\0132).Diadoc.Api.Pro" +
       "to.Events.CancellationInfo\022\016\n\006Labels\030\031 \003" +
-      "(\t\"\272\001\n\013EntityPatch\022\020\n\010EntityId\030\001 \002(\t\022 \n\021" +
-      "DocumentIsDeleted\030\002 \001(\010:\005false\022\031\n\021MovedT" +
-      "oDepartment\030\003 \001(\t\022!\n\022DocumentIsRestored\030" +
-      "\004 \001(\010:\005false\022\037\n\020ContentIsPatched\030\005 \001(\010:\005" +
-      "false\022\030\n\020ForwardedToBoxId\030\006 \001(\t*B\n\nEntit",
-      "yType\022\025\n\021UnknownEntityType\020\000\022\016\n\nAttachme" +
-      "nt\020\001\022\r\n\tSignature\020\002*\264\n\n\016AttachmentType\022\"" +
-      "\n\025UnknownAttachmentType\020\377\377\377\377\377\377\377\377\377\001\022\021\n\rNo" +
-      "nformalized\020\000\022\013\n\007Invoice\020\001\022\022\n\016InvoiceRec" +
-      "eipt\020\002\022\027\n\023InvoiceConfirmation\020\003\022\034\n\030Invoi" +
-      "ceCorrectionRequest\020\004\022\025\n\021AttachmentComme" +
-      "nt\020\005\022\037\n\033DeliveryFailureNotification\020\006\022\020\n" +
-      "\014EancomInvoic\020\007\022\035\n\031SignatureRequestRejec" +
-      "tion\020\010\022(\n$EcrCatConformanceCertificateMe" +
-      "tadata\020\t\022\037\n\033SignatureVerificationReport\020",
-      "\n\022\032\n\026TrustConnectionRequest\020\013\022\n\n\006Torg12\020" +
-      "\014\022\023\n\017InvoiceRevision\020\r\022\025\n\021InvoiceCorrect" +
-      "ion\020\016\022\035\n\031InvoiceCorrectionRevision\020\017\022\031\n\025" +
-      "AcceptanceCertificate\020\020\022\022\n\016StructuredDat" +
-      "a\020\021\022\023\n\017ProformaInvoice\020\022\022\r\n\tXmlTorg12\020\023\022" +
-      "\034\n\030XmlAcceptanceCertificate\020\024\022\027\n\023XmlTorg" +
-      "12BuyerTitle\020\025\022&\n\"XmlAcceptanceCertifica" +
-      "teBuyerTitle\020\026\022\016\n\nResolution\020\027\022\025\n\021Resolu" +
-      "tionRequest\020\030\022\033\n\027ResolutionRequestDenial" +
-      "\020\031\022\r\n\tPriceList\020\032\022\013\n\007Receipt\020\033\022\031\n\025XmlSig",
-      "natureRejection\020\034\022\025\n\021RevocationRequest\020\035" +
-      "\022\026\n\022PriceListAgreement\020\036\022\027\n\023CertificateR" +
-      "egistry\020\"\022\025\n\021ReconciliationAct\020#\022\014\n\010Cont" +
-      "ract\020$\022\n\n\006Torg13\020%\022\022\n\016ServiceDetails\020&\022\027" +
-      "\n\023RoamingNotification\020\'\022\032\n\026Supplementary" +
-      "Agreement\020(\022\035\n\031UniversalTransferDocument" +
-      "\020)\022\'\n#UniversalTransferDocumentBuyerTitl" +
-      "e\020*\022%\n!UniversalTransferDocumentRevision" +
-      "\020-\022\037\n\033UniversalCorrectionDocument\0201\022\'\n#U" +
-      "niversalCorrectionDocumentRevision\0202\022)\n%",
-      "UniversalCorrectionDocumentBuyerTitle\0203\022" +
-      "\016\n\nCustomData\020@\022\020\n\014MoveDocument\020A\022\'\n#Res" +
-      "olutionRouteAssignmentAttachment\020B\022$\n Re" +
-      "solutionRouteRemovalAttachment\020C\022\t\n\005Titl" +
-      "e\020D\022\020\n\014Cancellation\020E\022\013\n\007Edition\020GB\034B\032Di" +
-      "adocMessage_GetApiProtos"
+      "(\t\022\017\n\007Version\030\032 \001(\t\"\272\001\n\013EntityPatch\022\020\n\010E" +
+      "ntityId\030\001 \002(\t\022 \n\021DocumentIsDeleted\030\002 \001(\010" +
+      ":\005false\022\031\n\021MovedToDepartment\030\003 \001(\t\022!\n\022Do" +
+      "cumentIsRestored\030\004 \001(\010:\005false\022\037\n\020Content" +
+      "IsPatched\030\005 \001(\010:\005false\022\030\n\020ForwardedToBox",
+      "Id\030\006 \001(\t*B\n\nEntityType\022\025\n\021UnknownEntityT" +
+      "ype\020\000\022\016\n\nAttachment\020\001\022\r\n\tSignature\020\002*\264\n\n" +
+      "\016AttachmentType\022\"\n\025UnknownAttachmentType" +
+      "\020\377\377\377\377\377\377\377\377\377\001\022\021\n\rNonformalized\020\000\022\013\n\007Invoic" +
+      "e\020\001\022\022\n\016InvoiceReceipt\020\002\022\027\n\023InvoiceConfir" +
+      "mation\020\003\022\034\n\030InvoiceCorrectionRequest\020\004\022\025" +
+      "\n\021AttachmentComment\020\005\022\037\n\033DeliveryFailure" +
+      "Notification\020\006\022\020\n\014EancomInvoic\020\007\022\035\n\031Sign" +
+      "atureRequestRejection\020\010\022(\n$EcrCatConform" +
+      "anceCertificateMetadata\020\t\022\037\n\033SignatureVe",
+      "rificationReport\020\n\022\032\n\026TrustConnectionReq" +
+      "uest\020\013\022\n\n\006Torg12\020\014\022\023\n\017InvoiceRevision\020\r\022" +
+      "\025\n\021InvoiceCorrection\020\016\022\035\n\031InvoiceCorrect" +
+      "ionRevision\020\017\022\031\n\025AcceptanceCertificate\020\020" +
+      "\022\022\n\016StructuredData\020\021\022\023\n\017ProformaInvoice\020" +
+      "\022\022\r\n\tXmlTorg12\020\023\022\034\n\030XmlAcceptanceCertifi" +
+      "cate\020\024\022\027\n\023XmlTorg12BuyerTitle\020\025\022&\n\"XmlAc" +
+      "ceptanceCertificateBuyerTitle\020\026\022\016\n\nResol" +
+      "ution\020\027\022\025\n\021ResolutionRequest\020\030\022\033\n\027Resolu" +
+      "tionRequestDenial\020\031\022\r\n\tPriceList\020\032\022\013\n\007Re",
+      "ceipt\020\033\022\031\n\025XmlSignatureRejection\020\034\022\025\n\021Re" +
+      "vocationRequest\020\035\022\026\n\022PriceListAgreement\020" +
+      "\036\022\027\n\023CertificateRegistry\020\"\022\025\n\021Reconcilia" +
+      "tionAct\020#\022\014\n\010Contract\020$\022\n\n\006Torg13\020%\022\022\n\016S" +
+      "erviceDetails\020&\022\027\n\023RoamingNotification\020\'" +
+      "\022\032\n\026SupplementaryAgreement\020(\022\035\n\031Universa" +
+      "lTransferDocument\020)\022\'\n#UniversalTransfer" +
+      "DocumentBuyerTitle\020*\022%\n!UniversalTransfe" +
+      "rDocumentRevision\020-\022\037\n\033UniversalCorrecti" +
+      "onDocument\0201\022\'\n#UniversalCorrectionDocum",
+      "entRevision\0202\022)\n%UniversalCorrectionDocu" +
+      "mentBuyerTitle\0203\022\016\n\nCustomData\020@\022\020\n\014Move" +
+      "Document\020A\022\'\n#ResolutionRouteAssignmentA" +
+      "ttachment\020B\022$\n ResolutionRouteRemovalAtt" +
+      "achment\020C\022\t\n\005Title\020D\022\020\n\014Cancellation\020E\022\013" +
+      "\n\007Edition\020GB\034B\032DiadocMessage_GetApiProto" +
+      "s"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15485,7 +15643,7 @@ public final class DiadocMessage_GetApiProtos {
     internal_static_Diadoc_Api_Proto_Events_Entity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_Entity_descriptor,
-        new java.lang.String[] { "EntityType", "EntityId", "ParentEntityId", "Content", "AttachmentType", "FileName", "NeedRecipientSignature", "SignerBoxId", "NotDeliveredEventId", "DocumentInfo", "RawCreationDate", "ResolutionInfo", "SignerDepartmentId", "ResolutionRequestInfo", "ResolutionRequestDenialInfo", "NeedReceipt", "PacketId", "IsApprovementSignature", "IsEncryptedContent", "AttachmentVersion", "ResolutionRouteAssignmentInfo", "ResolutionRouteRemovalInfo", "CancellationInfo", "Labels", });
+        new java.lang.String[] { "EntityType", "EntityId", "ParentEntityId", "Content", "AttachmentType", "FileName", "NeedRecipientSignature", "SignerBoxId", "NotDeliveredEventId", "DocumentInfo", "RawCreationDate", "ResolutionInfo", "SignerDepartmentId", "ResolutionRequestInfo", "ResolutionRequestDenialInfo", "NeedReceipt", "PacketId", "IsApprovementSignature", "IsEncryptedContent", "AttachmentVersion", "ResolutionRouteAssignmentInfo", "ResolutionRouteRemovalInfo", "CancellationInfo", "Labels", "Version", });
     internal_static_Diadoc_Api_Proto_Events_EntityPatch_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_Events_EntityPatch_fieldAccessorTable = new

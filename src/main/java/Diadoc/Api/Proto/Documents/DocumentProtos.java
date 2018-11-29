@@ -1889,6 +1889,20 @@ public final class DocumentProtos {
      * <code>required .Diadoc.Api.Proto.Documents.SenderReceiptMetadata SenderReceiptMetadata = 75;</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.SenderReceiptMetadataOrBuilder getSenderReceiptMetadataOrBuilder();
+
+    /**
+     * <code>required string Version = 76;</code>
+     */
+    boolean hasVersion();
+    /**
+     * <code>required string Version = 76;</code>
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>required string Version = 76;</code>
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Document}
@@ -2629,6 +2643,12 @@ public final class DocumentProtos {
                 senderReceiptMetadata_ = subBuilder.buildPartial();
               }
               bitField2_ |= 0x00000008;
+              break;
+            }
+            case 610: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField2_ |= 0x00000010;
+              version_ = bs;
               break;
             }
           }
@@ -4576,6 +4596,48 @@ public final class DocumentProtos {
       return senderReceiptMetadata_;
     }
 
+    public static final int VERSION_FIELD_NUMBER = 76;
+    private java.lang.Object version_;
+    /**
+     * <code>required string Version = 76;</code>
+     */
+    public boolean hasVersion() {
+      return ((bitField2_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required string Version = 76;</code>
+     */
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          version_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Version = 76;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       indexKey_ = "";
       messageId_ = "";
@@ -4650,6 +4712,7 @@ public final class DocumentProtos {
       editingSettingId_ = "";
       lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
       senderReceiptMetadata_ = Diadoc.Api.Proto.Documents.DocumentProtos.SenderReceiptMetadata.getDefaultInstance();
+      version_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4706,6 +4769,10 @@ public final class DocumentProtos {
         return false;
       }
       if (!hasSenderReceiptMetadata()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasVersion()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -5089,6 +5156,9 @@ public final class DocumentProtos {
       if (((bitField2_ & 0x00000008) == 0x00000008)) {
         output.writeMessage(75, senderReceiptMetadata_);
       }
+      if (((bitField2_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(76, getVersionBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5389,6 +5459,10 @@ public final class DocumentProtos {
       if (((bitField2_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(75, senderReceiptMetadata_);
+      }
+      if (((bitField2_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(76, getVersionBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5828,6 +5902,8 @@ public final class DocumentProtos {
           senderReceiptMetadataBuilder_.clear();
         }
         bitField2_ = (bitField2_ & ~0x00000100);
+        version_ = "";
+        bitField2_ = (bitField2_ & ~0x00000200);
         return this;
       }
 
@@ -6297,6 +6373,10 @@ public final class DocumentProtos {
         } else {
           result.senderReceiptMetadata_ = senderReceiptMetadataBuilder_.build();
         }
+        if (((from_bitField2_ & 0x00000200) == 0x00000200)) {
+          to_bitField2_ |= 0x00000010;
+        }
+        result.version_ = version_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         result.bitField2_ = to_bitField2_;
@@ -6687,6 +6767,11 @@ public final class DocumentProtos {
         if (other.hasSenderReceiptMetadata()) {
           mergeSenderReceiptMetadata(other.getSenderReceiptMetadata());
         }
+        if (other.hasVersion()) {
+          bitField2_ |= 0x00000200;
+          version_ = other.version_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -6741,6 +6826,10 @@ public final class DocumentProtos {
           return false;
         }
         if (!hasSenderReceiptMetadata()) {
+          
+          return false;
+        }
+        if (!hasVersion()) {
           
           return false;
         }
@@ -13678,6 +13767,82 @@ public final class DocumentProtos {
         return senderReceiptMetadataBuilder_;
       }
 
+      private java.lang.Object version_ = "";
+      /**
+       * <code>required string Version = 76;</code>
+       */
+      public boolean hasVersion() {
+        return ((bitField2_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>required string Version = 76;</code>
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            version_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Version = 76;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Version = 76;</code>
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField2_ |= 0x00000200;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Version = 76;</code>
+       */
+      public Builder clearVersion() {
+        bitField2_ = (bitField2_ & ~0x00000200);
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Version = 76;</code>
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField2_ |= 0x00000200;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Document)
     }
 
@@ -17278,7 +17443,7 @@ public final class DocumentProtos {
       "\032)Documents/UniversalTransferDocument.pr",
       "oto\032\026ResolutionTarget.proto\032\032ForwardDocu" +
       "mentEvent.proto\032\"Events/DiadocMessage-Po" +
-      "stApi.proto\"\335&\n\010Document\022\020\n\010IndexKey\030\001 \001" +
+      "stApi.proto\"\356&\n\010Document\022\020\n\010IndexKey\030\001 \001" +
       "(\t\022\021\n\tMessageId\030\002 \002(\t\022\020\n\010EntityId\030\003 \002(\t\022" +
       "\036\n\026CreationTimestampTicks\030\004 \002(\020\022\031\n\021Count" +
       "eragentBoxId\030\005 \001(\t\022I\n\014DocumentType\030\006 \001(\016" +
@@ -17402,65 +17567,66 @@ public final class DocumentProtos {
       "\010LockMode\030J \002(\0162\032.Diadoc.Api.Proto.LockM" +
       "ode:\004None\022P\n\025SenderReceiptMetadata\030K \002(\013" +
       "21.Diadoc.Api.Proto.Documents.SenderRece" +
-      "iptMetadata\"\310\001\n\020ResolutionStatus\022W\n\004Type" +
-      "\030\001 \001(\01620.Diadoc.Api.Proto.Documents.Reso" +
-      "lutionStatusType:\027UnknownResolutionStatu" +
-      "s\0222\n\006Target\030\002 \001(\0132\".Diadoc.Api.Proto.Res",
-      "olutionTarget\022\024\n\014AuthorUserId\030\003 \002(\t\022\021\n\tA" +
-      "uthorFIO\030\004 \002(\t\"\320\001\n\030RecipientReceiptMetad" +
-      "ata\022d\n\rReceiptStatus\030\001 \002(\01620.Diadoc.Api." +
-      "Proto.Documents.GeneralReceiptStatus:\033Ge" +
-      "neralReceiptStatusUnknown\022N\n\024Confirmatio" +
-      "nMetadata\030\002 \001(\01320.Diadoc.Api.Proto.Docum" +
-      "ents.ConfirmationMetadata\"}\n\025SenderRecei" +
-      "ptMetadata\022d\n\rReceiptStatus\030\001 \002(\01620.Diad" +
-      "oc.Api.Proto.Documents.GeneralReceiptSta" +
-      "tus:\033GeneralReceiptStatusUnknown\"\223\001\n\024Con",
-      "firmationMetadata\022d\n\rReceiptStatus\030\001 \002(\016" +
-      "20.Diadoc.Api.Proto.Documents.GeneralRec" +
-      "eiptStatus:\033GeneralReceiptStatusUnknown\022" +
-      "\025\n\rDateTimeTicks\030\002 \002(\020\"\230\001\n\030AmendmentRequ" +
-      "estMetadata\022\026\n\016AmendmentFlags\030\001 \002(\005\022d\n\rR" +
-      "eceiptStatus\030\002 \002(\01620.Diadoc.Api.Proto.Do" +
-      "cuments.GeneralReceiptStatus:\033GeneralRec" +
-      "eiptStatusUnknown\"Y\n\006Origin\022<\n\013MessageTy" +
-      "pe\030\001 \002(\0162\'.Diadoc.Api.Proto.Documents.Me" +
-      "ssageType\022\021\n\tMessageId\030\002 \002(\t*\254\001\n\024Resolut",
-      "ionStatusType\022$\n\027UnknownResolutionStatus" +
-      "\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013D" +
-      "isapproved\020\002\022\030\n\024ApprovementRequested\020\003\022\026" +
-      "\n\022SignatureRequested\020\004\022\023\n\017SignatureDenie" +
-      "d\020\005*\262\001\n\020RevocationStatus\022\033\n\027UnknownRevoc" +
-      "ationStatus\020\000\022\030\n\024RevocationStatusNone\020\001\022" +
-      "\035\n\031RevocationIsRequestedByMe\020\002\022\030\n\024Reques" +
-      "tsMyRevocation\020\003\022\026\n\022RevocationAccepted\020\004" +
-      "\022\026\n\022RevocationRejected\020\005*\256\001\n\031RoamingNoti" +
-      "ficationStatus\022$\n UnknownRoamingNotifica",
-      "tionStatus\020\000\022!\n\035RoamingNotificationStatu" +
-      "sNone\020\001\022$\n RoamingNotificationStatusSucc" +
-      "ess\020\002\022\"\n\036RoamingNotificationStatusError\020" +
-      "\003*\300\001\n\025SenderSignatureStatus\022 \n\034UnknownSe" +
-      "nderSignatureStatus\020\000\022\035\n\031WaitingForSende" +
-      "rSignature\020\001\022\034\n\030SenderSignatureUnchecked" +
-      "\020\002\022\"\n\036SenderSignatureCheckedAndValid\020\003\022$" +
-      "\n SenderSignatureCheckedAndInvalid\020\004*\302\001\n" +
-      "\024ProxySignatureStatus\022\037\n\033UnknownProxySig" +
-      "natureStatus\020\000\022\034\n\030ProxySignatureStatusNo",
-      "ne\020\001\022\034\n\030WaitingForProxySignature\020\002\022\026\n\022Wi" +
-      "thProxySignature\020\003\022\032\n\026ProxySignatureReje" +
-      "cted\020\004\022\031\n\025InvalidProxySignature\020\005*\234\001\n\024Ge" +
-      "neralReceiptStatus\022\037\n\033GeneralReceiptStat" +
-      "usUnknown\020\000\022%\n!GeneralReceiptStatusNotAc" +
-      "ceptable\020\001\022\027\n\023HaveToCreateReceipt\020\002\022\025\n\021W" +
-      "aitingForReceipt\020\003\022\014\n\010Finished\020\004*\353\001\n\027Rec" +
-      "ipientResponseStatus\022\"\n\036RecipientRespons" +
-      "eStatusUnknown\020\000\022(\n$RecipientResponseSta" +
-      "tusNotAcceptable\020\001\022 \n\034WaitingForRecipien",
-      "tSignature\020\002\022\032\n\026WithRecipientSignature\020\003" +
-      "\022%\n!RecipientSignatureRequestRejected\020\004\022" +
-      "\035\n\031InvalidRecipientSignature\020\005*@\n\013Messag" +
-      "eType\022\013\n\007Unknown\020\000\022\013\n\007Message\020\001\022\t\n\005Draft" +
-      "\020\002\022\014\n\010Template\020\003B\020B\016DocumentProtos"
+      "iptMetadata\022\017\n\007Version\030L \002(\t\"\310\001\n\020Resolut" +
+      "ionStatus\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.Pro" +
+      "to.Documents.ResolutionStatusType:\027Unkno" +
+      "wnResolutionStatus\0222\n\006Target\030\002 \001(\0132\".Dia",
+      "doc.Api.Proto.ResolutionTarget\022\024\n\014Author" +
+      "UserId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n\030Reci" +
+      "pientReceiptMetadata\022d\n\rReceiptStatus\030\001 " +
+      "\002(\01620.Diadoc.Api.Proto.Documents.General" +
+      "ReceiptStatus:\033GeneralReceiptStatusUnkno" +
+      "wn\022N\n\024ConfirmationMetadata\030\002 \001(\01320.Diado" +
+      "c.Api.Proto.Documents.ConfirmationMetada" +
+      "ta\"}\n\025SenderReceiptMetadata\022d\n\rReceiptSt" +
+      "atus\030\001 \002(\01620.Diadoc.Api.Proto.Documents." +
+      "GeneralReceiptStatus:\033GeneralReceiptStat",
+      "usUnknown\"\223\001\n\024ConfirmationMetadata\022d\n\rRe" +
+      "ceiptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Doc" +
+      "uments.GeneralReceiptStatus:\033GeneralRece" +
+      "iptStatusUnknown\022\025\n\rDateTimeTicks\030\002 \002(\020\"" +
+      "\230\001\n\030AmendmentRequestMetadata\022\026\n\016Amendmen" +
+      "tFlags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620.Di" +
+      "adoc.Api.Proto.Documents.GeneralReceiptS" +
+      "tatus:\033GeneralReceiptStatusUnknown\"Y\n\006Or" +
+      "igin\022<\n\013MessageType\030\001 \002(\0162\'.Diadoc.Api.P" +
+      "roto.Documents.MessageType\022\021\n\tMessageId\030",
+      "\002 \002(\t*\254\001\n\024ResolutionStatusType\022$\n\027Unknow" +
+      "nResolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014" +
+      "\n\010Approved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024Approve" +
+      "mentRequested\020\003\022\026\n\022SignatureRequested\020\004\022" +
+      "\023\n\017SignatureDenied\020\005*\262\001\n\020RevocationStatu" +
+      "s\022\033\n\027UnknownRevocationStatus\020\000\022\030\n\024Revoca" +
+      "tionStatusNone\020\001\022\035\n\031RevocationIsRequeste" +
+      "dByMe\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Rev" +
+      "ocationAccepted\020\004\022\026\n\022RevocationRejected\020" +
+      "\005*\256\001\n\031RoamingNotificationStatus\022$\n Unkno",
+      "wnRoamingNotificationStatus\020\000\022!\n\035Roaming" +
+      "NotificationStatusNone\020\001\022$\n RoamingNotif" +
+      "icationStatusSuccess\020\002\022\"\n\036RoamingNotific" +
+      "ationStatusError\020\003*\300\001\n\025SenderSignatureSt" +
+      "atus\022 \n\034UnknownSenderSignatureStatus\020\000\022\035" +
+      "\n\031WaitingForSenderSignature\020\001\022\034\n\030SenderS" +
+      "ignatureUnchecked\020\002\022\"\n\036SenderSignatureCh" +
+      "eckedAndValid\020\003\022$\n SenderSignatureChecke" +
+      "dAndInvalid\020\004*\302\001\n\024ProxySignatureStatus\022\037" +
+      "\n\033UnknownProxySignatureStatus\020\000\022\034\n\030Proxy",
+      "SignatureStatusNone\020\001\022\034\n\030WaitingForProxy" +
+      "Signature\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026P" +
+      "roxySignatureRejected\020\004\022\031\n\025InvalidProxyS" +
+      "ignature\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033G" +
+      "eneralReceiptStatusUnknown\020\000\022%\n!GeneralR" +
+      "eceiptStatusNotAcceptable\020\001\022\027\n\023HaveToCre" +
+      "ateReceipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010F" +
+      "inished\020\004*\353\001\n\027RecipientResponseStatus\022\"\n" +
+      "\036RecipientResponseStatusUnknown\020\000\022(\n$Rec" +
+      "ipientResponseStatusNotAcceptable\020\001\022 \n\034W",
+      "aitingForRecipientSignature\020\002\022\032\n\026WithRec" +
+      "ipientSignature\020\003\022%\n!RecipientSignatureR" +
+      "equestRejected\020\004\022\035\n\031InvalidRecipientSign" +
+      "ature\020\005*@\n\013MessageType\022\013\n\007Unknown\020\000\022\013\n\007M" +
+      "essage\020\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016Doc" +
+      "umentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17494,7 +17660,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", "EditingSettingId", "LockMode", "SenderReceiptMetadata", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", "EditingSettingId", "LockMode", "SenderReceiptMetadata", "Version", });
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_ResolutionStatus_fieldAccessorTable = new
