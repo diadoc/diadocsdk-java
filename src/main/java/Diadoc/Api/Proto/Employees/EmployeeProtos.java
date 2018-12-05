@@ -2979,6 +2979,783 @@ public final class EmployeeProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Employees.EmployeeAction)
   }
 
+  public interface EmployeeListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Employees.EmployeeList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Employees.EmployeeProtos.Employee> 
+        getEmployeesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    Diadoc.Api.Proto.Employees.EmployeeProtos.Employee getEmployees(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    int getEmployeesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeOrBuilder> 
+        getEmployeesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeOrBuilder getEmployeesOrBuilder(
+        int index);
+
+    /**
+     * <code>required int32 TotalCount = 2;</code>
+     */
+    boolean hasTotalCount();
+    /**
+     * <code>required int32 TotalCount = 2;</code>
+     */
+    int getTotalCount();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Employees.EmployeeList}
+   */
+  public static final class EmployeeList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Employees.EmployeeList)
+      EmployeeListOrBuilder {
+    // Use EmployeeList.newBuilder() to construct.
+    private EmployeeList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private EmployeeList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final EmployeeList defaultInstance;
+    public static EmployeeList getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public EmployeeList getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EmployeeList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                employees_ = new java.util.ArrayList<Diadoc.Api.Proto.Employees.EmployeeProtos.Employee>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              employees_.add(input.readMessage(Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.PARSER, extensionRegistry));
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              totalCount_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          employees_ = java.util.Collections.unmodifiableList(employees_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList.class, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<EmployeeList> PARSER =
+        new com.google.protobuf.AbstractParser<EmployeeList>() {
+      public EmployeeList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EmployeeList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmployeeList> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int EMPLOYEES_FIELD_NUMBER = 1;
+    private java.util.List<Diadoc.Api.Proto.Employees.EmployeeProtos.Employee> employees_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Employees.EmployeeProtos.Employee> getEmployeesList() {
+      return employees_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeOrBuilder> 
+        getEmployeesOrBuilderList() {
+      return employees_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    public int getEmployeesCount() {
+      return employees_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    public Diadoc.Api.Proto.Employees.EmployeeProtos.Employee getEmployees(int index) {
+      return employees_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+     */
+    public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeOrBuilder getEmployeesOrBuilder(
+        int index) {
+      return employees_.get(index);
+    }
+
+    public static final int TOTALCOUNT_FIELD_NUMBER = 2;
+    private int totalCount_;
+    /**
+     * <code>required int32 TotalCount = 2;</code>
+     */
+    public boolean hasTotalCount() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 TotalCount = 2;</code>
+     */
+    public int getTotalCount() {
+      return totalCount_;
+    }
+
+    private void initFields() {
+      employees_ = java.util.Collections.emptyList();
+      totalCount_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasTotalCount()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getEmployeesCount(); i++) {
+        if (!getEmployees(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < employees_.size(); i++) {
+        output.writeMessage(1, employees_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(2, totalCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < employees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, employees_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, totalCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Employees.EmployeeList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Employees.EmployeeList)
+        Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList.class, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getEmployeesFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (employeesBuilder_ == null) {
+          employees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          employeesBuilder_.clear();
+        }
+        totalCount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeList_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList build() {
+        Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList buildPartial() {
+        Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList result = new Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (employeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            employees_ = java.util.Collections.unmodifiableList(employees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.employees_ = employees_;
+        } else {
+          result.employees_ = employeesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.totalCount_ = totalCount_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList) {
+          return mergeFrom((Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList other) {
+        if (other == Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList.getDefaultInstance()) return this;
+        if (employeesBuilder_ == null) {
+          if (!other.employees_.isEmpty()) {
+            if (employees_.isEmpty()) {
+              employees_ = other.employees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEmployeesIsMutable();
+              employees_.addAll(other.employees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.employees_.isEmpty()) {
+            if (employeesBuilder_.isEmpty()) {
+              employeesBuilder_.dispose();
+              employeesBuilder_ = null;
+              employees_ = other.employees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              employeesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getEmployeesFieldBuilder() : null;
+            } else {
+              employeesBuilder_.addAllMessages(other.employees_);
+            }
+          }
+        }
+        if (other.hasTotalCount()) {
+          setTotalCount(other.getTotalCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasTotalCount()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getEmployeesCount(); i++) {
+          if (!getEmployees(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<Diadoc.Api.Proto.Employees.EmployeeProtos.Employee> employees_ =
+        java.util.Collections.emptyList();
+      private void ensureEmployeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          employees_ = new java.util.ArrayList<Diadoc.Api.Proto.Employees.EmployeeProtos.Employee>(employees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Employees.EmployeeProtos.Employee, Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeOrBuilder> employeesBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Employees.EmployeeProtos.Employee> getEmployeesList() {
+        if (employeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(employees_);
+        } else {
+          return employeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public int getEmployeesCount() {
+        if (employeesBuilder_ == null) {
+          return employees_.size();
+        } else {
+          return employeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.Employee getEmployees(int index) {
+        if (employeesBuilder_ == null) {
+          return employees_.get(index);
+        } else {
+          return employeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Builder setEmployees(
+          int index, Diadoc.Api.Proto.Employees.EmployeeProtos.Employee value) {
+        if (employeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEmployeesIsMutable();
+          employees_.set(index, value);
+          onChanged();
+        } else {
+          employeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Builder setEmployees(
+          int index, Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder builderForValue) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          employees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          employeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Builder addEmployees(Diadoc.Api.Proto.Employees.EmployeeProtos.Employee value) {
+        if (employeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEmployeesIsMutable();
+          employees_.add(value);
+          onChanged();
+        } else {
+          employeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Builder addEmployees(
+          int index, Diadoc.Api.Proto.Employees.EmployeeProtos.Employee value) {
+        if (employeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEmployeesIsMutable();
+          employees_.add(index, value);
+          onChanged();
+        } else {
+          employeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Builder addEmployees(
+          Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder builderForValue) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          employees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          employeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Builder addEmployees(
+          int index, Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder builderForValue) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          employees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          employeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Builder addAllEmployees(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Employees.EmployeeProtos.Employee> values) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, employees_);
+          onChanged();
+        } else {
+          employeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Builder clearEmployees() {
+        if (employeesBuilder_ == null) {
+          employees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          employeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Builder removeEmployees(int index) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          employees_.remove(index);
+          onChanged();
+        } else {
+          employeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder getEmployeesBuilder(
+          int index) {
+        return getEmployeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeOrBuilder getEmployeesOrBuilder(
+          int index) {
+        if (employeesBuilder_ == null) {
+          return employees_.get(index);  } else {
+          return employeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeOrBuilder> 
+           getEmployeesOrBuilderList() {
+        if (employeesBuilder_ != null) {
+          return employeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(employees_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder addEmployeesBuilder() {
+        return getEmployeesFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder addEmployeesBuilder(
+          int index) {
+        return getEmployeesFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Employees.Employee Employees = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder> 
+           getEmployeesBuilderList() {
+        return getEmployeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Employees.EmployeeProtos.Employee, Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeOrBuilder> 
+          getEmployeesFieldBuilder() {
+        if (employeesBuilder_ == null) {
+          employeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Employees.EmployeeProtos.Employee, Diadoc.Api.Proto.Employees.EmployeeProtos.Employee.Builder, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeOrBuilder>(
+                  employees_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          employees_ = null;
+        }
+        return employeesBuilder_;
+      }
+
+      private int totalCount_ ;
+      /**
+       * <code>required int32 TotalCount = 2;</code>
+       */
+      public boolean hasTotalCount() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 TotalCount = 2;</code>
+       */
+      public int getTotalCount() {
+        return totalCount_;
+      }
+      /**
+       * <code>required int32 TotalCount = 2;</code>
+       */
+      public Builder setTotalCount(int value) {
+        bitField0_ |= 0x00000002;
+        totalCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 TotalCount = 2;</code>
+       */
+      public Builder clearTotalCount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Employees.EmployeeList)
+    }
+
+    static {
+      defaultInstance = new EmployeeList(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Employees.EmployeeList)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Employees_Employee_descriptor;
   private static
@@ -2994,6 +3771,11 @@ public final class EmployeeProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Employees_EmployeeAction_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Employees_EmployeeList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Employees_EmployeeList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3019,7 +3801,10 @@ public final class EmployeeProtos {
       "electedDepartmentIds\030\004 \003(\t\022;\n\007Actions\030\005 " +
       "\003(\0132*.Diadoc.Api.Proto.Employees.Employe" +
       "eAction\"1\n\016EmployeeAction\022\014\n\004Name\030\001 \002(\t\022" +
-      "\021\n\tIsAllowed\030\002 \002(\010B\020B\016EmployeeProtos"
+      "\021\n\tIsAllowed\030\002 \002(\010\"[\n\014EmployeeList\0227\n\tEm" +
+      "ployees\030\001 \003(\0132$.Diadoc.Api.Proto.Employe" +
+      "es.Employee\022\022\n\nTotalCount\030\002 \002(\005B\020B\016Emplo" +
+      "yeeProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3054,6 +3839,12 @@ public final class EmployeeProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Employees_EmployeeAction_descriptor,
         new java.lang.String[] { "Name", "IsAllowed", });
+    internal_static_Diadoc_Api_Proto_Employees_EmployeeList_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Employees_EmployeeList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Employees_EmployeeList_descriptor,
+        new java.lang.String[] { "Employees", "TotalCount", });
     Diadoc.Api.Proto.UserProtos.getDescriptor();
     Diadoc.Api.Proto.OrganizationUserPermissionsProtos.getDescriptor();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
