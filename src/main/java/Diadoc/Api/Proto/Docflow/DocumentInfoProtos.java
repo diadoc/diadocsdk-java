@@ -285,6 +285,20 @@ public final class DocumentInfoProtos {
      */
     com.google.protobuf.ByteString
         getAttachmentVersionBytes();
+
+    /**
+     * <code>required string Version = 18;</code>
+     */
+    boolean hasVersion();
+    /**
+     * <code>required string Version = 18;</code>
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>required string Version = 18;</code>
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentInfo}
@@ -510,6 +524,12 @@ public final class DocumentInfoProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
               attachmentVersion_ = bs;
+              break;
+            }
+            case 146: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00020000;
+              version_ = bs;
               break;
             }
           }
@@ -1056,6 +1076,48 @@ public final class DocumentInfoProtos {
       }
     }
 
+    public static final int VERSION_FIELD_NUMBER = 18;
+    private java.lang.Object version_;
+    /**
+     * <code>required string Version = 18;</code>
+     */
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>required string Version = 18;</code>
+     */
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          version_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Version = 18;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       documentType_ = Diadoc.Api.Proto.DocumentTypeProtos.DocumentType.UnknownDocumentType;
       documentDirection_ = Diadoc.Api.Proto.DocumentDirectionProtos.DocumentDirection.UnknownDocumentDirection;
@@ -1074,6 +1136,7 @@ public final class DocumentInfoProtos {
       universalTransferDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalTransferDocumentInfo.getDefaultInstance();
       universalCorrectionDocumentInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.UniversalCorrectionDocumentInfo.getDefaultInstance();
       attachmentVersion_ = "";
+      version_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1081,6 +1144,10 @@ public final class DocumentInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasVersion()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       if (hasUniversalTransferDocumentInfo()) {
         if (!getUniversalTransferDocumentInfo().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1150,6 +1217,9 @@ public final class DocumentInfoProtos {
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
         output.writeBytes(17, getAttachmentVersionBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeBytes(18, getVersionBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -1227,6 +1297,10 @@ public final class DocumentInfoProtos {
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(17, getAttachmentVersionBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(18, getVersionBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1424,6 +1498,8 @@ public final class DocumentInfoProtos {
         bitField0_ = (bitField0_ & ~0x00008000);
         attachmentVersion_ = "";
         bitField0_ = (bitField0_ & ~0x00010000);
+        version_ = "";
+        bitField0_ = (bitField0_ & ~0x00020000);
         return this;
       }
 
@@ -1556,6 +1632,10 @@ public final class DocumentInfoProtos {
           to_bitField0_ |= 0x00010000;
         }
         result.attachmentVersion_ = attachmentVersion_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.version_ = version_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1633,11 +1713,20 @@ public final class DocumentInfoProtos {
           attachmentVersion_ = other.attachmentVersion_;
           onChanged();
         }
+        if (other.hasVersion()) {
+          bitField0_ |= 0x00020000;
+          version_ = other.version_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+        if (!hasVersion()) {
+          
+          return false;
+        }
         if (hasUniversalTransferDocumentInfo()) {
           if (!getUniversalTransferDocumentInfo().isInitialized()) {
             
@@ -3374,6 +3463,82 @@ public final class DocumentInfoProtos {
   }
   bitField0_ |= 0x00010000;
         attachmentVersion_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <code>required string Version = 18;</code>
+       */
+      public boolean hasVersion() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>required string Version = 18;</code>
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            version_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Version = 18;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Version = 18;</code>
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00020000;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Version = 18;</code>
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Version = 18;</code>
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00020000;
+        version_ = value;
         onChanged();
         return this;
       }
@@ -13114,7 +13279,7 @@ public final class DocumentInfoProtos {
       "\n\032Docflow/DocumentInfo.proto\022\030Diadoc.Api" +
       ".Proto.Docflow\032\022DocumentType.proto\032\027Docu" +
       "mentDirection.proto\032-Invoicing/Universal" +
-      "TransferDocumentInfo.proto\"\255\010\n\014DocumentI" +
+      "TransferDocumentInfo.proto\"\276\010\n\014DocumentI" +
       "nfo\022I\n\014DocumentType\030\001 \001(\0162\036.Diadoc.Api.P" +
       "roto.DocumentType:\023UnknownDocumentType\022X" +
       "\n\021DocumentDirection\030\002 \001(\0162#.Diadoc.Api.P" +
@@ -13141,54 +13306,55 @@ public final class DocumentInfoProtos {
       "ocumentInfo\022b\n\037UniversalCorrectionDocume" +
       "ntInfo\030\020 \001(\01329.Diadoc.Api.Proto.Docflow." +
       "UniversalCorrectionDocumentInfo\022\031\n\021Attac",
-      "hmentVersion\030\021 \001(\t\"E\n\025DocumentDateAndNum" +
-      "ber\022\024\n\014DocumentDate\030\001 \001(\t\022\026\n\016DocumentNum" +
-      "ber\030\002 \001(\t\"\237\001\n\021BasicDocumentInfo\022\r\n\005Total" +
-      "\030\001 \001(\t\022\r\n\005NoVat\030\002 \001(\010\022\013\n\003Vat\030\003 \001(\t\022\017\n\007Gr" +
-      "ounds\030\004 \001(\t\022N\n\025RevisionDateAndNumber\030\005 \001" +
-      "(\0132/.Diadoc.Api.Proto.Docflow.DocumentDa" +
-      "teAndNumber\"\236\001\n\023InvoiceDocumentInfo\022\r\n\005T" +
-      "otal\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014CurrencyCode\030" +
-      "\003 \001(\005\022U\n\034OriginalInvoiceDateAndNumber\030\004 " +
-      "\001(\0132/.Diadoc.Api.Proto.Docflow.DocumentD",
-      "ateAndNumber\"\220\003\n\035InvoiceCorrectionDocume" +
-      "ntInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010TotalDec\030\002 \001" +
-      "(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(\t\022\024\n\014Cu" +
-      "rrencyCode\030\005 \001(\005\022U\n\034OriginalInvoiceDateA" +
-      "ndNumber\030\006 \001(\0132/.Diadoc.Api.Proto.Docflo" +
-      "w.DocumentDateAndNumber\022]\n$OriginalInvoi" +
-      "ceRevisionDateAndNumber\030\007 \001(\0132/.Diadoc.A" +
-      "pi.Proto.Docflow.DocumentDateAndNumber\022_" +
-      "\n&OriginalInvoiceCorrectionDateAndNumber" +
-      "\030\010 \001(\0132/.Diadoc.Api.Proto.Docflow.Docume",
-      "ntDateAndNumber\"\217\001\n\025PriceListDocumentInf" +
-      "o\022\036\n\026PriceListEffectiveDate\030\001 \001(\t\022V\n\035Con" +
-      "tractDocumentDateAndNumber\030\002 \001(\0132/.Diado" +
-      "c.Api.Proto.Docflow.DocumentDateAndNumbe" +
-      "r\"C\n\024ContractDocumentInfo\022\025\n\rContractPri" +
-      "ce\030\001 \001(\t\022\024\n\014ContractType\030\002 \001(\t\"w\n\"Supple" +
-      "mentaryAgreementDocumentInfo\022\r\n\005Total\030\001 " +
-      "\001(\t\022\024\n\014ContractType\030\002 \001(\t\022\026\n\016ContractNum" +
-      "ber\030\003 \001(\t\022\024\n\014ContractDate\030\004 \001(\t\"\366\001\n\035Univ" +
-      "ersalTransferDocumentInfo\022\r\n\005Total\030\001 \001(\t",
-      "\022\013\n\003Vat\030\002 \001(\t\022\024\n\014CurrencyCode\030\003 \001(\005\022\017\n\007G" +
-      "rounds\030\004 \001(\t\022:\n\010Function\030\005 \002(\0162(.Diadoc." +
-      "Api.Proto.Invoicing.FunctionType\022V\n\035Orig" +
-      "inalDocumentDateAndNumber\030\006 \001(\0132/.Diadoc" +
+      "hmentVersion\030\021 \001(\t\022\017\n\007Version\030\022 \002(\t\"E\n\025D" +
+      "ocumentDateAndNumber\022\024\n\014DocumentDate\030\001 \001" +
+      "(\t\022\026\n\016DocumentNumber\030\002 \001(\t\"\237\001\n\021BasicDocu" +
+      "mentInfo\022\r\n\005Total\030\001 \001(\t\022\r\n\005NoVat\030\002 \001(\010\022\013" +
+      "\n\003Vat\030\003 \001(\t\022\017\n\007Grounds\030\004 \001(\t\022N\n\025Revision" +
+      "DateAndNumber\030\005 \001(\0132/.Diadoc.Api.Proto.D" +
+      "ocflow.DocumentDateAndNumber\"\236\001\n\023Invoice" +
+      "DocumentInfo\022\r\n\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t" +
+      "\022\024\n\014CurrencyCode\030\003 \001(\005\022U\n\034OriginalInvoic" +
+      "eDateAndNumber\030\004 \001(\0132/.Diadoc.Api.Proto.",
+      "Docflow.DocumentDateAndNumber\"\220\003\n\035Invoic" +
+      "eCorrectionDocumentInfo\022\020\n\010TotalInc\030\001 \001(" +
+      "\t\022\020\n\010TotalDec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006V" +
+      "atDec\030\004 \001(\t\022\024\n\014CurrencyCode\030\005 \001(\005\022U\n\034Ori" +
+      "ginalInvoiceDateAndNumber\030\006 \001(\0132/.Diadoc" +
       ".Api.Proto.Docflow.DocumentDateAndNumber" +
-      "\"\342\003\n\037UniversalCorrectionDocumentInfo\022\020\n\010" +
-      "TotalInc\030\001 \001(\t\022\020\n\010TotalDec\030\002 \001(\t\022\016\n\006VatI" +
-      "nc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(\t\022\024\n\014CurrencyCode" +
-      "\030\005 \001(\005\022\017\n\007Grounds\030\006 \001(\t\022:\n\010Function\030\007 \002(" +
-      "\0162(.Diadoc.Api.Proto.Invoicing.FunctionT",
-      "ype\022V\n\035OriginalDocumentDateAndNumber\030\010 \001" +
-      "(\0132/.Diadoc.Api.Proto.Docflow.DocumentDa" +
-      "teAndNumber\022^\n%OriginalDocumentRevisionD" +
-      "ateAndNumber\030\t \001(\0132/.Diadoc.Api.Proto.Do" +
-      "cflow.DocumentDateAndNumber\022`\n\'OriginalD" +
-      "ocumentCorrectionDateAndNumber\030\n \001(\0132/.D" +
-      "iadoc.Api.Proto.Docflow.DocumentDateAndN" +
-      "umberB\024B\022DocumentInfoProtos"
+      "\022]\n$OriginalInvoiceRevisionDateAndNumber" +
+      "\030\007 \001(\0132/.Diadoc.Api.Proto.Docflow.Docume" +
+      "ntDateAndNumber\022_\n&OriginalInvoiceCorrec" +
+      "tionDateAndNumber\030\010 \001(\0132/.Diadoc.Api.Pro",
+      "to.Docflow.DocumentDateAndNumber\"\217\001\n\025Pri" +
+      "ceListDocumentInfo\022\036\n\026PriceListEffective" +
+      "Date\030\001 \001(\t\022V\n\035ContractDocumentDateAndNum" +
+      "ber\030\002 \001(\0132/.Diadoc.Api.Proto.Docflow.Doc" +
+      "umentDateAndNumber\"C\n\024ContractDocumentIn" +
+      "fo\022\025\n\rContractPrice\030\001 \001(\t\022\024\n\014ContractTyp" +
+      "e\030\002 \001(\t\"w\n\"SupplementaryAgreementDocumen" +
+      "tInfo\022\r\n\005Total\030\001 \001(\t\022\024\n\014ContractType\030\002 \001" +
+      "(\t\022\026\n\016ContractNumber\030\003 \001(\t\022\024\n\014ContractDa" +
+      "te\030\004 \001(\t\"\366\001\n\035UniversalTransferDocumentIn",
+      "fo\022\r\n\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014Curren" +
+      "cyCode\030\003 \001(\005\022\017\n\007Grounds\030\004 \001(\t\022:\n\010Functio" +
+      "n\030\005 \002(\0162(.Diadoc.Api.Proto.Invoicing.Fun" +
+      "ctionType\022V\n\035OriginalDocumentDateAndNumb" +
+      "er\030\006 \001(\0132/.Diadoc.Api.Proto.Docflow.Docu" +
+      "mentDateAndNumber\"\342\003\n\037UniversalCorrectio" +
+      "nDocumentInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010Total" +
+      "Dec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(" +
+      "\t\022\024\n\014CurrencyCode\030\005 \001(\005\022\017\n\007Grounds\030\006 \001(\t" +
+      "\022:\n\010Function\030\007 \002(\0162(.Diadoc.Api.Proto.In",
+      "voicing.FunctionType\022V\n\035OriginalDocument" +
+      "DateAndNumber\030\010 \001(\0132/.Diadoc.Api.Proto.D" +
+      "ocflow.DocumentDateAndNumber\022^\n%Original" +
+      "DocumentRevisionDateAndNumber\030\t \001(\0132/.Di" +
+      "adoc.Api.Proto.Docflow.DocumentDateAndNu" +
+      "mber\022`\n\'OriginalDocumentCorrectionDateAn" +
+      "dNumber\030\n \001(\0132/.Diadoc.Api.Proto.Docflow" +
+      ".DocumentDateAndNumberB\024B\022DocumentInfoPr" +
+      "otos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13210,7 +13376,7 @@ public final class DocumentInfoProtos {
     internal_static_Diadoc_Api_Proto_Docflow_DocumentInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocumentInfo_descriptor,
-        new java.lang.String[] { "DocumentType", "DocumentDirection", "IsTest", "CustomDocumentId", "FromDepartmentId", "ToDepartmentId", "CounteragentBoxId", "DocumentDateAndNumber", "BasicDocumentInfo", "InvoiceInfo", "InvoiceCorrectionInfo", "PriceListInfo", "ContractInfo", "SupplementaryAgreementInfo", "UniversalTransferDocumentInfo", "UniversalCorrectionDocumentInfo", "AttachmentVersion", });
+        new java.lang.String[] { "DocumentType", "DocumentDirection", "IsTest", "CustomDocumentId", "FromDepartmentId", "ToDepartmentId", "CounteragentBoxId", "DocumentDateAndNumber", "BasicDocumentInfo", "InvoiceInfo", "InvoiceCorrectionInfo", "PriceListInfo", "ContractInfo", "SupplementaryAgreementInfo", "UniversalTransferDocumentInfo", "UniversalCorrectionDocumentInfo", "AttachmentVersion", "Version", });
     internal_static_Diadoc_Api_Proto_Docflow_DocumentDateAndNumber_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_DocumentDateAndNumber_fieldAccessorTable = new

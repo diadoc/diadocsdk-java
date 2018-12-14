@@ -90,7 +90,8 @@ message Document {
 	optional Origin Origin = 72;
 	optional string EditingSettingId = 73 [default = ""];
 	required LockMode LockMode = 74 [default = None];
-	required SenderReceiptMetadata SenderReceiptMetadata = 75; 
+	required SenderReceiptMetadata SenderReceiptMetadata = 75;
+	required string Version = 76;
 }
 
 message ResolutionStatus {
