@@ -772,7 +772,7 @@ public class DiadocApi {
 
     public GeneratedFile GenerateTovTorg551XmlForSeller(TovTorgInfoProtos.TovTorgSellerTitleInfo sellerTitleInfo, boolean disableValidation) throws IOException, ParseException {
         if (sellerTitleInfo == null) throw new NullPointerException("sellerTitleInfo");
-        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateTorg12XmlForSeller?documentVersion=tovtorg_05_01_03" + (disableValidation?"&disableValidation":""), null, sellerTitleInfo.toByteArray());
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateTorg12XmlForSeller?documentVersion=tovtorg_05_01_04" + (disableValidation?"&disableValidation":""), null, sellerTitleInfo.toByteArray());
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
@@ -781,7 +781,7 @@ public class DiadocApi {
             String boxId,
             String sellerTitleMessageId,
             String sellerTitleAttachmentId) throws IOException, ParseException {
-        return GenerateTovTorg551XmlForBuyer(buyerTitleInfo, boxId, sellerTitleMessageId, sellerTitleAttachmentId, "tovtorg_05_01_02");
+        return GenerateTovTorg551XmlForBuyer(buyerTitleInfo, boxId, sellerTitleMessageId, sellerTitleAttachmentId, "tovtorg_05_01_04");
     }
 
     public GeneratedFile GenerateTovTorg551XmlForBuyer(
@@ -834,7 +834,7 @@ public class DiadocApi {
 
     public GeneratedFile GenerateAcceptanceCertificate552XmlForSeller(AcceptanceCertificate552InfoProtos.AcceptanceCertificate552SellerTitleInfo sellerTitleInfo, boolean disableValidation) throws IOException, ParseException {
         if (sellerTitleInfo == null) throw new NullPointerException("sellerTitleInfo");
-        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateAcceptanceCertificateXmlForSeller?documentVersion=rezru_05_01_01" + (disableValidation?"&disableValidation":""), null, sellerTitleInfo.toByteArray());
+        HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateAcceptanceCertificateXmlForSeller?documentVersion=rezru_05_01_02" + (disableValidation?"&disableValidation":""), null, sellerTitleInfo.toByteArray());
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
 
@@ -848,7 +848,7 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("sellerTitleMessageId", sellerTitleMessageId));
         parameters.add(new BasicNameValuePair("sellerTitleAttachmentId", sellerTitleAttachmentId));
-        parameters.add(new BasicNameValuePair("documentVersion", "rezru_05_01_01"));
+        parameters.add(new BasicNameValuePair("documentVersion", "rezru_05_01_02"));
         HttpResponse httpResponse = ReceivePostHttpResponse("/GenerateAcceptanceCertificateXmlForBuyer", parameters, buyerTitleInfo.toByteArray());
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
     }
@@ -1021,12 +1021,12 @@ public class DiadocApi {
 
     public TovTorgInfoProtos.TovTorgSellerTitleInfo ParseTovTorg551SellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
     {
-        return TovTorgInfoProtos.TovTorgSellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12SellerTitleXml?documentVersion=tovtorg_05_01_03", null, sellerTitleXmlContent));
+        return TovTorgInfoProtos.TovTorgSellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12SellerTitleXml?documentVersion=tovtorg_05_01_04", null, sellerTitleXmlContent));
     }
 
     public TovTorgInfoProtos.TovTorgBuyerTitleInfo ParseTovTorg551BuyerTitleXml(byte[] buyerTitleXmlContent) throws IOException
     {
-        return TovTorgInfoProtos.TovTorgBuyerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12BuyerTitleXml?documentVersion=tovtorg_05_01_02", null, buyerTitleXmlContent));
+        return TovTorgInfoProtos.TovTorgBuyerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseTorg12BuyerTitleXml?documentVersion=tovtorg_05_01_04", null, buyerTitleXmlContent));
     }
 
     public AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo ParseAcceptanceCertificateSellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
@@ -1041,18 +1041,18 @@ public class DiadocApi {
 
     public AcceptanceCertificate552InfoProtos.AcceptanceCertificate552SellerTitleInfo ParseAcceptanceCertificate552SellerTitleXml(byte[] sellerTitleXmlContent) throws IOException
     {
-        return AcceptanceCertificate552InfoProtos.AcceptanceCertificate552SellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseAcceptanceCertificateSellerTitleXml?documentVersion=rezru_05_01_01", null, sellerTitleXmlContent));
+        return AcceptanceCertificate552InfoProtos.AcceptanceCertificate552SellerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseAcceptanceCertificateSellerTitleXml?documentVersion=rezru_05_01_02", null, sellerTitleXmlContent));
     }
 
     public AcceptanceCertificate552InfoProtos.AcceptanceCertificate552BuyerTitleInfo ParseAcceptanceCertificate552BuyerTitleXml(byte[] buyerTitleXmlContent) throws IOException
     {
-        return AcceptanceCertificate552InfoProtos.AcceptanceCertificate552BuyerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseAcceptanceCertificateBuyerTitleXml?documentVersion=rezru_05_01_01", null, buyerTitleXmlContent));
+        return AcceptanceCertificate552InfoProtos.AcceptanceCertificate552BuyerTitleInfo.parseFrom(PerformPostHttpRequest("/ParseAcceptanceCertificateBuyerTitleXml?documentVersion=rezru_05_01_02", null, buyerTitleXmlContent));
     }
 
     public UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo ParseUniversalTransferDocumentSellerTitleXml(byte[] utdXmlContent) throws IOException
     {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-        parameters.add(new BasicNameValuePair("documentVersion", "utd_05_01_04"));
+        parameters.add(new BasicNameValuePair("documentVersion", "utd_05_01_05"));
         byte[] response = PerformPostHttpRequest("/ParseUniversalTransferDocumentSellerTitleXml", parameters, utdXmlContent);
         return UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo.parseFrom(response);
     }
@@ -1066,7 +1066,7 @@ public class DiadocApi {
     public UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo ParseUniversalCorrectionDocumentSellerTitleXml(byte[] utdXmlContent) throws IOException
     {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-        parameters.add(new BasicNameValuePair("documentVersion", "ucd_05_01_02"));
+        parameters.add(new BasicNameValuePair("documentVersion", "ucd_05_01_03"));
         byte[] response = PerformPostHttpRequest("/ParseUniversalCorrectionDocumentSellerTitleXml", parameters, utdXmlContent);
         return UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo.parseFrom(response);
     }
