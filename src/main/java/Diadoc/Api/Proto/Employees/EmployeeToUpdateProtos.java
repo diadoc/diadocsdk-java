@@ -997,6 +997,19 @@ public final class EmployeeToUpdateProtos {
      */
     Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeActionOrBuilder getActionsOrBuilder(
         int index);
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+     */
+    boolean hasAuthorizationPermission();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+     */
+    Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch getAuthorizationPermission();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+     */
+    Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatchOrBuilder getAuthorizationPermissionOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Employees.EmployeePermissionsPatch}
@@ -1108,6 +1121,19 @@ public final class EmployeeToUpdateProtos {
                 mutable_bitField0_ |= 0x00000010;
               }
               actions_.add(input.readMessage(Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeAction.PARSER, extensionRegistry));
+              break;
+            }
+            case 50: {
+              Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = authorizationPermission_.toBuilder();
+              }
+              authorizationPermission_ = input.readMessage(Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(authorizationPermission_);
+                authorizationPermission_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
               break;
             }
           }
@@ -1272,12 +1298,34 @@ public final class EmployeeToUpdateProtos {
       return actions_.get(index);
     }
 
+    public static final int AUTHORIZATIONPERMISSION_FIELD_NUMBER = 6;
+    private Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch authorizationPermission_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+     */
+    public boolean hasAuthorizationPermission() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+     */
+    public Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch getAuthorizationPermission() {
+      return authorizationPermission_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+     */
+    public Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatchOrBuilder getAuthorizationPermissionOrBuilder() {
+      return authorizationPermission_;
+    }
+
     private void initFields() {
       department_ = Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.EmployeeDepartmentPatch.getDefaultInstance();
       isAdministrator_ = Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.EmployeeIsAdministratorPatch.getDefaultInstance();
       documentAccessLevel_ = Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.EmployeeDocumentAccessLevelPatch.getDefaultInstance();
       selectedDepartments_ = Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.EmployeeSelectedDepartmentsPatch.getDefaultInstance();
       actions_ = java.util.Collections.emptyList();
+      authorizationPermission_ = Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1309,6 +1357,12 @@ public final class EmployeeToUpdateProtos {
           return false;
         }
       }
+      if (hasAuthorizationPermission()) {
+        if (!getAuthorizationPermission().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1330,6 +1384,9 @@ public final class EmployeeToUpdateProtos {
       }
       for (int i = 0; i < actions_.size(); i++) {
         output.writeMessage(5, actions_.get(i));
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(6, authorizationPermission_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1359,6 +1416,10 @@ public final class EmployeeToUpdateProtos {
       for (int i = 0; i < actions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, actions_.get(i));
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, authorizationPermission_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1474,6 +1535,7 @@ public final class EmployeeToUpdateProtos {
           getDocumentAccessLevelFieldBuilder();
           getSelectedDepartmentsFieldBuilder();
           getActionsFieldBuilder();
+          getAuthorizationPermissionFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1512,6 +1574,12 @@ public final class EmployeeToUpdateProtos {
         } else {
           actionsBuilder_.clear();
         }
+        if (authorizationPermissionBuilder_ == null) {
+          authorizationPermission_ = Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.getDefaultInstance();
+        } else {
+          authorizationPermissionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -1581,6 +1649,14 @@ public final class EmployeeToUpdateProtos {
         } else {
           result.actions_ = actionsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (authorizationPermissionBuilder_ == null) {
+          result.authorizationPermission_ = authorizationPermission_;
+        } else {
+          result.authorizationPermission_ = authorizationPermissionBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1635,6 +1711,9 @@ public final class EmployeeToUpdateProtos {
             }
           }
         }
+        if (other.hasAuthorizationPermission()) {
+          mergeAuthorizationPermission(other.getAuthorizationPermission());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -1660,6 +1739,12 @@ public final class EmployeeToUpdateProtos {
         }
         for (int i = 0; i < getActionsCount(); i++) {
           if (!getActions(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasAuthorizationPermission()) {
+          if (!getAuthorizationPermission().isInitialized()) {
             
             return false;
           }
@@ -2388,6 +2473,122 @@ public final class EmployeeToUpdateProtos {
           actions_ = null;
         }
         return actionsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch authorizationPermission_ = Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch, Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.Builder, Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatchOrBuilder> authorizationPermissionBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+       */
+      public boolean hasAuthorizationPermission() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch getAuthorizationPermission() {
+        if (authorizationPermissionBuilder_ == null) {
+          return authorizationPermission_;
+        } else {
+          return authorizationPermissionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+       */
+      public Builder setAuthorizationPermission(Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch value) {
+        if (authorizationPermissionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          authorizationPermission_ = value;
+          onChanged();
+        } else {
+          authorizationPermissionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+       */
+      public Builder setAuthorizationPermission(
+          Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.Builder builderForValue) {
+        if (authorizationPermissionBuilder_ == null) {
+          authorizationPermission_ = builderForValue.build();
+          onChanged();
+        } else {
+          authorizationPermissionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+       */
+      public Builder mergeAuthorizationPermission(Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch value) {
+        if (authorizationPermissionBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              authorizationPermission_ != Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.getDefaultInstance()) {
+            authorizationPermission_ =
+              Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.newBuilder(authorizationPermission_).mergeFrom(value).buildPartial();
+          } else {
+            authorizationPermission_ = value;
+          }
+          onChanged();
+        } else {
+          authorizationPermissionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+       */
+      public Builder clearAuthorizationPermission() {
+        if (authorizationPermissionBuilder_ == null) {
+          authorizationPermission_ = Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.getDefaultInstance();
+          onChanged();
+        } else {
+          authorizationPermissionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.Builder getAuthorizationPermissionBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getAuthorizationPermissionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatchOrBuilder getAuthorizationPermissionOrBuilder() {
+        if (authorizationPermissionBuilder_ != null) {
+          return authorizationPermissionBuilder_.getMessageOrBuilder();
+        } else {
+          return authorizationPermission_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch AuthorizationPermission = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch, Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.Builder, Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatchOrBuilder> 
+          getAuthorizationPermissionFieldBuilder() {
+        if (authorizationPermissionBuilder_ == null) {
+          authorizationPermissionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch, Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.Builder, Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatchOrBuilder>(
+                  getAuthorizationPermission(),
+                  getParentForChildren(),
+                  isClean());
+          authorizationPermission_ = null;
+        }
+        return authorizationPermissionBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Employees.EmployeePermissionsPatch)
@@ -5084,6 +5285,568 @@ public final class EmployeeToUpdateProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Employees.EmployeeCanBeInvitedForChatPatch)
   }
 
+  public interface AuthorizationPermissionPatchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required bool IsBlocked = 1;</code>
+     */
+    boolean hasIsBlocked();
+    /**
+     * <code>required bool IsBlocked = 1;</code>
+     */
+    boolean getIsBlocked();
+
+    /**
+     * <code>optional string Comment = 2;</code>
+     */
+    boolean hasComment();
+    /**
+     * <code>optional string Comment = 2;</code>
+     */
+    java.lang.String getComment();
+    /**
+     * <code>optional string Comment = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getCommentBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch}
+   */
+  public static final class AuthorizationPermissionPatch extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch)
+      AuthorizationPermissionPatchOrBuilder {
+    // Use AuthorizationPermissionPatch.newBuilder() to construct.
+    private AuthorizationPermissionPatch(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private AuthorizationPermissionPatch(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final AuthorizationPermissionPatch defaultInstance;
+    public static AuthorizationPermissionPatch getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public AuthorizationPermissionPatch getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AuthorizationPermissionPatch(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isBlocked_ = input.readBool();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              comment_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.class, Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<AuthorizationPermissionPatch> PARSER =
+        new com.google.protobuf.AbstractParser<AuthorizationPermissionPatch>() {
+      public AuthorizationPermissionPatch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AuthorizationPermissionPatch(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AuthorizationPermissionPatch> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ISBLOCKED_FIELD_NUMBER = 1;
+    private boolean isBlocked_;
+    /**
+     * <code>required bool IsBlocked = 1;</code>
+     */
+    public boolean hasIsBlocked() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required bool IsBlocked = 1;</code>
+     */
+    public boolean getIsBlocked() {
+      return isBlocked_;
+    }
+
+    public static final int COMMENT_FIELD_NUMBER = 2;
+    private java.lang.Object comment_;
+    /**
+     * <code>optional string Comment = 2;</code>
+     */
+    public boolean hasComment() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string Comment = 2;</code>
+     */
+    public java.lang.String getComment() {
+      java.lang.Object ref = comment_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          comment_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Comment = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCommentBytes() {
+      java.lang.Object ref = comment_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        comment_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      isBlocked_ = false;
+      comment_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasIsBlocked()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBool(1, isBlocked_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getCommentBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isBlocked_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getCommentBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch)
+        Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatchOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.class, Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        isBlocked_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        comment_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch build() {
+        Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch buildPartial() {
+        Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch result = new Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.isBlocked_ = isBlocked_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.comment_ = comment_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch) {
+          return mergeFrom((Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch other) {
+        if (other == Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch.getDefaultInstance()) return this;
+        if (other.hasIsBlocked()) {
+          setIsBlocked(other.getIsBlocked());
+        }
+        if (other.hasComment()) {
+          bitField0_ |= 0x00000002;
+          comment_ = other.comment_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasIsBlocked()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.AuthorizationPermissionPatch) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isBlocked_ ;
+      /**
+       * <code>required bool IsBlocked = 1;</code>
+       */
+      public boolean hasIsBlocked() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required bool IsBlocked = 1;</code>
+       */
+      public boolean getIsBlocked() {
+        return isBlocked_;
+      }
+      /**
+       * <code>required bool IsBlocked = 1;</code>
+       */
+      public Builder setIsBlocked(boolean value) {
+        bitField0_ |= 0x00000001;
+        isBlocked_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool IsBlocked = 1;</code>
+       */
+      public Builder clearIsBlocked() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isBlocked_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object comment_ = "";
+      /**
+       * <code>optional string Comment = 2;</code>
+       */
+      public boolean hasComment() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string Comment = 2;</code>
+       */
+      public java.lang.String getComment() {
+        java.lang.Object ref = comment_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            comment_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Comment = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCommentBytes() {
+        java.lang.Object ref = comment_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          comment_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Comment = 2;</code>
+       */
+      public Builder setComment(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        comment_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Comment = 2;</code>
+       */
+      public Builder clearComment() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        comment_ = getDefaultInstance().getComment();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Comment = 2;</code>
+       */
+      public Builder setCommentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        comment_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch)
+    }
+
+    static {
+      defaultInstance = new AuthorizationPermissionPatch(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Employees.AuthorizationPermissionPatch)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Employees_EmployeeToUpdate_descriptor;
   private static
@@ -5124,6 +5887,11 @@ public final class EmployeeToUpdateProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Employees_EmployeeCanBeInvitedForChatPatch_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5142,7 +5910,7 @@ public final class EmployeeToUpdateProtos {
       "Diadoc.Api.Proto.Employees.EmployeePosit" +
       "ionPatch\022Y\n\023CanBeInvitedForChat\030\003 \001(\0132<." +
       "Diadoc.Api.Proto.Employees.EmployeeCanBe" +
-      "InvitedForChatPatch\"\251\003\n\030EmployeePermissi",
+      "InvitedForChatPatch\"\204\004\n\030EmployeePermissi",
       "onsPatch\022G\n\nDepartment\030\001 \001(\01323.Diadoc.Ap" +
       "i.Proto.Employees.EmployeeDepartmentPatc" +
       "h\022Q\n\017IsAdministrator\030\002 \001(\01328.Diadoc.Api." +
@@ -5153,17 +5921,21 @@ public final class EmployeeToUpdateProtos {
       " \001(\0132<.Diadoc.Api.Proto.Employees.Employ" +
       "eeSelectedDepartmentsPatch\022;\n\007Actions\030\005 " +
       "\003(\0132*.Diadoc.Api.Proto.Employees.Employe",
-      "eAction\"/\n\027EmployeeDepartmentPatch\022\024\n\014De" +
-      "partmentId\030\001 \002(\t\"7\n\034EmployeeIsAdministra" +
-      "torPatch\022\027\n\017IsAdministrator\030\001 \002(\010\"f\n Emp" +
-      "loyeeDocumentAccessLevelPatch\022B\n\023Documen" +
-      "tAccessLevel\030\001 \002(\0162%.Diadoc.Api.Proto.Do" +
-      "cumentAccessLevel\"A\n EmployeeSelectedDep" +
-      "artmentsPatch\022\035\n\025SelectedDepartmentIds\030\001" +
-      " \003(\t\")\n\025EmployeePositionPatch\022\020\n\010Positio" +
-      "n\030\001 \001(\t\"?\n EmployeeCanBeInvitedForChatPa" +
-      "tch\022\033\n\023CanBeInvitedForChat\030\001 \002(\010B\030B\026Empl",
-      "oyeeToUpdateProtos"
+      "eAction\022Y\n\027AuthorizationPermission\030\006 \001(\013" +
+      "28.Diadoc.Api.Proto.Employees.Authorizat" +
+      "ionPermissionPatch\"/\n\027EmployeeDepartment" +
+      "Patch\022\024\n\014DepartmentId\030\001 \002(\t\"7\n\034EmployeeI" +
+      "sAdministratorPatch\022\027\n\017IsAdministrator\030\001" +
+      " \002(\010\"f\n EmployeeDocumentAccessLevelPatch" +
+      "\022B\n\023DocumentAccessLevel\030\001 \002(\0162%.Diadoc.A" +
+      "pi.Proto.DocumentAccessLevel\"A\n Employee" +
+      "SelectedDepartmentsPatch\022\035\n\025SelectedDepa" +
+      "rtmentIds\030\001 \003(\t\")\n\025EmployeePositionPatch",
+      "\022\020\n\010Position\030\001 \001(\t\"?\n EmployeeCanBeInvit" +
+      "edForChatPatch\022\033\n\023CanBeInvitedForChat\030\001 " +
+      "\002(\010\"B\n\034AuthorizationPermissionPatch\022\021\n\tI" +
+      "sBlocked\030\001 \002(\010\022\017\n\007Comment\030\002 \001(\tB\030B\026Emplo" +
+      "yeeToUpdateProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5190,7 +5962,7 @@ public final class EmployeeToUpdateProtos {
     internal_static_Diadoc_Api_Proto_Employees_EmployeePermissionsPatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Employees_EmployeePermissionsPatch_descriptor,
-        new java.lang.String[] { "Department", "IsAdministrator", "DocumentAccessLevel", "SelectedDepartments", "Actions", });
+        new java.lang.String[] { "Department", "IsAdministrator", "DocumentAccessLevel", "SelectedDepartments", "Actions", "AuthorizationPermission", });
     internal_static_Diadoc_Api_Proto_Employees_EmployeeDepartmentPatch_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Employees_EmployeeDepartmentPatch_fieldAccessorTable = new
@@ -5227,6 +5999,12 @@ public final class EmployeeToUpdateProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Employees_EmployeeCanBeInvitedForChatPatch_descriptor,
         new java.lang.String[] { "CanBeInvitedForChat", });
+    internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Employees_AuthorizationPermissionPatch_descriptor,
+        new java.lang.String[] { "IsBlocked", "Comment", });
     Diadoc.Api.Proto.Employees.EmployeeProtos.getDescriptor();
     Diadoc.Api.Proto.OrganizationUserPermissionsProtos.getDescriptor();
   }
