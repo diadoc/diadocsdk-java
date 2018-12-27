@@ -4,6 +4,7 @@ import Diadoc.Api.Proto.*;
 import Diadoc.Api.Proto.Docflow.DocflowApiProtos;
 import Diadoc.Api.Proto.Documents.*;
 import Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos;
+import Diadoc.Api.Proto.Departments.*;
 import Diadoc.Api.Proto.Employees.EmployeeProtos;
 import Diadoc.Api.Proto.Employees.Subscriptions.SubscriptionProtos;
 import Diadoc.Api.Proto.Employees.EmployeeToCreateProtos;
@@ -1541,6 +1542,77 @@ public class DiadocApi {
         return UserProtos.UserV2.parseFrom(responseBytes);
     }
 
+    public DepartmentProtos.Department GetDepartmentByFullId(String boxId, String departmentId) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (departmentId == null) throw new NullPointerException("departmentId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("departmentId", departmentId));
+        byte[] responseBytes = PerformGetHttpRequest("/admin/GetDepartment", params);
+        return DepartmentProtos.Department.parseFrom(responseBytes);
+    }
+
+    public DepartmentListProtos.DepartmentList GetDepartments(String boxId) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        byte[] responseBytes = PerformGetHttpRequest("/admin/GetDepartments", params);
+        return DepartmentListProtos.DepartmentList.parseFrom(responseBytes);
+    }
+
+    public DepartmentListProtos.DepartmentList GetDepartments(String boxId, int page) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (page < 1) throw new IllegalArgumentException("page must be 1 or greater");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("page", Integer.toString(page)));
+        byte[] responseBytes = PerformGetHttpRequest("/admin/GetDepartments", params);
+        return DepartmentListProtos.DepartmentList.parseFrom(responseBytes);
+    }
+
+    public DepartmentListProtos.DepartmentList GetDepartments(String boxId, int page, int count) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (page < 1) throw new IllegalArgumentException("page must be 1 or greater");
+        if (count < 1) throw new IllegalArgumentException("count must be 1 or greater");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("page", Integer.toString(page)));
+        params.add(new BasicNameValuePair("count", Integer.toString(count)));
+        byte[] responseBytes = PerformGetHttpRequest("/admin/GetDepartments", params);
+        return DepartmentListProtos.DepartmentList.parseFrom(responseBytes);
+    }
+
+    public DepartmentProtos.Department CreateDepartment(String boxId, DepartmentToCreateProtos.DepartmentToCreate departmentToCreate) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (departmentToCreate == null) throw new NullPointerException("departmentToCreate");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        byte[] body = departmentToCreate.toByteArray();
+        byte[] responseBytes = PerformPostHttpRequest("/admin/CreateDepartment", params, body);
+        return DepartmentProtos.Department.parseFrom(responseBytes);
+    }
+
+    public DepartmentProtos.Department UpdateDepartment(String boxId, String departmentId, DepartmentToUpdateProtos.DepartmentToUpdate departmentToUpdate ) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (departmentId == null) throw new NullPointerException("departmentId");
+        if (departmentToUpdate == null) throw new NullPointerException("departmentToUpdate");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("departmentId", departmentId));
+        byte[] body = departmentToUpdate.toByteArray();
+        byte[] responseBytes = PerformPostHttpRequest("/admin/UpdateDepartment", params, body);
+        return DepartmentProtos.Department.parseFrom(responseBytes);
+    }
+
+    public void DeleteDepartment(String boxId, String departmentId) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (departmentId == null) throw new NullPointerException("departmentId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("departmentId", departmentId));
+        PerformPostHttpRequest("/admin/DeleteDepartment", params, null);
+    }
+
     public EmployeeProtos.Employee GetEmployee(String boxId, String userId) throws IOException {
         if (boxId == null) throw new NullPointerException("boxId");
         if (userId == null) throw new NullPointerException("userId");
@@ -1602,7 +1674,7 @@ public class DiadocApi {
         byte[] responseBytes = PerformPostHttpRequest("/UpdateEmployee", params, body);
         return EmployeeProtos.Employee.parseFrom(responseBytes);
     }
-	
+
     public void DeleteEmployee(String boxId, String userId) throws IOException {
         if (boxId == null) throw new NullPointerException("boxId");
         if (userId == null) throw new NullPointerException("userId");
