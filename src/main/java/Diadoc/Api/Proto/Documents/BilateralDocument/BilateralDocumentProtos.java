@@ -3729,29 +3729,29 @@ public final class BilateralDocumentProtos {
         getContractTypeBytes();
 
     /**
-     * <code>optional string ContractNumber = 4;</code>
+     * <code>required string ContractNumber = 4;</code>
      */
     boolean hasContractNumber();
     /**
-     * <code>optional string ContractNumber = 4;</code>
+     * <code>required string ContractNumber = 4;</code>
      */
     java.lang.String getContractNumber();
     /**
-     * <code>optional string ContractNumber = 4;</code>
+     * <code>required string ContractNumber = 4;</code>
      */
     com.google.protobuf.ByteString
         getContractNumberBytes();
 
     /**
-     * <code>optional string ContractDate = 5;</code>
+     * <code>required string ContractDate = 5;</code>
      */
     boolean hasContractDate();
     /**
-     * <code>optional string ContractDate = 5;</code>
+     * <code>required string ContractDate = 5;</code>
      */
     java.lang.String getContractDate();
     /**
-     * <code>optional string ContractDate = 5;</code>
+     * <code>required string ContractDate = 5;</code>
      */
     com.google.protobuf.ByteString
         getContractDateBytes();
@@ -4005,13 +4005,13 @@ public final class BilateralDocumentProtos {
     public static final int CONTRACTNUMBER_FIELD_NUMBER = 4;
     private java.lang.Object contractNumber_;
     /**
-     * <code>optional string ContractNumber = 4;</code>
+     * <code>required string ContractNumber = 4;</code>
      */
     public boolean hasContractNumber() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional string ContractNumber = 4;</code>
+     * <code>required string ContractNumber = 4;</code>
      */
     public java.lang.String getContractNumber() {
       java.lang.Object ref = contractNumber_;
@@ -4028,7 +4028,7 @@ public final class BilateralDocumentProtos {
       }
     }
     /**
-     * <code>optional string ContractNumber = 4;</code>
+     * <code>required string ContractNumber = 4;</code>
      */
     public com.google.protobuf.ByteString
         getContractNumberBytes() {
@@ -4047,13 +4047,13 @@ public final class BilateralDocumentProtos {
     public static final int CONTRACTDATE_FIELD_NUMBER = 5;
     private java.lang.Object contractDate_;
     /**
-     * <code>optional string ContractDate = 5;</code>
+     * <code>required string ContractDate = 5;</code>
      */
     public boolean hasContractDate() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional string ContractDate = 5;</code>
+     * <code>required string ContractDate = 5;</code>
      */
     public java.lang.String getContractDate() {
       java.lang.Object ref = contractDate_;
@@ -4070,7 +4070,7 @@ public final class BilateralDocumentProtos {
       }
     }
     /**
-     * <code>optional string ContractDate = 5;</code>
+     * <code>required string ContractDate = 5;</code>
      */
     public com.google.protobuf.ByteString
         getContractDateBytes() {
@@ -4115,6 +4115,14 @@ public final class BilateralDocumentProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasContractNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasContractDate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -4401,6 +4409,14 @@ public final class BilateralDocumentProtos {
       }
 
       public final boolean isInitialized() {
+        if (!hasContractNumber()) {
+          
+          return false;
+        }
+        if (!hasContractDate()) {
+          
+          return false;
+        }
         return true;
       }
 
@@ -4612,13 +4628,13 @@ public final class BilateralDocumentProtos {
 
       private java.lang.Object contractNumber_ = "";
       /**
-       * <code>optional string ContractNumber = 4;</code>
+       * <code>required string ContractNumber = 4;</code>
        */
       public boolean hasContractNumber() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional string ContractNumber = 4;</code>
+       * <code>required string ContractNumber = 4;</code>
        */
       public java.lang.String getContractNumber() {
         java.lang.Object ref = contractNumber_;
@@ -4635,7 +4651,7 @@ public final class BilateralDocumentProtos {
         }
       }
       /**
-       * <code>optional string ContractNumber = 4;</code>
+       * <code>required string ContractNumber = 4;</code>
        */
       public com.google.protobuf.ByteString
           getContractNumberBytes() {
@@ -4651,7 +4667,7 @@ public final class BilateralDocumentProtos {
         }
       }
       /**
-       * <code>optional string ContractNumber = 4;</code>
+       * <code>required string ContractNumber = 4;</code>
        */
       public Builder setContractNumber(
           java.lang.String value) {
@@ -4664,7 +4680,7 @@ public final class BilateralDocumentProtos {
         return this;
       }
       /**
-       * <code>optional string ContractNumber = 4;</code>
+       * <code>required string ContractNumber = 4;</code>
        */
       public Builder clearContractNumber() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -4673,7 +4689,7 @@ public final class BilateralDocumentProtos {
         return this;
       }
       /**
-       * <code>optional string ContractNumber = 4;</code>
+       * <code>required string ContractNumber = 4;</code>
        */
       public Builder setContractNumberBytes(
           com.google.protobuf.ByteString value) {
@@ -4688,13 +4704,13 @@ public final class BilateralDocumentProtos {
 
       private java.lang.Object contractDate_ = "";
       /**
-       * <code>optional string ContractDate = 5;</code>
+       * <code>required string ContractDate = 5;</code>
        */
       public boolean hasContractDate() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional string ContractDate = 5;</code>
+       * <code>required string ContractDate = 5;</code>
        */
       public java.lang.String getContractDate() {
         java.lang.Object ref = contractDate_;
@@ -4711,7 +4727,7 @@ public final class BilateralDocumentProtos {
         }
       }
       /**
-       * <code>optional string ContractDate = 5;</code>
+       * <code>required string ContractDate = 5;</code>
        */
       public com.google.protobuf.ByteString
           getContractDateBytes() {
@@ -4727,7 +4743,7 @@ public final class BilateralDocumentProtos {
         }
       }
       /**
-       * <code>optional string ContractDate = 5;</code>
+       * <code>required string ContractDate = 5;</code>
        */
       public Builder setContractDate(
           java.lang.String value) {
@@ -4740,7 +4756,7 @@ public final class BilateralDocumentProtos {
         return this;
       }
       /**
-       * <code>optional string ContractDate = 5;</code>
+       * <code>required string ContractDate = 5;</code>
        */
       public Builder clearContractDate() {
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -4749,7 +4765,7 @@ public final class BilateralDocumentProtos {
         return this;
       }
       /**
-       * <code>optional string ContractDate = 5;</code>
+       * <code>required string ContractDate = 5;</code>
        */
       public Builder setContractDateBytes(
           com.google.protobuf.ByteString value) {
@@ -5376,7 +5392,7 @@ public final class BilateralDocumentProtos {
       "s.BilateralDocument.BilateralDocumentSta" +
       "tus:\036UnknownBilateralDocumentStatus\022\r\n\005T" +
       "otal\030\002 \001(\t\022\024\n\014ContractType\030\003 \001(\t\022\026\n\016Cont" +
-      "ractNumber\030\004 \001(\t\022\024\n\014ContractDate\030\005 \001(\t\022V" +
+      "ractNumber\030\004 \002(\t\022\024\n\014ContractDate\030\005 \002(\t\022V" +
       "\n\rReceiptStatus\030\006 \001(\0162).Diadoc.Api.Proto" +
       ".Documents.ReceiptStatus:\024UnknownReceipt" +
       "Status\"\362\001\n\031BilateralDocumentMetadata\022}\n\016",

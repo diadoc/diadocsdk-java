@@ -1,13 +1,14 @@
 package Diadoc.Api;
 
-import org.apache.http.annotation.Immutable;
+import org.apache.http.annotation.Contract;
+import org.apache.http.annotation.ThreadingBehavior;
 import org.apache.http.auth.BasicUserPrincipal;
 import org.apache.http.auth.Credentials;
 import org.apache.http.util.LangUtils;
 
 import java.security.Principal;
 
-@Immutable
+@Contract(threading = ThreadingBehavior.IMMUTABLE)
 public class DiadocCredentials implements Credentials {
 
     private final BasicUserPrincipal principal;

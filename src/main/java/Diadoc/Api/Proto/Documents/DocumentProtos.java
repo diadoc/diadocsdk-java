@@ -849,9 +849,9 @@ public final class DocumentProtos {
      */
     Unknown(0, 0),
     /**
-     * <code>Message = 1;</code>
+     * <code>Letter = 1;</code>
      */
-    Message(1, 1),
+    Letter(1, 1),
     /**
      * <code>Draft = 2;</code>
      */
@@ -867,9 +867,9 @@ public final class DocumentProtos {
      */
     public static final int Unknown_VALUE = 0;
     /**
-     * <code>Message = 1;</code>
+     * <code>Letter = 1;</code>
      */
-    public static final int Message_VALUE = 1;
+    public static final int Letter_VALUE = 1;
     /**
      * <code>Draft = 2;</code>
      */
@@ -885,7 +885,7 @@ public final class DocumentProtos {
     public static MessageType valueOf(int value) {
       switch (value) {
         case 0: return Unknown;
-        case 1: return Message;
+        case 1: return Letter;
         case 2: return Draft;
         case 3: return Template;
         default: return null;
@@ -4878,6 +4878,12 @@ public final class DocumentProtos {
           return false;
         }
       }
+      if (hasSupplementaryAgreementMetadata()) {
+        if (!getSupplementaryAgreementMetadata().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       if (hasUniversalTransferDocumentMetadata()) {
         if (!getUniversalTransferDocumentMetadata().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -6931,6 +6937,12 @@ public final class DocumentProtos {
         }
         for (int i = 0; i < getCustomDataCount(); i++) {
           if (!getCustomData(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasSupplementaryAgreementMetadata()) {
+          if (!getSupplementaryAgreementMetadata().isInitialized()) {
             
             return false;
           }
@@ -17624,9 +17636,9 @@ public final class DocumentProtos {
       "aitingForRecipientSignature\020\002\022\032\n\026WithRec" +
       "ipientSignature\020\003\022%\n!RecipientSignatureR" +
       "equestRejected\020\004\022\035\n\031InvalidRecipientSign" +
-      "ature\020\005*@\n\013MessageType\022\013\n\007Unknown\020\000\022\013\n\007M" +
-      "essage\020\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016Doc" +
-      "umentProtos"
+      "ature\020\005*?\n\013MessageType\022\013\n\007Unknown\020\000\022\n\n\006L" +
+      "etter\020\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016Docu" +
+      "mentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

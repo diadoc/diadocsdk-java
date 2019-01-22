@@ -5,7 +5,6 @@
 //	GetMessage(string boxId, Guid messageId) : Message
 
 import "Content.proto";
-import "DocumentId.proto";
 import "LockMode.proto";
 import "Documents/Document.proto";
 import "Events/CancellationInfo.proto";
