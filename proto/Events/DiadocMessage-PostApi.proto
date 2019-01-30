@@ -5,7 +5,7 @@
 
 import "DocumentId.proto";
 import "LockMode.proto";
-import "CustomDataItem.proto"; 
+import "CustomDataItem.proto";
 import "ResolutionRequestType.proto";
 import "ResolutionType.proto";
 import "Invoicing/Signer.proto";
@@ -492,6 +492,8 @@ message RoamingNotificationToPost {
 	required string EventId = 2;
 	required bool Success = 3;
 	optional string Description = 4;
+	optional string MessageId = 5;
+	repeated string NotifiableEntityIds = 6;
 }
 
 enum CustomDataPatchOperation {

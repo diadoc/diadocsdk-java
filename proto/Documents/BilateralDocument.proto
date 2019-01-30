@@ -35,8 +35,8 @@ message SupplementaryAgreementMetadata {
 	optional BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
 	optional string Total = 2;
 	optional string ContractType = 3;
-	optional string ContractNumber = 4;
-	optional string ContractDate = 5;
+	required string ContractNumber = 4;
+	required string ContractDate = 5;
 	optional ReceiptStatus ReceiptStatus = 6 [default = UnknownReceiptStatus];
 }
 

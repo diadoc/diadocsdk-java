@@ -85303,6 +85303,39 @@ public final class DiadocMessage_PostApiProtos {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>optional string MessageId = 5;</code>
+     */
+    boolean hasMessageId();
+    /**
+     * <code>optional string MessageId = 5;</code>
+     */
+    java.lang.String getMessageId();
+    /**
+     * <code>optional string MessageId = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageIdBytes();
+
+    /**
+     * <code>repeated string NotifiableEntityIds = 6;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getNotifiableEntityIdsList();
+    /**
+     * <code>repeated string NotifiableEntityIds = 6;</code>
+     */
+    int getNotifiableEntityIdsCount();
+    /**
+     * <code>repeated string NotifiableEntityIds = 6;</code>
+     */
+    java.lang.String getNotifiableEntityIds(int index);
+    /**
+     * <code>repeated string NotifiableEntityIds = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getNotifiableEntityIdsBytes(int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.RoamingNotificationToPost}
@@ -85379,6 +85412,21 @@ public final class DiadocMessage_PostApiProtos {
               description_ = bs;
               break;
             }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              messageId_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                notifiableEntityIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              notifiableEntityIds_.add(bs);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -85387,6 +85435,9 @@ public final class DiadocMessage_PostApiProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          notifiableEntityIds_ = notifiableEntityIds_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -85560,11 +85611,84 @@ public final class DiadocMessage_PostApiProtos {
       }
     }
 
+    public static final int MESSAGEID_FIELD_NUMBER = 5;
+    private java.lang.Object messageId_;
+    /**
+     * <code>optional string MessageId = 5;</code>
+     */
+    public boolean hasMessageId() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string MessageId = 5;</code>
+     */
+    public java.lang.String getMessageId() {
+      java.lang.Object ref = messageId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          messageId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string MessageId = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageIdBytes() {
+      java.lang.Object ref = messageId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        messageId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTIFIABLEENTITYIDS_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList notifiableEntityIds_;
+    /**
+     * <code>repeated string NotifiableEntityIds = 6;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNotifiableEntityIdsList() {
+      return notifiableEntityIds_;
+    }
+    /**
+     * <code>repeated string NotifiableEntityIds = 6;</code>
+     */
+    public int getNotifiableEntityIdsCount() {
+      return notifiableEntityIds_.size();
+    }
+    /**
+     * <code>repeated string NotifiableEntityIds = 6;</code>
+     */
+    public java.lang.String getNotifiableEntityIds(int index) {
+      return notifiableEntityIds_.get(index);
+    }
+    /**
+     * <code>repeated string NotifiableEntityIds = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNotifiableEntityIdsBytes(int index) {
+      return notifiableEntityIds_.getByteString(index);
+    }
+
     private void initFields() {
       boxId_ = "";
       eventId_ = "";
       success_ = false;
       description_ = "";
+      messageId_ = "";
+      notifiableEntityIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -85603,6 +85727,12 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(4, getDescriptionBytes());
       }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getMessageIdBytes());
+      }
+      for (int i = 0; i < notifiableEntityIds_.size(); i++) {
+        output.writeBytes(6, notifiableEntityIds_.getByteString(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -85627,6 +85757,19 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, getDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getMessageIdBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < notifiableEntityIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(notifiableEntityIds_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getNotifiableEntityIdsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -85753,6 +85896,10 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         description_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
+        messageId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        notifiableEntityIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -85797,6 +85944,15 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000008;
         }
         result.description_ = description_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.messageId_ = messageId_;
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          notifiableEntityIds_ = notifiableEntityIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.notifiableEntityIds_ = notifiableEntityIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -85829,6 +85985,21 @@ public final class DiadocMessage_PostApiProtos {
         if (other.hasDescription()) {
           bitField0_ |= 0x00000008;
           description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasMessageId()) {
+          bitField0_ |= 0x00000010;
+          messageId_ = other.messageId_;
+          onChanged();
+        }
+        if (!other.notifiableEntityIds_.isEmpty()) {
+          if (notifiableEntityIds_.isEmpty()) {
+            notifiableEntityIds_ = other.notifiableEntityIds_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureNotifiableEntityIdsIsMutable();
+            notifiableEntityIds_.addAll(other.notifiableEntityIds_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -86126,6 +86297,175 @@ public final class DiadocMessage_PostApiProtos {
   }
   bitField0_ |= 0x00000008;
         description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object messageId_ = "";
+      /**
+       * <code>optional string MessageId = 5;</code>
+       */
+      public boolean hasMessageId() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string MessageId = 5;</code>
+       */
+      public java.lang.String getMessageId() {
+        java.lang.Object ref = messageId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            messageId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string MessageId = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageIdBytes() {
+        java.lang.Object ref = messageId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          messageId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string MessageId = 5;</code>
+       */
+      public Builder setMessageId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        messageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string MessageId = 5;</code>
+       */
+      public Builder clearMessageId() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        messageId_ = getDefaultInstance().getMessageId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string MessageId = 5;</code>
+       */
+      public Builder setMessageIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        messageId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList notifiableEntityIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureNotifiableEntityIdsIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          notifiableEntityIds_ = new com.google.protobuf.LazyStringArrayList(notifiableEntityIds_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+      /**
+       * <code>repeated string NotifiableEntityIds = 6;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNotifiableEntityIdsList() {
+        return notifiableEntityIds_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string NotifiableEntityIds = 6;</code>
+       */
+      public int getNotifiableEntityIdsCount() {
+        return notifiableEntityIds_.size();
+      }
+      /**
+       * <code>repeated string NotifiableEntityIds = 6;</code>
+       */
+      public java.lang.String getNotifiableEntityIds(int index) {
+        return notifiableEntityIds_.get(index);
+      }
+      /**
+       * <code>repeated string NotifiableEntityIds = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNotifiableEntityIdsBytes(int index) {
+        return notifiableEntityIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string NotifiableEntityIds = 6;</code>
+       */
+      public Builder setNotifiableEntityIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNotifiableEntityIdsIsMutable();
+        notifiableEntityIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string NotifiableEntityIds = 6;</code>
+       */
+      public Builder addNotifiableEntityIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNotifiableEntityIdsIsMutable();
+        notifiableEntityIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string NotifiableEntityIds = 6;</code>
+       */
+      public Builder addAllNotifiableEntityIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNotifiableEntityIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, notifiableEntityIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string NotifiableEntityIds = 6;</code>
+       */
+      public Builder clearNotifiableEntityIds() {
+        notifiableEntityIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string NotifiableEntityIds = 6;</code>
+       */
+      public Builder addNotifiableEntityIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNotifiableEntityIdsIsMutable();
+        notifiableEntityIds_.add(value);
         onChanged();
         return this;
       }
@@ -96598,49 +96938,50 @@ public final class DiadocMessage_PostApiProtos {
       "\t\"\210\001\n\037XmlSignatureRejectionAttachment\022\026\n" +
       "\016ParentEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002" +
       " \002(\0132&.Diadoc.Api.Proto.Events.SignedCon" +
-      "tent\022\016\n\006Labels\030\003 \003(\t\"a\n\031RoamingNotificat" +
-      "ionToPost\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 \002(" +
-      "\t\022\017\n\007Success\030\003 \002(\010\022\023\n\013Description\030\004 \001(\t\"" +
-      "\213\001\n\017CustomDataPatch\022\026\n\016ParentEntityId\030\001 ",
-      "\002(\t\022D\n\tOperation\030\002 \002(\01621.Diadoc.Api.Prot" +
-      "o.Events.CustomDataPatchOperation\022\013\n\003Key" +
-      "\030\003 \002(\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditDocumentPa" +
-      "cketCommand\022\022\n\nDocumentId\030\001 \002(\t\022:\n\024AddDo" +
-      "cumentsToPacket\030\002 \003(\0132\034.Diadoc.Api.Proto" +
-      ".DocumentId\022?\n\031RemoveDocumentsFromPacket" +
-      "\030\003 \003(\0132\034.Diadoc.Api.Proto.DocumentId\"d\n\026" +
-      "ResolutionRouteRemoval\022\026\n\016ParentEntityId" +
-      "\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comment\030\003 \001(\t" +
-      ":\000\022\016\n\006Labels\030\004 \003(\t\"\213\002\n\016TemplateToPost\022\021\n",
-      "\tFromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002(\t\022\030\n\020Mes" +
-      "sageFromBoxId\030\003 \002(\t\022\026\n\016MessageToBoxId\030\004 " +
-      "\002(\t\022\035\n\025MessageToDepartmentId\030\005 \001(\t\022P\n\023Do" +
-      "cumentAttachments\030\006 \003(\01323.Diadoc.Api.Pro" +
-      "to.Events.TemplateDocumentAttachment\0222\n\010" +
-      "LockMode\030\007 \001(\0162\032.Diadoc.Api.Proto.LockMo" +
-      "de:\004None\"\245\003\n\032TemplateDocumentAttachment\022" +
-      "A\n\017UnsignedContent\030\001 \002(\0132(.Diadoc.Api.Pr" +
-      "oto.Events.UnsignedContent\022\017\n\007Comment\030\002 " +
-      "\001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n\010Function\030\004 \001",
-      "(\t\022\017\n\007Version\030\005 \001(\t\0227\n\010Metadata\030\006 \003(\0132%." +
-      "Diadoc.Api.Proto.Events.MetadataItem\022\022\n\n" +
-      "WorkflowId\030\007 \001(\005\022\030\n\020CustomDocumentId\030\010 \001" +
-      "(\t\022\030\n\020EditingSettingId\030\t \001(\t\022%\n\026NeedReci" +
-      "pientSignature\030\n \001(\010:\005false\022S\n\030Predefine" +
-      "dRecipientTitle\030\013 \001(\01321.Diadoc.Api.Proto" +
-      ".Events.PredefinedRecipientTitle\"]\n\030Pred" +
-      "efinedRecipientTitle\022A\n\017UnsignedContent\030" +
-      "\001 \002(\0132(.Diadoc.Api.Proto.Events.Unsigned" +
-      "Content\"7\n\017UnsignedContent\022\017\n\007Content\030\001 ",
-      "\001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034TemplateTra" +
-      "nsformationToPost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nTemp" +
-      "lateId\030\002 \002(\t\022P\n\027DocumentTransformations\030" +
-      "\003 \003(\0132/.Diadoc.Api.Proto.Events.Document" +
-      "Transformation\"F\n\026DocumentTransformation" +
-      "\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomDocumentId" +
-      "\030\002 \001(\t*/\n\030CustomDataPatchOperation\022\007\n\003Se" +
-      "t\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessage_PostApi" +
-      "Protos"
+      "tent\022\016\n\006Labels\030\003 \003(\t\"\221\001\n\031RoamingNotifica" +
+      "tionToPost\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 \002" +
+      "(\t\022\017\n\007Success\030\003 \002(\010\022\023\n\013Description\030\004 \001(\t" +
+      "\022\021\n\tMessageId\030\005 \001(\t\022\033\n\023NotifiableEntityI",
+      "ds\030\006 \003(\t\"\213\001\n\017CustomDataPatch\022\026\n\016ParentEn" +
+      "tityId\030\001 \002(\t\022D\n\tOperation\030\002 \002(\01621.Diadoc" +
+      ".Api.Proto.Events.CustomDataPatchOperati" +
+      "on\022\013\n\003Key\030\003 \002(\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditD" +
+      "ocumentPacketCommand\022\022\n\nDocumentId\030\001 \002(\t" +
+      "\022:\n\024AddDocumentsToPacket\030\002 \003(\0132\034.Diadoc." +
+      "Api.Proto.DocumentId\022?\n\031RemoveDocumentsF" +
+      "romPacket\030\003 \003(\0132\034.Diadoc.Api.Proto.Docum" +
+      "entId\"d\n\026ResolutionRouteRemoval\022\026\n\016Paren" +
+      "tEntityId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comm",
+      "ent\030\003 \001(\t:\000\022\016\n\006Labels\030\004 \003(\t\"\213\002\n\016Template" +
+      "ToPost\022\021\n\tFromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002" +
+      "(\t\022\030\n\020MessageFromBoxId\030\003 \002(\t\022\026\n\016MessageT" +
+      "oBoxId\030\004 \002(\t\022\035\n\025MessageToDepartmentId\030\005 " +
+      "\001(\t\022P\n\023DocumentAttachments\030\006 \003(\01323.Diado" +
+      "c.Api.Proto.Events.TemplateDocumentAttac" +
+      "hment\0222\n\010LockMode\030\007 \001(\0162\032.Diadoc.Api.Pro" +
+      "to.LockMode:\004None\"\245\003\n\032TemplateDocumentAt" +
+      "tachment\022A\n\017UnsignedContent\030\001 \002(\0132(.Diad" +
+      "oc.Api.Proto.Events.UnsignedContent\022\017\n\007C",
+      "omment\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n\010Fun" +
+      "ction\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227\n\010Metadata" +
+      "\030\006 \003(\0132%.Diadoc.Api.Proto.Events.Metadat" +
+      "aItem\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020CustomDocum" +
+      "entId\030\010 \001(\t\022\030\n\020EditingSettingId\030\t \001(\t\022%\n" +
+      "\026NeedRecipientSignature\030\n \001(\010:\005false\022S\n\030" +
+      "PredefinedRecipientTitle\030\013 \001(\01321.Diadoc." +
+      "Api.Proto.Events.PredefinedRecipientTitl" +
+      "e\"]\n\030PredefinedRecipientTitle\022A\n\017Unsigne" +
+      "dContent\030\001 \002(\0132(.Diadoc.Api.Proto.Events",
+      ".UnsignedContent\"7\n\017UnsignedContent\022\017\n\007C" +
+      "ontent\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034Te" +
+      "mplateTransformationToPost\022\r\n\005BoxId\030\001 \002(" +
+      "\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027DocumentTransfo" +
+      "rmations\030\003 \003(\0132/.Diadoc.Api.Proto.Events" +
+      ".DocumentTransformation\"F\n\026DocumentTrans" +
+      "formation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomD" +
+      "ocumentId\030\002 \001(\t*/\n\030CustomDataPatchOperat" +
+      "ion\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessag" +
+      "e_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -96952,7 +97293,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_RoamingNotificationToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_RoamingNotificationToPost_descriptor,
-        new java.lang.String[] { "BoxId", "EventId", "Success", "Description", });
+        new java.lang.String[] { "BoxId", "EventId", "Success", "Description", "MessageId", "NotifiableEntityIds", });
     internal_static_Diadoc_Api_Proto_Events_CustomDataPatch_descriptor =
       getDescriptor().getMessageTypes().get(48);
     internal_static_Diadoc_Api_Proto_Events_CustomDataPatch_fieldAccessorTable = new

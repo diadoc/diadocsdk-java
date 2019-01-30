@@ -8,8 +8,8 @@ environment:
     secure: prJOj46LFF9HWKRH4PZ8vSS7wgSkkAFIkSCkfqWfAoPNGhUcYqplF4h4PyxEmMjb
 
 install:
-  - set JDK_HOME=C:\Program Files (x86)\Java\jdk1.7.0
-  - set JAVA_HOME=C:\Program Files (x86)\Java\jdk1.7.0
+  - set JDK_HOME=C:\Program Files\Java\jdk10
+  - set JAVA_HOME=C:\Program Files\Java\jdk10
   - ps: |
       Add-Type -AssemblyName System.IO.Compression.FileSystem
       if (!(Test-Path -Path "C:\maven" )) {
@@ -23,11 +23,14 @@ install:
   - set PATH=%PATH%;C:\maven\apache-maven-3.5.4\bin
 
   - nuget install secure-file -ExcludeVersion
-  - secure-file\tools\secure-file -decrypt cryptopro-jcp-1.0.52.zip.enc -secret %diadoc_signing_secret%
-  - 7z x cryptopro-jcp-1.0.52.zip
-  - cd target\crypto-pro
-  - install.bat "%JDK_HOME%"
-  - cd ..\..
+  - secure-file\tools\secure-file -decrypt jcp-2.0.39014.zip.enc -secret %diadoc_signing_secret%
+  - 7z x jcp-2.0.39014.zip
+  - cd jcp-2.0.39014
+  - mvn install:install-file -Dfile="JCP.jar" -DgroupId="ru.CryptoPro" -DartifactId="JCP" -Dversion="2.0.39014" -Dpackaging="jar"
+  - mvn install:install-file -Dfile="asn1rt.jar" -DgroupId="com.objsys.asn1j" -DartifactId="asn1rt" -Dversion="2.0.39014" -Dpackaging="jar"
+  - mvn install:install-file -Dfile="ASN1P.jar" -DgroupId="ru.CryptoPro" -DartifactId="ASN1P" -Dversion="2.0.39014" -Dpackaging="jar"
+  - mvn install:install-file -Dfile="JCryptoP.jar" -DgroupId="ru.CryptoPro" -DartifactId="JCryptoP" -Dversion="2.0.39014" -Dpackaging="jar"
+  - cd ..
 
 build_script:
 - ps: .\build.ps1 -Target "AppVeyor" -Verbosity Diagnostic
