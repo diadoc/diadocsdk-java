@@ -269,27 +269,27 @@ public class DiadocApi {
         }
     }
 
-    public DiadocMessage_GetApiProtos.Template GetTemplate(String currentBoxId, String messageId) throws IOException {
+    public DiadocMessage_GetApiProtos.Template GetTemplate(String currentBoxId, String templateId) throws IOException {
         if (currentBoxId == null)
             throw new NullPointerException("currentBoxId");
-        if (messageId == null)
-            throw new NullPointerException("messageId");
+        if (templateId == null)
+            throw new NullPointerException("templateId");
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", currentBoxId));
-        parameters.add(new BasicNameValuePair("messageId", messageId));
+        parameters.add(new BasicNameValuePair("templateId", templateId));
         return DiadocMessage_GetApiProtos.Template.parseFrom(PerformGetHttpRequest("/GetTemplate", parameters));
     }
 
-    public DiadocMessage_GetApiProtos.Template GetTemplate(String currentBoxId, String messageId, String entityId) throws IOException {
+    public DiadocMessage_GetApiProtos.Template GetTemplate(String currentBoxId, String templateId, String entityId) throws IOException {
         if (currentBoxId == null)
             throw new NullPointerException("currentBoxId");
-        if (messageId == null)
-            throw new NullPointerException("messageId");
+        if (templateId == null)
+            throw new NullPointerException("templateId");
         if (entityId == null)
             throw new NullPointerException("entityId");
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", currentBoxId));
-        parameters.add(new BasicNameValuePair("messageId", messageId));
+        parameters.add(new BasicNameValuePair("templateId", templateId));
         parameters.add(new BasicNameValuePair("entityId", entityId));
         return DiadocMessage_GetApiProtos.Template.parseFrom(PerformGetHttpRequest("/GetTemplate", parameters));
     }
