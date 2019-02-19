@@ -29,6 +29,10 @@ public final class ResolutionRequestTypeProtos {
      * <code>ApprovementSignatureRequest = 2;</code>
      */
     ApprovementSignatureRequest(3, 2),
+    /**
+     * <code>Custom = 3;</code>
+     */
+    Custom(4, 3),
     ;
 
     /**
@@ -47,6 +51,10 @@ public final class ResolutionRequestTypeProtos {
      * <code>ApprovementSignatureRequest = 2;</code>
      */
     public static final int ApprovementSignatureRequest_VALUE = 2;
+    /**
+     * <code>Custom = 3;</code>
+     */
+    public static final int Custom_VALUE = 3;
 
 
     public final int getNumber() { return value; }
@@ -57,6 +65,7 @@ public final class ResolutionRequestTypeProtos {
         case 0: return ApprovementRequest;
         case 1: return SignatureRequest;
         case 2: return ApprovementSignatureRequest;
+        case 3: return Custom;
         default: return null;
       }
     }
@@ -118,11 +127,11 @@ public final class ResolutionRequestTypeProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\033ResolutionRequestType.proto\022\020Diadoc.Ap" +
-      "i.Proto*\221\001\n\025ResolutionRequestType\022)\n\034Unk" +
+      "i.Proto*\235\001\n\025ResolutionRequestType\022)\n\034Unk" +
       "nownResolutionRequestType\020\377\377\377\377\377\377\377\377\377\001\022\026\n\022" +
       "ApprovementRequest\020\000\022\024\n\020SignatureRequest" +
-      "\020\001\022\037\n\033ApprovementSignatureRequest\020\002B\035B\033R" +
-      "esolutionRequestTypeProtos"
+      "\020\001\022\037\n\033ApprovementSignatureRequest\020\002\022\n\n\006C" +
+      "ustom\020\003B\035B\033ResolutionRequestTypeProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

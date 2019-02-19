@@ -2863,6 +2863,19 @@ public final class ResolutionDocflowV3Protos {
      */
     com.google.protobuf.ByteString
         getResolvedWithBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction> getActionsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+     */
+    int getActionsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+     */
+    Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction getActions(int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.ResolutionRequestV3}
@@ -2965,6 +2978,39 @@ public final class ResolutionDocflowV3Protos {
               resolvedWith_ = bs;
               break;
             }
+            case 48: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction value = Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(6, rawValue);
+                } else {
+                if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                  actions_ = new java.util.ArrayList<Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction>();
+                  mutable_bitField0_ |= 0x00000020;
+                }
+                actions_.add(value);
+              }
+              break;
+            }
+            case 50: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction value = Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(6, rawValue);
+                  } else {
+                  if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                    actions_ = new java.util.ArrayList<Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction>();
+                    mutable_bitField0_ |= 0x00000020;
+                  }
+                  actions_.add(value);
+                }
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2973,6 +3019,9 @@ public final class ResolutionDocflowV3Protos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          actions_ = java.util.Collections.unmodifiableList(actions_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3146,12 +3195,34 @@ public final class ResolutionDocflowV3Protos {
       }
     }
 
+    public static final int ACTIONS_FIELD_NUMBER = 6;
+    private java.util.List<Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction> actions_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction> getActionsList() {
+      return actions_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+     */
+    public int getActionsCount() {
+      return actions_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+     */
+    public Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction getActions(int index) {
+      return actions_.get(index);
+    }
+
     private void initFields() {
       entity_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
       target_ = Diadoc.Api.Proto.ResolutionTargetProtos.ResolutionTarget.getDefaultInstance();
       authorUserId_ = "";
       requestType_ = Diadoc.Api.Proto.ResolutionRequestTypeProtos.ResolutionRequestType.UnknownResolutionRequestType;
       resolvedWith_ = "";
+      actions_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3197,6 +3268,9 @@ public final class ResolutionDocflowV3Protos {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeBytes(5, getResolvedWithBytes());
       }
+      for (int i = 0; i < actions_.size(); i++) {
+        output.writeEnum(6, actions_.get(i).getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3225,6 +3299,15 @@ public final class ResolutionDocflowV3Protos {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, getResolvedWithBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < actions_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(actions_.get(i).getNumber());
+        }
+        size += dataSize;
+        size += 1 * actions_.size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3363,6 +3446,8 @@ public final class ResolutionDocflowV3Protos {
         bitField0_ = (bitField0_ & ~0x00000008);
         resolvedWith_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
+        actions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -3419,6 +3504,11 @@ public final class ResolutionDocflowV3Protos {
           to_bitField0_ |= 0x00000010;
         }
         result.resolvedWith_ = resolvedWith_;
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          actions_ = java.util.Collections.unmodifiableList(actions_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.actions_ = actions_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3452,6 +3542,16 @@ public final class ResolutionDocflowV3Protos {
         if (other.hasResolvedWith()) {
           bitField0_ |= 0x00000010;
           resolvedWith_ = other.resolvedWith_;
+          onChanged();
+        }
+        if (!other.actions_.isEmpty()) {
+          if (actions_.isEmpty()) {
+            actions_ = other.actions_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureActionsIsMutable();
+            actions_.addAll(other.actions_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3912,6 +4012,78 @@ public final class ResolutionDocflowV3Protos {
   }
   bitField0_ |= 0x00000010;
         resolvedWith_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction> actions_ =
+        java.util.Collections.emptyList();
+      private void ensureActionsIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          actions_ = new java.util.ArrayList<Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction>(actions_);
+          bitField0_ |= 0x00000020;
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction> getActionsList() {
+        return java.util.Collections.unmodifiableList(actions_);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+       */
+      public int getActionsCount() {
+        return actions_.size();
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+       */
+      public Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction getActions(int index) {
+        return actions_.get(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+       */
+      public Builder setActions(
+          int index, Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureActionsIsMutable();
+        actions_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+       */
+      public Builder addActions(Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureActionsIsMutable();
+        actions_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+       */
+      public Builder addAllActions(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.ResolutionActionProtos.ResolutionAction> values) {
+        ensureActionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, actions_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.ResolutionAction Actions = 6;</code>
+       */
+      public Builder clearActions() {
+        actions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -6584,49 +6756,51 @@ public final class ResolutionDocflowV3Protos {
   static {
     java.lang.String[] descriptorData = {
       "\n!Docflow/ResolutionDocflowV3.proto\022\030Dia" +
-      "doc.Api.Proto.Docflow\032\017Timestamp.proto\032\033" +
-      "ResolutionRequestType.proto\032\026ResolutionT" +
-      "arget.proto\032\024ResolutionType.proto\032\030Docfl" +
-      "ow/Attachment.proto\032\032Docflow/AttachmentV" +
-      "3.proto\"\262\001\n\023ResolutionDocflowV3\022\022\n\nIsFin" +
-      "ished\030\001 \002(\010\022\026\n\016ParentEntityId\030\002 \002(\t\022S\n\020R" +
-      "esolutionStatus\030\003 \002(\0162*.Diadoc.Api.Proto" +
-      ".Docflow.ResolutionStatus:\rUnknownStatus" +
-      "\022\032\n\022ResolutionEntityId\030\004 \001(\t\"\254\002\n\024Resolut",
-      "ionEntitiesV3\022?\n\010Requests\030\001 \003(\0132-.Diadoc" +
-      ".Api.Proto.Docflow.ResolutionRequestV3\022;" +
-      "\n\013Resolutions\030\002 \003(\0132&.Diadoc.Api.Proto.D" +
-      "ocflow.ResolutionV3\022O\n\025ApprovementSignat" +
-      "ures\030\003 \003(\01320.Diadoc.Api.Proto.Docflow.Ap" +
-      "provementSignatureV3\022E\n\020SignatureDenials" +
-      "\030\004 \003(\0132+.Diadoc.Api.Proto.Docflow.Signat" +
-      "ureDenialV3\"\203\002\n\023ResolutionRequestV3\0220\n\006E" +
-      "ntity\030\001 \002(\0132 .Diadoc.Api.Proto.Docflow.E" +
-      "ntity\0222\n\006Target\030\002 \002(\0132\".Diadoc.Api.Proto",
-      ".ResolutionTarget\022\024\n\014AuthorUserId\030\003 \001(\t\022" +
-      "Z\n\013RequestType\030\004 \002(\0162\'.Diadoc.Api.Proto." +
-      "ResolutionRequestType:\034UnknownResolution" +
-      "RequestType\022\024\n\014ResolvedWith\030\005 \001(\t\"\304\001\n\014Re" +
-      "solutionV3\0220\n\006Entity\030\001 \002(\0132 .Diadoc.Api." +
-      "Proto.Docflow.Entity\022\033\n\023ResolutionReques" +
-      "tId\030\002 \001(\t\022\024\n\014AuthorUserId\030\003 \001(\t\022O\n\016Resol" +
-      "utionType\030\004 \002(\0162 .Diadoc.Api.Proto.Resol" +
-      "utionType:\025UnknownResolutionType\"\205\001\n\026App" +
-      "rovementSignatureV3\0228\n\tSignature\030\001 \002(\0132%",
-      ".Diadoc.Api.Proto.Docflow.SignatureV3\022\033\n" +
-      "\023ResolutionRequestId\030\002 \001(\t\022\024\n\014AuthorUser" +
-      "Id\030\003 \001(\t\"x\n\021SignatureDenialV3\0220\n\006Entity\030" +
-      "\001 \002(\0132 .Diadoc.Api.Proto.Docflow.Entity\022" +
-      "\033\n\023ResolutionRequestId\030\002 \002(\t\022\024\n\014AuthorUs" +
-      "erId\030\003 \001(\t*\250\002\n\020ResolutionStatus\022\021\n\rUnkno" +
-      "wnStatus\020\000\022\010\n\004None\020\001\022\014\n\010Approved\020\002\022\017\n\013Di" +
-      "sapproved\020\003\022\030\n\024ApprovementRequested\020\004\022!\n" +
-      "\035ApprovementSignatureRequested\020\005\022\035\n\031Prim" +
-      "arySignatureRequested\020\006\022\034\n\030SignatureRequ",
-      "estRejected\020\007\022 \n\034SignedWithApprovingSign" +
-      "ature\020\010\022\036\n\032SignedWithPrimarySignature\020\t\022" +
-      "\034\n\030PrimarySignatureRejected\020\nB\033B\031Resolut" +
-      "ionDocflowV3Protos"
+      "doc.Api.Proto.Docflow\032\017Timestamp.proto\032\026" +
+      "ResolutionAction.proto\032\033ResolutionReques" +
+      "tType.proto\032\026ResolutionTarget.proto\032\024Res" +
+      "olutionType.proto\032\030Docflow/Attachment.pr" +
+      "oto\032\032Docflow/AttachmentV3.proto\"\262\001\n\023Reso" +
+      "lutionDocflowV3\022\022\n\nIsFinished\030\001 \002(\010\022\026\n\016P" +
+      "arentEntityId\030\002 \002(\t\022S\n\020ResolutionStatus\030" +
+      "\003 \002(\0162*.Diadoc.Api.Proto.Docflow.Resolut" +
+      "ionStatus:\rUnknownStatus\022\032\n\022ResolutionEn",
+      "tityId\030\004 \001(\t\"\254\002\n\024ResolutionEntitiesV3\022?\n" +
+      "\010Requests\030\001 \003(\0132-.Diadoc.Api.Proto.Docfl" +
+      "ow.ResolutionRequestV3\022;\n\013Resolutions\030\002 " +
+      "\003(\0132&.Diadoc.Api.Proto.Docflow.Resolutio" +
+      "nV3\022O\n\025ApprovementSignatures\030\003 \003(\01320.Dia" +
+      "doc.Api.Proto.Docflow.ApprovementSignatu" +
+      "reV3\022E\n\020SignatureDenials\030\004 \003(\0132+.Diadoc." +
+      "Api.Proto.Docflow.SignatureDenialV3\"\270\002\n\023" +
+      "ResolutionRequestV3\0220\n\006Entity\030\001 \002(\0132 .Di" +
+      "adoc.Api.Proto.Docflow.Entity\0222\n\006Target\030",
+      "\002 \002(\0132\".Diadoc.Api.Proto.ResolutionTarge" +
+      "t\022\024\n\014AuthorUserId\030\003 \001(\t\022Z\n\013RequestType\030\004" +
+      " \002(\0162\'.Diadoc.Api.Proto.ResolutionReques" +
+      "tType:\034UnknownResolutionRequestType\022\024\n\014R" +
+      "esolvedWith\030\005 \001(\t\0223\n\007Actions\030\006 \003(\0162\".Dia" +
+      "doc.Api.Proto.ResolutionAction\"\304\001\n\014Resol" +
+      "utionV3\0220\n\006Entity\030\001 \002(\0132 .Diadoc.Api.Pro" +
+      "to.Docflow.Entity\022\033\n\023ResolutionRequestId" +
+      "\030\002 \001(\t\022\024\n\014AuthorUserId\030\003 \001(\t\022O\n\016Resoluti" +
+      "onType\030\004 \002(\0162 .Diadoc.Api.Proto.Resoluti",
+      "onType:\025UnknownResolutionType\"\205\001\n\026Approv" +
+      "ementSignatureV3\0228\n\tSignature\030\001 \002(\0132%.Di" +
+      "adoc.Api.Proto.Docflow.SignatureV3\022\033\n\023Re" +
+      "solutionRequestId\030\002 \001(\t\022\024\n\014AuthorUserId\030" +
+      "\003 \001(\t\"x\n\021SignatureDenialV3\0220\n\006Entity\030\001 \002" +
+      "(\0132 .Diadoc.Api.Proto.Docflow.Entity\022\033\n\023" +
+      "ResolutionRequestId\030\002 \002(\t\022\024\n\014AuthorUserI" +
+      "d\030\003 \001(\t*\250\002\n\020ResolutionStatus\022\021\n\rUnknownS" +
+      "tatus\020\000\022\010\n\004None\020\001\022\014\n\010Approved\020\002\022\017\n\013Disap" +
+      "proved\020\003\022\030\n\024ApprovementRequested\020\004\022!\n\035Ap",
+      "provementSignatureRequested\020\005\022\035\n\031Primary" +
+      "SignatureRequested\020\006\022\034\n\030SignatureRequest" +
+      "Rejected\020\007\022 \n\034SignedWithApprovingSignatu" +
+      "re\020\010\022\036\n\032SignedWithPrimarySignature\020\t\022\034\n\030" +
+      "PrimarySignatureRejected\020\nB\033B\031Resolution" +
+      "DocflowV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6640,6 +6814,7 @@ public final class ResolutionDocflowV3Protos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
+          Diadoc.Api.Proto.ResolutionActionProtos.getDescriptor(),
           Diadoc.Api.Proto.ResolutionRequestTypeProtos.getDescriptor(),
           Diadoc.Api.Proto.ResolutionTargetProtos.getDescriptor(),
           Diadoc.Api.Proto.ResolutionTypeProtos.getDescriptor(),
@@ -6663,7 +6838,7 @@ public final class ResolutionDocflowV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_ResolutionRequestV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_ResolutionRequestV3_descriptor,
-        new java.lang.String[] { "Entity", "Target", "AuthorUserId", "RequestType", "ResolvedWith", });
+        new java.lang.String[] { "Entity", "Target", "AuthorUserId", "RequestType", "ResolvedWith", "Actions", });
     internal_static_Diadoc_Api_Proto_Docflow_ResolutionV3_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Docflow_ResolutionV3_fieldAccessorTable = new
@@ -6683,6 +6858,7 @@ public final class ResolutionDocflowV3Protos {
         internal_static_Diadoc_Api_Proto_Docflow_SignatureDenialV3_descriptor,
         new java.lang.String[] { "Entity", "ResolutionRequestId", "AuthorUserId", });
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
+    Diadoc.Api.Proto.ResolutionActionProtos.getDescriptor();
     Diadoc.Api.Proto.ResolutionRequestTypeProtos.getDescriptor();
     Diadoc.Api.Proto.ResolutionTargetProtos.getDescriptor();
     Diadoc.Api.Proto.ResolutionTypeProtos.getDescriptor();
