@@ -57,6 +57,10 @@ public final class ResolutionDocflowV3Protos {
      * <code>PrimarySignatureRejected = 10;</code>
      */
     PrimarySignatureRejected(10, 10),
+    /**
+     * <code>ActionsRequested = 11;</code>
+     */
+    ActionsRequested(11, 11),
     ;
 
     /**
@@ -103,6 +107,10 @@ public final class ResolutionDocflowV3Protos {
      * <code>PrimarySignatureRejected = 10;</code>
      */
     public static final int PrimarySignatureRejected_VALUE = 10;
+    /**
+     * <code>ActionsRequested = 11;</code>
+     */
+    public static final int ActionsRequested_VALUE = 11;
 
 
     public final int getNumber() { return value; }
@@ -120,6 +128,7 @@ public final class ResolutionDocflowV3Protos {
         case 8: return SignedWithApprovingSignature;
         case 9: return SignedWithPrimarySignature;
         case 10: return PrimarySignatureRejected;
+        case 11: return ActionsRequested;
         default: return null;
       }
     }
@@ -6792,15 +6801,15 @@ public final class ResolutionDocflowV3Protos {
       "\003 \001(\t\"x\n\021SignatureDenialV3\0220\n\006Entity\030\001 \002" +
       "(\0132 .Diadoc.Api.Proto.Docflow.Entity\022\033\n\023" +
       "ResolutionRequestId\030\002 \002(\t\022\024\n\014AuthorUserI" +
-      "d\030\003 \001(\t*\250\002\n\020ResolutionStatus\022\021\n\rUnknownS" +
+      "d\030\003 \001(\t*\276\002\n\020ResolutionStatus\022\021\n\rUnknownS" +
       "tatus\020\000\022\010\n\004None\020\001\022\014\n\010Approved\020\002\022\017\n\013Disap" +
       "proved\020\003\022\030\n\024ApprovementRequested\020\004\022!\n\035Ap",
       "provementSignatureRequested\020\005\022\035\n\031Primary" +
       "SignatureRequested\020\006\022\034\n\030SignatureRequest" +
       "Rejected\020\007\022 \n\034SignedWithApprovingSignatu" +
       "re\020\010\022\036\n\032SignedWithPrimarySignature\020\t\022\034\n\030" +
-      "PrimarySignatureRejected\020\nB\033B\031Resolution" +
-      "DocflowV3Protos"
+      "PrimarySignatureRejected\020\n\022\024\n\020ActionsReq" +
+      "uested\020\013B\033B\031ResolutionDocflowV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

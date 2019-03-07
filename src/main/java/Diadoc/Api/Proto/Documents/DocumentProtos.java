@@ -45,6 +45,10 @@ public final class DocumentProtos {
      * <code>SignatureDenied = 5;</code>
      */
     SignatureDenied(6, 5),
+    /**
+     * <code>ActionsRequested = 6;</code>
+     */
+    ActionsRequested(7, 6),
     ;
 
     /**
@@ -79,6 +83,10 @@ public final class DocumentProtos {
      * <code>SignatureDenied = 5;</code>
      */
     public static final int SignatureDenied_VALUE = 5;
+    /**
+     * <code>ActionsRequested = 6;</code>
+     */
+    public static final int ActionsRequested_VALUE = 6;
 
 
     public final int getNumber() { return value; }
@@ -92,6 +100,7 @@ public final class DocumentProtos {
         case 3: return ApprovementRequested;
         case 4: return SignatureRequested;
         case 5: return SignatureDenied;
+        case 6: return ActionsRequested;
         default: return null;
       }
     }
@@ -17603,42 +17612,42 @@ public final class DocumentProtos {
       "tatus:\033GeneralReceiptStatusUnknown\"Y\n\006Or" +
       "igin\022<\n\013MessageType\030\001 \002(\0162\'.Diadoc.Api.P" +
       "roto.Documents.MessageType\022\021\n\tMessageId\030",
-      "\002 \002(\t*\254\001\n\024ResolutionStatusType\022$\n\027Unknow" +
+      "\002 \002(\t*\302\001\n\024ResolutionStatusType\022$\n\027Unknow" +
       "nResolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014" +
       "\n\010Approved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024Approve" +
       "mentRequested\020\003\022\026\n\022SignatureRequested\020\004\022" +
-      "\023\n\017SignatureDenied\020\005*\262\001\n\020RevocationStatu" +
-      "s\022\033\n\027UnknownRevocationStatus\020\000\022\030\n\024Revoca" +
-      "tionStatusNone\020\001\022\035\n\031RevocationIsRequeste" +
-      "dByMe\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Rev" +
-      "ocationAccepted\020\004\022\026\n\022RevocationRejected\020" +
-      "\005*\256\001\n\031RoamingNotificationStatus\022$\n Unkno",
-      "wnRoamingNotificationStatus\020\000\022!\n\035Roaming" +
-      "NotificationStatusNone\020\001\022$\n RoamingNotif" +
-      "icationStatusSuccess\020\002\022\"\n\036RoamingNotific" +
-      "ationStatusError\020\003*\300\001\n\025SenderSignatureSt" +
-      "atus\022 \n\034UnknownSenderSignatureStatus\020\000\022\035" +
-      "\n\031WaitingForSenderSignature\020\001\022\034\n\030SenderS" +
-      "ignatureUnchecked\020\002\022\"\n\036SenderSignatureCh" +
-      "eckedAndValid\020\003\022$\n SenderSignatureChecke" +
-      "dAndInvalid\020\004*\302\001\n\024ProxySignatureStatus\022\037" +
-      "\n\033UnknownProxySignatureStatus\020\000\022\034\n\030Proxy",
-      "SignatureStatusNone\020\001\022\034\n\030WaitingForProxy" +
-      "Signature\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026P" +
-      "roxySignatureRejected\020\004\022\031\n\025InvalidProxyS" +
-      "ignature\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033G" +
-      "eneralReceiptStatusUnknown\020\000\022%\n!GeneralR" +
-      "eceiptStatusNotAcceptable\020\001\022\027\n\023HaveToCre" +
-      "ateReceipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010F" +
-      "inished\020\004*\353\001\n\027RecipientResponseStatus\022\"\n" +
-      "\036RecipientResponseStatusUnknown\020\000\022(\n$Rec" +
-      "ipientResponseStatusNotAcceptable\020\001\022 \n\034W",
-      "aitingForRecipientSignature\020\002\022\032\n\026WithRec" +
-      "ipientSignature\020\003\022%\n!RecipientSignatureR" +
-      "equestRejected\020\004\022\035\n\031InvalidRecipientSign" +
-      "ature\020\005*?\n\013MessageType\022\013\n\007Unknown\020\000\022\n\n\006L" +
-      "etter\020\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016Docu" +
-      "mentProtos"
+      "\023\n\017SignatureDenied\020\005\022\024\n\020ActionsRequested" +
+      "\020\006*\262\001\n\020RevocationStatus\022\033\n\027UnknownRevoca" +
+      "tionStatus\020\000\022\030\n\024RevocationStatusNone\020\001\022\035" +
+      "\n\031RevocationIsRequestedByMe\020\002\022\030\n\024Request" +
+      "sMyRevocation\020\003\022\026\n\022RevocationAccepted\020\004\022" +
+      "\026\n\022RevocationRejected\020\005*\256\001\n\031RoamingNotif",
+      "icationStatus\022$\n UnknownRoamingNotificat" +
+      "ionStatus\020\000\022!\n\035RoamingNotificationStatus" +
+      "None\020\001\022$\n RoamingNotificationStatusSucce" +
+      "ss\020\002\022\"\n\036RoamingNotificationStatusError\020\003" +
+      "*\300\001\n\025SenderSignatureStatus\022 \n\034UnknownSen" +
+      "derSignatureStatus\020\000\022\035\n\031WaitingForSender" +
+      "Signature\020\001\022\034\n\030SenderSignatureUnchecked\020" +
+      "\002\022\"\n\036SenderSignatureCheckedAndValid\020\003\022$\n" +
+      " SenderSignatureCheckedAndInvalid\020\004*\302\001\n\024" +
+      "ProxySignatureStatus\022\037\n\033UnknownProxySign",
+      "atureStatus\020\000\022\034\n\030ProxySignatureStatusNon" +
+      "e\020\001\022\034\n\030WaitingForProxySignature\020\002\022\026\n\022Wit" +
+      "hProxySignature\020\003\022\032\n\026ProxySignatureRejec" +
+      "ted\020\004\022\031\n\025InvalidProxySignature\020\005*\234\001\n\024Gen" +
+      "eralReceiptStatus\022\037\n\033GeneralReceiptStatu" +
+      "sUnknown\020\000\022%\n!GeneralReceiptStatusNotAcc" +
+      "eptable\020\001\022\027\n\023HaveToCreateReceipt\020\002\022\025\n\021Wa" +
+      "itingForReceipt\020\003\022\014\n\010Finished\020\004*\353\001\n\027Reci" +
+      "pientResponseStatus\022\"\n\036RecipientResponse" +
+      "StatusUnknown\020\000\022(\n$RecipientResponseStat",
+      "usNotAcceptable\020\001\022 \n\034WaitingForRecipient" +
+      "Signature\020\002\022\032\n\026WithRecipientSignature\020\003\022" +
+      "%\n!RecipientSignatureRequestRejected\020\004\022\035" +
+      "\n\031InvalidRecipientSignature\020\005*?\n\013Message" +
+      "Type\022\013\n\007Unknown\020\000\022\n\n\006Letter\020\001\022\t\n\005Draft\020\002" +
+      "\022\014\n\010Template\020\003B\020B\016DocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
