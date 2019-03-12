@@ -188,7 +188,7 @@ public class DiadocApi {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("login", login));
         parameters.add(new BasicNameValuePair("password", password));
-        byte[] httpResponse = PerformPostHttpRequest("/Authenticate", parameters, null);
+        byte[] httpResponse = PerformPostHttpRequest("/V2/Authenticate", parameters, null);
         String result;
         try {
             result = new String(httpResponse, "UTF8");
@@ -199,10 +199,29 @@ public class DiadocApi {
     }
 
     public void Authenticate(X509Certificate currentCert) throws Exception {
+        Authenticate(currentCert, true);
+    }
+
+    public void Authenticate(X509Certificate currentCert, boolean autoConfirm) throws Exception {
         updateCredentials(null);
-        byte[] responseBody = PerformPostHttpRequest("/Authenticate", null, currentCert.getEncoded());
-        String authToken = getAuthToken(responseBody, currentCert);
-        updateCredentials(authToken);
+        byte[] responseBody = PerformPostHttpRequest("/V2/Authenticate", null, currentCert.getEncoded());
+
+        if (autoConfirm) {
+            String token = getDecryptedToken(responseBody, currentCert);
+            ConfirmAuthenticationByCertificate(currentCert, token);
+        }
+    }
+
+    private String getDecryptedToken(byte[] encryptedToken, X509Certificate currentCert) throws Exception {
+        byte[] decryptedKey = decryptToken(encryptedToken, currentCert);
+        return StringUtils.newStringUtf8(Base64.encodeBase64(decryptedKey));
+    }
+
+    public void ConfirmAuthenticationByCertificate(X509Certificate currentCert, String token) throws Exception {
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("token", token));
+        byte[] ddToken = PerformPostHttpRequest("/V2/AuthenticateConfirm", parameters, currentCert.getEncoded());
+        updateCredentials(StringUtils.newStringUtf8(ddToken));
     }
 
     public void Authenticate(String sid) throws Exception {
@@ -303,11 +322,6 @@ public class DiadocApi {
         if (documentId != null)
             params.add(new BasicNameValuePair("documentId", documentId));
         PerformPostHttpRequest("/Delete", params, new byte[]{});
-    }
-
-    private String getAuthToken(byte[] encryptedToken, X509Certificate currentCert) throws Exception {
-        byte[] decryptedToken = decryptToken(encryptedToken, currentCert);
-        return StringUtils.newStringUtf8(Base64.encodeBase64(decryptedToken));
     }
 
     private void decodeAsn1Bytes(Asn1Type obj, byte[] bytes) throws IOException, Asn1Exception {
