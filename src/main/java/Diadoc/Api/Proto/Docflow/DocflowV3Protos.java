@@ -5597,6 +5597,20 @@ public final class DocflowV3Protos {
      * <code>optional .Diadoc.Api.Proto.Timestamp DeliveredAt = 3;</code>
      */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getDeliveredAtOrBuilder();
+
+    /**
+     * <code>optional string PlainText = 4;</code>
+     */
+    boolean hasPlainText();
+    /**
+     * <code>optional string PlainText = 4;</code>
+     */
+    java.lang.String getPlainText();
+    /**
+     * <code>optional string PlainText = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getPlainTextBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow}
@@ -5679,6 +5693,12 @@ public final class DocflowV3Protos {
                 deliveredAt_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              plainText_ = bs;
               break;
             }
           }
@@ -5778,10 +5798,53 @@ public final class DocflowV3Protos {
       return deliveredAt_;
     }
 
+    public static final int PLAINTEXT_FIELD_NUMBER = 4;
+    private java.lang.Object plainText_;
+    /**
+     * <code>optional string PlainText = 4;</code>
+     */
+    public boolean hasPlainText() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string PlainText = 4;</code>
+     */
+    public java.lang.String getPlainText() {
+      java.lang.Object ref = plainText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          plainText_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string PlainText = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPlainTextBytes() {
+      java.lang.Object ref = plainText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        plainText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       signatureRejection_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
       isFormal_ = false;
       deliveredAt_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
+      plainText_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5823,6 +5886,9 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeMessage(3, deliveredAt_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getPlainTextBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5843,6 +5909,10 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, deliveredAt_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getPlainTextBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5977,6 +6047,8 @@ public final class DocflowV3Protos {
           deliveredAtBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
+        plainText_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -6025,6 +6097,10 @@ public final class DocflowV3Protos {
         } else {
           result.deliveredAt_ = deliveredAtBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.plainText_ = plainText_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6049,6 +6125,11 @@ public final class DocflowV3Protos {
         }
         if (other.hasDeliveredAt()) {
           mergeDeliveredAt(other.getDeliveredAt());
+        }
+        if (other.hasPlainText()) {
+          bitField0_ |= 0x00000008;
+          plainText_ = other.plainText_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6357,6 +6438,82 @@ public final class DocflowV3Protos {
           deliveredAt_ = null;
         }
         return deliveredAtBuilder_;
+      }
+
+      private java.lang.Object plainText_ = "";
+      /**
+       * <code>optional string PlainText = 4;</code>
+       */
+      public boolean hasPlainText() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string PlainText = 4;</code>
+       */
+      public java.lang.String getPlainText() {
+        java.lang.Object ref = plainText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            plainText_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string PlainText = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPlainTextBytes() {
+        java.lang.Object ref = plainText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          plainText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string PlainText = 4;</code>
+       */
+      public Builder setPlainText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        plainText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PlainText = 4;</code>
+       */
+      public Builder clearPlainText() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        plainText_ = getDefaultInstance().getPlainText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PlainText = 4;</code>
+       */
+      public Builder setPlainTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        plainText_ = value;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow)
@@ -7948,6 +8105,20 @@ public final class DocflowV3Protos {
      * <code>required int32 AmendmentFlags = 6;</code>
      */
     int getAmendmentFlags();
+
+    /**
+     * <code>optional string PlainText = 7;</code>
+     */
+    boolean hasPlainText();
+    /**
+     * <code>optional string PlainText = 7;</code>
+     */
+    java.lang.String getPlainText();
+    /**
+     * <code>optional string PlainText = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getPlainTextBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.AmendmentRequestDocflow}
@@ -8061,6 +8232,12 @@ public final class DocflowV3Protos {
             case 48: {
               bitField0_ |= 0x00000020;
               amendmentFlags_ = input.readInt32();
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              plainText_ = bs;
               break;
             }
           }
@@ -8217,6 +8394,48 @@ public final class DocflowV3Protos {
       return amendmentFlags_;
     }
 
+    public static final int PLAINTEXT_FIELD_NUMBER = 7;
+    private java.lang.Object plainText_;
+    /**
+     * <code>optional string PlainText = 7;</code>
+     */
+    public boolean hasPlainText() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string PlainText = 7;</code>
+     */
+    public java.lang.String getPlainText() {
+      java.lang.Object ref = plainText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          plainText_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string PlainText = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPlainTextBytes() {
+      java.lang.Object ref = plainText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        plainText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       isFinished_ = false;
       amendmentRequest_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
@@ -8224,6 +8443,7 @@ public final class DocflowV3Protos {
       deliveredAt_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       receipt_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ReceiptDocflowV3.getDefaultInstance();
       amendmentFlags_ = 0;
+      plainText_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -8290,6 +8510,9 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeInt32(6, amendmentFlags_);
       }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getPlainTextBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -8322,6 +8545,10 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, amendmentFlags_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getPlainTextBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -8472,6 +8699,8 @@ public final class DocflowV3Protos {
         bitField0_ = (bitField0_ & ~0x00000010);
         amendmentFlags_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
+        plainText_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -8540,6 +8769,10 @@ public final class DocflowV3Protos {
           to_bitField0_ |= 0x00000020;
         }
         result.amendmentFlags_ = amendmentFlags_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.plainText_ = plainText_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8573,6 +8806,11 @@ public final class DocflowV3Protos {
         }
         if (other.hasAmendmentFlags()) {
           setAmendmentFlags(other.getAmendmentFlags());
+        }
+        if (other.hasPlainText()) {
+          bitField0_ |= 0x00000040;
+          plainText_ = other.plainText_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -9159,6 +9397,82 @@ public final class DocflowV3Protos {
       public Builder clearAmendmentFlags() {
         bitField0_ = (bitField0_ & ~0x00000020);
         amendmentFlags_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object plainText_ = "";
+      /**
+       * <code>optional string PlainText = 7;</code>
+       */
+      public boolean hasPlainText() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string PlainText = 7;</code>
+       */
+      public java.lang.String getPlainText() {
+        java.lang.Object ref = plainText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            plainText_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string PlainText = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPlainTextBytes() {
+        java.lang.Object ref = plainText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          plainText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string PlainText = 7;</code>
+       */
+      public Builder setPlainText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        plainText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PlainText = 7;</code>
+       */
+      public Builder clearPlainText() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        plainText_ = getDefaultInstance().getPlainText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PlainText = 7;</code>
+       */
+      public Builder setPlainTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        plainText_ = value;
         onChanged();
         return this;
       }
@@ -10501,6 +10815,20 @@ public final class DocflowV3Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 4;</code>
      */
     Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotificationOrBuilder getRoamingNotificationOrBuilder();
+
+    /**
+     * <code>optional string PlainText = 5;</code>
+     */
+    boolean hasPlainText();
+    /**
+     * <code>optional string PlainText = 5;</code>
+     */
+    java.lang.String getPlainText();
+    /**
+     * <code>optional string PlainText = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getPlainTextBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.RevocationRequestDocflow}
@@ -10604,6 +10932,12 @@ public final class DocflowV3Protos {
                 roamingNotification_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              plainText_ = bs;
               break;
             }
           }
@@ -10730,11 +11064,54 @@ public final class DocflowV3Protos {
       return roamingNotification_;
     }
 
+    public static final int PLAINTEXT_FIELD_NUMBER = 5;
+    private java.lang.Object plainText_;
+    /**
+     * <code>optional string PlainText = 5;</code>
+     */
+    public boolean hasPlainText() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string PlainText = 5;</code>
+     */
+    public java.lang.String getPlainText() {
+      java.lang.Object ref = plainText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          plainText_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string PlainText = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPlainTextBytes() {
+      java.lang.Object ref = plainText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        plainText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       revocationRequest_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
       sentAt_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       deliveredAt_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       roamingNotification_ = Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.getDefaultInstance();
+      plainText_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -10787,6 +11164,9 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeMessage(4, roamingNotification_);
       }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getPlainTextBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -10811,6 +11191,10 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, roamingNotification_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getPlainTextBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -10957,6 +11341,8 @@ public final class DocflowV3Protos {
           roamingNotificationBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
+        plainText_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -11017,6 +11403,10 @@ public final class DocflowV3Protos {
         } else {
           result.roamingNotification_ = roamingNotificationBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.plainText_ = plainText_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -11044,6 +11434,11 @@ public final class DocflowV3Protos {
         }
         if (other.hasRoamingNotification()) {
           mergeRoamingNotification(other.getRoamingNotification());
+        }
+        if (other.hasPlainText()) {
+          bitField0_ |= 0x00000010;
+          plainText_ = other.plainText_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -11560,6 +11955,82 @@ public final class DocflowV3Protos {
           roamingNotification_ = null;
         }
         return roamingNotificationBuilder_;
+      }
+
+      private java.lang.Object plainText_ = "";
+      /**
+       * <code>optional string PlainText = 5;</code>
+       */
+      public boolean hasPlainText() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string PlainText = 5;</code>
+       */
+      public java.lang.String getPlainText() {
+        java.lang.Object ref = plainText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            plainText_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string PlainText = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPlainTextBytes() {
+        java.lang.Object ref = plainText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          plainText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string PlainText = 5;</code>
+       */
+      public Builder setPlainText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        plainText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PlainText = 5;</code>
+       */
+      public Builder clearPlainText() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        plainText_ = getDefaultInstance().getPlainText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PlainText = 5;</code>
+       */
+      public Builder setPlainTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        plainText_ = value;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.RevocationRequestDocflow)
@@ -13706,59 +14177,60 @@ public final class DocflowV3Protos {
       "oc.Api.Proto.Docflow.SignatureRejectionD" +
       "ocflow\022N\n\024ProxySignatureStatus\030\004 \002(\01620.D" +
       "iadoc.Api.Proto.Documents.ProxySignature" +
-      "Status\"\251\001\n\031SignatureRejectionDocflow\022H\n\022" +
+      "Status\"\274\001\n\031SignatureRejectionDocflow\022H\n\022" +
       "SignatureRejection\030\001 \002(\0132,.Diadoc.Api.Pr" +
       "oto.Docflow.SignedAttachmentV3\022\020\n\010IsForm" +
       "al\030\002 \002(\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.A" +
-      "pi.Proto.Timestamp\"\253\003\n\030RecipientResponse" +
-      "Docflow\022\022\n\nIsFinished\030\001 \002(\010\0228\n\tSignature",
-      "\030\002 \001(\0132%.Diadoc.Api.Proto.Docflow.Signat" +
-      "ureV3\022D\n\016RecipientTitle\030\003 \001(\0132,.Diadoc.A" +
-      "pi.Proto.Docflow.SignedAttachmentV3\022F\n\tR" +
-      "ejection\030\004 \001(\01323.Diadoc.Api.Proto.Docflo" +
-      "w.SignatureRejectionDocflow\022+\n\006SentAt\030\005 " +
+      "pi.Proto.Timestamp\022\021\n\tPlainText\030\004 \001(\t\"\253\003" +
+      "\n\030RecipientResponseDocflow\022\022\n\nIsFinished",
+      "\030\001 \002(\010\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Api.P" +
+      "roto.Docflow.SignatureV3\022D\n\016RecipientTit" +
+      "le\030\003 \001(\0132,.Diadoc.Api.Proto.Docflow.Sign" +
+      "edAttachmentV3\022F\n\tRejection\030\004 \001(\01323.Diad" +
+      "oc.Api.Proto.Docflow.SignatureRejectionD" +
+      "ocflow\022+\n\006SentAt\030\005 \001(\0132\033.Diadoc.Api.Prot" +
+      "o.Timestamp\0220\n\013DeliveredAt\030\006 \001(\0132\033.Diado" +
+      "c.Api.Proto.Timestamp\022T\n\027RecipientRespon" +
+      "seStatus\030\007 \002(\01623.Diadoc.Api.Proto.Docume" +
+      "nts.RecipientResponseStatus\"\274\002\n\027Amendmen",
+      "tRequestDocflow\022\022\n\nIsFinished\030\001 \002(\010\022F\n\020A" +
+      "mendmentRequest\030\002 \002(\0132,.Diadoc.Api.Proto" +
+      ".Docflow.SignedAttachmentV3\022+\n\006SentAt\030\003 " +
       "\001(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013Deli" +
-      "veredAt\030\006 \001(\0132\033.Diadoc.Api.Proto.Timesta" +
-      "mp\022T\n\027RecipientResponseStatus\030\007 \002(\01623.Di" +
-      "adoc.Api.Proto.Documents.RecipientRespon" +
-      "seStatus\"\251\002\n\027AmendmentRequestDocflow\022\022\n\n",
-      "IsFinished\030\001 \002(\010\022F\n\020AmendmentRequest\030\002 \002" +
-      "(\0132,.Diadoc.Api.Proto.Docflow.SignedAtta" +
-      "chmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Pr" +
-      "oto.Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Dia" +
-      "doc.Api.Proto.Timestamp\022;\n\007Receipt\030\005 \001(\013" +
-      "2*.Diadoc.Api.Proto.Docflow.ReceiptDocfl" +
-      "owV3\022\026\n\016AmendmentFlags\030\006 \002(\005\"\365\002\n\023Revocat" +
-      "ionDocflowV3\022\022\n\nIsFinished\030\001 \002(\010\022M\n\021Revo" +
-      "cationRequest\030\002 \002(\01322.Diadoc.Api.Proto.D" +
-      "ocflow.RevocationRequestDocflow\022O\n\022Revoc",
-      "ationResponse\030\003 \001(\01323.Diadoc.Api.Proto.D" +
-      "ocflow.RevocationResponseDocflow\022\026\n\016Init" +
-      "iatorBoxId\030\004 \002(\t\022F\n\020RevocationStatus\030\005 \002" +
-      "(\0162,.Diadoc.Api.Proto.Documents.Revocati" +
-      "onStatus\022J\n\022ResolutionEntities\030\006 \001(\0132..D" +
-      "iadoc.Api.Proto.Docflow.ResolutionEntiti" +
-      "esV3\"\216\002\n\030RevocationRequestDocflow\022G\n\021Rev" +
-      "ocationRequest\030\001 \002(\0132,.Diadoc.Api.Proto." +
-      "Docflow.SignedAttachmentV3\022+\n\006SentAt\030\002 \001" +
-      "(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013Deliv",
-      "eredAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestam" +
-      "p\022J\n\023RoamingNotification\030\004 \001(\0132-.Diadoc." +
-      "Api.Proto.Docflow.RoamingNotification\"\257\001" +
-      "\n\031RevocationResponseDocflow\022A\n\022Recipient" +
-      "Signature\030\001 \001(\0132%.Diadoc.Api.Proto.Docfl" +
-      "ow.SignatureV3\022O\n\022SignatureRejection\030\002 \001" +
-      "(\01323.Diadoc.Api.Proto.Docflow.SignatureR" +
-      "ejectionDocflow\"\325\002\n\020ReceiptDocflowV3\022\022\n\n" +
-      "IsFinished\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 " +
-      "\001(\0132,.Diadoc.Api.Proto.Docflow.SignedAtt",
-      "achmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.P" +
-      "roto.Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Di" +
-      "adoc.Api.Proto.Timestamp\022C\n\014Confirmation" +
-      "\030\005 \001(\0132-.Diadoc.Api.Proto.Docflow.Confir" +
-      "mationDocflow\022@\n\006Status\030\006 \002(\01620.Diadoc.A" +
-      "pi.Proto.Documents.GeneralReceiptStatusB" +
-      "\021B\017DocflowV3Protos"
+      "veredAt\030\004 \001(\0132\033.Diadoc.Api.Proto.Timesta" +
+      "mp\022;\n\007Receipt\030\005 \001(\0132*.Diadoc.Api.Proto.D" +
+      "ocflow.ReceiptDocflowV3\022\026\n\016AmendmentFlag" +
+      "s\030\006 \002(\005\022\021\n\tPlainText\030\007 \001(\t\"\365\002\n\023Revocatio" +
+      "nDocflowV3\022\022\n\nIsFinished\030\001 \002(\010\022M\n\021Revoca" +
+      "tionRequest\030\002 \002(\01322.Diadoc.Api.Proto.Doc",
+      "flow.RevocationRequestDocflow\022O\n\022Revocat" +
+      "ionResponse\030\003 \001(\01323.Diadoc.Api.Proto.Doc" +
+      "flow.RevocationResponseDocflow\022\026\n\016Initia" +
+      "torBoxId\030\004 \002(\t\022F\n\020RevocationStatus\030\005 \002(\016" +
+      "2,.Diadoc.Api.Proto.Documents.Revocation" +
+      "Status\022J\n\022ResolutionEntities\030\006 \001(\0132..Dia" +
+      "doc.Api.Proto.Docflow.ResolutionEntities" +
+      "V3\"\241\002\n\030RevocationRequestDocflow\022G\n\021Revoc" +
+      "ationRequest\030\001 \002(\0132,.Diadoc.Api.Proto.Do" +
+      "cflow.SignedAttachmentV3\022+\n\006SentAt\030\002 \001(\013",
+      "2\033.Diadoc.Api.Proto.Timestamp\0220\n\013Deliver" +
+      "edAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestamp\022" +
+      "J\n\023RoamingNotification\030\004 \001(\0132-.Diadoc.Ap" +
+      "i.Proto.Docflow.RoamingNotification\022\021\n\tP" +
+      "lainText\030\005 \001(\t\"\257\001\n\031RevocationResponseDoc" +
+      "flow\022A\n\022RecipientSignature\030\001 \001(\0132%.Diado" +
+      "c.Api.Proto.Docflow.SignatureV3\022O\n\022Signa" +
+      "tureRejection\030\002 \001(\01323.Diadoc.Api.Proto.D" +
+      "ocflow.SignatureRejectionDocflow\"\325\002\n\020Rec" +
+      "eiptDocflowV3\022\022\n\nIsFinished\030\001 \002(\010\022G\n\021Rec",
+      "eiptAttachment\030\002 \001(\0132,.Diadoc.Api.Proto." +
+      "Docflow.SignedAttachmentV3\022+\n\006SentAt\030\003 \001" +
+      "(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013Deliv" +
+      "eredAt\030\004 \001(\0132\033.Diadoc.Api.Proto.Timestam" +
+      "p\022C\n\014Confirmation\030\005 \001(\0132-.Diadoc.Api.Pro" +
+      "to.Docflow.ConfirmationDocflow\022@\n\006Status" +
+      "\030\006 \002(\01620.Diadoc.Api.Proto.Documents.Gene" +
+      "ralReceiptStatusB\021B\017DocflowV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13806,7 +14278,7 @@ public final class DocflowV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflow_descriptor,
-        new java.lang.String[] { "SignatureRejection", "IsFormal", "DeliveredAt", });
+        new java.lang.String[] { "SignatureRejection", "IsFormal", "DeliveredAt", "PlainText", });
     internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_fieldAccessorTable = new
@@ -13818,7 +14290,7 @@ public final class DocflowV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_AmendmentRequestDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_AmendmentRequestDocflow_descriptor,
-        new java.lang.String[] { "IsFinished", "AmendmentRequest", "SentAt", "DeliveredAt", "Receipt", "AmendmentFlags", });
+        new java.lang.String[] { "IsFinished", "AmendmentRequest", "SentAt", "DeliveredAt", "Receipt", "AmendmentFlags", "PlainText", });
     internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV3_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV3_fieldAccessorTable = new
@@ -13830,7 +14302,7 @@ public final class DocflowV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_RevocationRequestDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_RevocationRequestDocflow_descriptor,
-        new java.lang.String[] { "RevocationRequest", "SentAt", "DeliveredAt", "RoamingNotification", });
+        new java.lang.String[] { "RevocationRequest", "SentAt", "DeliveredAt", "RoamingNotification", "PlainText", });
     internal_static_Diadoc_Api_Proto_Docflow_RevocationResponseDocflow_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_Diadoc_Api_Proto_Docflow_RevocationResponseDocflow_fieldAccessorTable = new
