@@ -39,17 +39,17 @@ public final class DocflowV3Protos {
     Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflowOrBuilder getConfirmationOrBuilder();
 
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
      */
     boolean hasProxyResponse();
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
      */
-    Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow getProxyResponse();
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow getProxyResponse();
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
      */
-    Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflowOrBuilder getProxyResponseOrBuilder();
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder getProxyResponseOrBuilder();
 
     /**
      * <code>optional .Diadoc.Api.Proto.Docflow.ReceiptDocflowV3 RecipientReceipt = 4;</code>
@@ -65,17 +65,17 @@ public final class DocflowV3Protos {
     Diadoc.Api.Proto.Docflow.DocflowV3Protos.ReceiptDocflowV3OrBuilder getRecipientReceiptOrBuilder();
 
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
      */
     boolean hasRecipientResponse();
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
      */
-    Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow getRecipientResponse();
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow getRecipientResponse();
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
      */
-    Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflowOrBuilder getRecipientResponseOrBuilder();
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder getRecipientResponseOrBuilder();
 
     /**
      * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflow AmendmentRequest = 6;</code>
@@ -220,19 +220,6 @@ public final class DocflowV3Protos {
               bitField0_ |= 0x00000002;
               break;
             }
-            case 26: {
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                subBuilder = proxyResponse_.toBuilder();
-              }
-              proxyResponse_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(proxyResponse_);
-                proxyResponse_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000004;
-              break;
-            }
             case 34: {
               Diadoc.Api.Proto.Docflow.DocflowV3Protos.ReceiptDocflowV3.Builder subBuilder = null;
               if (((bitField0_ & 0x00000008) == 0x00000008)) {
@@ -247,11 +234,11 @@ public final class DocflowV3Protos {
               break;
             }
             case 42: {
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.Builder subBuilder = null;
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder subBuilder = null;
               if (((bitField0_ & 0x00000010) == 0x00000010)) {
                 subBuilder = recipientResponse_.toBuilder();
               }
-              recipientResponse_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.PARSER, extensionRegistry);
+              recipientResponse_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(recipientResponse_);
                 recipientResponse_ = subBuilder.buildPartial();
@@ -322,6 +309,19 @@ public final class DocflowV3Protos {
                 resolutionEntities_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000200;
+              break;
+            }
+            case 90: {
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = proxyResponse_.toBuilder();
+              }
+              proxyResponse_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(proxyResponse_);
+                proxyResponse_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
               break;
             }
           }
@@ -406,24 +406,24 @@ public final class DocflowV3Protos {
       return confirmation_;
     }
 
-    public static final int PROXYRESPONSE_FIELD_NUMBER = 3;
-    private Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow proxyResponse_;
+    public static final int PROXYRESPONSE_FIELD_NUMBER = 11;
+    private Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow proxyResponse_;
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
      */
     public boolean hasProxyResponse() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
      */
-    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow getProxyResponse() {
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow getProxyResponse() {
       return proxyResponse_;
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
      */
-    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflowOrBuilder getProxyResponseOrBuilder() {
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder getProxyResponseOrBuilder() {
       return proxyResponse_;
     }
 
@@ -449,23 +449,23 @@ public final class DocflowV3Protos {
     }
 
     public static final int RECIPIENTRESPONSE_FIELD_NUMBER = 5;
-    private Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow recipientResponse_;
+    private Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow recipientResponse_;
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
      */
     public boolean hasRecipientResponse() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
      */
-    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow getRecipientResponse() {
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow getRecipientResponse() {
       return recipientResponse_;
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
      */
-    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflowOrBuilder getRecipientResponseOrBuilder() {
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder getRecipientResponseOrBuilder() {
       return recipientResponse_;
     }
 
@@ -577,9 +577,9 @@ public final class DocflowV3Protos {
     private void initFields() {
       senderTitle_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.SenderTitleDocflow.getDefaultInstance();
       confirmation_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.getDefaultInstance();
-      proxyResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.getDefaultInstance();
+      proxyResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance();
       recipientReceipt_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ReceiptDocflowV3.getDefaultInstance();
-      recipientResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.getDefaultInstance();
+      recipientResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance();
       amendmentRequest_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.AmendmentRequestDocflow.getDefaultInstance();
       revocation_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.RevocationDocflowV3.getDefaultInstance();
       senderReceipt_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ReceiptDocflowV3.getDefaultInstance();
@@ -667,9 +667,6 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeMessage(2, confirmation_);
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, proxyResponse_);
-      }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeMessage(4, recipientReceipt_);
       }
@@ -691,6 +688,9 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeMessage(10, resolutionEntities_);
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(11, proxyResponse_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -707,10 +707,6 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, confirmation_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, proxyResponse_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
@@ -739,6 +735,10 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, resolutionEntities_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, proxyResponse_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -880,7 +880,7 @@ public final class DocflowV3Protos {
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (proxyResponseBuilder_ == null) {
-          proxyResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.getDefaultInstance();
+          proxyResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance();
         } else {
           proxyResponseBuilder_.clear();
         }
@@ -892,7 +892,7 @@ public final class DocflowV3Protos {
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         if (recipientResponseBuilder_ == null) {
-          recipientResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.getDefaultInstance();
+          recipientResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance();
         } else {
           recipientResponseBuilder_.clear();
         }
@@ -1402,19 +1402,19 @@ public final class DocflowV3Protos {
         return confirmationBuilder_;
       }
 
-      private Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow proxyResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.getDefaultInstance();
+      private Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow proxyResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflowOrBuilder> proxyResponseBuilder_;
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder> proxyResponseBuilder_;
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
        */
       public boolean hasProxyResponse() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
        */
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow getProxyResponse() {
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow getProxyResponse() {
         if (proxyResponseBuilder_ == null) {
           return proxyResponse_;
         } else {
@@ -1422,9 +1422,9 @@ public final class DocflowV3Protos {
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
        */
-      public Builder setProxyResponse(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow value) {
+      public Builder setProxyResponse(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow value) {
         if (proxyResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1438,10 +1438,10 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
        */
       public Builder setProxyResponse(
-          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.Builder builderForValue) {
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder builderForValue) {
         if (proxyResponseBuilder_ == null) {
           proxyResponse_ = builderForValue.build();
           onChanged();
@@ -1452,14 +1452,14 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
        */
-      public Builder mergeProxyResponse(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow value) {
+      public Builder mergeProxyResponse(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow value) {
         if (proxyResponseBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              proxyResponse_ != Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.getDefaultInstance()) {
+              proxyResponse_ != Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance()) {
             proxyResponse_ =
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.newBuilder(proxyResponse_).mergeFrom(value).buildPartial();
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.newBuilder(proxyResponse_).mergeFrom(value).buildPartial();
           } else {
             proxyResponse_ = value;
           }
@@ -1471,11 +1471,11 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
        */
       public Builder clearProxyResponse() {
         if (proxyResponseBuilder_ == null) {
-          proxyResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.getDefaultInstance();
+          proxyResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance();
           onChanged();
         } else {
           proxyResponseBuilder_.clear();
@@ -1484,17 +1484,17 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
        */
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.Builder getProxyResponseBuilder() {
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder getProxyResponseBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getProxyResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
        */
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflowOrBuilder getProxyResponseOrBuilder() {
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder getProxyResponseOrBuilder() {
         if (proxyResponseBuilder_ != null) {
           return proxyResponseBuilder_.getMessageOrBuilder();
         } else {
@@ -1502,14 +1502,14 @@ public final class DocflowV3Protos {
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.ProxyResponseDocflow ProxyResponse = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow ProxyResponse = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflowOrBuilder> 
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder> 
           getProxyResponseFieldBuilder() {
         if (proxyResponseBuilder_ == null) {
           proxyResponseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflowOrBuilder>(
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder>(
                   getProxyResponse(),
                   getParentForChildren(),
                   isClean());
@@ -1634,19 +1634,19 @@ public final class DocflowV3Protos {
         return recipientReceiptBuilder_;
       }
 
-      private Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow recipientResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.getDefaultInstance();
+      private Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow recipientResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflowOrBuilder> recipientResponseBuilder_;
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder> recipientResponseBuilder_;
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
        */
       public boolean hasRecipientResponse() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
        */
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow getRecipientResponse() {
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow getRecipientResponse() {
         if (recipientResponseBuilder_ == null) {
           return recipientResponse_;
         } else {
@@ -1654,9 +1654,9 @@ public final class DocflowV3Protos {
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
        */
-      public Builder setRecipientResponse(Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow value) {
+      public Builder setRecipientResponse(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow value) {
         if (recipientResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1670,10 +1670,10 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
        */
       public Builder setRecipientResponse(
-          Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.Builder builderForValue) {
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder builderForValue) {
         if (recipientResponseBuilder_ == null) {
           recipientResponse_ = builderForValue.build();
           onChanged();
@@ -1684,14 +1684,14 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
        */
-      public Builder mergeRecipientResponse(Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow value) {
+      public Builder mergeRecipientResponse(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow value) {
         if (recipientResponseBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010) &&
-              recipientResponse_ != Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.getDefaultInstance()) {
+              recipientResponse_ != Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance()) {
             recipientResponse_ =
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.newBuilder(recipientResponse_).mergeFrom(value).buildPartial();
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.newBuilder(recipientResponse_).mergeFrom(value).buildPartial();
           } else {
             recipientResponse_ = value;
           }
@@ -1703,11 +1703,11 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
        */
       public Builder clearRecipientResponse() {
         if (recipientResponseBuilder_ == null) {
-          recipientResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.getDefaultInstance();
+          recipientResponse_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance();
           onChanged();
         } else {
           recipientResponseBuilder_.clear();
@@ -1716,17 +1716,17 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
        */
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.Builder getRecipientResponseBuilder() {
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder getRecipientResponseBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
         return getRecipientResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
        */
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflowOrBuilder getRecipientResponseOrBuilder() {
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder getRecipientResponseOrBuilder() {
         if (recipientResponseBuilder_ != null) {
           return recipientResponseBuilder_.getMessageOrBuilder();
         } else {
@@ -1734,14 +1734,14 @@ public final class DocflowV3Protos {
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.RecipientResponseDocflow RecipientResponse = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow RecipientResponse = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflowOrBuilder> 
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder> 
           getRecipientResponseFieldBuilder() {
         if (recipientResponseBuilder_ == null) {
           recipientResponseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflowOrBuilder>(
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder>(
                   getRecipientResponse(),
                   getParentForChildren(),
                   isClean());
@@ -4657,908 +4657,6 @@ public final class DocflowV3Protos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.ConfirmationDocflow)
   }
 
-  public interface ProxyResponseDocflowOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.ProxyResponseDocflow)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required bool IsFinished = 1;</code>
-     */
-    boolean hasIsFinished();
-    /**
-     * <code>required bool IsFinished = 1;</code>
-     */
-    boolean getIsFinished();
-
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-     */
-    boolean hasSignature();
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-     */
-    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 getSignature();
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-     */
-    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder getSignatureOrBuilder();
-
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-     */
-    boolean hasRejection();
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-     */
-    Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow getRejection();
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-     */
-    Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflowOrBuilder getRejectionOrBuilder();
-
-    /**
-     * <code>required .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 4;</code>
-     */
-    boolean hasProxySignatureStatus();
-    /**
-     * <code>required .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 4;</code>
-     */
-    Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus getProxySignatureStatus();
-  }
-  /**
-   * Protobuf type {@code Diadoc.Api.Proto.Docflow.ProxyResponseDocflow}
-   */
-  public static final class ProxyResponseDocflow extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.ProxyResponseDocflow)
-      ProxyResponseDocflowOrBuilder {
-    // Use ProxyResponseDocflow.newBuilder() to construct.
-    private ProxyResponseDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private ProxyResponseDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final ProxyResponseDocflow defaultInstance;
-    public static ProxyResponseDocflow getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public ProxyResponseDocflow getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ProxyResponseDocflow(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 18: {
-              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = signature_.toBuilder();
-              }
-              signature_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(signature_);
-                signature_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-            case 26: {
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                subBuilder = rejection_.toBuilder();
-              }
-              rejection_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(rejection_);
-                rejection_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000004;
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-              Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus value = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(4, rawValue);
-              } else {
-                bitField0_ |= 0x00000008;
-                proxySignatureStatus_ = value;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<ProxyResponseDocflow> PARSER =
-        new com.google.protobuf.AbstractParser<ProxyResponseDocflow>() {
-      public ProxyResponseDocflow parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ProxyResponseDocflow(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ProxyResponseDocflow> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int ISFINISHED_FIELD_NUMBER = 1;
-    private boolean isFinished_;
-    /**
-     * <code>required bool IsFinished = 1;</code>
-     */
-    public boolean hasIsFinished() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required bool IsFinished = 1;</code>
-     */
-    public boolean getIsFinished() {
-      return isFinished_;
-    }
-
-    public static final int SIGNATURE_FIELD_NUMBER = 2;
-    private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 signature_;
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-     */
-    public boolean hasSignature() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-     */
-    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 getSignature() {
-      return signature_;
-    }
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-     */
-    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder getSignatureOrBuilder() {
-      return signature_;
-    }
-
-    public static final int REJECTION_FIELD_NUMBER = 3;
-    private Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow rejection_;
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-     */
-    public boolean hasRejection() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-     */
-    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow getRejection() {
-      return rejection_;
-    }
-    /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-     */
-    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflowOrBuilder getRejectionOrBuilder() {
-      return rejection_;
-    }
-
-    public static final int PROXYSIGNATURESTATUS_FIELD_NUMBER = 4;
-    private Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus proxySignatureStatus_;
-    /**
-     * <code>required .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 4;</code>
-     */
-    public boolean hasProxySignatureStatus() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>required .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 4;</code>
-     */
-    public Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus getProxySignatureStatus() {
-      return proxySignatureStatus_;
-    }
-
-    private void initFields() {
-      isFinished_ = false;
-      signature_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance();
-      rejection_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.getDefaultInstance();
-      proxySignatureStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.UnknownProxySignatureStatus;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasIsFinished()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasProxySignatureStatus()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (hasSignature()) {
-        if (!getSignature().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasRejection()) {
-        if (!getRejection().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBool(1, isFinished_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, signature_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, rejection_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeEnum(4, proxySignatureStatus_.getNumber());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isFinished_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, signature_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, rejection_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, proxySignatureStatus_.getNumber());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Diadoc.Api.Proto.Docflow.ProxyResponseDocflow}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.ProxyResponseDocflow)
-        Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflowOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.Builder.class);
-      }
-
-      // Construct using Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getSignatureFieldBuilder();
-          getRejectionFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        isFinished_ = false;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (signatureBuilder_ == null) {
-          signature_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance();
-        } else {
-          signatureBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (rejectionBuilder_ == null) {
-          rejection_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.getDefaultInstance();
-        } else {
-          rejectionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        proxySignatureStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.UnknownProxySignatureStatus;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_descriptor;
-      }
-
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow getDefaultInstanceForType() {
-        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.getDefaultInstance();
-      }
-
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow build() {
-        Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow buildPartial() {
-        Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow result = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.isFinished_ = isFinished_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        if (signatureBuilder_ == null) {
-          result.signature_ = signature_;
-        } else {
-          result.signature_ = signatureBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        if (rejectionBuilder_ == null) {
-          result.rejection_ = rejection_;
-        } else {
-          result.rejection_ = rejectionBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.proxySignatureStatus_ = proxySignatureStatus_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow) {
-          return mergeFrom((Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow other) {
-        if (other == Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow.getDefaultInstance()) return this;
-        if (other.hasIsFinished()) {
-          setIsFinished(other.getIsFinished());
-        }
-        if (other.hasSignature()) {
-          mergeSignature(other.getSignature());
-        }
-        if (other.hasRejection()) {
-          mergeRejection(other.getRejection());
-        }
-        if (other.hasProxySignatureStatus()) {
-          setProxySignatureStatus(other.getProxySignatureStatus());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasIsFinished()) {
-          
-          return false;
-        }
-        if (!hasProxySignatureStatus()) {
-          
-          return false;
-        }
-        if (hasSignature()) {
-          if (!getSignature().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasRejection()) {
-          if (!getRejection().isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Diadoc.Api.Proto.Docflow.DocflowV3Protos.ProxyResponseDocflow) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean isFinished_ ;
-      /**
-       * <code>required bool IsFinished = 1;</code>
-       */
-      public boolean hasIsFinished() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required bool IsFinished = 1;</code>
-       */
-      public boolean getIsFinished() {
-        return isFinished_;
-      }
-      /**
-       * <code>required bool IsFinished = 1;</code>
-       */
-      public Builder setIsFinished(boolean value) {
-        bitField0_ |= 0x00000001;
-        isFinished_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required bool IsFinished = 1;</code>
-       */
-      public Builder clearIsFinished() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isFinished_ = false;
-        onChanged();
-        return this;
-      }
-
-      private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 signature_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder> signatureBuilder_;
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-       */
-      public boolean hasSignature() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-       */
-      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 getSignature() {
-        if (signatureBuilder_ == null) {
-          return signature_;
-        } else {
-          return signatureBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-       */
-      public Builder setSignature(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 value) {
-        if (signatureBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          signature_ = value;
-          onChanged();
-        } else {
-          signatureBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-       */
-      public Builder setSignature(
-          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder builderForValue) {
-        if (signatureBuilder_ == null) {
-          signature_ = builderForValue.build();
-          onChanged();
-        } else {
-          signatureBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-       */
-      public Builder mergeSignature(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 value) {
-        if (signatureBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              signature_ != Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance()) {
-            signature_ =
-              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.newBuilder(signature_).mergeFrom(value).buildPartial();
-          } else {
-            signature_ = value;
-          }
-          onChanged();
-        } else {
-          signatureBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-       */
-      public Builder clearSignature() {
-        if (signatureBuilder_ == null) {
-          signature_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance();
-          onChanged();
-        } else {
-          signatureBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-       */
-      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder getSignatureBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getSignatureFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-       */
-      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder getSignatureOrBuilder() {
-        if (signatureBuilder_ != null) {
-          return signatureBuilder_.getMessageOrBuilder();
-        } else {
-          return signature_;
-        }
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder> 
-          getSignatureFieldBuilder() {
-        if (signatureBuilder_ == null) {
-          signatureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder>(
-                  getSignature(),
-                  getParentForChildren(),
-                  isClean());
-          signature_ = null;
-        }
-        return signatureBuilder_;
-      }
-
-      private Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow rejection_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflowOrBuilder> rejectionBuilder_;
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-       */
-      public boolean hasRejection() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-       */
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow getRejection() {
-        if (rejectionBuilder_ == null) {
-          return rejection_;
-        } else {
-          return rejectionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-       */
-      public Builder setRejection(Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow value) {
-        if (rejectionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          rejection_ = value;
-          onChanged();
-        } else {
-          rejectionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-       */
-      public Builder setRejection(
-          Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.Builder builderForValue) {
-        if (rejectionBuilder_ == null) {
-          rejection_ = builderForValue.build();
-          onChanged();
-        } else {
-          rejectionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-       */
-      public Builder mergeRejection(Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow value) {
-        if (rejectionBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              rejection_ != Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.getDefaultInstance()) {
-            rejection_ =
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.newBuilder(rejection_).mergeFrom(value).buildPartial();
-          } else {
-            rejection_ = value;
-          }
-          onChanged();
-        } else {
-          rejectionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-       */
-      public Builder clearRejection() {
-        if (rejectionBuilder_ == null) {
-          rejection_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.getDefaultInstance();
-          onChanged();
-        } else {
-          rejectionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-       */
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.Builder getRejectionBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getRejectionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-       */
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflowOrBuilder getRejectionOrBuilder() {
-        if (rejectionBuilder_ != null) {
-          return rejectionBuilder_.getMessageOrBuilder();
-        } else {
-          return rejection_;
-        }
-      }
-      /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflowOrBuilder> 
-          getRejectionFieldBuilder() {
-        if (rejectionBuilder_ == null) {
-          rejectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflowOrBuilder>(
-                  getRejection(),
-                  getParentForChildren(),
-                  isClean());
-          rejection_ = null;
-        }
-        return rejectionBuilder_;
-      }
-
-      private Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus proxySignatureStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.UnknownProxySignatureStatus;
-      /**
-       * <code>required .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 4;</code>
-       */
-      public boolean hasProxySignatureStatus() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>required .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 4;</code>
-       */
-      public Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus getProxySignatureStatus() {
-        return proxySignatureStatus_;
-      }
-      /**
-       * <code>required .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 4;</code>
-       */
-      public Builder setProxySignatureStatus(Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000008;
-        proxySignatureStatus_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required .Diadoc.Api.Proto.Documents.ProxySignatureStatus ProxySignatureStatus = 4;</code>
-       */
-      public Builder clearProxySignatureStatus() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        proxySignatureStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.ProxySignatureStatus.UnknownProxySignatureStatus;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.ProxyResponseDocflow)
-    }
-
-    static {
-      defaultInstance = new ProxyResponseDocflow(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.ProxyResponseDocflow)
-  }
-
   public interface SignatureRejectionDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow)
       com.google.protobuf.MessageOrBuilder {
@@ -6527,8 +5625,8 @@ public final class DocflowV3Protos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow)
   }
 
-  public interface RecipientResponseDocflowOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.RecipientResponseDocflow)
+  public interface ParticipantResponseDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6554,17 +5652,17 @@ public final class DocflowV3Protos {
     Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder getSignatureOrBuilder();
 
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
      */
-    boolean hasRecipientTitle();
+    boolean hasTitle();
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
      */
-    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getRecipientTitle();
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getTitle();
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
      */
-    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getRecipientTitleOrBuilder();
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getTitleOrBuilder();
 
     /**
      * <code>optional .Diadoc.Api.Proto.Docflow.SignatureRejectionDocflow Rejection = 4;</code>
@@ -6606,34 +5704,34 @@ public final class DocflowV3Protos {
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getDeliveredAtOrBuilder();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 7;</code>
+     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus ResponseStatus = 7;</code>
      */
-    boolean hasRecipientResponseStatus();
+    boolean hasResponseStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 7;</code>
+     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus ResponseStatus = 7;</code>
      */
-    Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getRecipientResponseStatus();
+    Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getResponseStatus();
   }
   /**
-   * Protobuf type {@code Diadoc.Api.Proto.Docflow.RecipientResponseDocflow}
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow}
    */
-  public static final class RecipientResponseDocflow extends
+  public static final class ParticipantResponseDocflow extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.RecipientResponseDocflow)
-      RecipientResponseDocflowOrBuilder {
-    // Use RecipientResponseDocflow.newBuilder() to construct.
-    private RecipientResponseDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow)
+      ParticipantResponseDocflowOrBuilder {
+    // Use ParticipantResponseDocflow.newBuilder() to construct.
+    private ParticipantResponseDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private RecipientResponseDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private ParticipantResponseDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final RecipientResponseDocflow defaultInstance;
-    public static RecipientResponseDocflow getDefaultInstance() {
+    private static final ParticipantResponseDocflow defaultInstance;
+    public static ParticipantResponseDocflow getDefaultInstance() {
       return defaultInstance;
     }
 
-    public RecipientResponseDocflow getDefaultInstanceForType() {
+    public ParticipantResponseDocflow getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -6643,7 +5741,7 @@ public final class DocflowV3Protos {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private RecipientResponseDocflow(
+    private ParticipantResponseDocflow(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6687,12 +5785,12 @@ public final class DocflowV3Protos {
             case 26: {
               Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                subBuilder = recipientTitle_.toBuilder();
+                subBuilder = title_.toBuilder();
               }
-              recipientTitle_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.PARSER, extensionRegistry);
+              title_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(recipientTitle_);
-                recipientTitle_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(title_);
+                title_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000004;
               break;
@@ -6743,7 +5841,7 @@ public final class DocflowV3Protos {
                 unknownFields.mergeVarintField(7, rawValue);
               } else {
                 bitField0_ |= 0x00000040;
-                recipientResponseStatus_ = value;
+                responseStatus_ = value;
               }
               break;
             }
@@ -6761,28 +5859,28 @@ public final class DocflowV3Protos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_descriptor;
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_fieldAccessorTable
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.Builder.class);
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<RecipientResponseDocflow> PARSER =
-        new com.google.protobuf.AbstractParser<RecipientResponseDocflow>() {
-      public RecipientResponseDocflow parsePartialFrom(
+    public static com.google.protobuf.Parser<ParticipantResponseDocflow> PARSER =
+        new com.google.protobuf.AbstractParser<ParticipantResponseDocflow>() {
+      public ParticipantResponseDocflow parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RecipientResponseDocflow(input, extensionRegistry);
+        return new ParticipantResponseDocflow(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<RecipientResponseDocflow> getParserForType() {
+    public com.google.protobuf.Parser<ParticipantResponseDocflow> getParserForType() {
       return PARSER;
     }
 
@@ -6823,25 +5921,25 @@ public final class DocflowV3Protos {
       return signature_;
     }
 
-    public static final int RECIPIENTTITLE_FIELD_NUMBER = 3;
-    private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 recipientTitle_;
+    public static final int TITLE_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 title_;
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
      */
-    public boolean hasRecipientTitle() {
+    public boolean hasTitle() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
      */
-    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getRecipientTitle() {
-      return recipientTitle_;
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getTitle() {
+      return title_;
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
      */
-    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getRecipientTitleOrBuilder() {
-      return recipientTitle_;
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getTitleOrBuilder() {
+      return title_;
     }
 
     public static final int REJECTION_FIELD_NUMBER = 4;
@@ -6907,29 +6005,29 @@ public final class DocflowV3Protos {
       return deliveredAt_;
     }
 
-    public static final int RECIPIENTRESPONSESTATUS_FIELD_NUMBER = 7;
-    private Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus recipientResponseStatus_;
+    public static final int RESPONSESTATUS_FIELD_NUMBER = 7;
+    private Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus responseStatus_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 7;</code>
+     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus ResponseStatus = 7;</code>
      */
-    public boolean hasRecipientResponseStatus() {
+    public boolean hasResponseStatus() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 7;</code>
+     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus ResponseStatus = 7;</code>
      */
-    public Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getRecipientResponseStatus() {
-      return recipientResponseStatus_;
+    public Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getResponseStatus() {
+      return responseStatus_;
     }
 
     private void initFields() {
       isFinished_ = false;
       signature_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance();
-      recipientTitle_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
+      title_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
       rejection_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.getDefaultInstance();
       sentAt_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       deliveredAt_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
-      recipientResponseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
+      responseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -6941,7 +6039,7 @@ public final class DocflowV3Protos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasRecipientResponseStatus()) {
+      if (!hasResponseStatus()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -6951,8 +6049,8 @@ public final class DocflowV3Protos {
           return false;
         }
       }
-      if (hasRecipientTitle()) {
-        if (!getRecipientTitle().isInitialized()) {
+      if (hasTitle()) {
+        if (!getTitle().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -6989,7 +6087,7 @@ public final class DocflowV3Protos {
         output.writeMessage(2, signature_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, recipientTitle_);
+        output.writeMessage(3, title_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeMessage(4, rejection_);
@@ -7001,7 +6099,7 @@ public final class DocflowV3Protos {
         output.writeMessage(6, deliveredAt_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeEnum(7, recipientResponseStatus_.getNumber());
+        output.writeEnum(7, responseStatus_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -7022,7 +6120,7 @@ public final class DocflowV3Protos {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, recipientTitle_);
+          .computeMessageSize(3, title_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
@@ -7038,7 +6136,7 @@ public final class DocflowV3Protos {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(7, recipientResponseStatus_.getNumber());
+          .computeEnumSize(7, responseStatus_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -7052,53 +6150,53 @@ public final class DocflowV3Protos {
       return super.writeReplace();
     }
 
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseFrom(
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseFrom(
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseFrom(byte[] data)
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseFrom(
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseFrom(java.io.InputStream input)
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseFrom(
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseDelimitedFrom(java.io.InputStream input)
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseDelimitedFrom(
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseFrom(
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parseFrom(
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7107,7 +6205,7 @@ public final class DocflowV3Protos {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow prototype) {
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -7119,25 +6217,25 @@ public final class DocflowV3Protos {
       return builder;
     }
     /**
-     * Protobuf type {@code Diadoc.Api.Proto.Docflow.RecipientResponseDocflow}
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.RecipientResponseDocflow)
-        Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflowOrBuilder {
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow)
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_descriptor;
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_fieldAccessorTable
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.Builder.class);
+                Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.Builder.class);
       }
 
-      // Construct using Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.newBuilder()
+      // Construct using Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7150,7 +6248,7 @@ public final class DocflowV3Protos {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getSignatureFieldBuilder();
-          getRecipientTitleFieldBuilder();
+          getTitleFieldBuilder();
           getRejectionFieldBuilder();
           getSentAtFieldBuilder();
           getDeliveredAtFieldBuilder();
@@ -7170,10 +6268,10 @@ public final class DocflowV3Protos {
           signatureBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (recipientTitleBuilder_ == null) {
-          recipientTitle_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
+        if (titleBuilder_ == null) {
+          title_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
         } else {
-          recipientTitleBuilder_.clear();
+          titleBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         if (rejectionBuilder_ == null) {
@@ -7194,7 +6292,7 @@ public final class DocflowV3Protos {
           deliveredAtBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
-        recipientResponseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
+        responseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
         bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
@@ -7205,23 +6303,23 @@ public final class DocflowV3Protos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_descriptor;
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_descriptor;
       }
 
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow getDefaultInstanceForType() {
-        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.getDefaultInstance();
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance();
       }
 
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow build() {
-        Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow result = buildPartial();
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow build() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow buildPartial() {
-        Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow result = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow(this);
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow result = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -7239,10 +6337,10 @@ public final class DocflowV3Protos {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        if (recipientTitleBuilder_ == null) {
-          result.recipientTitle_ = recipientTitle_;
+        if (titleBuilder_ == null) {
+          result.title_ = title_;
         } else {
-          result.recipientTitle_ = recipientTitleBuilder_.build();
+          result.title_ = titleBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
@@ -7271,31 +6369,31 @@ public final class DocflowV3Protos {
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.recipientResponseStatus_ = recipientResponseStatus_;
+        result.responseStatus_ = responseStatus_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow) {
-          return mergeFrom((Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow)other);
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow other) {
-        if (other == Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow.getDefaultInstance()) return this;
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow.getDefaultInstance()) return this;
         if (other.hasIsFinished()) {
           setIsFinished(other.getIsFinished());
         }
         if (other.hasSignature()) {
           mergeSignature(other.getSignature());
         }
-        if (other.hasRecipientTitle()) {
-          mergeRecipientTitle(other.getRecipientTitle());
+        if (other.hasTitle()) {
+          mergeTitle(other.getTitle());
         }
         if (other.hasRejection()) {
           mergeRejection(other.getRejection());
@@ -7306,8 +6404,8 @@ public final class DocflowV3Protos {
         if (other.hasDeliveredAt()) {
           mergeDeliveredAt(other.getDeliveredAt());
         }
-        if (other.hasRecipientResponseStatus()) {
-          setRecipientResponseStatus(other.getRecipientResponseStatus());
+        if (other.hasResponseStatus()) {
+          setResponseStatus(other.getResponseStatus());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7318,7 +6416,7 @@ public final class DocflowV3Protos {
           
           return false;
         }
-        if (!hasRecipientResponseStatus()) {
+        if (!hasResponseStatus()) {
           
           return false;
         }
@@ -7328,8 +6426,8 @@ public final class DocflowV3Protos {
             return false;
           }
         }
-        if (hasRecipientTitle()) {
-          if (!getRecipientTitle().isInitialized()) {
+        if (hasTitle()) {
+          if (!getTitle().isInitialized()) {
             
             return false;
           }
@@ -7359,11 +6457,11 @@ public final class DocflowV3Protos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow parsedMessage = null;
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Diadoc.Api.Proto.Docflow.DocflowV3Protos.RecipientResponseDocflow) e.getUnfinishedMessage();
+          parsedMessage = (Diadoc.Api.Proto.Docflow.DocflowV3Protos.ParticipantResponseDocflow) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -7522,120 +6620,120 @@ public final class DocflowV3Protos {
         return signatureBuilder_;
       }
 
-      private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 recipientTitle_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
+      private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 title_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder> recipientTitleBuilder_;
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder> titleBuilder_;
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
        */
-      public boolean hasRecipientTitle() {
+      public boolean hasTitle() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
        */
-      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getRecipientTitle() {
-        if (recipientTitleBuilder_ == null) {
-          return recipientTitle_;
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getTitle() {
+        if (titleBuilder_ == null) {
+          return title_;
         } else {
-          return recipientTitleBuilder_.getMessage();
+          return titleBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
        */
-      public Builder setRecipientTitle(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 value) {
-        if (recipientTitleBuilder_ == null) {
+      public Builder setTitle(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 value) {
+        if (titleBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          recipientTitle_ = value;
+          title_ = value;
           onChanged();
         } else {
-          recipientTitleBuilder_.setMessage(value);
+          titleBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
        */
-      public Builder setRecipientTitle(
+      public Builder setTitle(
           Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder builderForValue) {
-        if (recipientTitleBuilder_ == null) {
-          recipientTitle_ = builderForValue.build();
+        if (titleBuilder_ == null) {
+          title_ = builderForValue.build();
           onChanged();
         } else {
-          recipientTitleBuilder_.setMessage(builderForValue.build());
+          titleBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
        */
-      public Builder mergeRecipientTitle(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 value) {
-        if (recipientTitleBuilder_ == null) {
+      public Builder mergeTitle(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 value) {
+        if (titleBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              recipientTitle_ != Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance()) {
-            recipientTitle_ =
-              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.newBuilder(recipientTitle_).mergeFrom(value).buildPartial();
+              title_ != Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance()) {
+            title_ =
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.newBuilder(title_).mergeFrom(value).buildPartial();
           } else {
-            recipientTitle_ = value;
+            title_ = value;
           }
           onChanged();
         } else {
-          recipientTitleBuilder_.mergeFrom(value);
+          titleBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
        */
-      public Builder clearRecipientTitle() {
-        if (recipientTitleBuilder_ == null) {
-          recipientTitle_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
+      public Builder clearTitle() {
+        if (titleBuilder_ == null) {
+          title_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
           onChanged();
         } else {
-          recipientTitleBuilder_.clear();
+          titleBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
        */
-      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder getRecipientTitleBuilder() {
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder getTitleBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
-        return getRecipientTitleFieldBuilder().getBuilder();
+        return getTitleFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
        */
-      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getRecipientTitleOrBuilder() {
-        if (recipientTitleBuilder_ != null) {
-          return recipientTitleBuilder_.getMessageOrBuilder();
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getTitleOrBuilder() {
+        if (titleBuilder_ != null) {
+          return titleBuilder_.getMessageOrBuilder();
         } else {
-          return recipientTitle_;
+          return title_;
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 RecipientTitle = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Title = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder> 
-          getRecipientTitleFieldBuilder() {
-        if (recipientTitleBuilder_ == null) {
-          recipientTitleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          getTitleFieldBuilder() {
+        if (titleBuilder_ == null) {
+          titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder>(
-                  getRecipientTitle(),
+                  getTitle(),
                   getParentForChildren(),
                   isClean());
-          recipientTitle_ = null;
+          title_ = null;
         }
-        return recipientTitleBuilder_;
+        return titleBuilder_;
       }
 
       private Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow rejection_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.SignatureRejectionDocflow.getDefaultInstance();
@@ -7986,50 +7084,50 @@ public final class DocflowV3Protos {
         return deliveredAtBuilder_;
       }
 
-      private Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus recipientResponseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
+      private Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus responseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 7;</code>
+       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus ResponseStatus = 7;</code>
        */
-      public boolean hasRecipientResponseStatus() {
+      public boolean hasResponseStatus() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 7;</code>
+       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus ResponseStatus = 7;</code>
        */
-      public Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getRecipientResponseStatus() {
-        return recipientResponseStatus_;
+      public Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getResponseStatus() {
+        return responseStatus_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 7;</code>
+       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus ResponseStatus = 7;</code>
        */
-      public Builder setRecipientResponseStatus(Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus value) {
+      public Builder setResponseStatus(Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
         bitField0_ |= 0x00000040;
-        recipientResponseStatus_ = value;
+        responseStatus_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 7;</code>
+       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus ResponseStatus = 7;</code>
        */
-      public Builder clearRecipientResponseStatus() {
+      public Builder clearResponseStatus() {
         bitField0_ = (bitField0_ & ~0x00000040);
-        recipientResponseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
+        responseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
         onChanged();
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.RecipientResponseDocflow)
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow)
     }
 
     static {
-      defaultInstance = new RecipientResponseDocflow(true);
+      defaultInstance = new ParticipantResponseDocflow(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.RecipientResponseDocflow)
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.ParticipantResponseDocflow)
   }
 
   public interface AmendmentRequestDocflowOrBuilder extends
@@ -14085,20 +13183,15 @@ public final class DocflowV3Protos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_ConfirmationDocflow_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflow_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_descriptor;
+    internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_fieldAccessorTable;
+      internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_AmendmentRequestDocflow_descriptor;
   private static
@@ -14137,100 +13230,94 @@ public final class DocflowV3Protos {
       "oto.Docflow\032\017Timestamp.proto\032\030Documents/" +
       "Document.proto\032\032Docflow/AttachmentV3.pro" +
       "to\032!Docflow/RoamingNotification.proto\032!D" +
-      "ocflow/ResolutionDocflowV3.proto\"\321\005\n\tDoc" +
+      "ocflow/ResolutionDocflowV3.proto\"\331\005\n\tDoc" +
       "flowV3\022A\n\013SenderTitle\030\001 \002(\0132,.Diadoc.Api" +
       ".Proto.Docflow.SenderTitleDocflow\022C\n\014Con" +
       "firmation\030\002 \001(\0132-.Diadoc.Api.Proto.Docfl" +
-      "ow.ConfirmationDocflow\022E\n\rProxyResponse\030" +
-      "\003 \001(\0132..Diadoc.Api.Proto.Docflow.ProxyRe",
-      "sponseDocflow\022D\n\020RecipientReceipt\030\004 \001(\0132" +
-      "*.Diadoc.Api.Proto.Docflow.ReceiptDocflo" +
-      "wV3\022M\n\021RecipientResponse\030\005 \001(\01322.Diadoc." +
-      "Api.Proto.Docflow.RecipientResponseDocfl" +
-      "ow\022K\n\020AmendmentRequest\030\006 \001(\01321.Diadoc.Ap" +
-      "i.Proto.Docflow.AmendmentRequestDocflow\022" +
-      "A\n\nRevocation\030\007 \001(\0132-.Diadoc.Api.Proto.D" +
-      "ocflow.RevocationDocflowV3\022A\n\rSenderRece" +
-      "ipt\030\010 \001(\0132*.Diadoc.Api.Proto.Docflow.Rec" +
-      "eiptDocflowV3\022A\n\nResolution\030\t \001(\0132-.Diad",
-      "oc.Api.Proto.Docflow.ResolutionDocflowV3" +
-      "\022J\n\022ResolutionEntities\030\n \001(\0132..Diadoc.Ap" +
-      "i.Proto.Docflow.ResolutionEntitiesV3\"\347\002\n" +
-      "\022SenderTitleDocflow\022\022\n\nIsFinished\030\001 \002(\010\022" +
-      "@\n\nAttachment\030\002 \002(\0132,.Diadoc.Api.Proto.D" +
-      "ocflow.SignedAttachmentV3\022+\n\006SentAt\030\003 \001(" +
-      "\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013Delive" +
-      "redAt\030\004 \001(\0132\033.Diadoc.Api.Proto.Timestamp" +
-      "\022J\n\023RoamingNotification\030\005 \001(\0132-.Diadoc.A" +
-      "pi.Proto.Docflow.RoamingNotification\022P\n\025",
-      "SenderSignatureStatus\030\006 \002(\01621.Diadoc.Api" +
-      ".Proto.Documents.SenderSignatureStatus\"\346" +
-      "\001\n\023ConfirmationDocflow\022\022\n\nIsFinished\030\001 \002" +
-      "(\010\022L\n\026ConfirmationAttachment\030\002 \001(\0132,.Dia" +
+      "ow.ConfirmationDocflow\022K\n\rProxyResponse\030" +
+      "\013 \001(\01324.Diadoc.Api.Proto.Docflow.Partici",
+      "pantResponseDocflow\022D\n\020RecipientReceipt\030" +
+      "\004 \001(\0132*.Diadoc.Api.Proto.Docflow.Receipt" +
+      "DocflowV3\022O\n\021RecipientResponse\030\005 \001(\01324.D" +
+      "iadoc.Api.Proto.Docflow.ParticipantRespo" +
+      "nseDocflow\022K\n\020AmendmentRequest\030\006 \001(\01321.D" +
+      "iadoc.Api.Proto.Docflow.AmendmentRequest" +
+      "Docflow\022A\n\nRevocation\030\007 \001(\0132-.Diadoc.Api" +
+      ".Proto.Docflow.RevocationDocflowV3\022A\n\rSe" +
+      "nderReceipt\030\010 \001(\0132*.Diadoc.Api.Proto.Doc" +
+      "flow.ReceiptDocflowV3\022A\n\nResolution\030\t \001(",
+      "\0132-.Diadoc.Api.Proto.Docflow.ResolutionD" +
+      "ocflowV3\022J\n\022ResolutionEntities\030\n \001(\0132..D" +
+      "iadoc.Api.Proto.Docflow.ResolutionEntiti" +
+      "esV3\"\347\002\n\022SenderTitleDocflow\022\022\n\nIsFinishe" +
+      "d\030\001 \002(\010\022@\n\nAttachment\030\002 \002(\0132,.Diadoc.Api" +
+      ".Proto.Docflow.SignedAttachmentV3\022+\n\006Sen" +
+      "tAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestamp\0220" +
+      "\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.Api.Proto.T" +
+      "imestamp\022J\n\023RoamingNotification\030\005 \001(\0132-." +
+      "Diadoc.Api.Proto.Docflow.RoamingNotifica",
+      "tion\022P\n\025SenderSignatureStatus\030\006 \002(\01621.Di" +
+      "adoc.Api.Proto.Documents.SenderSignature" +
+      "Status\"\346\001\n\023ConfirmationDocflow\022\022\n\nIsFini" +
+      "shed\030\001 \002(\010\022L\n\026ConfirmationAttachment\030\002 \001" +
+      "(\0132,.Diadoc.Api.Proto.Docflow.SignedAtta" +
+      "chmentV3\0220\n\013ConfirmedAt\030\003 \001(\0132\033.Diadoc.A" +
+      "pi.Proto.Timestamp\022;\n\007Receipt\030\004 \001(\0132*.Di" +
+      "adoc.Api.Proto.Docflow.ReceiptDocflowV3\"" +
+      "\274\001\n\031SignatureRejectionDocflow\022H\n\022Signatu" +
+      "reRejection\030\001 \002(\0132,.Diadoc.Api.Proto.Doc",
+      "flow.SignedAttachmentV3\022\020\n\010IsFormal\030\002 \002(" +
+      "\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.Api.Prot" +
+      "o.Timestamp\022\021\n\tPlainText\030\004 \001(\t\"\233\003\n\032Parti" +
+      "cipantResponseDocflow\022\022\n\nIsFinished\030\001 \002(" +
+      "\010\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Api.Proto." +
+      "Docflow.SignatureV3\022;\n\005Title\030\003 \001(\0132,.Dia" +
       "doc.Api.Proto.Docflow.SignedAttachmentV3" +
-      "\0220\n\013ConfirmedAt\030\003 \001(\0132\033.Diadoc.Api.Proto" +
-      ".Timestamp\022;\n\007Receipt\030\004 \001(\0132*.Diadoc.Api" +
-      ".Proto.Docflow.ReceiptDocflowV3\"\374\001\n\024Prox" +
-      "yResponseDocflow\022\022\n\nIsFinished\030\001 \002(\010\0228\n\t" +
-      "Signature\030\002 \001(\0132%.Diadoc.Api.Proto.Docfl",
-      "ow.SignatureV3\022F\n\tRejection\030\003 \001(\01323.Diad" +
-      "oc.Api.Proto.Docflow.SignatureRejectionD" +
-      "ocflow\022N\n\024ProxySignatureStatus\030\004 \002(\01620.D" +
-      "iadoc.Api.Proto.Documents.ProxySignature" +
-      "Status\"\274\001\n\031SignatureRejectionDocflow\022H\n\022" +
-      "SignatureRejection\030\001 \002(\0132,.Diadoc.Api.Pr" +
-      "oto.Docflow.SignedAttachmentV3\022\020\n\010IsForm" +
-      "al\030\002 \002(\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.A" +
-      "pi.Proto.Timestamp\022\021\n\tPlainText\030\004 \001(\t\"\253\003" +
-      "\n\030RecipientResponseDocflow\022\022\n\nIsFinished",
-      "\030\001 \002(\010\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Api.P" +
-      "roto.Docflow.SignatureV3\022D\n\016RecipientTit" +
-      "le\030\003 \001(\0132,.Diadoc.Api.Proto.Docflow.Sign" +
-      "edAttachmentV3\022F\n\tRejection\030\004 \001(\01323.Diad" +
-      "oc.Api.Proto.Docflow.SignatureRejectionD" +
-      "ocflow\022+\n\006SentAt\030\005 \001(\0132\033.Diadoc.Api.Prot" +
-      "o.Timestamp\0220\n\013DeliveredAt\030\006 \001(\0132\033.Diado" +
-      "c.Api.Proto.Timestamp\022T\n\027RecipientRespon" +
-      "seStatus\030\007 \002(\01623.Diadoc.Api.Proto.Docume" +
-      "nts.RecipientResponseStatus\"\274\002\n\027Amendmen",
-      "tRequestDocflow\022\022\n\nIsFinished\030\001 \002(\010\022F\n\020A" +
-      "mendmentRequest\030\002 \002(\0132,.Diadoc.Api.Proto" +
-      ".Docflow.SignedAttachmentV3\022+\n\006SentAt\030\003 " +
-      "\001(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013Deli" +
-      "veredAt\030\004 \001(\0132\033.Diadoc.Api.Proto.Timesta" +
-      "mp\022;\n\007Receipt\030\005 \001(\0132*.Diadoc.Api.Proto.D" +
-      "ocflow.ReceiptDocflowV3\022\026\n\016AmendmentFlag" +
-      "s\030\006 \002(\005\022\021\n\tPlainText\030\007 \001(\t\"\365\002\n\023Revocatio" +
-      "nDocflowV3\022\022\n\nIsFinished\030\001 \002(\010\022M\n\021Revoca" +
-      "tionRequest\030\002 \002(\01322.Diadoc.Api.Proto.Doc",
-      "flow.RevocationRequestDocflow\022O\n\022Revocat" +
-      "ionResponse\030\003 \001(\01323.Diadoc.Api.Proto.Doc" +
-      "flow.RevocationResponseDocflow\022\026\n\016Initia" +
-      "torBoxId\030\004 \002(\t\022F\n\020RevocationStatus\030\005 \002(\016" +
-      "2,.Diadoc.Api.Proto.Documents.Revocation" +
-      "Status\022J\n\022ResolutionEntities\030\006 \001(\0132..Dia" +
-      "doc.Api.Proto.Docflow.ResolutionEntities" +
-      "V3\"\241\002\n\030RevocationRequestDocflow\022G\n\021Revoc" +
-      "ationRequest\030\001 \002(\0132,.Diadoc.Api.Proto.Do" +
-      "cflow.SignedAttachmentV3\022+\n\006SentAt\030\002 \001(\013",
-      "2\033.Diadoc.Api.Proto.Timestamp\0220\n\013Deliver" +
-      "edAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestamp\022" +
-      "J\n\023RoamingNotification\030\004 \001(\0132-.Diadoc.Ap" +
-      "i.Proto.Docflow.RoamingNotification\022\021\n\tP" +
-      "lainText\030\005 \001(\t\"\257\001\n\031RevocationResponseDoc" +
-      "flow\022A\n\022RecipientSignature\030\001 \001(\0132%.Diado" +
-      "c.Api.Proto.Docflow.SignatureV3\022O\n\022Signa" +
-      "tureRejection\030\002 \001(\01323.Diadoc.Api.Proto.D" +
-      "ocflow.SignatureRejectionDocflow\"\325\002\n\020Rec" +
-      "eiptDocflowV3\022\022\n\nIsFinished\030\001 \002(\010\022G\n\021Rec",
-      "eiptAttachment\030\002 \001(\0132,.Diadoc.Api.Proto." +
-      "Docflow.SignedAttachmentV3\022+\n\006SentAt\030\003 \001" +
-      "(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013Deliv" +
-      "eredAt\030\004 \001(\0132\033.Diadoc.Api.Proto.Timestam" +
-      "p\022C\n\014Confirmation\030\005 \001(\0132-.Diadoc.Api.Pro" +
-      "to.Docflow.ConfirmationDocflow\022@\n\006Status" +
-      "\030\006 \002(\01620.Diadoc.Api.Proto.Documents.Gene" +
-      "ralReceiptStatusB\021B\017DocflowV3Protos"
+      "\022F\n\tRejection\030\004 \001(\01323.Diadoc.Api.Proto.D" +
+      "ocflow.SignatureRejectionDocflow\022+\n\006Sent" +
+      "At\030\005 \001(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n",
+      "\013DeliveredAt\030\006 \001(\0132\033.Diadoc.Api.Proto.Ti" +
+      "mestamp\022K\n\016ResponseStatus\030\007 \002(\01623.Diadoc" +
+      ".Api.Proto.Documents.RecipientResponseSt" +
+      "atus\"\274\002\n\027AmendmentRequestDocflow\022\022\n\nIsFi" +
+      "nished\030\001 \002(\010\022F\n\020AmendmentRequest\030\002 \002(\0132," +
+      ".Diadoc.Api.Proto.Docflow.SignedAttachme" +
+      "ntV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto." +
+      "Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc." +
+      "Api.Proto.Timestamp\022;\n\007Receipt\030\005 \001(\0132*.D" +
+      "iadoc.Api.Proto.Docflow.ReceiptDocflowV3",
+      "\022\026\n\016AmendmentFlags\030\006 \002(\005\022\021\n\tPlainText\030\007 " +
+      "\001(\t\"\365\002\n\023RevocationDocflowV3\022\022\n\nIsFinishe" +
+      "d\030\001 \002(\010\022M\n\021RevocationRequest\030\002 \002(\01322.Dia" +
+      "doc.Api.Proto.Docflow.RevocationRequestD" +
+      "ocflow\022O\n\022RevocationResponse\030\003 \001(\01323.Dia" +
+      "doc.Api.Proto.Docflow.RevocationResponse" +
+      "Docflow\022\026\n\016InitiatorBoxId\030\004 \002(\t\022F\n\020Revoc" +
+      "ationStatus\030\005 \002(\0162,.Diadoc.Api.Proto.Doc" +
+      "uments.RevocationStatus\022J\n\022ResolutionEnt" +
+      "ities\030\006 \001(\0132..Diadoc.Api.Proto.Docflow.R",
+      "esolutionEntitiesV3\"\241\002\n\030RevocationReques" +
+      "tDocflow\022G\n\021RevocationRequest\030\001 \002(\0132,.Di" +
+      "adoc.Api.Proto.Docflow.SignedAttachmentV" +
+      "3\022+\n\006SentAt\030\002 \001(\0132\033.Diadoc.Api.Proto.Tim" +
+      "estamp\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.Api" +
+      ".Proto.Timestamp\022J\n\023RoamingNotification\030" +
+      "\004 \001(\0132-.Diadoc.Api.Proto.Docflow.Roaming" +
+      "Notification\022\021\n\tPlainText\030\005 \001(\t\"\257\001\n\031Revo" +
+      "cationResponseDocflow\022A\n\022RecipientSignat" +
+      "ure\030\001 \001(\0132%.Diadoc.Api.Proto.Docflow.Sig",
+      "natureV3\022O\n\022SignatureRejection\030\002 \001(\01323.D" +
+      "iadoc.Api.Proto.Docflow.SignatureRejecti" +
+      "onDocflow\"\325\002\n\020ReceiptDocflowV3\022\022\n\nIsFini" +
+      "shed\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 \001(\0132,." +
+      "Diadoc.Api.Proto.Docflow.SignedAttachmen" +
+      "tV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto.T" +
+      "imestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.A" +
+      "pi.Proto.Timestamp\022C\n\014Confirmation\030\005 \001(\013" +
+      "2-.Diadoc.Api.Proto.Docflow.Confirmation" +
+      "Docflow\022@\n\006Status\030\006 \002(\01620.Diadoc.Api.Pro",
+      "to.Documents.GeneralReceiptStatusB\021B\017Doc" +
+      "flowV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14267,50 +13354,44 @@ public final class DocflowV3Protos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_ConfirmationDocflow_descriptor,
         new java.lang.String[] { "IsFinished", "ConfirmationAttachment", "ConfirmedAt", "Receipt", });
-    internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_Diadoc_Api_Proto_Docflow_ProxyResponseDocflow_descriptor,
-        new java.lang.String[] { "IsFinished", "Signature", "Rejection", "ProxySignatureStatus", });
     internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflow_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflow_descriptor,
         new java.lang.String[] { "SignatureRejection", "IsFormal", "DeliveredAt", "PlainText", });
-    internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_fieldAccessorTable = new
+    internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_Diadoc_Api_Proto_Docflow_RecipientResponseDocflow_descriptor,
-        new java.lang.String[] { "IsFinished", "Signature", "RecipientTitle", "Rejection", "SentAt", "DeliveredAt", "RecipientResponseStatus", });
+        internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflow_descriptor,
+        new java.lang.String[] { "IsFinished", "Signature", "Title", "Rejection", "SentAt", "DeliveredAt", "ResponseStatus", });
     internal_static_Diadoc_Api_Proto_Docflow_AmendmentRequestDocflow_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_Diadoc_Api_Proto_Docflow_AmendmentRequestDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_AmendmentRequestDocflow_descriptor,
         new java.lang.String[] { "IsFinished", "AmendmentRequest", "SentAt", "DeliveredAt", "Receipt", "AmendmentFlags", "PlainText", });
     internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV3_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV3_descriptor,
         new java.lang.String[] { "IsFinished", "RevocationRequest", "RevocationResponse", "InitiatorBoxId", "RevocationStatus", "ResolutionEntities", });
     internal_static_Diadoc_Api_Proto_Docflow_RevocationRequestDocflow_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_Diadoc_Api_Proto_Docflow_RevocationRequestDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_RevocationRequestDocflow_descriptor,
         new java.lang.String[] { "RevocationRequest", "SentAt", "DeliveredAt", "RoamingNotification", "PlainText", });
     internal_static_Diadoc_Api_Proto_Docflow_RevocationResponseDocflow_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_Diadoc_Api_Proto_Docflow_RevocationResponseDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_RevocationResponseDocflow_descriptor,
         new java.lang.String[] { "RecipientSignature", "SignatureRejection", });
     internal_static_Diadoc_Api_Proto_Docflow_ReceiptDocflowV3_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_Diadoc_Api_Proto_Docflow_ReceiptDocflowV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_ReceiptDocflowV3_descriptor,
