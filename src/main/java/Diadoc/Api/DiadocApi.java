@@ -5,6 +5,7 @@ import Diadoc.Api.Proto.Docflow.DocflowApiProtos;
 import Diadoc.Api.Proto.Documents.*;
 import Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos;
 import Diadoc.Api.Proto.Departments.*;
+import Diadoc.Api.Proto.Organizations.*;
 import Diadoc.Api.Proto.Employees.EmployeeProtos;
 import Diadoc.Api.Proto.Employees.Subscriptions.SubscriptionProtos;
 import Diadoc.Api.Proto.Employees.EmployeeToCreateProtos;
@@ -1523,6 +1524,14 @@ public class DiadocApi {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair(idName, id));
         return OrganizationProtos.Organization.parseFrom(PerformGetHttpRequest("/GetOrganization", parameters));
+    }
+
+    private OrganizationFeaturesProtos.OrganizationFeatures GetOrganizationFeatures(String boxId) throws IOException {
+        if (boxId == null)
+            throw new NullPointerException("boxId");
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        return OrganizationFeaturesProtos.OrganizationFeatures.parseFrom(PerformGetHttpRequest("/GetOrganizationFeatures", parameters));
     }
 
     public UserProtos.User GetMyUser() throws IOException {
