@@ -89849,6 +89849,34 @@ public final class DiadocMessage_PostApiProtos {
      * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 7 [default = None];</code>
      */
     Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode();
+
+    /**
+     * <code>optional string FromDepartmentId = 8;</code>
+     */
+    boolean hasFromDepartmentId();
+    /**
+     * <code>optional string FromDepartmentId = 8;</code>
+     */
+    java.lang.String getFromDepartmentId();
+    /**
+     * <code>optional string FromDepartmentId = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getFromDepartmentIdBytes();
+
+    /**
+     * <code>optional string ToDepartmentId = 9;</code>
+     */
+    boolean hasToDepartmentId();
+    /**
+     * <code>optional string ToDepartmentId = 9;</code>
+     */
+    java.lang.String getToDepartmentId();
+    /**
+     * <code>optional string ToDepartmentId = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getToDepartmentIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.TemplateToPost}
@@ -89949,6 +89977,18 @@ public final class DiadocMessage_PostApiProtos {
                 bitField0_ |= 0x00000020;
                 lockMode_ = value;
               }
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              fromDepartmentId_ = bs;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              toDepartmentId_ = bs;
               break;
             }
           }
@@ -90254,6 +90294,90 @@ public final class DiadocMessage_PostApiProtos {
       return lockMode_;
     }
 
+    public static final int FROMDEPARTMENTID_FIELD_NUMBER = 8;
+    private java.lang.Object fromDepartmentId_;
+    /**
+     * <code>optional string FromDepartmentId = 8;</code>
+     */
+    public boolean hasFromDepartmentId() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string FromDepartmentId = 8;</code>
+     */
+    public java.lang.String getFromDepartmentId() {
+      java.lang.Object ref = fromDepartmentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          fromDepartmentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string FromDepartmentId = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFromDepartmentIdBytes() {
+      java.lang.Object ref = fromDepartmentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromDepartmentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TODEPARTMENTID_FIELD_NUMBER = 9;
+    private java.lang.Object toDepartmentId_;
+    /**
+     * <code>optional string ToDepartmentId = 9;</code>
+     */
+    public boolean hasToDepartmentId() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional string ToDepartmentId = 9;</code>
+     */
+    public java.lang.String getToDepartmentId() {
+      java.lang.Object ref = toDepartmentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          toDepartmentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ToDepartmentId = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getToDepartmentIdBytes() {
+      java.lang.Object ref = toDepartmentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toDepartmentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       fromBoxId_ = "";
       toBoxId_ = "";
@@ -90262,6 +90386,8 @@ public final class DiadocMessage_PostApiProtos {
       messageToDepartmentId_ = "";
       documentAttachments_ = java.util.Collections.emptyList();
       lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
+      fromDepartmentId_ = "";
+      toDepartmentId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -90319,6 +90445,12 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeEnum(7, lockMode_.getNumber());
       }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(8, getFromDepartmentIdBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBytes(9, getToDepartmentIdBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -90355,6 +90487,14 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, lockMode_.getNumber());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getFromDepartmentIdBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getToDepartmentIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -90492,6 +90632,10 @@ public final class DiadocMessage_PostApiProtos {
         }
         lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
         bitField0_ = (bitField0_ & ~0x00000040);
+        fromDepartmentId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
+        toDepartmentId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -90553,6 +90697,14 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000020;
         }
         result.lockMode_ = lockMode_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.fromDepartmentId_ = fromDepartmentId_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.toDepartmentId_ = toDepartmentId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -90622,6 +90774,16 @@ public final class DiadocMessage_PostApiProtos {
         }
         if (other.hasLockMode()) {
           setLockMode(other.getLockMode());
+        }
+        if (other.hasFromDepartmentId()) {
+          bitField0_ |= 0x00000080;
+          fromDepartmentId_ = other.fromDepartmentId_;
+          onChanged();
+        }
+        if (other.hasToDepartmentId()) {
+          bitField0_ |= 0x00000100;
+          toDepartmentId_ = other.toDepartmentId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -91323,6 +91485,158 @@ public final class DiadocMessage_PostApiProtos {
       public Builder clearLockMode() {
         bitField0_ = (bitField0_ & ~0x00000040);
         lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fromDepartmentId_ = "";
+      /**
+       * <code>optional string FromDepartmentId = 8;</code>
+       */
+      public boolean hasFromDepartmentId() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional string FromDepartmentId = 8;</code>
+       */
+      public java.lang.String getFromDepartmentId() {
+        java.lang.Object ref = fromDepartmentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fromDepartmentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string FromDepartmentId = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFromDepartmentIdBytes() {
+        java.lang.Object ref = fromDepartmentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromDepartmentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string FromDepartmentId = 8;</code>
+       */
+      public Builder setFromDepartmentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        fromDepartmentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string FromDepartmentId = 8;</code>
+       */
+      public Builder clearFromDepartmentId() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        fromDepartmentId_ = getDefaultInstance().getFromDepartmentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string FromDepartmentId = 8;</code>
+       */
+      public Builder setFromDepartmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        fromDepartmentId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object toDepartmentId_ = "";
+      /**
+       * <code>optional string ToDepartmentId = 9;</code>
+       */
+      public boolean hasToDepartmentId() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional string ToDepartmentId = 9;</code>
+       */
+      public java.lang.String getToDepartmentId() {
+        java.lang.Object ref = toDepartmentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            toDepartmentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ToDepartmentId = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getToDepartmentIdBytes() {
+        java.lang.Object ref = toDepartmentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toDepartmentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ToDepartmentId = 9;</code>
+       */
+      public Builder setToDepartmentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        toDepartmentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ToDepartmentId = 9;</code>
+       */
+      public Builder clearToDepartmentId() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        toDepartmentId_ = getDefaultInstance().getToDepartmentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ToDepartmentId = 9;</code>
+       */
+      public Builder setToDepartmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        toDepartmentId_ = value;
         onChanged();
         return this;
       }
@@ -96952,36 +97266,37 @@ public final class DiadocMessage_PostApiProtos {
       "romPacket\030\003 \003(\0132\034.Diadoc.Api.Proto.Docum" +
       "entId\"d\n\026ResolutionRouteRemoval\022\026\n\016Paren" +
       "tEntityId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comm",
-      "ent\030\003 \001(\t:\000\022\016\n\006Labels\030\004 \003(\t\"\213\002\n\016Template" +
+      "ent\030\003 \001(\t:\000\022\016\n\006Labels\030\004 \003(\t\"\275\002\n\016Template" +
       "ToPost\022\021\n\tFromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002" +
       "(\t\022\030\n\020MessageFromBoxId\030\003 \002(\t\022\026\n\016MessageT" +
       "oBoxId\030\004 \002(\t\022\035\n\025MessageToDepartmentId\030\005 " +
       "\001(\t\022P\n\023DocumentAttachments\030\006 \003(\01323.Diado" +
       "c.Api.Proto.Events.TemplateDocumentAttac" +
       "hment\0222\n\010LockMode\030\007 \001(\0162\032.Diadoc.Api.Pro" +
-      "to.LockMode:\004None\"\245\003\n\032TemplateDocumentAt" +
-      "tachment\022A\n\017UnsignedContent\030\001 \002(\0132(.Diad" +
-      "oc.Api.Proto.Events.UnsignedContent\022\017\n\007C",
-      "omment\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n\010Fun" +
-      "ction\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227\n\010Metadata" +
-      "\030\006 \003(\0132%.Diadoc.Api.Proto.Events.Metadat" +
-      "aItem\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020CustomDocum" +
-      "entId\030\010 \001(\t\022\030\n\020EditingSettingId\030\t \001(\t\022%\n" +
-      "\026NeedRecipientSignature\030\n \001(\010:\005false\022S\n\030" +
-      "PredefinedRecipientTitle\030\013 \001(\01321.Diadoc." +
-      "Api.Proto.Events.PredefinedRecipientTitl" +
-      "e\"]\n\030PredefinedRecipientTitle\022A\n\017Unsigne" +
-      "dContent\030\001 \002(\0132(.Diadoc.Api.Proto.Events",
-      ".UnsignedContent\"7\n\017UnsignedContent\022\017\n\007C" +
-      "ontent\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034Te" +
-      "mplateTransformationToPost\022\r\n\005BoxId\030\001 \002(" +
-      "\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027DocumentTransfo" +
-      "rmations\030\003 \003(\0132/.Diadoc.Api.Proto.Events" +
-      ".DocumentTransformation\"F\n\026DocumentTrans" +
-      "formation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomD" +
-      "ocumentId\030\002 \001(\t*/\n\030CustomDataPatchOperat" +
-      "ion\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessag" +
-      "e_PostApiProtos"
+      "to.LockMode:\004None\022\030\n\020FromDepartmentId\030\010 " +
+      "\001(\t\022\026\n\016ToDepartmentId\030\t \001(\t\"\245\003\n\032Template" +
+      "DocumentAttachment\022A\n\017UnsignedContent\030\001 ",
+      "\002(\0132(.Diadoc.Api.Proto.Events.UnsignedCo" +
+      "ntent\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 " +
+      "\002(\t\022\020\n\010Function\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227" +
+      "\n\010Metadata\030\006 \003(\0132%.Diadoc.Api.Proto.Even" +
+      "ts.MetadataItem\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020C" +
+      "ustomDocumentId\030\010 \001(\t\022\030\n\020EditingSettingI" +
+      "d\030\t \001(\t\022%\n\026NeedRecipientSignature\030\n \001(\010:" +
+      "\005false\022S\n\030PredefinedRecipientTitle\030\013 \001(\013" +
+      "21.Diadoc.Api.Proto.Events.PredefinedRec" +
+      "ipientTitle\"]\n\030PredefinedRecipientTitle\022",
+      "A\n\017UnsignedContent\030\001 \002(\0132(.Diadoc.Api.Pr" +
+      "oto.Events.UnsignedContent\"7\n\017UnsignedCo" +
+      "ntent\022\017\n\007Content\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 " +
+      "\001(\t\"\223\001\n\034TemplateTransformationToPost\022\r\n\005" +
+      "BoxId\030\001 \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027Docum" +
+      "entTransformations\030\003 \003(\0132/.Diadoc.Api.Pr" +
+      "oto.Events.DocumentTransformation\"F\n\026Doc" +
+      "umentTransformation\022\022\n\nDocumentId\030\001 \002(\t\022" +
+      "\030\n\020CustomDocumentId\030\002 \001(\t*/\n\030CustomDataP" +
+      "atchOperation\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033Di",
+      "adocMessage_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -97317,7 +97632,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_TemplateToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_TemplateToPost_descriptor,
-        new java.lang.String[] { "FromBoxId", "ToBoxId", "MessageFromBoxId", "MessageToBoxId", "MessageToDepartmentId", "DocumentAttachments", "LockMode", });
+        new java.lang.String[] { "FromBoxId", "ToBoxId", "MessageFromBoxId", "MessageToBoxId", "MessageToDepartmentId", "DocumentAttachments", "LockMode", "FromDepartmentId", "ToDepartmentId", });
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_descriptor =
       getDescriptor().getMessageTypes().get(52);
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_fieldAccessorTable = new
