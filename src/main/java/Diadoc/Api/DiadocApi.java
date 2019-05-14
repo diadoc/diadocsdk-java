@@ -1078,7 +1078,19 @@ public class DiadocApi {
         return UniversalTransferDocumentInfoProtos.UniversalTransferDocumentBuyerTitleInfo.parseFrom(response);
     }
 
-    public RevocationRequestInfoProtos.RevocationRequestInfo ParseRevocationRequestXml(byte[] xmlContent) throws IOException {
+    public byte[] ParseTitleXml(String boxId, String documentTypeNamedId, String documentFunction, String documentVersion, Integer titleIndex, byte[] content) throws IOException
+    {
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("documentTypeNamedId", documentTypeNamedId));
+        parameters.add(new BasicNameValuePair("documentFunction", documentFunction));
+        parameters.add(new BasicNameValuePair("documentVersion", documentVersion));
+        parameters.add(new BasicNameValuePair("titleIndex", titleIndex.toString()));
+        return PerformPostHttpRequest("/ParseTitleXml", parameters, content);
+    }
+
+    public RevocationRequestInfoProtos.RevocationRequestInfo ParseRevocationRequestXml(byte[] xmlContent) throws IOException
+    {
         return RevocationRequestInfoProtos.RevocationRequestInfo.parseFrom(PerformPostHttpRequest("/ParseRevocationRequestXml", null, xmlContent));
     }
 
