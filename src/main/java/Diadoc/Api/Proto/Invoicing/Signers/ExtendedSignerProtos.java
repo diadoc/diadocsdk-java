@@ -339,10 +339,26 @@ public final class ExtendedSignerProtos {
      * <code>AuthorizedPerson = 4;</code>
      *
      * <pre>
-     * Уполномоченное физическое лицо (в том числе индивидуальный предприниматель)
+     * Уполномоченное физическое лицо (в том числе индивидуальный предприниматель);
      * </pre>
      */
     AuthorizedPerson(3, 4),
+    /**
+     * <code>BuyerEmployee = 5;</code>
+     *
+     * <pre>
+     * Работник организации - покупателя (для документов в формате приказа №820);
+     * </pre>
+     */
+    BuyerEmployee(4, 5),
+    /**
+     * <code>InformationCreatorBuyerEmployee = 6;</code>
+     *
+     * <pre>
+     * Работник организации - составителя файла обмена информации покупателя, если составитель файла обмена информации покупателя не является покупателем (для документов в формате приказа №820)
+     * </pre>
+     */
+    InformationCreatorBuyerEmployee(5, 6),
     ;
 
     /**
@@ -373,10 +389,26 @@ public final class ExtendedSignerProtos {
      * <code>AuthorizedPerson = 4;</code>
      *
      * <pre>
-     * Уполномоченное физическое лицо (в том числе индивидуальный предприниматель)
+     * Уполномоченное физическое лицо (в том числе индивидуальный предприниматель);
      * </pre>
      */
     public static final int AuthorizedPerson_VALUE = 4;
+    /**
+     * <code>BuyerEmployee = 5;</code>
+     *
+     * <pre>
+     * Работник организации - покупателя (для документов в формате приказа №820);
+     * </pre>
+     */
+    public static final int BuyerEmployee_VALUE = 5;
+    /**
+     * <code>InformationCreatorBuyerEmployee = 6;</code>
+     *
+     * <pre>
+     * Работник организации - составителя файла обмена информации покупателя, если составитель файла обмена информации покупателя не является покупателем (для документов в формате приказа №820)
+     * </pre>
+     */
+    public static final int InformationCreatorBuyerEmployee_VALUE = 6;
 
 
     public final int getNumber() { return value; }
@@ -387,6 +419,8 @@ public final class ExtendedSignerProtos {
         case 2: return InformationCreatorEmployee;
         case 3: return OtherOrganizationEmployee;
         case 4: return AuthorizedPerson;
+        case 5: return BuyerEmployee;
+        case 6: return InformationCreatorBuyerEmployee;
         default: return null;
       }
     }
@@ -483,7 +517,7 @@ public final class ExtendedSignerProtos {
      * <code>TovTorg551Seller = 4;</code>
      *
      * <pre>
-     * Данные для титула продавца 551
+     * Данные для титула продавца формата приказа 551
      * </pre>
      */
     TovTorg551Seller(5, 4),
@@ -491,7 +525,7 @@ public final class ExtendedSignerProtos {
      * <code>TovTorg551Buyer = 5;</code>
      *
      * <pre>
-     * Данные для титула покупателя 551
+     * Данные для титула покупателя формата приказа 551
      * </pre>
      */
     TovTorg551Buyer(6, 5),
@@ -499,7 +533,7 @@ public final class ExtendedSignerProtos {
      * <code>AccCert552Seller = 6;</code>
      *
      * <pre>
-     * Данные для титула исполнителя 552
+     * Данные для титула исполнителя формата приказа 552
      * </pre>
      */
     AccCert552Seller(7, 6),
@@ -507,10 +541,18 @@ public final class ExtendedSignerProtos {
      * <code>AccCert552Buyer = 7;</code>
      *
      * <pre>
-     * Данные для титула заказчика 552
+     * Данные для титула заказчика формата приказа 552
      * </pre>
      */
     AccCert552Buyer(8, 7),
+    /**
+     * <code>Utd820Buyer = 8;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя УПД формата приказа 820
+     * </pre>
+     */
+    Utd820Buyer(9, 8),
     ;
 
     /**
@@ -553,7 +595,7 @@ public final class ExtendedSignerProtos {
      * <code>TovTorg551Seller = 4;</code>
      *
      * <pre>
-     * Данные для титула продавца 551
+     * Данные для титула продавца формата приказа 551
      * </pre>
      */
     public static final int TovTorg551Seller_VALUE = 4;
@@ -561,7 +603,7 @@ public final class ExtendedSignerProtos {
      * <code>TovTorg551Buyer = 5;</code>
      *
      * <pre>
-     * Данные для титула покупателя 551
+     * Данные для титула покупателя формата приказа 551
      * </pre>
      */
     public static final int TovTorg551Buyer_VALUE = 5;
@@ -569,7 +611,7 @@ public final class ExtendedSignerProtos {
      * <code>AccCert552Seller = 6;</code>
      *
      * <pre>
-     * Данные для титула исполнителя 552
+     * Данные для титула исполнителя формата приказа 552
      * </pre>
      */
     public static final int AccCert552Seller_VALUE = 6;
@@ -577,10 +619,18 @@ public final class ExtendedSignerProtos {
      * <code>AccCert552Buyer = 7;</code>
      *
      * <pre>
-     * Данные для титула заказчика 552
+     * Данные для титула заказчика формата приказа 552
      * </pre>
      */
     public static final int AccCert552Buyer_VALUE = 7;
+    /**
+     * <code>Utd820Buyer = 8;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя УПД формата приказа 820
+     * </pre>
+     */
+    public static final int Utd820Buyer_VALUE = 8;
 
 
     public final int getNumber() { return value; }
@@ -596,6 +646,7 @@ public final class ExtendedSignerProtos {
         case 5: return TovTorg551Buyer;
         case 6: return AccCert552Seller;
         case 7: return AccCert552Buyer;
+        case 8: return Utd820Buyer;
         default: return null;
       }
     }
@@ -5728,15 +5779,17 @@ public final class ExtendedSignerProtos {
       "ation\020\003\022!\n\035MadeOperationAndSignedInvoice" +
       "\020\004\0222\n.MadeAndResponsibleForOperationAndS" +
       "ignedInvoice\020\005\022.\n*ResponsibleForOperatio" +
-      "nAndSignerForInvoice\020\006*w\n\014SignerStatus\022\022" +
-      "\n\016SellerEmployee\020\001\022\036\n\032InformationCreator" +
-      "Employee\020\002\022\035\n\031OtherOrganizationEmployee\020" +
-      "\003\022\024\n\020AuthorizedPerson\020\004*\270\001\n\021DocumentTitl" +
-      "eType\022\023\n\006Absent\020\377\377\377\377\377\377\377\377\377\001\022\r\n\tUtdSeller\020",
-      "\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUcdSeller\020\002\022\014\n\010UcdBuy" +
-      "er\020\003\022\024\n\020TovTorg551Seller\020\004\022\023\n\017TovTorg551" +
-      "Buyer\020\005\022\024\n\020AccCert552Seller\020\006\022\023\n\017AccCert" +
-      "552Buyer\020\007B\026B\024ExtendedSignerProtos"
+      "nAndSignerForInvoice\020\006*\257\001\n\014SignerStatus\022" +
+      "\022\n\016SellerEmployee\020\001\022\036\n\032InformationCreato" +
+      "rEmployee\020\002\022\035\n\031OtherOrganizationEmployee" +
+      "\020\003\022\024\n\020AuthorizedPerson\020\004\022\021\n\rBuyerEmploye" +
+      "e\020\005\022#\n\037InformationCreatorBuyerEmployee\020\006",
+      "*\311\001\n\021DocumentTitleType\022\023\n\006Absent\020\377\377\377\377\377\377\377" +
+      "\377\377\001\022\r\n\tUtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUcdS" +
+      "eller\020\002\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg551Selle" +
+      "r\020\004\022\023\n\017TovTorg551Buyer\020\005\022\024\n\020AccCert552Se" +
+      "ller\020\006\022\023\n\017AccCert552Buyer\020\007\022\017\n\013Utd820Buy" +
+      "er\020\010B\026B\024ExtendedSignerProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
