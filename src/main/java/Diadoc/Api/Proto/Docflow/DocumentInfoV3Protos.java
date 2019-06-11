@@ -8608,6 +8608,30 @@ public final class DocumentInfoV3Protos {
      */
     com.google.protobuf.ByteString
         getTransformedToLetterIdsBytes(int index);
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo> 
+        getTemplateTransformationInfosList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo getTemplateTransformationInfos(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    int getTemplateTransformationInfosCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder> 
+        getTemplateTransformationInfosOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder getTemplateTransformationInfosOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentTemplateInfo}
@@ -8683,6 +8707,14 @@ public final class DocumentInfoV3Protos {
               transformedToLetterIds_.add(bs);
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                templateTransformationInfos_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              templateTransformationInfos_.add(input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -8693,6 +8725,9 @@ public final class DocumentInfoV3Protos {
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           transformedToLetterIds_ = transformedToLetterIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          templateTransformationInfos_ = java.util.Collections.unmodifiableList(templateTransformationInfos_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -8776,9 +8811,45 @@ public final class DocumentInfoV3Protos {
       return transformedToLetterIds_.getByteString(index);
     }
 
+    public static final int TEMPLATETRANSFORMATIONINFOS_FIELD_NUMBER = 3;
+    private java.util.List<Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo> templateTransformationInfos_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo> getTemplateTransformationInfosList() {
+      return templateTransformationInfos_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder> 
+        getTemplateTransformationInfosOrBuilderList() {
+      return templateTransformationInfos_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    public int getTemplateTransformationInfosCount() {
+      return templateTransformationInfos_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo getTemplateTransformationInfos(int index) {
+      return templateTransformationInfos_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder getTemplateTransformationInfosOrBuilder(
+        int index) {
+      return templateTransformationInfos_.get(index);
+    }
+
     private void initFields() {
       letterParticipants_ = Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.DocumentParticipants.getDefaultInstance();
       transformedToLetterIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      templateTransformationInfos_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -8794,6 +8865,12 @@ public final class DocumentInfoV3Protos {
         memoizedIsInitialized = 0;
         return false;
       }
+      for (int i = 0; i < getTemplateTransformationInfosCount(); i++) {
+        if (!getTemplateTransformationInfos(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -8806,6 +8883,9 @@ public final class DocumentInfoV3Protos {
       }
       for (int i = 0; i < transformedToLetterIds_.size(); i++) {
         output.writeBytes(2, transformedToLetterIds_.getByteString(i));
+      }
+      for (int i = 0; i < templateTransformationInfos_.size(); i++) {
+        output.writeMessage(3, templateTransformationInfos_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -8828,6 +8908,10 @@ public final class DocumentInfoV3Protos {
         }
         size += dataSize;
         size += 1 * getTransformedToLetterIdsList().size();
+      }
+      for (int i = 0; i < templateTransformationInfos_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, templateTransformationInfos_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -8939,6 +9023,7 @@ public final class DocumentInfoV3Protos {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getLetterParticipantsFieldBuilder();
+          getTemplateTransformationInfosFieldBuilder();
         }
       }
       private static Builder create() {
@@ -8955,6 +9040,12 @@ public final class DocumentInfoV3Protos {
         bitField0_ = (bitField0_ & ~0x00000001);
         transformedToLetterIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (templateTransformationInfosBuilder_ == null) {
+          templateTransformationInfos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          templateTransformationInfosBuilder_.clear();
+        }
         return this;
       }
 
@@ -8996,6 +9087,15 @@ public final class DocumentInfoV3Protos {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.transformedToLetterIds_ = transformedToLetterIds_;
+        if (templateTransformationInfosBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            templateTransformationInfos_ = java.util.Collections.unmodifiableList(templateTransformationInfos_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.templateTransformationInfos_ = templateTransformationInfos_;
+        } else {
+          result.templateTransformationInfos_ = templateTransformationInfosBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -9025,6 +9125,32 @@ public final class DocumentInfoV3Protos {
           }
           onChanged();
         }
+        if (templateTransformationInfosBuilder_ == null) {
+          if (!other.templateTransformationInfos_.isEmpty()) {
+            if (templateTransformationInfos_.isEmpty()) {
+              templateTransformationInfos_ = other.templateTransformationInfos_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTemplateTransformationInfosIsMutable();
+              templateTransformationInfos_.addAll(other.templateTransformationInfos_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.templateTransformationInfos_.isEmpty()) {
+            if (templateTransformationInfosBuilder_.isEmpty()) {
+              templateTransformationInfosBuilder_.dispose();
+              templateTransformationInfosBuilder_ = null;
+              templateTransformationInfos_ = other.templateTransformationInfos_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              templateTransformationInfosBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getTemplateTransformationInfosFieldBuilder() : null;
+            } else {
+              templateTransformationInfosBuilder_.addAllMessages(other.templateTransformationInfos_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -9037,6 +9163,12 @@ public final class DocumentInfoV3Protos {
         if (!getLetterParticipants().isInitialized()) {
           
           return false;
+        }
+        for (int i = 0; i < getTemplateTransformationInfosCount(); i++) {
+          if (!getTemplateTransformationInfos(i).isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -9269,6 +9401,246 @@ public final class DocumentInfoV3Protos {
         return this;
       }
 
+      private java.util.List<Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo> templateTransformationInfos_ =
+        java.util.Collections.emptyList();
+      private void ensureTemplateTransformationInfosIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          templateTransformationInfos_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo>(templateTransformationInfos_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder> templateTransformationInfosBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo> getTemplateTransformationInfosList() {
+        if (templateTransformationInfosBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(templateTransformationInfos_);
+        } else {
+          return templateTransformationInfosBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public int getTemplateTransformationInfosCount() {
+        if (templateTransformationInfosBuilder_ == null) {
+          return templateTransformationInfos_.size();
+        } else {
+          return templateTransformationInfosBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo getTemplateTransformationInfos(int index) {
+        if (templateTransformationInfosBuilder_ == null) {
+          return templateTransformationInfos_.get(index);
+        } else {
+          return templateTransformationInfosBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Builder setTemplateTransformationInfos(
+          int index, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo value) {
+        if (templateTransformationInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTemplateTransformationInfosIsMutable();
+          templateTransformationInfos_.set(index, value);
+          onChanged();
+        } else {
+          templateTransformationInfosBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Builder setTemplateTransformationInfos(
+          int index, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder builderForValue) {
+        if (templateTransformationInfosBuilder_ == null) {
+          ensureTemplateTransformationInfosIsMutable();
+          templateTransformationInfos_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          templateTransformationInfosBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Builder addTemplateTransformationInfos(Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo value) {
+        if (templateTransformationInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTemplateTransformationInfosIsMutable();
+          templateTransformationInfos_.add(value);
+          onChanged();
+        } else {
+          templateTransformationInfosBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Builder addTemplateTransformationInfos(
+          int index, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo value) {
+        if (templateTransformationInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTemplateTransformationInfosIsMutable();
+          templateTransformationInfos_.add(index, value);
+          onChanged();
+        } else {
+          templateTransformationInfosBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Builder addTemplateTransformationInfos(
+          Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder builderForValue) {
+        if (templateTransformationInfosBuilder_ == null) {
+          ensureTemplateTransformationInfosIsMutable();
+          templateTransformationInfos_.add(builderForValue.build());
+          onChanged();
+        } else {
+          templateTransformationInfosBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Builder addTemplateTransformationInfos(
+          int index, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder builderForValue) {
+        if (templateTransformationInfosBuilder_ == null) {
+          ensureTemplateTransformationInfosIsMutable();
+          templateTransformationInfos_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          templateTransformationInfosBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Builder addAllTemplateTransformationInfos(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo> values) {
+        if (templateTransformationInfosBuilder_ == null) {
+          ensureTemplateTransformationInfosIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, templateTransformationInfos_);
+          onChanged();
+        } else {
+          templateTransformationInfosBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Builder clearTemplateTransformationInfos() {
+        if (templateTransformationInfosBuilder_ == null) {
+          templateTransformationInfos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          templateTransformationInfosBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Builder removeTemplateTransformationInfos(int index) {
+        if (templateTransformationInfosBuilder_ == null) {
+          ensureTemplateTransformationInfosIsMutable();
+          templateTransformationInfos_.remove(index);
+          onChanged();
+        } else {
+          templateTransformationInfosBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder getTemplateTransformationInfosBuilder(
+          int index) {
+        return getTemplateTransformationInfosFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder getTemplateTransformationInfosOrBuilder(
+          int index) {
+        if (templateTransformationInfosBuilder_ == null) {
+          return templateTransformationInfos_.get(index);  } else {
+          return templateTransformationInfosBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder> 
+           getTemplateTransformationInfosOrBuilderList() {
+        if (templateTransformationInfosBuilder_ != null) {
+          return templateTransformationInfosBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(templateTransformationInfos_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder addTemplateTransformationInfosBuilder() {
+        return getTemplateTransformationInfosFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder addTemplateTransformationInfosBuilder(
+          int index) {
+        return getTemplateTransformationInfosFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.TemplateTransformationInfo TemplateTransformationInfos = 3;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder> 
+           getTemplateTransformationInfosBuilderList() {
+        return getTemplateTransformationInfosFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder> 
+          getTemplateTransformationInfosFieldBuilder() {
+        if (templateTransformationInfosBuilder_ == null) {
+          templateTransformationInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder>(
+                  templateTransformationInfos_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          templateTransformationInfos_ = null;
+        }
+        return templateTransformationInfosBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.DocumentTemplateInfo)
     }
 
@@ -9278,6 +9650,848 @@ public final class DocumentInfoV3Protos {
     }
 
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.DocumentTemplateInfo)
+  }
+
+  public interface TemplateTransformationInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.TemplateTransformationInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string TransformationId = 1;</code>
+     */
+    boolean hasTransformationId();
+    /**
+     * <code>required string TransformationId = 1;</code>
+     */
+    java.lang.String getTransformationId();
+    /**
+     * <code>required string TransformationId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTransformationIdBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+     */
+    boolean hasTransformedToDocumentId();
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+     */
+    Diadoc.Api.Proto.DocumentIdProtos.DocumentId getTransformedToDocumentId();
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+     */
+    Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder getTransformedToDocumentIdOrBuilder();
+
+    /**
+     * <code>optional string AuthorUserId = 3;</code>
+     */
+    boolean hasAuthorUserId();
+    /**
+     * <code>optional string AuthorUserId = 3;</code>
+     */
+    java.lang.String getAuthorUserId();
+    /**
+     * <code>optional string AuthorUserId = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getAuthorUserIdBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.TemplateTransformationInfo}
+   */
+  public static final class TemplateTransformationInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.TemplateTransformationInfo)
+      TemplateTransformationInfoOrBuilder {
+    // Use TemplateTransformationInfo.newBuilder() to construct.
+    private TemplateTransformationInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private TemplateTransformationInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final TemplateTransformationInfo defaultInstance;
+    public static TemplateTransformationInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public TemplateTransformationInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TemplateTransformationInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              transformationId_ = bs;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = transformedToDocumentId_.toBuilder();
+              }
+              transformedToDocumentId_ = input.readMessage(Diadoc.Api.Proto.DocumentIdProtos.DocumentId.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(transformedToDocumentId_);
+                transformedToDocumentId_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              authorUserId_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.class, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<TemplateTransformationInfo> PARSER =
+        new com.google.protobuf.AbstractParser<TemplateTransformationInfo>() {
+      public TemplateTransformationInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TemplateTransformationInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TemplateTransformationInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int TRANSFORMATIONID_FIELD_NUMBER = 1;
+    private java.lang.Object transformationId_;
+    /**
+     * <code>required string TransformationId = 1;</code>
+     */
+    public boolean hasTransformationId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string TransformationId = 1;</code>
+     */
+    public java.lang.String getTransformationId() {
+      java.lang.Object ref = transformationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          transformationId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string TransformationId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTransformationIdBytes() {
+      java.lang.Object ref = transformationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transformationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSFORMEDTODOCUMENTID_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.DocumentIdProtos.DocumentId transformedToDocumentId_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+     */
+    public boolean hasTransformedToDocumentId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+     */
+    public Diadoc.Api.Proto.DocumentIdProtos.DocumentId getTransformedToDocumentId() {
+      return transformedToDocumentId_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+     */
+    public Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder getTransformedToDocumentIdOrBuilder() {
+      return transformedToDocumentId_;
+    }
+
+    public static final int AUTHORUSERID_FIELD_NUMBER = 3;
+    private java.lang.Object authorUserId_;
+    /**
+     * <code>optional string AuthorUserId = 3;</code>
+     */
+    public boolean hasAuthorUserId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string AuthorUserId = 3;</code>
+     */
+    public java.lang.String getAuthorUserId() {
+      java.lang.Object ref = authorUserId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          authorUserId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string AuthorUserId = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAuthorUserIdBytes() {
+      java.lang.Object ref = authorUserId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authorUserId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      transformationId_ = "";
+      transformedToDocumentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
+      authorUserId_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasTransformationId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasTransformedToDocumentId()) {
+        if (!getTransformedToDocumentId().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getTransformationIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, transformedToDocumentId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getAuthorUserIdBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getTransformationIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, transformedToDocumentId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getAuthorUserIdBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.TemplateTransformationInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.TemplateTransformationInfo)
+        Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.class, Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getTransformedToDocumentIdFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        transformationId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (transformedToDocumentIdBuilder_ == null) {
+          transformedToDocumentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
+        } else {
+          transformedToDocumentIdBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        authorUserId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo build() {
+        Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo result = new Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.transformationId_ = transformationId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (transformedToDocumentIdBuilder_ == null) {
+          result.transformedToDocumentId_ = transformedToDocumentId_;
+        } else {
+          result.transformedToDocumentId_ = transformedToDocumentIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.authorUserId_ = authorUserId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo.getDefaultInstance()) return this;
+        if (other.hasTransformationId()) {
+          bitField0_ |= 0x00000001;
+          transformationId_ = other.transformationId_;
+          onChanged();
+        }
+        if (other.hasTransformedToDocumentId()) {
+          mergeTransformedToDocumentId(other.getTransformedToDocumentId());
+        }
+        if (other.hasAuthorUserId()) {
+          bitField0_ |= 0x00000004;
+          authorUserId_ = other.authorUserId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasTransformationId()) {
+          
+          return false;
+        }
+        if (hasTransformedToDocumentId()) {
+          if (!getTransformedToDocumentId().isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateTransformationInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object transformationId_ = "";
+      /**
+       * <code>required string TransformationId = 1;</code>
+       */
+      public boolean hasTransformationId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string TransformationId = 1;</code>
+       */
+      public java.lang.String getTransformationId() {
+        java.lang.Object ref = transformationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            transformationId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string TransformationId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTransformationIdBytes() {
+        java.lang.Object ref = transformationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transformationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string TransformationId = 1;</code>
+       */
+      public Builder setTransformationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        transformationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TransformationId = 1;</code>
+       */
+      public Builder clearTransformationId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        transformationId_ = getDefaultInstance().getTransformationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string TransformationId = 1;</code>
+       */
+      public Builder setTransformationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        transformationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.DocumentIdProtos.DocumentId transformedToDocumentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.DocumentIdProtos.DocumentId, Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder, Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder> transformedToDocumentIdBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+       */
+      public boolean hasTransformedToDocumentId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+       */
+      public Diadoc.Api.Proto.DocumentIdProtos.DocumentId getTransformedToDocumentId() {
+        if (transformedToDocumentIdBuilder_ == null) {
+          return transformedToDocumentId_;
+        } else {
+          return transformedToDocumentIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+       */
+      public Builder setTransformedToDocumentId(Diadoc.Api.Proto.DocumentIdProtos.DocumentId value) {
+        if (transformedToDocumentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          transformedToDocumentId_ = value;
+          onChanged();
+        } else {
+          transformedToDocumentIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+       */
+      public Builder setTransformedToDocumentId(
+          Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder builderForValue) {
+        if (transformedToDocumentIdBuilder_ == null) {
+          transformedToDocumentId_ = builderForValue.build();
+          onChanged();
+        } else {
+          transformedToDocumentIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+       */
+      public Builder mergeTransformedToDocumentId(Diadoc.Api.Proto.DocumentIdProtos.DocumentId value) {
+        if (transformedToDocumentIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              transformedToDocumentId_ != Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance()) {
+            transformedToDocumentId_ =
+              Diadoc.Api.Proto.DocumentIdProtos.DocumentId.newBuilder(transformedToDocumentId_).mergeFrom(value).buildPartial();
+          } else {
+            transformedToDocumentId_ = value;
+          }
+          onChanged();
+        } else {
+          transformedToDocumentIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+       */
+      public Builder clearTransformedToDocumentId() {
+        if (transformedToDocumentIdBuilder_ == null) {
+          transformedToDocumentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
+          onChanged();
+        } else {
+          transformedToDocumentIdBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+       */
+      public Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder getTransformedToDocumentIdBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTransformedToDocumentIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+       */
+      public Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder getTransformedToDocumentIdOrBuilder() {
+        if (transformedToDocumentIdBuilder_ != null) {
+          return transformedToDocumentIdBuilder_.getMessageOrBuilder();
+        } else {
+          return transformedToDocumentId_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId TransformedToDocumentId = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.DocumentIdProtos.DocumentId, Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder, Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder> 
+          getTransformedToDocumentIdFieldBuilder() {
+        if (transformedToDocumentIdBuilder_ == null) {
+          transformedToDocumentIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.DocumentIdProtos.DocumentId, Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder, Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder>(
+                  getTransformedToDocumentId(),
+                  getParentForChildren(),
+                  isClean());
+          transformedToDocumentId_ = null;
+        }
+        return transformedToDocumentIdBuilder_;
+      }
+
+      private java.lang.Object authorUserId_ = "";
+      /**
+       * <code>optional string AuthorUserId = 3;</code>
+       */
+      public boolean hasAuthorUserId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string AuthorUserId = 3;</code>
+       */
+      public java.lang.String getAuthorUserId() {
+        java.lang.Object ref = authorUserId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            authorUserId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string AuthorUserId = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAuthorUserIdBytes() {
+        java.lang.Object ref = authorUserId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authorUserId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AuthorUserId = 3;</code>
+       */
+      public Builder setAuthorUserId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        authorUserId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AuthorUserId = 3;</code>
+       */
+      public Builder clearAuthorUserId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        authorUserId_ = getDefaultInstance().getAuthorUserId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AuthorUserId = 3;</code>
+       */
+      public Builder setAuthorUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        authorUserId_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.TemplateTransformationInfo)
+    }
+
+    static {
+      defaultInstance = new TemplateTransformationInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.TemplateTransformationInfo)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
@@ -9320,6 +10534,11 @@ public final class DocumentInfoV3Protos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_DocumentTemplateInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9376,11 +10595,17 @@ public final class DocumentInfoV3Protos {
       "iadoc.Api.Proto.ForwardDocumentEvent\022\016\n\006" +
       "IsTest\030\003 \002(\010\"Y\n\021DocumentDraftInfo\022\022\n\nIsR" +
       "ecycled\030\001 \002(\010\022\020\n\010IsLocked\030\002 \002(\010\022\036\n\026Trans" +
-      "formedToLetterIds\030\003 \003(\t\"\202\001\n\024DocumentTemp" +
+      "formedToLetterIds\030\003 \003(\t\"\335\001\n\024DocumentTemp" +
       "lateInfo\022J\n\022LetterParticipants\030\001 \002(\0132..D" +
       "iadoc.Api.Proto.Docflow.DocumentParticip",
-      "ants\022\036\n\026TransformedToLetterIds\030\002 \003(\tB\026B\024" +
-      "DocumentInfoV3Protos"
+      "ants\022\036\n\026TransformedToLetterIds\030\002 \003(\t\022Y\n\033" +
+      "TemplateTransformationInfos\030\003 \003(\01324.Diad" +
+      "oc.Api.Proto.Docflow.TemplateTransformat" +
+      "ionInfo\"\213\001\n\032TemplateTransformationInfo\022\030" +
+      "\n\020TransformationId\030\001 \002(\t\022=\n\027TransformedT" +
+      "oDocumentId\030\002 \001(\0132\034.Diadoc.Api.Proto.Doc" +
+      "umentId\022\024\n\014AuthorUserId\030\003 \001(\tB\026B\024Documen" +
+      "tInfoV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9450,7 +10675,13 @@ public final class DocumentInfoV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_DocumentTemplateInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocumentTemplateInfo_descriptor,
-        new java.lang.String[] { "LetterParticipants", "TransformedToLetterIds", });
+        new java.lang.String[] { "LetterParticipants", "TransformedToLetterIds", "TemplateTransformationInfos", });
+    internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_descriptor,
+        new java.lang.String[] { "TransformationId", "TransformedToDocumentId", "AuthorUserId", });
     Diadoc.Api.Proto.FullVersionProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();

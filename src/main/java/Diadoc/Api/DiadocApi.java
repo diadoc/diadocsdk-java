@@ -456,7 +456,7 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("boxId", currentBoxId));
         if (eventIdCurrent != null)
             parameters.add(new BasicNameValuePair("afterEventId", eventIdCurrent));
-        return DiadocMessage_GetApiProtos.BoxEventList.parseFrom(PerformGetHttpRequest("/V5/GetNewEvents", parameters));
+        return DiadocMessage_GetApiProtos.BoxEventList.parseFrom(PerformGetHttpRequest("/V6/GetNewEvents", parameters));
     }
 
     public OrganizationProtos.OrganizationList GetOrganizationsByInnKpp(String inn, String kpp) throws IOException {
@@ -592,7 +592,7 @@ public class DiadocApi {
         if (withOriginalSignature) parameters.add(new BasicNameValuePair("originalSignature", null));
         parameters.add(new BasicNameValuePair("injectEntityContent", String.valueOf(injectEntityContent)));
 
-        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V4/GetMessage", parameters));
+        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V5/GetMessage", parameters));
     }
 
     public DiadocMessage_GetApiProtos.Message GetMessage(String currentBoxId, String messageId, String entityId) throws IOException {
@@ -618,7 +618,7 @@ public class DiadocApi {
         if (withOriginalSignature) parameters.add(new BasicNameValuePair("originalSignature", null));
         parameters.add(new BasicNameValuePair("injectEntityContent", String.valueOf(injectEntityContent)));
 
-        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V4/GetMessage", parameters));
+        return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V5/GetMessage", parameters));
     }
 
     public GeneratedFile GenerateInvoiceDocumentReceiptXml(String boxId, String messageId, String attachmentId, SignerProtos.Signer signer)

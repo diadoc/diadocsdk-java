@@ -12,6 +12,7 @@ import "Events/ResolutionInfo.proto";
 import "Events/ResolutionRequestInfo.proto";
 import "Events/ResolutionRequestDenialInfo.proto";
 import "Events/ResolutionRouteInfo.proto";
+import "DocumentId.proto";
 
 package Diadoc.Api.Proto.Events;
 
@@ -48,6 +49,8 @@ message Message {
 	optional string ProxyTitle = 19;
 	optional bool PacketIsLocked = 20 [default = false];
 	required LockMode LockMode = 21 [default = None];
+	required Documents.MessageType MessageType = 22;
+	optional TemplateToLetterTransformationInfo TemplateToLetterTransformationInfo = 23;
 }
 
 message Template {
@@ -77,6 +80,8 @@ message MessagePatch {
 	optional bool MessageIsDelivered = 11 [default = false];
 	optional string DeliveredPatchId = 12;
 	required string PatchId = 13;
+
+	required Documents.MessageType MessageType = 15;
 }
 
 message Entity {
@@ -105,6 +110,21 @@ message Entity {
 	optional CancellationInfo CancellationInfo = 24;						// only for AttachmentType.Cancellation
 	repeated string Labels = 25;
 	optional string Version = 26;
+	optional TemplateTransformationInfo TemplateTransformationInfo = 27;
+}
+
+message TemplateToLetterTransformationInfo
+{
+	required string LetterFromBoxId = 1;
+	required string LetterToBoxId = 2;
+	optional string LetterFromDepartmentId = 3;
+	optional string LetterToDepartmentId = 4;
+}
+
+message TemplateTransformationInfo
+{
+	optional DocumentId TransformedToDocumentId = 1;
+	optional string Author = 2;
 }
 
 message EntityPatch {
@@ -176,5 +196,7 @@ enum AttachmentType {
 	Title = 68;
 	Cancellation = 69;
 	Edition = 71;
+	DeletionRestoration = 72;
+	TemplateTransformation = 73;
 	//Неизвестные типы должны обрабатываться как Title
 }
