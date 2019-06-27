@@ -1693,6 +1693,14 @@ public class DiadocApi {
         PerformPostHttpRequest("/DeleteEmployee", params, null);
     }
 
+    public EmployeeProtos.Employee GetMyEmployee(String boxId) throws IOException {
+        if (boxId == null) throw new NullPointerException("boxId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        byte[] responseBytes = PerformGetHttpRequest("/GetMyEmployee", params);
+        return EmployeeProtos.Employee.parseFrom(responseBytes);
+    }
+
     public SubscriptionProtos.EmployeeSubscriptions GetSubscriptions(String boxId, String userId) throws IOException {
         if (boxId == null) throw new NullPointerException("boxId");
         if (userId == null) throw new NullPointerException("userId");

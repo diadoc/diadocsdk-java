@@ -251,6 +251,15 @@ public final class OrganizationUserPermissionsProtos {
      * <code>required .Diadoc.Api.Proto.AuthorizationPermission AuthorizationPermission = 12;</code>
      */
     Diadoc.Api.Proto.OrganizationUserPermissionsProtos.AuthorizationPermissionOrBuilder getAuthorizationPermissionOrBuilder();
+
+    /**
+     * <code>required bool CanDeleteRestoreDocuments = 13;</code>
+     */
+    boolean hasCanDeleteRestoreDocuments();
+    /**
+     * <code>required bool CanDeleteRestoreDocuments = 13;</code>
+     */
+    boolean getCanDeleteRestoreDocuments();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.OrganizationUserPermissions}
@@ -377,6 +386,11 @@ public final class OrganizationUserPermissionsProtos {
                 authorizationPermission_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000200;
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00000400;
+              canDeleteRestoreDocuments_ = input.readBool();
               break;
             }
           }
@@ -661,6 +675,21 @@ public final class OrganizationUserPermissionsProtos {
       return authorizationPermission_;
     }
 
+    public static final int CANDELETERESTOREDOCUMENTS_FIELD_NUMBER = 13;
+    private boolean canDeleteRestoreDocuments_;
+    /**
+     * <code>required bool CanDeleteRestoreDocuments = 13;</code>
+     */
+    public boolean hasCanDeleteRestoreDocuments() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>required bool CanDeleteRestoreDocuments = 13;</code>
+     */
+    public boolean getCanDeleteRestoreDocuments() {
+      return canDeleteRestoreDocuments_;
+    }
+
     private void initFields() {
       userDepartmentId_ = "";
       isAdministrator_ = false;
@@ -673,6 +702,7 @@ public final class OrganizationUserPermissionsProtos {
       jobTitle_ = "";
       canCreateDocuments_ = false;
       authorizationPermission_ = Diadoc.Api.Proto.OrganizationUserPermissionsProtos.AuthorizationPermission.getDefaultInstance();
+      canDeleteRestoreDocuments_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -709,6 +739,10 @@ public final class OrganizationUserPermissionsProtos {
         return false;
       }
       if (!hasAuthorizationPermission()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCanDeleteRestoreDocuments()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -755,6 +789,9 @@ public final class OrganizationUserPermissionsProtos {
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeMessage(12, authorizationPermission_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBool(13, canDeleteRestoreDocuments_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -813,6 +850,10 @@ public final class OrganizationUserPermissionsProtos {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, authorizationPermission_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, canDeleteRestoreDocuments_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -958,6 +999,8 @@ public final class OrganizationUserPermissionsProtos {
           authorizationPermissionBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000400);
+        canDeleteRestoreDocuments_ = false;
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -1035,6 +1078,10 @@ public final class OrganizationUserPermissionsProtos {
         } else {
           result.authorizationPermission_ = authorizationPermissionBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.canDeleteRestoreDocuments_ = canDeleteRestoreDocuments_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1095,6 +1142,9 @@ public final class OrganizationUserPermissionsProtos {
         if (other.hasAuthorizationPermission()) {
           mergeAuthorizationPermission(other.getAuthorizationPermission());
         }
+        if (other.hasCanDeleteRestoreDocuments()) {
+          setCanDeleteRestoreDocuments(other.getCanDeleteRestoreDocuments());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -1129,6 +1179,10 @@ public final class OrganizationUserPermissionsProtos {
           return false;
         }
         if (!hasAuthorizationPermission()) {
+          
+          return false;
+        }
+        if (!hasCanDeleteRestoreDocuments()) {
           
           return false;
         }
@@ -1746,6 +1800,38 @@ public final class OrganizationUserPermissionsProtos {
         return authorizationPermissionBuilder_;
       }
 
+      private boolean canDeleteRestoreDocuments_ ;
+      /**
+       * <code>required bool CanDeleteRestoreDocuments = 13;</code>
+       */
+      public boolean hasCanDeleteRestoreDocuments() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>required bool CanDeleteRestoreDocuments = 13;</code>
+       */
+      public boolean getCanDeleteRestoreDocuments() {
+        return canDeleteRestoreDocuments_;
+      }
+      /**
+       * <code>required bool CanDeleteRestoreDocuments = 13;</code>
+       */
+      public Builder setCanDeleteRestoreDocuments(boolean value) {
+        bitField0_ |= 0x00000800;
+        canDeleteRestoreDocuments_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool CanDeleteRestoreDocuments = 13;</code>
+       */
+      public Builder clearCanDeleteRestoreDocuments() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        canDeleteRestoreDocuments_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationUserPermissions)
     }
 
@@ -2339,7 +2425,7 @@ public final class OrganizationUserPermissionsProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n!OrganizationUserPermissions.proto\022\020Dia" +
-      "doc.Api.Proto\"\275\003\n\033OrganizationUserPermis" +
+      "doc.Api.Proto\"\340\003\n\033OrganizationUserPermis" +
       "sions\022\030\n\020UserDepartmentId\030\001 \002(\t\022\027\n\017IsAdm" +
       "inistrator\030\002 \002(\010\022^\n\023DocumentAccessLevel\030" +
       "\003 \001(\0162%.Diadoc.Api.Proto.DocumentAccessL" +
@@ -2350,14 +2436,14 @@ public final class OrganizationUserPermissionsProtos {
       "DepartmentIds\030\t \003(\t\022\020\n\010JobTitle\030\n \001(\t\022\032\n",
       "\022CanCreateDocuments\030\013 \002(\010\022J\n\027Authorizati" +
       "onPermission\030\014 \002(\0132).Diadoc.Api.Proto.Au" +
-      "thorizationPermission\"=\n\027AuthorizationPe" +
-      "rmission\022\021\n\tIsBlocked\030\001 \002(\010\022\017\n\007Comment\030\002" +
-      " \001(\t*\236\001\n\023DocumentAccessLevel\022\'\n\032UnknownD" +
-      "ocumentAccessLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016Departm" +
-      "entOnly\020\000\022\037\n\033DepartmentAndSubdepartments" +
-      "\020\001\022\020\n\014AllDocuments\020\002\022\027\n\023SelectedDepartme" +
-      "nts\020\003B#B!OrganizationUserPermissionsProt" +
-      "os"
+      "thorizationPermission\022!\n\031CanDeleteRestor" +
+      "eDocuments\030\r \002(\010\"=\n\027AuthorizationPermiss" +
+      "ion\022\021\n\tIsBlocked\030\001 \002(\010\022\017\n\007Comment\030\002 \001(\t*" +
+      "\236\001\n\023DocumentAccessLevel\022\'\n\032UnknownDocume" +
+      "ntAccessLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016DepartmentOn" +
+      "ly\020\000\022\037\n\033DepartmentAndSubdepartments\020\001\022\020\n" +
+      "\014AllDocuments\020\002\022\027\n\023SelectedDepartments\020\003" +
+      "B#B!OrganizationUserPermissionsProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2376,7 +2462,7 @@ public final class OrganizationUserPermissionsProtos {
     internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor,
-        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanManageCounteragents", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", "AuthorizationPermission", });
+        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanManageCounteragents", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", "AuthorizationPermission", "CanDeleteRestoreDocuments", });
     internal_static_Diadoc_Api_Proto_AuthorizationPermission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_AuthorizationPermission_fieldAccessorTable = new
