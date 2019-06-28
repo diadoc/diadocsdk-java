@@ -61,6 +61,7 @@ import javax.mail.internet.ParseException;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+import javax.tools.Tool;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
@@ -1126,6 +1127,19 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("eventId", eventId));
         return DiadocMessage_GetApiProtos.BoxEvent.parseFrom(PerformGetHttpRequest("/V2/GetEvent", parameters));
+    }
+
+    public CustomPrintFormDetectionProtos.CustomPrintFormDetectionResult detectCustomPrintForms(String boxId, CustomPrintFormDetectionProtos.CustomPrintFormDetectionRequest detectionRequest) throws IOException {
+        if (Tools.IsNullOrEmpty(boxId))
+            throw new IllegalArgumentException("boxId");
+        if(detectionRequest == null || detectionRequest.getDocumentIdsCount() == 0)
+            throw new IllegalArgumentException("detectionRequest");
+
+        List<NameValuePair> params = new ArrayList<>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+
+        byte[] responseBytes = PerformPostHttpRequest("/DetectCustomPrintForms", params, detectionRequest.toByteArray());
+        return CustomPrintFormDetectionProtos.CustomPrintFormDetectionResult.parseFrom(responseBytes);
     }
 
     public PrintFormResult GeneratePrintForm(String boxId, String messageId, String documentId) throws IllegalStateException, IOException, ParseException {
