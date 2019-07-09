@@ -31834,7 +31834,7 @@ public final class UniversalTransferDocumentInfoProtos {
         getCostChangeInfoBytes();
 
     /**
-     * <code>required string TransferDocDetails = 2;</code>
+     * <code>optional string TransferDocDetails = 2;</code>
      *
      * <pre>
      * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -31842,7 +31842,7 @@ public final class UniversalTransferDocumentInfoProtos {
      */
     boolean hasTransferDocDetails();
     /**
-     * <code>required string TransferDocDetails = 2;</code>
+     * <code>optional string TransferDocDetails = 2;</code>
      *
      * <pre>
      * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -31850,7 +31850,7 @@ public final class UniversalTransferDocumentInfoProtos {
      */
     java.lang.String getTransferDocDetails();
     /**
-     * <code>required string TransferDocDetails = 2;</code>
+     * <code>optional string TransferDocDetails = 2;</code>
      *
      * <pre>
      * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -32139,7 +32139,7 @@ public final class UniversalTransferDocumentInfoProtos {
     public static final int TRANSFERDOCDETAILS_FIELD_NUMBER = 2;
     private java.lang.Object transferDocDetails_;
     /**
-     * <code>required string TransferDocDetails = 2;</code>
+     * <code>optional string TransferDocDetails = 2;</code>
      *
      * <pre>
      * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -32149,7 +32149,7 @@ public final class UniversalTransferDocumentInfoProtos {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required string TransferDocDetails = 2;</code>
+     * <code>optional string TransferDocDetails = 2;</code>
      *
      * <pre>
      * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -32170,7 +32170,7 @@ public final class UniversalTransferDocumentInfoProtos {
       }
     }
     /**
-     * <code>required string TransferDocDetails = 2;</code>
+     * <code>optional string TransferDocDetails = 2;</code>
      *
      * <pre>
      * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -32366,10 +32366,6 @@ public final class UniversalTransferDocumentInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasTransferDocDetails()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasOperationContent()) {
         memoizedIsInitialized = 0;
         return false;
@@ -32683,10 +32679,6 @@ public final class UniversalTransferDocumentInfoProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasTransferDocDetails()) {
-          
-          return false;
-        }
         if (!hasOperationContent()) {
           
           return false;
@@ -32821,7 +32813,7 @@ public final class UniversalTransferDocumentInfoProtos {
 
       private java.lang.Object transferDocDetails_ = "";
       /**
-       * <code>required string TransferDocDetails = 2;</code>
+       * <code>optional string TransferDocDetails = 2;</code>
        *
        * <pre>
        * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -32831,7 +32823,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required string TransferDocDetails = 2;</code>
+       * <code>optional string TransferDocDetails = 2;</code>
        *
        * <pre>
        * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -32852,7 +32844,7 @@ public final class UniversalTransferDocumentInfoProtos {
         }
       }
       /**
-       * <code>required string TransferDocDetails = 2;</code>
+       * <code>optional string TransferDocDetails = 2;</code>
        *
        * <pre>
        * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -32872,7 +32864,7 @@ public final class UniversalTransferDocumentInfoProtos {
         }
       }
       /**
-       * <code>required string TransferDocDetails = 2;</code>
+       * <code>optional string TransferDocDetails = 2;</code>
        *
        * <pre>
        * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -32889,7 +32881,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return this;
       }
       /**
-       * <code>required string TransferDocDetails = 2;</code>
+       * <code>optional string TransferDocDetails = 2;</code>
        *
        * <pre>
        * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -32902,7 +32894,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return this;
       }
       /**
-       * <code>required string TransferDocDetails = 2;</code>
+       * <code>optional string TransferDocDetails = 2;</code>
        *
        * <pre>
        * Реквизиты передаточных документов, к которым относится корректировка // ПередатДокум
@@ -38590,7 +38582,7 @@ public final class UniversalTransferDocumentInfoProtos {
       "nfo\022\033\n\023InvoiceRevisionDate\030\001 \002(\t\022\035\n\025Invo" +
       "iceRevisionNumber\030\002 \002(\t\"\272\001\n\014EventContent" +
       "\022\026\n\016CostChangeInfo\030\001 \001(\t\022\032\n\022TransferDocD" +
-      "etails\030\002 \002(\t\022\030\n\020OperationContent\030\003 \002(\t\022\030" +
+      "etails\030\002 \001(\t\022\030\n\020OperationContent\030\003 \002(\t\022\030" +
       "\n\020NotificationDate\030\004 \001(\t\022B\n\016CorrectionBa" +
       "se\030\005 \003(\0132*.Diadoc.Api.Proto.Invoicing.Co" +
       "rrectionBase\"x\n\016CorrectionBase\022\030\n\020BaseDo" +
