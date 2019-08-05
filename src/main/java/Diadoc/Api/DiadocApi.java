@@ -878,9 +878,15 @@ public class DiadocApi {
     }
 
     public GeneratedFile GenerateUniversalTransferDocumentXmlForSeller(UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo utdInfo, boolean disableValidation) throws IOException, ParseException {
+        return GenerateUniversalTransferDocumentXmlForSeller(utdInfo, disableValidation, "utd_05_01_05");
+    }
+
+    public GeneratedFile GenerateUniversalTransferDocumentXmlForSeller(UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo utdInfo, boolean disableValidation, String documentVersion) throws IOException, ParseException {
         if (utdInfo == null) throw new NullPointerException("info");
         HttpResponse httpResponse = ReceivePostHttpResponse(
-                "/GenerateUniversalTransferDocumentXmlForSeller" + (disableValidation ? "?disableValidation" : ""),
+                "/GenerateUniversalTransferDocumentXmlForSeller"
+                        + "?documentVersion=" + documentVersion
+                        + (disableValidation ? "&disableValidation" : ""),
                 null,
                 utdInfo.toByteArray());
         return new GeneratedFile(GetHttpResponseFileName(httpResponse), GetResponseBytes(httpResponse));
@@ -891,10 +897,15 @@ public class DiadocApi {
     }
 
     public GeneratedFile GenerateUniversalCorrectionTransferDocumentXmlForSeller(UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo ucdInfo, boolean disableValidation) throws IOException, ParseException {
+        return GenerateUniversalCorrectionTransferDocumentXmlForSeller(ucdInfo, disableValidation, "ucd_05_01_03");
+    }
+
+    public GeneratedFile GenerateUniversalCorrectionTransferDocumentXmlForSeller(UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo ucdInfo, boolean disableValidation, String documentVersion) throws IOException, ParseException {
         if (ucdInfo == null) throw new NullPointerException("info");
         HttpResponse httpResponse = ReceivePostHttpResponse(
                 "/GenerateUniversalTransferDocumentXmlForSeller"
                         + "?correction"
+                        + "&documentVersion=" + documentVersion
                         + (disableValidation ? "&disableValidation" : ""),
                 null,
                 ucdInfo.toByteArray());
@@ -1057,8 +1068,12 @@ public class DiadocApi {
     }
 
     public UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo ParseUniversalTransferDocumentSellerTitleXml(byte[] utdXmlContent) throws IOException {
+        return ParseUniversalTransferDocumentSellerTitleXml(utdXmlContent, "utd_05_01_05");
+    }
+
+    public UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo ParseUniversalTransferDocumentSellerTitleXml(byte[] utdXmlContent, String documentVersion) throws IOException {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-        parameters.add(new BasicNameValuePair("documentVersion", "utd_05_01_05"));
+        parameters.add(new BasicNameValuePair("documentVersion", documentVersion));
         byte[] response = PerformPostHttpRequest("/ParseUniversalTransferDocumentSellerTitleXml", parameters, utdXmlContent);
         return UniversalTransferDocumentInfoProtos.UniversalTransferDocumentSellerTitleInfo.parseFrom(response);
     }
@@ -1069,8 +1084,12 @@ public class DiadocApi {
     }
 
     public UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo ParseUniversalCorrectionDocumentSellerTitleXml(byte[] utdXmlContent) throws IOException {
+        return ParseUniversalCorrectionDocumentSellerTitleXml(utdXmlContent, "ucd_05_01_03");
+    }
+
+    public UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo ParseUniversalCorrectionDocumentSellerTitleXml(byte[] utdXmlContent, String documentVersion) throws IOException {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-        parameters.add(new BasicNameValuePair("documentVersion", "ucd_05_01_03"));
+        parameters.add(new BasicNameValuePair("documentVersion", documentVersion));
         byte[] response = PerformPostHttpRequest("/ParseUniversalCorrectionDocumentSellerTitleXml", parameters, utdXmlContent);
         return UniversalTransferDocumentInfoProtos.UniversalCorrectionDocumentSellerTitleInfo.parseFrom(response);
     }
