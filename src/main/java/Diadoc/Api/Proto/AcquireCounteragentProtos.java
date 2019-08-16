@@ -1932,6 +1932,19 @@ public final class AcquireCounteragentProtos {
      */
     com.google.protobuf.ByteString
         getOrgIdBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+     */
+    boolean hasInvitationDocumentId();
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+     */
+    Diadoc.Api.Proto.DocumentIdProtos.DocumentId getInvitationDocumentId();
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+     */
+    Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder getInvitationDocumentIdOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.AcquireCounteragentResult}
@@ -1989,6 +2002,19 @@ public final class AcquireCounteragentProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               orgId_ = bs;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = invitationDocumentId_.toBuilder();
+              }
+              invitationDocumentId_ = input.readMessage(Diadoc.Api.Proto.DocumentIdProtos.DocumentId.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(invitationDocumentId_);
+                invitationDocumentId_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
               break;
             }
           }
@@ -2073,8 +2099,30 @@ public final class AcquireCounteragentProtos {
       }
     }
 
+    public static final int INVITATIONDOCUMENTID_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.DocumentIdProtos.DocumentId invitationDocumentId_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+     */
+    public boolean hasInvitationDocumentId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+     */
+    public Diadoc.Api.Proto.DocumentIdProtos.DocumentId getInvitationDocumentId() {
+      return invitationDocumentId_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+     */
+    public Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder getInvitationDocumentIdOrBuilder() {
+      return invitationDocumentId_;
+    }
+
     private void initFields() {
       orgId_ = "";
+      invitationDocumentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2086,6 +2134,12 @@ public final class AcquireCounteragentProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (hasInvitationDocumentId()) {
+        if (!getInvitationDocumentId().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -2095,6 +2149,9 @@ public final class AcquireCounteragentProtos {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(1, getOrgIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, invitationDocumentId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2108,6 +2165,10 @@ public final class AcquireCounteragentProtos {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, getOrgIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, invitationDocumentId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2218,6 +2279,7 @@ public final class AcquireCounteragentProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getInvitationDocumentIdFieldBuilder();
         }
       }
       private static Builder create() {
@@ -2228,6 +2290,12 @@ public final class AcquireCounteragentProtos {
         super.clear();
         orgId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (invitationDocumentIdBuilder_ == null) {
+          invitationDocumentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
+        } else {
+          invitationDocumentIdBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -2260,6 +2328,14 @@ public final class AcquireCounteragentProtos {
           to_bitField0_ |= 0x00000001;
         }
         result.orgId_ = orgId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (invitationDocumentIdBuilder_ == null) {
+          result.invitationDocumentId_ = invitationDocumentId_;
+        } else {
+          result.invitationDocumentId_ = invitationDocumentIdBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2281,6 +2357,9 @@ public final class AcquireCounteragentProtos {
           orgId_ = other.orgId_;
           onChanged();
         }
+        if (other.hasInvitationDocumentId()) {
+          mergeInvitationDocumentId(other.getInvitationDocumentId());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -2289,6 +2368,12 @@ public final class AcquireCounteragentProtos {
         if (!hasOrgId()) {
           
           return false;
+        }
+        if (hasInvitationDocumentId()) {
+          if (!getInvitationDocumentId().isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -2388,6 +2473,122 @@ public final class AcquireCounteragentProtos {
         return this;
       }
 
+      private Diadoc.Api.Proto.DocumentIdProtos.DocumentId invitationDocumentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.DocumentIdProtos.DocumentId, Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder, Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder> invitationDocumentIdBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+       */
+      public boolean hasInvitationDocumentId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+       */
+      public Diadoc.Api.Proto.DocumentIdProtos.DocumentId getInvitationDocumentId() {
+        if (invitationDocumentIdBuilder_ == null) {
+          return invitationDocumentId_;
+        } else {
+          return invitationDocumentIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+       */
+      public Builder setInvitationDocumentId(Diadoc.Api.Proto.DocumentIdProtos.DocumentId value) {
+        if (invitationDocumentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          invitationDocumentId_ = value;
+          onChanged();
+        } else {
+          invitationDocumentIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+       */
+      public Builder setInvitationDocumentId(
+          Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder builderForValue) {
+        if (invitationDocumentIdBuilder_ == null) {
+          invitationDocumentId_ = builderForValue.build();
+          onChanged();
+        } else {
+          invitationDocumentIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+       */
+      public Builder mergeInvitationDocumentId(Diadoc.Api.Proto.DocumentIdProtos.DocumentId value) {
+        if (invitationDocumentIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              invitationDocumentId_ != Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance()) {
+            invitationDocumentId_ =
+              Diadoc.Api.Proto.DocumentIdProtos.DocumentId.newBuilder(invitationDocumentId_).mergeFrom(value).buildPartial();
+          } else {
+            invitationDocumentId_ = value;
+          }
+          onChanged();
+        } else {
+          invitationDocumentIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+       */
+      public Builder clearInvitationDocumentId() {
+        if (invitationDocumentIdBuilder_ == null) {
+          invitationDocumentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
+          onChanged();
+        } else {
+          invitationDocumentIdBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+       */
+      public Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder getInvitationDocumentIdBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getInvitationDocumentIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+       */
+      public Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder getInvitationDocumentIdOrBuilder() {
+        if (invitationDocumentIdBuilder_ != null) {
+          return invitationDocumentIdBuilder_.getMessageOrBuilder();
+        } else {
+          return invitationDocumentId_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.DocumentIdProtos.DocumentId, Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder, Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder> 
+          getInvitationDocumentIdFieldBuilder() {
+        if (invitationDocumentIdBuilder_ == null) {
+          invitationDocumentIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.DocumentIdProtos.DocumentId, Diadoc.Api.Proto.DocumentIdProtos.DocumentId.Builder, Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder>(
+                  getInvitationDocumentId(),
+                  getParentForChildren(),
+                  isClean());
+          invitationDocumentId_ = null;
+        }
+        return invitationDocumentIdBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.AcquireCounteragentResult)
     }
 
@@ -2425,16 +2626,18 @@ public final class AcquireCounteragentProtos {
     java.lang.String[] descriptorData = {
       "\n\031AcquireCounteragent.proto\022\020Diadoc.Api." +
       "Proto\032\"Events/DiadocMessage-PostApi.prot" +
-      "o\"\231\001\n\032AcquireCounteragentRequest\022\r\n\005OrgI" +
-      "d\030\001 \001(\t\022\013\n\003Inn\030\002 \001(\t\022\035\n\025MessageToCounter" +
-      "agent\030\003 \001(\t\022@\n\022InvitationDocument\030\004 \001(\0132" +
-      "$.Diadoc.Api.Proto.InvitationDocument\"\226\001" +
-      "\n\022InvitationDocument\022=\n\rSignedContent\030\001 " +
-      "\002(\0132&.Diadoc.Api.Proto.Events.SignedCont" +
-      "ent\022\020\n\010FileName\030\002 \002(\t\022!\n\022SignatureReques" +
-      "ted\030\003 \001(\010:\005false\022\014\n\004Type\030\004 \001(\t\"*\n\031Acquir",
-      "eCounteragentResult\022\r\n\005OrgId\030\001 \002(\tB\033B\031Ac" +
-      "quireCounteragentProtos"
+      "o\032\020DocumentId.proto\"\231\001\n\032AcquireCounterag" +
+      "entRequest\022\r\n\005OrgId\030\001 \001(\t\022\013\n\003Inn\030\002 \001(\t\022\035" +
+      "\n\025MessageToCounteragent\030\003 \001(\t\022@\n\022Invitat" +
+      "ionDocument\030\004 \001(\0132$.Diadoc.Api.Proto.Inv" +
+      "itationDocument\"\226\001\n\022InvitationDocument\022=" +
+      "\n\rSignedContent\030\001 \002(\0132&.Diadoc.Api.Proto" +
+      ".Events.SignedContent\022\020\n\010FileName\030\002 \002(\t\022" +
+      "!\n\022SignatureRequested\030\003 \001(\010:\005false\022\014\n\004Ty",
+      "pe\030\004 \001(\t\"f\n\031AcquireCounteragentResult\022\r\n" +
+      "\005OrgId\030\001 \002(\t\022:\n\024InvitationDocumentId\030\002 \001" +
+      "(\0132\034.Diadoc.Api.Proto.DocumentIdB\033B\031Acqu" +
+      "ireCounteragentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2448,6 +2651,7 @@ public final class AcquireCounteragentProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.getDescriptor(),
+          Diadoc.Api.Proto.DocumentIdProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_AcquireCounteragentRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2466,8 +2670,9 @@ public final class AcquireCounteragentProtos {
     internal_static_Diadoc_Api_Proto_AcquireCounteragentResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_AcquireCounteragentResult_descriptor,
-        new java.lang.String[] { "OrgId", });
+        new java.lang.String[] { "OrgId", "InvitationDocumentId", });
     Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.getDescriptor();
+    Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
