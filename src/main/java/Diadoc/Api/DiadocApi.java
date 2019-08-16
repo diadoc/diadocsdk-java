@@ -460,6 +460,14 @@ public class DiadocApi {
         return DiadocMessage_GetApiProtos.BoxEventList.parseFrom(PerformGetHttpRequest("/V6/GetNewEvents", parameters));
     }
 
+    public DiadocMessage_GetApiProtos.BoxEvent getLastEvent(String boxId) throws IOException {
+        if(boxId == null) throw new IllegalArgumentException("boxId");
+        List<NameValuePair> params = new ArrayList<>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        var result = PerformGetHttpRequest("/GetLastEvent", params);
+        return DiadocMessage_GetApiProtos.BoxEvent.parseFrom(result);
+    }
+
     public OrganizationProtos.OrganizationList GetOrganizationsByInnKpp(String inn, String kpp) throws IOException {
         return GetOrganizationsByInnKpp(inn, kpp, false);
     }
