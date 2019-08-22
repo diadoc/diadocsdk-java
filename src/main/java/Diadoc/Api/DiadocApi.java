@@ -1873,6 +1873,10 @@ public class DiadocApi {
     }
 
     public FileContent GetContent(String typeNamedId, String function, String version, int titleIndex) throws IOException {
+        return GetContent(typeNamedId, function, version, titleIndex, XsdContentType.TitleXsd);
+    }
+
+    public FileContent GetContent(String typeNamedId, String function, String version, int titleIndex, XsdContentType contentType) throws IOException {
         if (Tools.IsNullOrEmpty(typeNamedId)) throw new NullPointerException("typeNamedId");
         if (Tools.IsNullOrEmpty(function)) throw new NullPointerException("function");
         if (Tools.IsNullOrEmpty(version)) throw new NullPointerException("version");
@@ -1883,6 +1887,7 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("function", function));
         parameters.add(new BasicNameValuePair("version", version));
         parameters.add(new BasicNameValuePair("titleIndex", Integer.toString(titleIndex)));
+        parameters.add(new BasicNameValuePair("contentType", contentType.name()));
 
         HttpResponse response = ReceiveGetHttpResponse("/GetContent", parameters);
         byte[] bytes = GetResponseBytes(response);
