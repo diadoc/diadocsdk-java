@@ -5263,6 +5263,15 @@ public final class DocumentTypeDescriptionProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>required int32 Index = 7;</code>
+     */
+    boolean hasIndex();
+    /**
+     * <code>required int32 Index = 7;</code>
+     */
+    int getIndex();
+
+    /**
      * <code>required bool IsFormal = 1;</code>
      */
     boolean hasIsFormal();
@@ -5413,41 +5422,41 @@ public final class DocumentTypeDescriptionProtos {
               break;
             }
             case 8: {
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               isFormal_ = input.readBool();
               break;
             }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               xsdUrl_ = bs;
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 metadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000020;
               }
               metadataItems_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.PARSER, extensionRegistry));
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 encryptedMetadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000040;
               }
               encryptedMetadataItems_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.PARSER, extensionRegistry));
               break;
             }
             case 42: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               userDataXsdUrl_ = bs;
               break;
             }
             case 50: {
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
                 subBuilder = signerInfo_.toBuilder();
               }
               signerInfo_ = input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.PARSER, extensionRegistry);
@@ -5455,7 +5464,12 @@ public final class DocumentTypeDescriptionProtos {
                 subBuilder.mergeFrom(signerInfo_);
                 signerInfo_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000001;
+              index_ = input.readInt32();
               break;
             }
           }
@@ -5466,10 +5480,10 @@ public final class DocumentTypeDescriptionProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           metadataItems_ = java.util.Collections.unmodifiableList(metadataItems_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
           encryptedMetadataItems_ = java.util.Collections.unmodifiableList(encryptedMetadataItems_);
         }
         this.unknownFields = unknownFields.build();
@@ -5504,13 +5518,28 @@ public final class DocumentTypeDescriptionProtos {
     }
 
     private int bitField0_;
+    public static final int INDEX_FIELD_NUMBER = 7;
+    private int index_;
+    /**
+     * <code>required int32 Index = 7;</code>
+     */
+    public boolean hasIndex() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 Index = 7;</code>
+     */
+    public int getIndex() {
+      return index_;
+    }
+
     public static final int ISFORMAL_FIELD_NUMBER = 1;
     private boolean isFormal_;
     /**
      * <code>required bool IsFormal = 1;</code>
      */
     public boolean hasIsFormal() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>required bool IsFormal = 1;</code>
@@ -5525,7 +5554,7 @@ public final class DocumentTypeDescriptionProtos {
      * <code>optional string XsdUrl = 2;</code>
      */
     public boolean hasXsdUrl() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
      * <code>optional string XsdUrl = 2;</code>
@@ -5567,7 +5596,7 @@ public final class DocumentTypeDescriptionProtos {
      * <code>optional string UserDataXsdUrl = 5;</code>
      */
     public boolean hasUserDataXsdUrl() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>optional string UserDataXsdUrl = 5;</code>
@@ -5609,7 +5638,7 @@ public final class DocumentTypeDescriptionProtos {
      * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
      */
     public boolean hasSignerInfo() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
      * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
@@ -5695,6 +5724,7 @@ public final class DocumentTypeDescriptionProtos {
     }
 
     private void initFields() {
+      index_ = 0;
       isFormal_ = false;
       xsdUrl_ = "";
       userDataXsdUrl_ = "";
@@ -5708,6 +5738,10 @@ public final class DocumentTypeDescriptionProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasIndex()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       if (!hasIsFormal()) {
         memoizedIsInitialized = 0;
         return false;
@@ -5739,10 +5773,10 @@ public final class DocumentTypeDescriptionProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBool(1, isFormal_);
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(2, getXsdUrlBytes());
       }
       for (int i = 0; i < metadataItems_.size(); i++) {
@@ -5751,11 +5785,14 @@ public final class DocumentTypeDescriptionProtos {
       for (int i = 0; i < encryptedMetadataItems_.size(); i++) {
         output.writeMessage(4, encryptedMetadataItems_.get(i));
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(5, getUserDataXsdUrlBytes());
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeMessage(6, signerInfo_);
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(7, index_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5766,11 +5803,11 @@ public final class DocumentTypeDescriptionProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, isFormal_);
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, getXsdUrlBytes());
       }
@@ -5782,13 +5819,17 @@ public final class DocumentTypeDescriptionProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, encryptedMetadataItems_.get(i));
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, getUserDataXsdUrlBytes());
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, signerInfo_);
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, index_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5910,27 +5951,29 @@ public final class DocumentTypeDescriptionProtos {
 
       public Builder clear() {
         super.clear();
-        isFormal_ = false;
+        index_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        xsdUrl_ = "";
+        isFormal_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
-        userDataXsdUrl_ = "";
+        xsdUrl_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+        userDataXsdUrl_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (signerInfoBuilder_ == null) {
           signerInfo_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.getDefaultInstance();
         } else {
           signerInfoBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (metadataItemsBuilder_ == null) {
           metadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           metadataItemsBuilder_.clear();
         }
         if (encryptedMetadataItemsBuilder_ == null) {
           encryptedMetadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           encryptedMetadataItemsBuilder_.clear();
         }
@@ -5965,17 +6008,21 @@ public final class DocumentTypeDescriptionProtos {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.isFormal_ = isFormal_;
+        result.index_ = index_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.xsdUrl_ = xsdUrl_;
+        result.isFormal_ = isFormal_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.userDataXsdUrl_ = userDataXsdUrl_;
+        result.xsdUrl_ = xsdUrl_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
+        }
+        result.userDataXsdUrl_ = userDataXsdUrl_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
         }
         if (signerInfoBuilder_ == null) {
           result.signerInfo_ = signerInfo_;
@@ -5983,18 +6030,18 @@ public final class DocumentTypeDescriptionProtos {
           result.signerInfo_ = signerInfoBuilder_.build();
         }
         if (metadataItemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
             metadataItems_ = java.util.Collections.unmodifiableList(metadataItems_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.metadataItems_ = metadataItems_;
         } else {
           result.metadataItems_ = metadataItemsBuilder_.build();
         }
         if (encryptedMetadataItemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
             encryptedMetadataItems_ = java.util.Collections.unmodifiableList(encryptedMetadataItems_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.encryptedMetadataItems_ = encryptedMetadataItems_;
         } else {
@@ -6016,16 +6063,19 @@ public final class DocumentTypeDescriptionProtos {
 
       public Builder mergeFrom(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle other) {
         if (other == Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle.getDefaultInstance()) return this;
+        if (other.hasIndex()) {
+          setIndex(other.getIndex());
+        }
         if (other.hasIsFormal()) {
           setIsFormal(other.getIsFormal());
         }
         if (other.hasXsdUrl()) {
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           xsdUrl_ = other.xsdUrl_;
           onChanged();
         }
         if (other.hasUserDataXsdUrl()) {
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           userDataXsdUrl_ = other.userDataXsdUrl_;
           onChanged();
         }
@@ -6036,7 +6086,7 @@ public final class DocumentTypeDescriptionProtos {
           if (!other.metadataItems_.isEmpty()) {
             if (metadataItems_.isEmpty()) {
               metadataItems_ = other.metadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureMetadataItemsIsMutable();
               metadataItems_.addAll(other.metadataItems_);
@@ -6049,7 +6099,7 @@ public final class DocumentTypeDescriptionProtos {
               metadataItemsBuilder_.dispose();
               metadataItemsBuilder_ = null;
               metadataItems_ = other.metadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
               metadataItemsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getMetadataItemsFieldBuilder() : null;
@@ -6062,7 +6112,7 @@ public final class DocumentTypeDescriptionProtos {
           if (!other.encryptedMetadataItems_.isEmpty()) {
             if (encryptedMetadataItems_.isEmpty()) {
               encryptedMetadataItems_ = other.encryptedMetadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureEncryptedMetadataItemsIsMutable();
               encryptedMetadataItems_.addAll(other.encryptedMetadataItems_);
@@ -6075,7 +6125,7 @@ public final class DocumentTypeDescriptionProtos {
               encryptedMetadataItemsBuilder_.dispose();
               encryptedMetadataItemsBuilder_ = null;
               encryptedMetadataItems_ = other.encryptedMetadataItems_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
               encryptedMetadataItemsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getEncryptedMetadataItemsFieldBuilder() : null;
@@ -6089,6 +6139,10 @@ public final class DocumentTypeDescriptionProtos {
       }
 
       public final boolean isInitialized() {
+        if (!hasIndex()) {
+          
+          return false;
+        }
         if (!hasIsFormal()) {
           
           return false;
@@ -6135,12 +6189,44 @@ public final class DocumentTypeDescriptionProtos {
       }
       private int bitField0_;
 
+      private int index_ ;
+      /**
+       * <code>required int32 Index = 7;</code>
+       */
+      public boolean hasIndex() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 Index = 7;</code>
+       */
+      public int getIndex() {
+        return index_;
+      }
+      /**
+       * <code>required int32 Index = 7;</code>
+       */
+      public Builder setIndex(int value) {
+        bitField0_ |= 0x00000001;
+        index_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 Index = 7;</code>
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        index_ = 0;
+        onChanged();
+        return this;
+      }
+
       private boolean isFormal_ ;
       /**
        * <code>required bool IsFormal = 1;</code>
        */
       public boolean hasIsFormal() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
+        return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
        * <code>required bool IsFormal = 1;</code>
@@ -6152,7 +6238,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>required bool IsFormal = 1;</code>
        */
       public Builder setIsFormal(boolean value) {
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         isFormal_ = value;
         onChanged();
         return this;
@@ -6161,7 +6247,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>required bool IsFormal = 1;</code>
        */
       public Builder clearIsFormal() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         isFormal_ = false;
         onChanged();
         return this;
@@ -6172,7 +6258,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>optional string XsdUrl = 2;</code>
        */
       public boolean hasXsdUrl() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
        * <code>optional string XsdUrl = 2;</code>
@@ -6215,7 +6301,7 @@ public final class DocumentTypeDescriptionProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
         xsdUrl_ = value;
         onChanged();
         return this;
@@ -6224,7 +6310,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>optional string XsdUrl = 2;</code>
        */
       public Builder clearXsdUrl() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         xsdUrl_ = getDefaultInstance().getXsdUrl();
         onChanged();
         return this;
@@ -6237,7 +6323,7 @@ public final class DocumentTypeDescriptionProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
         xsdUrl_ = value;
         onChanged();
         return this;
@@ -6248,7 +6334,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>optional string UserDataXsdUrl = 5;</code>
        */
       public boolean hasUserDataXsdUrl() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>optional string UserDataXsdUrl = 5;</code>
@@ -6291,7 +6377,7 @@ public final class DocumentTypeDescriptionProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000008;
         userDataXsdUrl_ = value;
         onChanged();
         return this;
@@ -6300,7 +6386,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>optional string UserDataXsdUrl = 5;</code>
        */
       public Builder clearUserDataXsdUrl() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         userDataXsdUrl_ = getDefaultInstance().getUserDataXsdUrl();
         onChanged();
         return this;
@@ -6313,7 +6399,7 @@ public final class DocumentTypeDescriptionProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000008;
         userDataXsdUrl_ = value;
         onChanged();
         return this;
@@ -6326,7 +6412,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
        */
       public boolean hasSignerInfo() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
@@ -6351,7 +6437,7 @@ public final class DocumentTypeDescriptionProtos {
         } else {
           signerInfoBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         return this;
       }
       /**
@@ -6365,7 +6451,7 @@ public final class DocumentTypeDescriptionProtos {
         } else {
           signerInfoBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         return this;
       }
       /**
@@ -6373,7 +6459,7 @@ public final class DocumentTypeDescriptionProtos {
        */
       public Builder mergeSignerInfo(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo value) {
         if (signerInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
               signerInfo_ != Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.getDefaultInstance()) {
             signerInfo_ =
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.newBuilder(signerInfo_).mergeFrom(value).buildPartial();
@@ -6384,7 +6470,7 @@ public final class DocumentTypeDescriptionProtos {
         } else {
           signerInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         return this;
       }
       /**
@@ -6397,14 +6483,14 @@ public final class DocumentTypeDescriptionProtos {
         } else {
           signerInfoBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
       /**
        * <code>required .Diadoc.Api.Proto.Documents.Types.SignerInfo SignerInfo = 6;</code>
        */
       public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerInfo.Builder getSignerInfoBuilder() {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return getSignerInfoFieldBuilder().getBuilder();
       }
@@ -6438,9 +6524,9 @@ public final class DocumentTypeDescriptionProtos {
       private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> metadataItems_ =
         java.util.Collections.emptyList();
       private void ensureMetadataItemsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
           metadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>(metadataItems_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -6590,7 +6676,7 @@ public final class DocumentTypeDescriptionProtos {
       public Builder clearMetadataItems() {
         if (metadataItemsBuilder_ == null) {
           metadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           metadataItemsBuilder_.clear();
@@ -6667,7 +6753,7 @@ public final class DocumentTypeDescriptionProtos {
           metadataItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemOrBuilder>(
                   metadataItems_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
                   isClean());
           metadataItems_ = null;
@@ -6678,9 +6764,9 @@ public final class DocumentTypeDescriptionProtos {
       private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem> encryptedMetadataItems_ =
         java.util.Collections.emptyList();
       private void ensureEncryptedMetadataItemsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
           encryptedMetadataItems_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem>(encryptedMetadataItems_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -6830,7 +6916,7 @@ public final class DocumentTypeDescriptionProtos {
       public Builder clearEncryptedMetadataItems() {
         if (encryptedMetadataItemsBuilder_ == null) {
           encryptedMetadataItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           encryptedMetadataItemsBuilder_.clear();
@@ -6907,7 +6993,7 @@ public final class DocumentTypeDescriptionProtos {
           encryptedMetadataItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItem.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemOrBuilder>(
                   encryptedMetadataItems_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
                   isClean());
           encryptedMetadataItems_ = null;
@@ -9778,36 +9864,36 @@ public final class DocumentTypeDescriptionProtos {
       "\006 \003(\01322.Diadoc.Api.Proto.Documents.Types",
       ".DocumentWorkflow\022(\n SupportsPredefinedR" +
       "ecipientTitle\030\007 \002(\010\"1\n\020DocumentWorkflow\022" +
-      "\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\262\002\n\rDocum" +
-      "entTitle\022\020\n\010IsFormal\030\001 \002(\010\022\016\n\006XsdUrl\030\002 \001" +
-      "(\t\022\026\n\016UserDataXsdUrl\030\005 \001(\t\022@\n\nSignerInfo" +
-      "\030\006 \002(\0132,.Diadoc.Api.Proto.Documents.Type" +
-      "s.SignerInfo\022M\n\rMetadataItems\030\003 \003(\01326.Di" +
-      "adoc.Api.Proto.Documents.Types.DocumentM" +
-      "etadataItem\022V\n\026EncryptedMetadataItems\030\004 " +
-      "\003(\01326.Diadoc.Api.Proto.Documents.Types.D",
-      "ocumentMetadataItem\"\260\001\n\nSignerInfo\022@\n\nSi" +
-      "gnerType\030\001 \002(\0162,.Diadoc.Api.Proto.Docume" +
-      "nts.Types.SignerType\022`\n\031ExtendedDocument" +
-      "TitleType\030\002 \002(\01625.Diadoc.Api.Proto.Invoi" +
-      "cing.Signers.DocumentTitleType:\006Absent\"\312" +
-      "\001\n\024DocumentMetadataItem\022\n\n\002Id\030\001 \002(\t\022H\n\004T" +
-      "ype\030\002 \002(\0162:.Diadoc.Api.Proto.Documents.T" +
-      "ypes.DocumentMetadataItemType\022\022\n\nIsRequi" +
-      "red\030\003 \002(\010\022H\n\006Source\030\004 \002(\01628.Diadoc.Api.P" +
-      "roto.Documents.Types.DocumentMetadataSou",
-      "rce\"N\n\024DetectedDocumentType\022\023\n\013TypeNamed" +
-      "Id\030\001 \002(\t\022\020\n\010Function\030\002 \002(\t\022\017\n\007Version\030\003 " +
-      "\002(\t\"l\n\033DetectDocumentTypesResponse\022M\n\rDo" +
-      "cumentTypes\030\001 \003(\01326.Diadoc.Api.Proto.Doc" +
-      "uments.Types.DetectedDocumentType*-\n\017Doc" +
-      "umentDocflow\022\014\n\010External\020\000\022\014\n\010Internal\020\001" +
-      "*6\n\nSignerType\022\010\n\004None\020\000\022\n\n\006Signer\020\001\022\022\n\016" +
-      "ExtendedSigner\020\002*T\n\030DocumentMetadataItem" +
-      "Type\022\n\n\006String\020\000\022\013\n\007Integer\020\001\022\013\n\007Decimal" +
-      "\020\002\022\010\n\004Date\020\003\022\010\n\004Time\020\004*+\n\026DocumentMetada",
-      "taSource\022\007\n\003Xml\020\000\022\010\n\004User\020\001B\037B\035DocumentT" +
-      "ypeDescriptionProtos"
+      "\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\301\002\n\rDocum" +
+      "entTitle\022\r\n\005Index\030\007 \002(\005\022\020\n\010IsFormal\030\001 \002(" +
+      "\010\022\016\n\006XsdUrl\030\002 \001(\t\022\026\n\016UserDataXsdUrl\030\005 \001(" +
+      "\t\022@\n\nSignerInfo\030\006 \002(\0132,.Diadoc.Api.Proto" +
+      ".Documents.Types.SignerInfo\022M\n\rMetadataI" +
+      "tems\030\003 \003(\01326.Diadoc.Api.Proto.Documents." +
+      "Types.DocumentMetadataItem\022V\n\026EncryptedM" +
+      "etadataItems\030\004 \003(\01326.Diadoc.Api.Proto.Do",
+      "cuments.Types.DocumentMetadataItem\"\260\001\n\nS" +
+      "ignerInfo\022@\n\nSignerType\030\001 \002(\0162,.Diadoc.A" +
+      "pi.Proto.Documents.Types.SignerType\022`\n\031E" +
+      "xtendedDocumentTitleType\030\002 \002(\01625.Diadoc." +
+      "Api.Proto.Invoicing.Signers.DocumentTitl" +
+      "eType:\006Absent\"\312\001\n\024DocumentMetadataItem\022\n" +
+      "\n\002Id\030\001 \002(\t\022H\n\004Type\030\002 \002(\0162:.Diadoc.Api.Pr" +
+      "oto.Documents.Types.DocumentMetadataItem" +
+      "Type\022\022\n\nIsRequired\030\003 \002(\010\022H\n\006Source\030\004 \002(\016" +
+      "28.Diadoc.Api.Proto.Documents.Types.Docu",
+      "mentMetadataSource\"N\n\024DetectedDocumentTy" +
+      "pe\022\023\n\013TypeNamedId\030\001 \002(\t\022\020\n\010Function\030\002 \002(" +
+      "\t\022\017\n\007Version\030\003 \002(\t\"l\n\033DetectDocumentType" +
+      "sResponse\022M\n\rDocumentTypes\030\001 \003(\01326.Diado" +
+      "c.Api.Proto.Documents.Types.DetectedDocu" +
+      "mentType*-\n\017DocumentDocflow\022\014\n\010External\020" +
+      "\000\022\014\n\010Internal\020\001*6\n\nSignerType\022\010\n\004None\020\000\022" +
+      "\n\n\006Signer\020\001\022\022\n\016ExtendedSigner\020\002*T\n\030Docum" +
+      "entMetadataItemType\022\n\n\006String\020\000\022\013\n\007Integ" +
+      "er\020\001\022\013\n\007Decimal\020\002\022\010\n\004Date\020\003\022\010\n\004Time\020\004*+\n",
+      "\026DocumentMetadataSource\022\007\n\003Xml\020\000\022\010\n\004User" +
+      "\020\001B\037B\035DocumentTypeDescriptionProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9857,7 +9943,7 @@ public final class DocumentTypeDescriptionProtos {
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTitle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTitle_descriptor,
-        new java.lang.String[] { "IsFormal", "XsdUrl", "UserDataXsdUrl", "SignerInfo", "MetadataItems", "EncryptedMetadataItems", });
+        new java.lang.String[] { "Index", "IsFormal", "XsdUrl", "UserDataXsdUrl", "SignerInfo", "MetadataItems", "EncryptedMetadataItems", });
     internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfo_fieldAccessorTable = new
