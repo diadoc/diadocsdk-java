@@ -1,4 +1,5 @@
 import "Events/DiadocMessage-PostApi.proto";
+import "DocumentId.proto";
 
 package Diadoc.Api.Proto;
 
@@ -18,4 +19,5 @@ message InvitationDocument {
 
 message AcquireCounteragentResult {
 	required string OrgId = 1;
+	optional DocumentId InvitationDocumentId = 2;
 }
