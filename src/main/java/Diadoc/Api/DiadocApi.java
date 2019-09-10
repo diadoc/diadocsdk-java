@@ -2,6 +2,7 @@ package Diadoc.Api;
 
 import Diadoc.Api.Proto.*;
 import Diadoc.Api.Proto.Docflow.DocflowApiProtos;
+import Diadoc.Api.Proto.Docflow.DocflowApiV3Protos;
 import Diadoc.Api.Proto.Documents.*;
 import Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos;
 import Diadoc.Api.Proto.Departments.*;
@@ -91,9 +92,14 @@ public class DiadocApi {
     private String apiClientId;
     private DefaultHttpClient httpClient;
     private boolean authenticated;
+    private DocflowHttpApiV3 docflow;
 
     public boolean IsAuthenticated() {
         return authenticated;
+    }
+
+    public DocflowHttpApiV3 GetDocflow() {
+        return this.docflow;
     }
 
     public DiadocApi(String apiClientId, String url)
@@ -104,6 +110,7 @@ public class DiadocApi {
         this.apiClientId = apiClientId;
         this.httpClient = createHttpClient();
         updateCredentials(null);
+        this.docflow = new DocflowHttpApiV3();
     }
 
     private static DefaultHttpClient createHttpClient()
@@ -461,7 +468,7 @@ public class DiadocApi {
     }
 
     public DiadocMessage_GetApiProtos.BoxEvent getLastEvent(String boxId) throws IOException {
-        if(boxId == null) throw new IllegalArgumentException("boxId");
+        if (boxId == null) throw new IllegalArgumentException("boxId");
         List<NameValuePair> params = new ArrayList<>();
         params.add(new BasicNameValuePair("boxId", boxId));
         var result = PerformGetHttpRequest("/GetLastEvent", params);
@@ -1181,8 +1188,7 @@ public class DiadocApi {
         return UniversalTransferDocumentInfoProtos.UniversalTransferDocumentBuyerTitleInfo.parseFrom(response);
     }
 
-    public byte[] ParseTitleXml(String boxId, String documentTypeNamedId, String documentFunction, String documentVersion, Integer titleIndex, byte[] content) throws IOException
-    {
+    public byte[] ParseTitleXml(String boxId, String documentTypeNamedId, String documentFunction, String documentVersion, Integer titleIndex, byte[] content) throws IOException {
         List<NameValuePair> parameters = new ArrayList<NameValuePair>();
         parameters.add(new BasicNameValuePair("boxId", boxId));
         parameters.add(new BasicNameValuePair("documentTypeNamedId", documentTypeNamedId));
@@ -1192,8 +1198,7 @@ public class DiadocApi {
         return PerformPostHttpRequest("/ParseTitleXml", parameters, content);
     }
 
-    public RevocationRequestInfoProtos.RevocationRequestInfo ParseRevocationRequestXml(byte[] xmlContent) throws IOException
-    {
+    public RevocationRequestInfoProtos.RevocationRequestInfo ParseRevocationRequestXml(byte[] xmlContent) throws IOException {
         return RevocationRequestInfoProtos.RevocationRequestInfo.parseFrom(PerformPostHttpRequest("/ParseRevocationRequestXml", null, xmlContent));
     }
 
@@ -1233,7 +1238,7 @@ public class DiadocApi {
     public CustomPrintFormDetectionProtos.CustomPrintFormDetectionResult detectCustomPrintForms(String boxId, CustomPrintFormDetectionProtos.CustomPrintFormDetectionRequest detectionRequest) throws IOException {
         if (Tools.IsNullOrEmpty(boxId))
             throw new IllegalArgumentException("boxId");
-        if(detectionRequest == null || detectionRequest.getDocumentIdsCount() == 0)
+        if (detectionRequest == null || detectionRequest.getDocumentIdsCount() == 0)
             throw new IllegalArgumentException("detectionRequest");
 
         List<NameValuePair> params = new ArrayList<>();
@@ -2029,5 +2034,35 @@ public class DiadocApi {
             return errorCodeHeaders[0].getValue();
         }
         return null;
+    }
+
+    public class DocflowHttpApiV3 {
+        public DocflowApiV3Protos.GetDocflowBatchResponseV3 GetDocflows(String boxId, DocflowApiProtos.GetDocflowBatchRequest request) throws IOException {
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("boxId", boxId));
+            byte[] bytes = PerformPostHttpRequest("/V3/GetDocflows", params, request.toByteArray());
+            return DocflowApiV3Protos.GetDocflowBatchResponseV3.parseFrom(bytes);
+        }
+
+        public DocflowApiV3Protos.GetDocflowEventsResponseV3 GetDocflowEvents(String boxId, DocflowApiProtos.GetDocflowEventsRequest request) throws IOException {
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("boxId", boxId));
+            byte[] bytes = PerformPostHttpRequest("/V3/GetDocflowEvents", params, request.toByteArray());
+            return DocflowApiV3Protos.GetDocflowEventsResponseV3.parseFrom(bytes);
+        }
+
+        public DocflowApiV3Protos.SearchDocflowsResponseV3 SearchDocflows(String boxId, DocflowApiProtos.SearchDocflowsRequest request) throws IOException {
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("boxId", boxId));
+            byte[] bytes = PerformPostHttpRequest("/V3/SearchDocflows", params, request.toByteArray());
+            return DocflowApiV3Protos.SearchDocflowsResponseV3.parseFrom(bytes);
+        }
+
+        public DocflowApiV3Protos.GetDocflowsByPacketIdResponseV3 GetDocflowsByPacketId(String boxId, DocflowApiProtos.GetDocflowsByPacketIdRequest request) throws IOException {
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("boxId", boxId));
+            byte[] bytes = PerformPostHttpRequest("/V3/GetDocflowsByPacketId", params, request.toByteArray());
+            return DocflowApiV3Protos.GetDocflowsByPacketIdResponseV3.parseFrom(bytes);
+        }
     }
 }
