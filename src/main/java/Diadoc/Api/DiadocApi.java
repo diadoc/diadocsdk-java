@@ -6,6 +6,7 @@ import Diadoc.Api.Proto.Docflow.DocflowApiV3Protos;
 import Diadoc.Api.Proto.Documents.*;
 import Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos;
 import Diadoc.Api.Proto.Departments.*;
+import Diadoc.Api.Proto.Dss.DssSignProtos;
 import Diadoc.Api.Proto.Organizations.*;
 import Diadoc.Api.Proto.Employees.EmployeeProtos;
 import Diadoc.Api.Proto.Employees.Subscriptions.SubscriptionProtos;
@@ -1927,6 +1928,31 @@ public class DiadocApi {
             throws Exception {
         byte[] data = WaitTaskResult("/AutosignReceiptsResult", taskId, timeoutInMillis);
         return CloudSignProtos.AutosignReceiptsResult.parseFrom(data);
+    }
+
+    public AsyncMethodResultProtos.AsyncMethodResult DssSign(String boxId, DssSignProtos.DssSignRequest request) throws Exception {
+        return DssSign(boxId, request, null);
+    }
+
+    public AsyncMethodResultProtos.AsyncMethodResult DssSign(String boxId, DssSignProtos.DssSignRequest request, String certificateThumbprint) throws Exception {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (request == null) throw new NullPointerException("request");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        if (certificateThumbprint != null)
+            params.add(new BasicNameValuePair("certificateThumbprint", certificateThumbprint));
+        byte[] responseBytes = PerformPostHttpRequest("/DssSign", params, request.toByteArray());
+        return AsyncMethodResultProtos.AsyncMethodResult.parseFrom(responseBytes);
+    }
+
+    public DssSignProtos.DssSignResult DssSignResult(String boxId, String taskId) throws Exception {
+        if (boxId == null) throw new NullPointerException("boxId");
+        if (taskId == null) throw new NullPointerException("taskId");
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("boxId", boxId));
+        params.add(new BasicNameValuePair("taskId", taskId));
+        byte[] responseBytes = PerformGetHttpRequest("/DssSignResult", params);
+        return DssSignProtos.DssSignResult.parseFrom(responseBytes);
     }
 
     public DocumentListProtos.DocumentList GetDocumentsByMessageId(String boxId, String messageId) throws IOException {
