@@ -675,6 +675,27 @@ public class DiadocApi {
         return DiadocMessage_GetApiProtos.Message.parseFrom(PerformGetHttpRequest("/V5/GetMessage", parameters));
     }
 
+    public GeneratedFile GenerateReceiptXml(String boxId, String messageId, String attachmentId, SignerProtos.Signer signer)
+            throws IllegalStateException, IOException, ParseException {
+        if (boxId == null)
+            throw new NullPointerException("boxId");
+        if (messageId == null)
+            throw new NullPointerException("messageId");
+        if (attachmentId == null)
+            throw new NullPointerException("attachmentId");
+        if (signer == null)
+            throw new NullPointerException("signer");
+
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("messageId", messageId));
+        parameters.add(new BasicNameValuePair("attachmentId", attachmentId));
+        HttpResponse webResponse = receivePostHttpResponse("/GenerateReceiptXml", parameters, signer.toByteArray());
+
+        return new GeneratedFile(GetHttpResponseFileName(webResponse), getResponseBytes(webResponse));
+    }
+
+    @Deprecated
     public GeneratedFile GenerateInvoiceDocumentReceiptXml(String boxId, String messageId, String attachmentId, SignerProtos.Signer signer)
             throws IllegalStateException, IOException, ParseException {
         if (boxId == null)
@@ -695,6 +716,7 @@ public class DiadocApi {
         return new GeneratedFile(GetHttpResponseFileName(webResponse), getResponseBytes(webResponse));
     }
 
+    @Deprecated
     public GeneratedFile GenerateDocumentReceiptXml(String boxId, String messageId, String attachmentId, SignerProtos.Signer signer)
             throws IllegalStateException, IOException, ParseException {
         if (boxId == null)
