@@ -3672,6 +3672,15 @@ public final class ForwardingApiProtos {
      */
     Diadoc.Api.Proto.Forwarding.ForwardingApiProtos.ForwardedDocumentEventOrBuilder getEventsOrBuilder(
         int index);
+
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    boolean hasTotalCountType();
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType getTotalCountType();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Forwarding.GetForwardedDocumentEventsResponse}
@@ -3736,6 +3745,17 @@ public final class ForwardingApiProtos {
                 mutable_bitField0_ |= 0x00000002;
               }
               events_.add(input.readMessage(Diadoc.Api.Proto.Forwarding.ForwardingApiProtos.ForwardedDocumentEvent.PARSER, extensionRegistry));
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType value = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                totalCountType_ = value;
+              }
               break;
             }
           }
@@ -3831,9 +3851,25 @@ public final class ForwardingApiProtos {
       return events_.get(index);
     }
 
+    public static final int TOTALCOUNTTYPE_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType totalCountType_;
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    public boolean hasTotalCountType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    public Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType getTotalCountType() {
+      return totalCountType_;
+    }
+
     private void initFields() {
       totalCount_ = 0;
       events_ = java.util.Collections.emptyList();
+      totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3841,6 +3877,10 @@ public final class ForwardingApiProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasTotalCountType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getEventsCount(); i++) {
         if (!getEvents(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -3860,6 +3900,9 @@ public final class ForwardingApiProtos {
       for (int i = 0; i < events_.size(); i++) {
         output.writeMessage(2, events_.get(i));
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(3, totalCountType_.getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3876,6 +3919,10 @@ public final class ForwardingApiProtos {
       for (int i = 0; i < events_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, events_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, totalCountType_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4003,6 +4050,8 @@ public final class ForwardingApiProtos {
         } else {
           eventsBuilder_.clear();
         }
+        totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -4044,6 +4093,10 @@ public final class ForwardingApiProtos {
         } else {
           result.events_ = eventsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.totalCountType_ = totalCountType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4089,11 +4142,18 @@ public final class ForwardingApiProtos {
             }
           }
         }
+        if (other.hasTotalCountType()) {
+          setTotalCountType(other.getTotalCountType());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+        if (!hasTotalCountType()) {
+          
+          return false;
+        }
         for (int i = 0; i < getEventsCount(); i++) {
           if (!getEvents(i).isInitialized()) {
             
@@ -4392,6 +4452,41 @@ public final class ForwardingApiProtos {
           events_ = null;
         }
         return eventsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public boolean hasTotalCountType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType getTotalCountType() {
+        return totalCountType_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public Builder setTotalCountType(Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        totalCountType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public Builder clearTotalCountType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Forwarding.GetForwardedDocumentEventsResponse)
@@ -5454,36 +5549,38 @@ public final class ForwardingApiProtos {
     java.lang.String[] descriptorData = {
       "\n\036Forwarding/ForwardingApi.proto\022\033Diadoc" +
       ".Api.Proto.Forwarding\032\017Timestamp.proto\032\020" +
-      "DocumentId.proto\032\025TimeBasedFilter.proto\032" +
-      "\"Forwarding/ForwardedDocument.proto\"[\n\026F" +
-      "orwardDocumentRequest\022\017\n\007ToBoxId\030\001 \002(\t\0220" +
-      "\n\nDocumentId\030\002 \002(\0132\034.Diadoc.Api.Proto.Do" +
-      "cumentId\"\237\001\n\027ForwardDocumentResponse\0225\n\020" +
-      "ForwardTimestamp\030\001 \001(\0132\033.Diadoc.Api.Prot" +
-      "o.Timestamp\022M\n\023ForwardedDocumentId\030\002 \001(\013" +
-      "20.Diadoc.Api.Proto.Forwarding.Forwarded",
-      "DocumentId\"\222\001\n\034GetForwardedDocumentsRequ" +
-      "est\022N\n\024ForwardedDocumentIds\030\001 \003(\01320.Diad" +
-      "oc.Api.Proto.Forwarding.ForwardedDocumen" +
-      "tId\022\"\n\023InjectEntityContent\030\002 \001(\010:\005false\"" +
-      "k\n\035GetForwardedDocumentsResponse\022J\n\022Forw" +
-      "ardedDocuments\030\001 \003(\0132..Diadoc.Api.Proto." +
-      "Forwarding.ForwardedDocument\"\274\001\n!GetForw" +
-      "ardedDocumentEventsRequest\0221\n\006Filter\030\001 \002" +
-      "(\0132!.Diadoc.Api.Proto.TimeBasedFilter\022\025\n" +
-      "\rAfterIndexKey\030\002 \001(\014\022)\n\032PopulateForwarde",
-      "dDocuments\030\003 \001(\010:\005false\022\"\n\023InjectEntityC" +
-      "ontent\030\004 \001(\010:\005false\"}\n\"GetForwardedDocum" +
-      "entEventsResponse\022\022\n\nTotalCount\030\001 \001(\005\022C\n" +
-      "\006Events\030\002 \003(\01323.Diadoc.Api.Proto.Forward" +
-      "ing.ForwardedDocumentEvent\"\364\001\n\026Forwarded" +
-      "DocumentEvent\022.\n\tTimestamp\030\001 \001(\0132\033.Diado" +
-      "c.Api.Proto.Timestamp\022M\n\023ForwardedDocume" +
-      "ntId\030\002 \001(\01320.Diadoc.Api.Proto.Forwarding" +
-      ".ForwardedDocumentId\022\020\n\010IndexKey\030\003 \001(\014\022I" +
-      "\n\021ForwardedDocument\030\004 \001(\0132..Diadoc.Api.P",
-      "roto.Forwarding.ForwardedDocumentB\025B\023For" +
-      "wardingApiProtos"
+      "DocumentId.proto\032\024TotalCountType.proto\032\025" +
+      "TimeBasedFilter.proto\032\"Forwarding/Forwar" +
+      "dedDocument.proto\"[\n\026ForwardDocumentRequ" +
+      "est\022\017\n\007ToBoxId\030\001 \002(\t\0220\n\nDocumentId\030\002 \002(\013" +
+      "2\034.Diadoc.Api.Proto.DocumentId\"\237\001\n\027Forwa" +
+      "rdDocumentResponse\0225\n\020ForwardTimestamp\030\001" +
+      " \001(\0132\033.Diadoc.Api.Proto.Timestamp\022M\n\023For" +
+      "wardedDocumentId\030\002 \001(\01320.Diadoc.Api.Prot",
+      "o.Forwarding.ForwardedDocumentId\"\222\001\n\034Get" +
+      "ForwardedDocumentsRequest\022N\n\024ForwardedDo" +
+      "cumentIds\030\001 \003(\01320.Diadoc.Api.Proto.Forwa" +
+      "rding.ForwardedDocumentId\022\"\n\023InjectEntit" +
+      "yContent\030\002 \001(\010:\005false\"k\n\035GetForwardedDoc" +
+      "umentsResponse\022J\n\022ForwardedDocuments\030\001 \003" +
+      "(\0132..Diadoc.Api.Proto.Forwarding.Forward" +
+      "edDocument\"\274\001\n!GetForwardedDocumentEvent" +
+      "sRequest\0221\n\006Filter\030\001 \002(\0132!.Diadoc.Api.Pr" +
+      "oto.TimeBasedFilter\022\025\n\rAfterIndexKey\030\002 \001",
+      "(\014\022)\n\032PopulateForwardedDocuments\030\003 \001(\010:\005" +
+      "false\022\"\n\023InjectEntityContent\030\004 \001(\010:\005fals" +
+      "e\"\267\001\n\"GetForwardedDocumentEventsResponse" +
+      "\022\022\n\nTotalCount\030\001 \001(\005\022C\n\006Events\030\002 \003(\01323.D" +
+      "iadoc.Api.Proto.Forwarding.ForwardedDocu" +
+      "mentEvent\0228\n\016TotalCountType\030\003 \002(\0162 .Diad" +
+      "oc.Api.Proto.TotalCountType\"\364\001\n\026Forwarde" +
+      "dDocumentEvent\022.\n\tTimestamp\030\001 \001(\0132\033.Diad" +
+      "oc.Api.Proto.Timestamp\022M\n\023ForwardedDocum" +
+      "entId\030\002 \001(\01320.Diadoc.Api.Proto.Forwardin",
+      "g.ForwardedDocumentId\022\020\n\010IndexKey\030\003 \001(\014\022" +
+      "I\n\021ForwardedDocument\030\004 \001(\0132..Diadoc.Api." +
+      "Proto.Forwarding.ForwardedDocumentB\025B\023Fo" +
+      "rwardingApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5498,6 +5595,7 @@ public final class ForwardingApiProtos {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
           Diadoc.Api.Proto.DocumentIdProtos.getDescriptor(),
+          Diadoc.Api.Proto.TotalCountTypeProtos.getDescriptor(),
           Diadoc.Api.Proto.TimeBasedFilterProtos.getDescriptor(),
           Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos.getDescriptor(),
         }, assigner);
@@ -5536,7 +5634,7 @@ public final class ForwardingApiProtos {
     internal_static_Diadoc_Api_Proto_Forwarding_GetForwardedDocumentEventsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Forwarding_GetForwardedDocumentEventsResponse_descriptor,
-        new java.lang.String[] { "TotalCount", "Events", });
+        new java.lang.String[] { "TotalCount", "Events", "TotalCountType", });
     internal_static_Diadoc_Api_Proto_Forwarding_ForwardedDocumentEvent_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_Forwarding_ForwardedDocumentEvent_fieldAccessorTable = new
@@ -5545,6 +5643,7 @@ public final class ForwardingApiProtos {
         new java.lang.String[] { "Timestamp", "ForwardedDocumentId", "IndexKey", "ForwardedDocument", });
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
+    Diadoc.Api.Proto.TotalCountTypeProtos.getDescriptor();
     Diadoc.Api.Proto.TimeBasedFilterProtos.getDescriptor();
     Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos.getDescriptor();
   }
