@@ -2894,6 +2894,15 @@ public final class DocflowApiV3Protos {
      */
     Diadoc.Api.Proto.Docflow.DocflowApiV3Protos.DocflowEventV3OrBuilder getEventsOrBuilder(
         int index);
+
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    boolean hasTotalCountType();
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType getTotalCountType();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.GetDocflowEventsResponseV3}
@@ -2958,6 +2967,17 @@ public final class DocflowApiV3Protos {
                 mutable_bitField0_ |= 0x00000002;
               }
               events_.add(input.readMessage(Diadoc.Api.Proto.Docflow.DocflowApiV3Protos.DocflowEventV3.PARSER, extensionRegistry));
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType value = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                totalCountType_ = value;
+              }
               break;
             }
           }
@@ -3053,9 +3073,25 @@ public final class DocflowApiV3Protos {
       return events_.get(index);
     }
 
+    public static final int TOTALCOUNTTYPE_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType totalCountType_;
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    public boolean hasTotalCountType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    public Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType getTotalCountType() {
+      return totalCountType_;
+    }
+
     private void initFields() {
       totalCount_ = 0;
       events_ = java.util.Collections.emptyList();
+      totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3064,6 +3100,10 @@ public final class DocflowApiV3Protos {
       if (isInitialized == 0) return false;
 
       if (!hasTotalCount()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTotalCountType()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -3086,6 +3126,9 @@ public final class DocflowApiV3Protos {
       for (int i = 0; i < events_.size(); i++) {
         output.writeMessage(2, events_.get(i));
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(3, totalCountType_.getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3102,6 +3145,10 @@ public final class DocflowApiV3Protos {
       for (int i = 0; i < events_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, events_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, totalCountType_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3229,6 +3276,8 @@ public final class DocflowApiV3Protos {
         } else {
           eventsBuilder_.clear();
         }
+        totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -3270,6 +3319,10 @@ public final class DocflowApiV3Protos {
         } else {
           result.events_ = eventsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.totalCountType_ = totalCountType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3315,12 +3368,19 @@ public final class DocflowApiV3Protos {
             }
           }
         }
+        if (other.hasTotalCountType()) {
+          setTotalCountType(other.getTotalCountType());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasTotalCount()) {
+          
+          return false;
+        }
+        if (!hasTotalCountType()) {
           
           return false;
         }
@@ -3622,6 +3682,41 @@ public final class DocflowApiV3Protos {
           events_ = null;
         }
         return eventsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public boolean hasTotalCountType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType getTotalCountType() {
+        return totalCountType_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public Builder setTotalCountType(Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        totalCountType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public Builder clearTotalCountType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.GetDocflowEventsResponseV3)
@@ -5218,30 +5313,32 @@ public final class DocflowApiV3Protos {
     java.lang.String[] descriptorData = {
       "\n\032Docflow/DocflowApiV3.proto\022\030Diadoc.Api" +
       ".Proto.Docflow\032\017Timestamp.proto\032\020Documen" +
-      "tId.proto\032#Docflow/DocumentWithDocflowV3" +
-      ".proto\"_\n\031GetDocflowBatchResponseV3\022B\n\tD" +
-      "ocuments\030\001 \003(\0132/.Diadoc.Api.Proto.Docflo" +
-      "w.DocumentWithDocflowV3\"y\n\030SearchDocflow" +
-      "sResponseV3\022B\n\tDocuments\030\001 \003(\0132/.Diadoc." +
-      "Api.Proto.Docflow.DocumentWithDocflowV3\022" +
-      "\031\n\021HaveMoreDocuments\030\002 \002(\010\"h\n\021FetchedDoc" +
-      "umentV3\022A\n\010Document\030\001 \002(\0132/.Diadoc.Api.P",
-      "roto.Docflow.DocumentWithDocflowV3\022\020\n\010In" +
-      "dexKey\030\002 \002(\014\"{\n\037GetDocflowsByPacketIdRes" +
-      "ponseV3\022>\n\tDocuments\030\001 \003(\0132+.Diadoc.Api." +
-      "Proto.Docflow.FetchedDocumentV3\022\030\n\020NextP" +
-      "ageIndexKey\030\002 \001(\014\"j\n\032GetDocflowEventsRes" +
-      "ponseV3\022\022\n\nTotalCount\030\001 \002(\005\0228\n\006Events\030\002 " +
-      "\003(\0132(.Diadoc.Api.Proto.Docflow.DocflowEv" +
-      "entV3\"\301\002\n\016DocflowEventV3\022\017\n\007EventId\030\001 \002(" +
-      "\t\022.\n\tTimestamp\030\002 \002(\0132\033.Diadoc.Api.Proto." +
-      "Timestamp\0220\n\nDocumentId\030\003 \002(\0132\034.Diadoc.A",
-      "pi.Proto.DocumentId\022\020\n\010IndexKey\030\004 \002(\014\022A\n" +
-      "\010Document\030\005 \001(\0132/.Diadoc.Api.Proto.Docfl" +
-      "ow.DocumentWithDocflowV3\022\027\n\017PreviousEven" +
-      "tId\030\006 \001(\t\022N\n\025PreviousDocumentState\030\007 \001(\013" +
-      "2/.Diadoc.Api.Proto.Docflow.DocumentWith" +
-      "DocflowV3B\024B\022DocflowApiV3Protos"
+      "tId.proto\032\024TotalCountType.proto\032#Docflow" +
+      "/DocumentWithDocflowV3.proto\"_\n\031GetDocfl" +
+      "owBatchResponseV3\022B\n\tDocuments\030\001 \003(\0132/.D" +
+      "iadoc.Api.Proto.Docflow.DocumentWithDocf" +
+      "lowV3\"y\n\030SearchDocflowsResponseV3\022B\n\tDoc" +
+      "uments\030\001 \003(\0132/.Diadoc.Api.Proto.Docflow." +
+      "DocumentWithDocflowV3\022\031\n\021HaveMoreDocumen" +
+      "ts\030\002 \002(\010\"h\n\021FetchedDocumentV3\022A\n\010Documen",
+      "t\030\001 \002(\0132/.Diadoc.Api.Proto.Docflow.Docum" +
+      "entWithDocflowV3\022\020\n\010IndexKey\030\002 \002(\014\"{\n\037Ge" +
+      "tDocflowsByPacketIdResponseV3\022>\n\tDocumen" +
+      "ts\030\001 \003(\0132+.Diadoc.Api.Proto.Docflow.Fetc" +
+      "hedDocumentV3\022\030\n\020NextPageIndexKey\030\002 \001(\014\"" +
+      "\244\001\n\032GetDocflowEventsResponseV3\022\022\n\nTotalC" +
+      "ount\030\001 \002(\005\0228\n\006Events\030\002 \003(\0132(.Diadoc.Api." +
+      "Proto.Docflow.DocflowEventV3\0228\n\016TotalCou" +
+      "ntType\030\003 \002(\0162 .Diadoc.Api.Proto.TotalCou" +
+      "ntType\"\301\002\n\016DocflowEventV3\022\017\n\007EventId\030\001 \002",
+      "(\t\022.\n\tTimestamp\030\002 \002(\0132\033.Diadoc.Api.Proto" +
+      ".Timestamp\0220\n\nDocumentId\030\003 \002(\0132\034.Diadoc." +
+      "Api.Proto.DocumentId\022\020\n\010IndexKey\030\004 \002(\014\022A" +
+      "\n\010Document\030\005 \001(\0132/.Diadoc.Api.Proto.Docf" +
+      "low.DocumentWithDocflowV3\022\027\n\017PreviousEve" +
+      "ntId\030\006 \001(\t\022N\n\025PreviousDocumentState\030\007 \001(" +
+      "\0132/.Diadoc.Api.Proto.Docflow.DocumentWit" +
+      "hDocflowV3B\024B\022DocflowApiV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5256,6 +5353,7 @@ public final class DocflowApiV3Protos {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
           Diadoc.Api.Proto.DocumentIdProtos.getDescriptor(),
+          Diadoc.Api.Proto.TotalCountTypeProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.DocumentWithDocflowV3Protos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Docflow_GetDocflowBatchResponseV3_descriptor =
@@ -5287,7 +5385,7 @@ public final class DocflowApiV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_GetDocflowEventsResponseV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_GetDocflowEventsResponseV3_descriptor,
-        new java.lang.String[] { "TotalCount", "Events", });
+        new java.lang.String[] { "TotalCount", "Events", "TotalCountType", });
     internal_static_Diadoc_Api_Proto_Docflow_DocflowEventV3_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_Diadoc_Api_Proto_Docflow_DocflowEventV3_fieldAccessorTable = new
@@ -5296,6 +5394,7 @@ public final class DocflowApiV3Protos {
         new java.lang.String[] { "EventId", "Timestamp", "DocumentId", "IndexKey", "Document", "PreviousEventId", "PreviousDocumentState", });
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
+    Diadoc.Api.Proto.TotalCountTypeProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.DocumentWithDocflowV3Protos.getDescriptor();
   }
 
