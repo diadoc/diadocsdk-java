@@ -2016,6 +2016,7 @@ public class DiadocApi {
         return DocumentTypeDescriptionProtos.GetDocumentTypesResponse.parseFrom(PerformGetHttpRequest("/GetDocumentTypes", parameters));
     }
 
+    @Deprecated
     public DocumentTypeDescriptionProtos.DetectDocumentTypesResponse DetectDocumentTypes(String boxId, String nameOnShelf) throws IOException {
         if (Tools.IsNullOrEmpty(boxId)) throw new NullPointerException("boxId");
         if (Tools.IsNullOrEmpty(nameOnShelf)) throw new NullPointerException("nameOnShelf");
@@ -2027,6 +2028,7 @@ public class DiadocApi {
         return DocumentTypeDescriptionProtos.DetectDocumentTypesResponse.parseFrom(PerformGetHttpRequest("/DetectDocumentTypes", parameters));
     }
 
+    @Deprecated
     public DocumentTypeDescriptionProtos.DetectDocumentTypesResponse DetectDocumentTypes(String boxId, byte[] content) throws IOException {
         if (Tools.IsNullOrEmpty(boxId)) throw new NullPointerException("boxId");
 
@@ -2034,6 +2036,26 @@ public class DiadocApi {
         parameters.add(new BasicNameValuePair("boxId", boxId));
 
         return DocumentTypeDescriptionProtos.DetectDocumentTypesResponse.parseFrom(PerformPostHttpRequest("/DetectDocumentTypes", parameters, content));
+    }
+
+    public DetectTitleResponseProtos.DetectTitleResponse DetectDocumentTitles(String boxId, String nameOnShelf) throws IOException {
+        if (Tools.IsNullOrEmpty(boxId)) throw new NullPointerException("boxId");
+        if (Tools.IsNullOrEmpty(nameOnShelf)) throw new NullPointerException("nameOnShelf");
+
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("nameOnShelf", nameOnShelf));
+
+        return DetectTitleResponseProtos.DetectTitleResponse.parseFrom(PerformGetHttpRequest("/DetectDocumentTitles", parameters));
+    }
+
+    public DetectTitleResponseProtos.DetectTitleResponse DetectDocumentTitles(String boxId, byte[] content) throws IOException {
+        if (Tools.IsNullOrEmpty(boxId)) throw new NullPointerException("boxId");
+
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+
+        return DetectTitleResponseProtos.DetectTitleResponse.parseFrom(PerformPostHttpRequest("/DetectDocumentTitles", parameters, content));
     }
 
     public FileContent GetContent(String typeNamedId, String function, String version, int titleIndex) throws IOException {
