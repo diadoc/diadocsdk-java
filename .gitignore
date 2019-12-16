@@ -12,6 +12,7 @@ tools/
 *.jar
 *.war
 *.ear
+*.orig
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
@@ -33,6 +34,7 @@ hs_err_pid*
 .idea/sqlDataSources.xml
 .idea/dynamic.xml
 .idea/uiDesigner.xml
+secure-file/*
 
 # Gradle:
 .idea/gradle.xml
@@ -60,3 +62,6 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+#jcp
+jcp-2.0.39014
