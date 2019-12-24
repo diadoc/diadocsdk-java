@@ -2498,21 +2498,21 @@ public final class AttachmentV3Protos {
     java.lang.String[] descriptorData = {
       "\n\032Docflow/AttachmentV3.proto\022\030Diadoc.Api" +
       ".Proto.Docflow\032\030Docflow/Attachment.proto" +
-      "\032\017Timestamp.proto\032!SignatureVerification" +
-      "Result.proto\"\255\002\n\013SignatureV3\022-\n\003Cms\030\001 \002(" +
-      "\0132 .Diadoc.Api.Proto.Docflow.Entity\0220\n\006C" +
-      "adesT\030\002 \001(\0132 .Diadoc.Api.Proto.Docflow.E" +
-      "ntity\022\023\n\013SignerBoxId\030\003 \002(\t\022\032\n\022SignerDepa" +
-      "rtmentId\030\004 \002(\t\022\017\n\007IsValid\030\005 \002(\010\022I\n\022Verif" +
-      "icationResult\030\006 \001(\0132-.Diadoc.Api.Proto.S" +
-      "ignatureVerificationResult\0220\n\013DeliveredA",
-      "t\030\007 \001(\0132\033.Diadoc.Api.Proto.Timestamp\"\273\001\n" +
-      "\022SignedAttachmentV3\0228\n\nAttachment\030\001 \002(\0132" +
-      "$.Diadoc.Api.Proto.Docflow.Attachment\0228\n" +
-      "\tSignature\030\002 \001(\0132%.Diadoc.Api.Proto.Docf" +
-      "low.SignatureV3\0221\n\007Comment\030\003 \001(\0132 .Diado" +
-      "c.Api.Proto.Docflow.EntityB\024B\022Attachment" +
-      "V3Protos"
+      "\032\rContent.proto\032\017Timestamp.proto\032!Signat" +
+      "ureVerificationResult.proto\"\255\002\n\013Signatur" +
+      "eV3\022-\n\003Cms\030\001 \002(\0132 .Diadoc.Api.Proto.Docf" +
+      "low.Entity\0220\n\006CadesT\030\002 \001(\0132 .Diadoc.Api." +
+      "Proto.Docflow.Entity\022\023\n\013SignerBoxId\030\003 \002(" +
+      "\t\022\032\n\022SignerDepartmentId\030\004 \002(\t\022\017\n\007IsValid" +
+      "\030\005 \002(\010\022I\n\022VerificationResult\030\006 \001(\0132-.Dia" +
+      "doc.Api.Proto.SignatureVerificationResul",
+      "t\0220\n\013DeliveredAt\030\007 \001(\0132\033.Diadoc.Api.Prot" +
+      "o.Timestamp\"\273\001\n\022SignedAttachmentV3\0228\n\nAt" +
+      "tachment\030\001 \002(\0132$.Diadoc.Api.Proto.Docflo" +
+      "w.Attachment\0228\n\tSignature\030\002 \001(\0132%.Diadoc" +
+      ".Api.Proto.Docflow.SignatureV3\0221\n\007Commen" +
+      "t\030\003 \001(\0132 .Diadoc.Api.Proto.Docflow.Entit" +
+      "yB\024B\022AttachmentV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2526,6 +2526,7 @@ public final class AttachmentV3Protos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor(),
+          Diadoc.Api.Proto.ContentProtos.getDescriptor(),
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
           Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor(),
         }, assigner);
@@ -2542,6 +2543,7 @@ public final class AttachmentV3Protos {
         internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_descriptor,
         new java.lang.String[] { "Attachment", "Signature", "Comment", });
     Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor();
+    Diadoc.Api.Proto.ContentProtos.getDescriptor();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor();
   }

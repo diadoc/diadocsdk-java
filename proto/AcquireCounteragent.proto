@@ -4,9 +4,9 @@ import "DocumentId.proto";
 package Diadoc.Api.Proto;
 
 message AcquireCounteragentRequest {
-	optional string OrgId = 1; 
-	optional string Inn = 2; 
-	optional string MessageToCounteragent = 3; 
+	optional string OrgId = 1;
+	optional string Inn = 2;
+	optional string MessageToCounteragent = 3;
 	optional InvitationDocument InvitationDocument = 4;
 }
 

@@ -190,7 +190,6 @@ public class DiadocApi {
     }
 
 
-
     private String getDecryptedToken(byte[] encryptedToken, X509Certificate currentCert) throws Exception {
         byte[] decryptedKey = decryptToken(encryptedToken, currentCert);
         return StringUtils.newStringUtf8(Base64.encodeBase64(decryptedKey));
@@ -298,6 +297,25 @@ public class DiadocApi {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public DiadocMessage_GetApiProtos.MessagePatch PostTemplatePatch(
+            String boxId,
+            String templateId,
+            DiadocMessage_PostApiProtos.TemplatePatchToPost templatePatchToPost) throws IOException {
+        if (boxId == null)
+            throw new NullPointerException("boxId");
+        if (templateId == null)
+            throw new NullPointerException("templateId");
+        if (templatePatchToPost == null)
+            throw new NullPointerException("templatePatchToPost");
+
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair("boxId", boxId));
+        parameters.add(new BasicNameValuePair("templateId", templateId));
+
+        byte[] responseBytes = PerformPostHttpRequest("/PostTemplatePatch", parameters, templatePatchToPost.toByteArray());
+        return DiadocMessage_GetApiProtos.MessagePatch.parseFrom(responseBytes);
     }
 
     public DiadocMessage_GetApiProtos.Message TransformTemplateToMessage(DiadocMessage_PostApiProtos.TemplateTransformationToPost templateTransformationToPost) throws IOException {
@@ -453,8 +471,6 @@ public class DiadocApi {
             httpPost.setEntity(new ByteArrayEntity(requestBody));
         return httpPost;
     }
-
-
 
 
     private byte[] PerformGetHttpRequest(String path, List<NameValuePair> parameters) throws IOException {

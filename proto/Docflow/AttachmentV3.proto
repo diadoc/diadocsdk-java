@@ -1,4 +1,5 @@
 import "Docflow/Attachment.proto";
+import "Content.proto";
 import "Timestamp.proto";
 import "SignatureVerificationResult.proto";
 
