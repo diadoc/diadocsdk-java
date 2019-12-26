@@ -181,7 +181,7 @@ public class CertificateHelper {
         return new String(Hex.encodeHex(digest));
     }
 
-    public static List<X509Certificate> GetCertificatesFromPersonalStore() {
+    public static List<X509Certificate> getCertificatesFromPersonalStore() {
         List<X509Certificate> certs = new ArrayList<X509Certificate>();
         try {
             KeyStore keystore = KeyStore.getInstance("HDImageStore");
@@ -209,7 +209,7 @@ public class CertificateHelper {
         return null;
     }
 
-    public static X509Certificate GetCertificateFromBytes(byte[] bytes) throws CertificateException {
+    public static X509Certificate getCertificateFromBytes(byte[] bytes) throws CertificateException {
         CertificateFactory certFactory = CertificateFactory.getInstance("X.509");
         return (X509Certificate) certFactory.generateCertificate(new ByteArrayInputStream(bytes));
     }
