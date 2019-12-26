@@ -65,25 +65,25 @@
         <dependency>
             <groupId>ru.CryptoPro</groupId>
             <artifactId>JCP</artifactId>
-            <version>2.0.40132-A</version>
+            <version>2.0.40450-A</version>
         </dependency>
         <!-- local -->
         <dependency>
             <groupId>com.objsys.asn1j</groupId>
             <artifactId>asn1rt</artifactId>
-            <version>2.0.40132-A</version>
+            <version>2.0.40450-A</version>
         </dependency>
         <!-- local -->
         <dependency>
             <groupId>ru.CryptoPro</groupId>
             <artifactId>ASN1P</artifactId>
-            <version>2.0.40132-A</version>
+            <version>2.0.40450-A</version>
         </dependency>
         <!-- local -->
         <dependency>
             <groupId>ru.CryptoPro</groupId>
             <artifactId>JCryptoP</artifactId>
-            <version>2.0.40132-A</version>
+            <version>2.0.40450-A</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
