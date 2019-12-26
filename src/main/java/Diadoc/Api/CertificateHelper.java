@@ -10,6 +10,8 @@ import java.security.cert.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
+
+import Diadoc.Api.sign.GOSTSignInfoProvider;
 import org.apache.commons.codec.binary.Hex;
 
 import ru.CryptoPro.JCP.JCP;
@@ -29,6 +31,7 @@ import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.SignerInfo;
 import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.SignerInfos;
 import ru.CryptoPro.JCP.ASN.PKIX1Explicit88.CertificateSerialNumber;
 import ru.CryptoPro.JCP.ASN.PKIX1Explicit88.Name;
+import ru.CryptoPro.JCP.params.AlgIdSpec;
 import ru.CryptoPro.JCP.params.OID;
 import com.objsys.asn1j.runtime.Asn1BerDecodeBuffer;
 import com.objsys.asn1j.runtime.Asn1BerEncodeBuffer;
@@ -37,161 +40,162 @@ import com.objsys.asn1j.runtime.Asn1ObjectIdentifier;
 import com.objsys.asn1j.runtime.Asn1OctetString;
 
 public class CertificateHelper {
-	
-	private static final String STR_CMS_OID_DATA = "1.2.840.113549.1.7.1";
-	private static final String STR_CMS_OID_SIGNED = "1.2.840.113549.1.7.2";
-	
-	public static byte[] createCMS(byte[] buffer, byte[] sign,
-			Certificate cert, boolean detached) throws Exception {
-		final ContentInfo all = new ContentInfo();
-		all.contentType = new Asn1ObjectIdentifier(new OID(
-				STR_CMS_OID_SIGNED).value);
-		final SignedData cms = new SignedData();
-		all.content = cms;
-		cms.version = new CMSVersion(1);
-		// digest
-		cms.digestAlgorithms = new DigestAlgorithmIdentifiers(1);
-		final DigestAlgorithmIdentifier a = new DigestAlgorithmIdentifier(
-				new OID(JCP.GOST_DIGEST_OID).value);
-		a.parameters = new Asn1Null();
-		cms.digestAlgorithms.elements[0] = a;
-		if (detached)
-			cms.encapContentInfo = new EncapsulatedContentInfo(
-					new Asn1ObjectIdentifier(
-							new OID(STR_CMS_OID_DATA).value), null);
-		else
-			cms.encapContentInfo = new EncapsulatedContentInfo(
-					new Asn1ObjectIdentifier(
-							new OID(STR_CMS_OID_DATA).value),
-					new Asn1OctetString(buffer));
-		// certificate
-		cms.certificates = new CertificateSet(1);
-		final ru.CryptoPro.JCP.ASN.PKIX1Explicit88.Certificate certificate = new ru.CryptoPro.JCP.ASN.PKIX1Explicit88.Certificate();
-		final Asn1BerDecodeBuffer decodeBuffer = new Asn1BerDecodeBuffer(
-				cert.getEncoded());
-		certificate.decode(decodeBuffer);
-		cms.certificates.elements = new CertificateChoices[1];
-		cms.certificates.elements[0] = new CertificateChoices();
-		cms.certificates.elements[0].set_certificate(certificate);
 
-		// signer info
-		cms.signerInfos = new SignerInfos(1);
-		cms.signerInfos.elements[0] = new SignerInfo();
-		cms.signerInfos.elements[0].version = new CMSVersion(1);
-		cms.signerInfos.elements[0].sid = new SignerIdentifier();
+    private static final String STR_CMS_OID_DATA = "1.2.840.113549.1.7.1";
+    private static final String STR_CMS_OID_SIGNED = "1.2.840.113549.1.7.2";
 
-		final byte[] encodedName = ((X509Certificate) cert)
-				.getIssuerX500Principal().getEncoded();
-		final Asn1BerDecodeBuffer nameBuf = new Asn1BerDecodeBuffer(encodedName);
-		final Name name = new Name();
-		name.decode(nameBuf);
+    public static byte[] createCMS(
+            byte[] buffer,
+            byte[] sign,
+            Certificate cert,
+            boolean detached,
+            GOSTSignInfoProvider gostSignInfoProvider) throws Exception {
+        final ContentInfo all = new ContentInfo();
+        all.contentType = new Asn1ObjectIdentifier(new OID(STR_CMS_OID_SIGNED).value);
+        final SignedData cms = new SignedData();
+        all.content = cms;
+        cms.version = new CMSVersion(1);
+        // digest
+        cms.digestAlgorithms = new DigestAlgorithmIdentifiers(1);
+        final DigestAlgorithmIdentifier a = new DigestAlgorithmIdentifier(
+                new OID(gostSignInfoProvider.getDigestOID()).value);
+        a.parameters = new Asn1Null();
+        cms.digestAlgorithms.elements[0] = a;
+        if (detached) {
+            cms.encapContentInfo = new EncapsulatedContentInfo(
+                    new Asn1ObjectIdentifier(
+                            new OID(STR_CMS_OID_DATA).value), null);
+        } else {
+            cms.encapContentInfo = new EncapsulatedContentInfo(
+                    new Asn1ObjectIdentifier(
+                            new OID(STR_CMS_OID_DATA).value),
+                    new Asn1OctetString(buffer));
+        }
+        // certificate
+        cms.certificates = new CertificateSet(1);
+        final ru.CryptoPro.JCP.ASN.PKIX1Explicit88.Certificate certificate = new ru.CryptoPro.JCP.ASN.PKIX1Explicit88.Certificate();
+        final Asn1BerDecodeBuffer decodeBuffer = new Asn1BerDecodeBuffer(
+                cert.getEncoded());
+        certificate.decode(decodeBuffer);
+        cms.certificates.elements = new CertificateChoices[1];
+        cms.certificates.elements[0] = new CertificateChoices();
+        cms.certificates.elements[0].set_certificate(certificate);
 
-		final CertificateSerialNumber num = new CertificateSerialNumber(
-				((X509Certificate) cert).getSerialNumber());
-		cms.signerInfos.elements[0].sid
-				.set_issuerAndSerialNumber(new IssuerAndSerialNumber(name, num));
-		cms.signerInfos.elements[0].digestAlgorithm = new DigestAlgorithmIdentifier(
-				new OID(JCP.GOST_DIGEST_OID).value);
-		cms.signerInfos.elements[0].digestAlgorithm.parameters = new Asn1Null();
-		cms.signerInfos.elements[0].signatureAlgorithm = new SignatureAlgorithmIdentifier(
-				new OID(JCP.GOST_EL_KEY_OID).value);
-		cms.signerInfos.elements[0].signatureAlgorithm.parameters = new Asn1Null();
-		cms.signerInfos.elements[0].signature = new SignatureValue(sign);
-		// encode
-		final Asn1BerEncodeBuffer asnBuf = new Asn1BerEncodeBuffer();
-		all.encode(asnBuf, true);
-		return asnBuf.getMsgCopy();
-	}
+        // signer info
+        cms.signerInfos = new SignerInfos(1);
+        cms.signerInfos.elements[0] = new SignerInfo();
+        cms.signerInfos.elements[0].version = new CMSVersion(1);
+        cms.signerInfos.elements[0].sid = new SignerIdentifier();
 
-	public static byte[] CMSSign(byte[] data, PrivateKey key, Certificate cert,
-			boolean detached) throws Exception {
-		// sign
-		final Signature signature = Signature
-				.getInstance(JCP.GOST_EL_SIGN_NAME);
-		signature.initSign(key);
-		signature.update(data);
-		final byte[] sign = signature.sign();
-		// create cms format
-		return createCMS(data, sign, cert, detached);
-	}
-	
-	public static byte[] sign(X509Certificate cert, byte[] data) throws Exception {
-		
-		PrivateKey privateKey = getPrivateKey(cert, null);
-		
-		return CMSSign(data, privateKey, cert, false);
-		
-	}
-	
-	public static PrivateKey getPrivateKey(X509Certificate cert, char[] password)
-	{
-		try {
+        final byte[] encodedName = ((X509Certificate) cert)
+                .getIssuerX500Principal().getEncoded();
+        final Asn1BerDecodeBuffer nameBuf = new Asn1BerDecodeBuffer(encodedName);
+        final Name name = new Name();
+        name.decode(nameBuf);
+
+        final CertificateSerialNumber num = new CertificateSerialNumber(
+                ((X509Certificate) cert).getSerialNumber());
+        cms.signerInfos.elements[0].sid
+                .set_issuerAndSerialNumber(new IssuerAndSerialNumber(name, num));
+        cms.signerInfos.elements[0].digestAlgorithm = new DigestAlgorithmIdentifier(
+                new OID(gostSignInfoProvider.getDigestOID()).value);
+        cms.signerInfos.elements[0].digestAlgorithm.parameters = new Asn1Null();
+        cms.signerInfos.elements[0].signatureAlgorithm = new SignatureAlgorithmIdentifier(
+                new OID(gostSignInfoProvider.getSignOID()).value);
+        cms.signerInfos.elements[0].signatureAlgorithm.parameters = new Asn1Null();
+        cms.signerInfos.elements[0].signature = new SignatureValue(sign);
+        // encode
+        final Asn1BerEncodeBuffer asnBuf = new Asn1BerEncodeBuffer();
+        all.encode(asnBuf, true);
+        return asnBuf.getMsgCopy();
+    }
+
+    public static byte[] CMSSign(byte[] data, PrivateKey key, Certificate cert,
+                                 boolean detached) throws Exception {
+        // sign
+
+        var signatureInfoProvider = new GOSTSignInfoProvider((X509Certificate) cert);
+        final Signature signature = signatureInfoProvider.getSignatureInstance();
+
+        signature.initSign(key);
+        signature.update(data);
+        final byte[] sign = signature.sign();
+        // create cms format
+        return createCMS(data, sign, cert, detached, signatureInfoProvider);
+    }
+
+    public static byte[] sign(X509Certificate cert, byte[] data) throws Exception {
+
+        PrivateKey privateKey = getPrivateKey(cert, null);
+
+        return CMSSign(data, privateKey, cert, true);
+
+    }
+
+    public static PrivateKey getPrivateKey(X509Certificate cert, char[] password) {
+        try {
             KeyStore keystore = KeyStore.getInstance("HDImageStore");
             keystore.load(null, null);
-            for (Enumeration<String> en = keystore.aliases(); en.hasMoreElements();) 
-            {
+            for (Enumeration<String> en = keystore.aliases(); en.hasMoreElements(); ) {
                 String s = en.nextElement();
-            	if (keystore.isKeyEntry(s)) {
-            		Certificate kcerts[] = keystore.getCertificateChain(s);
-            		if (kcerts[0] instanceof X509Certificate) {
-            			X509Certificate x509 = (X509Certificate) kcerts[0];
-            			if (getThumbPrint(x509).startsWith(getThumbPrint(cert)))
-            				return (PrivateKey) keystore.getKey(s, password);
-            		}
-            	}
-            	if (keystore.isCertificateEntry(s)) {
+                if (keystore.isKeyEntry(s)) {
+                    Certificate kcerts[] = keystore.getCertificateChain(s);
+                    if (kcerts[0] instanceof X509Certificate) {
+                        X509Certificate x509 = (X509Certificate) kcerts[0];
+                        if (getThumbPrint(x509).startsWith(getThumbPrint(cert)))
+                            return (PrivateKey) keystore.getKey(s, password);
+                    }
+                }
+                if (keystore.isCertificateEntry(s)) {
                     Certificate c = keystore.getCertificate(s);
                     if (c instanceof X509Certificate) {
-            			if (getThumbPrint((X509Certificate) c).startsWith(getThumbPrint(cert)))
-            				return (PrivateKey) keystore.getKey(s, password);
+                        if (getThumbPrint((X509Certificate) c).startsWith(getThumbPrint(cert)))
+                            return (PrivateKey) keystore.getKey(s, password);
                     }
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-		return null;
-	}
-	
-	public static String CertificateToString(X509Certificate certificate)
-	{
-		String subject = certificate.getSubjectDN().getName();
-		int cnStartIndex = subject.indexOf("CN=");
-		if (cnStartIndex == -1) return subject;
-		String commonName = subject.substring(cnStartIndex + 3);
-		int commaIndex = commonName.indexOf(',');
-		if (commaIndex == -1)
-			commaIndex = commonName.indexOf(';');
-		if (commaIndex == -1) return commonName;
-		return commonName.substring(0, commaIndex);
-	}
-	
-	public static String getThumbPrint(X509Certificate cert) 
-        throws NoSuchAlgorithmException, CertificateEncodingException {
+        return null;
+    }
+
+    public static String CertificateToString(X509Certificate certificate) {
+        String subject = certificate.getSubjectDN().getName();
+        int cnStartIndex = subject.indexOf("CN=");
+        if (cnStartIndex == -1) return subject;
+        String commonName = subject.substring(cnStartIndex + 3);
+        int commaIndex = commonName.indexOf(',');
+        if (commaIndex == -1)
+            commaIndex = commonName.indexOf(';');
+        if (commaIndex == -1) return commonName;
+        return commonName.substring(0, commaIndex);
+    }
+
+    public static String getThumbPrint(X509Certificate cert)
+            throws NoSuchAlgorithmException, CertificateEncodingException {
         MessageDigest md = MessageDigest.getInstance("SHA-1");
         byte[] der = cert.getEncoded();
         md.update(der);
         byte[] digest = md.digest();
         return new String(Hex.encodeHex(digest));
-	}
-	
-	public static List<X509Certificate> GetCertificatesFromPersonalStore()
-	{
-		List<X509Certificate> certs = new ArrayList<X509Certificate>();
-		try {
+    }
+
+    public static List<X509Certificate> getCertificatesFromPersonalStore() {
+        List<X509Certificate> certs = new ArrayList<X509Certificate>();
+        try {
             KeyStore keystore = KeyStore.getInstance("HDImageStore");
             keystore.load(null, null);
-            for (Enumeration<String> en = keystore.aliases(); en.hasMoreElements();) 
-            {
+            for (Enumeration<String> en = keystore.aliases(); en.hasMoreElements(); ) {
                 String s = en.nextElement();
-            	if (keystore.isKeyEntry(s)) {
-            		Certificate kcerts[] = keystore.getCertificateChain(s);
-            		if (kcerts[0] instanceof X509Certificate) {
-            			X509Certificate x509 = (X509Certificate) kcerts[0];
-            			certs.add((X509Certificate) x509);
-            		}
-            	}
-            	if (keystore.isCertificateEntry(s)) {
+                if (keystore.isKeyEntry(s)) {
+                    Certificate kcerts[] = keystore.getCertificateChain(s);
+                    if (kcerts[0] instanceof X509Certificate) {
+                        X509Certificate x509 = (X509Certificate) kcerts[0];
+                        certs.add((X509Certificate) x509);
+                    }
+                }
+                if (keystore.isCertificateEntry(s)) {
                     Certificate c = keystore.getCertificate(s);
                     if (c instanceof X509Certificate) {
                         certs.add((X509Certificate) c);
@@ -202,11 +206,11 @@ public class CertificateHelper {
         } catch (Exception e) {
             e.printStackTrace();
         }
-		return null;
-	}
+        return null;
+    }
 
-    public static X509Certificate GetCertificateFromBytes(byte[] bytes) throws CertificateException {
+    public static X509Certificate getCertificateFromBytes(byte[] bytes) throws CertificateException {
         CertificateFactory certFactory = CertificateFactory.getInstance("X.509");
-        return (X509Certificate)certFactory.generateCertificate(new ByteArrayInputStream(bytes));
+        return (X509Certificate) certFactory.generateCertificate(new ByteArrayInputStream(bytes));
     }
 }
