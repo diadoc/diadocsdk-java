@@ -53,7 +53,7 @@ public class DiadocCredentials implements Credentials {
     }
 
     public String getPassword() {
-        throw new RuntimeException();
+        return null;
     }
 
     @Override
