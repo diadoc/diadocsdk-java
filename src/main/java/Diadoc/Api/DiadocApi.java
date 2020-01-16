@@ -44,6 +44,7 @@ import Diadoc.Api.user.UserClient;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import Diadoc.Api.httpClient.FileContent;
 import Diadoc.Api.httpClient.GeneratedFile;
+import org.apache.http.HttpHost;
 import org.jetbrains.annotations.Nullable;
 
 import javax.mail.internet.ParseException;
@@ -89,12 +90,12 @@ public class DiadocApi {
         return this.docflow;
     }
 
-    public DiadocApi(String apiClientId, String url) {
+    public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost) {
         if (url == null) {
             throw new IllegalArgumentException("url");
         }
         authManager = new AuthManager(apiClientId);
-        DiadocHttpClient diadocHttpClient = new DiadocHttpClient(authManager.getCredentialsProvider(), url);
+        DiadocHttpClient diadocHttpClient = new DiadocHttpClient(authManager.getCredentialsProvider(), url, proxyHost);
         authClient = new AuthenticateClient(authManager, diadocHttpClient);
         organizationClient = new OrganizationClient(diadocHttpClient);
         departmentClient = new DepartmentClient(diadocHttpClient);
@@ -114,6 +115,10 @@ public class DiadocApi {
         docflowClient = new DocflowClient(diadocHttpClient);
         authManager.setCredentials(null);
         this.docflow = new DocflowHttpApiV3();
+    }
+
+    public DiadocApi(String apiClientId, String url) {
+        this(apiClientId, url, null);
     }
 
     public AuthenticateClient getAuthClient() {

@@ -46,21 +46,25 @@ public class DiadocHttpClient {
     private CloseableHttpClient httpClient;
     private String baseUrl;
 
-    public DiadocHttpClient(CredentialsProvider credentialsProvider, String baseUrl) {
+    public DiadocHttpClient(CredentialsProvider credentialsProvider, String baseUrl, @Nullable HttpHost proxyHost) {
         var sslSocketFactory = getTrustfulSslSocketFactory();
-        httpClient = HttpClients
+        var httpClientBuilder = HttpClients
                 .custom()
                 .setSSLSocketFactory(sslSocketFactory)
-                .setConnectionManager(new PoolingHttpClientConnectionManager(RegistryBuilder.<ConnectionSocketFactory>create()
+                .setConnectionManager(new PoolingHttpClientConnectionManager(
+                        RegistryBuilder.<ConnectionSocketFactory>create()
                         .register("https", sslSocketFactory)
                         .register("http", new PlainConnectionSocketFactory())
                         .build()))
                 .setUserAgent(EnvironmentHelpers.getUserAgentString())
                 .addInterceptorFirst(new DiadocPreemptiveAuthRequestInterceptor())
                 .addInterceptorLast(new ContentLengthInterceptor())
-                .setDefaultCredentialsProvider(credentialsProvider)
-                .build();
+                .setDefaultCredentialsProvider(credentialsProvider);
+        if(proxyHost != null){
+            httpClientBuilder.setProxy(proxyHost);
+        }
 
+        httpClient = httpClientBuilder.build();
         this.baseUrl = baseUrl;
     }
 
