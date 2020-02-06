@@ -32,12 +32,20 @@ public class MessageClient {
     }
 
     public Message postMessage(MessageToPost msg) throws DiadocSdkException {
+        return postMessage(msg, null);
+    }
+
+    public Message postMessage(MessageToPost msg, @Nullable String operationId) throws DiadocSdkException {
         if (msg == null) {
             throw new IllegalArgumentException("msg");
         }
         try {
+            var uriBuilder = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/V3/PostMessage");
+            if (operationId != null) {
+                uriBuilder.addParameter("operationId", operationId);
+            }
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/V3/PostMessage").build())
+                    uriBuilder.build())
                     .setEntity(new ByteArrayEntity(msg.toByteArray()));
 
             return Message.parseFrom(diadocHttpClient.performRequest(request));
@@ -94,13 +102,21 @@ public class MessageClient {
     }
 
     public MessagePatch postMessagePatch(MessagePatchToPost patch) throws DiadocSdkException {
+        return postMessagePatch(patch, null);
+    }
+
+    public MessagePatch postMessagePatch(MessagePatchToPost patch, @Nullable String operationId) throws DiadocSdkException {
         if (patch == null) {
             throw new IllegalArgumentException("patch");
         }
 
         try {
+            var uriBuilder = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/V3/PostMessagePatch");
+            if (operationId != null) {
+                uriBuilder.addParameter("operationId", operationId);
+            }
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/V3/PostMessagePatch").build())
+                    uriBuilder.build())
                     .setEntity(new ByteArrayEntity(patch.toByteArray()));
 
             return MessagePatch.parseFrom(diadocHttpClient.performRequest(request));

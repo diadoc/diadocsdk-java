@@ -280,8 +280,16 @@ public class DiadocApi {
      */
     @Deprecated
     public DiadocMessage_GetApiProtos.Message PostMessage(DiadocMessage_PostApiProtos.MessageToPost msg) throws IOException {
+        return PostMessage(msg, null);
+    }
+
+    /**
+     * Use MessageClient instead
+     */
+    @Deprecated
+    public DiadocMessage_GetApiProtos.Message PostMessage(DiadocMessage_PostApiProtos.MessageToPost msg, @Nullable String operationId) throws IOException {
         try {
-            return messageClient.postMessage(msg);
+            return messageClient.postMessage(msg, operationId);
         } catch (DiadocSdkException e) {
             if (e.getCause() instanceof IOException) {
                 throw (IOException) e.getCause();
@@ -296,8 +304,16 @@ public class DiadocApi {
      */
     @Deprecated
     public DiadocMessage_GetApiProtos.MessagePatch PostMessagePatch(DiadocMessage_PostApiProtos.MessagePatchToPost patch) throws IOException {
+        return PostMessagePatch(patch, null);
+    }
+
+    /**
+     * Use MessageClient instead
+     */
+    @Deprecated
+    public DiadocMessage_GetApiProtos.MessagePatch PostMessagePatch(DiadocMessage_PostApiProtos.MessagePatchToPost patch, @Nullable String operationId) throws IOException {
         try {
-            return messageClient.postMessagePatch(patch);
+            return messageClient.postMessagePatch(patch, operationId);
         } catch (DiadocSdkException e) {
             if (e.getCause() instanceof IOException) {
                 throw (IOException) e.getCause();
