@@ -48003,6 +48003,20 @@ public final class DiadocMessage_PostApiProtos {
      * <code>optional bool IsEncrypted = 17 [default = false];</code>
      */
     boolean getIsEncrypted();
+
+    /**
+     * <code>optional string EditingSettingId = 18;</code>
+     */
+    boolean hasEditingSettingId();
+    /**
+     * <code>optional string EditingSettingId = 18;</code>
+     */
+    java.lang.String getEditingSettingId();
+    /**
+     * <code>optional string EditingSettingId = 18;</code>
+     */
+    com.google.protobuf.ByteString
+        getEditingSettingIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.DocumentAttachment}
@@ -48149,6 +48163,12 @@ public final class DiadocMessage_PostApiProtos {
             case 136: {
               bitField0_ |= 0x00000200;
               isEncrypted_ = input.readBool();
+              break;
+            }
+            case 146: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              editingSettingId_ = bs;
               break;
             }
           }
@@ -48661,6 +48681,48 @@ public final class DiadocMessage_PostApiProtos {
       return isEncrypted_;
     }
 
+    public static final int EDITINGSETTINGID_FIELD_NUMBER = 18;
+    private java.lang.Object editingSettingId_;
+    /**
+     * <code>optional string EditingSettingId = 18;</code>
+     */
+    public boolean hasEditingSettingId() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional string EditingSettingId = 18;</code>
+     */
+    public java.lang.String getEditingSettingId() {
+      java.lang.Object ref = editingSettingId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          editingSettingId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string EditingSettingId = 18;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEditingSettingIdBytes() {
+      java.lang.Object ref = editingSettingId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        editingSettingId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       signedContent_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.SignedContent.getDefaultInstance();
       comment_ = "";
@@ -48676,6 +48738,7 @@ public final class DiadocMessage_PostApiProtos {
       metadata_ = java.util.Collections.emptyList();
       workflowId_ = 0;
       isEncrypted_ = false;
+      editingSettingId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -48764,6 +48827,9 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeBool(17, isEncrypted_);
       }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBytes(18, getEditingSettingIdBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -48828,6 +48894,10 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(17, isEncrypted_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(18, getEditingSettingIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -48999,6 +49069,8 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00001000);
         isEncrypted_ = false;
         bitField0_ = (bitField0_ & ~0x00002000);
+        editingSettingId_ = "";
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -49107,6 +49179,10 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000200;
         }
         result.isEncrypted_ = isEncrypted_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.editingSettingId_ = editingSettingId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -49266,6 +49342,11 @@ public final class DiadocMessage_PostApiProtos {
         }
         if (other.hasIsEncrypted()) {
           setIsEncrypted(other.getIsEncrypted());
+        }
+        if (other.hasEditingSettingId()) {
+          bitField0_ |= 0x00004000;
+          editingSettingId_ = other.editingSettingId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -50960,6 +51041,82 @@ public final class DiadocMessage_PostApiProtos {
       public Builder clearIsEncrypted() {
         bitField0_ = (bitField0_ & ~0x00002000);
         isEncrypted_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object editingSettingId_ = "";
+      /**
+       * <code>optional string EditingSettingId = 18;</code>
+       */
+      public boolean hasEditingSettingId() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional string EditingSettingId = 18;</code>
+       */
+      public java.lang.String getEditingSettingId() {
+        java.lang.Object ref = editingSettingId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            editingSettingId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string EditingSettingId = 18;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEditingSettingIdBytes() {
+        java.lang.Object ref = editingSettingId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          editingSettingId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string EditingSettingId = 18;</code>
+       */
+      public Builder setEditingSettingId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
+        editingSettingId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string EditingSettingId = 18;</code>
+       */
+      public Builder clearEditingSettingId() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        editingSettingId_ = getDefaultInstance().getEditingSettingId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string EditingSettingId = 18;</code>
+       */
+      public Builder setEditingSettingIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
+        editingSettingId_ = value;
         onChanged();
         return this;
       }
@@ -98697,7 +98854,7 @@ public final class DiadocMessage_PostApiProtos {
       "Date\030\007 \001(\t\022\026\n\016DocumentNumber\030\010 \001(\t\022\030\n\020Cu" +
       "stomDocumentId\030\t \001(\t\022\032\n\013NeedReceipt\030\n \001(",
       "\010:\005false\0224\n\nCustomData\030\013 \003(\0132 .Diadoc.Ap" +
-      "i.Proto.CustomDataItem\"\220\004\n\022DocumentAttac" +
+      "i.Proto.CustomDataItem\"\252\004\n\022DocumentAttac" +
       "hment\022=\n\rSignedContent\030\001 \002(\0132&.Diadoc.Ap" +
       "i.Proto.Events.SignedContent\022\017\n\007Comment\030" +
       "\003 \001(\t\022%\n\026NeedRecipientSignature\030\004 \001(\010:\005f" +
@@ -98710,198 +98867,199 @@ public final class DiadocMessage_PostApiProtos {
       "NamedId\030\014 \002(\t\022\020\n\010Function\030\r \001(\t\022\017\n\007Versi" +
       "on\030\016 \001(\t\0227\n\010Metadata\030\017 \003(\0132%.Diadoc.Api." +
       "Proto.Events.MetadataItem\022\022\n\nWorkflowId\030" +
-      "\020 \001(\005\022\032\n\013IsEncrypted\030\021 \001(\010:\005false\"*\n\014Met" +
-      "adataItem\022\013\n\003Key\030\001 \002(\t\022\r\n\005Value\030\002 \002(\t\"\226\016" +
-      "\n\022MessagePatchToPost\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tM" +
-      "essageId\030\002 \002(\t\022<\n\010Receipts\030\003 \003(\0132*.Diado" +
-      "c.Api.Proto.Events.ReceiptAttachment\022P\n\022" +
-      "CorrectionRequests\030\004 \003(\01324.Diadoc.Api.Pr",
-      "oto.Events.CorrectionRequestAttachment\022>" +
-      "\n\nSignatures\030\005 \003(\0132*.Diadoc.Api.Proto.Ev" +
-      "ents.DocumentSignature\022Z\n\034RequestedSigna" +
-      "tureRejections\030\006 \003(\01324.Diadoc.Api.Proto." +
-      "Events.RequestedSignatureRejection\022O\n\024Xm" +
-      "lTorg12BuyerTitles\030\007 \003(\01321.Diadoc.Api.Pr" +
-      "oto.Events.RecipientTitleAttachment\022^\n#X" +
-      "mlAcceptanceCertificateBuyerTitles\030\010 \003(\013" +
-      "21.Diadoc.Api.Proto.Events.RecipientTitl" +
-      "eAttachment\022B\n\013Resolutions\030\t \003(\0132-.Diado",
-      "c.Api.Proto.Events.ResolutionAttachment\022" +
-      "P\n\022ResolutionRequests\030\n \003(\01324.Diadoc.Api" +
-      ".Proto.Events.ResolutionRequestAttachmen" +
-      "t\022h\n\036ResolutionRequestCancellations\030\013 \003(" +
-      "\0132@.Diadoc.Api.Proto.Events.ResolutionRe" +
-      "questCancellationAttachment\022\\\n\030Resolutio" +
-      "nRequestDenials\030\014 \003(\0132:.Diadoc.Api.Proto" +
-      ".Events.ResolutionRequestDenialAttachmen" +
-      "t\022t\n$ResolutionRequestDenialCancellation" +
-      "s\030\r \003(\0132F.Diadoc.Api.Proto.Events.Resolu",
-      "tionRequestDenialCancellationAttachment\022" +
-      "P\n\022RevocationRequests\030\016 \003(\01324.Diadoc.Api" +
-      ".Proto.Events.RevocationRequestAttachmen" +
-      "t\022X\n\026XmlSignatureRejections\030\017 \003(\01328.Diad" +
-      "oc.Api.Proto.Events.XmlSignatureRejectio" +
-      "nAttachment\022C\n\021CustomDataPatches\030\020 \003(\0132(" +
-      ".Diadoc.Api.Proto.Events.CustomDataPatch" +
-      "\022V\n\032ResolutionRouteAssignments\030\021 \003(\01322.D" +
-      "iadoc.Api.Proto.Events.ResolutionRouteAs" +
-      "signment\022N\n\026SignatureVerifications\030\022 \003(\013",
-      "2..Diadoc.Api.Proto.Events.SignatureVeri" +
-      "fication\022V\n\032EditDocumentPacketCommands\030\023" +
-      " \003(\01322.Diadoc.Api.Proto.Events.EditDocum" +
-      "entPacketCommand\022_\n$UniversalTransferDoc" +
-      "umentBuyerTitles\030\024 \003(\01321.Diadoc.Api.Prot" +
-      "o.Events.RecipientTitleAttachment\022P\n\027Res" +
-      "olutionRouteRemovals\030\025 \003(\0132/.Diadoc.Api." +
-      "Proto.Events.ResolutionRouteRemoval\022J\n\017R" +
-      "ecipientTitles\030\026 \003(\01321.Diadoc.Api.Proto." +
-      "Events.RecipientTitleAttachment\022=\n\016Editi",
-      "ngPatches\030\030 \003(\0132%.Diadoc.Api.Proto.Event" +
-      "s.EditingPatch\"q\n\014EditingPatch\022\026\n\016Parent" +
-      "EntityId\030\001 \002(\t\0229\n\007Content\030\002 \002(\0132(.Diadoc" +
-      ".Api.Proto.Events.UnsignedContent\022\016\n\006Lab" +
-      "els\030\003 \003(\t\"i\n\025SignatureVerification\022\031\n\021In" +
-      "itialDocumentId\030\001 \002(\t\022\017\n\007IsValid\030\002 \002(\010\022\024" +
-      "\n\014ErrorMessage\030\003 \001(\t\022\016\n\006Labels\030\004 \003(\t\"\302\001\n" +
-      "\033ResolutionRequestAttachment\022\031\n\021InitialD" +
-      "ocumentId\030\001 \002(\t\0225\n\004Type\030\002 \002(\0162\'.Diadoc.A" +
-      "pi.Proto.ResolutionRequestType\022\024\n\014Target",
-      "UserId\030\003 \001(\t\022\032\n\022TargetDepartmentId\030\004 \001(\t" +
-      "\022\017\n\007Comment\030\005 \001(\t\022\016\n\006Labels\030\006 \003(\t\"h\n\031Res" +
-      "olutionRouteAssignment\022\031\n\021InitialDocumen" +
-      "tId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\017\n\007Comment\030\003 " +
-      "\001(\t\022\016\n\006Labels\030\004 \003(\t\"n\n\'ResolutionRequest" +
-      "CancellationAttachment\022\"\n\032InitialResolut" +
-      "ionRequestId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006L" +
-      "abels\030\003 \003(\t\"Y\n-ResolutionRequestDenialCa" +
-      "ncellationAttachment\022(\n InitialResolutio" +
-      "nRequestDenialId\030\001 \002(\t\"h\n!ResolutionRequ",
-      "estDenialAttachment\022\"\n\032InitialResolution" +
-      "RequestId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labe" +
-      "ls\030\003 \003(\t\"\214\001\n\024ResolutionAttachment\022\031\n\021Ini" +
-      "tialDocumentId\030\001 \002(\t\0228\n\016ResolutionType\030\002" +
-      " \002(\0162 .Diadoc.Api.Proto.ResolutionType\022\017" +
-      "\n\007Comment\030\003 \001(\t\022\016\n\006Labels\030\004 \003(\t\"z\n\021Recei" +
-      "ptAttachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\r" +
-      "SignedContent\030\002 \002(\0132&.Diadoc.Api.Proto.E" +
-      "vents.SignedContent\022\016\n\006Labels\030\004 \003(\t\"\235\001\n\030" +
-      "RecipientTitleAttachment\022\026\n\016ParentEntity",
-      "Id\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc" +
-      ".Api.Proto.Events.SignedContent\022\016\n\006Label" +
-      "s\030\004 \003(\t\022\032\n\013NeedReceipt\030\005 \002(\010:\005false\"\204\001\n\033" +
-      "CorrectionRequestAttachment\022\026\n\016ParentEnt" +
-      "ityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Dia" +
-      "doc.Api.Proto.Events.SignedContent\022\016\n\006La" +
-      "bels\030\004 \003(\t\"\323\001\n\021DocumentSignature\022\026\n\016Pare" +
-      "ntEntityId\030\001 \002(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025S" +
-      "ignWithTestSignature\030\004 \001(\010:\005false\022%\n\026IsA" +
-      "pprovementSignature\030\005 \001(\010:\005false\022\034\n\024Sign",
-      "atureNameOnShelf\030\006 \001(\t\022\030\n\020PatchedContent" +
-      "Id\030\007 \001(\t\022\016\n\006Labels\030\010 \003(\t\"\204\001\n\027DocumentSen" +
-      "derSignature\022\026\n\016ParentEntityId\030\001 \002(\t\022\021\n\t" +
-      "Signature\030\002 \001(\014\022$\n\025SignWithTestSignature" +
-      "\030\004 \001(\010:\005false\022\030\n\020PatchedContentId\030\005 \001(\t\"" +
-      "\204\001\n\033RequestedSignatureRejection\022\026\n\016Paren" +
-      "tEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&" +
-      ".Diadoc.Api.Proto.Events.SignedContent\022\016" +
-      "\n\006Labels\030\003 \003(\t\"\214\001\n\rSignedContent\022\017\n\007Cont" +
-      "ent\030\001 \001(\014\022\021\n\tSignature\030\002 \001(\014\022\023\n\013NameOnSh",
-      "elf\030\004 \001(\t\022$\n\025SignWithTestSignature\030\005 \001(\010" +
-      ":\005false\022\034\n\024SignatureNameOnShelf\030\006 \001(\t\"\323\001" +
-      "\n\013DraftToSend\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007DraftId\030" +
-      "\002 \002(\t\022\017\n\007ToBoxId\030\003 \001(\t\022\026\n\016ToDepartmentId" +
-      "\030\004 \001(\t\022L\n\022DocumentSignatures\030\005 \003(\01320.Dia" +
-      "doc.Api.Proto.Events.DocumentSenderSigna" +
-      "ture\022\022\n\nProxyBoxId\030\006 \001(\t\022\031\n\021ProxyDepartm" +
-      "entId\030\007 \001(\t\"\355\001\n\035PrepareDocumentsToSignRe" +
-      "quest\022\r\n\005BoxId\030\001 \002(\t\022E\n\016DraftDocuments\030\002" +
-      " \003(\0132-.Diadoc.Api.Proto.Events.DraftDocu",
-      "mentToPatch\022;\n\tDocuments\030\003 \003(\0132(.Diadoc." +
-      "Api.Proto.Events.DocumentToPatch\0229\n\010Cont" +
-      "ents\030\004 \003(\0132\'.Diadoc.Api.Proto.Events.Con" +
-      "tentToPatch\"\331\001\n\024DraftDocumentToPatch\0220\n\n" +
+      "\020 \001(\005\022\032\n\013IsEncrypted\030\021 \001(\010:\005false\022\030\n\020Edi" +
+      "tingSettingId\030\022 \001(\t\"*\n\014MetadataItem\022\013\n\003K" +
+      "ey\030\001 \002(\t\022\r\n\005Value\030\002 \002(\t\"\226\016\n\022MessagePatch" +
+      "ToPost\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageId\030\002 \002(\t" +
+      "\022<\n\010Receipts\030\003 \003(\0132*.Diadoc.Api.Proto.Ev" +
+      "ents.ReceiptAttachment\022P\n\022CorrectionRequ",
+      "ests\030\004 \003(\01324.Diadoc.Api.Proto.Events.Cor" +
+      "rectionRequestAttachment\022>\n\nSignatures\030\005" +
+      " \003(\0132*.Diadoc.Api.Proto.Events.DocumentS" +
+      "ignature\022Z\n\034RequestedSignatureRejections" +
+      "\030\006 \003(\01324.Diadoc.Api.Proto.Events.Request" +
+      "edSignatureRejection\022O\n\024XmlTorg12BuyerTi" +
+      "tles\030\007 \003(\01321.Diadoc.Api.Proto.Events.Rec" +
+      "ipientTitleAttachment\022^\n#XmlAcceptanceCe" +
+      "rtificateBuyerTitles\030\010 \003(\01321.Diadoc.Api." +
+      "Proto.Events.RecipientTitleAttachment\022B\n",
+      "\013Resolutions\030\t \003(\0132-.Diadoc.Api.Proto.Ev" +
+      "ents.ResolutionAttachment\022P\n\022ResolutionR" +
+      "equests\030\n \003(\01324.Diadoc.Api.Proto.Events." +
+      "ResolutionRequestAttachment\022h\n\036Resolutio" +
+      "nRequestCancellations\030\013 \003(\0132@.Diadoc.Api" +
+      ".Proto.Events.ResolutionRequestCancellat" +
+      "ionAttachment\022\\\n\030ResolutionRequestDenial" +
+      "s\030\014 \003(\0132:.Diadoc.Api.Proto.Events.Resolu" +
+      "tionRequestDenialAttachment\022t\n$Resolutio" +
+      "nRequestDenialCancellations\030\r \003(\0132F.Diad",
+      "oc.Api.Proto.Events.ResolutionRequestDen" +
+      "ialCancellationAttachment\022P\n\022RevocationR" +
+      "equests\030\016 \003(\01324.Diadoc.Api.Proto.Events." +
+      "RevocationRequestAttachment\022X\n\026XmlSignat" +
+      "ureRejections\030\017 \003(\01328.Diadoc.Api.Proto.E" +
+      "vents.XmlSignatureRejectionAttachment\022C\n" +
+      "\021CustomDataPatches\030\020 \003(\0132(.Diadoc.Api.Pr" +
+      "oto.Events.CustomDataPatch\022V\n\032Resolution" +
+      "RouteAssignments\030\021 \003(\01322.Diadoc.Api.Prot" +
+      "o.Events.ResolutionRouteAssignment\022N\n\026Si",
+      "gnatureVerifications\030\022 \003(\0132..Diadoc.Api." +
+      "Proto.Events.SignatureVerification\022V\n\032Ed" +
+      "itDocumentPacketCommands\030\023 \003(\01322.Diadoc." +
+      "Api.Proto.Events.EditDocumentPacketComma" +
+      "nd\022_\n$UniversalTransferDocumentBuyerTitl" +
+      "es\030\024 \003(\01321.Diadoc.Api.Proto.Events.Recip" +
+      "ientTitleAttachment\022P\n\027ResolutionRouteRe" +
+      "movals\030\025 \003(\0132/.Diadoc.Api.Proto.Events.R" +
+      "esolutionRouteRemoval\022J\n\017RecipientTitles" +
+      "\030\026 \003(\01321.Diadoc.Api.Proto.Events.Recipie",
+      "ntTitleAttachment\022=\n\016EditingPatches\030\030 \003(" +
+      "\0132%.Diadoc.Api.Proto.Events.EditingPatch" +
+      "\"q\n\014EditingPatch\022\026\n\016ParentEntityId\030\001 \002(\t" +
+      "\0229\n\007Content\030\002 \002(\0132(.Diadoc.Api.Proto.Eve" +
+      "nts.UnsignedContent\022\016\n\006Labels\030\003 \003(\t\"i\n\025S" +
+      "ignatureVerification\022\031\n\021InitialDocumentI" +
+      "d\030\001 \002(\t\022\017\n\007IsValid\030\002 \002(\010\022\024\n\014ErrorMessage" +
+      "\030\003 \001(\t\022\016\n\006Labels\030\004 \003(\t\"\302\001\n\033ResolutionReq" +
+      "uestAttachment\022\031\n\021InitialDocumentId\030\001 \002(" +
+      "\t\0225\n\004Type\030\002 \002(\0162\'.Diadoc.Api.Proto.Resol",
+      "utionRequestType\022\024\n\014TargetUserId\030\003 \001(\t\022\032" +
+      "\n\022TargetDepartmentId\030\004 \001(\t\022\017\n\007Comment\030\005 " +
+      "\001(\t\022\016\n\006Labels\030\006 \003(\t\"h\n\031ResolutionRouteAs" +
+      "signment\022\031\n\021InitialDocumentId\030\001 \002(\t\022\017\n\007R" +
+      "outeId\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t\022\016\n\006Labels\030" +
+      "\004 \003(\t\"n\n\'ResolutionRequestCancellationAt" +
+      "tachment\022\"\n\032InitialResolutionRequestId\030\001" +
+      " \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"Y\n" +
+      "-ResolutionRequestDenialCancellationAtta" +
+      "chment\022(\n InitialResolutionRequestDenial",
+      "Id\030\001 \002(\t\"h\n!ResolutionRequestDenialAttac" +
+      "hment\022\"\n\032InitialResolutionRequestId\030\001 \002(" +
+      "\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"\214\001\n\024R" +
+      "esolutionAttachment\022\031\n\021InitialDocumentId" +
+      "\030\001 \002(\t\0228\n\016ResolutionType\030\002 \002(\0162 .Diadoc." +
+      "Api.Proto.ResolutionType\022\017\n\007Comment\030\003 \001(" +
+      "\t\022\016\n\006Labels\030\004 \003(\t\"z\n\021ReceiptAttachment\022\026" +
+      "\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedContent\030" +
+      "\002 \002(\0132&.Diadoc.Api.Proto.Events.SignedCo" +
+      "ntent\022\016\n\006Labels\030\004 \003(\t\"\235\001\n\030RecipientTitle",
+      "Attachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSi" +
+      "gnedContent\030\002 \002(\0132&.Diadoc.Api.Proto.Eve" +
+      "nts.SignedContent\022\016\n\006Labels\030\004 \003(\t\022\032\n\013Nee" +
+      "dReceipt\030\005 \002(\010:\005false\"\204\001\n\033CorrectionRequ" +
+      "estAttachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n" +
+      "\rSignedContent\030\002 \002(\0132&.Diadoc.Api.Proto." +
+      "Events.SignedContent\022\016\n\006Labels\030\004 \003(\t\"\323\001\n" +
+      "\021DocumentSignature\022\026\n\016ParentEntityId\030\001 \002" +
+      "(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025SignWithTestSig" +
+      "nature\030\004 \001(\010:\005false\022%\n\026IsApprovementSign",
+      "ature\030\005 \001(\010:\005false\022\034\n\024SignatureNameOnShe" +
+      "lf\030\006 \001(\t\022\030\n\020PatchedContentId\030\007 \001(\t\022\016\n\006La" +
+      "bels\030\010 \003(\t\"\204\001\n\027DocumentSenderSignature\022\026" +
+      "\n\016ParentEntityId\030\001 \002(\t\022\021\n\tSignature\030\002 \001(" +
+      "\014\022$\n\025SignWithTestSignature\030\004 \001(\010:\005false\022" +
+      "\030\n\020PatchedContentId\030\005 \001(\t\"\204\001\n\033RequestedS" +
+      "ignatureRejection\022\026\n\016ParentEntityId\030\001 \002(" +
+      "\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.Api.Pr" +
+      "oto.Events.SignedContent\022\016\n\006Labels\030\003 \003(\t" +
+      "\"\214\001\n\rSignedContent\022\017\n\007Content\030\001 \001(\014\022\021\n\tS",
+      "ignature\030\002 \001(\014\022\023\n\013NameOnShelf\030\004 \001(\t\022$\n\025S" +
+      "ignWithTestSignature\030\005 \001(\010:\005false\022\034\n\024Sig" +
+      "natureNameOnShelf\030\006 \001(\t\"\323\001\n\013DraftToSend\022" +
+      "\r\n\005BoxId\030\001 \002(\t\022\017\n\007DraftId\030\002 \002(\t\022\017\n\007ToBox" +
+      "Id\030\003 \001(\t\022\026\n\016ToDepartmentId\030\004 \001(\t\022L\n\022Docu" +
+      "mentSignatures\030\005 \003(\01320.Diadoc.Api.Proto." +
+      "Events.DocumentSenderSignature\022\022\n\nProxyB" +
+      "oxId\030\006 \001(\t\022\031\n\021ProxyDepartmentId\030\007 \001(\t\"\355\001" +
+      "\n\035PrepareDocumentsToSignRequest\022\r\n\005BoxId" +
+      "\030\001 \002(\t\022E\n\016DraftDocuments\030\002 \003(\0132-.Diadoc.",
+      "Api.Proto.Events.DraftDocumentToPatch\022;\n" +
+      "\tDocuments\030\003 \003(\0132(.Diadoc.Api.Proto.Even" +
+      "ts.DocumentToPatch\0229\n\010Contents\030\004 \003(\0132\'.D" +
+      "iadoc.Api.Proto.Events.ContentToPatch\"\331\001" +
+      "\n\024DraftDocumentToPatch\0220\n\nDocumentId\030\001 \002" +
+      "(\0132\034.Diadoc.Api.Proto.DocumentId\022\017\n\007ToBo" +
+      "xId\030\002 \001(\t\0222\n\006Signer\030\003 \001(\0132\".Diadoc.Api.P" +
+      "roto.Invoicing.Signer\022J\n\016ExtendedSigner\030" +
+      "\004 \003(\01322.Diadoc.Api.Proto.Invoicing.Signe" +
+      "rs.ExtendedSigner\"\224\002\n\016ContentToPatch\022\023\n\013",
+      "TypeNamedId\030\001 \002(\t\022\020\n\010Function\030\002 \002(\t\022\017\n\007V" +
+      "ersion\030\003 \002(\t\0229\n\007Content\030\004 \002(\0132(.Diadoc.A" +
+      "pi.Proto.Events.UnsignedContent\022\017\n\007ToBox" +
+      "Id\030\005 \001(\t\0222\n\006Signer\030\006 \001(\0132\".Diadoc.Api.Pr" +
+      "oto.Invoicing.Signer\022J\n\016ExtendedSigner\030\007" +
+      " \003(\01322.Diadoc.Api.Proto.Invoicing.Signer" +
+      "s.ExtendedSigner\"\303\001\n\017DocumentToPatch\0220\n\n" +
       "DocumentId\030\001 \002(\0132\034.Diadoc.Api.Proto.Docu" +
-      "mentId\022\017\n\007ToBoxId\030\002 \001(\t\0222\n\006Signer\030\003 \001(\0132" +
-      "\".Diadoc.Api.Proto.Invoicing.Signer\022J\n\016E" +
-      "xtendedSigner\030\004 \003(\01322.Diadoc.Api.Proto.I" +
-      "nvoicing.Signers.ExtendedSigner\"\224\002\n\016Cont" +
-      "entToPatch\022\023\n\013TypeNamedId\030\001 \002(\t\022\020\n\010Funct",
-      "ion\030\002 \002(\t\022\017\n\007Version\030\003 \002(\t\0229\n\007Content\030\004 " +
-      "\002(\0132(.Diadoc.Api.Proto.Events.UnsignedCo" +
-      "ntent\022\017\n\007ToBoxId\030\005 \001(\t\0222\n\006Signer\030\006 \001(\0132\"" +
-      ".Diadoc.Api.Proto.Invoicing.Signer\022J\n\016Ex" +
-      "tendedSigner\030\007 \003(\01322.Diadoc.Api.Proto.In" +
-      "voicing.Signers.ExtendedSigner\"\303\001\n\017Docum" +
-      "entToPatch\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc." +
-      "Api.Proto.DocumentId\0222\n\006Signer\030\002 \001(\0132\".D" +
-      "iadoc.Api.Proto.Invoicing.Signer\022J\n\016Exte" +
-      "ndedSigner\030\003 \003(\01322.Diadoc.Api.Proto.Invo",
-      "icing.Signers.ExtendedSigner\"u\n\026Document" +
-      "PatchedContent\0220\n\nDocumentId\030\001 \002(\0132\034.Dia" +
-      "doc.Api.Proto.DocumentId\022\030\n\020PatchedConte" +
-      "ntId\030\002 \002(\t\022\017\n\007Content\030\003 \001(\014\"r\n\036PrepareDo" +
-      "cumentsToSignResponse\022P\n\027DocumentPatched" +
-      "Contents\030\001 \003(\0132/.Diadoc.Api.Proto.Events" +
-      ".DocumentPatchedContent\"y\n\rMessageToSend" +
-      "\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageId\030\002 \002(\t\022F\n\022Do" +
-      "cumentSignatures\030\003 \003(\0132*.Diadoc.Api.Prot" +
-      "o.Events.DocumentSignature\"\204\001\n\033Revocatio",
-      "nRequestAttachment\022\026\n\016ParentEntityId\030\001 \002" +
-      "(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.Api.P" +
-      "roto.Events.SignedContent\022\016\n\006Labels\030\003 \003(" +
-      "\t\"\210\001\n\037XmlSignatureRejectionAttachment\022\026\n" +
-      "\016ParentEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002" +
-      " \002(\0132&.Diadoc.Api.Proto.Events.SignedCon" +
-      "tent\022\016\n\006Labels\030\003 \003(\t\"\221\001\n\031RoamingNotifica" +
-      "tionToPost\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 \002" +
-      "(\t\022\017\n\007Success\030\003 \002(\010\022\023\n\013Description\030\004 \001(\t" +
-      "\022\021\n\tMessageId\030\005 \001(\t\022\033\n\023NotifiableEntityI",
-      "ds\030\006 \003(\t\"\213\001\n\017CustomDataPatch\022\026\n\016ParentEn" +
-      "tityId\030\001 \002(\t\022D\n\tOperation\030\002 \002(\01621.Diadoc" +
-      ".Api.Proto.Events.CustomDataPatchOperati" +
-      "on\022\013\n\003Key\030\003 \002(\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditD" +
-      "ocumentPacketCommand\022\022\n\nDocumentId\030\001 \002(\t" +
-      "\022:\n\024AddDocumentsToPacket\030\002 \003(\0132\034.Diadoc." +
-      "Api.Proto.DocumentId\022?\n\031RemoveDocumentsF" +
-      "romPacket\030\003 \003(\0132\034.Diadoc.Api.Proto.Docum" +
-      "entId\"d\n\026ResolutionRouteRemoval\022\026\n\016Paren" +
-      "tEntityId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comm",
-      "ent\030\003 \001(\t:\000\022\016\n\006Labels\030\004 \003(\t\"\275\002\n\016Template" +
-      "ToPost\022\021\n\tFromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002" +
-      "(\t\022\030\n\020MessageFromBoxId\030\003 \002(\t\022\026\n\016MessageT" +
-      "oBoxId\030\004 \002(\t\022\035\n\025MessageToDepartmentId\030\005 " +
-      "\001(\t\022P\n\023DocumentAttachments\030\006 \003(\01323.Diado" +
-      "c.Api.Proto.Events.TemplateDocumentAttac" +
-      "hment\0222\n\010LockMode\030\007 \001(\0162\032.Diadoc.Api.Pro" +
-      "to.LockMode:\004None\022\030\n\020FromDepartmentId\030\010 " +
-      "\001(\t\022\026\n\016ToDepartmentId\030\t \001(\t\"\305\003\n\032Template" +
-      "DocumentAttachment\022A\n\017UnsignedContent\030\001 ",
-      "\002(\0132(.Diadoc.Api.Proto.Events.UnsignedCo" +
-      "ntent\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 " +
-      "\002(\t\022\020\n\010Function\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227" +
-      "\n\010Metadata\030\006 \003(\0132%.Diadoc.Api.Proto.Even" +
-      "ts.MetadataItem\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020C" +
-      "ustomDocumentId\030\010 \001(\t\022\030\n\020EditingSettingI" +
-      "d\030\t \001(\t\022%\n\026NeedRecipientSignature\030\n \001(\010:" +
-      "\005false\022S\n\030PredefinedRecipientTitle\030\013 \001(\013" +
-      "21.Diadoc.Api.Proto.Events.PredefinedRec" +
-      "ipientTitle\022\036\n\017RefusalDisabled\030\014 \001(\010:\005fa",
-      "lse\"[\n\023TemplatePatchToPost\022D\n\010Refusals\030\001" +
-      " \003(\01322.Diadoc.Api.Proto.Events.TemplateR" +
-      "efusalAttachment\"P\n\031TemplateRefusalAttac" +
-      "hment\022\022\n\nDocumentId\030\001 \002(\t\022\017\n\007Comment\030\002 \001" +
-      "(\t\022\016\n\006Labels\030\003 \003(\t\"]\n\030PredefinedRecipien" +
-      "tTitle\022A\n\017UnsignedContent\030\001 \002(\0132(.Diadoc" +
-      ".Api.Proto.Events.UnsignedContent\"7\n\017Uns" +
-      "ignedContent\022\017\n\007Content\030\001 \001(\014\022\023\n\013NameOnS" +
-      "helf\030\002 \001(\t\"\223\001\n\034TemplateTransformationToP" +
-      "ost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P",
-      "\n\027DocumentTransformations\030\003 \003(\0132/.Diadoc" +
-      ".Api.Proto.Events.DocumentTransformation" +
-      "\"F\n\026DocumentTransformation\022\022\n\nDocumentId" +
-      "\030\001 \002(\t\022\030\n\020CustomDocumentId\030\002 \001(\t*/\n\030Cust" +
-      "omDataPatchOperation\022\007\n\003Set\020\000\022\n\n\006Remove\020" +
-      "\001B\035B\033DiadocMessage_PostApiProtos"
+      "mentId\0222\n\006Signer\030\002 \001(\0132\".Diadoc.Api.Prot" +
+      "o.Invoicing.Signer\022J\n\016ExtendedSigner\030\003 \003",
+      "(\01322.Diadoc.Api.Proto.Invoicing.Signers." +
+      "ExtendedSigner\"u\n\026DocumentPatchedContent" +
+      "\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc.Api.Proto." +
+      "DocumentId\022\030\n\020PatchedContentId\030\002 \002(\t\022\017\n\007" +
+      "Content\030\003 \001(\014\"r\n\036PrepareDocumentsToSignR" +
+      "esponse\022P\n\027DocumentPatchedContents\030\001 \003(\013" +
+      "2/.Diadoc.Api.Proto.Events.DocumentPatch" +
+      "edContent\"y\n\rMessageToSend\022\r\n\005BoxId\030\001 \002(" +
+      "\t\022\021\n\tMessageId\030\002 \002(\t\022F\n\022DocumentSignatur" +
+      "es\030\003 \003(\0132*.Diadoc.Api.Proto.Events.Docum",
+      "entSignature\"\204\001\n\033RevocationRequestAttach" +
+      "ment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedCo" +
+      "ntent\030\002 \002(\0132&.Diadoc.Api.Proto.Events.Si" +
+      "gnedContent\022\016\n\006Labels\030\003 \003(\t\"\210\001\n\037XmlSigna" +
+      "tureRejectionAttachment\022\026\n\016ParentEntityI" +
+      "d\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc." +
+      "Api.Proto.Events.SignedContent\022\016\n\006Labels" +
+      "\030\003 \003(\t\"\221\001\n\031RoamingNotificationToPost\022\r\n\005" +
+      "BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 \002(\t\022\017\n\007Success\030" +
+      "\003 \002(\010\022\023\n\013Description\030\004 \001(\t\022\021\n\tMessageId\030",
+      "\005 \001(\t\022\033\n\023NotifiableEntityIds\030\006 \003(\t\"\213\001\n\017C" +
+      "ustomDataPatch\022\026\n\016ParentEntityId\030\001 \002(\t\022D" +
+      "\n\tOperation\030\002 \002(\01621.Diadoc.Api.Proto.Eve" +
+      "nts.CustomDataPatchOperation\022\013\n\003Key\030\003 \002(" +
+      "\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditDocumentPacketC" +
+      "ommand\022\022\n\nDocumentId\030\001 \002(\t\022:\n\024AddDocumen" +
+      "tsToPacket\030\002 \003(\0132\034.Diadoc.Api.Proto.Docu" +
+      "mentId\022?\n\031RemoveDocumentsFromPacket\030\003 \003(" +
+      "\0132\034.Diadoc.Api.Proto.DocumentId\"d\n\026Resol" +
+      "utionRouteRemoval\022\026\n\016ParentEntityId\030\001 \002(",
+      "\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comment\030\003 \001(\t:\000\022\016\n" +
+      "\006Labels\030\004 \003(\t\"\275\002\n\016TemplateToPost\022\021\n\tFrom" +
+      "BoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002(\t\022\030\n\020MessageF" +
+      "romBoxId\030\003 \002(\t\022\026\n\016MessageToBoxId\030\004 \002(\t\022\035" +
+      "\n\025MessageToDepartmentId\030\005 \001(\t\022P\n\023Documen" +
+      "tAttachments\030\006 \003(\01323.Diadoc.Api.Proto.Ev" +
+      "ents.TemplateDocumentAttachment\0222\n\010LockM" +
+      "ode\030\007 \001(\0162\032.Diadoc.Api.Proto.LockMode:\004N" +
+      "one\022\030\n\020FromDepartmentId\030\010 \001(\t\022\026\n\016ToDepar" +
+      "tmentId\030\t \001(\t\"\305\003\n\032TemplateDocumentAttach",
+      "ment\022A\n\017UnsignedContent\030\001 \002(\0132(.Diadoc.A" +
+      "pi.Proto.Events.UnsignedContent\022\017\n\007Comme" +
+      "nt\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n\010Functio" +
+      "n\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227\n\010Metadata\030\006 \003" +
+      "(\0132%.Diadoc.Api.Proto.Events.MetadataIte" +
+      "m\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020CustomDocumentI" +
+      "d\030\010 \001(\t\022\030\n\020EditingSettingId\030\t \001(\t\022%\n\026Nee" +
+      "dRecipientSignature\030\n \001(\010:\005false\022S\n\030Pred" +
+      "efinedRecipientTitle\030\013 \001(\01321.Diadoc.Api." +
+      "Proto.Events.PredefinedRecipientTitle\022\036\n",
+      "\017RefusalDisabled\030\014 \001(\010:\005false\"[\n\023Templat" +
+      "ePatchToPost\022D\n\010Refusals\030\001 \003(\01322.Diadoc." +
+      "Api.Proto.Events.TemplateRefusalAttachme" +
+      "nt\"P\n\031TemplateRefusalAttachment\022\022\n\nDocum" +
+      "entId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003" +
+      " \003(\t\"]\n\030PredefinedRecipientTitle\022A\n\017Unsi" +
+      "gnedContent\030\001 \002(\0132(.Diadoc.Api.Proto.Eve" +
+      "nts.UnsignedContent\"7\n\017UnsignedContent\022\017" +
+      "\n\007Content\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n" +
+      "\034TemplateTransformationToPost\022\r\n\005BoxId\030\001",
+      " \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027DocumentTran" +
+      "sformations\030\003 \003(\0132/.Diadoc.Api.Proto.Eve" +
+      "nts.DocumentTransformation\"F\n\026DocumentTr" +
+      "ansformation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020Cust" +
+      "omDocumentId\030\002 \001(\t*/\n\030CustomDataPatchOpe" +
+      "ration\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMes" +
+      "sage_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -99045,7 +99203,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_DocumentAttachment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_DocumentAttachment_descriptor,
-        new java.lang.String[] { "SignedContent", "Comment", "NeedRecipientSignature", "InitialDocumentIds", "SubordinateDocumentIds", "CustomDocumentId", "NeedReceipt", "CustomData", "TypeNamedId", "Function", "Version", "Metadata", "WorkflowId", "IsEncrypted", });
+        new java.lang.String[] { "SignedContent", "Comment", "NeedRecipientSignature", "InitialDocumentIds", "SubordinateDocumentIds", "CustomDocumentId", "NeedReceipt", "CustomData", "TypeNamedId", "Function", "Version", "Metadata", "WorkflowId", "IsEncrypted", "EditingSettingId", });
     internal_static_Diadoc_Api_Proto_Events_MetadataItem_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_Diadoc_Api_Proto_Events_MetadataItem_fieldAccessorTable = new
