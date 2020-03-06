@@ -143,4 +143,65 @@ public class PrintFormClient {
             throw new DiadocSdkException(e);
         }
     }
+    
+    
+    public PrintFormResult generatePrintFormFromAttachment(String boxId, String type, byte[] bytes)
+			throws DiadocSdkException {
+		if (Tools.isNullOrEmpty(boxId)) {
+			throw new IllegalArgumentException("boxId");
+		}
+		if (Tools.isNullOrEmpty(type)) {
+			throw new IllegalArgumentException("type");
+		}
+		if (bytes == null) {
+			throw new IllegalArgumentException("bytes");
+		}
+
+		try {
+			var request = RequestBuilder
+					.post(new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GeneratePrintFormFromAttachment")
+							.addParameter("boxId", boxId).addParameter("documentType", type)
+
+							.build())
+					.setEntity(new ByteArrayEntity(bytes));
+
+			var response = diadocHttpClient.getRawResponse(request);
+
+
+			if (response.getRetryAfter() != null) {
+				return new PrintFormResult(response.getRetryAfter());
+			}
+
+			return new PrintFormResult(
+					new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
+
+		} catch (URISyntaxException | ParseException | IOException e) {
+			throw new DiadocSdkException(e);
+		}
+	}
+
+	public PrintFormResult generatedPrintForm(String printId) throws DiadocSdkException {
+		PrintFormResult ret = null;
+
+		
+		try {
+
+			var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
+					.setPath("/GetGeneratedPrintForm").addParameter("printFormId", printId).build());
+
+			var response = diadocHttpClient.getRawResponse(request);
+
+			if (response.getRetryAfter() != null) {
+				return new PrintFormResult(response.getRetryAfter());
+			}
+
+			ret = new PrintFormResult(
+					new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
+
+		} catch (URISyntaxException | ParseException | IOException e) {
+			throw new DiadocSdkException(e);
+		}
+
+		return ret;
+	}
 }
