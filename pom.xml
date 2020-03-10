@@ -4,7 +4,7 @@
 
     <groupId>ru.kontur.diadoc</groupId>
     <artifactId>diadocsdk</artifactId>
-    <version>2.19.0-dev.3623.32010</version>
+    <version>3.0.4-dev.3714.25913</version>
 
     <packaging>jar</packaging>
 

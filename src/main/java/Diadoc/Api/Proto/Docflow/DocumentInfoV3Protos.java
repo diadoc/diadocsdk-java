@@ -245,6 +245,20 @@ public final class DocumentInfoV3Protos {
      * <code>optional .Diadoc.Api.Proto.Documents.Origin Origin = 18;</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.OriginOrBuilder getOriginOrBuilder();
+
+    /**
+     * <code>optional string EditingSettingId = 19 [default = ""];</code>
+     */
+    boolean hasEditingSettingId();
+    /**
+     * <code>optional string EditingSettingId = 19 [default = ""];</code>
+     */
+    java.lang.String getEditingSettingId();
+    /**
+     * <code>optional string EditingSettingId = 19 [default = ""];</code>
+     */
+    com.google.protobuf.ByteString
+        getEditingSettingIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentInfoV3}
@@ -470,6 +484,12 @@ public final class DocumentInfoV3Protos {
                 origin_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00008000;
+              break;
+            }
+            case 154: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00010000;
+              editingSettingId_ = bs;
               break;
             }
           }
@@ -930,6 +950,48 @@ public final class DocumentInfoV3Protos {
       return origin_;
     }
 
+    public static final int EDITINGSETTINGID_FIELD_NUMBER = 19;
+    private java.lang.Object editingSettingId_;
+    /**
+     * <code>optional string EditingSettingId = 19 [default = ""];</code>
+     */
+    public boolean hasEditingSettingId() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional string EditingSettingId = 19 [default = ""];</code>
+     */
+    public java.lang.String getEditingSettingId() {
+      java.lang.Object ref = editingSettingId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          editingSettingId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string EditingSettingId = 19 [default = ""];</code>
+     */
+    public com.google.protobuf.ByteString
+        getEditingSettingIdBytes() {
+      java.lang.Object ref = editingSettingId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        editingSettingId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       fullVersion_ = Diadoc.Api.Proto.FullVersionProtos.FullVersion.getDefaultInstance();
       messageType_ = Diadoc.Api.Proto.Documents.DocumentProtos.MessageType.Unknown;
@@ -949,6 +1011,7 @@ public final class DocumentInfoV3Protos {
       draftInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.DocumentDraftInfo.getDefaultInstance();
       templateInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.DocumentTemplateInfo.getDefaultInstance();
       origin_ = Diadoc.Api.Proto.Documents.DocumentProtos.Origin.getDefaultInstance();
+      editingSettingId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1113,6 +1176,9 @@ public final class DocumentInfoV3Protos {
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         output.writeMessage(18, origin_);
       }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeBytes(19, getEditingSettingIdBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1193,6 +1259,10 @@ public final class DocumentInfoV3Protos {
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, origin_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(19, getEditingSettingIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1397,6 +1467,8 @@ public final class DocumentInfoV3Protos {
           originBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00020000);
+        editingSettingId_ = "";
+        bitField0_ = (bitField0_ & ~0x00040000);
         return this;
       }
 
@@ -1539,6 +1611,10 @@ public final class DocumentInfoV3Protos {
         } else {
           result.origin_ = originBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.editingSettingId_ = editingSettingId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1658,6 +1734,11 @@ public final class DocumentInfoV3Protos {
         }
         if (other.hasOrigin()) {
           mergeOrigin(other.getOrigin());
+        }
+        if (other.hasEditingSettingId()) {
+          bitField0_ |= 0x00040000;
+          editingSettingId_ = other.editingSettingId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -3538,6 +3619,82 @@ public final class DocumentInfoV3Protos {
           origin_ = null;
         }
         return originBuilder_;
+      }
+
+      private java.lang.Object editingSettingId_ = "";
+      /**
+       * <code>optional string EditingSettingId = 19 [default = ""];</code>
+       */
+      public boolean hasEditingSettingId() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional string EditingSettingId = 19 [default = ""];</code>
+       */
+      public java.lang.String getEditingSettingId() {
+        java.lang.Object ref = editingSettingId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            editingSettingId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string EditingSettingId = 19 [default = ""];</code>
+       */
+      public com.google.protobuf.ByteString
+          getEditingSettingIdBytes() {
+        java.lang.Object ref = editingSettingId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          editingSettingId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string EditingSettingId = 19 [default = ""];</code>
+       */
+      public Builder setEditingSettingId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00040000;
+        editingSettingId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string EditingSettingId = 19 [default = ""];</code>
+       */
+      public Builder clearEditingSettingId() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        editingSettingId_ = getDefaultInstance().getEditingSettingId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string EditingSettingId = 19 [default = ""];</code>
+       */
+      public Builder setEditingSettingIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00040000;
+        editingSettingId_ = value;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.DocumentInfoV3)
@@ -11558,7 +11715,7 @@ public final class DocumentInfoV3Protos {
       "s/Document.proto\032\016LockMode.proto\032\032Forwar" +
       "dDocumentEvent.proto\032\027DocumentDirection." +
       "proto\032\"Events/DiadocMessage-PostApi.prot" +
-      "o\032\024CustomDataItem.proto\"\352\006\n\016DocumentInfo" +
+      "o\032\024CustomDataItem.proto\"\206\007\n\016DocumentInfo" +
       "V3\0222\n\013FullVersion\030\001 \002(\0132\035.Diadoc.Api.Pro" +
       "to.FullVersion\022<\n\013MessageType\030\002 \002(\0162\'.Di" +
       "adoc.Api.Proto.Documents.MessageType\022\022\n\n",
@@ -11580,40 +11737,40 @@ public final class DocumentInfoV3Protos {
       ".DocumentDraftInfo\022D\n\014TemplateInfo\030\021 \001(\013" +
       "2..Diadoc.Api.Proto.Docflow.DocumentTemp" +
       "lateInfo\0222\n\006Origin\030\022 \001(\0132\".Diadoc.Api.Pr" +
-      "oto.Documents.Origin\"\351\001\n\024DocumentPartici" +
-      "pants\022=\n\006Sender\030\001 \002(\0132-.Diadoc.Api.Proto",
-      ".Docflow.DocumentParticipant\022<\n\005Proxy\030\002 " +
-      "\001(\0132-.Diadoc.Api.Proto.Docflow.DocumentP" +
-      "articipant\022@\n\tRecipient\030\003 \001(\0132-.Diadoc.A" +
-      "pi.Proto.Docflow.DocumentParticipant\022\022\n\n" +
-      "IsInternal\030\004 \002(\010\":\n\023DocumentParticipant\022" +
-      "\r\n\005BoxId\030\001 \002(\t\022\024\n\014DepartmentId\030\002 \001(\t\"w\n\r" +
-      "DocumentLinks\0220\n\nInitialIds\030\001 \003(\0132\034.Diad" +
-      "oc.Api.Proto.DocumentId\0224\n\016SubordinateId" +
-      "s\030\002 \003(\0132\034.Diadoc.Api.Proto.DocumentId\"z\n" +
-      "\nPacketInfo\022,\n\010LockMode\030\001 \002(\0162\032.Diadoc.A",
-      "pi.Proto.LockMode\022\020\n\010PacketId\030\002 \001(\t\022,\n\007A" +
-      "ddedAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestam" +
-      "p\"\200\001\n\022DocumentLetterInfo\022\023\n\013IsEncrypted\030" +
-      "\001 \002(\010\022E\n\025ForwardDocumentEvents\030\002 \003(\0132&.D" +
-      "iadoc.Api.Proto.ForwardDocumentEvent\022\016\n\006" +
-      "IsTest\030\003 \002(\010\"Y\n\021DocumentDraftInfo\022\022\n\nIsR" +
-      "ecycled\030\001 \002(\010\022\020\n\010IsLocked\030\002 \002(\010\022\036\n\026Trans" +
-      "formedToLetterIds\030\003 \003(\t\"\251\002\n\024DocumentTemp" +
-      "lateInfo\022J\n\022LetterParticipants\030\001 \002(\0132..D" +
-      "iadoc.Api.Proto.Docflow.DocumentParticip",
-      "ants\022\036\n\026TransformedToLetterIds\030\002 \003(\t\022Y\n\033" +
-      "TemplateTransformationInfos\030\003 \003(\01324.Diad" +
-      "oc.Api.Proto.Docflow.TemplateTransformat" +
-      "ionInfo\022J\n\023TemplateRefusalInfo\030\004 \001(\0132-.D" +
-      "iadoc.Api.Proto.Docflow.TemplateRefusalI" +
-      "nfo\"\213\001\n\032TemplateTransformationInfo\022\030\n\020Tr" +
-      "ansformationId\030\001 \002(\t\022=\n\027TransformedToDoc" +
-      "umentId\030\002 \001(\0132\034.Diadoc.Api.Proto.Documen" +
-      "tId\022\024\n\014AuthorUserId\030\003 \001(\t\"K\n\023TemplateRef" +
-      "usalInfo\022\r\n\005BoxId\030\001 \002(\t\022\024\n\014AuthorUserId\030",
-      "\002 \001(\t\022\017\n\007Comment\030\003 \001(\tB\026B\024DocumentInfoV3" +
-      "Protos"
+      "oto.Documents.Origin\022\032\n\020EditingSettingId" +
+      "\030\023 \001(\t:\000\"\351\001\n\024DocumentParticipants\022=\n\006Sen",
+      "der\030\001 \002(\0132-.Diadoc.Api.Proto.Docflow.Doc" +
+      "umentParticipant\022<\n\005Proxy\030\002 \001(\0132-.Diadoc" +
+      ".Api.Proto.Docflow.DocumentParticipant\022@" +
+      "\n\tRecipient\030\003 \001(\0132-.Diadoc.Api.Proto.Doc" +
+      "flow.DocumentParticipant\022\022\n\nIsInternal\030\004" +
+      " \002(\010\":\n\023DocumentParticipant\022\r\n\005BoxId\030\001 \002" +
+      "(\t\022\024\n\014DepartmentId\030\002 \001(\t\"w\n\rDocumentLink" +
+      "s\0220\n\nInitialIds\030\001 \003(\0132\034.Diadoc.Api.Proto" +
+      ".DocumentId\0224\n\016SubordinateIds\030\002 \003(\0132\034.Di" +
+      "adoc.Api.Proto.DocumentId\"z\n\nPacketInfo\022",
+      ",\n\010LockMode\030\001 \002(\0162\032.Diadoc.Api.Proto.Loc" +
+      "kMode\022\020\n\010PacketId\030\002 \001(\t\022,\n\007AddedAt\030\003 \001(\013" +
+      "2\033.Diadoc.Api.Proto.Timestamp\"\200\001\n\022Docume" +
+      "ntLetterInfo\022\023\n\013IsEncrypted\030\001 \002(\010\022E\n\025For" +
+      "wardDocumentEvents\030\002 \003(\0132&.Diadoc.Api.Pr" +
+      "oto.ForwardDocumentEvent\022\016\n\006IsTest\030\003 \002(\010" +
+      "\"Y\n\021DocumentDraftInfo\022\022\n\nIsRecycled\030\001 \002(" +
+      "\010\022\020\n\010IsLocked\030\002 \002(\010\022\036\n\026TransformedToLett" +
+      "erIds\030\003 \003(\t\"\251\002\n\024DocumentTemplateInfo\022J\n\022" +
+      "LetterParticipants\030\001 \002(\0132..Diadoc.Api.Pr",
+      "oto.Docflow.DocumentParticipants\022\036\n\026Tran" +
+      "sformedToLetterIds\030\002 \003(\t\022Y\n\033TemplateTran" +
+      "sformationInfos\030\003 \003(\01324.Diadoc.Api.Proto" +
+      ".Docflow.TemplateTransformationInfo\022J\n\023T" +
+      "emplateRefusalInfo\030\004 \001(\0132-.Diadoc.Api.Pr" +
+      "oto.Docflow.TemplateRefusalInfo\"\213\001\n\032Temp" +
+      "lateTransformationInfo\022\030\n\020Transformation" +
+      "Id\030\001 \002(\t\022=\n\027TransformedToDocumentId\030\002 \001(" +
+      "\0132\034.Diadoc.Api.Proto.DocumentId\022\024\n\014Autho" +
+      "rUserId\030\003 \001(\t\"K\n\023TemplateRefusalInfo\022\r\n\005",
+      "BoxId\030\001 \002(\t\022\024\n\014AuthorUserId\030\002 \001(\t\022\017\n\007Com" +
+      "ment\030\003 \001(\tB\026B\024DocumentInfoV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11641,7 +11798,7 @@ public final class DocumentInfoV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_DocumentInfoV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocumentInfoV3_descriptor,
-        new java.lang.String[] { "FullVersion", "MessageType", "WorkflowId", "Participants", "DocumentDirection", "DepartmentId", "CustomDocumentId", "Metadata", "CustomData", "DocumentLinks", "PacketInfo", "IsRead", "IsDeleted", "IsInvitation", "LetterInfo", "DraftInfo", "TemplateInfo", "Origin", });
+        new java.lang.String[] { "FullVersion", "MessageType", "WorkflowId", "Participants", "DocumentDirection", "DepartmentId", "CustomDocumentId", "Metadata", "CustomData", "DocumentLinks", "PacketInfo", "IsRead", "IsDeleted", "IsInvitation", "LetterInfo", "DraftInfo", "TemplateInfo", "Origin", "EditingSettingId", });
     internal_static_Diadoc_Api_Proto_Docflow_DocumentParticipants_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_DocumentParticipants_fieldAccessorTable = new
