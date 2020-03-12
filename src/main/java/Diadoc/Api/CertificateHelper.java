@@ -125,11 +125,8 @@ public class CertificateHelper {
     }
 
     public static byte[] sign(X509Certificate cert, byte[] data) throws Exception {
-
-        PrivateKey privateKey = getPrivateKey(cert, null);
-
+        var privateKey = getPrivateKey(cert, null);
         return CMSSign(data, privateKey, cert, true);
-
     }
 
     public static PrivateKey getPrivateKey(X509Certificate cert, char[] password) {
