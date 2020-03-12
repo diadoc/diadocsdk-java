@@ -1,28 +1,21 @@
 package Diadoc.Api.message;
 
-import Diadoc.Api.Proto.Invoicing.InvoiceCorrectionRequestInfoProtos;
-import Diadoc.Api.exceptions.DiadocException;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
-import org.apache.http.HttpStatus;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
-import org.apache.http.message.BasicNameValuePair;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
 
 import static Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.Message;
 import static Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.MessagePatch;
 import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.MessagePatchToPost;
 import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.MessageToPost;
-import static Diadoc.Api.Proto.Invoicing.InvoiceCorrectionRequestInfoProtos.*;
+import static Diadoc.Api.Proto.Invoicing.InvoiceCorrectionRequestInfoProtos.InvoiceCorrectionRequestInfo;
 
 public class MessageClient {
     private DiadocHttpClient diadocHttpClient;

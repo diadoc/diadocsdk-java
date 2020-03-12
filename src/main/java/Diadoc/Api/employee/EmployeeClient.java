@@ -1,5 +1,6 @@
 package Diadoc.Api.employee;
 
+import Diadoc.Api.Proto.CertificateListProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.http.client.methods.RequestBuilder;
@@ -10,6 +11,7 @@ import org.jetbrains.annotations.Nullable;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import static Diadoc.Api.Proto.CertificateListProtos.*;
 import static Diadoc.Api.Proto.Employees.EmployeeProtos.Employee;
 import static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList;
 import static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreate;
@@ -188,6 +190,22 @@ public class EmployeeClient {
                             .addParameter("userId", userId)
                             .build());
             return EmployeeSubscriptions.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public CertificateList getMyCertificates(String boxId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        try {
+            var request = RequestBuilder.get(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/GetMyCertificates")
+                            .addParameter("boxId", boxId)
+                            .build());
+            return CertificateList.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
