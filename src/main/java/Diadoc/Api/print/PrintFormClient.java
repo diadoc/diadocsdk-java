@@ -143,65 +143,60 @@ public class PrintFormClient {
             throw new DiadocSdkException(e);
         }
     }
-    
-    
-    public PrintFormResult generatePrintFormFromAttachment(String boxId, String type, byte[] bytes)
-			throws DiadocSdkException {
-		if (Tools.isNullOrEmpty(boxId)) {
-			throw new IllegalArgumentException("boxId");
-		}
-		if (Tools.isNullOrEmpty(type)) {
-			throw new IllegalArgumentException("type");
-		}
-		if (bytes == null) {
-			throw new IllegalArgumentException("bytes");
-		}
 
-		try {
-			var request = RequestBuilder
-					.post(new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GeneratePrintFormFromAttachment")
-							.addParameter("boxId", boxId).addParameter("documentType", type)
+    public PrintFormResult generatePrintFormFromAttachment(String fromBoxId, String type, byte[] bytes) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(fromBoxId)) {
+            throw new IllegalArgumentException("fromBoxId");
+        }
+        if (Tools.isNullOrEmpty(type)) {
+            throw new IllegalArgumentException("type");
+        }
+        if (bytes==null) {
+            throw new IllegalArgumentException("bytes");
+        }
 
-							.build())
-					.setEntity(new ByteArrayEntity(bytes));
+        try {
+            var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GeneratePrintFormFromAttachment")
+                    .addParameter("fromBoxId", fromBoxId)
+                    .addParameter("type", type)
+                    .build())
+                    .setEntity(new ByteArrayEntity(bytes));
 
-			var response = diadocHttpClient.getRawResponse(request);
+            var response = diadocHttpClient.getRawResponse(request);
 
+            if (response.getRetryAfter() != null) {
+                return new PrintFormResult(response.getRetryAfter());
+            }
 
-			if (response.getRetryAfter() != null) {
-				return new PrintFormResult(response.getRetryAfter());
-			}
+            return new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
 
-			return new PrintFormResult(
-					new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
+        } catch (URISyntaxException | ParseException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 
-		} catch (URISyntaxException | ParseException | IOException e) {
-			throw new DiadocSdkException(e);
-		}
-	}
+    public PrintFormResult getGeneratedPrintForm(String printFormId) throws DiadocSdkException {
+        PrintFormResult ret = null;
 
-	public PrintFormResult generatedPrintForm(String printId) throws DiadocSdkException {
-		PrintFormResult ret = null;
+        try {
+            var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
+                .setPath("/GetGeneratedPrintForm")
+                .addParameter("printFormId", printFormId)
+                .build());
 
-		
-		try {
+            var response = diadocHttpClient.getRawResponse(request);
+            if (response.getRetryAfter() != null) {
+                return new PrintFormResult(response.getRetryAfter());
+            }
 
-			var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
-					.setPath("/GetGeneratedPrintForm").addParameter("printFormId", printId).build());
+            ret = new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
 
-			var response = diadocHttpClient.getRawResponse(request);
+        } catch (URISyntaxException | ParseException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
 
-			if (response.getRetryAfter() != null) {
-				return new PrintFormResult(response.getRetryAfter());
-			}
+        return ret;
+    }
 
-			ret = new PrintFormResult(
-					new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
-
-		} catch (URISyntaxException | ParseException | IOException e) {
-			throw new DiadocSdkException(e);
-		}
-
-		return ret;
-	}
 }
