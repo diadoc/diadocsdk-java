@@ -184,6 +184,54 @@ public final class ExtendedSignerProtos {
      * </pre>
      */
     ResponsibleForOperationAndSignerForInvoice(6, 6),
+    /**
+     * <code>ChairmanCommission = 7;</code>
+     *
+     * <pre>
+     * председатель комиссии
+     * </pre>
+     */
+    ChairmanCommission(7, 7),
+    /**
+     * <code>MemberCommission = 8;</code>
+     *
+     * <pre>
+     * член комиссии
+     * </pre>
+     */
+    MemberCommission(8, 8),
+    /**
+     * <code>PersonApprovedDocument = 21;</code>
+     *
+     * <pre>
+     * лицо, в полномочия которого входит утверждение документа, оформляющего событие (факт хозяйственной жизни)
+     * </pre>
+     */
+    PersonApprovedDocument(9, 21),
+    /**
+     * <code>PersonConfirmedDocument = 22;</code>
+     *
+     * <pre>
+     * лицо, в полномочия которого входит подтверждение оформленного события (факта хозяйственной жизни)
+     * </pre>
+     */
+    PersonConfirmedDocument(10, 22),
+    /**
+     * <code>PersonAgreedOnDocument = 23;</code>
+     *
+     * <pre>
+     * лицо, в полномочия которого входит согласование документа, оформляющего событие (факт хозяйственной жизни)
+     * </pre>
+     */
+    PersonAgreedOnDocument(11, 23),
+    /**
+     * <code>PersonOtherPower = 29;</code>
+     *
+     * <pre>
+     * лицо с иными полномочиями
+     * </pre>
+     */
+    PersonOtherPower(12, 29),
     ;
 
     /**
@@ -242,6 +290,54 @@ public final class ExtendedSignerProtos {
      * </pre>
      */
     public static final int ResponsibleForOperationAndSignerForInvoice_VALUE = 6;
+    /**
+     * <code>ChairmanCommission = 7;</code>
+     *
+     * <pre>
+     * председатель комиссии
+     * </pre>
+     */
+    public static final int ChairmanCommission_VALUE = 7;
+    /**
+     * <code>MemberCommission = 8;</code>
+     *
+     * <pre>
+     * член комиссии
+     * </pre>
+     */
+    public static final int MemberCommission_VALUE = 8;
+    /**
+     * <code>PersonApprovedDocument = 21;</code>
+     *
+     * <pre>
+     * лицо, в полномочия которого входит утверждение документа, оформляющего событие (факт хозяйственной жизни)
+     * </pre>
+     */
+    public static final int PersonApprovedDocument_VALUE = 21;
+    /**
+     * <code>PersonConfirmedDocument = 22;</code>
+     *
+     * <pre>
+     * лицо, в полномочия которого входит подтверждение оформленного события (факта хозяйственной жизни)
+     * </pre>
+     */
+    public static final int PersonConfirmedDocument_VALUE = 22;
+    /**
+     * <code>PersonAgreedOnDocument = 23;</code>
+     *
+     * <pre>
+     * лицо, в полномочия которого входит согласование документа, оформляющего событие (факт хозяйственной жизни)
+     * </pre>
+     */
+    public static final int PersonAgreedOnDocument_VALUE = 23;
+    /**
+     * <code>PersonOtherPower = 29;</code>
+     *
+     * <pre>
+     * лицо с иными полномочиями
+     * </pre>
+     */
+    public static final int PersonOtherPower_VALUE = 29;
 
 
     public final int getNumber() { return value; }
@@ -255,6 +351,12 @@ public final class ExtendedSignerProtos {
         case 4: return MadeOperationAndSignedInvoice;
         case 5: return MadeAndResponsibleForOperationAndSignedInvoice;
         case 6: return ResponsibleForOperationAndSignerForInvoice;
+        case 7: return ChairmanCommission;
+        case 8: return MemberCommission;
+        case 21: return PersonApprovedDocument;
+        case 22: return PersonConfirmedDocument;
+        case 23: return PersonAgreedOnDocument;
+        case 29: return PersonOtherPower;
         default: return null;
       }
     }
@@ -549,10 +651,26 @@ public final class ExtendedSignerProtos {
      * <code>Utd820Buyer = 8;</code>
      *
      * <pre>
-     * Данные для титула покупателя УПД формата приказа 820
+     * Данные для титула покупателя УПД формата приказа 820 
      * </pre>
      */
     Utd820Buyer(9, 8),
+    /**
+     * <code>PriRasxBuyer = 9;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя приказа 423
+     * </pre>
+     */
+    PriRasxBuyer(10, 9),
+    /**
+     * <code>PriRasxAddInformation = 10;</code>
+     *
+     * <pre>
+     * Данные для титула дополнительных сведений приказа 423
+     * </pre>
+     */
+    PriRasxAddInformation(11, 10),
     ;
 
     /**
@@ -627,10 +745,26 @@ public final class ExtendedSignerProtos {
      * <code>Utd820Buyer = 8;</code>
      *
      * <pre>
-     * Данные для титула покупателя УПД формата приказа 820
+     * Данные для титула покупателя УПД формата приказа 820 
      * </pre>
      */
     public static final int Utd820Buyer_VALUE = 8;
+    /**
+     * <code>PriRasxBuyer = 9;</code>
+     *
+     * <pre>
+     * Данные для титула покупателя приказа 423
+     * </pre>
+     */
+    public static final int PriRasxBuyer_VALUE = 9;
+    /**
+     * <code>PriRasxAddInformation = 10;</code>
+     *
+     * <pre>
+     * Данные для титула дополнительных сведений приказа 423
+     * </pre>
+     */
+    public static final int PriRasxAddInformation_VALUE = 10;
 
 
     public final int getNumber() { return value; }
@@ -647,6 +781,8 @@ public final class ExtendedSignerProtos {
         case 6: return AccCert552Seller;
         case 7: return AccCert552Buyer;
         case 8: return Utd820Buyer;
+        case 9: return PriRasxBuyer;
+        case 10: return PriRasxAddInformation;
         default: return null;
       }
     }
@@ -5773,23 +5909,28 @@ public final class ExtendedSignerProtos {
       "s\022\030\n\020SignerPowersBase\030\007 \001(\t\022\033\n\023SignerOrg" +
       "PowersBase\030\010 \001(\t*G\n\nSignerType\022\017\n\013LegalE" +
       "ntity\020\001\022\024\n\020IndividualEntity\020\002\022\022\n\016Physica" +
-      "lPerson\020\003*\372\001\n\014SignerPowers\022\021\n\rInvoiceSig",
+      "lPerson\020\003*\223\003\n\014SignerPowers\022\021\n\rInvoiceSig",
       "ner\020\000\022\027\n\023PersonMadeOperation\020\001\022\030\n\024MadeAn" +
       "dSignOperation\020\002\022\035\n\031PersonDocumentedOper" +
       "ation\020\003\022!\n\035MadeOperationAndSignedInvoice" +
       "\020\004\0222\n.MadeAndResponsibleForOperationAndS" +
       "ignedInvoice\020\005\022.\n*ResponsibleForOperatio" +
-      "nAndSignerForInvoice\020\006*\257\001\n\014SignerStatus\022" +
-      "\022\n\016SellerEmployee\020\001\022\036\n\032InformationCreato" +
-      "rEmployee\020\002\022\035\n\031OtherOrganizationEmployee" +
-      "\020\003\022\024\n\020AuthorizedPerson\020\004\022\021\n\rBuyerEmploye" +
-      "e\020\005\022#\n\037InformationCreatorBuyerEmployee\020\006",
-      "*\311\001\n\021DocumentTitleType\022\023\n\006Absent\020\377\377\377\377\377\377\377" +
-      "\377\377\001\022\r\n\tUtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUcdS" +
-      "eller\020\002\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg551Selle" +
-      "r\020\004\022\023\n\017TovTorg551Buyer\020\005\022\024\n\020AccCert552Se" +
-      "ller\020\006\022\023\n\017AccCert552Buyer\020\007\022\017\n\013Utd820Buy" +
-      "er\020\010B\026B\024ExtendedSignerProtos"
+      "nAndSignerForInvoice\020\006\022\026\n\022ChairmanCommis" +
+      "sion\020\007\022\024\n\020MemberCommission\020\010\022\032\n\026PersonAp" +
+      "provedDocument\020\025\022\033\n\027PersonConfirmedDocum" +
+      "ent\020\026\022\032\n\026PersonAgreedOnDocument\020\027\022\024\n\020Per" +
+      "sonOtherPower\020\035*\257\001\n\014SignerStatus\022\022\n\016Sell",
+      "erEmployee\020\001\022\036\n\032InformationCreatorEmploy" +
+      "ee\020\002\022\035\n\031OtherOrganizationEmployee\020\003\022\024\n\020A" +
+      "uthorizedPerson\020\004\022\021\n\rBuyerEmployee\020\005\022#\n\037" +
+      "InformationCreatorBuyerEmployee\020\006*\366\001\n\021Do" +
+      "cumentTitleType\022\023\n\006Absent\020\377\377\377\377\377\377\377\377\377\001\022\r\n\t" +
+      "UtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUcdSeller\020\002" +
+      "\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg551Seller\020\004\022\023\n\017" +
+      "TovTorg551Buyer\020\005\022\024\n\020AccCert552Seller\020\006\022" +
+      "\023\n\017AccCert552Buyer\020\007\022\017\n\013Utd820Buyer\020\010\022\020\n" +
+      "\014PriRasxBuyer\020\t\022\031\n\025PriRasxAddInformation",
+      "\020\nB\026B\024ExtendedSignerProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
