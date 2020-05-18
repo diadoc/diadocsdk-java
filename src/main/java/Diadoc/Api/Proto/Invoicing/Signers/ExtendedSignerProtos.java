@@ -656,21 +656,21 @@ public final class ExtendedSignerProtos {
      */
     Utd820Buyer(9, 8),
     /**
-     * <code>PriRasxBuyer = 9;</code>
+     * <code>Torg2Buyer = 9;</code>
      *
      * <pre>
      * Данные для титула покупателя приказа 423
      * </pre>
      */
-    PriRasxBuyer(10, 9),
+    Torg2Buyer(10, 9),
     /**
-     * <code>PriRasxAddInformation = 10;</code>
+     * <code>Torg2AdditionalInfo = 10;</code>
      *
      * <pre>
      * Данные для титула дополнительных сведений приказа 423
      * </pre>
      */
-    PriRasxAddInformation(11, 10),
+    Torg2AdditionalInfo(11, 10),
     ;
 
     /**
@@ -750,21 +750,21 @@ public final class ExtendedSignerProtos {
      */
     public static final int Utd820Buyer_VALUE = 8;
     /**
-     * <code>PriRasxBuyer = 9;</code>
+     * <code>Torg2Buyer = 9;</code>
      *
      * <pre>
      * Данные для титула покупателя приказа 423
      * </pre>
      */
-    public static final int PriRasxBuyer_VALUE = 9;
+    public static final int Torg2Buyer_VALUE = 9;
     /**
-     * <code>PriRasxAddInformation = 10;</code>
+     * <code>Torg2AdditionalInfo = 10;</code>
      *
      * <pre>
      * Данные для титула дополнительных сведений приказа 423
      * </pre>
      */
-    public static final int PriRasxAddInformation_VALUE = 10;
+    public static final int Torg2AdditionalInfo_VALUE = 10;
 
 
     public final int getNumber() { return value; }
@@ -781,8 +781,8 @@ public final class ExtendedSignerProtos {
         case 6: return AccCert552Seller;
         case 7: return AccCert552Buyer;
         case 8: return Utd820Buyer;
-        case 9: return PriRasxBuyer;
-        case 10: return PriRasxAddInformation;
+        case 9: return Torg2Buyer;
+        case 10: return Torg2AdditionalInfo;
         default: return null;
       }
     }
@@ -5923,14 +5923,14 @@ public final class ExtendedSignerProtos {
       "erEmployee\020\001\022\036\n\032InformationCreatorEmploy" +
       "ee\020\002\022\035\n\031OtherOrganizationEmployee\020\003\022\024\n\020A" +
       "uthorizedPerson\020\004\022\021\n\rBuyerEmployee\020\005\022#\n\037" +
-      "InformationCreatorBuyerEmployee\020\006*\366\001\n\021Do" +
+      "InformationCreatorBuyerEmployee\020\006*\362\001\n\021Do" +
       "cumentTitleType\022\023\n\006Absent\020\377\377\377\377\377\377\377\377\377\001\022\r\n\t" +
       "UtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUcdSeller\020\002" +
       "\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg551Seller\020\004\022\023\n\017" +
       "TovTorg551Buyer\020\005\022\024\n\020AccCert552Seller\020\006\022" +
-      "\023\n\017AccCert552Buyer\020\007\022\017\n\013Utd820Buyer\020\010\022\020\n" +
-      "\014PriRasxBuyer\020\t\022\031\n\025PriRasxAddInformation",
-      "\020\nB\026B\024ExtendedSignerProtos"
+      "\023\n\017AccCert552Buyer\020\007\022\017\n\013Utd820Buyer\020\010\022\016\n" +
+      "\nTorg2Buyer\020\t\022\027\n\023Torg2AdditionalInfo\020\nB\026",
+      "B\024ExtendedSignerProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
