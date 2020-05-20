@@ -3232,6 +3232,24 @@ public final class DocumentTypeDescriptionProtos {
     boolean getSupportsEncrypting();
 
     /**
+     * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
+     */
+    boolean hasSupportsPredefinedRecipientTitle();
+    /**
+     * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
+     */
+    boolean getSupportsPredefinedRecipientTitle();
+
+    /**
+     * <code>required bool SupportsAmendmentRequest = 8;</code>
+     */
+    boolean hasSupportsAmendmentRequest();
+    /**
+     * <code>required bool SupportsAmendmentRequest = 8;</code>
+     */
+    boolean getSupportsAmendmentRequest();
+
+    /**
      * <code>repeated .Diadoc.Api.Proto.Documents.Types.DocumentTitle Titles = 4;</code>
      */
     java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle> 
@@ -3287,15 +3305,6 @@ public final class DocumentTypeDescriptionProtos {
      */
     Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder getWorkflowsOrBuilder(
         int index);
-
-    /**
-     * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
-     */
-    boolean hasSupportsPredefinedRecipientTitle();
-    /**
-     * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
-     */
-    boolean getSupportsPredefinedRecipientTitle();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Types.DocumentVersion}
@@ -3366,29 +3375,34 @@ public final class DocumentTypeDescriptionProtos {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 titles_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000020;
               }
               titles_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle.PARSER, extensionRegistry));
               break;
             }
             case 40: {
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000020;
               isActual_ = input.readBool();
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                 workflows_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000080;
               }
               workflows_.add(input.readMessage(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.PARSER, extensionRegistry));
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               supportsPredefinedRecipientTitle_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000010;
+              supportsAmendmentRequest_ = input.readBool();
               break;
             }
           }
@@ -3399,10 +3413,10 @@ public final class DocumentTypeDescriptionProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           titles_ = java.util.Collections.unmodifiableList(titles_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           workflows_ = java.util.Collections.unmodifiableList(workflows_);
         }
         this.unknownFields = unknownFields.build();
@@ -3509,6 +3523,36 @@ public final class DocumentTypeDescriptionProtos {
       return supportsEncrypting_;
     }
 
+    public static final int SUPPORTSPREDEFINEDRECIPIENTTITLE_FIELD_NUMBER = 7;
+    private boolean supportsPredefinedRecipientTitle_;
+    /**
+     * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
+     */
+    public boolean hasSupportsPredefinedRecipientTitle() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
+     */
+    public boolean getSupportsPredefinedRecipientTitle() {
+      return supportsPredefinedRecipientTitle_;
+    }
+
+    public static final int SUPPORTSAMENDMENTREQUEST_FIELD_NUMBER = 8;
+    private boolean supportsAmendmentRequest_;
+    /**
+     * <code>required bool SupportsAmendmentRequest = 8;</code>
+     */
+    public boolean hasSupportsAmendmentRequest() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required bool SupportsAmendmentRequest = 8;</code>
+     */
+    public boolean getSupportsAmendmentRequest() {
+      return supportsAmendmentRequest_;
+    }
+
     public static final int TITLES_FIELD_NUMBER = 4;
     private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle> titles_;
     /**
@@ -3550,7 +3594,7 @@ public final class DocumentTypeDescriptionProtos {
      * <code>required bool IsActual = 5;</code>
      */
     public boolean hasIsActual() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
      * <code>required bool IsActual = 5;</code>
@@ -3594,29 +3638,15 @@ public final class DocumentTypeDescriptionProtos {
       return workflows_.get(index);
     }
 
-    public static final int SUPPORTSPREDEFINEDRECIPIENTTITLE_FIELD_NUMBER = 7;
-    private boolean supportsPredefinedRecipientTitle_;
-    /**
-     * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
-     */
-    public boolean hasSupportsPredefinedRecipientTitle() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
-     */
-    public boolean getSupportsPredefinedRecipientTitle() {
-      return supportsPredefinedRecipientTitle_;
-    }
-
     private void initFields() {
       version_ = "";
       supportsContentPatching_ = false;
       supportsEncrypting_ = false;
+      supportsPredefinedRecipientTitle_ = false;
+      supportsAmendmentRequest_ = false;
       titles_ = java.util.Collections.emptyList();
       isActual_ = false;
       workflows_ = java.util.Collections.emptyList();
-      supportsPredefinedRecipientTitle_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3636,11 +3666,15 @@ public final class DocumentTypeDescriptionProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasIsActual()) {
+      if (!hasSupportsPredefinedRecipientTitle()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasSupportsPredefinedRecipientTitle()) {
+      if (!hasSupportsAmendmentRequest()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasIsActual()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -3675,14 +3709,17 @@ public final class DocumentTypeDescriptionProtos {
       for (int i = 0; i < titles_.size(); i++) {
         output.writeMessage(4, titles_.get(i));
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeBool(5, isActual_);
       }
       for (int i = 0; i < workflows_.size(); i++) {
         output.writeMessage(6, workflows_.get(i));
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBool(7, supportsPredefinedRecipientTitle_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(8, supportsAmendmentRequest_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3709,7 +3746,7 @@ public final class DocumentTypeDescriptionProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, titles_.get(i));
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, isActual_);
       }
@@ -3717,9 +3754,13 @@ public final class DocumentTypeDescriptionProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, workflows_.get(i));
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, supportsPredefinedRecipientTitle_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, supportsAmendmentRequest_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3846,22 +3887,24 @@ public final class DocumentTypeDescriptionProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         supportsEncrypting_ = false;
         bitField0_ = (bitField0_ & ~0x00000004);
+        supportsPredefinedRecipientTitle_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        supportsAmendmentRequest_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (titlesBuilder_ == null) {
           titles_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           titlesBuilder_.clear();
         }
         isActual_ = false;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
         if (workflowsBuilder_ == null) {
           workflows_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
           workflowsBuilder_.clear();
         }
-        supportsPredefinedRecipientTitle_ = false;
-        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -3902,32 +3945,36 @@ public final class DocumentTypeDescriptionProtos {
           to_bitField0_ |= 0x00000004;
         }
         result.supportsEncrypting_ = supportsEncrypting_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.supportsPredefinedRecipientTitle_ = supportsPredefinedRecipientTitle_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.supportsAmendmentRequest_ = supportsAmendmentRequest_;
         if (titlesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
             titles_ = java.util.Collections.unmodifiableList(titles_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.titles_ = titles_;
         } else {
           result.titles_ = titlesBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000008;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000020;
         }
         result.isActual_ = isActual_;
         if (workflowsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
             workflows_ = java.util.Collections.unmodifiableList(workflows_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.workflows_ = workflows_;
         } else {
           result.workflows_ = workflowsBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.supportsPredefinedRecipientTitle_ = supportsPredefinedRecipientTitle_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3955,11 +4002,17 @@ public final class DocumentTypeDescriptionProtos {
         if (other.hasSupportsEncrypting()) {
           setSupportsEncrypting(other.getSupportsEncrypting());
         }
+        if (other.hasSupportsPredefinedRecipientTitle()) {
+          setSupportsPredefinedRecipientTitle(other.getSupportsPredefinedRecipientTitle());
+        }
+        if (other.hasSupportsAmendmentRequest()) {
+          setSupportsAmendmentRequest(other.getSupportsAmendmentRequest());
+        }
         if (titlesBuilder_ == null) {
           if (!other.titles_.isEmpty()) {
             if (titles_.isEmpty()) {
               titles_ = other.titles_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureTitlesIsMutable();
               titles_.addAll(other.titles_);
@@ -3972,7 +4025,7 @@ public final class DocumentTypeDescriptionProtos {
               titlesBuilder_.dispose();
               titlesBuilder_ = null;
               titles_ = other.titles_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000020);
               titlesBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTitlesFieldBuilder() : null;
@@ -3988,7 +4041,7 @@ public final class DocumentTypeDescriptionProtos {
           if (!other.workflows_.isEmpty()) {
             if (workflows_.isEmpty()) {
               workflows_ = other.workflows_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureWorkflowsIsMutable();
               workflows_.addAll(other.workflows_);
@@ -4001,7 +4054,7 @@ public final class DocumentTypeDescriptionProtos {
               workflowsBuilder_.dispose();
               workflowsBuilder_ = null;
               workflows_ = other.workflows_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000080);
               workflowsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getWorkflowsFieldBuilder() : null;
@@ -4009,9 +4062,6 @@ public final class DocumentTypeDescriptionProtos {
               workflowsBuilder_.addAllMessages(other.workflows_);
             }
           }
-        }
-        if (other.hasSupportsPredefinedRecipientTitle()) {
-          setSupportsPredefinedRecipientTitle(other.getSupportsPredefinedRecipientTitle());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4030,11 +4080,15 @@ public final class DocumentTypeDescriptionProtos {
           
           return false;
         }
-        if (!hasIsActual()) {
+        if (!hasSupportsPredefinedRecipientTitle()) {
           
           return false;
         }
-        if (!hasSupportsPredefinedRecipientTitle()) {
+        if (!hasSupportsAmendmentRequest()) {
+          
+          return false;
+        }
+        if (!hasIsActual()) {
           
           return false;
         }
@@ -4212,12 +4266,76 @@ public final class DocumentTypeDescriptionProtos {
         return this;
       }
 
+      private boolean supportsPredefinedRecipientTitle_ ;
+      /**
+       * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
+       */
+      public boolean hasSupportsPredefinedRecipientTitle() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
+       */
+      public boolean getSupportsPredefinedRecipientTitle() {
+        return supportsPredefinedRecipientTitle_;
+      }
+      /**
+       * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
+       */
+      public Builder setSupportsPredefinedRecipientTitle(boolean value) {
+        bitField0_ |= 0x00000008;
+        supportsPredefinedRecipientTitle_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
+       */
+      public Builder clearSupportsPredefinedRecipientTitle() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        supportsPredefinedRecipientTitle_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean supportsAmendmentRequest_ ;
+      /**
+       * <code>required bool SupportsAmendmentRequest = 8;</code>
+       */
+      public boolean hasSupportsAmendmentRequest() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required bool SupportsAmendmentRequest = 8;</code>
+       */
+      public boolean getSupportsAmendmentRequest() {
+        return supportsAmendmentRequest_;
+      }
+      /**
+       * <code>required bool SupportsAmendmentRequest = 8;</code>
+       */
+      public Builder setSupportsAmendmentRequest(boolean value) {
+        bitField0_ |= 0x00000010;
+        supportsAmendmentRequest_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool SupportsAmendmentRequest = 8;</code>
+       */
+      public Builder clearSupportsAmendmentRequest() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        supportsAmendmentRequest_ = false;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle> titles_ =
         java.util.Collections.emptyList();
       private void ensureTitlesIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
           titles_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle>(titles_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -4367,7 +4485,7 @@ public final class DocumentTypeDescriptionProtos {
       public Builder clearTitles() {
         if (titlesBuilder_ == null) {
           titles_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           titlesBuilder_.clear();
@@ -4444,7 +4562,7 @@ public final class DocumentTypeDescriptionProtos {
           titlesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitle.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentTitleOrBuilder>(
                   titles_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
                   isClean());
           titles_ = null;
@@ -4457,7 +4575,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>required bool IsActual = 5;</code>
        */
       public boolean hasIsActual() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
        * <code>required bool IsActual = 5;</code>
@@ -4469,7 +4587,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>required bool IsActual = 5;</code>
        */
       public Builder setIsActual(boolean value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000040;
         isActual_ = value;
         onChanged();
         return this;
@@ -4478,7 +4596,7 @@ public final class DocumentTypeDescriptionProtos {
        * <code>required bool IsActual = 5;</code>
        */
       public Builder clearIsActual() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
         isActual_ = false;
         onChanged();
         return this;
@@ -4487,9 +4605,9 @@ public final class DocumentTypeDescriptionProtos {
       private java.util.List<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow> workflows_ =
         java.util.Collections.emptyList();
       private void ensureWorkflowsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
           workflows_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow>(workflows_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -4639,7 +4757,7 @@ public final class DocumentTypeDescriptionProtos {
       public Builder clearWorkflows() {
         if (workflowsBuilder_ == null) {
           workflows_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           workflowsBuilder_.clear();
@@ -4716,44 +4834,12 @@ public final class DocumentTypeDescriptionProtos {
           workflowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflow.Builder, Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentWorkflowOrBuilder>(
                   workflows_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000080) == 0x00000080),
                   getParentForChildren(),
                   isClean());
           workflows_ = null;
         }
         return workflowsBuilder_;
-      }
-
-      private boolean supportsPredefinedRecipientTitle_ ;
-      /**
-       * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
-       */
-      public boolean hasSupportsPredefinedRecipientTitle() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
-       */
-      public boolean getSupportsPredefinedRecipientTitle() {
-        return supportsPredefinedRecipientTitle_;
-      }
-      /**
-       * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
-       */
-      public Builder setSupportsPredefinedRecipientTitle(boolean value) {
-        bitField0_ |= 0x00000040;
-        supportsPredefinedRecipientTitle_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required bool SupportsPredefinedRecipientTitle = 7;</code>
-       */
-      public Builder clearSupportsPredefinedRecipientTitle() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        supportsPredefinedRecipientTitle_ = false;
-        onChanged();
-        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Types.DocumentVersion)
@@ -9856,44 +9942,45 @@ public final class DocumentTypeDescriptionProtos {
       "ocumentTypeDescription\"e\n\020DocumentFuncti" +
       "on\022\014\n\004Name\030\001 \002(\t\022C\n\010Versions\030\002 \003(\01321.Dia" +
       "doc.Api.Proto.Documents.Types.DocumentVe" +
-      "rsion\"\243\002\n\017DocumentVersion\022\017\n\007Version\030\001 \002" +
+      "rsion\"\305\002\n\017DocumentVersion\022\017\n\007Version\030\001 \002" +
       "(\t\022\037\n\027SupportsContentPatching\030\002 \002(\010\022\032\n\022S" +
-      "upportsEncrypting\030\003 \002(\010\022?\n\006Titles\030\004 \003(\0132" +
-      "/.Diadoc.Api.Proto.Documents.Types.Docum" +
-      "entTitle\022\020\n\010IsActual\030\005 \002(\010\022E\n\tWorkflows\030" +
-      "\006 \003(\01322.Diadoc.Api.Proto.Documents.Types",
-      ".DocumentWorkflow\022(\n SupportsPredefinedR" +
-      "ecipientTitle\030\007 \002(\010\"1\n\020DocumentWorkflow\022" +
-      "\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\301\002\n\rDocum" +
-      "entTitle\022\r\n\005Index\030\007 \002(\005\022\020\n\010IsFormal\030\001 \002(" +
-      "\010\022\016\n\006XsdUrl\030\002 \001(\t\022\026\n\016UserDataXsdUrl\030\005 \001(" +
-      "\t\022@\n\nSignerInfo\030\006 \002(\0132,.Diadoc.Api.Proto" +
-      ".Documents.Types.SignerInfo\022M\n\rMetadataI" +
-      "tems\030\003 \003(\01326.Diadoc.Api.Proto.Documents." +
-      "Types.DocumentMetadataItem\022V\n\026EncryptedM" +
-      "etadataItems\030\004 \003(\01326.Diadoc.Api.Proto.Do",
-      "cuments.Types.DocumentMetadataItem\"\260\001\n\nS" +
-      "ignerInfo\022@\n\nSignerType\030\001 \002(\0162,.Diadoc.A" +
-      "pi.Proto.Documents.Types.SignerType\022`\n\031E" +
-      "xtendedDocumentTitleType\030\002 \002(\01625.Diadoc." +
-      "Api.Proto.Invoicing.Signers.DocumentTitl" +
-      "eType:\006Absent\"\312\001\n\024DocumentMetadataItem\022\n" +
-      "\n\002Id\030\001 \002(\t\022H\n\004Type\030\002 \002(\0162:.Diadoc.Api.Pr" +
-      "oto.Documents.Types.DocumentMetadataItem" +
-      "Type\022\022\n\nIsRequired\030\003 \002(\010\022H\n\006Source\030\004 \002(\016" +
-      "28.Diadoc.Api.Proto.Documents.Types.Docu",
-      "mentMetadataSource\"N\n\024DetectedDocumentTy" +
-      "pe\022\023\n\013TypeNamedId\030\001 \002(\t\022\020\n\010Function\030\002 \002(" +
-      "\t\022\017\n\007Version\030\003 \002(\t\"l\n\033DetectDocumentType" +
-      "sResponse\022M\n\rDocumentTypes\030\001 \003(\01326.Diado" +
-      "c.Api.Proto.Documents.Types.DetectedDocu" +
-      "mentType*-\n\017DocumentDocflow\022\014\n\010External\020" +
-      "\000\022\014\n\010Internal\020\001*6\n\nSignerType\022\010\n\004None\020\000\022" +
-      "\n\n\006Signer\020\001\022\022\n\016ExtendedSigner\020\002*T\n\030Docum" +
-      "entMetadataItemType\022\n\n\006String\020\000\022\013\n\007Integ" +
-      "er\020\001\022\013\n\007Decimal\020\002\022\010\n\004Date\020\003\022\010\n\004Time\020\004*+\n",
-      "\026DocumentMetadataSource\022\007\n\003Xml\020\000\022\010\n\004User" +
-      "\020\001B\037B\035DocumentTypeDescriptionProtos"
+      "upportsEncrypting\030\003 \002(\010\022(\n SupportsPrede" +
+      "finedRecipientTitle\030\007 \002(\010\022 \n\030SupportsAme" +
+      "ndmentRequest\030\010 \002(\010\022?\n\006Titles\030\004 \003(\0132/.Di" +
+      "adoc.Api.Proto.Documents.Types.DocumentT",
+      "itle\022\020\n\010IsActual\030\005 \002(\010\022E\n\tWorkflows\030\006 \003(" +
+      "\01322.Diadoc.Api.Proto.Documents.Types.Doc" +
+      "umentWorkflow\"1\n\020DocumentWorkflow\022\n\n\002Id\030" +
+      "\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\301\002\n\rDocumentTit" +
+      "le\022\r\n\005Index\030\007 \002(\005\022\020\n\010IsFormal\030\001 \002(\010\022\016\n\006X" +
+      "sdUrl\030\002 \001(\t\022\026\n\016UserDataXsdUrl\030\005 \001(\t\022@\n\nS" +
+      "ignerInfo\030\006 \002(\0132,.Diadoc.Api.Proto.Docum" +
+      "ents.Types.SignerInfo\022M\n\rMetadataItems\030\003" +
+      " \003(\01326.Diadoc.Api.Proto.Documents.Types." +
+      "DocumentMetadataItem\022V\n\026EncryptedMetadat",
+      "aItems\030\004 \003(\01326.Diadoc.Api.Proto.Document" +
+      "s.Types.DocumentMetadataItem\"\260\001\n\nSignerI" +
+      "nfo\022@\n\nSignerType\030\001 \002(\0162,.Diadoc.Api.Pro" +
+      "to.Documents.Types.SignerType\022`\n\031Extende" +
+      "dDocumentTitleType\030\002 \002(\01625.Diadoc.Api.Pr" +
+      "oto.Invoicing.Signers.DocumentTitleType:" +
+      "\006Absent\"\312\001\n\024DocumentMetadataItem\022\n\n\002Id\030\001" +
+      " \002(\t\022H\n\004Type\030\002 \002(\0162:.Diadoc.Api.Proto.Do" +
+      "cuments.Types.DocumentMetadataItemType\022\022" +
+      "\n\nIsRequired\030\003 \002(\010\022H\n\006Source\030\004 \002(\01628.Dia",
+      "doc.Api.Proto.Documents.Types.DocumentMe" +
+      "tadataSource\"N\n\024DetectedDocumentType\022\023\n\013" +
+      "TypeNamedId\030\001 \002(\t\022\020\n\010Function\030\002 \002(\t\022\017\n\007V" +
+      "ersion\030\003 \002(\t\"l\n\033DetectDocumentTypesRespo" +
+      "nse\022M\n\rDocumentTypes\030\001 \003(\01326.Diadoc.Api." +
+      "Proto.Documents.Types.DetectedDocumentTy" +
+      "pe*-\n\017DocumentDocflow\022\014\n\010External\020\000\022\014\n\010I" +
+      "nternal\020\001*6\n\nSignerType\022\010\n\004None\020\000\022\n\n\006Sig" +
+      "ner\020\001\022\022\n\016ExtendedSigner\020\002*T\n\030DocumentMet" +
+      "adataItemType\022\n\n\006String\020\000\022\013\n\007Integer\020\001\022\013",
+      "\n\007Decimal\020\002\022\010\n\004Date\020\003\022\010\n\004Time\020\004*+\n\026Docum" +
+      "entMetadataSource\022\007\n\003Xml\020\000\022\010\n\004User\020\001B\037B\035" +
+      "DocumentTypeDescriptionProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9931,7 +10018,7 @@ public final class DocumentTypeDescriptionProtos {
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentVersion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DocumentVersion_descriptor,
-        new java.lang.String[] { "Version", "SupportsContentPatching", "SupportsEncrypting", "Titles", "IsActual", "Workflows", "SupportsPredefinedRecipientTitle", });
+        new java.lang.String[] { "Version", "SupportsContentPatching", "SupportsEncrypting", "SupportsPredefinedRecipientTitle", "SupportsAmendmentRequest", "Titles", "IsActual", "Workflows", });
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentWorkflow_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentWorkflow_fieldAccessorTable = new
