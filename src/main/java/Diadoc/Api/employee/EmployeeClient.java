@@ -1,6 +1,5 @@
 package Diadoc.Api.employee;
 
-import Diadoc.Api.Proto.CertificateListProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.http.client.methods.RequestBuilder;
@@ -11,12 +10,13 @@ import org.jetbrains.annotations.Nullable;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
-import static Diadoc.Api.Proto.CertificateListProtos.*;
+import static Diadoc.Api.Proto.CertificateListProtos.CertificateList;
 import static Diadoc.Api.Proto.Employees.EmployeeProtos.Employee;
 import static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeList;
 import static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreate;
 import static Diadoc.Api.Proto.Employees.EmployeeToUpdateProtos.EmployeeToUpdate;
-import static Diadoc.Api.Proto.Employees.Subscriptions.SubscriptionProtos.*;
+import static Diadoc.Api.Proto.Employees.Subscriptions.SubscriptionProtos.EmployeeSubscriptions;
+import static Diadoc.Api.Proto.Employees.Subscriptions.SubscriptionProtos.SubscriptionsToUpdate;
 
 public class EmployeeClient {
     private DiadocHttpClient diadocHttpClient;

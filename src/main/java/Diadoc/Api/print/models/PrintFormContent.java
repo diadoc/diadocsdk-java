@@ -20,16 +20,6 @@ public class PrintFormContent {
 	public String getFileName() { return fileName; }
 	public byte[] getBytes() { return bytes; }
 
-	/**
-	 * Use saveToFile instead
-	 */
-
-	@Deprecated
-	public void SaveToFile(String path) throws Exception
-	{
-		saveToFile(path);
-	}
-
 	public void saveToFile(String path) throws IOException {
 		Tools.WriteAllBytes(path, getBytes());
 	}

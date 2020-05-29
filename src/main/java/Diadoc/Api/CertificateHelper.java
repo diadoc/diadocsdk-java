@@ -1,43 +1,22 @@
 package Diadoc.Api;
 
+import Diadoc.Api.sign.GOSTSignInfoProvider;
+import com.objsys.asn1j.runtime.*;
+import org.apache.commons.codec.binary.Hex;
+import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.*;
+import ru.CryptoPro.JCP.ASN.PKIX1Explicit88.CertificateSerialNumber;
+import ru.CryptoPro.JCP.ASN.PKIX1Explicit88.Name;
+import ru.CryptoPro.JCP.params.OID;
+
 import java.io.ByteArrayInputStream;
-import java.security.KeyStore;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.PrivateKey;
 import java.security.Signature;
+import java.security.*;
+import java.security.cert.Certificate;
 import java.security.cert.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
-
-import Diadoc.Api.sign.GOSTSignInfoProvider;
-import org.apache.commons.codec.binary.Hex;
-
-import ru.CryptoPro.JCP.JCP;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.CMSVersion;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.CertificateChoices;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.CertificateSet;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.ContentInfo;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.DigestAlgorithmIdentifier;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.DigestAlgorithmIdentifiers;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.EncapsulatedContentInfo;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.IssuerAndSerialNumber;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.SignatureAlgorithmIdentifier;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.SignatureValue;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.SignedData;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.SignerIdentifier;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.SignerInfo;
-import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.SignerInfos;
-import ru.CryptoPro.JCP.ASN.PKIX1Explicit88.CertificateSerialNumber;
-import ru.CryptoPro.JCP.ASN.PKIX1Explicit88.Name;
-import ru.CryptoPro.JCP.params.AlgIdSpec;
-import ru.CryptoPro.JCP.params.OID;
-import com.objsys.asn1j.runtime.Asn1BerDecodeBuffer;
-import com.objsys.asn1j.runtime.Asn1BerEncodeBuffer;
-import com.objsys.asn1j.runtime.Asn1Null;
-import com.objsys.asn1j.runtime.Asn1ObjectIdentifier;
-import com.objsys.asn1j.runtime.Asn1OctetString;
 
 public class CertificateHelper {
 
