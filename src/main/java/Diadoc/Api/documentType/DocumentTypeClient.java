@@ -1,22 +1,19 @@
 package Diadoc.Api.documentType;
 
-import Diadoc.Api.Proto.Documents.DetectTitleResponseProtos;
-import Diadoc.Api.httpClient.FileContent;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
-import org.apache.http.NameValuePair;
+import Diadoc.Api.httpClient.FileContent;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
 
-import static Diadoc.Api.Proto.Documents.DetectTitleResponseProtos.*;
-import static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.*;
+import static Diadoc.Api.Proto.Documents.DetectTitleResponseProtos.DetectTitleResponse;
+import static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DetectDocumentTypesResponse;
+import static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.GetDocumentTypesResponse;
 
 public class DocumentTypeClient {
     public DiadocHttpClient diadocHttpClient;

@@ -1,8 +1,6 @@
 package Diadoc.Api.print.models;
 
-import Diadoc.Api.Proto.Documents.DocumentZipProtos;
-
-import static Diadoc.Api.Proto.Documents.DocumentZipProtos.*;
+import static Diadoc.Api.Proto.Documents.DocumentZipProtos.DocumentZipGenerationResult;
 
 public class DocumentZipResult {
     private int retryAfter;

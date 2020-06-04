@@ -1,6 +1,5 @@
 package Diadoc.Api.organizations;
 
-import Diadoc.Api.Proto.Registration.RegistrationRequestProtos;
 import Diadoc.Api.exceptions.DiadocException;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
@@ -16,9 +15,9 @@ import java.net.URISyntaxException;
 
 import static Diadoc.Api.Proto.GetOrganizationsByInnListProtos.*;
 import static Diadoc.Api.Proto.OrganizationProtos.*;
-import static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.*;
-import static Diadoc.Api.Proto.OrganizationUserProtos.*;
-import static Diadoc.Api.Proto.Organizations.OrganizationFeaturesProtos.*;
+import static Diadoc.Api.Proto.OrganizationUserPermissionsProtos.OrganizationUserPermissions;
+import static Diadoc.Api.Proto.OrganizationUserProtos.OrganizationUsersList;
+import static Diadoc.Api.Proto.Organizations.OrganizationFeaturesProtos.OrganizationFeatures;
 import static Diadoc.Api.Proto.Registration.RegistrationRequestProtos.*;
 
 public class OrganizationClient {

@@ -1,9 +1,6 @@
 package Diadoc.Api.exceptions;
 
-import Diadoc.Api.exceptions.DiadocSdkException;
 import org.jetbrains.annotations.Nullable;
-
-import java.io.IOException;
 
 public class DiadocException extends Exception {
     private int httpStatusCode;

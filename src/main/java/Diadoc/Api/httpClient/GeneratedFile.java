@@ -13,14 +13,6 @@ public class GeneratedFile {
         this.content = content;
     }
 
-    /**
-     * Use saveToFile instead
-     * */
-    @Deprecated
-    public void SaveContentToFile(String path) throws IOException {
-        saveContentToFile(path);
-    }
-
     public void saveContentToFile(String path) throws IOException {
         Tools.WriteAllBytes(path, getContent());
     }

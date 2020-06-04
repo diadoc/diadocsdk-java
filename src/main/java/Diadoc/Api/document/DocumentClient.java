@@ -1,26 +1,22 @@
 package Diadoc.Api.document;
 
-import Diadoc.Api.Proto.SignatureInfoProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
-import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-import static Diadoc.Api.Proto.Documents.DocumentListProtos.*;
-import static Diadoc.Api.Proto.Documents.DocumentProtos.*;
-import static Diadoc.Api.Proto.Documents.DocumentsMoveOperationProtos.*;
-import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.*;
-import static Diadoc.Api.Proto.SignatureInfoProtos.*;
+import static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList;
+import static Diadoc.Api.Proto.Documents.DocumentProtos.Document;
+import static Diadoc.Api.Proto.Documents.DocumentsMoveOperationProtos.DocumentsMoveOperation;
+import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PrepareDocumentsToSignRequest;
+import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PrepareDocumentsToSignResponse;
+import static Diadoc.Api.Proto.SignatureInfoProtos.SignatureInfo;
 
 public class DocumentClient {
     private DiadocHttpClient diadocHttpClient;

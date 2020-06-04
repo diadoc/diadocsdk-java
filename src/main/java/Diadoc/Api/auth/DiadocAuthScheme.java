@@ -1,10 +1,8 @@
 package Diadoc.Api.auth;
 
-import Diadoc.Api.auth.DiadocCredentials;
 import org.apache.http.Header;
 import org.apache.http.HttpRequest;
 import org.apache.http.annotation.Contract;
-import org.apache.http.annotation.ThreadingBehavior;
 import org.apache.http.auth.AUTH;
 import org.apache.http.auth.AuthenticationException;
 import org.apache.http.auth.Credentials;
@@ -13,7 +11,7 @@ import org.apache.http.impl.auth.RFC2617Scheme;
 import org.apache.http.message.BufferedHeader;
 import org.apache.http.util.CharArrayBuffer;
 
-@Contract(threading = ThreadingBehavior.UNSAFE)
+@Contract()
 public class DiadocAuthScheme extends RFC2617Scheme {
 
     private boolean complete;
