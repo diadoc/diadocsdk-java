@@ -102,12 +102,11 @@ public class DiadocHttpClient {
         }
     }
 
-
     private byte[] getResponseBytes(HttpResponse response) throws IOException {
         if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
             throw new HttpResponseException(
                     response.getStatusLine().getStatusCode(),
-                    response.getStatusLine().getReasonPhrase());
+                    new String(IOUtils.toByteArray(response.getEntity().getContent())));
         }
         return IOUtils.toByteArray(response.getEntity().getContent());
     }
@@ -116,7 +115,7 @@ public class DiadocHttpClient {
         if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
             return DiadocResponseInfo.fail(
                     response.getStatusLine().getStatusCode(),
-                    response.getStatusLine().getReasonPhrase(),
+                    new String(IOUtils.toByteArray(response.getEntity().getContent())),
                     tryGetRetryAfter(response));
         }
         return DiadocResponseInfo.success(IOUtils.toByteArray(response.getEntity().getContent()), response.getStatusLine().getStatusCode());
