@@ -124,7 +124,7 @@ public class DiadocHttpClient {
     private DiadocResponseInfo getRawResponse(HttpResponse response) throws IOException, ParseException {
 
         return new DiadocResponseInfo(
-                response.getEntity().getContent() != null
+                response.getEntity() != null && response.getEntity().getContent() != null
                         ? IOUtils.toByteArray(response.getEntity().getContent())
                         : null,
                 tryGetRetryAfter(response),
@@ -136,7 +136,7 @@ public class DiadocHttpClient {
 
     @Nullable
     private static String tryGetContentType(HttpResponse response) {
-        if (response.getEntity().getContentType() != null) {
+        if (response.getEntity() != null && response.getEntity().getContentType() != null) {
             return response.getEntity().getContentType().getValue();
         }
         return null;

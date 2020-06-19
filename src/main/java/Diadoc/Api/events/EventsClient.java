@@ -2,10 +2,12 @@ package Diadoc.Api.events;
 
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.httpClient.DiadocHttpClient;
+import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.jetbrains.annotations.Nullable;
 
+import javax.mail.internet.ParseException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
@@ -40,6 +42,7 @@ public class EventsClient {
         }
     }
 
+    @Nullable
     public BoxEvent getLastEvent(String boxId) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
@@ -50,8 +53,12 @@ public class EventsClient {
                     new URIBuilder(diadocHttpClient.getBaseUrl())
                             .setPath("/GetLastEvent")
                             .addParameter("boxId", boxId).build());
-            return BoxEvent.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
+            var response = diadocHttpClient.getRawResponse(request);
+            if(response.getStatusCode() == HttpStatus.SC_NO_CONTENT){
+                return null;
+            }
+            return BoxEvent.parseFrom(response.getContent());
+        } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
         }
     }
