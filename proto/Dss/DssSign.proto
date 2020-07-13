@@ -13,10 +13,27 @@ message DssSignFile
 	optional string FileName = 2;
 }
 
+enum DssConfirmType {
+	ConfirmTypeUnknown = -1;
+	None = 0;
+	Sms = 1;
+	MyDss = 2;
+	Applet = 3;
+}
+
+enum DssOperator {
+	OperatorUnknown = 0;
+	Megafon = 1;
+	Kontur = 2;
+}
+
 message DssSignResult
 {
 	optional DssOperationStatus OperationStatus = 1 [default = Unknown];
 	repeated DssFileSigningResult FileSigningResults = 2;
+	optional DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];
+	optional DssOperator Operator = 4 [default = OperatorUnknown];
+	optional string PhoneLastNumbers = 5;
 }
  
 message DssFileSigningResult
@@ -41,4 +58,5 @@ enum DssOperationStatus
 	Timeout = 4;
 	Crashed = 5;
 	UserHasUnconfirmedOperation = 6;
+	OperationRetryRequired = 7;
 }
