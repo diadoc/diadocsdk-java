@@ -9,6 +9,206 @@ public final class DssSignProtos {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Dss.DssConfirmType}
+   */
+  public enum DssConfirmType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ConfirmTypeUnknown = -1;</code>
+     */
+    ConfirmTypeUnknown(0, -1),
+    /**
+     * <code>None = 0;</code>
+     */
+    None(1, 0),
+    /**
+     * <code>Sms = 1;</code>
+     */
+    Sms(2, 1),
+    /**
+     * <code>MyDss = 2;</code>
+     */
+    MyDss(3, 2),
+    /**
+     * <code>Applet = 3;</code>
+     */
+    Applet(4, 3),
+    ;
+
+    /**
+     * <code>ConfirmTypeUnknown = -1;</code>
+     */
+    public static final int ConfirmTypeUnknown_VALUE = -1;
+    /**
+     * <code>None = 0;</code>
+     */
+    public static final int None_VALUE = 0;
+    /**
+     * <code>Sms = 1;</code>
+     */
+    public static final int Sms_VALUE = 1;
+    /**
+     * <code>MyDss = 2;</code>
+     */
+    public static final int MyDss_VALUE = 2;
+    /**
+     * <code>Applet = 3;</code>
+     */
+    public static final int Applet_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static DssConfirmType valueOf(int value) {
+      switch (value) {
+        case -1: return ConfirmTypeUnknown;
+        case 0: return None;
+        case 1: return Sms;
+        case 2: return MyDss;
+        case 3: return Applet;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DssConfirmType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DssConfirmType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DssConfirmType>() {
+            public DssConfirmType findValueByNumber(int number) {
+              return DssConfirmType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final DssConfirmType[] VALUES = values();
+
+    public static DssConfirmType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DssConfirmType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Dss.DssConfirmType)
+  }
+
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Dss.DssOperator}
+   */
+  public enum DssOperator
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>OperatorUnknown = 0;</code>
+     */
+    OperatorUnknown(0, 0),
+    /**
+     * <code>Megafon = 1;</code>
+     */
+    Megafon(1, 1),
+    /**
+     * <code>Kontur = 2;</code>
+     */
+    Kontur(2, 2),
+    ;
+
+    /**
+     * <code>OperatorUnknown = 0;</code>
+     */
+    public static final int OperatorUnknown_VALUE = 0;
+    /**
+     * <code>Megafon = 1;</code>
+     */
+    public static final int Megafon_VALUE = 1;
+    /**
+     * <code>Kontur = 2;</code>
+     */
+    public static final int Kontur_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static DssOperator valueOf(int value) {
+      switch (value) {
+        case 0: return OperatorUnknown;
+        case 1: return Megafon;
+        case 2: return Kontur;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DssOperator>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DssOperator>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DssOperator>() {
+            public DssOperator findValueByNumber(int number) {
+              return DssOperator.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final DssOperator[] VALUES = values();
+
+    public static DssOperator valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DssOperator(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Dss.DssOperator)
+  }
+
+  /**
    * Protobuf enum {@code Diadoc.Api.Proto.Dss.DssFileSigningStatus}
    */
   public enum DssFileSigningStatus
@@ -74,7 +274,7 @@ public final class DssSignProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(0);
+      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final DssFileSigningStatus[] VALUES = values();
@@ -132,6 +332,10 @@ public final class DssSignProtos {
      * <code>UserHasUnconfirmedOperation = 6;</code>
      */
     UserHasUnconfirmedOperation(6, 6),
+    /**
+     * <code>OperationRetryRequired = 7;</code>
+     */
+    OperationRetryRequired(7, 7),
     ;
 
     /**
@@ -162,6 +366,10 @@ public final class DssSignProtos {
      * <code>UserHasUnconfirmedOperation = 6;</code>
      */
     public static final int UserHasUnconfirmedOperation_VALUE = 6;
+    /**
+     * <code>OperationRetryRequired = 7;</code>
+     */
+    public static final int OperationRetryRequired_VALUE = 7;
 
 
     public final int getNumber() { return value; }
@@ -175,6 +383,7 @@ public final class DssSignProtos {
         case 4: return Timeout;
         case 5: return Crashed;
         case 6: return UserHasUnconfirmedOperation;
+        case 7: return OperationRetryRequired;
         default: return null;
       }
     }
@@ -201,7 +410,7 @@ public final class DssSignProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(1);
+      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final DssOperationStatus[] VALUES = values();
@@ -1631,6 +1840,38 @@ public final class DssSignProtos {
      */
     Diadoc.Api.Proto.Dss.DssSignProtos.DssFileSigningResultOrBuilder getFileSigningResultsOrBuilder(
         int index);
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];</code>
+     */
+    boolean hasConfirmType();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];</code>
+     */
+    Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType getConfirmType();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssOperator Operator = 4 [default = OperatorUnknown];</code>
+     */
+    boolean hasOperator();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssOperator Operator = 4 [default = OperatorUnknown];</code>
+     */
+    Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator getOperator();
+
+    /**
+     * <code>optional string PhoneLastNumbers = 5;</code>
+     */
+    boolean hasPhoneLastNumbers();
+    /**
+     * <code>optional string PhoneLastNumbers = 5;</code>
+     */
+    java.lang.String getPhoneLastNumbers();
+    /**
+     * <code>optional string PhoneLastNumbers = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getPhoneLastNumbersBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Dss.DssSignResult}
@@ -1701,6 +1942,34 @@ public final class DssSignProtos {
                 mutable_bitField0_ |= 0x00000002;
               }
               fileSigningResults_.add(input.readMessage(Diadoc.Api.Proto.Dss.DssSignProtos.DssFileSigningResult.PARSER, extensionRegistry));
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType value = Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                confirmType_ = value;
+              }
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator value = Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(4, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                operator_ = value;
+              }
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              phoneLastNumbers_ = bs;
               break;
             }
           }
@@ -1796,9 +2065,84 @@ public final class DssSignProtos {
       return fileSigningResults_.get(index);
     }
 
+    public static final int CONFIRMTYPE_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType confirmType_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];</code>
+     */
+    public boolean hasConfirmType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];</code>
+     */
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType getConfirmType() {
+      return confirmType_;
+    }
+
+    public static final int OPERATOR_FIELD_NUMBER = 4;
+    private Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator operator_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssOperator Operator = 4 [default = OperatorUnknown];</code>
+     */
+    public boolean hasOperator() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssOperator Operator = 4 [default = OperatorUnknown];</code>
+     */
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator getOperator() {
+      return operator_;
+    }
+
+    public static final int PHONELASTNUMBERS_FIELD_NUMBER = 5;
+    private java.lang.Object phoneLastNumbers_;
+    /**
+     * <code>optional string PhoneLastNumbers = 5;</code>
+     */
+    public boolean hasPhoneLastNumbers() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string PhoneLastNumbers = 5;</code>
+     */
+    public java.lang.String getPhoneLastNumbers() {
+      java.lang.Object ref = phoneLastNumbers_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          phoneLastNumbers_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string PhoneLastNumbers = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPhoneLastNumbersBytes() {
+      java.lang.Object ref = phoneLastNumbers_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        phoneLastNumbers_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       operationStatus_ = Diadoc.Api.Proto.Dss.DssSignProtos.DssOperationStatus.Unknown;
       fileSigningResults_ = java.util.Collections.emptyList();
+      confirmType_ = Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType.ConfirmTypeUnknown;
+      operator_ = Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator.OperatorUnknown;
+      phoneLastNumbers_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1819,6 +2163,15 @@ public final class DssSignProtos {
       for (int i = 0; i < fileSigningResults_.size(); i++) {
         output.writeMessage(2, fileSigningResults_.get(i));
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(3, confirmType_.getNumber());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(4, operator_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(5, getPhoneLastNumbersBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1835,6 +2188,18 @@ public final class DssSignProtos {
       for (int i = 0; i < fileSigningResults_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, fileSigningResults_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, confirmType_.getNumber());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, operator_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getPhoneLastNumbersBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1962,6 +2327,12 @@ public final class DssSignProtos {
         } else {
           fileSigningResultsBuilder_.clear();
         }
+        confirmType_ = Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType.ConfirmTypeUnknown;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        operator_ = Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator.OperatorUnknown;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        phoneLastNumbers_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -2003,6 +2374,18 @@ public final class DssSignProtos {
         } else {
           result.fileSigningResults_ = fileSigningResultsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.confirmType_ = confirmType_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.operator_ = operator_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.phoneLastNumbers_ = phoneLastNumbers_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2047,6 +2430,17 @@ public final class DssSignProtos {
               fileSigningResultsBuilder_.addAllMessages(other.fileSigningResults_);
             }
           }
+        }
+        if (other.hasConfirmType()) {
+          setConfirmType(other.getConfirmType());
+        }
+        if (other.hasOperator()) {
+          setOperator(other.getOperator());
+        }
+        if (other.hasPhoneLastNumbers()) {
+          bitField0_ |= 0x00000010;
+          phoneLastNumbers_ = other.phoneLastNumbers_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2348,6 +2742,152 @@ public final class DssSignProtos {
           fileSigningResults_ = null;
         }
         return fileSigningResultsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType confirmType_ = Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType.ConfirmTypeUnknown;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];</code>
+       */
+      public boolean hasConfirmType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType getConfirmType() {
+        return confirmType_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];</code>
+       */
+      public Builder setConfirmType(Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        confirmType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];</code>
+       */
+      public Builder clearConfirmType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        confirmType_ = Diadoc.Api.Proto.Dss.DssSignProtos.DssConfirmType.ConfirmTypeUnknown;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator operator_ = Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator.OperatorUnknown;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssOperator Operator = 4 [default = OperatorUnknown];</code>
+       */
+      public boolean hasOperator() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssOperator Operator = 4 [default = OperatorUnknown];</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator getOperator() {
+        return operator_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssOperator Operator = 4 [default = OperatorUnknown];</code>
+       */
+      public Builder setOperator(Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        operator_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssOperator Operator = 4 [default = OperatorUnknown];</code>
+       */
+      public Builder clearOperator() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        operator_ = Diadoc.Api.Proto.Dss.DssSignProtos.DssOperator.OperatorUnknown;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object phoneLastNumbers_ = "";
+      /**
+       * <code>optional string PhoneLastNumbers = 5;</code>
+       */
+      public boolean hasPhoneLastNumbers() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string PhoneLastNumbers = 5;</code>
+       */
+      public java.lang.String getPhoneLastNumbers() {
+        java.lang.Object ref = phoneLastNumbers_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            phoneLastNumbers_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string PhoneLastNumbers = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPhoneLastNumbersBytes() {
+        java.lang.Object ref = phoneLastNumbers_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phoneLastNumbers_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string PhoneLastNumbers = 5;</code>
+       */
+      public Builder setPhoneLastNumbers(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        phoneLastNumbers_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PhoneLastNumbers = 5;</code>
+       */
+      public Builder clearPhoneLastNumbers() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        phoneLastNumbers_ = getDefaultInstance().getPhoneLastNumbers();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string PhoneLastNumbers = 5;</code>
+       */
+      public Builder setPhoneLastNumbersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        phoneLastNumbers_ = value;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Dss.DssSignResult)
@@ -2882,21 +3422,29 @@ public final class DssSignProtos {
       "\005Files\030\001 \003(\0132!.Diadoc.Api.Proto.Dss.DssS" +
       "ignFile\"N\n\013DssSignFile\022-\n\007Content\030\001 \002(\0132" +
       "\034.Diadoc.Api.Proto.Content_v3\022\020\n\010FileNam" +
-      "e\030\002 \001(\t\"\243\001\n\rDssSignResult\022J\n\017OperationSt" +
+      "e\030\002 \001(\t\"\322\002\n\rDssSignResult\022J\n\017OperationSt" +
       "atus\030\001 \001(\0162(.Diadoc.Api.Proto.Dss.DssOpe" +
       "rationStatus:\007Unknown\022F\n\022FileSigningResu" +
       "lts\030\002 \003(\0132*.Diadoc.Api.Proto.Dss.DssFile" +
-      "SigningResult\"\206\001\n\024DssFileSigningResult\022[",
-      "\n\021FileSigningStatus\030\001 \001(\0162*.Diadoc.Api.P" +
-      "roto.Dss.DssFileSigningStatus:\024UnknownSi" +
-      "gningStatus\022\021\n\tSignature\030\002 \001(\014*X\n\024DssFil" +
-      "eSigningStatus\022\030\n\024UnknownSigningStatus\020\000" +
-      "\022\024\n\020SigningCompleted\020\001\022\020\n\014SigningError\020\002" +
-      "*\217\001\n\022DssOperationStatus\022\013\n\007Unknown\020\000\022\016\n\n" +
-      "InProgress\020\001\022\r\n\tCompleted\020\002\022\022\n\016CanceledB" +
-      "yUser\020\003\022\013\n\007Timeout\020\004\022\013\n\007Crashed\020\005\022\037\n\033Use" +
-      "rHasUnconfirmedOperation\020\006B\017B\rDssSignPro" +
-      "tos"
+      "SigningResult\022M\n\013ConfirmType\030\003 \001(\0162$.Dia",
+      "doc.Api.Proto.Dss.DssConfirmType:\022Confir" +
+      "mTypeUnknown\022D\n\010Operator\030\004 \001(\0162!.Diadoc." +
+      "Api.Proto.Dss.DssOperator:\017OperatorUnkno" +
+      "wn\022\030\n\020PhoneLastNumbers\030\005 \001(\t\"\206\001\n\024DssFile" +
+      "SigningResult\022[\n\021FileSigningStatus\030\001 \001(\016" +
+      "2*.Diadoc.Api.Proto.Dss.DssFileSigningSt" +
+      "atus:\024UnknownSigningStatus\022\021\n\tSignature\030" +
+      "\002 \001(\014*[\n\016DssConfirmType\022\037\n\022ConfirmTypeUn" +
+      "known\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\007\n\003Sms\020\001\022\t\n\005M" +
+      "yDss\020\002\022\n\n\006Applet\020\003*;\n\013DssOperator\022\023\n\017Ope",
+      "ratorUnknown\020\000\022\013\n\007Megafon\020\001\022\n\n\006Kontur\020\002*" +
+      "X\n\024DssFileSigningStatus\022\030\n\024UnknownSignin" +
+      "gStatus\020\000\022\024\n\020SigningCompleted\020\001\022\020\n\014Signi" +
+      "ngError\020\002*\253\001\n\022DssOperationStatus\022\013\n\007Unkn" +
+      "own\020\000\022\016\n\nInProgress\020\001\022\r\n\tCompleted\020\002\022\022\n\016" +
+      "CanceledByUser\020\003\022\013\n\007Timeout\020\004\022\013\n\007Crashed" +
+      "\020\005\022\037\n\033UserHasUnconfirmedOperation\020\006\022\032\n\026O" +
+      "perationRetryRequired\020\007B\017B\rDssSignProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2928,7 +3476,7 @@ public final class DssSignProtos {
     internal_static_Diadoc_Api_Proto_Dss_DssSignResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Dss_DssSignResult_descriptor,
-        new java.lang.String[] { "OperationStatus", "FileSigningResults", });
+        new java.lang.String[] { "OperationStatus", "FileSigningResults", "ConfirmType", "Operator", "PhoneLastNumbers", });
     internal_static_Diadoc_Api_Proto_Dss_DssFileSigningResult_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Dss_DssFileSigningResult_fieldAccessorTable = new
