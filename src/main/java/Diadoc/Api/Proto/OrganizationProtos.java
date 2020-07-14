@@ -6176,6 +6176,20 @@ public final class OrganizationProtos {
         getBoxIdBytes();
 
     /**
+     * <code>required string BoxIdGuid = 6;</code>
+     */
+    boolean hasBoxIdGuid();
+    /**
+     * <code>required string BoxIdGuid = 6;</code>
+     */
+    java.lang.String getBoxIdGuid();
+    /**
+     * <code>required string BoxIdGuid = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getBoxIdGuidBytes();
+
+    /**
      * <code>required string Title = 2;</code>
      */
     boolean hasTitle();
@@ -6280,13 +6294,13 @@ public final class OrganizationProtos {
             }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               title_ = bs;
               break;
             }
             case 26: {
               Diadoc.Api.Proto.OrganizationProtos.Organization.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
                 subBuilder = organization_.toBuilder();
               }
               organization_ = input.readMessage(Diadoc.Api.Proto.OrganizationProtos.Organization.PARSER, extensionRegistry);
@@ -6294,7 +6308,7 @@ public final class OrganizationProtos {
                 subBuilder.mergeFrom(organization_);
                 organization_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             }
             case 32: {
@@ -6303,14 +6317,20 @@ public final class OrganizationProtos {
               if (value == null) {
                 unknownFields.mergeVarintField(4, rawValue);
               } else {
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000010;
                 invoiceFormatVersion_ = value;
               }
               break;
             }
             case 40: {
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               encryptedDocumentsAllowed_ = input.readBool();
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              boxIdGuid_ = bs;
               break;
             }
           }
@@ -6395,13 +6415,55 @@ public final class OrganizationProtos {
       }
     }
 
+    public static final int BOXIDGUID_FIELD_NUMBER = 6;
+    private java.lang.Object boxIdGuid_;
+    /**
+     * <code>required string BoxIdGuid = 6;</code>
+     */
+    public boolean hasBoxIdGuid() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string BoxIdGuid = 6;</code>
+     */
+    public java.lang.String getBoxIdGuid() {
+      java.lang.Object ref = boxIdGuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          boxIdGuid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string BoxIdGuid = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBoxIdGuidBytes() {
+      java.lang.Object ref = boxIdGuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        boxIdGuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int TITLE_FIELD_NUMBER = 2;
     private java.lang.Object title_;
     /**
      * <code>required string Title = 2;</code>
      */
     public boolean hasTitle() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
      * <code>required string Title = 2;</code>
@@ -6443,7 +6505,7 @@ public final class OrganizationProtos {
      * <code>optional .Diadoc.Api.Proto.Organization Organization = 3;</code>
      */
     public boolean hasOrganization() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>optional .Diadoc.Api.Proto.Organization Organization = 3;</code>
@@ -6464,7 +6526,7 @@ public final class OrganizationProtos {
      * <code>optional .Diadoc.Api.Proto.OrganizationInvoiceFormatVersion InvoiceFormatVersion = 4 [default = v5_02];</code>
      */
     public boolean hasInvoiceFormatVersion() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
      * <code>optional .Diadoc.Api.Proto.OrganizationInvoiceFormatVersion InvoiceFormatVersion = 4 [default = v5_02];</code>
@@ -6479,7 +6541,7 @@ public final class OrganizationProtos {
      * <code>optional bool EncryptedDocumentsAllowed = 5;</code>
      */
     public boolean hasEncryptedDocumentsAllowed() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
      * <code>optional bool EncryptedDocumentsAllowed = 5;</code>
@@ -6490,6 +6552,7 @@ public final class OrganizationProtos {
 
     private void initFields() {
       boxId_ = "";
+      boxIdGuid_ = "";
       title_ = "";
       organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
       invoiceFormatVersion_ = Diadoc.Api.Proto.OrganizationProtos.OrganizationInvoiceFormatVersion.v5_02;
@@ -6502,6 +6565,10 @@ public final class OrganizationProtos {
       if (isInitialized == 0) return false;
 
       if (!hasBoxId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasBoxIdGuid()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -6525,17 +6592,20 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(1, getBoxIdBytes());
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(2, getTitleBytes());
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeMessage(3, organization_);
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeEnum(4, invoiceFormatVersion_.getNumber());
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeBool(5, encryptedDocumentsAllowed_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(6, getBoxIdGuidBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -6550,21 +6620,25 @@ public final class OrganizationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, getBoxIdBytes());
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, getTitleBytes());
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, organization_);
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, invoiceFormatVersion_.getNumber());
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, encryptedDocumentsAllowed_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getBoxIdGuidBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -6686,18 +6760,20 @@ public final class OrganizationProtos {
         super.clear();
         boxId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        title_ = "";
+        boxIdGuid_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
+        title_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (organizationBuilder_ == null) {
           organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
         } else {
           organizationBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        invoiceFormatVersion_ = Diadoc.Api.Proto.OrganizationProtos.OrganizationInvoiceFormatVersion.v5_02;
         bitField0_ = (bitField0_ & ~0x00000008);
-        encryptedDocumentsAllowed_ = false;
+        invoiceFormatVersion_ = Diadoc.Api.Proto.OrganizationProtos.OrganizationInvoiceFormatVersion.v5_02;
         bitField0_ = (bitField0_ & ~0x00000010);
+        encryptedDocumentsAllowed_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -6733,21 +6809,25 @@ public final class OrganizationProtos {
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.title_ = title_;
+        result.boxIdGuid_ = boxIdGuid_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
+        }
+        result.title_ = title_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
         }
         if (organizationBuilder_ == null) {
           result.organization_ = organization_;
         } else {
           result.organization_ = organizationBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.invoiceFormatVersion_ = invoiceFormatVersion_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
+        }
+        result.invoiceFormatVersion_ = invoiceFormatVersion_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
         }
         result.encryptedDocumentsAllowed_ = encryptedDocumentsAllowed_;
         result.bitField0_ = to_bitField0_;
@@ -6771,8 +6851,13 @@ public final class OrganizationProtos {
           boxId_ = other.boxId_;
           onChanged();
         }
-        if (other.hasTitle()) {
+        if (other.hasBoxIdGuid()) {
           bitField0_ |= 0x00000002;
+          boxIdGuid_ = other.boxIdGuid_;
+          onChanged();
+        }
+        if (other.hasTitle()) {
+          bitField0_ |= 0x00000004;
           title_ = other.title_;
           onChanged();
         }
@@ -6791,6 +6876,10 @@ public final class OrganizationProtos {
 
       public final boolean isInitialized() {
         if (!hasBoxId()) {
+          
+          return false;
+        }
+        if (!hasBoxIdGuid()) {
           
           return false;
         }
@@ -6902,12 +6991,88 @@ public final class OrganizationProtos {
         return this;
       }
 
+      private java.lang.Object boxIdGuid_ = "";
+      /**
+       * <code>required string BoxIdGuid = 6;</code>
+       */
+      public boolean hasBoxIdGuid() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string BoxIdGuid = 6;</code>
+       */
+      public java.lang.String getBoxIdGuid() {
+        java.lang.Object ref = boxIdGuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            boxIdGuid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string BoxIdGuid = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBoxIdGuidBytes() {
+        java.lang.Object ref = boxIdGuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          boxIdGuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string BoxIdGuid = 6;</code>
+       */
+      public Builder setBoxIdGuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        boxIdGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string BoxIdGuid = 6;</code>
+       */
+      public Builder clearBoxIdGuid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        boxIdGuid_ = getDefaultInstance().getBoxIdGuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string BoxIdGuid = 6;</code>
+       */
+      public Builder setBoxIdGuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        boxIdGuid_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object title_ = "";
       /**
        * <code>required string Title = 2;</code>
        */
       public boolean hasTitle() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
        * <code>required string Title = 2;</code>
@@ -6950,7 +7115,7 @@ public final class OrganizationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
         title_ = value;
         onChanged();
         return this;
@@ -6959,7 +7124,7 @@ public final class OrganizationProtos {
        * <code>required string Title = 2;</code>
        */
       public Builder clearTitle() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         title_ = getDefaultInstance().getTitle();
         onChanged();
         return this;
@@ -6972,7 +7137,7 @@ public final class OrganizationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
         title_ = value;
         onChanged();
         return this;
@@ -6985,7 +7150,7 @@ public final class OrganizationProtos {
        * <code>optional .Diadoc.Api.Proto.Organization Organization = 3;</code>
        */
       public boolean hasOrganization() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>optional .Diadoc.Api.Proto.Organization Organization = 3;</code>
@@ -7010,7 +7175,7 @@ public final class OrganizationProtos {
         } else {
           organizationBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -7024,7 +7189,7 @@ public final class OrganizationProtos {
         } else {
           organizationBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -7032,7 +7197,7 @@ public final class OrganizationProtos {
        */
       public Builder mergeOrganization(Diadoc.Api.Proto.OrganizationProtos.Organization value) {
         if (organizationBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
               organization_ != Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance()) {
             organization_ =
               Diadoc.Api.Proto.OrganizationProtos.Organization.newBuilder(organization_).mergeFrom(value).buildPartial();
@@ -7043,7 +7208,7 @@ public final class OrganizationProtos {
         } else {
           organizationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -7056,14 +7221,14 @@ public final class OrganizationProtos {
         } else {
           organizationBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
       /**
        * <code>optional .Diadoc.Api.Proto.Organization Organization = 3;</code>
        */
       public Diadoc.Api.Proto.OrganizationProtos.Organization.Builder getOrganizationBuilder() {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return getOrganizationFieldBuilder().getBuilder();
       }
@@ -7099,7 +7264,7 @@ public final class OrganizationProtos {
        * <code>optional .Diadoc.Api.Proto.OrganizationInvoiceFormatVersion InvoiceFormatVersion = 4 [default = v5_02];</code>
        */
       public boolean hasInvoiceFormatVersion() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>optional .Diadoc.Api.Proto.OrganizationInvoiceFormatVersion InvoiceFormatVersion = 4 [default = v5_02];</code>
@@ -7114,7 +7279,7 @@ public final class OrganizationProtos {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         invoiceFormatVersion_ = value;
         onChanged();
         return this;
@@ -7123,7 +7288,7 @@ public final class OrganizationProtos {
        * <code>optional .Diadoc.Api.Proto.OrganizationInvoiceFormatVersion InvoiceFormatVersion = 4 [default = v5_02];</code>
        */
       public Builder clearInvoiceFormatVersion() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         invoiceFormatVersion_ = Diadoc.Api.Proto.OrganizationProtos.OrganizationInvoiceFormatVersion.v5_02;
         onChanged();
         return this;
@@ -7134,7 +7299,7 @@ public final class OrganizationProtos {
        * <code>optional bool EncryptedDocumentsAllowed = 5;</code>
        */
       public boolean hasEncryptedDocumentsAllowed() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
        * <code>optional bool EncryptedDocumentsAllowed = 5;</code>
@@ -7146,7 +7311,7 @@ public final class OrganizationProtos {
        * <code>optional bool EncryptedDocumentsAllowed = 5;</code>
        */
       public Builder setEncryptedDocumentsAllowed(boolean value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         encryptedDocumentsAllowed_ = value;
         onChanged();
         return this;
@@ -7155,7 +7320,7 @@ public final class OrganizationProtos {
        * <code>optional bool EncryptedDocumentsAllowed = 5;</code>
        */
       public Builder clearEncryptedDocumentsAllowed() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         encryptedDocumentsAllowed_ = false;
         onChanged();
         return this;
@@ -7224,16 +7389,16 @@ public final class OrganizationProtos {
       "arentDepartmentId\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n" +
       "\014Abbreviation\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Addr" +
       "ess\030\006 \001(\0132\031.Diadoc.Api.Proto.Address\022\031\n\n" +
-      "IsDisabled\030\007 \001(\010:\005false\"\325\001\n\003Box\022\r\n\005BoxId" +
-      "\030\001 \002(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Organization\030\003 " +
-      "\001(\0132\036.Diadoc.Api.Proto.Organization\022W\n\024I" +
-      "nvoiceFormatVersion\030\004 \001(\01622.Diadoc.Api.P" +
-      "roto.OrganizationInvoiceFormatVersion:\005v" +
-      "5_02\022!\n\031EncryptedDocumentsAllowed\030\005 \001(\010*" +
-      "8\n OrganizationInvoiceFormatVersion\022\t\n\005v",
-      "5_01\020\001\022\t\n\005v5_02\020\002*:\n\013Sociability\022\024\n\020AllO" +
-      "rganizations\020\000\022\025\n\021CounteragentsOnly\020\001B\024B" +
-      "\022OrganizationProtos"
+      "IsDisabled\030\007 \001(\010:\005false\"\350\001\n\003Box\022\r\n\005BoxId" +
+      "\030\001 \002(\t\022\021\n\tBoxIdGuid\030\006 \002(\t\022\r\n\005Title\030\002 \002(\t" +
+      "\0224\n\014Organization\030\003 \001(\0132\036.Diadoc.Api.Prot" +
+      "o.Organization\022W\n\024InvoiceFormatVersion\030\004" +
+      " \001(\01622.Diadoc.Api.Proto.OrganizationInvo" +
+      "iceFormatVersion:\005v5_02\022!\n\031EncryptedDocu" +
+      "mentsAllowed\030\005 \001(\010*8\n OrganizationInvoic",
+      "eFormatVersion\022\t\n\005v5_01\020\001\022\t\n\005v5_02\020\002*:\n\013" +
+      "Sociability\022\024\n\020AllOrganizations\020\000\022\025\n\021Cou" +
+      "nteragentsOnly\020\001B\024B\022OrganizationProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7271,7 +7436,7 @@ public final class OrganizationProtos {
     internal_static_Diadoc_Api_Proto_Box_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Box_descriptor,
-        new java.lang.String[] { "BoxId", "Title", "Organization", "InvoiceFormatVersion", "EncryptedDocumentsAllowed", });
+        new java.lang.String[] { "BoxId", "BoxIdGuid", "Title", "Organization", "InvoiceFormatVersion", "EncryptedDocumentsAllowed", });
     Diadoc.Api.Proto.AddressProtos.getDescriptor();
   }
 
