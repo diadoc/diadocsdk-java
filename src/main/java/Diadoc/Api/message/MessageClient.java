@@ -13,6 +13,7 @@ import java.net.URISyntaxException;
 
 import static Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.Message;
 import static Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.MessagePatch;
+import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.DraftToSend;
 import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.MessagePatchToPost;
 import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.MessageToPost;
 import static Diadoc.Api.Proto.Invoicing.InvoiceCorrectionRequestInfoProtos.InvoiceCorrectionRequestInfo;
@@ -37,8 +38,8 @@ public class MessageClient {
             if (operationId != null) {
                 uriBuilder.addParameter("operationId", operationId);
             }
-            var request = RequestBuilder.post(
-                    uriBuilder.build())
+            var request = RequestBuilder
+                    .post(uriBuilder.build())
                     .setEntity(new ByteArrayEntity(msg.toByteArray()));
 
             return Message.parseFrom(diadocHttpClient.performRequest(request));
@@ -108,8 +109,8 @@ public class MessageClient {
             if (operationId != null) {
                 uriBuilder.addParameter("operationId", operationId);
             }
-            var request = RequestBuilder.post(
-                    uriBuilder.build())
+            var request = RequestBuilder
+                    .post(uriBuilder.build())
                     .setEntity(new ByteArrayEntity(patch.toByteArray()));
 
             return MessagePatch.parseFrom(diadocHttpClient.performRequest(request));
@@ -135,8 +136,34 @@ public class MessageClient {
                 url.addParameter("entityId", documentId);
             }
 
-            var request = RequestBuilder.post(url.build()).setHeader("Content-Length", "0");
+            var request = RequestBuilder
+                    .post(url.build())
+                    .setHeader("Content-Length", "0");
+
             diadocHttpClient.performRequest(request);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public Message sendDraft(DraftToSend draftToSend) throws DiadocSdkException {
+        return sendDraft(draftToSend, null);
+    }
+
+    public Message sendDraft(DraftToSend draftToSend, @Nullable String operationId) throws DiadocSdkException {
+        if (draftToSend == null) {
+            throw new IllegalArgumentException("draftToSend");
+        }
+        try {
+            var uriBuilder = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/SendDraft");
+            if (operationId != null) {
+                uriBuilder.addParameter("operationId", operationId);
+            }
+            var request = RequestBuilder
+                    .post(uriBuilder.build())
+                    .setEntity(new ByteArrayEntity(draftToSend.toByteArray()));
+
+            return Message.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
@@ -150,20 +177,20 @@ public class MessageClient {
             throw new IllegalArgumentException("draftId");
         }
         try {
-            var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
                             .setPath("/RecycleDraft")
                             .addParameter("boxId", boxId)
-                            .addParameter("draftId", draftId)
-                            .build()).setHeader("Content-Length", "0");
+                            .addParameter("draftId", draftId);
+            
+            var request = RequestBuilder
+                    .post(url.build())
+                    .setHeader("Content-Length", "0");
 
             diadocHttpClient.performRequest(request);
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
     }
-
-
 
     public InvoiceCorrectionRequestInfo getInvoiceCorrectionRequestInfo(String boxId, String messageId, String entityId) throws DiadocSdkException {
         if (boxId == null) {
