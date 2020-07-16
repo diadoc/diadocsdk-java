@@ -177,8 +177,6 @@ public class PrintFormClient {
     }
 
     public PrintFormResult getGeneratedPrintForm(String printFormId) throws DiadocSdkException {
-        PrintFormResult ret = null;
-
         try {
             var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
                 .setPath("/GetGeneratedPrintForm")
@@ -186,17 +184,16 @@ public class PrintFormClient {
                 .build());
 
             var response = diadocHttpClient.getRawResponse(request);
-            if (response.getRetryAfter() != null) {
+            
+            if (response.getRetryAfter() != null){
                 return new PrintFormResult(response.getRetryAfter());
             }
-
-            ret = new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
-
+          
+            return new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
+            
         } catch (URISyntaxException | ParseException | IOException e) {
             throw new DiadocSdkException(e);
         }
-
-        return ret;
     }
 
 }
