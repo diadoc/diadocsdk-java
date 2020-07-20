@@ -9,6 +9,8 @@ import org.apache.commons.io.IOUtils;
 import org.apache.http.*;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpResponseException;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.config.RegistryBuilder;
@@ -17,27 +19,19 @@ import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.TrustAllStrategy;
-import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.ssl.SSLContextBuilder;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.mail.internet.ContentDisposition;
 import javax.mail.internet.ParseException;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 import java.util.Date;
 import java.util.concurrent.TimeoutException;
 
@@ -48,19 +42,21 @@ public class DiadocHttpClient {
 
     public DiadocHttpClient(CredentialsProvider credentialsProvider, String baseUrl, @Nullable HttpHost proxyHost) {
         var sslSocketFactory = getTrustfulSslSocketFactory();
+
         var httpClientBuilder = HttpClients
                 .custom()
                 .setSSLSocketFactory(sslSocketFactory)
                 .setConnectionManager(new PoolingHttpClientConnectionManager(
                         RegistryBuilder.<ConnectionSocketFactory>create()
-                        .register("https", sslSocketFactory)
-                        .register("http", new PlainConnectionSocketFactory())
-                        .build()))
+                                .register("https", sslSocketFactory)
+                                .register("http", new PlainConnectionSocketFactory())
+                                .build()))
                 .setUserAgent(EnvironmentHelpers.getUserAgentString())
                 .addInterceptorFirst(new DiadocPreemptiveAuthRequestInterceptor())
                 .addInterceptorLast(new ContentLengthInterceptor())
                 .setDefaultCredentialsProvider(credentialsProvider);
-        if(proxyHost != null){
+
+        if (proxyHost != null) {
             httpClientBuilder.setProxy(proxyHost);
         }
 
@@ -73,31 +69,31 @@ public class DiadocHttpClient {
     }
 
     public byte[] performRequest(RequestBuilder requestBuilder) throws IOException {
-        try (var response = httpClient.execute(requestBuilder.build())) {
+        try (var response = httpClient.execute(createRequest(requestBuilder))) {
             return getResponseBytes(response);
         }
     }
 
     public GeneratedFile performRequestWithGeneratedFile(RequestBuilder requestBuilder) throws IOException, ParseException {
-        try (var response = httpClient.execute(requestBuilder.build())) {
+        try (var response = httpClient.execute(createRequest(requestBuilder))) {
             return new GeneratedFile(tryGetHttpResponseFileName(response), getResponseBytes(response));
         }
     }
 
     public FileContent performRequestWithFileContent(RequestBuilder requestBuilder) throws IOException {
-        try (var response = httpClient.execute(requestBuilder.build())) {
+        try (var response = httpClient.execute(createRequest(requestBuilder))) {
             return new FileContent(getResponseBytes(response), tryGetFileContentName(response));
         }
     }
 
     public DiadocResponseInfo getResponse(RequestBuilder requestBuilder) throws IOException {
-        try (var response = httpClient.execute(requestBuilder.build())) {
+        try (var response = httpClient.execute(createRequest(requestBuilder))) {
             return getResponse(response);
         }
     }
 
     public DiadocResponseInfo getRawResponse(RequestBuilder requestBuilder) throws IOException, ParseException {
-        try (var response = httpClient.execute(requestBuilder.build())) {
+        try (var response = httpClient.execute(createRequest(requestBuilder))) {
             return getRawResponse(response);
         }
     }
@@ -134,6 +130,19 @@ public class DiadocHttpClient {
                 tryGetContentType(response));
     }
 
+    private HttpUriRequest createRequest(RequestBuilder requestBuilder) {
+        var requestConfig = RequestConfig.custom().setAuthenticationEnabled(false).build();
+        return requestBuilder.setConfig(requestConfig).build();
+    }
+
+    private HttpUriRequest createWaitRequest(String path, String taskId) throws URISyntaxException {
+        return createRequest(RequestBuilder.get(
+                new URIBuilder(baseUrl)
+                        .setPath(path)
+                        .addParameter("taskId", taskId)
+                        .build()));
+    }
+
     @Nullable
     private static String tryGetContentType(HttpResponse response) {
         if (response.getEntity() != null && response.getEntity().getContentType() != null) {
@@ -160,13 +169,8 @@ public class DiadocHttpClient {
 
         try {
             while (true) {
-                try (var response = httpClient.execute(
-                        RequestBuilder.get(
-                                new URIBuilder(baseUrl)
-                                        .setPath(path)
-                                        .addParameter("taskId", taskId)
-                                        .build())
-                                .build())) {
+                try (var response = httpClient.execute(createWaitRequest(path, taskId)))
+                {
                     var statusCode = response.getStatusLine().getStatusCode();
                     if (statusCode == HttpStatus.SC_NO_CONTENT) {
                         if (new Date().getTime() > timeLimit) {
