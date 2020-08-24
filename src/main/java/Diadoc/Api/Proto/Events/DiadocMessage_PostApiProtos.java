@@ -91973,6 +91973,30 @@ public final class DiadocMessage_PostApiProtos {
      * <code>optional bool RefusalDisabled = 12 [default = false];</code>
      */
     boolean getRefusalDisabled();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem> 
+        getCustomDataList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem getCustomData(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    int getCustomDataCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder> 
+        getCustomDataOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder getCustomDataOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.TemplateDocumentAttachment}
@@ -92111,6 +92135,14 @@ public final class DiadocMessage_PostApiProtos {
               refusalDisabled_ = input.readBool();
               break;
             }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+                customData_ = new java.util.ArrayList<Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem>();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              customData_.add(input.readMessage(Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -92121,6 +92153,9 @@ public final class DiadocMessage_PostApiProtos {
       } finally {
         if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           metadata_ = java.util.Collections.unmodifiableList(metadata_);
+        }
+        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+          customData_ = java.util.Collections.unmodifiableList(customData_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -92528,6 +92563,41 @@ public final class DiadocMessage_PostApiProtos {
       return refusalDisabled_;
     }
 
+    public static final int CUSTOMDATA_FIELD_NUMBER = 13;
+    private java.util.List<Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem> customData_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem> getCustomDataList() {
+      return customData_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder> 
+        getCustomDataOrBuilderList() {
+      return customData_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    public int getCustomDataCount() {
+      return customData_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    public Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem getCustomData(int index) {
+      return customData_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+     */
+    public Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder getCustomDataOrBuilder(
+        int index) {
+      return customData_.get(index);
+    }
+
     private void initFields() {
       unsignedContent_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.UnsignedContent.getDefaultInstance();
       comment_ = "";
@@ -92541,6 +92611,7 @@ public final class DiadocMessage_PostApiProtos {
       needRecipientSignature_ = false;
       predefinedRecipientTitle_ = Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PredefinedRecipientTitle.getDefaultInstance();
       refusalDisabled_ = false;
+      customData_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -92564,6 +92635,12 @@ public final class DiadocMessage_PostApiProtos {
       }
       if (hasPredefinedRecipientTitle()) {
         if (!getPredefinedRecipientTitle().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getCustomDataCount(); i++) {
+        if (!getCustomData(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -92610,6 +92687,9 @@ public final class DiadocMessage_PostApiProtos {
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeBool(12, refusalDisabled_);
+      }
+      for (int i = 0; i < customData_.size(); i++) {
+        output.writeMessage(13, customData_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -92667,6 +92747,10 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, refusalDisabled_);
+      }
+      for (int i = 0; i < customData_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, customData_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -92780,6 +92864,7 @@ public final class DiadocMessage_PostApiProtos {
           getUnsignedContentFieldBuilder();
           getMetadataFieldBuilder();
           getPredefinedRecipientTitleFieldBuilder();
+          getCustomDataFieldBuilder();
         }
       }
       private static Builder create() {
@@ -92824,6 +92909,12 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00000400);
         refusalDisabled_ = false;
         bitField0_ = (bitField0_ & ~0x00000800);
+        if (customDataBuilder_ == null) {
+          customData_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+        } else {
+          customDataBuilder_.clear();
+        }
         return this;
       }
 
@@ -92913,6 +93004,15 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000400;
         }
         result.refusalDisabled_ = refusalDisabled_;
+        if (customDataBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) == 0x00001000)) {
+            customData_ = java.util.Collections.unmodifiableList(customData_);
+            bitField0_ = (bitField0_ & ~0x00001000);
+          }
+          result.customData_ = customData_;
+        } else {
+          result.customData_ = customDataBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -93000,6 +93100,32 @@ public final class DiadocMessage_PostApiProtos {
         if (other.hasRefusalDisabled()) {
           setRefusalDisabled(other.getRefusalDisabled());
         }
+        if (customDataBuilder_ == null) {
+          if (!other.customData_.isEmpty()) {
+            if (customData_.isEmpty()) {
+              customData_ = other.customData_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+            } else {
+              ensureCustomDataIsMutable();
+              customData_.addAll(other.customData_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.customData_.isEmpty()) {
+            if (customDataBuilder_.isEmpty()) {
+              customDataBuilder_.dispose();
+              customDataBuilder_ = null;
+              customData_ = other.customData_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+              customDataBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getCustomDataFieldBuilder() : null;
+            } else {
+              customDataBuilder_.addAllMessages(other.customData_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -93021,6 +93147,12 @@ public final class DiadocMessage_PostApiProtos {
         }
         if (hasPredefinedRecipientTitle()) {
           if (!getPredefinedRecipientTitle().isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getCustomDataCount(); i++) {
+          if (!getCustomData(i).isInitialized()) {
             
             return false;
           }
@@ -94069,6 +94201,246 @@ public final class DiadocMessage_PostApiProtos {
         refusalDisabled_ = false;
         onChanged();
         return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem> customData_ =
+        java.util.Collections.emptyList();
+      private void ensureCustomDataIsMutable() {
+        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+          customData_ = new java.util.ArrayList<Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem>(customData_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder> customDataBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem> getCustomDataList() {
+        if (customDataBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(customData_);
+        } else {
+          return customDataBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public int getCustomDataCount() {
+        if (customDataBuilder_ == null) {
+          return customData_.size();
+        } else {
+          return customDataBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem getCustomData(int index) {
+        if (customDataBuilder_ == null) {
+          return customData_.get(index);
+        } else {
+          return customDataBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Builder setCustomData(
+          int index, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem value) {
+        if (customDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomDataIsMutable();
+          customData_.set(index, value);
+          onChanged();
+        } else {
+          customDataBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Builder setCustomData(
+          int index, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder builderForValue) {
+        if (customDataBuilder_ == null) {
+          ensureCustomDataIsMutable();
+          customData_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          customDataBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Builder addCustomData(Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem value) {
+        if (customDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomDataIsMutable();
+          customData_.add(value);
+          onChanged();
+        } else {
+          customDataBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Builder addCustomData(
+          int index, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem value) {
+        if (customDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomDataIsMutable();
+          customData_.add(index, value);
+          onChanged();
+        } else {
+          customDataBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Builder addCustomData(
+          Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder builderForValue) {
+        if (customDataBuilder_ == null) {
+          ensureCustomDataIsMutable();
+          customData_.add(builderForValue.build());
+          onChanged();
+        } else {
+          customDataBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Builder addCustomData(
+          int index, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder builderForValue) {
+        if (customDataBuilder_ == null) {
+          ensureCustomDataIsMutable();
+          customData_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          customDataBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Builder addAllCustomData(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem> values) {
+        if (customDataBuilder_ == null) {
+          ensureCustomDataIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, customData_);
+          onChanged();
+        } else {
+          customDataBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Builder clearCustomData() {
+        if (customDataBuilder_ == null) {
+          customData_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+          onChanged();
+        } else {
+          customDataBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Builder removeCustomData(int index) {
+        if (customDataBuilder_ == null) {
+          ensureCustomDataIsMutable();
+          customData_.remove(index);
+          onChanged();
+        } else {
+          customDataBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder getCustomDataBuilder(
+          int index) {
+        return getCustomDataFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder getCustomDataOrBuilder(
+          int index) {
+        if (customDataBuilder_ == null) {
+          return customData_.get(index);  } else {
+          return customDataBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder> 
+           getCustomDataOrBuilderList() {
+        if (customDataBuilder_ != null) {
+          return customDataBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(customData_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder addCustomDataBuilder() {
+        return getCustomDataFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder addCustomDataBuilder(
+          int index) {
+        return getCustomDataFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CustomDataItem CustomData = 13;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder> 
+           getCustomDataBuilderList() {
+        return getCustomDataFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder> 
+          getCustomDataFieldBuilder() {
+        if (customDataBuilder_ == null) {
+          customDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItem.Builder, Diadoc.Api.Proto.CustomDataItemProtos.CustomDataItemOrBuilder>(
+                  customData_,
+                  ((bitField0_ & 0x00001000) == 0x00001000),
+                  getParentForChildren(),
+                  isClean());
+          customData_ = null;
+        }
+        return customDataBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.TemplateDocumentAttachment)
@@ -99032,7 +99404,7 @@ public final class DiadocMessage_PostApiProtos {
       "ents.TemplateDocumentAttachment\0222\n\010LockM" +
       "ode\030\007 \001(\0162\032.Diadoc.Api.Proto.LockMode:\004N" +
       "one\022\030\n\020FromDepartmentId\030\010 \001(\t\022\026\n\016ToDepar" +
-      "tmentId\030\t \001(\t\"\305\003\n\032TemplateDocumentAttach",
+      "tmentId\030\t \001(\t\"\373\003\n\032TemplateDocumentAttach",
       "ment\022A\n\017UnsignedContent\030\001 \002(\0132(.Diadoc.A" +
       "pi.Proto.Events.UnsignedContent\022\017\n\007Comme" +
       "nt\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n\010Functio" +
@@ -99043,23 +99415,24 @@ public final class DiadocMessage_PostApiProtos {
       "dRecipientSignature\030\n \001(\010:\005false\022S\n\030Pred" +
       "efinedRecipientTitle\030\013 \001(\01321.Diadoc.Api." +
       "Proto.Events.PredefinedRecipientTitle\022\036\n",
-      "\017RefusalDisabled\030\014 \001(\010:\005false\"[\n\023Templat" +
-      "ePatchToPost\022D\n\010Refusals\030\001 \003(\01322.Diadoc." +
-      "Api.Proto.Events.TemplateRefusalAttachme" +
-      "nt\"P\n\031TemplateRefusalAttachment\022\022\n\nDocum" +
-      "entId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003" +
-      " \003(\t\"]\n\030PredefinedRecipientTitle\022A\n\017Unsi" +
-      "gnedContent\030\001 \002(\0132(.Diadoc.Api.Proto.Eve" +
-      "nts.UnsignedContent\"7\n\017UnsignedContent\022\017" +
-      "\n\007Content\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n" +
-      "\034TemplateTransformationToPost\022\r\n\005BoxId\030\001",
-      " \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027DocumentTran" +
-      "sformations\030\003 \003(\0132/.Diadoc.Api.Proto.Eve" +
-      "nts.DocumentTransformation\"F\n\026DocumentTr" +
-      "ansformation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020Cust" +
-      "omDocumentId\030\002 \001(\t*/\n\030CustomDataPatchOpe" +
-      "ration\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMes" +
-      "sage_PostApiProtos"
+      "\017RefusalDisabled\030\014 \001(\010:\005false\0224\n\nCustomD" +
+      "ata\030\r \003(\0132 .Diadoc.Api.Proto.CustomDataI" +
+      "tem\"[\n\023TemplatePatchToPost\022D\n\010Refusals\030\001" +
+      " \003(\01322.Diadoc.Api.Proto.Events.TemplateR" +
+      "efusalAttachment\"P\n\031TemplateRefusalAttac" +
+      "hment\022\022\n\nDocumentId\030\001 \002(\t\022\017\n\007Comment\030\002 \001" +
+      "(\t\022\016\n\006Labels\030\003 \003(\t\"]\n\030PredefinedRecipien" +
+      "tTitle\022A\n\017UnsignedContent\030\001 \002(\0132(.Diadoc" +
+      ".Api.Proto.Events.UnsignedContent\"7\n\017Uns" +
+      "ignedContent\022\017\n\007Content\030\001 \001(\014\022\023\n\013NameOnS",
+      "helf\030\002 \001(\t\"\223\001\n\034TemplateTransformationToP" +
+      "ost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P" +
+      "\n\027DocumentTransformations\030\003 \003(\0132/.Diadoc" +
+      ".Api.Proto.Events.DocumentTransformation" +
+      "\"F\n\026DocumentTransformation\022\022\n\nDocumentId" +
+      "\030\001 \002(\t\022\030\n\020CustomDocumentId\030\002 \001(\t*/\n\030Cust" +
+      "omDataPatchOperation\022\007\n\003Set\020\000\022\n\n\006Remove\020" +
+      "\001B\035B\033DiadocMessage_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -99401,7 +99774,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_descriptor,
-        new java.lang.String[] { "UnsignedContent", "Comment", "TypeNamedId", "Function", "Version", "Metadata", "WorkflowId", "CustomDocumentId", "EditingSettingId", "NeedRecipientSignature", "PredefinedRecipientTitle", "RefusalDisabled", });
+        new java.lang.String[] { "UnsignedContent", "Comment", "TypeNamedId", "Function", "Version", "Metadata", "WorkflowId", "CustomDocumentId", "EditingSettingId", "NeedRecipientSignature", "PredefinedRecipientTitle", "RefusalDisabled", "CustomData", });
     internal_static_Diadoc_Api_Proto_Events_TemplatePatchToPost_descriptor =
       getDescriptor().getMessageTypes().get(53);
     internal_static_Diadoc_Api_Proto_Events_TemplatePatchToPost_fieldAccessorTable = new
