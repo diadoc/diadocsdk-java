@@ -9,7 +9,9 @@ import org.apache.commons.io.IOUtils;
 import org.apache.http.*;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpResponseException;
+import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
@@ -39,6 +41,8 @@ public class DiadocHttpClient {
 
     private CloseableHttpClient httpClient;
     private String baseUrl;
+    private ResponseHandler<? extends CloseableHttpResponse> responseHandler =
+            (ResponseHandler<CloseableHttpResponse>) httpResponse -> (CloseableHttpResponse) httpResponse;
 
     public DiadocHttpClient(CredentialsProvider credentialsProvider, String baseUrl, @Nullable HttpHost proxyHost) {
         var sslSocketFactory = getTrustfulSslSocketFactory();
@@ -64,36 +68,40 @@ public class DiadocHttpClient {
         this.baseUrl = baseUrl;
     }
 
+    public void setResponseHandler(ResponseHandler<? extends CloseableHttpResponse> responseHandler) {
+        this.responseHandler = responseHandler;
+    }
+
     public String getBaseUrl() {
         return baseUrl;
     }
 
     public byte[] performRequest(RequestBuilder requestBuilder) throws IOException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = httpClient.execute(createRequest(requestBuilder), responseHandler)) {
             return getResponseBytes(response);
         }
     }
 
     public GeneratedFile performRequestWithGeneratedFile(RequestBuilder requestBuilder) throws IOException, ParseException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = httpClient.execute(createRequest(requestBuilder), responseHandler)) {
             return new GeneratedFile(tryGetHttpResponseFileName(response), getResponseBytes(response));
         }
     }
 
     public FileContent performRequestWithFileContent(RequestBuilder requestBuilder) throws IOException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = httpClient.execute(createRequest(requestBuilder), responseHandler)) {
             return new FileContent(getResponseBytes(response), tryGetFileContentName(response));
         }
     }
 
     public DiadocResponseInfo getResponse(RequestBuilder requestBuilder) throws IOException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = httpClient.execute(createRequest(requestBuilder), responseHandler)) {
             return getResponse(response);
         }
     }
 
     public DiadocResponseInfo getRawResponse(RequestBuilder requestBuilder) throws IOException, ParseException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = httpClient.execute(createRequest(requestBuilder), responseHandler)) {
             return getRawResponse(response);
         }
     }
@@ -169,7 +177,7 @@ public class DiadocHttpClient {
 
         try {
             while (true) {
-                try (var response = httpClient.execute(createWaitRequest(path, taskId)))
+                try (var response = httpClient.execute(createWaitRequest(path, taskId), responseHandler))
                 {
                     var statusCode = response.getStatusLine().getStatusCode();
                     if (statusCode == HttpStatus.SC_NO_CONTENT) {
