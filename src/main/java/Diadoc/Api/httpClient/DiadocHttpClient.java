@@ -1,5 +1,6 @@
 package Diadoc.Api.httpClient;
 
+import Diadoc.Api.ConnectionSettings;
 import Diadoc.Api.exceptions.DiadocException;
 import Diadoc.Api.auth.DiadocPreemptiveAuthRequestInterceptor;
 import Diadoc.Api.exceptions.DiadocSdkException;
@@ -40,17 +41,26 @@ public class DiadocHttpClient {
     private CloseableHttpClient httpClient;
     private String baseUrl;
 
-    public DiadocHttpClient(CredentialsProvider credentialsProvider, String baseUrl, @Nullable HttpHost proxyHost) {
+    public DiadocHttpClient(
+            CredentialsProvider credentialsProvider,
+            String baseUrl,
+            @Nullable HttpHost proxyHost,
+            @Nullable ConnectionSettings connectionSettings) {
         var sslSocketFactory = getTrustfulSslSocketFactory();
 
+        var connectionManager = new PoolingHttpClientConnectionManager(
+                RegistryBuilder.<ConnectionSocketFactory>create()
+                        .register("https", sslSocketFactory)
+                        .register("http", new PlainConnectionSocketFactory())
+                        .build());
+        if(connectionSettings != null) {
+            connectionManager.setMaxTotal(connectionSettings.getMaxTotalConnections());
+            connectionManager.setDefaultMaxPerRoute(connectionSettings.getMaxConnectionsPerRoute());
+        }
         var httpClientBuilder = HttpClients
                 .custom()
                 .setSSLSocketFactory(sslSocketFactory)
-                .setConnectionManager(new PoolingHttpClientConnectionManager(
-                        RegistryBuilder.<ConnectionSocketFactory>create()
-                                .register("https", sslSocketFactory)
-                                .register("http", new PlainConnectionSocketFactory())
-                                .build()))
+                .setConnectionManager(connectionManager)
                 .setUserAgent(EnvironmentHelpers.getUserAgentString())
                 .addInterceptorFirst(new DiadocPreemptiveAuthRequestInterceptor())
                 .addInterceptorLast(new ContentLengthInterceptor())
@@ -169,8 +179,7 @@ public class DiadocHttpClient {
 
         try {
             while (true) {
-                try (var response = httpClient.execute(createWaitRequest(path, taskId)))
-                {
+                try (var response = httpClient.execute(createWaitRequest(path, taskId))) {
                     var statusCode = response.getStatusLine().getStatusCode();
                     if (statusCode == HttpStatus.SC_NO_CONTENT) {
                         if (new Date().getTime() > timeLimit) {
