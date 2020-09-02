@@ -43,12 +43,12 @@ public class DiadocApi {
     private DocumentTypeClient documentTypeClient;
     private DocflowClient docflowClient;
 
-    public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost) {
+    public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
         if (url == null) {
             throw new IllegalArgumentException("url");
         }
         authManager = new AuthManager(apiClientId);
-        DiadocHttpClient diadocHttpClient = new DiadocHttpClient(authManager.getCredentialsProvider(), url, proxyHost);
+        DiadocHttpClient diadocHttpClient = new DiadocHttpClient(authManager.getCredentialsProvider(), url, proxyHost, connectionSettings);
         authClient = new AuthenticateClient(authManager, diadocHttpClient);
         organizationClient = new OrganizationClient(diadocHttpClient);
         departmentClient = new DepartmentClient(diadocHttpClient);
