@@ -141,6 +141,54 @@ public final class DocflowV3Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.ResolutionEntitiesV3 ResolutionEntities = 10;</code>
      */
     Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.ResolutionEntitiesV3OrBuilder getResolutionEntitiesOrBuilder();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow> 
+        getOuterDocflowsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow getOuterDocflows(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    int getOuterDocflowsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder> 
+        getOuterDocflowsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder getOuterDocflowsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> 
+        getOuterDocflowEntitiesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities getOuterDocflowEntities(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    int getOuterDocflowEntitiesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> 
+        getOuterDocflowEntitiesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder getOuterDocflowEntitiesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocflowV3}
@@ -324,6 +372,22 @@ public final class DocflowV3Protos {
               bitField0_ |= 0x00000004;
               break;
             }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                outerDocflows_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow>();
+                mutable_bitField0_ |= 0x00000400;
+              }
+              outerDocflows_.add(input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.PARSER, extensionRegistry));
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+                outerDocflowEntities_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              outerDocflowEntities_.add(input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -332,6 +396,12 @@ public final class DocflowV3Protos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+          outerDocflows_ = java.util.Collections.unmodifiableList(outerDocflows_);
+        }
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+          outerDocflowEntities_ = java.util.Collections.unmodifiableList(outerDocflowEntities_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -574,6 +644,76 @@ public final class DocflowV3Protos {
       return resolutionEntities_;
     }
 
+    public static final int OUTERDOCFLOWS_FIELD_NUMBER = 12;
+    private java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow> outerDocflows_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow> getOuterDocflowsList() {
+      return outerDocflows_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder> 
+        getOuterDocflowsOrBuilderList() {
+      return outerDocflows_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    public int getOuterDocflowsCount() {
+      return outerDocflows_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow getOuterDocflows(int index) {
+      return outerDocflows_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder getOuterDocflowsOrBuilder(
+        int index) {
+      return outerDocflows_.get(index);
+    }
+
+    public static final int OUTERDOCFLOWENTITIES_FIELD_NUMBER = 13;
+    private java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> outerDocflowEntities_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> getOuterDocflowEntitiesList() {
+      return outerDocflowEntities_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> 
+        getOuterDocflowEntitiesOrBuilderList() {
+      return outerDocflowEntities_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    public int getOuterDocflowEntitiesCount() {
+      return outerDocflowEntities_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities getOuterDocflowEntities(int index) {
+      return outerDocflowEntities_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder getOuterDocflowEntitiesOrBuilder(
+        int index) {
+      return outerDocflowEntities_.get(index);
+    }
+
     private void initFields() {
       senderTitle_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.SenderTitleDocflow.getDefaultInstance();
       confirmation_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.getDefaultInstance();
@@ -585,6 +725,8 @@ public final class DocflowV3Protos {
       senderReceipt_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ReceiptDocflowV3.getDefaultInstance();
       resolution_ = Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.ResolutionDocflowV3.getDefaultInstance();
       resolutionEntities_ = Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.ResolutionEntitiesV3.getDefaultInstance();
+      outerDocflows_ = java.util.Collections.emptyList();
+      outerDocflowEntities_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -654,6 +796,18 @@ public final class DocflowV3Protos {
           return false;
         }
       }
+      for (int i = 0; i < getOuterDocflowsCount(); i++) {
+        if (!getOuterDocflows(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getOuterDocflowEntitiesCount(); i++) {
+        if (!getOuterDocflowEntities(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -690,6 +844,12 @@ public final class DocflowV3Protos {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeMessage(11, proxyResponse_);
+      }
+      for (int i = 0; i < outerDocflows_.size(); i++) {
+        output.writeMessage(12, outerDocflows_.get(i));
+      }
+      for (int i = 0; i < outerDocflowEntities_.size(); i++) {
+        output.writeMessage(13, outerDocflowEntities_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -739,6 +899,14 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, proxyResponse_);
+      }
+      for (int i = 0; i < outerDocflows_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, outerDocflows_.get(i));
+      }
+      for (int i = 0; i < outerDocflowEntities_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, outerDocflowEntities_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -859,6 +1027,8 @@ public final class DocflowV3Protos {
           getSenderReceiptFieldBuilder();
           getResolutionFieldBuilder();
           getResolutionEntitiesFieldBuilder();
+          getOuterDocflowsFieldBuilder();
+          getOuterDocflowEntitiesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -927,6 +1097,18 @@ public final class DocflowV3Protos {
           resolutionEntitiesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000200);
+        if (outerDocflowsBuilder_ == null) {
+          outerDocflows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          outerDocflowsBuilder_.clear();
+        }
+        if (outerDocflowEntitiesBuilder_ == null) {
+          outerDocflowEntities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+        } else {
+          outerDocflowEntitiesBuilder_.clear();
+        }
         return this;
       }
 
@@ -1035,6 +1217,24 @@ public final class DocflowV3Protos {
         } else {
           result.resolutionEntities_ = resolutionEntitiesBuilder_.build();
         }
+        if (outerDocflowsBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+            outerDocflows_ = java.util.Collections.unmodifiableList(outerDocflows_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.outerDocflows_ = outerDocflows_;
+        } else {
+          result.outerDocflows_ = outerDocflowsBuilder_.build();
+        }
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+            outerDocflowEntities_ = java.util.Collections.unmodifiableList(outerDocflowEntities_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.outerDocflowEntities_ = outerDocflowEntities_;
+        } else {
+          result.outerDocflowEntities_ = outerDocflowEntitiesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1080,6 +1280,58 @@ public final class DocflowV3Protos {
         }
         if (other.hasResolutionEntities()) {
           mergeResolutionEntities(other.getResolutionEntities());
+        }
+        if (outerDocflowsBuilder_ == null) {
+          if (!other.outerDocflows_.isEmpty()) {
+            if (outerDocflows_.isEmpty()) {
+              outerDocflows_ = other.outerDocflows_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureOuterDocflowsIsMutable();
+              outerDocflows_.addAll(other.outerDocflows_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.outerDocflows_.isEmpty()) {
+            if (outerDocflowsBuilder_.isEmpty()) {
+              outerDocflowsBuilder_.dispose();
+              outerDocflowsBuilder_ = null;
+              outerDocflows_ = other.outerDocflows_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              outerDocflowsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getOuterDocflowsFieldBuilder() : null;
+            } else {
+              outerDocflowsBuilder_.addAllMessages(other.outerDocflows_);
+            }
+          }
+        }
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (!other.outerDocflowEntities_.isEmpty()) {
+            if (outerDocflowEntities_.isEmpty()) {
+              outerDocflowEntities_ = other.outerDocflowEntities_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureOuterDocflowEntitiesIsMutable();
+              outerDocflowEntities_.addAll(other.outerDocflowEntities_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.outerDocflowEntities_.isEmpty()) {
+            if (outerDocflowEntitiesBuilder_.isEmpty()) {
+              outerDocflowEntitiesBuilder_.dispose();
+              outerDocflowEntitiesBuilder_ = null;
+              outerDocflowEntities_ = other.outerDocflowEntities_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              outerDocflowEntitiesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getOuterDocflowEntitiesFieldBuilder() : null;
+            } else {
+              outerDocflowEntitiesBuilder_.addAllMessages(other.outerDocflowEntities_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1144,6 +1396,18 @@ public final class DocflowV3Protos {
         }
         if (hasResolutionEntities()) {
           if (!getResolutionEntities().isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getOuterDocflowsCount(); i++) {
+          if (!getOuterDocflows(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getOuterDocflowEntitiesCount(); i++) {
+          if (!getOuterDocflowEntities(i).isInitialized()) {
             
             return false;
           }
@@ -2328,6 +2592,486 @@ public final class DocflowV3Protos {
           resolutionEntities_ = null;
         }
         return resolutionEntitiesBuilder_;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow> outerDocflows_ =
+        java.util.Collections.emptyList();
+      private void ensureOuterDocflowsIsMutable() {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+          outerDocflows_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow>(outerDocflows_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder> outerDocflowsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow> getOuterDocflowsList() {
+        if (outerDocflowsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(outerDocflows_);
+        } else {
+          return outerDocflowsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public int getOuterDocflowsCount() {
+        if (outerDocflowsBuilder_ == null) {
+          return outerDocflows_.size();
+        } else {
+          return outerDocflowsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow getOuterDocflows(int index) {
+        if (outerDocflowsBuilder_ == null) {
+          return outerDocflows_.get(index);
+        } else {
+          return outerDocflowsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Builder setOuterDocflows(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow value) {
+        if (outerDocflowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOuterDocflowsIsMutable();
+          outerDocflows_.set(index, value);
+          onChanged();
+        } else {
+          outerDocflowsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Builder setOuterDocflows(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder builderForValue) {
+        if (outerDocflowsBuilder_ == null) {
+          ensureOuterDocflowsIsMutable();
+          outerDocflows_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          outerDocflowsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Builder addOuterDocflows(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow value) {
+        if (outerDocflowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOuterDocflowsIsMutable();
+          outerDocflows_.add(value);
+          onChanged();
+        } else {
+          outerDocflowsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Builder addOuterDocflows(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow value) {
+        if (outerDocflowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOuterDocflowsIsMutable();
+          outerDocflows_.add(index, value);
+          onChanged();
+        } else {
+          outerDocflowsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Builder addOuterDocflows(
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder builderForValue) {
+        if (outerDocflowsBuilder_ == null) {
+          ensureOuterDocflowsIsMutable();
+          outerDocflows_.add(builderForValue.build());
+          onChanged();
+        } else {
+          outerDocflowsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Builder addOuterDocflows(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder builderForValue) {
+        if (outerDocflowsBuilder_ == null) {
+          ensureOuterDocflowsIsMutable();
+          outerDocflows_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          outerDocflowsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Builder addAllOuterDocflows(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow> values) {
+        if (outerDocflowsBuilder_ == null) {
+          ensureOuterDocflowsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, outerDocflows_);
+          onChanged();
+        } else {
+          outerDocflowsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Builder clearOuterDocflows() {
+        if (outerDocflowsBuilder_ == null) {
+          outerDocflows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          outerDocflowsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Builder removeOuterDocflows(int index) {
+        if (outerDocflowsBuilder_ == null) {
+          ensureOuterDocflowsIsMutable();
+          outerDocflows_.remove(index);
+          onChanged();
+        } else {
+          outerDocflowsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder getOuterDocflowsBuilder(
+          int index) {
+        return getOuterDocflowsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder getOuterDocflowsOrBuilder(
+          int index) {
+        if (outerDocflowsBuilder_ == null) {
+          return outerDocflows_.get(index);  } else {
+          return outerDocflowsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder> 
+           getOuterDocflowsOrBuilderList() {
+        if (outerDocflowsBuilder_ != null) {
+          return outerDocflowsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(outerDocflows_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder addOuterDocflowsBuilder() {
+        return getOuterDocflowsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder addOuterDocflowsBuilder(
+          int index) {
+        return getOuterDocflowsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflow OuterDocflows = 12;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder> 
+           getOuterDocflowsBuilderList() {
+        return getOuterDocflowsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder> 
+          getOuterDocflowsFieldBuilder() {
+        if (outerDocflowsBuilder_ == null) {
+          outerDocflowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder>(
+                  outerDocflows_,
+                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  getParentForChildren(),
+                  isClean());
+          outerDocflows_ = null;
+        }
+        return outerDocflowsBuilder_;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> outerDocflowEntities_ =
+        java.util.Collections.emptyList();
+      private void ensureOuterDocflowEntitiesIsMutable() {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+          outerDocflowEntities_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities>(outerDocflowEntities_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> outerDocflowEntitiesBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> getOuterDocflowEntitiesList() {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(outerDocflowEntities_);
+        } else {
+          return outerDocflowEntitiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public int getOuterDocflowEntitiesCount() {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          return outerDocflowEntities_.size();
+        } else {
+          return outerDocflowEntitiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities getOuterDocflowEntities(int index) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          return outerDocflowEntities_.get(index);
+        } else {
+          return outerDocflowEntitiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Builder setOuterDocflowEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities value) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.set(index, value);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Builder setOuterDocflowEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder builderForValue) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Builder addOuterDocflowEntities(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities value) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.add(value);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Builder addOuterDocflowEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities value) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.add(index, value);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Builder addOuterDocflowEntities(
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder builderForValue) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.add(builderForValue.build());
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Builder addOuterDocflowEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder builderForValue) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Builder addAllOuterDocflowEntities(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> values) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, outerDocflowEntities_);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Builder clearOuterDocflowEntities() {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          outerDocflowEntities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Builder removeOuterDocflowEntities(int index) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.remove(index);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder getOuterDocflowEntitiesBuilder(
+          int index) {
+        return getOuterDocflowEntitiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder getOuterDocflowEntitiesOrBuilder(
+          int index) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          return outerDocflowEntities_.get(index);  } else {
+          return outerDocflowEntitiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> 
+           getOuterDocflowEntitiesOrBuilderList() {
+        if (outerDocflowEntitiesBuilder_ != null) {
+          return outerDocflowEntitiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(outerDocflowEntities_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder addOuterDocflowEntitiesBuilder() {
+        return getOuterDocflowEntitiesFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder addOuterDocflowEntitiesBuilder(
+          int index) {
+        return getOuterDocflowEntitiesFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 13;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder> 
+           getOuterDocflowEntitiesBuilderList() {
+        return getOuterDocflowEntitiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> 
+          getOuterDocflowEntitiesFieldBuilder() {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          outerDocflowEntitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder>(
+                  outerDocflowEntities_,
+                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  getParentForChildren(),
+                  isClean());
+          outerDocflowEntities_ = null;
+        }
+        return outerDocflowEntitiesBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.DocflowV3)
@@ -8660,6 +9404,30 @@ public final class DocflowV3Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.ResolutionEntitiesV3 ResolutionEntities = 6;</code>
      */
     Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.ResolutionEntitiesV3OrBuilder getResolutionEntitiesOrBuilder();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> 
+        getOuterDocflowEntitiesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities getOuterDocflowEntities(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    int getOuterDocflowEntitiesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> 
+        getOuterDocflowEntitiesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder getOuterDocflowEntitiesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.RevocationDocflowV3}
@@ -8774,6 +9542,14 @@ public final class DocflowV3Protos {
               bitField0_ |= 0x00000020;
               break;
             }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                outerDocflowEntities_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              outerDocflowEntities_.add(input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -8782,6 +9558,9 @@ public final class DocflowV3Protos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          outerDocflowEntities_ = java.util.Collections.unmodifiableList(outerDocflowEntities_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -8949,6 +9728,41 @@ public final class DocflowV3Protos {
       return resolutionEntities_;
     }
 
+    public static final int OUTERDOCFLOWENTITIES_FIELD_NUMBER = 7;
+    private java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> outerDocflowEntities_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> getOuterDocflowEntitiesList() {
+      return outerDocflowEntities_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> 
+        getOuterDocflowEntitiesOrBuilderList() {
+      return outerDocflowEntities_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    public int getOuterDocflowEntitiesCount() {
+      return outerDocflowEntities_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities getOuterDocflowEntities(int index) {
+      return outerDocflowEntities_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder getOuterDocflowEntitiesOrBuilder(
+        int index) {
+      return outerDocflowEntities_.get(index);
+    }
+
     private void initFields() {
       isFinished_ = false;
       revocationRequest_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.RevocationRequestDocflow.getDefaultInstance();
@@ -8956,6 +9770,7 @@ public final class DocflowV3Protos {
       initiatorBoxId_ = "";
       revocationStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RevocationStatus.UnknownRevocationStatus;
       resolutionEntities_ = Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.ResolutionEntitiesV3.getDefaultInstance();
+      outerDocflowEntities_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -8995,6 +9810,12 @@ public final class DocflowV3Protos {
           return false;
         }
       }
+      for (int i = 0; i < getOuterDocflowEntitiesCount(); i++) {
+        if (!getOuterDocflowEntities(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -9019,6 +9840,9 @@ public final class DocflowV3Protos {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeMessage(6, resolutionEntities_);
+      }
+      for (int i = 0; i < outerDocflowEntities_.size(); i++) {
+        output.writeMessage(7, outerDocflowEntities_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -9052,6 +9876,10 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, resolutionEntities_);
+      }
+      for (int i = 0; i < outerDocflowEntities_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, outerDocflowEntities_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -9165,6 +9993,7 @@ public final class DocflowV3Protos {
           getRevocationRequestFieldBuilder();
           getRevocationResponseFieldBuilder();
           getResolutionEntitiesFieldBuilder();
+          getOuterDocflowEntitiesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -9197,6 +10026,12 @@ public final class DocflowV3Protos {
           resolutionEntitiesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
+        if (outerDocflowEntitiesBuilder_ == null) {
+          outerDocflowEntities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          outerDocflowEntitiesBuilder_.clear();
+        }
         return this;
       }
 
@@ -9261,6 +10096,15 @@ public final class DocflowV3Protos {
         } else {
           result.resolutionEntities_ = resolutionEntitiesBuilder_.build();
         }
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            outerDocflowEntities_ = java.util.Collections.unmodifiableList(outerDocflowEntities_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.outerDocflowEntities_ = outerDocflowEntities_;
+        } else {
+          result.outerDocflowEntities_ = outerDocflowEntitiesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -9297,6 +10141,32 @@ public final class DocflowV3Protos {
         if (other.hasResolutionEntities()) {
           mergeResolutionEntities(other.getResolutionEntities());
         }
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (!other.outerDocflowEntities_.isEmpty()) {
+            if (outerDocflowEntities_.isEmpty()) {
+              outerDocflowEntities_ = other.outerDocflowEntities_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureOuterDocflowEntitiesIsMutable();
+              outerDocflowEntities_.addAll(other.outerDocflowEntities_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.outerDocflowEntities_.isEmpty()) {
+            if (outerDocflowEntitiesBuilder_.isEmpty()) {
+              outerDocflowEntitiesBuilder_.dispose();
+              outerDocflowEntitiesBuilder_ = null;
+              outerDocflowEntities_ = other.outerDocflowEntities_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              outerDocflowEntitiesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getOuterDocflowEntitiesFieldBuilder() : null;
+            } else {
+              outerDocflowEntitiesBuilder_.addAllMessages(other.outerDocflowEntities_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -9330,6 +10200,12 @@ public final class DocflowV3Protos {
         }
         if (hasResolutionEntities()) {
           if (!getResolutionEntities().isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getOuterDocflowEntitiesCount(); i++) {
+          if (!getOuterDocflowEntities(i).isInitialized()) {
             
             return false;
           }
@@ -9845,6 +10721,246 @@ public final class DocflowV3Protos {
           resolutionEntities_ = null;
         }
         return resolutionEntitiesBuilder_;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> outerDocflowEntities_ =
+        java.util.Collections.emptyList();
+      private void ensureOuterDocflowEntitiesIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          outerDocflowEntities_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities>(outerDocflowEntities_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> outerDocflowEntitiesBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> getOuterDocflowEntitiesList() {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(outerDocflowEntities_);
+        } else {
+          return outerDocflowEntitiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public int getOuterDocflowEntitiesCount() {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          return outerDocflowEntities_.size();
+        } else {
+          return outerDocflowEntitiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities getOuterDocflowEntities(int index) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          return outerDocflowEntities_.get(index);
+        } else {
+          return outerDocflowEntitiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Builder setOuterDocflowEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities value) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.set(index, value);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Builder setOuterDocflowEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder builderForValue) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Builder addOuterDocflowEntities(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities value) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.add(value);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Builder addOuterDocflowEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities value) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.add(index, value);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Builder addOuterDocflowEntities(
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder builderForValue) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.add(builderForValue.build());
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Builder addOuterDocflowEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder builderForValue) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Builder addAllOuterDocflowEntities(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities> values) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, outerDocflowEntities_);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Builder clearOuterDocflowEntities() {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          outerDocflowEntities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Builder removeOuterDocflowEntities(int index) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          ensureOuterDocflowEntitiesIsMutable();
+          outerDocflowEntities_.remove(index);
+          onChanged();
+        } else {
+          outerDocflowEntitiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder getOuterDocflowEntitiesBuilder(
+          int index) {
+        return getOuterDocflowEntitiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder getOuterDocflowEntitiesOrBuilder(
+          int index) {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          return outerDocflowEntities_.get(index);  } else {
+          return outerDocflowEntitiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> 
+           getOuterDocflowEntitiesOrBuilderList() {
+        if (outerDocflowEntitiesBuilder_ != null) {
+          return outerDocflowEntitiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(outerDocflowEntities_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder addOuterDocflowEntitiesBuilder() {
+        return getOuterDocflowEntitiesFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder addOuterDocflowEntitiesBuilder(
+          int index) {
+        return getOuterDocflowEntitiesFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.OuterDocflowEntities OuterDocflowEntities = 7;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder> 
+           getOuterDocflowEntitiesBuilderList() {
+        return getOuterDocflowEntitiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder> 
+          getOuterDocflowEntitiesFieldBuilder() {
+        if (outerDocflowEntitiesBuilder_ == null) {
+          outerDocflowEntitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder>(
+                  outerDocflowEntities_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          outerDocflowEntities_ = null;
+        }
+        return outerDocflowEntitiesBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.RevocationDocflowV3)
@@ -13167,6 +14283,2570 @@ public final class DocflowV3Protos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.ReceiptDocflowV3)
   }
 
+  public interface OuterDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.OuterDocflow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    boolean hasDocflowNamedId();
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    java.lang.String getDocflowNamedId();
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDocflowNamedIdBytes();
+
+    /**
+     * <code>required string ParentEntityId = 2;</code>
+     */
+    boolean hasParentEntityId();
+    /**
+     * <code>required string ParentEntityId = 2;</code>
+     */
+    java.lang.String getParentEntityId();
+    /**
+     * <code>required string ParentEntityId = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getParentEntityIdBytes();
+
+    /**
+     * <code>required string OuterDocflowEntityId = 3;</code>
+     */
+    boolean hasOuterDocflowEntityId();
+    /**
+     * <code>required string OuterDocflowEntityId = 3;</code>
+     */
+    java.lang.String getOuterDocflowEntityId();
+    /**
+     * <code>required string OuterDocflowEntityId = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getOuterDocflowEntityIdBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.OuterDocflow}
+   */
+  public static final class OuterDocflow extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.OuterDocflow)
+      OuterDocflowOrBuilder {
+    // Use OuterDocflow.newBuilder() to construct.
+    private OuterDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private OuterDocflow(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final OuterDocflow defaultInstance;
+    public static OuterDocflow getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public OuterDocflow getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OuterDocflow(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              docflowNamedId_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              parentEntityId_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              outerDocflowEntityId_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<OuterDocflow> PARSER =
+        new com.google.protobuf.AbstractParser<OuterDocflow>() {
+      public OuterDocflow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OuterDocflow(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OuterDocflow> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int DOCFLOWNAMEDID_FIELD_NUMBER = 1;
+    private java.lang.Object docflowNamedId_;
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    public boolean hasDocflowNamedId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    public java.lang.String getDocflowNamedId() {
+      java.lang.Object ref = docflowNamedId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          docflowNamedId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDocflowNamedIdBytes() {
+      java.lang.Object ref = docflowNamedId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        docflowNamedId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARENTENTITYID_FIELD_NUMBER = 2;
+    private java.lang.Object parentEntityId_;
+    /**
+     * <code>required string ParentEntityId = 2;</code>
+     */
+    public boolean hasParentEntityId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string ParentEntityId = 2;</code>
+     */
+    public java.lang.String getParentEntityId() {
+      java.lang.Object ref = parentEntityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          parentEntityId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string ParentEntityId = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getParentEntityIdBytes() {
+      java.lang.Object ref = parentEntityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentEntityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUTERDOCFLOWENTITYID_FIELD_NUMBER = 3;
+    private java.lang.Object outerDocflowEntityId_;
+    /**
+     * <code>required string OuterDocflowEntityId = 3;</code>
+     */
+    public boolean hasOuterDocflowEntityId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string OuterDocflowEntityId = 3;</code>
+     */
+    public java.lang.String getOuterDocflowEntityId() {
+      java.lang.Object ref = outerDocflowEntityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          outerDocflowEntityId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string OuterDocflowEntityId = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOuterDocflowEntityIdBytes() {
+      java.lang.Object ref = outerDocflowEntityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outerDocflowEntityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      docflowNamedId_ = "";
+      parentEntityId_ = "";
+      outerDocflowEntityId_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDocflowNamedId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasParentEntityId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOuterDocflowEntityId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getDocflowNamedIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getParentEntityIdBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getOuterDocflowEntityIdBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getDocflowNamedIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getParentEntityIdBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getOuterDocflowEntityIdBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.OuterDocflow}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.OuterDocflow)
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        docflowNamedId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        parentEntityId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        outerDocflowEntityId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow build() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow result = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.docflowNamedId_ = docflowNamedId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.parentEntityId_ = parentEntityId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.outerDocflowEntityId_ = outerDocflowEntityId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow.getDefaultInstance()) return this;
+        if (other.hasDocflowNamedId()) {
+          bitField0_ |= 0x00000001;
+          docflowNamedId_ = other.docflowNamedId_;
+          onChanged();
+        }
+        if (other.hasParentEntityId()) {
+          bitField0_ |= 0x00000002;
+          parentEntityId_ = other.parentEntityId_;
+          onChanged();
+        }
+        if (other.hasOuterDocflowEntityId()) {
+          bitField0_ |= 0x00000004;
+          outerDocflowEntityId_ = other.outerDocflowEntityId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDocflowNamedId()) {
+          
+          return false;
+        }
+        if (!hasParentEntityId()) {
+          
+          return false;
+        }
+        if (!hasOuterDocflowEntityId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflow) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object docflowNamedId_ = "";
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public boolean hasDocflowNamedId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public java.lang.String getDocflowNamedId() {
+        java.lang.Object ref = docflowNamedId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            docflowNamedId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDocflowNamedIdBytes() {
+        java.lang.Object ref = docflowNamedId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          docflowNamedId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public Builder setDocflowNamedId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        docflowNamedId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public Builder clearDocflowNamedId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        docflowNamedId_ = getDefaultInstance().getDocflowNamedId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public Builder setDocflowNamedIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        docflowNamedId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object parentEntityId_ = "";
+      /**
+       * <code>required string ParentEntityId = 2;</code>
+       */
+      public boolean hasParentEntityId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string ParentEntityId = 2;</code>
+       */
+      public java.lang.String getParentEntityId() {
+        java.lang.Object ref = parentEntityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            parentEntityId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string ParentEntityId = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getParentEntityIdBytes() {
+        java.lang.Object ref = parentEntityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentEntityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ParentEntityId = 2;</code>
+       */
+      public Builder setParentEntityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        parentEntityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ParentEntityId = 2;</code>
+       */
+      public Builder clearParentEntityId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        parentEntityId_ = getDefaultInstance().getParentEntityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ParentEntityId = 2;</code>
+       */
+      public Builder setParentEntityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        parentEntityId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object outerDocflowEntityId_ = "";
+      /**
+       * <code>required string OuterDocflowEntityId = 3;</code>
+       */
+      public boolean hasOuterDocflowEntityId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string OuterDocflowEntityId = 3;</code>
+       */
+      public java.lang.String getOuterDocflowEntityId() {
+        java.lang.Object ref = outerDocflowEntityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            outerDocflowEntityId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string OuterDocflowEntityId = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOuterDocflowEntityIdBytes() {
+        java.lang.Object ref = outerDocflowEntityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          outerDocflowEntityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string OuterDocflowEntityId = 3;</code>
+       */
+      public Builder setOuterDocflowEntityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        outerDocflowEntityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OuterDocflowEntityId = 3;</code>
+       */
+      public Builder clearOuterDocflowEntityId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        outerDocflowEntityId_ = getDefaultInstance().getOuterDocflowEntityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string OuterDocflowEntityId = 3;</code>
+       */
+      public Builder setOuterDocflowEntityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        outerDocflowEntityId_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.OuterDocflow)
+    }
+
+    static {
+      defaultInstance = new OuterDocflow(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.OuterDocflow)
+  }
+
+  public interface OuterDocflowEntitiesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.OuterDocflowEntities)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    boolean hasDocflowNamedId();
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    java.lang.String getDocflowNamedId();
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDocflowNamedIdBytes();
+
+    /**
+     * <code>required string DocflowFriendlyName = 2;</code>
+     */
+    boolean hasDocflowFriendlyName();
+    /**
+     * <code>required string DocflowFriendlyName = 2;</code>
+     */
+    java.lang.String getDocflowFriendlyName();
+    /**
+     * <code>required string DocflowFriendlyName = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDocflowFriendlyNameBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity> 
+        getStatusEntitiesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity getStatusEntities(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    int getStatusEntitiesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder> 
+        getStatusEntitiesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder getStatusEntitiesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.OuterDocflowEntities}
+   */
+  public static final class OuterDocflowEntities extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.OuterDocflowEntities)
+      OuterDocflowEntitiesOrBuilder {
+    // Use OuterDocflowEntities.newBuilder() to construct.
+    private OuterDocflowEntities(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private OuterDocflowEntities(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final OuterDocflowEntities defaultInstance;
+    public static OuterDocflowEntities getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public OuterDocflowEntities getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OuterDocflowEntities(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              docflowNamedId_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              docflowFriendlyName_ = bs;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                statusEntities_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              statusEntities_.add(input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          statusEntities_ = java.util.Collections.unmodifiableList(statusEntities_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<OuterDocflowEntities> PARSER =
+        new com.google.protobuf.AbstractParser<OuterDocflowEntities>() {
+      public OuterDocflowEntities parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OuterDocflowEntities(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OuterDocflowEntities> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int DOCFLOWNAMEDID_FIELD_NUMBER = 1;
+    private java.lang.Object docflowNamedId_;
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    public boolean hasDocflowNamedId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    public java.lang.String getDocflowNamedId() {
+      java.lang.Object ref = docflowNamedId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          docflowNamedId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string DocflowNamedId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDocflowNamedIdBytes() {
+      java.lang.Object ref = docflowNamedId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        docflowNamedId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOCFLOWFRIENDLYNAME_FIELD_NUMBER = 2;
+    private java.lang.Object docflowFriendlyName_;
+    /**
+     * <code>required string DocflowFriendlyName = 2;</code>
+     */
+    public boolean hasDocflowFriendlyName() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string DocflowFriendlyName = 2;</code>
+     */
+    public java.lang.String getDocflowFriendlyName() {
+      java.lang.Object ref = docflowFriendlyName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          docflowFriendlyName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string DocflowFriendlyName = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDocflowFriendlyNameBytes() {
+      java.lang.Object ref = docflowFriendlyName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        docflowFriendlyName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUSENTITIES_FIELD_NUMBER = 3;
+    private java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity> statusEntities_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity> getStatusEntitiesList() {
+      return statusEntities_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder> 
+        getStatusEntitiesOrBuilderList() {
+      return statusEntities_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    public int getStatusEntitiesCount() {
+      return statusEntities_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity getStatusEntities(int index) {
+      return statusEntities_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder getStatusEntitiesOrBuilder(
+        int index) {
+      return statusEntities_.get(index);
+    }
+
+    private void initFields() {
+      docflowNamedId_ = "";
+      docflowFriendlyName_ = "";
+      statusEntities_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDocflowNamedId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDocflowFriendlyName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getStatusEntitiesCount(); i++) {
+        if (!getStatusEntities(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getDocflowNamedIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getDocflowFriendlyNameBytes());
+      }
+      for (int i = 0; i < statusEntities_.size(); i++) {
+        output.writeMessage(3, statusEntities_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getDocflowNamedIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getDocflowFriendlyNameBytes());
+      }
+      for (int i = 0; i < statusEntities_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, statusEntities_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.OuterDocflowEntities}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.OuterDocflowEntities)
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntitiesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getStatusEntitiesFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        docflowNamedId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        docflowFriendlyName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (statusEntitiesBuilder_ == null) {
+          statusEntities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          statusEntitiesBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities build() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities result = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.docflowNamedId_ = docflowNamedId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.docflowFriendlyName_ = docflowFriendlyName_;
+        if (statusEntitiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            statusEntities_ = java.util.Collections.unmodifiableList(statusEntities_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.statusEntities_ = statusEntities_;
+        } else {
+          result.statusEntities_ = statusEntitiesBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities.getDefaultInstance()) return this;
+        if (other.hasDocflowNamedId()) {
+          bitField0_ |= 0x00000001;
+          docflowNamedId_ = other.docflowNamedId_;
+          onChanged();
+        }
+        if (other.hasDocflowFriendlyName()) {
+          bitField0_ |= 0x00000002;
+          docflowFriendlyName_ = other.docflowFriendlyName_;
+          onChanged();
+        }
+        if (statusEntitiesBuilder_ == null) {
+          if (!other.statusEntities_.isEmpty()) {
+            if (statusEntities_.isEmpty()) {
+              statusEntities_ = other.statusEntities_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureStatusEntitiesIsMutable();
+              statusEntities_.addAll(other.statusEntities_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.statusEntities_.isEmpty()) {
+            if (statusEntitiesBuilder_.isEmpty()) {
+              statusEntitiesBuilder_.dispose();
+              statusEntitiesBuilder_ = null;
+              statusEntities_ = other.statusEntities_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              statusEntitiesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getStatusEntitiesFieldBuilder() : null;
+            } else {
+              statusEntitiesBuilder_.addAllMessages(other.statusEntities_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDocflowNamedId()) {
+          
+          return false;
+        }
+        if (!hasDocflowFriendlyName()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getStatusEntitiesCount(); i++) {
+          if (!getStatusEntities(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.DocflowV3Protos.OuterDocflowEntities) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object docflowNamedId_ = "";
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public boolean hasDocflowNamedId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public java.lang.String getDocflowNamedId() {
+        java.lang.Object ref = docflowNamedId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            docflowNamedId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDocflowNamedIdBytes() {
+        java.lang.Object ref = docflowNamedId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          docflowNamedId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public Builder setDocflowNamedId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        docflowNamedId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public Builder clearDocflowNamedId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        docflowNamedId_ = getDefaultInstance().getDocflowNamedId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocflowNamedId = 1;</code>
+       */
+      public Builder setDocflowNamedIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        docflowNamedId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object docflowFriendlyName_ = "";
+      /**
+       * <code>required string DocflowFriendlyName = 2;</code>
+       */
+      public boolean hasDocflowFriendlyName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string DocflowFriendlyName = 2;</code>
+       */
+      public java.lang.String getDocflowFriendlyName() {
+        java.lang.Object ref = docflowFriendlyName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            docflowFriendlyName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string DocflowFriendlyName = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDocflowFriendlyNameBytes() {
+        java.lang.Object ref = docflowFriendlyName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          docflowFriendlyName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DocflowFriendlyName = 2;</code>
+       */
+      public Builder setDocflowFriendlyName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        docflowFriendlyName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocflowFriendlyName = 2;</code>
+       */
+      public Builder clearDocflowFriendlyName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        docflowFriendlyName_ = getDefaultInstance().getDocflowFriendlyName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DocflowFriendlyName = 2;</code>
+       */
+      public Builder setDocflowFriendlyNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        docflowFriendlyName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity> statusEntities_ =
+        java.util.Collections.emptyList();
+      private void ensureStatusEntitiesIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          statusEntities_ = new java.util.ArrayList<Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity>(statusEntities_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder> statusEntitiesBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity> getStatusEntitiesList() {
+        if (statusEntitiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(statusEntities_);
+        } else {
+          return statusEntitiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public int getStatusEntitiesCount() {
+        if (statusEntitiesBuilder_ == null) {
+          return statusEntities_.size();
+        } else {
+          return statusEntitiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity getStatusEntities(int index) {
+        if (statusEntitiesBuilder_ == null) {
+          return statusEntities_.get(index);
+        } else {
+          return statusEntitiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Builder setStatusEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity value) {
+        if (statusEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStatusEntitiesIsMutable();
+          statusEntities_.set(index, value);
+          onChanged();
+        } else {
+          statusEntitiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Builder setStatusEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder builderForValue) {
+        if (statusEntitiesBuilder_ == null) {
+          ensureStatusEntitiesIsMutable();
+          statusEntities_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          statusEntitiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Builder addStatusEntities(Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity value) {
+        if (statusEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStatusEntitiesIsMutable();
+          statusEntities_.add(value);
+          onChanged();
+        } else {
+          statusEntitiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Builder addStatusEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity value) {
+        if (statusEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStatusEntitiesIsMutable();
+          statusEntities_.add(index, value);
+          onChanged();
+        } else {
+          statusEntitiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Builder addStatusEntities(
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder builderForValue) {
+        if (statusEntitiesBuilder_ == null) {
+          ensureStatusEntitiesIsMutable();
+          statusEntities_.add(builderForValue.build());
+          onChanged();
+        } else {
+          statusEntitiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Builder addStatusEntities(
+          int index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder builderForValue) {
+        if (statusEntitiesBuilder_ == null) {
+          ensureStatusEntitiesIsMutable();
+          statusEntities_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          statusEntitiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Builder addAllStatusEntities(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity> values) {
+        if (statusEntitiesBuilder_ == null) {
+          ensureStatusEntitiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, statusEntities_);
+          onChanged();
+        } else {
+          statusEntitiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Builder clearStatusEntities() {
+        if (statusEntitiesBuilder_ == null) {
+          statusEntities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          statusEntitiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Builder removeStatusEntities(int index) {
+        if (statusEntitiesBuilder_ == null) {
+          ensureStatusEntitiesIsMutable();
+          statusEntities_.remove(index);
+          onChanged();
+        } else {
+          statusEntitiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder getStatusEntitiesBuilder(
+          int index) {
+        return getStatusEntitiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder getStatusEntitiesOrBuilder(
+          int index) {
+        if (statusEntitiesBuilder_ == null) {
+          return statusEntities_.get(index);  } else {
+          return statusEntitiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder> 
+           getStatusEntitiesOrBuilderList() {
+        if (statusEntitiesBuilder_ != null) {
+          return statusEntitiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(statusEntities_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder addStatusEntitiesBuilder() {
+        return getStatusEntitiesFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder addStatusEntitiesBuilder(
+          int index) {
+        return getStatusEntitiesFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Docflow.StatusEntity StatusEntities = 3;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder> 
+           getStatusEntitiesBuilderList() {
+        return getStatusEntitiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder> 
+          getStatusEntitiesFieldBuilder() {
+        if (statusEntitiesBuilder_ == null) {
+          statusEntitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder>(
+                  statusEntities_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          statusEntities_ = null;
+        }
+        return statusEntitiesBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.OuterDocflowEntities)
+    }
+
+    static {
+      defaultInstance = new OuterDocflowEntities(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.OuterDocflowEntities)
+  }
+
+  public interface StatusEntityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.StatusEntity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+     */
+    boolean hasAttachment();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getAttachment();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getAttachmentOrBuilder();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     */
+    boolean hasStatus();
+    /**
+     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     */
+    Diadoc.Api.Proto.OuterDocflowStatusProtos.Status getStatus();
+    /**
+     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     */
+    Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder getStatusOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.StatusEntity}
+   */
+  public static final class StatusEntity extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.StatusEntity)
+      StatusEntityOrBuilder {
+    // Use StatusEntity.newBuilder() to construct.
+    private StatusEntity(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private StatusEntity(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final StatusEntity defaultInstance;
+    public static StatusEntity getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public StatusEntity getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StatusEntity(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = attachment_.toBuilder();
+              }
+              attachment_ = input.readMessage(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(attachment_);
+                attachment_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = status_.toBuilder();
+              }
+              status_ = input.readMessage(Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(status_);
+                status_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<StatusEntity> PARSER =
+        new com.google.protobuf.AbstractParser<StatusEntity>() {
+      public StatusEntity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StatusEntity(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StatusEntity> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ATTACHMENT_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 attachment_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+     */
+    public boolean hasAttachment() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getAttachment() {
+      return attachment_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getAttachmentOrBuilder() {
+      return attachment_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.OuterDocflowStatusProtos.Status status_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     */
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     */
+    public Diadoc.Api.Proto.OuterDocflowStatusProtos.Status getStatus() {
+      return status_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     */
+    public Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder getStatusOrBuilder() {
+      return status_;
+    }
+
+    private void initFields() {
+      attachment_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
+      status_ = Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasAttachment()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getAttachment().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getStatus().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, attachment_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, status_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, attachment_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, status_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.StatusEntity}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.StatusEntity)
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getAttachmentFieldBuilder();
+          getStatusFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (attachmentBuilder_ == null) {
+          attachment_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
+        } else {
+          attachmentBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (statusBuilder_ == null) {
+          status_ = Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance();
+        } else {
+          statusBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_descriptor;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity build() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity result = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (attachmentBuilder_ == null) {
+          result.attachment_ = attachment_;
+        } else {
+          result.attachment_ = attachmentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (statusBuilder_ == null) {
+          result.status_ = status_;
+        } else {
+          result.status_ = statusBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity.getDefaultInstance()) return this;
+        if (other.hasAttachment()) {
+          mergeAttachment(other.getAttachment());
+        }
+        if (other.hasStatus()) {
+          mergeStatus(other.getStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasAttachment()) {
+          
+          return false;
+        }
+        if (!hasStatus()) {
+          
+          return false;
+        }
+        if (!getAttachment().isInitialized()) {
+          
+          return false;
+        }
+        if (!getStatus().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.Docflow.DocflowV3Protos.StatusEntity) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 attachment_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder> attachmentBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+       */
+      public boolean hasAttachment() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getAttachment() {
+        if (attachmentBuilder_ == null) {
+          return attachment_;
+        } else {
+          return attachmentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+       */
+      public Builder setAttachment(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 value) {
+        if (attachmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          attachment_ = value;
+          onChanged();
+        } else {
+          attachmentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+       */
+      public Builder setAttachment(
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder builderForValue) {
+        if (attachmentBuilder_ == null) {
+          attachment_ = builderForValue.build();
+          onChanged();
+        } else {
+          attachmentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+       */
+      public Builder mergeAttachment(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 value) {
+        if (attachmentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              attachment_ != Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance()) {
+            attachment_ =
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.newBuilder(attachment_).mergeFrom(value).buildPartial();
+          } else {
+            attachment_ = value;
+          }
+          onChanged();
+        } else {
+          attachmentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+       */
+      public Builder clearAttachment() {
+        if (attachmentBuilder_ == null) {
+          attachment_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
+          onChanged();
+        } else {
+          attachmentBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder getAttachmentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAttachmentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getAttachmentOrBuilder() {
+        if (attachmentBuilder_ != null) {
+          return attachmentBuilder_.getMessageOrBuilder();
+        } else {
+          return attachment_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 Attachment = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder> 
+          getAttachmentFieldBuilder() {
+        if (attachmentBuilder_ == null) {
+          attachmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder>(
+                  getAttachment(),
+                  getParentForChildren(),
+                  isClean());
+          attachment_ = null;
+        }
+        return attachmentBuilder_;
+      }
+
+      private Diadoc.Api.Proto.OuterDocflowStatusProtos.Status status_ = Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.OuterDocflowStatusProtos.Status, Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder, Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder> statusBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       */
+      public Diadoc.Api.Proto.OuterDocflowStatusProtos.Status getStatus() {
+        if (statusBuilder_ == null) {
+          return status_;
+        } else {
+          return statusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       */
+      public Builder setStatus(Diadoc.Api.Proto.OuterDocflowStatusProtos.Status value) {
+        if (statusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          status_ = value;
+          onChanged();
+        } else {
+          statusBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       */
+      public Builder setStatus(
+          Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder builderForValue) {
+        if (statusBuilder_ == null) {
+          status_ = builderForValue.build();
+          onChanged();
+        } else {
+          statusBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       */
+      public Builder mergeStatus(Diadoc.Api.Proto.OuterDocflowStatusProtos.Status value) {
+        if (statusBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              status_ != Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance()) {
+            status_ =
+              Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.newBuilder(status_).mergeFrom(value).buildPartial();
+          } else {
+            status_ = value;
+          }
+          onChanged();
+        } else {
+          statusBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       */
+      public Builder clearStatus() {
+        if (statusBuilder_ == null) {
+          status_ = Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance();
+          onChanged();
+        } else {
+          statusBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       */
+      public Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder getStatusBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       */
+      public Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder getStatusOrBuilder() {
+        if (statusBuilder_ != null) {
+          return statusBuilder_.getMessageOrBuilder();
+        } else {
+          return status_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.OuterDocflowStatusProtos.Status, Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder, Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder> 
+          getStatusFieldBuilder() {
+        if (statusBuilder_ == null) {
+          statusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.OuterDocflowStatusProtos.Status, Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder, Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder>(
+                  getStatus(),
+                  getParentForChildren(),
+                  isClean());
+          status_ = null;
+        }
+        return statusBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.StatusEntity)
+    }
+
+    static {
+      defaultInstance = new StatusEntity(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.StatusEntity)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_DocflowV3_descriptor;
   private static
@@ -13217,6 +16897,21 @@ public final class DocflowV3Protos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_ReceiptDocflowV3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13230,94 +16925,109 @@ public final class DocflowV3Protos {
       "oto.Docflow\032\017Timestamp.proto\032\030Documents/" +
       "Document.proto\032\032Docflow/AttachmentV3.pro" +
       "to\032!Docflow/RoamingNotification.proto\032!D" +
-      "ocflow/ResolutionDocflowV3.proto\"\331\005\n\tDoc" +
-      "flowV3\022A\n\013SenderTitle\030\001 \002(\0132,.Diadoc.Api" +
-      ".Proto.Docflow.SenderTitleDocflow\022C\n\014Con" +
-      "firmation\030\002 \001(\0132-.Diadoc.Api.Proto.Docfl" +
-      "ow.ConfirmationDocflow\022K\n\rProxyResponse\030" +
-      "\013 \001(\01324.Diadoc.Api.Proto.Docflow.Partici",
-      "pantResponseDocflow\022D\n\020RecipientReceipt\030" +
-      "\004 \001(\0132*.Diadoc.Api.Proto.Docflow.Receipt" +
-      "DocflowV3\022O\n\021RecipientResponse\030\005 \001(\01324.D" +
-      "iadoc.Api.Proto.Docflow.ParticipantRespo" +
-      "nseDocflow\022K\n\020AmendmentRequest\030\006 \001(\01321.D" +
-      "iadoc.Api.Proto.Docflow.AmendmentRequest" +
-      "Docflow\022A\n\nRevocation\030\007 \001(\0132-.Diadoc.Api" +
-      ".Proto.Docflow.RevocationDocflowV3\022A\n\rSe" +
-      "nderReceipt\030\010 \001(\0132*.Diadoc.Api.Proto.Doc" +
-      "flow.ReceiptDocflowV3\022A\n\nResolution\030\t \001(",
-      "\0132-.Diadoc.Api.Proto.Docflow.ResolutionD" +
-      "ocflowV3\022J\n\022ResolutionEntities\030\n \001(\0132..D" +
-      "iadoc.Api.Proto.Docflow.ResolutionEntiti" +
-      "esV3\"\347\002\n\022SenderTitleDocflow\022\022\n\nIsFinishe" +
-      "d\030\001 \002(\010\022@\n\nAttachment\030\002 \002(\0132,.Diadoc.Api" +
-      ".Proto.Docflow.SignedAttachmentV3\022+\n\006Sen" +
-      "tAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestamp\0220" +
-      "\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.Api.Proto.T" +
-      "imestamp\022J\n\023RoamingNotification\030\005 \001(\0132-." +
-      "Diadoc.Api.Proto.Docflow.RoamingNotifica",
-      "tion\022P\n\025SenderSignatureStatus\030\006 \002(\01621.Di" +
-      "adoc.Api.Proto.Documents.SenderSignature" +
-      "Status\"\346\001\n\023ConfirmationDocflow\022\022\n\nIsFini" +
-      "shed\030\001 \002(\010\022L\n\026ConfirmationAttachment\030\002 \001" +
+      "ocflow/ResolutionDocflowV3.proto\032\030OuterD" +
+      "ocflowStatus.proto\"\346\006\n\tDocflowV3\022A\n\013Send" +
+      "erTitle\030\001 \002(\0132,.Diadoc.Api.Proto.Docflow" +
+      ".SenderTitleDocflow\022C\n\014Confirmation\030\002 \001(" +
+      "\0132-.Diadoc.Api.Proto.Docflow.Confirmatio" +
+      "nDocflow\022K\n\rProxyResponse\030\013 \001(\01324.Diadoc",
+      ".Api.Proto.Docflow.ParticipantResponseDo" +
+      "cflow\022D\n\020RecipientReceipt\030\004 \001(\0132*.Diadoc" +
+      ".Api.Proto.Docflow.ReceiptDocflowV3\022O\n\021R" +
+      "ecipientResponse\030\005 \001(\01324.Diadoc.Api.Prot" +
+      "o.Docflow.ParticipantResponseDocflow\022K\n\020" +
+      "AmendmentRequest\030\006 \001(\01321.Diadoc.Api.Prot" +
+      "o.Docflow.AmendmentRequestDocflow\022A\n\nRev" +
+      "ocation\030\007 \001(\0132-.Diadoc.Api.Proto.Docflow" +
+      ".RevocationDocflowV3\022A\n\rSenderReceipt\030\010 " +
+      "\001(\0132*.Diadoc.Api.Proto.Docflow.ReceiptDo",
+      "cflowV3\022A\n\nResolution\030\t \001(\0132-.Diadoc.Api" +
+      ".Proto.Docflow.ResolutionDocflowV3\022J\n\022Re" +
+      "solutionEntities\030\n \001(\0132..Diadoc.Api.Prot" +
+      "o.Docflow.ResolutionEntitiesV3\022=\n\rOuterD" +
+      "ocflows\030\014 \003(\0132&.Diadoc.Api.Proto.Docflow" +
+      ".OuterDocflow\022L\n\024OuterDocflowEntities\030\r " +
+      "\003(\0132..Diadoc.Api.Proto.Docflow.OuterDocf" +
+      "lowEntities\"\347\002\n\022SenderTitleDocflow\022\022\n\nIs" +
+      "Finished\030\001 \002(\010\022@\n\nAttachment\030\002 \002(\0132,.Dia" +
+      "doc.Api.Proto.Docflow.SignedAttachmentV3",
+      "\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Time" +
+      "stamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.Api." +
+      "Proto.Timestamp\022J\n\023RoamingNotification\030\005" +
+      " \001(\0132-.Diadoc.Api.Proto.Docflow.RoamingN" +
+      "otification\022P\n\025SenderSignatureStatus\030\006 \002" +
+      "(\01621.Diadoc.Api.Proto.Documents.SenderSi" +
+      "gnatureStatus\"\346\001\n\023ConfirmationDocflow\022\022\n" +
+      "\nIsFinished\030\001 \002(\010\022L\n\026ConfirmationAttachm" +
+      "ent\030\002 \001(\0132,.Diadoc.Api.Proto.Docflow.Sig" +
+      "nedAttachmentV3\0220\n\013ConfirmedAt\030\003 \001(\0132\033.D",
+      "iadoc.Api.Proto.Timestamp\022;\n\007Receipt\030\004 \001" +
+      "(\0132*.Diadoc.Api.Proto.Docflow.ReceiptDoc" +
+      "flowV3\"\274\001\n\031SignatureRejectionDocflow\022H\n\022" +
+      "SignatureRejection\030\001 \002(\0132,.Diadoc.Api.Pr" +
+      "oto.Docflow.SignedAttachmentV3\022\020\n\010IsForm" +
+      "al\030\002 \002(\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.A" +
+      "pi.Proto.Timestamp\022\021\n\tPlainText\030\004 \001(\t\"\233\003" +
+      "\n\032ParticipantResponseDocflow\022\022\n\nIsFinish" +
+      "ed\030\001 \002(\010\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Api" +
+      ".Proto.Docflow.SignatureV3\022;\n\005Title\030\003 \001(",
+      "\0132,.Diadoc.Api.Proto.Docflow.SignedAttac" +
+      "hmentV3\022F\n\tRejection\030\004 \001(\01323.Diadoc.Api." +
+      "Proto.Docflow.SignatureRejectionDocflow\022" +
+      "+\n\006SentAt\030\005 \001(\0132\033.Diadoc.Api.Proto.Times" +
+      "tamp\0220\n\013DeliveredAt\030\006 \001(\0132\033.Diadoc.Api.P" +
+      "roto.Timestamp\022K\n\016ResponseStatus\030\007 \002(\01623" +
+      ".Diadoc.Api.Proto.Documents.RecipientRes" +
+      "ponseStatus\"\274\002\n\027AmendmentRequestDocflow\022" +
+      "\022\n\nIsFinished\030\001 \002(\010\022F\n\020AmendmentRequest\030" +
+      "\002 \002(\0132,.Diadoc.Api.Proto.Docflow.SignedA",
+      "ttachmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api" +
+      ".Proto.Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033." +
+      "Diadoc.Api.Proto.Timestamp\022;\n\007Receipt\030\005 " +
+      "\001(\0132*.Diadoc.Api.Proto.Docflow.ReceiptDo" +
+      "cflowV3\022\026\n\016AmendmentFlags\030\006 \002(\005\022\021\n\tPlain" +
+      "Text\030\007 \001(\t\"\303\003\n\023RevocationDocflowV3\022\022\n\nIs" +
+      "Finished\030\001 \002(\010\022M\n\021RevocationRequest\030\002 \002(" +
+      "\01322.Diadoc.Api.Proto.Docflow.RevocationR" +
+      "equestDocflow\022O\n\022RevocationResponse\030\003 \001(" +
+      "\01323.Diadoc.Api.Proto.Docflow.RevocationR",
+      "esponseDocflow\022\026\n\016InitiatorBoxId\030\004 \002(\t\022F" +
+      "\n\020RevocationStatus\030\005 \002(\0162,.Diadoc.Api.Pr" +
+      "oto.Documents.RevocationStatus\022J\n\022Resolu" +
+      "tionEntities\030\006 \001(\0132..Diadoc.Api.Proto.Do" +
+      "cflow.ResolutionEntitiesV3\022L\n\024OuterDocfl" +
+      "owEntities\030\007 \003(\0132..Diadoc.Api.Proto.Docf" +
+      "low.OuterDocflowEntities\"\241\002\n\030RevocationR" +
+      "equestDocflow\022G\n\021RevocationRequest\030\001 \002(\013" +
+      "2,.Diadoc.Api.Proto.Docflow.SignedAttach" +
+      "mentV3\022+\n\006SentAt\030\002 \001(\0132\033.Diadoc.Api.Prot",
+      "o.Timestamp\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diado" +
+      "c.Api.Proto.Timestamp\022J\n\023RoamingNotifica" +
+      "tion\030\004 \001(\0132-.Diadoc.Api.Proto.Docflow.Ro" +
+      "amingNotification\022\021\n\tPlainText\030\005 \001(\t\"\257\001\n" +
+      "\031RevocationResponseDocflow\022A\n\022RecipientS" +
+      "ignature\030\001 \001(\0132%.Diadoc.Api.Proto.Docflo" +
+      "w.SignatureV3\022O\n\022SignatureRejection\030\002 \001(" +
+      "\01323.Diadoc.Api.Proto.Docflow.SignatureRe" +
+      "jectionDocflow\"\325\002\n\020ReceiptDocflowV3\022\022\n\nI" +
+      "sFinished\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 \001",
       "(\0132,.Diadoc.Api.Proto.Docflow.SignedAtta" +
-      "chmentV3\0220\n\013ConfirmedAt\030\003 \001(\0132\033.Diadoc.A" +
-      "pi.Proto.Timestamp\022;\n\007Receipt\030\004 \001(\0132*.Di" +
-      "adoc.Api.Proto.Docflow.ReceiptDocflowV3\"" +
-      "\274\001\n\031SignatureRejectionDocflow\022H\n\022Signatu" +
-      "reRejection\030\001 \002(\0132,.Diadoc.Api.Proto.Doc",
-      "flow.SignedAttachmentV3\022\020\n\010IsFormal\030\002 \002(" +
-      "\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.Api.Prot" +
-      "o.Timestamp\022\021\n\tPlainText\030\004 \001(\t\"\233\003\n\032Parti" +
-      "cipantResponseDocflow\022\022\n\nIsFinished\030\001 \002(" +
-      "\010\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Api.Proto." +
-      "Docflow.SignatureV3\022;\n\005Title\030\003 \001(\0132,.Dia" +
-      "doc.Api.Proto.Docflow.SignedAttachmentV3" +
-      "\022F\n\tRejection\030\004 \001(\01323.Diadoc.Api.Proto.D" +
-      "ocflow.SignatureRejectionDocflow\022+\n\006Sent" +
-      "At\030\005 \001(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n",
-      "\013DeliveredAt\030\006 \001(\0132\033.Diadoc.Api.Proto.Ti" +
-      "mestamp\022K\n\016ResponseStatus\030\007 \002(\01623.Diadoc" +
-      ".Api.Proto.Documents.RecipientResponseSt" +
-      "atus\"\274\002\n\027AmendmentRequestDocflow\022\022\n\nIsFi" +
-      "nished\030\001 \002(\010\022F\n\020AmendmentRequest\030\002 \002(\0132," +
-      ".Diadoc.Api.Proto.Docflow.SignedAttachme" +
-      "ntV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto." +
-      "Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc." +
-      "Api.Proto.Timestamp\022;\n\007Receipt\030\005 \001(\0132*.D" +
-      "iadoc.Api.Proto.Docflow.ReceiptDocflowV3",
-      "\022\026\n\016AmendmentFlags\030\006 \002(\005\022\021\n\tPlainText\030\007 " +
-      "\001(\t\"\365\002\n\023RevocationDocflowV3\022\022\n\nIsFinishe" +
-      "d\030\001 \002(\010\022M\n\021RevocationRequest\030\002 \002(\01322.Dia" +
-      "doc.Api.Proto.Docflow.RevocationRequestD" +
-      "ocflow\022O\n\022RevocationResponse\030\003 \001(\01323.Dia" +
-      "doc.Api.Proto.Docflow.RevocationResponse" +
-      "Docflow\022\026\n\016InitiatorBoxId\030\004 \002(\t\022F\n\020Revoc" +
-      "ationStatus\030\005 \002(\0162,.Diadoc.Api.Proto.Doc" +
-      "uments.RevocationStatus\022J\n\022ResolutionEnt" +
-      "ities\030\006 \001(\0132..Diadoc.Api.Proto.Docflow.R",
-      "esolutionEntitiesV3\"\241\002\n\030RevocationReques" +
-      "tDocflow\022G\n\021RevocationRequest\030\001 \002(\0132,.Di" +
-      "adoc.Api.Proto.Docflow.SignedAttachmentV" +
-      "3\022+\n\006SentAt\030\002 \001(\0132\033.Diadoc.Api.Proto.Tim" +
-      "estamp\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.Api" +
-      ".Proto.Timestamp\022J\n\023RoamingNotification\030" +
-      "\004 \001(\0132-.Diadoc.Api.Proto.Docflow.Roaming" +
-      "Notification\022\021\n\tPlainText\030\005 \001(\t\"\257\001\n\031Revo" +
-      "cationResponseDocflow\022A\n\022RecipientSignat" +
-      "ure\030\001 \001(\0132%.Diadoc.Api.Proto.Docflow.Sig",
-      "natureV3\022O\n\022SignatureRejection\030\002 \001(\01323.D" +
-      "iadoc.Api.Proto.Docflow.SignatureRejecti" +
-      "onDocflow\"\325\002\n\020ReceiptDocflowV3\022\022\n\nIsFini" +
-      "shed\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 \001(\0132,." +
-      "Diadoc.Api.Proto.Docflow.SignedAttachmen" +
-      "tV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto.T" +
-      "imestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.A" +
-      "pi.Proto.Timestamp\022C\n\014Confirmation\030\005 \001(\013" +
-      "2-.Diadoc.Api.Proto.Docflow.Confirmation" +
-      "Docflow\022@\n\006Status\030\006 \002(\01620.Diadoc.Api.Pro",
-      "to.Documents.GeneralReceiptStatusB\021B\017Doc" +
-      "flowV3Protos"
+      "chmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Pr" +
+      "oto.Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Dia" +
+      "doc.Api.Proto.Timestamp\022C\n\014Confirmation\030" +
+      "\005 \001(\0132-.Diadoc.Api.Proto.Docflow.Confirm" +
+      "ationDocflow\022@\n\006Status\030\006 \002(\01620.Diadoc.Ap" +
+      "i.Proto.Documents.GeneralReceiptStatus\"\\" +
+      "\n\014OuterDocflow\022\026\n\016DocflowNamedId\030\001 \002(\t\022\026" +
+      "\n\016ParentEntityId\030\002 \002(\t\022\034\n\024OuterDocflowEn" +
+      "tityId\030\003 \002(\t\"\213\001\n\024OuterDocflowEntities\022\026\n",
+      "\016DocflowNamedId\030\001 \002(\t\022\033\n\023DocflowFriendly" +
+      "Name\030\002 \002(\t\022>\n\016StatusEntities\030\003 \003(\0132&.Dia" +
+      "doc.Api.Proto.Docflow.StatusEntity\"z\n\014St" +
+      "atusEntity\022@\n\nAttachment\030\001 \002(\0132,.Diadoc." +
+      "Api.Proto.Docflow.SignedAttachmentV3\022(\n\006" +
+      "Status\030\002 \002(\0132\030.Diadoc.Api.Proto.StatusB\021" +
+      "B\017DocflowV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13335,13 +17045,14 @@ public final class DocflowV3Protos {
           Diadoc.Api.Proto.Docflow.AttachmentV3Protos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.getDescriptor(),
+          Diadoc.Api.Proto.OuterDocflowStatusProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Docflow_DocflowV3_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_Docflow_DocflowV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocflowV3_descriptor,
-        new java.lang.String[] { "SenderTitle", "Confirmation", "ProxyResponse", "RecipientReceipt", "RecipientResponse", "AmendmentRequest", "Revocation", "SenderReceipt", "Resolution", "ResolutionEntities", });
+        new java.lang.String[] { "SenderTitle", "Confirmation", "ProxyResponse", "RecipientReceipt", "RecipientResponse", "AmendmentRequest", "Revocation", "SenderReceipt", "Resolution", "ResolutionEntities", "OuterDocflows", "OuterDocflowEntities", });
     internal_static_Diadoc_Api_Proto_Docflow_SenderTitleDocflow_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_SenderTitleDocflow_fieldAccessorTable = new
@@ -13377,7 +17088,7 @@ public final class DocflowV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV3_descriptor,
-        new java.lang.String[] { "IsFinished", "RevocationRequest", "RevocationResponse", "InitiatorBoxId", "RevocationStatus", "ResolutionEntities", });
+        new java.lang.String[] { "IsFinished", "RevocationRequest", "RevocationResponse", "InitiatorBoxId", "RevocationStatus", "ResolutionEntities", "OuterDocflowEntities", });
     internal_static_Diadoc_Api_Proto_Docflow_RevocationRequestDocflow_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_Diadoc_Api_Proto_Docflow_RevocationRequestDocflow_fieldAccessorTable = new
@@ -13396,11 +17107,30 @@ public final class DocflowV3Protos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_ReceiptDocflowV3_descriptor,
         new java.lang.String[] { "IsFinished", "ReceiptAttachment", "SentAt", "DeliveredAt", "Confirmation", "Status", });
+    internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_OuterDocflow_descriptor,
+        new java.lang.String[] { "DocflowNamedId", "ParentEntityId", "OuterDocflowEntityId", });
+    internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_OuterDocflowEntities_descriptor,
+        new java.lang.String[] { "DocflowNamedId", "DocflowFriendlyName", "StatusEntities", });
+    internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_descriptor,
+        new java.lang.String[] { "Attachment", "Status", });
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.Documents.DocumentProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.AttachmentV3Protos.getDescriptor();
     Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.getDescriptor();
+    Diadoc.Api.Proto.OuterDocflowStatusProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
