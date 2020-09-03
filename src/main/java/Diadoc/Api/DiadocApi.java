@@ -70,7 +70,7 @@ public class DiadocApi {
     }
 
     public DiadocApi(String apiClientId, String url) {
-        this(apiClientId, url, null);
+        this(apiClientId, url, null, null);
     }
 
     public AuthenticateClient getAuthClient() {
