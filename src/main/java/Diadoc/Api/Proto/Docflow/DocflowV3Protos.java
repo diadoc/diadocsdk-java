@@ -7888,15 +7888,15 @@ public final class DocflowV3Protos {
     boolean getIsFinished();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
      */
     boolean hasAmendmentRequest();
     /**
-     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
      */
     Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getAmendmentRequest();
     /**
-     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
      */
     Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getAmendmentRequestOrBuilder();
 
@@ -8140,19 +8140,19 @@ public final class DocflowV3Protos {
     public static final int AMENDMENTREQUEST_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 amendmentRequest_;
     /**
-     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
      */
     public boolean hasAmendmentRequest() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
      */
     public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getAmendmentRequest() {
       return amendmentRequest_;
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
      */
     public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getAmendmentRequestOrBuilder() {
       return amendmentRequest_;
@@ -8297,17 +8297,15 @@ public final class DocflowV3Protos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasAmendmentRequest()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasAmendmentFlags()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!getAmendmentRequest().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
+      if (hasAmendmentRequest()) {
+        if (!getAmendmentRequest().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       if (hasSentAt()) {
         if (!getSentAt().isInitialized()) {
@@ -8663,17 +8661,15 @@ public final class DocflowV3Protos {
           
           return false;
         }
-        if (!hasAmendmentRequest()) {
-          
-          return false;
-        }
         if (!hasAmendmentFlags()) {
           
           return false;
         }
-        if (!getAmendmentRequest().isInitialized()) {
-          
-          return false;
+        if (hasAmendmentRequest()) {
+          if (!getAmendmentRequest().isInitialized()) {
+            
+            return false;
+          }
         }
         if (hasSentAt()) {
           if (!getSentAt().isInitialized()) {
@@ -8751,13 +8747,13 @@ public final class DocflowV3Protos {
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder> amendmentRequestBuilder_;
       /**
-       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
        */
       public boolean hasAmendmentRequest() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
        */
       public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 getAmendmentRequest() {
         if (amendmentRequestBuilder_ == null) {
@@ -8767,7 +8763,7 @@ public final class DocflowV3Protos {
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
        */
       public Builder setAmendmentRequest(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 value) {
         if (amendmentRequestBuilder_ == null) {
@@ -8783,7 +8779,7 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
        */
       public Builder setAmendmentRequest(
           Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder builderForValue) {
@@ -8797,7 +8793,7 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
        */
       public Builder mergeAmendmentRequest(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3 value) {
         if (amendmentRequestBuilder_ == null) {
@@ -8816,7 +8812,7 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
        */
       public Builder clearAmendmentRequest() {
         if (amendmentRequestBuilder_ == null) {
@@ -8829,7 +8825,7 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
        */
       public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder getAmendmentRequestBuilder() {
         bitField0_ |= 0x00000002;
@@ -8837,7 +8833,7 @@ public final class DocflowV3Protos {
         return getAmendmentRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
        */
       public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getAmendmentRequestOrBuilder() {
         if (amendmentRequestBuilder_ != null) {
@@ -8847,7 +8843,7 @@ public final class DocflowV3Protos {
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignedAttachmentV3 AmendmentRequest = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder> 
@@ -16980,7 +16976,7 @@ public final class DocflowV3Protos {
       ".Diadoc.Api.Proto.Documents.RecipientRes" +
       "ponseStatus\"\274\002\n\027AmendmentRequestDocflow\022" +
       "\022\n\nIsFinished\030\001 \002(\010\022F\n\020AmendmentRequest\030" +
-      "\002 \002(\0132,.Diadoc.Api.Proto.Docflow.SignedA",
+      "\002 \001(\0132,.Diadoc.Api.Proto.Docflow.SignedA",
       "ttachmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api" +
       ".Proto.Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033." +
       "Diadoc.Api.Proto.Timestamp\022;\n\007Receipt\030\005 " +
