@@ -90034,6 +90034,34 @@ public final class DiadocMessage_PostApiProtos {
      */
     com.google.protobuf.ByteString
         getToDepartmentIdBytes();
+
+    /**
+     * <code>optional string MessageProxyBoxId = 10;</code>
+     */
+    boolean hasMessageProxyBoxId();
+    /**
+     * <code>optional string MessageProxyBoxId = 10;</code>
+     */
+    java.lang.String getMessageProxyBoxId();
+    /**
+     * <code>optional string MessageProxyBoxId = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageProxyBoxIdBytes();
+
+    /**
+     * <code>optional string MessageProxyDepartmentId = 11;</code>
+     */
+    boolean hasMessageProxyDepartmentId();
+    /**
+     * <code>optional string MessageProxyDepartmentId = 11;</code>
+     */
+    java.lang.String getMessageProxyDepartmentId();
+    /**
+     * <code>optional string MessageProxyDepartmentId = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageProxyDepartmentIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.TemplateToPost}
@@ -90146,6 +90174,18 @@ public final class DiadocMessage_PostApiProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
               toDepartmentId_ = bs;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              messageProxyBoxId_ = bs;
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              messageProxyDepartmentId_ = bs;
               break;
             }
           }
@@ -90535,6 +90575,90 @@ public final class DiadocMessage_PostApiProtos {
       }
     }
 
+    public static final int MESSAGEPROXYBOXID_FIELD_NUMBER = 10;
+    private java.lang.Object messageProxyBoxId_;
+    /**
+     * <code>optional string MessageProxyBoxId = 10;</code>
+     */
+    public boolean hasMessageProxyBoxId() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional string MessageProxyBoxId = 10;</code>
+     */
+    public java.lang.String getMessageProxyBoxId() {
+      java.lang.Object ref = messageProxyBoxId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          messageProxyBoxId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string MessageProxyBoxId = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageProxyBoxIdBytes() {
+      java.lang.Object ref = messageProxyBoxId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        messageProxyBoxId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MESSAGEPROXYDEPARTMENTID_FIELD_NUMBER = 11;
+    private java.lang.Object messageProxyDepartmentId_;
+    /**
+     * <code>optional string MessageProxyDepartmentId = 11;</code>
+     */
+    public boolean hasMessageProxyDepartmentId() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional string MessageProxyDepartmentId = 11;</code>
+     */
+    public java.lang.String getMessageProxyDepartmentId() {
+      java.lang.Object ref = messageProxyDepartmentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          messageProxyDepartmentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string MessageProxyDepartmentId = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageProxyDepartmentIdBytes() {
+      java.lang.Object ref = messageProxyDepartmentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        messageProxyDepartmentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       fromBoxId_ = "";
       toBoxId_ = "";
@@ -90545,6 +90669,8 @@ public final class DiadocMessage_PostApiProtos {
       lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
       fromDepartmentId_ = "";
       toDepartmentId_ = "";
+      messageProxyBoxId_ = "";
+      messageProxyDepartmentId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -90608,6 +90734,12 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeBytes(9, getToDepartmentIdBytes());
       }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBytes(10, getMessageProxyBoxIdBytes());
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeBytes(11, getMessageProxyDepartmentIdBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -90652,6 +90784,14 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(9, getToDepartmentIdBytes());
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(10, getMessageProxyBoxIdBytes());
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, getMessageProxyDepartmentIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -90793,6 +90933,10 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00000080);
         toDepartmentId_ = "";
         bitField0_ = (bitField0_ & ~0x00000100);
+        messageProxyBoxId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000200);
+        messageProxyDepartmentId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -90862,6 +91006,14 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000080;
         }
         result.toDepartmentId_ = toDepartmentId_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.messageProxyBoxId_ = messageProxyBoxId_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.messageProxyDepartmentId_ = messageProxyDepartmentId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -90940,6 +91092,16 @@ public final class DiadocMessage_PostApiProtos {
         if (other.hasToDepartmentId()) {
           bitField0_ |= 0x00000100;
           toDepartmentId_ = other.toDepartmentId_;
+          onChanged();
+        }
+        if (other.hasMessageProxyBoxId()) {
+          bitField0_ |= 0x00000200;
+          messageProxyBoxId_ = other.messageProxyBoxId_;
+          onChanged();
+        }
+        if (other.hasMessageProxyDepartmentId()) {
+          bitField0_ |= 0x00000400;
+          messageProxyDepartmentId_ = other.messageProxyDepartmentId_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -91794,6 +91956,158 @@ public final class DiadocMessage_PostApiProtos {
   }
   bitField0_ |= 0x00000100;
         toDepartmentId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object messageProxyBoxId_ = "";
+      /**
+       * <code>optional string MessageProxyBoxId = 10;</code>
+       */
+      public boolean hasMessageProxyBoxId() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional string MessageProxyBoxId = 10;</code>
+       */
+      public java.lang.String getMessageProxyBoxId() {
+        java.lang.Object ref = messageProxyBoxId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            messageProxyBoxId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string MessageProxyBoxId = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageProxyBoxIdBytes() {
+        java.lang.Object ref = messageProxyBoxId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          messageProxyBoxId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string MessageProxyBoxId = 10;</code>
+       */
+      public Builder setMessageProxyBoxId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        messageProxyBoxId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string MessageProxyBoxId = 10;</code>
+       */
+      public Builder clearMessageProxyBoxId() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        messageProxyBoxId_ = getDefaultInstance().getMessageProxyBoxId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string MessageProxyBoxId = 10;</code>
+       */
+      public Builder setMessageProxyBoxIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        messageProxyBoxId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object messageProxyDepartmentId_ = "";
+      /**
+       * <code>optional string MessageProxyDepartmentId = 11;</code>
+       */
+      public boolean hasMessageProxyDepartmentId() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional string MessageProxyDepartmentId = 11;</code>
+       */
+      public java.lang.String getMessageProxyDepartmentId() {
+        java.lang.Object ref = messageProxyDepartmentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            messageProxyDepartmentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string MessageProxyDepartmentId = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageProxyDepartmentIdBytes() {
+        java.lang.Object ref = messageProxyDepartmentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          messageProxyDepartmentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string MessageProxyDepartmentId = 11;</code>
+       */
+      public Builder setMessageProxyDepartmentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        messageProxyDepartmentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string MessageProxyDepartmentId = 11;</code>
+       */
+      public Builder clearMessageProxyDepartmentId() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        messageProxyDepartmentId_ = getDefaultInstance().getMessageProxyDepartmentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string MessageProxyDepartmentId = 11;</code>
+       */
+      public Builder setMessageProxyDepartmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        messageProxyDepartmentId_ = value;
         onChanged();
         return this;
       }
@@ -99396,7 +99710,7 @@ public final class DiadocMessage_PostApiProtos {
       "\0132\034.Diadoc.Api.Proto.DocumentId\"d\n\026Resol" +
       "utionRouteRemoval\022\026\n\016ParentEntityId\030\001 \002(",
       "\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comment\030\003 \001(\t:\000\022\016\n" +
-      "\006Labels\030\004 \003(\t\"\275\002\n\016TemplateToPost\022\021\n\tFrom" +
+      "\006Labels\030\004 \003(\t\"\372\002\n\016TemplateToPost\022\021\n\tFrom" +
       "BoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002(\t\022\030\n\020MessageF" +
       "romBoxId\030\003 \002(\t\022\026\n\016MessageToBoxId\030\004 \002(\t\022\035" +
       "\n\025MessageToDepartmentId\030\005 \001(\t\022P\n\023Documen" +
@@ -99404,35 +99718,37 @@ public final class DiadocMessage_PostApiProtos {
       "ents.TemplateDocumentAttachment\0222\n\010LockM" +
       "ode\030\007 \001(\0162\032.Diadoc.Api.Proto.LockMode:\004N" +
       "one\022\030\n\020FromDepartmentId\030\010 \001(\t\022\026\n\016ToDepar" +
-      "tmentId\030\t \001(\t\"\373\003\n\032TemplateDocumentAttach",
-      "ment\022A\n\017UnsignedContent\030\001 \002(\0132(.Diadoc.A" +
-      "pi.Proto.Events.UnsignedContent\022\017\n\007Comme" +
-      "nt\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n\010Functio" +
-      "n\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227\n\010Metadata\030\006 \003" +
-      "(\0132%.Diadoc.Api.Proto.Events.MetadataIte" +
-      "m\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020CustomDocumentI" +
-      "d\030\010 \001(\t\022\030\n\020EditingSettingId\030\t \001(\t\022%\n\026Nee" +
-      "dRecipientSignature\030\n \001(\010:\005false\022S\n\030Pred" +
-      "efinedRecipientTitle\030\013 \001(\01321.Diadoc.Api." +
-      "Proto.Events.PredefinedRecipientTitle\022\036\n",
-      "\017RefusalDisabled\030\014 \001(\010:\005false\0224\n\nCustomD" +
-      "ata\030\r \003(\0132 .Diadoc.Api.Proto.CustomDataI" +
-      "tem\"[\n\023TemplatePatchToPost\022D\n\010Refusals\030\001" +
-      " \003(\01322.Diadoc.Api.Proto.Events.TemplateR" +
-      "efusalAttachment\"P\n\031TemplateRefusalAttac" +
-      "hment\022\022\n\nDocumentId\030\001 \002(\t\022\017\n\007Comment\030\002 \001" +
-      "(\t\022\016\n\006Labels\030\003 \003(\t\"]\n\030PredefinedRecipien" +
-      "tTitle\022A\n\017UnsignedContent\030\001 \002(\0132(.Diadoc" +
-      ".Api.Proto.Events.UnsignedContent\"7\n\017Uns" +
-      "ignedContent\022\017\n\007Content\030\001 \001(\014\022\023\n\013NameOnS",
-      "helf\030\002 \001(\t\"\223\001\n\034TemplateTransformationToP" +
-      "ost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nTemplateId\030\002 \002(\t\022P" +
-      "\n\027DocumentTransformations\030\003 \003(\0132/.Diadoc" +
-      ".Api.Proto.Events.DocumentTransformation" +
-      "\"F\n\026DocumentTransformation\022\022\n\nDocumentId" +
-      "\030\001 \002(\t\022\030\n\020CustomDocumentId\030\002 \001(\t*/\n\030Cust" +
-      "omDataPatchOperation\022\007\n\003Set\020\000\022\n\n\006Remove\020" +
-      "\001B\035B\033DiadocMessage_PostApiProtos"
+      "tmentId\030\t \001(\t\022\031\n\021MessageProxyBoxId\030\n \001(\t",
+      "\022 \n\030MessageProxyDepartmentId\030\013 \001(\t\"\373\003\n\032T" +
+      "emplateDocumentAttachment\022A\n\017UnsignedCon" +
+      "tent\030\001 \002(\0132(.Diadoc.Api.Proto.Events.Uns" +
+      "ignedContent\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNam" +
+      "edId\030\003 \002(\t\022\020\n\010Function\030\004 \001(\t\022\017\n\007Version\030" +
+      "\005 \001(\t\0227\n\010Metadata\030\006 \003(\0132%.Diadoc.Api.Pro" +
+      "to.Events.MetadataItem\022\022\n\nWorkflowId\030\007 \001" +
+      "(\005\022\030\n\020CustomDocumentId\030\010 \001(\t\022\030\n\020EditingS" +
+      "ettingId\030\t \001(\t\022%\n\026NeedRecipientSignature" +
+      "\030\n \001(\010:\005false\022S\n\030PredefinedRecipientTitl",
+      "e\030\013 \001(\01321.Diadoc.Api.Proto.Events.Predef" +
+      "inedRecipientTitle\022\036\n\017RefusalDisabled\030\014 " +
+      "\001(\010:\005false\0224\n\nCustomData\030\r \003(\0132 .Diadoc." +
+      "Api.Proto.CustomDataItem\"[\n\023TemplatePatc" +
+      "hToPost\022D\n\010Refusals\030\001 \003(\01322.Diadoc.Api.P" +
+      "roto.Events.TemplateRefusalAttachment\"P\n" +
+      "\031TemplateRefusalAttachment\022\022\n\nDocumentId" +
+      "\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"" +
+      "]\n\030PredefinedRecipientTitle\022A\n\017UnsignedC" +
+      "ontent\030\001 \002(\0132(.Diadoc.Api.Proto.Events.U",
+      "nsignedContent\"7\n\017UnsignedContent\022\017\n\007Con" +
+      "tent\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034Temp" +
+      "lateTransformationToPost\022\r\n\005BoxId\030\001 \002(\t\022" +
+      "\022\n\nTemplateId\030\002 \002(\t\022P\n\027DocumentTransform" +
+      "ations\030\003 \003(\0132/.Diadoc.Api.Proto.Events.D" +
+      "ocumentTransformation\"F\n\026DocumentTransfo" +
+      "rmation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomDoc" +
+      "umentId\030\002 \001(\t*/\n\030CustomDataPatchOperatio" +
+      "n\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessage_" +
+      "PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -99768,7 +100084,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_TemplateToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_TemplateToPost_descriptor,
-        new java.lang.String[] { "FromBoxId", "ToBoxId", "MessageFromBoxId", "MessageToBoxId", "MessageToDepartmentId", "DocumentAttachments", "LockMode", "FromDepartmentId", "ToDepartmentId", });
+        new java.lang.String[] { "FromBoxId", "ToBoxId", "MessageFromBoxId", "MessageToBoxId", "MessageToDepartmentId", "DocumentAttachments", "LockMode", "FromDepartmentId", "ToDepartmentId", "MessageProxyBoxId", "MessageProxyDepartmentId", });
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_descriptor =
       getDescriptor().getMessageTypes().get(52);
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_fieldAccessorTable = new
