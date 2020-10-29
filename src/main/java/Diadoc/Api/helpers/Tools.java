@@ -10,8 +10,7 @@ import java.util.Random;
 import com.google.protobuf.ByteString;
 
 public class Tools {
-	public static String ConsoleReadLine() throws IOException
-	{
+    public static String ConsoleReadLine() throws IOException {
         InputStreamReader converter = new InputStreamReader(System.in);
         BufferedReader in = new BufferedReader(converter);
         return in.readLine();
@@ -24,12 +23,12 @@ public class Tools {
     }
 
     public static long toCsTicks(long time) {
-		return 621355968000000000L+time*10000;
+        return 621355968000000000L + time * 10000;
     }
 
     public static void WriteAllBytes(String getEntityDestinationPath,
                                      ByteString data) throws IOException {
-		WriteAllBytes(getEntityDestinationPath,data.toByteArray());
+        WriteAllBytes(getEntityDestinationPath, data.toByteArray());
     }
 
     public static void WriteAllBytes(String getEntityDestinationPath,
