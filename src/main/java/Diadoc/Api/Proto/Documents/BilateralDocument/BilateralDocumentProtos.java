@@ -30,9 +30,9 @@ public final class BilateralDocumentProtos {
      */
     OutboundWithRecipientSignature(2, 2),
     /**
-     * <code>OutboundWithRecipientPartiallySignature = 16;</code>
+     * <code>OutboundWithRecipientPartiallySignature = 19;</code>
      */
-    OutboundWithRecipientPartiallySignature(3, 16),
+    OutboundWithRecipientPartiallySignature(3, 19),
     /**
      * <code>OutboundRecipientSignatureRequestRejected = 3;</code>
      */
@@ -54,9 +54,9 @@ public final class BilateralDocumentProtos {
      */
     InboundWithRecipientSignature(8, 5),
     /**
-     * <code>InboundWithRecipientPartiallySignature = 17;</code>
+     * <code>InboundWithRecipientPartiallySignature = 20;</code>
      */
-    InboundWithRecipientPartiallySignature(9, 17),
+    InboundWithRecipientPartiallySignature(9, 20),
     /**
      * <code>InboundRecipientSignatureRequestRejected = 6;</code>
      */
@@ -74,9 +74,9 @@ public final class BilateralDocumentProtos {
      */
     InternalWithRecipientSignature(13, 8),
     /**
-     * <code>InternalWithRecipientPartiallySignature = 18;</code>
+     * <code>InternalWithRecipientPartiallySignature = 21;</code>
      */
-    InternalWithRecipientPartiallySignature(14, 18),
+    InternalWithRecipientPartiallySignature(14, 21),
     /**
      * <code>InternalRecipientSignatureRequestRejected = 9;</code>
      */
@@ -112,9 +112,9 @@ public final class BilateralDocumentProtos {
      */
     public static final int OutboundWithRecipientSignature_VALUE = 2;
     /**
-     * <code>OutboundWithRecipientPartiallySignature = 16;</code>
+     * <code>OutboundWithRecipientPartiallySignature = 19;</code>
      */
-    public static final int OutboundWithRecipientPartiallySignature_VALUE = 16;
+    public static final int OutboundWithRecipientPartiallySignature_VALUE = 19;
     /**
      * <code>OutboundRecipientSignatureRequestRejected = 3;</code>
      */
@@ -136,9 +136,9 @@ public final class BilateralDocumentProtos {
      */
     public static final int InboundWithRecipientSignature_VALUE = 5;
     /**
-     * <code>InboundWithRecipientPartiallySignature = 17;</code>
+     * <code>InboundWithRecipientPartiallySignature = 20;</code>
      */
-    public static final int InboundWithRecipientPartiallySignature_VALUE = 17;
+    public static final int InboundWithRecipientPartiallySignature_VALUE = 20;
     /**
      * <code>InboundRecipientSignatureRequestRejected = 6;</code>
      */
@@ -156,9 +156,9 @@ public final class BilateralDocumentProtos {
      */
     public static final int InternalWithRecipientSignature_VALUE = 8;
     /**
-     * <code>InternalWithRecipientPartiallySignature = 18;</code>
+     * <code>InternalWithRecipientPartiallySignature = 21;</code>
      */
-    public static final int InternalWithRecipientPartiallySignature_VALUE = 18;
+    public static final int InternalWithRecipientPartiallySignature_VALUE = 21;
     /**
      * <code>InternalRecipientSignatureRequestRejected = 9;</code>
      */
@@ -184,18 +184,18 @@ public final class BilateralDocumentProtos {
         case 0: return UnknownBilateralDocumentStatus;
         case 1: return OutboundWaitingForRecipientSignature;
         case 2: return OutboundWithRecipientSignature;
-        case 16: return OutboundWithRecipientPartiallySignature;
+        case 19: return OutboundWithRecipientPartiallySignature;
         case 3: return OutboundRecipientSignatureRequestRejected;
         case 10: return OutboundWaitingForSenderSignature;
         case 11: return OutboundInvalidSenderSignature;
         case 4: return InboundWaitingForRecipientSignature;
         case 5: return InboundWithRecipientSignature;
-        case 17: return InboundWithRecipientPartiallySignature;
+        case 20: return InboundWithRecipientPartiallySignature;
         case 6: return InboundRecipientSignatureRequestRejected;
         case 12: return InboundInvalidRecipientSignature;
         case 7: return InternalWaitingForRecipientSignature;
         case 8: return InternalWithRecipientSignature;
-        case 18: return InternalWithRecipientPartiallySignature;
+        case 21: return InternalWithRecipientPartiallySignature;
         case 9: return InternalRecipientSignatureRequestRejected;
         case 13: return InternalWaitingForSenderSignature;
         case 14: return InternalInvalidSenderSignature;
@@ -5432,19 +5432,19 @@ public final class BilateralDocumentProtos {
       "\"\n\036UnknownBilateralDocumentStatus\020\000\022(\n$O" +
       "utboundWaitingForRecipientSignature\020\001\022\"\n" +
       "\036OutboundWithRecipientSignature\020\002\022+\n\'Out" +
-      "boundWithRecipientPartiallySignature\020\020\022-",
+      "boundWithRecipientPartiallySignature\020\023\022-",
       "\n)OutboundRecipientSignatureRequestRejec" +
       "ted\020\003\022%\n!OutboundWaitingForSenderSignatu" +
       "re\020\n\022\"\n\036OutboundInvalidSenderSignature\020\013" +
       "\022\'\n#InboundWaitingForRecipientSignature\020" +
       "\004\022!\n\035InboundWithRecipientSignature\020\005\022*\n&" +
-      "InboundWithRecipientPartiallySignature\020\021" +
+      "InboundWithRecipientPartiallySignature\020\024" +
       "\022,\n(InboundRecipientSignatureRequestReje" +
       "cted\020\006\022$\n InboundInvalidRecipientSignatu" +
       "re\020\014\022(\n$InternalWaitingForRecipientSigna" +
       "ture\020\007\022\"\n\036InternalWithRecipientSignature",
       "\020\010\022+\n\'InternalWithRecipientPartiallySign" +
-      "ature\020\022\022-\n)InternalRecipientSignatureReq" +
+      "ature\020\025\022-\n)InternalRecipientSignatureReq" +
       "uestRejected\020\t\022%\n!InternalWaitingForSend" +
       "erSignature\020\r\022\"\n\036InternalInvalidSenderSi" +
       "gnature\020\016\022%\n!InternalInvalidRecipientSig" +
