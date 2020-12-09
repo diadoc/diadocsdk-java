@@ -1593,6 +1593,20 @@ public final class AttachmentV3Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.Entity Comment = 3;</code>
      */
     Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getCommentOrBuilder();
+
+    /**
+     * <code>required string ContentTypeId = 4;</code>
+     */
+    boolean hasContentTypeId();
+    /**
+     * <code>required string ContentTypeId = 4;</code>
+     */
+    java.lang.String getContentTypeId();
+    /**
+     * <code>required string ContentTypeId = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getContentTypeIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignedAttachmentV3}
@@ -1683,6 +1697,12 @@ public final class AttachmentV3Protos {
                 comment_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              contentTypeId_ = bs;
               break;
             }
           }
@@ -1788,10 +1808,53 @@ public final class AttachmentV3Protos {
       return comment_;
     }
 
+    public static final int CONTENTTYPEID_FIELD_NUMBER = 4;
+    private java.lang.Object contentTypeId_;
+    /**
+     * <code>required string ContentTypeId = 4;</code>
+     */
+    public boolean hasContentTypeId() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required string ContentTypeId = 4;</code>
+     */
+    public java.lang.String getContentTypeId() {
+      java.lang.Object ref = contentTypeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          contentTypeId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string ContentTypeId = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContentTypeIdBytes() {
+      java.lang.Object ref = contentTypeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contentTypeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       attachment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Attachment.getDefaultInstance();
       signature_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance();
       comment_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
+      contentTypeId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1800,6 +1863,10 @@ public final class AttachmentV3Protos {
       if (isInitialized == 0) return false;
 
       if (!hasAttachment()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasContentTypeId()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1835,6 +1902,9 @@ public final class AttachmentV3Protos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeMessage(3, comment_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getContentTypeIdBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1855,6 +1925,10 @@ public final class AttachmentV3Protos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, comment_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getContentTypeIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1994,6 +2068,8 @@ public final class AttachmentV3Protos {
           commentBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
+        contentTypeId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -2046,6 +2122,10 @@ public final class AttachmentV3Protos {
         } else {
           result.comment_ = commentBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.contentTypeId_ = contentTypeId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2071,12 +2151,21 @@ public final class AttachmentV3Protos {
         if (other.hasComment()) {
           mergeComment(other.getComment());
         }
+        if (other.hasContentTypeId()) {
+          bitField0_ |= 0x00000008;
+          contentTypeId_ = other.contentTypeId_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasAttachment()) {
+          
+          return false;
+        }
+        if (!hasContentTypeId()) {
           
           return false;
         }
@@ -2466,6 +2555,82 @@ public final class AttachmentV3Protos {
         return commentBuilder_;
       }
 
+      private java.lang.Object contentTypeId_ = "";
+      /**
+       * <code>required string ContentTypeId = 4;</code>
+       */
+      public boolean hasContentTypeId() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required string ContentTypeId = 4;</code>
+       */
+      public java.lang.String getContentTypeId() {
+        java.lang.Object ref = contentTypeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contentTypeId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string ContentTypeId = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContentTypeIdBytes() {
+        java.lang.Object ref = contentTypeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contentTypeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ContentTypeId = 4;</code>
+       */
+      public Builder setContentTypeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        contentTypeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ContentTypeId = 4;</code>
+       */
+      public Builder clearContentTypeId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        contentTypeId_ = getDefaultInstance().getContentTypeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ContentTypeId = 4;</code>
+       */
+      public Builder setContentTypeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        contentTypeId_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.SignedAttachmentV3)
     }
 
@@ -2507,12 +2672,13 @@ public final class AttachmentV3Protos {
       "\030\005 \002(\010\022I\n\022VerificationResult\030\006 \001(\0132-.Dia" +
       "doc.Api.Proto.SignatureVerificationResul",
       "t\0220\n\013DeliveredAt\030\007 \001(\0132\033.Diadoc.Api.Prot" +
-      "o.Timestamp\"\273\001\n\022SignedAttachmentV3\0228\n\nAt" +
+      "o.Timestamp\"\322\001\n\022SignedAttachmentV3\0228\n\nAt" +
       "tachment\030\001 \002(\0132$.Diadoc.Api.Proto.Docflo" +
       "w.Attachment\0228\n\tSignature\030\002 \001(\0132%.Diadoc" +
       ".Api.Proto.Docflow.SignatureV3\0221\n\007Commen" +
       "t\030\003 \001(\0132 .Diadoc.Api.Proto.Docflow.Entit" +
-      "yB\024B\022AttachmentV3Protos"
+      "y\022\025\n\rContentTypeId\030\004 \002(\tB\024B\022AttachmentV3" +
+      "Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2541,7 +2707,7 @@ public final class AttachmentV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_descriptor,
-        new java.lang.String[] { "Attachment", "Signature", "Comment", });
+        new java.lang.String[] { "Attachment", "Signature", "Comment", "ContentTypeId", });
     Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor();
     Diadoc.Api.Proto.ContentProtos.getDescriptor();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();

@@ -759,6 +759,10 @@ public final class DocumentProtos {
      * <code>InvalidRecipientSignature = 5;</code>
      */
     InvalidRecipientSignature(5, 5),
+    /**
+     * <code>WithRecipientPartiallySignature = 6;</code>
+     */
+    WithRecipientPartiallySignature(6, 6),
     ;
 
     /**
@@ -785,6 +789,10 @@ public final class DocumentProtos {
      * <code>InvalidRecipientSignature = 5;</code>
      */
     public static final int InvalidRecipientSignature_VALUE = 5;
+    /**
+     * <code>WithRecipientPartiallySignature = 6;</code>
+     */
+    public static final int WithRecipientPartiallySignature_VALUE = 6;
 
 
     public final int getNumber() { return value; }
@@ -797,6 +805,7 @@ public final class DocumentProtos {
         case 3: return WithRecipientSignature;
         case 4: return RecipientSignatureRequestRejected;
         case 5: return InvalidRecipientSignature;
+        case 6: return WithRecipientPartiallySignature;
         default: return null;
       }
     }
@@ -18710,15 +18719,16 @@ public final class DocumentProtos {
       "eceiptStatus\022\037\n\033GeneralReceiptStatusUnkn",
       "own\020\000\022%\n!GeneralReceiptStatusNotAcceptab" +
       "le\020\001\022\027\n\023HaveToCreateReceipt\020\002\022\025\n\021Waiting" +
-      "ForReceipt\020\003\022\014\n\010Finished\020\004*\353\001\n\027Recipient" +
+      "ForReceipt\020\003\022\014\n\010Finished\020\004*\220\002\n\027Recipient" +
       "ResponseStatus\022\"\n\036RecipientResponseStatu" +
       "sUnknown\020\000\022(\n$RecipientResponseStatusNot" +
       "Acceptable\020\001\022 \n\034WaitingForRecipientSigna" +
       "ture\020\002\022\032\n\026WithRecipientSignature\020\003\022%\n!Re" +
       "cipientSignatureRequestRejected\020\004\022\035\n\031Inv" +
-      "alidRecipientSignature\020\005*?\n\013MessageType\022" +
-      "\013\n\007Unknown\020\000\022\n\n\006Letter\020\001\022\t\n\005Draft\020\002\022\014\n\010T",
-      "emplate\020\003B\020B\016DocumentProtos"
+      "alidRecipientSignature\020\005\022#\n\037WithRecipien" +
+      "tPartiallySignature\020\006*?\n\013MessageType\022\013\n\007",
+      "Unknown\020\000\022\n\n\006Letter\020\001\022\t\n\005Draft\020\002\022\014\n\010Temp" +
+      "late\020\003B\020B\016DocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

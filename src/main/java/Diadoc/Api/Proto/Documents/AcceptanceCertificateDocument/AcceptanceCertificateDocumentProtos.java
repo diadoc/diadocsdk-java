@@ -30,69 +30,81 @@ public final class AcceptanceCertificateDocumentProtos {
      */
     OutboundWithRecipientSignature(2, 2),
     /**
+     * <code>OutboundWithRecipientPartiallySignature = 16;</code>
+     */
+    OutboundWithRecipientPartiallySignature(3, 16),
+    /**
      * <code>OutboundRecipientSignatureRequestRejected = 3;</code>
      */
-    OutboundRecipientSignatureRequestRejected(3, 3),
+    OutboundRecipientSignatureRequestRejected(4, 3),
     /**
      * <code>OutboundWaitingForSenderSignature = 10;</code>
      */
-    OutboundWaitingForSenderSignature(4, 10),
+    OutboundWaitingForSenderSignature(5, 10),
     /**
      * <code>OutboundInvalidSenderSignature = 11;</code>
      */
-    OutboundInvalidSenderSignature(5, 11),
+    OutboundInvalidSenderSignature(6, 11),
     /**
-     * <code>OutboundNoRecipientSignatureRequest = 16;</code>
+     * <code>OutboundNoRecipientSignatureRequest = 19;</code>
      */
-    OutboundNoRecipientSignatureRequest(6, 16),
+    OutboundNoRecipientSignatureRequest(7, 19),
     /**
      * <code>InboundWaitingForRecipientSignature = 4;</code>
      */
-    InboundWaitingForRecipientSignature(7, 4),
+    InboundWaitingForRecipientSignature(8, 4),
     /**
      * <code>InboundWithRecipientSignature = 5;</code>
      */
-    InboundWithRecipientSignature(8, 5),
+    InboundWithRecipientSignature(9, 5),
+    /**
+     * <code>InboundWithRecipientPartiallySignature = 17;</code>
+     */
+    InboundWithRecipientPartiallySignature(10, 17),
     /**
      * <code>InboundRecipientSignatureRequestRejected = 6;</code>
      */
-    InboundRecipientSignatureRequestRejected(9, 6),
+    InboundRecipientSignatureRequestRejected(11, 6),
     /**
      * <code>InboundInvalidRecipientSignature = 12;</code>
      */
-    InboundInvalidRecipientSignature(10, 12),
+    InboundInvalidRecipientSignature(12, 12),
     /**
-     * <code>InboundNoRecipientSignatureRequest = 17;</code>
+     * <code>InboundNoRecipientSignatureRequest = 20;</code>
      */
-    InboundNoRecipientSignatureRequest(11, 17),
+    InboundNoRecipientSignatureRequest(13, 20),
     /**
      * <code>InternalWaitingForRecipientSignature = 7;</code>
      */
-    InternalWaitingForRecipientSignature(12, 7),
+    InternalWaitingForRecipientSignature(14, 7),
     /**
      * <code>InternalWithRecipientSignature = 8;</code>
      */
-    InternalWithRecipientSignature(13, 8),
+    InternalWithRecipientSignature(15, 8),
+    /**
+     * <code>InternalWithRecipientPartiallySignature = 18;</code>
+     */
+    InternalWithRecipientPartiallySignature(16, 18),
     /**
      * <code>InternalRecipientSignatureRequestRejected = 9;</code>
      */
-    InternalRecipientSignatureRequestRejected(14, 9),
+    InternalRecipientSignatureRequestRejected(17, 9),
     /**
      * <code>InternalWaitingForSenderSignature = 13;</code>
      */
-    InternalWaitingForSenderSignature(15, 13),
+    InternalWaitingForSenderSignature(18, 13),
     /**
      * <code>InternalInvalidSenderSignature = 14;</code>
      */
-    InternalInvalidSenderSignature(16, 14),
+    InternalInvalidSenderSignature(19, 14),
     /**
      * <code>InternalInvalidRecipientSignature = 15;</code>
      */
-    InternalInvalidRecipientSignature(17, 15),
+    InternalInvalidRecipientSignature(20, 15),
     /**
-     * <code>InternalNoRecipientSignatureRequest = 18;</code>
+     * <code>InternalNoRecipientSignatureRequest = 21;</code>
      */
-    InternalNoRecipientSignatureRequest(18, 18),
+    InternalNoRecipientSignatureRequest(21, 21),
     ;
 
     /**
@@ -112,6 +124,10 @@ public final class AcceptanceCertificateDocumentProtos {
      */
     public static final int OutboundWithRecipientSignature_VALUE = 2;
     /**
+     * <code>OutboundWithRecipientPartiallySignature = 16;</code>
+     */
+    public static final int OutboundWithRecipientPartiallySignature_VALUE = 16;
+    /**
      * <code>OutboundRecipientSignatureRequestRejected = 3;</code>
      */
     public static final int OutboundRecipientSignatureRequestRejected_VALUE = 3;
@@ -124,9 +140,9 @@ public final class AcceptanceCertificateDocumentProtos {
      */
     public static final int OutboundInvalidSenderSignature_VALUE = 11;
     /**
-     * <code>OutboundNoRecipientSignatureRequest = 16;</code>
+     * <code>OutboundNoRecipientSignatureRequest = 19;</code>
      */
-    public static final int OutboundNoRecipientSignatureRequest_VALUE = 16;
+    public static final int OutboundNoRecipientSignatureRequest_VALUE = 19;
     /**
      * <code>InboundWaitingForRecipientSignature = 4;</code>
      */
@@ -136,6 +152,10 @@ public final class AcceptanceCertificateDocumentProtos {
      */
     public static final int InboundWithRecipientSignature_VALUE = 5;
     /**
+     * <code>InboundWithRecipientPartiallySignature = 17;</code>
+     */
+    public static final int InboundWithRecipientPartiallySignature_VALUE = 17;
+    /**
      * <code>InboundRecipientSignatureRequestRejected = 6;</code>
      */
     public static final int InboundRecipientSignatureRequestRejected_VALUE = 6;
@@ -144,9 +164,9 @@ public final class AcceptanceCertificateDocumentProtos {
      */
     public static final int InboundInvalidRecipientSignature_VALUE = 12;
     /**
-     * <code>InboundNoRecipientSignatureRequest = 17;</code>
+     * <code>InboundNoRecipientSignatureRequest = 20;</code>
      */
-    public static final int InboundNoRecipientSignatureRequest_VALUE = 17;
+    public static final int InboundNoRecipientSignatureRequest_VALUE = 20;
     /**
      * <code>InternalWaitingForRecipientSignature = 7;</code>
      */
@@ -155,6 +175,10 @@ public final class AcceptanceCertificateDocumentProtos {
      * <code>InternalWithRecipientSignature = 8;</code>
      */
     public static final int InternalWithRecipientSignature_VALUE = 8;
+    /**
+     * <code>InternalWithRecipientPartiallySignature = 18;</code>
+     */
+    public static final int InternalWithRecipientPartiallySignature_VALUE = 18;
     /**
      * <code>InternalRecipientSignatureRequestRejected = 9;</code>
      */
@@ -172,9 +196,9 @@ public final class AcceptanceCertificateDocumentProtos {
      */
     public static final int InternalInvalidRecipientSignature_VALUE = 15;
     /**
-     * <code>InternalNoRecipientSignatureRequest = 18;</code>
+     * <code>InternalNoRecipientSignatureRequest = 21;</code>
      */
-    public static final int InternalNoRecipientSignatureRequest_VALUE = 18;
+    public static final int InternalNoRecipientSignatureRequest_VALUE = 21;
 
 
     public final int getNumber() { return value; }
@@ -184,22 +208,25 @@ public final class AcceptanceCertificateDocumentProtos {
         case 0: return UnknownAcceptanceCertificateDocumentStatus;
         case 1: return OutboundWaitingForRecipientSignature;
         case 2: return OutboundWithRecipientSignature;
+        case 16: return OutboundWithRecipientPartiallySignature;
         case 3: return OutboundRecipientSignatureRequestRejected;
         case 10: return OutboundWaitingForSenderSignature;
         case 11: return OutboundInvalidSenderSignature;
-        case 16: return OutboundNoRecipientSignatureRequest;
+        case 19: return OutboundNoRecipientSignatureRequest;
         case 4: return InboundWaitingForRecipientSignature;
         case 5: return InboundWithRecipientSignature;
+        case 17: return InboundWithRecipientPartiallySignature;
         case 6: return InboundRecipientSignatureRequestRejected;
         case 12: return InboundInvalidRecipientSignature;
-        case 17: return InboundNoRecipientSignatureRequest;
+        case 20: return InboundNoRecipientSignatureRequest;
         case 7: return InternalWaitingForRecipientSignature;
         case 8: return InternalWithRecipientSignature;
+        case 18: return InternalWithRecipientPartiallySignature;
         case 9: return InternalRecipientSignatureRequestRejected;
         case 13: return InternalWaitingForSenderSignature;
         case 14: return InternalInvalidSenderSignature;
         case 15: return InternalInvalidRecipientSignature;
-        case 18: return InternalNoRecipientSignatureRequest;
+        case 21: return InternalNoRecipientSignatureRequest;
         default: return null;
       }
     }
@@ -1248,28 +1275,32 @@ public final class AcceptanceCertificateDocumentProtos {
       "DocumentStatus\022\r\n\005Total\030\002 \002(\t\022\013\n\003Vat\030\003 \001" +
       "(\t\022\017\n\007Grounds\030\004 \001(\t\022V\n\rReceiptStatus\030\005 \001",
       "(\0162).Diadoc.Api.Proto.Documents.ReceiptS" +
-      "tatus:\024UnknownReceiptStatus*\246\006\n#Acceptan" +
+      "tatus:\024UnknownReceiptStatus*\254\007\n#Acceptan" +
       "ceCertificateDocumentStatus\022.\n*UnknownAc" +
       "ceptanceCertificateDocumentStatus\020\000\022(\n$O" +
       "utboundWaitingForRecipientSignature\020\001\022\"\n" +
-      "\036OutboundWithRecipientSignature\020\002\022-\n)Out" +
-      "boundRecipientSignatureRequestRejected\020\003" +
-      "\022%\n!OutboundWaitingForSenderSignature\020\n\022" +
-      "\"\n\036OutboundInvalidSenderSignature\020\013\022\'\n#O" +
-      "utboundNoRecipientSignatureRequest\020\020\022\'\n#",
-      "InboundWaitingForRecipientSignature\020\004\022!\n" +
-      "\035InboundWithRecipientSignature\020\005\022,\n(Inbo" +
-      "undRecipientSignatureRequestRejected\020\006\022$" +
-      "\n InboundInvalidRecipientSignature\020\014\022&\n\"" +
-      "InboundNoRecipientSignatureRequest\020\021\022(\n$" +
-      "InternalWaitingForRecipientSignature\020\007\022\"" +
-      "\n\036InternalWithRecipientSignature\020\010\022-\n)In" +
-      "ternalRecipientSignatureRequestRejected\020" +
-      "\t\022%\n!InternalWaitingForSenderSignature\020\r" +
-      "\022\"\n\036InternalInvalidSenderSignature\020\016\022%\n!",
-      "InternalInvalidRecipientSignature\020\017\022\'\n#I" +
-      "nternalNoRecipientSignatureRequest\020\022B%B#" +
-      "AcceptanceCertificateDocumentProtos"
+      "\036OutboundWithRecipientSignature\020\002\022+\n\'Out" +
+      "boundWithRecipientPartiallySignature\020\020\022-" +
+      "\n)OutboundRecipientSignatureRequestRejec" +
+      "ted\020\003\022%\n!OutboundWaitingForSenderSignatu" +
+      "re\020\n\022\"\n\036OutboundInvalidSenderSignature\020\013",
+      "\022\'\n#OutboundNoRecipientSignatureRequest\020" +
+      "\023\022\'\n#InboundWaitingForRecipientSignature" +
+      "\020\004\022!\n\035InboundWithRecipientSignature\020\005\022*\n" +
+      "&InboundWithRecipientPartiallySignature\020" +
+      "\021\022,\n(InboundRecipientSignatureRequestRej" +
+      "ected\020\006\022$\n InboundInvalidRecipientSignat" +
+      "ure\020\014\022&\n\"InboundNoRecipientSignatureRequ" +
+      "est\020\024\022(\n$InternalWaitingForRecipientSign" +
+      "ature\020\007\022\"\n\036InternalWithRecipientSignatur" +
+      "e\020\010\022+\n\'InternalWithRecipientPartiallySig",
+      "nature\020\022\022-\n)InternalRecipientSignatureRe" +
+      "questRejected\020\t\022%\n!InternalWaitingForSen" +
+      "derSignature\020\r\022\"\n\036InternalInvalidSenderS" +
+      "ignature\020\016\022%\n!InternalInvalidRecipientSi" +
+      "gnature\020\017\022\'\n#InternalNoRecipientSignatur" +
+      "eRequest\020\025B%B#AcceptanceCertificateDocum" +
+      "entProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
