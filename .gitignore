@@ -1,5 +1,6 @@
 target/
-tools/
+tools/*
+!tools/packages.config
 .idea/
 *.iml
 
