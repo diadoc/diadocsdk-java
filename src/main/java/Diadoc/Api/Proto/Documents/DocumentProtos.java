@@ -1945,6 +1945,34 @@ public final class DocumentProtos {
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.LastOuterDocflowOrBuilder getLastOuterDocflowsOrBuilder(
         int index);
+
+    /**
+     * <code>optional string ProxyBoxId = 78;</code>
+     */
+    boolean hasProxyBoxId();
+    /**
+     * <code>optional string ProxyBoxId = 78;</code>
+     */
+    java.lang.String getProxyBoxId();
+    /**
+     * <code>optional string ProxyBoxId = 78;</code>
+     */
+    com.google.protobuf.ByteString
+        getProxyBoxIdBytes();
+
+    /**
+     * <code>optional string ProxyDepartmentId = 79;</code>
+     */
+    boolean hasProxyDepartmentId();
+    /**
+     * <code>optional string ProxyDepartmentId = 79;</code>
+     */
+    java.lang.String getProxyDepartmentId();
+    /**
+     * <code>optional string ProxyDepartmentId = 79;</code>
+     */
+    com.google.protobuf.ByteString
+        getProxyDepartmentIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Document}
@@ -2699,6 +2727,18 @@ public final class DocumentProtos {
                 mutable_bitField2_ |= 0x00000400;
               }
               lastOuterDocflows_.add(input.readMessage(Diadoc.Api.Proto.Documents.DocumentProtos.LastOuterDocflow.PARSER, extensionRegistry));
+              break;
+            }
+            case 626: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField2_ |= 0x00000020;
+              proxyBoxId_ = bs;
+              break;
+            }
+            case 634: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField2_ |= 0x00000040;
+              proxyDepartmentId_ = bs;
               break;
             }
           }
@@ -4726,6 +4766,90 @@ public final class DocumentProtos {
       return lastOuterDocflows_.get(index);
     }
 
+    public static final int PROXYBOXID_FIELD_NUMBER = 78;
+    private java.lang.Object proxyBoxId_;
+    /**
+     * <code>optional string ProxyBoxId = 78;</code>
+     */
+    public boolean hasProxyBoxId() {
+      return ((bitField2_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string ProxyBoxId = 78;</code>
+     */
+    public java.lang.String getProxyBoxId() {
+      java.lang.Object ref = proxyBoxId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          proxyBoxId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ProxyBoxId = 78;</code>
+     */
+    public com.google.protobuf.ByteString
+        getProxyBoxIdBytes() {
+      java.lang.Object ref = proxyBoxId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proxyBoxId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROXYDEPARTMENTID_FIELD_NUMBER = 79;
+    private java.lang.Object proxyDepartmentId_;
+    /**
+     * <code>optional string ProxyDepartmentId = 79;</code>
+     */
+    public boolean hasProxyDepartmentId() {
+      return ((bitField2_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string ProxyDepartmentId = 79;</code>
+     */
+    public java.lang.String getProxyDepartmentId() {
+      java.lang.Object ref = proxyDepartmentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          proxyDepartmentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ProxyDepartmentId = 79;</code>
+     */
+    public com.google.protobuf.ByteString
+        getProxyDepartmentIdBytes() {
+      java.lang.Object ref = proxyDepartmentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proxyDepartmentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       indexKey_ = "";
       messageId_ = "";
@@ -4802,6 +4926,8 @@ public final class DocumentProtos {
       senderReceiptMetadata_ = Diadoc.Api.Proto.Documents.DocumentProtos.SenderReceiptMetadata.getDefaultInstance();
       version_ = "";
       lastOuterDocflows_ = java.util.Collections.emptyList();
+      proxyBoxId_ = "";
+      proxyDepartmentId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5263,6 +5389,12 @@ public final class DocumentProtos {
       for (int i = 0; i < lastOuterDocflows_.size(); i++) {
         output.writeMessage(77, lastOuterDocflows_.get(i));
       }
+      if (((bitField2_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(78, getProxyBoxIdBytes());
+      }
+      if (((bitField2_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(79, getProxyDepartmentIdBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5571,6 +5703,14 @@ public final class DocumentProtos {
       for (int i = 0; i < lastOuterDocflows_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(77, lastOuterDocflows_.get(i));
+      }
+      if (((bitField2_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(78, getProxyBoxIdBytes());
+      }
+      if (((bitField2_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(79, getProxyDepartmentIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -6019,6 +6159,10 @@ public final class DocumentProtos {
         } else {
           lastOuterDocflowsBuilder_.clear();
         }
+        proxyBoxId_ = "";
+        bitField2_ = (bitField2_ & ~0x00000800);
+        proxyDepartmentId_ = "";
+        bitField2_ = (bitField2_ & ~0x00001000);
         return this;
       }
 
@@ -6501,6 +6645,14 @@ public final class DocumentProtos {
         } else {
           result.lastOuterDocflows_ = lastOuterDocflowsBuilder_.build();
         }
+        if (((from_bitField2_ & 0x00000800) == 0x00000800)) {
+          to_bitField2_ |= 0x00000020;
+        }
+        result.proxyBoxId_ = proxyBoxId_;
+        if (((from_bitField2_ & 0x00001000) == 0x00001000)) {
+          to_bitField2_ |= 0x00000040;
+        }
+        result.proxyDepartmentId_ = proxyDepartmentId_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         result.bitField2_ = to_bitField2_;
@@ -6921,6 +7073,16 @@ public final class DocumentProtos {
               lastOuterDocflowsBuilder_.addAllMessages(other.lastOuterDocflows_);
             }
           }
+        }
+        if (other.hasProxyBoxId()) {
+          bitField2_ |= 0x00000800;
+          proxyBoxId_ = other.proxyBoxId_;
+          onChanged();
+        }
+        if (other.hasProxyDepartmentId()) {
+          bitField2_ |= 0x00001000;
+          proxyDepartmentId_ = other.proxyDepartmentId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -14245,6 +14407,158 @@ public final class DocumentProtos {
         return lastOuterDocflowsBuilder_;
       }
 
+      private java.lang.Object proxyBoxId_ = "";
+      /**
+       * <code>optional string ProxyBoxId = 78;</code>
+       */
+      public boolean hasProxyBoxId() {
+        return ((bitField2_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional string ProxyBoxId = 78;</code>
+       */
+      public java.lang.String getProxyBoxId() {
+        java.lang.Object ref = proxyBoxId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            proxyBoxId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ProxyBoxId = 78;</code>
+       */
+      public com.google.protobuf.ByteString
+          getProxyBoxIdBytes() {
+        java.lang.Object ref = proxyBoxId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proxyBoxId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ProxyBoxId = 78;</code>
+       */
+      public Builder setProxyBoxId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField2_ |= 0x00000800;
+        proxyBoxId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ProxyBoxId = 78;</code>
+       */
+      public Builder clearProxyBoxId() {
+        bitField2_ = (bitField2_ & ~0x00000800);
+        proxyBoxId_ = getDefaultInstance().getProxyBoxId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ProxyBoxId = 78;</code>
+       */
+      public Builder setProxyBoxIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField2_ |= 0x00000800;
+        proxyBoxId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proxyDepartmentId_ = "";
+      /**
+       * <code>optional string ProxyDepartmentId = 79;</code>
+       */
+      public boolean hasProxyDepartmentId() {
+        return ((bitField2_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional string ProxyDepartmentId = 79;</code>
+       */
+      public java.lang.String getProxyDepartmentId() {
+        java.lang.Object ref = proxyDepartmentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            proxyDepartmentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ProxyDepartmentId = 79;</code>
+       */
+      public com.google.protobuf.ByteString
+          getProxyDepartmentIdBytes() {
+        java.lang.Object ref = proxyDepartmentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proxyDepartmentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ProxyDepartmentId = 79;</code>
+       */
+      public Builder setProxyDepartmentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField2_ |= 0x00001000;
+        proxyDepartmentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ProxyDepartmentId = 79;</code>
+       */
+      public Builder clearProxyDepartmentId() {
+        bitField2_ = (bitField2_ & ~0x00001000);
+        proxyDepartmentId_ = getDefaultInstance().getProxyDepartmentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ProxyDepartmentId = 79;</code>
+       */
+      public Builder setProxyDepartmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField2_ |= 0x00001000;
+        proxyDepartmentId_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Document)
     }
 
@@ -18539,7 +18853,7 @@ public final class DocumentProtos {
       "\032)Documents/UniversalTransferDocument.pr",
       "oto\032\026ResolutionTarget.proto\032\032ForwardDocu" +
       "mentEvent.proto\032\"Events/DiadocMessage-Po" +
-      "stApi.proto\032\022OuterDocflow.proto\"\267\'\n\010Docu" +
+      "stApi.proto\032\022OuterDocflow.proto\"\346\'\n\010Docu" +
       "ment\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessageId\030\002 \002(" +
       "\t\022\020\n\010EntityId\030\003 \002(\t\022\036\n\026CreationTimestamp" +
       "Ticks\030\004 \002(\020\022\031\n\021CounteragentBoxId\030\005 \001(\t\022I" +
@@ -18666,69 +18980,70 @@ public final class DocumentProtos {
       "Documents.SenderReceiptMetadata\022\017\n\007Versi" +
       "on\030L \002(\t\022G\n\021LastOuterDocflows\030M \003(\0132,.Di" +
       "adoc.Api.Proto.Documents.LastOuterDocflo" +
-      "w\"d\n\020LastOuterDocflow\022\026\n\016ParentEntityId\030",
-      "\001 \002(\t\0228\n\014OuterDocflow\030\002 \002(\0132\".Diadoc.Api" +
-      ".Proto.OuterDocflowInfo\"\310\001\n\020ResolutionSt" +
-      "atus\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.Proto.Do" +
-      "cuments.ResolutionStatusType:\027UnknownRes" +
-      "olutionStatus\0222\n\006Target\030\002 \001(\0132\".Diadoc.A" +
-      "pi.Proto.ResolutionTarget\022\024\n\014AuthorUserI" +
-      "d\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n\030Recipient" +
-      "ReceiptMetadata\022d\n\rReceiptStatus\030\001 \002(\01620" +
-      ".Diadoc.Api.Proto.Documents.GeneralRecei" +
-      "ptStatus:\033GeneralReceiptStatusUnknown\022N\n",
-      "\024ConfirmationMetadata\030\002 \001(\01320.Diadoc.Api" +
-      ".Proto.Documents.ConfirmationMetadata\"}\n" +
-      "\025SenderReceiptMetadata\022d\n\rReceiptStatus\030" +
-      "\001 \002(\01620.Diadoc.Api.Proto.Documents.Gener" +
+      "w\022\022\n\nProxyBoxId\030N \001(\t\022\031\n\021ProxyDepartment",
+      "Id\030O \001(\t\"d\n\020LastOuterDocflow\022\026\n\016ParentEn" +
+      "tityId\030\001 \002(\t\0228\n\014OuterDocflow\030\002 \002(\0132\".Dia" +
+      "doc.Api.Proto.OuterDocflowInfo\"\310\001\n\020Resol" +
+      "utionStatus\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.P" +
+      "roto.Documents.ResolutionStatusType:\027Unk" +
+      "nownResolutionStatus\0222\n\006Target\030\002 \001(\0132\".D" +
+      "iadoc.Api.Proto.ResolutionTarget\022\024\n\014Auth" +
+      "orUserId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n\030Re" +
+      "cipientReceiptMetadata\022d\n\rReceiptStatus\030" +
+      "\001 \002(\01620.Diadoc.Api.Proto.Documents.Gener",
       "alReceiptStatus:\033GeneralReceiptStatusUnk" +
-      "nown\"\223\001\n\024ConfirmationMetadata\022d\n\rReceipt" +
+      "nown\022N\n\024ConfirmationMetadata\030\002 \001(\01320.Dia" +
+      "doc.Api.Proto.Documents.ConfirmationMeta" +
+      "data\"}\n\025SenderReceiptMetadata\022d\n\rReceipt" +
       "Status\030\001 \002(\01620.Diadoc.Api.Proto.Document" +
       "s.GeneralReceiptStatus:\033GeneralReceiptSt" +
-      "atusUnknown\022\025\n\rDateTimeTicks\030\002 \002(\020\"\230\001\n\030A" +
-      "mendmentRequestMetadata\022\026\n\016AmendmentFlag",
-      "s\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620.Diadoc." +
-      "Api.Proto.Documents.GeneralReceiptStatus" +
-      ":\033GeneralReceiptStatusUnknown\"Y\n\006Origin\022" +
-      "<\n\013MessageType\030\001 \002(\0162\'.Diadoc.Api.Proto." +
-      "Documents.MessageType\022\021\n\tMessageId\030\002 \002(\t" +
-      "*\302\001\n\024ResolutionStatusType\022$\n\027UnknownReso" +
-      "lutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010App" +
-      "roved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024ApprovementR" +
-      "equested\020\003\022\026\n\022SignatureRequested\020\004\022\023\n\017Si" +
-      "gnatureDenied\020\005\022\024\n\020ActionsRequested\020\006*\262\001",
-      "\n\020RevocationStatus\022\033\n\027UnknownRevocationS" +
-      "tatus\020\000\022\030\n\024RevocationStatusNone\020\001\022\035\n\031Rev" +
-      "ocationIsRequestedByMe\020\002\022\030\n\024RequestsMyRe" +
-      "vocation\020\003\022\026\n\022RevocationAccepted\020\004\022\026\n\022Re" +
-      "vocationRejected\020\005*\256\001\n\031RoamingNotificati" +
-      "onStatus\022$\n UnknownRoamingNotificationSt" +
-      "atus\020\000\022!\n\035RoamingNotificationStatusNone\020" +
-      "\001\022$\n RoamingNotificationStatusSuccess\020\002\022" +
-      "\"\n\036RoamingNotificationStatusError\020\003*\300\001\n\025" +
-      "SenderSignatureStatus\022 \n\034UnknownSenderSi",
-      "gnatureStatus\020\000\022\035\n\031WaitingForSenderSigna" +
-      "ture\020\001\022\034\n\030SenderSignatureUnchecked\020\002\022\"\n\036" +
-      "SenderSignatureCheckedAndValid\020\003\022$\n Send" +
-      "erSignatureCheckedAndInvalid\020\004*\302\001\n\024Proxy" +
-      "SignatureStatus\022\037\n\033UnknownProxySignature" +
-      "Status\020\000\022\034\n\030ProxySignatureStatusNone\020\001\022\034" +
-      "\n\030WaitingForProxySignature\020\002\022\026\n\022WithProx" +
-      "ySignature\020\003\022\032\n\026ProxySignatureRejected\020\004" +
-      "\022\031\n\025InvalidProxySignature\020\005*\234\001\n\024GeneralR" +
-      "eceiptStatus\022\037\n\033GeneralReceiptStatusUnkn",
-      "own\020\000\022%\n!GeneralReceiptStatusNotAcceptab" +
-      "le\020\001\022\027\n\023HaveToCreateReceipt\020\002\022\025\n\021Waiting" +
-      "ForReceipt\020\003\022\014\n\010Finished\020\004*\220\002\n\027Recipient" +
-      "ResponseStatus\022\"\n\036RecipientResponseStatu" +
-      "sUnknown\020\000\022(\n$RecipientResponseStatusNot" +
-      "Acceptable\020\001\022 \n\034WaitingForRecipientSigna" +
-      "ture\020\002\022\032\n\026WithRecipientSignature\020\003\022%\n!Re" +
-      "cipientSignatureRequestRejected\020\004\022\035\n\031Inv" +
-      "alidRecipientSignature\020\005\022#\n\037WithRecipien" +
-      "tPartiallySignature\020\006*?\n\013MessageType\022\013\n\007",
-      "Unknown\020\000\022\n\n\006Letter\020\001\022\t\n\005Draft\020\002\022\014\n\010Temp" +
-      "late\020\003B\020B\016DocumentProtos"
+      "atusUnknown\"\223\001\n\024ConfirmationMetadata\022d\n\r" +
+      "ReceiptStatus\030\001 \002(\01620.Diadoc.Api.Proto.D" +
+      "ocuments.GeneralReceiptStatus:\033GeneralRe" +
+      "ceiptStatusUnknown\022\025\n\rDateTimeTicks\030\002 \002(",
+      "\020\"\230\001\n\030AmendmentRequestMetadata\022\026\n\016Amendm" +
+      "entFlags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620." +
+      "Diadoc.Api.Proto.Documents.GeneralReceip" +
+      "tStatus:\033GeneralReceiptStatusUnknown\"Y\n\006" +
+      "Origin\022<\n\013MessageType\030\001 \002(\0162\'.Diadoc.Api" +
+      ".Proto.Documents.MessageType\022\021\n\tMessageI" +
+      "d\030\002 \002(\t*\302\001\n\024ResolutionStatusType\022$\n\027Unkn" +
+      "ownResolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000" +
+      "\022\014\n\010Approved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024Appro" +
+      "vementRequested\020\003\022\026\n\022SignatureRequested\020",
+      "\004\022\023\n\017SignatureDenied\020\005\022\024\n\020ActionsRequest" +
+      "ed\020\006*\262\001\n\020RevocationStatus\022\033\n\027UnknownRevo" +
+      "cationStatus\020\000\022\030\n\024RevocationStatusNone\020\001" +
+      "\022\035\n\031RevocationIsRequestedByMe\020\002\022\030\n\024Reque" +
+      "stsMyRevocation\020\003\022\026\n\022RevocationAccepted\020" +
+      "\004\022\026\n\022RevocationRejected\020\005*\256\001\n\031RoamingNot" +
+      "ificationStatus\022$\n UnknownRoamingNotific" +
+      "ationStatus\020\000\022!\n\035RoamingNotificationStat" +
+      "usNone\020\001\022$\n RoamingNotificationStatusSuc" +
+      "cess\020\002\022\"\n\036RoamingNotificationStatusError",
+      "\020\003*\300\001\n\025SenderSignatureStatus\022 \n\034UnknownS" +
+      "enderSignatureStatus\020\000\022\035\n\031WaitingForSend" +
+      "erSignature\020\001\022\034\n\030SenderSignatureUnchecke" +
+      "d\020\002\022\"\n\036SenderSignatureCheckedAndValid\020\003\022" +
+      "$\n SenderSignatureCheckedAndInvalid\020\004*\302\001" +
+      "\n\024ProxySignatureStatus\022\037\n\033UnknownProxySi" +
+      "gnatureStatus\020\000\022\034\n\030ProxySignatureStatusN" +
+      "one\020\001\022\034\n\030WaitingForProxySignature\020\002\022\026\n\022W" +
+      "ithProxySignature\020\003\022\032\n\026ProxySignatureRej" +
+      "ected\020\004\022\031\n\025InvalidProxySignature\020\005*\234\001\n\024G",
+      "eneralReceiptStatus\022\037\n\033GeneralReceiptSta" +
+      "tusUnknown\020\000\022%\n!GeneralReceiptStatusNotA" +
+      "cceptable\020\001\022\027\n\023HaveToCreateReceipt\020\002\022\025\n\021" +
+      "WaitingForReceipt\020\003\022\014\n\010Finished\020\004*\220\002\n\027Re" +
+      "cipientResponseStatus\022\"\n\036RecipientRespon" +
+      "seStatusUnknown\020\000\022(\n$RecipientResponseSt" +
+      "atusNotAcceptable\020\001\022 \n\034WaitingForRecipie" +
+      "ntSignature\020\002\022\032\n\026WithRecipientSignature\020" +
+      "\003\022%\n!RecipientSignatureRequestRejected\020\004" +
+      "\022\035\n\031InvalidRecipientSignature\020\005\022#\n\037WithR",
+      "ecipientPartiallySignature\020\006*?\n\013MessageT" +
+      "ype\022\013\n\007Unknown\020\000\022\n\n\006Letter\020\001\022\t\n\005Draft\020\002\022" +
+      "\014\n\010Template\020\003B\020B\016DocumentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -18763,7 +19078,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", "EditingSettingId", "LockMode", "SenderReceiptMetadata", "Version", "LastOuterDocflows", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", "EditingSettingId", "LockMode", "SenderReceiptMetadata", "Version", "LastOuterDocflows", "ProxyBoxId", "ProxyDepartmentId", });
     internal_static_Diadoc_Api_Proto_Documents_LastOuterDocflow_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_LastOuterDocflow_fieldAccessorTable = new
