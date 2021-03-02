@@ -1148,6 +1148,12 @@ public final class DocumentInfoProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (hasSupplementaryAgreementInfo()) {
+        if (!getSupplementaryAgreementInfo().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       if (hasUniversalTransferDocumentInfo()) {
         if (!getUniversalTransferDocumentInfo().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1726,6 +1732,12 @@ public final class DocumentInfoProtos {
         if (!hasVersion()) {
           
           return false;
+        }
+        if (hasSupplementaryAgreementInfo()) {
+          if (!getSupplementaryAgreementInfo().isInitialized()) {
+            
+            return false;
+          }
         }
         if (hasUniversalTransferDocumentInfo()) {
           if (!getUniversalTransferDocumentInfo().isInitialized()) {
@@ -9159,60 +9171,58 @@ public final class DocumentInfoProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string Total = 1;</code>
-     */
-    boolean hasTotal();
-    /**
-     * <code>optional string Total = 1;</code>
-     */
-    java.lang.String getTotal();
-    /**
-     * <code>optional string Total = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getTotalBytes();
-
-    /**
-     * <code>optional string ContractType = 2;</code>
+     * <code>optional string ContractType = 1;</code>
      */
     boolean hasContractType();
     /**
-     * <code>optional string ContractType = 2;</code>
+     * <code>optional string ContractType = 1;</code>
      */
     java.lang.String getContractType();
     /**
-     * <code>optional string ContractType = 2;</code>
+     * <code>optional string ContractType = 1;</code>
      */
     com.google.protobuf.ByteString
         getContractTypeBytes();
 
     /**
-     * <code>optional string ContractNumber = 3;</code>
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
      */
-    boolean hasContractNumber();
+    boolean hasContractDocumentDateAndNumber();
     /**
-     * <code>optional string ContractNumber = 3;</code>
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
      */
-    java.lang.String getContractNumber();
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getContractDocumentDateAndNumber();
     /**
-     * <code>optional string ContractNumber = 3;</code>
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
      */
-    com.google.protobuf.ByteString
-        getContractNumberBytes();
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getContractDocumentDateAndNumberOrBuilder();
 
     /**
-     * <code>optional string ContractDate = 4;</code>
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
      */
-    boolean hasContractDate();
+    boolean hasDocumentDateAndNumber();
     /**
-     * <code>optional string ContractDate = 4;</code>
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
      */
-    java.lang.String getContractDate();
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getDocumentDateAndNumber();
     /**
-     * <code>optional string ContractDate = 4;</code>
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getDocumentDateAndNumberOrBuilder();
+
+    /**
+     * <code>optional string Total = 4;</code>
+     */
+    boolean hasTotal();
+    /**
+     * <code>optional string Total = 4;</code>
+     */
+    java.lang.String getTotal();
+    /**
+     * <code>optional string Total = 4;</code>
      */
     com.google.protobuf.ByteString
-        getContractDateBytes();
+        getTotalBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.SupplementaryAgreementDocumentInfo}
@@ -9269,25 +9279,39 @@ public final class DocumentInfoProtos {
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              total_ = bs;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
               contractType_ = bs;
               break;
             }
+            case 18: {
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = contractDocumentDateAndNumber_.toBuilder();
+              }
+              contractDocumentDateAndNumber_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(contractDocumentDateAndNumber_);
+                contractDocumentDateAndNumber_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = documentDateAndNumber_.toBuilder();
+              }
+              documentDateAndNumber_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(documentDateAndNumber_);
+                documentDateAndNumber_ = subBuilder.buildPartial();
+              }
               bitField0_ |= 0x00000004;
-              contractNumber_ = bs;
               break;
             }
             case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              contractDate_ = bs;
+              total_ = bs;
               break;
             }
           }
@@ -9330,58 +9354,16 @@ public final class DocumentInfoProtos {
     }
 
     private int bitField0_;
-    public static final int TOTAL_FIELD_NUMBER = 1;
-    private java.lang.Object total_;
+    public static final int CONTRACTTYPE_FIELD_NUMBER = 1;
+    private java.lang.Object contractType_;
     /**
-     * <code>optional string Total = 1;</code>
+     * <code>optional string ContractType = 1;</code>
      */
-    public boolean hasTotal() {
+    public boolean hasContractType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional string Total = 1;</code>
-     */
-    public java.lang.String getTotal() {
-      java.lang.Object ref = total_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          total_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string Total = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTotalBytes() {
-      java.lang.Object ref = total_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        total_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONTRACTTYPE_FIELD_NUMBER = 2;
-    private java.lang.Object contractType_;
-    /**
-     * <code>optional string ContractType = 2;</code>
-     */
-    public boolean hasContractType() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional string ContractType = 2;</code>
+     * <code>optional string ContractType = 1;</code>
      */
     public java.lang.String getContractType() {
       java.lang.Object ref = contractType_;
@@ -9398,7 +9380,7 @@ public final class DocumentInfoProtos {
       }
     }
     /**
-     * <code>optional string ContractType = 2;</code>
+     * <code>optional string ContractType = 1;</code>
      */
     public com.google.protobuf.ByteString
         getContractTypeBytes() {
@@ -9414,61 +9396,61 @@ public final class DocumentInfoProtos {
       }
     }
 
-    public static final int CONTRACTNUMBER_FIELD_NUMBER = 3;
-    private java.lang.Object contractNumber_;
+    public static final int CONTRACTDOCUMENTDATEANDNUMBER_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber contractDocumentDateAndNumber_;
     /**
-     * <code>optional string ContractNumber = 3;</code>
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
      */
-    public boolean hasContractNumber() {
+    public boolean hasContractDocumentDateAndNumber() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getContractDocumentDateAndNumber() {
+      return contractDocumentDateAndNumber_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getContractDocumentDateAndNumberOrBuilder() {
+      return contractDocumentDateAndNumber_;
+    }
+
+    public static final int DOCUMENTDATEANDNUMBER_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber documentDateAndNumber_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
+     */
+    public boolean hasDocumentDateAndNumber() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional string ContractNumber = 3;</code>
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
      */
-    public java.lang.String getContractNumber() {
-      java.lang.Object ref = contractNumber_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          contractNumber_ = s;
-        }
-        return s;
-      }
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getDocumentDateAndNumber() {
+      return documentDateAndNumber_;
     }
     /**
-     * <code>optional string ContractNumber = 3;</code>
+     * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
      */
-    public com.google.protobuf.ByteString
-        getContractNumberBytes() {
-      java.lang.Object ref = contractNumber_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        contractNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getDocumentDateAndNumberOrBuilder() {
+      return documentDateAndNumber_;
     }
 
-    public static final int CONTRACTDATE_FIELD_NUMBER = 4;
-    private java.lang.Object contractDate_;
+    public static final int TOTAL_FIELD_NUMBER = 4;
+    private java.lang.Object total_;
     /**
-     * <code>optional string ContractDate = 4;</code>
+     * <code>optional string Total = 4;</code>
      */
-    public boolean hasContractDate() {
+    public boolean hasTotal() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional string ContractDate = 4;</code>
+     * <code>optional string Total = 4;</code>
      */
-    public java.lang.String getContractDate() {
-      java.lang.Object ref = contractDate_;
+    public java.lang.String getTotal() {
+      java.lang.Object ref = total_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -9476,22 +9458,22 @@ public final class DocumentInfoProtos {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          contractDate_ = s;
+          total_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string ContractDate = 4;</code>
+     * <code>optional string Total = 4;</code>
      */
     public com.google.protobuf.ByteString
-        getContractDateBytes() {
-      java.lang.Object ref = contractDate_;
+        getTotalBytes() {
+      java.lang.Object ref = total_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        contractDate_ = b;
+        total_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9499,10 +9481,10 @@ public final class DocumentInfoProtos {
     }
 
     private void initFields() {
-      total_ = "";
       contractType_ = "";
-      contractNumber_ = "";
-      contractDate_ = "";
+      contractDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      documentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      total_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -9510,6 +9492,14 @@ public final class DocumentInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasContractDocumentDateAndNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDocumentDateAndNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -9518,16 +9508,16 @@ public final class DocumentInfoProtos {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getTotalBytes());
+        output.writeBytes(1, getContractTypeBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getContractTypeBytes());
+        output.writeMessage(2, contractDocumentDateAndNumber_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getContractNumberBytes());
+        output.writeMessage(3, documentDateAndNumber_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(4, getContractDateBytes());
+        output.writeBytes(4, getTotalBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -9540,19 +9530,19 @@ public final class DocumentInfoProtos {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getTotalBytes());
+          .computeBytesSize(1, getContractTypeBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getContractTypeBytes());
+          .computeMessageSize(2, contractDocumentDateAndNumber_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getContractNumberBytes());
+          .computeMessageSize(3, documentDateAndNumber_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getContractDateBytes());
+          .computeBytesSize(4, getTotalBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -9663,6 +9653,8 @@ public final class DocumentInfoProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getContractDocumentDateAndNumberFieldBuilder();
+          getDocumentDateAndNumberFieldBuilder();
         }
       }
       private static Builder create() {
@@ -9671,13 +9663,21 @@ public final class DocumentInfoProtos {
 
       public Builder clear() {
         super.clear();
-        total_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         contractType_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (contractDocumentDateAndNumberBuilder_ == null) {
+          contractDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+        } else {
+          contractDocumentDateAndNumberBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000002);
-        contractNumber_ = "";
+        if (documentDateAndNumberBuilder_ == null) {
+          documentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+        } else {
+          documentDateAndNumberBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000004);
-        contractDate_ = "";
+        total_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
@@ -9710,19 +9710,27 @@ public final class DocumentInfoProtos {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.total_ = total_;
+        result.contractType_ = contractType_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.contractType_ = contractType_;
+        if (contractDocumentDateAndNumberBuilder_ == null) {
+          result.contractDocumentDateAndNumber_ = contractDocumentDateAndNumber_;
+        } else {
+          result.contractDocumentDateAndNumber_ = contractDocumentDateAndNumberBuilder_.build();
+        }
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.contractNumber_ = contractNumber_;
+        if (documentDateAndNumberBuilder_ == null) {
+          result.documentDateAndNumber_ = documentDateAndNumber_;
+        } else {
+          result.documentDateAndNumber_ = documentDateAndNumberBuilder_.build();
+        }
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.contractDate_ = contractDate_;
+        result.total_ = total_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -9739,24 +9747,20 @@ public final class DocumentInfoProtos {
 
       public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.SupplementaryAgreementDocumentInfo other) {
         if (other == Diadoc.Api.Proto.Docflow.DocumentInfoProtos.SupplementaryAgreementDocumentInfo.getDefaultInstance()) return this;
-        if (other.hasTotal()) {
-          bitField0_ |= 0x00000001;
-          total_ = other.total_;
-          onChanged();
-        }
         if (other.hasContractType()) {
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
           contractType_ = other.contractType_;
           onChanged();
         }
-        if (other.hasContractNumber()) {
-          bitField0_ |= 0x00000004;
-          contractNumber_ = other.contractNumber_;
-          onChanged();
+        if (other.hasContractDocumentDateAndNumber()) {
+          mergeContractDocumentDateAndNumber(other.getContractDocumentDateAndNumber());
         }
-        if (other.hasContractDate()) {
+        if (other.hasDocumentDateAndNumber()) {
+          mergeDocumentDateAndNumber(other.getDocumentDateAndNumber());
+        }
+        if (other.hasTotal()) {
           bitField0_ |= 0x00000008;
-          contractDate_ = other.contractDate_;
+          total_ = other.total_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -9764,6 +9768,14 @@ public final class DocumentInfoProtos {
       }
 
       public final boolean isInitialized() {
+        if (!hasContractDocumentDateAndNumber()) {
+          
+          return false;
+        }
+        if (!hasDocumentDateAndNumber()) {
+          
+          return false;
+        }
         return true;
       }
 
@@ -9786,91 +9798,15 @@ public final class DocumentInfoProtos {
       }
       private int bitField0_;
 
-      private java.lang.Object total_ = "";
+      private java.lang.Object contractType_ = "";
       /**
-       * <code>optional string Total = 1;</code>
+       * <code>optional string ContractType = 1;</code>
        */
-      public boolean hasTotal() {
+      public boolean hasContractType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional string Total = 1;</code>
-       */
-      public java.lang.String getTotal() {
-        java.lang.Object ref = total_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            total_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string Total = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTotalBytes() {
-        java.lang.Object ref = total_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          total_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string Total = 1;</code>
-       */
-      public Builder setTotal(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        total_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string Total = 1;</code>
-       */
-      public Builder clearTotal() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        total_ = getDefaultInstance().getTotal();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string Total = 1;</code>
-       */
-      public Builder setTotalBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        total_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object contractType_ = "";
-      /**
-       * <code>optional string ContractType = 2;</code>
-       */
-      public boolean hasContractType() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional string ContractType = 2;</code>
+       * <code>optional string ContractType = 1;</code>
        */
       public java.lang.String getContractType() {
         java.lang.Object ref = contractType_;
@@ -9887,7 +9823,7 @@ public final class DocumentInfoProtos {
         }
       }
       /**
-       * <code>optional string ContractType = 2;</code>
+       * <code>optional string ContractType = 1;</code>
        */
       public com.google.protobuf.ByteString
           getContractTypeBytes() {
@@ -9903,135 +9839,291 @@ public final class DocumentInfoProtos {
         }
       }
       /**
-       * <code>optional string ContractType = 2;</code>
+       * <code>optional string ContractType = 1;</code>
        */
       public Builder setContractType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000001;
         contractType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string ContractType = 2;</code>
+       * <code>optional string ContractType = 1;</code>
        */
       public Builder clearContractType() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         contractType_ = getDefaultInstance().getContractType();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string ContractType = 2;</code>
+       * <code>optional string ContractType = 1;</code>
        */
       public Builder setContractTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000001;
         contractType_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object contractNumber_ = "";
+      private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber contractDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> contractDocumentDateAndNumberBuilder_;
       /**
-       * <code>optional string ContractNumber = 3;</code>
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
        */
-      public boolean hasContractNumber() {
+      public boolean hasContractDocumentDateAndNumber() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getContractDocumentDateAndNumber() {
+        if (contractDocumentDateAndNumberBuilder_ == null) {
+          return contractDocumentDateAndNumber_;
+        } else {
+          return contractDocumentDateAndNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+       */
+      public Builder setContractDocumentDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (contractDocumentDateAndNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractDocumentDateAndNumber_ = value;
+          onChanged();
+        } else {
+          contractDocumentDateAndNumberBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+       */
+      public Builder setContractDocumentDateAndNumber(
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder builderForValue) {
+        if (contractDocumentDateAndNumberBuilder_ == null) {
+          contractDocumentDateAndNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          contractDocumentDateAndNumberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+       */
+      public Builder mergeContractDocumentDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (contractDocumentDateAndNumberBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              contractDocumentDateAndNumber_ != Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance()) {
+            contractDocumentDateAndNumber_ =
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.newBuilder(contractDocumentDateAndNumber_).mergeFrom(value).buildPartial();
+          } else {
+            contractDocumentDateAndNumber_ = value;
+          }
+          onChanged();
+        } else {
+          contractDocumentDateAndNumberBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+       */
+      public Builder clearContractDocumentDateAndNumber() {
+        if (contractDocumentDateAndNumberBuilder_ == null) {
+          contractDocumentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+          onChanged();
+        } else {
+          contractDocumentDateAndNumberBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder getContractDocumentDateAndNumberBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getContractDocumentDateAndNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getContractDocumentDateAndNumberOrBuilder() {
+        if (contractDocumentDateAndNumberBuilder_ != null) {
+          return contractDocumentDateAndNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return contractDocumentDateAndNumber_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber ContractDocumentDateAndNumber = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> 
+          getContractDocumentDateAndNumberFieldBuilder() {
+        if (contractDocumentDateAndNumberBuilder_ == null) {
+          contractDocumentDateAndNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder>(
+                  getContractDocumentDateAndNumber(),
+                  getParentForChildren(),
+                  isClean());
+          contractDocumentDateAndNumber_ = null;
+        }
+        return contractDocumentDateAndNumberBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber documentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> documentDateAndNumberBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
+       */
+      public boolean hasDocumentDateAndNumber() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional string ContractNumber = 3;</code>
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
        */
-      public java.lang.String getContractNumber() {
-        java.lang.Object ref = contractNumber_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            contractNumber_ = s;
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber getDocumentDateAndNumber() {
+        if (documentDateAndNumberBuilder_ == null) {
+          return documentDateAndNumber_;
+        } else {
+          return documentDateAndNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
+       */
+      public Builder setDocumentDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (documentDateAndNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
           }
-          return s;
+          documentDateAndNumber_ = value;
+          onChanged();
         } else {
-          return (java.lang.String) ref;
+          documentDateAndNumberBuilder_.setMessage(value);
         }
-      }
-      /**
-       * <code>optional string ContractNumber = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getContractNumberBytes() {
-        java.lang.Object ref = contractNumber_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          contractNumber_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string ContractNumber = 3;</code>
-       */
-      public Builder setContractNumber(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        contractNumber_ = value;
-        onChanged();
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional string ContractNumber = 3;</code>
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
        */
-      public Builder clearContractNumber() {
+      public Builder setDocumentDateAndNumber(
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder builderForValue) {
+        if (documentDateAndNumberBuilder_ == null) {
+          documentDateAndNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          documentDateAndNumberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
+       */
+      public Builder mergeDocumentDateAndNumber(Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber value) {
+        if (documentDateAndNumberBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              documentDateAndNumber_ != Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance()) {
+            documentDateAndNumber_ =
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.newBuilder(documentDateAndNumber_).mergeFrom(value).buildPartial();
+          } else {
+            documentDateAndNumber_ = value;
+          }
+          onChanged();
+        } else {
+          documentDateAndNumberBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
+       */
+      public Builder clearDocumentDateAndNumber() {
+        if (documentDateAndNumberBuilder_ == null) {
+          documentDateAndNumber_ = Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.getDefaultInstance();
+          onChanged();
+        } else {
+          documentDateAndNumberBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000004);
-        contractNumber_ = getDefaultInstance().getContractNumber();
-        onChanged();
         return this;
       }
       /**
-       * <code>optional string ContractNumber = 3;</code>
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
        */
-      public Builder setContractNumberBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        contractNumber_ = value;
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder getDocumentDateAndNumberBuilder() {
+        bitField0_ |= 0x00000004;
         onChanged();
-        return this;
+        return getDocumentDateAndNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder getDocumentDateAndNumberOrBuilder() {
+        if (documentDateAndNumberBuilder_ != null) {
+          return documentDateAndNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return documentDateAndNumber_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.DocumentDateAndNumber DocumentDateAndNumber = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder> 
+          getDocumentDateAndNumberFieldBuilder() {
+        if (documentDateAndNumberBuilder_ == null) {
+          documentDateAndNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumber.Builder, Diadoc.Api.Proto.Docflow.DocumentInfoProtos.DocumentDateAndNumberOrBuilder>(
+                  getDocumentDateAndNumber(),
+                  getParentForChildren(),
+                  isClean());
+          documentDateAndNumber_ = null;
+        }
+        return documentDateAndNumberBuilder_;
       }
 
-      private java.lang.Object contractDate_ = "";
+      private java.lang.Object total_ = "";
       /**
-       * <code>optional string ContractDate = 4;</code>
+       * <code>optional string Total = 4;</code>
        */
-      public boolean hasContractDate() {
+      public boolean hasTotal() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional string ContractDate = 4;</code>
+       * <code>optional string Total = 4;</code>
        */
-      public java.lang.String getContractDate() {
-        java.lang.Object ref = contractDate_;
+      public java.lang.String getTotal() {
+        java.lang.Object ref = total_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            contractDate_ = s;
+            total_ = s;
           }
           return s;
         } else {
@@ -10039,53 +10131,53 @@ public final class DocumentInfoProtos {
         }
       }
       /**
-       * <code>optional string ContractDate = 4;</code>
+       * <code>optional string Total = 4;</code>
        */
       public com.google.protobuf.ByteString
-          getContractDateBytes() {
-        java.lang.Object ref = contractDate_;
+          getTotalBytes() {
+        java.lang.Object ref = total_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          contractDate_ = b;
+          total_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string ContractDate = 4;</code>
+       * <code>optional string Total = 4;</code>
        */
-      public Builder setContractDate(
+      public Builder setTotal(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        contractDate_ = value;
+        total_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string ContractDate = 4;</code>
+       * <code>optional string Total = 4;</code>
        */
-      public Builder clearContractDate() {
+      public Builder clearTotal() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        contractDate_ = getDefaultInstance().getContractDate();
+        total_ = getDefaultInstance().getTotal();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string ContractDate = 4;</code>
+       * <code>optional string Total = 4;</code>
        */
-      public Builder setContractDateBytes(
+      public Builder setTotalBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        contractDate_ = value;
+        total_ = value;
         onChanged();
         return this;
       }
@@ -13332,29 +13424,32 @@ public final class DocumentInfoProtos {
       "ber\030\002 \001(\0132/.Diadoc.Api.Proto.Docflow.Doc" +
       "umentDateAndNumber\"C\n\024ContractDocumentIn" +
       "fo\022\025\n\rContractPrice\030\001 \001(\t\022\024\n\014ContractTyp" +
-      "e\030\002 \001(\t\"w\n\"SupplementaryAgreementDocumen" +
-      "tInfo\022\r\n\005Total\030\001 \001(\t\022\024\n\014ContractType\030\002 \001" +
-      "(\t\022\026\n\016ContractNumber\030\003 \001(\t\022\024\n\014ContractDa" +
-      "te\030\004 \001(\t\"\366\001\n\035UniversalTransferDocumentIn",
-      "fo\022\r\n\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014Curren" +
-      "cyCode\030\003 \001(\005\022\017\n\007Grounds\030\004 \001(\t\022:\n\010Functio" +
-      "n\030\005 \002(\0162(.Diadoc.Api.Proto.Invoicing.Fun" +
-      "ctionType\022V\n\035OriginalDocumentDateAndNumb" +
-      "er\030\006 \001(\0132/.Diadoc.Api.Proto.Docflow.Docu" +
-      "mentDateAndNumber\"\342\003\n\037UniversalCorrectio" +
-      "nDocumentInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010Total" +
-      "Dec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(" +
-      "\t\022\024\n\014CurrencyCode\030\005 \001(\005\022\017\n\007Grounds\030\006 \001(\t" +
-      "\022:\n\010Function\030\007 \002(\0162(.Diadoc.Api.Proto.In",
-      "voicing.FunctionType\022V\n\035OriginalDocument" +
-      "DateAndNumber\030\010 \001(\0132/.Diadoc.Api.Proto.D" +
-      "ocflow.DocumentDateAndNumber\022^\n%Original" +
-      "DocumentRevisionDateAndNumber\030\t \001(\0132/.Di" +
-      "adoc.Api.Proto.Docflow.DocumentDateAndNu" +
-      "mber\022`\n\'OriginalDocumentCorrectionDateAn" +
-      "dNumber\030\n \001(\0132/.Diadoc.Api.Proto.Docflow" +
-      ".DocumentDateAndNumberB\024B\022DocumentInfoPr" +
-      "otos"
+      "e\030\002 \001(\t\"\361\001\n\"SupplementaryAgreementDocume" +
+      "ntInfo\022\024\n\014ContractType\030\001 \001(\t\022V\n\035Contract" +
+      "DocumentDateAndNumber\030\002 \002(\0132/.Diadoc.Api" +
+      ".Proto.Docflow.DocumentDateAndNumber\022N\n\025",
+      "DocumentDateAndNumber\030\003 \002(\0132/.Diadoc.Api" +
+      ".Proto.Docflow.DocumentDateAndNumber\022\r\n\005" +
+      "Total\030\004 \001(\t\"\366\001\n\035UniversalTransferDocumen" +
+      "tInfo\022\r\n\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014Cur" +
+      "rencyCode\030\003 \001(\005\022\017\n\007Grounds\030\004 \001(\t\022:\n\010Func" +
+      "tion\030\005 \002(\0162(.Diadoc.Api.Proto.Invoicing." +
+      "FunctionType\022V\n\035OriginalDocumentDateAndN" +
+      "umber\030\006 \001(\0132/.Diadoc.Api.Proto.Docflow.D" +
+      "ocumentDateAndNumber\"\342\003\n\037UniversalCorrec" +
+      "tionDocumentInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010To",
+      "talDec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004" +
+      " \001(\t\022\024\n\014CurrencyCode\030\005 \001(\005\022\017\n\007Grounds\030\006 " +
+      "\001(\t\022:\n\010Function\030\007 \002(\0162(.Diadoc.Api.Proto" +
+      ".Invoicing.FunctionType\022V\n\035OriginalDocum" +
+      "entDateAndNumber\030\010 \001(\0132/.Diadoc.Api.Prot" +
+      "o.Docflow.DocumentDateAndNumber\022^\n%Origi" +
+      "nalDocumentRevisionDateAndNumber\030\t \001(\0132/" +
+      ".Diadoc.Api.Proto.Docflow.DocumentDateAn" +
+      "dNumber\022`\n\'OriginalDocumentCorrectionDat" +
+      "eAndNumber\030\n \001(\0132/.Diadoc.Api.Proto.Docf",
+      "low.DocumentDateAndNumberB\024B\022DocumentInf" +
+      "oProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13418,7 +13513,7 @@ public final class DocumentInfoProtos {
     internal_static_Diadoc_Api_Proto_Docflow_SupplementaryAgreementDocumentInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SupplementaryAgreementDocumentInfo_descriptor,
-        new java.lang.String[] { "Total", "ContractType", "ContractNumber", "ContractDate", });
+        new java.lang.String[] { "ContractType", "ContractDocumentDateAndNumber", "DocumentDateAndNumber", "Total", });
     internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_Diadoc_Api_Proto_Docflow_UniversalTransferDocumentInfo_fieldAccessorTable = new
