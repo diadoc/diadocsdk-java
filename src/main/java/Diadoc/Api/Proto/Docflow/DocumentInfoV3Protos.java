@@ -8802,6 +8802,15 @@ public final class DocumentInfoV3Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.TemplateRefusalInfo TemplateRefusalInfo = 4;</code>
      */
     Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateRefusalInfoOrBuilder getTemplateRefusalInfoOrBuilder();
+
+    /**
+     * <code>optional bool IsReusable = 5 [default = false];</code>
+     */
+    boolean hasIsReusable();
+    /**
+     * <code>optional bool IsReusable = 5 [default = false];</code>
+     */
+    boolean getIsReusable();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentTemplateInfo}
@@ -8896,6 +8905,11 @@ public final class DocumentInfoV3Protos {
                 templateRefusalInfo_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000002;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000004;
+              isReusable_ = input.readBool();
               break;
             }
           }
@@ -9050,11 +9064,27 @@ public final class DocumentInfoV3Protos {
       return templateRefusalInfo_;
     }
 
+    public static final int ISREUSABLE_FIELD_NUMBER = 5;
+    private boolean isReusable_;
+    /**
+     * <code>optional bool IsReusable = 5 [default = false];</code>
+     */
+    public boolean hasIsReusable() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool IsReusable = 5 [default = false];</code>
+     */
+    public boolean getIsReusable() {
+      return isReusable_;
+    }
+
     private void initFields() {
       letterParticipants_ = Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.DocumentParticipants.getDefaultInstance();
       transformedToLetterIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       templateTransformationInfos_ = java.util.Collections.emptyList();
       templateRefusalInfo_ = Diadoc.Api.Proto.Docflow.DocumentInfoV3Protos.TemplateRefusalInfo.getDefaultInstance();
+      isReusable_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -9101,6 +9131,9 @@ public final class DocumentInfoV3Protos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeMessage(4, templateRefusalInfo_);
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(5, isReusable_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -9130,6 +9163,10 @@ public final class DocumentInfoV3Protos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, templateRefusalInfo_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, isReusable_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -9271,6 +9308,8 @@ public final class DocumentInfoV3Protos {
           templateRefusalInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
+        isReusable_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -9329,6 +9368,10 @@ public final class DocumentInfoV3Protos {
         } else {
           result.templateRefusalInfo_ = templateRefusalInfoBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.isReusable_ = isReusable_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -9386,6 +9429,9 @@ public final class DocumentInfoV3Protos {
         }
         if (other.hasTemplateRefusalInfo()) {
           mergeTemplateRefusalInfo(other.getTemplateRefusalInfo());
+        }
+        if (other.hasIsReusable()) {
+          setIsReusable(other.getIsReusable());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -9997,6 +10043,38 @@ public final class DocumentInfoV3Protos {
           templateRefusalInfo_ = null;
         }
         return templateRefusalInfoBuilder_;
+      }
+
+      private boolean isReusable_ ;
+      /**
+       * <code>optional bool IsReusable = 5 [default = false];</code>
+       */
+      public boolean hasIsReusable() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bool IsReusable = 5 [default = false];</code>
+       */
+      public boolean getIsReusable() {
+        return isReusable_;
+      }
+      /**
+       * <code>optional bool IsReusable = 5 [default = false];</code>
+       */
+      public Builder setIsReusable(boolean value) {
+        bitField0_ |= 0x00000010;
+        isReusable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsReusable = 5 [default = false];</code>
+       */
+      public Builder clearIsReusable() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        isReusable_ = false;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.DocumentTemplateInfo)
@@ -11757,20 +11835,21 @@ public final class DocumentInfoV3Protos {
       "oto.ForwardDocumentEvent\022\016\n\006IsTest\030\003 \002(\010" +
       "\"Y\n\021DocumentDraftInfo\022\022\n\nIsRecycled\030\001 \002(" +
       "\010\022\020\n\010IsLocked\030\002 \002(\010\022\036\n\026TransformedToLett" +
-      "erIds\030\003 \003(\t\"\251\002\n\024DocumentTemplateInfo\022J\n\022" +
+      "erIds\030\003 \003(\t\"\304\002\n\024DocumentTemplateInfo\022J\n\022" +
       "LetterParticipants\030\001 \002(\0132..Diadoc.Api.Pr",
       "oto.Docflow.DocumentParticipants\022\036\n\026Tran" +
       "sformedToLetterIds\030\002 \003(\t\022Y\n\033TemplateTran" +
       "sformationInfos\030\003 \003(\01324.Diadoc.Api.Proto" +
       ".Docflow.TemplateTransformationInfo\022J\n\023T" +
       "emplateRefusalInfo\030\004 \001(\0132-.Diadoc.Api.Pr" +
-      "oto.Docflow.TemplateRefusalInfo\"\213\001\n\032Temp" +
-      "lateTransformationInfo\022\030\n\020Transformation" +
-      "Id\030\001 \002(\t\022=\n\027TransformedToDocumentId\030\002 \001(" +
-      "\0132\034.Diadoc.Api.Proto.DocumentId\022\024\n\014Autho" +
-      "rUserId\030\003 \001(\t\"K\n\023TemplateRefusalInfo\022\r\n\005",
-      "BoxId\030\001 \002(\t\022\024\n\014AuthorUserId\030\002 \001(\t\022\017\n\007Com" +
-      "ment\030\003 \001(\tB\026B\024DocumentInfoV3Protos"
+      "oto.Docflow.TemplateRefusalInfo\022\031\n\nIsReu" +
+      "sable\030\005 \001(\010:\005false\"\213\001\n\032TemplateTransform" +
+      "ationInfo\022\030\n\020TransformationId\030\001 \002(\t\022=\n\027T" +
+      "ransformedToDocumentId\030\002 \001(\0132\034.Diadoc.Ap" +
+      "i.Proto.DocumentId\022\024\n\014AuthorUserId\030\003 \001(\t",
+      "\"K\n\023TemplateRefusalInfo\022\r\n\005BoxId\030\001 \002(\t\022\024" +
+      "\n\014AuthorUserId\030\002 \001(\t\022\017\n\007Comment\030\003 \001(\tB\026B" +
+      "\024DocumentInfoV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11840,7 +11919,7 @@ public final class DocumentInfoV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_DocumentTemplateInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocumentTemplateInfo_descriptor,
-        new java.lang.String[] { "LetterParticipants", "TransformedToLetterIds", "TemplateTransformationInfos", "TemplateRefusalInfo", });
+        new java.lang.String[] { "LetterParticipants", "TransformedToLetterIds", "TemplateTransformationInfos", "TemplateRefusalInfo", "IsReusable", });
     internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_Diadoc_Api_Proto_Docflow_TemplateTransformationInfo_fieldAccessorTable = new

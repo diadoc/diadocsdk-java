@@ -90062,6 +90062,15 @@ public final class DiadocMessage_PostApiProtos {
      */
     com.google.protobuf.ByteString
         getMessageProxyDepartmentIdBytes();
+
+    /**
+     * <code>optional bool IsReusable = 12 [default = false];</code>
+     */
+    boolean hasIsReusable();
+    /**
+     * <code>optional bool IsReusable = 12 [default = false];</code>
+     */
+    boolean getIsReusable();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.TemplateToPost}
@@ -90186,6 +90195,11 @@ public final class DiadocMessage_PostApiProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000200;
               messageProxyDepartmentId_ = bs;
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000400;
+              isReusable_ = input.readBool();
               break;
             }
           }
@@ -90659,6 +90673,21 @@ public final class DiadocMessage_PostApiProtos {
       }
     }
 
+    public static final int ISREUSABLE_FIELD_NUMBER = 12;
+    private boolean isReusable_;
+    /**
+     * <code>optional bool IsReusable = 12 [default = false];</code>
+     */
+    public boolean hasIsReusable() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional bool IsReusable = 12 [default = false];</code>
+     */
+    public boolean getIsReusable() {
+      return isReusable_;
+    }
+
     private void initFields() {
       fromBoxId_ = "";
       toBoxId_ = "";
@@ -90671,6 +90700,7 @@ public final class DiadocMessage_PostApiProtos {
       toDepartmentId_ = "";
       messageProxyBoxId_ = "";
       messageProxyDepartmentId_ = "";
+      isReusable_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -90740,6 +90770,9 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeBytes(11, getMessageProxyDepartmentIdBytes());
       }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBool(12, isReusable_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -90792,6 +90825,10 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(11, getMessageProxyDepartmentIdBytes());
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, isReusable_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -90937,6 +90974,8 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00000200);
         messageProxyDepartmentId_ = "";
         bitField0_ = (bitField0_ & ~0x00000400);
+        isReusable_ = false;
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -91014,6 +91053,10 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000200;
         }
         result.messageProxyDepartmentId_ = messageProxyDepartmentId_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.isReusable_ = isReusable_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -91103,6 +91146,9 @@ public final class DiadocMessage_PostApiProtos {
           bitField0_ |= 0x00000400;
           messageProxyDepartmentId_ = other.messageProxyDepartmentId_;
           onChanged();
+        }
+        if (other.hasIsReusable()) {
+          setIsReusable(other.getIsReusable());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -92108,6 +92154,38 @@ public final class DiadocMessage_PostApiProtos {
   }
   bitField0_ |= 0x00000400;
         messageProxyDepartmentId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean isReusable_ ;
+      /**
+       * <code>optional bool IsReusable = 12 [default = false];</code>
+       */
+      public boolean hasIsReusable() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional bool IsReusable = 12 [default = false];</code>
+       */
+      public boolean getIsReusable() {
+        return isReusable_;
+      }
+      /**
+       * <code>optional bool IsReusable = 12 [default = false];</code>
+       */
+      public Builder setIsReusable(boolean value) {
+        bitField0_ |= 0x00000800;
+        isReusable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsReusable = 12 [default = false];</code>
+       */
+      public Builder clearIsReusable() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        isReusable_ = false;
         onChanged();
         return this;
       }
@@ -99710,7 +99788,7 @@ public final class DiadocMessage_PostApiProtos {
       "\0132\034.Diadoc.Api.Proto.DocumentId\"d\n\026Resol" +
       "utionRouteRemoval\022\026\n\016ParentEntityId\030\001 \002(",
       "\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comment\030\003 \001(\t:\000\022\016\n" +
-      "\006Labels\030\004 \003(\t\"\372\002\n\016TemplateToPost\022\021\n\tFrom" +
+      "\006Labels\030\004 \003(\t\"\225\003\n\016TemplateToPost\022\021\n\tFrom" +
       "BoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002(\t\022\030\n\020MessageF" +
       "romBoxId\030\003 \002(\t\022\026\n\016MessageToBoxId\030\004 \002(\t\022\035" +
       "\n\025MessageToDepartmentId\030\005 \001(\t\022P\n\023Documen" +
@@ -99719,36 +99797,36 @@ public final class DiadocMessage_PostApiProtos {
       "ode\030\007 \001(\0162\032.Diadoc.Api.Proto.LockMode:\004N" +
       "one\022\030\n\020FromDepartmentId\030\010 \001(\t\022\026\n\016ToDepar" +
       "tmentId\030\t \001(\t\022\031\n\021MessageProxyBoxId\030\n \001(\t",
-      "\022 \n\030MessageProxyDepartmentId\030\013 \001(\t\"\373\003\n\032T" +
-      "emplateDocumentAttachment\022A\n\017UnsignedCon" +
-      "tent\030\001 \002(\0132(.Diadoc.Api.Proto.Events.Uns" +
-      "ignedContent\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNam" +
-      "edId\030\003 \002(\t\022\020\n\010Function\030\004 \001(\t\022\017\n\007Version\030" +
-      "\005 \001(\t\0227\n\010Metadata\030\006 \003(\0132%.Diadoc.Api.Pro" +
-      "to.Events.MetadataItem\022\022\n\nWorkflowId\030\007 \001" +
-      "(\005\022\030\n\020CustomDocumentId\030\010 \001(\t\022\030\n\020EditingS" +
-      "ettingId\030\t \001(\t\022%\n\026NeedRecipientSignature" +
-      "\030\n \001(\010:\005false\022S\n\030PredefinedRecipientTitl",
-      "e\030\013 \001(\01321.Diadoc.Api.Proto.Events.Predef" +
-      "inedRecipientTitle\022\036\n\017RefusalDisabled\030\014 " +
-      "\001(\010:\005false\0224\n\nCustomData\030\r \003(\0132 .Diadoc." +
-      "Api.Proto.CustomDataItem\"[\n\023TemplatePatc" +
-      "hToPost\022D\n\010Refusals\030\001 \003(\01322.Diadoc.Api.P" +
-      "roto.Events.TemplateRefusalAttachment\"P\n" +
-      "\031TemplateRefusalAttachment\022\022\n\nDocumentId" +
-      "\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"" +
-      "]\n\030PredefinedRecipientTitle\022A\n\017UnsignedC" +
-      "ontent\030\001 \002(\0132(.Diadoc.Api.Proto.Events.U",
-      "nsignedContent\"7\n\017UnsignedContent\022\017\n\007Con" +
-      "tent\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034Temp" +
-      "lateTransformationToPost\022\r\n\005BoxId\030\001 \002(\t\022" +
-      "\022\n\nTemplateId\030\002 \002(\t\022P\n\027DocumentTransform" +
-      "ations\030\003 \003(\0132/.Diadoc.Api.Proto.Events.D" +
-      "ocumentTransformation\"F\n\026DocumentTransfo" +
-      "rmation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomDoc" +
-      "umentId\030\002 \001(\t*/\n\030CustomDataPatchOperatio" +
-      "n\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessage_" +
-      "PostApiProtos"
+      "\022 \n\030MessageProxyDepartmentId\030\013 \001(\t\022\031\n\nIs" +
+      "Reusable\030\014 \001(\010:\005false\"\373\003\n\032TemplateDocume" +
+      "ntAttachment\022A\n\017UnsignedContent\030\001 \002(\0132(." +
+      "Diadoc.Api.Proto.Events.UnsignedContent\022" +
+      "\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n" +
+      "\010Function\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227\n\010Meta" +
+      "data\030\006 \003(\0132%.Diadoc.Api.Proto.Events.Met" +
+      "adataItem\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020CustomD" +
+      "ocumentId\030\010 \001(\t\022\030\n\020EditingSettingId\030\t \001(" +
+      "\t\022%\n\026NeedRecipientSignature\030\n \001(\010:\005false",
+      "\022S\n\030PredefinedRecipientTitle\030\013 \001(\01321.Dia" +
+      "doc.Api.Proto.Events.PredefinedRecipient" +
+      "Title\022\036\n\017RefusalDisabled\030\014 \001(\010:\005false\0224\n" +
+      "\nCustomData\030\r \003(\0132 .Diadoc.Api.Proto.Cus" +
+      "tomDataItem\"[\n\023TemplatePatchToPost\022D\n\010Re" +
+      "fusals\030\001 \003(\01322.Diadoc.Api.Proto.Events.T" +
+      "emplateRefusalAttachment\"P\n\031TemplateRefu" +
+      "salAttachment\022\022\n\nDocumentId\030\001 \002(\t\022\017\n\007Com" +
+      "ment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"]\n\030Predefined" +
+      "RecipientTitle\022A\n\017UnsignedContent\030\001 \002(\0132",
+      "(.Diadoc.Api.Proto.Events.UnsignedConten" +
+      "t\"7\n\017UnsignedContent\022\017\n\007Content\030\001 \001(\014\022\023\n" +
+      "\013NameOnShelf\030\002 \001(\t\"\223\001\n\034TemplateTransform" +
+      "ationToPost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nTemplateId" +
+      "\030\002 \002(\t\022P\n\027DocumentTransformations\030\003 \003(\0132" +
+      "/.Diadoc.Api.Proto.Events.DocumentTransf" +
+      "ormation\"F\n\026DocumentTransformation\022\022\n\nDo" +
+      "cumentId\030\001 \002(\t\022\030\n\020CustomDocumentId\030\002 \001(\t" +
+      "*/\n\030CustomDataPatchOperation\022\007\n\003Set\020\000\022\n\n" +
+      "\006Remove\020\001B\035B\033DiadocMessage_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -100084,7 +100162,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_TemplateToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_TemplateToPost_descriptor,
-        new java.lang.String[] { "FromBoxId", "ToBoxId", "MessageFromBoxId", "MessageToBoxId", "MessageToDepartmentId", "DocumentAttachments", "LockMode", "FromDepartmentId", "ToDepartmentId", "MessageProxyBoxId", "MessageProxyDepartmentId", });
+        new java.lang.String[] { "FromBoxId", "ToBoxId", "MessageFromBoxId", "MessageToBoxId", "MessageToDepartmentId", "DocumentAttachments", "LockMode", "FromDepartmentId", "ToDepartmentId", "MessageProxyBoxId", "MessageProxyDepartmentId", "IsReusable", });
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_descriptor =
       getDescriptor().getMessageTypes().get(52);
     internal_static_Diadoc_Api_Proto_Events_TemplateDocumentAttachment_fieldAccessorTable = new
