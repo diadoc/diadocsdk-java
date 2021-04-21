@@ -128,13 +128,18 @@ public class DiadocHttpClient {
     }
 
     private DiadocResponseInfo getRawResponse(HttpResponse response) throws IOException, ParseException {
-
+        var statusCode = response.getStatusLine().getStatusCode();
+        if (statusCode < HttpStatus.SC_OK || statusCode >= HttpStatus.SC_BAD_REQUEST) {
+            throw new HttpResponseException(
+                    statusCode,
+                    new String(IOUtils.toByteArray(response.getEntity().getContent())));
+        }
         return new DiadocResponseInfo(
                 response.getEntity() != null && response.getEntity().getContent() != null
                         ? IOUtils.toByteArray(response.getEntity().getContent())
                         : null,
                 tryGetRetryAfter(response),
-                response.getStatusLine().getStatusCode(),
+                statusCode,
                 response.getStatusLine().getReasonPhrase(),
                 tryGetHttpResponseFileName(response),
                 tryGetContentType(response));
