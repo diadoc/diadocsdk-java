@@ -8166,6 +8166,19 @@ public final class DocflowV3Protos {
      */
     com.google.protobuf.ByteString
         getPlainTextBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+     */
+    boolean hasConfirmationDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow getConfirmationDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.AmendmentRequestDocflow}
@@ -8285,6 +8298,19 @@ public final class DocflowV3Protos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000040;
               plainText_ = bs;
+              break;
+            }
+            case 66: {
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = confirmationDocflow_.toBuilder();
+              }
+              confirmationDocflow_ = input.readMessage(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(confirmationDocflow_);
+                confirmationDocflow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
               break;
             }
           }
@@ -8483,6 +8509,27 @@ public final class DocflowV3Protos {
       }
     }
 
+    public static final int CONFIRMATIONDOCFLOW_FIELD_NUMBER = 8;
+    private Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow confirmationDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+     */
+    public boolean hasConfirmationDocflow() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow getConfirmationDocflow() {
+      return confirmationDocflow_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder() {
+      return confirmationDocflow_;
+    }
+
     private void initFields() {
       isFinished_ = false;
       amendmentRequest_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
@@ -8491,6 +8538,7 @@ public final class DocflowV3Protos {
       receipt_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ReceiptDocflowV3.getDefaultInstance();
       amendmentFlags_ = 0;
       plainText_ = "";
+      confirmationDocflow_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -8530,6 +8578,12 @@ public final class DocflowV3Protos {
           return false;
         }
       }
+      if (hasConfirmationDocflow()) {
+        if (!getConfirmationDocflow().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -8557,6 +8611,9 @@ public final class DocflowV3Protos {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeBytes(7, getPlainTextBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(8, confirmationDocflow_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -8594,6 +8651,10 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, getPlainTextBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, confirmationDocflow_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -8708,6 +8769,7 @@ public final class DocflowV3Protos {
           getSentAtFieldBuilder();
           getDeliveredAtFieldBuilder();
           getReceiptFieldBuilder();
+          getConfirmationDocflowFieldBuilder();
         }
       }
       private static Builder create() {
@@ -8746,6 +8808,12 @@ public final class DocflowV3Protos {
         bitField0_ = (bitField0_ & ~0x00000020);
         plainText_ = "";
         bitField0_ = (bitField0_ & ~0x00000040);
+        if (confirmationDocflowBuilder_ == null) {
+          confirmationDocflow_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.getDefaultInstance();
+        } else {
+          confirmationDocflowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -8818,6 +8886,14 @@ public final class DocflowV3Protos {
           to_bitField0_ |= 0x00000040;
         }
         result.plainText_ = plainText_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        if (confirmationDocflowBuilder_ == null) {
+          result.confirmationDocflow_ = confirmationDocflow_;
+        } else {
+          result.confirmationDocflow_ = confirmationDocflowBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8857,6 +8933,9 @@ public final class DocflowV3Protos {
           plainText_ = other.plainText_;
           onChanged();
         }
+        if (other.hasConfirmationDocflow()) {
+          mergeConfirmationDocflow(other.getConfirmationDocflow());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -8890,6 +8969,12 @@ public final class DocflowV3Protos {
         }
         if (hasReceipt()) {
           if (!getReceipt().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasConfirmationDocflow()) {
+          if (!getConfirmationDocflow().isInitialized()) {
             
             return false;
           }
@@ -9518,6 +9603,122 @@ public final class DocflowV3Protos {
         plainText_ = value;
         onChanged();
         return this;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow confirmationDocflow_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflowOrBuilder> confirmationDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+       */
+      public boolean hasConfirmationDocflow() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow getConfirmationDocflow() {
+        if (confirmationDocflowBuilder_ == null) {
+          return confirmationDocflow_;
+        } else {
+          return confirmationDocflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+       */
+      public Builder setConfirmationDocflow(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow value) {
+        if (confirmationDocflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          confirmationDocflow_ = value;
+          onChanged();
+        } else {
+          confirmationDocflowBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+       */
+      public Builder setConfirmationDocflow(
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.Builder builderForValue) {
+        if (confirmationDocflowBuilder_ == null) {
+          confirmationDocflow_ = builderForValue.build();
+          onChanged();
+        } else {
+          confirmationDocflowBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+       */
+      public Builder mergeConfirmationDocflow(Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow value) {
+        if (confirmationDocflowBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              confirmationDocflow_ != Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.getDefaultInstance()) {
+            confirmationDocflow_ =
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.newBuilder(confirmationDocflow_).mergeFrom(value).buildPartial();
+          } else {
+            confirmationDocflow_ = value;
+          }
+          onChanged();
+        } else {
+          confirmationDocflowBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+       */
+      public Builder clearConfirmationDocflow() {
+        if (confirmationDocflowBuilder_ == null) {
+          confirmationDocflow_ = Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.getDefaultInstance();
+          onChanged();
+        } else {
+          confirmationDocflowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.Builder getConfirmationDocflowBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getConfirmationDocflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflowOrBuilder getConfirmationDocflowOrBuilder() {
+        if (confirmationDocflowBuilder_ != null) {
+          return confirmationDocflowBuilder_.getMessageOrBuilder();
+        } else {
+          return confirmationDocflow_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflow ConfirmationDocflow = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflowOrBuilder> 
+          getConfirmationDocflowFieldBuilder() {
+        if (confirmationDocflowBuilder_ == null) {
+          confirmationDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.ConfirmationDocflowOrBuilder>(
+                  getConfirmationDocflow(),
+                  getParentForChildren(),
+                  isClean());
+          confirmationDocflow_ = null;
+        }
+        return confirmationDocflowBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.AmendmentRequestDocflow)
@@ -17181,7 +17382,7 @@ public final class DocflowV3Protos {
       "stamp\0220\n\013DeliveredAt\030\006 \001(\0132\033.Diadoc.Api." +
       "Proto.Timestamp\022K\n\016ResponseStatus\030\007 \002(\0162" +
       "3.Diadoc.Api.Proto.Documents.RecipientRe" +
-      "sponseStatus\"\274\002\n\027AmendmentRequestDocflow",
+      "sponseStatus\"\210\003\n\027AmendmentRequestDocflow",
       "\022\022\n\nIsFinished\030\001 \002(\010\022F\n\020AmendmentRequest" +
       "\030\002 \001(\0132,.Diadoc.Api.Proto.Docflow.Signed" +
       "AttachmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Ap" +
@@ -17189,48 +17390,50 @@ public final class DocflowV3Protos {
       ".Diadoc.Api.Proto.Timestamp\022;\n\007Receipt\030\005" +
       " \001(\0132*.Diadoc.Api.Proto.Docflow.ReceiptD" +
       "ocflowV3\022\026\n\016AmendmentFlags\030\006 \002(\005\022\021\n\tPlai" +
-      "nText\030\007 \001(\t\"\303\003\n\023RevocationDocflowV3\022\022\n\nI" +
-      "sFinished\030\001 \002(\010\022M\n\021RevocationRequest\030\002 \002" +
-      "(\01322.Diadoc.Api.Proto.Docflow.Revocation",
-      "RequestDocflow\022O\n\022RevocationResponse\030\003 \001" +
-      "(\01323.Diadoc.Api.Proto.Docflow.Revocation" +
-      "ResponseDocflow\022\026\n\016InitiatorBoxId\030\004 \002(\t\022" +
-      "F\n\020RevocationStatus\030\005 \002(\0162,.Diadoc.Api.P" +
-      "roto.Documents.RevocationStatus\022J\n\022Resol" +
-      "utionEntities\030\006 \001(\0132..Diadoc.Api.Proto.D" +
-      "ocflow.ResolutionEntitiesV3\022L\n\024OuterDocf" +
-      "lowEntities\030\007 \003(\0132..Diadoc.Api.Proto.Doc" +
-      "flow.OuterDocflowEntities\"\241\002\n\030Revocation" +
-      "RequestDocflow\022G\n\021RevocationRequest\030\001 \002(",
-      "\0132,.Diadoc.Api.Proto.Docflow.SignedAttac" +
-      "hmentV3\022+\n\006SentAt\030\002 \001(\0132\033.Diadoc.Api.Pro" +
-      "to.Timestamp\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diad" +
-      "oc.Api.Proto.Timestamp\022J\n\023RoamingNotific" +
-      "ation\030\004 \001(\0132-.Diadoc.Api.Proto.Docflow.R" +
-      "oamingNotification\022\021\n\tPlainText\030\005 \001(\t\"\257\001" +
-      "\n\031RevocationResponseDocflow\022A\n\022Recipient" +
-      "Signature\030\001 \001(\0132%.Diadoc.Api.Proto.Docfl" +
-      "ow.SignatureV3\022O\n\022SignatureRejection\030\002 \001" +
-      "(\01323.Diadoc.Api.Proto.Docflow.SignatureR",
-      "ejectionDocflow\"\325\002\n\020ReceiptDocflowV3\022\022\n\n" +
-      "IsFinished\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 " +
-      "\001(\0132,.Diadoc.Api.Proto.Docflow.SignedAtt" +
-      "achmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.P" +
-      "roto.Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Di" +
-      "adoc.Api.Proto.Timestamp\022C\n\014Confirmation" +
-      "\030\005 \001(\0132-.Diadoc.Api.Proto.Docflow.Confir" +
-      "mationDocflow\022@\n\006Status\030\006 \002(\01620.Diadoc.A" +
-      "pi.Proto.Documents.GeneralReceiptStatus\"" +
-      "\\\n\014OuterDocflow\022\026\n\016DocflowNamedId\030\001 \002(\t\022",
-      "\026\n\016ParentEntityId\030\002 \002(\t\022\034\n\024OuterDocflowE" +
-      "ntityId\030\003 \002(\t\"\213\001\n\024OuterDocflowEntities\022\026" +
-      "\n\016DocflowNamedId\030\001 \002(\t\022\033\n\023DocflowFriendl" +
-      "yName\030\002 \002(\t\022>\n\016StatusEntities\030\003 \003(\0132&.Di" +
-      "adoc.Api.Proto.Docflow.StatusEntity\"z\n\014S" +
-      "tatusEntity\022@\n\nAttachment\030\001 \002(\0132,.Diadoc" +
-      ".Api.Proto.Docflow.SignedAttachmentV3\022(\n" +
-      "\006Status\030\002 \002(\0132\030.Diadoc.Api.Proto.StatusB" +
-      "\021B\017DocflowV3Protos"
+      "nText\030\007 \001(\t\022J\n\023ConfirmationDocflow\030\010 \001(\013" +
+      "2-.Diadoc.Api.Proto.Docflow.Confirmation" +
+      "Docflow\"\303\003\n\023RevocationDocflowV3\022\022\n\nIsFin",
+      "ished\030\001 \002(\010\022M\n\021RevocationRequest\030\002 \002(\01322" +
+      ".Diadoc.Api.Proto.Docflow.RevocationRequ" +
+      "estDocflow\022O\n\022RevocationResponse\030\003 \001(\01323" +
+      ".Diadoc.Api.Proto.Docflow.RevocationResp" +
+      "onseDocflow\022\026\n\016InitiatorBoxId\030\004 \002(\t\022F\n\020R" +
+      "evocationStatus\030\005 \002(\0162,.Diadoc.Api.Proto" +
+      ".Documents.RevocationStatus\022J\n\022Resolutio" +
+      "nEntities\030\006 \001(\0132..Diadoc.Api.Proto.Docfl" +
+      "ow.ResolutionEntitiesV3\022L\n\024OuterDocflowE" +
+      "ntities\030\007 \003(\0132..Diadoc.Api.Proto.Docflow",
+      ".OuterDocflowEntities\"\241\002\n\030RevocationRequ" +
+      "estDocflow\022G\n\021RevocationRequest\030\001 \002(\0132,." +
+      "Diadoc.Api.Proto.Docflow.SignedAttachmen" +
+      "tV3\022+\n\006SentAt\030\002 \001(\0132\033.Diadoc.Api.Proto.T" +
+      "imestamp\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.A" +
+      "pi.Proto.Timestamp\022J\n\023RoamingNotificatio" +
+      "n\030\004 \001(\0132-.Diadoc.Api.Proto.Docflow.Roami" +
+      "ngNotification\022\021\n\tPlainText\030\005 \001(\t\"\257\001\n\031Re" +
+      "vocationResponseDocflow\022A\n\022RecipientSign" +
+      "ature\030\001 \001(\0132%.Diadoc.Api.Proto.Docflow.S",
+      "ignatureV3\022O\n\022SignatureRejection\030\002 \001(\01323" +
+      ".Diadoc.Api.Proto.Docflow.SignatureRejec" +
+      "tionDocflow\"\325\002\n\020ReceiptDocflowV3\022\022\n\nIsFi" +
+      "nished\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 \001(\0132" +
+      ",.Diadoc.Api.Proto.Docflow.SignedAttachm" +
+      "entV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto" +
+      ".Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc" +
+      ".Api.Proto.Timestamp\022C\n\014Confirmation\030\005 \001" +
+      "(\0132-.Diadoc.Api.Proto.Docflow.Confirmati" +
+      "onDocflow\022@\n\006Status\030\006 \002(\01620.Diadoc.Api.P",
+      "roto.Documents.GeneralReceiptStatus\"\\\n\014O" +
+      "uterDocflow\022\026\n\016DocflowNamedId\030\001 \002(\t\022\026\n\016P" +
+      "arentEntityId\030\002 \002(\t\022\034\n\024OuterDocflowEntit" +
+      "yId\030\003 \002(\t\"\213\001\n\024OuterDocflowEntities\022\026\n\016Do" +
+      "cflowNamedId\030\001 \002(\t\022\033\n\023DocflowFriendlyNam" +
+      "e\030\002 \002(\t\022>\n\016StatusEntities\030\003 \003(\0132&.Diadoc" +
+      ".Api.Proto.Docflow.StatusEntity\"z\n\014Statu" +
+      "sEntity\022@\n\nAttachment\030\001 \002(\0132,.Diadoc.Api" +
+      ".Proto.Docflow.SignedAttachmentV3\022(\n\006Sta" +
+      "tus\030\002 \002(\0132\030.Diadoc.Api.Proto.StatusB\021B\017D",
+      "ocflowV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17286,7 +17489,7 @@ public final class DocflowV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_AmendmentRequestDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_AmendmentRequestDocflow_descriptor,
-        new java.lang.String[] { "IsFinished", "AmendmentRequest", "SentAt", "DeliveredAt", "Receipt", "AmendmentFlags", "PlainText", });
+        new java.lang.String[] { "IsFinished", "AmendmentRequest", "SentAt", "DeliveredAt", "Receipt", "AmendmentFlags", "PlainText", "ConfirmationDocflow", });
     internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV3_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV3_fieldAccessorTable = new
