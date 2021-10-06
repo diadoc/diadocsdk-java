@@ -43,14 +43,44 @@ public class GenerateClient {
                                                              InvoiceCorrectionRequestInfo invoiceCorrectionInfo) throws DiadocSdkException {
         return getGeneratedXml(boxId, messageId, attachmentId, "/GenerateInvoiceCorrectionRequestXml", invoiceCorrectionInfo);
     }
-
     public GeneratedFile generateRevocationRequestXml(String boxId,
                                                       String messageId,
                                                       String attachmentId,
                                                       RevocationRequestInfo revocationRequestInfo) throws DiadocSdkException {
-        return getGeneratedXml(boxId, messageId, attachmentId, "/GenerateRevocationRequestXml", revocationRequestInfo);
+        return generateRevocationRequestXml(boxId, messageId, attachmentId, revocationRequestInfo, null);
     }
 
+    public GeneratedFile generateRevocationRequestXml(String boxId,
+                                                      String messageId,
+                                                      String attachmentId,
+                                                      RevocationRequestInfo revocationRequestInfo,
+                                                      @Nullable String contentTypeId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId");
+        }
+        if (attachmentId == null) {
+            throw new IllegalArgumentException("attachmentId");
+        }
+
+        try {
+            var uriBuilder = new URIBuilder(diadocHttpClient.getBaseUrl())
+                .setPath("/V2/GenerateRevocationRequestXml")
+                .addParameter("boxId", boxId)
+                .addParameter("messageId", messageId)
+                .addParameter("attachmentId", attachmentId);
+            if(contentTypeId != null) {
+                uriBuilder.addParameter("contentTypeId", contentTypeId);
+            }
+            var request = RequestBuilder.post(uriBuilder.build())
+                    .setEntity(new ByteArrayEntity(revocationRequestInfo.toByteArray()));
+            return diadocHttpClient.performRequestWithGeneratedFile(request);
+        } catch (URISyntaxException | IOException | ParseException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 
     public GeneratedFile generateSignatureRejectionXml(String boxId,
                                                        String messageId,
