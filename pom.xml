@@ -17,7 +17,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>2.6.1</version>
+            <version>3.16.1</version>
         </dependency>
         <!-- http://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
