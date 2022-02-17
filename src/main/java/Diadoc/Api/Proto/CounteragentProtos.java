@@ -171,6 +171,15 @@ public final class CounteragentProtos {
      */
     Diadoc.Api.Proto.CounteragentProtos.CounteragentOrBuilder getCounteragentsOrBuilder(
         int index);
+
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    boolean hasTotalCountType();
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType getTotalCountType();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.CounteragentList}
@@ -235,6 +244,17 @@ public final class CounteragentProtos {
                 mutable_bitField0_ |= 0x00000002;
               }
               counteragents_.add(input.readMessage(Diadoc.Api.Proto.CounteragentProtos.Counteragent.PARSER, extensionRegistry));
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType value = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                totalCountType_ = value;
+              }
               break;
             }
           }
@@ -330,9 +350,25 @@ public final class CounteragentProtos {
       return counteragents_.get(index);
     }
 
+    public static final int TOTALCOUNTTYPE_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType totalCountType_;
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    public boolean hasTotalCountType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+     */
+    public Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType getTotalCountType() {
+      return totalCountType_;
+    }
+
     private void initFields() {
       totalCount_ = 0;
       counteragents_ = java.util.Collections.emptyList();
+      totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -341,6 +377,10 @@ public final class CounteragentProtos {
       if (isInitialized == 0) return false;
 
       if (!hasTotalCount()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTotalCountType()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -363,6 +403,9 @@ public final class CounteragentProtos {
       for (int i = 0; i < counteragents_.size(); i++) {
         output.writeMessage(2, counteragents_.get(i));
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(3, totalCountType_.getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -379,6 +422,10 @@ public final class CounteragentProtos {
       for (int i = 0; i < counteragents_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, counteragents_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, totalCountType_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -506,6 +553,8 @@ public final class CounteragentProtos {
         } else {
           counteragentsBuilder_.clear();
         }
+        totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -547,6 +596,10 @@ public final class CounteragentProtos {
         } else {
           result.counteragents_ = counteragentsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.totalCountType_ = totalCountType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -592,12 +645,19 @@ public final class CounteragentProtos {
             }
           }
         }
+        if (other.hasTotalCountType()) {
+          setTotalCountType(other.getTotalCountType());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasTotalCount()) {
+          
+          return false;
+        }
+        if (!hasTotalCountType()) {
           
           return false;
         }
@@ -899,6 +959,41 @@ public final class CounteragentProtos {
           counteragents_ = null;
         }
         return counteragentsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public boolean hasTotalCountType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType getTotalCountType() {
+        return totalCountType_;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public Builder setTotalCountType(Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        totalCountType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.TotalCountType TotalCountType = 3;</code>
+       */
+      public Builder clearTotalCountType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalCountType_ = Diadoc.Api.Proto.TotalCountTypeProtos.TotalCountType.UnknownCountType;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CounteragentList)
@@ -3407,26 +3502,28 @@ public final class CounteragentProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\022Counteragent.proto\022\020Diadoc.Api.Proto\032\022" +
-      "Organization.proto\032\020DocumentId.proto\"]\n\020" +
-      "CounteragentList\022\022\n\nTotalCount\030\001 \002(\005\0225\n\r" +
-      "Counteragents\030\002 \003(\0132\036.Diadoc.Api.Proto.C" +
-      "ounteragent\"\313\002\n\014Counteragent\022\020\n\010IndexKey" +
-      "\030\001 \001(\t\0224\n\014Organization\030\002 \002(\0132\036.Diadoc.Ap" +
-      "i.Proto.Organization\022V\n\rCurrentStatus\030\003 " +
-      "\001(\0162$.Diadoc.Api.Proto.CounteragentStatu" +
-      "s:\031UnknownCounteragentStatus\022\037\n\027LastEven" +
-      "tTimestampTicks\030\004 \002(\020\022\037\n\027MessageFromCoun",
-      "teragent\030\006 \001(\t\022\035\n\025MessageToCounteragent\030" +
-      "\007 \001(\t\022:\n\024InvitationDocumentId\030\010 \001(\0132\034.Di" +
-      "adoc.Api.Proto.DocumentId\"R\n\033Counteragen" +
-      "tCertificateList\0223\n\014Certificates\030\001 \003(\0132\035" +
-      ".Diadoc.Api.Proto.Certificate\")\n\013Certifi" +
-      "cate\022\032\n\022RawCertificateData\030\001 \002(\014*\251\001\n\022Cou" +
-      "nteragentStatus\022\035\n\031UnknownCounteragentSt" +
-      "atus\020\000\022\024\n\020IsMyCounteragent\020\001\022\r\n\tInvitesM" +
-      "e\020\002\022\021\n\rIsInvitedByMe\020\003\022\r\n\tRejectsMe\020\005\022\022\n" +
-      "\016IsRejectedByMe\020\006\022\031\n\025NotInCounteragentLi",
-      "st\020\007B\024B\022CounteragentProtos"
+      "Organization.proto\032\020DocumentId.proto\032\024To" +
+      "talCountType.proto\"\227\001\n\020CounteragentList\022" +
+      "\022\n\nTotalCount\030\001 \002(\005\0225\n\rCounteragents\030\002 \003" +
+      "(\0132\036.Diadoc.Api.Proto.Counteragent\0228\n\016To" +
+      "talCountType\030\003 \002(\0162 .Diadoc.Api.Proto.To" +
+      "talCountType\"\313\002\n\014Counteragent\022\020\n\010IndexKe" +
+      "y\030\001 \001(\t\0224\n\014Organization\030\002 \002(\0132\036.Diadoc.A" +
+      "pi.Proto.Organization\022V\n\rCurrentStatus\030\003" +
+      " \001(\0162$.Diadoc.Api.Proto.CounteragentStat",
+      "us:\031UnknownCounteragentStatus\022\037\n\027LastEve" +
+      "ntTimestampTicks\030\004 \002(\020\022\037\n\027MessageFromCou" +
+      "nteragent\030\006 \001(\t\022\035\n\025MessageToCounteragent" +
+      "\030\007 \001(\t\022:\n\024InvitationDocumentId\030\010 \001(\0132\034.D" +
+      "iadoc.Api.Proto.DocumentId\"R\n\033Counterage" +
+      "ntCertificateList\0223\n\014Certificates\030\001 \003(\0132" +
+      "\035.Diadoc.Api.Proto.Certificate\")\n\013Certif" +
+      "icate\022\032\n\022RawCertificateData\030\001 \002(\014*\251\001\n\022Co" +
+      "unteragentStatus\022\035\n\031UnknownCounteragentS" +
+      "tatus\020\000\022\024\n\020IsMyCounteragent\020\001\022\r\n\tInvites",
+      "Me\020\002\022\021\n\rIsInvitedByMe\020\003\022\r\n\tRejectsMe\020\005\022\022" +
+      "\n\016IsRejectedByMe\020\006\022\031\n\025NotInCounteragentL" +
+      "ist\020\007B\024B\022CounteragentProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3441,13 +3538,14 @@ public final class CounteragentProtos {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.OrganizationProtos.getDescriptor(),
           Diadoc.Api.Proto.DocumentIdProtos.getDescriptor(),
+          Diadoc.Api.Proto.TotalCountTypeProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_CounteragentList_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_CounteragentList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_CounteragentList_descriptor,
-        new java.lang.String[] { "TotalCount", "Counteragents", });
+        new java.lang.String[] { "TotalCount", "Counteragents", "TotalCountType", });
     internal_static_Diadoc_Api_Proto_Counteragent_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Counteragent_fieldAccessorTable = new
@@ -3468,6 +3566,7 @@ public final class CounteragentProtos {
         new java.lang.String[] { "RawCertificateData", });
     Diadoc.Api.Proto.OrganizationProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
+    Diadoc.Api.Proto.TotalCountTypeProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
