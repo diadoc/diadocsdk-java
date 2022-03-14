@@ -7,6 +7,7 @@ import Diadoc.Api.department.DepartmentClient;
 import Diadoc.Api.docflow.DocflowClient;
 import Diadoc.Api.document.DocumentClient;
 import Diadoc.Api.documentType.DocumentTypeClient;
+import Diadoc.Api.documentWorkflow.DocumentWorkflowClient;
 import Diadoc.Api.employee.EmployeeClient;
 import Diadoc.Api.employeePowersOfAttorney.EmployeePowerOfAttorneyClient;
 import Diadoc.Api.events.EventsClient;
@@ -46,6 +47,7 @@ public class DiadocApi {
     private DocflowClient docflowClient;
     private PowerOfAttorneyClient powerOfAttorneyClient;
     private EmployeePowerOfAttorneyClient employeePowerOfAttorneyClient;
+    private DocumentWorkflowClient documentWorkflowClient;
 
     public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
         if (url == null) {
@@ -72,6 +74,7 @@ public class DiadocApi {
         docflowClient = new DocflowClient(diadocHttpClient);
         powerOfAttorneyClient = new PowerOfAttorneyClient(diadocHttpClient);
         employeePowerOfAttorneyClient = new EmployeePowerOfAttorneyClient(diadocHttpClient);
+        documentWorkflowClient = new DocumentWorkflowClient(diadocHttpClient);
         authManager.setCredentials(null);
     }
 
@@ -153,6 +156,10 @@ public class DiadocApi {
 
     public EmployeePowerOfAttorneyClient getEmployeePowerOfAttorneyClient() {
         return employeePowerOfAttorneyClient;
+    }
+
+    public DocumentWorkflowClient gDocumentWorkflowClient() {
+        return documentWorkflowClient;
     }
 
     public AuthManager getAuthManager() {
