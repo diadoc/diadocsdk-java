@@ -1315,6 +1315,10 @@ public final class AcquireCounteragentProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1579,6 +1583,10 @@ public final class AcquireCounteragentProtos {
           return false;
         }
         if (!hasFileName()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }

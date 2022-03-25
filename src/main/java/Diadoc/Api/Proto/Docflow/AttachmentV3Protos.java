@@ -100,6 +100,19 @@ public final class AttachmentV3Protos {
      * <code>optional .Diadoc.Api.Proto.Timestamp DeliveredAt = 7;</code>
      */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getDeliveredAtOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+     */
+    boolean hasPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+     */
+    Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney getPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+     */
+    Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorneyOrBuilder getPowerOfAttorneyOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignatureV3}
@@ -220,6 +233,19 @@ public final class AttachmentV3Protos {
                 deliveredAt_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000040;
+              break;
+            }
+            case 66: {
+              Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = powerOfAttorney_.toBuilder();
+              }
+              powerOfAttorney_ = input.readMessage(Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(powerOfAttorney_);
+                powerOfAttorney_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
               break;
             }
           }
@@ -445,6 +471,27 @@ public final class AttachmentV3Protos {
       return deliveredAt_;
     }
 
+    public static final int POWEROFATTORNEY_FIELD_NUMBER = 8;
+    private Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney powerOfAttorney_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+     */
+    public boolean hasPowerOfAttorney() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney getPowerOfAttorney() {
+      return powerOfAttorney_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorneyOrBuilder getPowerOfAttorneyOrBuilder() {
+      return powerOfAttorney_;
+    }
+
     private void initFields() {
       cms_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
       cadesT_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
@@ -453,6 +500,7 @@ public final class AttachmentV3Protos {
       isValid_ = false;
       verificationResult_ = Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.getDefaultInstance();
       deliveredAt_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
+      powerOfAttorney_ = Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -498,6 +546,12 @@ public final class AttachmentV3Protos {
           return false;
         }
       }
+      if (hasPowerOfAttorney()) {
+        if (!getPowerOfAttorney().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -525,6 +579,9 @@ public final class AttachmentV3Protos {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeMessage(7, deliveredAt_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(8, powerOfAttorney_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -562,6 +619,10 @@ public final class AttachmentV3Protos {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, deliveredAt_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, powerOfAttorney_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -676,6 +737,7 @@ public final class AttachmentV3Protos {
           getCadesTFieldBuilder();
           getVerificationResultFieldBuilder();
           getDeliveredAtFieldBuilder();
+          getPowerOfAttorneyFieldBuilder();
         }
       }
       private static Builder create() {
@@ -714,6 +776,12 @@ public final class AttachmentV3Protos {
           deliveredAtBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000040);
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.getDefaultInstance();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -786,6 +854,14 @@ public final class AttachmentV3Protos {
         } else {
           result.deliveredAt_ = deliveredAtBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        if (powerOfAttorneyBuilder_ == null) {
+          result.powerOfAttorney_ = powerOfAttorney_;
+        } else {
+          result.powerOfAttorney_ = powerOfAttorneyBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -827,6 +903,9 @@ public final class AttachmentV3Protos {
         if (other.hasDeliveredAt()) {
           mergeDeliveredAt(other.getDeliveredAt());
         }
+        if (other.hasPowerOfAttorney()) {
+          mergePowerOfAttorney(other.getPowerOfAttorney());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -866,6 +945,12 @@ public final class AttachmentV3Protos {
         }
         if (hasDeliveredAt()) {
           if (!getDeliveredAt().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasPowerOfAttorney()) {
+          if (!getPowerOfAttorney().isInitialized()) {
             
             return false;
           }
@@ -1538,6 +1623,122 @@ public final class AttachmentV3Protos {
           deliveredAt_ = null;
         }
         return deliveredAtBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney powerOfAttorney_ = Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney, Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.Builder, Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorneyOrBuilder> powerOfAttorneyBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+       */
+      public boolean hasPowerOfAttorney() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney getPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          return powerOfAttorney_;
+        } else {
+          return powerOfAttorneyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+       */
+      public Builder setPowerOfAttorney(Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          powerOfAttorney_ = value;
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+       */
+      public Builder setPowerOfAttorney(
+          Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.Builder builderForValue) {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = builderForValue.build();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+       */
+      public Builder mergePowerOfAttorney(Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              powerOfAttorney_ != Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.getDefaultInstance()) {
+            powerOfAttorney_ =
+              Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.newBuilder(powerOfAttorney_).mergeFrom(value).buildPartial();
+          } else {
+            powerOfAttorney_ = value;
+          }
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+       */
+      public Builder clearPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.getDefaultInstance();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.Builder getPowerOfAttorneyBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getPowerOfAttorneyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorneyOrBuilder getPowerOfAttorneyOrBuilder() {
+        if (powerOfAttorneyBuilder_ != null) {
+          return powerOfAttorneyBuilder_.getMessageOrBuilder();
+        } else {
+          return powerOfAttorney_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney, Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.Builder, Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorneyOrBuilder> 
+          getPowerOfAttorneyFieldBuilder() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorneyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney, Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.Builder, Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorneyOrBuilder>(
+                  getPowerOfAttorney(),
+                  getParentForChildren(),
+                  isClean());
+          powerOfAttorney_ = null;
+        }
+        return powerOfAttorneyBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.SignatureV3)
@@ -2664,21 +2865,24 @@ public final class AttachmentV3Protos {
       "\n\032Docflow/AttachmentV3.proto\022\030Diadoc.Api" +
       ".Proto.Docflow\032\030Docflow/Attachment.proto" +
       "\032\rContent.proto\032\017Timestamp.proto\032!Signat" +
-      "ureVerificationResult.proto\"\255\002\n\013Signatur" +
+      "ureVerificationResult.proto\032&Docflow/Sig" +
+      "naturePowerOfAttorney.proto\"\372\002\n\013Signatur" +
       "eV3\022-\n\003Cms\030\001 \002(\0132 .Diadoc.Api.Proto.Docf" +
       "low.Entity\0220\n\006CadesT\030\002 \001(\0132 .Diadoc.Api." +
       "Proto.Docflow.Entity\022\023\n\013SignerBoxId\030\003 \002(" +
       "\t\022\032\n\022SignerDepartmentId\030\004 \002(\t\022\017\n\007IsValid" +
-      "\030\005 \002(\010\022I\n\022VerificationResult\030\006 \001(\0132-.Dia" +
-      "doc.Api.Proto.SignatureVerificationResul",
+      "\030\005 \002(\010\022I\n\022VerificationResult\030\006 \001(\0132-.Dia",
+      "doc.Api.Proto.SignatureVerificationResul" +
       "t\0220\n\013DeliveredAt\030\007 \001(\0132\033.Diadoc.Api.Prot" +
-      "o.Timestamp\"\322\001\n\022SignedAttachmentV3\0228\n\nAt" +
-      "tachment\030\001 \002(\0132$.Diadoc.Api.Proto.Docflo" +
-      "w.Attachment\0228\n\tSignature\030\002 \001(\0132%.Diadoc" +
-      ".Api.Proto.Docflow.SignatureV3\0221\n\007Commen" +
-      "t\030\003 \001(\0132 .Diadoc.Api.Proto.Docflow.Entit" +
-      "y\022\025\n\rContentTypeId\030\004 \002(\tB\024B\022AttachmentV3" +
-      "Protos"
+      "o.Timestamp\022K\n\017PowerOfAttorney\030\010 \001(\01322.D" +
+      "iadoc.Api.Proto.Docflow.SignaturePowerOf" +
+      "Attorney\"\322\001\n\022SignedAttachmentV3\0228\n\nAttac" +
+      "hment\030\001 \002(\0132$.Diadoc.Api.Proto.Docflow.A" +
+      "ttachment\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Ap" +
+      "i.Proto.Docflow.SignatureV3\0221\n\007Comment\030\003" +
+      " \001(\0132 .Diadoc.Api.Proto.Docflow.Entity\022\025" +
+      "\n\rContentTypeId\030\004 \002(\tB\024B\022AttachmentV3Pro",
+      "tos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2695,13 +2899,14 @@ public final class AttachmentV3Protos {
           Diadoc.Api.Proto.ContentProtos.getDescriptor(),
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
           Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor(),
+          Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_descriptor,
-        new java.lang.String[] { "Cms", "CadesT", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", "DeliveredAt", });
+        new java.lang.String[] { "Cms", "CadesT", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", "DeliveredAt", "PowerOfAttorney", });
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_fieldAccessorTable = new
@@ -2712,6 +2917,7 @@ public final class AttachmentV3Protos {
     Diadoc.Api.Proto.ContentProtos.getDescriptor();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -37,6 +37,19 @@ public final class DocflowStatusV3Protos {
      * <code>optional .Diadoc.Api.Proto.DocflowStatusModelV3 SecondaryStatus = 2;</code>
      */
     Diadoc.Api.Proto.DocflowStatusV3Protos.DocflowStatusModelV3OrBuilder getSecondaryStatusOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+     */
+    boolean hasPowerOfAttorneyGeneralStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus getPowerOfAttorneyGeneralStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatusOrBuilder getPowerOfAttorneyGeneralStatusOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.DocflowStatusV3}
@@ -114,6 +127,19 @@ public final class DocflowStatusV3Protos {
                 secondaryStatus_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = powerOfAttorneyGeneralStatus_.toBuilder();
+              }
+              powerOfAttorneyGeneralStatus_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(powerOfAttorneyGeneralStatus_);
+                powerOfAttorneyGeneralStatus_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
               break;
             }
           }
@@ -198,9 +224,31 @@ public final class DocflowStatusV3Protos {
       return secondaryStatus_;
     }
 
+    public static final int POWEROFATTORNEYGENERALSTATUS_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus powerOfAttorneyGeneralStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+     */
+    public boolean hasPowerOfAttorneyGeneralStatus() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus getPowerOfAttorneyGeneralStatus() {
+      return powerOfAttorneyGeneralStatus_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatusOrBuilder getPowerOfAttorneyGeneralStatusOrBuilder() {
+      return powerOfAttorneyGeneralStatus_;
+    }
+
     private void initFields() {
       primaryStatus_ = Diadoc.Api.Proto.DocflowStatusV3Protos.DocflowStatusModelV3.getDefaultInstance();
       secondaryStatus_ = Diadoc.Api.Proto.DocflowStatusV3Protos.DocflowStatusModelV3.getDefaultInstance();
+      powerOfAttorneyGeneralStatus_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -211,6 +259,12 @@ public final class DocflowStatusV3Protos {
       if (!hasPrimaryStatus()) {
         memoizedIsInitialized = 0;
         return false;
+      }
+      if (hasPowerOfAttorneyGeneralStatus()) {
+        if (!getPowerOfAttorneyGeneralStatus().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -224,6 +278,9 @@ public final class DocflowStatusV3Protos {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeMessage(2, secondaryStatus_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, powerOfAttorneyGeneralStatus_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -241,6 +298,10 @@ public final class DocflowStatusV3Protos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, secondaryStatus_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, powerOfAttorneyGeneralStatus_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -353,6 +414,7 @@ public final class DocflowStatusV3Protos {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getPrimaryStatusFieldBuilder();
           getSecondaryStatusFieldBuilder();
+          getPowerOfAttorneyGeneralStatusFieldBuilder();
         }
       }
       private static Builder create() {
@@ -373,6 +435,12 @@ public final class DocflowStatusV3Protos {
           secondaryStatusBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (powerOfAttorneyGeneralStatusBuilder_ == null) {
+          powerOfAttorneyGeneralStatus_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.getDefaultInstance();
+        } else {
+          powerOfAttorneyGeneralStatusBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -417,6 +485,14 @@ public final class DocflowStatusV3Protos {
         } else {
           result.secondaryStatus_ = secondaryStatusBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (powerOfAttorneyGeneralStatusBuilder_ == null) {
+          result.powerOfAttorneyGeneralStatus_ = powerOfAttorneyGeneralStatus_;
+        } else {
+          result.powerOfAttorneyGeneralStatus_ = powerOfAttorneyGeneralStatusBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -439,6 +515,9 @@ public final class DocflowStatusV3Protos {
         if (other.hasSecondaryStatus()) {
           mergeSecondaryStatus(other.getSecondaryStatus());
         }
+        if (other.hasPowerOfAttorneyGeneralStatus()) {
+          mergePowerOfAttorneyGeneralStatus(other.getPowerOfAttorneyGeneralStatus());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -447,6 +526,12 @@ public final class DocflowStatusV3Protos {
         if (!hasPrimaryStatus()) {
           
           return false;
+        }
+        if (hasPowerOfAttorneyGeneralStatus()) {
+          if (!getPowerOfAttorneyGeneralStatus().isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -700,6 +785,122 @@ public final class DocflowStatusV3Protos {
           secondaryStatus_ = null;
         }
         return secondaryStatusBuilder_;
+      }
+
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus powerOfAttorneyGeneralStatus_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatusOrBuilder> powerOfAttorneyGeneralStatusBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+       */
+      public boolean hasPowerOfAttorneyGeneralStatus() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus getPowerOfAttorneyGeneralStatus() {
+        if (powerOfAttorneyGeneralStatusBuilder_ == null) {
+          return powerOfAttorneyGeneralStatus_;
+        } else {
+          return powerOfAttorneyGeneralStatusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+       */
+      public Builder setPowerOfAttorneyGeneralStatus(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus value) {
+        if (powerOfAttorneyGeneralStatusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          powerOfAttorneyGeneralStatus_ = value;
+          onChanged();
+        } else {
+          powerOfAttorneyGeneralStatusBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+       */
+      public Builder setPowerOfAttorneyGeneralStatus(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.Builder builderForValue) {
+        if (powerOfAttorneyGeneralStatusBuilder_ == null) {
+          powerOfAttorneyGeneralStatus_ = builderForValue.build();
+          onChanged();
+        } else {
+          powerOfAttorneyGeneralStatusBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+       */
+      public Builder mergePowerOfAttorneyGeneralStatus(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus value) {
+        if (powerOfAttorneyGeneralStatusBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              powerOfAttorneyGeneralStatus_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.getDefaultInstance()) {
+            powerOfAttorneyGeneralStatus_ =
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.newBuilder(powerOfAttorneyGeneralStatus_).mergeFrom(value).buildPartial();
+          } else {
+            powerOfAttorneyGeneralStatus_ = value;
+          }
+          onChanged();
+        } else {
+          powerOfAttorneyGeneralStatusBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+       */
+      public Builder clearPowerOfAttorneyGeneralStatus() {
+        if (powerOfAttorneyGeneralStatusBuilder_ == null) {
+          powerOfAttorneyGeneralStatus_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.getDefaultInstance();
+          onChanged();
+        } else {
+          powerOfAttorneyGeneralStatusBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.Builder getPowerOfAttorneyGeneralStatusBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPowerOfAttorneyGeneralStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatusOrBuilder getPowerOfAttorneyGeneralStatusOrBuilder() {
+        if (powerOfAttorneyGeneralStatusBuilder_ != null) {
+          return powerOfAttorneyGeneralStatusBuilder_.getMessageOrBuilder();
+        } else {
+          return powerOfAttorneyGeneralStatus_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatusOrBuilder> 
+          getPowerOfAttorneyGeneralStatusFieldBuilder() {
+        if (powerOfAttorneyGeneralStatusBuilder_ == null) {
+          powerOfAttorneyGeneralStatusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatusOrBuilder>(
+                  getPowerOfAttorneyGeneralStatus(),
+                  getParentForChildren(),
+                  isClean());
+          powerOfAttorneyGeneralStatus_ = null;
+        }
+        return powerOfAttorneyGeneralStatusBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.DocflowStatusV3)
@@ -1366,12 +1567,16 @@ public final class DocflowStatusV3Protos {
   static {
     java.lang.String[] descriptorData = {
       "\n\025DocflowStatusV3.proto\022\020Diadoc.Api.Prot" +
-      "o\"\221\001\n\017DocflowStatusV3\022=\n\rPrimaryStatus\030\001" +
-      " \002(\0132&.Diadoc.Api.Proto.DocflowStatusMod" +
-      "elV3\022?\n\017SecondaryStatus\030\002 \001(\0132&.Diadoc.A" +
-      "pi.Proto.DocflowStatusModelV3\"<\n\024Docflow" +
-      "StatusModelV3\022\020\n\010Severity\030\001 \001(\t\022\022\n\nStatu" +
-      "sText\030\002 \001(\tB\027B\025DocflowStatusV3Protos"
+      "o\0320PowersOfAttorney/PowerOfAttorneyValid" +
+      "ation.proto\"\373\001\n\017DocflowStatusV3\022=\n\rPrima" +
+      "ryStatus\030\001 \002(\0132&.Diadoc.Api.Proto.Docflo" +
+      "wStatusModelV3\022?\n\017SecondaryStatus\030\002 \001(\0132" +
+      "&.Diadoc.Api.Proto.DocflowStatusModelV3\022" +
+      "h\n\034PowerOfAttorneyGeneralStatus\030\003 \001(\0132B." +
+      "Diadoc.Api.Proto.PowersOfAttorney.PowerO" +
+      "fAttorneyValidationStatus\"<\n\024DocflowStat" +
+      "usModelV3\022\020\n\010Severity\030\001 \001(\t\022\022\n\nStatusTex",
+      "t\030\002 \001(\tB\027B\025DocflowStatusV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1384,19 +1589,21 @@ public final class DocflowStatusV3Protos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_DocflowStatusV3_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_DocflowStatusV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_DocflowStatusV3_descriptor,
-        new java.lang.String[] { "PrimaryStatus", "SecondaryStatus", });
+        new java.lang.String[] { "PrimaryStatus", "SecondaryStatus", "PowerOfAttorneyGeneralStatus", });
     internal_static_Diadoc_Api_Proto_DocflowStatusModelV3_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_DocflowStatusModelV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_DocflowStatusModelV3_descriptor,
         new java.lang.String[] { "Severity", "StatusText", });
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

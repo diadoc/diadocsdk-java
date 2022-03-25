@@ -8,12 +8,14 @@ import Diadoc.Api.docflow.DocflowClient;
 import Diadoc.Api.document.DocumentClient;
 import Diadoc.Api.documentType.DocumentTypeClient;
 import Diadoc.Api.employee.EmployeeClient;
+import Diadoc.Api.employeePowersOfAttorney.EmployeePowerOfAttorneyClient;
 import Diadoc.Api.events.EventsClient;
 import Diadoc.Api.generateTitle.GenerateClient;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import Diadoc.Api.message.MessageClient;
 import Diadoc.Api.organizations.OrganizationClient;
 import Diadoc.Api.parse.ParseClient;
+import Diadoc.Api.powersOfAttorney.PowerOfAttorneyClient;
 import Diadoc.Api.print.PrintFormClient;
 import Diadoc.Api.shelf.ShelfClient;
 import Diadoc.Api.sign.SignClient;
@@ -42,6 +44,8 @@ public class DiadocApi {
     private SignClient signClient;
     private DocumentTypeClient documentTypeClient;
     private DocflowClient docflowClient;
+    private PowerOfAttorneyClient powerOfAttorneyClient;
+    private EmployeePowerOfAttorneyClient employeePowerOfAttorneyClient;
 
     public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
         if (url == null) {
@@ -66,6 +70,8 @@ public class DiadocApi {
         signClient = new SignClient(diadocHttpClient);
         documentTypeClient = new DocumentTypeClient(diadocHttpClient);
         docflowClient = new DocflowClient(diadocHttpClient);
+        powerOfAttorneyClient = new PowerOfAttorneyClient(diadocHttpClient);
+        employeePowerOfAttorneyClient = new EmployeePowerOfAttorneyClient(diadocHttpClient);
         authManager.setCredentials(null);
     }
 
@@ -139,6 +145,14 @@ public class DiadocApi {
 
     public DocflowClient getDocflowClient() {
         return docflowClient;
+    }
+
+    public PowerOfAttorneyClient getPowerOfAttorneyClient() {
+        return powerOfAttorneyClient;
+    }
+
+    public EmployeePowerOfAttorneyClient getEmployeePowerOfAttorneyClient() {
+        return employeePowerOfAttorneyClient;
     }
 
     public AuthManager getAuthManager() {

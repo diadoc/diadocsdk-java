@@ -28,8 +28,7 @@ public class EventsClient {
         try {
             var url = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/V6/GetNewEvents")
-                    .addParameter("boxId", currentBoxId)
-                    .addParameter("includeDrafts", null);
+                    .addParameter("boxId", currentBoxId);
 
             if (eventIdCurrent != null) {
                 url.addParameter("afterEventId", eventIdCurrent);
