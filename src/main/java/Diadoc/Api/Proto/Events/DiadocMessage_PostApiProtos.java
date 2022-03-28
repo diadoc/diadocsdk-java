@@ -10328,6 +10328,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -10803,6 +10807,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasXmlBasicMetadata()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -12728,6 +12736,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -13226,6 +13238,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasMetadata()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -18370,6 +18386,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -18795,6 +18815,10 @@ public final class DiadocMessage_PostApiProtos {
 
       public final boolean isInitialized() {
         if (!hasSignedContent()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -20617,6 +20641,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -21116,6 +21144,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasFileName()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -23369,6 +23401,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -23918,6 +23954,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasTotal()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -26328,6 +26368,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -26859,6 +26903,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasTotal()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -29282,6 +29330,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -29843,6 +29895,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasTotal()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -31825,6 +31881,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getCustomDataCount(); i++) {
         if (!getCustomData(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -32146,6 +32206,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasFileName()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -34437,6 +34501,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -34994,6 +35062,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasContractDocumentNumber()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -37286,6 +37358,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -37773,6 +37849,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasDocumentDate()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -39999,6 +40079,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -40526,6 +40610,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasDocumentNumber()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -42966,6 +43054,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -43537,6 +43629,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasContractDate()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -45901,6 +45997,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -46384,6 +46484,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasFileName()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -48754,6 +48858,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getInitialDocumentIdsCount(); i++) {
         if (!getInitialDocumentIds(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -49358,6 +49466,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasTypeNamedId()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -67605,6 +67717,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -67864,6 +67980,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasSignedContent()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -68539,6 +68659,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -68818,6 +68942,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasNeedReceipt()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -69487,6 +69615,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -69746,6 +69878,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasSignedContent()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -70194,6 +70330,19 @@ public final class DiadocMessage_PostApiProtos {
      */
     com.google.protobuf.ByteString
         getLabelsBytes(int index);
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+     */
+    boolean hasPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+     */
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+     */
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.DocumentSignature}
@@ -70287,6 +70436,19 @@ public final class DiadocMessage_PostApiProtos {
                 mutable_bitField0_ |= 0x00000040;
               }
               labels_.add(bs);
+              break;
+            }
+            case 74: {
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = powerOfAttorney_.toBuilder();
+              }
+              powerOfAttorney_ = input.readMessage(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(powerOfAttorney_);
+                powerOfAttorney_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
               break;
             }
           }
@@ -70532,6 +70694,27 @@ public final class DiadocMessage_PostApiProtos {
       return labels_.getByteString(index);
     }
 
+    public static final int POWEROFATTORNEY_FIELD_NUMBER = 9;
+    private Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost powerOfAttorney_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+     */
+    public boolean hasPowerOfAttorney() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+     */
+    public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney() {
+      return powerOfAttorney_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+     */
+    public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder() {
+      return powerOfAttorney_;
+    }
+
     private void initFields() {
       parentEntityId_ = "";
       signature_ = com.google.protobuf.ByteString.EMPTY;
@@ -70540,6 +70723,7 @@ public final class DiadocMessage_PostApiProtos {
       signatureNameOnShelf_ = "";
       patchedContentId_ = "";
       labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -70550,6 +70734,12 @@ public final class DiadocMessage_PostApiProtos {
       if (!hasParentEntityId()) {
         memoizedIsInitialized = 0;
         return false;
+      }
+      if (hasPowerOfAttorney()) {
+        if (!getPowerOfAttorney().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -70578,6 +70768,9 @@ public final class DiadocMessage_PostApiProtos {
       }
       for (int i = 0; i < labels_.size(); i++) {
         output.writeBytes(8, labels_.getByteString(i));
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(9, powerOfAttorney_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -70620,6 +70813,10 @@ public final class DiadocMessage_PostApiProtos {
         }
         size += dataSize;
         size += 1 * getLabelsList().size();
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, powerOfAttorney_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -70730,6 +70927,7 @@ public final class DiadocMessage_PostApiProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPowerOfAttorneyFieldBuilder();
         }
       }
       private static Builder create() {
@@ -70752,6 +70950,12 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00000020);
         labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000040);
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -70809,6 +71013,14 @@ public final class DiadocMessage_PostApiProtos {
           bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.labels_ = labels_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        if (powerOfAttorneyBuilder_ == null) {
+          result.powerOfAttorney_ = powerOfAttorney_;
+        } else {
+          result.powerOfAttorney_ = powerOfAttorneyBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -70859,6 +71071,9 @@ public final class DiadocMessage_PostApiProtos {
           }
           onChanged();
         }
+        if (other.hasPowerOfAttorney()) {
+          mergePowerOfAttorney(other.getPowerOfAttorney());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -70867,6 +71082,12 @@ public final class DiadocMessage_PostApiProtos {
         if (!hasParentEntityId()) {
           
           return false;
+        }
+        if (hasPowerOfAttorney()) {
+          if (!getPowerOfAttorney().isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -71310,6 +71531,122 @@ public final class DiadocMessage_PostApiProtos {
         return this;
       }
 
+      private Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder> powerOfAttorneyBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+       */
+      public boolean hasPowerOfAttorney() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          return powerOfAttorney_;
+        } else {
+          return powerOfAttorneyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+       */
+      public Builder setPowerOfAttorney(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          powerOfAttorney_ = value;
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+       */
+      public Builder setPowerOfAttorney(
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder builderForValue) {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = builderForValue.build();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+       */
+      public Builder mergePowerOfAttorney(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              powerOfAttorney_ != Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance()) {
+            powerOfAttorney_ =
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.newBuilder(powerOfAttorney_).mergeFrom(value).buildPartial();
+          } else {
+            powerOfAttorney_ = value;
+          }
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+       */
+      public Builder clearPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder getPowerOfAttorneyBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getPowerOfAttorneyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder() {
+        if (powerOfAttorneyBuilder_ != null) {
+          return powerOfAttorneyBuilder_.getMessageOrBuilder();
+        } else {
+          return powerOfAttorney_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder> 
+          getPowerOfAttorneyFieldBuilder() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorneyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder>(
+                  getPowerOfAttorney(),
+                  getParentForChildren(),
+                  isClean());
+          powerOfAttorney_ = null;
+        }
+        return powerOfAttorneyBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.DocumentSignature)
     }
 
@@ -71370,6 +71707,19 @@ public final class DiadocMessage_PostApiProtos {
      */
     com.google.protobuf.ByteString
         getPatchedContentIdBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+     */
+    boolean hasPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+     */
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+     */
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.DocumentSenderSignature}
@@ -71443,6 +71793,19 @@ public final class DiadocMessage_PostApiProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
               patchedContentId_ = bs;
+              break;
+            }
+            case 50: {
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = powerOfAttorney_.toBuilder();
+              }
+              powerOfAttorney_ = input.readMessage(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(powerOfAttorney_);
+                powerOfAttorney_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
               break;
             }
           }
@@ -71599,11 +71962,33 @@ public final class DiadocMessage_PostApiProtos {
       }
     }
 
+    public static final int POWEROFATTORNEY_FIELD_NUMBER = 6;
+    private Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost powerOfAttorney_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+     */
+    public boolean hasPowerOfAttorney() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+     */
+    public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney() {
+      return powerOfAttorney_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+     */
+    public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder() {
+      return powerOfAttorney_;
+    }
+
     private void initFields() {
       parentEntityId_ = "";
       signature_ = com.google.protobuf.ByteString.EMPTY;
       signWithTestSignature_ = false;
       patchedContentId_ = "";
+      powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -71614,6 +71999,12 @@ public final class DiadocMessage_PostApiProtos {
       if (!hasParentEntityId()) {
         memoizedIsInitialized = 0;
         return false;
+      }
+      if (hasPowerOfAttorney()) {
+        if (!getPowerOfAttorney().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -71633,6 +72024,9 @@ public final class DiadocMessage_PostApiProtos {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(5, getPatchedContentIdBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(6, powerOfAttorney_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -71658,6 +72052,10 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, getPatchedContentIdBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, powerOfAttorney_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -71768,6 +72166,7 @@ public final class DiadocMessage_PostApiProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPowerOfAttorneyFieldBuilder();
         }
       }
       private static Builder create() {
@@ -71784,6 +72183,12 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         patchedContentId_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -71828,6 +72233,14 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000008;
         }
         result.patchedContentId_ = patchedContentId_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (powerOfAttorneyBuilder_ == null) {
+          result.powerOfAttorney_ = powerOfAttorney_;
+        } else {
+          result.powerOfAttorney_ = powerOfAttorneyBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -71860,6 +72273,9 @@ public final class DiadocMessage_PostApiProtos {
           patchedContentId_ = other.patchedContentId_;
           onChanged();
         }
+        if (other.hasPowerOfAttorney()) {
+          mergePowerOfAttorney(other.getPowerOfAttorney());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -71868,6 +72284,12 @@ public final class DiadocMessage_PostApiProtos {
         if (!hasParentEntityId()) {
           
           return false;
+        }
+        if (hasPowerOfAttorney()) {
+          if (!getPowerOfAttorney().isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -72108,6 +72530,122 @@ public final class DiadocMessage_PostApiProtos {
         patchedContentId_ = value;
         onChanged();
         return this;
+      }
+
+      private Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder> powerOfAttorneyBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+       */
+      public boolean hasPowerOfAttorney() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          return powerOfAttorney_;
+        } else {
+          return powerOfAttorneyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+       */
+      public Builder setPowerOfAttorney(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          powerOfAttorney_ = value;
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+       */
+      public Builder setPowerOfAttorney(
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder builderForValue) {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = builderForValue.build();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+       */
+      public Builder mergePowerOfAttorney(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              powerOfAttorney_ != Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance()) {
+            powerOfAttorney_ =
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.newBuilder(powerOfAttorney_).mergeFrom(value).buildPartial();
+          } else {
+            powerOfAttorney_ = value;
+          }
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+       */
+      public Builder clearPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder getPowerOfAttorneyBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getPowerOfAttorneyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder() {
+        if (powerOfAttorneyBuilder_ != null) {
+          return powerOfAttorneyBuilder_.getMessageOrBuilder();
+        } else {
+          return powerOfAttorney_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder> 
+          getPowerOfAttorneyFieldBuilder() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorneyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder>(
+                  getPowerOfAttorney(),
+                  getParentForChildren(),
+                  isClean());
+          powerOfAttorney_ = null;
+        }
+        return powerOfAttorneyBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.DocumentSenderSignature)
@@ -72405,6 +72943,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -72664,6 +73206,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasSignedContent()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -73043,6 +73589,19 @@ public final class DiadocMessage_PostApiProtos {
      */
     com.google.protobuf.ByteString
         getSignatureNameOnShelfBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+     */
+    boolean hasPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+     */
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+     */
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.SignedContent}
@@ -73121,6 +73680,19 @@ public final class DiadocMessage_PostApiProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
               signatureNameOnShelf_ = bs;
+              break;
+            }
+            case 58: {
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = powerOfAttorney_.toBuilder();
+              }
+              powerOfAttorney_ = input.readMessage(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(powerOfAttorney_);
+                powerOfAttorney_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
               break;
             }
           }
@@ -73292,12 +73864,34 @@ public final class DiadocMessage_PostApiProtos {
       }
     }
 
+    public static final int POWEROFATTORNEY_FIELD_NUMBER = 7;
+    private Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost powerOfAttorney_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+     */
+    public boolean hasPowerOfAttorney() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+     */
+    public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney() {
+      return powerOfAttorney_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+     */
+    public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder() {
+      return powerOfAttorney_;
+    }
+
     private void initFields() {
       content_ = com.google.protobuf.ByteString.EMPTY;
       signature_ = com.google.protobuf.ByteString.EMPTY;
       nameOnShelf_ = "";
       signWithTestSignature_ = false;
       signatureNameOnShelf_ = "";
+      powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -73305,6 +73899,12 @@ public final class DiadocMessage_PostApiProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (hasPowerOfAttorney()) {
+        if (!getPowerOfAttorney().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -73326,6 +73926,9 @@ public final class DiadocMessage_PostApiProtos {
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeBytes(6, getSignatureNameOnShelfBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(7, powerOfAttorney_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -73355,6 +73958,10 @@ public final class DiadocMessage_PostApiProtos {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(6, getSignatureNameOnShelfBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, powerOfAttorney_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -73465,6 +74072,7 @@ public final class DiadocMessage_PostApiProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPowerOfAttorneyFieldBuilder();
         }
       }
       private static Builder create() {
@@ -73483,6 +74091,12 @@ public final class DiadocMessage_PostApiProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         signatureNameOnShelf_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -73531,6 +74145,14 @@ public final class DiadocMessage_PostApiProtos {
           to_bitField0_ |= 0x00000010;
         }
         result.signatureNameOnShelf_ = signatureNameOnShelf_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (powerOfAttorneyBuilder_ == null) {
+          result.powerOfAttorney_ = powerOfAttorney_;
+        } else {
+          result.powerOfAttorney_ = powerOfAttorneyBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -73566,11 +74188,20 @@ public final class DiadocMessage_PostApiProtos {
           signatureNameOnShelf_ = other.signatureNameOnShelf_;
           onChanged();
         }
+        if (other.hasPowerOfAttorney()) {
+          mergePowerOfAttorney(other.getPowerOfAttorney());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+        if (hasPowerOfAttorney()) {
+          if (!getPowerOfAttorney().isInitialized()) {
+            
+            return false;
+          }
+        }
         return true;
       }
 
@@ -73845,6 +74476,122 @@ public final class DiadocMessage_PostApiProtos {
         signatureNameOnShelf_ = value;
         onChanged();
         return this;
+      }
+
+      private Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder> powerOfAttorneyBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+       */
+      public boolean hasPowerOfAttorney() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          return powerOfAttorney_;
+        } else {
+          return powerOfAttorneyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+       */
+      public Builder setPowerOfAttorney(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          powerOfAttorney_ = value;
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+       */
+      public Builder setPowerOfAttorney(
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder builderForValue) {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = builderForValue.build();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+       */
+      public Builder mergePowerOfAttorney(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              powerOfAttorney_ != Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance()) {
+            powerOfAttorney_ =
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.newBuilder(powerOfAttorney_).mergeFrom(value).buildPartial();
+          } else {
+            powerOfAttorney_ = value;
+          }
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+       */
+      public Builder clearPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder getPowerOfAttorneyBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getPowerOfAttorneyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder() {
+        if (powerOfAttorneyBuilder_ != null) {
+          return powerOfAttorneyBuilder_.getMessageOrBuilder();
+        } else {
+          return powerOfAttorney_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder> 
+          getPowerOfAttorneyFieldBuilder() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorneyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder>(
+                  getPowerOfAttorney(),
+                  getParentForChildren(),
+                  isClean());
+          powerOfAttorney_ = null;
+        }
+        return powerOfAttorneyBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.SignedContent)
@@ -83962,6 +84709,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -84221,6 +84972,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasSignedContent()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -84826,6 +85581,10 @@ public final class DiadocMessage_PostApiProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getSignedContent().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -85085,6 +85844,10 @@ public final class DiadocMessage_PostApiProtos {
           return false;
         }
         if (!hasSignedContent()) {
+          
+          return false;
+        }
+        if (!getSignedContent().isInitialized()) {
           
           return false;
         }
@@ -99405,428 +100168,435 @@ public final class DiadocMessage_PostApiProtos {
       "ing/ExtendedSigner.proto\032\033Events/Resolut" +
       "ionInfo.proto\032\"Events/ResolutionRequestI" +
       "nfo.proto\032 Invoicing/OrganizationInfo.pr" +
-      "oto\032\032Docflow/DocumentInfo.proto\"\251\020\n\rMess" +
-      "ageToPost\022\021\n\tFromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030",
-      "\002 \001(\t\022@\n\010Invoices\030\003 \003(\0132..Diadoc.Api.Pro" +
-      "to.Events.XmlDocumentAttachment\022P\n\026Nonfo" +
-      "rmalizedDocuments\030\004 \003(\01320.Diadoc.Api.Pro" +
-      "to.Events.NonformalizedAttachment\022I\n\017Tor" +
-      "g12Documents\030\005 \003(\01320.Diadoc.Api.Proto.Ev" +
-      "ents.BasicDocumentAttachment\022X\n\026Acceptan" +
-      "ceCertificates\030\007 \003(\01328.Diadoc.Api.Proto." +
-      "Events.AcceptanceCertificateAttachment\022T" +
-      "\n\031StructuredDataAttachments\030\010 \003(\01321.Diad" +
-      "oc.Api.Proto.Events.StructuredDataAttach",
-      "ment\022J\n\020ProformaInvoices\030\t \003(\01320.Diadoc." +
-      "Api.Proto.Events.BasicDocumentAttachment" +
-      "\022M\n\025XmlTorg12SellerTitles\030\n \003(\0132..Diadoc" +
-      ".Api.Proto.Events.XmlDocumentAttachment\022" +
-      "\\\n$XmlAcceptanceCertificateSellerTitles\030" +
-      "\013 \003(\0132..Diadoc.Api.Proto.Events.XmlDocum" +
-      "entAttachment\022\026\n\016ToDepartmentId\030\014 \001(\t\022\026\n" +
-      "\007IsDraft\030\r \001(\010:\005false\022\030\n\tLockDraft\030\016 \001(\010" +
-      ":\005false\022#\n\025StrictDraftValidation\030\017 \001(\010:\004" +
-      "true\022\031\n\nIsInternal\030\020 \001(\010:\005false\022\030\n\020FromD",
-      "epartmentId\030\021 \001(\t\022\030\n\tDelaySend\030\022 \001(\010:\005fa" +
-      "lse\022@\n\nPriceLists\030\023 \003(\0132,.Diadoc.Api.Pro" +
-      "to.Events.PriceListAttachment\022M\n\023PriceLi" +
-      "stAgreements\030\024 \003(\01320.Diadoc.Api.Proto.Ev" +
-      "ents.NonformalizedAttachment\022O\n\025Certific" +
-      "ateRegistries\030\025 \003(\01320.Diadoc.Api.Proto.E" +
-      "vents.NonformalizedAttachment\022P\n\022Reconci" +
-      "liationActs\030\026 \003(\01324.Diadoc.Api.Proto.Eve" +
-      "nts.ReconciliationActAttachment\022>\n\tContr" +
-      "acts\030\027 \003(\0132+.Diadoc.Api.Proto.Events.Con",
-      "tractAttachment\022B\n\017Torg13Documents\030\030 \003(\013" +
-      "2).Diadoc.Api.Proto.Events.Torg13Attachm" +
-      "ent\022R\n\027ServiceDetailsDocuments\030\031 \003(\01321.D" +
-      "iadoc.Api.Proto.Events.ServiceDetailsAtt" +
-      "achment\022\022\n\nProxyBoxId\030\032 \001(\t\022\031\n\021ProxyDepa" +
-      "rtmentId\030\033 \001(\t\022N\n\021EncryptedInvoices\030\034 \003(" +
-      "\01323.Diadoc.Api.Proto.Events.EncryptedInv" +
-      "oiceAttachment\022_\n\036EncryptedXmlTorg12Sell" +
-      "erTitles\030\035 \003(\01327.Diadoc.Api.Proto.Events" +
-      ".EncryptedXmlDocumentAttachment\022n\n-Encry",
-      "ptedXmlAcceptanceCertificateSellerTitles" +
-      "\030\036 \003(\01327.Diadoc.Api.Proto.Events.Encrypt" +
-      "edXmlDocumentAttachment\022Z\n\027Supplementary" +
-      "Agreements\030\037 \003(\01329.Diadoc.Api.Proto.Even" +
-      "ts.SupplementaryAgreementAttachment\022\031\n\nL" +
-      "ockPacket\030  \001(\010:\005false\022]\n%UniversalTrans" +
-      "ferDocumentSellerTitles\030! \003(\0132..Diadoc.A" +
-      "pi.Proto.Events.XmlDocumentAttachment\022H\n" +
-      "\023DocumentAttachments\030\" \003(\0132+.Diadoc.Api." +
-      "Proto.Events.DocumentAttachment\0222\n\010LockM",
-      "ode\030# \001(\0162\032.Diadoc.Api.Proto.LockMode:\004N" +
-      "one\"\324\003\n\036EncryptedXmlDocumentAttachment\022=" +
-      "\n\rSignedContent\030\001 \002(\0132&.Diadoc.Api.Proto" +
-      ".Events.SignedContent\022\017\n\007Comment\030\003 \001(\t\0228" +
-      "\n\022InitialDocumentIds\030\004 \003(\0132\034.Diadoc.Api." +
-      "Proto.DocumentId\022<\n\026SubordinateDocumentI" +
-      "ds\030\005 \003(\0132\034.Diadoc.Api.Proto.DocumentId\022\030" +
-      "\n\020CustomDocumentId\030\006 \001(\t\0224\n\nCustomData\030\007" +
-      " \003(\0132 .Diadoc.Api.Proto.CustomDataItem\022D" +
-      "\n\010Metadata\030\010 \002(\01322.Diadoc.Api.Proto.Even",
-      "ts.EncryptedDocumentMetadata\022T\n\020XmlBasic" +
-      "Metadata\030\t \002(\0132:.Diadoc.Api.Proto.Events" +
-      ".EncryptedXmlBasicDocumentMetadata\"\246\004\n\032E" +
-      "ncryptedInvoiceAttachment\022=\n\rSignedConte" +
+      "oto\032\032Docflow/DocumentInfo.proto\032\"Events/" +
+      "PowerOfAttorneyToPost.proto\"\251\020\n\rMessageT",
+      "oPost\022\021\n\tFromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \001(" +
+      "\t\022@\n\010Invoices\030\003 \003(\0132..Diadoc.Api.Proto.E" +
+      "vents.XmlDocumentAttachment\022P\n\026Nonformal" +
+      "izedDocuments\030\004 \003(\01320.Diadoc.Api.Proto.E" +
+      "vents.NonformalizedAttachment\022I\n\017Torg12D" +
+      "ocuments\030\005 \003(\01320.Diadoc.Api.Proto.Events" +
+      ".BasicDocumentAttachment\022X\n\026AcceptanceCe" +
+      "rtificates\030\007 \003(\01328.Diadoc.Api.Proto.Even" +
+      "ts.AcceptanceCertificateAttachment\022T\n\031St" +
+      "ructuredDataAttachments\030\010 \003(\01321.Diadoc.A",
+      "pi.Proto.Events.StructuredDataAttachment" +
+      "\022J\n\020ProformaInvoices\030\t \003(\01320.Diadoc.Api." +
+      "Proto.Events.BasicDocumentAttachment\022M\n\025" +
+      "XmlTorg12SellerTitles\030\n \003(\0132..Diadoc.Api" +
+      ".Proto.Events.XmlDocumentAttachment\022\\\n$X" +
+      "mlAcceptanceCertificateSellerTitles\030\013 \003(" +
+      "\0132..Diadoc.Api.Proto.Events.XmlDocumentA" +
+      "ttachment\022\026\n\016ToDepartmentId\030\014 \001(\t\022\026\n\007IsD" +
+      "raft\030\r \001(\010:\005false\022\030\n\tLockDraft\030\016 \001(\010:\005fa" +
+      "lse\022#\n\025StrictDraftValidation\030\017 \001(\010:\004true",
+      "\022\031\n\nIsInternal\030\020 \001(\010:\005false\022\030\n\020FromDepar" +
+      "tmentId\030\021 \001(\t\022\030\n\tDelaySend\030\022 \001(\010:\005false\022" +
+      "@\n\nPriceLists\030\023 \003(\0132,.Diadoc.Api.Proto.E" +
+      "vents.PriceListAttachment\022M\n\023PriceListAg" +
+      "reements\030\024 \003(\01320.Diadoc.Api.Proto.Events" +
+      ".NonformalizedAttachment\022O\n\025CertificateR" +
+      "egistries\030\025 \003(\01320.Diadoc.Api.Proto.Event" +
+      "s.NonformalizedAttachment\022P\n\022Reconciliat" +
+      "ionActs\030\026 \003(\01324.Diadoc.Api.Proto.Events." +
+      "ReconciliationActAttachment\022>\n\tContracts",
+      "\030\027 \003(\0132+.Diadoc.Api.Proto.Events.Contrac" +
+      "tAttachment\022B\n\017Torg13Documents\030\030 \003(\0132).D" +
+      "iadoc.Api.Proto.Events.Torg13Attachment\022" +
+      "R\n\027ServiceDetailsDocuments\030\031 \003(\01321.Diado" +
+      "c.Api.Proto.Events.ServiceDetailsAttachm" +
+      "ent\022\022\n\nProxyBoxId\030\032 \001(\t\022\031\n\021ProxyDepartme" +
+      "ntId\030\033 \001(\t\022N\n\021EncryptedInvoices\030\034 \003(\01323." +
+      "Diadoc.Api.Proto.Events.EncryptedInvoice" +
+      "Attachment\022_\n\036EncryptedXmlTorg12SellerTi" +
+      "tles\030\035 \003(\01327.Diadoc.Api.Proto.Events.Enc",
+      "ryptedXmlDocumentAttachment\022n\n-Encrypted" +
+      "XmlAcceptanceCertificateSellerTitles\030\036 \003" +
+      "(\01327.Diadoc.Api.Proto.Events.EncryptedXm" +
+      "lDocumentAttachment\022Z\n\027SupplementaryAgre" +
+      "ements\030\037 \003(\01329.Diadoc.Api.Proto.Events.S" +
+      "upplementaryAgreementAttachment\022\031\n\nLockP" +
+      "acket\030  \001(\010:\005false\022]\n%UniversalTransferD" +
+      "ocumentSellerTitles\030! \003(\0132..Diadoc.Api.P" +
+      "roto.Events.XmlDocumentAttachment\022H\n\023Doc" +
+      "umentAttachments\030\" \003(\0132+.Diadoc.Api.Prot",
+      "o.Events.DocumentAttachment\0222\n\010LockMode\030" +
+      "# \001(\0162\032.Diadoc.Api.Proto.LockMode:\004None\"" +
+      "\324\003\n\036EncryptedXmlDocumentAttachment\022=\n\rSi" +
+      "gnedContent\030\001 \002(\0132&.Diadoc.Api.Proto.Eve" +
+      "nts.SignedContent\022\017\n\007Comment\030\003 \001(\t\0228\n\022In" +
+      "itialDocumentIds\030\004 \003(\0132\034.Diadoc.Api.Prot" +
+      "o.DocumentId\022<\n\026SubordinateDocumentIds\030\005" +
+      " \003(\0132\034.Diadoc.Api.Proto.DocumentId\022\030\n\020Cu" +
+      "stomDocumentId\030\006 \001(\t\0224\n\nCustomData\030\007 \003(\013" +
+      "2 .Diadoc.Api.Proto.CustomDataItem\022D\n\010Me",
+      "tadata\030\010 \002(\01322.Diadoc.Api.Proto.Events.E" +
+      "ncryptedDocumentMetadata\022T\n\020XmlBasicMeta" +
+      "data\030\t \002(\0132:.Diadoc.Api.Proto.Events.Enc" +
+      "ryptedXmlBasicDocumentMetadata\"\246\004\n\032Encry" +
+      "ptedInvoiceAttachment\022=\n\rSignedContent\030\001" +
+      " \002(\0132&.Diadoc.Api.Proto.Events.SignedCon" +
+      "tent\022\017\n\007Comment\030\003 \001(\t\0228\n\022InitialDocument" +
+      "Ids\030\004 \003(\0132\034.Diadoc.Api.Proto.DocumentId\022" +
+      "<\n\026SubordinateDocumentIds\030\005 \003(\0132\034.Diadoc" +
+      ".Api.Proto.DocumentId\022\030\n\020CustomDocumentI",
+      "d\030\006 \001(\t\0224\n\nCustomData\030\007 \003(\0132 .Diadoc.Api" +
+      ".Proto.CustomDataItem\022D\n\010Metadata\030\010 \002(\0132" +
+      "2.Diadoc.Api.Proto.Events.EncryptedDocum" +
+      "entMetadata\022J\n\017InvoiceMetadata\030\t \001(\01321.D" +
+      "iadoc.Api.Proto.Events.EncryptedInvoiceM" +
+      "etadata\022^\n\031InvoiceCorrectionMetadata\030\n \001" +
+      "(\0132;.Diadoc.Api.Proto.Events.EncryptedIn" +
+      "voiceCorrectionMetadata\"\272\001\n\031EncryptedDoc" +
+      "umentMetadata\022\016\n\006FileId\030\001 \002(\t\022\035\n\025BuyerFn" +
+      "sParticipantId\030\002 \002(\t\022\036\n\026SenderFnsPartici",
+      "pantId\030\003 \002(\t\022N\n\025DocumentDateAndNumber\030\004 " +
+      "\002(\0132/.Diadoc.Api.Proto.Docflow.DocumentD" +
+      "ateAndNumber\"g\n!EncryptedXmlBasicDocumen" +
+      "tMetadata\022\025\n\rFormationDate\030\001 \002(\t\022\025\n\rForm" +
+      "ationTime\030\002 \002(\t\022\024\n\014DocumentName\030\003 \001(\t\"j\n" +
+      "\030EncryptedInvoiceMetadata\022N\n\025RevisionDat" +
+      "eAndNumber\030\001 \001(\0132/.Diadoc.Api.Proto.Docf" +
+      "low.DocumentDateAndNumber\"\273\002\n\"EncryptedI" +
+      "nvoiceCorrectionMetadata\022U\n\034OriginalInvo" +
+      "iceDateAndNumber\030\001 \002(\0132/.Diadoc.Api.Prot",
+      "o.Docflow.DocumentDateAndNumber\022]\n$Origi" +
+      "nalInvoiceRevisionDateAndNumber\030\002 \001(\0132/." +
+      "Diadoc.Api.Proto.Docflow.DocumentDateAnd" +
+      "Number\022_\n&InvoiceCorrectionRevisionDateA" +
+      "ndNumber\030\003 \001(\0132/.Diadoc.Api.Proto.Docflo" +
+      "w.DocumentDateAndNumber\"\313\002\n\025XmlDocumentA" +
+      "ttachment\022=\n\rSignedContent\030\001 \002(\0132&.Diado" +
+      "c.Api.Proto.Events.SignedContent\022\017\n\007Comm" +
+      "ent\030\003 \001(\t\0228\n\022InitialDocumentIds\030\004 \003(\0132\034." +
+      "Diadoc.Api.Proto.DocumentId\022<\n\026Subordina",
+      "teDocumentIds\030\005 \003(\0132\034.Diadoc.Api.Proto.D" +
+      "ocumentId\022\030\n\020CustomDocumentId\030\006 \001(\t\022\032\n\013N" +
+      "eedReceipt\030\007 \001(\010:\005false\0224\n\nCustomData\030\010 " +
+      "\003(\0132 .Diadoc.Api.Proto.CustomDataItem\"\264\003" +
+      "\n\027NonformalizedAttachment\022=\n\rSignedConte" +
       "nt\030\001 \002(\0132&.Diadoc.Api.Proto.Events.Signe" +
-      "dContent\022\017\n\007Comment\030\003 \001(\t\0228\n\022InitialDocu" +
-      "mentIds\030\004 \003(\0132\034.Diadoc.Api.Proto.Documen" +
-      "tId\022<\n\026SubordinateDocumentIds\030\005 \003(\0132\034.Di" +
-      "adoc.Api.Proto.DocumentId\022\030\n\020CustomDocum" +
-      "entId\030\006 \001(\t\0224\n\nCustomData\030\007 \003(\0132 .Diadoc",
-      ".Api.Proto.CustomDataItem\022D\n\010Metadata\030\010 " +
-      "\002(\01322.Diadoc.Api.Proto.Events.EncryptedD" +
-      "ocumentMetadata\022J\n\017InvoiceMetadata\030\t \001(\013" +
-      "21.Diadoc.Api.Proto.Events.EncryptedInvo" +
-      "iceMetadata\022^\n\031InvoiceCorrectionMetadata" +
-      "\030\n \001(\0132;.Diadoc.Api.Proto.Events.Encrypt" +
-      "edInvoiceCorrectionMetadata\"\272\001\n\031Encrypte" +
-      "dDocumentMetadata\022\016\n\006FileId\030\001 \002(\t\022\035\n\025Buy" +
-      "erFnsParticipantId\030\002 \002(\t\022\036\n\026SenderFnsPar" +
-      "ticipantId\030\003 \002(\t\022N\n\025DocumentDateAndNumbe",
-      "r\030\004 \002(\0132/.Diadoc.Api.Proto.Docflow.Docum" +
-      "entDateAndNumber\"g\n!EncryptedXmlBasicDoc" +
-      "umentMetadata\022\025\n\rFormationDate\030\001 \002(\t\022\025\n\r" +
-      "FormationTime\030\002 \002(\t\022\024\n\014DocumentName\030\003 \001(" +
-      "\t\"j\n\030EncryptedInvoiceMetadata\022N\n\025Revisio" +
-      "nDateAndNumber\030\001 \001(\0132/.Diadoc.Api.Proto." +
-      "Docflow.DocumentDateAndNumber\"\273\002\n\"Encryp" +
-      "tedInvoiceCorrectionMetadata\022U\n\034Original" +
-      "InvoiceDateAndNumber\030\001 \002(\0132/.Diadoc.Api." +
-      "Proto.Docflow.DocumentDateAndNumber\022]\n$O",
-      "riginalInvoiceRevisionDateAndNumber\030\002 \001(" +
-      "\0132/.Diadoc.Api.Proto.Docflow.DocumentDat" +
-      "eAndNumber\022_\n&InvoiceCorrectionRevisionD" +
-      "ateAndNumber\030\003 \001(\0132/.Diadoc.Api.Proto.Do" +
-      "cflow.DocumentDateAndNumber\"\313\002\n\025XmlDocum" +
-      "entAttachment\022=\n\rSignedContent\030\001 \002(\0132&.D" +
-      "iadoc.Api.Proto.Events.SignedContent\022\017\n\007" +
-      "Comment\030\003 \001(\t\0228\n\022InitialDocumentIds\030\004 \003(" +
-      "\0132\034.Diadoc.Api.Proto.DocumentId\022<\n\026Subor" +
-      "dinateDocumentIds\030\005 \003(\0132\034.Diadoc.Api.Pro",
-      "to.DocumentId\022\030\n\020CustomDocumentId\030\006 \001(\t\022" +
-      "\032\n\013NeedReceipt\030\007 \001(\010:\005false\0224\n\nCustomDat" +
-      "a\030\010 \003(\0132 .Diadoc.Api.Proto.CustomDataIte" +
-      "m\"\264\003\n\027NonformalizedAttachment\022=\n\rSignedC" +
-      "ontent\030\001 \002(\0132&.Diadoc.Api.Proto.Events.S" +
-      "ignedContent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Commen" +
-      "t\030\003 \001(\t\022%\n\026NeedRecipientSignature\030\004 \001(\010:" +
-      "\005false\0228\n\022InitialDocumentIds\030\005 \003(\0132\034.Dia" +
-      "doc.Api.Proto.DocumentId\022<\n\026SubordinateD" +
-      "ocumentIds\030\006 \003(\0132\034.Diadoc.Api.Proto.Docu",
-      "mentId\022\024\n\014DocumentDate\030\007 \001(\t\022\026\n\016Document" +
-      "Number\030\010 \001(\t\022\030\n\020CustomDocumentId\030\t \001(\t\022\032" +
-      "\n\013NeedReceipt\030\n \001(\010:\005false\0224\n\nCustomData" +
-      "\030\013 \003(\0132 .Diadoc.Api.Proto.CustomDataItem" +
-      "\"\272\003\n\027BasicDocumentAttachment\022=\n\rSignedCo" +
+      "dContent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Comment\030\003 " +
+      "\001(\t\022%\n\026NeedRecipientSignature\030\004 \001(\010:\005fal" +
+      "se\0228\n\022InitialDocumentIds\030\005 \003(\0132\034.Diadoc." +
+      "Api.Proto.DocumentId\022<\n\026SubordinateDocum",
+      "entIds\030\006 \003(\0132\034.Diadoc.Api.Proto.Document" +
+      "Id\022\024\n\014DocumentDate\030\007 \001(\t\022\026\n\016DocumentNumb" +
+      "er\030\010 \001(\t\022\030\n\020CustomDocumentId\030\t \001(\t\022\032\n\013Ne" +
+      "edReceipt\030\n \001(\010:\005false\0224\n\nCustomData\030\013 \003" +
+      "(\0132 .Diadoc.Api.Proto.CustomDataItem\"\272\003\n" +
+      "\027BasicDocumentAttachment\022=\n\rSignedConten" +
+      "t\030\001 \002(\0132&.Diadoc.Api.Proto.Events.Signed" +
+      "Content\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Comment\030\003 \001" +
+      "(\t\0228\n\022InitialDocumentIds\030\004 \003(\0132\034.Diadoc." +
+      "Api.Proto.DocumentId\022<\n\026SubordinateDocum",
+      "entIds\030\005 \003(\0132\034.Diadoc.Api.Proto.Document" +
+      "Id\022\024\n\014DocumentDate\030\006 \002(\t\022\026\n\016DocumentNumb" +
+      "er\030\007 \002(\t\022\r\n\005Total\030\010 \002(\t\022\030\n\020CustomDocumen" +
+      "tId\030\t \001(\t\022\013\n\003Vat\030\n \001(\t\022\017\n\007Grounds\030\013 \001(\t\022" +
+      "\032\n\013NeedReceipt\030\014 \001(\010:\005false\0224\n\nCustomDat" +
+      "a\030\r \003(\0132 .Diadoc.Api.Proto.CustomDataIte" +
+      "m\"\246\003\n\020Torg13Attachment\022=\n\rSignedContent\030" +
+      "\001 \002(\0132&.Diadoc.Api.Proto.Events.SignedCo" +
+      "ntent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t" +
+      "\0228\n\022InitialDocumentIds\030\004 \003(\0132\034.Diadoc.Ap",
+      "i.Proto.DocumentId\022<\n\026SubordinateDocumen" +
+      "tIds\030\005 \003(\0132\034.Diadoc.Api.Proto.DocumentId" +
+      "\022\024\n\014DocumentDate\030\006 \002(\t\022\026\n\016DocumentNumber" +
+      "\030\007 \002(\t\022\r\n\005Total\030\010 \002(\t\022\030\n\020CustomDocumentI" +
+      "d\030\t \001(\t\022\017\n\007Grounds\030\013 \001(\t\022\032\n\013NeedReceipt\030" +
+      "\014 \001(\010:\005false\0224\n\nCustomData\030\r \003(\0132 .Diado" +
+      "c.Api.Proto.CustomDataItem\"\352\003\n\037Acceptanc" +
+      "eCertificateAttachment\022=\n\rSignedContent\030" +
+      "\001 \002(\0132&.Diadoc.Api.Proto.Events.SignedCo" +
+      "ntent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t",
+      "\0228\n\022InitialDocumentIds\030\004 \003(\0132\034.Diadoc.Ap" +
+      "i.Proto.DocumentId\022<\n\026SubordinateDocumen" +
+      "tIds\030\005 \003(\0132\034.Diadoc.Api.Proto.DocumentId" +
+      "\022\024\n\014DocumentDate\030\006 \002(\t\022\030\n\016DocumentNumber" +
+      "\030\007 \001(\t:\000\022\r\n\005Total\030\010 \002(\t\022\030\n\020CustomDocumen" +
+      "tId\030\t \001(\t\022\013\n\003Vat\030\n \001(\t\022\017\n\007Grounds\030\013 \001(\t\022" +
+      "\032\n\013NeedReceipt\030\014 \001(\010:\005false\022$\n\026NeedRecip" +
+      "ientSignature\030\r \001(\010:\004true\0224\n\nCustomData\030" +
+      "\016 \003(\0132 .Diadoc.Api.Proto.CustomDataItem\"" +
+      "\324\001\n TrustConnectionRequestAttachment\022=\n\r",
+      "SignedContent\030\001 \002(\0132&.Diadoc.Api.Proto.E" +
+      "vents.SignedContent\022\020\n\010FileName\030\002 \002(\t\022\017\n" +
+      "\007Comment\030\003 \001(\t\022\030\n\020CustomDocumentId\030\004 \001(\t" +
+      "\0224\n\nCustomData\030\005 \003(\0132 .Diadoc.Api.Proto." +
+      "CustomDataItem\"]\n\030StructuredDataAttachme" +
+      "nt\022\017\n\007Content\030\001 \002(\014\022\020\n\010FileName\030\002 \002(\t\022\036\n" +
+      "\026ParentCustomDocumentId\030\003 \002(\t\"\347\003\n\023PriceL" +
+      "istAttachment\022=\n\rSignedContent\030\001 \002(\0132&.D" +
+      "iadoc.Api.Proto.Events.SignedContent\022\020\n\010" +
+      "FileName\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t\0228\n\022Initi",
+      "alDocumentIds\030\004 \003(\0132\034.Diadoc.Api.Proto.D" +
+      "ocumentId\022<\n\026SubordinateDocumentIds\030\005 \003(" +
+      "\0132\034.Diadoc.Api.Proto.DocumentId\022\030\n\020Custo" +
+      "mDocumentId\030\006 \001(\t\022\024\n\014DocumentDate\030\007 \002(\t\022" +
+      "\026\n\016DocumentNumber\030\010 \002(\t\022\036\n\026PriceListEffe" +
+      "ctiveDate\030\t \002(\t\022\034\n\024ContractDocumentDate\030" +
+      "\n \002(\t\022\036\n\026ContractDocumentNumber\030\013 \002(\t\022\032\n" +
+      "\013NeedReceipt\030\014 \001(\010:\005false\0224\n\nCustomData\030" +
+      "\r \003(\0132 .Diadoc.Api.Proto.CustomDataItem\"" +
+      "\223\003\n\033ReconciliationActAttachment\022=\n\rSigne",
+      "dContent\030\001 \002(\0132&.Diadoc.Api.Proto.Events" +
+      ".SignedContent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Comm" +
+      "ent\030\003 \001(\t\0228\n\022InitialDocumentIds\030\005 \003(\0132\034." +
+      "Diadoc.Api.Proto.DocumentId\022<\n\026Subordina" +
+      "teDocumentIds\030\006 \003(\0132\034.Diadoc.Api.Proto.D" +
+      "ocumentId\022\024\n\014DocumentDate\030\007 \002(\t\022\030\n\016Docum" +
+      "entNumber\030\010 \001(\t:\000\022\030\n\020CustomDocumentId\030\t " +
+      "\001(\t\022\032\n\013NeedReceipt\030\n \001(\010:\005false\0224\n\nCusto" +
+      "mData\030\013 \003(\0132 .Diadoc.Api.Proto.CustomDat" +
+      "aItem\"\265\003\n\022ContractAttachment\022=\n\rSignedCo",
       "ntent\030\001 \002(\0132&.Diadoc.Api.Proto.Events.Si" +
       "gnedContent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Comment" +
       "\030\003 \001(\t\0228\n\022InitialDocumentIds\030\004 \003(\0132\034.Dia" +
       "doc.Api.Proto.DocumentId\022<\n\026SubordinateD" +
-      "ocumentIds\030\005 \003(\0132\034.Diadoc.Api.Proto.Docu",
-      "mentId\022\024\n\014DocumentDate\030\006 \002(\t\022\026\n\016Document" +
-      "Number\030\007 \002(\t\022\r\n\005Total\030\010 \002(\t\022\030\n\020CustomDoc" +
-      "umentId\030\t \001(\t\022\013\n\003Vat\030\n \001(\t\022\017\n\007Grounds\030\013 " +
-      "\001(\t\022\032\n\013NeedReceipt\030\014 \001(\010:\005false\0224\n\nCusto" +
-      "mData\030\r \003(\0132 .Diadoc.Api.Proto.CustomDat" +
-      "aItem\"\246\003\n\020Torg13Attachment\022=\n\rSignedCont" +
-      "ent\030\001 \002(\0132&.Diadoc.Api.Proto.Events.Sign" +
-      "edContent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Comment\030\003" +
-      " \001(\t\0228\n\022InitialDocumentIds\030\004 \003(\0132\034.Diado" +
-      "c.Api.Proto.DocumentId\022<\n\026SubordinateDoc",
-      "umentIds\030\005 \003(\0132\034.Diadoc.Api.Proto.Docume" +
-      "ntId\022\024\n\014DocumentDate\030\006 \002(\t\022\026\n\016DocumentNu" +
-      "mber\030\007 \002(\t\022\r\n\005Total\030\010 \002(\t\022\030\n\020CustomDocum" +
-      "entId\030\t \001(\t\022\017\n\007Grounds\030\013 \001(\t\022\032\n\013NeedRece" +
-      "ipt\030\014 \001(\010:\005false\0224\n\nCustomData\030\r \003(\0132 .D" +
-      "iadoc.Api.Proto.CustomDataItem\"\352\003\n\037Accep" +
-      "tanceCertificateAttachment\022=\n\rSignedCont" +
-      "ent\030\001 \002(\0132&.Diadoc.Api.Proto.Events.Sign" +
-      "edContent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Comment\030\003" +
-      " \001(\t\0228\n\022InitialDocumentIds\030\004 \003(\0132\034.Diado",
-      "c.Api.Proto.DocumentId\022<\n\026SubordinateDoc" +
-      "umentIds\030\005 \003(\0132\034.Diadoc.Api.Proto.Docume" +
-      "ntId\022\024\n\014DocumentDate\030\006 \002(\t\022\030\n\016DocumentNu" +
-      "mber\030\007 \001(\t:\000\022\r\n\005Total\030\010 \002(\t\022\030\n\020CustomDoc" +
-      "umentId\030\t \001(\t\022\013\n\003Vat\030\n \001(\t\022\017\n\007Grounds\030\013 " +
-      "\001(\t\022\032\n\013NeedReceipt\030\014 \001(\010:\005false\022$\n\026NeedR" +
-      "ecipientSignature\030\r \001(\010:\004true\0224\n\nCustomD" +
-      "ata\030\016 \003(\0132 .Diadoc.Api.Proto.CustomDataI" +
-      "tem\"\324\001\n TrustConnectionRequestAttachment" +
-      "\022=\n\rSignedContent\030\001 \002(\0132&.Diadoc.Api.Pro",
-      "to.Events.SignedContent\022\020\n\010FileName\030\002 \002(" +
-      "\t\022\017\n\007Comment\030\003 \001(\t\022\030\n\020CustomDocumentId\030\004" +
-      " \001(\t\0224\n\nCustomData\030\005 \003(\0132 .Diadoc.Api.Pr" +
-      "oto.CustomDataItem\"]\n\030StructuredDataAtta" +
-      "chment\022\017\n\007Content\030\001 \002(\014\022\020\n\010FileName\030\002 \002(" +
-      "\t\022\036\n\026ParentCustomDocumentId\030\003 \002(\t\"\347\003\n\023Pr" +
-      "iceListAttachment\022=\n\rSignedContent\030\001 \002(\013" +
-      "2&.Diadoc.Api.Proto.Events.SignedContent" +
-      "\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t\0228\n\022I" +
-      "nitialDocumentIds\030\004 \003(\0132\034.Diadoc.Api.Pro",
-      "to.DocumentId\022<\n\026SubordinateDocumentIds\030" +
-      "\005 \003(\0132\034.Diadoc.Api.Proto.DocumentId\022\030\n\020C" +
-      "ustomDocumentId\030\006 \001(\t\022\024\n\014DocumentDate\030\007 " +
-      "\002(\t\022\026\n\016DocumentNumber\030\010 \002(\t\022\036\n\026PriceList" +
-      "EffectiveDate\030\t \002(\t\022\034\n\024ContractDocumentD" +
-      "ate\030\n \002(\t\022\036\n\026ContractDocumentNumber\030\013 \002(" +
-      "\t\022\032\n\013NeedReceipt\030\014 \001(\010:\005false\0224\n\nCustomD" +
-      "ata\030\r \003(\0132 .Diadoc.Api.Proto.CustomDataI" +
-      "tem\"\223\003\n\033ReconciliationActAttachment\022=\n\rS" +
-      "ignedContent\030\001 \002(\0132&.Diadoc.Api.Proto.Ev",
-      "ents.SignedContent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007" +
-      "Comment\030\003 \001(\t\0228\n\022InitialDocumentIds\030\005 \003(" +
-      "\0132\034.Diadoc.Api.Proto.DocumentId\022<\n\026Subor" +
-      "dinateDocumentIds\030\006 \003(\0132\034.Diadoc.Api.Pro" +
-      "to.DocumentId\022\024\n\014DocumentDate\030\007 \002(\t\022\030\n\016D" +
-      "ocumentNumber\030\010 \001(\t:\000\022\030\n\020CustomDocumentI" +
-      "d\030\t \001(\t\022\032\n\013NeedReceipt\030\n \001(\010:\005false\0224\n\nC" +
-      "ustomData\030\013 \003(\0132 .Diadoc.Api.Proto.Custo" +
-      "mDataItem\"\265\003\n\022ContractAttachment\022=\n\rSign" +
-      "edContent\030\001 \002(\0132&.Diadoc.Api.Proto.Event",
-      "s.SignedContent\022\020\n\010FileName\030\002 \002(\t\022\017\n\007Com" +
-      "ment\030\003 \001(\t\0228\n\022InitialDocumentIds\030\004 \003(\0132\034" +
-      ".Diadoc.Api.Proto.DocumentId\022<\n\026Subordin" +
-      "ateDocumentIds\030\005 \003(\0132\034.Diadoc.Api.Proto." +
-      "DocumentId\022\030\n\020CustomDocumentId\030\006 \001(\t\022\024\n\014" +
-      "DocumentDate\030\007 \002(\t\022\026\n\016DocumentNumber\030\010 \002" +
-      "(\t\022\025\n\rContractPrice\030\t \001(\t\022\024\n\014ContractTyp" +
-      "e\030\n \001(\t\022\032\n\013NeedReceipt\030\013 \001(\010:\005false\0224\n\nC" +
-      "ustomData\030\014 \003(\0132 .Diadoc.Api.Proto.Custo" +
-      "mDataItem\"\351\003\n SupplementaryAgreementAtta",
+      "ocumentIds\030\005 \003(\0132\034.Diadoc.Api.Proto.Docu" +
+      "mentId\022\030\n\020CustomDocumentId\030\006 \001(\t\022\024\n\014Docu" +
+      "mentDate\030\007 \002(\t\022\026\n\016DocumentNumber\030\010 \002(\t\022\025" +
+      "\n\rContractPrice\030\t \001(\t\022\024\n\014ContractType\030\n " +
+      "\001(\t\022\032\n\013NeedReceipt\030\013 \001(\010:\005false\0224\n\nCusto" +
+      "mData\030\014 \003(\0132 .Diadoc.Api.Proto.CustomDat",
+      "aItem\"\351\003\n SupplementaryAgreementAttachme" +
+      "nt\022=\n\rSignedContent\030\001 \002(\0132&.Diadoc.Api.P" +
+      "roto.Events.SignedContent\022\020\n\010FileName\030\002 " +
+      "\002(\t\022\017\n\007Comment\030\003 \001(\t\0228\n\022InitialDocumentI" +
+      "ds\030\004 \003(\0132\034.Diadoc.Api.Proto.DocumentId\022<" +
+      "\n\026SubordinateDocumentIds\030\005 \003(\0132\034.Diadoc." +
+      "Api.Proto.DocumentId\022\030\n\020CustomDocumentId" +
+      "\030\006 \001(\t\022\024\n\014DocumentDate\030\007 \002(\t\022\026\n\016Document" +
+      "Number\030\010 \002(\t\022\r\n\005Total\030\t \001(\t\022\026\n\016ContractN" +
+      "umber\030\n \002(\t\022\024\n\014ContractDate\030\013 \002(\t\022\024\n\014Con",
+      "tractType\030\014 \001(\t\022\032\n\013NeedReceipt\030\r \001(\010:\005fa" +
+      "lse\0224\n\nCustomData\030\016 \003(\0132 .Diadoc.Api.Pro" +
+      "to.CustomDataItem\"\216\003\n\030ServiceDetailsAtta" +
       "chment\022=\n\rSignedContent\030\001 \002(\0132&.Diadoc.A" +
       "pi.Proto.Events.SignedContent\022\020\n\010FileNam" +
       "e\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t\0228\n\022InitialDocum" +
-      "entIds\030\004 \003(\0132\034.Diadoc.Api.Proto.Document" +
-      "Id\022<\n\026SubordinateDocumentIds\030\005 \003(\0132\034.Dia" +
-      "doc.Api.Proto.DocumentId\022\030\n\020CustomDocume" +
-      "ntId\030\006 \001(\t\022\024\n\014DocumentDate\030\007 \002(\t\022\026\n\016Docu" +
-      "mentNumber\030\010 \002(\t\022\r\n\005Total\030\t \001(\t\022\026\n\016Contr" +
-      "actNumber\030\n \002(\t\022\024\n\014ContractDate\030\013 \002(\t\022\024\n" +
-      "\014ContractType\030\014 \001(\t\022\032\n\013NeedReceipt\030\r \001(\010",
-      ":\005false\0224\n\nCustomData\030\016 \003(\0132 .Diadoc.Api" +
-      ".Proto.CustomDataItem\"\216\003\n\030ServiceDetails" +
-      "Attachment\022=\n\rSignedContent\030\001 \002(\0132&.Diad" +
-      "oc.Api.Proto.Events.SignedContent\022\020\n\010Fil" +
-      "eName\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t\0228\n\022InitialD" +
-      "ocumentIds\030\005 \003(\0132\034.Diadoc.Api.Proto.Docu" +
-      "mentId\022<\n\026SubordinateDocumentIds\030\006 \003(\0132\034" +
-      ".Diadoc.Api.Proto.DocumentId\022\024\n\014Document" +
-      "Date\030\007 \001(\t\022\026\n\016DocumentNumber\030\010 \001(\t\022\030\n\020Cu" +
-      "stomDocumentId\030\t \001(\t\022\032\n\013NeedReceipt\030\n \001(",
-      "\010:\005false\0224\n\nCustomData\030\013 \003(\0132 .Diadoc.Ap" +
-      "i.Proto.CustomDataItem\"\252\004\n\022DocumentAttac" +
-      "hment\022=\n\rSignedContent\030\001 \002(\0132&.Diadoc.Ap" +
-      "i.Proto.Events.SignedContent\022\017\n\007Comment\030" +
-      "\003 \001(\t\022%\n\026NeedRecipientSignature\030\004 \001(\010:\005f" +
-      "alse\0228\n\022InitialDocumentIds\030\005 \003(\0132\034.Diado" +
-      "c.Api.Proto.DocumentId\022<\n\026SubordinateDoc" +
-      "umentIds\030\006 \003(\0132\034.Diadoc.Api.Proto.Docume" +
-      "ntId\022\030\n\020CustomDocumentId\030\t \001(\t\022\032\n\013NeedRe" +
-      "ceipt\030\n \001(\010:\005false\0224\n\nCustomData\030\013 \003(\0132 ",
-      ".Diadoc.Api.Proto.CustomDataItem\022\023\n\013Type" +
-      "NamedId\030\014 \002(\t\022\020\n\010Function\030\r \001(\t\022\017\n\007Versi" +
-      "on\030\016 \001(\t\0227\n\010Metadata\030\017 \003(\0132%.Diadoc.Api." +
-      "Proto.Events.MetadataItem\022\022\n\nWorkflowId\030" +
-      "\020 \001(\005\022\032\n\013IsEncrypted\030\021 \001(\010:\005false\022\030\n\020Edi" +
-      "tingSettingId\030\022 \001(\t\"*\n\014MetadataItem\022\013\n\003K" +
-      "ey\030\001 \002(\t\022\r\n\005Value\030\002 \002(\t\"\226\016\n\022MessagePatch" +
-      "ToPost\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageId\030\002 \002(\t" +
-      "\022<\n\010Receipts\030\003 \003(\0132*.Diadoc.Api.Proto.Ev" +
-      "ents.ReceiptAttachment\022P\n\022CorrectionRequ",
-      "ests\030\004 \003(\01324.Diadoc.Api.Proto.Events.Cor" +
-      "rectionRequestAttachment\022>\n\nSignatures\030\005" +
-      " \003(\0132*.Diadoc.Api.Proto.Events.DocumentS" +
-      "ignature\022Z\n\034RequestedSignatureRejections" +
-      "\030\006 \003(\01324.Diadoc.Api.Proto.Events.Request" +
-      "edSignatureRejection\022O\n\024XmlTorg12BuyerTi" +
-      "tles\030\007 \003(\01321.Diadoc.Api.Proto.Events.Rec" +
-      "ipientTitleAttachment\022^\n#XmlAcceptanceCe" +
-      "rtificateBuyerTitles\030\010 \003(\01321.Diadoc.Api." +
-      "Proto.Events.RecipientTitleAttachment\022B\n",
-      "\013Resolutions\030\t \003(\0132-.Diadoc.Api.Proto.Ev" +
-      "ents.ResolutionAttachment\022P\n\022ResolutionR" +
-      "equests\030\n \003(\01324.Diadoc.Api.Proto.Events." +
-      "ResolutionRequestAttachment\022h\n\036Resolutio" +
-      "nRequestCancellations\030\013 \003(\0132@.Diadoc.Api" +
-      ".Proto.Events.ResolutionRequestCancellat" +
-      "ionAttachment\022\\\n\030ResolutionRequestDenial" +
-      "s\030\014 \003(\0132:.Diadoc.Api.Proto.Events.Resolu" +
-      "tionRequestDenialAttachment\022t\n$Resolutio" +
-      "nRequestDenialCancellations\030\r \003(\0132F.Diad",
-      "oc.Api.Proto.Events.ResolutionRequestDen" +
-      "ialCancellationAttachment\022P\n\022RevocationR" +
-      "equests\030\016 \003(\01324.Diadoc.Api.Proto.Events." +
-      "RevocationRequestAttachment\022X\n\026XmlSignat" +
-      "ureRejections\030\017 \003(\01328.Diadoc.Api.Proto.E" +
-      "vents.XmlSignatureRejectionAttachment\022C\n" +
-      "\021CustomDataPatches\030\020 \003(\0132(.Diadoc.Api.Pr" +
-      "oto.Events.CustomDataPatch\022V\n\032Resolution" +
-      "RouteAssignments\030\021 \003(\01322.Diadoc.Api.Prot" +
-      "o.Events.ResolutionRouteAssignment\022N\n\026Si",
-      "gnatureVerifications\030\022 \003(\0132..Diadoc.Api." +
-      "Proto.Events.SignatureVerification\022V\n\032Ed" +
-      "itDocumentPacketCommands\030\023 \003(\01322.Diadoc." +
-      "Api.Proto.Events.EditDocumentPacketComma" +
-      "nd\022_\n$UniversalTransferDocumentBuyerTitl" +
-      "es\030\024 \003(\01321.Diadoc.Api.Proto.Events.Recip" +
-      "ientTitleAttachment\022P\n\027ResolutionRouteRe" +
-      "movals\030\025 \003(\0132/.Diadoc.Api.Proto.Events.R" +
-      "esolutionRouteRemoval\022J\n\017RecipientTitles" +
-      "\030\026 \003(\01321.Diadoc.Api.Proto.Events.Recipie",
-      "ntTitleAttachment\022=\n\016EditingPatches\030\030 \003(" +
-      "\0132%.Diadoc.Api.Proto.Events.EditingPatch" +
-      "\"q\n\014EditingPatch\022\026\n\016ParentEntityId\030\001 \002(\t" +
-      "\0229\n\007Content\030\002 \002(\0132(.Diadoc.Api.Proto.Eve" +
-      "nts.UnsignedContent\022\016\n\006Labels\030\003 \003(\t\"i\n\025S" +
-      "ignatureVerification\022\031\n\021InitialDocumentI" +
-      "d\030\001 \002(\t\022\017\n\007IsValid\030\002 \002(\010\022\024\n\014ErrorMessage" +
-      "\030\003 \001(\t\022\016\n\006Labels\030\004 \003(\t\"\302\001\n\033ResolutionReq" +
-      "uestAttachment\022\031\n\021InitialDocumentId\030\001 \002(" +
-      "\t\0225\n\004Type\030\002 \002(\0162\'.Diadoc.Api.Proto.Resol",
-      "utionRequestType\022\024\n\014TargetUserId\030\003 \001(\t\022\032" +
-      "\n\022TargetDepartmentId\030\004 \001(\t\022\017\n\007Comment\030\005 " +
-      "\001(\t\022\016\n\006Labels\030\006 \003(\t\"h\n\031ResolutionRouteAs" +
-      "signment\022\031\n\021InitialDocumentId\030\001 \002(\t\022\017\n\007R" +
-      "outeId\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t\022\016\n\006Labels\030" +
-      "\004 \003(\t\"n\n\'ResolutionRequestCancellationAt" +
-      "tachment\022\"\n\032InitialResolutionRequestId\030\001" +
-      " \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"Y\n" +
-      "-ResolutionRequestDenialCancellationAtta" +
-      "chment\022(\n InitialResolutionRequestDenial",
-      "Id\030\001 \002(\t\"h\n!ResolutionRequestDenialAttac" +
-      "hment\022\"\n\032InitialResolutionRequestId\030\001 \002(" +
-      "\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"\214\001\n\024R" +
-      "esolutionAttachment\022\031\n\021InitialDocumentId" +
-      "\030\001 \002(\t\0228\n\016ResolutionType\030\002 \002(\0162 .Diadoc." +
-      "Api.Proto.ResolutionType\022\017\n\007Comment\030\003 \001(" +
-      "\t\022\016\n\006Labels\030\004 \003(\t\"z\n\021ReceiptAttachment\022\026" +
+      "entIds\030\005 \003(\0132\034.Diadoc.Api.Proto.Document" +
+      "Id\022<\n\026SubordinateDocumentIds\030\006 \003(\0132\034.Dia" +
+      "doc.Api.Proto.DocumentId\022\024\n\014DocumentDate" +
+      "\030\007 \001(\t\022\026\n\016DocumentNumber\030\010 \001(\t\022\030\n\020Custom",
+      "DocumentId\030\t \001(\t\022\032\n\013NeedReceipt\030\n \001(\010:\005f" +
+      "alse\0224\n\nCustomData\030\013 \003(\0132 .Diadoc.Api.Pr" +
+      "oto.CustomDataItem\"\252\004\n\022DocumentAttachmen" +
+      "t\022=\n\rSignedContent\030\001 \002(\0132&.Diadoc.Api.Pr" +
+      "oto.Events.SignedContent\022\017\n\007Comment\030\003 \001(" +
+      "\t\022%\n\026NeedRecipientSignature\030\004 \001(\010:\005false" +
+      "\0228\n\022InitialDocumentIds\030\005 \003(\0132\034.Diadoc.Ap" +
+      "i.Proto.DocumentId\022<\n\026SubordinateDocumen" +
+      "tIds\030\006 \003(\0132\034.Diadoc.Api.Proto.DocumentId" +
+      "\022\030\n\020CustomDocumentId\030\t \001(\t\022\032\n\013NeedReceip",
+      "t\030\n \001(\010:\005false\0224\n\nCustomData\030\013 \003(\0132 .Dia" +
+      "doc.Api.Proto.CustomDataItem\022\023\n\013TypeName" +
+      "dId\030\014 \002(\t\022\020\n\010Function\030\r \001(\t\022\017\n\007Version\030\016" +
+      " \001(\t\0227\n\010Metadata\030\017 \003(\0132%.Diadoc.Api.Prot" +
+      "o.Events.MetadataItem\022\022\n\nWorkflowId\030\020 \001(" +
+      "\005\022\032\n\013IsEncrypted\030\021 \001(\010:\005false\022\030\n\020Editing" +
+      "SettingId\030\022 \001(\t\"*\n\014MetadataItem\022\013\n\003Key\030\001" +
+      " \002(\t\022\r\n\005Value\030\002 \002(\t\"\226\016\n\022MessagePatchToPo" +
+      "st\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageId\030\002 \002(\t\022<\n\010" +
+      "Receipts\030\003 \003(\0132*.Diadoc.Api.Proto.Events",
+      ".ReceiptAttachment\022P\n\022CorrectionRequests" +
+      "\030\004 \003(\01324.Diadoc.Api.Proto.Events.Correct" +
+      "ionRequestAttachment\022>\n\nSignatures\030\005 \003(\013" +
+      "2*.Diadoc.Api.Proto.Events.DocumentSigna" +
+      "ture\022Z\n\034RequestedSignatureRejections\030\006 \003" +
+      "(\01324.Diadoc.Api.Proto.Events.RequestedSi" +
+      "gnatureRejection\022O\n\024XmlTorg12BuyerTitles" +
+      "\030\007 \003(\01321.Diadoc.Api.Proto.Events.Recipie" +
+      "ntTitleAttachment\022^\n#XmlAcceptanceCertif" +
+      "icateBuyerTitles\030\010 \003(\01321.Diadoc.Api.Prot",
+      "o.Events.RecipientTitleAttachment\022B\n\013Res" +
+      "olutions\030\t \003(\0132-.Diadoc.Api.Proto.Events" +
+      ".ResolutionAttachment\022P\n\022ResolutionReque" +
+      "sts\030\n \003(\01324.Diadoc.Api.Proto.Events.Reso" +
+      "lutionRequestAttachment\022h\n\036ResolutionReq" +
+      "uestCancellations\030\013 \003(\0132@.Diadoc.Api.Pro" +
+      "to.Events.ResolutionRequestCancellationA" +
+      "ttachment\022\\\n\030ResolutionRequestDenials\030\014 " +
+      "\003(\0132:.Diadoc.Api.Proto.Events.Resolution" +
+      "RequestDenialAttachment\022t\n$ResolutionReq",
+      "uestDenialCancellations\030\r \003(\0132F.Diadoc.A" +
+      "pi.Proto.Events.ResolutionRequestDenialC" +
+      "ancellationAttachment\022P\n\022RevocationReque" +
+      "sts\030\016 \003(\01324.Diadoc.Api.Proto.Events.Revo" +
+      "cationRequestAttachment\022X\n\026XmlSignatureR" +
+      "ejections\030\017 \003(\01328.Diadoc.Api.Proto.Event" +
+      "s.XmlSignatureRejectionAttachment\022C\n\021Cus" +
+      "tomDataPatches\030\020 \003(\0132(.Diadoc.Api.Proto." +
+      "Events.CustomDataPatch\022V\n\032ResolutionRout" +
+      "eAssignments\030\021 \003(\01322.Diadoc.Api.Proto.Ev",
+      "ents.ResolutionRouteAssignment\022N\n\026Signat" +
+      "ureVerifications\030\022 \003(\0132..Diadoc.Api.Prot" +
+      "o.Events.SignatureVerification\022V\n\032EditDo" +
+      "cumentPacketCommands\030\023 \003(\01322.Diadoc.Api." +
+      "Proto.Events.EditDocumentPacketCommand\022_" +
+      "\n$UniversalTransferDocumentBuyerTitles\030\024" +
+      " \003(\01321.Diadoc.Api.Proto.Events.Recipient" +
+      "TitleAttachment\022P\n\027ResolutionRouteRemova" +
+      "ls\030\025 \003(\0132/.Diadoc.Api.Proto.Events.Resol" +
+      "utionRouteRemoval\022J\n\017RecipientTitles\030\026 \003",
+      "(\01321.Diadoc.Api.Proto.Events.RecipientTi" +
+      "tleAttachment\022=\n\016EditingPatches\030\030 \003(\0132%." +
+      "Diadoc.Api.Proto.Events.EditingPatch\"q\n\014" +
+      "EditingPatch\022\026\n\016ParentEntityId\030\001 \002(\t\0229\n\007" +
+      "Content\030\002 \002(\0132(.Diadoc.Api.Proto.Events." +
+      "UnsignedContent\022\016\n\006Labels\030\003 \003(\t\"i\n\025Signa" +
+      "tureVerification\022\031\n\021InitialDocumentId\030\001 " +
+      "\002(\t\022\017\n\007IsValid\030\002 \002(\010\022\024\n\014ErrorMessage\030\003 \001" +
+      "(\t\022\016\n\006Labels\030\004 \003(\t\"\302\001\n\033ResolutionRequest" +
+      "Attachment\022\031\n\021InitialDocumentId\030\001 \002(\t\0225\n",
+      "\004Type\030\002 \002(\0162\'.Diadoc.Api.Proto.Resolutio" +
+      "nRequestType\022\024\n\014TargetUserId\030\003 \001(\t\022\032\n\022Ta" +
+      "rgetDepartmentId\030\004 \001(\t\022\017\n\007Comment\030\005 \001(\t\022" +
+      "\016\n\006Labels\030\006 \003(\t\"h\n\031ResolutionRouteAssign" +
+      "ment\022\031\n\021InitialDocumentId\030\001 \002(\t\022\017\n\007Route" +
+      "Id\030\002 \002(\t\022\017\n\007Comment\030\003 \001(\t\022\016\n\006Labels\030\004 \003(" +
+      "\t\"n\n\'ResolutionRequestCancellationAttach" +
+      "ment\022\"\n\032InitialResolutionRequestId\030\001 \002(\t" +
+      "\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"Y\n-Res" +
+      "olutionRequestDenialCancellationAttachme",
+      "nt\022(\n InitialResolutionRequestDenialId\030\001" +
+      " \002(\t\"h\n!ResolutionRequestDenialAttachmen" +
+      "t\022\"\n\032InitialResolutionRequestId\030\001 \002(\t\022\017\n" +
+      "\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"\214\001\n\024Resol" +
+      "utionAttachment\022\031\n\021InitialDocumentId\030\001 \002" +
+      "(\t\0228\n\016ResolutionType\030\002 \002(\0162 .Diadoc.Api." +
+      "Proto.ResolutionType\022\017\n\007Comment\030\003 \001(\t\022\016\n" +
+      "\006Labels\030\004 \003(\t\"z\n\021ReceiptAttachment\022\026\n\016Pa" +
+      "rentEntityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(" +
+      "\0132&.Diadoc.Api.Proto.Events.SignedConten",
+      "t\022\016\n\006Labels\030\004 \003(\t\"\235\001\n\030RecipientTitleAtta" +
+      "chment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSigned" +
+      "Content\030\002 \002(\0132&.Diadoc.Api.Proto.Events." +
+      "SignedContent\022\016\n\006Labels\030\004 \003(\t\022\032\n\013NeedRec" +
+      "eipt\030\005 \002(\010:\005false\"\204\001\n\033CorrectionRequestA" +
+      "ttachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSig" +
+      "nedContent\030\002 \002(\0132&.Diadoc.Api.Proto.Even" +
+      "ts.SignedContent\022\016\n\006Labels\030\004 \003(\t\"\234\002\n\021Doc" +
+      "umentSignature\022\026\n\016ParentEntityId\030\001 \002(\t\022\021" +
+      "\n\tSignature\030\002 \001(\014\022$\n\025SignWithTestSignatu",
+      "re\030\004 \001(\010:\005false\022%\n\026IsApprovementSignatur" +
+      "e\030\005 \001(\010:\005false\022\034\n\024SignatureNameOnShelf\030\006" +
+      " \001(\t\022\030\n\020PatchedContentId\030\007 \001(\t\022\016\n\006Labels" +
+      "\030\010 \003(\t\022G\n\017PowerOfAttorney\030\t \001(\0132..Diadoc" +
+      ".Api.Proto.Events.PowerOfAttorneyToPost\"" +
+      "\315\001\n\027DocumentSenderSignature\022\026\n\016ParentEnt" +
+      "ityId\030\001 \002(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025SignWi" +
+      "thTestSignature\030\004 \001(\010:\005false\022\030\n\020PatchedC" +
+      "ontentId\030\005 \001(\t\022G\n\017PowerOfAttorney\030\006 \001(\0132" +
+      "..Diadoc.Api.Proto.Events.PowerOfAttorne",
+      "yToPost\"\204\001\n\033RequestedSignatureRejection\022" +
+      "\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedContent" +
+      "\030\002 \002(\0132&.Diadoc.Api.Proto.Events.SignedC" +
+      "ontent\022\016\n\006Labels\030\003 \003(\t\"\325\001\n\rSignedContent" +
+      "\022\017\n\007Content\030\001 \001(\014\022\021\n\tSignature\030\002 \001(\014\022\023\n\013" +
+      "NameOnShelf\030\004 \001(\t\022$\n\025SignWithTestSignatu" +
+      "re\030\005 \001(\010:\005false\022\034\n\024SignatureNameOnShelf\030" +
+      "\006 \001(\t\022G\n\017PowerOfAttorney\030\007 \001(\0132..Diadoc." +
+      "Api.Proto.Events.PowerOfAttorneyToPost\"\323" +
+      "\001\n\013DraftToSend\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007DraftId",
+      "\030\002 \002(\t\022\017\n\007ToBoxId\030\003 \001(\t\022\026\n\016ToDepartmentI" +
+      "d\030\004 \001(\t\022L\n\022DocumentSignatures\030\005 \003(\01320.Di" +
+      "adoc.Api.Proto.Events.DocumentSenderSign" +
+      "ature\022\022\n\nProxyBoxId\030\006 \001(\t\022\031\n\021ProxyDepart" +
+      "mentId\030\007 \001(\t\"\355\001\n\035PrepareDocumentsToSignR" +
+      "equest\022\r\n\005BoxId\030\001 \002(\t\022E\n\016DraftDocuments\030" +
+      "\002 \003(\0132-.Diadoc.Api.Proto.Events.DraftDoc" +
+      "umentToPatch\022;\n\tDocuments\030\003 \003(\0132(.Diadoc" +
+      ".Api.Proto.Events.DocumentToPatch\0229\n\010Con" +
+      "tents\030\004 \003(\0132\'.Diadoc.Api.Proto.Events.Co",
+      "ntentToPatch\"\331\001\n\024DraftDocumentToPatch\0220\n" +
+      "\nDocumentId\030\001 \002(\0132\034.Diadoc.Api.Proto.Doc" +
+      "umentId\022\017\n\007ToBoxId\030\002 \001(\t\0222\n\006Signer\030\003 \001(\013" +
+      "2\".Diadoc.Api.Proto.Invoicing.Signer\022J\n\016" +
+      "ExtendedSigner\030\004 \003(\01322.Diadoc.Api.Proto." +
+      "Invoicing.Signers.ExtendedSigner\"\224\002\n\016Con" +
+      "tentToPatch\022\023\n\013TypeNamedId\030\001 \002(\t\022\020\n\010Func" +
+      "tion\030\002 \002(\t\022\017\n\007Version\030\003 \002(\t\0229\n\007Content\030\004" +
+      " \002(\0132(.Diadoc.Api.Proto.Events.UnsignedC" +
+      "ontent\022\017\n\007ToBoxId\030\005 \001(\t\0222\n\006Signer\030\006 \001(\0132",
+      "\".Diadoc.Api.Proto.Invoicing.Signer\022J\n\016E" +
+      "xtendedSigner\030\007 \003(\01322.Diadoc.Api.Proto.I" +
+      "nvoicing.Signers.ExtendedSigner\"\303\001\n\017Docu" +
+      "mentToPatch\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc" +
+      ".Api.Proto.DocumentId\0222\n\006Signer\030\002 \001(\0132\"." +
+      "Diadoc.Api.Proto.Invoicing.Signer\022J\n\016Ext" +
+      "endedSigner\030\003 \003(\01322.Diadoc.Api.Proto.Inv" +
+      "oicing.Signers.ExtendedSigner\"u\n\026Documen" +
+      "tPatchedContent\0220\n\nDocumentId\030\001 \002(\0132\034.Di" +
+      "adoc.Api.Proto.DocumentId\022\030\n\020PatchedCont",
+      "entId\030\002 \002(\t\022\017\n\007Content\030\003 \001(\014\"r\n\036PrepareD" +
+      "ocumentsToSignResponse\022P\n\027DocumentPatche" +
+      "dContents\030\001 \003(\0132/.Diadoc.Api.Proto.Event" +
+      "s.DocumentPatchedContent\"y\n\rMessageToSen" +
+      "d\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageId\030\002 \002(\t\022F\n\022D" +
+      "ocumentSignatures\030\003 \003(\0132*.Diadoc.Api.Pro" +
+      "to.Events.DocumentSignature\"\204\001\n\033Revocati" +
+      "onRequestAttachment\022\026\n\016ParentEntityId\030\001 " +
+      "\002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.Api." +
+      "Proto.Events.SignedContent\022\016\n\006Labels\030\003 \003",
+      "(\t\"\210\001\n\037XmlSignatureRejectionAttachment\022\026" +
       "\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedContent\030" +
       "\002 \002(\0132&.Diadoc.Api.Proto.Events.SignedCo" +
-      "ntent\022\016\n\006Labels\030\004 \003(\t\"\235\001\n\030RecipientTitle",
-      "Attachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSi" +
-      "gnedContent\030\002 \002(\0132&.Diadoc.Api.Proto.Eve" +
-      "nts.SignedContent\022\016\n\006Labels\030\004 \003(\t\022\032\n\013Nee" +
-      "dReceipt\030\005 \002(\010:\005false\"\204\001\n\033CorrectionRequ" +
-      "estAttachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n" +
-      "\rSignedContent\030\002 \002(\0132&.Diadoc.Api.Proto." +
-      "Events.SignedContent\022\016\n\006Labels\030\004 \003(\t\"\323\001\n" +
-      "\021DocumentSignature\022\026\n\016ParentEntityId\030\001 \002" +
-      "(\t\022\021\n\tSignature\030\002 \001(\014\022$\n\025SignWithTestSig" +
-      "nature\030\004 \001(\010:\005false\022%\n\026IsApprovementSign",
-      "ature\030\005 \001(\010:\005false\022\034\n\024SignatureNameOnShe" +
-      "lf\030\006 \001(\t\022\030\n\020PatchedContentId\030\007 \001(\t\022\016\n\006La" +
-      "bels\030\010 \003(\t\"\204\001\n\027DocumentSenderSignature\022\026" +
-      "\n\016ParentEntityId\030\001 \002(\t\022\021\n\tSignature\030\002 \001(" +
-      "\014\022$\n\025SignWithTestSignature\030\004 \001(\010:\005false\022" +
-      "\030\n\020PatchedContentId\030\005 \001(\t\"\204\001\n\033RequestedS" +
-      "ignatureRejection\022\026\n\016ParentEntityId\030\001 \002(" +
-      "\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.Api.Pr" +
-      "oto.Events.SignedContent\022\016\n\006Labels\030\003 \003(\t" +
-      "\"\214\001\n\rSignedContent\022\017\n\007Content\030\001 \001(\014\022\021\n\tS",
-      "ignature\030\002 \001(\014\022\023\n\013NameOnShelf\030\004 \001(\t\022$\n\025S" +
-      "ignWithTestSignature\030\005 \001(\010:\005false\022\034\n\024Sig" +
-      "natureNameOnShelf\030\006 \001(\t\"\323\001\n\013DraftToSend\022" +
-      "\r\n\005BoxId\030\001 \002(\t\022\017\n\007DraftId\030\002 \002(\t\022\017\n\007ToBox" +
-      "Id\030\003 \001(\t\022\026\n\016ToDepartmentId\030\004 \001(\t\022L\n\022Docu" +
-      "mentSignatures\030\005 \003(\01320.Diadoc.Api.Proto." +
-      "Events.DocumentSenderSignature\022\022\n\nProxyB" +
-      "oxId\030\006 \001(\t\022\031\n\021ProxyDepartmentId\030\007 \001(\t\"\355\001" +
-      "\n\035PrepareDocumentsToSignRequest\022\r\n\005BoxId" +
-      "\030\001 \002(\t\022E\n\016DraftDocuments\030\002 \003(\0132-.Diadoc.",
-      "Api.Proto.Events.DraftDocumentToPatch\022;\n" +
-      "\tDocuments\030\003 \003(\0132(.Diadoc.Api.Proto.Even" +
-      "ts.DocumentToPatch\0229\n\010Contents\030\004 \003(\0132\'.D" +
-      "iadoc.Api.Proto.Events.ContentToPatch\"\331\001" +
-      "\n\024DraftDocumentToPatch\0220\n\nDocumentId\030\001 \002" +
-      "(\0132\034.Diadoc.Api.Proto.DocumentId\022\017\n\007ToBo" +
-      "xId\030\002 \001(\t\0222\n\006Signer\030\003 \001(\0132\".Diadoc.Api.P" +
-      "roto.Invoicing.Signer\022J\n\016ExtendedSigner\030" +
-      "\004 \003(\01322.Diadoc.Api.Proto.Invoicing.Signe" +
-      "rs.ExtendedSigner\"\224\002\n\016ContentToPatch\022\023\n\013",
-      "TypeNamedId\030\001 \002(\t\022\020\n\010Function\030\002 \002(\t\022\017\n\007V" +
-      "ersion\030\003 \002(\t\0229\n\007Content\030\004 \002(\0132(.Diadoc.A" +
-      "pi.Proto.Events.UnsignedContent\022\017\n\007ToBox" +
-      "Id\030\005 \001(\t\0222\n\006Signer\030\006 \001(\0132\".Diadoc.Api.Pr" +
-      "oto.Invoicing.Signer\022J\n\016ExtendedSigner\030\007" +
-      " \003(\01322.Diadoc.Api.Proto.Invoicing.Signer" +
-      "s.ExtendedSigner\"\303\001\n\017DocumentToPatch\0220\n\n" +
-      "DocumentId\030\001 \002(\0132\034.Diadoc.Api.Proto.Docu" +
-      "mentId\0222\n\006Signer\030\002 \001(\0132\".Diadoc.Api.Prot" +
-      "o.Invoicing.Signer\022J\n\016ExtendedSigner\030\003 \003",
-      "(\01322.Diadoc.Api.Proto.Invoicing.Signers." +
-      "ExtendedSigner\"u\n\026DocumentPatchedContent" +
-      "\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc.Api.Proto." +
-      "DocumentId\022\030\n\020PatchedContentId\030\002 \002(\t\022\017\n\007" +
-      "Content\030\003 \001(\014\"r\n\036PrepareDocumentsToSignR" +
-      "esponse\022P\n\027DocumentPatchedContents\030\001 \003(\013" +
-      "2/.Diadoc.Api.Proto.Events.DocumentPatch" +
-      "edContent\"y\n\rMessageToSend\022\r\n\005BoxId\030\001 \002(" +
-      "\t\022\021\n\tMessageId\030\002 \002(\t\022F\n\022DocumentSignatur" +
-      "es\030\003 \003(\0132*.Diadoc.Api.Proto.Events.Docum",
-      "entSignature\"\204\001\n\033RevocationRequestAttach" +
-      "ment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedCo" +
-      "ntent\030\002 \002(\0132&.Diadoc.Api.Proto.Events.Si" +
-      "gnedContent\022\016\n\006Labels\030\003 \003(\t\"\210\001\n\037XmlSigna" +
-      "tureRejectionAttachment\022\026\n\016ParentEntityI" +
-      "d\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc." +
-      "Api.Proto.Events.SignedContent\022\016\n\006Labels" +
-      "\030\003 \003(\t\"\221\001\n\031RoamingNotificationToPost\022\r\n\005" +
-      "BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 \002(\t\022\017\n\007Success\030" +
-      "\003 \002(\010\022\023\n\013Description\030\004 \001(\t\022\021\n\tMessageId\030",
-      "\005 \001(\t\022\033\n\023NotifiableEntityIds\030\006 \003(\t\"\213\001\n\017C" +
-      "ustomDataPatch\022\026\n\016ParentEntityId\030\001 \002(\t\022D" +
-      "\n\tOperation\030\002 \002(\01621.Diadoc.Api.Proto.Eve" +
-      "nts.CustomDataPatchOperation\022\013\n\003Key\030\003 \002(" +
-      "\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditDocumentPacketC" +
-      "ommand\022\022\n\nDocumentId\030\001 \002(\t\022:\n\024AddDocumen" +
-      "tsToPacket\030\002 \003(\0132\034.Diadoc.Api.Proto.Docu" +
-      "mentId\022?\n\031RemoveDocumentsFromPacket\030\003 \003(" +
-      "\0132\034.Diadoc.Api.Proto.DocumentId\"d\n\026Resol" +
-      "utionRouteRemoval\022\026\n\016ParentEntityId\030\001 \002(",
-      "\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comment\030\003 \001(\t:\000\022\016\n" +
-      "\006Labels\030\004 \003(\t\"\225\003\n\016TemplateToPost\022\021\n\tFrom" +
-      "BoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002(\t\022\030\n\020MessageF" +
-      "romBoxId\030\003 \002(\t\022\026\n\016MessageToBoxId\030\004 \002(\t\022\035" +
-      "\n\025MessageToDepartmentId\030\005 \001(\t\022P\n\023Documen" +
-      "tAttachments\030\006 \003(\01323.Diadoc.Api.Proto.Ev" +
-      "ents.TemplateDocumentAttachment\0222\n\010LockM" +
-      "ode\030\007 \001(\0162\032.Diadoc.Api.Proto.LockMode:\004N" +
-      "one\022\030\n\020FromDepartmentId\030\010 \001(\t\022\026\n\016ToDepar" +
-      "tmentId\030\t \001(\t\022\031\n\021MessageProxyBoxId\030\n \001(\t",
-      "\022 \n\030MessageProxyDepartmentId\030\013 \001(\t\022\031\n\nIs" +
-      "Reusable\030\014 \001(\010:\005false\"\373\003\n\032TemplateDocume" +
-      "ntAttachment\022A\n\017UnsignedContent\030\001 \002(\0132(." +
-      "Diadoc.Api.Proto.Events.UnsignedContent\022" +
-      "\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(\t\022\020\n" +
-      "\010Function\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227\n\010Meta" +
-      "data\030\006 \003(\0132%.Diadoc.Api.Proto.Events.Met" +
-      "adataItem\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020CustomD" +
-      "ocumentId\030\010 \001(\t\022\030\n\020EditingSettingId\030\t \001(" +
-      "\t\022%\n\026NeedRecipientSignature\030\n \001(\010:\005false",
-      "\022S\n\030PredefinedRecipientTitle\030\013 \001(\01321.Dia" +
-      "doc.Api.Proto.Events.PredefinedRecipient" +
-      "Title\022\036\n\017RefusalDisabled\030\014 \001(\010:\005false\0224\n" +
-      "\nCustomData\030\r \003(\0132 .Diadoc.Api.Proto.Cus" +
-      "tomDataItem\"[\n\023TemplatePatchToPost\022D\n\010Re" +
-      "fusals\030\001 \003(\01322.Diadoc.Api.Proto.Events.T" +
-      "emplateRefusalAttachment\"P\n\031TemplateRefu" +
-      "salAttachment\022\022\n\nDocumentId\030\001 \002(\t\022\017\n\007Com" +
-      "ment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"]\n\030Predefined" +
-      "RecipientTitle\022A\n\017UnsignedContent\030\001 \002(\0132",
-      "(.Diadoc.Api.Proto.Events.UnsignedConten" +
-      "t\"7\n\017UnsignedContent\022\017\n\007Content\030\001 \001(\014\022\023\n" +
-      "\013NameOnShelf\030\002 \001(\t\"\223\001\n\034TemplateTransform" +
-      "ationToPost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nTemplateId" +
-      "\030\002 \002(\t\022P\n\027DocumentTransformations\030\003 \003(\0132" +
-      "/.Diadoc.Api.Proto.Events.DocumentTransf" +
-      "ormation\"F\n\026DocumentTransformation\022\022\n\nDo" +
-      "cumentId\030\001 \002(\t\022\030\n\020CustomDocumentId\030\002 \001(\t" +
-      "*/\n\030CustomDataPatchOperation\022\007\n\003Set\020\000\022\n\n" +
-      "\006Remove\020\001B\035B\033DiadocMessage_PostApiProtos"
+      "ntent\022\016\n\006Labels\030\003 \003(\t\"\221\001\n\031RoamingNotific" +
+      "ationToPost\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 " +
+      "\002(\t\022\017\n\007Success\030\003 \002(\010\022\023\n\013Description\030\004 \001(" +
+      "\t\022\021\n\tMessageId\030\005 \001(\t\022\033\n\023NotifiableEntity" +
+      "Ids\030\006 \003(\t\"\213\001\n\017CustomDataPatch\022\026\n\016ParentE" +
+      "ntityId\030\001 \002(\t\022D\n\tOperation\030\002 \002(\01621.Diado" +
+      "c.Api.Proto.Events.CustomDataPatchOperat",
+      "ion\022\013\n\003Key\030\003 \002(\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031Edit" +
+      "DocumentPacketCommand\022\022\n\nDocumentId\030\001 \002(" +
+      "\t\022:\n\024AddDocumentsToPacket\030\002 \003(\0132\034.Diadoc" +
+      ".Api.Proto.DocumentId\022?\n\031RemoveDocuments" +
+      "FromPacket\030\003 \003(\0132\034.Diadoc.Api.Proto.Docu" +
+      "mentId\"d\n\026ResolutionRouteRemoval\022\026\n\016Pare" +
+      "ntEntityId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Com" +
+      "ment\030\003 \001(\t:\000\022\016\n\006Labels\030\004 \003(\t\"\225\003\n\016Templat" +
+      "eToPost\022\021\n\tFromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 " +
+      "\002(\t\022\030\n\020MessageFromBoxId\030\003 \002(\t\022\026\n\016Message",
+      "ToBoxId\030\004 \002(\t\022\035\n\025MessageToDepartmentId\030\005" +
+      " \001(\t\022P\n\023DocumentAttachments\030\006 \003(\01323.Diad" +
+      "oc.Api.Proto.Events.TemplateDocumentAtta" +
+      "chment\0222\n\010LockMode\030\007 \001(\0162\032.Diadoc.Api.Pr" +
+      "oto.LockMode:\004None\022\030\n\020FromDepartmentId\030\010" +
+      " \001(\t\022\026\n\016ToDepartmentId\030\t \001(\t\022\031\n\021MessageP" +
+      "roxyBoxId\030\n \001(\t\022 \n\030MessageProxyDepartmen" +
+      "tId\030\013 \001(\t\022\031\n\nIsReusable\030\014 \001(\010:\005false\"\373\003\n" +
+      "\032TemplateDocumentAttachment\022A\n\017UnsignedC" +
+      "ontent\030\001 \002(\0132(.Diadoc.Api.Proto.Events.U",
+      "nsignedContent\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeN" +
+      "amedId\030\003 \002(\t\022\020\n\010Function\030\004 \001(\t\022\017\n\007Versio" +
+      "n\030\005 \001(\t\0227\n\010Metadata\030\006 \003(\0132%.Diadoc.Api.P" +
+      "roto.Events.MetadataItem\022\022\n\nWorkflowId\030\007" +
+      " \001(\005\022\030\n\020CustomDocumentId\030\010 \001(\t\022\030\n\020Editin" +
+      "gSettingId\030\t \001(\t\022%\n\026NeedRecipientSignatu" +
+      "re\030\n \001(\010:\005false\022S\n\030PredefinedRecipientTi" +
+      "tle\030\013 \001(\01321.Diadoc.Api.Proto.Events.Pred" +
+      "efinedRecipientTitle\022\036\n\017RefusalDisabled\030" +
+      "\014 \001(\010:\005false\0224\n\nCustomData\030\r \003(\0132 .Diado",
+      "c.Api.Proto.CustomDataItem\"[\n\023TemplatePa" +
+      "tchToPost\022D\n\010Refusals\030\001 \003(\01322.Diadoc.Api" +
+      ".Proto.Events.TemplateRefusalAttachment\"" +
+      "P\n\031TemplateRefusalAttachment\022\022\n\nDocument" +
+      "Id\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(" +
+      "\t\"]\n\030PredefinedRecipientTitle\022A\n\017Unsigne" +
+      "dContent\030\001 \002(\0132(.Diadoc.Api.Proto.Events" +
+      ".UnsignedContent\"7\n\017UnsignedContent\022\017\n\007C" +
+      "ontent\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034Te" +
+      "mplateTransformationToPost\022\r\n\005BoxId\030\001 \002(",
+      "\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027DocumentTransfo" +
+      "rmations\030\003 \003(\0132/.Diadoc.Api.Proto.Events" +
+      ".DocumentTransformation\"F\n\026DocumentTrans" +
+      "formation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomD" +
+      "ocumentId\030\002 \001(\t*/\n\030CustomDataPatchOperat" +
+      "ion\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessag" +
+      "e_PostApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -99850,6 +100620,7 @@ public final class DiadocMessage_PostApiProtos {
           Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.getDescriptor(),
           Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.DocumentInfoProtos.getDescriptor(),
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Events_MessageToPost_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -100054,13 +100825,13 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_DocumentSignature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_DocumentSignature_descriptor,
-        new java.lang.String[] { "ParentEntityId", "Signature", "SignWithTestSignature", "IsApprovementSignature", "SignatureNameOnShelf", "PatchedContentId", "Labels", });
+        new java.lang.String[] { "ParentEntityId", "Signature", "SignWithTestSignature", "IsApprovementSignature", "SignatureNameOnShelf", "PatchedContentId", "Labels", "PowerOfAttorney", });
     internal_static_Diadoc_Api_Proto_Events_DocumentSenderSignature_descriptor =
       getDescriptor().getMessageTypes().get(34);
     internal_static_Diadoc_Api_Proto_Events_DocumentSenderSignature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_DocumentSenderSignature_descriptor,
-        new java.lang.String[] { "ParentEntityId", "Signature", "SignWithTestSignature", "PatchedContentId", });
+        new java.lang.String[] { "ParentEntityId", "Signature", "SignWithTestSignature", "PatchedContentId", "PowerOfAttorney", });
     internal_static_Diadoc_Api_Proto_Events_RequestedSignatureRejection_descriptor =
       getDescriptor().getMessageTypes().get(35);
     internal_static_Diadoc_Api_Proto_Events_RequestedSignatureRejection_fieldAccessorTable = new
@@ -100072,7 +100843,7 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_SignedContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_SignedContent_descriptor,
-        new java.lang.String[] { "Content", "Signature", "NameOnShelf", "SignWithTestSignature", "SignatureNameOnShelf", });
+        new java.lang.String[] { "Content", "Signature", "NameOnShelf", "SignWithTestSignature", "SignatureNameOnShelf", "PowerOfAttorney", });
     internal_static_Diadoc_Api_Proto_Events_DraftToSend_descriptor =
       getDescriptor().getMessageTypes().get(37);
     internal_static_Diadoc_Api_Proto_Events_DraftToSend_fieldAccessorTable = new
@@ -100216,6 +100987,7 @@ public final class DiadocMessage_PostApiProtos {
     Diadoc.Api.Proto.Events.ResolutionRequestInfoProtos.getDescriptor();
     Diadoc.Api.Proto.Invoicing.OrganizationInfoProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.DocumentInfoProtos.getDescriptor();
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

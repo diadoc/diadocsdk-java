@@ -16538,17 +16538,17 @@ public final class DocflowV3Protos {
     Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3OrBuilder getAttachmentOrBuilder();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
      */
     boolean hasStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
      */
-    Diadoc.Api.Proto.OuterDocflowStatusProtos.Status getStatus();
+    Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status getStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
      */
-    Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder getStatusOrBuilder();
+    Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.StatusOrBuilder getStatusOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.StatusEntity}
@@ -16616,11 +16616,11 @@ public final class DocflowV3Protos {
               break;
             }
             case 18: {
-              Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder subBuilder = null;
+              Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = status_.toBuilder();
               }
-              status_ = input.readMessage(Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.PARSER, extensionRegistry);
+              status_ = input.readMessage(Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(status_);
                 status_ = subBuilder.buildPartial();
@@ -16690,29 +16690,29 @@ public final class DocflowV3Protos {
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
-    private Diadoc.Api.Proto.OuterDocflowStatusProtos.Status status_;
+    private Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status status_;
     /**
-     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
      */
     public boolean hasStatus() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
      */
-    public Diadoc.Api.Proto.OuterDocflowStatusProtos.Status getStatus() {
+    public Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status getStatus() {
       return status_;
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+     * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
      */
-    public Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder getStatusOrBuilder() {
+    public Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.StatusOrBuilder getStatusOrBuilder() {
       return status_;
     }
 
     private void initFields() {
       attachment_ = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignedAttachmentV3.getDefaultInstance();
-      status_ = Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance();
+      status_ = Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -16892,7 +16892,7 @@ public final class DocflowV3Protos {
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (statusBuilder_ == null) {
-          status_ = Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance();
+          status_ = Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.getDefaultInstance();
         } else {
           statusBuilder_.clear();
         }
@@ -17122,19 +17122,19 @@ public final class DocflowV3Protos {
         return attachmentBuilder_;
       }
 
-      private Diadoc.Api.Proto.OuterDocflowStatusProtos.Status status_ = Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance();
+      private Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status status_ = Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.OuterDocflowStatusProtos.Status, Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder, Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder> statusBuilder_;
+          Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status, Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.Builder, Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.StatusOrBuilder> statusBuilder_;
       /**
-       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
        */
       public boolean hasStatus() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
        */
-      public Diadoc.Api.Proto.OuterDocflowStatusProtos.Status getStatus() {
+      public Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status getStatus() {
         if (statusBuilder_ == null) {
           return status_;
         } else {
@@ -17142,9 +17142,9 @@ public final class DocflowV3Protos {
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
        */
-      public Builder setStatus(Diadoc.Api.Proto.OuterDocflowStatusProtos.Status value) {
+      public Builder setStatus(Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status value) {
         if (statusBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17158,10 +17158,10 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
        */
       public Builder setStatus(
-          Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder builderForValue) {
+          Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.Builder builderForValue) {
         if (statusBuilder_ == null) {
           status_ = builderForValue.build();
           onChanged();
@@ -17172,14 +17172,14 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
        */
-      public Builder mergeStatus(Diadoc.Api.Proto.OuterDocflowStatusProtos.Status value) {
+      public Builder mergeStatus(Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status value) {
         if (statusBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              status_ != Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance()) {
+              status_ != Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.getDefaultInstance()) {
             status_ =
-              Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.newBuilder(status_).mergeFrom(value).buildPartial();
+              Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.newBuilder(status_).mergeFrom(value).buildPartial();
           } else {
             status_ = value;
           }
@@ -17191,11 +17191,11 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
        */
       public Builder clearStatus() {
         if (statusBuilder_ == null) {
-          status_ = Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.getDefaultInstance();
+          status_ = Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.getDefaultInstance();
           onChanged();
         } else {
           statusBuilder_.clear();
@@ -17204,17 +17204,17 @@ public final class DocflowV3Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
        */
-      public Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder getStatusBuilder() {
+      public Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.Builder getStatusBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getStatusFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
        */
-      public Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder getStatusOrBuilder() {
+      public Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.StatusOrBuilder getStatusOrBuilder() {
         if (statusBuilder_ != null) {
           return statusBuilder_.getMessageOrBuilder();
         } else {
@@ -17222,14 +17222,14 @@ public final class DocflowV3Protos {
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Status Status = 2;</code>
+       * <code>required .Diadoc.Api.Proto.OuterDocflows.Status Status = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.OuterDocflowStatusProtos.Status, Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder, Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder> 
+          Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status, Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.Builder, Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.StatusOrBuilder> 
           getStatusFieldBuilder() {
         if (statusBuilder_ == null) {
           statusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.OuterDocflowStatusProtos.Status, Diadoc.Api.Proto.OuterDocflowStatusProtos.Status.Builder, Diadoc.Api.Proto.OuterDocflowStatusProtos.StatusOrBuilder>(
+              Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status, Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.Status.Builder, Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.StatusOrBuilder>(
                   getStatus(),
                   getParentForChildren(),
                   isClean());
@@ -17327,113 +17327,114 @@ public final class DocflowV3Protos {
       "oto.Docflow\032\017Timestamp.proto\032\030Documents/" +
       "Document.proto\032\032Docflow/AttachmentV3.pro" +
       "to\032!Docflow/RoamingNotification.proto\032!D" +
-      "ocflow/ResolutionDocflowV3.proto\032\030OuterD" +
-      "ocflowStatus.proto\032\025DocflowStatusV3.prot" +
-      "o\"\240\007\n\tDocflowV3\022A\n\013SenderTitle\030\001 \002(\0132,.D" +
-      "iadoc.Api.Proto.Docflow.SenderTitleDocfl" +
-      "ow\022C\n\014Confirmation\030\002 \001(\0132-.Diadoc.Api.Pr" +
-      "oto.Docflow.ConfirmationDocflow\022K\n\rProxy",
-      "Response\030\013 \001(\01324.Diadoc.Api.Proto.Docflo" +
-      "w.ParticipantResponseDocflow\022D\n\020Recipien" +
-      "tReceipt\030\004 \001(\0132*.Diadoc.Api.Proto.Docflo" +
-      "w.ReceiptDocflowV3\022O\n\021RecipientResponse\030" +
-      "\005 \001(\01324.Diadoc.Api.Proto.Docflow.Partici" +
-      "pantResponseDocflow\022K\n\020AmendmentRequest\030" +
-      "\006 \001(\01321.Diadoc.Api.Proto.Docflow.Amendme" +
-      "ntRequestDocflow\022A\n\nRevocation\030\007 \001(\0132-.D" +
-      "iadoc.Api.Proto.Docflow.RevocationDocflo" +
-      "wV3\022A\n\rSenderReceipt\030\010 \001(\0132*.Diadoc.Api.",
-      "Proto.Docflow.ReceiptDocflowV3\022A\n\nResolu" +
-      "tion\030\t \001(\0132-.Diadoc.Api.Proto.Docflow.Re" +
-      "solutionDocflowV3\022J\n\022ResolutionEntities\030" +
-      "\n \001(\0132..Diadoc.Api.Proto.Docflow.Resolut" +
-      "ionEntitiesV3\022=\n\rOuterDocflows\030\014 \003(\0132&.D" +
-      "iadoc.Api.Proto.Docflow.OuterDocflow\022L\n\024" +
-      "OuterDocflowEntities\030\r \003(\0132..Diadoc.Api." +
-      "Proto.Docflow.OuterDocflowEntities\0228\n\rDo" +
-      "cflowStatus\030\016 \002(\0132!.Diadoc.Api.Proto.Doc" +
-      "flowStatusV3\"\347\002\n\022SenderTitleDocflow\022\022\n\nI",
-      "sFinished\030\001 \002(\010\022@\n\nAttachment\030\002 \002(\0132,.Di" +
-      "adoc.Api.Proto.Docflow.SignedAttachmentV" +
-      "3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Tim" +
-      "estamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.Api" +
-      ".Proto.Timestamp\022J\n\023RoamingNotification\030" +
-      "\005 \001(\0132-.Diadoc.Api.Proto.Docflow.Roaming" +
-      "Notification\022P\n\025SenderSignatureStatus\030\006 " +
-      "\002(\01621.Diadoc.Api.Proto.Documents.SenderS" +
-      "ignatureStatus\"\346\001\n\023ConfirmationDocflow\022\022" +
-      "\n\nIsFinished\030\001 \002(\010\022L\n\026ConfirmationAttach",
-      "ment\030\002 \001(\0132,.Diadoc.Api.Proto.Docflow.Si" +
-      "gnedAttachmentV3\0220\n\013ConfirmedAt\030\003 \001(\0132\033." +
-      "Diadoc.Api.Proto.Timestamp\022;\n\007Receipt\030\004 " +
-      "\001(\0132*.Diadoc.Api.Proto.Docflow.ReceiptDo" +
-      "cflowV3\"\274\001\n\031SignatureRejectionDocflow\022H\n" +
-      "\022SignatureRejection\030\001 \002(\0132,.Diadoc.Api.P" +
-      "roto.Docflow.SignedAttachmentV3\022\020\n\010IsFor" +
-      "mal\030\002 \002(\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc." +
-      "Api.Proto.Timestamp\022\021\n\tPlainText\030\004 \001(\t\"\233" +
-      "\003\n\032ParticipantResponseDocflow\022\022\n\nIsFinis",
-      "hed\030\001 \002(\010\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Ap" +
-      "i.Proto.Docflow.SignatureV3\022;\n\005Title\030\003 \001" +
-      "(\0132,.Diadoc.Api.Proto.Docflow.SignedAtta" +
-      "chmentV3\022F\n\tRejection\030\004 \001(\01323.Diadoc.Api" +
-      ".Proto.Docflow.SignatureRejectionDocflow" +
-      "\022+\n\006SentAt\030\005 \001(\0132\033.Diadoc.Api.Proto.Time" +
-      "stamp\0220\n\013DeliveredAt\030\006 \001(\0132\033.Diadoc.Api." +
-      "Proto.Timestamp\022K\n\016ResponseStatus\030\007 \002(\0162" +
-      "3.Diadoc.Api.Proto.Documents.RecipientRe" +
-      "sponseStatus\"\210\003\n\027AmendmentRequestDocflow",
-      "\022\022\n\nIsFinished\030\001 \002(\010\022F\n\020AmendmentRequest" +
-      "\030\002 \001(\0132,.Diadoc.Api.Proto.Docflow.Signed" +
-      "AttachmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Ap" +
-      "i.Proto.Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033" +
-      ".Diadoc.Api.Proto.Timestamp\022;\n\007Receipt\030\005" +
-      " \001(\0132*.Diadoc.Api.Proto.Docflow.ReceiptD" +
-      "ocflowV3\022\026\n\016AmendmentFlags\030\006 \002(\005\022\021\n\tPlai" +
-      "nText\030\007 \001(\t\022J\n\023ConfirmationDocflow\030\010 \001(\013" +
-      "2-.Diadoc.Api.Proto.Docflow.Confirmation" +
-      "Docflow\"\303\003\n\023RevocationDocflowV3\022\022\n\nIsFin",
-      "ished\030\001 \002(\010\022M\n\021RevocationRequest\030\002 \002(\01322" +
-      ".Diadoc.Api.Proto.Docflow.RevocationRequ" +
-      "estDocflow\022O\n\022RevocationResponse\030\003 \001(\01323" +
-      ".Diadoc.Api.Proto.Docflow.RevocationResp" +
-      "onseDocflow\022\026\n\016InitiatorBoxId\030\004 \002(\t\022F\n\020R" +
-      "evocationStatus\030\005 \002(\0162,.Diadoc.Api.Proto" +
-      ".Documents.RevocationStatus\022J\n\022Resolutio" +
-      "nEntities\030\006 \001(\0132..Diadoc.Api.Proto.Docfl" +
-      "ow.ResolutionEntitiesV3\022L\n\024OuterDocflowE" +
-      "ntities\030\007 \003(\0132..Diadoc.Api.Proto.Docflow",
-      ".OuterDocflowEntities\"\241\002\n\030RevocationRequ" +
-      "estDocflow\022G\n\021RevocationRequest\030\001 \002(\0132,." +
-      "Diadoc.Api.Proto.Docflow.SignedAttachmen" +
-      "tV3\022+\n\006SentAt\030\002 \001(\0132\033.Diadoc.Api.Proto.T" +
-      "imestamp\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.A" +
-      "pi.Proto.Timestamp\022J\n\023RoamingNotificatio" +
-      "n\030\004 \001(\0132-.Diadoc.Api.Proto.Docflow.Roami" +
-      "ngNotification\022\021\n\tPlainText\030\005 \001(\t\"\257\001\n\031Re" +
-      "vocationResponseDocflow\022A\n\022RecipientSign" +
-      "ature\030\001 \001(\0132%.Diadoc.Api.Proto.Docflow.S",
-      "ignatureV3\022O\n\022SignatureRejection\030\002 \001(\01323" +
-      ".Diadoc.Api.Proto.Docflow.SignatureRejec" +
-      "tionDocflow\"\325\002\n\020ReceiptDocflowV3\022\022\n\nIsFi" +
-      "nished\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 \001(\0132" +
+      "ocflow/ResolutionDocflowV3.proto\032&OuterD" +
+      "ocflows/OuterDocflowStatus.proto\032\025Docflo" +
+      "wStatusV3.proto\"\240\007\n\tDocflowV3\022A\n\013SenderT" +
+      "itle\030\001 \002(\0132,.Diadoc.Api.Proto.Docflow.Se" +
+      "nderTitleDocflow\022C\n\014Confirmation\030\002 \001(\0132-" +
+      ".Diadoc.Api.Proto.Docflow.ConfirmationDo",
+      "cflow\022K\n\rProxyResponse\030\013 \001(\01324.Diadoc.Ap" +
+      "i.Proto.Docflow.ParticipantResponseDocfl" +
+      "ow\022D\n\020RecipientReceipt\030\004 \001(\0132*.Diadoc.Ap" +
+      "i.Proto.Docflow.ReceiptDocflowV3\022O\n\021Reci" +
+      "pientResponse\030\005 \001(\01324.Diadoc.Api.Proto.D" +
+      "ocflow.ParticipantResponseDocflow\022K\n\020Ame" +
+      "ndmentRequest\030\006 \001(\01321.Diadoc.Api.Proto.D" +
+      "ocflow.AmendmentRequestDocflow\022A\n\nRevoca" +
+      "tion\030\007 \001(\0132-.Diadoc.Api.Proto.Docflow.Re" +
+      "vocationDocflowV3\022A\n\rSenderReceipt\030\010 \001(\013",
+      "2*.Diadoc.Api.Proto.Docflow.ReceiptDocfl" +
+      "owV3\022A\n\nResolution\030\t \001(\0132-.Diadoc.Api.Pr" +
+      "oto.Docflow.ResolutionDocflowV3\022J\n\022Resol" +
+      "utionEntities\030\n \001(\0132..Diadoc.Api.Proto.D" +
+      "ocflow.ResolutionEntitiesV3\022=\n\rOuterDocf" +
+      "lows\030\014 \003(\0132&.Diadoc.Api.Proto.Docflow.Ou" +
+      "terDocflow\022L\n\024OuterDocflowEntities\030\r \003(\013" +
+      "2..Diadoc.Api.Proto.Docflow.OuterDocflow" +
+      "Entities\0228\n\rDocflowStatus\030\016 \002(\0132!.Diadoc" +
+      ".Api.Proto.DocflowStatusV3\"\347\002\n\022SenderTit",
+      "leDocflow\022\022\n\nIsFinished\030\001 \002(\010\022@\n\nAttachm" +
+      "ent\030\002 \002(\0132,.Diadoc.Api.Proto.Docflow.Sig" +
+      "nedAttachmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc" +
+      ".Api.Proto.Timestamp\0220\n\013DeliveredAt\030\004 \001(" +
+      "\0132\033.Diadoc.Api.Proto.Timestamp\022J\n\023Roamin" +
+      "gNotification\030\005 \001(\0132-.Diadoc.Api.Proto.D" +
+      "ocflow.RoamingNotification\022P\n\025SenderSign" +
+      "atureStatus\030\006 \002(\01621.Diadoc.Api.Proto.Doc" +
+      "uments.SenderSignatureStatus\"\346\001\n\023Confirm" +
+      "ationDocflow\022\022\n\nIsFinished\030\001 \002(\010\022L\n\026Conf",
+      "irmationAttachment\030\002 \001(\0132,.Diadoc.Api.Pr" +
+      "oto.Docflow.SignedAttachmentV3\0220\n\013Confir" +
+      "medAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestamp" +
+      "\022;\n\007Receipt\030\004 \001(\0132*.Diadoc.Api.Proto.Doc" +
+      "flow.ReceiptDocflowV3\"\274\001\n\031SignatureRejec" +
+      "tionDocflow\022H\n\022SignatureRejection\030\001 \002(\0132" +
       ",.Diadoc.Api.Proto.Docflow.SignedAttachm" +
-      "entV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto" +
-      ".Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc" +
-      ".Api.Proto.Timestamp\022C\n\014Confirmation\030\005 \001" +
-      "(\0132-.Diadoc.Api.Proto.Docflow.Confirmati" +
-      "onDocflow\022@\n\006Status\030\006 \002(\01620.Diadoc.Api.P",
-      "roto.Documents.GeneralReceiptStatus\"\\\n\014O" +
-      "uterDocflow\022\026\n\016DocflowNamedId\030\001 \002(\t\022\026\n\016P" +
-      "arentEntityId\030\002 \002(\t\022\034\n\024OuterDocflowEntit" +
-      "yId\030\003 \002(\t\"\213\001\n\024OuterDocflowEntities\022\026\n\016Do" +
-      "cflowNamedId\030\001 \002(\t\022\033\n\023DocflowFriendlyNam" +
-      "e\030\002 \002(\t\022>\n\016StatusEntities\030\003 \003(\0132&.Diadoc" +
-      ".Api.Proto.Docflow.StatusEntity\"z\n\014Statu" +
-      "sEntity\022@\n\nAttachment\030\001 \002(\0132,.Diadoc.Api" +
-      ".Proto.Docflow.SignedAttachmentV3\022(\n\006Sta" +
-      "tus\030\002 \002(\0132\030.Diadoc.Api.Proto.StatusB\021B\017D",
-      "ocflowV3Protos"
+      "entV3\022\020\n\010IsFormal\030\002 \002(\010\0220\n\013DeliveredAt\030\003" +
+      " \001(\0132\033.Diadoc.Api.Proto.Timestamp\022\021\n\tPla" +
+      "inText\030\004 \001(\t\"\233\003\n\032ParticipantResponseDocf",
+      "low\022\022\n\nIsFinished\030\001 \002(\010\0228\n\tSignature\030\002 \001" +
+      "(\0132%.Diadoc.Api.Proto.Docflow.SignatureV" +
+      "3\022;\n\005Title\030\003 \001(\0132,.Diadoc.Api.Proto.Docf" +
+      "low.SignedAttachmentV3\022F\n\tRejection\030\004 \001(" +
+      "\01323.Diadoc.Api.Proto.Docflow.SignatureRe" +
+      "jectionDocflow\022+\n\006SentAt\030\005 \001(\0132\033.Diadoc." +
+      "Api.Proto.Timestamp\0220\n\013DeliveredAt\030\006 \001(\013" +
+      "2\033.Diadoc.Api.Proto.Timestamp\022K\n\016Respons" +
+      "eStatus\030\007 \002(\01623.Diadoc.Api.Proto.Documen" +
+      "ts.RecipientResponseStatus\"\210\003\n\027Amendment",
+      "RequestDocflow\022\022\n\nIsFinished\030\001 \002(\010\022F\n\020Am" +
+      "endmentRequest\030\002 \001(\0132,.Diadoc.Api.Proto." +
+      "Docflow.SignedAttachmentV3\022+\n\006SentAt\030\003 \001" +
+      "(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013Deliv" +
+      "eredAt\030\004 \001(\0132\033.Diadoc.Api.Proto.Timestam" +
+      "p\022;\n\007Receipt\030\005 \001(\0132*.Diadoc.Api.Proto.Do" +
+      "cflow.ReceiptDocflowV3\022\026\n\016AmendmentFlags" +
+      "\030\006 \002(\005\022\021\n\tPlainText\030\007 \001(\t\022J\n\023Confirmatio" +
+      "nDocflow\030\010 \001(\0132-.Diadoc.Api.Proto.Docflo" +
+      "w.ConfirmationDocflow\"\303\003\n\023RevocationDocf",
+      "lowV3\022\022\n\nIsFinished\030\001 \002(\010\022M\n\021RevocationR" +
+      "equest\030\002 \002(\01322.Diadoc.Api.Proto.Docflow." +
+      "RevocationRequestDocflow\022O\n\022RevocationRe" +
+      "sponse\030\003 \001(\01323.Diadoc.Api.Proto.Docflow." +
+      "RevocationResponseDocflow\022\026\n\016InitiatorBo" +
+      "xId\030\004 \002(\t\022F\n\020RevocationStatus\030\005 \002(\0162,.Di" +
+      "adoc.Api.Proto.Documents.RevocationStatu" +
+      "s\022J\n\022ResolutionEntities\030\006 \001(\0132..Diadoc.A" +
+      "pi.Proto.Docflow.ResolutionEntitiesV3\022L\n" +
+      "\024OuterDocflowEntities\030\007 \003(\0132..Diadoc.Api",
+      ".Proto.Docflow.OuterDocflowEntities\"\241\002\n\030" +
+      "RevocationRequestDocflow\022G\n\021RevocationRe" +
+      "quest\030\001 \002(\0132,.Diadoc.Api.Proto.Docflow.S" +
+      "ignedAttachmentV3\022+\n\006SentAt\030\002 \001(\0132\033.Diad" +
+      "oc.Api.Proto.Timestamp\0220\n\013DeliveredAt\030\003 " +
+      "\001(\0132\033.Diadoc.Api.Proto.Timestamp\022J\n\023Roam" +
+      "ingNotification\030\004 \001(\0132-.Diadoc.Api.Proto" +
+      ".Docflow.RoamingNotification\022\021\n\tPlainTex" +
+      "t\030\005 \001(\t\"\257\001\n\031RevocationResponseDocflow\022A\n" +
+      "\022RecipientSignature\030\001 \001(\0132%.Diadoc.Api.P",
+      "roto.Docflow.SignatureV3\022O\n\022SignatureRej" +
+      "ection\030\002 \001(\01323.Diadoc.Api.Proto.Docflow." +
+      "SignatureRejectionDocflow\"\325\002\n\020ReceiptDoc" +
+      "flowV3\022\022\n\nIsFinished\030\001 \002(\010\022G\n\021ReceiptAtt" +
+      "achment\030\002 \001(\0132,.Diadoc.Api.Proto.Docflow" +
+      ".SignedAttachmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Di" +
+      "adoc.Api.Proto.Timestamp\0220\n\013DeliveredAt\030" +
+      "\004 \001(\0132\033.Diadoc.Api.Proto.Timestamp\022C\n\014Co" +
+      "nfirmation\030\005 \001(\0132-.Diadoc.Api.Proto.Docf" +
+      "low.ConfirmationDocflow\022@\n\006Status\030\006 \002(\0162",
+      "0.Diadoc.Api.Proto.Documents.GeneralRece" +
+      "iptStatus\"\\\n\014OuterDocflow\022\026\n\016DocflowName" +
+      "dId\030\001 \002(\t\022\026\n\016ParentEntityId\030\002 \002(\t\022\034\n\024Out" +
+      "erDocflowEntityId\030\003 \002(\t\"\213\001\n\024OuterDocflow" +
+      "Entities\022\026\n\016DocflowNamedId\030\001 \002(\t\022\033\n\023Docf" +
+      "lowFriendlyName\030\002 \002(\t\022>\n\016StatusEntities\030" +
+      "\003 \003(\0132&.Diadoc.Api.Proto.Docflow.StatusE" +
+      "ntity\"\210\001\n\014StatusEntity\022@\n\nAttachment\030\001 \002" +
+      "(\0132,.Diadoc.Api.Proto.Docflow.SignedAtta" +
+      "chmentV3\0226\n\006Status\030\002 \002(\0132&.Diadoc.Api.Pr",
+      "oto.OuterDocflows.StatusB\021B\017DocflowV3Pro" +
+      "tos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17451,7 +17452,7 @@ public final class DocflowV3Protos {
           Diadoc.Api.Proto.Docflow.AttachmentV3Protos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.getDescriptor(),
-          Diadoc.Api.Proto.OuterDocflowStatusProtos.getDescriptor(),
+          Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.getDescriptor(),
           Diadoc.Api.Proto.DocflowStatusV3Protos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Docflow_DocflowV3_descriptor =
@@ -17537,7 +17538,7 @@ public final class DocflowV3Protos {
     Diadoc.Api.Proto.Docflow.AttachmentV3Protos.getDescriptor();
     Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.getDescriptor();
-    Diadoc.Api.Proto.OuterDocflowStatusProtos.getDescriptor();
+    Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.getDescriptor();
     Diadoc.Api.Proto.DocflowStatusV3Protos.getDescriptor();
   }
 

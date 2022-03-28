@@ -887,6 +887,19 @@ public final class ExtendedSignerProtos {
      * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerDetails SignerDetails = 4;</code>
      */
     Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsOrBuilder getSignerDetailsOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+     */
+    boolean hasPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+     */
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+     */
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Invoicing.Signers.ExtendedSigner}
@@ -968,6 +981,19 @@ public final class ExtendedSignerProtos {
                 signerDetails_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = powerOfAttorney_.toBuilder();
+              }
+              powerOfAttorney_ = input.readMessage(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(powerOfAttorney_);
+                powerOfAttorney_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
               break;
             }
           }
@@ -1130,11 +1156,33 @@ public final class ExtendedSignerProtos {
       return signerDetails_;
     }
 
+    public static final int POWEROFATTORNEY_FIELD_NUMBER = 5;
+    private Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost powerOfAttorney_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+     */
+    public boolean hasPowerOfAttorney() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+     */
+    public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney() {
+      return powerOfAttorney_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+     */
+    public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder() {
+      return powerOfAttorney_;
+    }
+
     private void initFields() {
       boxId_ = "";
       signerCertificate_ = com.google.protobuf.ByteString.EMPTY;
       signerCertificateThumbprint_ = "";
       signerDetails_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetails.getDefaultInstance();
+      powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1144,6 +1192,12 @@ public final class ExtendedSignerProtos {
 
       if (hasSignerDetails()) {
         if (!getSignerDetails().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasPowerOfAttorney()) {
+        if (!getPowerOfAttorney().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -1166,6 +1220,9 @@ public final class ExtendedSignerProtos {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeMessage(4, signerDetails_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, powerOfAttorney_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1191,6 +1248,10 @@ public final class ExtendedSignerProtos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, signerDetails_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, powerOfAttorney_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1302,6 +1363,7 @@ public final class ExtendedSignerProtos {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getSignerDetailsFieldBuilder();
+          getPowerOfAttorneyFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1322,6 +1384,12 @@ public final class ExtendedSignerProtos {
           signerDetailsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -1370,6 +1438,14 @@ public final class ExtendedSignerProtos {
         } else {
           result.signerDetails_ = signerDetailsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (powerOfAttorneyBuilder_ == null) {
+          result.powerOfAttorney_ = powerOfAttorney_;
+        } else {
+          result.powerOfAttorney_ = powerOfAttorneyBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1402,6 +1478,9 @@ public final class ExtendedSignerProtos {
         if (other.hasSignerDetails()) {
           mergeSignerDetails(other.getSignerDetails());
         }
+        if (other.hasPowerOfAttorney()) {
+          mergePowerOfAttorney(other.getPowerOfAttorney());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -1409,6 +1488,12 @@ public final class ExtendedSignerProtos {
       public final boolean isInitialized() {
         if (hasSignerDetails()) {
           if (!getSignerDetails().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasPowerOfAttorney()) {
+          if (!getPowerOfAttorney().isInitialized()) {
             
             return false;
           }
@@ -1736,6 +1821,122 @@ public final class ExtendedSignerProtos {
           signerDetails_ = null;
         }
         return signerDetailsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder> powerOfAttorneyBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+       */
+      public boolean hasPowerOfAttorney() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost getPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          return powerOfAttorney_;
+        } else {
+          return powerOfAttorneyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+       */
+      public Builder setPowerOfAttorney(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          powerOfAttorney_ = value;
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+       */
+      public Builder setPowerOfAttorney(
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder builderForValue) {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = builderForValue.build();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+       */
+      public Builder mergePowerOfAttorney(Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost value) {
+        if (powerOfAttorneyBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              powerOfAttorney_ != Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance()) {
+            powerOfAttorney_ =
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.newBuilder(powerOfAttorney_).mergeFrom(value).buildPartial();
+          } else {
+            powerOfAttorney_ = value;
+          }
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+       */
+      public Builder clearPowerOfAttorney() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorney_ = Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.getDefaultInstance();
+          onChanged();
+        } else {
+          powerOfAttorneyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder getPowerOfAttorneyBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getPowerOfAttorneyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+       */
+      public Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder getPowerOfAttorneyOrBuilder() {
+        if (powerOfAttorneyBuilder_ != null) {
+          return powerOfAttorneyBuilder_.getMessageOrBuilder();
+        } else {
+          return powerOfAttorney_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Events.PowerOfAttorneyToPost PowerOfAttorney = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder> 
+          getPowerOfAttorneyFieldBuilder() {
+        if (powerOfAttorneyBuilder_ == null) {
+          powerOfAttorneyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPost.Builder, Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.PowerOfAttorneyToPostOrBuilder>(
+                  getPowerOfAttorney(),
+                  getParentForChildren(),
+                  isClean());
+          powerOfAttorney_ = null;
+        }
+        return powerOfAttorneyBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Invoicing.Signers.ExtendedSigner)
@@ -5881,56 +6082,59 @@ public final class ExtendedSignerProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\036Invoicing/ExtendedSigner.proto\022\"Diadoc" +
-      ".Api.Proto.Invoicing.Signers\"\261\001\n\016Extende" +
-      "dSigner\022\r\n\005BoxId\030\001 \001(\t\022\031\n\021SignerCertific" +
-      "ate\030\002 \001(\014\022#\n\033SignerCertificateThumbprint" +
-      "\030\003 \001(\t\022P\n\rSignerDetails\030\004 \001(\01329.Diadoc.A" +
-      "pi.Proto.Invoicing.Signers.ExtendedSigne" +
-      "rDetails\"\333\003\n\025ExtendedSignerDetails\022\017\n\007Su" +
-      "rname\030\001 \002(\t\022\021\n\tFirstName\030\002 \002(\t\022\022\n\nPatron" +
-      "ymic\030\003 \001(\t\022\020\n\010JobTitle\030\004 \001(\t\022\013\n\003Inn\030\005 \001(" +
-      "\t\022\037\n\027RegistrationCertificate\030\006 \001(\t\022O\n\nSi",
-      "gnerType\030\007 \002(\0162..Diadoc.Api.Proto.Invoic" +
-      "ing.Signers.SignerType:\013LegalEntity\022\036\n\026S" +
-      "ignerOrganizationName\030\010 \001(\t\022\022\n\nSignerInf" +
-      "o\030\t \001(\t\022F\n\014SignerPowers\030\n \002(\01620.Diadoc.A" +
-      "pi.Proto.Invoicing.Signers.SignerPowers\022" +
-      "F\n\014SignerStatus\030\013 \002(\01620.Diadoc.Api.Proto" +
-      ".Invoicing.Signers.SignerStatus\022\030\n\020Signe" +
-      "rPowersBase\030\014 \001(\t\022\033\n\023SignerOrgPowersBase" +
-      "\030\r \001(\t\"\357\002\n\033ExtendedSignerDetailsToPost\022\020" +
-      "\n\010JobTitle\030\001 \001(\t\022\037\n\027RegistrationCertific",
-      "ate\030\002 \001(\t\022B\n\nSignerType\030\003 \002(\0162..Diadoc.A" +
-      "pi.Proto.Invoicing.Signers.SignerType\022\022\n" +
-      "\nSignerInfo\030\004 \001(\t\022F\n\014SignerPowers\030\005 \002(\0162" +
-      "0.Diadoc.Api.Proto.Invoicing.Signers.Sig" +
-      "nerPowers\022F\n\014SignerStatus\030\006 \002(\01620.Diadoc" +
-      ".Api.Proto.Invoicing.Signers.SignerStatu" +
-      "s\022\030\n\020SignerPowersBase\030\007 \001(\t\022\033\n\023SignerOrg" +
-      "PowersBase\030\010 \001(\t*G\n\nSignerType\022\017\n\013LegalE" +
-      "ntity\020\001\022\024\n\020IndividualEntity\020\002\022\022\n\016Physica" +
-      "lPerson\020\003*\223\003\n\014SignerPowers\022\021\n\rInvoiceSig",
-      "ner\020\000\022\027\n\023PersonMadeOperation\020\001\022\030\n\024MadeAn" +
-      "dSignOperation\020\002\022\035\n\031PersonDocumentedOper" +
-      "ation\020\003\022!\n\035MadeOperationAndSignedInvoice" +
-      "\020\004\0222\n.MadeAndResponsibleForOperationAndS" +
-      "ignedInvoice\020\005\022.\n*ResponsibleForOperatio" +
-      "nAndSignerForInvoice\020\006\022\026\n\022ChairmanCommis" +
-      "sion\020\007\022\024\n\020MemberCommission\020\010\022\032\n\026PersonAp" +
-      "provedDocument\020\025\022\033\n\027PersonConfirmedDocum" +
-      "ent\020\026\022\032\n\026PersonAgreedOnDocument\020\027\022\024\n\020Per" +
-      "sonOtherPower\020\035*\257\001\n\014SignerStatus\022\022\n\016Sell",
-      "erEmployee\020\001\022\036\n\032InformationCreatorEmploy" +
-      "ee\020\002\022\035\n\031OtherOrganizationEmployee\020\003\022\024\n\020A" +
-      "uthorizedPerson\020\004\022\021\n\rBuyerEmployee\020\005\022#\n\037" +
-      "InformationCreatorBuyerEmployee\020\006*\362\001\n\021Do" +
-      "cumentTitleType\022\023\n\006Absent\020\377\377\377\377\377\377\377\377\377\001\022\r\n\t" +
-      "UtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022\r\n\tUcdSeller\020\002" +
-      "\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg551Seller\020\004\022\023\n\017" +
-      "TovTorg551Buyer\020\005\022\024\n\020AccCert552Seller\020\006\022" +
-      "\023\n\017AccCert552Buyer\020\007\022\017\n\013Utd820Buyer\020\010\022\016\n" +
-      "\nTorg2Buyer\020\t\022\027\n\023Torg2AdditionalInfo\020\nB\026",
-      "B\024ExtendedSignerProtos"
+      ".Api.Proto.Invoicing.Signers\032\"Events/Pow" +
+      "erOfAttorneyToPost.proto\"\372\001\n\016ExtendedSig" +
+      "ner\022\r\n\005BoxId\030\001 \001(\t\022\031\n\021SignerCertificate\030" +
+      "\002 \001(\014\022#\n\033SignerCertificateThumbprint\030\003 \001" +
+      "(\t\022P\n\rSignerDetails\030\004 \001(\01329.Diadoc.Api.P" +
+      "roto.Invoicing.Signers.ExtendedSignerDet" +
+      "ails\022G\n\017PowerOfAttorney\030\005 \001(\0132..Diadoc.A" +
+      "pi.Proto.Events.PowerOfAttorneyToPost\"\333\003" +
+      "\n\025ExtendedSignerDetails\022\017\n\007Surname\030\001 \002(\t",
+      "\022\021\n\tFirstName\030\002 \002(\t\022\022\n\nPatronymic\030\003 \001(\t\022" +
+      "\020\n\010JobTitle\030\004 \001(\t\022\013\n\003Inn\030\005 \001(\t\022\037\n\027Regist" +
+      "rationCertificate\030\006 \001(\t\022O\n\nSignerType\030\007 " +
+      "\002(\0162..Diadoc.Api.Proto.Invoicing.Signers" +
+      ".SignerType:\013LegalEntity\022\036\n\026SignerOrgani" +
+      "zationName\030\010 \001(\t\022\022\n\nSignerInfo\030\t \001(\t\022F\n\014" +
+      "SignerPowers\030\n \002(\01620.Diadoc.Api.Proto.In" +
+      "voicing.Signers.SignerPowers\022F\n\014SignerSt" +
+      "atus\030\013 \002(\01620.Diadoc.Api.Proto.Invoicing." +
+      "Signers.SignerStatus\022\030\n\020SignerPowersBase",
+      "\030\014 \001(\t\022\033\n\023SignerOrgPowersBase\030\r \001(\t\"\357\002\n\033" +
+      "ExtendedSignerDetailsToPost\022\020\n\010JobTitle\030" +
+      "\001 \001(\t\022\037\n\027RegistrationCertificate\030\002 \001(\t\022B" +
+      "\n\nSignerType\030\003 \002(\0162..Diadoc.Api.Proto.In" +
+      "voicing.Signers.SignerType\022\022\n\nSignerInfo" +
+      "\030\004 \001(\t\022F\n\014SignerPowers\030\005 \002(\01620.Diadoc.Ap" +
+      "i.Proto.Invoicing.Signers.SignerPowers\022F" +
+      "\n\014SignerStatus\030\006 \002(\01620.Diadoc.Api.Proto." +
+      "Invoicing.Signers.SignerStatus\022\030\n\020Signer" +
+      "PowersBase\030\007 \001(\t\022\033\n\023SignerOrgPowersBase\030",
+      "\010 \001(\t*G\n\nSignerType\022\017\n\013LegalEntity\020\001\022\024\n\020" +
+      "IndividualEntity\020\002\022\022\n\016PhysicalPerson\020\003*\223" +
+      "\003\n\014SignerPowers\022\021\n\rInvoiceSigner\020\000\022\027\n\023Pe" +
+      "rsonMadeOperation\020\001\022\030\n\024MadeAndSignOperat" +
+      "ion\020\002\022\035\n\031PersonDocumentedOperation\020\003\022!\n\035" +
+      "MadeOperationAndSignedInvoice\020\004\0222\n.MadeA" +
+      "ndResponsibleForOperationAndSignedInvoic" +
+      "e\020\005\022.\n*ResponsibleForOperationAndSignerF" +
+      "orInvoice\020\006\022\026\n\022ChairmanCommission\020\007\022\024\n\020M" +
+      "emberCommission\020\010\022\032\n\026PersonApprovedDocum",
+      "ent\020\025\022\033\n\027PersonConfirmedDocument\020\026\022\032\n\026Pe" +
+      "rsonAgreedOnDocument\020\027\022\024\n\020PersonOtherPow" +
+      "er\020\035*\257\001\n\014SignerStatus\022\022\n\016SellerEmployee\020" +
+      "\001\022\036\n\032InformationCreatorEmployee\020\002\022\035\n\031Oth" +
+      "erOrganizationEmployee\020\003\022\024\n\020AuthorizedPe" +
+      "rson\020\004\022\021\n\rBuyerEmployee\020\005\022#\n\037Information" +
+      "CreatorBuyerEmployee\020\006*\362\001\n\021DocumentTitle" +
+      "Type\022\023\n\006Absent\020\377\377\377\377\377\377\377\377\377\001\022\r\n\tUtdSeller\020\000" +
+      "\022\014\n\010UtdBuyer\020\001\022\r\n\tUcdSeller\020\002\022\014\n\010UcdBuye" +
+      "r\020\003\022\024\n\020TovTorg551Seller\020\004\022\023\n\017TovTorg551B",
+      "uyer\020\005\022\024\n\020AccCert552Seller\020\006\022\023\n\017AccCert5" +
+      "52Buyer\020\007\022\017\n\013Utd820Buyer\020\010\022\016\n\nTorg2Buyer" +
+      "\020\t\022\027\n\023Torg2AdditionalInfo\020\nB\026B\024ExtendedS" +
+      "ignerProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5943,13 +6147,14 @@ public final class ExtendedSignerProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSigner_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSigner_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSigner_descriptor,
-        new java.lang.String[] { "BoxId", "SignerCertificate", "SignerCertificateThumbprint", "SignerDetails", });
+        new java.lang.String[] { "BoxId", "SignerCertificate", "SignerCertificateThumbprint", "SignerDetails", "PowerOfAttorney", });
     internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetails_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetails_fieldAccessorTable = new
@@ -5962,6 +6167,7 @@ public final class ExtendedSignerProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Invoicing_Signers_ExtendedSignerDetailsToPost_descriptor,
         new java.lang.String[] { "JobTitle", "RegistrationCertificate", "SignerType", "SignerInfo", "SignerPowers", "SignerStatus", "SignerPowersBase", "SignerOrgPowersBase", });
+    Diadoc.Api.Proto.Events.PowerOfAttorneyToPostProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

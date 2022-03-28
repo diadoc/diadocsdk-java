@@ -1,0 +1,9 @@
+import "OuterDocflows/OuterDocflowStatus.proto";
+
+package Diadoc.Api.Proto.OuterDocflows;
+
+message OuterDocflowInfo {
+    required string DocflowNamedId = 1;
+    required string DocflowFriendlyName = 2;
+    required Status Status = 3;
+}
