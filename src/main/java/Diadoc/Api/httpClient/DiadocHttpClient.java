@@ -15,6 +15,7 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.config.RegistryBuilder;
+import org.apache.http.config.SocketConfig;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
@@ -40,6 +41,7 @@ public class DiadocHttpClient {
 
     private CloseableHttpClient httpClient;
     private String baseUrl;
+    private ConnectionSettings connectionSettings;
 
     public DiadocHttpClient(
             CredentialsProvider credentialsProvider,
@@ -56,6 +58,10 @@ public class DiadocHttpClient {
         if(connectionSettings != null) {
             connectionManager.setMaxTotal(connectionSettings.getMaxTotalConnections());
             connectionManager.setDefaultMaxPerRoute(connectionSettings.getMaxConnectionsPerRoute());
+            // https://issues.apache.org/jira/browse/HTTPCLIENT-1478
+            if (connectionSettings.getConnectTimeout() > 0) {
+                connectionManager.setDefaultSocketConfig(SocketConfig.custom().setSoTimeout(connectionSettings.getConnectTimeout()).build());
+            }
         }
         var httpClientBuilder = HttpClients
                 .custom()
@@ -72,6 +78,7 @@ public class DiadocHttpClient {
 
         httpClient = httpClientBuilder.build();
         this.baseUrl = baseUrl;
+        this.connectionSettings = connectionSettings;
     }
 
     public String getBaseUrl() {
@@ -146,7 +153,19 @@ public class DiadocHttpClient {
     }
 
     private HttpUriRequest createRequest(RequestBuilder requestBuilder) {
-        var requestConfig = RequestConfig.custom().setAuthenticationEnabled(false).build();
+        var requestConfigBuilder = RequestConfig.custom();
+        if (connectionSettings != null) {
+            if (connectionSettings.getSocketTimeout() > 0) {
+                requestConfigBuilder.setSocketTimeout(connectionSettings.getSocketTimeout());
+            }
+            if (connectionSettings.getConnectTimeout() > 0) {
+                requestConfigBuilder.setConnectTimeout(connectionSettings.getConnectTimeout());
+            }
+            if (connectionSettings.getConnectionRequestTimeout() > 0) {
+                requestConfigBuilder.setConnectionRequestTimeout(connectionSettings.getConnectionRequestTimeout());
+            }
+        }
+        var requestConfig = requestConfigBuilder.setAuthenticationEnabled(false).build();
         return requestBuilder.setConfig(requestConfig).build();
     }
 
