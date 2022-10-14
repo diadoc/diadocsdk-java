@@ -61878,11 +61878,11 @@ public final class DiadocMessage_PostApiProtos {
         getInitialDocumentIdBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
      */
     boolean hasType();
     /**
-     * <code>required .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
      */
     Diadoc.Api.Proto.ResolutionRequestTypeProtos.ResolutionRequestType getType();
 
@@ -62131,13 +62131,13 @@ public final class DiadocMessage_PostApiProtos {
     public static final int TYPE_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.ResolutionRequestTypeProtos.ResolutionRequestType type_;
     /**
-     * <code>required .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
      */
     public boolean hasType() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
      */
     public Diadoc.Api.Proto.ResolutionRequestTypeProtos.ResolutionRequestType getType() {
       return type_;
@@ -62313,10 +62313,6 @@ public final class DiadocMessage_PostApiProtos {
       if (isInitialized == 0) return false;
 
       if (!hasInitialDocumentId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasType()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -62623,10 +62619,6 @@ public final class DiadocMessage_PostApiProtos {
           
           return false;
         }
-        if (!hasType()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -62727,19 +62719,19 @@ public final class DiadocMessage_PostApiProtos {
 
       private Diadoc.Api.Proto.ResolutionRequestTypeProtos.ResolutionRequestType type_ = Diadoc.Api.Proto.ResolutionRequestTypeProtos.ResolutionRequestType.UnknownResolutionRequestType;
       /**
-       * <code>required .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
        */
       public Diadoc.Api.Proto.ResolutionRequestTypeProtos.ResolutionRequestType getType() {
         return type_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
        */
       public Builder setType(Diadoc.Api.Proto.ResolutionRequestTypeProtos.ResolutionRequestType value) {
         if (value == null) {
@@ -62751,7 +62743,7 @@ public final class DiadocMessage_PostApiProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.ResolutionRequestType Type = 2;</code>
        */
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -66232,11 +66224,11 @@ public final class DiadocMessage_PostApiProtos {
         getInitialDocumentIdBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
      */
     boolean hasResolutionType();
     /**
-     * <code>required .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
      */
     Diadoc.Api.Proto.ResolutionTypeProtos.ResolutionType getResolutionType();
 
@@ -66445,13 +66437,13 @@ public final class DiadocMessage_PostApiProtos {
     public static final int RESOLUTIONTYPE_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.ResolutionTypeProtos.ResolutionType resolutionType_;
     /**
-     * <code>required .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
      */
     public boolean hasResolutionType() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
      */
     public Diadoc.Api.Proto.ResolutionTypeProtos.ResolutionType getResolutionType() {
       return resolutionType_;
@@ -66541,10 +66533,6 @@ public final class DiadocMessage_PostApiProtos {
       if (isInitialized == 0) return false;
 
       if (!hasInitialDocumentId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasResolutionType()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -66815,10 +66803,6 @@ public final class DiadocMessage_PostApiProtos {
           
           return false;
         }
-        if (!hasResolutionType()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -66919,19 +66903,19 @@ public final class DiadocMessage_PostApiProtos {
 
       private Diadoc.Api.Proto.ResolutionTypeProtos.ResolutionType resolutionType_ = Diadoc.Api.Proto.ResolutionTypeProtos.ResolutionType.UnknownResolutionType;
       /**
-       * <code>required .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
        */
       public boolean hasResolutionType() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
        */
       public Diadoc.Api.Proto.ResolutionTypeProtos.ResolutionType getResolutionType() {
         return resolutionType_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
        */
       public Builder setResolutionType(Diadoc.Api.Proto.ResolutionTypeProtos.ResolutionType value) {
         if (value == null) {
@@ -66943,7 +66927,7 @@ public final class DiadocMessage_PostApiProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.ResolutionType ResolutionType = 2;</code>
        */
       public Builder clearResolutionType() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -96510,7 +96494,7 @@ public final class DiadocMessage_PostApiProtos {
       "itialDocumentId\030\001 \002(\t\022\017\n\007IsValid\030\002 \002(\010\022\024" +
       "\n\014ErrorMessage\030\003 \001(\t\022\016\n\006Labels\030\004 \003(\t\"\302\001\n" +
       "\033ResolutionRequestAttachment\022\031\n\021InitialD" +
-      "ocumentId\030\001 \002(\t\0225\n\004Type\030\002 \002(\0162\'.Diadoc.A" +
+      "ocumentId\030\001 \002(\t\0225\n\004Type\030\002 \001(\0162\'.Diadoc.A" +
       "pi.Proto.ResolutionRequestType\022\024\n\014Target",
       "UserId\030\003 \001(\t\022\032\n\022TargetDepartmentId\030\004 \001(\t" +
       "\022\017\n\007Comment\030\005 \001(\t\022\016\n\006Labels\030\006 \003(\t\"h\n\031Res" +
@@ -96526,7 +96510,7 @@ public final class DiadocMessage_PostApiProtos {
       "RequestId\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labe" +
       "ls\030\003 \003(\t\"\214\001\n\024ResolutionAttachment\022\031\n\021Ini" +
       "tialDocumentId\030\001 \002(\t\0228\n\016ResolutionType\030\002" +
-      " \002(\0162 .Diadoc.Api.Proto.ResolutionType\022\017" +
+      " \001(\0162 .Diadoc.Api.Proto.ResolutionType\022\017" +
       "\n\007Comment\030\003 \001(\t\022\016\n\006Labels\030\004 \003(\t\"z\n\021Recei" +
       "ptAttachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\r" +
       "SignedContent\030\002 \002(\0132&.Diadoc.Api.Proto.E" +

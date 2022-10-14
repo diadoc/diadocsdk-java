@@ -63,7 +63,7 @@ message Torg12Item {
 	optional string GrossQuantity = 11;										// брутто
 	required string Quantity = 12;										// нетто // количество (масса)
 	optional string Price = 13;												// цена
-	required string TaxRate = 14;											// ставка налога
+	optional string TaxRate = 14;											// ставка налога
 	optional string SubtotalWithVatExcluded = 15;							// сумма без учета налога
 	optional string Vat = 16;												// сумма налога
 	required string Subtotal = 17;											// сумма всего

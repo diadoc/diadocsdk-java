@@ -48,7 +48,7 @@ message Message {
 	optional string ProxyBoxId = 18;
 	optional string ProxyTitle = 19;
 	optional bool PacketIsLocked = 20 [default = false];
-	required LockMode LockMode = 21 [default = None];
+	optional LockMode LockMode = 21 [default = None];
 }
 
 message Template {
@@ -61,7 +61,7 @@ message Template {
     repeated Entity Entities = 7;
     optional bool IsDeleted = 8 [default = false];
     optional string MessageToDepartmentId = 9;
-    required LockMode LockMode = 10;
+    optional LockMode LockMode = 10;
 }
 
 message MessagePatch {

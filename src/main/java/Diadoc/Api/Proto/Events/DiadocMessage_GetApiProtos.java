@@ -2584,11 +2584,11 @@ public final class DiadocMessage_GetApiProtos {
     boolean getPacketIsLocked();
 
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
      */
     boolean hasLockMode();
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
      */
     Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode();
   }
@@ -3385,13 +3385,13 @@ public final class DiadocMessage_GetApiProtos {
     public static final int LOCKMODE_FIELD_NUMBER = 21;
     private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_;
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
      */
     public boolean hasLockMode() {
       return ((bitField0_ & 0x00040000) == 0x00040000);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
      */
     public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
       return lockMode_;
@@ -3443,10 +3443,6 @@ public final class DiadocMessage_GetApiProtos {
         return false;
       }
       if (!hasFromTitle()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasLockMode()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -4053,10 +4049,6 @@ public final class DiadocMessage_GetApiProtos {
           return false;
         }
         if (!hasFromTitle()) {
-          
-          return false;
-        }
-        if (!hasLockMode()) {
           
           return false;
         }
@@ -5383,19 +5375,19 @@ public final class DiadocMessage_GetApiProtos {
 
       private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
        */
       public boolean hasLockMode() {
         return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
        */
       public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
         return lockMode_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
        */
       public Builder setLockMode(Diadoc.Api.Proto.LockModeProtos.LockMode value) {
         if (value == null) {
@@ -5407,7 +5399,7 @@ public final class DiadocMessage_GetApiProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 21 [default = None];</code>
        */
       public Builder clearLockMode() {
         bitField0_ = (bitField0_ & ~0x00100000);
@@ -5558,11 +5550,11 @@ public final class DiadocMessage_GetApiProtos {
         getMessageToDepartmentIdBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
      */
     boolean hasLockMode();
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
      */
     Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode();
   }
@@ -6046,13 +6038,13 @@ public final class DiadocMessage_GetApiProtos {
     public static final int LOCKMODE_FIELD_NUMBER = 10;
     private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_;
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
      */
     public boolean hasLockMode() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
      */
     public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
       return lockMode_;
@@ -6097,10 +6089,6 @@ public final class DiadocMessage_GetApiProtos {
         return false;
       }
       if (!hasMessageToBoxId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasLockMode()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -6518,10 +6506,6 @@ public final class DiadocMessage_GetApiProtos {
           return false;
         }
         if (!hasMessageToBoxId()) {
-          
-          return false;
-        }
-        if (!hasLockMode()) {
           
           return false;
         }
@@ -7315,19 +7299,19 @@ public final class DiadocMessage_GetApiProtos {
 
       private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.Unknown;
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
        */
       public boolean hasLockMode() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
        */
       public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
         return lockMode_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
        */
       public Builder setLockMode(Diadoc.Api.Proto.LockModeProtos.LockMode value) {
         if (value == null) {
@@ -7339,7 +7323,7 @@ public final class DiadocMessage_GetApiProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 10;</code>
        */
       public Builder clearLockMode() {
         bitField0_ = (bitField0_ & ~0x00000200);
@@ -15496,14 +15480,14 @@ public final class DiadocMessage_GetApiProtos {
       "\030\020 \001(\010:\005false\022\032\n\013IsProxified\030\021 \001(\010:\005fals" +
       "e\022\022\n\nProxyBoxId\030\022 \001(\t\022\022\n\nProxyTitle\030\023 \001(" +
       "\t\022\035\n\016PacketIsLocked\030\024 \001(\010:\005false\0222\n\010Lock" +
-      "Mode\030\025 \002(\0162\032.Diadoc.Api.Proto.LockMode:\004" +
+      "Mode\030\025 \001(\0162\032.Diadoc.Api.Proto.LockMode:\004" +
       "None\"\245\002\n\010Template\022\021\n\tMessageId\030\001 \002(\t\022\026\n\016" +
       "TimestampTicks\030\002 \002(\020\022\021\n\tFromBoxId\030\003 \002(\t\022",
       "\017\n\007ToBoxId\030\004 \002(\t\022\030\n\020MessageFromBoxId\030\005 \002" +
       "(\t\022\026\n\016MessageToBoxId\030\006 \002(\t\0221\n\010Entities\030\007" +
       " \003(\0132\037.Diadoc.Api.Proto.Events.Entity\022\030\n" +
       "\tIsDeleted\030\010 \001(\010:\005false\022\035\n\025MessageToDepa" +
-      "rtmentId\030\t \001(\t\022,\n\010LockMode\030\n \002(\0162\032.Diado" +
+      "rtmentId\030\t \001(\t\022,\n\010LockMode\030\n \001(\0162\032.Diado" +
       "c.Api.Proto.LockMode\"\274\003\n\014MessagePatch\022\021\n" +
       "\tMessageId\030\001 \002(\t\022\026\n\016TimestampTicks\030\002 \002(\020" +
       "\0221\n\010Entities\030\003 \003(\0132\037.Diadoc.Api.Proto.Ev" +

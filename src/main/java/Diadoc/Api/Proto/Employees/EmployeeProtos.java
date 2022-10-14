@@ -1217,11 +1217,11 @@ public final class EmployeeProtos {
     boolean getIsAdministrator();
 
     /**
-     * <code>required .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+     * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
      */
     boolean hasDocumentAccessLevel();
     /**
-     * <code>required .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+     * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
      */
     Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel getDocumentAccessLevel();
 
@@ -1491,13 +1491,13 @@ public final class EmployeeProtos {
     public static final int DOCUMENTACCESSLEVEL_FIELD_NUMBER = 3;
     private Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel documentAccessLevel_;
     /**
-     * <code>required .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+     * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
      */
     public boolean hasDocumentAccessLevel() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+     * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
      */
     public Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel getDocumentAccessLevel() {
       return documentAccessLevel_;
@@ -1607,10 +1607,6 @@ public final class EmployeeProtos {
         return false;
       }
       if (!hasIsAdministrator()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasDocumentAccessLevel()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1969,10 +1965,6 @@ public final class EmployeeProtos {
           
           return false;
         }
-        if (!hasDocumentAccessLevel()) {
-          
-          return false;
-        }
         for (int i = 0; i < getActionsCount(); i++) {
           if (!getActions(i).isInitialized()) {
             
@@ -2117,19 +2109,19 @@ public final class EmployeeProtos {
 
       private Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel documentAccessLevel_ = Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel.UnknownDocumentAccessLevel;
       /**
-       * <code>required .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+       * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
        */
       public boolean hasDocumentAccessLevel() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+       * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
        */
       public Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel getDocumentAccessLevel() {
         return documentAccessLevel_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+       * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
        */
       public Builder setDocumentAccessLevel(Diadoc.Api.Proto.OrganizationUserPermissionsProtos.DocumentAccessLevel value) {
         if (value == null) {
@@ -2141,7 +2133,7 @@ public final class EmployeeProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
+       * <code>optional .Diadoc.Api.Proto.DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];</code>
        */
       public Builder clearDocumentAccessLevel() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -3997,7 +3989,7 @@ public final class EmployeeProtos {
       "adoc.Api.Proto.Timestamp\"\320\002\n\023EmployeePer" +
       "missions\022\030\n\020UserDepartmentId\030\001 \002(\t\022\027\n\017Is",
       "Administrator\030\002 \002(\010\022^\n\023DocumentAccessLev" +
-      "el\030\003 \002(\0162%.Diadoc.Api.Proto.DocumentAcce" +
+      "el\030\003 \001(\0162%.Diadoc.Api.Proto.DocumentAcce" +
       "ssLevel:\032UnknownDocumentAccessLevel\022\035\n\025S" +
       "electedDepartmentIds\030\004 \003(\t\022;\n\007Actions\030\005 " +
       "\003(\0132*.Diadoc.Api.Proto.Employees.Employe" +

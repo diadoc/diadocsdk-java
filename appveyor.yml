@@ -14,7 +14,7 @@ install:
       Add-Type -AssemblyName System.IO.Compression.FileSystem
       if (!(Test-Path -Path "C:\maven" )) {
         (new-object System.Net.WebClient).DownloadFile(
-          'http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.zip',
+          'https://dlcdn.apache.org/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.zip',
           'C:\maven-bin.zip'
         )
         [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\maven-bin.zip", "C:\maven")
@@ -42,6 +42,5 @@ deploy:
     draft: false
     prerelease: false
     on:
-      branch: master                 # release from master branch only
       appveyor_repo_tag: true        # deploy on tag push only
       appveyor_repo_tag_name: /^versions/

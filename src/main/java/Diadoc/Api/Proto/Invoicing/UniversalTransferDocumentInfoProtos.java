@@ -294,7 +294,7 @@ public final class UniversalTransferDocumentInfoProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
      *
      * <pre>
      * Функция документа // Функция
@@ -302,7 +302,7 @@ public final class UniversalTransferDocumentInfoProtos {
      */
     boolean hasFunction();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
      *
      * <pre>
      * Функция документа // Функция
@@ -1112,7 +1112,7 @@ public final class UniversalTransferDocumentInfoProtos {
     public static final int FUNCTION_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
      *
      * <pre>
      * Функция документа // Функция
@@ -1122,7 +1122,7 @@ public final class UniversalTransferDocumentInfoProtos {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
      *
      * <pre>
      * Функция документа // Функция
@@ -2041,10 +2041,6 @@ public final class UniversalTransferDocumentInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasFunction()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasDocumentDate()) {
         memoizedIsInitialized = 0;
         return false;
@@ -2770,10 +2766,6 @@ public final class UniversalTransferDocumentInfoProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasFunction()) {
-          
-          return false;
-        }
         if (!hasDocumentDate()) {
           
           return false;
@@ -2872,7 +2864,7 @@ public final class UniversalTransferDocumentInfoProtos {
 
       private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
        *
        * <pre>
        * Функция документа // Функция
@@ -2882,7 +2874,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
        *
        * <pre>
        * Функция документа // Функция
@@ -2892,7 +2884,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return function_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
        *
        * <pre>
        * Функция документа // Функция
@@ -2908,7 +2900,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
        *
        * <pre>
        * Функция документа // Функция
@@ -8110,7 +8102,7 @@ public final class UniversalTransferDocumentInfoProtos {
         getExciseBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -8118,7 +8110,7 @@ public final class UniversalTransferDocumentInfoProtos {
      */
     boolean hasTaxRate();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -8986,7 +8978,7 @@ public final class UniversalTransferDocumentInfoProtos {
     public static final int TAXRATE_FIELD_NUMBER = 7;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -8996,7 +8988,7 @@ public final class UniversalTransferDocumentInfoProtos {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
      *
      * <pre>
      * ставка налога // НалСт
@@ -9601,10 +9593,6 @@ public final class UniversalTransferDocumentInfoProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasTaxRate()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasSubtotal()) {
         memoizedIsInitialized = 0;
         return false;
@@ -10186,10 +10174,6 @@ public final class UniversalTransferDocumentInfoProtos {
 
       public final boolean isInitialized() {
         if (!hasProduct()) {
-          
-          return false;
-        }
-        if (!hasTaxRate()) {
           
           return false;
         }
@@ -10833,7 +10817,7 @@ public final class UniversalTransferDocumentInfoProtos {
 
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.NoVat;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -10843,7 +10827,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -10853,7 +10837,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return taxRate_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -10869,7 +10853,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 7;</code>
        *
        * <pre>
        * ставка налога // НалСт
@@ -25017,7 +25001,7 @@ public final class UniversalTransferDocumentInfoProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
      *
      * <pre>
      * Функция документа // Функция
@@ -25025,7 +25009,7 @@ public final class UniversalTransferDocumentInfoProtos {
      */
     boolean hasFunction();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
      *
      * <pre>
      * Функция документа // Функция
@@ -25759,7 +25743,7 @@ public final class UniversalTransferDocumentInfoProtos {
     public static final int FUNCTION_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
      *
      * <pre>
      * Функция документа // Функция
@@ -25769,7 +25753,7 @@ public final class UniversalTransferDocumentInfoProtos {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
      *
      * <pre>
      * Функция документа // Функция
@@ -26620,10 +26604,6 @@ public final class UniversalTransferDocumentInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasFunction()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasDocumentDate()) {
         memoizedIsInitialized = 0;
         return false;
@@ -27291,10 +27271,6 @@ public final class UniversalTransferDocumentInfoProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasFunction()) {
-          
-          return false;
-        }
         if (!hasDocumentDate()) {
           
           return false;
@@ -27385,7 +27361,7 @@ public final class UniversalTransferDocumentInfoProtos {
 
       private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
        *
        * <pre>
        * Функция документа // Функция
@@ -27395,7 +27371,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
        *
        * <pre>
        * Функция документа // Функция
@@ -27405,7 +27381,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return function_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
        *
        * <pre>
        * Функция документа // Функция
@@ -27421,7 +27397,7 @@ public final class UniversalTransferDocumentInfoProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 1;</code>
        *
        * <pre>
        * Функция документа // Функция
@@ -38472,7 +38448,7 @@ public final class UniversalTransferDocumentInfoProtos {
       "oicing/InvoiceInfo.proto\032\036Invoicing/Exte" +
       "ndedSigner.proto\032(Invoicing/ExtendedOrga" +
       "nizationInfo.proto\"\342\007\n(UniversalTransfer" +
-      "DocumentSellerTitleInfo\022:\n\010Function\030\001 \002(" +
+      "DocumentSellerTitleInfo\022:\n\010Function\030\001 \001(" +
       "\0162(.Diadoc.Api.Proto.Invoicing.FunctionT" +
       "ype\022\024\n\014DocumentName\030\002 \001(\t\022\024\n\014DocumentDat" +
       "e\030\003 \002(\t\022\026\n\016DocumentNumber\030\004 \002(\t\022R\n\006Selle" +
@@ -38506,7 +38482,7 @@ public final class UniversalTransferDocumentInfoProtos {
       "lNet\030\005 \001(\t\"\266\004\n\023ExtendedInvoiceItem\022\017\n\007Pr" +
       "oduct\030\001 \002(\t\022\014\n\004Unit\030\002 \001(\t\022\020\n\010UnitName\030\003 " +
       "\001(\t\022\020\n\010Quantity\030\004 \001(\t\022\r\n\005Price\030\005 \001(\t\022\016\n\006" +
-      "Excise\030\006 \001(\t\0224\n\007TaxRate\030\007 \002(\0162#.Diadoc.A",
+      "Excise\030\006 \001(\t\0224\n\007TaxRate\030\007 \001(\0162#.Diadoc.A",
       "pi.Proto.Invoicing.TaxRate\022\037\n\027SubtotalWi" +
       "thVatExcluded\030\010 \001(\t\022\013\n\003Vat\030\t \001(\t\022\020\n\010Subt" +
       "otal\030\n \002(\t\022K\n\023CustomsDeclarations\030\013 \003(\0132" +
@@ -38561,7 +38537,7 @@ public final class UniversalTransferDocumentInfoProtos {
       "o.Invoicing.AdditionalInfoId\022C\n\007Signers\030" +
       "\t \003(\01322.Diadoc.Api.Proto.Invoicing.Signe" +
       "rs.ExtendedSigner\"\374\006\n*UniversalCorrectio" +
-      "nDocumentSellerTitleInfo\022:\n\010Function\030\001 \002" +
+      "nDocumentSellerTitleInfo\022:\n\010Function\030\001 \001" +
       "(\0162(.Diadoc.Api.Proto.Invoicing.Function" +
       "Type\022\024\n\014DocumentName\030\002 \001(\t\022\024\n\014DocumentDa" +
       "te\030\003 \002(\t\022\026\n\016DocumentNumber\030\004 \002(\t\022F\n\010Invo" +

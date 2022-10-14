@@ -5,7 +5,7 @@ import "Invoicing/ExtendedOrganizationInfo.proto";
 package Diadoc.Api.Proto.Invoicing;
 
 message UniversalTransferDocumentSellerTitleInfo {
-	required FunctionType Function = 1;  // Функция документа // Функция
+	optional FunctionType Function = 1;  // Функция документа // Функция
 	optional string DocumentName = 2;    // Наименование первичного документа, определенное организацией // НаимДокОпр
 	required string DocumentDate  = 3;   // дата УПД // ДатаСчФ
 	required string DocumentNumber  = 4; // номер УПД // НомерСчФ
@@ -54,7 +54,7 @@ message ExtendedInvoiceItem {
 	optional string Quantity = 4; // количество единиц товара // КолТов
 	optional string Price = 5;    // цена за единицу товара // ЦенаТов
 	optional string Excise = 6;   // акциз // СумАкциз
-	required TaxRate TaxRate = 7; // ставка налога // НалСт
+	optional TaxRate TaxRate = 7; // ставка налога // НалСт
 	optional string SubtotalWithVatExcluded = 8; // сумма без учета налога // СтТовБезНДС
 	optional string Vat = 9;       // сумма налога // СумНал
 	required string Subtotal = 10; // сумма всего // СтТовУчНал
@@ -142,7 +142,7 @@ message UniversalTransferDocumentBuyerTitleInfo {
 }
 
 message UniversalCorrectionDocumentSellerTitleInfo {
-	required FunctionType Function = 1;                          // Функция документа // Функция
+	optional FunctionType Function = 1;                          // Функция документа // Функция
 	optional string DocumentName = 2;                            // Наименование первичного документа, определенное организацией // НаимДокОпр
 	required string DocumentDate  = 3;                           // дата УКД // ДатаКСчФ
 	required string DocumentNumber  = 4;                         // номер УКД // НомерКСчФ

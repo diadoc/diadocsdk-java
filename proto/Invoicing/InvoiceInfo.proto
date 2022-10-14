@@ -43,7 +43,7 @@ message InvoiceItem {
 	repeated string CountriesOfOrigin = 5;			// страны происхождения товара (коды)  v5.01
 	repeated string CustomsDeclarationNumbers = 6;	// номера таможенных деклараций        v5.01
 	optional string Excise = 7;						// акциз
-	required TaxRate TaxRate = 8; 					// ставка налога
+	optional TaxRate TaxRate = 8; 					// ставка налога
 	optional string SubtotalWithVatExcluded = 9;	// сумма без учета налога
 	optional string Vat = 10;						// сумма налога
 	required string Subtotal = 11;					// сумма всего
@@ -121,7 +121,7 @@ message CorrectableInvoiceItemFields {
 	optional string Quantity = 2;					// количество единиц товара
 	optional string Price = 3;						// цена за единицу товара
 	optional string Excise = 4;						// акциз
-	required TaxRate TaxRate = 5;					// ставка налога
+	optional TaxRate TaxRate = 5;					// ставка налога
 	optional string SubtotalWithVatExcluded = 6;	// сумма без учета налога
 	optional string Vat = 7;						// сумма налога
 	required string Subtotal = 8;					// сумма с учетом налога

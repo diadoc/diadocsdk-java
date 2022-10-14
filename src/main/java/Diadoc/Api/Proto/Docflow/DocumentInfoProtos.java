@@ -1148,18 +1148,6 @@ public final class DocumentInfoProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (hasUniversalTransferDocumentInfo()) {
-        if (!getUniversalTransferDocumentInfo().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasUniversalCorrectionDocumentInfo()) {
-        if (!getUniversalCorrectionDocumentInfo().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1726,18 +1714,6 @@ public final class DocumentInfoProtos {
         if (!hasVersion()) {
           
           return false;
-        }
-        if (hasUniversalTransferDocumentInfo()) {
-          if (!getUniversalTransferDocumentInfo().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasUniversalCorrectionDocumentInfo()) {
-          if (!getUniversalCorrectionDocumentInfo().isInitialized()) {
-            
-            return false;
-          }
         }
         return true;
       }
@@ -10157,11 +10133,11 @@ public final class DocumentInfoProtos {
         getGroundsBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
      */
     boolean hasFunction();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
      */
     Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction();
 
@@ -10473,13 +10449,13 @@ public final class DocumentInfoProtos {
     public static final int FUNCTION_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
      */
     public boolean hasFunction() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
      */
     public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction() {
       return function_;
@@ -10532,10 +10508,6 @@ public final class DocumentInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasFunction()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -10829,10 +10801,6 @@ public final class DocumentInfoProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasFunction()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -11117,19 +11085,19 @@ public final class DocumentInfoProtos {
 
       private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
        */
       public boolean hasFunction() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
        */
       public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction() {
         return function_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
        */
       public Builder setFunction(Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType value) {
         if (value == null) {
@@ -11141,7 +11109,7 @@ public final class DocumentInfoProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 5;</code>
        */
       public Builder clearFunction() {
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -11397,11 +11365,11 @@ public final class DocumentInfoProtos {
         getGroundsBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
      */
     boolean hasFunction();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
      */
     Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction();
 
@@ -11861,13 +11829,13 @@ public final class DocumentInfoProtos {
     public static final int FUNCTION_FIELD_NUMBER = 7;
     private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
      */
     public boolean hasFunction() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
      */
     public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction() {
       return function_;
@@ -11966,10 +11934,6 @@ public final class DocumentInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasFunction()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -12349,10 +12313,6 @@ public final class DocumentInfoProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasFunction()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -12789,19 +12749,19 @@ public final class DocumentInfoProtos {
 
       private Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType function_ = Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType.Invoice;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
        */
       public boolean hasFunction() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
        */
       public Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType getFunction() {
         return function_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
        */
       public Builder setFunction(Diadoc.Api.Proto.Invoicing.UniversalTransferDocumentInfoProtos.FunctionType value) {
         if (value == null) {
@@ -12813,7 +12773,7 @@ public final class DocumentInfoProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.FunctionType Function = 7;</code>
        */
       public Builder clearFunction() {
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -13338,14 +13298,14 @@ public final class DocumentInfoProtos {
       "te\030\004 \001(\t\"\366\001\n\035UniversalTransferDocumentIn",
       "fo\022\r\n\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014Curren" +
       "cyCode\030\003 \001(\005\022\017\n\007Grounds\030\004 \001(\t\022:\n\010Functio" +
-      "n\030\005 \002(\0162(.Diadoc.Api.Proto.Invoicing.Fun" +
+      "n\030\005 \001(\0162(.Diadoc.Api.Proto.Invoicing.Fun" +
       "ctionType\022V\n\035OriginalDocumentDateAndNumb" +
       "er\030\006 \001(\0132/.Diadoc.Api.Proto.Docflow.Docu" +
       "mentDateAndNumber\"\342\003\n\037UniversalCorrectio" +
       "nDocumentInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010Total" +
       "Dec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(" +
       "\t\022\024\n\014CurrencyCode\030\005 \001(\005\022\017\n\007Grounds\030\006 \001(\t" +
-      "\022:\n\010Function\030\007 \002(\0162(.Diadoc.Api.Proto.In",
+      "\022:\n\010Function\030\007 \001(\0162(.Diadoc.Api.Proto.In",
       "voicing.FunctionType\022V\n\035OriginalDocument" +
       "DateAndNumber\030\010 \001(\0132/.Diadoc.Api.Proto.D" +
       "ocflow.DocumentDateAndNumber\022^\n%Original" +

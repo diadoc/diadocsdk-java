@@ -9721,7 +9721,7 @@ public final class Torg12InfoProtos {
         getPriceBytes();
 
     /**
-     * <code>required string TaxRate = 14;</code>
+     * <code>optional string TaxRate = 14;</code>
      *
      * <pre>
      * ставка налога
@@ -9729,7 +9729,7 @@ public final class Torg12InfoProtos {
      */
     boolean hasTaxRate();
     /**
-     * <code>required string TaxRate = 14;</code>
+     * <code>optional string TaxRate = 14;</code>
      *
      * <pre>
      * ставка налога
@@ -9737,7 +9737,7 @@ public final class Torg12InfoProtos {
      */
     java.lang.String getTaxRate();
     /**
-     * <code>required string TaxRate = 14;</code>
+     * <code>optional string TaxRate = 14;</code>
      *
      * <pre>
      * ставка налога
@@ -10755,7 +10755,7 @@ public final class Torg12InfoProtos {
     public static final int TAXRATE_FIELD_NUMBER = 14;
     private java.lang.Object taxRate_;
     /**
-     * <code>required string TaxRate = 14;</code>
+     * <code>optional string TaxRate = 14;</code>
      *
      * <pre>
      * ставка налога
@@ -10765,7 +10765,7 @@ public final class Torg12InfoProtos {
       return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
-     * <code>required string TaxRate = 14;</code>
+     * <code>optional string TaxRate = 14;</code>
      *
      * <pre>
      * ставка налога
@@ -10786,7 +10786,7 @@ public final class Torg12InfoProtos {
       }
     }
     /**
-     * <code>required string TaxRate = 14;</code>
+     * <code>optional string TaxRate = 14;</code>
      *
      * <pre>
      * ставка налога
@@ -11057,10 +11057,6 @@ public final class Torg12InfoProtos {
         return false;
       }
       if (!hasQuantity()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasTaxRate()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -11583,10 +11579,6 @@ public final class Torg12InfoProtos {
           return false;
         }
         if (!hasQuantity()) {
-          
-          return false;
-        }
-        if (!hasTaxRate()) {
           
           return false;
         }
@@ -12918,7 +12910,7 @@ public final class Torg12InfoProtos {
 
       private java.lang.Object taxRate_ = "";
       /**
-       * <code>required string TaxRate = 14;</code>
+       * <code>optional string TaxRate = 14;</code>
        *
        * <pre>
        * ставка налога
@@ -12928,7 +12920,7 @@ public final class Torg12InfoProtos {
         return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
-       * <code>required string TaxRate = 14;</code>
+       * <code>optional string TaxRate = 14;</code>
        *
        * <pre>
        * ставка налога
@@ -12949,7 +12941,7 @@ public final class Torg12InfoProtos {
         }
       }
       /**
-       * <code>required string TaxRate = 14;</code>
+       * <code>optional string TaxRate = 14;</code>
        *
        * <pre>
        * ставка налога
@@ -12969,7 +12961,7 @@ public final class Torg12InfoProtos {
         }
       }
       /**
-       * <code>required string TaxRate = 14;</code>
+       * <code>optional string TaxRate = 14;</code>
        *
        * <pre>
        * ставка налога
@@ -12986,7 +12978,7 @@ public final class Torg12InfoProtos {
         return this;
       }
       /**
-       * <code>required string TaxRate = 14;</code>
+       * <code>optional string TaxRate = 14;</code>
        *
        * <pre>
        * ставка налога
@@ -12999,7 +12991,7 @@ public final class Torg12InfoProtos {
         return this;
       }
       /**
-       * <code>required string TaxRate = 14;</code>
+       * <code>optional string TaxRate = 14;</code>
        *
        * <pre>
        * ставка налога
@@ -14652,7 +14644,7 @@ public final class Torg12InfoProtos {
       "\022\020\n\010UnitName\030\007 \002(\t\022\022\n\nParcelType\030\010 \001(\t\022\026" +
       "\n\016ParcelCapacity\030\t \001(\t\022\027\n\017ParcelsQuantit" +
       "y\030\n \001(\t\022\025\n\rGrossQuantity\030\013 \001(\t\022\020\n\010Quanti" +
-      "ty\030\014 \002(\t\022\r\n\005Price\030\r \001(\t\022\017\n\007TaxRate\030\016 \002(\t",
+      "ty\030\014 \002(\t\022\r\n\005Price\030\r \001(\t\022\017\n\007TaxRate\030\016 \001(\t",
       "\022\037\n\027SubtotalWithVatExcluded\030\017 \001(\t\022\013\n\003Vat" +
       "\030\020 \001(\t\022\020\n\010Subtotal\030\021 \002(\t\022\026\n\016AdditionalIn" +
       "fo\030\022 \001(\t\"e\n\007Grounds\022\024\n\014DocumentName\030\001 \001(" +

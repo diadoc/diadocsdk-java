@@ -329,7 +329,7 @@ message SignatureVerification {
 
 message ResolutionRequestAttachment {
 	required string InitialDocumentId = 1;
-	required ResolutionRequestType Type = 2;
+	optional ResolutionRequestType Type = 2;
 	optional string TargetUserId = 3;
 	optional string TargetDepartmentId = 4;
 	optional string Comment = 5;
@@ -362,7 +362,7 @@ message ResolutionRequestDenialAttachment {
 
 message ResolutionAttachment {
 	required string InitialDocumentId = 1;
-	required ResolutionType ResolutionType = 2;
+	optional ResolutionType ResolutionType = 2;
 	optional string Comment = 3;
 	repeated string Labels = 4;
 }

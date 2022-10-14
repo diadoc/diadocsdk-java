@@ -1820,11 +1820,11 @@ public final class DocumentProtos {
     Diadoc.Api.Proto.Documents.DocumentProtos.ConfirmationMetadataOrBuilder getConfirmationMetadataOrBuilder();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
      */
     boolean hasRecipientResponseStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getRecipientResponseStatus();
 
@@ -1869,11 +1869,11 @@ public final class DocumentProtos {
         getEditingSettingIdBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
      */
     boolean hasLockMode();
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
      */
     Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode();
 
@@ -4464,13 +4464,13 @@ public final class DocumentProtos {
     public static final int RECIPIENTRESPONSESTATUS_FIELD_NUMBER = 70;
     private Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus recipientResponseStatus_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
      */
     public boolean hasRecipientResponseStatus() {
       return ((bitField1_ & 0x40000000) == 0x40000000);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
      */
     public Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getRecipientResponseStatus() {
       return recipientResponseStatus_;
@@ -4563,13 +4563,13 @@ public final class DocumentProtos {
     public static final int LOCKMODE_FIELD_NUMBER = 74;
     private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_;
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
      */
     public boolean hasLockMode() {
       return ((bitField2_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
+     * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
      */
     public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
       return lockMode_;
@@ -4756,15 +4756,7 @@ public final class DocumentProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasRecipientResponseStatus()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasAmendmentRequestMetadata()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasLockMode()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -4866,12 +4858,6 @@ public final class DocumentProtos {
           return false;
         }
       }
-      if (hasServiceDetailsMetadata()) {
-        if (!getServiceDetailsMetadata().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       for (int i = 0; i < getCustomDataCount(); i++) {
         if (!getCustomData(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -4925,10 +4911,6 @@ public final class DocumentProtos {
           memoizedIsInitialized = 0;
           return false;
         }
-      }
-      if (!getSenderReceiptMetadata().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
       }
       memoizedIsInitialized = 1;
       return true;
@@ -6813,15 +6795,7 @@ public final class DocumentProtos {
           
           return false;
         }
-        if (!hasRecipientResponseStatus()) {
-          
-          return false;
-        }
         if (!hasAmendmentRequestMetadata()) {
-          
-          return false;
-        }
-        if (!hasLockMode()) {
           
           return false;
         }
@@ -6923,12 +6897,6 @@ public final class DocumentProtos {
             return false;
           }
         }
-        if (hasServiceDetailsMetadata()) {
-          if (!getServiceDetailsMetadata().isInitialized()) {
-            
-            return false;
-          }
-        }
         for (int i = 0; i < getCustomDataCount(); i++) {
           if (!getCustomData(i).isInitialized()) {
             
@@ -6982,10 +6950,6 @@ public final class DocumentProtos {
             
             return false;
           }
-        }
-        if (!getSenderReceiptMetadata().isInitialized()) {
-          
-          return false;
         }
         return true;
       }
@@ -13275,19 +13239,19 @@ public final class DocumentProtos {
 
       private Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus recipientResponseStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
        */
       public boolean hasRecipientResponseStatus() {
         return ((bitField2_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
        */
       public Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getRecipientResponseStatus() {
         return recipientResponseStatus_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
        */
       public Builder setRecipientResponseStatus(Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus value) {
         if (value == null) {
@@ -13299,7 +13263,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];</code>
        */
       public Builder clearRecipientResponseStatus() {
         bitField2_ = (bitField2_ & ~0x00000008);
@@ -13618,19 +13582,19 @@ public final class DocumentProtos {
 
       private Diadoc.Api.Proto.LockModeProtos.LockMode lockMode_ = Diadoc.Api.Proto.LockModeProtos.LockMode.None;
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
        */
       public boolean hasLockMode() {
         return ((bitField2_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
        */
       public Diadoc.Api.Proto.LockModeProtos.LockMode getLockMode() {
         return lockMode_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
        */
       public Builder setLockMode(Diadoc.Api.Proto.LockModeProtos.LockMode value) {
         if (value == null) {
@@ -13642,7 +13606,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
+       * <code>optional .Diadoc.Api.Proto.LockMode LockMode = 74 [default = None];</code>
        */
       public Builder clearLockMode() {
         bitField2_ = (bitField2_ & ~0x00000080);
@@ -14784,11 +14748,11 @@ public final class DocumentProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     boolean hasReceiptStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus();
 
@@ -14924,13 +14888,13 @@ public final class DocumentProtos {
     public static final int RECEIPTSTATUS_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus receiptStatus_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     public boolean hasReceiptStatus() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     public Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus() {
       return receiptStatus_;
@@ -14967,10 +14931,6 @@ public final class DocumentProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasReceiptStatus()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (hasConfirmationMetadata()) {
         if (!getConfirmationMetadata().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -15200,10 +15160,6 @@ public final class DocumentProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasReceiptStatus()) {
-          
-          return false;
-        }
         if (hasConfirmationMetadata()) {
           if (!getConfirmationMetadata().isInitialized()) {
             
@@ -15234,19 +15190,19 @@ public final class DocumentProtos {
 
       private Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus.GeneralReceiptStatusUnknown;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public boolean hasReceiptStatus() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus() {
         return receiptStatus_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus value) {
         if (value == null) {
@@ -15258,7 +15214,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Builder clearReceiptStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -15399,11 +15355,11 @@ public final class DocumentProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     boolean hasReceiptStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus();
   }
@@ -15513,13 +15469,13 @@ public final class DocumentProtos {
     public static final int RECEIPTSTATUS_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus receiptStatus_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     public boolean hasReceiptStatus() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     public Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus() {
       return receiptStatus_;
@@ -15534,10 +15490,6 @@ public final class DocumentProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasReceiptStatus()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -15736,10 +15688,6 @@ public final class DocumentProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasReceiptStatus()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -15764,19 +15712,19 @@ public final class DocumentProtos {
 
       private Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus.GeneralReceiptStatusUnknown;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public boolean hasReceiptStatus() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus() {
         return receiptStatus_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus value) {
         if (value == null) {
@@ -15788,7 +15736,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Builder clearReceiptStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -15813,11 +15761,11 @@ public final class DocumentProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     boolean hasReceiptStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus();
 
@@ -15941,13 +15889,13 @@ public final class DocumentProtos {
     public static final int RECEIPTSTATUS_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus receiptStatus_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     public boolean hasReceiptStatus() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
      */
     public Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus() {
       return receiptStatus_;
@@ -15978,10 +15926,6 @@ public final class DocumentProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasReceiptStatus()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasDateTimeTicks()) {
         memoizedIsInitialized = 0;
         return false;
@@ -16200,10 +16144,6 @@ public final class DocumentProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasReceiptStatus()) {
-          
-          return false;
-        }
         if (!hasDateTimeTicks()) {
           
           return false;
@@ -16232,19 +16172,19 @@ public final class DocumentProtos {
 
       private Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus.GeneralReceiptStatusUnknown;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public boolean hasReceiptStatus() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus() {
         return receiptStatus_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus value) {
         if (value == null) {
@@ -16256,7 +16196,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Builder clearReceiptStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -16322,11 +16262,11 @@ public final class DocumentProtos {
     int getAmendmentFlags();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
      */
     boolean hasReceiptStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus();
   }
@@ -16456,13 +16396,13 @@ public final class DocumentProtos {
     public static final int RECEIPTSTATUS_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus receiptStatus_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
      */
     public boolean hasReceiptStatus() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
      */
     public Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus() {
       return receiptStatus_;
@@ -16479,10 +16419,6 @@ public final class DocumentProtos {
       if (isInitialized == 0) return false;
 
       if (!hasAmendmentFlags()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasReceiptStatus()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -16704,10 +16640,6 @@ public final class DocumentProtos {
           
           return false;
         }
-        if (!hasReceiptStatus()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -16764,19 +16696,19 @@ public final class DocumentProtos {
 
       private Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus.GeneralReceiptStatusUnknown;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
        */
       public boolean hasReceiptStatus() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus getReceiptStatus() {
         return receiptStatus_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.DocumentProtos.GeneralReceiptStatus value) {
         if (value == null) {
@@ -16788,7 +16720,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];</code>
        */
       public Builder clearReceiptStatus() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -16813,11 +16745,11 @@ public final class DocumentProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
      */
     boolean hasMessageType();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
      */
     Diadoc.Api.Proto.Documents.DocumentProtos.MessageType getMessageType();
 
@@ -16947,13 +16879,13 @@ public final class DocumentProtos {
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.DocumentProtos.MessageType messageType_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
      */
     public boolean hasMessageType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
      */
     public Diadoc.Api.Proto.Documents.DocumentProtos.MessageType getMessageType() {
       return messageType_;
@@ -17011,10 +16943,6 @@ public final class DocumentProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasMessageType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasMessageId()) {
         memoizedIsInitialized = 0;
         return false;
@@ -17235,10 +17163,6 @@ public final class DocumentProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasMessageType()) {
-          
-          return false;
-        }
         if (!hasMessageId()) {
           
           return false;
@@ -17267,19 +17191,19 @@ public final class DocumentProtos {
 
       private Diadoc.Api.Proto.Documents.DocumentProtos.MessageType messageType_ = Diadoc.Api.Proto.Documents.DocumentProtos.MessageType.Unknown;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
        */
       public boolean hasMessageType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
        */
       public Diadoc.Api.Proto.Documents.DocumentProtos.MessageType getMessageType() {
         return messageType_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
        */
       public Builder setMessageType(Diadoc.Api.Proto.Documents.DocumentProtos.MessageType value) {
         if (value == null) {
@@ -17291,7 +17215,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.MessageType MessageType = 1;</code>
        */
       public Builder clearMessageType() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -17557,14 +17481,14 @@ public final class DocumentProtos {
       "uments.RecipientReceiptMetadata\022N\n\024Confi" +
       "rmationMetadata\030E \002(\01320.Diadoc.Api.Proto" +
       ".Documents.ConfirmationMetadata\022t\n\027Recip" +
-      "ientResponseStatus\030F \002(\01623.Diadoc.Api.Pr" +
+      "ientResponseStatus\030F \001(\01623.Diadoc.Api.Pr" +
       "oto.Documents.RecipientResponseStatus:\036R" +
       "ecipientResponseStatusUnknown\022V\n\030Amendme" +
       "ntRequestMetadata\030G \002(\01324.Diadoc.Api.Pro",
       "to.Documents.AmendmentRequestMetadata\0222\n" +
       "\006Origin\030H \001(\0132\".Diadoc.Api.Proto.Documen" +
       "ts.Origin\022\032\n\020EditingSettingId\030I \001(\t:\000\0222\n" +
-      "\010LockMode\030J \002(\0162\032.Diadoc.Api.Proto.LockM" +
+      "\010LockMode\030J \001(\0162\032.Diadoc.Api.Proto.LockM" +
       "ode:\004None\022P\n\025SenderReceiptMetadata\030K \002(\013" +
       "21.Diadoc.Api.Proto.Documents.SenderRece" +
       "iptMetadata\022\017\n\007Version\030L \002(\t\"\310\001\n\020Resolut" +
@@ -17574,22 +17498,22 @@ public final class DocumentProtos {
       "doc.Api.Proto.ResolutionTarget\022\024\n\014Author" +
       "UserId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n\030Reci" +
       "pientReceiptMetadata\022d\n\rReceiptStatus\030\001 " +
-      "\002(\01620.Diadoc.Api.Proto.Documents.General" +
+      "\001(\01620.Diadoc.Api.Proto.Documents.General" +
       "ReceiptStatus:\033GeneralReceiptStatusUnkno" +
       "wn\022N\n\024ConfirmationMetadata\030\002 \001(\01320.Diado" +
       "c.Api.Proto.Documents.ConfirmationMetada" +
       "ta\"}\n\025SenderReceiptMetadata\022d\n\rReceiptSt" +
-      "atus\030\001 \002(\01620.Diadoc.Api.Proto.Documents." +
+      "atus\030\001 \001(\01620.Diadoc.Api.Proto.Documents." +
       "GeneralReceiptStatus:\033GeneralReceiptStat",
       "usUnknown\"\223\001\n\024ConfirmationMetadata\022d\n\rRe" +
-      "ceiptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Doc" +
+      "ceiptStatus\030\001 \001(\01620.Diadoc.Api.Proto.Doc" +
       "uments.GeneralReceiptStatus:\033GeneralRece" +
       "iptStatusUnknown\022\025\n\rDateTimeTicks\030\002 \002(\020\"" +
       "\230\001\n\030AmendmentRequestMetadata\022\026\n\016Amendmen" +
-      "tFlags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620.Di" +
+      "tFlags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \001(\01620.Di" +
       "adoc.Api.Proto.Documents.GeneralReceiptS" +
       "tatus:\033GeneralReceiptStatusUnknown\"Y\n\006Or" +
-      "igin\022<\n\013MessageType\030\001 \002(\0162\'.Diadoc.Api.P" +
+      "igin\022<\n\013MessageType\030\001 \001(\0162\'.Diadoc.Api.P" +
       "roto.Documents.MessageType\022\021\n\tMessageId\030",
       "\002 \002(\t*\254\001\n\024ResolutionStatusType\022$\n\027Unknow" +
       "nResolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014" +

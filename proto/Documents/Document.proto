@@ -85,11 +85,11 @@ message Document {
 	repeated Events.MetadataItem Metadata = 67;
 	required RecipientReceiptMetadata RecipientReceiptMetadata = 68;
 	required ConfirmationMetadata ConfirmationMetadata = 69;
-	required RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];
+	optional RecipientResponseStatus RecipientResponseStatus = 70 [default = RecipientResponseStatusUnknown];
 	required AmendmentRequestMetadata AmendmentRequestMetadata = 71;
 	optional Origin Origin = 72;
 	optional string EditingSettingId = 73 [default = ""];
-	required LockMode LockMode = 74 [default = None];
+	optional LockMode LockMode = 74 [default = None];
 	required SenderReceiptMetadata SenderReceiptMetadata = 75;
 	required string Version = 76;
 }
@@ -154,22 +154,22 @@ enum GeneralReceiptStatus {
 }
 
 message RecipientReceiptMetadata {
-	required GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];
+	optional GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];
 	optional ConfirmationMetadata ConfirmationMetadata = 2;
 }
 
 message SenderReceiptMetadata {
-	required GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];
+	optional GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];
 }
 
 message ConfirmationMetadata {
-	required GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];
+	optional GeneralReceiptStatus ReceiptStatus = 1 [default = GeneralReceiptStatusUnknown];
 	required sfixed64 DateTimeTicks = 2;
 }
 
 message AmendmentRequestMetadata {
 	required int32 AmendmentFlags = 1;
-	required GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];
+	optional GeneralReceiptStatus ReceiptStatus = 2 [default = GeneralReceiptStatusUnknown];
 }
 
 enum RecipientResponseStatus {
@@ -182,7 +182,7 @@ enum RecipientResponseStatus {
 }
 
 message Origin {
-	required MessageType MessageType = 1;
+	optional MessageType MessageType = 1;
 	required string MessageId = 2;
 }
 

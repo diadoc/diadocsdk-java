@@ -16,7 +16,7 @@ message Employee
 message EmployeePermissions {
 	required string UserDepartmentId = 1;
 	required bool IsAdministrator = 2;
-	required DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];
+	optional DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];
 	repeated string SelectedDepartmentIds = 4;
 	repeated EmployeeAction Actions = 5;
 	optional AuthorizationPermission AuthorizationPermission = 6;

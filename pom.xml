@@ -4,7 +4,7 @@
 
     <groupId>ru.kontur.diadoc</groupId>
     <artifactId>diadocsdk</artifactId>
-    <version>1.36.2-dev</version>
+    <version>1.64.2</version>
 
     <packaging>jar</packaging>
 
@@ -75,6 +75,11 @@
                         </manifest>
                     </archive>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
             </plugin>
         </plugins>
     </build>

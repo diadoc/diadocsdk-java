@@ -49,8 +49,8 @@ message DocumentTitle {
 }
 
 message SignerInfo {
-	required SignerType SignerType = 1;
-	required Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];
+	optional SignerType SignerType = 1;
+	optional Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];
 }
 
 enum SignerType {
@@ -61,9 +61,9 @@ enum SignerType {
 
 message DocumentMetadataItem {
 	required string Id = 1;
-	required DocumentMetadataItemType Type = 2;
+	optional DocumentMetadataItemType Type = 2;
 	required bool IsRequired = 3;
-	required DocumentMetadataSource Source = 4;
+	optional DocumentMetadataSource Source = 4;
 }
 
 enum DocumentMetadataItemType {

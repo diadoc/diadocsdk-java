@@ -9,7 +9,7 @@ message ExtendedOrganizationInfo {
   optional string Kpp = 4;         // КПП //КПП
   optional Address Address = 5;    // адрес //Адрес
   optional string FnsParticipantId = 6; // идентификатор участника ЭДО
-  required OrgType OrgType = 7;    // СвИП - СвЮЛУч - СвИнНеУч
+  optional OrgType OrgType = 7;    // СвИП - СвЮЛУч - СвИнНеУч
   optional string Okopf = 8;       // код организационно-правовой формы по ОКОПФ
   optional string Okpo = 9;        // код в общероссийском классификаторе предприятий и организаций //ОКПО
   optional string Okdp = 10;       // код основного вида деятельности по ОКДП

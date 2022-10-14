@@ -1124,11 +1124,11 @@ public final class OrganizationProtos {
     int getSearchCount();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+     * <code>optional .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
      */
     boolean hasSociability();
     /**
-     * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+     * <code>optional .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
      */
     Diadoc.Api.Proto.OrganizationProtos.Sociability getSociability();
 
@@ -2024,13 +2024,13 @@ public final class OrganizationProtos {
     public static final int SOCIABILITY_FIELD_NUMBER = 22;
     private Diadoc.Api.Proto.OrganizationProtos.Sociability sociability_;
     /**
-     * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+     * <code>optional .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
      */
     public boolean hasSociability() {
       return ((bitField0_ & 0x00040000) == 0x00040000);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+     * <code>optional .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
      */
     public Diadoc.Api.Proto.OrganizationProtos.Sociability getSociability() {
       return sociability_;
@@ -2192,10 +2192,6 @@ public final class OrganizationProtos {
         return false;
       }
       if (!hasFullName()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasSociability()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -2905,10 +2901,6 @@ public final class OrganizationProtos {
           return false;
         }
         if (!hasFullName()) {
-          
-          return false;
-        }
-        if (!hasSociability()) {
           
           return false;
         }
@@ -4490,19 +4482,19 @@ public final class OrganizationProtos {
 
       private Diadoc.Api.Proto.OrganizationProtos.Sociability sociability_ = Diadoc.Api.Proto.OrganizationProtos.Sociability.AllOrganizations;
       /**
-       * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+       * <code>optional .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
        */
       public boolean hasSociability() {
         return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+       * <code>optional .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
        */
       public Diadoc.Api.Proto.OrganizationProtos.Sociability getSociability() {
         return sociability_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+       * <code>optional .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
        */
       public Builder setSociability(Diadoc.Api.Proto.OrganizationProtos.Sociability value) {
         if (value == null) {
@@ -4514,7 +4506,7 @@ public final class OrganizationProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
+       * <code>optional .Diadoc.Api.Proto.Sociability Sociability = 22;</code>
        */
       public Builder clearSociability() {
         bitField0_ = (bitField0_ & ~0x00100000);
@@ -7216,7 +7208,7 @@ public final class OrganizationProtos {
       "\n\006IsTest\030\020 \001(\010\022\020\n\010IsBranch\030\021 \001(\010\022\021\n\tIsRo" +
       "aming\030\022 \001(\010\022\022\n\nIsEmployee\030\023 \001(\010\022\027\n\017Invit" +
       "ationCount\030\024 \001(\005\022\023\n\013SearchCount\030\025 \001(\005\0222\n" +
-      "\013Sociability\030\026 \002(\0162\035.Diadoc.Api.Proto.So" +
+      "\013Sociability\030\026 \001(\0162\035.Diadoc.Api.Proto.So" +
       "ciability\022\027\n\017LiquidationDate\030\027 \001(\t\022!\n\031Ce" +
       "rtificateOfRegistryInfo\030\030 \001(\t\022\021\n\tIsForei" +
       "gn\030\031 \001(\010\022\034\n\024HasCertificateToSign\030\032 \001(\010\"\266" +

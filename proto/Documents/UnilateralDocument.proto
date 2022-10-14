@@ -12,8 +12,8 @@ message ProformaInvoiceMetadata {
 
 
 message ServiceDetailsMetadata {
-	required UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];
-	required ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
+	optional UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];
+	optional ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
 }
 
 enum UnilateralDocumentStatus {

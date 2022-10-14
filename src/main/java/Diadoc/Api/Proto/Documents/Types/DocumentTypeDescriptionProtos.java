@@ -5716,10 +5716,6 @@ public final class DocumentTypeDescriptionProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!getSignerInfo().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       for (int i = 0; i < getMetadataItemsCount(); i++) {
         if (!getMetadataItems(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -6094,10 +6090,6 @@ public final class DocumentTypeDescriptionProtos {
           return false;
         }
         if (!hasSignerInfo()) {
-          
-          return false;
-        }
-        if (!getSignerInfo().isInitialized()) {
           
           return false;
         }
@@ -6931,20 +6923,20 @@ public final class DocumentTypeDescriptionProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
      */
     boolean hasSignerType();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
      */
     Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType getSignerType();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
      */
     boolean hasExtendedDocumentTitleType();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
      */
     Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType getExtendedDocumentTitleType();
   }
@@ -7065,13 +7057,13 @@ public final class DocumentTypeDescriptionProtos {
     public static final int SIGNERTYPE_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType signerType_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
      */
     public boolean hasSignerType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
      */
     public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType getSignerType() {
       return signerType_;
@@ -7080,13 +7072,13 @@ public final class DocumentTypeDescriptionProtos {
     public static final int EXTENDEDDOCUMENTTITLETYPE_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType extendedDocumentTitleType_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
      */
     public boolean hasExtendedDocumentTitleType() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
      */
     public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType getExtendedDocumentTitleType() {
       return extendedDocumentTitleType_;
@@ -7102,14 +7094,6 @@ public final class DocumentTypeDescriptionProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasSignerType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasExtendedDocumentTitleType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -7324,14 +7308,6 @@ public final class DocumentTypeDescriptionProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasSignerType()) {
-          
-          return false;
-        }
-        if (!hasExtendedDocumentTitleType()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -7356,19 +7332,19 @@ public final class DocumentTypeDescriptionProtos {
 
       private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType signerType_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType.None;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
        */
       public boolean hasSignerType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
        */
       public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType getSignerType() {
         return signerType_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
        */
       public Builder setSignerType(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.SignerType value) {
         if (value == null) {
@@ -7380,7 +7356,7 @@ public final class DocumentTypeDescriptionProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.SignerType SignerType = 1;</code>
        */
       public Builder clearSignerType() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -7391,19 +7367,19 @@ public final class DocumentTypeDescriptionProtos {
 
       private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType extendedDocumentTitleType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType.Absent;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
        */
       public boolean hasExtendedDocumentTitleType() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
        */
       public Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType getExtendedDocumentTitleType() {
         return extendedDocumentTitleType_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
        */
       public Builder setExtendedDocumentTitleType(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType value) {
         if (value == null) {
@@ -7415,7 +7391,7 @@ public final class DocumentTypeDescriptionProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.DocumentTitleType ExtendedDocumentTitleType = 2 [default = Absent];</code>
        */
       public Builder clearExtendedDocumentTitleType() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -7454,11 +7430,11 @@ public final class DocumentTypeDescriptionProtos {
         getIdBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
      */
     boolean hasType();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
      */
     Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemType getType();
 
@@ -7472,11 +7448,11 @@ public final class DocumentTypeDescriptionProtos {
     boolean getIsRequired();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
      */
     boolean hasSource();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
      */
     Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataSource getSource();
   }
@@ -7650,13 +7626,13 @@ public final class DocumentTypeDescriptionProtos {
     public static final int TYPE_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemType type_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
      */
     public boolean hasType() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
      */
     public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemType getType() {
       return type_;
@@ -7680,13 +7656,13 @@ public final class DocumentTypeDescriptionProtos {
     public static final int SOURCE_FIELD_NUMBER = 4;
     private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataSource source_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
      */
     public boolean hasSource() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
      */
     public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataSource getSource() {
       return source_;
@@ -7708,15 +7684,7 @@ public final class DocumentTypeDescriptionProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasIsRequired()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasSource()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -7972,15 +7940,7 @@ public final class DocumentTypeDescriptionProtos {
           
           return false;
         }
-        if (!hasType()) {
-          
-          return false;
-        }
         if (!hasIsRequired()) {
-          
-          return false;
-        }
-        if (!hasSource()) {
           
           return false;
         }
@@ -8084,19 +8044,19 @@ public final class DocumentTypeDescriptionProtos {
 
       private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemType type_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemType.String;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
        */
       public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemType getType() {
         return type_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
        */
       public Builder setType(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataItemType value) {
         if (value == null) {
@@ -8108,7 +8068,7 @@ public final class DocumentTypeDescriptionProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataItemType Type = 2;</code>
        */
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -8151,19 +8111,19 @@ public final class DocumentTypeDescriptionProtos {
 
       private Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataSource source_ = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataSource.Xml;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
        */
       public boolean hasSource() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
        */
       public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataSource getSource() {
         return source_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
        */
       public Builder setSource(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DocumentMetadataSource value) {
         if (value == null) {
@@ -8175,7 +8135,7 @@ public final class DocumentTypeDescriptionProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.DocumentMetadataSource Source = 4;</code>
        */
       public Builder clearSource() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -9787,14 +9747,14 @@ public final class DocumentTypeDescriptionProtos {
       "etadataItem\022V\n\026EncryptedMetadataItems\030\004 " +
       "\003(\01326.Diadoc.Api.Proto.Documents.Types.D",
       "ocumentMetadataItem\"\260\001\n\nSignerInfo\022@\n\nSi" +
-      "gnerType\030\001 \002(\0162,.Diadoc.Api.Proto.Docume" +
+      "gnerType\030\001 \001(\0162,.Diadoc.Api.Proto.Docume" +
       "nts.Types.SignerType\022`\n\031ExtendedDocument" +
-      "TitleType\030\002 \002(\01625.Diadoc.Api.Proto.Invoi" +
+      "TitleType\030\002 \001(\01625.Diadoc.Api.Proto.Invoi" +
       "cing.Signers.DocumentTitleType:\006Absent\"\312" +
       "\001\n\024DocumentMetadataItem\022\n\n\002Id\030\001 \002(\t\022H\n\004T" +
-      "ype\030\002 \002(\0162:.Diadoc.Api.Proto.Documents.T" +
+      "ype\030\002 \001(\0162:.Diadoc.Api.Proto.Documents.T" +
       "ypes.DocumentMetadataItemType\022\022\n\nIsRequi" +
-      "red\030\003 \002(\010\022H\n\006Source\030\004 \002(\01628.Diadoc.Api.P" +
+      "red\030\003 \002(\010\022H\n\006Source\030\004 \001(\01628.Diadoc.Api.P" +
       "roto.Documents.Types.DocumentMetadataSou",
       "rce\"N\n\024DetectedDocumentType\022\023\n\013TypeNamed" +
       "Id\030\001 \002(\t\022\020\n\010Function\030\002 \002(\t\022\017\n\007Version\030\003 " +

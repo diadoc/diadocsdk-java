@@ -300,7 +300,7 @@ public final class ExtendedOrganizationInfoProtos {
         getFnsParticipantIdBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
      *
      * <pre>
      * СвИП - СвЮЛУч - СвИнНеУч
@@ -308,7 +308,7 @@ public final class ExtendedOrganizationInfoProtos {
      */
     boolean hasOrgType();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
      *
      * <pre>
      * СвИП - СвЮЛУч - СвИнНеУч
@@ -1216,7 +1216,7 @@ public final class ExtendedOrganizationInfoProtos {
     public static final int ORGTYPE_FIELD_NUMBER = 7;
     private Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfoProtos.OrgType orgType_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
      *
      * <pre>
      * СвИП - СвЮЛУч - СвИнНеУч
@@ -1226,7 +1226,7 @@ public final class ExtendedOrganizationInfoProtos {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
      *
      * <pre>
      * СвИП - СвЮЛУч - СвИнНеУч
@@ -2021,10 +2021,6 @@ public final class ExtendedOrganizationInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasOrgType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (hasAddress()) {
         if (!getAddress().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -2596,10 +2592,6 @@ public final class ExtendedOrganizationInfoProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasOrgType()) {
-          
-          return false;
-        }
         if (hasAddress()) {
           if (!getAddress().isInitialized()) {
             
@@ -3282,7 +3274,7 @@ public final class ExtendedOrganizationInfoProtos {
 
       private Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfoProtos.OrgType orgType_ = Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfoProtos.OrgType.LegalEntity;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
        *
        * <pre>
        * СвИП - СвЮЛУч - СвИнНеУч
@@ -3292,7 +3284,7 @@ public final class ExtendedOrganizationInfoProtos {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
        *
        * <pre>
        * СвИП - СвЮЛУч - СвИнНеУч
@@ -3302,7 +3294,7 @@ public final class ExtendedOrganizationInfoProtos {
         return orgType_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
        *
        * <pre>
        * СвИП - СвЮЛУч - СвИнНеУч
@@ -3318,7 +3310,7 @@ public final class ExtendedOrganizationInfoProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Organizations.OrgType OrgType = 7;</code>
        *
        * <pre>
        * СвИП - СвЮЛУч - СвИнНеУч
@@ -4762,7 +4754,7 @@ public final class ExtendedOrganizationInfoProtos {
       "tionInfo\022\r\n\005BoxId\030\001 \001(\t\022\017\n\007OrgName\030\002 \001(\t" +
       "\022\013\n\003Inn\030\003 \001(\t\022\013\n\003Kpp\030\004 \001(\t\022*\n\007Address\030\005 " +
       "\001(\0132\031.Diadoc.Api.Proto.Address\022\030\n\020FnsPar" +
-      "ticipantId\030\006 \001(\t\022B\n\007OrgType\030\007 \002(\01621.Diad" +
+      "ticipantId\030\006 \001(\t\022B\n\007OrgType\030\007 \001(\01621.Diad" +
       "oc.Api.Proto.Invoicing.Organizations.Org" +
       "Type\022\r\n\005Okopf\030\010 \001(\t\022\014\n\004Okpo\030\t \001(\t\022\014\n\004Okd" +
       "p\030\n \001(\t\022\r\n\005Phone\030\013 \001(\t\022\r\n\005Email\030\014 \001(\t\022\034\n",

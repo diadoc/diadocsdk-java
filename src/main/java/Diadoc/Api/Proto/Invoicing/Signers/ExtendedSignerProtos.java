@@ -1651,7 +1651,7 @@ public final class ExtendedSignerProtos {
         getRegistrationCertificateBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
      *
      * <pre>
      * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
@@ -1659,7 +1659,7 @@ public final class ExtendedSignerProtos {
      */
     boolean hasSignerType();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
      *
      * <pre>
      * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
@@ -1720,7 +1720,7 @@ public final class ExtendedSignerProtos {
         getSignerInfoBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
      *
      * <pre>
      * Область полномочий (ОблПолн)
@@ -1728,7 +1728,7 @@ public final class ExtendedSignerProtos {
      */
     boolean hasSignerPowers();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
      *
      * <pre>
      * Область полномочий (ОблПолн)
@@ -1737,7 +1737,7 @@ public final class ExtendedSignerProtos {
     Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers getSignerPowers();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
      *
      * <pre>
      * Статус (Статус)
@@ -1745,7 +1745,7 @@ public final class ExtendedSignerProtos {
      */
     boolean hasSignerStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
      *
      * <pre>
      * Статус (Статус)
@@ -2245,7 +2245,7 @@ public final class ExtendedSignerProtos {
     public static final int SIGNERTYPE_FIELD_NUMBER = 7;
     private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType signerType_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
      *
      * <pre>
      * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
@@ -2255,7 +2255,7 @@ public final class ExtendedSignerProtos {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
      *
      * <pre>
      * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
@@ -2376,7 +2376,7 @@ public final class ExtendedSignerProtos {
     public static final int SIGNERPOWERS_FIELD_NUMBER = 10;
     private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers signerPowers_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
      *
      * <pre>
      * Область полномочий (ОблПолн)
@@ -2386,7 +2386,7 @@ public final class ExtendedSignerProtos {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
      *
      * <pre>
      * Область полномочий (ОблПолн)
@@ -2399,7 +2399,7 @@ public final class ExtendedSignerProtos {
     public static final int SIGNERSTATUS_FIELD_NUMBER = 11;
     private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus signerStatus_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
      *
      * <pre>
      * Статус (Статус)
@@ -2409,7 +2409,7 @@ public final class ExtendedSignerProtos {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
      *
      * <pre>
      * Статус (Статус)
@@ -2553,18 +2553,6 @@ public final class ExtendedSignerProtos {
         return false;
       }
       if (!hasFirstName()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasSignerType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasSignerPowers()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasSignerStatus()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -2983,18 +2971,6 @@ public final class ExtendedSignerProtos {
           return false;
         }
         if (!hasFirstName()) {
-          
-          return false;
-        }
-        if (!hasSignerType()) {
-          
-          return false;
-        }
-        if (!hasSignerPowers()) {
-          
-          return false;
-        }
-        if (!hasSignerStatus()) {
           
           return false;
         }
@@ -3478,7 +3454,7 @@ public final class ExtendedSignerProtos {
 
       private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType signerType_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerType.LegalEntity;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
        *
        * <pre>
        * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
@@ -3488,7 +3464,7 @@ public final class ExtendedSignerProtos {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
        *
        * <pre>
        * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
@@ -3498,7 +3474,7 @@ public final class ExtendedSignerProtos {
         return signerType_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
        *
        * <pre>
        * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
@@ -3514,7 +3490,7 @@ public final class ExtendedSignerProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerType SignerType = 7 [default = LegalEntity];</code>
        *
        * <pre>
        * Физическое лицо-Индивидуальный предприниматель – представитель юридического лица (ФЛ-ИП-ЮЛ)
@@ -3729,7 +3705,7 @@ public final class ExtendedSignerProtos {
 
       private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers signerPowers_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerPowers.InvoiceSigner;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
        *
        * <pre>
        * Область полномочий (ОблПолн)
@@ -3739,7 +3715,7 @@ public final class ExtendedSignerProtos {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
        *
        * <pre>
        * Область полномочий (ОблПолн)
@@ -3749,7 +3725,7 @@ public final class ExtendedSignerProtos {
         return signerPowers_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
        *
        * <pre>
        * Область полномочий (ОблПолн)
@@ -3765,7 +3741,7 @@ public final class ExtendedSignerProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerPowers SignerPowers = 10;</code>
        *
        * <pre>
        * Область полномочий (ОблПолн)
@@ -3780,7 +3756,7 @@ public final class ExtendedSignerProtos {
 
       private Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus signerStatus_ = Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.SignerStatus.SellerEmployee;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
        *
        * <pre>
        * Статус (Статус)
@@ -3790,7 +3766,7 @@ public final class ExtendedSignerProtos {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
        *
        * <pre>
        * Статус (Статус)
@@ -3800,7 +3776,7 @@ public final class ExtendedSignerProtos {
         return signerStatus_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
        *
        * <pre>
        * Статус (Статус)
@@ -3816,7 +3792,7 @@ public final class ExtendedSignerProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.Signers.SignerStatus SignerStatus = 11;</code>
        *
        * <pre>
        * Статус (Статус)
@@ -5703,12 +5679,12 @@ public final class ExtendedSignerProtos {
       "rname\030\001 \002(\t\022\021\n\tFirstName\030\002 \002(\t\022\022\n\nPatron" +
       "ymic\030\003 \001(\t\022\020\n\010JobTitle\030\004 \001(\t\022\013\n\003Inn\030\005 \001(" +
       "\t\022\037\n\027RegistrationCertificate\030\006 \001(\t\022O\n\nSi",
-      "gnerType\030\007 \002(\0162..Diadoc.Api.Proto.Invoic" +
+      "gnerType\030\007 \001(\0162..Diadoc.Api.Proto.Invoic" +
       "ing.Signers.SignerType:\013LegalEntity\022\036\n\026S" +
       "ignerOrganizationName\030\010 \001(\t\022\022\n\nSignerInf" +
-      "o\030\t \001(\t\022F\n\014SignerPowers\030\n \002(\01620.Diadoc.A" +
+      "o\030\t \001(\t\022F\n\014SignerPowers\030\n \001(\01620.Diadoc.A" +
       "pi.Proto.Invoicing.Signers.SignerPowers\022" +
-      "F\n\014SignerStatus\030\013 \002(\01620.Diadoc.Api.Proto" +
+      "F\n\014SignerStatus\030\013 \001(\01620.Diadoc.Api.Proto" +
       ".Invoicing.Signers.SignerStatus\022\030\n\020Signe" +
       "rPowersBase\030\014 \001(\t\022\033\n\023SignerOrgPowersBase" +
       "\030\r \001(\t\"\357\002\n\033ExtendedSignerDetailsToPost\022\020" +

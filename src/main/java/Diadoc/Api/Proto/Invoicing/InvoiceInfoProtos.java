@@ -6270,7 +6270,7 @@ public final class InvoiceInfoProtos {
         getExciseBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
      *
      * <pre>
      * ставка налога
@@ -6278,7 +6278,7 @@ public final class InvoiceInfoProtos {
      */
     boolean hasTaxRate();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
      *
      * <pre>
      * ставка налога
@@ -7044,7 +7044,7 @@ public final class InvoiceInfoProtos {
     public static final int TAXRATE_FIELD_NUMBER = 8;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
      *
      * <pre>
      * ставка налога
@@ -7054,7 +7054,7 @@ public final class InvoiceInfoProtos {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
      *
      * <pre>
      * ставка налога
@@ -7413,10 +7413,6 @@ public final class InvoiceInfoProtos {
       if (isInitialized == 0) return false;
 
       if (!hasProduct()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasTaxRate()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -7953,10 +7949,6 @@ public final class InvoiceInfoProtos {
 
       public final boolean isInitialized() {
         if (!hasProduct()) {
-          
-          return false;
-        }
-        if (!hasTaxRate()) {
           
           return false;
         }
@@ -8758,7 +8750,7 @@ public final class InvoiceInfoProtos {
 
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.NoVat;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
        *
        * <pre>
        * ставка налога
@@ -8768,7 +8760,7 @@ public final class InvoiceInfoProtos {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
        *
        * <pre>
        * ставка налога
@@ -8778,7 +8770,7 @@ public final class InvoiceInfoProtos {
         return taxRate_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
        *
        * <pre>
        * ставка налога
@@ -8794,7 +8786,7 @@ public final class InvoiceInfoProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 8;</code>
        *
        * <pre>
        * ставка налога
@@ -20031,7 +20023,7 @@ public final class InvoiceInfoProtos {
         getExciseBytes();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
      *
      * <pre>
      * ставка налога
@@ -20039,7 +20031,7 @@ public final class InvoiceInfoProtos {
      */
     boolean hasTaxRate();
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
      *
      * <pre>
      * ставка налога
@@ -20489,7 +20481,7 @@ public final class InvoiceInfoProtos {
     public static final int TAXRATE_FIELD_NUMBER = 5;
     private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_;
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
      *
      * <pre>
      * ставка налога
@@ -20499,7 +20491,7 @@ public final class InvoiceInfoProtos {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
      *
      * <pre>
      * ставка налога
@@ -20687,10 +20679,6 @@ public final class InvoiceInfoProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasTaxRate()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasSubtotal()) {
         memoizedIsInitialized = 0;
         return false;
@@ -21019,10 +21007,6 @@ public final class InvoiceInfoProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasTaxRate()) {
-          
-          return false;
-        }
         if (!hasSubtotal()) {
           
           return false;
@@ -21451,7 +21435,7 @@ public final class InvoiceInfoProtos {
 
       private Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate taxRate_ = Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.TaxRate.NoVat;
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
        *
        * <pre>
        * ставка налога
@@ -21461,7 +21445,7 @@ public final class InvoiceInfoProtos {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
        *
        * <pre>
        * ставка налога
@@ -21471,7 +21455,7 @@ public final class InvoiceInfoProtos {
         return taxRate_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
        *
        * <pre>
        * ставка налога
@@ -21487,7 +21471,7 @@ public final class InvoiceInfoProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.Invoicing.TaxRate TaxRate = 5;</code>
        *
        * <pre>
        * ставка налога
@@ -23043,7 +23027,7 @@ public final class InvoiceInfoProtos {
       "(\t\022\020\n\010Quantity\030\003 \001(\t\022\r\n\005Price\030\004 \001(\t\022\031\n\021C" +
       "ountriesOfOrigin\030\005 \003(\t\022!\n\031CustomsDeclara" +
       "tionNumbers\030\006 \003(\t\022\016\n\006Excise\030\007 \001(\t\0224\n\007Tax" +
-      "Rate\030\010 \002(\0162#.Diadoc.Api.Proto.Invoicing.",
+      "Rate\030\010 \001(\0162#.Diadoc.Api.Proto.Invoicing.",
       "TaxRate\022\037\n\027SubtotalWithVatExcluded\030\t \001(\t" +
       "\022\013\n\003Vat\030\n \001(\t\022\020\n\010Subtotal\030\013 \002(\t\022\026\n\016Addit" +
       "ionalInfo\030\014 \001(\t\022K\n\023CustomsDeclarations\030\r" +
@@ -23093,7 +23077,7 @@ public final class InvoiceInfoProtos {
       "2*.Diadoc.Api.Proto.Invoicing.Additional" +
       "Info\"\323\001\n\034CorrectableInvoiceItemFields\022\014\n" +
       "\004Unit\030\001 \001(\t\022\020\n\010Quantity\030\002 \001(\t\022\r\n\005Price\030\003" +
-      " \001(\t\022\016\n\006Excise\030\004 \001(\t\0224\n\007TaxRate\030\005 \002(\0162#.",
+      " \001(\t\022\016\n\006Excise\030\004 \001(\t\0224\n\007TaxRate\030\005 \001(\0162#.",
       "Diadoc.Api.Proto.Invoicing.TaxRate\022\037\n\027Su" +
       "btotalWithVatExcluded\030\006 \001(\t\022\013\n\003Vat\030\007 \001(\t" +
       "\022\020\n\010Subtotal\030\010 \002(\t\"h\n\026InvoiceItemAmounts" +

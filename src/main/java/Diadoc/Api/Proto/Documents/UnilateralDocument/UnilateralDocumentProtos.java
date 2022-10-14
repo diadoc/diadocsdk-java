@@ -1129,20 +1129,20 @@ public final class UnilateralDocumentProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
      */
     boolean hasDocumentStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
      */
     Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.UnilateralDocumentStatus getDocumentStatus();
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
      */
     boolean hasReceiptStatus();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
      */
     Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus();
   }
@@ -1263,13 +1263,13 @@ public final class UnilateralDocumentProtos {
     public static final int DOCUMENTSTATUS_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.UnilateralDocumentStatus documentStatus_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
      */
     public boolean hasDocumentStatus() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
      */
     public Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.UnilateralDocumentStatus getDocumentStatus() {
       return documentStatus_;
@@ -1278,13 +1278,13 @@ public final class UnilateralDocumentProtos {
     public static final int RECEIPTSTATUS_FIELD_NUMBER = 2;
     private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
      */
     public boolean hasReceiptStatus() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
      */
     public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
       return receiptStatus_;
@@ -1300,14 +1300,6 @@ public final class UnilateralDocumentProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasDocumentStatus()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasReceiptStatus()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1522,14 +1514,6 @@ public final class UnilateralDocumentProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasDocumentStatus()) {
-          
-          return false;
-        }
-        if (!hasReceiptStatus()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -1554,19 +1538,19 @@ public final class UnilateralDocumentProtos {
 
       private Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.UnilateralDocumentStatus documentStatus_ = Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.UnilateralDocumentStatus.UnknownUnilateralDocumentStatus;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
        */
       public boolean hasDocumentStatus() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
        */
       public Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.UnilateralDocumentStatus getDocumentStatus() {
         return documentStatus_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
        */
       public Builder setDocumentStatus(Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.UnilateralDocumentStatus value) {
         if (value == null) {
@@ -1578,7 +1562,7 @@ public final class UnilateralDocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentStatus DocumentStatus = 1 [default = UnknownUnilateralDocumentStatus];</code>
        */
       public Builder clearDocumentStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -1589,19 +1573,19 @@ public final class UnilateralDocumentProtos {
 
       private Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus receiptStatus_ = Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus.UnknownReceiptStatus;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
        */
       public boolean hasReceiptStatus() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
        */
       public Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus getReceiptStatus() {
         return receiptStatus_;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
        */
       public Builder setReceiptStatus(Diadoc.Api.Proto.Documents.ReceiptStatusProtos.ReceiptStatus value) {
         if (value == null) {
@@ -1613,7 +1597,7 @@ public final class UnilateralDocumentProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];</code>
        */
       public Builder clearReceiptStatus() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -1663,10 +1647,10 @@ public final class UnilateralDocumentProtos {
       "\n\rReceiptStatus\030\005 \001(\0162).Diadoc.Api.Proto" +
       ".Documents.ReceiptStatus:\024UnknownReceipt",
       "Status\"\363\001\n\026ServiceDetailsMetadata\022\200\001\n\016Do" +
-      "cumentStatus\030\001 \002(\0162G.Diadoc.Api.Proto.Do" +
+      "cumentStatus\030\001 \001(\0162G.Diadoc.Api.Proto.Do" +
       "cuments.UnilateralDocument.UnilateralDoc" +
       "umentStatus:\037UnknownUnilateralDocumentSt" +
-      "atus\022V\n\rReceiptStatus\030\002 \002(\0162).Diadoc.Api" +
+      "atus\022V\n\rReceiptStatus\030\002 \001(\0162).Diadoc.Api" +
       ".Proto.Documents.ReceiptStatus:\024UnknownR" +
       "eceiptStatus*\376\001\n\030UnilateralDocumentStatu" +
       "s\022#\n\037UnknownUnilateralDocumentStatus\020\000\022\014" +
