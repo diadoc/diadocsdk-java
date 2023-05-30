@@ -24,6 +24,9 @@ import static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo
 import static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo;
 import static Diadoc.Api.Proto.Invoicing.RevocationRequestInfoProtos.RevocationRequestInfo;
 import static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo;
+import static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionGenerationRequestV2;
+import static Diadoc.Api.Proto.Invoicing.InvoiceCorrectionRequestInfoProtos.InvoiceCorrectionRequestGenerationRequestV2;
+import static Diadoc.Api.Proto.Invoicing.ReceiptGenerationRequestProtos.ReceiptGenerationRequestV2;
 import static Diadoc.Api.Proto.Invoicing.SignerProtos.Signer;
 import static Diadoc.Api.Proto.Invoicing.Torg12InfoProtos.Torg12BuyerTitleInfo;
 import static Diadoc.Api.Proto.Invoicing.Torg12InfoProtos.Torg12SellerTitleInfo;
@@ -42,6 +45,11 @@ public class GenerateClient {
                                                              String attachmentId,
                                                              InvoiceCorrectionRequestInfo invoiceCorrectionInfo) throws DiadocSdkException {
         return getGeneratedXml(boxId, messageId, attachmentId, "/GenerateInvoiceCorrectionRequestXml", invoiceCorrectionInfo);
+    }
+
+    public GeneratedFile generateInvoiceCorrectionRequestXmlV2(String boxId,
+                                                               InvoiceCorrectionRequestGenerationRequestV2 generationRequest) throws DiadocSdkException {
+        return getGeneratedXml(boxId, "/V2/GenerateInvoiceCorrectionRequestXml", generationRequest);
     }
     public GeneratedFile generateRevocationRequestXml(String boxId,
                                                       String messageId,
@@ -89,8 +97,17 @@ public class GenerateClient {
         return getGeneratedXml(boxId, messageId, attachmentId, "/GenerateSignatureRejectionXml", signatureRejectionInfo);
     }
 
+    public GeneratedFile generateSignatureRejectionXmlV2(String boxId,
+                                                       SignatureRejectionGenerationRequestV2 generationRequest) throws DiadocSdkException {
+        return getGeneratedXml(boxId, "/V2/GenerateSignatureRejectionXml", generationRequest);
+    }
+
     public GeneratedFile generateReceiptXml(String boxId, String messageId, String attachmentId, Signer signer) throws DiadocSdkException {
         return getGeneratedXml(boxId, messageId, attachmentId, "/GenerateReceiptXml", signer);
+    }
+
+    public GeneratedFile generateReceiptXmlV2(String boxId, ReceiptGenerationRequestV2 generationRequest) throws DiadocSdkException {
+        return getGeneratedXml(boxId, "/V2/GenerateReceiptXml", generationRequest);
     }
 
     private <T extends GeneratedMessage> GeneratedFile getGeneratedXml(
@@ -116,6 +133,27 @@ public class GenerateClient {
                             .addParameter("boxId", boxId)
                             .addParameter("messageId", messageId)
                             .addParameter("attachmentId", attachmentId)
+                            .build())
+                    .setEntity(new ByteArrayEntity(data.toByteArray()));
+            return diadocHttpClient.performRequestWithGeneratedFile(request);
+        } catch (URISyntaxException | IOException | ParseException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    private <T extends GeneratedMessage> GeneratedFile getGeneratedXml(
+            String boxId,
+            String path,
+            T data) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        try {
+            var request = RequestBuilder.post(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath(path)
+                            .addParameter("boxId", boxId)
                             .build())
                     .setEntity(new ByteArrayEntity(data.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);

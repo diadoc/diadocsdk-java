@@ -108,6 +108,106 @@ public final class CertificateInfoV2Protos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.CertificateType)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.CertificateSubjectType}
+   */
+  public enum CertificateSubjectType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownCertificateSubjectType = 0;</code>
+     */
+    UnknownCertificateSubjectType(0, 0),
+    /**
+     * <code>LegalEntity = 1;</code>
+     */
+    LegalEntity(1, 1),
+    /**
+     * <code>IndividualEntity = 2;</code>
+     */
+    IndividualEntity(2, 2),
+    /**
+     * <code>PhysicalPerson = 3;</code>
+     */
+    PhysicalPerson(3, 3),
+    ;
+
+    /**
+     * <code>UnknownCertificateSubjectType = 0;</code>
+     */
+    public static final int UnknownCertificateSubjectType_VALUE = 0;
+    /**
+     * <code>LegalEntity = 1;</code>
+     */
+    public static final int LegalEntity_VALUE = 1;
+    /**
+     * <code>IndividualEntity = 2;</code>
+     */
+    public static final int IndividualEntity_VALUE = 2;
+    /**
+     * <code>PhysicalPerson = 3;</code>
+     */
+    public static final int PhysicalPerson_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static CertificateSubjectType valueOf(int value) {
+      switch (value) {
+        case 0: return UnknownCertificateSubjectType;
+        case 1: return LegalEntity;
+        case 2: return IndividualEntity;
+        case 3: return PhysicalPerson;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<CertificateSubjectType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<CertificateSubjectType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CertificateSubjectType>() {
+            public CertificateSubjectType findValueByNumber(int number) {
+              return CertificateSubjectType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.CertificateInfoV2Protos.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final CertificateSubjectType[] VALUES = values();
+
+    public static CertificateSubjectType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private CertificateSubjectType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.CertificateSubjectType)
+  }
+
   public interface CertificateInfoV2OrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CertificateInfoV2)
       com.google.protobuf.MessageOrBuilder {
@@ -263,6 +363,15 @@ public final class CertificateInfoV2Protos {
      * <code>optional bool IsDefault = 13;</code>
      */
     boolean getIsDefault();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateSubjectType SubjectType = 14;</code>
+     */
+    boolean hasSubjectType();
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateSubjectType SubjectType = 14;</code>
+     */
+    Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType getSubjectType();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.CertificateInfoV2}
@@ -392,6 +501,17 @@ public final class CertificateInfoV2Protos {
             case 104: {
               bitField0_ |= 0x00001000;
               isDefault_ = input.readBool();
+              break;
+            }
+            case 112: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType value = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(14, rawValue);
+              } else {
+                bitField0_ |= 0x00002000;
+                subjectType_ = value;
+              }
               break;
             }
           }
@@ -818,6 +938,21 @@ public final class CertificateInfoV2Protos {
       return isDefault_;
     }
 
+    public static final int SUBJECTTYPE_FIELD_NUMBER = 14;
+    private Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType subjectType_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateSubjectType SubjectType = 14;</code>
+     */
+    public boolean hasSubjectType() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.CertificateSubjectType SubjectType = 14;</code>
+     */
+    public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType getSubjectType() {
+      return subjectType_;
+    }
+
     private void initFields() {
       thumbprint_ = "";
       type_ = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateType.UnknownCertificateType;
@@ -832,6 +967,7 @@ public final class CertificateInfoV2Protos {
       userLastName_ = "";
       userShortName_ = "";
       isDefault_ = false;
+      subjectType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -893,6 +1029,9 @@ public final class CertificateInfoV2Protos {
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         output.writeBool(13, isDefault_);
       }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeEnum(14, subjectType_.getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -953,6 +1092,10 @@ public final class CertificateInfoV2Protos {
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, isDefault_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, subjectType_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1097,6 +1240,8 @@ public final class CertificateInfoV2Protos {
         bitField0_ = (bitField0_ & ~0x00000800);
         isDefault_ = false;
         bitField0_ = (bitField0_ & ~0x00001000);
+        subjectType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType;
+        bitField0_ = (bitField0_ & ~0x00002000);
         return this;
       }
 
@@ -1177,6 +1322,10 @@ public final class CertificateInfoV2Protos {
           to_bitField0_ |= 0x00001000;
         }
         result.isDefault_ = isDefault_;
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.subjectType_ = subjectType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1245,6 +1394,9 @@ public final class CertificateInfoV2Protos {
         }
         if (other.hasIsDefault()) {
           setIsDefault(other.getIsDefault());
+        }
+        if (other.hasSubjectType()) {
+          setSubjectType(other.getSubjectType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2008,6 +2160,41 @@ public final class CertificateInfoV2Protos {
         return this;
       }
 
+      private Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType subjectType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType;
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateSubjectType SubjectType = 14;</code>
+       */
+      public boolean hasSubjectType() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateSubjectType SubjectType = 14;</code>
+       */
+      public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType getSubjectType() {
+        return subjectType_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateSubjectType SubjectType = 14;</code>
+       */
+      public Builder setSubjectType(Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00002000;
+        subjectType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.CertificateSubjectType SubjectType = 14;</code>
+       */
+      public Builder clearSubjectType() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        subjectType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CertificateInfoV2)
     }
 
@@ -2034,7 +2221,7 @@ public final class CertificateInfoV2Protos {
   static {
     java.lang.String[] descriptorData = {
       "\n\027CertificateInfoV2.proto\022\020Diadoc.Api.Pr" +
-      "oto\"\312\002\n\021CertificateInfoV2\022\022\n\nThumbprint\030" +
+      "oto\"\211\003\n\021CertificateInfoV2\022\022\n\nThumbprint\030" +
       "\001 \002(\t\022/\n\004Type\030\002 \002(\0162!.Diadoc.Api.Proto.C" +
       "ertificateType\022\021\n\tValidFrom\030\003 \001(\020\022\017\n\007Val" +
       "idTo\030\004 \001(\020\022\033\n\023PrivateKeyValidFrom\030\005 \001(\020\022" +
@@ -2042,11 +2229,15 @@ public final class CertificateInfoV2Protos {
       "onName\030\007 \001(\t\022\013\n\003Inn\030\010 \001(\t\022\025\n\rUserFirstNa" +
       "me\030\t \001(\t\022\026\n\016UserMiddleName\030\n \001(\t\022\024\n\014User" +
       "LastName\030\013 \001(\t\022\025\n\rUserShortName\030\014 \001(\t\022\021\n" +
-      "\tIsDefault\030\r \001(\010*z\n\017CertificateType\022\032\n\026U",
-      "nknownCertificateType\020\000\022\030\n\024TokenCertific" +
-      "ateType\020\001\022\026\n\022DssCertificateType\020\002\022\031\n\025Kon" +
-      "turCertificateType\020\003B\031B\027CertificateInfoV" +
-      "2Protos"
+      "\tIsDefault\030\r \001(\010\022=\n\013SubjectType\030\016 \001(\0162(.",
+      "Diadoc.Api.Proto.CertificateSubjectType*" +
+      "z\n\017CertificateType\022\032\n\026UnknownCertificate" +
+      "Type\020\000\022\030\n\024TokenCertificateType\020\001\022\026\n\022DssC" +
+      "ertificateType\020\002\022\031\n\025KonturCertificateTyp" +
+      "e\020\003*v\n\026CertificateSubjectType\022!\n\035Unknown" +
+      "CertificateSubjectType\020\000\022\017\n\013LegalEntity\020" +
+      "\001\022\024\n\020IndividualEntity\020\002\022\022\n\016PhysicalPerso" +
+      "n\020\003B\031B\027CertificateInfoV2Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2065,7 +2256,7 @@ public final class CertificateInfoV2Protos {
     internal_static_Diadoc_Api_Proto_CertificateInfoV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_CertificateInfoV2_descriptor,
-        new java.lang.String[] { "Thumbprint", "Type", "ValidFrom", "ValidTo", "PrivateKeyValidFrom", "PrivateKeyValidTo", "OrganizationName", "Inn", "UserFirstName", "UserMiddleName", "UserLastName", "UserShortName", "IsDefault", });
+        new java.lang.String[] { "Thumbprint", "Type", "ValidFrom", "ValidTo", "PrivateKeyValidFrom", "PrivateKeyValidTo", "OrganizationName", "Inn", "UserFirstName", "UserMiddleName", "UserLastName", "UserShortName", "IsDefault", "SubjectType", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
