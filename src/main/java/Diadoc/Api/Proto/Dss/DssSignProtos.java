@@ -33,6 +33,10 @@ public final class DssSignProtos {
      * <code>Applet = 3;</code>
      */
     Applet(4, 3),
+    /**
+     * <code>MobileSdk = 4;</code>
+     */
+    MobileSdk(5, 4),
     ;
 
     /**
@@ -55,6 +59,10 @@ public final class DssSignProtos {
      * <code>Applet = 3;</code>
      */
     public static final int Applet_VALUE = 3;
+    /**
+     * <code>MobileSdk = 4;</code>
+     */
+    public static final int MobileSdk_VALUE = 4;
 
 
     public final int getNumber() { return value; }
@@ -66,6 +74,7 @@ public final class DssSignProtos {
         case 1: return Sms;
         case 2: return MyDss;
         case 3: return Applet;
+        case 4: return MobileSdk;
         default: return null;
       }
     }
@@ -3434,17 +3443,18 @@ public final class DssSignProtos {
       "SigningResult\022[\n\021FileSigningStatus\030\001 \001(\016" +
       "2*.Diadoc.Api.Proto.Dss.DssFileSigningSt" +
       "atus:\024UnknownSigningStatus\022\021\n\tSignature\030" +
-      "\002 \001(\014*[\n\016DssConfirmType\022\037\n\022ConfirmTypeUn" +
+      "\002 \001(\014*j\n\016DssConfirmType\022\037\n\022ConfirmTypeUn" +
       "known\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\007\n\003Sms\020\001\022\t\n\005M" +
-      "yDss\020\002\022\n\n\006Applet\020\003*;\n\013DssOperator\022\023\n\017Ope",
-      "ratorUnknown\020\000\022\013\n\007Megafon\020\001\022\n\n\006Kontur\020\002*" +
-      "X\n\024DssFileSigningStatus\022\030\n\024UnknownSignin" +
-      "gStatus\020\000\022\024\n\020SigningCompleted\020\001\022\020\n\014Signi" +
-      "ngError\020\002*\253\001\n\022DssOperationStatus\022\013\n\007Unkn" +
-      "own\020\000\022\016\n\nInProgress\020\001\022\r\n\tCompleted\020\002\022\022\n\016" +
-      "CanceledByUser\020\003\022\013\n\007Timeout\020\004\022\013\n\007Crashed" +
-      "\020\005\022\037\n\033UserHasUnconfirmedOperation\020\006\022\032\n\026O" +
-      "perationRetryRequired\020\007B\017B\rDssSignProtos"
+      "yDss\020\002\022\n\n\006Applet\020\003\022\r\n\tMobileSdk\020\004*;\n\013Dss",
+      "Operator\022\023\n\017OperatorUnknown\020\000\022\013\n\007Megafon" +
+      "\020\001\022\n\n\006Kontur\020\002*X\n\024DssFileSigningStatus\022\030" +
+      "\n\024UnknownSigningStatus\020\000\022\024\n\020SigningCompl" +
+      "eted\020\001\022\020\n\014SigningError\020\002*\253\001\n\022DssOperatio" +
+      "nStatus\022\013\n\007Unknown\020\000\022\016\n\nInProgress\020\001\022\r\n\t" +
+      "Completed\020\002\022\022\n\016CanceledByUser\020\003\022\013\n\007Timeo" +
+      "ut\020\004\022\013\n\007Crashed\020\005\022\037\n\033UserHasUnconfirmedO" +
+      "peration\020\006\022\032\n\026OperationRetryRequired\020\007B\017" +
+      "B\rDssSignProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
