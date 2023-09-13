@@ -115,6 +115,7 @@ public class PowerOfAttorneyClient {
             var request = RequestBuilder.get(
                             new URIBuilder(diadocHttpClient.getBaseUrl())
                                     .setPath("/GetPowerOfAttorneyInfo")
+                                    .addParameter("boxId", boxId)
                                     .addParameter("messageId", messageId)
                                     .addParameter("entityId", entityId)
                                     .build());
