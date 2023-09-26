@@ -50,6 +50,19 @@ public final class DocflowStatusV3Protos {
      * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;</code>
      */
     Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatusOrBuilder getPowerOfAttorneyGeneralStatusOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+     */
+    boolean hasGeneralRoamingSendingStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+     */
+    Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus getGeneralRoamingSendingStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+     */
+    Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatusOrBuilder getGeneralRoamingSendingStatusOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.DocflowStatusV3}
@@ -140,6 +153,19 @@ public final class DocflowStatusV3Protos {
                 powerOfAttorneyGeneralStatus_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = generalRoamingSendingStatus_.toBuilder();
+              }
+              generalRoamingSendingStatus_ = input.readMessage(Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(generalRoamingSendingStatus_);
+                generalRoamingSendingStatus_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
               break;
             }
           }
@@ -245,10 +271,32 @@ public final class DocflowStatusV3Protos {
       return powerOfAttorneyGeneralStatus_;
     }
 
+    public static final int GENERALROAMINGSENDINGSTATUS_FIELD_NUMBER = 4;
+    private Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus generalRoamingSendingStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+     */
+    public boolean hasGeneralRoamingSendingStatus() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+     */
+    public Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus getGeneralRoamingSendingStatus() {
+      return generalRoamingSendingStatus_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+     */
+    public Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatusOrBuilder getGeneralRoamingSendingStatusOrBuilder() {
+      return generalRoamingSendingStatus_;
+    }
+
     private void initFields() {
       primaryStatus_ = Diadoc.Api.Proto.DocflowStatusV3Protos.DocflowStatusModelV3.getDefaultInstance();
       secondaryStatus_ = Diadoc.Api.Proto.DocflowStatusV3Protos.DocflowStatusModelV3.getDefaultInstance();
       powerOfAttorneyGeneralStatus_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatus.getDefaultInstance();
+      generalRoamingSendingStatus_ = Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -262,6 +310,12 @@ public final class DocflowStatusV3Protos {
       }
       if (hasPowerOfAttorneyGeneralStatus()) {
         if (!getPowerOfAttorneyGeneralStatus().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasGeneralRoamingSendingStatus()) {
+        if (!getGeneralRoamingSendingStatus().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -281,6 +335,9 @@ public final class DocflowStatusV3Protos {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeMessage(3, powerOfAttorneyGeneralStatus_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, generalRoamingSendingStatus_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -302,6 +359,10 @@ public final class DocflowStatusV3Protos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, powerOfAttorneyGeneralStatus_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, generalRoamingSendingStatus_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -415,6 +476,7 @@ public final class DocflowStatusV3Protos {
           getPrimaryStatusFieldBuilder();
           getSecondaryStatusFieldBuilder();
           getPowerOfAttorneyGeneralStatusFieldBuilder();
+          getGeneralRoamingSendingStatusFieldBuilder();
         }
       }
       private static Builder create() {
@@ -441,6 +503,12 @@ public final class DocflowStatusV3Protos {
           powerOfAttorneyGeneralStatusBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
+        if (generalRoamingSendingStatusBuilder_ == null) {
+          generalRoamingSendingStatus_ = Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.getDefaultInstance();
+        } else {
+          generalRoamingSendingStatusBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -493,6 +561,14 @@ public final class DocflowStatusV3Protos {
         } else {
           result.powerOfAttorneyGeneralStatus_ = powerOfAttorneyGeneralStatusBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (generalRoamingSendingStatusBuilder_ == null) {
+          result.generalRoamingSendingStatus_ = generalRoamingSendingStatus_;
+        } else {
+          result.generalRoamingSendingStatus_ = generalRoamingSendingStatusBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -518,6 +594,9 @@ public final class DocflowStatusV3Protos {
         if (other.hasPowerOfAttorneyGeneralStatus()) {
           mergePowerOfAttorneyGeneralStatus(other.getPowerOfAttorneyGeneralStatus());
         }
+        if (other.hasGeneralRoamingSendingStatus()) {
+          mergeGeneralRoamingSendingStatus(other.getGeneralRoamingSendingStatus());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -529,6 +608,12 @@ public final class DocflowStatusV3Protos {
         }
         if (hasPowerOfAttorneyGeneralStatus()) {
           if (!getPowerOfAttorneyGeneralStatus().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasGeneralRoamingSendingStatus()) {
+          if (!getGeneralRoamingSendingStatus().isInitialized()) {
             
             return false;
           }
@@ -901,6 +986,122 @@ public final class DocflowStatusV3Protos {
           powerOfAttorneyGeneralStatus_ = null;
         }
         return powerOfAttorneyGeneralStatusBuilder_;
+      }
+
+      private Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus generalRoamingSendingStatus_ = Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus, Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.Builder, Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatusOrBuilder> generalRoamingSendingStatusBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+       */
+      public boolean hasGeneralRoamingSendingStatus() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+       */
+      public Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus getGeneralRoamingSendingStatus() {
+        if (generalRoamingSendingStatusBuilder_ == null) {
+          return generalRoamingSendingStatus_;
+        } else {
+          return generalRoamingSendingStatusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+       */
+      public Builder setGeneralRoamingSendingStatus(Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus value) {
+        if (generalRoamingSendingStatusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          generalRoamingSendingStatus_ = value;
+          onChanged();
+        } else {
+          generalRoamingSendingStatusBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+       */
+      public Builder setGeneralRoamingSendingStatus(
+          Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.Builder builderForValue) {
+        if (generalRoamingSendingStatusBuilder_ == null) {
+          generalRoamingSendingStatus_ = builderForValue.build();
+          onChanged();
+        } else {
+          generalRoamingSendingStatusBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+       */
+      public Builder mergeGeneralRoamingSendingStatus(Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus value) {
+        if (generalRoamingSendingStatusBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              generalRoamingSendingStatus_ != Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.getDefaultInstance()) {
+            generalRoamingSendingStatus_ =
+              Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.newBuilder(generalRoamingSendingStatus_).mergeFrom(value).buildPartial();
+          } else {
+            generalRoamingSendingStatus_ = value;
+          }
+          onChanged();
+        } else {
+          generalRoamingSendingStatusBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+       */
+      public Builder clearGeneralRoamingSendingStatus() {
+        if (generalRoamingSendingStatusBuilder_ == null) {
+          generalRoamingSendingStatus_ = Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.getDefaultInstance();
+          onChanged();
+        } else {
+          generalRoamingSendingStatusBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+       */
+      public Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.Builder getGeneralRoamingSendingStatusBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getGeneralRoamingSendingStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+       */
+      public Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatusOrBuilder getGeneralRoamingSendingStatusOrBuilder() {
+        if (generalRoamingSendingStatusBuilder_ != null) {
+          return generalRoamingSendingStatusBuilder_.getMessageOrBuilder();
+        } else {
+          return generalRoamingSendingStatus_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.RoamingSendingStatus GeneralRoamingSendingStatus = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus, Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.Builder, Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatusOrBuilder> 
+          getGeneralRoamingSendingStatusFieldBuilder() {
+        if (generalRoamingSendingStatusBuilder_ == null) {
+          generalRoamingSendingStatusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus, Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatus.Builder, Diadoc.Api.Proto.RoamingSendingStatusProtos.RoamingSendingStatusOrBuilder>(
+                  getGeneralRoamingSendingStatus(),
+                  getParentForChildren(),
+                  isClean());
+          generalRoamingSendingStatus_ = null;
+        }
+        return generalRoamingSendingStatusBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.DocflowStatusV3)
@@ -1568,15 +1769,18 @@ public final class DocflowStatusV3Protos {
     java.lang.String[] descriptorData = {
       "\n\025DocflowStatusV3.proto\022\020Diadoc.Api.Prot" +
       "o\0320PowersOfAttorney/PowerOfAttorneyValid" +
-      "ation.proto\"\373\001\n\017DocflowStatusV3\022=\n\rPrima" +
-      "ryStatus\030\001 \002(\0132&.Diadoc.Api.Proto.Docflo" +
-      "wStatusModelV3\022?\n\017SecondaryStatus\030\002 \001(\0132" +
-      "&.Diadoc.Api.Proto.DocflowStatusModelV3\022" +
-      "h\n\034PowerOfAttorneyGeneralStatus\030\003 \001(\0132B." +
-      "Diadoc.Api.Proto.PowersOfAttorney.PowerO" +
-      "fAttorneyValidationStatus\"<\n\024DocflowStat" +
-      "usModelV3\022\020\n\010Severity\030\001 \001(\t\022\022\n\nStatusTex",
-      "t\030\002 \001(\tB\027B\025DocflowStatusV3Protos"
+      "ation.proto\032\032RoamingSendingStatus.proto\"" +
+      "\310\002\n\017DocflowStatusV3\022=\n\rPrimaryStatus\030\001 \002" +
+      "(\0132&.Diadoc.Api.Proto.DocflowStatusModel" +
+      "V3\022?\n\017SecondaryStatus\030\002 \001(\0132&.Diadoc.Api" +
+      ".Proto.DocflowStatusModelV3\022h\n\034PowerOfAt" +
+      "torneyGeneralStatus\030\003 \001(\0132B.Diadoc.Api.P" +
+      "roto.PowersOfAttorney.PowerOfAttorneyVal" +
+      "idationStatus\022K\n\033GeneralRoamingSendingSt",
+      "atus\030\004 \001(\0132&.Diadoc.Api.Proto.RoamingSen" +
+      "dingStatus\"<\n\024DocflowStatusModelV3\022\020\n\010Se" +
+      "verity\030\001 \001(\t\022\022\n\nStatusText\030\002 \001(\tB\027B\025Docf" +
+      "lowStatusV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1590,13 +1794,14 @@ public final class DocflowStatusV3Protos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.getDescriptor(),
+          Diadoc.Api.Proto.RoamingSendingStatusProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_DocflowStatusV3_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_DocflowStatusV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_DocflowStatusV3_descriptor,
-        new java.lang.String[] { "PrimaryStatus", "SecondaryStatus", "PowerOfAttorneyGeneralStatus", });
+        new java.lang.String[] { "PrimaryStatus", "SecondaryStatus", "PowerOfAttorneyGeneralStatus", "GeneralRoamingSendingStatus", });
     internal_static_Diadoc_Api_Proto_DocflowStatusModelV3_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_DocflowStatusModelV3_fieldAccessorTable = new
@@ -1604,6 +1809,7 @@ public final class DocflowStatusV3Protos {
         internal_static_Diadoc_Api_Proto_DocflowStatusModelV3_descriptor,
         new java.lang.String[] { "Severity", "StatusText", });
     Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.getDescriptor();
+    Diadoc.Api.Proto.RoamingSendingStatusProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
