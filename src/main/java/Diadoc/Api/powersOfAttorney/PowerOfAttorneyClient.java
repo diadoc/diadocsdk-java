@@ -126,7 +126,7 @@ public class PowerOfAttorneyClient {
         }
     }
 
-    public PowerOfAttorneyContent getPowerOfAttorneyContent(String boxId, String messageId, String entityId) throws DiadocSdkException {
+    public PowerOfAttorneyContentResponse getPowerOfAttorneyContent(String boxId, String messageId, String entityId) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
         }
@@ -140,13 +140,13 @@ public class PowerOfAttorneyClient {
         try {
             var request = RequestBuilder.get(
                     new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/GetPowerOfAttorneyContent")
+                            .setPath("V2/GetPowerOfAttorneyContent")
                             .addParameter("boxId", boxId)
                             .addParameter("messageId", messageId)
                             .addParameter("entityId", entityId)
                             .build());
 
-            return PowerOfAttorneyContent.parseFrom(diadocHttpClient.performRequest(request));
+            return PowerOfAttorneyContentResponse.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
