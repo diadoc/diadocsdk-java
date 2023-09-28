@@ -15,6 +15,9 @@ message PowerOfAttorney {
     required PowerOfAttorneyConfidant Confidant = 3;
     required Timestamp StartAt = 4;
     required Timestamp ExpireAt = 5;
+    optional string System = 6;
+    optional string IdFile = 7;
+    repeated PowerOfAttorney DelegationChain = 8;
 }
 
 message PowerOfAttorneyIssuer {
@@ -92,4 +95,26 @@ message PowerOfAttorneyStatus {
 message PowerOfAttorneyOperationError {
     required string Code = 1;
     required string Text = 2;
+}
+
+enum PowerOfAttorneySendingType {
+    Unknown = 0;
+    Metadata = 1;
+    File = 2;
+}
+
+message PowerOfAttorneyContent {
+    required bytes Content = 1;
+    required bytes Signature = 2;
+}
+
+message PowerOfAttorneyContentResponse {
+    required PowerOfAttorneyContentV2 Content = 1;
+    repeated PowerOfAttorneyContentV2 DelegationChain = 2;
+}
+
+message PowerOfAttorneyContentV2 {
+    required bytes Content = 1;
+    required bytes Signature = 2;
+    required PowerOfAttorneyFullId FullId = 3;
 }
