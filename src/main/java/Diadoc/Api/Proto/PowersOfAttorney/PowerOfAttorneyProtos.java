@@ -134,6 +134,10 @@ public final class PowerOfAttorneyProtos {
      * <code>File = 2;</code>
      */
     File(2, 2),
+    /**
+     * <code>DocumentContent = 3;</code>
+     */
+    DocumentContent(3, 3),
     ;
 
     /**
@@ -148,6 +152,10 @@ public final class PowerOfAttorneyProtos {
      * <code>File = 2;</code>
      */
     public static final int File_VALUE = 2;
+    /**
+     * <code>DocumentContent = 3;</code>
+     */
+    public static final int DocumentContent_VALUE = 3;
 
 
     public final int getNumber() { return value; }
@@ -157,6 +165,7 @@ public final class PowerOfAttorneyProtos {
         case 0: return Unknown;
         case 1: return Metadata;
         case 2: return File;
+        case 3: return DocumentContent;
         default: return null;
       }
     }
@@ -977,6 +986,19 @@ public final class PowerOfAttorneyProtos {
      */
     Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyOrBuilder getDelegationChainOrBuilder(
         int index);
+
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+     */
+    boolean hasPermissionsInfo();
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo getPermissionsInfo();
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfoOrBuilder getPermissionsInfoOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorney}
@@ -1113,6 +1135,19 @@ public final class PowerOfAttorneyProtos {
                 mutable_bitField0_ |= 0x00000080;
               }
               delegationChain_.add(input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorney.PARSER, extensionRegistry));
+              break;
+            }
+            case 74: {
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = permissionsInfo_.toBuilder();
+              }
+              permissionsInfo_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(permissionsInfo_);
+                permissionsInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
               break;
             }
           }
@@ -1382,6 +1417,27 @@ public final class PowerOfAttorneyProtos {
       return delegationChain_.get(index);
     }
 
+    public static final int PERMISSIONSINFO_FIELD_NUMBER = 9;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo permissionsInfo_;
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+     */
+    public boolean hasPermissionsInfo() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo getPermissionsInfo() {
+      return permissionsInfo_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfoOrBuilder getPermissionsInfoOrBuilder() {
+      return permissionsInfo_;
+    }
+
     private void initFields() {
       fullId_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance();
       issuer_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.getDefaultInstance();
@@ -1391,6 +1447,7 @@ public final class PowerOfAttorneyProtos {
       system_ = "";
       idFile_ = "";
       delegationChain_ = java.util.Collections.emptyList();
+      permissionsInfo_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1415,6 +1472,10 @@ public final class PowerOfAttorneyProtos {
         return false;
       }
       if (!hasExpireAt()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPermissionsInfo()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1443,6 +1504,10 @@ public final class PowerOfAttorneyProtos {
           memoizedIsInitialized = 0;
           return false;
         }
+      }
+      if (!getPermissionsInfo().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
       }
       memoizedIsInitialized = 1;
       return true;
@@ -1474,6 +1539,9 @@ public final class PowerOfAttorneyProtos {
       }
       for (int i = 0; i < delegationChain_.size(); i++) {
         output.writeMessage(8, delegationChain_.get(i));
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(9, permissionsInfo_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1515,6 +1583,10 @@ public final class PowerOfAttorneyProtos {
       for (int i = 0; i < delegationChain_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, delegationChain_.get(i));
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, permissionsInfo_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1631,6 +1703,7 @@ public final class PowerOfAttorneyProtos {
           getStartAtFieldBuilder();
           getExpireAtFieldBuilder();
           getDelegationChainFieldBuilder();
+          getPermissionsInfoFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1679,6 +1752,12 @@ public final class PowerOfAttorneyProtos {
         } else {
           delegationChainBuilder_.clear();
         }
+        if (permissionsInfoBuilder_ == null) {
+          permissionsInfo_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.getDefaultInstance();
+        } else {
+          permissionsInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -1764,6 +1843,14 @@ public final class PowerOfAttorneyProtos {
         } else {
           result.delegationChain_ = delegationChainBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        if (permissionsInfoBuilder_ == null) {
+          result.permissionsInfo_ = permissionsInfo_;
+        } else {
+          result.permissionsInfo_ = permissionsInfoBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1831,6 +1918,9 @@ public final class PowerOfAttorneyProtos {
             }
           }
         }
+        if (other.hasPermissionsInfo()) {
+          mergePermissionsInfo(other.getPermissionsInfo());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -1853,6 +1943,10 @@ public final class PowerOfAttorneyProtos {
           return false;
         }
         if (!hasExpireAt()) {
+          
+          return false;
+        }
+        if (!hasPermissionsInfo()) {
           
           return false;
         }
@@ -1881,6 +1975,10 @@ public final class PowerOfAttorneyProtos {
             
             return false;
           }
+        }
+        if (!getPermissionsInfo().isInitialized()) {
+          
+          return false;
         }
         return true;
       }
@@ -2874,6 +2972,122 @@ public final class PowerOfAttorneyProtos {
           delegationChain_ = null;
         }
         return delegationChainBuilder_;
+      }
+
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo permissionsInfo_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfoOrBuilder> permissionsInfoBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+       */
+      public boolean hasPermissionsInfo() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo getPermissionsInfo() {
+        if (permissionsInfoBuilder_ == null) {
+          return permissionsInfo_;
+        } else {
+          return permissionsInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+       */
+      public Builder setPermissionsInfo(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo value) {
+        if (permissionsInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          permissionsInfo_ = value;
+          onChanged();
+        } else {
+          permissionsInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+       */
+      public Builder setPermissionsInfo(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.Builder builderForValue) {
+        if (permissionsInfoBuilder_ == null) {
+          permissionsInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          permissionsInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+       */
+      public Builder mergePermissionsInfo(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo value) {
+        if (permissionsInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) == 0x00000100) &&
+              permissionsInfo_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.getDefaultInstance()) {
+            permissionsInfo_ =
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.newBuilder(permissionsInfo_).mergeFrom(value).buildPartial();
+          } else {
+            permissionsInfo_ = value;
+          }
+          onChanged();
+        } else {
+          permissionsInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+       */
+      public Builder clearPermissionsInfo() {
+        if (permissionsInfoBuilder_ == null) {
+          permissionsInfo_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.getDefaultInstance();
+          onChanged();
+        } else {
+          permissionsInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.Builder getPermissionsInfoBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getPermissionsInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfoOrBuilder getPermissionsInfoOrBuilder() {
+        if (permissionsInfoBuilder_ != null) {
+          return permissionsInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return permissionsInfo_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfoOrBuilder> 
+          getPermissionsInfoFieldBuilder() {
+        if (permissionsInfoBuilder_ == null) {
+          permissionsInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfoOrBuilder>(
+                  getPermissionsInfo(),
+                  getParentForChildren(),
+                  isClean());
+          permissionsInfo_ = null;
+        }
+        return permissionsInfoBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorney)
@@ -8737,6 +8951,4416 @@ public final class PowerOfAttorneyProtos {
     }
 
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyConfidantOrganization)
+  }
+
+  public interface PowerOfAttorneyPermissionsInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions> 
+        getPermissionsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions getPermissions(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    int getPermissionsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder> 
+        getPermissionsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder getPermissionsOrBuilder(
+        int index);
+
+    /**
+     * <code>optional string TransferPermissionLoss = 2;</code>
+     */
+    boolean hasTransferPermissionLoss();
+    /**
+     * <code>optional string TransferPermissionLoss = 2;</code>
+     */
+    java.lang.String getTransferPermissionLoss();
+    /**
+     * <code>optional string TransferPermissionLoss = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTransferPermissionLossBytes();
+
+    /**
+     * <code>required string JointPermissions = 3;</code>
+     */
+    boolean hasJointPermissions();
+    /**
+     * <code>required string JointPermissions = 3;</code>
+     */
+    java.lang.String getJointPermissions();
+    /**
+     * <code>required string JointPermissions = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getJointPermissionsBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo}
+   */
+  public static final class PowerOfAttorneyPermissionsInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo)
+      PowerOfAttorneyPermissionsInfoOrBuilder {
+    // Use PowerOfAttorneyPermissionsInfo.newBuilder() to construct.
+    private PowerOfAttorneyPermissionsInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PowerOfAttorneyPermissionsInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PowerOfAttorneyPermissionsInfo defaultInstance;
+    public static PowerOfAttorneyPermissionsInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PowerOfAttorneyPermissionsInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PowerOfAttorneyPermissionsInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                permissions_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              permissions_.add(input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.PARSER, extensionRegistry));
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              transferPermissionLoss_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              jointPermissions_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          permissions_ = java.util.Collections.unmodifiableList(permissions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PowerOfAttorneyPermissionsInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PowerOfAttorneyPermissionsInfo>() {
+      public PowerOfAttorneyPermissionsInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PowerOfAttorneyPermissionsInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PowerOfAttorneyPermissionsInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int PERMISSIONS_FIELD_NUMBER = 1;
+    private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions> permissions_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions> getPermissionsList() {
+      return permissions_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder> 
+        getPermissionsOrBuilderList() {
+      return permissions_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    public int getPermissionsCount() {
+      return permissions_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions getPermissions(int index) {
+      return permissions_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder getPermissionsOrBuilder(
+        int index) {
+      return permissions_.get(index);
+    }
+
+    public static final int TRANSFERPERMISSIONLOSS_FIELD_NUMBER = 2;
+    private java.lang.Object transferPermissionLoss_;
+    /**
+     * <code>optional string TransferPermissionLoss = 2;</code>
+     */
+    public boolean hasTransferPermissionLoss() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string TransferPermissionLoss = 2;</code>
+     */
+    public java.lang.String getTransferPermissionLoss() {
+      java.lang.Object ref = transferPermissionLoss_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          transferPermissionLoss_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string TransferPermissionLoss = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTransferPermissionLossBytes() {
+      java.lang.Object ref = transferPermissionLoss_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transferPermissionLoss_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JOINTPERMISSIONS_FIELD_NUMBER = 3;
+    private java.lang.Object jointPermissions_;
+    /**
+     * <code>required string JointPermissions = 3;</code>
+     */
+    public boolean hasJointPermissions() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string JointPermissions = 3;</code>
+     */
+    public java.lang.String getJointPermissions() {
+      java.lang.Object ref = jointPermissions_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          jointPermissions_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string JointPermissions = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getJointPermissionsBytes() {
+      java.lang.Object ref = jointPermissions_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jointPermissions_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      permissions_ = java.util.Collections.emptyList();
+      transferPermissionLoss_ = "";
+      jointPermissions_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasJointPermissions()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getPermissionsCount(); i++) {
+        if (!getPermissions(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < permissions_.size(); i++) {
+        output.writeMessage(1, permissions_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(2, getTransferPermissionLossBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(3, getJointPermissionsBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < permissions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, permissions_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTransferPermissionLossBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getJointPermissionsBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo)
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPermissionsFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (permissionsBuilder_ == null) {
+          permissions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          permissionsBuilder_.clear();
+        }
+        transferPermissionLoss_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        jointPermissions_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_descriptor;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo build() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo buildPartial() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (permissionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            permissions_ = java.util.Collections.unmodifiableList(permissions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.permissions_ = permissions_;
+        } else {
+          result.permissions_ = permissionsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.transferPermissionLoss_ = transferPermissionLoss_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.jointPermissions_ = jointPermissions_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo) {
+          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo other) {
+        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.getDefaultInstance()) return this;
+        if (permissionsBuilder_ == null) {
+          if (!other.permissions_.isEmpty()) {
+            if (permissions_.isEmpty()) {
+              permissions_ = other.permissions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePermissionsIsMutable();
+              permissions_.addAll(other.permissions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.permissions_.isEmpty()) {
+            if (permissionsBuilder_.isEmpty()) {
+              permissionsBuilder_.dispose();
+              permissionsBuilder_ = null;
+              permissions_ = other.permissions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              permissionsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPermissionsFieldBuilder() : null;
+            } else {
+              permissionsBuilder_.addAllMessages(other.permissions_);
+            }
+          }
+        }
+        if (other.hasTransferPermissionLoss()) {
+          bitField0_ |= 0x00000002;
+          transferPermissionLoss_ = other.transferPermissionLoss_;
+          onChanged();
+        }
+        if (other.hasJointPermissions()) {
+          bitField0_ |= 0x00000004;
+          jointPermissions_ = other.jointPermissions_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasJointPermissions()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getPermissionsCount(); i++) {
+          if (!getPermissions(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions> permissions_ =
+        java.util.Collections.emptyList();
+      private void ensurePermissionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          permissions_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions>(permissions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder> permissionsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions> getPermissionsList() {
+        if (permissionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(permissions_);
+        } else {
+          return permissionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public int getPermissionsCount() {
+        if (permissionsBuilder_ == null) {
+          return permissions_.size();
+        } else {
+          return permissionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions getPermissions(int index) {
+        if (permissionsBuilder_ == null) {
+          return permissions_.get(index);
+        } else {
+          return permissionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Builder setPermissions(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions value) {
+        if (permissionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePermissionsIsMutable();
+          permissions_.set(index, value);
+          onChanged();
+        } else {
+          permissionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Builder setPermissions(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder builderForValue) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          permissions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          permissionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Builder addPermissions(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions value) {
+        if (permissionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePermissionsIsMutable();
+          permissions_.add(value);
+          onChanged();
+        } else {
+          permissionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Builder addPermissions(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions value) {
+        if (permissionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePermissionsIsMutable();
+          permissions_.add(index, value);
+          onChanged();
+        } else {
+          permissionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Builder addPermissions(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder builderForValue) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          permissions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          permissionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Builder addPermissions(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder builderForValue) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          permissions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          permissionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Builder addAllPermissions(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions> values) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, permissions_);
+          onChanged();
+        } else {
+          permissionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Builder clearPermissions() {
+        if (permissionsBuilder_ == null) {
+          permissions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          permissionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Builder removePermissions(int index) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          permissions_.remove(index);
+          onChanged();
+        } else {
+          permissionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder getPermissionsBuilder(
+          int index) {
+        return getPermissionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder getPermissionsOrBuilder(
+          int index) {
+        if (permissionsBuilder_ == null) {
+          return permissions_.get(index);  } else {
+          return permissionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder> 
+           getPermissionsOrBuilderList() {
+        if (permissionsBuilder_ != null) {
+          return permissionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(permissions_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder addPermissionsBuilder() {
+        return getPermissionsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder addPermissionsBuilder(
+          int index) {
+        return getPermissionsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions Permissions = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder> 
+           getPermissionsBuilderList() {
+        return getPermissionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder> 
+          getPermissionsFieldBuilder() {
+        if (permissionsBuilder_ == null) {
+          permissionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder>(
+                  permissions_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          permissions_ = null;
+        }
+        return permissionsBuilder_;
+      }
+
+      private java.lang.Object transferPermissionLoss_ = "";
+      /**
+       * <code>optional string TransferPermissionLoss = 2;</code>
+       */
+      public boolean hasTransferPermissionLoss() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string TransferPermissionLoss = 2;</code>
+       */
+      public java.lang.String getTransferPermissionLoss() {
+        java.lang.Object ref = transferPermissionLoss_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            transferPermissionLoss_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string TransferPermissionLoss = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTransferPermissionLossBytes() {
+        java.lang.Object ref = transferPermissionLoss_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transferPermissionLoss_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string TransferPermissionLoss = 2;</code>
+       */
+      public Builder setTransferPermissionLoss(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        transferPermissionLoss_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string TransferPermissionLoss = 2;</code>
+       */
+      public Builder clearTransferPermissionLoss() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        transferPermissionLoss_ = getDefaultInstance().getTransferPermissionLoss();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string TransferPermissionLoss = 2;</code>
+       */
+      public Builder setTransferPermissionLossBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        transferPermissionLoss_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jointPermissions_ = "";
+      /**
+       * <code>required string JointPermissions = 3;</code>
+       */
+      public boolean hasJointPermissions() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string JointPermissions = 3;</code>
+       */
+      public java.lang.String getJointPermissions() {
+        java.lang.Object ref = jointPermissions_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jointPermissions_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string JointPermissions = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getJointPermissionsBytes() {
+        java.lang.Object ref = jointPermissions_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jointPermissions_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string JointPermissions = 3;</code>
+       */
+      public Builder setJointPermissions(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        jointPermissions_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string JointPermissions = 3;</code>
+       */
+      public Builder clearJointPermissions() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        jointPermissions_ = getDefaultInstance().getJointPermissions();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string JointPermissions = 3;</code>
+       */
+      public Builder setJointPermissionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        jointPermissions_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo)
+    }
+
+    static {
+      defaultInstance = new PowerOfAttorneyPermissionsInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo)
+  }
+
+  public interface PowerOfAttorneyPermissionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required string Type = 1;</code>
+     */
+    java.lang.String getType();
+    /**
+     * <code>required string Type = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>optional string TextPermission = 2;</code>
+     */
+    boolean hasTextPermission();
+    /**
+     * <code>optional string TextPermission = 2;</code>
+     */
+    java.lang.String getTextPermission();
+    /**
+     * <code>optional string TextPermission = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTextPermissionBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission> 
+        getMachineReadablePermissionList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission getMachineReadablePermission(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    int getMachineReadablePermissionCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder> 
+        getMachineReadablePermissionOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder getMachineReadablePermissionOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions}
+   */
+  public static final class PowerOfAttorneyPermissions extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions)
+      PowerOfAttorneyPermissionsOrBuilder {
+    // Use PowerOfAttorneyPermissions.newBuilder() to construct.
+    private PowerOfAttorneyPermissions(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PowerOfAttorneyPermissions(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PowerOfAttorneyPermissions defaultInstance;
+    public static PowerOfAttorneyPermissions getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PowerOfAttorneyPermissions getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PowerOfAttorneyPermissions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              type_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              textPermission_ = bs;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                machineReadablePermission_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              machineReadablePermission_.add(input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          machineReadablePermission_ = java.util.Collections.unmodifiableList(machineReadablePermission_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PowerOfAttorneyPermissions> PARSER =
+        new com.google.protobuf.AbstractParser<PowerOfAttorneyPermissions>() {
+      public PowerOfAttorneyPermissions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PowerOfAttorneyPermissions(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PowerOfAttorneyPermissions> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private java.lang.Object type_;
+    /**
+     * <code>required string Type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string Type = 1;</code>
+     */
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          type_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Type = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEXTPERMISSION_FIELD_NUMBER = 2;
+    private java.lang.Object textPermission_;
+    /**
+     * <code>optional string TextPermission = 2;</code>
+     */
+    public boolean hasTextPermission() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string TextPermission = 2;</code>
+     */
+    public java.lang.String getTextPermission() {
+      java.lang.Object ref = textPermission_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          textPermission_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string TextPermission = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTextPermissionBytes() {
+      java.lang.Object ref = textPermission_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        textPermission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MACHINEREADABLEPERMISSION_FIELD_NUMBER = 3;
+    private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission> machineReadablePermission_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission> getMachineReadablePermissionList() {
+      return machineReadablePermission_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder> 
+        getMachineReadablePermissionOrBuilderList() {
+      return machineReadablePermission_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    public int getMachineReadablePermissionCount() {
+      return machineReadablePermission_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission getMachineReadablePermission(int index) {
+      return machineReadablePermission_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder getMachineReadablePermissionOrBuilder(
+        int index) {
+      return machineReadablePermission_.get(index);
+    }
+
+    private void initFields() {
+      type_ = "";
+      textPermission_ = "";
+      machineReadablePermission_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getMachineReadablePermissionCount(); i++) {
+        if (!getMachineReadablePermission(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getTypeBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getTextPermissionBytes());
+      }
+      for (int i = 0; i < machineReadablePermission_.size(); i++) {
+        output.writeMessage(3, machineReadablePermission_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getTypeBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTextPermissionBytes());
+      }
+      for (int i = 0; i < machineReadablePermission_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, machineReadablePermission_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions)
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getMachineReadablePermissionFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        type_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        textPermission_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (machineReadablePermissionBuilder_ == null) {
+          machineReadablePermission_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          machineReadablePermissionBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_descriptor;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions build() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions buildPartial() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.textPermission_ = textPermission_;
+        if (machineReadablePermissionBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            machineReadablePermission_ = java.util.Collections.unmodifiableList(machineReadablePermission_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.machineReadablePermission_ = machineReadablePermission_;
+        } else {
+          result.machineReadablePermission_ = machineReadablePermissionBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions) {
+          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions other) {
+        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          bitField0_ |= 0x00000001;
+          type_ = other.type_;
+          onChanged();
+        }
+        if (other.hasTextPermission()) {
+          bitField0_ |= 0x00000002;
+          textPermission_ = other.textPermission_;
+          onChanged();
+        }
+        if (machineReadablePermissionBuilder_ == null) {
+          if (!other.machineReadablePermission_.isEmpty()) {
+            if (machineReadablePermission_.isEmpty()) {
+              machineReadablePermission_ = other.machineReadablePermission_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureMachineReadablePermissionIsMutable();
+              machineReadablePermission_.addAll(other.machineReadablePermission_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.machineReadablePermission_.isEmpty()) {
+            if (machineReadablePermissionBuilder_.isEmpty()) {
+              machineReadablePermissionBuilder_.dispose();
+              machineReadablePermissionBuilder_ = null;
+              machineReadablePermission_ = other.machineReadablePermission_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              machineReadablePermissionBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getMachineReadablePermissionFieldBuilder() : null;
+            } else {
+              machineReadablePermissionBuilder_.addAllMessages(other.machineReadablePermission_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getMachineReadablePermissionCount(); i++) {
+          if (!getMachineReadablePermission(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissions) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>required string Type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string Type = 1;</code>
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            type_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Type = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Type = 1;</code>
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Type = 1;</code>
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object textPermission_ = "";
+      /**
+       * <code>optional string TextPermission = 2;</code>
+       */
+      public boolean hasTextPermission() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string TextPermission = 2;</code>
+       */
+      public java.lang.String getTextPermission() {
+        java.lang.Object ref = textPermission_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            textPermission_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string TextPermission = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTextPermissionBytes() {
+        java.lang.Object ref = textPermission_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          textPermission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string TextPermission = 2;</code>
+       */
+      public Builder setTextPermission(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        textPermission_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string TextPermission = 2;</code>
+       */
+      public Builder clearTextPermission() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        textPermission_ = getDefaultInstance().getTextPermission();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string TextPermission = 2;</code>
+       */
+      public Builder setTextPermissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        textPermission_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission> machineReadablePermission_ =
+        java.util.Collections.emptyList();
+      private void ensureMachineReadablePermissionIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          machineReadablePermission_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission>(machineReadablePermission_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder> machineReadablePermissionBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission> getMachineReadablePermissionList() {
+        if (machineReadablePermissionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(machineReadablePermission_);
+        } else {
+          return machineReadablePermissionBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public int getMachineReadablePermissionCount() {
+        if (machineReadablePermissionBuilder_ == null) {
+          return machineReadablePermission_.size();
+        } else {
+          return machineReadablePermissionBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission getMachineReadablePermission(int index) {
+        if (machineReadablePermissionBuilder_ == null) {
+          return machineReadablePermission_.get(index);
+        } else {
+          return machineReadablePermissionBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Builder setMachineReadablePermission(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission value) {
+        if (machineReadablePermissionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMachineReadablePermissionIsMutable();
+          machineReadablePermission_.set(index, value);
+          onChanged();
+        } else {
+          machineReadablePermissionBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Builder setMachineReadablePermission(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder builderForValue) {
+        if (machineReadablePermissionBuilder_ == null) {
+          ensureMachineReadablePermissionIsMutable();
+          machineReadablePermission_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          machineReadablePermissionBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Builder addMachineReadablePermission(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission value) {
+        if (machineReadablePermissionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMachineReadablePermissionIsMutable();
+          machineReadablePermission_.add(value);
+          onChanged();
+        } else {
+          machineReadablePermissionBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Builder addMachineReadablePermission(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission value) {
+        if (machineReadablePermissionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMachineReadablePermissionIsMutable();
+          machineReadablePermission_.add(index, value);
+          onChanged();
+        } else {
+          machineReadablePermissionBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Builder addMachineReadablePermission(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder builderForValue) {
+        if (machineReadablePermissionBuilder_ == null) {
+          ensureMachineReadablePermissionIsMutable();
+          machineReadablePermission_.add(builderForValue.build());
+          onChanged();
+        } else {
+          machineReadablePermissionBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Builder addMachineReadablePermission(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder builderForValue) {
+        if (machineReadablePermissionBuilder_ == null) {
+          ensureMachineReadablePermissionIsMutable();
+          machineReadablePermission_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          machineReadablePermissionBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Builder addAllMachineReadablePermission(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission> values) {
+        if (machineReadablePermissionBuilder_ == null) {
+          ensureMachineReadablePermissionIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, machineReadablePermission_);
+          onChanged();
+        } else {
+          machineReadablePermissionBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Builder clearMachineReadablePermission() {
+        if (machineReadablePermissionBuilder_ == null) {
+          machineReadablePermission_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          machineReadablePermissionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Builder removeMachineReadablePermission(int index) {
+        if (machineReadablePermissionBuilder_ == null) {
+          ensureMachineReadablePermissionIsMutable();
+          machineReadablePermission_.remove(index);
+          onChanged();
+        } else {
+          machineReadablePermissionBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder getMachineReadablePermissionBuilder(
+          int index) {
+        return getMachineReadablePermissionFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder getMachineReadablePermissionOrBuilder(
+          int index) {
+        if (machineReadablePermissionBuilder_ == null) {
+          return machineReadablePermission_.get(index);  } else {
+          return machineReadablePermissionBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder> 
+           getMachineReadablePermissionOrBuilderList() {
+        if (machineReadablePermissionBuilder_ != null) {
+          return machineReadablePermissionBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(machineReadablePermission_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder addMachineReadablePermissionBuilder() {
+        return getMachineReadablePermissionFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder addMachineReadablePermissionBuilder(
+          int index) {
+        return getMachineReadablePermissionFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission MachineReadablePermission = 3;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder> 
+           getMachineReadablePermissionBuilderList() {
+        return getMachineReadablePermissionFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder> 
+          getMachineReadablePermissionFieldBuilder() {
+        if (machineReadablePermissionBuilder_ == null) {
+          machineReadablePermissionBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder>(
+                  machineReadablePermission_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          machineReadablePermission_ = null;
+        }
+        return machineReadablePermissionBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions)
+    }
+
+    static {
+      defaultInstance = new PowerOfAttorneyPermissions(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissions)
+  }
+
+  public interface PowerOfAttorneyMachineReadablePermissionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Mnemonic = 1;</code>
+     */
+    boolean hasMnemonic();
+    /**
+     * <code>optional string Mnemonic = 1;</code>
+     */
+    java.lang.String getMnemonic();
+    /**
+     * <code>optional string Mnemonic = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getMnemonicBytes();
+
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    java.lang.String getCode();
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions> 
+        getRestrictionsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions getRestrictions(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    int getRestrictionsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder> 
+        getRestrictionsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder getRestrictionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission}
+   */
+  public static final class PowerOfAttorneyMachineReadablePermission extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission)
+      PowerOfAttorneyMachineReadablePermissionOrBuilder {
+    // Use PowerOfAttorneyMachineReadablePermission.newBuilder() to construct.
+    private PowerOfAttorneyMachineReadablePermission(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PowerOfAttorneyMachineReadablePermission(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PowerOfAttorneyMachineReadablePermission defaultInstance;
+    public static PowerOfAttorneyMachineReadablePermission getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PowerOfAttorneyMachineReadablePermission getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PowerOfAttorneyMachineReadablePermission(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              mnemonic_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              code_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              name_ = bs;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                restrictions_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              restrictions_.add(input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          restrictions_ = java.util.Collections.unmodifiableList(restrictions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PowerOfAttorneyMachineReadablePermission> PARSER =
+        new com.google.protobuf.AbstractParser<PowerOfAttorneyMachineReadablePermission>() {
+      public PowerOfAttorneyMachineReadablePermission parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PowerOfAttorneyMachineReadablePermission(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PowerOfAttorneyMachineReadablePermission> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int MNEMONIC_FIELD_NUMBER = 1;
+    private java.lang.Object mnemonic_;
+    /**
+     * <code>optional string Mnemonic = 1;</code>
+     */
+    public boolean hasMnemonic() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string Mnemonic = 1;</code>
+     */
+    public java.lang.String getMnemonic() {
+      java.lang.Object ref = mnemonic_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          mnemonic_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Mnemonic = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMnemonicBytes() {
+      java.lang.Object ref = mnemonic_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mnemonic_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODE_FIELD_NUMBER = 2;
+    private java.lang.Object code_;
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    public java.lang.String getCode() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          code_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        code_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    private java.lang.Object name_;
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESTRICTIONS_FIELD_NUMBER = 4;
+    private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions> restrictions_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions> getRestrictionsList() {
+      return restrictions_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder> 
+        getRestrictionsOrBuilderList() {
+      return restrictions_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    public int getRestrictionsCount() {
+      return restrictions_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions getRestrictions(int index) {
+      return restrictions_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder getRestrictionsOrBuilder(
+        int index) {
+      return restrictions_.get(index);
+    }
+
+    private void initFields() {
+      mnemonic_ = "";
+      code_ = "";
+      name_ = "";
+      restrictions_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getRestrictionsCount(); i++) {
+        if (!getRestrictions(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getMnemonicBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getCodeBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getNameBytes());
+      }
+      for (int i = 0; i < restrictions_.size(); i++) {
+        output.writeMessage(4, restrictions_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getMnemonicBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getCodeBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getNameBytes());
+      }
+      for (int i = 0; i < restrictions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, restrictions_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission)
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermissionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getRestrictionsFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        mnemonic_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        code_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (restrictionsBuilder_ == null) {
+          restrictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          restrictionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_descriptor;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission build() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission buildPartial() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.mnemonic_ = mnemonic_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.code_ = code_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.name_ = name_;
+        if (restrictionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            restrictions_ = java.util.Collections.unmodifiableList(restrictions_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.restrictions_ = restrictions_;
+        } else {
+          result.restrictions_ = restrictionsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission) {
+          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission other) {
+        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission.getDefaultInstance()) return this;
+        if (other.hasMnemonic()) {
+          bitField0_ |= 0x00000001;
+          mnemonic_ = other.mnemonic_;
+          onChanged();
+        }
+        if (other.hasCode()) {
+          bitField0_ |= 0x00000002;
+          code_ = other.code_;
+          onChanged();
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000004;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (restrictionsBuilder_ == null) {
+          if (!other.restrictions_.isEmpty()) {
+            if (restrictions_.isEmpty()) {
+              restrictions_ = other.restrictions_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureRestrictionsIsMutable();
+              restrictions_.addAll(other.restrictions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.restrictions_.isEmpty()) {
+            if (restrictionsBuilder_.isEmpty()) {
+              restrictionsBuilder_.dispose();
+              restrictionsBuilder_ = null;
+              restrictions_ = other.restrictions_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              restrictionsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRestrictionsFieldBuilder() : null;
+            } else {
+              restrictionsBuilder_.addAllMessages(other.restrictions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasCode()) {
+          
+          return false;
+        }
+        if (!hasName()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getRestrictionsCount(); i++) {
+          if (!getRestrictions(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyMachineReadablePermission) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mnemonic_ = "";
+      /**
+       * <code>optional string Mnemonic = 1;</code>
+       */
+      public boolean hasMnemonic() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string Mnemonic = 1;</code>
+       */
+      public java.lang.String getMnemonic() {
+        java.lang.Object ref = mnemonic_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            mnemonic_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Mnemonic = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMnemonicBytes() {
+        java.lang.Object ref = mnemonic_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mnemonic_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Mnemonic = 1;</code>
+       */
+      public Builder setMnemonic(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        mnemonic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Mnemonic = 1;</code>
+       */
+      public Builder clearMnemonic() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        mnemonic_ = getDefaultInstance().getMnemonic();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Mnemonic = 1;</code>
+       */
+      public Builder setMnemonicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        mnemonic_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object code_ = "";
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public java.lang.String getCode() {
+        java.lang.Object ref = code_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            code_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        java.lang.Object ref = code_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          code_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public Builder setCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        code_ = getDefaultInstance().getCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions> restrictions_ =
+        java.util.Collections.emptyList();
+      private void ensureRestrictionsIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          restrictions_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions>(restrictions_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder> restrictionsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions> getRestrictionsList() {
+        if (restrictionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(restrictions_);
+        } else {
+          return restrictionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public int getRestrictionsCount() {
+        if (restrictionsBuilder_ == null) {
+          return restrictions_.size();
+        } else {
+          return restrictionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions getRestrictions(int index) {
+        if (restrictionsBuilder_ == null) {
+          return restrictions_.get(index);
+        } else {
+          return restrictionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Builder setRestrictions(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions value) {
+        if (restrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRestrictionsIsMutable();
+          restrictions_.set(index, value);
+          onChanged();
+        } else {
+          restrictionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Builder setRestrictions(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder builderForValue) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          restrictionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Builder addRestrictions(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions value) {
+        if (restrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRestrictionsIsMutable();
+          restrictions_.add(value);
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Builder addRestrictions(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions value) {
+        if (restrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRestrictionsIsMutable();
+          restrictions_.add(index, value);
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Builder addRestrictions(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder builderForValue) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Builder addRestrictions(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder builderForValue) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Builder addAllRestrictions(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions> values) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, restrictions_);
+          onChanged();
+        } else {
+          restrictionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Builder clearRestrictions() {
+        if (restrictionsBuilder_ == null) {
+          restrictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          restrictionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Builder removeRestrictions(int index) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.remove(index);
+          onChanged();
+        } else {
+          restrictionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder getRestrictionsBuilder(
+          int index) {
+        return getRestrictionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder getRestrictionsOrBuilder(
+          int index) {
+        if (restrictionsBuilder_ == null) {
+          return restrictions_.get(index);  } else {
+          return restrictionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder> 
+           getRestrictionsOrBuilderList() {
+        if (restrictionsBuilder_ != null) {
+          return restrictionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(restrictions_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder addRestrictionsBuilder() {
+        return getRestrictionsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder addRestrictionsBuilder(
+          int index) {
+        return getRestrictionsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions Restrictions = 4;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder> 
+           getRestrictionsBuilderList() {
+        return getRestrictionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder> 
+          getRestrictionsFieldBuilder() {
+        if (restrictionsBuilder_ == null) {
+          restrictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder>(
+                  restrictions_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          restrictions_ = null;
+        }
+        return restrictionsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission)
+    }
+
+    static {
+      defaultInstance = new PowerOfAttorneyMachineReadablePermission(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyMachineReadablePermission)
+  }
+
+  public interface PowerOfAttorneyRestrictionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 Id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>required int32 Id = 1;</code>
+     */
+    int getId();
+
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    java.lang.String getCode();
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional string ValueName = 4;</code>
+     */
+    boolean hasValueName();
+    /**
+     * <code>optional string ValueName = 4;</code>
+     */
+    java.lang.String getValueName();
+    /**
+     * <code>optional string ValueName = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getValueNameBytes();
+
+    /**
+     * <code>optional string ValueCode = 5;</code>
+     */
+    boolean hasValueCode();
+    /**
+     * <code>optional string ValueCode = 5;</code>
+     */
+    java.lang.String getValueCode();
+    /**
+     * <code>optional string ValueCode = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getValueCodeBytes();
+
+    /**
+     * <code>optional string ValueText = 6;</code>
+     */
+    boolean hasValueText();
+    /**
+     * <code>optional string ValueText = 6;</code>
+     */
+    java.lang.String getValueText();
+    /**
+     * <code>optional string ValueText = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getValueTextBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions}
+   */
+  public static final class PowerOfAttorneyRestrictions extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions)
+      PowerOfAttorneyRestrictionsOrBuilder {
+    // Use PowerOfAttorneyRestrictions.newBuilder() to construct.
+    private PowerOfAttorneyRestrictions(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PowerOfAttorneyRestrictions(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PowerOfAttorneyRestrictions defaultInstance;
+    public static PowerOfAttorneyRestrictions getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PowerOfAttorneyRestrictions getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PowerOfAttorneyRestrictions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              code_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              name_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              valueName_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              valueCode_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              valueText_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PowerOfAttorneyRestrictions> PARSER =
+        new com.google.protobuf.AbstractParser<PowerOfAttorneyRestrictions>() {
+      public PowerOfAttorneyRestrictions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PowerOfAttorneyRestrictions(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PowerOfAttorneyRestrictions> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>required int32 Id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 Id = 1;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int CODE_FIELD_NUMBER = 2;
+    private java.lang.Object code_;
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    public java.lang.String getCode() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          code_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Code = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        code_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    private java.lang.Object name_;
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Name = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUENAME_FIELD_NUMBER = 4;
+    private java.lang.Object valueName_;
+    /**
+     * <code>optional string ValueName = 4;</code>
+     */
+    public boolean hasValueName() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string ValueName = 4;</code>
+     */
+    public java.lang.String getValueName() {
+      java.lang.Object ref = valueName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          valueName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ValueName = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueNameBytes() {
+      java.lang.Object ref = valueName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valueName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUECODE_FIELD_NUMBER = 5;
+    private java.lang.Object valueCode_;
+    /**
+     * <code>optional string ValueCode = 5;</code>
+     */
+    public boolean hasValueCode() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string ValueCode = 5;</code>
+     */
+    public java.lang.String getValueCode() {
+      java.lang.Object ref = valueCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          valueCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ValueCode = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueCodeBytes() {
+      java.lang.Object ref = valueCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valueCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUETEXT_FIELD_NUMBER = 6;
+    private java.lang.Object valueText_;
+    /**
+     * <code>optional string ValueText = 6;</code>
+     */
+    public boolean hasValueText() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string ValueText = 6;</code>
+     */
+    public java.lang.String getValueText() {
+      java.lang.Object ref = valueText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          valueText_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ValueText = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueTextBytes() {
+      java.lang.Object ref = valueText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valueText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      id_ = 0;
+      code_ = "";
+      name_ = "";
+      valueName_ = "";
+      valueCode_ = "";
+      valueText_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getCodeBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getValueNameBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getValueCodeBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getValueTextBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getCodeBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getValueNameBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getValueCodeBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getValueTextBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions)
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        code_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        valueName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        valueCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        valueText_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_descriptor;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions build() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions buildPartial() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.code_ = code_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.valueName_ = valueName_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.valueCode_ = valueCode_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.valueText_ = valueText_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions) {
+          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions other) {
+        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasCode()) {
+          bitField0_ |= 0x00000002;
+          code_ = other.code_;
+          onChanged();
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000004;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasValueName()) {
+          bitField0_ |= 0x00000008;
+          valueName_ = other.valueName_;
+          onChanged();
+        }
+        if (other.hasValueCode()) {
+          bitField0_ |= 0x00000010;
+          valueCode_ = other.valueCode_;
+          onChanged();
+        }
+        if (other.hasValueText()) {
+          bitField0_ |= 0x00000020;
+          valueText_ = other.valueText_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasId()) {
+          
+          return false;
+        }
+        if (!hasCode()) {
+          
+          return false;
+        }
+        if (!hasName()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRestrictions) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <code>required int32 Id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 Id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>required int32 Id = 1;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 Id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object code_ = "";
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public java.lang.String getCode() {
+        java.lang.Object ref = code_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            code_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        java.lang.Object ref = code_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          code_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public Builder setCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        code_ = getDefaultInstance().getCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Code = 2;</code>
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 3;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valueName_ = "";
+      /**
+       * <code>optional string ValueName = 4;</code>
+       */
+      public boolean hasValueName() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string ValueName = 4;</code>
+       */
+      public java.lang.String getValueName() {
+        java.lang.Object ref = valueName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            valueName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ValueName = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueNameBytes() {
+        java.lang.Object ref = valueName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valueName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ValueName = 4;</code>
+       */
+      public Builder setValueName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        valueName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ValueName = 4;</code>
+       */
+      public Builder clearValueName() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        valueName_ = getDefaultInstance().getValueName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ValueName = 4;</code>
+       */
+      public Builder setValueNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        valueName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valueCode_ = "";
+      /**
+       * <code>optional string ValueCode = 5;</code>
+       */
+      public boolean hasValueCode() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string ValueCode = 5;</code>
+       */
+      public java.lang.String getValueCode() {
+        java.lang.Object ref = valueCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            valueCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ValueCode = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueCodeBytes() {
+        java.lang.Object ref = valueCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valueCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ValueCode = 5;</code>
+       */
+      public Builder setValueCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        valueCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ValueCode = 5;</code>
+       */
+      public Builder clearValueCode() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        valueCode_ = getDefaultInstance().getValueCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ValueCode = 5;</code>
+       */
+      public Builder setValueCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        valueCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valueText_ = "";
+      /**
+       * <code>optional string ValueText = 6;</code>
+       */
+      public boolean hasValueText() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string ValueText = 6;</code>
+       */
+      public java.lang.String getValueText() {
+        java.lang.Object ref = valueText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            valueText_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ValueText = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueTextBytes() {
+        java.lang.Object ref = valueText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valueText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ValueText = 6;</code>
+       */
+      public Builder setValueText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        valueText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ValueText = 6;</code>
+       */
+      public Builder clearValueText() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        valueText_ = getDefaultInstance().getValueText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ValueText = 6;</code>
+       */
+      public Builder setValueTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        valueText_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions)
+    }
+
+    static {
+      defaultInstance = new PowerOfAttorneyRestrictions(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRestrictions)
   }
 
   public interface PowerOfAttorneyToRegisterOrBuilder extends
@@ -14922,6 +19546,26 @@ public final class PowerOfAttorneyProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyConfidantOrganization_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyToRegister_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -14974,7 +19618,7 @@ public final class PowerOfAttorneyProtos {
       "\022!Diadoc.Api.Proto.PowersOfAttorney\032\020Con" +
       "tent_v3.proto\032\017Timestamp.proto\032\nUser.pro" +
       "to\"F\n\025PowerOfAttorneyFullId\022\032\n\022Registrat" +
-      "ionNumber\030\001 \002(\t\022\021\n\tIssuerInn\030\002 \002(\t\"\277\003\n\017P" +
+      "ionNumber\030\001 \002(\t\022\021\n\tIssuerInn\030\002 \002(\t\"\233\004\n\017P" +
       "owerOfAttorney\022H\n\006FullId\030\001 \002(\01328.Diadoc." +
       "Api.Proto.PowersOfAttorney.PowerOfAttorn" +
       "eyFullId\022H\n\006Issuer\030\002 \002(\01328.Diadoc.Api.Pr" +
@@ -14986,69 +19630,89 @@ public final class PowerOfAttorneyProtos {
       "Proto.Timestamp\022\016\n\006System\030\006 \001(\t\022\016\n\006IdFil" +
       "e\030\007 \001(\t\022K\n\017DelegationChain\030\010 \003(\01322.Diado" +
       "c.Api.Proto.PowersOfAttorney.PowerOfAtto" +
-      "rney\"\362\003\n\025PowerOfAttorneyIssuer\022]\n\004Type\030\001" +
-      " \001(\0162<.Diadoc.Api.Proto.PowersOfAttorney" +
-      ".PowerOfAttorneyIssuerType:\021UnknownIssue" +
-      "rType\022X\n\013LegalEntity\030\002 \001(\0132C.Diadoc.Api.",
-      "Proto.PowersOfAttorney.PowerOfAttorneyIs" +
-      "suerLegalEntity\022\\\n\rForeignEntity\030\003 \001(\0132E" +
+      "rney\022Z\n\017PermissionsInfo\030\t \002(\0132A.Diadoc.A" +
+      "pi.Proto.PowersOfAttorney.PowerOfAttorne" +
+      "yPermissionsInfo\"\362\003\n\025PowerOfAttorneyIssu" +
+      "er\022]\n\004Type\030\001 \001(\0162<.Diadoc.Api.Proto.Powe",
+      "rsOfAttorney.PowerOfAttorneyIssuerType:\021" +
+      "UnknownIssuerType\022X\n\013LegalEntity\030\002 \001(\0132C" +
       ".Diadoc.Api.Proto.PowersOfAttorney.Power" +
-      "OfAttorneyIssuerForeignEntity\022b\n\020Individ" +
-      "ualEntity\030\004 \001(\0132H.Diadoc.Api.Proto.Power" +
-      "sOfAttorney.PowerOfAttorneyIssuerIndivid" +
-      "ualEntity\022^\n\016PhysicalEntity\030\005 \001(\0132F.Diad" +
-      "oc.Api.Proto.PowersOfAttorney.PowerOfAtt" +
-      "orneyIssuerPhysicalEntity\"V\n PowerOfAtto" +
-      "rneyIssuerLegalEntity\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kp",
-      "p\030\002 \002(\t\022\030\n\020OrganizationName\030\003 \002(\t\"X\n\"Pow" +
-      "erOfAttorneyIssuerForeignEntity\022\013\n\003Inn\030\001" +
-      " \001(\t\022\013\n\003Kpp\030\002 \001(\t\022\030\n\020OrganizationName\030\003 " +
-      "\002(\t\"N\n%PowerOfAttorneyIssuerIndividualEn" +
-      "tity\022\013\n\003Inn\030\001 \002(\t\022\030\n\020OrganizationName\030\003 " +
-      "\002(\t\"b\n#PowerOfAttorneyIssuerPhysicalEnti" +
-      "ty\022\013\n\003Inn\030\001 \002(\t\022.\n\nPersonName\030\002 \001(\0132\032.Di" +
-      "adoc.Api.Proto.FullName\"\266\001\n\030PowerOfAttor" +
-      "neyConfidant\022.\n\nPersonName\030\001 \002(\0132\032.Diado" +
-      "c.Api.Proto.FullName\022\013\n\003Inn\030\002 \002(\t\022]\n\014Org",
-      "anization\030\003 \001(\0132G.Diadoc.Api.Proto.Power" +
-      "sOfAttorney.PowerOfAttorneyConfidantOrga" +
-      "nization\"N\n$PowerOfAttorneyConfidantOrga" +
-      "nization\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kpp\030\002 \001(\t\022\014\n\004Na" +
-      "me\030\003 \002(\t\"\267\001\n\031PowerOfAttorneyToRegister\022H" +
-      "\n\006FullId\030\001 \001(\01328.Diadoc.Api.Proto.Powers" +
-      "OfAttorney.PowerOfAttorneyFullId\022P\n\007Cont" +
-      "ent\030\002 \001(\0132?.Diadoc.Api.Proto.PowersOfAtt" +
-      "orney.PowerOfAttorneySignedContent\"~\n\034Po" +
-      "werOfAttorneySignedContent\022-\n\007Content\030\001 ",
-      "\002(\0132\034.Diadoc.Api.Proto.Content_v3\022/\n\tSig" +
-      "nature\030\002 \002(\0132\034.Diadoc.Api.Proto.Content_" +
-      "v3\"\241\002\n\035PowerOfAttorneyRegisterResult\022\027\n\017" +
-      "OperationStatus\030\001 \002(\t\022K\n\017PowerOfAttorney" +
-      "\030\002 \001(\01322.Diadoc.Api.Proto.PowersOfAttorn" +
-      "ey.PowerOfAttorney\022H\n\006Status\030\003 \001(\01328.Dia" +
-      "doc.Api.Proto.PowersOfAttorney.PowerOfAt" +
-      "torneyStatus\022P\n\006Errors\030\004 \003(\0132@.Diadoc.Ap" +
-      "i.Proto.PowersOfAttorney.PowerOfAttorney" +
-      "OperationError\"Y\n\025PowerOfAttorneyStatus\022",
-      "\016\n\006Status\030\001 \002(\t\0220\n\013LastCheckAt\030\002 \001(\0132\033.D" +
-      "iadoc.Api.Proto.Timestamp\";\n\035PowerOfAtto" +
-      "rneyOperationError\022\014\n\004Code\030\001 \002(\t\022\014\n\004Text" +
-      "\030\002 \002(\t\"<\n\026PowerOfAttorneyContent\022\017\n\007Cont" +
-      "ent\030\001 \002(\014\022\021\n\tSignature\030\002 \002(\014\"\304\001\n\036PowerOf" +
-      "AttorneyContentResponse\022L\n\007Content\030\001 \002(\013" +
-      "2;.Diadoc.Api.Proto.PowersOfAttorney.Pow" +
-      "erOfAttorneyContentV2\022T\n\017DelegationChain" +
-      "\030\002 \003(\0132;.Diadoc.Api.Proto.PowersOfAttorn" +
-      "ey.PowerOfAttorneyContentV2\"\210\001\n\030PowerOfA",
-      "ttorneyContentV2\022\017\n\007Content\030\001 \002(\014\022\021\n\tSig" +
-      "nature\030\002 \002(\014\022H\n\006FullId\030\003 \002(\01328.Diadoc.Ap" +
-      "i.Proto.PowersOfAttorney.PowerOfAttorney" +
-      "FullId*\200\001\n\031PowerOfAttorneyIssuerType\022\025\n\021" +
-      "UnknownIssuerType\020\000\022\017\n\013LegalEntity\020\001\022\021\n\r" +
-      "ForeignEntity\020\002\022\024\n\020IndividualEntity\020\003\022\022\n" +
-      "\016PhysicalEntity\020\004*A\n\032PowerOfAttorneySend" +
-      "ingType\022\013\n\007Unknown\020\000\022\014\n\010Metadata\020\001\022\010\n\004Fi" +
-      "le\020\002B\027B\025PowerOfAttorneyProtos"
+      "OfAttorneyIssuerLegalEntity\022\\\n\rForeignEn" +
+      "tity\030\003 \001(\0132E.Diadoc.Api.Proto.PowersOfAt" +
+      "torney.PowerOfAttorneyIssuerForeignEntit" +
+      "y\022b\n\020IndividualEntity\030\004 \001(\0132H.Diadoc.Api" +
+      ".Proto.PowersOfAttorney.PowerOfAttorneyI" +
+      "ssuerIndividualEntity\022^\n\016PhysicalEntity\030" +
+      "\005 \001(\0132F.Diadoc.Api.Proto.PowersOfAttorne",
+      "y.PowerOfAttorneyIssuerPhysicalEntity\"V\n" +
+      " PowerOfAttorneyIssuerLegalEntity\022\013\n\003Inn" +
+      "\030\001 \002(\t\022\013\n\003Kpp\030\002 \002(\t\022\030\n\020OrganizationName\030" +
+      "\003 \002(\t\"X\n\"PowerOfAttorneyIssuerForeignEnt" +
+      "ity\022\013\n\003Inn\030\001 \001(\t\022\013\n\003Kpp\030\002 \001(\t\022\030\n\020Organiz" +
+      "ationName\030\003 \002(\t\"N\n%PowerOfAttorneyIssuer" +
+      "IndividualEntity\022\013\n\003Inn\030\001 \002(\t\022\030\n\020Organiz" +
+      "ationName\030\003 \002(\t\"b\n#PowerOfAttorneyIssuer" +
+      "PhysicalEntity\022\013\n\003Inn\030\001 \002(\t\022.\n\nPersonNam" +
+      "e\030\002 \001(\0132\032.Diadoc.Api.Proto.FullName\"\266\001\n\030",
+      "PowerOfAttorneyConfidant\022.\n\nPersonName\030\001" +
+      " \002(\0132\032.Diadoc.Api.Proto.FullName\022\013\n\003Inn\030" +
+      "\002 \002(\t\022]\n\014Organization\030\003 \001(\0132G.Diadoc.Api" +
+      ".Proto.PowersOfAttorney.PowerOfAttorneyC" +
+      "onfidantOrganization\"N\n$PowerOfAttorneyC" +
+      "onfidantOrganization\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kpp" +
+      "\030\002 \001(\t\022\014\n\004Name\030\003 \002(\t\"\256\001\n\036PowerOfAttorney" +
+      "PermissionsInfo\022R\n\013Permissions\030\001 \003(\0132=.D" +
+      "iadoc.Api.Proto.PowersOfAttorney.PowerOf" +
+      "AttorneyPermissions\022\036\n\026TransferPermissio",
+      "nLoss\030\002 \001(\t\022\030\n\020JointPermissions\030\003 \002(\t\"\262\001" +
+      "\n\032PowerOfAttorneyPermissions\022\014\n\004Type\030\001 \002" +
+      "(\t\022\026\n\016TextPermission\030\002 \001(\t\022n\n\031MachineRea" +
+      "dablePermission\030\003 \003(\0132K.Diadoc.Api.Proto" +
+      ".PowersOfAttorney.PowerOfAttorneyMachine" +
+      "ReadablePermission\"\256\001\n(PowerOfAttorneyMa" +
+      "chineReadablePermission\022\020\n\010Mnemonic\030\001 \001(" +
+      "\t\022\014\n\004Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022T\n\014Restric" +
+      "tions\030\004 \003(\0132>.Diadoc.Api.Proto.PowersOfA" +
+      "ttorney.PowerOfAttorneyRestrictions\"~\n\033P",
+      "owerOfAttorneyRestrictions\022\n\n\002Id\030\001 \002(\005\022\014" +
+      "\n\004Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\021\n\tValueName\030" +
+      "\004 \001(\t\022\021\n\tValueCode\030\005 \001(\t\022\021\n\tValueText\030\006 " +
+      "\001(\t\"\267\001\n\031PowerOfAttorneyToRegister\022H\n\006Ful" +
+      "lId\030\001 \001(\01328.Diadoc.Api.Proto.PowersOfAtt" +
+      "orney.PowerOfAttorneyFullId\022P\n\007Content\030\002" +
+      " \001(\0132?.Diadoc.Api.Proto.PowersOfAttorney" +
+      ".PowerOfAttorneySignedContent\"~\n\034PowerOf" +
+      "AttorneySignedContent\022-\n\007Content\030\001 \002(\0132\034" +
+      ".Diadoc.Api.Proto.Content_v3\022/\n\tSignatur",
+      "e\030\002 \002(\0132\034.Diadoc.Api.Proto.Content_v3\"\241\002" +
+      "\n\035PowerOfAttorneyRegisterResult\022\027\n\017Opera" +
+      "tionStatus\030\001 \002(\t\022K\n\017PowerOfAttorney\030\002 \001(" +
+      "\01322.Diadoc.Api.Proto.PowersOfAttorney.Po" +
+      "werOfAttorney\022H\n\006Status\030\003 \001(\01328.Diadoc.A" +
+      "pi.Proto.PowersOfAttorney.PowerOfAttorne" +
+      "yStatus\022P\n\006Errors\030\004 \003(\0132@.Diadoc.Api.Pro" +
+      "to.PowersOfAttorney.PowerOfAttorneyOpera" +
+      "tionError\"Y\n\025PowerOfAttorneyStatus\022\016\n\006St" +
+      "atus\030\001 \002(\t\0220\n\013LastCheckAt\030\002 \001(\0132\033.Diadoc",
+      ".Api.Proto.Timestamp\";\n\035PowerOfAttorneyO" +
+      "perationError\022\014\n\004Code\030\001 \002(\t\022\014\n\004Text\030\002 \002(" +
+      "\t\"<\n\026PowerOfAttorneyContent\022\017\n\007Content\030\001" +
+      " \002(\014\022\021\n\tSignature\030\002 \002(\014\"\304\001\n\036PowerOfAttor" +
+      "neyContentResponse\022L\n\007Content\030\001 \002(\0132;.Di" +
+      "adoc.Api.Proto.PowersOfAttorney.PowerOfA" +
+      "ttorneyContentV2\022T\n\017DelegationChain\030\002 \003(" +
+      "\0132;.Diadoc.Api.Proto.PowersOfAttorney.Po" +
+      "werOfAttorneyContentV2\"\210\001\n\030PowerOfAttorn" +
+      "eyContentV2\022\017\n\007Content\030\001 \002(\014\022\021\n\tSignatur",
+      "e\030\002 \002(\014\022H\n\006FullId\030\003 \002(\01328.Diadoc.Api.Pro" +
+      "to.PowersOfAttorney.PowerOfAttorneyFullI" +
+      "d*\200\001\n\031PowerOfAttorneyIssuerType\022\025\n\021Unkno" +
+      "wnIssuerType\020\000\022\017\n\013LegalEntity\020\001\022\021\n\rForei" +
+      "gnEntity\020\002\022\024\n\020IndividualEntity\020\003\022\022\n\016Phys" +
+      "icalEntity\020\004*V\n\032PowerOfAttorneySendingTy" +
+      "pe\022\013\n\007Unknown\020\000\022\014\n\010Metadata\020\001\022\010\n\004File\020\002\022" +
+      "\023\n\017DocumentContent\020\003B\027B\025PowerOfAttorneyP" +
+      "rotos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15076,7 +19740,7 @@ public final class PowerOfAttorneyProtos {
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorney_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorney_descriptor,
-        new java.lang.String[] { "FullId", "Issuer", "Confidant", "StartAt", "ExpireAt", "System", "IdFile", "DelegationChain", });
+        new java.lang.String[] { "FullId", "Issuer", "Confidant", "StartAt", "ExpireAt", "System", "IdFile", "DelegationChain", "PermissionsInfo", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyIssuer_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyIssuer_fieldAccessorTable = new
@@ -15119,50 +19783,74 @@ public final class PowerOfAttorneyProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyConfidantOrganization_descriptor,
         new java.lang.String[] { "Inn", "Kpp", "Name", });
-    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyToRegister_descriptor =
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissionsInfo_descriptor,
+        new java.lang.String[] { "Permissions", "TransferPermissionLoss", "JointPermissions", });
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPermissions_descriptor,
+        new java.lang.String[] { "Type", "TextPermission", "MachineReadablePermission", });
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyMachineReadablePermission_descriptor,
+        new java.lang.String[] { "Mnemonic", "Code", "Name", "Restrictions", });
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRestrictions_descriptor,
+        new java.lang.String[] { "Id", "Code", "Name", "ValueName", "ValueCode", "ValueText", });
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyToRegister_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyToRegister_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyToRegister_descriptor,
         new java.lang.String[] { "FullId", "Content", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneySignedContent_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneySignedContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneySignedContent_descriptor,
         new java.lang.String[] { "Content", "Signature", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRegisterResult_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRegisterResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRegisterResult_descriptor,
         new java.lang.String[] { "OperationStatus", "PowerOfAttorney", "Status", "Errors", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyStatus_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyStatus_descriptor,
         new java.lang.String[] { "Status", "LastCheckAt", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyOperationError_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyOperationError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyOperationError_descriptor,
         new java.lang.String[] { "Code", "Text", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_descriptor,
         new java.lang.String[] { "Content", "Signature", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentResponse_descriptor,
         new java.lang.String[] { "Content", "DelegationChain", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentV2_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentV2_descriptor,
