@@ -79,6 +79,15 @@ public final class PowerOfAttorneyToPostProtos {
      */
     Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneySignedContentOrBuilder getContentsOrBuilder(
         int index);
+
+    /**
+     * <code>optional bool UseDocumentContent = 6;</code>
+     */
+    boolean hasUseDocumentContent();
+    /**
+     * <code>optional bool UseDocumentContent = 6;</code>
+     */
+    boolean getUseDocumentContent();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.PowerOfAttorneyToPost}
@@ -174,6 +183,11 @@ public final class PowerOfAttorneyToPostProtos {
                 mutable_bitField0_ |= 0x00000010;
               }
               contents_.add(input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneySignedContent.PARSER, extensionRegistry));
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              useDocumentContent_ = input.readBool();
               break;
             }
           }
@@ -326,12 +340,28 @@ public final class PowerOfAttorneyToPostProtos {
       return contents_.get(index);
     }
 
+    public static final int USEDOCUMENTCONTENT_FIELD_NUMBER = 6;
+    private boolean useDocumentContent_;
+    /**
+     * <code>optional bool UseDocumentContent = 6;</code>
+     */
+    public boolean hasUseDocumentContent() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool UseDocumentContent = 6;</code>
+     */
+    public boolean getUseDocumentContent() {
+      return useDocumentContent_;
+    }
+
     private void initFields() {
       fullId_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance();
       useDefault_ = false;
       content_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneySignedContent.getDefaultInstance();
       sendAsFile_ = false;
       contents_ = java.util.Collections.emptyList();
+      useDocumentContent_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -383,6 +413,9 @@ public final class PowerOfAttorneyToPostProtos {
       for (int i = 0; i < contents_.size(); i++) {
         output.writeMessage(5, contents_.get(i));
       }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(6, useDocumentContent_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -411,6 +444,10 @@ public final class PowerOfAttorneyToPostProtos {
       for (int i = 0; i < contents_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, contents_.get(i));
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, useDocumentContent_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -554,6 +591,8 @@ public final class PowerOfAttorneyToPostProtos {
         } else {
           contentsBuilder_.clear();
         }
+        useDocumentContent_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -615,6 +654,10 @@ public final class PowerOfAttorneyToPostProtos {
         } else {
           result.contents_ = contentsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.useDocumentContent_ = useDocumentContent_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -668,6 +711,9 @@ public final class PowerOfAttorneyToPostProtos {
               contentsBuilder_.addAllMessages(other.contents_);
             }
           }
+        }
+        if (other.hasUseDocumentContent()) {
+          setUseDocumentContent(other.getUseDocumentContent());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1254,6 +1300,38 @@ public final class PowerOfAttorneyToPostProtos {
         return contentsBuilder_;
       }
 
+      private boolean useDocumentContent_ ;
+      /**
+       * <code>optional bool UseDocumentContent = 6;</code>
+       */
+      public boolean hasUseDocumentContent() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bool UseDocumentContent = 6;</code>
+       */
+      public boolean getUseDocumentContent() {
+        return useDocumentContent_;
+      }
+      /**
+       * <code>optional bool UseDocumentContent = 6;</code>
+       */
+      public Builder setUseDocumentContent(boolean value) {
+        bitField0_ |= 0x00000020;
+        useDocumentContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool UseDocumentContent = 6;</code>
+       */
+      public Builder clearUseDocumentContent() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        useDocumentContent_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.PowerOfAttorneyToPost)
     }
 
@@ -1281,7 +1359,7 @@ public final class PowerOfAttorneyToPostProtos {
     java.lang.String[] descriptorData = {
       "\n\"Events/PowerOfAttorneyToPost.proto\022\027Di" +
       "adoc.Api.Proto.Events\032&PowersOfAttorney/" +
-      "PowerOfAttorney.proto\"\256\002\n\025PowerOfAttorne" +
+      "PowerOfAttorney.proto\"\312\002\n\025PowerOfAttorne" +
       "yToPost\022H\n\006FullId\030\001 \001(\01328.Diadoc.Api.Pro" +
       "to.PowersOfAttorney.PowerOfAttorneyFullI" +
       "d\022\022\n\nUseDefault\030\002 \002(\010\022P\n\007Content\030\003 \001(\0132?" +
@@ -1289,7 +1367,8 @@ public final class PowerOfAttorneyToPostProtos {
       "OfAttorneySignedContent\022\022\n\nSendAsFile\030\004 " +
       "\001(\010\022Q\n\010Contents\030\005 \003(\0132?.Diadoc.Api.Proto" +
       ".PowersOfAttorney.PowerOfAttorneySignedC",
-      "ontentB\035B\033PowerOfAttorneyToPostProtos"
+      "ontent\022\032\n\022UseDocumentContent\030\006 \001(\010B\035B\033Po" +
+      "werOfAttorneyToPostProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1309,7 +1388,7 @@ public final class PowerOfAttorneyToPostProtos {
     internal_static_Diadoc_Api_Proto_Events_PowerOfAttorneyToPost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_PowerOfAttorneyToPost_descriptor,
-        new java.lang.String[] { "FullId", "UseDefault", "Content", "SendAsFile", "Contents", });
+        new java.lang.String[] { "FullId", "UseDefault", "Content", "SendAsFile", "Contents", "UseDocumentContent", });
     Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.getDescriptor();
   }
 
