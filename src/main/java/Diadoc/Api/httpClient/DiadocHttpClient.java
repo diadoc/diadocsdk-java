@@ -32,7 +32,7 @@ import java.util.concurrent.TimeoutException;
 
 public class DiadocHttpClient {
 
-    private CloseableHttpClient httpClient;
+    protected CloseableHttpClient httpClient;
 
     private final String baseUrl;
 
