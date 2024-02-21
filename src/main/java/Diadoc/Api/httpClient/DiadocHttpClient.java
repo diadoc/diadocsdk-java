@@ -1,109 +1,126 @@
 package Diadoc.Api.httpClient;
 
 import Diadoc.Api.ConnectionSettings;
+import Diadoc.Api.auth.DiadocCredentials;
 import Diadoc.Api.exceptions.DiadocException;
-import Diadoc.Api.auth.DiadocPreemptiveAuthRequestInterceptor;
 import Diadoc.Api.exceptions.DiadocSdkException;
-import Diadoc.Api.helpers.EnvironmentHelpers;
 import Diadoc.Api.helpers.Tools;
 import org.apache.commons.io.IOUtils;
-import org.apache.http.*;
+import org.apache.http.Header;
+import org.apache.http.HttpHeaders;
+import org.apache.http.HttpHost;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.auth.AuthScope;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpResponseException;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.config.RegistryBuilder;
-import org.apache.http.conn.socket.ConnectionSocketFactory;
-import org.apache.http.conn.socket.PlainConnectionSocketFactory;
-import org.apache.http.conn.ssl.NoopHostnameVerifier;
-import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.conn.ssl.TrustAllStrategy;
+import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
-import org.apache.http.ssl.SSLContextBuilder;
 import org.jetbrains.annotations.Nullable;
 
 import javax.mail.internet.ContentDisposition;
 import javax.mail.internet.ParseException;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.security.KeyManagementException;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 import java.util.concurrent.TimeoutException;
 
 public class DiadocHttpClient {
 
     private CloseableHttpClient httpClient;
-    private String baseUrl;
+
+    private final String baseUrl;
+
+    private final String apiClientId;
+
+    private final CredentialsProvider credentialsProvider;
+
+    private boolean isAuthenticated = false;
 
     public DiadocHttpClient(
-            CredentialsProvider credentialsProvider,
+            String apiClientId,
             String baseUrl,
             @Nullable HttpHost proxyHost,
             @Nullable ConnectionSettings connectionSettings) {
-        var sslSocketFactory = getTrustfulSslSocketFactory();
-
-        var connectionManager = new PoolingHttpClientConnectionManager(
-                RegistryBuilder.<ConnectionSocketFactory>create()
-                        .register("https", sslSocketFactory)
-                        .register("http", new PlainConnectionSocketFactory())
-                        .build());
-        if(connectionSettings != null) {
-            connectionManager.setMaxTotal(connectionSettings.getMaxTotalConnections());
-            connectionManager.setDefaultMaxPerRoute(connectionSettings.getMaxConnectionsPerRoute());
-        }
-        var httpClientBuilder = HttpClients
-                .custom()
-                .setSSLSocketFactory(sslSocketFactory)
-                .setConnectionManager(connectionManager)
-                .setUserAgent(EnvironmentHelpers.getUserAgentString())
-                .addInterceptorFirst(new DiadocPreemptiveAuthRequestInterceptor())
-                .addInterceptorLast(new ContentLengthInterceptor())
-                .setDefaultCredentialsProvider(credentialsProvider);
-
-        if (proxyHost != null) {
-            httpClientBuilder.setProxy(proxyHost);
-        }
-
-        httpClient = httpClientBuilder.build();
-        this.baseUrl = baseUrl;
+        this(apiClientId, baseUrl, DefaultHttpClientBuilder.defaultClient(proxyHost, connectionSettings));
     }
+
+    public DiadocHttpClient(String apiClientId, String baseUrl, DefaultHttpClientBuilder clientBuilder) {
+        if (baseUrl == null) {
+            throw new IllegalArgumentException("url");
+        }
+
+        this.apiClientId = apiClientId;
+        this.baseUrl = baseUrl;
+
+        credentialsProvider = new BasicCredentialsProvider();
+        credentialsProvider.setCredentials(AuthScope.ANY, new DiadocCredentials(apiClientId, null));
+
+        httpClient = clientBuilder.build(credentialsProvider);
+    }
+
 
     public String getBaseUrl() {
         return baseUrl;
     }
 
+    public boolean isAuthenticated() {
+        return isAuthenticated;
+    }
+
+    public void setCredentials(String authToken) {
+        isAuthenticated = (authToken != null);
+        credentialsProvider.setCredentials(AuthScope.ANY, new DiadocCredentials(apiClientId, authToken));
+    }
+
+    public void clearCredentials(){
+        isAuthenticated = false;
+        credentialsProvider.setCredentials(AuthScope.ANY, new DiadocCredentials(apiClientId, null));
+    }
+
+    public CredentialsProvider getCredentialsProvider() {
+        return credentialsProvider;
+    }
+
+    protected CloseableHttpResponse performCall(RequestBuilder requestBuilder) throws IOException {
+        return performCall(createRequest(requestBuilder));
+    }
+
+    protected CloseableHttpResponse performCall(HttpUriRequest request) throws IOException {
+        return httpClient.execute(request);
+    }
+
     public byte[] performRequest(RequestBuilder requestBuilder) throws IOException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = performCall(requestBuilder)) {
             return getResponseBytes(response);
         }
     }
 
     public GeneratedFile performRequestWithGeneratedFile(RequestBuilder requestBuilder) throws IOException, ParseException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = performCall(requestBuilder)) {
             return new GeneratedFile(tryGetHttpResponseFileName(response), getResponseBytes(response));
         }
     }
 
     public FileContent performRequestWithFileContent(RequestBuilder requestBuilder) throws IOException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = performCall(requestBuilder)) {
             return new FileContent(getResponseBytes(response), tryGetFileContentName(response));
         }
     }
 
     public DiadocResponseInfo getResponse(RequestBuilder requestBuilder) throws IOException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = performCall(requestBuilder)) {
             return getResponse(response);
         }
     }
 
     public DiadocResponseInfo getRawResponse(RequestBuilder requestBuilder) throws IOException, ParseException {
-        try (var response = httpClient.execute(createRequest(requestBuilder))) {
+        try (var response = performCall(requestBuilder)) {
             return getRawResponse(response);
         }
     }
@@ -145,12 +162,12 @@ public class DiadocHttpClient {
                 tryGetContentType(response));
     }
 
-    private HttpUriRequest createRequest(RequestBuilder requestBuilder) {
+    protected HttpUriRequest createRequest(RequestBuilder requestBuilder) {
         var requestConfig = RequestConfig.custom().setAuthenticationEnabled(false).build();
         return requestBuilder.setConfig(requestConfig).build();
     }
 
-    private HttpUriRequest createWaitRequest(String path, String taskId) throws URISyntaxException {
+    protected HttpUriRequest createWaitRequest(String path, String taskId) throws URISyntaxException {
         return createRequest(RequestBuilder.get(
                 new URIBuilder(baseUrl)
                         .setPath(path)
@@ -166,16 +183,6 @@ public class DiadocHttpClient {
         return null;
     }
 
-    private static SSLConnectionSocketFactory getTrustfulSslSocketFactory() {
-        try {
-            var ctx = SSLContextBuilder.create().loadTrustMaterial(new TrustAllStrategy()).build();
-            return new SSLConnectionSocketFactory(ctx, NoopHostnameVerifier.INSTANCE);
-        } catch (NoSuchAlgorithmException | KeyManagementException | KeyStoreException e) {
-            e.printStackTrace();
-            throw new RuntimeException("Can't create ssl connection factory", e);
-        }
-    }
-
     public byte[] waitTaskResult(String path, String taskId, @Nullable Integer timeoutInMillis) throws DiadocSdkException {
         if (timeoutInMillis == null) {
             timeoutInMillis = 5 * 60 * 1000;
@@ -184,7 +191,7 @@ public class DiadocHttpClient {
 
         try {
             while (true) {
-                try (var response = httpClient.execute(createWaitRequest(path, taskId))) {
+                try (var response = performCall(createWaitRequest(path, taskId))) {
                     var statusCode = response.getStatusLine().getStatusCode();
                     if (statusCode == HttpStatus.SC_NO_CONTENT) {
                         if (new Date().getTime() > timeLimit) {
