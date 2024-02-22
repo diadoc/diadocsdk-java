@@ -113,6 +113,7 @@ public class DiadocApi {
     public CounteragentGroupClient getCounteragentGroupClient() {
         return counteragentGroupClient;
     }
+
     public GenerateClient getGenerateClient() {
         return generateClient;
     }
