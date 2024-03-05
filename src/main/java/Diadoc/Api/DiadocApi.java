@@ -48,13 +48,14 @@ public class DiadocApi {
     private PowerOfAttorneyClient powerOfAttorneyClient;
     private EmployeePowerOfAttorneyClient employeePowerOfAttorneyClient;
     private DocumentWorkflowClient documentWorkflowClient;
+    private DiadocHttpClient diadocHttpClient;
 
     public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
         if (url == null) {
             throw new IllegalArgumentException("url");
         }
         authManager = new AuthManager(apiClientId);
-        DiadocHttpClient diadocHttpClient = new DiadocHttpClient(authManager.getCredentialsProvider(), url, proxyHost, connectionSettings);
+        diadocHttpClient = new DiadocHttpClient(authManager.getCredentialsProvider(), url, proxyHost, connectionSettings);
         authClient = new AuthenticateClient(authManager, diadocHttpClient);
         organizationClient = new OrganizationClient(diadocHttpClient);
         departmentClient = new DepartmentClient(diadocHttpClient);
@@ -164,5 +165,9 @@ public class DiadocApi {
 
     public AuthManager getAuthManager() {
         return authManager;
+    }
+
+    public void setSolutionInfo(String solutionInfo) {
+        diadocHttpClient.setSolutionInfo(solutionInfo);
     }
 }
