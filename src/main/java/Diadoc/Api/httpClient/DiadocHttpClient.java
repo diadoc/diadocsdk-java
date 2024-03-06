@@ -40,6 +40,7 @@ public class DiadocHttpClient {
 
     private CloseableHttpClient httpClient;
     private String baseUrl;
+    private String solutionInfo;
 
     public DiadocHttpClient(
             CredentialsProvider credentialsProvider,
@@ -76,6 +77,10 @@ public class DiadocHttpClient {
 
     public String getBaseUrl() {
         return baseUrl;
+    }
+
+    public void setSolutionInfo(String solutionInfo) {
+        this.solutionInfo = solutionInfo;
     }
 
     public byte[] performRequest(RequestBuilder requestBuilder) throws IOException {
@@ -147,6 +152,9 @@ public class DiadocHttpClient {
 
     private HttpUriRequest createRequest(RequestBuilder requestBuilder) {
         var requestConfig = RequestConfig.custom().setAuthenticationEnabled(false).build();
+        if (solutionInfo != null && !solutionInfo.isEmpty()) {
+            requestBuilder.setHeader("X-Solution-Info", solutionInfo);
+        }
         return requestBuilder.setConfig(requestConfig).build();
     }
 
