@@ -49,13 +49,30 @@ public class DiadocApi {
     private EmployeePowerOfAttorneyClient employeePowerOfAttorneyClient;
     private DocumentWorkflowClient documentWorkflowClient;
 
+    protected final DiadocHttpClient diadocHttpClient;
+
     public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
-        if (url == null) {
-            throw new IllegalArgumentException("url");
+        this(
+            new DiadocHttpClient(
+                apiClientId,
+                url,
+                proxyHost,
+                connectionSettings
+            )
+        );
+    }
+
+    public DiadocApi(String apiClientId, String url) {
+        this(apiClientId, url, null, null);
+    }
+
+    public DiadocApi(DiadocHttpClient diadocHttpClient) {
+        if (diadocHttpClient == null) {
+            throw new IllegalArgumentException("diadocHttpClient");
         }
-        authManager = new AuthManager(apiClientId);
-        DiadocHttpClient diadocHttpClient = new DiadocHttpClient(authManager.getCredentialsProvider(), url, proxyHost, connectionSettings);
-        authClient = new AuthenticateClient(authManager, diadocHttpClient);
+        this.diadocHttpClient = diadocHttpClient;
+        authManager = new AuthManager(diadocHttpClient);
+        authClient = new AuthenticateClient(diadocHttpClient);
         organizationClient = new OrganizationClient(diadocHttpClient);
         departmentClient = new DepartmentClient(diadocHttpClient);
         employeeClient = new EmployeeClient(diadocHttpClient);
@@ -76,10 +93,6 @@ public class DiadocApi {
         employeePowerOfAttorneyClient = new EmployeePowerOfAttorneyClient(diadocHttpClient);
         documentWorkflowClient = new DocumentWorkflowClient(diadocHttpClient);
         authManager.setCredentials(null);
-    }
-
-    public DiadocApi(String apiClientId, String url) {
-        this(apiClientId, url, null, null);
     }
 
     public AuthenticateClient getAuthClient() {

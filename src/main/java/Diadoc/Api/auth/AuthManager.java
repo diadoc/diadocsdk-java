@@ -1,35 +1,30 @@
 package Diadoc.Api.auth;
 
-import org.apache.http.auth.AuthScope;
+import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.http.client.CredentialsProvider;
-import org.apache.http.impl.client.BasicCredentialsProvider;
 
 public class AuthManager {
-    private boolean isAuthenticated = false;
-    private String apiClientId;
-    private CredentialsProvider credentialsProvider;
 
-    public AuthManager(String apiClientId) {
-        this.apiClientId = apiClientId;
-        credentialsProvider = new BasicCredentialsProvider();
-        credentialsProvider.setCredentials(AuthScope.ANY, new DiadocCredentials(apiClientId, null));
+    private final DiadocHttpClient diadocHttpClient;
+
+    public AuthManager(DiadocHttpClient diadocHttpClient) {
+        this.diadocHttpClient = diadocHttpClient;
     }
 
     public CredentialsProvider getCredentialsProvider() {
-        return credentialsProvider;
+        return diadocHttpClient.getCredentialsProvider();
     }
 
     public boolean isAuthenticated() {
-        return isAuthenticated;
+        return diadocHttpClient.isAuthenticated();
     }
 
     public void setCredentials(String authToken) {
-        isAuthenticated = (authToken != null);
-        credentialsProvider.setCredentials(AuthScope.ANY, new DiadocCredentials(apiClientId, authToken));
+        diadocHttpClient.setCredentials(authToken);
     }
 
     public void clearCredentials(){
-        isAuthenticated = false;
-        credentialsProvider.setCredentials(AuthScope.ANY, new DiadocCredentials(apiClientId, null));
+        diadocHttpClient.clearCredentials();
     }
+
 }
