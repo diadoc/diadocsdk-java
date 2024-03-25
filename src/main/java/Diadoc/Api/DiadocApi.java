@@ -3,6 +3,7 @@ package Diadoc.Api;
 import Diadoc.Api.auth.AuthManager;
 import Diadoc.Api.auth.AuthenticateClient;
 import Diadoc.Api.counteragent.CounteragentClient;
+import Diadoc.Api.counteragentGroup.CounteragentGroupClient;
 import Diadoc.Api.department.DepartmentClient;
 import Diadoc.Api.docflow.DocflowClient;
 import Diadoc.Api.document.DocumentClient;
@@ -34,6 +35,7 @@ public class DiadocApi {
     private EmployeeClient employeeClient;
     private UserClient userClient;
     private CounteragentClient counteragentClient;
+    private CounteragentGroupClient counteragentGroupClient;
     private GenerateClient generateClient;
     private ShelfClient shelfClient;
     private MessageClient messageClient;
@@ -62,6 +64,7 @@ public class DiadocApi {
         employeeClient = new EmployeeClient(diadocHttpClient);
         userClient = new UserClient(diadocHttpClient);
         counteragentClient = new CounteragentClient(diadocHttpClient);
+        counteragentGroupClient = new CounteragentGroupClient(diadocHttpClient);
         generateClient = new GenerateClient(diadocHttpClient);
         shelfClient = new ShelfClient(diadocHttpClient);
         messageClient = new MessageClient(diadocHttpClient);
@@ -105,6 +108,10 @@ public class DiadocApi {
 
     public CounteragentClient getCounteragentClient() {
         return counteragentClient;
+    }
+
+    public CounteragentGroupClient getCounteragentGroupClient() {
+        return counteragentGroupClient;
     }
 
     public GenerateClient getGenerateClient() {
