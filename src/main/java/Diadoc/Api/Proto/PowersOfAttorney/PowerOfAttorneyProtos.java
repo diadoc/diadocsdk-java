@@ -999,6 +999,19 @@ public final class PowerOfAttorneyProtos {
      * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPermissionsInfo PermissionsInfo = 9;</code>
      */
     Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfoOrBuilder getPermissionsInfoOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+     */
+    boolean hasDelegationInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo getDelegationInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfoOrBuilder getDelegationInfoOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorney}
@@ -1148,6 +1161,19 @@ public final class PowerOfAttorneyProtos {
                 permissionsInfo_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000080;
+              break;
+            }
+            case 82: {
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000100) == 0x00000100)) {
+                subBuilder = delegationInfo_.toBuilder();
+              }
+              delegationInfo_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(delegationInfo_);
+                delegationInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000100;
               break;
             }
           }
@@ -1438,6 +1464,27 @@ public final class PowerOfAttorneyProtos {
       return permissionsInfo_;
     }
 
+    public static final int DELEGATIONINFO_FIELD_NUMBER = 10;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo delegationInfo_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+     */
+    public boolean hasDelegationInfo() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo getDelegationInfo() {
+      return delegationInfo_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfoOrBuilder getDelegationInfoOrBuilder() {
+      return delegationInfo_;
+    }
+
     private void initFields() {
       fullId_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance();
       issuer_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.getDefaultInstance();
@@ -1448,6 +1495,7 @@ public final class PowerOfAttorneyProtos {
       idFile_ = "";
       delegationChain_ = java.util.Collections.emptyList();
       permissionsInfo_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyPermissionsInfo.getDefaultInstance();
+      delegationInfo_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1509,6 +1557,12 @@ public final class PowerOfAttorneyProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (hasDelegationInfo()) {
+        if (!getDelegationInfo().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1542,6 +1596,9 @@ public final class PowerOfAttorneyProtos {
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeMessage(9, permissionsInfo_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeMessage(10, delegationInfo_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1587,6 +1644,10 @@ public final class PowerOfAttorneyProtos {
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, permissionsInfo_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, delegationInfo_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1704,6 +1765,7 @@ public final class PowerOfAttorneyProtos {
           getExpireAtFieldBuilder();
           getDelegationChainFieldBuilder();
           getPermissionsInfoFieldBuilder();
+          getDelegationInfoFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1758,6 +1820,12 @@ public final class PowerOfAttorneyProtos {
           permissionsInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000100);
+        if (delegationInfoBuilder_ == null) {
+          delegationInfo_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.getDefaultInstance();
+        } else {
+          delegationInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -1851,6 +1919,14 @@ public final class PowerOfAttorneyProtos {
         } else {
           result.permissionsInfo_ = permissionsInfoBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        if (delegationInfoBuilder_ == null) {
+          result.delegationInfo_ = delegationInfo_;
+        } else {
+          result.delegationInfo_ = delegationInfoBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1921,6 +1997,9 @@ public final class PowerOfAttorneyProtos {
         if (other.hasPermissionsInfo()) {
           mergePermissionsInfo(other.getPermissionsInfo());
         }
+        if (other.hasDelegationInfo()) {
+          mergeDelegationInfo(other.getDelegationInfo());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -1979,6 +2058,12 @@ public final class PowerOfAttorneyProtos {
         if (!getPermissionsInfo().isInitialized()) {
           
           return false;
+        }
+        if (hasDelegationInfo()) {
+          if (!getDelegationInfo().isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -3088,6 +3173,122 @@ public final class PowerOfAttorneyProtos {
           permissionsInfo_ = null;
         }
         return permissionsInfoBuilder_;
+      }
+
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo delegationInfo_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfoOrBuilder> delegationInfoBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+       */
+      public boolean hasDelegationInfo() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo getDelegationInfo() {
+        if (delegationInfoBuilder_ == null) {
+          return delegationInfo_;
+        } else {
+          return delegationInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+       */
+      public Builder setDelegationInfo(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo value) {
+        if (delegationInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delegationInfo_ = value;
+          onChanged();
+        } else {
+          delegationInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+       */
+      public Builder setDelegationInfo(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.Builder builderForValue) {
+        if (delegationInfoBuilder_ == null) {
+          delegationInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          delegationInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+       */
+      public Builder mergeDelegationInfo(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo value) {
+        if (delegationInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) == 0x00000200) &&
+              delegationInfo_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.getDefaultInstance()) {
+            delegationInfo_ =
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.newBuilder(delegationInfo_).mergeFrom(value).buildPartial();
+          } else {
+            delegationInfo_ = value;
+          }
+          onChanged();
+        } else {
+          delegationInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+       */
+      public Builder clearDelegationInfo() {
+        if (delegationInfoBuilder_ == null) {
+          delegationInfo_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.getDefaultInstance();
+          onChanged();
+        } else {
+          delegationInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.Builder getDelegationInfoBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getDelegationInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfoOrBuilder getDelegationInfoOrBuilder() {
+        if (delegationInfoBuilder_ != null) {
+          return delegationInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return delegationInfo_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo DelegationInfo = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfoOrBuilder> 
+          getDelegationInfoFieldBuilder() {
+        if (delegationInfoBuilder_ == null) {
+          delegationInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfoOrBuilder>(
+                  getDelegationInfo(),
+                  getParentForChildren(),
+                  isClean());
+          delegationInfo_ = null;
+        }
+        return delegationInfoBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorney)
@@ -17405,6 +17606,647 @@ public final class PowerOfAttorneyProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyOperationError)
   }
 
+  public interface PowerOfAttorneyDelegationInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string RootRegistrationNumber = 1;</code>
+     */
+    boolean hasRootRegistrationNumber();
+    /**
+     * <code>required string RootRegistrationNumber = 1;</code>
+     */
+    java.lang.String getRootRegistrationNumber();
+    /**
+     * <code>required string RootRegistrationNumber = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getRootRegistrationNumberBytes();
+
+    /**
+     * <code>optional string ParentRegistrationNumber = 2;</code>
+     */
+    boolean hasParentRegistrationNumber();
+    /**
+     * <code>optional string ParentRegistrationNumber = 2;</code>
+     */
+    java.lang.String getParentRegistrationNumber();
+    /**
+     * <code>optional string ParentRegistrationNumber = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getParentRegistrationNumberBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo}
+   */
+  public static final class PowerOfAttorneyDelegationInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo)
+      PowerOfAttorneyDelegationInfoOrBuilder {
+    // Use PowerOfAttorneyDelegationInfo.newBuilder() to construct.
+    private PowerOfAttorneyDelegationInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PowerOfAttorneyDelegationInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PowerOfAttorneyDelegationInfo defaultInstance;
+    public static PowerOfAttorneyDelegationInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PowerOfAttorneyDelegationInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PowerOfAttorneyDelegationInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              rootRegistrationNumber_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              parentRegistrationNumber_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PowerOfAttorneyDelegationInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PowerOfAttorneyDelegationInfo>() {
+      public PowerOfAttorneyDelegationInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PowerOfAttorneyDelegationInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PowerOfAttorneyDelegationInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ROOTREGISTRATIONNUMBER_FIELD_NUMBER = 1;
+    private java.lang.Object rootRegistrationNumber_;
+    /**
+     * <code>required string RootRegistrationNumber = 1;</code>
+     */
+    public boolean hasRootRegistrationNumber() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string RootRegistrationNumber = 1;</code>
+     */
+    public java.lang.String getRootRegistrationNumber() {
+      java.lang.Object ref = rootRegistrationNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          rootRegistrationNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string RootRegistrationNumber = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRootRegistrationNumberBytes() {
+      java.lang.Object ref = rootRegistrationNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rootRegistrationNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARENTREGISTRATIONNUMBER_FIELD_NUMBER = 2;
+    private java.lang.Object parentRegistrationNumber_;
+    /**
+     * <code>optional string ParentRegistrationNumber = 2;</code>
+     */
+    public boolean hasParentRegistrationNumber() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string ParentRegistrationNumber = 2;</code>
+     */
+    public java.lang.String getParentRegistrationNumber() {
+      java.lang.Object ref = parentRegistrationNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          parentRegistrationNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ParentRegistrationNumber = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getParentRegistrationNumberBytes() {
+      java.lang.Object ref = parentRegistrationNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentRegistrationNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      rootRegistrationNumber_ = "";
+      parentRegistrationNumber_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasRootRegistrationNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getRootRegistrationNumberBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getParentRegistrationNumberBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getRootRegistrationNumberBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getParentRegistrationNumberBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo)
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        rootRegistrationNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        parentRegistrationNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_descriptor;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo build() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo buildPartial() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.rootRegistrationNumber_ = rootRegistrationNumber_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.parentRegistrationNumber_ = parentRegistrationNumber_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo) {
+          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo other) {
+        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo.getDefaultInstance()) return this;
+        if (other.hasRootRegistrationNumber()) {
+          bitField0_ |= 0x00000001;
+          rootRegistrationNumber_ = other.rootRegistrationNumber_;
+          onChanged();
+        }
+        if (other.hasParentRegistrationNumber()) {
+          bitField0_ |= 0x00000002;
+          parentRegistrationNumber_ = other.parentRegistrationNumber_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasRootRegistrationNumber()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyDelegationInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object rootRegistrationNumber_ = "";
+      /**
+       * <code>required string RootRegistrationNumber = 1;</code>
+       */
+      public boolean hasRootRegistrationNumber() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string RootRegistrationNumber = 1;</code>
+       */
+      public java.lang.String getRootRegistrationNumber() {
+        java.lang.Object ref = rootRegistrationNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            rootRegistrationNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string RootRegistrationNumber = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRootRegistrationNumberBytes() {
+        java.lang.Object ref = rootRegistrationNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rootRegistrationNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string RootRegistrationNumber = 1;</code>
+       */
+      public Builder setRootRegistrationNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        rootRegistrationNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string RootRegistrationNumber = 1;</code>
+       */
+      public Builder clearRootRegistrationNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rootRegistrationNumber_ = getDefaultInstance().getRootRegistrationNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string RootRegistrationNumber = 1;</code>
+       */
+      public Builder setRootRegistrationNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        rootRegistrationNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object parentRegistrationNumber_ = "";
+      /**
+       * <code>optional string ParentRegistrationNumber = 2;</code>
+       */
+      public boolean hasParentRegistrationNumber() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string ParentRegistrationNumber = 2;</code>
+       */
+      public java.lang.String getParentRegistrationNumber() {
+        java.lang.Object ref = parentRegistrationNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            parentRegistrationNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ParentRegistrationNumber = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getParentRegistrationNumberBytes() {
+        java.lang.Object ref = parentRegistrationNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentRegistrationNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ParentRegistrationNumber = 2;</code>
+       */
+      public Builder setParentRegistrationNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        parentRegistrationNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ParentRegistrationNumber = 2;</code>
+       */
+      public Builder clearParentRegistrationNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        parentRegistrationNumber_ = getDefaultInstance().getParentRegistrationNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ParentRegistrationNumber = 2;</code>
+       */
+      public Builder setParentRegistrationNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        parentRegistrationNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo)
+    }
+
+    static {
+      defaultInstance = new PowerOfAttorneyDelegationInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo)
+  }
+
   public interface PowerOfAttorneyContentOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyContent)
       com.google.protobuf.MessageOrBuilder {
@@ -19591,6 +20433,11 @@ public final class PowerOfAttorneyProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyOperationError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -19618,7 +20465,7 @@ public final class PowerOfAttorneyProtos {
       "\022!Diadoc.Api.Proto.PowersOfAttorney\032\020Con" +
       "tent_v3.proto\032\017Timestamp.proto\032\nUser.pro" +
       "to\"F\n\025PowerOfAttorneyFullId\022\032\n\022Registrat" +
-      "ionNumber\030\001 \002(\t\022\021\n\tIssuerInn\030\002 \002(\t\"\233\004\n\017P" +
+      "ionNumber\030\001 \002(\t\022\021\n\tIssuerInn\030\002 \002(\t\"\365\004\n\017P" +
       "owerOfAttorney\022H\n\006FullId\030\001 \002(\01328.Diadoc." +
       "Api.Proto.PowersOfAttorney.PowerOfAttorn" +
       "eyFullId\022H\n\006Issuer\030\002 \002(\01328.Diadoc.Api.Pr" +
@@ -19632,87 +20479,91 @@ public final class PowerOfAttorneyProtos {
       "c.Api.Proto.PowersOfAttorney.PowerOfAtto" +
       "rney\022Z\n\017PermissionsInfo\030\t \002(\0132A.Diadoc.A" +
       "pi.Proto.PowersOfAttorney.PowerOfAttorne" +
-      "yPermissionsInfo\"\362\003\n\025PowerOfAttorneyIssu" +
-      "er\022]\n\004Type\030\001 \001(\0162<.Diadoc.Api.Proto.Powe",
-      "rsOfAttorney.PowerOfAttorneyIssuerType:\021" +
-      "UnknownIssuerType\022X\n\013LegalEntity\030\002 \001(\0132C" +
-      ".Diadoc.Api.Proto.PowersOfAttorney.Power" +
-      "OfAttorneyIssuerLegalEntity\022\\\n\rForeignEn" +
-      "tity\030\003 \001(\0132E.Diadoc.Api.Proto.PowersOfAt" +
-      "torney.PowerOfAttorneyIssuerForeignEntit" +
-      "y\022b\n\020IndividualEntity\030\004 \001(\0132H.Diadoc.Api" +
-      ".Proto.PowersOfAttorney.PowerOfAttorneyI" +
-      "ssuerIndividualEntity\022^\n\016PhysicalEntity\030" +
-      "\005 \001(\0132F.Diadoc.Api.Proto.PowersOfAttorne",
-      "y.PowerOfAttorneyIssuerPhysicalEntity\"V\n" +
-      " PowerOfAttorneyIssuerLegalEntity\022\013\n\003Inn" +
-      "\030\001 \002(\t\022\013\n\003Kpp\030\002 \002(\t\022\030\n\020OrganizationName\030" +
-      "\003 \002(\t\"X\n\"PowerOfAttorneyIssuerForeignEnt" +
-      "ity\022\013\n\003Inn\030\001 \001(\t\022\013\n\003Kpp\030\002 \001(\t\022\030\n\020Organiz" +
-      "ationName\030\003 \002(\t\"N\n%PowerOfAttorneyIssuer" +
-      "IndividualEntity\022\013\n\003Inn\030\001 \002(\t\022\030\n\020Organiz" +
-      "ationName\030\003 \002(\t\"b\n#PowerOfAttorneyIssuer" +
-      "PhysicalEntity\022\013\n\003Inn\030\001 \002(\t\022.\n\nPersonNam" +
-      "e\030\002 \001(\0132\032.Diadoc.Api.Proto.FullName\"\266\001\n\030",
-      "PowerOfAttorneyConfidant\022.\n\nPersonName\030\001" +
-      " \002(\0132\032.Diadoc.Api.Proto.FullName\022\013\n\003Inn\030" +
-      "\002 \002(\t\022]\n\014Organization\030\003 \001(\0132G.Diadoc.Api" +
-      ".Proto.PowersOfAttorney.PowerOfAttorneyC" +
-      "onfidantOrganization\"N\n$PowerOfAttorneyC" +
-      "onfidantOrganization\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kpp" +
-      "\030\002 \001(\t\022\014\n\004Name\030\003 \002(\t\"\256\001\n\036PowerOfAttorney" +
-      "PermissionsInfo\022R\n\013Permissions\030\001 \003(\0132=.D" +
-      "iadoc.Api.Proto.PowersOfAttorney.PowerOf" +
-      "AttorneyPermissions\022\036\n\026TransferPermissio",
-      "nLoss\030\002 \001(\t\022\030\n\020JointPermissions\030\003 \002(\t\"\262\001" +
-      "\n\032PowerOfAttorneyPermissions\022\014\n\004Type\030\001 \002" +
-      "(\t\022\026\n\016TextPermission\030\002 \001(\t\022n\n\031MachineRea" +
-      "dablePermission\030\003 \003(\0132K.Diadoc.Api.Proto" +
-      ".PowersOfAttorney.PowerOfAttorneyMachine" +
-      "ReadablePermission\"\256\001\n(PowerOfAttorneyMa" +
-      "chineReadablePermission\022\020\n\010Mnemonic\030\001 \001(" +
-      "\t\022\014\n\004Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022T\n\014Restric" +
-      "tions\030\004 \003(\0132>.Diadoc.Api.Proto.PowersOfA" +
-      "ttorney.PowerOfAttorneyRestrictions\"~\n\033P",
-      "owerOfAttorneyRestrictions\022\n\n\002Id\030\001 \002(\005\022\014" +
-      "\n\004Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\021\n\tValueName\030" +
-      "\004 \001(\t\022\021\n\tValueCode\030\005 \001(\t\022\021\n\tValueText\030\006 " +
-      "\001(\t\"\267\001\n\031PowerOfAttorneyToRegister\022H\n\006Ful" +
-      "lId\030\001 \001(\01328.Diadoc.Api.Proto.PowersOfAtt" +
-      "orney.PowerOfAttorneyFullId\022P\n\007Content\030\002" +
-      " \001(\0132?.Diadoc.Api.Proto.PowersOfAttorney" +
-      ".PowerOfAttorneySignedContent\"~\n\034PowerOf" +
-      "AttorneySignedContent\022-\n\007Content\030\001 \002(\0132\034" +
-      ".Diadoc.Api.Proto.Content_v3\022/\n\tSignatur",
-      "e\030\002 \002(\0132\034.Diadoc.Api.Proto.Content_v3\"\241\002" +
-      "\n\035PowerOfAttorneyRegisterResult\022\027\n\017Opera" +
-      "tionStatus\030\001 \002(\t\022K\n\017PowerOfAttorney\030\002 \001(" +
-      "\01322.Diadoc.Api.Proto.PowersOfAttorney.Po" +
-      "werOfAttorney\022H\n\006Status\030\003 \001(\01328.Diadoc.A" +
-      "pi.Proto.PowersOfAttorney.PowerOfAttorne" +
-      "yStatus\022P\n\006Errors\030\004 \003(\0132@.Diadoc.Api.Pro" +
-      "to.PowersOfAttorney.PowerOfAttorneyOpera" +
-      "tionError\"Y\n\025PowerOfAttorneyStatus\022\016\n\006St" +
-      "atus\030\001 \002(\t\0220\n\013LastCheckAt\030\002 \001(\0132\033.Diadoc",
-      ".Api.Proto.Timestamp\";\n\035PowerOfAttorneyO" +
-      "perationError\022\014\n\004Code\030\001 \002(\t\022\014\n\004Text\030\002 \002(" +
-      "\t\"<\n\026PowerOfAttorneyContent\022\017\n\007Content\030\001" +
-      " \002(\014\022\021\n\tSignature\030\002 \002(\014\"\304\001\n\036PowerOfAttor" +
-      "neyContentResponse\022L\n\007Content\030\001 \002(\0132;.Di" +
-      "adoc.Api.Proto.PowersOfAttorney.PowerOfA" +
-      "ttorneyContentV2\022T\n\017DelegationChain\030\002 \003(" +
-      "\0132;.Diadoc.Api.Proto.PowersOfAttorney.Po" +
-      "werOfAttorneyContentV2\"\210\001\n\030PowerOfAttorn" +
-      "eyContentV2\022\017\n\007Content\030\001 \002(\014\022\021\n\tSignatur",
-      "e\030\002 \002(\014\022H\n\006FullId\030\003 \002(\01328.Diadoc.Api.Pro" +
-      "to.PowersOfAttorney.PowerOfAttorneyFullI" +
-      "d*\200\001\n\031PowerOfAttorneyIssuerType\022\025\n\021Unkno" +
-      "wnIssuerType\020\000\022\017\n\013LegalEntity\020\001\022\021\n\rForei" +
-      "gnEntity\020\002\022\024\n\020IndividualEntity\020\003\022\022\n\016Phys" +
-      "icalEntity\020\004*V\n\032PowerOfAttorneySendingTy" +
-      "pe\022\013\n\007Unknown\020\000\022\014\n\010Metadata\020\001\022\010\n\004File\020\002\022" +
-      "\023\n\017DocumentContent\020\003B\027B\025PowerOfAttorneyP" +
-      "rotos"
+      "yPermissionsInfo\022X\n\016DelegationInfo\030\n \001(\013" +
+      "2@.Diadoc.Api.Proto.PowersOfAttorney.Pow",
+      "erOfAttorneyDelegationInfo\"\362\003\n\025PowerOfAt" +
+      "torneyIssuer\022]\n\004Type\030\001 \001(\0162<.Diadoc.Api." +
+      "Proto.PowersOfAttorney.PowerOfAttorneyIs" +
+      "suerType:\021UnknownIssuerType\022X\n\013LegalEnti" +
+      "ty\030\002 \001(\0132C.Diadoc.Api.Proto.PowersOfAtto" +
+      "rney.PowerOfAttorneyIssuerLegalEntity\022\\\n" +
+      "\rForeignEntity\030\003 \001(\0132E.Diadoc.Api.Proto." +
+      "PowersOfAttorney.PowerOfAttorneyIssuerFo" +
+      "reignEntity\022b\n\020IndividualEntity\030\004 \001(\0132H." +
+      "Diadoc.Api.Proto.PowersOfAttorney.PowerO",
+      "fAttorneyIssuerIndividualEntity\022^\n\016Physi" +
+      "calEntity\030\005 \001(\0132F.Diadoc.Api.Proto.Power" +
+      "sOfAttorney.PowerOfAttorneyIssuerPhysica" +
+      "lEntity\"V\n PowerOfAttorneyIssuerLegalEnt" +
+      "ity\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kpp\030\002 \002(\t\022\030\n\020Organiz" +
+      "ationName\030\003 \002(\t\"X\n\"PowerOfAttorneyIssuer" +
+      "ForeignEntity\022\013\n\003Inn\030\001 \001(\t\022\013\n\003Kpp\030\002 \001(\t\022" +
+      "\030\n\020OrganizationName\030\003 \002(\t\"N\n%PowerOfAtto" +
+      "rneyIssuerIndividualEntity\022\013\n\003Inn\030\001 \002(\t\022" +
+      "\030\n\020OrganizationName\030\003 \002(\t\"b\n#PowerOfAtto",
+      "rneyIssuerPhysicalEntity\022\013\n\003Inn\030\001 \002(\t\022.\n" +
+      "\nPersonName\030\002 \001(\0132\032.Diadoc.Api.Proto.Ful" +
+      "lName\"\266\001\n\030PowerOfAttorneyConfidant\022.\n\nPe" +
+      "rsonName\030\001 \002(\0132\032.Diadoc.Api.Proto.FullNa" +
+      "me\022\013\n\003Inn\030\002 \002(\t\022]\n\014Organization\030\003 \001(\0132G." +
+      "Diadoc.Api.Proto.PowersOfAttorney.PowerO" +
+      "fAttorneyConfidantOrganization\"N\n$PowerO" +
+      "fAttorneyConfidantOrganization\022\013\n\003Inn\030\001 " +
+      "\002(\t\022\013\n\003Kpp\030\002 \001(\t\022\014\n\004Name\030\003 \002(\t\"\256\001\n\036Power" +
+      "OfAttorneyPermissionsInfo\022R\n\013Permissions",
+      "\030\001 \003(\0132=.Diadoc.Api.Proto.PowersOfAttorn" +
+      "ey.PowerOfAttorneyPermissions\022\036\n\026Transfe" +
+      "rPermissionLoss\030\002 \001(\t\022\030\n\020JointPermission" +
+      "s\030\003 \002(\t\"\262\001\n\032PowerOfAttorneyPermissions\022\014" +
+      "\n\004Type\030\001 \002(\t\022\026\n\016TextPermission\030\002 \001(\t\022n\n\031" +
+      "MachineReadablePermission\030\003 \003(\0132K.Diadoc" +
+      ".Api.Proto.PowersOfAttorney.PowerOfAttor" +
+      "neyMachineReadablePermission\"\256\001\n(PowerOf" +
+      "AttorneyMachineReadablePermission\022\020\n\010Mne" +
+      "monic\030\001 \001(\t\022\014\n\004Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022",
+      "T\n\014Restrictions\030\004 \003(\0132>.Diadoc.Api.Proto" +
+      ".PowersOfAttorney.PowerOfAttorneyRestric" +
+      "tions\"~\n\033PowerOfAttorneyRestrictions\022\n\n\002" +
+      "Id\030\001 \002(\005\022\014\n\004Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\021\n\t" +
+      "ValueName\030\004 \001(\t\022\021\n\tValueCode\030\005 \001(\t\022\021\n\tVa" +
+      "lueText\030\006 \001(\t\"\267\001\n\031PowerOfAttorneyToRegis" +
+      "ter\022H\n\006FullId\030\001 \001(\01328.Diadoc.Api.Proto.P" +
+      "owersOfAttorney.PowerOfAttorneyFullId\022P\n" +
+      "\007Content\030\002 \001(\0132?.Diadoc.Api.Proto.Powers" +
+      "OfAttorney.PowerOfAttorneySignedContent\"",
+      "~\n\034PowerOfAttorneySignedContent\022-\n\007Conte" +
+      "nt\030\001 \002(\0132\034.Diadoc.Api.Proto.Content_v3\022/" +
+      "\n\tSignature\030\002 \002(\0132\034.Diadoc.Api.Proto.Con" +
+      "tent_v3\"\241\002\n\035PowerOfAttorneyRegisterResul" +
+      "t\022\027\n\017OperationStatus\030\001 \002(\t\022K\n\017PowerOfAtt" +
+      "orney\030\002 \001(\01322.Diadoc.Api.Proto.PowersOfA" +
+      "ttorney.PowerOfAttorney\022H\n\006Status\030\003 \001(\0132" +
+      "8.Diadoc.Api.Proto.PowersOfAttorney.Powe" +
+      "rOfAttorneyStatus\022P\n\006Errors\030\004 \003(\0132@.Diad" +
+      "oc.Api.Proto.PowersOfAttorney.PowerOfAtt",
+      "orneyOperationError\"Y\n\025PowerOfAttorneySt" +
+      "atus\022\016\n\006Status\030\001 \002(\t\0220\n\013LastCheckAt\030\002 \001(" +
+      "\0132\033.Diadoc.Api.Proto.Timestamp\";\n\035PowerO" +
+      "fAttorneyOperationError\022\014\n\004Code\030\001 \002(\t\022\014\n" +
+      "\004Text\030\002 \002(\t\"a\n\035PowerOfAttorneyDelegation" +
+      "Info\022\036\n\026RootRegistrationNumber\030\001 \002(\t\022 \n\030" +
+      "ParentRegistrationNumber\030\002 \001(\t\"<\n\026PowerO" +
+      "fAttorneyContent\022\017\n\007Content\030\001 \002(\014\022\021\n\tSig" +
+      "nature\030\002 \002(\014\"\304\001\n\036PowerOfAttorneyContentR" +
+      "esponse\022L\n\007Content\030\001 \002(\0132;.Diadoc.Api.Pr",
+      "oto.PowersOfAttorney.PowerOfAttorneyCont" +
+      "entV2\022T\n\017DelegationChain\030\002 \003(\0132;.Diadoc." +
+      "Api.Proto.PowersOfAttorney.PowerOfAttorn" +
+      "eyContentV2\"\210\001\n\030PowerOfAttorneyContentV2" +
+      "\022\017\n\007Content\030\001 \002(\014\022\021\n\tSignature\030\002 \002(\014\022H\n\006" +
+      "FullId\030\003 \002(\01328.Diadoc.Api.Proto.PowersOf" +
+      "Attorney.PowerOfAttorneyFullId*\200\001\n\031Power" +
+      "OfAttorneyIssuerType\022\025\n\021UnknownIssuerTyp" +
+      "e\020\000\022\017\n\013LegalEntity\020\001\022\021\n\rForeignEntity\020\002\022" +
+      "\024\n\020IndividualEntity\020\003\022\022\n\016PhysicalEntity\020",
+      "\004*V\n\032PowerOfAttorneySendingType\022\013\n\007Unkno" +
+      "wn\020\000\022\014\n\010Metadata\020\001\022\010\n\004File\020\002\022\023\n\017Document" +
+      "Content\020\003B\027B\025PowerOfAttorneyProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19740,7 +20591,7 @@ public final class PowerOfAttorneyProtos {
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorney_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorney_descriptor,
-        new java.lang.String[] { "FullId", "Issuer", "Confidant", "StartAt", "ExpireAt", "System", "IdFile", "DelegationChain", "PermissionsInfo", });
+        new java.lang.String[] { "FullId", "Issuer", "Confidant", "StartAt", "ExpireAt", "System", "IdFile", "DelegationChain", "PermissionsInfo", "DelegationInfo", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyIssuer_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyIssuer_fieldAccessorTable = new
@@ -19837,20 +20688,26 @@ public final class PowerOfAttorneyProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyOperationError_descriptor,
         new java.lang.String[] { "Code", "Text", });
-    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_descriptor =
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_descriptor =
       getDescriptor().getMessageTypes().get(18);
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_descriptor,
+        new java.lang.String[] { "RootRegistrationNumber", "ParentRegistrationNumber", });
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_descriptor =
+      getDescriptor().getMessageTypes().get(19);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_descriptor,
         new java.lang.String[] { "Content", "Signature", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentResponse_descriptor,
         new java.lang.String[] { "Content", "DelegationChain", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentV2_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentV2_descriptor,
