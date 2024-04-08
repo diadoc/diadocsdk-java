@@ -582,6 +582,20 @@ public final class GetOrganizationsByInnListProtos {
      * <code>optional .Diadoc.Api.Proto.DocumentId InvitationDocumentId = 6;</code>
      */
     Diadoc.Api.Proto.DocumentIdProtos.DocumentIdOrBuilder getInvitationDocumentIdOrBuilder();
+
+    /**
+     * <code>optional string CounteragentGroupId = 7;</code>
+     */
+    boolean hasCounteragentGroupId();
+    /**
+     * <code>optional string CounteragentGroupId = 7;</code>
+     */
+    java.lang.String getCounteragentGroupId();
+    /**
+     * <code>optional string CounteragentGroupId = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getCounteragentGroupIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.OrganizationWithCounteragentStatus}
@@ -687,6 +701,12 @@ public final class GetOrganizationsByInnListProtos {
                 invitationDocumentId_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000020;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              counteragentGroupId_ = bs;
               break;
             }
           }
@@ -885,6 +905,48 @@ public final class GetOrganizationsByInnListProtos {
       return invitationDocumentId_;
     }
 
+    public static final int COUNTERAGENTGROUPID_FIELD_NUMBER = 7;
+    private java.lang.Object counteragentGroupId_;
+    /**
+     * <code>optional string CounteragentGroupId = 7;</code>
+     */
+    public boolean hasCounteragentGroupId() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string CounteragentGroupId = 7;</code>
+     */
+    public java.lang.String getCounteragentGroupId() {
+      java.lang.Object ref = counteragentGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          counteragentGroupId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string CounteragentGroupId = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCounteragentGroupIdBytes() {
+      java.lang.Object ref = counteragentGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        counteragentGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       organization_ = Diadoc.Api.Proto.OrganizationProtos.Organization.getDefaultInstance();
       counteragentStatus_ = Diadoc.Api.Proto.CounteragentProtos.CounteragentStatus.UnknownCounteragentStatus;
@@ -892,6 +954,7 @@ public final class GetOrganizationsByInnListProtos {
       messageFromCounteragent_ = "";
       messageToCounteragent_ = "";
       invitationDocumentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
+      counteragentGroupId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -938,6 +1001,9 @@ public final class GetOrganizationsByInnListProtos {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeMessage(6, invitationDocumentId_);
       }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getCounteragentGroupIdBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -970,6 +1036,10 @@ public final class GetOrganizationsByInnListProtos {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, invitationDocumentId_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getCounteragentGroupIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1110,6 +1180,8 @@ public final class GetOrganizationsByInnListProtos {
           invitationDocumentIdBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
+        counteragentGroupId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -1170,6 +1242,10 @@ public final class GetOrganizationsByInnListProtos {
         } else {
           result.invitationDocumentId_ = invitationDocumentIdBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.counteragentGroupId_ = counteragentGroupId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1207,6 +1283,11 @@ public final class GetOrganizationsByInnListProtos {
         }
         if (other.hasInvitationDocumentId()) {
           mergeInvitationDocumentId(other.getInvitationDocumentId());
+        }
+        if (other.hasCounteragentGroupId()) {
+          bitField0_ |= 0x00000040;
+          counteragentGroupId_ = other.counteragentGroupId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1698,6 +1779,82 @@ public final class GetOrganizationsByInnListProtos {
           invitationDocumentId_ = null;
         }
         return invitationDocumentIdBuilder_;
+      }
+
+      private java.lang.Object counteragentGroupId_ = "";
+      /**
+       * <code>optional string CounteragentGroupId = 7;</code>
+       */
+      public boolean hasCounteragentGroupId() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string CounteragentGroupId = 7;</code>
+       */
+      public java.lang.String getCounteragentGroupId() {
+        java.lang.Object ref = counteragentGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            counteragentGroupId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string CounteragentGroupId = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCounteragentGroupIdBytes() {
+        java.lang.Object ref = counteragentGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          counteragentGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string CounteragentGroupId = 7;</code>
+       */
+      public Builder setCounteragentGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        counteragentGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string CounteragentGroupId = 7;</code>
+       */
+      public Builder clearCounteragentGroupId() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        counteragentGroupId_ = getDefaultInstance().getCounteragentGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string CounteragentGroupId = 7;</code>
+       */
+      public Builder setCounteragentGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        counteragentGroupId_ = value;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationWithCounteragentStatus)
@@ -2427,7 +2584,7 @@ public final class GetOrganizationsByInnListProtos {
       "c.Api.Proto\032\022Organization.proto\032\022Counter" +
       "agent.proto\032\020DocumentId.proto\"3\n GetOrga" +
       "nizationsByInnListRequest\022\017\n\007InnList\030\001 \003" +
-      "(\t\"\324\002\n\"OrganizationWithCounteragentStatu" +
+      "(\t\"\361\002\n\"OrganizationWithCounteragentStatu" +
       "s\0224\n\014Organization\030\001 \002(\0132\036.Diadoc.Api.Pro" +
       "to.Organization\022[\n\022CounteragentStatus\030\002 " +
       "\001(\0162$.Diadoc.Api.Proto.CounteragentStatu" +
@@ -2435,11 +2592,12 @@ public final class GetOrganizationsByInnListProtos {
       "tTimestampTicks\030\003 \001(\020\022\037\n\027MessageFromCoun",
       "teragent\030\004 \001(\t\022\035\n\025MessageToCounteragent\030" +
       "\005 \001(\t\022:\n\024InvitationDocumentId\030\006 \001(\0132\034.Di" +
-      "adoc.Api.Proto.DocumentId\"p\n!GetOrganiza" +
-      "tionsByInnListResponse\022K\n\rOrganizations\030" +
-      "\001 \003(\01324.Diadoc.Api.Proto.OrganizationWit" +
-      "hCounteragentStatusB!B\037GetOrganizationsB" +
-      "yInnListProtos"
+      "adoc.Api.Proto.DocumentId\022\033\n\023Counteragen" +
+      "tGroupId\030\007 \001(\t\"p\n!GetOrganizationsByInnL" +
+      "istResponse\022K\n\rOrganizations\030\001 \003(\01324.Dia" +
+      "doc.Api.Proto.OrganizationWithCounterage" +
+      "ntStatusB!B\037GetOrganizationsByInnListPro" +
+      "tos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2467,7 +2625,7 @@ public final class GetOrganizationsByInnListProtos {
     internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationWithCounteragentStatus_descriptor,
-        new java.lang.String[] { "Organization", "CounteragentStatus", "LastEventTimestampTicks", "MessageFromCounteragent", "MessageToCounteragent", "InvitationDocumentId", });
+        new java.lang.String[] { "Organization", "CounteragentStatus", "LastEventTimestampTicks", "MessageFromCounteragent", "MessageToCounteragent", "InvitationDocumentId", "CounteragentGroupId", });
     internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_GetOrganizationsByInnListResponse_fieldAccessorTable = new
