@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 import static Diadoc.Api.Proto.AcquireCounteragentProtos.*;
 import static Diadoc.Api.Proto.AsyncMethodResultProtos.*;
 import static Diadoc.Api.Proto.CounteragentProtos.*;
+import static Diadoc.Api.Proto.Events.DiadocCounteragent_GetApiProtos.*;
 
 public class CounteragentClient {
     private DiadocHttpClient diadocHttpClient;
@@ -153,6 +154,44 @@ public class CounteragentClient {
 
             var request = RequestBuilder.post(url.build());
             diadocHttpClient.performRequest(request);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public BoxCounteragentEventList getCounteragentEvents(
+            String boxId,
+            @Nullable String afterIndexKey,
+            @Nullable Long timestampFromTicks,
+            @Nullable Long timestampToTicks,
+            @Nullable Integer limit) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V1/GetCounteragentEvents")
+                    .addParameter("boxId", boxId);
+
+            if (!Tools.isNullOrEmpty(afterIndexKey)) {
+                url.addParameter("afterIndexKey", afterIndexKey);
+            }
+
+            if (timestampFromTicks != null) {
+                url.addParameter("timestampFromTicks", timestampFromTicks.toString());
+            }
+
+            if (timestampToTicks != null) {
+                url.addParameter("timestampToTicks", timestampToTicks.toString());
+            }
+
+            if (limit != null && limit > 0) {
+                url.addParameter("limit", limit.toString());
+            }
+
+            var request = RequestBuilder.get(url.build());
+            return BoxCounteragentEventList.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
