@@ -164,12 +164,30 @@ public class OrganizationClient {
         return getMyOrganizations(true);
     }
 
+    /**
+     * Use getOrganizationUsersV2 instead
+     */
+
+    @Deprecated
     public OrganizationUsersList getOrganizationUsers(String orgId) throws DiadocSdkException {
         try {
             var request = RequestBuilder.get(
                     new URIBuilder(diadocHttpClient.getBaseUrl())
                             .setPath("/GetOrganizationUsers")
                             .addParameter("orgId", orgId)
+                            .build());
+            return OrganizationUsersList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+    
+    public OrganizationUsersList getOrganizationUsersV2(String boxId) throws DiadocSdkException {
+        try {
+            var request = RequestBuilder.get(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V2/GetOrganizationUsers")
+                            .addParameter("boxId", boxId)
                             .build());
             return OrganizationUsersList.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {

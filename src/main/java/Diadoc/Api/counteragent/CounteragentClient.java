@@ -24,10 +24,20 @@ public class CounteragentClient {
         this.diadocHttpClient = diadocHttpClient;
     }
 
+    /**
+     * Use acquireCounteragentV3 instead
+     */
+
+    @Deprecated
     public AsyncMethodResult acquireCounteragent(String myOrgId, AcquireCounteragentRequest acquireCounteragentRequest) throws DiadocSdkException {
         return acquireCounteragent(myOrgId, null, acquireCounteragentRequest);
     }
 
+    /**
+     * Use acquireCounteragentV3 instead
+     */
+
+    @Deprecated
     public AsyncMethodResult acquireCounteragent(
             String myOrgId,
             @Nullable String myDepartmentId,
@@ -58,7 +68,43 @@ public class CounteragentClient {
             throw new DiadocSdkException(e);
         }
     }
+    
+    public AsyncMethodResult acquireCounteragentV3(
+            String myBoxId,
+            @Nullable String myDepartmentId,
+            AcquireCounteragentRequest acquireCounteragentRequest) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(myBoxId)) {
+            throw new IllegalArgumentException("myBoxId");
+        }
 
+        if (acquireCounteragentRequest == null) {
+            throw new IllegalArgumentException("acquireCounteragentRequest");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V3/AcquireCounteragent")
+                    .addParameter("myBoxId", myBoxId);
+
+            if (myDepartmentId != null) {
+                url.addParameter("myDepartmentId", myDepartmentId);
+            }
+
+            var request = RequestBuilder
+                    .post(url.build())
+                    .setEntity(new ByteArrayEntity(acquireCounteragentRequest.toByteArray()));
+
+            return AsyncMethodResult.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    /**
+     * Use waitAcquireCounteragentResultV2 instead
+     */
+
+    @Deprecated
     public AcquireCounteragentResult waitAcquireCounteragentResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException, DiadocException {
         try {
             byte[] data = diadocHttpClient.waitTaskResult("/AcquireCounteragentResult", taskId, timeoutInMillis);
@@ -67,7 +113,21 @@ public class CounteragentClient {
             throw new DiadocSdkException(e);
         }
     }
+    
+    public AcquireCounteragentResultV2 waitAcquireCounteragentResultV2(String taskId, Integer timeoutInMillis) throws DiadocSdkException, DiadocException {
+        try {
+            byte[] data = diadocHttpClient.waitTaskResult("/V2/AcquireCounteragentResult", taskId, timeoutInMillis);
+            return AcquireCounteragentResultV2.parseFrom(data);
+        } catch (IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 
+    /**
+     * Use getCounteragentV3 instead
+     */
+
+    @Deprecated
     public Counteragent getCounteragent(String myOrgId, String counteragentOrgId) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myOrgId)) {
             throw new IllegalArgumentException("myOrgId");
@@ -88,7 +148,33 @@ public class CounteragentClient {
             throw new DiadocSdkException(e);
         }
     }
+    
+    public Counteragent getCounteragentV3(String myBoxId, String counteragentBoxId) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(myBoxId)) {
+            throw new IllegalArgumentException("myBoxId");
+        }
+        if (Tools.isNullOrEmpty(counteragentBoxId)) {
+            throw new IllegalArgumentException("counteragentBoxId");
+        }
 
+        try {
+            var request = RequestBuilder
+                    .get(new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V3/GetCounteragent")
+                            .addParameter("myBoxId", myBoxId)
+                            .addParameter("counteragentBoxId", counteragentBoxId)
+                            .build());
+            return Counteragent.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    /**
+     * Use getCounteragentCertificatesV2 instead
+     */
+
+    @Deprecated
     public CounteragentCertificateList getCounteragentCertificates(String myOrgId, String counteragentOrgId) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myOrgId)) {
             throw new IllegalArgumentException("myOrgId");
@@ -109,7 +195,33 @@ public class CounteragentClient {
             throw new DiadocSdkException(e);
         }
     }
+    
+    public CounteragentCertificateList getCounteragentCertificatesV2(String myBoxId, String counteragentBoxId) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(myBoxId)) {
+            throw new IllegalArgumentException("myBoxId");
+        }
+        if (Tools.isNullOrEmpty(counteragentBoxId)) {
+            throw new IllegalArgumentException("counteragentBoxId");
+        }
 
+        try {
+            var request = RequestBuilder
+                    .get(new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V2/GetCounteragentCertificates")
+                            .addParameter("myBoxId", myBoxId)
+                            .addParameter("counteragentBoxId", counteragentBoxId)
+                            .build());
+            return CounteragentCertificateList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    /**
+     * Use getCounteragentsV3 instead
+     */
+
+    @Deprecated
     public CounteragentList getCounteragents(String myOrgId, @Nullable String counteragentStatus, @Nullable String afterIndexKey) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myOrgId)) {
             throw new IllegalArgumentException("myOrgId");
@@ -133,7 +245,36 @@ public class CounteragentClient {
             throw new DiadocSdkException(e);
         }
     }
+    
+    public CounteragentList getCounteragentsV3(String myBoxId, @Nullable String counteragentStatus, @Nullable String afterIndexKey) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(myBoxId)) {
+            throw new IllegalArgumentException("myBoxId");
+        }
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V3/GetCounteragents")
+                    .addParameter("myBoxId", myBoxId);
 
+            if (!Tools.isNullOrEmpty(counteragentStatus)) {
+                url.addParameter("counteragentStatus", counteragentStatus);
+            }
+
+            if (afterIndexKey != null) {
+                url.addParameter("afterIndexKey", afterIndexKey);
+            }
+
+            var request = RequestBuilder.get(url.build());
+            return CounteragentList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    /**
+     * Use breakWithCounteragentV2 instead
+     */
+
+    @Deprecated
     public void breakWithCounteragent(String myOrgId, String counteragentOrgId, @Nullable String comment) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myOrgId)) {
             throw new IllegalArgumentException("myOrgId");
@@ -147,6 +288,31 @@ public class CounteragentClient {
                     .setPath("/BreakWithCounteragent")
                     .addParameter("myOrgId", myOrgId)
                     .addParameter("counteragentOrgId", counteragentOrgId);
+
+            if (!Tools.isNullOrEmpty(comment)) {
+                url.addParameter("comment", comment);
+            }
+
+            var request = RequestBuilder.post(url.build());
+            diadocHttpClient.performRequest(request);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+    
+    public void breakWithCounteragentV2(String myBoxId, String counteragentBoxId, @Nullable String comment) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(myBoxId)) {
+            throw new IllegalArgumentException("myBoxId");
+        }
+        if (Tools.isNullOrEmpty(counteragentBoxId)) {
+            throw new IllegalArgumentException("counteragentBoxId");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V2/BreakWithCounteragent")
+                    .addParameter("myBoxId", myBoxId)
+                    .addParameter("counteragentBoxId", counteragentBoxId);
 
             if (!Tools.isNullOrEmpty(comment)) {
                 url.addParameter("comment", comment);
