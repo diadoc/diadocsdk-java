@@ -37,6 +37,10 @@ public final class PowerOfAttorneyValidationProtos {
      * <code>ValidationError = 4;</code>
      */
     ValidationError(4, 4),
+    /**
+     * <code>IsNotAttached = 5;</code>
+     */
+    IsNotAttached(5, 5),
     ;
 
     /**
@@ -63,6 +67,10 @@ public final class PowerOfAttorneyValidationProtos {
      * <code>ValidationError = 4;</code>
      */
     public static final int ValidationError_VALUE = 4;
+    /**
+     * <code>IsNotAttached = 5;</code>
+     */
+    public static final int IsNotAttached_VALUE = 5;
 
 
     public final int getNumber() { return value; }
@@ -74,6 +82,7 @@ public final class PowerOfAttorneyValidationProtos {
         case 2: return IsValid;
         case 3: return IsNotValid;
         case 4: return ValidationError;
+        case 5: return IsNotAttached;
         default: return null;
       }
     }
@@ -3576,11 +3585,12 @@ public final class PowerOfAttorneyValidationProtos {
       "i.Proto.Content_v3\"\201\001\n PowerOfAttorneyPr" +
       "evalidateResult\022]\n\021PrevalidateStatus\030\001 \002",
       "(\0132B.Diadoc.Api.Proto.PowersOfAttorney.P" +
-      "owerOfAttorneyValidationStatus*\204\001\n&Power" +
+      "owerOfAttorneyValidationStatus*\227\001\n&Power" +
       "OfAttorneyValidationStatusNamedId\022\021\n\rUnk" +
       "nownStatus\020\000\022\025\n\021CanNotBeValidated\020\001\022\013\n\007I" +
       "sValid\020\002\022\016\n\nIsNotValid\020\003\022\023\n\017ValidationEr" +
-      "ror\020\004B!B\037PowerOfAttorneyValidationProtos"
+      "ror\020\004\022\021\n\rIsNotAttached\020\005B!B\037PowerOfAttor" +
+      "neyValidationProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
