@@ -113,6 +113,19 @@ public final class AttachmentV3Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorney PowerOfAttorney = 8;</code>
      */
     Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorneyOrBuilder getPowerOfAttorneyOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+     */
+    boolean hasPowerOfAttorneyAttachmentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+     */
+    Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus getPowerOfAttorneyAttachmentStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+     */
+    Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatusOrBuilder getPowerOfAttorneyAttachmentStatusOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignatureV3}
@@ -246,6 +259,19 @@ public final class AttachmentV3Protos {
                 powerOfAttorney_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000080;
+              break;
+            }
+            case 74: {
+              Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000100) == 0x00000100)) {
+                subBuilder = powerOfAttorneyAttachmentStatus_.toBuilder();
+              }
+              powerOfAttorneyAttachmentStatus_ = input.readMessage(Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(powerOfAttorneyAttachmentStatus_);
+                powerOfAttorneyAttachmentStatus_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000100;
               break;
             }
           }
@@ -492,6 +518,27 @@ public final class AttachmentV3Protos {
       return powerOfAttorney_;
     }
 
+    public static final int POWEROFATTORNEYATTACHMENTSTATUS_FIELD_NUMBER = 9;
+    private Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus powerOfAttorneyAttachmentStatus_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+     */
+    public boolean hasPowerOfAttorneyAttachmentStatus() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus getPowerOfAttorneyAttachmentStatus() {
+      return powerOfAttorneyAttachmentStatus_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+     */
+    public Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatusOrBuilder getPowerOfAttorneyAttachmentStatusOrBuilder() {
+      return powerOfAttorneyAttachmentStatus_;
+    }
+
     private void initFields() {
       cms_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
       cadesT_ = Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance();
@@ -501,6 +548,7 @@ public final class AttachmentV3Protos {
       verificationResult_ = Diadoc.Api.Proto.SignatureVerificationResultProtos.SignatureVerificationResult.getDefaultInstance();
       deliveredAt_ = Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance();
       powerOfAttorney_ = Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.SignaturePowerOfAttorney.getDefaultInstance();
+      powerOfAttorneyAttachmentStatus_ = Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -552,6 +600,12 @@ public final class AttachmentV3Protos {
           return false;
         }
       }
+      if (hasPowerOfAttorneyAttachmentStatus()) {
+        if (!getPowerOfAttorneyAttachmentStatus().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -582,6 +636,9 @@ public final class AttachmentV3Protos {
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeMessage(8, powerOfAttorney_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeMessage(9, powerOfAttorneyAttachmentStatus_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -623,6 +680,10 @@ public final class AttachmentV3Protos {
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, powerOfAttorney_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, powerOfAttorneyAttachmentStatus_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -738,6 +799,7 @@ public final class AttachmentV3Protos {
           getVerificationResultFieldBuilder();
           getDeliveredAtFieldBuilder();
           getPowerOfAttorneyFieldBuilder();
+          getPowerOfAttorneyAttachmentStatusFieldBuilder();
         }
       }
       private static Builder create() {
@@ -782,6 +844,12 @@ public final class AttachmentV3Protos {
           powerOfAttorneyBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000080);
+        if (powerOfAttorneyAttachmentStatusBuilder_ == null) {
+          powerOfAttorneyAttachmentStatus_ = Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.getDefaultInstance();
+        } else {
+          powerOfAttorneyAttachmentStatusBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -862,6 +930,14 @@ public final class AttachmentV3Protos {
         } else {
           result.powerOfAttorney_ = powerOfAttorneyBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        if (powerOfAttorneyAttachmentStatusBuilder_ == null) {
+          result.powerOfAttorneyAttachmentStatus_ = powerOfAttorneyAttachmentStatus_;
+        } else {
+          result.powerOfAttorneyAttachmentStatus_ = powerOfAttorneyAttachmentStatusBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -905,6 +981,9 @@ public final class AttachmentV3Protos {
         }
         if (other.hasPowerOfAttorney()) {
           mergePowerOfAttorney(other.getPowerOfAttorney());
+        }
+        if (other.hasPowerOfAttorneyAttachmentStatus()) {
+          mergePowerOfAttorneyAttachmentStatus(other.getPowerOfAttorneyAttachmentStatus());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -951,6 +1030,12 @@ public final class AttachmentV3Protos {
         }
         if (hasPowerOfAttorney()) {
           if (!getPowerOfAttorney().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasPowerOfAttorneyAttachmentStatus()) {
+          if (!getPowerOfAttorneyAttachmentStatus().isInitialized()) {
             
             return false;
           }
@@ -1739,6 +1824,122 @@ public final class AttachmentV3Protos {
           powerOfAttorney_ = null;
         }
         return powerOfAttorneyBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus powerOfAttorneyAttachmentStatus_ = Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus, Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.Builder, Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatusOrBuilder> powerOfAttorneyAttachmentStatusBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+       */
+      public boolean hasPowerOfAttorneyAttachmentStatus() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus getPowerOfAttorneyAttachmentStatus() {
+        if (powerOfAttorneyAttachmentStatusBuilder_ == null) {
+          return powerOfAttorneyAttachmentStatus_;
+        } else {
+          return powerOfAttorneyAttachmentStatusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+       */
+      public Builder setPowerOfAttorneyAttachmentStatus(Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus value) {
+        if (powerOfAttorneyAttachmentStatusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          powerOfAttorneyAttachmentStatus_ = value;
+          onChanged();
+        } else {
+          powerOfAttorneyAttachmentStatusBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+       */
+      public Builder setPowerOfAttorneyAttachmentStatus(
+          Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.Builder builderForValue) {
+        if (powerOfAttorneyAttachmentStatusBuilder_ == null) {
+          powerOfAttorneyAttachmentStatus_ = builderForValue.build();
+          onChanged();
+        } else {
+          powerOfAttorneyAttachmentStatusBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+       */
+      public Builder mergePowerOfAttorneyAttachmentStatus(Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus value) {
+        if (powerOfAttorneyAttachmentStatusBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) == 0x00000100) &&
+              powerOfAttorneyAttachmentStatus_ != Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.getDefaultInstance()) {
+            powerOfAttorneyAttachmentStatus_ =
+              Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.newBuilder(powerOfAttorneyAttachmentStatus_).mergeFrom(value).buildPartial();
+          } else {
+            powerOfAttorneyAttachmentStatus_ = value;
+          }
+          onChanged();
+        } else {
+          powerOfAttorneyAttachmentStatusBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+       */
+      public Builder clearPowerOfAttorneyAttachmentStatus() {
+        if (powerOfAttorneyAttachmentStatusBuilder_ == null) {
+          powerOfAttorneyAttachmentStatus_ = Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.getDefaultInstance();
+          onChanged();
+        } else {
+          powerOfAttorneyAttachmentStatusBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.Builder getPowerOfAttorneyAttachmentStatusBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getPowerOfAttorneyAttachmentStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatusOrBuilder getPowerOfAttorneyAttachmentStatusOrBuilder() {
+        if (powerOfAttorneyAttachmentStatusBuilder_ != null) {
+          return powerOfAttorneyAttachmentStatusBuilder_.getMessageOrBuilder();
+        } else {
+          return powerOfAttorneyAttachmentStatus_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus, Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.Builder, Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatusOrBuilder> 
+          getPowerOfAttorneyAttachmentStatusFieldBuilder() {
+        if (powerOfAttorneyAttachmentStatusBuilder_ == null) {
+          powerOfAttorneyAttachmentStatusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus, Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.Builder, Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatusOrBuilder>(
+                  getPowerOfAttorneyAttachmentStatus(),
+                  getParentForChildren(),
+                  isClean());
+          powerOfAttorneyAttachmentStatus_ = null;
+        }
+        return powerOfAttorneyAttachmentStatusBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.SignatureV3)
@@ -2865,24 +3066,27 @@ public final class AttachmentV3Protos {
       "\n\032Docflow/AttachmentV3.proto\022\030Diadoc.Api" +
       ".Proto.Docflow\032\030Docflow/Attachment.proto" +
       "\032\rContent.proto\032\017Timestamp.proto\032!Signat" +
-      "ureVerificationResult.proto\032&Docflow/Sig" +
-      "naturePowerOfAttorney.proto\"\372\002\n\013Signatur" +
-      "eV3\022-\n\003Cms\030\001 \002(\0132 .Diadoc.Api.Proto.Docf" +
-      "low.Entity\0220\n\006CadesT\030\002 \001(\0132 .Diadoc.Api." +
-      "Proto.Docflow.Entity\022\023\n\013SignerBoxId\030\003 \002(" +
-      "\t\022\032\n\022SignerDepartmentId\030\004 \002(\t\022\017\n\007IsValid" +
-      "\030\005 \002(\010\022I\n\022VerificationResult\030\006 \001(\0132-.Dia",
-      "doc.Api.Proto.SignatureVerificationResul" +
-      "t\0220\n\013DeliveredAt\030\007 \001(\0132\033.Diadoc.Api.Prot" +
-      "o.Timestamp\022K\n\017PowerOfAttorney\030\010 \001(\01322.D" +
-      "iadoc.Api.Proto.Docflow.SignaturePowerOf" +
-      "Attorney\"\322\001\n\022SignedAttachmentV3\0228\n\nAttac" +
-      "hment\030\001 \002(\0132$.Diadoc.Api.Proto.Docflow.A" +
-      "ttachment\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Ap" +
-      "i.Proto.Docflow.SignatureV3\0221\n\007Comment\030\003" +
-      " \001(\0132 .Diadoc.Api.Proto.Docflow.Entity\022\025" +
-      "\n\rContentTypeId\030\004 \002(\tB\024B\022AttachmentV3Pro",
-      "tos"
+      "ureVerificationResult.proto\032-Docflow/Pow" +
+      "erOfAttorneyAttachmentStatus.proto\032&Docf" +
+      "low/SignaturePowerOfAttorney.proto\"\336\003\n\013S" +
+      "ignatureV3\022-\n\003Cms\030\001 \002(\0132 .Diadoc.Api.Pro" +
+      "to.Docflow.Entity\0220\n\006CadesT\030\002 \001(\0132 .Diad" +
+      "oc.Api.Proto.Docflow.Entity\022\023\n\013SignerBox" +
+      "Id\030\003 \002(\t\022\032\n\022SignerDepartmentId\030\004 \002(\t\022\017\n\007",
+      "IsValid\030\005 \002(\010\022I\n\022VerificationResult\030\006 \001(" +
+      "\0132-.Diadoc.Api.Proto.SignatureVerificati" +
+      "onResult\0220\n\013DeliveredAt\030\007 \001(\0132\033.Diadoc.A" +
+      "pi.Proto.Timestamp\022K\n\017PowerOfAttorney\030\010 " +
+      "\001(\01322.Diadoc.Api.Proto.Docflow.Signature" +
+      "PowerOfAttorney\022b\n\037PowerOfAttorneyAttach" +
+      "mentStatus\030\t \001(\01329.Diadoc.Api.Proto.Docf" +
+      "low.PowerOfAttorneyAttachmentStatus\"\322\001\n\022" +
+      "SignedAttachmentV3\0228\n\nAttachment\030\001 \002(\0132$" +
+      ".Diadoc.Api.Proto.Docflow.Attachment\0228\n\t",
+      "Signature\030\002 \001(\0132%.Diadoc.Api.Proto.Docfl" +
+      "ow.SignatureV3\0221\n\007Comment\030\003 \001(\0132 .Diadoc" +
+      ".Api.Proto.Docflow.Entity\022\025\n\rContentType" +
+      "Id\030\004 \002(\tB\024B\022AttachmentV3Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2899,6 +3103,7 @@ public final class AttachmentV3Protos {
           Diadoc.Api.Proto.ContentProtos.getDescriptor(),
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
           Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor(),
+          Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_descriptor =
@@ -2906,7 +3111,7 @@ public final class AttachmentV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_descriptor,
-        new java.lang.String[] { "Cms", "CadesT", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", "DeliveredAt", "PowerOfAttorney", });
+        new java.lang.String[] { "Cms", "CadesT", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", "DeliveredAt", "PowerOfAttorney", "PowerOfAttorneyAttachmentStatus", });
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_fieldAccessorTable = new
@@ -2917,6 +3122,7 @@ public final class AttachmentV3Protos {
     Diadoc.Api.Proto.ContentProtos.getDescriptor();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.SignaturePowerOfAttorneyProtos.getDescriptor();
   }
 
