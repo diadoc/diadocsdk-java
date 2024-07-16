@@ -41,6 +41,10 @@ public final class PowerOfAttorneyValidationProtos {
      * <code>IsNotAttached = 5;</code>
      */
     IsNotAttached(5, 5),
+    /**
+     * <code>HasWarnings = 6;</code>
+     */
+    HasWarnings(6, 6),
     ;
 
     /**
@@ -71,6 +75,10 @@ public final class PowerOfAttorneyValidationProtos {
      * <code>IsNotAttached = 5;</code>
      */
     public static final int IsNotAttached_VALUE = 5;
+    /**
+     * <code>HasWarnings = 6;</code>
+     */
+    public static final int HasWarnings_VALUE = 6;
 
 
     public final int getNumber() { return value; }
@@ -83,6 +91,7 @@ public final class PowerOfAttorneyValidationProtos {
         case 3: return IsNotValid;
         case 4: return ValidationError;
         case 5: return IsNotAttached;
+        case 6: return HasWarnings;
         default: return null;
       }
     }
@@ -171,28 +180,54 @@ public final class PowerOfAttorneyValidationProtos {
         getStatusTextBytes();
 
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError> 
+    @java.lang.Deprecated java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError> 
         getErrorsList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getErrors(int index);
+    @java.lang.Deprecated Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getErrors(int index);
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    int getErrorsCount();
+    @java.lang.Deprecated int getErrorsCount();
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> 
         getErrorsOrBuilderList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getErrorsOrBuilder(
+    @java.lang.Deprecated Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getErrorsOrBuilder(
         int index);
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+     */
+    boolean hasValidationProtocol();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol getValidationProtocol();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocolOrBuilder getValidationProtocolOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+     */
+    boolean hasOperationError();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getOperationError();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getOperationErrorOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus}
@@ -280,6 +315,32 @@ public final class PowerOfAttorneyValidationProtos {
                 mutable_bitField0_ |= 0x00000008;
               }
               errors_.add(input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.PARSER, extensionRegistry));
+              break;
+            }
+            case 42: {
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = validationProtocol_.toBuilder();
+              }
+              validationProtocol_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(validationProtocol_);
+                validationProtocol_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 50: {
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = operationError_.toBuilder();
+              }
+              operationError_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(operationError_);
+                operationError_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
               break;
             }
           }
@@ -400,36 +461,78 @@ public final class PowerOfAttorneyValidationProtos {
     public static final int ERRORS_FIELD_NUMBER = 4;
     private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError> errors_;
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError> getErrorsList() {
+    @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError> getErrorsList() {
       return errors_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> 
         getErrorsOrBuilderList() {
       return errors_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    public int getErrorsCount() {
+    @java.lang.Deprecated public int getErrorsCount() {
       return errors_.size();
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getErrors(int index) {
+    @java.lang.Deprecated public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getErrors(int index) {
       return errors_.get(index);
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
      */
-    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getErrorsOrBuilder(
+    @java.lang.Deprecated public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getErrorsOrBuilder(
         int index) {
       return errors_.get(index);
+    }
+
+    public static final int VALIDATIONPROTOCOL_FIELD_NUMBER = 5;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol validationProtocol_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+     */
+    public boolean hasValidationProtocol() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol getValidationProtocol() {
+      return validationProtocol_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocolOrBuilder getValidationProtocolOrBuilder() {
+      return validationProtocol_;
+    }
+
+    public static final int OPERATIONERROR_FIELD_NUMBER = 6;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError operationError_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+     */
+    public boolean hasOperationError() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getOperationError() {
+      return operationError_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getOperationErrorOrBuilder() {
+      return operationError_;
     }
 
     private void initFields() {
@@ -437,6 +540,8 @@ public final class PowerOfAttorneyValidationProtos {
       statusNamedId_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationStatusNamedId.UnknownStatus;
       statusText_ = "";
       errors_ = java.util.Collections.emptyList();
+      validationProtocol_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.getDefaultInstance();
+      operationError_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -446,6 +551,18 @@ public final class PowerOfAttorneyValidationProtos {
 
       for (int i = 0; i < getErrorsCount(); i++) {
         if (!getErrors(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasValidationProtocol()) {
+        if (!getValidationProtocol().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasOperationError()) {
+        if (!getOperationError().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -468,6 +585,12 @@ public final class PowerOfAttorneyValidationProtos {
       }
       for (int i = 0; i < errors_.size(); i++) {
         output.writeMessage(4, errors_.get(i));
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(5, validationProtocol_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(6, operationError_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -493,6 +616,14 @@ public final class PowerOfAttorneyValidationProtos {
       for (int i = 0; i < errors_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, errors_.get(i));
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, validationProtocol_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, operationError_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -604,6 +735,8 @@ public final class PowerOfAttorneyValidationProtos {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getErrorsFieldBuilder();
+          getValidationProtocolFieldBuilder();
+          getOperationErrorFieldBuilder();
         }
       }
       private static Builder create() {
@@ -624,6 +757,18 @@ public final class PowerOfAttorneyValidationProtos {
         } else {
           errorsBuilder_.clear();
         }
+        if (validationProtocolBuilder_ == null) {
+          validationProtocol_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.getDefaultInstance();
+        } else {
+          validationProtocolBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (operationErrorBuilder_ == null) {
+          operationError_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance();
+        } else {
+          operationErrorBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -672,6 +817,22 @@ public final class PowerOfAttorneyValidationProtos {
           result.errors_ = errors_;
         } else {
           result.errors_ = errorsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (validationProtocolBuilder_ == null) {
+          result.validationProtocol_ = validationProtocol_;
+        } else {
+          result.validationProtocol_ = validationProtocolBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (operationErrorBuilder_ == null) {
+          result.operationError_ = operationError_;
+        } else {
+          result.operationError_ = operationErrorBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -726,6 +887,12 @@ public final class PowerOfAttorneyValidationProtos {
             }
           }
         }
+        if (other.hasValidationProtocol()) {
+          mergeValidationProtocol(other.getValidationProtocol());
+        }
+        if (other.hasOperationError()) {
+          mergeOperationError(other.getOperationError());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -733,6 +900,18 @@ public final class PowerOfAttorneyValidationProtos {
       public final boolean isInitialized() {
         for (int i = 0; i < getErrorsCount(); i++) {
           if (!getErrors(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasValidationProtocol()) {
+          if (!getValidationProtocol().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasOperationError()) {
+          if (!getOperationError().isInitialized()) {
             
             return false;
           }
@@ -918,9 +1097,9 @@ public final class PowerOfAttorneyValidationProtos {
           Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> errorsBuilder_;
 
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError> getErrorsList() {
+      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError> getErrorsList() {
         if (errorsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(errors_);
         } else {
@@ -928,9 +1107,9 @@ public final class PowerOfAttorneyValidationProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public int getErrorsCount() {
+      @java.lang.Deprecated public int getErrorsCount() {
         if (errorsBuilder_ == null) {
           return errors_.size();
         } else {
@@ -938,9 +1117,9 @@ public final class PowerOfAttorneyValidationProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getErrors(int index) {
+      @java.lang.Deprecated public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getErrors(int index) {
         if (errorsBuilder_ == null) {
           return errors_.get(index);
         } else {
@@ -948,9 +1127,9 @@ public final class PowerOfAttorneyValidationProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Builder setErrors(
+      @java.lang.Deprecated public Builder setErrors(
           int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError value) {
         if (errorsBuilder_ == null) {
           if (value == null) {
@@ -965,9 +1144,9 @@ public final class PowerOfAttorneyValidationProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Builder setErrors(
+      @java.lang.Deprecated public Builder setErrors(
           int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder builderForValue) {
         if (errorsBuilder_ == null) {
           ensureErrorsIsMutable();
@@ -979,9 +1158,9 @@ public final class PowerOfAttorneyValidationProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Builder addErrors(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError value) {
+      @java.lang.Deprecated public Builder addErrors(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError value) {
         if (errorsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -995,9 +1174,9 @@ public final class PowerOfAttorneyValidationProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Builder addErrors(
+      @java.lang.Deprecated public Builder addErrors(
           int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError value) {
         if (errorsBuilder_ == null) {
           if (value == null) {
@@ -1012,9 +1191,9 @@ public final class PowerOfAttorneyValidationProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Builder addErrors(
+      @java.lang.Deprecated public Builder addErrors(
           Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder builderForValue) {
         if (errorsBuilder_ == null) {
           ensureErrorsIsMutable();
@@ -1026,9 +1205,9 @@ public final class PowerOfAttorneyValidationProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Builder addErrors(
+      @java.lang.Deprecated public Builder addErrors(
           int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder builderForValue) {
         if (errorsBuilder_ == null) {
           ensureErrorsIsMutable();
@@ -1040,9 +1219,9 @@ public final class PowerOfAttorneyValidationProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Builder addAllErrors(
+      @java.lang.Deprecated public Builder addAllErrors(
           java.lang.Iterable<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError> values) {
         if (errorsBuilder_ == null) {
           ensureErrorsIsMutable();
@@ -1055,9 +1234,9 @@ public final class PowerOfAttorneyValidationProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Builder clearErrors() {
+      @java.lang.Deprecated public Builder clearErrors() {
         if (errorsBuilder_ == null) {
           errors_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -1068,9 +1247,9 @@ public final class PowerOfAttorneyValidationProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Builder removeErrors(int index) {
+      @java.lang.Deprecated public Builder removeErrors(int index) {
         if (errorsBuilder_ == null) {
           ensureErrorsIsMutable();
           errors_.remove(index);
@@ -1081,16 +1260,16 @@ public final class PowerOfAttorneyValidationProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder getErrorsBuilder(
+      @java.lang.Deprecated public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder getErrorsBuilder(
           int index) {
         return getErrorsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getErrorsOrBuilder(
+      @java.lang.Deprecated public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getErrorsOrBuilder(
           int index) {
         if (errorsBuilder_ == null) {
           return errors_.get(index);  } else {
@@ -1098,9 +1277,9 @@ public final class PowerOfAttorneyValidationProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> 
            getErrorsOrBuilderList() {
         if (errorsBuilder_ != null) {
           return errorsBuilder_.getMessageOrBuilderList();
@@ -1109,24 +1288,24 @@ public final class PowerOfAttorneyValidationProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder addErrorsBuilder() {
+      @java.lang.Deprecated public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder addErrorsBuilder() {
         return getErrorsFieldBuilder().addBuilder(
             Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder addErrorsBuilder(
+      @java.lang.Deprecated public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder addErrorsBuilder(
           int index) {
         return getErrorsFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4;</code>
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Errors = 4 [deprecated = true];</code>
        */
-      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder> 
+      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder> 
            getErrorsBuilderList() {
         return getErrorsFieldBuilder().getBuilderList();
       }
@@ -1143,6 +1322,238 @@ public final class PowerOfAttorneyValidationProtos {
           errors_ = null;
         }
         return errorsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol validationProtocol_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocolOrBuilder> validationProtocolBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+       */
+      public boolean hasValidationProtocol() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol getValidationProtocol() {
+        if (validationProtocolBuilder_ == null) {
+          return validationProtocol_;
+        } else {
+          return validationProtocolBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+       */
+      public Builder setValidationProtocol(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol value) {
+        if (validationProtocolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          validationProtocol_ = value;
+          onChanged();
+        } else {
+          validationProtocolBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+       */
+      public Builder setValidationProtocol(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.Builder builderForValue) {
+        if (validationProtocolBuilder_ == null) {
+          validationProtocol_ = builderForValue.build();
+          onChanged();
+        } else {
+          validationProtocolBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+       */
+      public Builder mergeValidationProtocol(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol value) {
+        if (validationProtocolBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              validationProtocol_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.getDefaultInstance()) {
+            validationProtocol_ =
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.newBuilder(validationProtocol_).mergeFrom(value).buildPartial();
+          } else {
+            validationProtocol_ = value;
+          }
+          onChanged();
+        } else {
+          validationProtocolBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+       */
+      public Builder clearValidationProtocol() {
+        if (validationProtocolBuilder_ == null) {
+          validationProtocol_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.getDefaultInstance();
+          onChanged();
+        } else {
+          validationProtocolBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.Builder getValidationProtocolBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getValidationProtocolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocolOrBuilder getValidationProtocolOrBuilder() {
+        if (validationProtocolBuilder_ != null) {
+          return validationProtocolBuilder_.getMessageOrBuilder();
+        } else {
+          return validationProtocol_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol ValidationProtocol = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocolOrBuilder> 
+          getValidationProtocolFieldBuilder() {
+        if (validationProtocolBuilder_ == null) {
+          validationProtocolBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocolOrBuilder>(
+                  getValidationProtocol(),
+                  getParentForChildren(),
+                  isClean());
+          validationProtocol_ = null;
+        }
+        return validationProtocolBuilder_;
+      }
+
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError operationError_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> operationErrorBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+       */
+      public boolean hasOperationError() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getOperationError() {
+        if (operationErrorBuilder_ == null) {
+          return operationError_;
+        } else {
+          return operationErrorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+       */
+      public Builder setOperationError(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError value) {
+        if (operationErrorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          operationError_ = value;
+          onChanged();
+        } else {
+          operationErrorBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+       */
+      public Builder setOperationError(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder builderForValue) {
+        if (operationErrorBuilder_ == null) {
+          operationError_ = builderForValue.build();
+          onChanged();
+        } else {
+          operationErrorBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+       */
+      public Builder mergeOperationError(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError value) {
+        if (operationErrorBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              operationError_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance()) {
+            operationError_ =
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.newBuilder(operationError_).mergeFrom(value).buildPartial();
+          } else {
+            operationError_ = value;
+          }
+          onChanged();
+        } else {
+          operationErrorBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+       */
+      public Builder clearOperationError() {
+        if (operationErrorBuilder_ == null) {
+          operationError_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance();
+          onChanged();
+        } else {
+          operationErrorBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder getOperationErrorBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getOperationErrorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getOperationErrorOrBuilder() {
+        if (operationErrorBuilder_ != null) {
+          return operationErrorBuilder_.getMessageOrBuilder();
+        } else {
+          return operationError_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError OperationError = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> 
+          getOperationErrorFieldBuilder() {
+        if (operationErrorBuilder_ == null) {
+          operationErrorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder>(
+                  getOperationError(),
+                  getParentForChildren(),
+                  isClean());
+          operationError_ = null;
+        }
+        return operationErrorBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus)
@@ -3530,6 +3941,1544 @@ public final class PowerOfAttorneyValidationProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPrevalidateResult)
   }
 
+  public interface ValidationProtocolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult> 
+        getCheckResultsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult getCheckResults(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    int getCheckResultsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder> 
+        getCheckResultsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder getCheckResultsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol}
+   */
+  public static final class ValidationProtocol extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol)
+      ValidationProtocolOrBuilder {
+    // Use ValidationProtocol.newBuilder() to construct.
+    private ValidationProtocol(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ValidationProtocol(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ValidationProtocol defaultInstance;
+    public static ValidationProtocol getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ValidationProtocol getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ValidationProtocol(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                checkResults_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              checkResults_.add(input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          checkResults_ = java.util.Collections.unmodifiableList(checkResults_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ValidationProtocol> PARSER =
+        new com.google.protobuf.AbstractParser<ValidationProtocol>() {
+      public ValidationProtocol parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ValidationProtocol(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValidationProtocol> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int CHECKRESULTS_FIELD_NUMBER = 1;
+    private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult> checkResults_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult> getCheckResultsList() {
+      return checkResults_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder> 
+        getCheckResultsOrBuilderList() {
+      return checkResults_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    public int getCheckResultsCount() {
+      return checkResults_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult getCheckResults(int index) {
+      return checkResults_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder getCheckResultsOrBuilder(
+        int index) {
+      return checkResults_.get(index);
+    }
+
+    private void initFields() {
+      checkResults_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getCheckResultsCount(); i++) {
+        if (!getCheckResults(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < checkResults_.size(); i++) {
+        output.writeMessage(1, checkResults_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < checkResults_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, checkResults_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol)
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getCheckResultsFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (checkResultsBuilder_ == null) {
+          checkResults_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          checkResultsBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_descriptor;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol build() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol buildPartial() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol(this);
+        int from_bitField0_ = bitField0_;
+        if (checkResultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            checkResults_ = java.util.Collections.unmodifiableList(checkResults_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.checkResults_ = checkResults_;
+        } else {
+          result.checkResults_ = checkResultsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol) {
+          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol other) {
+        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol.getDefaultInstance()) return this;
+        if (checkResultsBuilder_ == null) {
+          if (!other.checkResults_.isEmpty()) {
+            if (checkResults_.isEmpty()) {
+              checkResults_ = other.checkResults_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCheckResultsIsMutable();
+              checkResults_.addAll(other.checkResults_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.checkResults_.isEmpty()) {
+            if (checkResultsBuilder_.isEmpty()) {
+              checkResultsBuilder_.dispose();
+              checkResultsBuilder_ = null;
+              checkResults_ = other.checkResults_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              checkResultsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getCheckResultsFieldBuilder() : null;
+            } else {
+              checkResultsBuilder_.addAllMessages(other.checkResults_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getCheckResultsCount(); i++) {
+          if (!getCheckResults(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationProtocol) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult> checkResults_ =
+        java.util.Collections.emptyList();
+      private void ensureCheckResultsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          checkResults_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult>(checkResults_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder> checkResultsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult> getCheckResultsList() {
+        if (checkResultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(checkResults_);
+        } else {
+          return checkResultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public int getCheckResultsCount() {
+        if (checkResultsBuilder_ == null) {
+          return checkResults_.size();
+        } else {
+          return checkResultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult getCheckResults(int index) {
+        if (checkResultsBuilder_ == null) {
+          return checkResults_.get(index);
+        } else {
+          return checkResultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Builder setCheckResults(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult value) {
+        if (checkResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCheckResultsIsMutable();
+          checkResults_.set(index, value);
+          onChanged();
+        } else {
+          checkResultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Builder setCheckResults(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder builderForValue) {
+        if (checkResultsBuilder_ == null) {
+          ensureCheckResultsIsMutable();
+          checkResults_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          checkResultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Builder addCheckResults(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult value) {
+        if (checkResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCheckResultsIsMutable();
+          checkResults_.add(value);
+          onChanged();
+        } else {
+          checkResultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Builder addCheckResults(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult value) {
+        if (checkResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCheckResultsIsMutable();
+          checkResults_.add(index, value);
+          onChanged();
+        } else {
+          checkResultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Builder addCheckResults(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder builderForValue) {
+        if (checkResultsBuilder_ == null) {
+          ensureCheckResultsIsMutable();
+          checkResults_.add(builderForValue.build());
+          onChanged();
+        } else {
+          checkResultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Builder addCheckResults(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder builderForValue) {
+        if (checkResultsBuilder_ == null) {
+          ensureCheckResultsIsMutable();
+          checkResults_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          checkResultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Builder addAllCheckResults(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult> values) {
+        if (checkResultsBuilder_ == null) {
+          ensureCheckResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, checkResults_);
+          onChanged();
+        } else {
+          checkResultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Builder clearCheckResults() {
+        if (checkResultsBuilder_ == null) {
+          checkResults_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          checkResultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Builder removeCheckResults(int index) {
+        if (checkResultsBuilder_ == null) {
+          ensureCheckResultsIsMutable();
+          checkResults_.remove(index);
+          onChanged();
+        } else {
+          checkResultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder getCheckResultsBuilder(
+          int index) {
+        return getCheckResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder getCheckResultsOrBuilder(
+          int index) {
+        if (checkResultsBuilder_ == null) {
+          return checkResults_.get(index);  } else {
+          return checkResultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder> 
+           getCheckResultsOrBuilderList() {
+        if (checkResultsBuilder_ != null) {
+          return checkResultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(checkResults_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder addCheckResultsBuilder() {
+        return getCheckResultsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder addCheckResultsBuilder(
+          int index) {
+        return getCheckResultsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult CheckResults = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder> 
+           getCheckResultsBuilderList() {
+        return getCheckResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder> 
+          getCheckResultsFieldBuilder() {
+        if (checkResultsBuilder_ == null) {
+          checkResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder>(
+                  checkResults_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          checkResults_ = null;
+        }
+        return checkResultsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol)
+    }
+
+    static {
+      defaultInstance = new ValidationProtocol(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.ValidationProtocol)
+  }
+
+  public interface ValidationCheckResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Status = 1;</code>
+     */
+    boolean hasStatus();
+    /**
+     * <code>required string Status = 1;</code>
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>required string Status = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+     */
+    boolean hasError();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getError();
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getErrorOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult}
+   */
+  public static final class ValidationCheckResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult)
+      ValidationCheckResultOrBuilder {
+    // Use ValidationCheckResult.newBuilder() to construct.
+    private ValidationCheckResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ValidationCheckResult(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ValidationCheckResult defaultInstance;
+    public static ValidationCheckResult getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ValidationCheckResult getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ValidationCheckResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              status_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              name_ = bs;
+              break;
+            }
+            case 26: {
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = error_.toBuilder();
+              }
+              error_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(error_);
+                error_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ValidationCheckResult> PARSER =
+        new com.google.protobuf.AbstractParser<ValidationCheckResult>() {
+      public ValidationCheckResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ValidationCheckResult(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValidationCheckResult> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private java.lang.Object status_;
+    /**
+     * <code>required string Status = 1;</code>
+     */
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string Status = 1;</code>
+     */
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          status_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Status = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.Object name_;
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError error_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+     */
+    public boolean hasError() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getError() {
+      return error_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getErrorOrBuilder() {
+      return error_;
+    }
+
+    private void initFields() {
+      status_ = "";
+      name_ = "";
+      error_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasError()) {
+        if (!getError().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getStatusBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, error_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getStatusBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, error_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult)
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getErrorFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        status_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (errorBuilder_ == null) {
+          error_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance();
+        } else {
+          errorBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_descriptor;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.getDefaultInstance();
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult build() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult buildPartial() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.status_ = status_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (errorBuilder_ == null) {
+          result.error_ = error_;
+        } else {
+          result.error_ = errorBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult) {
+          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult other) {
+        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.getDefaultInstance()) return this;
+        if (other.hasStatus()) {
+          bitField0_ |= 0x00000001;
+          status_ = other.status_;
+          onChanged();
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000002;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasError()) {
+          mergeError(other.getError());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasStatus()) {
+          
+          return false;
+        }
+        if (!hasName()) {
+          
+          return false;
+        }
+        if (hasError()) {
+          if (!getError().isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>required string Status = 1;</code>
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string Status = 1;</code>
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            status_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Status = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Status = 1;</code>
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Status = 1;</code>
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Status = 1;</code>
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        status_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError error_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> errorBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+       */
+      public boolean hasError() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError getError() {
+        if (errorBuilder_ == null) {
+          return error_;
+        } else {
+          return errorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+       */
+      public Builder setError(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError value) {
+        if (errorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          error_ = value;
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+       */
+      public Builder setError(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder builderForValue) {
+        if (errorBuilder_ == null) {
+          error_ = builderForValue.build();
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+       */
+      public Builder mergeError(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError value) {
+        if (errorBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              error_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance()) {
+            error_ =
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.newBuilder(error_).mergeFrom(value).buildPartial();
+          } else {
+            error_ = value;
+          }
+          onChanged();
+        } else {
+          errorBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+       */
+      public Builder clearError() {
+        if (errorBuilder_ == null) {
+          error_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance();
+          onChanged();
+        } else {
+          errorBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder getErrorBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getErrorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder getErrorOrBuilder() {
+        if (errorBuilder_ != null) {
+          return errorBuilder_.getMessageOrBuilder();
+        } else {
+          return error_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationError Error = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder> 
+          getErrorFieldBuilder() {
+        if (errorBuilder_ == null) {
+          errorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationErrorOrBuilder>(
+                  getError(),
+                  getParentForChildren(),
+                  isClean());
+          error_ = null;
+        }
+        return errorBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult)
+    }
+
+    static {
+      defaultInstance = new ValidationCheckResult(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.ValidationCheckResult)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyValidationStatus_descriptor;
   private static
@@ -3555,6 +5504,16 @@ public final class PowerOfAttorneyValidationProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3567,30 +5526,41 @@ public final class PowerOfAttorneyValidationProtos {
       "\n0PowersOfAttorney/PowerOfAttorneyValida" +
       "tion.proto\022!Diadoc.Api.Proto.PowersOfAtt" +
       "orney\032\016Severity.proto\032\020Content_v3.proto\"" +
-      "\270\002\n\037PowerOfAttorneyValidationStatus\022=\n\010S" +
+      "\352\003\n\037PowerOfAttorneyValidationStatus\022=\n\010S" +
       "everity\030\001 \001(\0162\032.Diadoc.Api.Proto.Severit" +
       "y:\017UnknownSeverity\022o\n\rStatusNamedId\030\002 \001(" +
       "\0162I.Diadoc.Api.Proto.PowersOfAttorney.Po" +
       "werOfAttorneyValidationStatusNamedId:\rUn" +
-      "knownStatus\022\022\n\nStatusText\030\003 \001(\t\022Q\n\006Error" +
+      "knownStatus\022\022\n\nStatusText\030\003 \001(\t\022U\n\006Error" +
       "s\030\004 \003(\0132A.Diadoc.Api.Proto.PowersOfAttor",
-      "ney.PowerOfAttorneyValidationError\"<\n\036Po" +
-      "werOfAttorneyValidationError\022\014\n\004Code\030\001 \002" +
-      "(\t\022\014\n\004Text\030\002 \002(\t\"\207\001\n!PowerOfAttorneyPrev" +
-      "alidateRequest\022b\n\024ConfidantCertificate\030\001" +
-      " \002(\0132D.Diadoc.Api.Proto.PowersOfAttorney" +
-      ".ConfidantCertificateToPrevalidate\"f\n!Co" +
-      "nfidantCertificateToPrevalidate\022\022\n\nThumb" +
-      "print\030\001 \001(\t\022-\n\007Content\030\002 \001(\0132\034.Diadoc.Ap" +
-      "i.Proto.Content_v3\"\201\001\n PowerOfAttorneyPr" +
-      "evalidateResult\022]\n\021PrevalidateStatus\030\001 \002",
-      "(\0132B.Diadoc.Api.Proto.PowersOfAttorney.P" +
-      "owerOfAttorneyValidationStatus*\227\001\n&Power" +
-      "OfAttorneyValidationStatusNamedId\022\021\n\rUnk" +
-      "nownStatus\020\000\022\025\n\021CanNotBeValidated\020\001\022\013\n\007I" +
-      "sValid\020\002\022\016\n\nIsNotValid\020\003\022\023\n\017ValidationEr" +
-      "ror\020\004\022\021\n\rIsNotAttached\020\005B!B\037PowerOfAttor" +
-      "neyValidationProtos"
+      "ney.PowerOfAttorneyValidationErrorB\002\030\001\022Q" +
+      "\n\022ValidationProtocol\030\005 \001(\01325.Diadoc.Api." +
+      "Proto.PowersOfAttorney.ValidationProtoco" +
+      "l\022Y\n\016OperationError\030\006 \001(\0132A.Diadoc.Api.P" +
+      "roto.PowersOfAttorney.PowerOfAttorneyVal" +
+      "idationError\"<\n\036PowerOfAttorneyValidatio" +
+      "nError\022\014\n\004Code\030\001 \002(\t\022\014\n\004Text\030\002 \002(\t\"\207\001\n!P" +
+      "owerOfAttorneyPrevalidateRequest\022b\n\024Conf" +
+      "idantCertificate\030\001 \002(\0132D.Diadoc.Api.Prot" +
+      "o.PowersOfAttorney.ConfidantCertificateT",
+      "oPrevalidate\"f\n!ConfidantCertificateToPr" +
+      "evalidate\022\022\n\nThumbprint\030\001 \001(\t\022-\n\007Content" +
+      "\030\002 \001(\0132\034.Diadoc.Api.Proto.Content_v3\"\201\001\n" +
+      " PowerOfAttorneyPrevalidateResult\022]\n\021Pre" +
+      "validateStatus\030\001 \002(\0132B.Diadoc.Api.Proto." +
+      "PowersOfAttorney.PowerOfAttorneyValidati" +
+      "onStatus\"d\n\022ValidationProtocol\022N\n\014CheckR" +
+      "esults\030\001 \003(\01328.Diadoc.Api.Proto.PowersOf" +
+      "Attorney.ValidationCheckResult\"\207\001\n\025Valid" +
+      "ationCheckResult\022\016\n\006Status\030\001 \002(\t\022\014\n\004Name",
+      "\030\002 \002(\t\022P\n\005Error\030\003 \001(\0132A.Diadoc.Api.Proto" +
+      ".PowersOfAttorney.PowerOfAttorneyValidat" +
+      "ionError*\250\001\n&PowerOfAttorneyValidationSt" +
+      "atusNamedId\022\021\n\rUnknownStatus\020\000\022\025\n\021CanNot" +
+      "BeValidated\020\001\022\013\n\007IsValid\020\002\022\016\n\nIsNotValid" +
+      "\020\003\022\023\n\017ValidationError\020\004\022\021\n\rIsNotAttached" +
+      "\020\005\022\017\n\013HasWarnings\020\006B!B\037PowerOfAttorneyVa" +
+      "lidationProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3611,7 +5581,7 @@ public final class PowerOfAttorneyValidationProtos {
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyValidationStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyValidationStatus_descriptor,
-        new java.lang.String[] { "Severity", "StatusNamedId", "StatusText", "Errors", });
+        new java.lang.String[] { "Severity", "StatusNamedId", "StatusText", "Errors", "ValidationProtocol", "OperationError", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyValidationError_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyValidationError_fieldAccessorTable = new
@@ -3636,6 +5606,18 @@ public final class PowerOfAttorneyValidationProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateResult_descriptor,
         new java.lang.String[] { "PrevalidateStatus", });
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_descriptor,
+        new java.lang.String[] { "CheckResults", });
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_descriptor,
+        new java.lang.String[] { "Status", "Name", "Error", });
     Diadoc.Api.Proto.SeverityProtos.getDescriptor();
     Diadoc.Api.Proto.Content_v3Protos.getDescriptor();
   }
