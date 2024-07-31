@@ -208,6 +208,215 @@ public final class CertificateInfoV2Protos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.CertificateSubjectType)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.DssType}
+   */
+  public enum DssType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownDssType = 0;</code>
+     */
+    UnknownDssType(0, 0),
+    /**
+     * <code>MyDss = 1;</code>
+     */
+    MyDss(1, 1),
+    /**
+     * <code>KSignServer = 2;</code>
+     */
+    KSignServer(2, 2),
+    /**
+     * <code>KSignRutoken = 3;</code>
+     */
+    KSignRutoken(3, 3),
+    /**
+     * <code>KSignMobile = 4;</code>
+     */
+    KSignMobile(4, 4),
+    ;
+
+    /**
+     * <code>UnknownDssType = 0;</code>
+     */
+    public static final int UnknownDssType_VALUE = 0;
+    /**
+     * <code>MyDss = 1;</code>
+     */
+    public static final int MyDss_VALUE = 1;
+    /**
+     * <code>KSignServer = 2;</code>
+     */
+    public static final int KSignServer_VALUE = 2;
+    /**
+     * <code>KSignRutoken = 3;</code>
+     */
+    public static final int KSignRutoken_VALUE = 3;
+    /**
+     * <code>KSignMobile = 4;</code>
+     */
+    public static final int KSignMobile_VALUE = 4;
+
+
+    public final int getNumber() { return value; }
+
+    public static DssType valueOf(int value) {
+      switch (value) {
+        case 0: return UnknownDssType;
+        case 1: return MyDss;
+        case 2: return KSignServer;
+        case 3: return KSignRutoken;
+        case 4: return KSignMobile;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DssType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DssType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DssType>() {
+            public DssType findValueByNumber(int number) {
+              return DssType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.CertificateInfoV2Protos.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final DssType[] VALUES = values();
+
+    public static DssType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DssType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.DssType)
+  }
+
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.CertificateUsage}
+   */
+  public enum CertificateUsage
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownUsage = 0;</code>
+     */
+    UnknownUsage(0, 0),
+    /**
+     * <code>CloudUsage = 1;</code>
+     */
+    CloudUsage(1, 1),
+    /**
+     * <code>TokenUsage = 2;</code>
+     */
+    TokenUsage(2, 2),
+    /**
+     * <code>DssUsage = 3;</code>
+     */
+    DssUsage(3, 3),
+    ;
+
+    /**
+     * <code>UnknownUsage = 0;</code>
+     */
+    public static final int UnknownUsage_VALUE = 0;
+    /**
+     * <code>CloudUsage = 1;</code>
+     */
+    public static final int CloudUsage_VALUE = 1;
+    /**
+     * <code>TokenUsage = 2;</code>
+     */
+    public static final int TokenUsage_VALUE = 2;
+    /**
+     * <code>DssUsage = 3;</code>
+     */
+    public static final int DssUsage_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static CertificateUsage valueOf(int value) {
+      switch (value) {
+        case 0: return UnknownUsage;
+        case 1: return CloudUsage;
+        case 2: return TokenUsage;
+        case 3: return DssUsage;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<CertificateUsage>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<CertificateUsage>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CertificateUsage>() {
+            public CertificateUsage findValueByNumber(int number) {
+              return CertificateUsage.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.CertificateInfoV2Protos.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final CertificateUsage[] VALUES = values();
+
+    public static CertificateUsage valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private CertificateUsage(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.CertificateUsage)
+  }
+
   public interface CertificateInfoV2OrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CertificateInfoV2)
       com.google.protobuf.MessageOrBuilder {
@@ -372,6 +581,28 @@ public final class CertificateInfoV2Protos {
      * <code>optional .Diadoc.Api.Proto.CertificateSubjectType SubjectType = 14;</code>
      */
     Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType getSubjectType();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage> getUsagesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+     */
+    int getUsagesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+     */
+    Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage getUsages(int index);
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.DssType DssType = 16;</code>
+     */
+    boolean hasDssType();
+    /**
+     * <code>optional .Diadoc.Api.Proto.DssType DssType = 16;</code>
+     */
+    Diadoc.Api.Proto.CertificateInfoV2Protos.DssType getDssType();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.CertificateInfoV2}
@@ -514,6 +745,50 @@ public final class CertificateInfoV2Protos {
               }
               break;
             }
+            case 120: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage value = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(15, rawValue);
+                } else {
+                if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+                  usages_ = new java.util.ArrayList<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage>();
+                  mutable_bitField0_ |= 0x00004000;
+                }
+                usages_.add(value);
+              }
+              break;
+            }
+            case 122: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage value = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(15, rawValue);
+                  } else {
+                  if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+                    usages_ = new java.util.ArrayList<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage>();
+                    mutable_bitField0_ |= 0x00004000;
+                  }
+                  usages_.add(value);
+                }
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 128: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.CertificateInfoV2Protos.DssType value = Diadoc.Api.Proto.CertificateInfoV2Protos.DssType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(16, rawValue);
+              } else {
+                bitField0_ |= 0x00004000;
+                dssType_ = value;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -522,6 +797,9 @@ public final class CertificateInfoV2Protos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+          usages_ = java.util.Collections.unmodifiableList(usages_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -953,6 +1231,42 @@ public final class CertificateInfoV2Protos {
       return subjectType_;
     }
 
+    public static final int USAGES_FIELD_NUMBER = 15;
+    private java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage> usages_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage> getUsagesList() {
+      return usages_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+     */
+    public int getUsagesCount() {
+      return usages_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+     */
+    public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage getUsages(int index) {
+      return usages_.get(index);
+    }
+
+    public static final int DSSTYPE_FIELD_NUMBER = 16;
+    private Diadoc.Api.Proto.CertificateInfoV2Protos.DssType dssType_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.DssType DssType = 16;</code>
+     */
+    public boolean hasDssType() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.DssType DssType = 16;</code>
+     */
+    public Diadoc.Api.Proto.CertificateInfoV2Protos.DssType getDssType() {
+      return dssType_;
+    }
+
     private void initFields() {
       thumbprint_ = "";
       type_ = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateType.UnknownCertificateType;
@@ -968,6 +1282,8 @@ public final class CertificateInfoV2Protos {
       userShortName_ = "";
       isDefault_ = false;
       subjectType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType;
+      usages_ = java.util.Collections.emptyList();
+      dssType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.DssType.UnknownDssType;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1031,6 +1347,12 @@ public final class CertificateInfoV2Protos {
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeEnum(14, subjectType_.getNumber());
+      }
+      for (int i = 0; i < usages_.size(); i++) {
+        output.writeEnum(15, usages_.get(i).getNumber());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeEnum(16, dssType_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -1096,6 +1418,19 @@ public final class CertificateInfoV2Protos {
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(14, subjectType_.getNumber());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < usages_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(usages_.get(i).getNumber());
+        }
+        size += dataSize;
+        size += 1 * usages_.size();
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(16, dssType_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1242,6 +1577,10 @@ public final class CertificateInfoV2Protos {
         bitField0_ = (bitField0_ & ~0x00001000);
         subjectType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType;
         bitField0_ = (bitField0_ & ~0x00002000);
+        usages_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00004000);
+        dssType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.DssType.UnknownDssType;
+        bitField0_ = (bitField0_ & ~0x00008000);
         return this;
       }
 
@@ -1326,6 +1665,15 @@ public final class CertificateInfoV2Protos {
           to_bitField0_ |= 0x00002000;
         }
         result.subjectType_ = subjectType_;
+        if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          usages_ = java.util.Collections.unmodifiableList(usages_);
+          bitField0_ = (bitField0_ & ~0x00004000);
+        }
+        result.usages_ = usages_;
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.dssType_ = dssType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1397,6 +1745,19 @@ public final class CertificateInfoV2Protos {
         }
         if (other.hasSubjectType()) {
           setSubjectType(other.getSubjectType());
+        }
+        if (!other.usages_.isEmpty()) {
+          if (usages_.isEmpty()) {
+            usages_ = other.usages_;
+            bitField0_ = (bitField0_ & ~0x00004000);
+          } else {
+            ensureUsagesIsMutable();
+            usages_.addAll(other.usages_);
+          }
+          onChanged();
+        }
+        if (other.hasDssType()) {
+          setDssType(other.getDssType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2195,6 +2556,113 @@ public final class CertificateInfoV2Protos {
         return this;
       }
 
+      private java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage> usages_ =
+        java.util.Collections.emptyList();
+      private void ensureUsagesIsMutable() {
+        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+          usages_ = new java.util.ArrayList<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage>(usages_);
+          bitField0_ |= 0x00004000;
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage> getUsagesList() {
+        return java.util.Collections.unmodifiableList(usages_);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+       */
+      public int getUsagesCount() {
+        return usages_.size();
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+       */
+      public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage getUsages(int index) {
+        return usages_.get(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+       */
+      public Builder setUsages(
+          int index, Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUsagesIsMutable();
+        usages_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+       */
+      public Builder addUsages(Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUsagesIsMutable();
+        usages_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+       */
+      public Builder addAllUsages(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateUsage> values) {
+        ensureUsagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, usages_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.CertificateUsage Usages = 15;</code>
+       */
+      public Builder clearUsages() {
+        usages_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00004000);
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.CertificateInfoV2Protos.DssType dssType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.DssType.UnknownDssType;
+      /**
+       * <code>optional .Diadoc.Api.Proto.DssType DssType = 16;</code>
+       */
+      public boolean hasDssType() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DssType DssType = 16;</code>
+       */
+      public Diadoc.Api.Proto.CertificateInfoV2Protos.DssType getDssType() {
+        return dssType_;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DssType DssType = 16;</code>
+       */
+      public Builder setDssType(Diadoc.Api.Proto.CertificateInfoV2Protos.DssType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00008000;
+        dssType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.DssType DssType = 16;</code>
+       */
+      public Builder clearDssType() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        dssType_ = Diadoc.Api.Proto.CertificateInfoV2Protos.DssType.UnknownDssType;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.CertificateInfoV2)
     }
 
@@ -2221,7 +2689,7 @@ public final class CertificateInfoV2Protos {
   static {
     java.lang.String[] descriptorData = {
       "\n\027CertificateInfoV2.proto\022\020Diadoc.Api.Pr" +
-      "oto\"\211\003\n\021CertificateInfoV2\022\022\n\nThumbprint\030" +
+      "oto\"\351\003\n\021CertificateInfoV2\022\022\n\nThumbprint\030" +
       "\001 \002(\t\022/\n\004Type\030\002 \002(\0162!.Diadoc.Api.Proto.C" +
       "ertificateType\022\021\n\tValidFrom\030\003 \001(\020\022\017\n\007Val" +
       "idTo\030\004 \001(\020\022\033\n\023PrivateKeyValidFrom\030\005 \001(\020\022" +
@@ -2230,14 +2698,21 @@ public final class CertificateInfoV2Protos {
       "me\030\t \001(\t\022\026\n\016UserMiddleName\030\n \001(\t\022\024\n\014User" +
       "LastName\030\013 \001(\t\022\025\n\rUserShortName\030\014 \001(\t\022\021\n" +
       "\tIsDefault\030\r \001(\010\022=\n\013SubjectType\030\016 \001(\0162(.",
-      "Diadoc.Api.Proto.CertificateSubjectType*" +
-      "z\n\017CertificateType\022\032\n\026UnknownCertificate" +
-      "Type\020\000\022\030\n\024TokenCertificateType\020\001\022\026\n\022DssC" +
-      "ertificateType\020\002\022\031\n\025KonturCertificateTyp" +
-      "e\020\003*v\n\026CertificateSubjectType\022!\n\035Unknown" +
-      "CertificateSubjectType\020\000\022\017\n\013LegalEntity\020" +
-      "\001\022\024\n\020IndividualEntity\020\002\022\022\n\016PhysicalPerso" +
-      "n\020\003B\031B\027CertificateInfoV2Protos"
+      "Diadoc.Api.Proto.CertificateSubjectType\022" +
+      "2\n\006Usages\030\017 \003(\0162\".Diadoc.Api.Proto.Certi" +
+      "ficateUsage\022*\n\007DssType\030\020 \001(\0162\031.Diadoc.Ap" +
+      "i.Proto.DssType*z\n\017CertificateType\022\032\n\026Un" +
+      "knownCertificateType\020\000\022\030\n\024TokenCertifica" +
+      "teType\020\001\022\026\n\022DssCertificateType\020\002\022\031\n\025Kont" +
+      "urCertificateType\020\003*v\n\026CertificateSubjec" +
+      "tType\022!\n\035UnknownCertificateSubjectType\020\000" +
+      "\022\017\n\013LegalEntity\020\001\022\024\n\020IndividualEntity\020\002\022" +
+      "\022\n\016PhysicalPerson\020\003*\\\n\007DssType\022\022\n\016Unknow",
+      "nDssType\020\000\022\t\n\005MyDss\020\001\022\017\n\013KSignServer\020\002\022\020" +
+      "\n\014KSignRutoken\020\003\022\017\n\013KSignMobile\020\004*R\n\020Cer" +
+      "tificateUsage\022\020\n\014UnknownUsage\020\000\022\016\n\nCloud" +
+      "Usage\020\001\022\016\n\nTokenUsage\020\002\022\014\n\010DssUsage\020\003B\031B" +
+      "\027CertificateInfoV2Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2256,7 +2731,7 @@ public final class CertificateInfoV2Protos {
     internal_static_Diadoc_Api_Proto_CertificateInfoV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_CertificateInfoV2_descriptor,
-        new java.lang.String[] { "Thumbprint", "Type", "ValidFrom", "ValidTo", "PrivateKeyValidFrom", "PrivateKeyValidTo", "OrganizationName", "Inn", "UserFirstName", "UserMiddleName", "UserLastName", "UserShortName", "IsDefault", "SubjectType", });
+        new java.lang.String[] { "Thumbprint", "Type", "ValidFrom", "ValidTo", "PrivateKeyValidFrom", "PrivateKeyValidTo", "OrganizationName", "Inn", "UserFirstName", "UserMiddleName", "UserLastName", "UserShortName", "IsDefault", "SubjectType", "Usages", "DssType", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
