@@ -43,7 +43,7 @@ enum DssType {
 
 enum CertificateUsage {
 	UnknownUsage = 0;
-	CloudUsage = 1;
+	KonturCertificateUsage = 1;
 	TokenUsage = 2;
 	DssUsage = 3;
 }

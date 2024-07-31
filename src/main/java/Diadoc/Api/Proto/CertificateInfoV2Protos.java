@@ -327,9 +327,9 @@ public final class CertificateInfoV2Protos {
      */
     UnknownUsage(0, 0),
     /**
-     * <code>CloudUsage = 1;</code>
+     * <code>KonturCertificateUsage = 1;</code>
      */
-    CloudUsage(1, 1),
+    KonturCertificateUsage(1, 1),
     /**
      * <code>TokenUsage = 2;</code>
      */
@@ -345,9 +345,9 @@ public final class CertificateInfoV2Protos {
      */
     public static final int UnknownUsage_VALUE = 0;
     /**
-     * <code>CloudUsage = 1;</code>
+     * <code>KonturCertificateUsage = 1;</code>
      */
-    public static final int CloudUsage_VALUE = 1;
+    public static final int KonturCertificateUsage_VALUE = 1;
     /**
      * <code>TokenUsage = 2;</code>
      */
@@ -363,7 +363,7 @@ public final class CertificateInfoV2Protos {
     public static CertificateUsage valueOf(int value) {
       switch (value) {
         case 0: return UnknownUsage;
-        case 1: return CloudUsage;
+        case 1: return KonturCertificateUsage;
         case 2: return TokenUsage;
         case 3: return DssUsage;
         default: return null;
@@ -2709,10 +2709,10 @@ public final class CertificateInfoV2Protos {
       "\022\017\n\013LegalEntity\020\001\022\024\n\020IndividualEntity\020\002\022" +
       "\022\n\016PhysicalPerson\020\003*\\\n\007DssType\022\022\n\016Unknow",
       "nDssType\020\000\022\t\n\005MyDss\020\001\022\017\n\013KSignServer\020\002\022\020" +
-      "\n\014KSignRutoken\020\003\022\017\n\013KSignMobile\020\004*R\n\020Cer" +
-      "tificateUsage\022\020\n\014UnknownUsage\020\000\022\016\n\nCloud" +
-      "Usage\020\001\022\016\n\nTokenUsage\020\002\022\014\n\010DssUsage\020\003B\031B" +
-      "\027CertificateInfoV2Protos"
+      "\n\014KSignRutoken\020\003\022\017\n\013KSignMobile\020\004*^\n\020Cer" +
+      "tificateUsage\022\020\n\014UnknownUsage\020\000\022\032\n\026Kontu" +
+      "rCertificateUsage\020\001\022\016\n\nTokenUsage\020\002\022\014\n\010D" +
+      "ssUsage\020\003B\031B\027CertificateInfoV2Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
