@@ -1,0 +1,96 @@
+﻿
+on:
+  push:
+    paths-ignore:
+      - "**/*.md"
+env:
+  JCP_VERSION: 2.0.40450-A
+  JCP_FILENAME_PREFIX: jcp-
+      
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.x
+      
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@v1.14.0
+        with:
+          java-version: 17
+          maven-version: 3.9.8
+
+      - name: Setup NuGet.exe
+        uses: nuget/setup-nuget@v2
+        with:
+          nuget-version: '5.x'
+          
+      - run: nuget install secure-file -ExcludeVersion
+      - run: ./secure-file/tools/secure-file.exe -decrypt ${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip.enc -secret ${{ secrets.DIADOC_SIGNING_SECRET }}
+
+      - name: Extract JCP from ZIP
+        uses: ihiroky/extract-action@v1
+        with:
+          file_path: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip
+
+      - run: mvn install:install-file -Dfile="JCP.jar" -DgroupId="ru.CryptoPro" -DartifactId="JCP" -Dversion="${{ env.JCP_VERSION }}" -Dpackaging="jar"
+        working-directory: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
+      - run: mvn install:install-file -Dfile="asn1rt.jar" -DgroupId="com.objsys.asn1j" -DartifactId="asn1rt" -Dversion="${{ env.JCP_VERSION }}" -Dpackaging="jar"
+        working-directory: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
+      - run: mvn install:install-file -Dfile="ASN1P.jar" -DgroupId="ru.CryptoPro" -DartifactId="ASN1P" -Dversion="${{ env.JCP_VERSION }}" -Dpackaging="jar"
+        working-directory: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
+      - run: mvn install:install-file -Dfile="JCryptoP.jar" -DgroupId="ru.CryptoPro" -DartifactId="JCryptoP" -Dversion="${{ env.JCP_VERSION }}" -Dpackaging="jar"
+        working-directory: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
+      
+      - name: Run the build script
+        uses: cake-build/cake-action@v2
+        env:
+          github_ref_type: ${{ github.ref_type }}
+        with:
+          target: Default
+          arguments: |
+            configuration: Release
+          verbosity: Diagnostic
+          cake-version: 1.3.0
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: packages
+          path: |
+            target/*.jar
+          if-no-files-found: error
+
+  publish:
+    runs-on: ubuntu-22.04
+    needs: build
+    if: startsWith(github.event.ref, 'refs/tags/version')
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.x
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: packages
+
+      - name: Create github release
+        uses: softprops/action-gh-release@v1
+        with:
+          fail_on_unmatched_files: true
+          draft: false
+          prerelease: false
+          files: |
+            **/*.jar
