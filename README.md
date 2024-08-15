@@ -1,7 +1,7 @@
 |              | Build Status
 |--------------|--------------
-| master       | [![Build status (master)](https://github.com/diadoc/diadocsdk-java/actions/workflows/actions.yml/badge.svg?branch=master)
-| latest       | [![Build status (lastest)](https://github.com/diadoc/diadocsdk-java/actions/workflows/actions.yml/badge.svg)
+| master       | ![Build status (master)](https://github.com/diadoc/diadocsdk-java/actions/workflows/actions.yml/badge.svg?branch=master)
+| latest       | ![Build status (lastest)](https://github.com/diadoc/diadocsdk-java/actions/workflows/actions.yml/badge.svg)
 
 
 # diadocsdk-java
