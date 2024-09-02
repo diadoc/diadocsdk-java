@@ -143,6 +143,114 @@ public final class PowerOfAttorneyValidationProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatusNamedId)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus}
+   */
+  public enum PowerOfAttorneyValidationCheckStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownCheckStatus = 0;</code>
+     *
+     * <pre>
+     *reserved for backward compatibility
+     * </pre>
+     */
+    UnknownCheckStatus(0, 0),
+    /**
+     * <code>Ok = 1;</code>
+     */
+    Ok(1, 1),
+    /**
+     * <code>Warning = 2;</code>
+     */
+    Warning(2, 2),
+    /**
+     * <code>Error = 3;</code>
+     */
+    Error(3, 3),
+    ;
+
+    /**
+     * <code>UnknownCheckStatus = 0;</code>
+     *
+     * <pre>
+     *reserved for backward compatibility
+     * </pre>
+     */
+    public static final int UnknownCheckStatus_VALUE = 0;
+    /**
+     * <code>Ok = 1;</code>
+     */
+    public static final int Ok_VALUE = 1;
+    /**
+     * <code>Warning = 2;</code>
+     */
+    public static final int Warning_VALUE = 2;
+    /**
+     * <code>Error = 3;</code>
+     */
+    public static final int Error_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static PowerOfAttorneyValidationCheckStatus valueOf(int value) {
+      switch (value) {
+        case 0: return UnknownCheckStatus;
+        case 1: return Ok;
+        case 2: return Warning;
+        case 3: return Error;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PowerOfAttorneyValidationCheckStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<PowerOfAttorneyValidationCheckStatus>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PowerOfAttorneyValidationCheckStatus>() {
+            public PowerOfAttorneyValidationCheckStatus findValueByNumber(int number) {
+              return PowerOfAttorneyValidationCheckStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final PowerOfAttorneyValidationCheckStatus[] VALUES = values();
+
+    public static PowerOfAttorneyValidationCheckStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private PowerOfAttorneyValidationCheckStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus)
+  }
+
   public interface PowerOfAttorneyValidationStatusOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationStatus)
       com.google.protobuf.MessageOrBuilder {
@@ -4634,18 +4742,13 @@ public final class PowerOfAttorneyValidationProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string Status = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus Status = 1 [default = UnknownCheckStatus];</code>
      */
     boolean hasStatus();
     /**
-     * <code>required string Status = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus Status = 1 [default = UnknownCheckStatus];</code>
      */
-    java.lang.String getStatus();
-    /**
-     * <code>required string Status = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getStatusBytes();
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus getStatus();
 
     /**
      * <code>required string Name = 2;</code>
@@ -4726,10 +4829,15 @@ public final class PowerOfAttorneyValidationProtos {
               }
               break;
             }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              status_ = bs;
+            case 8: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus value = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                status_ = value;
+              }
               break;
             }
             case 18: {
@@ -4792,45 +4900,18 @@ public final class PowerOfAttorneyValidationProtos {
 
     private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
-    private java.lang.Object status_;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus status_;
     /**
-     * <code>required string Status = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus Status = 1 [default = UnknownCheckStatus];</code>
      */
     public boolean hasStatus() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required string Status = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus Status = 1 [default = UnknownCheckStatus];</code>
      */
-    public java.lang.String getStatus() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          status_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string Status = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStatusBytes() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        status_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus getStatus() {
+      return status_;
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
@@ -4897,7 +4978,7 @@ public final class PowerOfAttorneyValidationProtos {
     }
 
     private void initFields() {
-      status_ = "";
+      status_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus.UnknownCheckStatus;
       name_ = "";
       error_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationError.getDefaultInstance();
     }
@@ -4907,10 +4988,6 @@ public final class PowerOfAttorneyValidationProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasStatus()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasName()) {
         memoizedIsInitialized = 0;
         return false;
@@ -4929,7 +5006,7 @@ public final class PowerOfAttorneyValidationProtos {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getStatusBytes());
+        output.writeEnum(1, status_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(2, getNameBytes());
@@ -4948,7 +5025,7 @@ public final class PowerOfAttorneyValidationProtos {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getStatusBytes());
+          .computeEnumSize(1, status_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -5076,7 +5153,7 @@ public final class PowerOfAttorneyValidationProtos {
 
       public Builder clear() {
         super.clear();
-        status_ = "";
+        status_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus.UnknownCheckStatus;
         bitField0_ = (bitField0_ & ~0x00000001);
         name_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -5147,9 +5224,7 @@ public final class PowerOfAttorneyValidationProtos {
       public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult other) {
         if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ValidationCheckResult.getDefaultInstance()) return this;
         if (other.hasStatus()) {
-          bitField0_ |= 0x00000001;
-          status_ = other.status_;
-          onChanged();
+          setStatus(other.getStatus());
         }
         if (other.hasName()) {
           bitField0_ |= 0x00000002;
@@ -5164,10 +5239,6 @@ public final class PowerOfAttorneyValidationProtos {
       }
 
       public final boolean isInitialized() {
-        if (!hasStatus()) {
-          
-          return false;
-        }
         if (!hasName()) {
           
           return false;
@@ -5200,78 +5271,37 @@ public final class PowerOfAttorneyValidationProtos {
       }
       private int bitField0_;
 
-      private java.lang.Object status_ = "";
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus status_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus.UnknownCheckStatus;
       /**
-       * <code>required string Status = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus Status = 1 [default = UnknownCheckStatus];</code>
        */
       public boolean hasStatus() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string Status = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus Status = 1 [default = UnknownCheckStatus];</code>
        */
-      public java.lang.String getStatus() {
-        java.lang.Object ref = status_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            status_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus getStatus() {
+        return status_;
       }
       /**
-       * <code>required string Status = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus Status = 1 [default = UnknownCheckStatus];</code>
        */
-      public com.google.protobuf.ByteString
-          getStatusBytes() {
-        java.lang.Object ref = status_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          status_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string Status = 1;</code>
-       */
-      public Builder setStatus(
-          java.lang.String value) {
+      public Builder setStatus(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
         status_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string Status = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationCheckStatus Status = 1 [default = UnknownCheckStatus];</code>
        */
       public Builder clearStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        status_ = getDefaultInstance().getStatus();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string Status = 1;</code>
-       */
-      public Builder setStatusBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        status_ = value;
+        status_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyValidationCheckStatus.UnknownCheckStatus;
         onChanged();
         return this;
       }
@@ -5551,16 +5581,21 @@ public final class PowerOfAttorneyValidationProtos {
       "PowersOfAttorney.PowerOfAttorneyValidati" +
       "onStatus\"d\n\022ValidationProtocol\022N\n\014CheckR" +
       "esults\030\001 \003(\01328.Diadoc.Api.Proto.PowersOf" +
-      "Attorney.ValidationCheckResult\"\207\001\n\025Valid" +
-      "ationCheckResult\022\016\n\006Status\030\001 \002(\t\022\014\n\004Name",
-      "\030\002 \002(\t\022P\n\005Error\030\003 \001(\0132A.Diadoc.Api.Proto" +
-      ".PowersOfAttorney.PowerOfAttorneyValidat" +
-      "ionError*\250\001\n&PowerOfAttorneyValidationSt" +
-      "atusNamedId\022\021\n\rUnknownStatus\020\000\022\025\n\021CanNot" +
-      "BeValidated\020\001\022\013\n\007IsValid\020\002\022\016\n\nIsNotValid" +
-      "\020\003\022\023\n\017ValidationError\020\004\022\021\n\rIsNotAttached" +
-      "\020\005\022\017\n\013HasWarnings\020\006B!B\037PowerOfAttorneyVa" +
-      "lidationProtos"
+      "Attorney.ValidationCheckResult\"\344\001\n\025Valid" +
+      "ationCheckResult\022k\n\006Status\030\001 \001(\0162G.Diado",
+      "c.Api.Proto.PowersOfAttorney.PowerOfAtto" +
+      "rneyValidationCheckStatus:\022UnknownCheckS" +
+      "tatus\022\014\n\004Name\030\002 \002(\t\022P\n\005Error\030\003 \001(\0132A.Dia" +
+      "doc.Api.Proto.PowersOfAttorney.PowerOfAt" +
+      "torneyValidationError*\250\001\n&PowerOfAttorne" +
+      "yValidationStatusNamedId\022\021\n\rUnknownStatu" +
+      "s\020\000\022\025\n\021CanNotBeValidated\020\001\022\013\n\007IsValid\020\002\022" +
+      "\016\n\nIsNotValid\020\003\022\023\n\017ValidationError\020\004\022\021\n\r" +
+      "IsNotAttached\020\005\022\017\n\013HasWarnings\020\006*^\n$Powe" +
+      "rOfAttorneyValidationCheckStatus\022\026\n\022Unkn",
+      "ownCheckStatus\020\000\022\006\n\002Ok\020\001\022\013\n\007Warning\020\002\022\t\n" +
+      "\005Error\020\003B!B\037PowerOfAttorneyValidationPro" +
+      "tos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
