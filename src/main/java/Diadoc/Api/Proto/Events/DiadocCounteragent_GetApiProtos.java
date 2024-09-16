@@ -916,6 +916,19 @@ public final class DiadocCounteragent_GetApiProtos {
      */
     com.google.protobuf.ByteString
         getIndexKeyBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType> getEventTypesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+     */
+    int getEventTypesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+     */
+    Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType getEventTypes(int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.BoxCounteragentEvent}
@@ -994,6 +1007,39 @@ public final class DiadocCounteragent_GetApiProtos {
               indexKey_ = bs;
               break;
             }
+            case 32: {
+              int rawValue = input.readEnum();
+              Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType value = Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(4, rawValue);
+                } else {
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  eventTypes_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType>();
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                eventTypes_.add(value);
+              }
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType value = Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(4, rawValue);
+                  } else {
+                  if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                    eventTypes_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType>();
+                    mutable_bitField0_ |= 0x00000008;
+                  }
+                  eventTypes_.add(value);
+                }
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1002,6 +1048,9 @@ public final class DiadocCounteragent_GetApiProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          eventTypes_ = java.util.Collections.unmodifiableList(eventTypes_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1139,10 +1188,32 @@ public final class DiadocCounteragent_GetApiProtos {
       }
     }
 
+    public static final int EVENTTYPES_FIELD_NUMBER = 4;
+    private java.util.List<Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType> eventTypes_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType> getEventTypesList() {
+      return eventTypes_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+     */
+    public int getEventTypesCount() {
+      return eventTypes_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+     */
+    public Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType getEventTypes(int index) {
+      return eventTypes_.get(index);
+    }
+
     private void initFields() {
       eventId_ = "";
       counteragent_ = Diadoc.Api.Proto.Events.DiadocCounteragent_GetApiProtos.CounteragentInfo.getDefaultInstance();
       indexKey_ = "";
+      eventTypes_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1176,6 +1247,9 @@ public final class DiadocCounteragent_GetApiProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getIndexKeyBytes());
       }
+      for (int i = 0; i < eventTypes_.size(); i++) {
+        output.writeEnum(4, eventTypes_.get(i).getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1196,6 +1270,15 @@ public final class DiadocCounteragent_GetApiProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getIndexKeyBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < eventTypes_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(eventTypes_.get(i).getNumber());
+        }
+        size += dataSize;
+        size += 1 * eventTypes_.size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1325,6 +1408,8 @@ public final class DiadocCounteragent_GetApiProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         indexKey_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+        eventTypes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -1369,6 +1454,11 @@ public final class DiadocCounteragent_GetApiProtos {
           to_bitField0_ |= 0x00000004;
         }
         result.indexKey_ = indexKey_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          eventTypes_ = java.util.Collections.unmodifiableList(eventTypes_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.eventTypes_ = eventTypes_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1396,6 +1486,16 @@ public final class DiadocCounteragent_GetApiProtos {
         if (other.hasIndexKey()) {
           bitField0_ |= 0x00000004;
           indexKey_ = other.indexKey_;
+          onChanged();
+        }
+        if (!other.eventTypes_.isEmpty()) {
+          if (eventTypes_.isEmpty()) {
+            eventTypes_ = other.eventTypes_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureEventTypesIsMutable();
+            eventTypes_.addAll(other.eventTypes_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1699,6 +1799,78 @@ public final class DiadocCounteragent_GetApiProtos {
   }
   bitField0_ |= 0x00000004;
         indexKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType> eventTypes_ =
+        java.util.Collections.emptyList();
+      private void ensureEventTypesIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          eventTypes_ = new java.util.ArrayList<Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType>(eventTypes_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType> getEventTypesList() {
+        return java.util.Collections.unmodifiableList(eventTypes_);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+       */
+      public int getEventTypesCount() {
+        return eventTypes_.size();
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+       */
+      public Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType getEventTypes(int index) {
+        return eventTypes_.get(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+       */
+      public Builder setEventTypes(
+          int index, Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventTypesIsMutable();
+        eventTypes_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+       */
+      public Builder addEventTypes(Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventTypesIsMutable();
+        eventTypes_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+       */
+      public Builder addAllEventTypes(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.CounteragentEventType> values) {
+        ensureEventTypesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, eventTypes_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Events.CounteragentEventType EventTypes = 4;</code>
+       */
+      public Builder clearEventTypes() {
+        eventTypes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -3235,23 +3407,25 @@ public final class DiadocCounteragent_GetApiProtos {
       "\n&Events/DiadocCounteragent-GetApi.proto" +
       "\022\027Diadoc.Api.Proto.Events\032\022Counteragent." +
       "proto\032\024TotalCountType.proto\032\020DocumentId." +
-      "proto\"\247\001\n\030BoxCounteragentEventList\022=\n\006Ev" +
-      "ents\030\001 \003(\0132-.Diadoc.Api.Proto.Events.Box" +
-      "CounteragentEvent\022\022\n\nTotalCount\030\002 \001(\005\0228\n" +
-      "\016TotalCountType\030\003 \002(\0162 .Diadoc.Api.Proto" +
-      ".TotalCountType\"z\n\024BoxCounteragentEvent\022" +
-      "\017\n\007EventId\030\001 \002(\t\022?\n\014Counteragent\030\002 \001(\0132)" +
-      ".Diadoc.Api.Proto.Events.CounteragentInf",
-      "o\022\020\n\010IndexKey\030\003 \001(\t\"\263\002\n\020CounteragentInfo" +
-      "\022\031\n\021CounteragentBoxId\030\001 \002(\t\0224\n\006Status\030\002 " +
-      "\002(\0162$.Diadoc.Api.Proto.CounteragentStatu" +
-      "s\022\033\n\023EventTimestampTicks\030\003 \002(\020\022\030\n\020LastEv" +
-      "entComment\030\004 \001(\t\022\037\n\027MessageFromCounterag" +
-      "ent\030\005 \001(\t\022\035\n\025MessageToCounteragent\030\006 \001(\t" +
-      "\022:\n\024InvitationDocumentId\030\007 \001(\0132\034.Diadoc." +
-      "Api.Proto.DocumentId\022\033\n\023CounteragentGrou" +
-      "pId\030\010 \001(\tB!B\037DiadocCounteragent_GetApiPr" +
-      "otos"
+      "proto\032\"Events/CounteragentEventType.prot" +
+      "o\"\247\001\n\030BoxCounteragentEventList\022=\n\006Events" +
+      "\030\001 \003(\0132-.Diadoc.Api.Proto.Events.BoxCoun" +
+      "teragentEvent\022\022\n\nTotalCount\030\002 \001(\005\0228\n\016Tot" +
+      "alCountType\030\003 \002(\0162 .Diadoc.Api.Proto.Tot" +
+      "alCountType\"\276\001\n\024BoxCounteragentEvent\022\017\n\007" +
+      "EventId\030\001 \002(\t\022?\n\014Counteragent\030\002 \001(\0132).Di",
+      "adoc.Api.Proto.Events.CounteragentInfo\022\020" +
+      "\n\010IndexKey\030\003 \001(\t\022B\n\nEventTypes\030\004 \003(\0162..D" +
+      "iadoc.Api.Proto.Events.CounteragentEvent" +
+      "Type\"\263\002\n\020CounteragentInfo\022\031\n\021Counteragen" +
+      "tBoxId\030\001 \002(\t\0224\n\006Status\030\002 \002(\0162$.Diadoc.Ap" +
+      "i.Proto.CounteragentStatus\022\033\n\023EventTimes" +
+      "tampTicks\030\003 \002(\020\022\030\n\020LastEventComment\030\004 \001(" +
+      "\t\022\037\n\027MessageFromCounteragent\030\005 \001(\t\022\035\n\025Me" +
+      "ssageToCounteragent\030\006 \001(\t\022:\n\024InvitationD" +
+      "ocumentId\030\007 \001(\0132\034.Diadoc.Api.Proto.Docum",
+      "entId\022\033\n\023CounteragentGroupId\030\010 \001(\tB!B\037Di" +
+      "adocCounteragent_GetApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3267,6 +3441,7 @@ public final class DiadocCounteragent_GetApiProtos {
           Diadoc.Api.Proto.CounteragentProtos.getDescriptor(),
           Diadoc.Api.Proto.TotalCountTypeProtos.getDescriptor(),
           Diadoc.Api.Proto.DocumentIdProtos.getDescriptor(),
+          Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_Events_BoxCounteragentEventList_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3279,7 +3454,7 @@ public final class DiadocCounteragent_GetApiProtos {
     internal_static_Diadoc_Api_Proto_Events_BoxCounteragentEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_BoxCounteragentEvent_descriptor,
-        new java.lang.String[] { "EventId", "Counteragent", "IndexKey", });
+        new java.lang.String[] { "EventId", "Counteragent", "IndexKey", "EventTypes", });
     internal_static_Diadoc_Api_Proto_Events_CounteragentInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Events_CounteragentInfo_fieldAccessorTable = new
@@ -3289,6 +3464,7 @@ public final class DiadocCounteragent_GetApiProtos {
     Diadoc.Api.Proto.CounteragentProtos.getDescriptor();
     Diadoc.Api.Proto.TotalCountTypeProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
+    Diadoc.Api.Proto.Events.CounteragentEventTypeProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
