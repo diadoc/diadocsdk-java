@@ -1,6 +1,7 @@
 #addin "nuget:?package=Cake.Git&version=1.0.0"
 using Cake.Common.Diagnostics;
 using System.Text.RegularExpressions;
+using System.Runtime.InteropServices;
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
@@ -10,7 +11,7 @@ var protocLink = "https://github.com/google/protobuf/releases/download/v2.6.1/pr
 var protocArchive = buildDir.CombineWithFilePath("protoc-2.6.1-win32.zip");
 var protocBinDir = buildDir.Combine("protoc");
 var protocExe = protocBinDir.CombineWithFilePath("protoc.exe");
-var mvnTool = new [] { "mvn.cmd", "mvn.exe" }.Select(x => Context.Tools.Resolve(x)).Where(x => x != null).FirstOrDefault();
+var mvnTool = new [] { "mvn.cmd", "mvn.exe", "mvn" }.Select(x => Context.Tools.Resolve(x)).Where(x => x != null).FirstOrDefault();
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
@@ -154,6 +155,11 @@ public void CompileProtoFiles(IEnumerable<FilePath> files, DirectoryPath sourceP
 	foreach (var file in files)
 	{
 		protocArguments.WithArguments(args => args.Append(file.FullPath));
+	}
+
+	if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+	{
+		protocExe = "protoc";
 	}
 
 	var exitCode = StartProcess(protocExe, protocArguments);
