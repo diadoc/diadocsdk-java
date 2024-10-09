@@ -63,8 +63,8 @@
         </dependency>
         <!-- local -->
         <dependency>
-            <groupId>ru.CryptoPro</groupId>
-            <artifactId>JCP</artifactId>
+            <groupId>ru.cryptopro</groupId>
+            <artifactId>jcp</artifactId>
             <version>2.0.40450-A</version>
         </dependency>
         <!-- local -->
@@ -75,14 +75,14 @@
         </dependency>
         <!-- local -->
         <dependency>
-            <groupId>ru.CryptoPro</groupId>
-            <artifactId>ASN1P</artifactId>
+            <groupId>ru.cryptopro</groupId>
+            <artifactId>asn1p</artifactId>
             <version>2.0.40450-A</version>
         </dependency>
         <!-- local -->
         <dependency>
-            <groupId>ru.CryptoPro</groupId>
-            <artifactId>JCryptoP</artifactId>
+            <groupId>ru.cryptopro</groupId>
+            <artifactId>jcryptop</artifactId>
             <version>2.0.40450-A</version>
         </dependency>
         <dependency>
