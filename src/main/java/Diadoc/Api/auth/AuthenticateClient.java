@@ -72,7 +72,7 @@ public class AuthenticateClient {
 
     }
 
-    public void authenticate(X509Certificate currentCert, boolean autoConfirm) throws DiadocSdkException {
+    public byte[] authenticate(X509Certificate currentCert, boolean autoConfirm) throws DiadocSdkException {
         try {
             authManager.clearCredentials();
 
@@ -90,16 +90,37 @@ public class AuthenticateClient {
                 String token = getDecryptedToken(response, currentCert);
                 confirmAuthenticationByCertificate(currentCert, token);
             }
+            return response;
         } catch (URISyntaxException | IOException | CertificateEncodingException | TokenDecryptException ex) {
             throw new DiadocSdkException(ex);
         }
     }
-
+    
     public void authenticate(X509Certificate currentCert) throws DiadocSdkException {
         authenticate(currentCert, true);
     }
 
-    public void confirmAuthenticationByCertificate(X509Certificate currentCert, String token) throws DiadocSdkException {
+    public byte[] authenticate(byte[] currentCert) throws DiadocSdkException {
+        try {
+            authManager.clearCredentials();
+
+            var request = RequestBuilder
+                    .post(new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath(V_3_AUTHENTICATE)
+                            .addParameter("type", "certificate")
+                            .build())
+                    .addHeader("Content-Type", "application/octet-stream")
+                    .setEntity(new ByteArrayEntity(currentCert));
+
+            var response = diadocHttpClient.performRequest(request);
+
+            return response;
+        } catch (URISyntaxException | IOException ex) {
+            throw new DiadocSdkException(ex);
+        }
+    }
+
+    public String confirmAuthenticationByCertificate(X509Certificate currentCert, String token) throws DiadocSdkException {
         try {
             var request = RequestBuilder.post(
                     new URIBuilder(diadocHttpClient.getBaseUrl())
@@ -109,9 +130,34 @@ public class AuthenticateClient {
                     .setEntity(new ByteArrayEntity(currentCert.getEncoded()));
 
             var response = diadocHttpClient.performRequest(request);
-
-            authManager.setCredentials(StringUtils.newStringUtf8(response));
+    
+            String authToken = StringUtils.newStringUtf8(response);
+    
+            authManager.setCredentials(authToken);
+            
+            return authToken;
         } catch (URISyntaxException | CertificateEncodingException | IOException ex) {
+            throw new DiadocSdkException(ex);
+        }
+    }
+    public String confirmAuthenticationByCertificate(byte[] currentCert, String thumbprint, String token) throws DiadocSdkException {
+        try {
+            var uriBuilder = new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V3/AuthenticateConfirm")
+                            .addParameter("token", token);
+            if (null != thumbprint)
+                uriBuilder.addParameter("thumbprint", thumbprint);
+            var request = RequestBuilder.post(
+                    uriBuilder.build());
+            if (null != currentCert)
+                request.setEntity(new ByteArrayEntity(currentCert));
+
+            var response = diadocHttpClient.performRequest(request);
+
+            String authToken = StringUtils.newStringUtf8(response);
+            authManager.setCredentials(authToken);
+            return authToken;
+        } catch (URISyntaxException | IOException ex) {
             throw new DiadocSdkException(ex);
         }
     }

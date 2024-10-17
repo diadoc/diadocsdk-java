@@ -66,3 +66,4 @@ fabric.properties
 
 #jcp
 jcp-*
+/replay_pid85356.log
