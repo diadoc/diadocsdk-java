@@ -66,6 +66,9 @@ jobs:
           path: |
             target/*.jar
           if-no-files-found: error
+          run: |
+            echo "Contents of target directory:"
+            ls -la target/
 
   publish:
     runs-on: ubuntu-22.04
