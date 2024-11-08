@@ -92,7 +92,7 @@ message Document {
 	optional Origin Origin = 72;
 	optional string EditingSettingId = 73 [default = ""];
 	required LockMode LockMode = 74 [default = None];
-	required SenderReceiptMetadata SenderReceiptMetadata = 75; 
+	required SenderReceiptMetadata SenderReceiptMetadata = 75;
 	required string Version = 76;
 	repeated LastOuterDocflow LastOuterDocflows = 77;
 	optional string ProxyBoxId = 78;
@@ -119,7 +119,7 @@ enum ResolutionStatusType {
 	Disapproved = 2;
 	ApprovementRequested = 3;
 	SignatureRequested = 4;
-	SignatureDenied = 5; 
+	SignatureDenied = 5;
 	ActionsRequested = 6;
 }
 

@@ -2,6 +2,7 @@ import "Organization.proto";
 import "Counteragent.proto";
 import "DocumentId.proto";
 
+
 package Diadoc.Api.Proto;
 
 message GetOrganizationsByInnListRequest {
