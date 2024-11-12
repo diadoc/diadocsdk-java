@@ -84,6 +84,39 @@ public class ShelfClient {
         return nameOnShelf;
     }
 
+//    public String uploadFileToShelfV2(FileToUpload file) throws DiadocSdkException {
+//        if (file == null)
+//            throw new IllegalArgumentException("file");
+//
+//        var url = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/V2/ShelfUpload");
+//
+//        try {
+//            var response = diadocHttpClient.getResponse(RequestBuilder.post(url.build()).setEntity(new ByteArrayEntity(file.toByteArray())));
+//            if (response.getStatusCode() != HttpStatus.SC_OK) {
+//                if (SHELF_NON_RETRIABLE_STATUS_CODES.contains(response.getStatusCode())) {
+//                    throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode());
+//                }
+//
+//                httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode()));
+//                return null;
+//            }
+//
+//            responseContent = response.getContent();
+//
+//        } catch (IOException e) {
+//            httpErrors.add(e);
+//            return null;
+//        }
+//
+//        if (responseContent == null || responseContent.length == 0)
+//            return null;
+//
+//        String responseString = new String(responseContent, StandardCharsets.UTF_8);
+//
+//        int[] missingParts = new Gson().fromJson(responseString, int[].class);
+//        return Arrays.stream(missingParts).boxed().collect(Collectors.toList());
+//    }
+
     private String createNameOnShelf() {
         return String.format("java_api-%s", UUID.randomUUID().toString().replaceAll("-", ""));
     }
