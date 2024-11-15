@@ -39,7 +39,7 @@ message ExtendedSignerDetailsToPost {
 }
 
 enum SignerType {
-	SignerTypeUnspecified = 0;     // Не указано
+	SignerTypeUnspecified = -1;     // Не указано
 	LegalEntity = 1;                // Представитель юридического лица
 	IndividualEntity = 2;           // Индивидуальный предприниматель
 	PhysicalPerson = 3;             // Физическое лицо
