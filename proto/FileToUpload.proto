@@ -1,6 +1,0 @@
-﻿package Diadoc.Api.Proto;
-
-message FileToUpload {
-  required bytes Content = 1;
-  optional string FileExtension = 2;
-}
