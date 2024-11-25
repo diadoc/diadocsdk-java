@@ -38,10 +38,9 @@ public class ShelfClient {
     }
 
     /**
-     * Use shelfDownload instead
+     * @deprecated
+     * Используйте {@link #shelfDownloadV2(String)}
      */
-
-    @Deprecated
     public byte[] shelfDownload(String nameOnShelf) throws DiadocSdkException {
         if (!nameOnShelf.contains(SHELF_PATH_PREFIX))
             nameOnShelf = SHELF_PATH_PREFIX + "/" + nameOnShelf;
@@ -71,10 +70,10 @@ public class ShelfClient {
     }
 
     /**
-     * Use uploadFileToShelfV2 or uploadLargeFileToShelf instead
+     * @deprecated
+     * Используйте {@link #uploadLargeFileToShelf(byte[], String)}
+     * Или {@link #uploadFileToShelfV2(byte[], String)}
      */
-
-    @Deprecated
     public String uploadFileToShelf(byte[] data) throws DiadocSdkException {
         if (data == null)
             throw new IllegalArgumentException("data");
