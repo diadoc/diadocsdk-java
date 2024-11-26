@@ -49,7 +49,7 @@ jobs:
         working-directory: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
 
       - name: Run the build script
-        run: mvn package
+        run: mvn package -X
         env:
           github_ref_type: ${{ github.ref_type }}
 
