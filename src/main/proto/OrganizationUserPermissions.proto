@@ -1,0 +1,31 @@
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "OrganizationUserPermissionsProtos";
+
+enum DocumentAccessLevel {
+	UnknownDocumentAccessLevel = -1; // Access level which is reported to legacy clients for newly introduced access levels
+	DepartmentOnly = 0;
+	DepartmentAndSubdepartments = 1;
+	AllDocuments = 2;
+	SelectedDepartments = 3;
+}
+
+message OrganizationUserPermissions {
+	required string UserDepartmentId = 1;
+	required bool IsAdministrator = 2;
+	optional DocumentAccessLevel DocumentAccessLevel = 3 [default = UnknownDocumentAccessLevel];
+	required bool CanSignDocuments = 4;
+	required bool CanManageCounteragents = 6;
+	required bool CanAddResolutions = 7;
+	required bool CanRequestResolutions = 8;
+	repeated string SelectedDepartmentIds = 9;
+	optional string JobTitle = 10;
+	required bool CanCreateDocuments = 11;
+	required AuthorizationPermission AuthorizationPermission = 12;
+	required bool CanDeleteRestoreDocuments = 13;
+}
+
+message AuthorizationPermission {
+	required bool IsBlocked = 1;
+	optional string Comment = 2;
+}

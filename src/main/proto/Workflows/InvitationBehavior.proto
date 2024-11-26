@@ -1,0 +1,11 @@
+package Diadoc.Api.Proto.Workflows.InvitationBehavior;
+
+option java_outer_classname = "InvitationBehaviorProtos";
+
+enum InvitationBehavior
+{
+    Unknown = 0;
+    Never = 1;
+    DefineByUser = 2;
+    Always = 3;
+}

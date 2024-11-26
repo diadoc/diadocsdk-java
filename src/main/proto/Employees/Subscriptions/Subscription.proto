@@ -1,0 +1,17 @@
+package Diadoc.Api.Proto.Employees.Subscriptions;
+
+option java_outer_classname = "SubscriptionProtos";
+
+message EmployeeSubscriptions {
+	repeated Subscription Subscriptions = 1;
+}
+
+message SubscriptionsToUpdate {
+	repeated Subscription Subscriptions = 1;
+}
+
+message Subscription
+{
+	required string Id = 1;
+	required bool IsSubscribed = 2;
+}

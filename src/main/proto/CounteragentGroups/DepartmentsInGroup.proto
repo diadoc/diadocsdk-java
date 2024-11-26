@@ -1,0 +1,8 @@
+package Diadoc.Api.Proto.CounteragentGroups;
+
+option java_outer_classname = "DepartmentsInGroupProtos";
+
+message DepartmentsInGroup
+{
+  repeated string DepartmentIds = 1;
+}

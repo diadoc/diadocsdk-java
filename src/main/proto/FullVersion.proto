@@ -1,0 +1,9 @@
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "FullVersionProtos";
+
+message FullVersion {
+	required string TypeNamedId = 1;
+	required string Function = 2;
+	required string Version = 3;
+}

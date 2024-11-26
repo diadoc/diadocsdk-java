@@ -1,7 +1,0 @@
-package Diadoc.Api.Proto;
-
-message RoamingNotification
-{
-	required bool Success = 1;
-	optional string Description = 2;
-}

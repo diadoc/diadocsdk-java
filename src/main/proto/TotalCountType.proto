@@ -1,0 +1,10 @@
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "TotalCountTypeProtos";
+
+enum TotalCountType
+{
+	UnknownCountType = 0;
+	Equal = 1;
+	GreaterThanOrEqual = 2;
+}

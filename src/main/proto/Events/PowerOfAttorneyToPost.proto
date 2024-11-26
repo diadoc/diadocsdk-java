@@ -1,0 +1,14 @@
+import "PowersOfAttorney/PowerOfAttorney.proto";
+
+package Diadoc.Api.Proto.Events;
+
+option java_outer_classname = "PowerOfAttorneyToPostProtos";
+
+message PowerOfAttorneyToPost {
+    optional PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;
+    required bool UseDefault = 2;
+    optional PowersOfAttorney.PowerOfAttorneySignedContent Content = 3;
+    optional bool SendAsFile = 4;
+    repeated PowersOfAttorney.PowerOfAttorneySignedContent Contents = 5;
+    optional bool UseDocumentContent = 6;
+}

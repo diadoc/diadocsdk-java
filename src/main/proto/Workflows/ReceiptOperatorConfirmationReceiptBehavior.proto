@@ -1,0 +1,10 @@
+package Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior;
+
+option java_outer_classname = "ReceiptOperatorConfirmationReceiptBehaviorProtos";
+
+enum ReceiptOperatorConfirmationReceiptBehavior
+{
+    Unknown = 0;
+    Never = 1;
+    Always = 2;
+}

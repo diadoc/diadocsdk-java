@@ -1,0 +1,14 @@
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "ResolutionActionProtos";
+
+enum ResolutionAction
+{
+	UnknownAction = 0;
+	ApproveAction = 1;
+	DisapproveAction = 2;
+	SignWithApprovementSignature = 3;
+	SignWithPrimarySignature = 4;
+	DenySignatureRequest = 5;
+	RejectSigning = 6;
+}

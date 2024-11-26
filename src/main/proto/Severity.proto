@@ -1,0 +1,12 @@
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "SeverityProtos";
+
+enum Severity
+{
+	UnknownSeverity = 0; //reserved for backward compatibility
+	Info = 1;
+	Success = 2;
+	Warning = 3;
+	Error = 4;
+}

@@ -1,0 +1,141 @@
+import "Timestamp.proto";
+import "Documents/Document.proto";
+import "Docflow/AttachmentV3.proto";
+import "Docflow/RoamingNotification.proto";
+import "Docflow/ResolutionDocflowV3.proto";
+import "OuterDocflows/OuterDocflowStatus.proto";
+import "DocflowStatusV3.proto";
+
+package Diadoc.Api.Proto.Docflow;
+
+option java_outer_classname = "DocflowV3Protos";
+
+message DocflowV3
+{
+	required SenderTitleDocflow SenderTitle = 1;
+	optional ConfirmationDocflow Confirmation = 2;
+	optional ParticipantResponseDocflow ProxyResponse = 11;
+	optional ReceiptDocflowV3 RecipientReceipt = 4;
+	optional ParticipantResponseDocflow RecipientResponse = 5;
+	optional AmendmentRequestDocflow AmendmentRequest = 6;
+	optional RevocationDocflowV3 Revocation = 7;
+	optional ReceiptDocflowV3 SenderReceipt = 8;
+	optional ResolutionDocflowV3 Resolution = 9;
+	optional ResolutionEntitiesV3 ResolutionEntities = 10;
+	repeated OuterDocflow OuterDocflows = 12;
+	repeated OuterDocflowEntities OuterDocflowEntities = 13;
+	required DocflowStatusV3 DocflowStatus = 14;
+}
+
+message SenderTitleDocflow
+{
+	required bool IsFinished = 1;
+	required SignedAttachmentV3 Attachment = 2;
+	optional Timestamp SentAt = 3;
+	optional Timestamp DeliveredAt = 4;
+	optional RoamingNotification RoamingNotification = 5;
+	required Documents.SenderSignatureStatus SenderSignatureStatus = 6;
+}
+
+message ConfirmationDocflow
+{
+	required bool IsFinished = 1;
+	optional SignedAttachmentV3 ConfirmationAttachment = 2;
+	optional Timestamp ConfirmedAt = 3;
+	optional ReceiptDocflowV3 Receipt = 4;
+	optional OperatorConfirmationDocflow RoamingConfirmation = 5;
+}
+
+message OperatorConfirmationDocflow
+{
+	optional SignedAttachmentV3 ConfirmationAttachment = 1;
+	optional Timestamp ConfirmedAt = 2;
+}
+
+message SignatureRejectionDocflow
+{
+	required SignedAttachmentV3 SignatureRejection = 1;
+	required bool IsFormal = 2;
+	optional Timestamp DeliveredAt = 3;
+	optional string PlainText = 4;
+}
+
+message ParticipantResponseDocflow
+{
+	required bool IsFinished = 1;
+	optional SignatureV3 Signature = 2;
+	optional SignedAttachmentV3 Title = 3;
+	optional SignatureRejectionDocflow Rejection = 4;
+	optional Timestamp SentAt = 5;
+	optional Timestamp DeliveredAt = 6;
+	required Documents.RecipientResponseStatus ResponseStatus = 7;
+	optional ConfirmationDocflow Confirmation = 8;
+}
+
+message AmendmentRequestDocflow
+{
+	required bool IsFinished = 1;
+	optional SignedAttachmentV3 AmendmentRequest = 2;
+	optional Timestamp SentAt = 3;
+	optional Timestamp DeliveredAt = 4;
+	optional ReceiptDocflowV3 Receipt = 5;
+	required int32 AmendmentFlags = 6;
+	optional string PlainText = 7;
+	optional ConfirmationDocflow ConfirmationDocflow = 8;
+}
+
+message RevocationDocflowV3
+{
+	required bool IsFinished = 1;
+	required RevocationRequestDocflow RevocationRequest = 2;
+	optional RevocationResponseDocflow RevocationResponse = 3;
+	required string InitiatorBoxId = 4;
+	required Documents.RevocationStatus RevocationStatus = 5;
+	optional ResolutionEntitiesV3 ResolutionEntities = 6;
+	repeated OuterDocflowEntities OuterDocflowEntities  = 7;
+}
+
+message RevocationRequestDocflow
+{
+	required SignedAttachmentV3 RevocationRequest = 1;
+	optional Timestamp SentAt = 2;
+	optional Timestamp DeliveredAt = 3;
+	optional RoamingNotification RoamingNotification = 4;
+	optional string PlainText = 5;
+}
+
+message RevocationResponseDocflow
+{
+	optional SignatureV3 RecipientSignature = 1;
+	optional SignatureRejectionDocflow SignatureRejection = 2;
+}
+
+message ReceiptDocflowV3
+{
+	required bool IsFinished = 1;
+	optional SignedAttachmentV3 ReceiptAttachment = 2;
+	optional Timestamp SentAt = 3;
+	optional Timestamp DeliveredAt = 4;
+	optional ConfirmationDocflow Confirmation = 5;
+	required Documents.GeneralReceiptStatus Status = 6;
+}
+
+message OuterDocflow
+{
+	required string DocflowNamedId = 1;
+	required string ParentEntityId = 2;
+	required string OuterDocflowEntityId = 3;
+}
+
+message OuterDocflowEntities
+{
+	required string DocflowNamedId = 1;
+	required string DocflowFriendlyName = 2;
+	repeated StatusEntity StatusEntities = 3;
+}
+
+message StatusEntity
+{
+	required SignedAttachmentV3 Attachment = 1;
+	required OuterDocflows.Status Status = 2;
+}

@@ -1,8 +1,0 @@
-package Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior;
-
-enum OperatorConfirmationReceiptBehavior
-{
-    Unknown = 0;
-    Never = 1;
-    Always = 2;
-}

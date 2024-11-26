@@ -1,6 +1,0 @@
-package Diadoc.Api.Proto.Events;
-
-message ResolutionRequestDenialInfo {
-	required string Author = 1;
-	optional string InitialRequestId = 2;
-}

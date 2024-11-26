@@ -1,0 +1,11 @@
+import "Departments/Department.proto";
+
+package Diadoc.Api.Proto.Departments;
+
+option java_outer_classname = "DepartmentListProtos";
+
+message DepartmentList
+{
+	repeated Department Departments = 1;
+	required int32 TotalCount = 2;
+}

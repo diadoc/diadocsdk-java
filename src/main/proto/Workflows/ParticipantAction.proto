@@ -1,0 +1,11 @@
+package Diadoc.Api.Proto.Workflows.ParticipantAction;
+
+option java_outer_classname = "ParticipantActionProtos";
+
+enum ParticipantAction
+{
+    Unknown = 0;
+    Title = 1;
+    Signature = 2;
+    OptionalSignature = 3;
+}

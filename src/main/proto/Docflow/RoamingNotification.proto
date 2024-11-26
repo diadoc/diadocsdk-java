@@ -1,0 +1,11 @@
+import "Docflow/Attachment.proto";
+
+package Diadoc.Api.Proto.Docflow;
+
+option java_outer_classname = "RoamingNotificationProtos";
+
+message RoamingNotification
+{
+	required Entity Notification = 1;
+	required bool IsSuccess = 2;
+}

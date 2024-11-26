@@ -1,0 +1,20 @@
+import "PowersOfAttorney/PowerOfAttorneyValidation.proto";
+import "RoamingSendingStatus.proto";
+
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "DocflowStatusV3Protos";
+
+message DocflowStatusV3
+{
+    required DocflowStatusModelV3 PrimaryStatus = 1;
+    optional DocflowStatusModelV3 SecondaryStatus = 2;
+    optional PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyGeneralStatus = 3;
+    optional RoamingSendingStatus GeneralRoamingSendingStatus = 4;
+}
+
+message DocflowStatusModelV3
+{
+    optional string Severity = 1;
+    optional string StatusText = 2;
+}

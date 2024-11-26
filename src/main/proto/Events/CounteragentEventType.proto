@@ -1,0 +1,22 @@
+package Diadoc.Api.Proto.Events;
+
+option java_outer_classname = "CounteragentEventTypeProtos";
+
+enum CounteragentEventType
+{
+	UnknownCounteragentEventType = 0;
+	IInvitedCounteragent = 1;
+	CounteragentInvitedMe = 2;
+	CounteragentAcceptedInvitation = 3;
+	IAcceptedInvitation = 4;
+	IWithdrewInvitation = 5;
+	CounteragentWithdrewInvitation = 6;
+	IRejectedInvitation = 7;
+	CounteragentRejectedInvitation = 8;
+	IBrokeUpWithCounteragent = 9;
+	CounteragentBrokeUpWithMe = 10;
+	IForgotCounteragent = 11;
+	CounteragentForgotMe = 12;
+	IMadeCounteragent = 13;
+	CounteragentMadeMe = 14;
+}

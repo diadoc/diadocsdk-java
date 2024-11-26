@@ -1,6 +1,0 @@
-package Diadoc.Api.Proto;
-
-message CustomDataItem {
-	required string Key = 1;
-	optional string Value = 2;
-}

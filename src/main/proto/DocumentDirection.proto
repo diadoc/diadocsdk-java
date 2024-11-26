@@ -1,0 +1,11 @@
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "DocumentDirectionProtos";
+
+enum DocumentDirection
+{
+	UnknownDocumentDirection = 0; // reserved for backward compatibility
+	Inbound = 1;
+	Outbound = 2;
+	Internal = 3;
+}

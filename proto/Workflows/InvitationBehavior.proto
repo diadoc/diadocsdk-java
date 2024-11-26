@@ -1,9 +1,0 @@
-package Diadoc.Api.Proto.Workflows.InvitationBehavior;
-
-enum InvitationBehavior
-{
-    Unknown = 0;
-    Never = 1;
-    DefineByUser = 2;
-    Always = 3;
-}

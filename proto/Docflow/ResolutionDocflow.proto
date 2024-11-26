@@ -1,9 +1,0 @@
-import "Timestamp.proto";
-import "ResolutionTarget.proto";
-import "Docflow/Attachment.proto";
-
-package Diadoc.Api.Proto.Docflow;
-
-message ResolutionDocflow
-{
-}

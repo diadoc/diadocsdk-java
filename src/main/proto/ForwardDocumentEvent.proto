@@ -1,0 +1,11 @@
+import "Timestamp.proto";
+
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "ForwardDocumentEventProtos";
+
+message ForwardDocumentEvent
+{
+	optional Timestamp Timestamp = 1;
+	optional string ToBoxId = 2;
+}

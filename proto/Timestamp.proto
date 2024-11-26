@@ -1,6 +1,0 @@
-package Diadoc.Api.Proto;
-
-message Timestamp
-{
-	required sfixed64 Ticks = 1;
-}

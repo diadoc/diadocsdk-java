@@ -1,0 +1,22 @@
+import "PowersOfAttorney/PowerOfAttorney.proto";
+import "PowersOfAttorney/PowerOfAttorneyValidation.proto";
+import "Docflow/Attachment.proto";
+import "RoamingSendingStatus.proto";
+
+package Diadoc.Api.Proto.Docflow;
+
+option java_outer_classname = "SignaturePowerOfAttorneyProtos";
+
+message SignaturePowerOfAttorney {
+    required Entity Entity = 1;
+    required PowersOfAttorney.PowerOfAttorneyFullId FullId = 2;
+    optional PowersOfAttorney.PowerOfAttorneyValidationStatus Status = 3;
+    repeated PowerOfAttorneyStatusChange StatusChanges = 4;
+    optional RoamingSendingStatus RoamingSendingStatus = 5;
+    optional PowersOfAttorney.PowerOfAttorneySendingType SendingType = 6 [default = Unknown];
+}
+
+message PowerOfAttorneyStatusChange {
+    required Entity Entity = 1;
+    required PowersOfAttorney.PowerOfAttorneyValidationStatus PowerOfAttorneyStatus = 2;
+}

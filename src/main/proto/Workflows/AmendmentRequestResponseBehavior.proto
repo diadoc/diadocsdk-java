@@ -1,0 +1,12 @@
+package Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior;
+
+option java_outer_classname = "AmendmentRequestResponseBehaviorProtos";
+
+enum AmendmentRequestResponseBehavior
+{
+    Unknown = 0;
+    None = 1;
+    Receipt = 2;
+    OperatorConfirmation = 3;
+    OperatorConfirmationOrReceipt = 4;
+}

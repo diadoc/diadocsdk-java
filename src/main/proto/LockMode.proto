@@ -1,0 +1,11 @@
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "LockModeProtos";
+
+enum LockMode
+{
+    Unknown = 0;
+    None = 1;
+    Send = 2;
+    Full = 3;
+}

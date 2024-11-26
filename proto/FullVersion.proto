@@ -1,7 +1,0 @@
-package Diadoc.Api.Proto;
-
-message FullVersion {
-	required string TypeNamedId = 1;
-	required string Function = 2;
-	required string Version = 3;
-}

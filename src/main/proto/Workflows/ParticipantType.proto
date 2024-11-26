@@ -1,0 +1,11 @@
+package Diadoc.Api.Proto.Workflows.ParticipantType;
+
+option java_outer_classname = "ParticipantTypeProtos";
+
+enum ParticipantType
+{
+    Unknown = 0;
+    Sender = 1;
+    Proxy = 2;
+    Recipient = 3;
+}

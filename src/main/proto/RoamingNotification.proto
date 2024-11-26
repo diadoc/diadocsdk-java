@@ -1,0 +1,9 @@
+package Diadoc.Api.Proto;
+
+option java_outer_classname = "RoamingNotificationProtos";
+
+message RoamingNotification
+{
+	required bool Success = 1;
+	optional string Description = 2;
+}
