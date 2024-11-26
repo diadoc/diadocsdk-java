@@ -6,7 +6,6 @@
     <artifactId>diadocsdk</artifactId>
     <version>3.24.1</version>
 
-
     <packaging>jar</packaging>
 
     <properties>
