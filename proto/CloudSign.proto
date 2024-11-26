@@ -1,13 +1,6 @@
 import "Content_v2.proto";
-import "google/protobuf/descriptor.proto";
 
 package Diadoc.Api.Proto;
-
-extend google.protobuf.FileOptions {
-	optional bool file_deprecated = 50001;
-}
-
-option (file_deprecated) = true;
 
 message CloudSignRequest {
 	repeated CloudSignFile Files = 1 [deprecated = true];

@@ -11,14 +11,7 @@ var protocLink = "https://github.com/google/protobuf/releases/download/v2.6.1/pr
 var protocArchive = buildDir.CombineWithFilePath("protoc-2.6.1-win32.zip");
 var protocBinDir = buildDir.Combine("protoc");
 var protocExe = protocBinDir.CombineWithFilePath("protoc.exe");
-
-var descriptorSourceLink = "https://github.com/protocolbuffers/protobuf/archive/refs/tags/v2.6.1.zip";
-var descriptorArchive = buildDir.CombineWithFilePath("protobuf-v2.6.1.zip");
-var descriptorSourceDir = buildDir.Combine("protobuf-src");
-var includeDir = protocBinDir.Combine("include");
-var googleProtobufDir = includeDir.Combine("google").Combine("protobuf");
-
-var mvnTool = new[] { "mvn.cmd", "mvn.exe", "mvn" }.Select(x => Context.Tools.Resolve(x)).Where(x => x != null).FirstOrDefault();
+var mvnTool = new [] { "mvn.cmd", "mvn.exe", "mvn" }.Select(x => Context.Tools.Resolve(x)).Where(x => x != null).FirstOrDefault();
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
@@ -47,69 +40,55 @@ Task("ExtractProtobuf")
 		Unzip(protocArchive, protocBinDir);
 	});
 
-Task("DownloadDescriptorFiles")
-    .WithCriteria(() => !DirectoryExists(googleProtobufDir))
-    .Does(() =>
-    {
-        CreateDirectory(descriptorArchive.GetDirectory());
-        DownloadFile(descriptorSourceLink, descriptorArchive);
-    });
-
-Task("ExtractDescriptorFiles")
-    .WithCriteria(!DirectoryExists(googleProtobufDir)) // Проверяем, создана ли целевая директория
-    .IsDependentOn("DownloadDescriptorFiles")
-    .Does(() =>
-    {
-        if (!DirectoryExists(descriptorSourceDir))
-        {
-            Information("Extracting descriptor archive to: {0}", descriptorSourceDir.FullPath);
-            Unzip(descriptorArchive, descriptorSourceDir);
-        }
-        else
-        {
-            Information("Descriptor source directory already exists: {0}", descriptorSourceDir.FullPath);
-        }
-
-        // Проверяем, что директория с исходниками .proto существует
-        var protoSourceDir = descriptorSourceDir.Combine("protobuf-2.6.1/src/google/protobuf");
-        if (!DirectoryExists(protoSourceDir))
-            throw new Exception($"Source directory for descriptor.proto not found: {protoSourceDir.FullPath}");
-
-        // Создаём директорию include/google/protobuf, если её нет
-        CreateDirectory(googleProtobufDir);
-
-        // Копируем только файлы protobuf
-        foreach (var file in GetFiles(protoSourceDir.FullPath + "/*.proto"))
-        {
-            var destinationFile = googleProtobufDir.CombineWithFilePath(file.GetFilename());
-
-            // Удаляем файл, если он уже существует
-            if (FileExists(destinationFile))
-            {
-                Information("Overwriting existing file: {0}", destinationFile.FullPath);
-                DeleteFile(destinationFile);
-            }
-
-            CopyFile(file, destinationFile);
-        }
-
-        Information("Descriptor files extracted to: {0}", googleProtobufDir.FullPath);
-    });
-
 Task("GenerateProtoFiles")
     .IsDependentOn("ExtractProtobuf")
-    .IsDependentOn("ExtractDescriptorFiles")
     .Does(() =>
     {
         var sourceProtoDir = new DirectoryPath("./proto/").MakeAbsolute(Context.Environment);
         var destinationProtoDir = new DirectoryPath("./src/main/java/").MakeAbsolute(Context.Environment);
 
-		var protoFiles = GetFiles("./proto/**/*.proto");
-		var modifiedProtoDir = buildDir.Combine("modified_proto");
-		var patchedProtoFiles = PatchJavaProtoFiles(protoFiles, sourceProtoDir, modifiedProtoDir);
+        var protoFiles = GetFiles("./proto/**/*.proto");
+        var modifiedProtoDir = buildDir.Combine("modified_proto");
+        var patchedProtoFiles = PatchJavaProtoFiles(protoFiles, sourceProtoDir, modifiedProtoDir);
 
-		CompileProtoFiles(patchedProtoFiles, modifiedProtoDir, destinationProtoDir);
-	});
+        CompileProtoFiles(patchedProtoFiles, modifiedProtoDir, destinationProtoDir);
+
+        AddDeprecatedToCloudSignProtos(destinationProtoDir);
+    });
+
+public void AddDeprecatedToCloudSignProtos(DirectoryPath destinationDir)
+{
+    // Находим файл CloudSignProtos.java
+    var filePath = GetFiles(destinationDir.FullPath + "/**/CloudSignProtos.java").FirstOrDefault();
+
+    if (filePath == null)
+    {
+        Warning("CloudSignProtos.java not found in directory: {0}", destinationDir.FullPath);
+        return;
+    }
+
+    Information("Adding @Deprecated annotation to: {0}", filePath.FullPath);
+
+    // Читаем содержимое файла
+    var lines = System.IO.File.ReadAllLines(filePath.FullPath).ToList();
+
+    // Ищем строку с объявлением класса
+    for (int i = 0; i < lines.Count; i++)
+    {
+        if (lines[i].StartsWith("public final class"))
+        {
+            // Добавляем @Deprecated перед объявлением класса
+            lines.Insert(i, "@Deprecated");
+            break;
+        }
+    }
+
+    // Сохраняем изменённый файл
+    System.IO.File.WriteAllLines(filePath.FullPath, lines);
+
+    Information("Added @Deprecated annotation to CloudSignProtos.");
+}
+
 
 Task("Generate-Version-Info")
 	.Does(() =>
@@ -207,7 +186,6 @@ public void CompileProtoFiles(IEnumerable<FilePath> files, DirectoryPath sourceP
     var protocArguments = new ProcessSettings()
         .WithArguments(args => args
             .Append("-I=" + sourceProtoDir.FullPath)
-            .Append("-I=" + includeDir.FullPath)
             .Append("--java_out=" + destinationProtoDir.FullPath));
 
 	foreach (var file in files)

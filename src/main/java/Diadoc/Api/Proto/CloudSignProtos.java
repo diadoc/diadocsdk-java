@@ -3,11 +3,11 @@
 
 package Diadoc.Api.Proto;
 
+@Deprecated
 public final class CloudSignProtos {
   private CloudSignProtos() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
-    registry.add(Diadoc.Api.Proto.CloudSignProtos.fileDeprecated);
   }
   public interface CloudSignRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CloudSignRequest)
@@ -3186,17 +3186,6 @@ public final class CloudSignProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.AutosignReceiptsResult)
   }
 
-  public static final int FILE_DEPRECATED_FIELD_NUMBER = 50001;
-  /**
-   * <code>extend .google.protobuf.FileOptions { ... }</code>
-   */
-  public static final
-    com.google.protobuf.GeneratedMessage.GeneratedExtension<
-      com.google.protobuf.DescriptorProtos.FileOptions,
-      java.lang.Boolean> fileDeprecated = com.google.protobuf.GeneratedMessage
-          .newFileScopedGeneratedExtension(
-        java.lang.Boolean.class,
-        null);
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor;
   private static
@@ -3232,20 +3221,17 @@ public final class CloudSignProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\017CloudSign.proto\022\020Diadoc.Api.Proto\032\020Con" +
-      "tent_v2.proto\032 google/protobuf/descripto" +
-      "r.proto\"J\n\020CloudSignRequest\0222\n\005Files\030\001 \003" +
-      "(\0132\037.Diadoc.Api.Proto.CloudSignFileB\002\030\001:" +
-      "\002\030\001\"r\n\rCloudSignFile\0221\n\007Content\030\001 \001(\0132\034." +
-      "Diadoc.Api.Proto.Content_v2B\002\030\001\022\024\n\010FileN" +
-      "ame\030\002 \001(\tB\002\030\001\022\030\n\ndeprecated\030\003 \001(\010:\004true\"" +
-      "(\n\017CloudSignResult\022\021\n\005Token\030\001 \001(\tB\002\030\001:\002\030" +
-      "\001\"R\n\026CloudSignConfirmResult\0224\n\nSignature" +
-      "s\030\001 \003(\0132\034.Diadoc.Api.Proto.Content_v2B\002\030",
-      "\001:\002\030\001\"W\n\026AutosignReceiptsResult\022\037\n\023Signe" +
-      "dReceiptsCount\030\001 \002(\003B\002\030\001\022\030\n\014NextBatchKey" +
-      "\030\002 \002(\tB\002\030\001:\002\030\001:7\n\017file_deprecated\022\034.goog" +
-      "le.protobuf.FileOptions\030\321\206\003 \001(\010B\025B\017Cloud" +
-      "SignProtos\210\265\030\001"
+      "tent_v2.proto\"J\n\020CloudSignRequest\0222\n\005Fil" +
+      "es\030\001 \003(\0132\037.Diadoc.Api.Proto.CloudSignFil" +
+      "eB\002\030\001:\002\030\001\"r\n\rCloudSignFile\0221\n\007Content\030\001 " +
+      "\001(\0132\034.Diadoc.Api.Proto.Content_v2B\002\030\001\022\024\n" +
+      "\010FileName\030\002 \001(\tB\002\030\001\022\030\n\ndeprecated\030\003 \001(\010:" +
+      "\004true\"(\n\017CloudSignResult\022\021\n\005Token\030\001 \001(\tB" +
+      "\002\030\001:\002\030\001\"R\n\026CloudSignConfirmResult\0224\n\nSig" +
+      "natures\030\001 \003(\0132\034.Diadoc.Api.Proto.Content" +
+      "_v2B\002\030\001:\002\030\001\"W\n\026AutosignReceiptsResult\022\037\n",
+      "\023SignedReceiptsCount\030\001 \002(\003B\002\030\001\022\030\n\014NextBa" +
+      "tchKey\030\002 \002(\tB\002\030\001:\002\030\001B\021B\017CloudSignProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3259,7 +3245,6 @@ public final class CloudSignProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Content_v2Protos.getDescriptor(),
-          com.google.protobuf.DescriptorProtos.getDescriptor(),
         }, assigner);
     internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3291,14 +3276,7 @@ public final class CloudSignProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_AutosignReceiptsResult_descriptor,
         new java.lang.String[] { "SignedReceiptsCount", "NextBatchKey", });
-    fileDeprecated.internalInit(descriptor.getExtensions().get(0));
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(Diadoc.Api.Proto.CloudSignProtos.fileDeprecated);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
     Diadoc.Api.Proto.Content_v2Protos.getDescriptor();
-    com.google.protobuf.DescriptorProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
