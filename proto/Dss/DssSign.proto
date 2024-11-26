@@ -2,6 +2,8 @@ import "Content_v3.proto";
 
 package Diadoc.Api.Proto.Dss;
 
+option java_outer_classname = "DssSignProtos";
+
 message DssSignRequest
 {
 	repeated DssSignFile Files = 1;
@@ -12,6 +14,7 @@ message DssSignFile
 	required Content_v3 Content = 1;
 	optional string FileName = 2;
 }
+
 
 enum DssConfirmType {
 	ConfirmTypeUnknown = -1;
@@ -28,28 +31,27 @@ enum DssOperator {
 	Kontur = 2;
 }
 
-message DssSignResult
-{
+message DssSignResult {
 	optional DssOperationStatus OperationStatus = 1 [default = Unknown];
 	repeated DssFileSigningResult FileSigningResults = 2;
 	optional DssConfirmType ConfirmType = 3 [default = ConfirmTypeUnknown];
 	optional DssOperator Operator = 4 [default = OperatorUnknown];
 	optional string PhoneLastNumbers = 5;
 }
- 
+
 message DssFileSigningResult
 {
 	optional DssFileSigningStatus FileSigningStatus = 1 [default = UnknownSigningStatus];
 	optional bytes Signature = 2;
 }
- 
+
 enum DssFileSigningStatus
 {
 	UnknownSigningStatus = 0;
 	SigningCompleted = 1;
 	SigningError = 2;
 }
- 
+
 enum DssOperationStatus
 {
 	Unknown = 0;

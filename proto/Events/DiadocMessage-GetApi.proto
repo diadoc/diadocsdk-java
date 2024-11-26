@@ -21,6 +21,8 @@ import "OuterDocflows/OuterDocflow.proto";
 
 package Diadoc.Api.Proto.Events;
 
+option java_outer_classname = "DiadocMessage_GetApiProtos";
+
 message BoxEventList {
 	repeated BoxEvent Events = 1;
 	optional int32 TotalCount = 2;
@@ -31,6 +33,7 @@ message BoxEvent {
 	required string EventId = 1;
 	optional Message Message = 2;
 	optional MessagePatch Patch = 3;
+	optional string IndexKey = 4;
 }
 
 message Message {
@@ -123,7 +126,7 @@ message Entity {
 	optional string Version = 26;
 	optional TemplateTransformationInfo TemplateTransformationInfo = 27;
 	optional TemplateRefusalInfo TemplateRefusalInfo = 28;
-	optional OuterDocflows.OuterDocflowInfo OuterDocflow = 29;
+	optional OuterDocflows.OuterDocflowInfo OuterDocflow = 29;	
 	optional RevocationRequestInfo RevocationRequestInfo = 30;
 	optional string ContentTypeId = 31;
 	optional PowerOfAttorneyInfo PowerOfAttorneyInfo = 32;

@@ -12,6 +12,8 @@ import "Docflow/RoamingNotification.proto";
 
 package Diadoc.Api.Proto.Docflow;
 
+option java_outer_classname = "DocflowProtos";
+
 message Docflow
 {
 	optional bool IsFinished = 1;

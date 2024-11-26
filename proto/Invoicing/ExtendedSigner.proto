@@ -2,6 +2,8 @@ import "Events/PowerOfAttorneyToPost.proto";
 
 package Diadoc.Api.Proto.Invoicing.Signers;
 
+option java_outer_classname = "ExtendedSignerProtos";
+
 message ExtendedSigner {
 	optional string BoxId = 1;
 	optional bytes SignerCertificate = 2;
@@ -82,7 +84,7 @@ enum DocumentTitleType {
 	TovTorg551Buyer = 5;         // Данные для титула покупателя формата приказа 551
 	AccCert552Seller = 6;        // Данные для титула исполнителя формата приказа 552
 	AccCert552Buyer = 7;         // Данные для титула заказчика формата приказа 552
-	Utd820Buyer = 8;             // Данные для титула покупателя УПД формата приказа 820
+	Utd820Buyer = 8;             // Данные для титула покупателя УПД формата приказа 820 
 	Torg2Buyer = 9;              // Данные для титула покупателя приказа 423
 	Torg2AdditionalInfo = 10;    // Данные для титула дополнительных сведений приказа 423
 	Ucd736Buyer = 11;            // Данные для титула покупателя УКД формата приказа 736

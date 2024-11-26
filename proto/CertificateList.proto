@@ -1,6 +1,8 @@
 import "CertificateInfoV2.proto";
 package Diadoc.Api.Proto;
 
+option java_outer_classname = "CertificateListProtos";
+
 message CertificateList {
-	repeated CertificateInfoV2 Certificates = 1;
+	repeated CertificateInfoV2 Certificates = 1 [deprecated = true];
 }
