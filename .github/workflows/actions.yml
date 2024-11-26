@@ -6,6 +6,7 @@ on:
 env:
   JCP_VERSION: 2.0.40450-A
   JCP_FILENAME_PREFIX: jcp-
+  DIADOC_SIGNING_SECRET: ${{ secrets.DIADOC_SIGNING_SECRET }}
       
 jobs:
   build:
@@ -27,7 +28,7 @@ jobs:
           openssl enc -d -aes-256-cbc \
             -in ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip.enc \
             -out ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip \
-            -pass ${{ secrets.DIADOC_SIGNING_SECRET }}
+            -pass env:DIADOC_SIGNING_SECRET
           
           unzip -o ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip \
             -d ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
