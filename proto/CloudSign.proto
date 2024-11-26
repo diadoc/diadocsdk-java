@@ -3,7 +3,7 @@ import "Content_v2.proto";
 package Diadoc.Api.Proto;
 
 message CloudSignRequest {
-	repeated CloudSignFile Files = 1; 
+	repeated CloudSignFile Files = 1;
 }
 
 message CloudSignFile {
