@@ -3,23 +3,23 @@ import "Content_v2.proto";
 package Diadoc.Api.Proto;
 
 message CloudSignRequest {
-	repeated CloudSignFile Files = 1; 
+	repeated CloudSignFile Files = 1 [deprecated = true];
 }
 
 message CloudSignFile {
-	optional Content_v2 Content = 1;
-	optional string FileName = 2;
+	optional Content_v2 Content = 1 [deprecated = true];
+	optional string FileName = 2 [deprecated = true];
 }
 
 message CloudSignResult {
-	optional string Token = 1;
+	optional string Token = 1 [deprecated = true];
 }
 
 message CloudSignConfirmResult {
-	repeated Content_v2 Signatures = 1;
+	repeated Content_v2 Signatures = 1 [deprecated = true];
 }
 
 message AutosignReceiptsResult {
-	required int64 SignedReceiptsCount = 1;
-	required string NextBatchKey = 2;
+	required int64 SignedReceiptsCount = 1 [deprecated = true];
+	required string NextBatchKey = 2 [deprecated = true];
 }

@@ -27,6 +27,10 @@ public class SignClient {
         return cloudSign(request, null);
     }
 
+    /**
+     * @deprecated Этот метод будет удалён в следующей мажорной версии.
+     * Для сценариев с подписаниями используйте методы: dssSign и dssSignResult
+     */
     public AsyncMethodResult cloudSign(CloudSignRequest cloudSignRequest, @Nullable String certificateThumbprint) throws DiadocSdkException {
         if (cloudSignRequest == null) {
             throw new IllegalArgumentException("cloudSignRequest");
@@ -45,6 +49,10 @@ public class SignClient {
         }
     }
 
+    /**
+     * @deprecated Этот метод будет удалён в следующей мажорной версии.
+     * Для сценариев с подписаниями используйте методы: {@link #dssSign(String, DssSignRequest)} и {@link #dssSignResult(String, String)}
+     */
     public CloudSignResult waitCloudSignResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException {
         try {
             var data = diadocHttpClient.waitTaskResult("/CloudSignResult", taskId, timeoutInMillis);
@@ -54,6 +62,10 @@ public class SignClient {
         }
     }
 
+    /**
+     * @deprecated Этот метод будет удалён в следующей мажорной версии.
+     * Для сценариев с подписаниями используйте методы: {@link #dssSign(String, DssSignRequest)} и {@link #dssSignResult(String, String)}
+     */
     public AsyncMethodResult cloudSignConfirm(String token, String confirmationCode, boolean returnContent) throws DiadocSdkException {
         try {
             var url = new URIBuilder(diadocHttpClient.getBaseUrl())
@@ -204,11 +216,11 @@ public class SignClient {
         try {
             var result = diadocHttpClient.performRequest(
                     RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/V2/ExtendedSignerDetails")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("thumbprint", thumbprint)
-                                    .addParameter("documentTitleType", Integer.toString(documentTitleType.getNumber())).build())
+                                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                                            .setPath("/V2/ExtendedSignerDetails")
+                                            .addParameter("boxId", boxId)
+                                            .addParameter("thumbprint", thumbprint)
+                                            .addParameter("documentTitleType", Integer.toString(documentTitleType.getNumber())).build())
                             .setEntity(new ByteArrayEntity(signerDetails.toByteArray())));
             return ExtendedSignerDetails.parseFrom(result);
 

@@ -41,18 +41,54 @@ Task("ExtractProtobuf")
 	});
 
 Task("GenerateProtoFiles")
-	.IsDependentOn("ExtractProtobuf")
-	.Does(() =>
-	{
-		var sourceProtoDir = new DirectoryPath("./proto/").MakeAbsolute(Context.Environment);
-		var destinationProtoDir = new DirectoryPath("./src/main/java/").MakeAbsolute(Context.Environment);
+    .IsDependentOn("ExtractProtobuf")
+    .Does(() =>
+    {
+        var sourceProtoDir = new DirectoryPath("./proto/").MakeAbsolute(Context.Environment);
+        var destinationProtoDir = new DirectoryPath("./src/main/java/").MakeAbsolute(Context.Environment);
 
-		var protoFiles = GetFiles("./proto/**/*.proto");
-		var modifiedProtoDir = buildDir.Combine("modified_proto");
-		var patchedProtoFiles = PatchJavaProtoFiles(protoFiles, sourceProtoDir, modifiedProtoDir);
+        var protoFiles = GetFiles("./proto/**/*.proto");
+        var modifiedProtoDir = buildDir.Combine("modified_proto");
+        var patchedProtoFiles = PatchJavaProtoFiles(protoFiles, sourceProtoDir, modifiedProtoDir);
 
-		CompileProtoFiles(patchedProtoFiles, modifiedProtoDir, destinationProtoDir);
-	});
+        CompileProtoFiles(patchedProtoFiles, modifiedProtoDir, destinationProtoDir);
+
+        AddDeprecatedToCloudSignProtos(destinationProtoDir);
+    });
+
+public void AddDeprecatedToCloudSignProtos(DirectoryPath destinationDir)
+{
+    // Находим файл CloudSignProtos.java
+    var filePath = GetFiles(destinationDir.FullPath + "/**/CloudSignProtos.java").FirstOrDefault();
+
+    if (filePath == null)
+    {
+        Warning("CloudSignProtos.java not found in directory: {0}", destinationDir.FullPath);
+        return;
+    }
+
+    Information("Adding @Deprecated annotation to: {0}", filePath.FullPath);
+
+    // Читаем содержимое файла
+    var lines = System.IO.File.ReadAllLines(filePath.FullPath).ToList();
+
+    // Ищем строку с объявлением класса
+    for (int i = 0; i < lines.Count; i++)
+    {
+        if (lines[i].StartsWith("public final class"))
+        {
+            // Добавляем @Deprecated перед объявлением класса
+            lines.Insert(i, "@Deprecated");
+            break;
+        }
+    }
+
+    // Сохраняем изменённый файл
+    System.IO.File.WriteAllLines(filePath.FullPath, lines);
+
+    Information("Added @Deprecated annotation to CloudSignProtos.");
+}
+
 
 Task("Generate-Version-Info")
 	.Does(() =>
@@ -147,10 +183,10 @@ public void CompileProtoFiles(IEnumerable<FilePath> files, DirectoryPath sourceP
 {
 	CreateDirectory(destinationProtoDir);
 
-	var protocArguments = new ProcessSettings()
-		.WithArguments(args => args
-			.Append("-I=" + sourceProtoDir.FullPath)
-			.Append("--java_out=" + destinationProtoDir.FullPath));
+    var protocArguments = new ProcessSettings()
+        .WithArguments(args => args
+            .Append("-I=" + sourceProtoDir.FullPath)
+            .Append("--java_out=" + destinationProtoDir.FullPath));
 
 	foreach (var file in files)
 	{
@@ -222,7 +258,7 @@ public string GetSemanticVersionV2(string clearVersion)
 		{
 			return clearVersion;
 		}
-		
+
 		var buildNumber = workflow.RunNumber;
 		return $"{clearVersion}-CI{buildNumber}";
 	}
