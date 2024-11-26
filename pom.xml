@@ -169,6 +169,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <protoSourceRoot>${user.dir}/proto</protoSourceRoot>
                     <protocArtifact>
                         com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}
                     </protocArtifact>
