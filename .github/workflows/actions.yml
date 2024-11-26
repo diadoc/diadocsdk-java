@@ -27,7 +27,7 @@ jobs:
           openssl enc -d -aes-256-cbc \
             -in ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip.enc \
             -out ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip \
-            -pass env:DECRYPT_PASSWORD
+            -pass ${{ secrets.DIADOC_SIGNING_SECRET }}
           
           unzip -o ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip \
             -d ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
