@@ -175,6 +175,7 @@
                     </protocArtifact>
                     <outputDirectory>${user.dir}/src/main/java</outputDirectory>
                     <clearOutputDirectory>false</clearOutputDirectory>
+                    <useArgumentFile>true</useArgumentFile>
                 </configuration>
             </plugin>
 
