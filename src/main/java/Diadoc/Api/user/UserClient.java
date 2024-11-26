@@ -39,15 +39,21 @@ public class UserClient {
         }
     }
 
+    /**
+     * Метод устарел и будет удален.
+     * Пожалуйста, ознакомьтесь с документацией для подробной информации:
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/UpdateMyUser.html">документация по методу updateMyUser</a>
+     */
+    @Deprecated
     public UserV2 updateMyUser(UserToUpdate userToUpdate) throws DiadocSdkException {
         if (userToUpdate == null) {
             throw new IllegalArgumentException("userToUpdate");
         }
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/UpdateMyUser")
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/UpdateMyUser")
+                                    .build())
                     .setEntity(new ByteArrayEntity(userToUpdate.toByteArray()));
             return UserV2.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {

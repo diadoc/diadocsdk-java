@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto;
 
-public final class CloudSignProtos {
+@java.lang.Deprecated public final class CloudSignProtos {
   private CloudSignProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -783,14 +783,14 @@ public final class CloudSignProtos {
     /**
      * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-     *     See CloudSign.proto;l=12
+     *     See CloudSign.proto;l=14
      * @return Whether the content field is set.
      */
     @java.lang.Deprecated boolean hasContent();
     /**
      * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-     *     See CloudSign.proto;l=12
+     *     See CloudSign.proto;l=14
      * @return The content.
      */
     @java.lang.Deprecated Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent();
@@ -802,21 +802,21 @@ public final class CloudSignProtos {
     /**
      * <code>optional string FileName = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     *     See CloudSign.proto;l=15
      * @return Whether the fileName field is set.
      */
     @java.lang.Deprecated boolean hasFileName();
     /**
      * <code>optional string FileName = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     *     See CloudSign.proto;l=15
      * @return The fileName.
      */
     @java.lang.Deprecated java.lang.String getFileName();
     /**
      * <code>optional string FileName = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     *     See CloudSign.proto;l=15
      * @return The bytes for fileName.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -866,7 +866,7 @@ public final class CloudSignProtos {
     /**
      * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-     *     See CloudSign.proto;l=12
+     *     See CloudSign.proto;l=14
      * @return Whether the content field is set.
      */
     @java.lang.Override
@@ -876,7 +876,7 @@ public final class CloudSignProtos {
     /**
      * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-     *     See CloudSign.proto;l=12
+     *     See CloudSign.proto;l=14
      * @return The content.
      */
     @java.lang.Override
@@ -897,7 +897,7 @@ public final class CloudSignProtos {
     /**
      * <code>optional string FileName = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     *     See CloudSign.proto;l=15
      * @return Whether the fileName field is set.
      */
     @java.lang.Override
@@ -907,7 +907,7 @@ public final class CloudSignProtos {
     /**
      * <code>optional string FileName = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     *     See CloudSign.proto;l=15
      * @return The fileName.
      */
     @java.lang.Override
@@ -928,7 +928,7 @@ public final class CloudSignProtos {
     /**
      * <code>optional string FileName = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     *     See CloudSign.proto;l=15
      * @return The bytes for fileName.
      */
     @java.lang.Override
@@ -1308,7 +1308,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-       *     See CloudSign.proto;l=12
+       *     See CloudSign.proto;l=14
        * @return Whether the content field is set.
        */
       @java.lang.Deprecated public boolean hasContent() {
@@ -1317,7 +1317,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-       *     See CloudSign.proto;l=12
+       *     See CloudSign.proto;l=14
        * @return The content.
        */
       @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent() {
@@ -1431,7 +1431,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string FileName = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       *     See CloudSign.proto;l=15
        * @return Whether the fileName field is set.
        */
       @java.lang.Deprecated public boolean hasFileName() {
@@ -1440,7 +1440,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string FileName = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       *     See CloudSign.proto;l=15
        * @return The fileName.
        */
       @java.lang.Deprecated public java.lang.String getFileName() {
@@ -1460,7 +1460,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string FileName = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       *     See CloudSign.proto;l=15
        * @return The bytes for fileName.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1479,7 +1479,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string FileName = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       *     See CloudSign.proto;l=15
        * @param value The fileName to set.
        * @return This builder for chaining.
        */
@@ -1494,7 +1494,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string FileName = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       *     See CloudSign.proto;l=15
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearFileName() {
@@ -1506,7 +1506,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string FileName = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       *     See CloudSign.proto;l=15
        * @param value The bytes for fileName to set.
        * @return This builder for chaining.
        */
@@ -1577,21 +1577,21 @@ public final class CloudSignProtos {
     /**
      * <code>optional string Token = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     *     See CloudSign.proto;l=20
      * @return Whether the token field is set.
      */
     @java.lang.Deprecated boolean hasToken();
     /**
      * <code>optional string Token = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     *     See CloudSign.proto;l=20
      * @return The token.
      */
     @java.lang.Deprecated java.lang.String getToken();
     /**
      * <code>optional string Token = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     *     See CloudSign.proto;l=20
      * @return The bytes for token.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -1642,7 +1642,7 @@ public final class CloudSignProtos {
     /**
      * <code>optional string Token = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     *     See CloudSign.proto;l=20
      * @return Whether the token field is set.
      */
     @java.lang.Override
@@ -1652,7 +1652,7 @@ public final class CloudSignProtos {
     /**
      * <code>optional string Token = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     *     See CloudSign.proto;l=20
      * @return The token.
      */
     @java.lang.Override
@@ -1673,7 +1673,7 @@ public final class CloudSignProtos {
     /**
      * <code>optional string Token = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     *     See CloudSign.proto;l=20
      * @return The bytes for token.
      */
     @java.lang.Override
@@ -1997,7 +1997,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string Token = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       *     See CloudSign.proto;l=20
        * @return Whether the token field is set.
        */
       @java.lang.Deprecated public boolean hasToken() {
@@ -2006,7 +2006,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string Token = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       *     See CloudSign.proto;l=20
        * @return The token.
        */
       @java.lang.Deprecated public java.lang.String getToken() {
@@ -2026,7 +2026,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string Token = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       *     See CloudSign.proto;l=20
        * @return The bytes for token.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2045,7 +2045,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string Token = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       *     See CloudSign.proto;l=20
        * @param value The token to set.
        * @return This builder for chaining.
        */
@@ -2060,7 +2060,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string Token = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       *     See CloudSign.proto;l=20
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearToken() {
@@ -2072,7 +2072,7 @@ public final class CloudSignProtos {
       /**
        * <code>optional string Token = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       *     See CloudSign.proto;l=20
        * @param value The bytes for token to set.
        * @return This builder for chaining.
        */
@@ -2894,14 +2894,14 @@ public final class CloudSignProtos {
     /**
      * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-     *     See CloudSign.proto;l=28
+     *     See CloudSign.proto;l=30
      * @return Whether the signedReceiptsCount field is set.
      */
     @java.lang.Deprecated boolean hasSignedReceiptsCount();
     /**
      * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-     *     See CloudSign.proto;l=28
+     *     See CloudSign.proto;l=30
      * @return The signedReceiptsCount.
      */
     @java.lang.Deprecated long getSignedReceiptsCount();
@@ -2909,21 +2909,21 @@ public final class CloudSignProtos {
     /**
      * <code>required string NextBatchKey = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     *     See CloudSign.proto;l=31
      * @return Whether the nextBatchKey field is set.
      */
     @java.lang.Deprecated boolean hasNextBatchKey();
     /**
      * <code>required string NextBatchKey = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     *     See CloudSign.proto;l=31
      * @return The nextBatchKey.
      */
     @java.lang.Deprecated java.lang.String getNextBatchKey();
     /**
      * <code>required string NextBatchKey = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     *     See CloudSign.proto;l=31
      * @return The bytes for nextBatchKey.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -2973,7 +2973,7 @@ public final class CloudSignProtos {
     /**
      * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-     *     See CloudSign.proto;l=28
+     *     See CloudSign.proto;l=30
      * @return Whether the signedReceiptsCount field is set.
      */
     @java.lang.Override
@@ -2983,7 +2983,7 @@ public final class CloudSignProtos {
     /**
      * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-     *     See CloudSign.proto;l=28
+     *     See CloudSign.proto;l=30
      * @return The signedReceiptsCount.
      */
     @java.lang.Override
@@ -2997,7 +2997,7 @@ public final class CloudSignProtos {
     /**
      * <code>required string NextBatchKey = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     *     See CloudSign.proto;l=31
      * @return Whether the nextBatchKey field is set.
      */
     @java.lang.Override
@@ -3007,7 +3007,7 @@ public final class CloudSignProtos {
     /**
      * <code>required string NextBatchKey = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     *     See CloudSign.proto;l=31
      * @return The nextBatchKey.
      */
     @java.lang.Override
@@ -3028,7 +3028,7 @@ public final class CloudSignProtos {
     /**
      * <code>required string NextBatchKey = 2 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     *     See CloudSign.proto;l=31
      * @return The bytes for nextBatchKey.
      */
     @java.lang.Override
@@ -3396,7 +3396,7 @@ public final class CloudSignProtos {
       /**
        * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-       *     See CloudSign.proto;l=28
+       *     See CloudSign.proto;l=30
        * @return Whether the signedReceiptsCount field is set.
        */
       @java.lang.Override
@@ -3406,7 +3406,7 @@ public final class CloudSignProtos {
       /**
        * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-       *     See CloudSign.proto;l=28
+       *     See CloudSign.proto;l=30
        * @return The signedReceiptsCount.
        */
       @java.lang.Override
@@ -3416,7 +3416,7 @@ public final class CloudSignProtos {
       /**
        * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-       *     See CloudSign.proto;l=28
+       *     See CloudSign.proto;l=30
        * @param value The signedReceiptsCount to set.
        * @return This builder for chaining.
        */
@@ -3430,7 +3430,7 @@ public final class CloudSignProtos {
       /**
        * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-       *     See CloudSign.proto;l=28
+       *     See CloudSign.proto;l=30
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSignedReceiptsCount() {
@@ -3444,7 +3444,7 @@ public final class CloudSignProtos {
       /**
        * <code>required string NextBatchKey = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       *     See CloudSign.proto;l=31
        * @return Whether the nextBatchKey field is set.
        */
       @java.lang.Deprecated public boolean hasNextBatchKey() {
@@ -3453,7 +3453,7 @@ public final class CloudSignProtos {
       /**
        * <code>required string NextBatchKey = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       *     See CloudSign.proto;l=31
        * @return The nextBatchKey.
        */
       @java.lang.Deprecated public java.lang.String getNextBatchKey() {
@@ -3473,7 +3473,7 @@ public final class CloudSignProtos {
       /**
        * <code>required string NextBatchKey = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       *     See CloudSign.proto;l=31
        * @return The bytes for nextBatchKey.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -3492,7 +3492,7 @@ public final class CloudSignProtos {
       /**
        * <code>required string NextBatchKey = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       *     See CloudSign.proto;l=31
        * @param value The nextBatchKey to set.
        * @return This builder for chaining.
        */
@@ -3507,7 +3507,7 @@ public final class CloudSignProtos {
       /**
        * <code>required string NextBatchKey = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       *     See CloudSign.proto;l=31
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearNextBatchKey() {
@@ -3519,7 +3519,7 @@ public final class CloudSignProtos {
       /**
        * <code>required string NextBatchKey = 2 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       *     See CloudSign.proto;l=31
        * @param value The bytes for nextBatchKey to set.
        * @return This builder for chaining.
        */
@@ -3627,8 +3627,8 @@ public final class CloudSignProtos {
       "nfirmResult\0224\n\nSignatures\030\001 \003(\0132\034.Diadoc" +
       ".Api.Proto.Content_v2B\002\030\001:\002\030\001\"W\n\026Autosig" +
       "nReceiptsResult\022\037\n\023SignedReceiptsCount\030\001" +
-      " \002(\003B\002\030\001\022\030\n\014NextBatchKey\030\002 \002(\tB\002\030\001:\002\030\001B\021" +
-      "B\017CloudSignProtos"
+      " \002(\003B\002\030\001\022\030\n\014NextBatchKey\030\002 \002(\tB\002\030\001:\002\030\001B\024" +
+      "B\017CloudSignProtos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

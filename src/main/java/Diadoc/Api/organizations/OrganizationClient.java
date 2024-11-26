@@ -76,10 +76,10 @@ public class OrganizationClient {
             throw new IllegalArgumentException("innListRequest");
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/GetOrganizationsByInnList")
-                            .addParameter("myOrgId", myOrgId)
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/GetOrganizationsByInnList")
+                                    .addParameter("myOrgId", myOrgId)
+                                    .build())
                     .setEntity(new ByteArrayEntity(innListRequest.toByteArray()));
 
 
@@ -103,9 +103,9 @@ public class OrganizationClient {
         }
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/GetOrganizationsByInnList")
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/GetOrganizationsByInnList")
+                                    .build())
                     .setEntity(new ByteArrayEntity(innListRequest.toByteArray()));
             var response = GetOrganizationsByInnListResponse.parseFrom(diadocHttpClient.performRequest(request));
             return response
@@ -165,9 +165,9 @@ public class OrganizationClient {
     }
 
     /**
-     * Use getOrganizationUsersV2 instead
+     * @deprecated Метод устарел.
+     * Используйте {@link #getOrganizationUsersV2
      */
-
     @Deprecated
     public OrganizationUsersList getOrganizationUsers(String orgId) throws DiadocSdkException {
         try {
@@ -181,7 +181,7 @@ public class OrganizationClient {
             throw new DiadocSdkException(e);
         }
     }
-    
+
     public OrganizationUsersList getOrganizationUsersV2(String boxId) throws DiadocSdkException {
         try {
             var request = RequestBuilder.get(
@@ -195,6 +195,11 @@ public class OrganizationClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link Diadoc.Api.employee.EmployeeClient#getMyEmployee(String)}
+     */
+    @Deprecated
     public OrganizationUserPermissions getMyPermissions(String orgId) throws DiadocSdkException {
         if (orgId == null) {
             throw new IllegalArgumentException("orgId");
@@ -249,9 +254,9 @@ public class OrganizationClient {
     public RegistrationResponse register(RegistrationRequest registrationRequest) throws DiadocSdkException {
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/Register")
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/Register")
+                                    .build())
                     .setEntity(new ByteArrayEntity(registrationRequest.toByteArray()));
             return RegistrationResponse.parseFrom(diadocHttpClient.performRequest(request));
 
@@ -263,9 +268,9 @@ public class OrganizationClient {
     public void registerConfirm(RegistrationConfirmRequest registrationConfirmRequest) throws DiadocSdkException {
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/Register")
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/Register")
+                                    .build())
                     .setEntity(new ByteArrayEntity(registrationConfirmRequest.toByteArray()));
             diadocHttpClient.performRequest(request);
 
@@ -284,10 +289,10 @@ public class OrganizationClient {
 
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/CanSendInvoice")
-                            .addParameter("boxId", boxId)
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/CanSendInvoice")
+                                    .addParameter("boxId", boxId)
+                                    .build())
                     .setEntity(new ByteArrayEntity(certBytes));
 
             var response = diadocHttpClient.getResponse(request);

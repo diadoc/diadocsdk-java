@@ -38,6 +38,11 @@ public class DocumentTypeClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #detectDocumentTitles(String, String)}
+     */
+    @Deprecated
     public DetectDocumentTypesResponse detectDocumentTypes(String boxId, String nameOnShelf) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
@@ -60,16 +65,21 @@ public class DocumentTypeClient {
 
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #detectDocumentTitles(String, byte[])}
+     */
+    @Deprecated
     public DetectDocumentTypesResponse detectDocumentTypes(String boxId, byte[] content) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/DetectDocumentTypes")
-                            .addParameter("boxId", boxId)
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/DetectDocumentTypes")
+                                    .addParameter("boxId", boxId)
+                                    .build())
                     .setEntity(new ByteArrayEntity(content));
             return DetectDocumentTypesResponse.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
@@ -138,10 +148,10 @@ public class DocumentTypeClient {
 
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/DetectDocumentTitles")
-                            .addParameter("boxId", boxId)
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/DetectDocumentTitles")
+                                    .addParameter("boxId", boxId)
+                                    .build())
                     .setEntity(new ByteArrayEntity(content));
             return DetectTitleResponse.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
