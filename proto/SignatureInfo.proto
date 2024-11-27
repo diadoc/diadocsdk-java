@@ -1,4 +1,4 @@
-import "CertificateInfoV2.proto";
+import "Certificates/CertificateInfoV2.proto";
 import "SignatureVerificationResult.proto";
 import "Timestamp.proto";
 
@@ -23,5 +23,5 @@ message SignatureInfo
 	optional string Surname = 13;     //Фамилия 
 	optional string Snils = 14;       //СНИЛС 
 	optional string Email = 15;       //Email 
-	optional CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType]; // Тип владельца сертификата
+	optional Certificates.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType]; // Тип владельца сертификата
 }

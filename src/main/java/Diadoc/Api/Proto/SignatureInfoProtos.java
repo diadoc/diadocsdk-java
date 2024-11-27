@@ -463,7 +463,7 @@ public final class SignatureInfoProtos {
      * Тип владельца сертификата
      * </pre>
      *
-     * <code>optional .Diadoc.Api.Proto.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
+     * <code>optional .Diadoc.Api.Proto.Certificates.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
      * @return Whether the certificateSubjectType field is set.
      */
     boolean hasCertificateSubjectType();
@@ -472,10 +472,10 @@ public final class SignatureInfoProtos {
      * Тип владельца сертификата
      * </pre>
      *
-     * <code>optional .Diadoc.Api.Proto.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
+     * <code>optional .Diadoc.Api.Proto.Certificates.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
      * @return The certificateSubjectType.
      */
-    Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType getCertificateSubjectType();
+    Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType getCertificateSubjectType();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.SignatureInfo}
@@ -1381,7 +1381,7 @@ public final class SignatureInfoProtos {
      * Тип владельца сертификата
      * </pre>
      *
-     * <code>optional .Diadoc.Api.Proto.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
+     * <code>optional .Diadoc.Api.Proto.Certificates.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
      * @return Whether the certificateSubjectType field is set.
      */
     @java.lang.Override public boolean hasCertificateSubjectType() {
@@ -1392,12 +1392,12 @@ public final class SignatureInfoProtos {
      * Тип владельца сертификата
      * </pre>
      *
-     * <code>optional .Diadoc.Api.Proto.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
+     * <code>optional .Diadoc.Api.Proto.Certificates.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
      * @return The certificateSubjectType.
      */
-    @java.lang.Override public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType getCertificateSubjectType() {
-      Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType result = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.forNumber(certificateSubjectType_);
-      return result == null ? Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType : result;
+    @java.lang.Override public Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType getCertificateSubjectType() {
+      Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType result = Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType.forNumber(certificateSubjectType_);
+      return result == null ? Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2209,8 +2209,8 @@ public final class SignatureInfoProtos {
               } // case 122
               case 128: {
                 int tmpRaw = input.readEnum();
-                Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType tmpValue =
-                    Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.forNumber(tmpRaw);
+                Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType tmpValue =
+                    Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType.forNumber(tmpRaw);
                 if (tmpValue == null) {
                   mergeUnknownVarintField(16, tmpRaw);
                 } else {
@@ -3961,7 +3961,7 @@ public final class SignatureInfoProtos {
        * Тип владельца сертификата
        * </pre>
        *
-       * <code>optional .Diadoc.Api.Proto.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
+       * <code>optional .Diadoc.Api.Proto.Certificates.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
        * @return Whether the certificateSubjectType field is set.
        */
       @java.lang.Override public boolean hasCertificateSubjectType() {
@@ -3972,24 +3972,24 @@ public final class SignatureInfoProtos {
        * Тип владельца сертификата
        * </pre>
        *
-       * <code>optional .Diadoc.Api.Proto.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
+       * <code>optional .Diadoc.Api.Proto.Certificates.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
        * @return The certificateSubjectType.
        */
       @java.lang.Override
-      public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType getCertificateSubjectType() {
-        Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType result = Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.forNumber(certificateSubjectType_);
-        return result == null ? Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType : result;
+      public Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType getCertificateSubjectType() {
+        Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType result = Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType.forNumber(certificateSubjectType_);
+        return result == null ? Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType.UnknownCertificateSubjectType : result;
       }
       /**
        * <pre>
        * Тип владельца сертификата
        * </pre>
        *
-       * <code>optional .Diadoc.Api.Proto.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
+       * <code>optional .Diadoc.Api.Proto.Certificates.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
        * @param value The certificateSubjectType to set.
        * @return This builder for chaining.
        */
-      public Builder setCertificateSubjectType(Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateSubjectType value) {
+      public Builder setCertificateSubjectType(Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.CertificateSubjectType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4003,7 +4003,7 @@ public final class SignatureInfoProtos {
        * Тип владельца сертификата
        * </pre>
        *
-       * <code>optional .Diadoc.Api.Proto.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
+       * <code>optional .Diadoc.Api.Proto.Certificates.CertificateSubjectType CertificateSubjectType = 16 [default = UnknownCertificateSubjectType];</code>
        * @return This builder for chaining.
        */
       public Builder clearCertificateSubjectType() {
@@ -4079,27 +4079,28 @@ public final class SignatureInfoProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\023SignatureInfo.proto\022\020Diadoc.Api.Proto\032" +
-      "\027CertificateInfoV2.proto\032!SignatureVerif" +
-      "icationResult.proto\032\017Timestamp.proto\"\221\004\n" +
-      "\rSignatureInfo\0220\n\013SigningTime\030\001 \002(\0132\033.Di" +
-      "adoc.Api.Proto.Timestamp\022>\n\031SignatureVer" +
-      "ificationTime\030\002 \001(\0132\033.Diadoc.Api.Proto.T" +
-      "imestamp\022R\n\033SignatureVerificationResult\030" +
-      "\003 \001(\0132-.Diadoc.Api.Proto.SignatureVerifi" +
-      "cationResult\022\022\n\nThumbprint\030\004 \002(\t\022\024\n\014Seri" +
-      "alNumber\030\005 \002(\t\022\016\n\006Issuer\030\006 \001(\t\022\021\n\tStartD" +
-      "ate\030\007 \001(\t\022\017\n\007EndDate\030\010 \001(\t\022\017\n\007OrgName\030\t " +
-      "\001(\t\022\016\n\006OrgInn\030\n \001(\t\022\020\n\010JobTitle\030\013 \001(\t\022\021\n" +
-      "\tFirstName\030\014 \001(\t\022\017\n\007Surname\030\r \001(\t\022\r\n\005Sni" +
-      "ls\030\016 \001(\t\022\r\n\005Email\030\017 \001(\t\022g\n\026CertificateSu" +
-      "bjectType\030\020 \001(\0162(.Diadoc.Api.Proto.Certi" +
-      "ficateSubjectType:\035UnknownCertificateSub" +
-      "jectTypeB\025B\023SignatureInfoProtos"
+      "$Certificates/CertificateInfoV2.proto\032!S" +
+      "ignatureVerificationResult.proto\032\017Timest" +
+      "amp.proto\"\236\004\n\rSignatureInfo\0220\n\013SigningTi" +
+      "me\030\001 \002(\0132\033.Diadoc.Api.Proto.Timestamp\022>\n" +
+      "\031SignatureVerificationTime\030\002 \001(\0132\033.Diado" +
+      "c.Api.Proto.Timestamp\022R\n\033SignatureVerifi" +
+      "cationResult\030\003 \001(\0132-.Diadoc.Api.Proto.Si" +
+      "gnatureVerificationResult\022\022\n\nThumbprint\030" +
+      "\004 \002(\t\022\024\n\014SerialNumber\030\005 \002(\t\022\016\n\006Issuer\030\006 " +
+      "\001(\t\022\021\n\tStartDate\030\007 \001(\t\022\017\n\007EndDate\030\010 \001(\t\022" +
+      "\017\n\007OrgName\030\t \001(\t\022\016\n\006OrgInn\030\n \001(\t\022\020\n\010JobT" +
+      "itle\030\013 \001(\t\022\021\n\tFirstName\030\014 \001(\t\022\017\n\007Surname" +
+      "\030\r \001(\t\022\r\n\005Snils\030\016 \001(\t\022\r\n\005Email\030\017 \001(\t\022t\n\026" +
+      "CertificateSubjectType\030\020 \001(\01625.Diadoc.Ap" +
+      "i.Proto.Certificates.CertificateSubjectT" +
+      "ype:\035UnknownCertificateSubjectTypeB\025B\023Si" +
+      "gnatureInfoProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          Diadoc.Api.Proto.CertificateInfoV2Protos.getDescriptor(),
+          Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.getDescriptor(),
           Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor(),
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
         });
@@ -4110,7 +4111,7 @@ public final class SignatureInfoProtos {
         internal_static_Diadoc_Api_Proto_SignatureInfo_descriptor,
         new java.lang.String[] { "SigningTime", "SignatureVerificationTime", "SignatureVerificationResult", "Thumbprint", "SerialNumber", "Issuer", "StartDate", "EndDate", "OrgName", "OrgInn", "JobTitle", "FirstName", "Surname", "Snils", "Email", "CertificateSubjectType", });
     descriptor.resolveAllFeaturesImmutable();
-    Diadoc.Api.Proto.CertificateInfoV2Protos.getDescriptor();
+    Diadoc.Api.Proto.Certificates.CertificateInfoV2Protos.getDescriptor();
     Diadoc.Api.Proto.SignatureVerificationResultProtos.getDescriptor();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
   }
