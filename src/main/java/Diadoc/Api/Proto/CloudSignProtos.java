@@ -793,11 +793,11 @@ package Diadoc.Api.Proto;
      *     See CloudSign.proto;l=14
      * @return The content.
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent();
+    @java.lang.Deprecated Diadoc.Api.Proto.ContentV2.Content_v2 getContent();
     /**
      * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder();
+    @java.lang.Deprecated Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder getContentOrBuilder();
 
     /**
      * <code>optional string FileName = 2 [deprecated = true];</code>
@@ -862,7 +862,7 @@ package Diadoc.Api.Proto;
 
     private int bitField0_;
     public static final int CONTENT_FIELD_NUMBER = 1;
-    private Diadoc.Api.Proto.Content_v2Protos.Content_v2 content_;
+    private Diadoc.Api.Proto.ContentV2.Content_v2 content_;
     /**
      * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
      * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
@@ -880,15 +880,15 @@ package Diadoc.Api.Proto;
      * @return The content.
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent() {
-      return content_ == null ? Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance() : content_;
+    @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2 getContent() {
+      return content_ == null ? Diadoc.Api.Proto.ContentV2.Content_v2.getDefaultInstance() : content_;
     }
     /**
      * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder() {
-      return content_ == null ? Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance() : content_;
+    @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder getContentOrBuilder() {
+      return content_ == null ? Diadoc.Api.Proto.ContentV2.Content_v2.getDefaultInstance() : content_;
     }
 
     public static final int FILENAME_FIELD_NUMBER = 2;
@@ -1302,9 +1302,9 @@ package Diadoc.Api.Proto;
       }
       private int bitField0_;
 
-      private Diadoc.Api.Proto.Content_v2Protos.Content_v2 content_;
+      private Diadoc.Api.Proto.ContentV2.Content_v2 content_;
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> contentBuilder_;
+          Diadoc.Api.Proto.ContentV2.Content_v2, Diadoc.Api.Proto.ContentV2.Content_v2.Builder, Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder> contentBuilder_;
       /**
        * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
        * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
@@ -1320,9 +1320,9 @@ package Diadoc.Api.Proto;
        *     See CloudSign.proto;l=14
        * @return The content.
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent() {
+      @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2 getContent() {
         if (contentBuilder_ == null) {
-          return content_ == null ? Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance() : content_;
+          return content_ == null ? Diadoc.Api.Proto.ContentV2.Content_v2.getDefaultInstance() : content_;
         } else {
           return contentBuilder_.getMessage();
         }
@@ -1330,7 +1330,7 @@ package Diadoc.Api.Proto;
       /**
        * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Builder setContent(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
+      @java.lang.Deprecated public Builder setContent(Diadoc.Api.Proto.ContentV2.Content_v2 value) {
         if (contentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1347,7 +1347,7 @@ package Diadoc.Api.Proto;
        * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setContent(
-          Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
+          Diadoc.Api.Proto.ContentV2.Content_v2.Builder builderForValue) {
         if (contentBuilder_ == null) {
           content_ = builderForValue.build();
         } else {
@@ -1360,11 +1360,11 @@ package Diadoc.Api.Proto;
       /**
        * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Builder mergeContent(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
+      @java.lang.Deprecated public Builder mergeContent(Diadoc.Api.Proto.ContentV2.Content_v2 value) {
         if (contentBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             content_ != null &&
-            content_ != Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance()) {
+            content_ != Diadoc.Api.Proto.ContentV2.Content_v2.getDefaultInstance()) {
             getContentBuilder().mergeFrom(value);
           } else {
             content_ = value;
@@ -1394,7 +1394,7 @@ package Diadoc.Api.Proto;
       /**
        * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder getContentBuilder() {
+      @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2.Builder getContentBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getContentFieldBuilder().getBuilder();
@@ -1402,23 +1402,23 @@ package Diadoc.Api.Proto;
       /**
        * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder() {
+      @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
           return contentBuilder_.getMessageOrBuilder();
         } else {
           return content_ == null ?
-              Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance() : content_;
+              Diadoc.Api.Proto.ContentV2.Content_v2.getDefaultInstance() : content_;
         }
       }
       /**
        * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
+          Diadoc.Api.Proto.ContentV2.Content_v2, Diadoc.Api.Proto.ContentV2.Content_v2.Builder, Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder> 
           getContentFieldBuilder() {
         if (contentBuilder_ == null) {
           contentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder>(
+              Diadoc.Api.Proto.ContentV2.Content_v2, Diadoc.Api.Proto.ContentV2.Content_v2.Builder, Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder>(
                   getContent(),
                   getParentForChildren(),
                   isClean());
@@ -2143,12 +2143,12 @@ package Diadoc.Api.Proto;
     /**
      * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
      */
-    @java.lang.Deprecated java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> 
+    @java.lang.Deprecated java.util.List<Diadoc.Api.Proto.ContentV2.Content_v2> 
         getSignaturesList();
     /**
      * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index);
+    @java.lang.Deprecated Diadoc.Api.Proto.ContentV2.Content_v2 getSignatures(int index);
     /**
      * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
      */
@@ -2156,12 +2156,12 @@ package Diadoc.Api.Proto;
     /**
      * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
      */
-    @java.lang.Deprecated java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder> 
         getSignaturesOrBuilderList();
     /**
      * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
+    @java.lang.Deprecated Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder getSignaturesOrBuilder(
         int index);
   }
   /**
@@ -2204,19 +2204,19 @@ package Diadoc.Api.Proto;
 
     public static final int SIGNATURES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> signatures_;
+    private java.util.List<Diadoc.Api.Proto.ContentV2.Content_v2> signatures_;
     /**
      * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> getSignaturesList() {
+    @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.ContentV2.Content_v2> getSignaturesList() {
       return signatures_;
     }
     /**
      * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder> 
         getSignaturesOrBuilderList() {
       return signatures_;
     }
@@ -2231,14 +2231,14 @@ package Diadoc.Api.Proto;
      * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index) {
+    @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2 getSignatures(int index) {
       return signatures_.get(index);
     }
     /**
      * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
+    @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder getSignaturesOrBuilder(
         int index) {
       return signatures_.get(index);
     }
@@ -2567,9 +2567,9 @@ package Diadoc.Api.Proto;
                 done = true;
                 break;
               case 10: {
-                Diadoc.Api.Proto.Content_v2Protos.Content_v2 m =
+                Diadoc.Api.Proto.ContentV2.Content_v2 m =
                     input.readMessage(
-                        Diadoc.Api.Proto.Content_v2Protos.Content_v2.parser(),
+                        Diadoc.Api.Proto.ContentV2.Content_v2.parser(),
                         extensionRegistry);
                 if (signaturesBuilder_ == null) {
                   ensureSignaturesIsMutable();
@@ -2596,22 +2596,22 @@ package Diadoc.Api.Proto;
       }
       private int bitField0_;
 
-      private java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> signatures_ =
+      private java.util.List<Diadoc.Api.Proto.ContentV2.Content_v2> signatures_ =
         java.util.Collections.emptyList();
       private void ensureSignaturesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          signatures_ = new java.util.ArrayList<Diadoc.Api.Proto.Content_v2Protos.Content_v2>(signatures_);
+          signatures_ = new java.util.ArrayList<Diadoc.Api.Proto.ContentV2.Content_v2>(signatures_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> signaturesBuilder_;
+          Diadoc.Api.Proto.ContentV2.Content_v2, Diadoc.Api.Proto.ContentV2.Content_v2.Builder, Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder> signaturesBuilder_;
 
       /**
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> getSignaturesList() {
+      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.ContentV2.Content_v2> getSignaturesList() {
         if (signaturesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(signatures_);
         } else {
@@ -2631,7 +2631,7 @@ package Diadoc.Api.Proto;
       /**
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index) {
+      @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2 getSignatures(int index) {
         if (signaturesBuilder_ == null) {
           return signatures_.get(index);
         } else {
@@ -2642,7 +2642,7 @@ package Diadoc.Api.Proto;
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setSignatures(
-          int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
+          int index, Diadoc.Api.Proto.ContentV2.Content_v2 value) {
         if (signaturesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2659,7 +2659,7 @@ package Diadoc.Api.Proto;
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setSignatures(
-          int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
+          int index, Diadoc.Api.Proto.ContentV2.Content_v2.Builder builderForValue) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
           signatures_.set(index, builderForValue.build());
@@ -2672,7 +2672,7 @@ package Diadoc.Api.Proto;
       /**
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Builder addSignatures(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
+      @java.lang.Deprecated public Builder addSignatures(Diadoc.Api.Proto.ContentV2.Content_v2 value) {
         if (signaturesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2689,7 +2689,7 @@ package Diadoc.Api.Proto;
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder addSignatures(
-          int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
+          int index, Diadoc.Api.Proto.ContentV2.Content_v2 value) {
         if (signaturesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2706,7 +2706,7 @@ package Diadoc.Api.Proto;
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder addSignatures(
-          Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
+          Diadoc.Api.Proto.ContentV2.Content_v2.Builder builderForValue) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
           signatures_.add(builderForValue.build());
@@ -2720,7 +2720,7 @@ package Diadoc.Api.Proto;
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder addSignatures(
-          int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
+          int index, Diadoc.Api.Proto.ContentV2.Content_v2.Builder builderForValue) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
           signatures_.add(index, builderForValue.build());
@@ -2734,7 +2734,7 @@ package Diadoc.Api.Proto;
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder addAllSignatures(
-          java.lang.Iterable<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2> values) {
+          java.lang.Iterable<? extends Diadoc.Api.Proto.ContentV2.Content_v2> values) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2774,14 +2774,14 @@ package Diadoc.Api.Proto;
       /**
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder getSignaturesBuilder(
+      @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2.Builder getSignaturesBuilder(
           int index) {
         return getSignaturesFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
+      @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder getSignaturesOrBuilder(
           int index) {
         if (signaturesBuilder_ == null) {
           return signatures_.get(index);  } else {
@@ -2791,7 +2791,7 @@ package Diadoc.Api.Proto;
       /**
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder> 
            getSignaturesOrBuilderList() {
         if (signaturesBuilder_ != null) {
           return signaturesBuilder_.getMessageOrBuilderList();
@@ -2802,31 +2802,31 @@ package Diadoc.Api.Proto;
       /**
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder addSignaturesBuilder() {
+      @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2.Builder addSignaturesBuilder() {
         return getSignaturesFieldBuilder().addBuilder(
-            Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance());
+            Diadoc.Api.Proto.ContentV2.Content_v2.getDefaultInstance());
       }
       /**
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder addSignaturesBuilder(
+      @java.lang.Deprecated public Diadoc.Api.Proto.ContentV2.Content_v2.Builder addSignaturesBuilder(
           int index) {
         return getSignaturesFieldBuilder().addBuilder(
-            index, Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance());
+            index, Diadoc.Api.Proto.ContentV2.Content_v2.getDefaultInstance());
       }
       /**
        * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
        */
-      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder> 
+      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.ContentV2.Content_v2.Builder> 
            getSignaturesBuilderList() {
         return getSignaturesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
+          Diadoc.Api.Proto.ContentV2.Content_v2, Diadoc.Api.Proto.ContentV2.Content_v2.Builder, Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder> 
           getSignaturesFieldBuilder() {
         if (signaturesBuilder_ == null) {
           signaturesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder>(
+              Diadoc.Api.Proto.ContentV2.Content_v2, Diadoc.Api.Proto.ContentV2.Content_v2.Builder, Diadoc.Api.Proto.ContentV2.Content_v2OrBuilder>(
                   signatures_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -3633,7 +3633,7 @@ package Diadoc.Api.Proto;
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          Diadoc.Api.Proto.Content_v2Protos.getDescriptor(),
+          Diadoc.Api.Proto.ContentV2.getDescriptor(),
         });
     internal_static_Diadoc_Api_Proto_CloudSignRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3666,7 +3666,7 @@ package Diadoc.Api.Proto;
         internal_static_Diadoc_Api_Proto_AutosignReceiptsResult_descriptor,
         new java.lang.String[] { "SignedReceiptsCount", "NextBatchKey", });
     descriptor.resolveAllFeaturesImmutable();
-    Diadoc.Api.Proto.Content_v2Protos.getDescriptor();
+    Diadoc.Api.Proto.ContentV2.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

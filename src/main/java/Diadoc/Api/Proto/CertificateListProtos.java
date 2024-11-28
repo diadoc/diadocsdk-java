@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto;
 
-@java.lang.Deprecated public final class CertificateListProtos {
+public final class CertificateListProtos {
   private CertificateListProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -30,27 +30,27 @@ package Diadoc.Api.Proto;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
-    @java.lang.Deprecated java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2> 
+    java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2> 
         getCertificatesList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 getCertificates(int index);
+    Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 getCertificates(int index);
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
-    @java.lang.Deprecated int getCertificatesCount();
+    int getCertificatesCount();
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
-    @java.lang.Deprecated java.util.List<? extends Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder> 
+    java.util.List<? extends Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder> 
         getCertificatesOrBuilderList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder getCertificatesOrBuilder(
+    Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder getCertificatesOrBuilder(
         int index);
   }
   /**
@@ -95,39 +95,39 @@ package Diadoc.Api.Proto;
     @SuppressWarnings("serial")
     private java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2> certificates_;
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2> getCertificatesList() {
+    public java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2> getCertificatesList() {
       return certificates_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder> 
+    public java.util.List<? extends Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder> 
         getCertificatesOrBuilderList() {
       return certificates_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public int getCertificatesCount() {
+    public int getCertificatesCount() {
       return certificates_.size();
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 getCertificates(int index) {
+    public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 getCertificates(int index) {
       return certificates_.get(index);
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder getCertificatesOrBuilder(
+    public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder getCertificatesOrBuilder(
         int index) {
       return certificates_.get(index);
     }
@@ -498,9 +498,9 @@ package Diadoc.Api.Proto;
           Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2, Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder, Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder> certificatesBuilder_;
 
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2> getCertificatesList() {
+      public java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2> getCertificatesList() {
         if (certificatesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(certificates_);
         } else {
@@ -508,9 +508,9 @@ package Diadoc.Api.Proto;
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public int getCertificatesCount() {
+      public int getCertificatesCount() {
         if (certificatesBuilder_ == null) {
           return certificates_.size();
         } else {
@@ -518,9 +518,9 @@ package Diadoc.Api.Proto;
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 getCertificates(int index) {
+      public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 getCertificates(int index) {
         if (certificatesBuilder_ == null) {
           return certificates_.get(index);
         } else {
@@ -528,9 +528,9 @@ package Diadoc.Api.Proto;
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Builder setCertificates(
+      public Builder setCertificates(
           int index, Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 value) {
         if (certificatesBuilder_ == null) {
           if (value == null) {
@@ -545,9 +545,9 @@ package Diadoc.Api.Proto;
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Builder setCertificates(
+      public Builder setCertificates(
           int index, Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder builderForValue) {
         if (certificatesBuilder_ == null) {
           ensureCertificatesIsMutable();
@@ -559,9 +559,9 @@ package Diadoc.Api.Proto;
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Builder addCertificates(Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 value) {
+      public Builder addCertificates(Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 value) {
         if (certificatesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -575,9 +575,9 @@ package Diadoc.Api.Proto;
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Builder addCertificates(
+      public Builder addCertificates(
           int index, Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2 value) {
         if (certificatesBuilder_ == null) {
           if (value == null) {
@@ -592,9 +592,9 @@ package Diadoc.Api.Proto;
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Builder addCertificates(
+      public Builder addCertificates(
           Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder builderForValue) {
         if (certificatesBuilder_ == null) {
           ensureCertificatesIsMutable();
@@ -606,9 +606,9 @@ package Diadoc.Api.Proto;
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Builder addCertificates(
+      public Builder addCertificates(
           int index, Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder builderForValue) {
         if (certificatesBuilder_ == null) {
           ensureCertificatesIsMutable();
@@ -620,9 +620,9 @@ package Diadoc.Api.Proto;
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Builder addAllCertificates(
+      public Builder addAllCertificates(
           java.lang.Iterable<? extends Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2> values) {
         if (certificatesBuilder_ == null) {
           ensureCertificatesIsMutable();
@@ -635,9 +635,9 @@ package Diadoc.Api.Proto;
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Builder clearCertificates() {
+      public Builder clearCertificates() {
         if (certificatesBuilder_ == null) {
           certificates_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -648,9 +648,9 @@ package Diadoc.Api.Proto;
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Builder removeCertificates(int index) {
+      public Builder removeCertificates(int index) {
         if (certificatesBuilder_ == null) {
           ensureCertificatesIsMutable();
           certificates_.remove(index);
@@ -661,16 +661,16 @@ package Diadoc.Api.Proto;
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder getCertificatesBuilder(
+      public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder getCertificatesBuilder(
           int index) {
         return getCertificatesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder getCertificatesOrBuilder(
+      public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder getCertificatesOrBuilder(
           int index) {
         if (certificatesBuilder_ == null) {
           return certificates_.get(index);  } else {
@@ -678,9 +678,9 @@ package Diadoc.Api.Proto;
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder> 
+      public java.util.List<? extends Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2OrBuilder> 
            getCertificatesOrBuilderList() {
         if (certificatesBuilder_ != null) {
           return certificatesBuilder_.getMessageOrBuilderList();
@@ -689,24 +689,24 @@ package Diadoc.Api.Proto;
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder addCertificatesBuilder() {
+      public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder addCertificatesBuilder() {
         return getCertificatesFieldBuilder().addBuilder(
             Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder addCertificatesBuilder(
+      public Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder addCertificatesBuilder(
           int index) {
         return getCertificatesFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CertificateInfoV2 Certificates = 1;</code>
        */
-      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder> 
+      public java.util.List<Diadoc.Api.Proto.CertificateInfoV2Protos.CertificateInfoV2.Builder> 
            getCertificatesBuilderList() {
         return getCertificatesFieldBuilder().getBuilderList();
       }
@@ -791,10 +791,10 @@ package Diadoc.Api.Proto;
   static {
     java.lang.String[] descriptorData = {
       "\n\025CertificateList.proto\022\020Diadoc.Api.Prot" +
-      "o\032\027CertificateInfoV2.proto\"P\n\017Certificat" +
-      "eList\022=\n\014Certificates\030\001 \003(\0132#.Diadoc.Api" +
-      ".Proto.CertificateInfoV2B\002\030\001B\032B\025Certific" +
-      "ateListProtos\270\001\001"
+      "o\032\027CertificateInfoV2.proto\"L\n\017Certificat" +
+      "eList\0229\n\014Certificates\030\001 \003(\0132#.Diadoc.Api" +
+      ".Proto.CertificateInfoV2B\027B\025CertificateL" +
+      "istProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

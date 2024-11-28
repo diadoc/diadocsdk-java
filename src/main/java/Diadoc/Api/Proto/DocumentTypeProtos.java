@@ -123,10 +123,6 @@ public final class DocumentTypeProtos {
      */
     UniversalTransferDocumentRevision(45),
     /**
-     * <code>MesNotification = 46;</code>
-     */
-    MesNotification(46),
-    /**
      * <code>UniversalCorrectionDocument = 49;</code>
      */
     UniversalCorrectionDocument(49),
@@ -238,10 +234,6 @@ public final class DocumentTypeProtos {
      */
     public static final int UniversalTransferDocumentRevision_VALUE = 45;
     /**
-     * <code>MesNotification = 46;</code>
-     */
-    public static final int MesNotification_VALUE = 46;
-    /**
      * <code>UniversalCorrectionDocument = 49;</code>
      */
     public static final int UniversalCorrectionDocument_VALUE = 49;
@@ -293,7 +285,6 @@ public final class DocumentTypeProtos {
         case 40: return SupplementaryAgreement;
         case 41: return UniversalTransferDocument;
         case 45: return UniversalTransferDocumentRevision;
-        case 46: return MesNotification;
         case 49: return UniversalCorrectionDocument;
         case 50: return UniversalCorrectionDocumentRevision;
         default: return null;
@@ -354,7 +345,7 @@ public final class DocumentTypeProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022DocumentType.proto\022\020Diadoc.Api.Proto*\346" +
+      "\n\022DocumentType.proto\022\020Diadoc.Api.Proto*\321" +
       "\004\n\014DocumentType\022 \n\023UnknownDocumentType\020\377" +
       "\377\377\377\377\377\377\377\377\001\022\021\n\rNonformalized\020\000\022\013\n\007Invoice\020" +
       "\001\022\032\n\026TrustConnectionRequest\020\013\022\n\n\006Torg12\020" +
@@ -368,9 +359,9 @@ public final class DocumentTypeProtos {
       "\020%\022\022\n\016ServiceDetails\020&\022\032\n\026SupplementaryA" +
       "greement\020(\022\035\n\031UniversalTransferDocument\020" +
       ")\022%\n!UniversalTransferDocumentRevision\020-" +
-      "\022\023\n\017MesNotification\020.\022\037\n\033UniversalCorrec" +
-      "tionDocument\0201\022\'\n#UniversalCorrectionDoc" +
-      "umentRevision\0202B\024B\022DocumentTypeProtos"
+      "\022\037\n\033UniversalCorrectionDocument\0201\022\'\n#Uni" +
+      "versalCorrectionDocumentRevision\0202B\024B\022Do" +
+      "cumentTypeProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
