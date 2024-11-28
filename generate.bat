@@ -1,1 +1,0 @@
-PowerShell -NoLogo -ExecutionPolicy Unrestricted -Command "& '.\build.ps1'" < NUL || exit /b 1

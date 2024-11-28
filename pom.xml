@@ -1,120 +1,196 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.kontur.diadoc</groupId>
     <artifactId>diadocsdk</artifactId>
-    <version>3.24.1</version>
+    <version>3.23.4</version>
 
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <protobuf.version>4.28.1</protobuf.version>
+        <maven-protoc-plugin.version>0.3.2</maven-protoc-plugin.version>
+        <httpClient.version>4.5.6</httpClient.version>
+        <fluent-hc.version>4.5.10</fluent-hc.version>
+        <commons-io.version>2.6</commons-io.version>
+        <juint.version>4.12</juint.version>
+        <gson.version>2.8.5</gson.version>
+        <json.version>20180813</json.version>
+        <mail.version>1.4.7</mail.version>
+        <annotations.version>16.0.1</annotations.version>
+
+        <jcp.version>2.0.40450-A</jcp.version>
+        <asn1rt.version>2.0.40450-A</asn1rt.version>
+        <asn1p.version>2.0.40450-A</asn1p.version>
+        <jcryptop.version>2.0.40450-A</jcryptop.version>
+
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+        <protobuf.plugin.version>0.9.4</protobuf.plugin.version>
+        <os-maven-plugin.version>1.5.0.Final</os-maven-plugin.version>
+        <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
     </properties>
 
     <dependencies>
+
         <!-- http://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>2.6.1</version>
+            <version>${protobuf.version}</version>
         </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.google.protobuf/protoc -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protoc</artifactId>
+            <version>${protobuf.version}</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.4.2</version>
+        </dependency>
+
         <!-- http://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>4.5.6</version>
+            <version>${httpClient.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/fluent-hc -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>fluent-hc</artifactId>
-            <version>4.5.10</version>
+            <version>${fluent-hc.version}</version>
         </dependency>
+
         <!-- http://mvnrepository.com/artifact/commons-io/commons-io -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.6</version>
+            <version>${commons-io.version}</version>
         </dependency>
+
         <!-- http://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${juint.version}</version>
         </dependency>
+
         <!-- http://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.5</version>
+            <version>${gson.version}</version>
         </dependency>
+
         <!-- http://mvnrepository.com/artifact/org.json/json -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20180813</version>
+            <version>${json.version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
-            <version>1.4.7</version>
+            <version>${mail.version}</version>
         </dependency>
+
         <!-- local -->
         <dependency>
             <groupId>ru.cryptopro</groupId>
             <artifactId>jcp</artifactId>
-            <version>2.0.40450-A</version>
+            <version>${jcp.version}</version>
         </dependency>
+
         <!-- local -->
         <dependency>
             <groupId>com.objsys.asn1j</groupId>
             <artifactId>asn1rt</artifactId>
-            <version>2.0.40450-A</version>
+            <version>${asn1rt.version}</version>
         </dependency>
+
         <!-- local -->
         <dependency>
             <groupId>ru.cryptopro</groupId>
             <artifactId>asn1p</artifactId>
-            <version>2.0.40450-A</version>
+            <version>${asn1rt.version}</version>
         </dependency>
+
         <!-- local -->
         <dependency>
             <groupId>ru.cryptopro</groupId>
             <artifactId>jcryptop</artifactId>
-            <version>2.0.40450-A</version>
+            <version>${jcryptop.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>16.0.1</version>
+            <version>${annotations.version}</version>
         </dependency>
+
     </dependencies>
 
     <build>
+        <extensions>
+            <!-- https://mvnrepository.com/artifact/kr.motd.maven/os-maven-plugin -->
+            <extension>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>${os-maven-plugin.version}</version>
+            </extension>
+        </extensions>
+
         <plugins>
+            <!-- https://mvnrepository.com/artifact/org.xolstice.maven.plugins/protobuf-maven-plugin -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>${protobuf-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                        </manifest>
-                    </archive>
+                    <protoSourceRoot>${user.dir}/proto</protoSourceRoot>
+                    <protocArtifact>
+                        com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}
+                    </protocArtifact>
+                    <outputDirectory>${user.dir}/src/main/java</outputDirectory>
+                    <clearOutputDirectory>false</clearOutputDirectory>
+                    <useArgumentFile>true</useArgumentFile>
                 </configuration>
             </plugin>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <release>10</release>
                     <fork>true</fork>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
+
 </project>

@@ -1,8 +1,8 @@
 package Diadoc.Api.sign;
 
 import Diadoc.Api.exceptions.DiadocSdkException;
-import com.google.protobuf.InvalidProtocolBufferException;
 import Diadoc.Api.httpClient.DiadocHttpClient;
+import com.google.protobuf.InvalidProtocolBufferException;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
@@ -11,9 +11,10 @@ import org.jetbrains.annotations.Nullable;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
-import static Diadoc.Api.Proto.AsyncMethodResultProtos.*;
+import static Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult;
 import static Diadoc.Api.Proto.CloudSignProtos.*;
-import static Diadoc.Api.Proto.Dss.DssSignProtos.*;
+import static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequest;
+import static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignResult;
 import static Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.*;
 
 public class SignClient {
@@ -27,10 +28,6 @@ public class SignClient {
         return cloudSign(request, null);
     }
 
-    /**
-     * @deprecated Этот метод будет удалён в следующей мажорной версии.
-     * Для сценариев с подписаниями используйте методы: dssSign и dssSignResult
-     */
     public AsyncMethodResult cloudSign(CloudSignRequest cloudSignRequest, @Nullable String certificateThumbprint) throws DiadocSdkException {
         if (cloudSignRequest == null) {
             throw new IllegalArgumentException("cloudSignRequest");
@@ -49,10 +46,6 @@ public class SignClient {
         }
     }
 
-    /**
-     * @deprecated Этот метод будет удалён в следующей мажорной версии.
-     * Для сценариев с подписаниями используйте методы: {@link #dssSign(String, DssSignRequest)} и {@link #dssSignResult(String, String)}
-     */
     public CloudSignResult waitCloudSignResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException {
         try {
             var data = diadocHttpClient.waitTaskResult("/CloudSignResult", taskId, timeoutInMillis);
@@ -62,10 +55,6 @@ public class SignClient {
         }
     }
 
-    /**
-     * @deprecated Этот метод будет удалён в следующей мажорной версии.
-     * Для сценариев с подписаниями используйте методы: {@link #dssSign(String, DssSignRequest)} и {@link #dssSignResult(String, String)}
-     */
     public AsyncMethodResult cloudSignConfirm(String token, String confirmationCode, boolean returnContent) throws DiadocSdkException {
         try {
             var url = new URIBuilder(diadocHttpClient.getBaseUrl())
@@ -216,11 +205,11 @@ public class SignClient {
         try {
             var result = diadocHttpClient.performRequest(
                     RequestBuilder.post(
-                                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                                            .setPath("/V2/ExtendedSignerDetails")
-                                            .addParameter("boxId", boxId)
-                                            .addParameter("thumbprint", thumbprint)
-                                            .addParameter("documentTitleType", Integer.toString(documentTitleType.getNumber())).build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/V2/ExtendedSignerDetails")
+                                    .addParameter("boxId", boxId)
+                                    .addParameter("thumbprint", thumbprint)
+                                    .addParameter("documentTitleType", Integer.toString(documentTitleType.getNumber())).build())
                             .setEntity(new ByteArrayEntity(signerDetails.toByteArray())));
             return ExtendedSignerDetails.parseFrom(result);
 
