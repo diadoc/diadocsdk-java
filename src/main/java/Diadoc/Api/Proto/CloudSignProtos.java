@@ -25,38 +25,38 @@ public final class CloudSignProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  @java.lang.Deprecated public interface CloudSignRequestOrBuilder extends
+  public interface CloudSignRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CloudSignRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
-    @java.lang.Deprecated java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> 
+    java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> 
         getFilesList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getFiles(int index);
+    Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getFiles(int index);
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
-    @java.lang.Deprecated int getFilesCount();
+    int getFilesCount();
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
-    @java.lang.Deprecated java.util.List<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> 
+    java.util.List<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> 
         getFilesOrBuilderList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder getFilesOrBuilder(
+    Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder getFilesOrBuilder(
         int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.CloudSignRequest}
    */
-  @java.lang.Deprecated public static final class CloudSignRequest extends
+  public static final class CloudSignRequest extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CloudSignRequest)
       CloudSignRequestOrBuilder {
@@ -95,39 +95,39 @@ public final class CloudSignProtos {
     @SuppressWarnings("serial")
     private java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> files_;
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> getFilesList() {
+    public java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> getFilesList() {
       return files_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> 
+    public java.util.List<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> 
         getFilesOrBuilderList() {
       return files_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public int getFilesCount() {
+    public int getFilesCount() {
       return files_.size();
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getFiles(int index) {
+    public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getFiles(int index) {
       return files_.get(index);
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder getFilesOrBuilder(
+    public Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder getFilesOrBuilder(
         int index) {
       return files_.get(index);
     }
@@ -498,9 +498,9 @@ public final class CloudSignProtos {
           Diadoc.Api.Proto.CloudSignProtos.CloudSignFile, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder, Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> filesBuilder_;
 
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> getFilesList() {
+      public java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> getFilesList() {
         if (filesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(files_);
         } else {
@@ -508,9 +508,9 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public int getFilesCount() {
+      public int getFilesCount() {
         if (filesBuilder_ == null) {
           return files_.size();
         } else {
@@ -518,9 +518,9 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getFiles(int index) {
+      public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile getFiles(int index) {
         if (filesBuilder_ == null) {
           return files_.get(index);
         } else {
@@ -528,9 +528,9 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Builder setFiles(
+      public Builder setFiles(
           int index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile value) {
         if (filesBuilder_ == null) {
           if (value == null) {
@@ -545,9 +545,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Builder setFiles(
+      public Builder setFiles(
           int index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder builderForValue) {
         if (filesBuilder_ == null) {
           ensureFilesIsMutable();
@@ -559,9 +559,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Builder addFiles(Diadoc.Api.Proto.CloudSignProtos.CloudSignFile value) {
+      public Builder addFiles(Diadoc.Api.Proto.CloudSignProtos.CloudSignFile value) {
         if (filesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -575,9 +575,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Builder addFiles(
+      public Builder addFiles(
           int index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile value) {
         if (filesBuilder_ == null) {
           if (value == null) {
@@ -592,9 +592,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Builder addFiles(
+      public Builder addFiles(
           Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder builderForValue) {
         if (filesBuilder_ == null) {
           ensureFilesIsMutable();
@@ -606,9 +606,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Builder addFiles(
+      public Builder addFiles(
           int index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder builderForValue) {
         if (filesBuilder_ == null) {
           ensureFilesIsMutable();
@@ -620,9 +620,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Builder addAllFiles(
+      public Builder addAllFiles(
           java.lang.Iterable<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFile> values) {
         if (filesBuilder_ == null) {
           ensureFilesIsMutable();
@@ -635,9 +635,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Builder clearFiles() {
+      public Builder clearFiles() {
         if (filesBuilder_ == null) {
           files_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -648,9 +648,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Builder removeFiles(int index) {
+      public Builder removeFiles(int index) {
         if (filesBuilder_ == null) {
           ensureFilesIsMutable();
           files_.remove(index);
@@ -661,16 +661,16 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder getFilesBuilder(
+      public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder getFilesBuilder(
           int index) {
         return getFilesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder getFilesOrBuilder(
+      public Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder getFilesOrBuilder(
           int index) {
         if (filesBuilder_ == null) {
           return files_.get(index);  } else {
@@ -678,9 +678,9 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> 
+      public java.util.List<? extends Diadoc.Api.Proto.CloudSignProtos.CloudSignFileOrBuilder> 
            getFilesOrBuilderList() {
         if (filesBuilder_ != null) {
           return filesBuilder_.getMessageOrBuilderList();
@@ -689,24 +689,24 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder addFilesBuilder() {
+      public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder addFilesBuilder() {
         return getFilesFieldBuilder().addBuilder(
             Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder addFilesBuilder(
+      public Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder addFilesBuilder(
           int index) {
         return getFilesFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.CloudSignFile Files = 1;</code>
        */
-      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder> 
+      public java.util.List<Diadoc.Api.Proto.CloudSignProtos.CloudSignFile.Builder> 
            getFilesBuilderList() {
         return getFilesFieldBuilder().getBuilderList();
       }
@@ -776,56 +776,46 @@ public final class CloudSignProtos {
 
   }
 
-  @java.lang.Deprecated public interface CloudSignFileOrBuilder extends
+  public interface CloudSignFileOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CloudSignFile)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-     *     See CloudSign.proto;l=12
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
      * @return Whether the content field is set.
      */
-    @java.lang.Deprecated boolean hasContent();
+    boolean hasContent();
     /**
-     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-     *     See CloudSign.proto;l=12
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
      * @return The content.
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent();
+    Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent();
     /**
-     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder();
+    Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder();
 
     /**
-     * <code>optional string FileName = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     * <code>optional string FileName = 2;</code>
      * @return Whether the fileName field is set.
      */
-    @java.lang.Deprecated boolean hasFileName();
+    boolean hasFileName();
     /**
-     * <code>optional string FileName = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     * <code>optional string FileName = 2;</code>
      * @return The fileName.
      */
-    @java.lang.Deprecated java.lang.String getFileName();
+    java.lang.String getFileName();
     /**
-     * <code>optional string FileName = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     * <code>optional string FileName = 2;</code>
      * @return The bytes for fileName.
      */
-    @java.lang.Deprecated com.google.protobuf.ByteString
+    com.google.protobuf.ByteString
         getFileNameBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.CloudSignFile}
    */
-  @java.lang.Deprecated public static final class CloudSignFile extends
+  public static final class CloudSignFile extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CloudSignFile)
       CloudSignFileOrBuilder {
@@ -864,30 +854,26 @@ public final class CloudSignProtos {
     public static final int CONTENT_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Content_v2Protos.Content_v2 content_;
     /**
-     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-     *     See CloudSign.proto;l=12
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
      * @return Whether the content field is set.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean hasContent() {
+    public boolean hasContent() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-     *     See CloudSign.proto;l=12
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
      * @return The content.
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent() {
+    public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent() {
       return content_ == null ? Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance() : content_;
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
+     * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder() {
+    public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder() {
       return content_ == null ? Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance() : content_;
     }
 
@@ -895,23 +881,19 @@ public final class CloudSignProtos {
     @SuppressWarnings("serial")
     private volatile java.lang.Object fileName_ = "";
     /**
-     * <code>optional string FileName = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     * <code>optional string FileName = 2;</code>
      * @return Whether the fileName field is set.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean hasFileName() {
+    public boolean hasFileName() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional string FileName = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     * <code>optional string FileName = 2;</code>
      * @return The fileName.
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.lang.String getFileName() {
+    public java.lang.String getFileName() {
       java.lang.Object ref = fileName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -926,13 +908,11 @@ public final class CloudSignProtos {
       }
     }
     /**
-     * <code>optional string FileName = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-     *     See CloudSign.proto;l=13
+     * <code>optional string FileName = 2;</code>
      * @return The bytes for fileName.
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getFileNameBytes() {
       java.lang.Object ref = fileName_;
       if (ref instanceof java.lang.String) {
@@ -1306,21 +1286,17 @@ public final class CloudSignProtos {
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> contentBuilder_;
       /**
-       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-       *     See CloudSign.proto;l=12
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
        * @return Whether the content field is set.
        */
-      @java.lang.Deprecated public boolean hasContent() {
+      public boolean hasContent() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignFile.Content is deprecated.
-       *     See CloudSign.proto;l=12
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
        * @return The content.
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent() {
+      public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getContent() {
         if (contentBuilder_ == null) {
           return content_ == null ? Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance() : content_;
         } else {
@@ -1328,9 +1304,9 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
        */
-      @java.lang.Deprecated public Builder setContent(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
+      public Builder setContent(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (contentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1344,9 +1320,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
        */
-      @java.lang.Deprecated public Builder setContent(
+      public Builder setContent(
           Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
         if (contentBuilder_ == null) {
           content_ = builderForValue.build();
@@ -1358,9 +1334,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
        */
-      @java.lang.Deprecated public Builder mergeContent(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
+      public Builder mergeContent(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (contentBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             content_ != null &&
@@ -1379,9 +1355,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
        */
-      @java.lang.Deprecated public Builder clearContent() {
+      public Builder clearContent() {
         bitField0_ = (bitField0_ & ~0x00000001);
         content_ = null;
         if (contentBuilder_ != null) {
@@ -1392,17 +1368,17 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder getContentBuilder() {
+      public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder getContentBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getContentFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder() {
+      public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
           return contentBuilder_.getMessageOrBuilder();
         } else {
@@ -1411,7 +1387,7 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1 [deprecated = true];</code>
+       * <code>optional .Diadoc.Api.Proto.Content_v2 Content = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
@@ -1429,21 +1405,17 @@ public final class CloudSignProtos {
 
       private java.lang.Object fileName_ = "";
       /**
-       * <code>optional string FileName = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       * <code>optional string FileName = 2;</code>
        * @return Whether the fileName field is set.
        */
-      @java.lang.Deprecated public boolean hasFileName() {
+      public boolean hasFileName() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional string FileName = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       * <code>optional string FileName = 2;</code>
        * @return The fileName.
        */
-      @java.lang.Deprecated public java.lang.String getFileName() {
+      public java.lang.String getFileName() {
         java.lang.Object ref = fileName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -1458,12 +1430,10 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>optional string FileName = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       * <code>optional string FileName = 2;</code>
        * @return The bytes for fileName.
        */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
+      public com.google.protobuf.ByteString
           getFileNameBytes() {
         java.lang.Object ref = fileName_;
         if (ref instanceof String) {
@@ -1477,13 +1447,11 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>optional string FileName = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       * <code>optional string FileName = 2;</code>
        * @param value The fileName to set.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder setFileName(
+      public Builder setFileName(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         fileName_ = value;
@@ -1492,25 +1460,21 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>optional string FileName = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       * <code>optional string FileName = 2;</code>
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder clearFileName() {
+      public Builder clearFileName() {
         fileName_ = getDefaultInstance().getFileName();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>optional string FileName = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignFile.FileName is deprecated.
-       *     See CloudSign.proto;l=13
+       * <code>optional string FileName = 2;</code>
        * @param value The bytes for fileName to set.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder setFileNameBytes(
+      public Builder setFileNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         fileName_ = value;
@@ -1570,37 +1534,31 @@ public final class CloudSignProtos {
 
   }
 
-  @java.lang.Deprecated public interface CloudSignResultOrBuilder extends
+  public interface CloudSignResultOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CloudSignResult)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string Token = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     * <code>optional string Token = 1;</code>
      * @return Whether the token field is set.
      */
-    @java.lang.Deprecated boolean hasToken();
+    boolean hasToken();
     /**
-     * <code>optional string Token = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     * <code>optional string Token = 1;</code>
      * @return The token.
      */
-    @java.lang.Deprecated java.lang.String getToken();
+    java.lang.String getToken();
     /**
-     * <code>optional string Token = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     * <code>optional string Token = 1;</code>
      * @return The bytes for token.
      */
-    @java.lang.Deprecated com.google.protobuf.ByteString
+    com.google.protobuf.ByteString
         getTokenBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.CloudSignResult}
    */
-  @java.lang.Deprecated public static final class CloudSignResult extends
+  public static final class CloudSignResult extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CloudSignResult)
       CloudSignResultOrBuilder {
@@ -1640,23 +1598,19 @@ public final class CloudSignProtos {
     @SuppressWarnings("serial")
     private volatile java.lang.Object token_ = "";
     /**
-     * <code>optional string Token = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     * <code>optional string Token = 1;</code>
      * @return Whether the token field is set.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean hasToken() {
+    public boolean hasToken() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional string Token = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     * <code>optional string Token = 1;</code>
      * @return The token.
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.lang.String getToken() {
+    public java.lang.String getToken() {
       java.lang.Object ref = token_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -1671,13 +1625,11 @@ public final class CloudSignProtos {
       }
     }
     /**
-     * <code>optional string Token = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-     *     See CloudSign.proto;l=18
+     * <code>optional string Token = 1;</code>
      * @return The bytes for token.
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getTokenBytes() {
       java.lang.Object ref = token_;
       if (ref instanceof java.lang.String) {
@@ -1995,21 +1947,17 @@ public final class CloudSignProtos {
 
       private java.lang.Object token_ = "";
       /**
-       * <code>optional string Token = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       * <code>optional string Token = 1;</code>
        * @return Whether the token field is set.
        */
-      @java.lang.Deprecated public boolean hasToken() {
+      public boolean hasToken() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional string Token = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       * <code>optional string Token = 1;</code>
        * @return The token.
        */
-      @java.lang.Deprecated public java.lang.String getToken() {
+      public java.lang.String getToken() {
         java.lang.Object ref = token_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -2024,12 +1972,10 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>optional string Token = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       * <code>optional string Token = 1;</code>
        * @return The bytes for token.
        */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
+      public com.google.protobuf.ByteString
           getTokenBytes() {
         java.lang.Object ref = token_;
         if (ref instanceof String) {
@@ -2043,13 +1989,11 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>optional string Token = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       * <code>optional string Token = 1;</code>
        * @param value The token to set.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder setToken(
+      public Builder setToken(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         token_ = value;
@@ -2058,25 +2002,21 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>optional string Token = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       * <code>optional string Token = 1;</code>
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder clearToken() {
+      public Builder clearToken() {
         token_ = getDefaultInstance().getToken();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>optional string Token = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.CloudSignResult.Token is deprecated.
-       *     See CloudSign.proto;l=18
+       * <code>optional string Token = 1;</code>
        * @param value The bytes for token to set.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder setTokenBytes(
+      public Builder setTokenBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         token_ = value;
@@ -2136,38 +2076,38 @@ public final class CloudSignProtos {
 
   }
 
-  @java.lang.Deprecated public interface CloudSignConfirmResultOrBuilder extends
+  public interface CloudSignConfirmResultOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CloudSignConfirmResult)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
-    @java.lang.Deprecated java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> 
+    java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> 
         getSignaturesList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index);
+    Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index);
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
-    @java.lang.Deprecated int getSignaturesCount();
+    int getSignaturesCount();
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
-    @java.lang.Deprecated java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
+    java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
         getSignaturesOrBuilderList();
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
-    @java.lang.Deprecated Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
+    Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
         int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.CloudSignConfirmResult}
    */
-  @java.lang.Deprecated public static final class CloudSignConfirmResult extends
+  public static final class CloudSignConfirmResult extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CloudSignConfirmResult)
       CloudSignConfirmResultOrBuilder {
@@ -2206,39 +2146,39 @@ public final class CloudSignProtos {
     @SuppressWarnings("serial")
     private java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> signatures_;
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> getSignaturesList() {
+    public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> getSignaturesList() {
       return signatures_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
+    public java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
         getSignaturesOrBuilderList() {
       return signatures_;
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public int getSignaturesCount() {
+    public int getSignaturesCount() {
       return signatures_.size();
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index) {
+    public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index) {
       return signatures_.get(index);
     }
     /**
-     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+     * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
+    public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
         int index) {
       return signatures_.get(index);
     }
@@ -2609,9 +2549,9 @@ public final class CloudSignProtos {
           Diadoc.Api.Proto.Content_v2Protos.Content_v2, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder, Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> signaturesBuilder_;
 
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> getSignaturesList() {
+      public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2> getSignaturesList() {
         if (signaturesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(signatures_);
         } else {
@@ -2619,9 +2559,9 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public int getSignaturesCount() {
+      public int getSignaturesCount() {
         if (signaturesBuilder_ == null) {
           return signatures_.size();
         } else {
@@ -2629,9 +2569,9 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index) {
+      public Diadoc.Api.Proto.Content_v2Protos.Content_v2 getSignatures(int index) {
         if (signaturesBuilder_ == null) {
           return signatures_.get(index);
         } else {
@@ -2639,9 +2579,9 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Builder setSignatures(
+      public Builder setSignatures(
           int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (signaturesBuilder_ == null) {
           if (value == null) {
@@ -2656,9 +2596,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Builder setSignatures(
+      public Builder setSignatures(
           int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
@@ -2670,9 +2610,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Builder addSignatures(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
+      public Builder addSignatures(Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (signaturesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2686,9 +2626,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Builder addSignatures(
+      public Builder addSignatures(
           int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2 value) {
         if (signaturesBuilder_ == null) {
           if (value == null) {
@@ -2703,9 +2643,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Builder addSignatures(
+      public Builder addSignatures(
           Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
@@ -2717,9 +2657,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Builder addSignatures(
+      public Builder addSignatures(
           int index, Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder builderForValue) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
@@ -2731,9 +2671,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Builder addAllSignatures(
+      public Builder addAllSignatures(
           java.lang.Iterable<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2> values) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
@@ -2746,9 +2686,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Builder clearSignatures() {
+      public Builder clearSignatures() {
         if (signaturesBuilder_ == null) {
           signatures_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -2759,9 +2699,9 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Builder removeSignatures(int index) {
+      public Builder removeSignatures(int index) {
         if (signaturesBuilder_ == null) {
           ensureSignaturesIsMutable();
           signatures_.remove(index);
@@ -2772,16 +2712,16 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder getSignaturesBuilder(
+      public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder getSignaturesBuilder(
           int index) {
         return getSignaturesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
+      public Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder getSignaturesOrBuilder(
           int index) {
         if (signaturesBuilder_ == null) {
           return signatures_.get(index);  } else {
@@ -2789,9 +2729,9 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
+      public java.util.List<? extends Diadoc.Api.Proto.Content_v2Protos.Content_v2OrBuilder> 
            getSignaturesOrBuilderList() {
         if (signaturesBuilder_ != null) {
           return signaturesBuilder_.getMessageOrBuilderList();
@@ -2800,24 +2740,24 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder addSignaturesBuilder() {
+      public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder addSignaturesBuilder() {
         return getSignaturesFieldBuilder().addBuilder(
             Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder addSignaturesBuilder(
+      public Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder addSignaturesBuilder(
           int index) {
         return getSignaturesFieldBuilder().addBuilder(
             index, Diadoc.Api.Proto.Content_v2Protos.Content_v2.getDefaultInstance());
       }
       /**
-       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1 [deprecated = true];</code>
+       * <code>repeated .Diadoc.Api.Proto.Content_v2 Signatures = 1;</code>
        */
-      @java.lang.Deprecated public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder> 
+      public java.util.List<Diadoc.Api.Proto.Content_v2Protos.Content_v2.Builder> 
            getSignaturesBuilderList() {
         return getSignaturesFieldBuilder().getBuilderList();
       }
@@ -2887,52 +2827,42 @@ public final class CloudSignProtos {
 
   }
 
-  @java.lang.Deprecated public interface AutosignReceiptsResultOrBuilder extends
+  public interface AutosignReceiptsResultOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.AutosignReceiptsResult)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-     *     See CloudSign.proto;l=28
+     * <code>required int64 SignedReceiptsCount = 1;</code>
      * @return Whether the signedReceiptsCount field is set.
      */
-    @java.lang.Deprecated boolean hasSignedReceiptsCount();
+    boolean hasSignedReceiptsCount();
     /**
-     * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-     *     See CloudSign.proto;l=28
+     * <code>required int64 SignedReceiptsCount = 1;</code>
      * @return The signedReceiptsCount.
      */
-    @java.lang.Deprecated long getSignedReceiptsCount();
+    long getSignedReceiptsCount();
 
     /**
-     * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     * <code>required string NextBatchKey = 2;</code>
      * @return Whether the nextBatchKey field is set.
      */
-    @java.lang.Deprecated boolean hasNextBatchKey();
+    boolean hasNextBatchKey();
     /**
-     * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     * <code>required string NextBatchKey = 2;</code>
      * @return The nextBatchKey.
      */
-    @java.lang.Deprecated java.lang.String getNextBatchKey();
+    java.lang.String getNextBatchKey();
     /**
-     * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     * <code>required string NextBatchKey = 2;</code>
      * @return The bytes for nextBatchKey.
      */
-    @java.lang.Deprecated com.google.protobuf.ByteString
+    com.google.protobuf.ByteString
         getNextBatchKeyBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.AutosignReceiptsResult}
    */
-  @java.lang.Deprecated public static final class AutosignReceiptsResult extends
+  public static final class AutosignReceiptsResult extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.AutosignReceiptsResult)
       AutosignReceiptsResultOrBuilder {
@@ -2971,23 +2901,19 @@ public final class CloudSignProtos {
     public static final int SIGNEDRECEIPTSCOUNT_FIELD_NUMBER = 1;
     private long signedReceiptsCount_ = 0L;
     /**
-     * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-     *     See CloudSign.proto;l=28
+     * <code>required int64 SignedReceiptsCount = 1;</code>
      * @return Whether the signedReceiptsCount field is set.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean hasSignedReceiptsCount() {
+    public boolean hasSignedReceiptsCount() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-     *     See CloudSign.proto;l=28
+     * <code>required int64 SignedReceiptsCount = 1;</code>
      * @return The signedReceiptsCount.
      */
     @java.lang.Override
-    @java.lang.Deprecated public long getSignedReceiptsCount() {
+    public long getSignedReceiptsCount() {
       return signedReceiptsCount_;
     }
 
@@ -2995,23 +2921,19 @@ public final class CloudSignProtos {
     @SuppressWarnings("serial")
     private volatile java.lang.Object nextBatchKey_ = "";
     /**
-     * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     * <code>required string NextBatchKey = 2;</code>
      * @return Whether the nextBatchKey field is set.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean hasNextBatchKey() {
+    public boolean hasNextBatchKey() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     * <code>required string NextBatchKey = 2;</code>
      * @return The nextBatchKey.
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.lang.String getNextBatchKey() {
+    public java.lang.String getNextBatchKey() {
       java.lang.Object ref = nextBatchKey_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -3026,13 +2948,11 @@ public final class CloudSignProtos {
       }
     }
     /**
-     * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-     * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-     *     See CloudSign.proto;l=29
+     * <code>required string NextBatchKey = 2;</code>
      * @return The bytes for nextBatchKey.
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getNextBatchKeyBytes() {
       java.lang.Object ref = nextBatchKey_;
       if (ref instanceof java.lang.String) {
@@ -3394,33 +3314,27 @@ public final class CloudSignProtos {
 
       private long signedReceiptsCount_ ;
       /**
-       * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-       *     See CloudSign.proto;l=28
+       * <code>required int64 SignedReceiptsCount = 1;</code>
        * @return Whether the signedReceiptsCount field is set.
        */
       @java.lang.Override
-      @java.lang.Deprecated public boolean hasSignedReceiptsCount() {
+      public boolean hasSignedReceiptsCount() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-       *     See CloudSign.proto;l=28
+       * <code>required int64 SignedReceiptsCount = 1;</code>
        * @return The signedReceiptsCount.
        */
       @java.lang.Override
-      @java.lang.Deprecated public long getSignedReceiptsCount() {
+      public long getSignedReceiptsCount() {
         return signedReceiptsCount_;
       }
       /**
-       * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-       *     See CloudSign.proto;l=28
+       * <code>required int64 SignedReceiptsCount = 1;</code>
        * @param value The signedReceiptsCount to set.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder setSignedReceiptsCount(long value) {
+      public Builder setSignedReceiptsCount(long value) {
 
         signedReceiptsCount_ = value;
         bitField0_ |= 0x00000001;
@@ -3428,12 +3342,10 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>required int64 SignedReceiptsCount = 1 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.SignedReceiptsCount is deprecated.
-       *     See CloudSign.proto;l=28
+       * <code>required int64 SignedReceiptsCount = 1;</code>
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder clearSignedReceiptsCount() {
+      public Builder clearSignedReceiptsCount() {
         bitField0_ = (bitField0_ & ~0x00000001);
         signedReceiptsCount_ = 0L;
         onChanged();
@@ -3442,21 +3354,17 @@ public final class CloudSignProtos {
 
       private java.lang.Object nextBatchKey_ = "";
       /**
-       * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       * <code>required string NextBatchKey = 2;</code>
        * @return Whether the nextBatchKey field is set.
        */
-      @java.lang.Deprecated public boolean hasNextBatchKey() {
+      public boolean hasNextBatchKey() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       * <code>required string NextBatchKey = 2;</code>
        * @return The nextBatchKey.
        */
-      @java.lang.Deprecated public java.lang.String getNextBatchKey() {
+      public java.lang.String getNextBatchKey() {
         java.lang.Object ref = nextBatchKey_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -3471,12 +3379,10 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       * <code>required string NextBatchKey = 2;</code>
        * @return The bytes for nextBatchKey.
        */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
+      public com.google.protobuf.ByteString
           getNextBatchKeyBytes() {
         java.lang.Object ref = nextBatchKey_;
         if (ref instanceof String) {
@@ -3490,13 +3396,11 @@ public final class CloudSignProtos {
         }
       }
       /**
-       * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       * <code>required string NextBatchKey = 2;</code>
        * @param value The nextBatchKey to set.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder setNextBatchKey(
+      public Builder setNextBatchKey(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         nextBatchKey_ = value;
@@ -3505,25 +3409,21 @@ public final class CloudSignProtos {
         return this;
       }
       /**
-       * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       * <code>required string NextBatchKey = 2;</code>
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder clearNextBatchKey() {
+      public Builder clearNextBatchKey() {
         nextBatchKey_ = getDefaultInstance().getNextBatchKey();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>required string NextBatchKey = 2 [deprecated = true];</code>
-       * @deprecated Diadoc.Api.Proto.AutosignReceiptsResult.NextBatchKey is deprecated.
-       *     See CloudSign.proto;l=29
+       * <code>required string NextBatchKey = 2;</code>
        * @param value The bytes for nextBatchKey to set.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder setNextBatchKeyBytes(
+      public Builder setNextBatchKeyBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         nextBatchKey_ = value;
@@ -3618,17 +3518,16 @@ public final class CloudSignProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\017CloudSign.proto\022\020Diadoc.Api.Proto\032\020Con" +
-      "tent_v2.proto\"J\n\020CloudSignRequest\0222\n\005Fil" +
+      "tent_v2.proto\"B\n\020CloudSignRequest\022.\n\005Fil" +
       "es\030\001 \003(\0132\037.Diadoc.Api.Proto.CloudSignFil" +
-      "eB\002\030\001:\002\030\001\"\\\n\rCloudSignFile\0221\n\007Content\030\001 " +
-      "\001(\0132\034.Diadoc.Api.Proto.Content_v2B\002\030\001\022\024\n" +
-      "\010FileName\030\002 \001(\tB\002\030\001:\002\030\001\"(\n\017CloudSignResu" +
-      "lt\022\021\n\005Token\030\001 \001(\tB\002\030\001:\002\030\001\"R\n\026CloudSignCo" +
-      "nfirmResult\0224\n\nSignatures\030\001 \003(\0132\034.Diadoc" +
-      ".Api.Proto.Content_v2B\002\030\001:\002\030\001\"W\n\026Autosig" +
-      "nReceiptsResult\022\037\n\023SignedReceiptsCount\030\001" +
-      " \002(\003B\002\030\001\022\030\n\014NextBatchKey\030\002 \002(\tB\002\030\001:\002\030\001B\021" +
-      "B\017CloudSignProtos"
+      "e\"P\n\rCloudSignFile\022-\n\007Content\030\001 \001(\0132\034.Di" +
+      "adoc.Api.Proto.Content_v2\022\020\n\010FileName\030\002 " +
+      "\001(\t\" \n\017CloudSignResult\022\r\n\005Token\030\001 \001(\t\"J\n" +
+      "\026CloudSignConfirmResult\0220\n\nSignatures\030\001 " +
+      "\003(\0132\034.Diadoc.Api.Proto.Content_v2\"K\n\026Aut" +
+      "osignReceiptsResult\022\033\n\023SignedReceiptsCou" +
+      "nt\030\001 \002(\003\022\024\n\014NextBatchKey\030\002 \002(\tB\021B\017CloudS" +
+      "ignProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
