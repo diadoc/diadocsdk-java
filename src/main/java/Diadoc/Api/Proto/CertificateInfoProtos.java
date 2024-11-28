@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto;
 
-public final class CertificateInfoProtos {
+@java.lang.Deprecated public final class CertificateInfoProtos {
   private CertificateInfoProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,87 +25,113 @@ public final class CertificateInfoProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface CertificateInfoOrBuilder extends
+  @java.lang.Deprecated public interface CertificateInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.CertificateInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string Thumbprint = 1;</code>
+     * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+     *     See CertificateInfo.proto;l=8
      * @return Whether the thumbprint field is set.
      */
-    boolean hasThumbprint();
+    @java.lang.Deprecated boolean hasThumbprint();
     /**
-     * <code>optional string Thumbprint = 1;</code>
+     * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+     *     See CertificateInfo.proto;l=8
      * @return The thumbprint.
      */
-    java.lang.String getThumbprint();
+    @java.lang.Deprecated java.lang.String getThumbprint();
     /**
-     * <code>optional string Thumbprint = 1;</code>
+     * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+     *     See CertificateInfo.proto;l=8
      * @return The bytes for thumbprint.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getThumbprintBytes();
 
     /**
-     * <code>optional sfixed64 ValidFrom = 2;</code>
+     * <code>optional sfixed64 ValidFrom = 2 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidFrom is deprecated.
+     *     See CertificateInfo.proto;l=9
      * @return Whether the validFrom field is set.
      */
-    boolean hasValidFrom();
+    @java.lang.Deprecated boolean hasValidFrom();
     /**
-     * <code>optional sfixed64 ValidFrom = 2;</code>
+     * <code>optional sfixed64 ValidFrom = 2 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidFrom is deprecated.
+     *     See CertificateInfo.proto;l=9
      * @return The validFrom.
      */
-    long getValidFrom();
+    @java.lang.Deprecated long getValidFrom();
 
     /**
-     * <code>optional sfixed64 ValidTo = 3;</code>
+     * <code>optional sfixed64 ValidTo = 3 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidTo is deprecated.
+     *     See CertificateInfo.proto;l=10
      * @return Whether the validTo field is set.
      */
-    boolean hasValidTo();
+    @java.lang.Deprecated boolean hasValidTo();
     /**
-     * <code>optional sfixed64 ValidTo = 3;</code>
+     * <code>optional sfixed64 ValidTo = 3 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidTo is deprecated.
+     *     See CertificateInfo.proto;l=10
      * @return The validTo.
      */
-    long getValidTo();
+    @java.lang.Deprecated long getValidTo();
 
     /**
-     * <code>optional string OrganizationName = 4;</code>
+     * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+     *     See CertificateInfo.proto;l=11
      * @return Whether the organizationName field is set.
      */
-    boolean hasOrganizationName();
+    @java.lang.Deprecated boolean hasOrganizationName();
     /**
-     * <code>optional string OrganizationName = 4;</code>
+     * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+     *     See CertificateInfo.proto;l=11
      * @return The organizationName.
      */
-    java.lang.String getOrganizationName();
+    @java.lang.Deprecated java.lang.String getOrganizationName();
     /**
-     * <code>optional string OrganizationName = 4;</code>
+     * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+     *     See CertificateInfo.proto;l=11
      * @return The bytes for organizationName.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getOrganizationNameBytes();
 
     /**
-     * <code>optional string Inn = 5;</code>
+     * <code>optional string Inn = 5 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+     *     See CertificateInfo.proto;l=12
      * @return Whether the inn field is set.
      */
-    boolean hasInn();
+    @java.lang.Deprecated boolean hasInn();
     /**
-     * <code>optional string Inn = 5;</code>
+     * <code>optional string Inn = 5 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+     *     See CertificateInfo.proto;l=12
      * @return The inn.
      */
-    java.lang.String getInn();
+    @java.lang.Deprecated java.lang.String getInn();
     /**
-     * <code>optional string Inn = 5;</code>
+     * <code>optional string Inn = 5 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+     *     See CertificateInfo.proto;l=12
      * @return The bytes for inn.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getInnBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.CertificateInfo}
    */
-  public static final class CertificateInfo extends
+  @java.lang.Deprecated public static final class CertificateInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.CertificateInfo)
       CertificateInfoOrBuilder {
@@ -147,19 +173,23 @@ public final class CertificateInfoProtos {
     @SuppressWarnings("serial")
     private volatile java.lang.Object thumbprint_ = "";
     /**
-     * <code>optional string Thumbprint = 1;</code>
+     * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+     *     See CertificateInfo.proto;l=8
      * @return Whether the thumbprint field is set.
      */
     @java.lang.Override
-    public boolean hasThumbprint() {
+    @java.lang.Deprecated public boolean hasThumbprint() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional string Thumbprint = 1;</code>
+     * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+     *     See CertificateInfo.proto;l=8
      * @return The thumbprint.
      */
     @java.lang.Override
-    public java.lang.String getThumbprint() {
+    @java.lang.Deprecated public java.lang.String getThumbprint() {
       java.lang.Object ref = thumbprint_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -174,11 +204,13 @@ public final class CertificateInfoProtos {
       }
     }
     /**
-     * <code>optional string Thumbprint = 1;</code>
+     * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+     *     See CertificateInfo.proto;l=8
      * @return The bytes for thumbprint.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getThumbprintBytes() {
       java.lang.Object ref = thumbprint_;
       if (ref instanceof java.lang.String) {
@@ -195,38 +227,46 @@ public final class CertificateInfoProtos {
     public static final int VALIDFROM_FIELD_NUMBER = 2;
     private long validFrom_ = 0L;
     /**
-     * <code>optional sfixed64 ValidFrom = 2;</code>
+     * <code>optional sfixed64 ValidFrom = 2 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidFrom is deprecated.
+     *     See CertificateInfo.proto;l=9
      * @return Whether the validFrom field is set.
      */
     @java.lang.Override
-    public boolean hasValidFrom() {
+    @java.lang.Deprecated public boolean hasValidFrom() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional sfixed64 ValidFrom = 2;</code>
+     * <code>optional sfixed64 ValidFrom = 2 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidFrom is deprecated.
+     *     See CertificateInfo.proto;l=9
      * @return The validFrom.
      */
     @java.lang.Override
-    public long getValidFrom() {
+    @java.lang.Deprecated public long getValidFrom() {
       return validFrom_;
     }
 
     public static final int VALIDTO_FIELD_NUMBER = 3;
     private long validTo_ = 0L;
     /**
-     * <code>optional sfixed64 ValidTo = 3;</code>
+     * <code>optional sfixed64 ValidTo = 3 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidTo is deprecated.
+     *     See CertificateInfo.proto;l=10
      * @return Whether the validTo field is set.
      */
     @java.lang.Override
-    public boolean hasValidTo() {
+    @java.lang.Deprecated public boolean hasValidTo() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional sfixed64 ValidTo = 3;</code>
+     * <code>optional sfixed64 ValidTo = 3 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidTo is deprecated.
+     *     See CertificateInfo.proto;l=10
      * @return The validTo.
      */
     @java.lang.Override
-    public long getValidTo() {
+    @java.lang.Deprecated public long getValidTo() {
       return validTo_;
     }
 
@@ -234,19 +274,23 @@ public final class CertificateInfoProtos {
     @SuppressWarnings("serial")
     private volatile java.lang.Object organizationName_ = "";
     /**
-     * <code>optional string OrganizationName = 4;</code>
+     * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+     *     See CertificateInfo.proto;l=11
      * @return Whether the organizationName field is set.
      */
     @java.lang.Override
-    public boolean hasOrganizationName() {
+    @java.lang.Deprecated public boolean hasOrganizationName() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>optional string OrganizationName = 4;</code>
+     * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+     *     See CertificateInfo.proto;l=11
      * @return The organizationName.
      */
     @java.lang.Override
-    public java.lang.String getOrganizationName() {
+    @java.lang.Deprecated public java.lang.String getOrganizationName() {
       java.lang.Object ref = organizationName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -261,11 +305,13 @@ public final class CertificateInfoProtos {
       }
     }
     /**
-     * <code>optional string OrganizationName = 4;</code>
+     * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+     *     See CertificateInfo.proto;l=11
      * @return The bytes for organizationName.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getOrganizationNameBytes() {
       java.lang.Object ref = organizationName_;
       if (ref instanceof java.lang.String) {
@@ -283,19 +329,23 @@ public final class CertificateInfoProtos {
     @SuppressWarnings("serial")
     private volatile java.lang.Object inn_ = "";
     /**
-     * <code>optional string Inn = 5;</code>
+     * <code>optional string Inn = 5 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+     *     See CertificateInfo.proto;l=12
      * @return Whether the inn field is set.
      */
     @java.lang.Override
-    public boolean hasInn() {
+    @java.lang.Deprecated public boolean hasInn() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>optional string Inn = 5;</code>
+     * <code>optional string Inn = 5 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+     *     See CertificateInfo.proto;l=12
      * @return The inn.
      */
     @java.lang.Override
-    public java.lang.String getInn() {
+    @java.lang.Deprecated public java.lang.String getInn() {
       java.lang.Object ref = inn_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -310,11 +360,13 @@ public final class CertificateInfoProtos {
       }
     }
     /**
-     * <code>optional string Inn = 5;</code>
+     * <code>optional string Inn = 5 [deprecated = true];</code>
+     * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+     *     See CertificateInfo.proto;l=12
      * @return The bytes for inn.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getInnBytes() {
       java.lang.Object ref = inn_;
       if (ref instanceof java.lang.String) {
@@ -752,17 +804,21 @@ public final class CertificateInfoProtos {
 
       private java.lang.Object thumbprint_ = "";
       /**
-       * <code>optional string Thumbprint = 1;</code>
+       * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+       *     See CertificateInfo.proto;l=8
        * @return Whether the thumbprint field is set.
        */
-      public boolean hasThumbprint() {
+      @java.lang.Deprecated public boolean hasThumbprint() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional string Thumbprint = 1;</code>
+       * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+       *     See CertificateInfo.proto;l=8
        * @return The thumbprint.
        */
-      public java.lang.String getThumbprint() {
+      @java.lang.Deprecated public java.lang.String getThumbprint() {
         java.lang.Object ref = thumbprint_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -777,10 +833,12 @@ public final class CertificateInfoProtos {
         }
       }
       /**
-       * <code>optional string Thumbprint = 1;</code>
+       * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+       *     See CertificateInfo.proto;l=8
        * @return The bytes for thumbprint.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getThumbprintBytes() {
         java.lang.Object ref = thumbprint_;
         if (ref instanceof String) {
@@ -794,11 +852,13 @@ public final class CertificateInfoProtos {
         }
       }
       /**
-       * <code>optional string Thumbprint = 1;</code>
+       * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+       *     See CertificateInfo.proto;l=8
        * @param value The thumbprint to set.
        * @return This builder for chaining.
        */
-      public Builder setThumbprint(
+      @java.lang.Deprecated public Builder setThumbprint(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         thumbprint_ = value;
@@ -807,21 +867,25 @@ public final class CertificateInfoProtos {
         return this;
       }
       /**
-       * <code>optional string Thumbprint = 1;</code>
+       * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+       *     See CertificateInfo.proto;l=8
        * @return This builder for chaining.
        */
-      public Builder clearThumbprint() {
+      @java.lang.Deprecated public Builder clearThumbprint() {
         thumbprint_ = getDefaultInstance().getThumbprint();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>optional string Thumbprint = 1;</code>
+       * <code>optional string Thumbprint = 1 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Thumbprint is deprecated.
+       *     See CertificateInfo.proto;l=8
        * @param value The bytes for thumbprint to set.
        * @return This builder for chaining.
        */
-      public Builder setThumbprintBytes(
+      @java.lang.Deprecated public Builder setThumbprintBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         thumbprint_ = value;
@@ -832,27 +896,33 @@ public final class CertificateInfoProtos {
 
       private long validFrom_ ;
       /**
-       * <code>optional sfixed64 ValidFrom = 2;</code>
+       * <code>optional sfixed64 ValidFrom = 2 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidFrom is deprecated.
+       *     See CertificateInfo.proto;l=9
        * @return Whether the validFrom field is set.
        */
       @java.lang.Override
-      public boolean hasValidFrom() {
+      @java.lang.Deprecated public boolean hasValidFrom() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional sfixed64 ValidFrom = 2;</code>
+       * <code>optional sfixed64 ValidFrom = 2 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidFrom is deprecated.
+       *     See CertificateInfo.proto;l=9
        * @return The validFrom.
        */
       @java.lang.Override
-      public long getValidFrom() {
+      @java.lang.Deprecated public long getValidFrom() {
         return validFrom_;
       }
       /**
-       * <code>optional sfixed64 ValidFrom = 2;</code>
+       * <code>optional sfixed64 ValidFrom = 2 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidFrom is deprecated.
+       *     See CertificateInfo.proto;l=9
        * @param value The validFrom to set.
        * @return This builder for chaining.
        */
-      public Builder setValidFrom(long value) {
+      @java.lang.Deprecated public Builder setValidFrom(long value) {
 
         validFrom_ = value;
         bitField0_ |= 0x00000002;
@@ -860,10 +930,12 @@ public final class CertificateInfoProtos {
         return this;
       }
       /**
-       * <code>optional sfixed64 ValidFrom = 2;</code>
+       * <code>optional sfixed64 ValidFrom = 2 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidFrom is deprecated.
+       *     See CertificateInfo.proto;l=9
        * @return This builder for chaining.
        */
-      public Builder clearValidFrom() {
+      @java.lang.Deprecated public Builder clearValidFrom() {
         bitField0_ = (bitField0_ & ~0x00000002);
         validFrom_ = 0L;
         onChanged();
@@ -872,27 +944,33 @@ public final class CertificateInfoProtos {
 
       private long validTo_ ;
       /**
-       * <code>optional sfixed64 ValidTo = 3;</code>
+       * <code>optional sfixed64 ValidTo = 3 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidTo is deprecated.
+       *     See CertificateInfo.proto;l=10
        * @return Whether the validTo field is set.
        */
       @java.lang.Override
-      public boolean hasValidTo() {
+      @java.lang.Deprecated public boolean hasValidTo() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional sfixed64 ValidTo = 3;</code>
+       * <code>optional sfixed64 ValidTo = 3 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidTo is deprecated.
+       *     See CertificateInfo.proto;l=10
        * @return The validTo.
        */
       @java.lang.Override
-      public long getValidTo() {
+      @java.lang.Deprecated public long getValidTo() {
         return validTo_;
       }
       /**
-       * <code>optional sfixed64 ValidTo = 3;</code>
+       * <code>optional sfixed64 ValidTo = 3 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidTo is deprecated.
+       *     See CertificateInfo.proto;l=10
        * @param value The validTo to set.
        * @return This builder for chaining.
        */
-      public Builder setValidTo(long value) {
+      @java.lang.Deprecated public Builder setValidTo(long value) {
 
         validTo_ = value;
         bitField0_ |= 0x00000004;
@@ -900,10 +978,12 @@ public final class CertificateInfoProtos {
         return this;
       }
       /**
-       * <code>optional sfixed64 ValidTo = 3;</code>
+       * <code>optional sfixed64 ValidTo = 3 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.ValidTo is deprecated.
+       *     See CertificateInfo.proto;l=10
        * @return This builder for chaining.
        */
-      public Builder clearValidTo() {
+      @java.lang.Deprecated public Builder clearValidTo() {
         bitField0_ = (bitField0_ & ~0x00000004);
         validTo_ = 0L;
         onChanged();
@@ -912,17 +992,21 @@ public final class CertificateInfoProtos {
 
       private java.lang.Object organizationName_ = "";
       /**
-       * <code>optional string OrganizationName = 4;</code>
+       * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+       *     See CertificateInfo.proto;l=11
        * @return Whether the organizationName field is set.
        */
-      public boolean hasOrganizationName() {
+      @java.lang.Deprecated public boolean hasOrganizationName() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>optional string OrganizationName = 4;</code>
+       * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+       *     See CertificateInfo.proto;l=11
        * @return The organizationName.
        */
-      public java.lang.String getOrganizationName() {
+      @java.lang.Deprecated public java.lang.String getOrganizationName() {
         java.lang.Object ref = organizationName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -937,10 +1021,12 @@ public final class CertificateInfoProtos {
         }
       }
       /**
-       * <code>optional string OrganizationName = 4;</code>
+       * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+       *     See CertificateInfo.proto;l=11
        * @return The bytes for organizationName.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getOrganizationNameBytes() {
         java.lang.Object ref = organizationName_;
         if (ref instanceof String) {
@@ -954,11 +1040,13 @@ public final class CertificateInfoProtos {
         }
       }
       /**
-       * <code>optional string OrganizationName = 4;</code>
+       * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+       *     See CertificateInfo.proto;l=11
        * @param value The organizationName to set.
        * @return This builder for chaining.
        */
-      public Builder setOrganizationName(
+      @java.lang.Deprecated public Builder setOrganizationName(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         organizationName_ = value;
@@ -967,21 +1055,25 @@ public final class CertificateInfoProtos {
         return this;
       }
       /**
-       * <code>optional string OrganizationName = 4;</code>
+       * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+       *     See CertificateInfo.proto;l=11
        * @return This builder for chaining.
        */
-      public Builder clearOrganizationName() {
+      @java.lang.Deprecated public Builder clearOrganizationName() {
         organizationName_ = getDefaultInstance().getOrganizationName();
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>optional string OrganizationName = 4;</code>
+       * <code>optional string OrganizationName = 4 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.OrganizationName is deprecated.
+       *     See CertificateInfo.proto;l=11
        * @param value The bytes for organizationName to set.
        * @return This builder for chaining.
        */
-      public Builder setOrganizationNameBytes(
+      @java.lang.Deprecated public Builder setOrganizationNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         organizationName_ = value;
@@ -992,17 +1084,21 @@ public final class CertificateInfoProtos {
 
       private java.lang.Object inn_ = "";
       /**
-       * <code>optional string Inn = 5;</code>
+       * <code>optional string Inn = 5 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+       *     See CertificateInfo.proto;l=12
        * @return Whether the inn field is set.
        */
-      public boolean hasInn() {
+      @java.lang.Deprecated public boolean hasInn() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>optional string Inn = 5;</code>
+       * <code>optional string Inn = 5 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+       *     See CertificateInfo.proto;l=12
        * @return The inn.
        */
-      public java.lang.String getInn() {
+      @java.lang.Deprecated public java.lang.String getInn() {
         java.lang.Object ref = inn_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -1017,10 +1113,12 @@ public final class CertificateInfoProtos {
         }
       }
       /**
-       * <code>optional string Inn = 5;</code>
+       * <code>optional string Inn = 5 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+       *     See CertificateInfo.proto;l=12
        * @return The bytes for inn.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getInnBytes() {
         java.lang.Object ref = inn_;
         if (ref instanceof String) {
@@ -1034,11 +1132,13 @@ public final class CertificateInfoProtos {
         }
       }
       /**
-       * <code>optional string Inn = 5;</code>
+       * <code>optional string Inn = 5 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+       *     See CertificateInfo.proto;l=12
        * @param value The inn to set.
        * @return This builder for chaining.
        */
-      public Builder setInn(
+      @java.lang.Deprecated public Builder setInn(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         inn_ = value;
@@ -1047,21 +1147,25 @@ public final class CertificateInfoProtos {
         return this;
       }
       /**
-       * <code>optional string Inn = 5;</code>
+       * <code>optional string Inn = 5 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+       *     See CertificateInfo.proto;l=12
        * @return This builder for chaining.
        */
-      public Builder clearInn() {
+      @java.lang.Deprecated public Builder clearInn() {
         inn_ = getDefaultInstance().getInn();
         bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
-       * <code>optional string Inn = 5;</code>
+       * <code>optional string Inn = 5 [deprecated = true];</code>
+       * @deprecated Diadoc.Api.Proto.CertificateInfo.Inn is deprecated.
+       *     See CertificateInfo.proto;l=12
        * @param value The bytes for inn to set.
        * @return This builder for chaining.
        */
-      public Builder setInnBytes(
+      @java.lang.Deprecated public Builder setInnBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         inn_ = value;
@@ -1136,10 +1240,11 @@ public final class CertificateInfoProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\025CertificateInfo.proto\022\020Diadoc.Api.Prot" +
-      "o\"p\n\017CertificateInfo\022\022\n\nThumbprint\030\001 \001(\t" +
-      "\022\021\n\tValidFrom\030\002 \001(\020\022\017\n\007ValidTo\030\003 \001(\020\022\030\n\020" +
-      "OrganizationName\030\004 \001(\t\022\013\n\003Inn\030\005 \001(\tB\027B\025C" +
-      "ertificateInfoProtos"
+      "o\"\210\001\n\017CertificateInfo\022\026\n\nThumbprint\030\001 \001(" +
+      "\tB\002\030\001\022\025\n\tValidFrom\030\002 \001(\020B\002\030\001\022\023\n\007ValidTo\030" +
+      "\003 \001(\020B\002\030\001\022\034\n\020OrganizationName\030\004 \001(\tB\002\030\001\022" +
+      "\017\n\003Inn\030\005 \001(\tB\002\030\001:\002\030\001B\032B\025CertificateInfoP" +
+      "rotos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

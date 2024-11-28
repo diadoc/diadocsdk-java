@@ -20,6 +20,7 @@ public class EventsClient {
         this.diadocHttpClient = diadocHttpClient;
     }
 
+    @Deprecated
     public BoxEventList getNewEvents(String currentBoxId, @Nullable String eventIdCurrent) throws DiadocSdkException {
         if (currentBoxId == null) {
             throw new IllegalArgumentException("currentBoxId");

@@ -1317,11 +1317,11 @@ public final class DssSignProtos {
      * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
      * @return The content.
      */
-    Diadoc.Api.Proto.Content_v3Protos.Content_v3 getContent();
+    Diadoc.Api.Proto.ContentV3.Content_v3 getContent();
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
      */
-    Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder getContentOrBuilder();
+    Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder getContentOrBuilder();
 
     /**
      * <code>optional string FileName = 2;</code>
@@ -1380,7 +1380,7 @@ public final class DssSignProtos {
 
     private int bitField0_;
     public static final int CONTENT_FIELD_NUMBER = 1;
-    private Diadoc.Api.Proto.Content_v3Protos.Content_v3 content_;
+    private Diadoc.Api.Proto.ContentV3.Content_v3 content_;
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
      * @return Whether the content field is set.
@@ -1394,15 +1394,15 @@ public final class DssSignProtos {
      * @return The content.
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.Content_v3Protos.Content_v3 getContent() {
-      return content_ == null ? Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : content_;
+    public Diadoc.Api.Proto.ContentV3.Content_v3 getContent() {
+      return content_ == null ? Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : content_;
     }
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder getContentOrBuilder() {
-      return content_ == null ? Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : content_;
+    public Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder getContentOrBuilder() {
+      return content_ == null ? Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : content_;
     }
 
     public static final int FILENAME_FIELD_NUMBER = 2;
@@ -1813,9 +1813,9 @@ public final class DssSignProtos {
       }
       private int bitField0_;
 
-      private Diadoc.Api.Proto.Content_v3Protos.Content_v3 content_;
+      private Diadoc.Api.Proto.ContentV3.Content_v3 content_;
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Content_v3Protos.Content_v3, Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder, Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder> contentBuilder_;
+          Diadoc.Api.Proto.ContentV3.Content_v3, Diadoc.Api.Proto.ContentV3.Content_v3.Builder, Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder> contentBuilder_;
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        * @return Whether the content field is set.
@@ -1827,9 +1827,9 @@ public final class DssSignProtos {
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        * @return The content.
        */
-      public Diadoc.Api.Proto.Content_v3Protos.Content_v3 getContent() {
+      public Diadoc.Api.Proto.ContentV3.Content_v3 getContent() {
         if (contentBuilder_ == null) {
-          return content_ == null ? Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : content_;
+          return content_ == null ? Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : content_;
         } else {
           return contentBuilder_.getMessage();
         }
@@ -1837,7 +1837,7 @@ public final class DssSignProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
-      public Builder setContent(Diadoc.Api.Proto.Content_v3Protos.Content_v3 value) {
+      public Builder setContent(Diadoc.Api.Proto.ContentV3.Content_v3 value) {
         if (contentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1854,7 +1854,7 @@ public final class DssSignProtos {
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
       public Builder setContent(
-          Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder builderForValue) {
+          Diadoc.Api.Proto.ContentV3.Content_v3.Builder builderForValue) {
         if (contentBuilder_ == null) {
           content_ = builderForValue.build();
         } else {
@@ -1867,11 +1867,11 @@ public final class DssSignProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
-      public Builder mergeContent(Diadoc.Api.Proto.Content_v3Protos.Content_v3 value) {
+      public Builder mergeContent(Diadoc.Api.Proto.ContentV3.Content_v3 value) {
         if (contentBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             content_ != null &&
-            content_ != Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance()) {
+            content_ != Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance()) {
             getContentBuilder().mergeFrom(value);
           } else {
             content_ = value;
@@ -1901,7 +1901,7 @@ public final class DssSignProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
-      public Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder getContentBuilder() {
+      public Diadoc.Api.Proto.ContentV3.Content_v3.Builder getContentBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getContentFieldBuilder().getBuilder();
@@ -1909,23 +1909,23 @@ public final class DssSignProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
-      public Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder getContentOrBuilder() {
+      public Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
           return contentBuilder_.getMessageOrBuilder();
         } else {
           return content_ == null ?
-              Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : content_;
+              Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : content_;
         }
       }
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Content_v3Protos.Content_v3, Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder, Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder> 
+          Diadoc.Api.Proto.ContentV3.Content_v3, Diadoc.Api.Proto.ContentV3.Content_v3.Builder, Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder> 
           getContentFieldBuilder() {
         if (contentBuilder_ == null) {
           contentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Content_v3Protos.Content_v3, Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder, Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder>(
+              Diadoc.Api.Proto.ContentV3.Content_v3, Diadoc.Api.Proto.ContentV3.Content_v3.Builder, Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder>(
                   getContent(),
                   getParentForChildren(),
                   isClean());
@@ -3940,7 +3940,7 @@ public final class DssSignProtos {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          Diadoc.Api.Proto.Content_v3Protos.getDescriptor(),
+          Diadoc.Api.Proto.ContentV3.getDescriptor(),
         });
     internal_static_Diadoc_Api_Proto_Dss_DssSignRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3967,7 +3967,7 @@ public final class DssSignProtos {
         internal_static_Diadoc_Api_Proto_Dss_DssFileSigningResult_descriptor,
         new java.lang.String[] { "FileSigningStatus", "Signature", });
     descriptor.resolveAllFeaturesImmutable();
-    Diadoc.Api.Proto.Content_v3Protos.getDescriptor();
+    Diadoc.Api.Proto.ContentV3.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

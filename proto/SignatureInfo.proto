@@ -2,7 +2,6 @@ import "CertificateInfoV2.proto";
 import "SignatureVerificationResult.proto";
 import "Timestamp.proto";
 
-
 package Diadoc.Api.Proto;
 
 option java_outer_classname = "SignatureInfoProtos";

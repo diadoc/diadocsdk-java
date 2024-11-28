@@ -15854,11 +15854,11 @@ public final class PowerOfAttorneyProtos {
      * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
      * @return The content.
      */
-    Diadoc.Api.Proto.Content_v3Protos.Content_v3 getContent();
+    Diadoc.Api.Proto.ContentV3.Content_v3 getContent();
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
      */
-    Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder getContentOrBuilder();
+    Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder getContentOrBuilder();
 
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
@@ -15869,11 +15869,11 @@ public final class PowerOfAttorneyProtos {
      * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
      * @return The signature.
      */
-    Diadoc.Api.Proto.Content_v3Protos.Content_v3 getSignature();
+    Diadoc.Api.Proto.ContentV3.Content_v3 getSignature();
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
      */
-    Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder getSignatureOrBuilder();
+    Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder getSignatureOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneySignedContent}
@@ -15914,7 +15914,7 @@ public final class PowerOfAttorneyProtos {
 
     private int bitField0_;
     public static final int CONTENT_FIELD_NUMBER = 1;
-    private Diadoc.Api.Proto.Content_v3Protos.Content_v3 content_;
+    private Diadoc.Api.Proto.ContentV3.Content_v3 content_;
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
      * @return Whether the content field is set.
@@ -15928,19 +15928,19 @@ public final class PowerOfAttorneyProtos {
      * @return The content.
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.Content_v3Protos.Content_v3 getContent() {
-      return content_ == null ? Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : content_;
+    public Diadoc.Api.Proto.ContentV3.Content_v3 getContent() {
+      return content_ == null ? Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : content_;
     }
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder getContentOrBuilder() {
-      return content_ == null ? Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : content_;
+    public Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder getContentOrBuilder() {
+      return content_ == null ? Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : content_;
     }
 
     public static final int SIGNATURE_FIELD_NUMBER = 2;
-    private Diadoc.Api.Proto.Content_v3Protos.Content_v3 signature_;
+    private Diadoc.Api.Proto.ContentV3.Content_v3 signature_;
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
      * @return Whether the signature field is set.
@@ -15954,15 +15954,15 @@ public final class PowerOfAttorneyProtos {
      * @return The signature.
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.Content_v3Protos.Content_v3 getSignature() {
-      return signature_ == null ? Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : signature_;
+    public Diadoc.Api.Proto.ContentV3.Content_v3 getSignature() {
+      return signature_ == null ? Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : signature_;
     }
     /**
      * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder getSignatureOrBuilder() {
-      return signature_ == null ? Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : signature_;
+    public Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder getSignatureOrBuilder() {
+      return signature_ == null ? Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : signature_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -16346,9 +16346,9 @@ public final class PowerOfAttorneyProtos {
       }
       private int bitField0_;
 
-      private Diadoc.Api.Proto.Content_v3Protos.Content_v3 content_;
+      private Diadoc.Api.Proto.ContentV3.Content_v3 content_;
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Content_v3Protos.Content_v3, Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder, Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder> contentBuilder_;
+          Diadoc.Api.Proto.ContentV3.Content_v3, Diadoc.Api.Proto.ContentV3.Content_v3.Builder, Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder> contentBuilder_;
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        * @return Whether the content field is set.
@@ -16360,9 +16360,9 @@ public final class PowerOfAttorneyProtos {
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        * @return The content.
        */
-      public Diadoc.Api.Proto.Content_v3Protos.Content_v3 getContent() {
+      public Diadoc.Api.Proto.ContentV3.Content_v3 getContent() {
         if (contentBuilder_ == null) {
-          return content_ == null ? Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : content_;
+          return content_ == null ? Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : content_;
         } else {
           return contentBuilder_.getMessage();
         }
@@ -16370,7 +16370,7 @@ public final class PowerOfAttorneyProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
-      public Builder setContent(Diadoc.Api.Proto.Content_v3Protos.Content_v3 value) {
+      public Builder setContent(Diadoc.Api.Proto.ContentV3.Content_v3 value) {
         if (contentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16387,7 +16387,7 @@ public final class PowerOfAttorneyProtos {
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
       public Builder setContent(
-          Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder builderForValue) {
+          Diadoc.Api.Proto.ContentV3.Content_v3.Builder builderForValue) {
         if (contentBuilder_ == null) {
           content_ = builderForValue.build();
         } else {
@@ -16400,11 +16400,11 @@ public final class PowerOfAttorneyProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
-      public Builder mergeContent(Diadoc.Api.Proto.Content_v3Protos.Content_v3 value) {
+      public Builder mergeContent(Diadoc.Api.Proto.ContentV3.Content_v3 value) {
         if (contentBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             content_ != null &&
-            content_ != Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance()) {
+            content_ != Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance()) {
             getContentBuilder().mergeFrom(value);
           } else {
             content_ = value;
@@ -16434,7 +16434,7 @@ public final class PowerOfAttorneyProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
-      public Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder getContentBuilder() {
+      public Diadoc.Api.Proto.ContentV3.Content_v3.Builder getContentBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getContentFieldBuilder().getBuilder();
@@ -16442,23 +16442,23 @@ public final class PowerOfAttorneyProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
-      public Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder getContentOrBuilder() {
+      public Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
           return contentBuilder_.getMessageOrBuilder();
         } else {
           return content_ == null ?
-              Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : content_;
+              Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : content_;
         }
       }
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Content = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Content_v3Protos.Content_v3, Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder, Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder> 
+          Diadoc.Api.Proto.ContentV3.Content_v3, Diadoc.Api.Proto.ContentV3.Content_v3.Builder, Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder> 
           getContentFieldBuilder() {
         if (contentBuilder_ == null) {
           contentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Content_v3Protos.Content_v3, Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder, Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder>(
+              Diadoc.Api.Proto.ContentV3.Content_v3, Diadoc.Api.Proto.ContentV3.Content_v3.Builder, Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder>(
                   getContent(),
                   getParentForChildren(),
                   isClean());
@@ -16467,9 +16467,9 @@ public final class PowerOfAttorneyProtos {
         return contentBuilder_;
       }
 
-      private Diadoc.Api.Proto.Content_v3Protos.Content_v3 signature_;
+      private Diadoc.Api.Proto.ContentV3.Content_v3 signature_;
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Content_v3Protos.Content_v3, Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder, Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder> signatureBuilder_;
+          Diadoc.Api.Proto.ContentV3.Content_v3, Diadoc.Api.Proto.ContentV3.Content_v3.Builder, Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder> signatureBuilder_;
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
        * @return Whether the signature field is set.
@@ -16481,9 +16481,9 @@ public final class PowerOfAttorneyProtos {
        * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
        * @return The signature.
        */
-      public Diadoc.Api.Proto.Content_v3Protos.Content_v3 getSignature() {
+      public Diadoc.Api.Proto.ContentV3.Content_v3 getSignature() {
         if (signatureBuilder_ == null) {
-          return signature_ == null ? Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : signature_;
+          return signature_ == null ? Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : signature_;
         } else {
           return signatureBuilder_.getMessage();
         }
@@ -16491,7 +16491,7 @@ public final class PowerOfAttorneyProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
        */
-      public Builder setSignature(Diadoc.Api.Proto.Content_v3Protos.Content_v3 value) {
+      public Builder setSignature(Diadoc.Api.Proto.ContentV3.Content_v3 value) {
         if (signatureBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16508,7 +16508,7 @@ public final class PowerOfAttorneyProtos {
        * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
        */
       public Builder setSignature(
-          Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder builderForValue) {
+          Diadoc.Api.Proto.ContentV3.Content_v3.Builder builderForValue) {
         if (signatureBuilder_ == null) {
           signature_ = builderForValue.build();
         } else {
@@ -16521,11 +16521,11 @@ public final class PowerOfAttorneyProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
        */
-      public Builder mergeSignature(Diadoc.Api.Proto.Content_v3Protos.Content_v3 value) {
+      public Builder mergeSignature(Diadoc.Api.Proto.ContentV3.Content_v3 value) {
         if (signatureBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
             signature_ != null &&
-            signature_ != Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance()) {
+            signature_ != Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance()) {
             getSignatureBuilder().mergeFrom(value);
           } else {
             signature_ = value;
@@ -16555,7 +16555,7 @@ public final class PowerOfAttorneyProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
        */
-      public Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder getSignatureBuilder() {
+      public Diadoc.Api.Proto.ContentV3.Content_v3.Builder getSignatureBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getSignatureFieldBuilder().getBuilder();
@@ -16563,23 +16563,23 @@ public final class PowerOfAttorneyProtos {
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
        */
-      public Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder getSignatureOrBuilder() {
+      public Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder getSignatureOrBuilder() {
         if (signatureBuilder_ != null) {
           return signatureBuilder_.getMessageOrBuilder();
         } else {
           return signature_ == null ?
-              Diadoc.Api.Proto.Content_v3Protos.Content_v3.getDefaultInstance() : signature_;
+              Diadoc.Api.Proto.ContentV3.Content_v3.getDefaultInstance() : signature_;
         }
       }
       /**
        * <code>required .Diadoc.Api.Proto.Content_v3 Signature = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.Content_v3Protos.Content_v3, Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder, Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder> 
+          Diadoc.Api.Proto.ContentV3.Content_v3, Diadoc.Api.Proto.ContentV3.Content_v3.Builder, Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder> 
           getSignatureFieldBuilder() {
         if (signatureBuilder_ == null) {
           signatureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.Content_v3Protos.Content_v3, Diadoc.Api.Proto.Content_v3Protos.Content_v3.Builder, Diadoc.Api.Proto.Content_v3Protos.Content_v3OrBuilder>(
+              Diadoc.Api.Proto.ContentV3.Content_v3, Diadoc.Api.Proto.ContentV3.Content_v3.Builder, Diadoc.Api.Proto.ContentV3.Content_v3OrBuilder>(
                   getSignature(),
                   getParentForChildren(),
                   isClean());
@@ -22806,7 +22806,7 @@ public final class PowerOfAttorneyProtos {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          Diadoc.Api.Proto.Content_v3Protos.getDescriptor(),
+          Diadoc.Api.Proto.ContentV3.getDescriptor(),
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
           Diadoc.Api.Proto.UserProtos.getDescriptor(),
         });
@@ -22943,7 +22943,7 @@ public final class PowerOfAttorneyProtos {
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContentV2_descriptor,
         new java.lang.String[] { "Content", "Signature", "FullId", });
     descriptor.resolveAllFeaturesImmutable();
-    Diadoc.Api.Proto.Content_v3Protos.getDescriptor();
+    Diadoc.Api.Proto.ContentV3.getDescriptor();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.UserProtos.getDescriptor();
   }
