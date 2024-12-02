@@ -77921,6 +77921,15 @@ public final class DiadocMessage_PostApiProtos {
      */
     Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerOrBuilder getExtendedSignerOrBuilder(
         int index);
+
+    /**
+     * <code>optional bytes SignerContent = 5;</code>
+     */
+    boolean hasSignerContent();
+    /**
+     * <code>optional bytes SignerContent = 5;</code>
+     */
+    com.google.protobuf.ByteString getSignerContent();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.DraftDocumentToPatch}
@@ -78012,6 +78021,11 @@ public final class DiadocMessage_PostApiProtos {
                 mutable_bitField0_ |= 0x00000008;
               }
               extendedSigner_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSigner.PARSER, extensionRegistry));
+              break;
+            }
+            case 42: {
+              bitField0_ |= 0x00000008;
+              signerContent_ = input.readBytes();
               break;
             }
           }
@@ -78176,11 +78190,27 @@ public final class DiadocMessage_PostApiProtos {
       return extendedSigner_.get(index);
     }
 
+    public static final int SIGNERCONTENT_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString signerContent_;
+    /**
+     * <code>optional bytes SignerContent = 5;</code>
+     */
+    public boolean hasSignerContent() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional bytes SignerContent = 5;</code>
+     */
+    public com.google.protobuf.ByteString getSignerContent() {
+      return signerContent_;
+    }
+
     private void initFields() {
       documentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
       toBoxId_ = "";
       signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
       extendedSigner_ = java.util.Collections.emptyList();
+      signerContent_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -78227,6 +78257,9 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < extendedSigner_.size(); i++) {
         output.writeMessage(4, extendedSigner_.get(i));
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(5, signerContent_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -78251,6 +78284,10 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < extendedSigner_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, extendedSigner_.get(i));
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, signerContent_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -78392,6 +78429,8 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           extendedSignerBuilder_.clear();
         }
+        signerContent_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -78449,6 +78488,10 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           result.extendedSigner_ = extendedSignerBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.signerContent_ = signerContent_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -78501,6 +78544,9 @@ public final class DiadocMessage_PostApiProtos {
               extendedSignerBuilder_.addAllMessages(other.extendedSigner_);
             }
           }
+        }
+        if (other.hasSignerContent()) {
+          setSignerContent(other.getSignerContent());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -79097,6 +79143,41 @@ public final class DiadocMessage_PostApiProtos {
         return extendedSignerBuilder_;
       }
 
+      private com.google.protobuf.ByteString signerContent_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes SignerContent = 5;</code>
+       */
+      public boolean hasSignerContent() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bytes SignerContent = 5;</code>
+       */
+      public com.google.protobuf.ByteString getSignerContent() {
+        return signerContent_;
+      }
+      /**
+       * <code>optional bytes SignerContent = 5;</code>
+       */
+      public Builder setSignerContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        signerContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes SignerContent = 5;</code>
+       */
+      public Builder clearSignerContent() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        signerContent_ = getDefaultInstance().getSignerContent();
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.DraftDocumentToPatch)
     }
 
@@ -79217,6 +79298,15 @@ public final class DiadocMessage_PostApiProtos {
      */
     Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerOrBuilder getExtendedSignerOrBuilder(
         int index);
+
+    /**
+     * <code>optional bytes SignerContent = 8;</code>
+     */
+    boolean hasSignerContent();
+    /**
+     * <code>optional bytes SignerContent = 8;</code>
+     */
+    com.google.protobuf.ByteString getSignerContent();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.ContentToPatch}
@@ -79326,6 +79416,11 @@ public final class DiadocMessage_PostApiProtos {
                 mutable_bitField0_ |= 0x00000040;
               }
               extendedSigner_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSigner.PARSER, extensionRegistry));
+              break;
+            }
+            case 66: {
+              bitField0_ |= 0x00000040;
+              signerContent_ = input.readBytes();
               break;
             }
           }
@@ -79616,6 +79711,21 @@ public final class DiadocMessage_PostApiProtos {
       return extendedSigner_.get(index);
     }
 
+    public static final int SIGNERCONTENT_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString signerContent_;
+    /**
+     * <code>optional bytes SignerContent = 8;</code>
+     */
+    public boolean hasSignerContent() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional bytes SignerContent = 8;</code>
+     */
+    public com.google.protobuf.ByteString getSignerContent() {
+      return signerContent_;
+    }
+
     private void initFields() {
       typeNamedId_ = "";
       function_ = "";
@@ -79624,6 +79734,7 @@ public final class DiadocMessage_PostApiProtos {
       toBoxId_ = "";
       signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
       extendedSigner_ = java.util.Collections.emptyList();
+      signerContent_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -79687,6 +79798,9 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < extendedSigner_.size(); i++) {
         output.writeMessage(7, extendedSigner_.get(i));
       }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(8, signerContent_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -79723,6 +79837,10 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < extendedSigner_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, extendedSigner_.get(i));
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, signerContent_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -79870,6 +79988,8 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           extendedSignerBuilder_.clear();
         }
+        signerContent_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -79939,6 +80059,10 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           result.extendedSigner_ = extendedSignerBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.signerContent_ = signerContent_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -80006,6 +80130,9 @@ public final class DiadocMessage_PostApiProtos {
               extendedSignerBuilder_.addAllMessages(other.extendedSigner_);
             }
           }
+        }
+        if (other.hasSignerContent()) {
+          setSignerContent(other.getSignerContent());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -80838,6 +80965,41 @@ public final class DiadocMessage_PostApiProtos {
         return extendedSignerBuilder_;
       }
 
+      private com.google.protobuf.ByteString signerContent_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes SignerContent = 8;</code>
+       */
+      public boolean hasSignerContent() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional bytes SignerContent = 8;</code>
+       */
+      public com.google.protobuf.ByteString getSignerContent() {
+        return signerContent_;
+      }
+      /**
+       * <code>optional bytes SignerContent = 8;</code>
+       */
+      public Builder setSignerContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        signerContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes SignerContent = 8;</code>
+       */
+      public Builder clearSignerContent() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        signerContent_ = getDefaultInstance().getSignerContent();
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.ContentToPatch)
     }
 
@@ -80902,6 +81064,15 @@ public final class DiadocMessage_PostApiProtos {
      */
     Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerOrBuilder getExtendedSignerOrBuilder(
         int index);
+
+    /**
+     * <code>optional bytes SignerContent = 4;</code>
+     */
+    boolean hasSignerContent();
+    /**
+     * <code>optional bytes SignerContent = 4;</code>
+     */
+    com.google.protobuf.ByteString getSignerContent();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Events.DocumentToPatch}
@@ -80987,6 +81158,11 @@ public final class DiadocMessage_PostApiProtos {
                 mutable_bitField0_ |= 0x00000004;
               }
               extendedSigner_.add(input.readMessage(Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSigner.PARSER, extensionRegistry));
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000004;
+              signerContent_ = input.readBytes();
               break;
             }
           }
@@ -81109,10 +81285,26 @@ public final class DiadocMessage_PostApiProtos {
       return extendedSigner_.get(index);
     }
 
+    public static final int SIGNERCONTENT_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString signerContent_;
+    /**
+     * <code>optional bytes SignerContent = 4;</code>
+     */
+    public boolean hasSignerContent() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bytes SignerContent = 4;</code>
+     */
+    public com.google.protobuf.ByteString getSignerContent() {
+      return signerContent_;
+    }
+
     private void initFields() {
       documentId_ = Diadoc.Api.Proto.DocumentIdProtos.DocumentId.getDefaultInstance();
       signer_ = Diadoc.Api.Proto.Invoicing.SignerProtos.Signer.getDefaultInstance();
       extendedSigner_ = java.util.Collections.emptyList();
+      signerContent_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -81156,6 +81348,9 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < extendedSigner_.size(); i++) {
         output.writeMessage(3, extendedSigner_.get(i));
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(4, signerContent_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -81176,6 +81371,10 @@ public final class DiadocMessage_PostApiProtos {
       for (int i = 0; i < extendedSigner_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, extendedSigner_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, signerContent_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -81315,6 +81514,8 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           extendedSignerBuilder_.clear();
         }
+        signerContent_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -81368,6 +81569,10 @@ public final class DiadocMessage_PostApiProtos {
         } else {
           result.extendedSigner_ = extendedSignerBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.signerContent_ = signerContent_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -81415,6 +81620,9 @@ public final class DiadocMessage_PostApiProtos {
               extendedSignerBuilder_.addAllMessages(other.extendedSigner_);
             }
           }
+        }
+        if (other.hasSignerContent()) {
+          setSignerContent(other.getSignerContent());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -81933,6 +82141,41 @@ public final class DiadocMessage_PostApiProtos {
           extendedSigner_ = null;
         }
         return extendedSignerBuilder_;
+      }
+
+      private com.google.protobuf.ByteString signerContent_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes SignerContent = 4;</code>
+       */
+      public boolean hasSignerContent() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional bytes SignerContent = 4;</code>
+       */
+      public com.google.protobuf.ByteString getSignerContent() {
+        return signerContent_;
+      }
+      /**
+       * <code>optional bytes SignerContent = 4;</code>
+       */
+      public Builder setSignerContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        signerContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes SignerContent = 4;</code>
+       */
+      public Builder clearSignerContent() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        signerContent_ = getDefaultInstance().getSignerContent();
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Events.DocumentToPatch)
@@ -100510,93 +100753,95 @@ public final class DiadocMessage_PostApiProtos {
       "umentToPatch\022;\n\tDocuments\030\003 \003(\0132(.Diadoc" +
       ".Api.Proto.Events.DocumentToPatch\0229\n\010Con" +
       "tents\030\004 \003(\0132\'.Diadoc.Api.Proto.Events.Co",
-      "ntentToPatch\"\331\001\n\024DraftDocumentToPatch\0220\n" +
+      "ntentToPatch\"\360\001\n\024DraftDocumentToPatch\0220\n" +
       "\nDocumentId\030\001 \002(\0132\034.Diadoc.Api.Proto.Doc" +
       "umentId\022\017\n\007ToBoxId\030\002 \001(\t\0222\n\006Signer\030\003 \001(\013" +
       "2\".Diadoc.Api.Proto.Invoicing.Signer\022J\n\016" +
       "ExtendedSigner\030\004 \003(\01322.Diadoc.Api.Proto." +
-      "Invoicing.Signers.ExtendedSigner\"\224\002\n\016Con" +
-      "tentToPatch\022\023\n\013TypeNamedId\030\001 \002(\t\022\020\n\010Func" +
-      "tion\030\002 \002(\t\022\017\n\007Version\030\003 \002(\t\0229\n\007Content\030\004" +
-      " \002(\0132(.Diadoc.Api.Proto.Events.UnsignedC" +
-      "ontent\022\017\n\007ToBoxId\030\005 \001(\t\0222\n\006Signer\030\006 \001(\0132",
-      "\".Diadoc.Api.Proto.Invoicing.Signer\022J\n\016E" +
-      "xtendedSigner\030\007 \003(\01322.Diadoc.Api.Proto.I" +
-      "nvoicing.Signers.ExtendedSigner\"\303\001\n\017Docu" +
-      "mentToPatch\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc" +
-      ".Api.Proto.DocumentId\0222\n\006Signer\030\002 \001(\0132\"." +
-      "Diadoc.Api.Proto.Invoicing.Signer\022J\n\016Ext" +
-      "endedSigner\030\003 \003(\01322.Diadoc.Api.Proto.Inv" +
-      "oicing.Signers.ExtendedSigner\"u\n\026Documen" +
-      "tPatchedContent\0220\n\nDocumentId\030\001 \002(\0132\034.Di" +
-      "adoc.Api.Proto.DocumentId\022\030\n\020PatchedCont",
-      "entId\030\002 \002(\t\022\017\n\007Content\030\003 \001(\014\"r\n\036PrepareD" +
-      "ocumentsToSignResponse\022P\n\027DocumentPatche" +
-      "dContents\030\001 \003(\0132/.Diadoc.Api.Proto.Event" +
-      "s.DocumentPatchedContent\"y\n\rMessageToSen" +
-      "d\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tMessageId\030\002 \002(\t\022F\n\022D" +
-      "ocumentSignatures\030\003 \003(\0132*.Diadoc.Api.Pro" +
-      "to.Events.DocumentSignature\"\204\001\n\033Revocati" +
-      "onRequestAttachment\022\026\n\016ParentEntityId\030\001 " +
-      "\002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Diadoc.Api." +
-      "Proto.Events.SignedContent\022\016\n\006Labels\030\003 \003",
-      "(\t\"\210\001\n\037XmlSignatureRejectionAttachment\022\026" +
-      "\n\016ParentEntityId\030\001 \002(\t\022=\n\rSignedContent\030" +
-      "\002 \002(\0132&.Diadoc.Api.Proto.Events.SignedCo" +
-      "ntent\022\016\n\006Labels\030\003 \003(\t\"\221\001\n\031RoamingNotific" +
-      "ationToPost\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 " +
-      "\002(\t\022\017\n\007Success\030\003 \002(\010\022\023\n\013Description\030\004 \001(" +
-      "\t\022\021\n\tMessageId\030\005 \001(\t\022\033\n\023NotifiableEntity" +
-      "Ids\030\006 \003(\t\"\213\001\n\017CustomDataPatch\022\026\n\016ParentE" +
-      "ntityId\030\001 \002(\t\022D\n\tOperation\030\002 \002(\01621.Diado" +
-      "c.Api.Proto.Events.CustomDataPatchOperat",
-      "ion\022\013\n\003Key\030\003 \002(\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031Edit" +
-      "DocumentPacketCommand\022\022\n\nDocumentId\030\001 \002(" +
-      "\t\022:\n\024AddDocumentsToPacket\030\002 \003(\0132\034.Diadoc" +
-      ".Api.Proto.DocumentId\022?\n\031RemoveDocuments" +
-      "FromPacket\030\003 \003(\0132\034.Diadoc.Api.Proto.Docu" +
-      "mentId\"d\n\026ResolutionRouteRemoval\022\026\n\016Pare" +
-      "ntEntityId\030\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Com" +
-      "ment\030\003 \001(\t:\000\022\016\n\006Labels\030\004 \003(\t\"\225\003\n\016Templat" +
-      "eToPost\022\021\n\tFromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 " +
-      "\002(\t\022\030\n\020MessageFromBoxId\030\003 \002(\t\022\026\n\016Message",
-      "ToBoxId\030\004 \002(\t\022\035\n\025MessageToDepartmentId\030\005" +
-      " \001(\t\022P\n\023DocumentAttachments\030\006 \003(\01323.Diad" +
-      "oc.Api.Proto.Events.TemplateDocumentAtta" +
-      "chment\0222\n\010LockMode\030\007 \001(\0162\032.Diadoc.Api.Pr" +
-      "oto.LockMode:\004None\022\030\n\020FromDepartmentId\030\010" +
-      " \001(\t\022\026\n\016ToDepartmentId\030\t \001(\t\022\031\n\021MessageP" +
-      "roxyBoxId\030\n \001(\t\022 \n\030MessageProxyDepartmen" +
-      "tId\030\013 \001(\t\022\031\n\nIsReusable\030\014 \001(\010:\005false\"\373\003\n" +
-      "\032TemplateDocumentAttachment\022A\n\017UnsignedC" +
-      "ontent\030\001 \002(\0132(.Diadoc.Api.Proto.Events.U",
-      "nsignedContent\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeN" +
-      "amedId\030\003 \002(\t\022\020\n\010Function\030\004 \001(\t\022\017\n\007Versio" +
-      "n\030\005 \001(\t\0227\n\010Metadata\030\006 \003(\0132%.Diadoc.Api.P" +
-      "roto.Events.MetadataItem\022\022\n\nWorkflowId\030\007" +
-      " \001(\005\022\030\n\020CustomDocumentId\030\010 \001(\t\022\030\n\020Editin" +
-      "gSettingId\030\t \001(\t\022%\n\026NeedRecipientSignatu" +
-      "re\030\n \001(\010:\005false\022S\n\030PredefinedRecipientTi" +
-      "tle\030\013 \001(\01321.Diadoc.Api.Proto.Events.Pred" +
-      "efinedRecipientTitle\022\036\n\017RefusalDisabled\030" +
-      "\014 \001(\010:\005false\0224\n\nCustomData\030\r \003(\0132 .Diado",
-      "c.Api.Proto.CustomDataItem\"[\n\023TemplatePa" +
-      "tchToPost\022D\n\010Refusals\030\001 \003(\01322.Diadoc.Api" +
-      ".Proto.Events.TemplateRefusalAttachment\"" +
-      "P\n\031TemplateRefusalAttachment\022\022\n\nDocument" +
-      "Id\030\001 \002(\t\022\017\n\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(" +
-      "\t\"]\n\030PredefinedRecipientTitle\022A\n\017Unsigne" +
-      "dContent\030\001 \002(\0132(.Diadoc.Api.Proto.Events" +
-      ".UnsignedContent\"7\n\017UnsignedContent\022\017\n\007C" +
-      "ontent\030\001 \001(\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034Te" +
-      "mplateTransformationToPost\022\r\n\005BoxId\030\001 \002(",
-      "\t\022\022\n\nTemplateId\030\002 \002(\t\022P\n\027DocumentTransfo" +
-      "rmations\030\003 \003(\0132/.Diadoc.Api.Proto.Events" +
-      ".DocumentTransformation\"F\n\026DocumentTrans" +
-      "formation\022\022\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomD" +
-      "ocumentId\030\002 \001(\t*/\n\030CustomDataPatchOperat" +
-      "ion\022\007\n\003Set\020\000\022\n\n\006Remove\020\001B\035B\033DiadocMessag" +
-      "e_PostApiProtos"
+      "Invoicing.Signers.ExtendedSigner\022\025\n\rSign" +
+      "erContent\030\005 \001(\014\"\253\002\n\016ContentToPatch\022\023\n\013Ty" +
+      "peNamedId\030\001 \002(\t\022\020\n\010Function\030\002 \002(\t\022\017\n\007Ver" +
+      "sion\030\003 \002(\t\0229\n\007Content\030\004 \002(\0132(.Diadoc.Api" +
+      ".Proto.Events.UnsignedContent\022\017\n\007ToBoxId",
+      "\030\005 \001(\t\0222\n\006Signer\030\006 \001(\0132\".Diadoc.Api.Prot" +
+      "o.Invoicing.Signer\022J\n\016ExtendedSigner\030\007 \003" +
+      "(\01322.Diadoc.Api.Proto.Invoicing.Signers." +
+      "ExtendedSigner\022\025\n\rSignerContent\030\010 \001(\014\"\332\001" +
+      "\n\017DocumentToPatch\0220\n\nDocumentId\030\001 \002(\0132\034." +
+      "Diadoc.Api.Proto.DocumentId\0222\n\006Signer\030\002 " +
+      "\001(\0132\".Diadoc.Api.Proto.Invoicing.Signer\022" +
+      "J\n\016ExtendedSigner\030\003 \003(\01322.Diadoc.Api.Pro" +
+      "to.Invoicing.Signers.ExtendedSigner\022\025\n\rS" +
+      "ignerContent\030\004 \001(\014\"u\n\026DocumentPatchedCon",
+      "tent\0220\n\nDocumentId\030\001 \002(\0132\034.Diadoc.Api.Pr" +
+      "oto.DocumentId\022\030\n\020PatchedContentId\030\002 \002(\t" +
+      "\022\017\n\007Content\030\003 \001(\014\"r\n\036PrepareDocumentsToS" +
+      "ignResponse\022P\n\027DocumentPatchedContents\030\001" +
+      " \003(\0132/.Diadoc.Api.Proto.Events.DocumentP" +
+      "atchedContent\"y\n\rMessageToSend\022\r\n\005BoxId\030" +
+      "\001 \002(\t\022\021\n\tMessageId\030\002 \002(\t\022F\n\022DocumentSign" +
+      "atures\030\003 \003(\0132*.Diadoc.Api.Proto.Events.D" +
+      "ocumentSignature\"\204\001\n\033RevocationRequestAt" +
+      "tachment\022\026\n\016ParentEntityId\030\001 \002(\t\022=\n\rSign",
+      "edContent\030\002 \002(\0132&.Diadoc.Api.Proto.Event" +
+      "s.SignedContent\022\016\n\006Labels\030\003 \003(\t\"\210\001\n\037XmlS" +
+      "ignatureRejectionAttachment\022\026\n\016ParentEnt" +
+      "ityId\030\001 \002(\t\022=\n\rSignedContent\030\002 \002(\0132&.Dia" +
+      "doc.Api.Proto.Events.SignedContent\022\016\n\006La" +
+      "bels\030\003 \003(\t\"\221\001\n\031RoamingNotificationToPost" +
+      "\022\r\n\005BoxId\030\001 \002(\t\022\017\n\007EventId\030\002 \002(\t\022\017\n\007Succ" +
+      "ess\030\003 \002(\010\022\023\n\013Description\030\004 \001(\t\022\021\n\tMessag" +
+      "eId\030\005 \001(\t\022\033\n\023NotifiableEntityIds\030\006 \003(\t\"\213" +
+      "\001\n\017CustomDataPatch\022\026\n\016ParentEntityId\030\001 \002",
+      "(\t\022D\n\tOperation\030\002 \002(\01621.Diadoc.Api.Proto" +
+      ".Events.CustomDataPatchOperation\022\013\n\003Key\030" +
+      "\003 \002(\t\022\r\n\005Value\030\004 \001(\t\"\254\001\n\031EditDocumentPac" +
+      "ketCommand\022\022\n\nDocumentId\030\001 \002(\t\022:\n\024AddDoc" +
+      "umentsToPacket\030\002 \003(\0132\034.Diadoc.Api.Proto." +
+      "DocumentId\022?\n\031RemoveDocumentsFromPacket\030" +
+      "\003 \003(\0132\034.Diadoc.Api.Proto.DocumentId\"d\n\026R" +
+      "esolutionRouteRemoval\022\026\n\016ParentEntityId\030" +
+      "\001 \002(\t\022\017\n\007RouteId\030\002 \002(\t\022\021\n\007Comment\030\003 \001(\t:" +
+      "\000\022\016\n\006Labels\030\004 \003(\t\"\225\003\n\016TemplateToPost\022\021\n\t",
+      "FromBoxId\030\001 \002(\t\022\017\n\007ToBoxId\030\002 \002(\t\022\030\n\020Mess" +
+      "ageFromBoxId\030\003 \002(\t\022\026\n\016MessageToBoxId\030\004 \002" +
+      "(\t\022\035\n\025MessageToDepartmentId\030\005 \001(\t\022P\n\023Doc" +
+      "umentAttachments\030\006 \003(\01323.Diadoc.Api.Prot" +
+      "o.Events.TemplateDocumentAttachment\0222\n\010L" +
+      "ockMode\030\007 \001(\0162\032.Diadoc.Api.Proto.LockMod" +
+      "e:\004None\022\030\n\020FromDepartmentId\030\010 \001(\t\022\026\n\016ToD" +
+      "epartmentId\030\t \001(\t\022\031\n\021MessageProxyBoxId\030\n" +
+      " \001(\t\022 \n\030MessageProxyDepartmentId\030\013 \001(\t\022\031" +
+      "\n\nIsReusable\030\014 \001(\010:\005false\"\373\003\n\032TemplateDo",
+      "cumentAttachment\022A\n\017UnsignedContent\030\001 \002(" +
+      "\0132(.Diadoc.Api.Proto.Events.UnsignedCont" +
+      "ent\022\017\n\007Comment\030\002 \001(\t\022\023\n\013TypeNamedId\030\003 \002(" +
+      "\t\022\020\n\010Function\030\004 \001(\t\022\017\n\007Version\030\005 \001(\t\0227\n\010" +
+      "Metadata\030\006 \003(\0132%.Diadoc.Api.Proto.Events" +
+      ".MetadataItem\022\022\n\nWorkflowId\030\007 \001(\005\022\030\n\020Cus" +
+      "tomDocumentId\030\010 \001(\t\022\030\n\020EditingSettingId\030" +
+      "\t \001(\t\022%\n\026NeedRecipientSignature\030\n \001(\010:\005f" +
+      "alse\022S\n\030PredefinedRecipientTitle\030\013 \001(\01321" +
+      ".Diadoc.Api.Proto.Events.PredefinedRecip",
+      "ientTitle\022\036\n\017RefusalDisabled\030\014 \001(\010:\005fals" +
+      "e\0224\n\nCustomData\030\r \003(\0132 .Diadoc.Api.Proto" +
+      ".CustomDataItem\"[\n\023TemplatePatchToPost\022D" +
+      "\n\010Refusals\030\001 \003(\01322.Diadoc.Api.Proto.Even" +
+      "ts.TemplateRefusalAttachment\"P\n\031Template" +
+      "RefusalAttachment\022\022\n\nDocumentId\030\001 \002(\t\022\017\n" +
+      "\007Comment\030\002 \001(\t\022\016\n\006Labels\030\003 \003(\t\"]\n\030Predef" +
+      "inedRecipientTitle\022A\n\017UnsignedContent\030\001 " +
+      "\002(\0132(.Diadoc.Api.Proto.Events.UnsignedCo" +
+      "ntent\"7\n\017UnsignedContent\022\017\n\007Content\030\001 \001(",
+      "\014\022\023\n\013NameOnShelf\030\002 \001(\t\"\223\001\n\034TemplateTrans" +
+      "formationToPost\022\r\n\005BoxId\030\001 \002(\t\022\022\n\nTempla" +
+      "teId\030\002 \002(\t\022P\n\027DocumentTransformations\030\003 " +
+      "\003(\0132/.Diadoc.Api.Proto.Events.DocumentTr" +
+      "ansformation\"F\n\026DocumentTransformation\022\022" +
+      "\n\nDocumentId\030\001 \002(\t\022\030\n\020CustomDocumentId\030\002" +
+      " \001(\t*/\n\030CustomDataPatchOperation\022\007\n\003Set\020" +
+      "\000\022\n\n\006Remove\020\001B\035B\033DiadocMessage_PostApiPr" +
+      "otos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -100861,19 +101106,19 @@ public final class DiadocMessage_PostApiProtos {
     internal_static_Diadoc_Api_Proto_Events_DraftDocumentToPatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_DraftDocumentToPatch_descriptor,
-        new java.lang.String[] { "DocumentId", "ToBoxId", "Signer", "ExtendedSigner", });
+        new java.lang.String[] { "DocumentId", "ToBoxId", "Signer", "ExtendedSigner", "SignerContent", });
     internal_static_Diadoc_Api_Proto_Events_ContentToPatch_descriptor =
       getDescriptor().getMessageTypes().get(40);
     internal_static_Diadoc_Api_Proto_Events_ContentToPatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_ContentToPatch_descriptor,
-        new java.lang.String[] { "TypeNamedId", "Function", "Version", "Content", "ToBoxId", "Signer", "ExtendedSigner", });
+        new java.lang.String[] { "TypeNamedId", "Function", "Version", "Content", "ToBoxId", "Signer", "ExtendedSigner", "SignerContent", });
     internal_static_Diadoc_Api_Proto_Events_DocumentToPatch_descriptor =
       getDescriptor().getMessageTypes().get(41);
     internal_static_Diadoc_Api_Proto_Events_DocumentToPatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Events_DocumentToPatch_descriptor,
-        new java.lang.String[] { "DocumentId", "Signer", "ExtendedSigner", });
+        new java.lang.String[] { "DocumentId", "Signer", "ExtendedSigner", "SignerContent", });
     internal_static_Diadoc_Api_Proto_Events_DocumentPatchedContent_descriptor =
       getDescriptor().getMessageTypes().get(42);
     internal_static_Diadoc_Api_Proto_Events_DocumentPatchedContent_fieldAccessorTable = new
