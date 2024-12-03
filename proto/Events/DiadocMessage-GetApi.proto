@@ -31,6 +31,7 @@ message BoxEvent {
 	required string EventId = 1;
 	optional Message Message = 2;
 	optional MessagePatch Patch = 3;
+	optional string IndexKey = 4;
 }
 
 message Message {
@@ -73,7 +74,7 @@ message Template {
     required LockMode LockMode = 10;
     optional string MessageProxyBoxId = 11;
     optional string MessageProxyDepartmentId = 12;
-	optional bool IsReusable = 13 [default = false];
+		optional bool IsReusable = 13 [default = false];
 }
 
 message MessagePatch {
@@ -90,7 +91,7 @@ message MessagePatch {
 	optional bool MessageIsDelivered = 11 [default = false];
 	optional string DeliveredPatchId = 12;
 	required string PatchId = 13;
-
+	optional string NotDeliveredEventId = 14;
 	required Documents.MessageType MessageType = 15;
 }
 
