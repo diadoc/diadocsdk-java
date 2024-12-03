@@ -135,8 +135,9 @@ enum PowerOfAttorneySendingType {
 }
 
 message PowerOfAttorneyDelegationInfo {
-    required string RootRegistrationNumber = 1;
-    optional string ParentRegistrationNumber = 2;
+	required string RootRegistrationNumber = 1;
+	optional string ParentRegistrationNumber = 2;
+	required PowerOfAttorneyIssuer RootIssuer = 3;
 }
 
 message PowerOfAttorneyContent {
