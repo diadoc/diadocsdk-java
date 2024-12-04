@@ -10,6 +10,7 @@ import org.jetbrains.annotations.Nullable;
 import javax.mail.internet.ParseException;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Objects;
 
 import static Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.*;
 
@@ -20,7 +21,13 @@ public class EventsClient {
         this.diadocHttpClient = diadocHttpClient;
     }
 
-    public BoxEventList getNewEvents(String currentBoxId, @Nullable String eventIdCurrent) throws DiadocSdkException {
+    /**
+     * @deprecated
+     *
+     * Используйте {@link #getNewEventsV7(String, String, String, String, String, MessageType, DocumentDirection, Long, Long, String, OrderBy, Integer)}  
+     */
+    @Deprecated
+    public BoxEventList getNewEvents( String currentBoxId, @Nullable String eventIdCurrent) throws DiadocSdkException {
         if (currentBoxId == null) {
             throw new IllegalArgumentException("currentBoxId");
         }
@@ -38,6 +45,62 @@ public class EventsClient {
             return BoxEventList.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
+        }
+    }
+
+    public BoxEventList getNewEventsV7(
+            String currentBoxId,
+            @Nullable String afterEventId,
+            @Nullable String afterIndexKey,
+            @Nullable String departmentId,
+            @Nullable String typeNameId,
+            @Nullable MessageType messageType,
+            @Nullable DocumentDirection documentDirection,
+            @Nullable Long timestampFromTicks,
+            @Nullable Long timestampToTicks,
+            @Nullable String counteragentBoxId,
+            @Nullable OrderBy orderBy,
+            @Nullable Integer limit            
+    ) throws DiadocSdkException {
+        Objects.requireNonNull(currentBoxId, "currentBoxId must not be null");
+
+        if (afterEventId != null && afterIndexKey != null) {
+            throw new IllegalArgumentException("Cannot specify both afterEventId and afterIndexKey at the same time");
+        }
+
+        try {
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V7/GetNewEvents")
+                    .addParameter("boxId", currentBoxId);
+
+            addParameterIfNotNull(uri, "afterEventId", afterEventId);
+            addParameterIfNotNull(uri, "afterIndexKey", afterIndexKey);
+            addParameterIfNotNull(uri, "departmentId", departmentId);
+            addParameterIfNotNull(uri, "messageType", messageType);
+            addParameterIfNotNull(uri, "typeNamedId", typeNameId);
+            addParameterIfNotNull(uri, "documentDirection", documentDirection);
+            addParameterIfNotNull(uri, "timestampFromTicks", timestampFromTicks);
+            addParameterIfNotNull(uri, "timestampToTicks", timestampToTicks);
+            addParameterIfNotNull(uri, "counteragentBoxId", counteragentBoxId);
+            addParameterIfNotNull(uri, "orderBy", orderBy);
+            uri.addParameter("limit", String.valueOf(limit != null ? limit : 100));
+
+            var request = RequestBuilder.get(uri.build());
+            return BoxEventList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    private void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Enum<?> paramValue) {
+        if (paramValue != null) {
+            urlBuilder.addParameter(paramName, paramValue.name());
+        }
+    }
+
+    private void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Object paramValue) {
+        if (paramValue != null) {
+            urlBuilder.addParameter(paramName, String.valueOf(paramValue));
         }
     }
 
