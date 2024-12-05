@@ -29,7 +29,7 @@ public class OrganizationClient {
     }
 
     public Box getBox(String boxId) throws DiadocSdkException {
-        if (Tools.isNullOrEmpty(boxId) || Tools.isUUIDString(boxId))
+        if (Tools.isNullOrEmpty(boxId) || !Tools.isUUIDString(boxId))
             throw new IllegalArgumentException("boxId");
         try {
             var request = RequestBuilder.get(
@@ -44,7 +44,7 @@ public class OrganizationClient {
     }
 
     public Organization getOrganizationById(String orgId) throws DiadocSdkException {
-        if (Tools.isNullOrEmpty(orgId) || Tools.isUUIDString(orgId)) {
+        if (Tools.isNullOrEmpty(orgId) || !Tools.isUUIDString(orgId)) {
             throw new IllegalArgumentException("orgId");
         }
         return getOrganization("orgId", orgId);
@@ -71,7 +71,7 @@ public class OrganizationClient {
     }
 
     public OrganizationWithCounteragentStatus[] getOrganizationsByInnList(String myOrgId, GetOrganizationsByInnListRequest innListRequest) throws DiadocSdkException {
-        if (myOrgId == null)
+        if (Tools.isNullOrEmpty(myOrgId) || !Tools.isUUIDString(myOrgId))
             throw new IllegalArgumentException("myOrgId");
         if (innListRequest == null)
             throw new IllegalArgumentException("innListRequest");
@@ -197,7 +197,7 @@ public class OrganizationClient {
     }
 
     public OrganizationUserPermissions getMyPermissions(String orgId) throws DiadocSdkException {
-        if (orgId == null) {
+        if (Tools.isNullOrEmpty(orgId) || !Tools.isUUIDString(orgId)) {
             throw new IllegalArgumentException("orgId");
         }
 
@@ -229,7 +229,7 @@ public class OrganizationClient {
     }
 
     public OrganizationFeatures getOrganizationFeatures(String boxId) throws DiadocSdkException {
-        if (boxId == null) {
+        if (Tools.isNullOrEmpty(boxId) || !Tools.isUUIDString(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
 
@@ -276,7 +276,7 @@ public class OrganizationClient {
     }
 
     public boolean canSendInvoice(String boxId, byte[] certBytes) throws DiadocSdkException {
-        if (Tools.isNullOrEmpty(boxId) || Tools.isUUIDString(boxId)) {
+        if (Tools.isNullOrEmpty(boxId) || !Tools.isUUIDString(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
         if (certBytes == null || certBytes.length == 0) {
@@ -306,7 +306,7 @@ public class OrganizationClient {
     }
 
     public RoamingOperatorProtos.RoamingOperatorList getRoamingOperators(String boxId) throws DiadocSdkException {
-        if (Tools.isNullOrEmpty(boxId) || Tools.isUUIDString(boxId)) {
+        if (Tools.isNullOrEmpty(boxId) || !Tools.isUUIDString(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
 
