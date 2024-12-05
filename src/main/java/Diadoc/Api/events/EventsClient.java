@@ -11,7 +11,6 @@ import org.jetbrains.annotations.Nullable;
 import javax.mail.internet.ParseException;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.Objects;
 
 import static Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.*;
 
@@ -25,11 +24,11 @@ public class EventsClient {
     /**
      * @deprecated
      *
-     * Используйте {@link #getNewEventsV7(String, String, String, String, String, MessageType, DocumentDirection, Long, Long, String, OrderBy, Integer)}  
+     * Используйте {@link #getNewEventsV7(String, String, String, String, String, MessageType, DocumentDirection, Long, Long, String, OrderBy, Integer)}
      */
     @Deprecated
     public BoxEventList getNewEvents( String currentBoxId, @Nullable String eventIdCurrent) throws DiadocSdkException {
-        if (currentBoxId == null) {
+        if (Tools.isNullOrEmpty(currentBoxId)) {
             throw new IllegalArgumentException("currentBoxId");
         }
 
@@ -61,7 +60,7 @@ public class EventsClient {
             @Nullable Long timestampToTicks,
             @Nullable String counteragentBoxId,
             @Nullable OrderBy orderBy,
-            @Nullable Integer limit            
+            @Nullable Integer limit
     ) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
@@ -109,7 +108,7 @@ public class EventsClient {
 
     @Nullable
     public BoxEvent getLastEvent(String boxId) throws DiadocSdkException {
-        if (boxId == null) {
+        if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
 
@@ -129,7 +128,7 @@ public class EventsClient {
     }
 
     public BoxEvent getEvent(String boxId, String eventId) throws DiadocSdkException {
-        if (boxId == null) {
+        if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
         if (eventId == null) {
