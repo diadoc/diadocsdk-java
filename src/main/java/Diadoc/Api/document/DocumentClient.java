@@ -169,9 +169,9 @@ public class DocumentClient {
         }
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/MoveDocuments")
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/MoveDocuments")
+                            .build())
                     .setEntity(new ByteArrayEntity(operation.toByteArray()));
             diadocHttpClient.performRequest(request);
         } catch (URISyntaxException | IOException e) {
@@ -206,9 +206,9 @@ public class DocumentClient {
 
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/PrepareDocumentsToSign")
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/PrepareDocumentsToSign")
+                            .build())
                     .setEntity(new ByteArrayEntity(documentsToSignRequest.toByteArray()));
             return PrepareDocumentsToSignResponse.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
