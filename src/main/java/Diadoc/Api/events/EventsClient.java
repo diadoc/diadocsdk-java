@@ -1,6 +1,7 @@
 package Diadoc.Api.events;
 
 import Diadoc.Api.exceptions.DiadocSdkException;
+import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.RequestBuilder;
@@ -49,7 +50,7 @@ public class EventsClient {
     }
 
     public BoxEventList getNewEventsV7(
-            String currentBoxId,
+            String boxId,
             @Nullable String afterEventId,
             @Nullable String afterIndexKey,
             @Nullable String departmentId,
@@ -62,7 +63,9 @@ public class EventsClient {
             @Nullable OrderBy orderBy,
             @Nullable Integer limit            
     ) throws DiadocSdkException {
-        Objects.requireNonNull(currentBoxId, "currentBoxId must not be null");
+        if (Tools.isNullOrEmpty(boxId)) {
+            throw new IllegalArgumentException("boxId");
+        }
 
         if (afterEventId != null && afterIndexKey != null) {
             throw new IllegalArgumentException("Cannot specify both afterEventId and afterIndexKey at the same time");
@@ -71,7 +74,7 @@ public class EventsClient {
         try {
             var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/V7/GetNewEvents")
-                    .addParameter("boxId", currentBoxId);
+                    .addParameter("boxId", boxId);
 
             addParameterIfNotNull(uri, "afterEventId", afterEventId);
             addParameterIfNotNull(uri, "afterIndexKey", afterIndexKey);

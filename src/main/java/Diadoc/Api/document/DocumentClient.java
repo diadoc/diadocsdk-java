@@ -1,5 +1,6 @@
 package Diadoc.Api.document;
 
+import Diadoc.Api.Proto.ResolutionRouteListProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
@@ -8,6 +9,7 @@ import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
 
 import java.io.IOException;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Date;
 
@@ -168,9 +170,9 @@ public class DocumentClient {
         }
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/MoveDocuments")
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/MoveDocuments")
+                                    .build())
                     .setEntity(new ByteArrayEntity(operation.toByteArray()));
             diadocHttpClient.performRequest(request);
         } catch (URISyntaxException | IOException e) {
@@ -205,9 +207,9 @@ public class DocumentClient {
 
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/PrepareDocumentsToSign")
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/PrepareDocumentsToSign")
+                                    .build())
                     .setEntity(new ByteArrayEntity(documentsToSignRequest.toByteArray()));
             return PrepareDocumentsToSignResponse.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
@@ -264,5 +266,20 @@ public class DocumentClient {
         }
     }
 
+    public ResolutionRouteListProtos.ResolutionRouteList getResolutionRoutesForOrganization(String orgId) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(orgId)) {
+            throw new IllegalArgumentException("orgId");
+        }
 
+        try {
+            var request = RequestBuilder.get(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/GetResolutionRoutesForOrganization")
+                            .addParameter("orgId", orgId)
+                            .build());
+            return ResolutionRouteListProtos.ResolutionRouteList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 }
