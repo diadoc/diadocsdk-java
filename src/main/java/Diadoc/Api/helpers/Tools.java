@@ -6,10 +6,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
+import java.util.regex.Pattern;
 
 import com.google.protobuf.ByteString;
 
 public class Tools {
+    private static final Pattern UUID_PATTERN = Pattern.compile("[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$");
+
     public static String ConsoleReadLine() throws IOException {
         InputStreamReader converter = new InputStreamReader(System.in);
         BufferedReader in = new BufferedReader(converter);
@@ -17,9 +20,11 @@ public class Tools {
     }
 
     public static boolean isNullOrEmpty(String s) {
-        if (s == null || (s.length() == 0))
-            return true;
-        return false;
+        return s == null || (s.isEmpty());
+    }
+
+    public static boolean isUUIDString(String s) {
+        return s != null && UUID_PATTERN.matcher(s).matches();
     }
 
     public static long toCsTicks(long time) {
