@@ -23,8 +23,8 @@ public class Tools {
         return s == null || (s.isEmpty());
     }
 
-    public static boolean isUUIDString(String s) {
-        return s != null && UUID_PATTERN.matcher(s).matches();
+    public static boolean isNotUUIDParameter(String s) {
+        return s == null || !UUID_PATTERN.matcher(s).matches();
     }
 
     public static long toCsTicks(long time) {

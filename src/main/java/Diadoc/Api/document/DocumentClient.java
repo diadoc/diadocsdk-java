@@ -27,7 +27,7 @@ public class DocumentClient {
     }
 
     public DocumentList getDocuments(DocumentsFilter filter) throws DiadocSdkException {
-        if (filter.getBoxId() == null) {
+        if (Tools.isNullOrEmpty(filter.getBoxId())) {
             throw new IllegalArgumentException("boxId");
         }
         if (filter.getFilterCategory() == null) {
@@ -139,13 +139,13 @@ public class DocumentClient {
     }
 
     public Document getDocument(String boxId, String messageId, String entityId) throws DiadocSdkException {
-        if (boxId == null) {
+        if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
-        if (messageId == null) {
+        if (Tools.isNullOrEmpty(messageId)) {
             throw new IllegalArgumentException("messageId");
         }
-        if (entityId == null) {
+        if (Tools.isNullOrEmpty(entityId)) {
             throw new IllegalArgumentException("entityId");
         }
 
@@ -180,10 +180,10 @@ public class DocumentClient {
     }
 
     public DocumentList getDocumentsByMessageId(String boxId, String messageId) throws DiadocSdkException {
-        if (boxId == null) {
+        if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
-        if (messageId == null) {
+        if (Tools.isNullOrEmpty(messageId)) {
             throw new IllegalArgumentException("messageId");
         }
         try {
@@ -217,13 +217,13 @@ public class DocumentClient {
     }
 
     public byte[] getEntityContent(String currentBoxId, String messageId, String entityId) throws IOException, DiadocSdkException {
-        if (currentBoxId == null) {
+        if (Tools.isNullOrEmpty(currentBoxId)) {
             throw new IllegalArgumentException("boxId");
         }
-        if (messageId == null) {
+        if (Tools.isNullOrEmpty(messageId)) {
             throw new IllegalArgumentException("messageId");
         }
-        if (entityId == null) {
+        if (Tools.isNullOrEmpty(entityId)) {
             throw new IllegalArgumentException("entityId");
         }
         try {
@@ -241,13 +241,13 @@ public class DocumentClient {
     }
 
     public SignatureInfo getSignatureInfo(String boxId, String messageId, String entityId) throws DiadocSdkException {
-        if (boxId == null) {
+        if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
-        if (messageId == null) {
+        if (Tools.isNullOrEmpty(messageId)) {
             throw new IllegalArgumentException("messageId");
         }
-        if (entityId == null) {
+        if (Tools.isNullOrEmpty(entityId)) {
             throw new IllegalArgumentException("entityId");
         }
 
