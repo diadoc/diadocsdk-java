@@ -51,7 +51,7 @@ public class OrganizationClient {
     }
 
     public Organization getOrganizationByInn(String inn) throws DiadocSdkException {
-        if (inn == null || inn.isEmpty()) {
+        if (Tools.isNullOrEmpty(inn)) {
             throw new IllegalArgumentException("inn");
         }
         return getOrganization("inn", inn);
@@ -120,7 +120,7 @@ public class OrganizationClient {
     }
 
     public OrganizationList getOrganizationsByInnKpp(String inn, @Nullable String kpp, boolean includeRelations) throws DiadocSdkException {
-        if (inn == null) {
+        if (Tools.isNullOrEmpty(inn)) {
             throw new IllegalArgumentException("inn");
         }
         try {
