@@ -2,7 +2,10 @@ import "Organization.proto";
 import "Counteragent.proto";
 import "DocumentId.proto";
 
+
 package Diadoc.Api.Proto;
+
+option java_outer_classname = "GetOrganizationsByInnListProtos";
 
 message GetOrganizationsByInnListRequest {
 	repeated string InnList = 1;
