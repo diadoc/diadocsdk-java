@@ -117,4 +117,35 @@ public class TemplateClient {
             throw new DiadocSdkException(e);
         }
     }
+
+    public MessagePatch postTemplatePatch(
+            String boxId,
+            String templateId,
+            String operationId,
+            DiadocMessage_PostApiProtos.TemplatePatchToPost templatePatchToPost) throws DiadocSdkException {
+
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (templateId == null) {
+            throw new IllegalArgumentException("templateId");
+        }
+        if (templatePatchToPost == null) {
+            throw new IllegalArgumentException("templatePatchToPost");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/PostTemplatePatch")
+                    .addParameter("boxId", boxId)
+                    .addParameter("templateId", templateId);
+            Tools.addParameterIfNotNull(url, "operationId", operationId);
+            var request = RequestBuilder.post(url.build())
+                    .setEntity(new ByteArrayEntity(templatePatchToPost.toByteArray()));
+
+            return MessagePatch.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 }
