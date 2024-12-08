@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 import com.google.protobuf.ByteString;
+import org.apache.http.client.utils.URIBuilder;
 
 public class Tools {
     public static String ConsoleReadLine() throws IOException {
@@ -51,5 +52,11 @@ public class Tools {
 
     public static String concatUriPath(String prefixPath, String postfixPath) {
         return prefixPath.replaceAll("/*$", "") + postfixPath;
+    }
+
+    public static void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Object paramValue) {
+        if (paramValue != null) {
+            urlBuilder.addParameter(paramName, String.valueOf(paramValue));
+        }
     }
 }
