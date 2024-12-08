@@ -178,20 +178,16 @@ public class PrintFormClient {
         }
     }
 
-    public PrintFormResult generateForwardedDocumentPrintForm(String boxId, String fromBoxId, String messageId, String documentId, String forwardEventId) throws DiadocSdkException {
-        Tools.checkForwardedDocumentParameters(boxId, fromBoxId, messageId, documentId, forwardEventId);
+    public PrintFormResult getGeneratedPrintForm(String printFormId) throws DiadocSdkException {
+        if (printFormId == null) {
+            throw new IllegalArgumentException("printFormId");
+        }
 
         try {
-            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
-                    .setPath("/GenerateForwardedDocumentPrintForm")
-                    .addParameter("boxId", boxId)
-                    .addParameter("fromBoxId", fromBoxId)
-                    .addParameter("messageId", messageId)
-                    .addParameter("documentId", documentId)
-                    .addParameter("forwardEventId", forwardEventId)
-                    .build();
-
-            var request = RequestBuilder.get(url);
+            var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GetGeneratedPrintForm")
+                    .addParameter("printFormId", printFormId)
+                    .build());
             var response = diadocHttpClient.getResponse(request);
             return getPrintFormFromResponse(response);
 
@@ -228,35 +224,14 @@ public class PrintFormClient {
 
     }
 
-    public PrintFormResult getGeneratedPrintForm(String printFormId) throws DiadocSdkException {
-        if (printFormId == null) {
-            throw new IllegalArgumentException("printFormId");
-        }
-
-        try {
-            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
-                    .setPath("/GetGeneratedPrintForm")
-                    .addParameter("printFormId", printFormId)
-                    .build();
-
-            var request = RequestBuilder.get(url);
-            var response = diadocHttpClient.getResponse(request);
-            return getPrintFormFromResponse(response);
-
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
-
-
-    }
-
-
     private PrintFormResult getPrintFormFromResponse(DiadocResponseInfo response){
         if (response.getRetryAfter() != null) {
             return new PrintFormResult(response.getRetryAfter());
         }
         else {
-            return new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
+            return new PrintFormResult(
+                    new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent())
+            );
         }
     }
 }
