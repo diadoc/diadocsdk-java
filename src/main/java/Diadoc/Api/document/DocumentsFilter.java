@@ -1,5 +1,7 @@
 package Diadoc.Api.document;
 
+import org.jetbrains.annotations.Nullable;
+
 import javax.swing.text.DocumentFilter;
 import java.util.Date;
 
@@ -7,6 +9,9 @@ public class DocumentsFilter {
     private String boxId;
     private String filterCategory;
     private String counteragentBoxId;
+
+    private String fromDepartmentId;
+    private String toDepartmentId;
     private Date timestampFrom;
     private Date timestampTo;
     private String fromDocumentDate;
@@ -44,6 +49,39 @@ public class DocumentsFilter {
         this.sortDirection = sortDirection;
         this.afterIndexKey = afterIndexKey;
         this.count = count;
+        this.fromDepartmentId = null;
+        this.toDepartmentId = null;
+    }
+
+    public DocumentsFilter(
+            String boxId,
+            String filterCategory,
+            String counteragentBoxId,
+            Date timestampFrom,
+            Date timestampTo,
+            String fromDocumentDate,
+            String toDocumentDate,
+            String departmentId,
+            boolean excludeSubdepartments,
+            String sortDirection,
+            String afterIndexKey,
+            Integer count,
+            @Nullable String fromDepartmentId,
+            @Nullable String toDepartmentId) {
+        this.boxId = boxId;
+        this.filterCategory = filterCategory;
+        this.counteragentBoxId = counteragentBoxId;
+        this.timestampFrom = timestampFrom;
+        this.timestampTo = timestampTo;
+        this.fromDocumentDate = fromDocumentDate;
+        this.toDocumentDate = toDocumentDate;
+        this.departmentId = departmentId;
+        this.excludeSubdepartments = excludeSubdepartments;
+        this.sortDirection = sortDirection;
+        this.afterIndexKey = afterIndexKey;
+        this.count = count;
+        this.fromDepartmentId = fromDepartmentId;
+        this.toDepartmentId = toDepartmentId;
     }
 
     public String getBoxId() {
@@ -151,6 +189,22 @@ public class DocumentsFilter {
 
     public DocumentsFilter setCount(Integer count) {
         this.count = count;
+        return this;
+    }
+
+    public String getFromDepartmentId() {
+        return fromDepartmentId;
+    }
+    public DocumentsFilter setFromDepartmentId(String fromDepartmentId) {
+        this.fromDepartmentId = fromDepartmentId;
+        return this;
+    }
+
+    public String getToDepartmentId() {
+        return toDepartmentId;
+    }
+    public DocumentsFilter setToDepartmentId(String toDepartmentId) {
+        this.toDepartmentId = toDepartmentId;
         return this;
     }
 }

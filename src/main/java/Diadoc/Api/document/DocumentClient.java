@@ -6,6 +6,7 @@ import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -78,6 +79,9 @@ public class DocumentClient {
             if (filter.getCount() != null) {
                 url.addParameter("count", filter.getCount().toString());
             }
+
+            Tools.addParameterIfNotNull(url, "fromDepartmentId", filter.getFromDepartmentId());
+            Tools.addParameterIfNotNull(url, "toDepartmentId", filter.getToDepartmentId());
 
             var request = RequestBuilder.get(url.build());
 
@@ -156,6 +160,33 @@ public class DocumentClient {
                             .addParameter("messageId", messageId)
                             .addParameter("entityId", entityId)
                             .build());
+            return Document.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+
+        public Document getDocument(String boxId, String messageId, String entityId, @Nullable Boolean injectEntityContent) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId");
+        }
+        if (entityId == null) {
+            throw new IllegalArgumentException("entityId");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V3/GetDocument")
+                            .addParameter("boxId", boxId)
+                            .addParameter("messageId", messageId)
+                            .addParameter("entityId", entityId);
+            Tools.addParameterIfNotNull(url, "injectEntityContent", injectEntityContent);
+
+            var request = RequestBuilder.get(url.build());
             return Document.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
