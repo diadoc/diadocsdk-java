@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
+import java.util.regex.Pattern;
 
 import com.google.protobuf.ByteString;
 
@@ -17,9 +18,7 @@ public class Tools {
     }
 
     public static boolean isNullOrEmpty(String s) {
-        if (s == null || (s.length() == 0))
-            return true;
-        return false;
+        return s == null || (s.isEmpty());
     }
 
     public static long toCsTicks(long time) {
