@@ -52,4 +52,26 @@ public class Tools {
     public static String concatUriPath(String prefixPath, String postfixPath) {
         return prefixPath.replaceAll("/*$", "") + postfixPath;
     }
+
+    public static void checkForwardedDocumentParameters(String boxId, String fromBoxId, String messageId, String documentId, String forwardEventId) {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (fromBoxId == null) {
+            throw new IllegalArgumentException("fromBoxId");
+        }
+
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId");
+        }
+
+        if (documentId == null) {
+            throw new IllegalArgumentException("documentId");
+        }
+
+        if (forwardEventId == null) {
+            throw new IllegalArgumentException("forwardEventId");
+        }
+    }
 }
