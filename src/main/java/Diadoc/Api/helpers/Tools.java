@@ -5,9 +5,14 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
+import Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos;
 import com.google.protobuf.ByteString;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 
 public class Tools {
     public static String ConsoleReadLine() throws IOException {
@@ -51,5 +56,36 @@ public class Tools {
 
     public static String concatUriPath(String prefixPath, String postfixPath) {
         return prefixPath.replaceAll("/*$", "") + postfixPath;
+    }
+
+    public static void checkForwardedDocumentParameters(String boxId, String fromBoxId, String messageId, String documentId, String forwardEventId) {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (fromBoxId == null) {
+            throw new IllegalArgumentException("fromBoxId");
+        }
+
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId");
+        }
+
+        if (documentId == null) {
+            throw new IllegalArgumentException("documentId");
+        }
+
+        if (forwardEventId == null) {
+            throw new IllegalArgumentException("forwardEventId");
+        }
+    }
+
+    public static List<NameValuePair> getForwardedDocumentIdParameters(ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId) {
+        List<NameValuePair> params = new ArrayList<>();
+        params.add(new BasicNameValuePair("fromBoxId", forwardedDocumentId.getFromBoxId()));
+        params.add(new BasicNameValuePair("messageId", forwardedDocumentId.getDocumentId().getMessageId()));
+        params.add(new BasicNameValuePair("documentId", forwardedDocumentId.getDocumentId().getEntityId()));
+        params.add(new BasicNameValuePair("forwardEventId", forwardedDocumentId.getForwardEventId()));
+        return params;
     }
 }
