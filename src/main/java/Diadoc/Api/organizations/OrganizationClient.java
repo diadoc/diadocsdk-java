@@ -63,6 +63,31 @@ public class OrganizationClient {
         return getOrganization("fnsParticipantId", fnsParticipantId);
     }
 
+    public Organization getOrganizationByInnKpp(
+            @Nullable String orgId, @Nullable String boxId, @Nullable String fnsParticipantId, @Nullable String inn, @Nullable String kpp
+    ) throws DiadocSdkException {
+        if (inn == null && kpp != null) {
+            throw new IllegalArgumentException("inn");
+        }
+
+        if (orgId == null && boxId == null && fnsParticipantId == null && inn == null) {
+            throw new IllegalArgumentException("One argument must not be null");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GetOrganization");
+            Tools.addParameterIfNotNull(url, "boxId", boxId);
+            Tools.addParameterIfNotNull(url, "fnsParticipantId", fnsParticipantId);
+            Tools.addParameterIfNotNull(url, "inn", inn);
+            Tools.addParameterIfNotNull(url, "kpp", kpp);
+            Tools.addParameterIfNotNull(url, "orgId", orgId);
+            var request = RequestBuilder.get(url.build());
+            return Organization.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
     public OrganizationWithCounteragentStatus[] getOrganizationsByInnList(String myOrgId, Iterable<String> innList) throws DiadocSdkException {
         var request = GetOrganizationsByInnListRequest.newBuilder();
         request.addAllInnList(innList);
