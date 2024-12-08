@@ -239,7 +239,28 @@ public class CounteragentClient {
             throw new DiadocSdkException(e);
         }
     }
-    
+
+    public CounteragentList getCounteragentsV3(String myBoxId, @Nullable String counteragentStatus, @Nullable String afterIndexKey) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(myBoxId)) {
+            throw new IllegalArgumentException("myBoxId");
+        }
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V3/GetCounteragents")
+                    .addParameter("myBoxId", myBoxId);
+
+            if (!Tools.isNullOrEmpty(counteragentStatus)) {
+                url.addParameter("counteragentStatus", counteragentStatus);
+            }
+
+            Tools.addParameterIfNotNull(url, "afterIndexKey", afterIndexKey);
+            var request = RequestBuilder.get(url.build());
+            return CounteragentList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
     public CounteragentList getCounteragentsV3(String myBoxId, @Nullable String counteragentStatus, @Nullable String afterIndexKey, @Nullable String query, @Nullable Integer pageSize) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myBoxId)) {
             throw new IllegalArgumentException("myBoxId");
