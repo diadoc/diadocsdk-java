@@ -7,6 +7,7 @@ import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -260,6 +261,33 @@ public class DocumentClient {
                             .addParameter("entityId", entityId)
                             .build());
             return SignatureInfo.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public void restore(String boxId, String messageId, @Nullable String documentId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId");
+        }
+
+        try {
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/Restore")
+                    .addParameter("boxId", boxId)
+                    .addParameter("messageId", messageId);
+
+            if (documentId != null) {
+                uri.addParameter("documentId", documentId);
+            }
+
+            var request = RequestBuilder.post(uri.build());
+
+            diadocHttpClient.performRequest(request);
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
