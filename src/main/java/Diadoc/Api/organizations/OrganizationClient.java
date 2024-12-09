@@ -49,11 +49,34 @@ public class OrganizationClient {
         return getOrganization("orgId", orgId);
     }
 
+    public Organization getOrganizationByBoxId(String boxId) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(boxId)) {
+            throw new IllegalArgumentException("boxId");
+        }
+        return getOrganization("boxId", boxId);
+    }
+
     public Organization getOrganizationByInn(String inn) throws DiadocSdkException {
         if (inn == null || inn.isEmpty()) {
             throw new IllegalArgumentException("inn");
         }
         return getOrganization("inn", inn);
+    }
+
+    public Organization getOrganizationByInnAndKpp(String inn, @Nullable String kpp) throws DiadocSdkException {
+        if (inn == null && kpp != null) {
+            throw new IllegalArgumentException("inn");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GetOrganization");
+            Tools.addParameterIfNotNull(url, "inn", inn);
+            Tools.addParameterIfNotNull(url, "kpp", kpp);
+            var request = RequestBuilder.get(url.build());
+            return Organization.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
     }
 
     public Organization getOrganizationByFnsParticipantId(String fnsParticipantId) throws DiadocSdkException {
