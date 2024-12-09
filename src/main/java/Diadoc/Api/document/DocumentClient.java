@@ -204,16 +204,7 @@ public class DocumentClient {
             throw new IllegalArgumentException("documentsToSignRequest");
         }
 
-        try {
-            var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/PrepareDocumentsToSign")
-                            .build())
-                    .setEntity(new ByteArrayEntity(documentsToSignRequest.toByteArray()));
-            return PrepareDocumentsToSignResponse.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
+        return prepareDocumentsToSign(documentsToSignRequest, null);
     }
 
     public PrepareDocumentsToSignResponse prepareDocumentsToSign(PrepareDocumentsToSignRequest documentsToSignRequest, @Nullable Boolean excludeContent) throws DiadocSdkException {
