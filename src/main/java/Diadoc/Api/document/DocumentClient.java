@@ -20,7 +20,7 @@ import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PrepareDocumen
 import static Diadoc.Api.Proto.SignatureInfoProtos.SignatureInfo;
 
 public class DocumentClient {
-    private DiadocHttpClient diadocHttpClient;
+    private final DiadocHttpClient diadocHttpClient;
 
     public DocumentClient(DiadocHttpClient diadocHttpClient) {
         this.diadocHttpClient = diadocHttpClient;

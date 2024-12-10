@@ -3,21 +3,21 @@ package Diadoc.Api.document;
 import java.util.Date;
 
 public class DocumentsFilter {
-    private String boxId;
-    private String filterCategory;
-    private String counteragentBoxId;
+    private final String boxId;
+    private final String filterCategory;
+    private final String counteragentBoxId;
 
-    private String fromDepartmentId;
-    private String toDepartmentId;
-    private Date timestampFrom;
-    private Date timestampTo;
-    private String fromDocumentDate;
-    private String toDocumentDate;
-    private String departmentId;
-    private boolean excludeSubdepartments;
-    private String sortDirection;
-    private String afterIndexKey;
-    private Integer count;
+    private final String fromDepartmentId;
+    private final String toDepartmentId;
+    private final Date timestampFrom;
+    private final Date timestampTo;
+    private final String fromDocumentDate;
+    private final String toDocumentDate;
+    private final String departmentId;
+    private final boolean excludeSubdepartments;
+    private final String sortDirection;
+    private final String afterIndexKey;
+    private final Integer count;
 
     // Приватный конструктор
     private DocumentsFilter(Builder builder) {
