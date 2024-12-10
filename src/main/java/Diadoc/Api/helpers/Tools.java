@@ -59,4 +59,10 @@ public class Tools {
             urlBuilder.addParameter(paramName, String.valueOf(paramValue));
         }
     }
+
+    public static void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Enum<?> paramValue) {
+        if (paramValue != null) {
+            urlBuilder.addParameter(paramName, paramValue.name());
+        }
+    }
 }

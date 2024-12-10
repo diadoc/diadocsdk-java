@@ -11,6 +11,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.Optional;
 
 import static Diadoc.Api.Proto.AcquireCounteragentProtos.*;
 import static Diadoc.Api.Proto.AsyncMethodResultProtos.*;
@@ -242,12 +244,26 @@ public class CounteragentClient {
 
     public CounteragentList getCounteragentsV3(String myBoxId, @Nullable String counteragentStatus, @Nullable String afterIndexKey) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myBoxId)) {
+            throw new IllegalArgumentException("myBoxId");        }
+
+        var counteragentEnumStatus = Optional.ofNullable(counteragentStatus)
+                .flatMap(value -> Arrays.stream(CounteragentStatus.values())
+                        .filter(status -> status.name().equals(value))
+                        .findFirst())
+                .orElseThrow(() -> new IllegalArgumentException("Invalid counteragentStatus value: " + counteragentStatus));
+
+
+        return getCounteragentsV3(myBoxId, counteragentEnumStatus, afterIndexKey, null, null);
+    }
+
+    public CounteragentList getCounteragentsV3(String myBoxId, @Nullable CounteragentStatus counteragentStatus, @Nullable String afterIndexKey) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(myBoxId)) {
             throw new IllegalArgumentException("myBoxId");
         }
         return getCounteragentsV3(myBoxId, counteragentStatus, afterIndexKey, null, null);
     }
 
-    public CounteragentList getCounteragentsV3(String myBoxId, @Nullable String counteragentStatus, @Nullable String afterIndexKey, @Nullable String query, @Nullable Integer pageSize) throws DiadocSdkException {
+    public CounteragentList getCounteragentsV3(String myBoxId, @Nullable CounteragentStatus counteragentStatus, @Nullable String afterIndexKey, @Nullable String query, @Nullable Integer pageSize) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myBoxId)) {
             throw new IllegalArgumentException("myBoxId");
         }
