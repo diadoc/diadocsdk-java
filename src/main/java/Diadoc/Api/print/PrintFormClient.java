@@ -146,7 +146,7 @@ public class PrintFormClient {
     }
 
     public PrintFormResult generatePrintFormFromAttachment(String fromBoxId, String documentType, byte[] bytes) throws DiadocSdkException {
-        validateInput(fromBoxId, documentType, bytes);
+        validateInput(documentType, bytes);
 
         var response = executeGeneratePrintFormRequest(fromBoxId, documentType, bytes);
 
@@ -160,17 +160,14 @@ public class PrintFormClient {
     }
 
     public String generatePrintFormFromAttachmentId(String fromBoxId, String documentType, byte[] bytes) throws DiadocSdkException {
-        validateInput(fromBoxId, documentType, bytes);
+        validateInput(documentType, bytes);
 
         var response = executeGeneratePrintFormRequest(fromBoxId, documentType, bytes);
 
         return response.getFileName();
     }
 
-    private void validateInput(String fromBoxId, String documentType, byte[] bytes) {
-        if (Tools.isNullOrEmpty(fromBoxId)) {
-            throw new IllegalArgumentException("fromBoxId");
-        }
+    private void validateInput(String documentType, byte[] bytes) {
         if (Tools.isNullOrEmpty(documentType)) {
             throw new IllegalArgumentException("documentType");
         }
