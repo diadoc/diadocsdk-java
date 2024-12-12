@@ -18,7 +18,7 @@ import static Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.*;
 import static Diadoc.Api.helpers.Tools.addParameterIfNotNull;
 
 public class EventsClient {
-    private DiadocHttpClient diadocHttpClient;
+    private final DiadocHttpClient diadocHttpClient;
 
     public EventsClient(DiadocHttpClient diadocHttpClient) {
         this.diadocHttpClient = diadocHttpClient;
