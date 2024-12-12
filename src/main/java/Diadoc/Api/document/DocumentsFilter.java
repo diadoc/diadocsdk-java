@@ -21,7 +21,7 @@ public class DocumentsFilter {
 
     /**
      * @deprecated Конструктор устарел
-     * Рекоментдуется использовать {@link #DocumentsFilter(Builder)}
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
      */
     @Deprecated
     public DocumentsFilter(
