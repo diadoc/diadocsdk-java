@@ -19,7 +19,40 @@ public class DocumentsFilter {
     private final String afterIndexKey;
     private final Integer count;
 
-    // Приватный конструктор
+    /**
+     * @deprecated Конструктор устарел
+     * Рекоментдуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    @Deprecated
+    public DocumentsFilter(
+            String boxId,
+            String filterCategory,
+            String counteragentBoxId,
+            Date timestampFrom,
+            Date timestampTo,
+            String fromDocumentDate,
+            String toDocumentDate,
+            String departmentId,
+            boolean excludeSubdepartments,
+            String sortDirection,
+            String afterIndexKey,
+            Integer count) {
+        this.boxId = boxId;
+        this.filterCategory = filterCategory;
+        this.counteragentBoxId = counteragentBoxId;
+        this.timestampFrom = timestampFrom;
+        this.timestampTo = timestampTo;
+        this.fromDocumentDate = fromDocumentDate;
+        this.toDocumentDate = toDocumentDate;
+        this.departmentId = departmentId;
+        this.excludeSubdepartments = excludeSubdepartments;
+        this.sortDirection = sortDirection;
+        this.afterIndexKey = afterIndexKey;
+        this.count = count;
+        this.toDepartmentId = null;
+        this.fromDepartmentId = null;
+    }
+
     private DocumentsFilter(Builder builder) {
         this.boxId = builder.boxId;
         this.filterCategory = builder.filterCategory;
@@ -37,7 +70,6 @@ public class DocumentsFilter {
         this.toDepartmentId = builder.toDepartmentId;
     }
 
-    // Статический внутренний класс Builder
     public static class Builder {
         private String boxId;
         private String filterCategory;
