@@ -271,7 +271,7 @@ public class CounteragentClient {
             Tools.addParameterIfNotNull(url, "counteragentStatus", counteragentStatus);
             Tools.addParameterIfNotNull(url, "afterIndexKey", afterIndexKey);
             Tools.addParameterIfNotNull(url, "query", query);
-            Tools.addParameterIfNotNull(url, "pageSize", String.valueOf(pageSize != null ? pageSize : 50));
+            Tools.addParameterIfNotNull(url, "pageSize",pageSize);
 
             var request = RequestBuilder.get(url.build());
             return CounteragentList.parseFrom(diadocHttpClient.performRequest(request));
