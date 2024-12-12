@@ -1,11 +1,13 @@
 package Diadoc.Api.events;
 
+import Diadoc.Api.Proto.Forwarding.ForwardingApiProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.entity.ByteArrayEntity;
 import org.jetbrains.annotations.Nullable;
 
 import javax.mail.internet.ParseException;
@@ -143,6 +145,31 @@ public class EventsClient {
                             .addParameter("eventId", eventId)
                             .build());
             return BoxEvent.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public ForwardingApiProtos.GetForwardedDocumentEventsResponse getForwardedDocumentEvents(
+            String boxId, ForwardingApiProtos.GetForwardedDocumentEventsRequest forwardedDocumentEventsRequest
+    ) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (forwardedDocumentEventsRequest == null) {
+            throw new IllegalArgumentException("forwardedDocumentEventsRequest");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V2/GetForwardedDocumentEvents")
+                    .addParameter("boxId", boxId)
+                    .build();
+            var request = RequestBuilder.post(url)
+                    .setEntity(new ByteArrayEntity(forwardedDocumentEventsRequest.toByteArray()));
+
+            return ForwardingApiProtos.GetForwardedDocumentEventsResponse.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
