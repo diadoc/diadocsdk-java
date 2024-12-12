@@ -178,12 +178,12 @@ public class PrintFormClient {
 
     private DiadocResponseInfo executeGeneratePrintFormRequest(String fromBoxId, String documentType, byte[] bytes) throws DiadocSdkException {
         try {
-            var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/GeneratePrintFormFromAttachment")
-                            .addParameter("fromBoxId", fromBoxId)
-                            .addParameter("documentType", documentType)
-                            .build())
-                    .setEntity(new ByteArrayEntity(bytes));
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GeneratePrintFormFromAttachment")
+                    .addParameter("documentType", documentType);
+            Tools.addParameterIfNotNull(uri, "fromBoxId", fromBoxId);
+
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(bytes));
 
             return diadocHttpClient.getRawResponse(request);
 
