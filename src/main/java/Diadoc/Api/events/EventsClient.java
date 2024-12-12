@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 import static Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.*;
+import static Diadoc.Api.helpers.Tools.addParameterIfNotNull;
 
 public class EventsClient {
     private DiadocHttpClient diadocHttpClient;
@@ -93,18 +94,6 @@ public class EventsClient {
             return BoxEventList.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
-        }
-    }
-
-    private void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Enum<?> paramValue) {
-        if (paramValue != null) {
-            urlBuilder.addParameter(paramName, paramValue.name());
-        }
-    }
-
-    private void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Object paramValue) {
-        if (paramValue != null) {
-            urlBuilder.addParameter(paramName, String.valueOf(paramValue));
         }
     }
 

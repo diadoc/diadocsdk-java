@@ -13,6 +13,7 @@ import Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos;
 import com.google.protobuf.ByteString;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.message.BasicNameValuePair;
 
 
@@ -94,5 +95,17 @@ public class Tools {
         params.add(new BasicNameValuePair("documentId", forwardedDocumentId.getDocumentId().getEntityId()));
         params.add(new BasicNameValuePair("forwardEventId", forwardedDocumentId.getForwardEventId()));
         return params;
+    }
+
+    public static void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Enum<?> paramValue) {
+        if (paramValue != null) {
+            urlBuilder.addParameter(paramName, paramValue.name());
+        }
+    }
+
+    public static void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Object paramValue) {
+        if (paramValue != null) {
+            urlBuilder.addParameter(paramName, String.valueOf(paramValue));
+        }
     }
 }
