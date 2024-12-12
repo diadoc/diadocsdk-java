@@ -264,7 +264,7 @@ public class OrganizationClient {
         try {
             var request = RequestBuilder.post(
                     new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/Register")
+                            .setPath("/RegisterConfirm")
                             .build())
                     .setEntity(new ByteArrayEntity(registrationConfirmRequest.toByteArray()));
             diadocHttpClient.performRequest(request);

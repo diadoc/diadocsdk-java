@@ -1,6 +1,7 @@
 package Diadoc.Api.print;
 
 import Diadoc.Api.exceptions.DiadocSdkException;
+import Diadoc.Api.httpClient.DiadocResponseInfo;
 import Diadoc.Api.print.models.DocumentProtocolResult;
 import Diadoc.Api.print.models.DocumentZipResult;
 import Diadoc.Api.print.models.PrintFormContent;
@@ -145,31 +146,46 @@ public class PrintFormClient {
     }
 
     public PrintFormResult generatePrintFormFromAttachment(String fromBoxId, String documentType, byte[] bytes) throws DiadocSdkException {
-        if (Tools.isNullOrEmpty(fromBoxId)) {
-            throw new IllegalArgumentException("fromBoxId");
-        }
+        validateInput(documentType, bytes);
+
+        var response = executeGeneratePrintFormRequest(fromBoxId, documentType, bytes);
+
+        return new PrintFormResult(
+                new PrintFormContent(
+                        response.getContentType(),
+                        response.getFileName(),
+                        response.getContent()
+                )
+        );
+    }
+
+    public String generatePrintFormFromAttachmentId(String fromBoxId, String documentType, byte[] bytes) throws DiadocSdkException {
+        validateInput(documentType, bytes);
+
+        var response = executeGeneratePrintFormRequest(fromBoxId, documentType, bytes);
+
+        return response.getFileName();
+    }
+
+    private void validateInput(String documentType, byte[] bytes) {
         if (Tools.isNullOrEmpty(documentType)) {
             throw new IllegalArgumentException("documentType");
         }
         if (bytes == null) {
             throw new IllegalArgumentException("bytes");
         }
+    }
 
+    private DiadocResponseInfo executeGeneratePrintFormRequest(String fromBoxId, String documentType, byte[] bytes) throws DiadocSdkException {
         try {
-            var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/GeneratePrintFormFromAttachment")
-                    .addParameter("fromBoxId", fromBoxId)
-                    .addParameter("documentType", documentType)
-                    .build())
-                    .setEntity(new ByteArrayEntity(bytes));
+                    .addParameter("documentType", documentType);
+            Tools.addParameterIfNotNull(uri, "fromBoxId", fromBoxId);
 
-            var response = diadocHttpClient.getRawResponse(request);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(bytes));
 
-            if (response.getRetryAfter() != null) {
-                return new PrintFormResult(response.getRetryAfter());
-            }
-
-            return new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
+            return diadocHttpClient.getRawResponse(request);
 
         } catch (URISyntaxException | ParseException | IOException e) {
             throw new DiadocSdkException(e);
