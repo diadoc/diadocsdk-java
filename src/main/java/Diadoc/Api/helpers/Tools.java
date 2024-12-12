@@ -8,12 +8,13 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.regex.Pattern;
 
 import Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos;
 import com.google.protobuf.ByteString;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+
 
 public class Tools {
     public static String ConsoleReadLine() throws IOException {
@@ -55,6 +56,13 @@ public class Tools {
 
     public static String concatUriPath(String prefixPath, String postfixPath) {
         return prefixPath.replaceAll("/*$", "") + postfixPath;
+    }
+
+
+    public static void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Object paramValue) {
+        if (paramValue != null) {
+            urlBuilder.addParameter(paramName, String.valueOf(paramValue));
+        }
     }
 
     public static void checkForwardedDocumentParameters(String boxId, String fromBoxId, String messageId, String documentId, String forwardEventId) {
