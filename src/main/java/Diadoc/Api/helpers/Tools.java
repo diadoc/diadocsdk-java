@@ -96,16 +96,4 @@ public class Tools {
         params.add(new BasicNameValuePair("forwardEventId", forwardedDocumentId.getForwardEventId()));
         return params;
     }
-
-    public static void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Enum<?> paramValue) {
-        if (paramValue != null) {
-            urlBuilder.addParameter(paramName, paramValue.name());
-        }
-    }
-
-    public static void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Object paramValue) {
-        if (paramValue != null) {
-            urlBuilder.addParameter(paramName, String.valueOf(paramValue));
-        }
-    }
 }
