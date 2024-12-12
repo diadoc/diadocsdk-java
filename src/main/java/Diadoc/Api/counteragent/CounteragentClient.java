@@ -246,12 +246,7 @@ public class CounteragentClient {
         if (Tools.isNullOrEmpty(myBoxId)) {
             throw new IllegalArgumentException("myBoxId");        }
 
-        var counteragentEnumStatus = Optional.ofNullable(counteragentStatus)
-                .flatMap(value -> Arrays.stream(CounteragentStatus.values())
-                        .filter(status -> status.name().equals(value))
-                        .findFirst())
-                .orElseThrow(() -> new IllegalArgumentException("Invalid counteragentStatus value: " + counteragentStatus));
-
+        var counteragentEnumStatus = CounteragentStatus.fromString(counteragentStatus).orElse(null);
 
         return getCounteragentsV3(myBoxId, counteragentEnumStatus, afterIndexKey, null, null);
     }
