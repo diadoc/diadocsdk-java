@@ -6,6 +6,7 @@ import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -203,11 +204,24 @@ public class DocumentClient {
             throw new IllegalArgumentException("documentsToSignRequest");
         }
 
+        return prepareDocumentsToSign(documentsToSignRequest, null);
+    }
+
+    public PrepareDocumentsToSignResponse prepareDocumentsToSign(PrepareDocumentsToSignRequest documentsToSignRequest, @Nullable Boolean excludeContent) throws DiadocSdkException {
+        if (documentsToSignRequest == null) {
+            throw new IllegalArgumentException("documentsToSignRequest");
+        }
+
+        if (excludeContent == null) {
+            excludeContent = false;
+        }
+
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/PrepareDocumentsToSign")
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/PrepareDocumentsToSign")
+                                    .addParameter("excludeContent", excludeContent.toString())
+                                    .build())
                     .setEntity(new ByteArrayEntity(documentsToSignRequest.toByteArray()));
             return PrepareDocumentsToSignResponse.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
