@@ -323,4 +323,12 @@ public class DocumentsFilter {
         this.count = count;
         return this;
     }
+
+    public String getFromDepartmentId() {
+        return fromDepartmentId;
+    }
+
+    public String getToDepartmentId() {
+        return toDepartmentId;
+    }
 }
