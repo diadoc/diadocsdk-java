@@ -20,7 +20,7 @@ import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PrepareDocumen
 import static Diadoc.Api.Proto.SignatureInfoProtos.SignatureInfo;
 
 public class DocumentClient {
-    private DiadocHttpClient diadocHttpClient;
+    private final DiadocHttpClient diadocHttpClient;
 
     public DocumentClient(DiadocHttpClient diadocHttpClient) {
         this.diadocHttpClient = diadocHttpClient;
@@ -80,6 +80,9 @@ public class DocumentClient {
                 url.addParameter("count", filter.getCount().toString());
             }
 
+            Tools.addParameterIfNotNull(url, "fromDepartmentId", filter.getFromDepartmentId());
+            Tools.addParameterIfNotNull(url, "toDepartmentId", filter.getToDepartmentId());
+
             var request = RequestBuilder.get(url.build());
 
             return DocumentList.parseFrom(diadocHttpClient.performRequest(request));
@@ -100,18 +103,19 @@ public class DocumentClient {
             boolean excludeSubdepartments,
             String afterIndexKey,
             Integer count) throws DiadocSdkException {
-        return getDocuments(new DocumentsFilter()
-                .setBoxId(boxId)
-                .setFilterCategory(filterCategory)
-                .setCounteragentBoxId(counteragentBoxId)
-                .setTimestampFrom(timestampFrom)
-                .setTimestampTo(timestampTo)
-                .setFromDocumentDate(fromDocumentDate)
-                .setToDocumentDate(toDocumentDate)
-                .setDepartmentId(departmentId)
-                .setExcludeSubdepartments(excludeSubdepartments)
-                .setAfterIndexKey(afterIndexKey)
-                .setCount(count));
+        return getDocuments(new DocumentsFilter.Builder()
+                .boxId(boxId)
+                .filterCategory(filterCategory)
+                .counteragentBoxId(counteragentBoxId)
+                .timestampFrom(timestampFrom)
+                .timestampTo(timestampTo)
+                .fromDocumentDate(fromDocumentDate)
+                .toDocumentDate(toDocumentDate)
+                .departmentId(departmentId)
+                .excludeSubdepartments(excludeSubdepartments)
+                .afterIndexKey(afterIndexKey)
+                .count(count)
+                .build());
     }
 
     public DocumentList getDocuments(String boxId,
@@ -149,14 +153,30 @@ public class DocumentClient {
             throw new IllegalArgumentException("entityId");
         }
 
+        return getDocument(boxId, messageId, entityId, true);
+    }
+
+
+    public Document getDocument(String boxId, String messageId, String entityId, @Nullable Boolean injectEntityContent) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId");
+        }
+        if (entityId == null) {
+            throw new IllegalArgumentException("entityId");
+        }
+
         try {
-            var request = RequestBuilder.get(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
                             .setPath("/V3/GetDocument")
                             .addParameter("boxId", boxId)
                             .addParameter("messageId", messageId)
-                            .addParameter("entityId", entityId)
-                            .build());
+                            .addParameter("entityId", entityId);
+            Tools.addParameterIfNotNull(url, "injectEntityContent", injectEntityContent != null ? injectEntityContent.toString() : true);
+
+            var request = RequestBuilder.get(url.build());
             return Document.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
