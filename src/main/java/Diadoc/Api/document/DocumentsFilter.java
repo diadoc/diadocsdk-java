@@ -172,158 +172,155 @@ public class DocumentsFilter {
         return boxId;
     }
 
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setBoxId(String boxId) {
+        this.boxId = boxId;
+        return this;
+    }
+
     public String getFilterCategory() {
         return filterCategory;
+    }
+
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setFilterCategory(String filterCategory) {
+        this.filterCategory = filterCategory;
+        return this;
     }
 
     public String getCounteragentBoxId() {
         return counteragentBoxId;
     }
 
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setCounteragentBoxId(String counteragentBoxId) {
+        this.counteragentBoxId = counteragentBoxId;
+        return this;
+    }
+
     public Date getTimestampFrom() {
         return timestampFrom;
+    }
+
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setTimestampFrom(Date timestampFrom) {
+        this.timestampFrom = timestampFrom;
+        return this;
     }
 
     public Date getTimestampTo() {
         return timestampTo;
     }
 
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setTimestampTo(Date timestampTo) {
+        this.timestampTo = timestampTo;
+        return this;
+    }
+
     public String getFromDocumentDate() {
         return fromDocumentDate;
+    }
+
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setFromDocumentDate(String fromDocumentDate) {
+        this.fromDocumentDate = fromDocumentDate;
+        return this;
     }
 
     public String getToDocumentDate() {
         return toDocumentDate;
     }
 
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setToDocumentDate(String toDocumentDate) {
+        this.toDocumentDate = toDocumentDate;
+        return this;
+    }
+
     public String getDepartmentId() {
         return departmentId;
+    }
+
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
+        return this;
     }
 
     public boolean isExcludeSubdepartments() {
         return excludeSubdepartments;
     }
 
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setExcludeSubdepartments(boolean excludeSubdepartments) {
+        this.excludeSubdepartments = excludeSubdepartments;
+        return this;
+    }
+
     public String getSortDirection() {
         return sortDirection;
+    }
+
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
     }
 
     public String getAfterIndexKey() {
         return afterIndexKey;
     }
 
+    /**
+     * @deprecated Setter устарел
+     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     */
+    public DocumentsFilter setAfterIndexKey(String afterIndexKey) {
+        this.afterIndexKey = afterIndexKey;
+        return this;
+    }
+
     public Integer getCount() {
         return count;
     }
 
-    public String getFromDepartmentId() {
-        return fromDepartmentId;
-    }
-
-    public String getToDepartmentId() {
-        return toDepartmentId;
-    }
-
-    public void setBoxId(String boxId) {
-        this.boxId = boxId;
-    }
-
     /**
      * @deprecated Setter устарел
      * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
      */
-    @Deprecated
-    public void setFilterCategory(String filterCategory) {
-        this.filterCategory = filterCategory;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setCounteragentBoxId(String counteragentBoxId) {
-        this.counteragentBoxId = counteragentBoxId;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setTimestampFrom(Date timestampFrom) {
-        this.timestampFrom = timestampFrom;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setTimestampTo(Date timestampTo) {
-        this.timestampTo = timestampTo;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setFromDocumentDate(String fromDocumentDate) {
-        this.fromDocumentDate = fromDocumentDate;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setToDocumentDate(String toDocumentDate) {
-        this.toDocumentDate = toDocumentDate;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setDepartmentId(String departmentId) {
-        this.departmentId = departmentId;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setExcludeSubdepartments(boolean excludeSubdepartments) {
-        this.excludeSubdepartments = excludeSubdepartments;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setSortDirection(String sortDirection) {
-        this.sortDirection = sortDirection;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setAfterIndexKey(String afterIndexKey) {
-        this.afterIndexKey = afterIndexKey;
-    }
-
-    /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
-     */
-    @Deprecated
-    public void setCount(Integer count) {
+    public DocumentsFilter setCount(Integer count) {
         this.count = count;
+        return this;
     }
 }
