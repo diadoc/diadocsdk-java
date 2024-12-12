@@ -64,13 +64,15 @@ public class OrganizationClient {
     }
 
     public Organization getOrganizationByInnAndKpp(String inn, @Nullable String kpp) throws DiadocSdkException {
-        if (inn == null && kpp != null) {
+        if (inn == null) {
             throw new IllegalArgumentException("inn");
         }
 
         try {
-            var url = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GetOrganization");
-            Tools.addParameterIfNotNull(url, "inn", inn);
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GetOrganization")
+                    .addParameter("inn", inn);
+
             Tools.addParameterIfNotNull(url, "kpp", kpp);
             var request = RequestBuilder.get(url.build());
             return Organization.parseFrom(diadocHttpClient.performRequest(request));
