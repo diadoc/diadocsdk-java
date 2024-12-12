@@ -66,6 +66,12 @@ public class Tools {
         }
     }
 
+    public static void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Enum<?> paramValue) {
+        if (paramValue != null) {
+            urlBuilder.addParameter(paramName, paramValue.name());
+        }
+    }
+
     public static void checkForwardedDocumentParameters(String boxId, String fromBoxId, String messageId, String documentId, String forwardEventId) {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
