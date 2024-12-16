@@ -1,5 +1,6 @@
 package Diadoc.Api.print;
 
+import Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.httpClient.DiadocResponseInfo;
 import Diadoc.Api.print.models.DocumentProtocolResult;
@@ -20,6 +21,7 @@ import java.nio.charset.StandardCharsets;
 import static Diadoc.Api.Proto.CustomPrintFormDetectionProtos.*;
 import static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.*;
 import static Diadoc.Api.Proto.Documents.DocumentZipProtos.*;
+import static Diadoc.Api.helpers.Tools.getForwardedDocumentIdParameters;
 
 public class PrintFormClient {
     private DiadocHttpClient diadocHttpClient;
@@ -194,22 +196,60 @@ public class PrintFormClient {
     }
 
     public PrintFormResult getGeneratedPrintForm(String printFormId) throws DiadocSdkException {
+        if (printFormId == null) {
+            throw new IllegalArgumentException("printFormId");
+        }
+
         try {
             var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/GetGeneratedPrintForm")
                     .addParameter("printFormId", printFormId)
                     .build());
+            var response = diadocHttpClient.getResponse(request);
+            return getPrintFormFromResponse(response);
 
-            var response = diadocHttpClient.getRawResponse(request);
-
-            if (response.getRetryAfter() != null) {
-                return new PrintFormResult(response.getRetryAfter());
-            }
-
-            return new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
-
-        } catch (URISyntaxException | ParseException | IOException e) {
+        } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
+        }
+
+    }
+
+
+    public PrintFormResult generateForwardedDocumentPrintForm(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (forwardedDocumentId == null) {
+            throw new IllegalArgumentException("forwardedDocumentId");
+        }
+
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateForwardedDocumentPrintForm")
+                    .addParameter("boxId", boxId)
+                    .addParameters(getForwardedDocumentIdParameters(forwardedDocumentId))
+                    .build();
+
+            var request = RequestBuilder.get(url);
+            var response = diadocHttpClient.getResponse(request);
+            return getPrintFormFromResponse(response);
+
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+
+    }
+
+    private PrintFormResult getPrintFormFromResponse(DiadocResponseInfo response){
+        if (response.getRetryAfter() != null) {
+            return new PrintFormResult(response.getRetryAfter());
+        }
+        else {
+            return new PrintFormResult(
+                    new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent())
+            );
         }
     }
 }
