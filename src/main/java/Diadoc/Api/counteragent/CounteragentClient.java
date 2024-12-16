@@ -11,6 +11,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.Optional;
 
 import static Diadoc.Api.Proto.AcquireCounteragentProtos.*;
 import static Diadoc.Api.Proto.AsyncMethodResultProtos.*;
@@ -55,10 +57,8 @@ public class CounteragentClient {
                     .setPath("/V2/AcquireCounteragent")
                     .addParameter("myOrgId", myOrgId);
 
-            if (myDepartmentId != null) {
-                url.addParameter("myDepartmentId", myDepartmentId);
-            }
-
+            Tools.addParameterIfNotNull(url, "myDepartmentId", myDepartmentId);
+            
             var request = RequestBuilder
                     .post(url.build())
                     .setEntity(new ByteArrayEntity(acquireCounteragentRequest.toByteArray()));
@@ -86,9 +86,7 @@ public class CounteragentClient {
                     .setPath("/V3/AcquireCounteragent")
                     .addParameter("myBoxId", myBoxId);
 
-            if (myDepartmentId != null) {
-                url.addParameter("myDepartmentId", myDepartmentId);
-            }
+            Tools.addParameterIfNotNull(url, "myDepartmentId", myDepartmentId);
 
             var request = RequestBuilder
                     .post(url.build())
@@ -235,9 +233,7 @@ public class CounteragentClient {
                 url.addParameter("counteragentStatus", counteragentStatus);
             }
 
-            if (afterIndexKey != null) {
-                url.addParameter("afterIndexKey", afterIndexKey);
-            }
+            Tools.addParameterIfNotNull(url, "afterIndexKey", afterIndexKey);
 
             var request = RequestBuilder.get(url.build());
             return CounteragentList.parseFrom(diadocHttpClient.performRequest(request));
@@ -245,23 +241,30 @@ public class CounteragentClient {
             throw new DiadocSdkException(e);
         }
     }
-    
+
     public CounteragentList getCounteragentsV3(String myBoxId, @Nullable String counteragentStatus, @Nullable String afterIndexKey) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(myBoxId)) {
+            throw new IllegalArgumentException("myBoxId");        }
+
+        var counteragentEnumStatus = CounteragentStatus.fromString(counteragentStatus).orElse(null);
+
+        return getCounteragentsV3(myBoxId, counteragentEnumStatus, afterIndexKey, null, null);
+    }
+
+    public CounteragentList getCounteragentsV3(String myBoxId, @Nullable CounteragentStatus counteragentStatus, @Nullable String afterIndexKey, @Nullable String query, @Nullable Integer pageSize) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myBoxId)) {
             throw new IllegalArgumentException("myBoxId");
         }
+
         try {
             var url = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/V3/GetCounteragents")
                     .addParameter("myBoxId", myBoxId);
 
-            if (!Tools.isNullOrEmpty(counteragentStatus)) {
-                url.addParameter("counteragentStatus", counteragentStatus);
-            }
-
-            if (afterIndexKey != null) {
-                url.addParameter("afterIndexKey", afterIndexKey);
-            }
+            Tools.addParameterIfNotNull(url, "counteragentStatus", counteragentStatus);
+            Tools.addParameterIfNotNull(url, "afterIndexKey", afterIndexKey);
+            Tools.addParameterIfNotNull(url, "query", query);
+            Tools.addParameterIfNotNull(url, "pageSize",pageSize);
 
             var request = RequestBuilder.get(url.build());
             return CounteragentList.parseFrom(diadocHttpClient.performRequest(request));

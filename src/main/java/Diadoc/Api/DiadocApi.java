@@ -166,8 +166,25 @@ public class DiadocApi {
         return employeePowerOfAttorneyClient;
     }
 
+    /**
+     * @deprecated
+     * Используйте {@link #getDocumentWorkflowClient()}
+     */
+    @Deprecated
     public DocumentWorkflowClient gDocumentWorkflowClient() {
         return documentWorkflowClient;
+    }
+
+    public TemplateClient getTemplateClient() {
+        return templateClient;
+    }
+
+    public DocumentWorkflowClient getDocumentWorkflowClient() {
+        return documentWorkflowClient;
+    }
+
+    public DiadocHttpClient getDiadocHttpClient() {
+        return diadocHttpClient;
     }
 
     public AuthManager getAuthManager() {
