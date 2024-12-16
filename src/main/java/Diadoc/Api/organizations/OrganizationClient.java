@@ -1,5 +1,6 @@
 package Diadoc.Api.organizations;
 
+import Diadoc.Api.Proto.ResolutionRouteListProtos;
 import Diadoc.Api.exceptions.DiadocException;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
@@ -380,4 +381,20 @@ public class OrganizationClient {
         }
     }
 
+    public ResolutionRouteListProtos.ResolutionRouteList getResolutionRoutesForOrganization(String orgId) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(orgId)) {
+            throw new IllegalArgumentException("orgId");
+        }
+
+        try {
+            var request = RequestBuilder.get(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/GetResolutionRoutesForOrganization")
+                            .addParameter("orgId", orgId)
+                            .build());
+            return ResolutionRouteListProtos.ResolutionRouteList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 }

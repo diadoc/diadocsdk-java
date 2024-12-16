@@ -1,11 +1,13 @@
 package Diadoc.Api.message;
 
+import Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.entity.ContentType;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
@@ -211,6 +213,25 @@ public class MessageClient {
 
             var request = RequestBuilder.get(url.build());
             return InvoiceCorrectionRequestInfo.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public void sendFnsRegistrationMessage(String boxId, FnsRegistrationMessageInfoProtos.FnsRegistrationMessageInfo fnsRegistrationMessageInfo) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(boxId)){
+            throw new IllegalArgumentException("boxId");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/SendFnsRegistrationMessage")
+                    .addParameter("boxId", boxId)
+                    .build();
+            var request = RequestBuilder.post(url)
+                    .setEntity(new ByteArrayEntity(fnsRegistrationMessageInfo.toByteArray()));
+            diadocHttpClient.performRequest(request);
+
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
