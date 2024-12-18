@@ -351,7 +351,7 @@ public class DocumentClient {
         }
     }
 
-    public byte[] getForwardedEntityContent(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId) throws DiadocSdkException {
+    public byte[] getForwardedEntityContent(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId, String entityId) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
         }
@@ -360,10 +360,15 @@ public class DocumentClient {
             throw new IllegalArgumentException("forwardedDocumentId");
         }
 
+        if (entityId == null) {
+            throw new IllegalArgumentException("entityId");
+        }
+
         try {
             var url = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/V2/GetForwardedEntityContent")
                     .addParameter("boxId", boxId)
+                    .addParameter("entityId", entityId)
                     .build();
             var request = RequestBuilder.get(url)
                     .setEntity(new ByteArrayEntity(forwardedDocumentId.toByteArray()));
