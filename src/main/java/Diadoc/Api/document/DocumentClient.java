@@ -365,7 +365,7 @@ public class DocumentClient {
                     .setPath("/V2/GetForwardedEntityContent")
                     .addParameter("boxId", boxId)
                     .build();
-            var request = RequestBuilder.post(url)
+            var request = RequestBuilder.get(url)
                     .setEntity(new ByteArrayEntity(forwardedDocumentId.toByteArray()));
 
             return diadocHttpClient.performRequest(request);
