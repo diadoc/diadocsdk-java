@@ -369,9 +369,9 @@ public class DocumentClient {
                     .setPath("/V2/GetForwardedEntityContent")
                     .addParameter("boxId", boxId)
                     .addParameter("entityId", entityId)
-                    .build();
-            var request = RequestBuilder.get(url)
-                    .setEntity(new ByteArrayEntity(forwardedDocumentId.toByteArray()));
+                    .addParameters(getForwardedDocumentIdParameters(forwardedDocumentId));
+
+            var request = RequestBuilder.get(url.build());
 
             return diadocHttpClient.performRequest(request);
         } catch (URISyntaxException | IOException e) {
