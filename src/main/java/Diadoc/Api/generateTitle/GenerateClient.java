@@ -634,7 +634,7 @@ public class GenerateClient {
 
         try {
             var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
-                    .setPath("/GenerateUniversalCorrectionTransferDocumentXmlForSeller");
+                    .setPath("/GenerateUniversalTransferDocumentXmlForSeller");
             Tools.addParameterIfNotNull(uri, "documentVersion", documentVersion);
             Tools.addParameterIfNotNull(uri, "disableValidation", disableValidation);
             Tools.addParameterIfNotNull(uri, "correction", correction);
