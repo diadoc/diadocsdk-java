@@ -351,7 +351,7 @@ public class DocumentClient {
         }
     }
 
-    public byte[] getForwardedEntityContent(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId) throws DiadocSdkException {
+    public byte[] getForwardedEntityContent(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId, String entityId) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
         }
@@ -360,13 +360,18 @@ public class DocumentClient {
             throw new IllegalArgumentException("forwardedDocumentId");
         }
 
+        if (entityId == null) {
+            throw new IllegalArgumentException("entityId");
+        }
+
         try {
             var url = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/V2/GetForwardedEntityContent")
                     .addParameter("boxId", boxId)
-                    .build();
-            var request = RequestBuilder.post(url)
-                    .setEntity(new ByteArrayEntity(forwardedDocumentId.toByteArray()));
+                    .addParameter("entityId", entityId)
+                    .addParameters(getForwardedDocumentIdParameters(forwardedDocumentId));
+
+            var request = RequestBuilder.get(url.build());
 
             return diadocHttpClient.performRequest(request);
         } catch (URISyntaxException | IOException e) {
