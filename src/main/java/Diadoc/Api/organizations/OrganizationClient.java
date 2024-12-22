@@ -1,5 +1,6 @@
 package Diadoc.Api.organizations;
 
+import Diadoc.Api.Proto.ResolutionRouteListProtos;
 import Diadoc.Api.exceptions.DiadocException;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
@@ -49,11 +50,36 @@ public class OrganizationClient {
         return getOrganization("orgId", orgId);
     }
 
+    public Organization getOrganizationByBoxId(String boxId) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(boxId)) {
+            throw new IllegalArgumentException("boxId");
+        }
+        return getOrganization("boxId", boxId);
+    }
+
     public Organization getOrganizationByInn(String inn) throws DiadocSdkException {
         if (inn == null || inn.isEmpty()) {
             throw new IllegalArgumentException("inn");
         }
         return getOrganization("inn", inn);
+    }
+
+    public Organization getOrganizationByInnAndKpp(String inn, @Nullable String kpp) throws DiadocSdkException {
+        if (inn == null) {
+            throw new IllegalArgumentException("inn");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GetOrganization")
+                    .addParameter("inn", inn);
+
+            Tools.addParameterIfNotNull(url, "kpp", kpp);
+            var request = RequestBuilder.get(url.build());
+            return getOrganization(request);
+        } catch (URISyntaxException e) {
+            throw new DiadocSdkException(e);
+        }
     }
 
     public Organization getOrganizationByFnsParticipantId(String fnsParticipantId) throws DiadocSdkException {
@@ -62,6 +88,33 @@ public class OrganizationClient {
         }
         return getOrganization("fnsParticipantId", fnsParticipantId);
     }
+
+    public Organization getOrganizationByParameters(
+            @Nullable String orgId, @Nullable String boxId, @Nullable String fnsParticipantId, @Nullable String inn, @Nullable String kpp
+    ) throws DiadocSdkException {
+        if (inn == null && kpp != null) {
+            throw new IllegalArgumentException("inn");
+        }
+
+        if (orgId == null && boxId == null && fnsParticipantId == null && inn == null) {
+            throw new IllegalArgumentException("One argument must not be null");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GetOrganization");
+            Tools.addParameterIfNotNull(url, "boxId", boxId);
+            Tools.addParameterIfNotNull(url, "fnsParticipantId", fnsParticipantId);
+            Tools.addParameterIfNotNull(url, "inn", inn);
+            Tools.addParameterIfNotNull(url, "kpp", kpp);
+            Tools.addParameterIfNotNull(url, "orgId", orgId);
+            var request = RequestBuilder.get(url.build());
+            return getOrganization(request);
+        } catch (URISyntaxException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+
 
     public OrganizationWithCounteragentStatus[] getOrganizationsByInnList(String myOrgId, Iterable<String> innList) throws DiadocSdkException {
         var request = GetOrganizationsByInnListRequest.newBuilder();
@@ -76,10 +129,10 @@ public class OrganizationClient {
             throw new IllegalArgumentException("innListRequest");
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GetOrganizationsByInnList")
-                                    .addParameter("myOrgId", myOrgId)
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/GetOrganizationsByInnList")
+                            .addParameter("myOrgId", myOrgId)
+                            .build())
                     .setEntity(new ByteArrayEntity(innListRequest.toByteArray()));
 
 
@@ -103,9 +156,9 @@ public class OrganizationClient {
         }
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GetOrganizationsByInnList")
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/GetOrganizationsByInnList")
+                            .build())
                     .setEntity(new ByteArrayEntity(innListRequest.toByteArray()));
             var response = GetOrganizationsByInnListResponse.parseFrom(diadocHttpClient.performRequest(request));
             return response
@@ -135,8 +188,8 @@ public class OrganizationClient {
                 url.addParameter("includeRelations", "true");
             }
             var request = RequestBuilder.get(url.build());
-            return OrganizationList.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
+            return getOrganizationsList(request);
+        } catch (URISyntaxException e) {
             throw new DiadocSdkException(e);
         }
     }
@@ -154,8 +207,8 @@ public class OrganizationClient {
                 url.addParameter("autoRegister", Boolean.toString(false));
             }
             var request = RequestBuilder.get(url.build());
-            return OrganizationList.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
+            return getOrganizationsList(request);
+        } catch (URISyntaxException e) {
             throw new DiadocSdkException(e);
         }
     }
@@ -165,9 +218,9 @@ public class OrganizationClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #getOrganizationUsersV2
+     * Use getOrganizationUsersV2 instead
      */
+
     @Deprecated
     public OrganizationUsersList getOrganizationUsers(String orgId) throws DiadocSdkException {
         try {
@@ -176,12 +229,12 @@ public class OrganizationClient {
                             .setPath("/GetOrganizationUsers")
                             .addParameter("orgId", orgId)
                             .build());
-            return OrganizationUsersList.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
+            return getOrganizationUsersList(request);
+        } catch (URISyntaxException e) {
             throw new DiadocSdkException(e);
         }
     }
-
+    
     public OrganizationUsersList getOrganizationUsersV2(String boxId) throws DiadocSdkException {
         try {
             var request = RequestBuilder.get(
@@ -189,17 +242,12 @@ public class OrganizationClient {
                             .setPath("/V2/GetOrganizationUsers")
                             .addParameter("boxId", boxId)
                             .build());
-            return OrganizationUsersList.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
+            return getOrganizationUsersList(request);
+        } catch (URISyntaxException e) {
             throw new DiadocSdkException(e);
         }
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link Diadoc.Api.employee.EmployeeClient#getMyEmployee(String)}
-     */
-    @Deprecated
     public OrganizationUserPermissions getMyPermissions(String orgId) throws DiadocSdkException {
         if (orgId == null) {
             throw new IllegalArgumentException("orgId");
@@ -226,8 +274,32 @@ public class OrganizationClient {
                             .addParameter(name, value)
                             .build());
 
+            return getOrganization(request);
+        } catch (URISyntaxException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    private Organization getOrganization(RequestBuilder request) throws DiadocSdkException {
+        try {
             return Organization.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
+        } catch (IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    private OrganizationUsersList getOrganizationUsersList(RequestBuilder request) throws DiadocSdkException{
+        try {
+            return OrganizationUsersList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    private OrganizationList getOrganizationsList(RequestBuilder request) throws DiadocSdkException {
+        try {
+            return OrganizationList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (IOException e) {
             throw new DiadocSdkException(e);
         }
     }
@@ -254,9 +326,9 @@ public class OrganizationClient {
     public RegistrationResponse register(RegistrationRequest registrationRequest) throws DiadocSdkException {
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/Register")
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/Register")
+                            .build())
                     .setEntity(new ByteArrayEntity(registrationRequest.toByteArray()));
             return RegistrationResponse.parseFrom(diadocHttpClient.performRequest(request));
 
@@ -268,9 +340,9 @@ public class OrganizationClient {
     public void registerConfirm(RegistrationConfirmRequest registrationConfirmRequest) throws DiadocSdkException {
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/Register")
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/RegisterConfirm")
+                            .build())
                     .setEntity(new ByteArrayEntity(registrationConfirmRequest.toByteArray()));
             diadocHttpClient.performRequest(request);
 
@@ -289,10 +361,10 @@ public class OrganizationClient {
 
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/CanSendInvoice")
-                                    .addParameter("boxId", boxId)
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/CanSendInvoice")
+                            .addParameter("boxId", boxId)
+                            .build())
                     .setEntity(new ByteArrayEntity(certBytes));
 
             var response = diadocHttpClient.getResponse(request);
@@ -309,4 +381,20 @@ public class OrganizationClient {
         }
     }
 
+    public ResolutionRouteListProtos.ResolutionRouteList getResolutionRoutesForOrganization(String orgId) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(orgId)) {
+            throw new IllegalArgumentException("orgId");
+        }
+
+        try {
+            var request = RequestBuilder.get(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/GetResolutionRoutesForOrganization")
+                            .addParameter("orgId", orgId)
+                            .build());
+            return ResolutionRouteListProtos.ResolutionRouteList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 }

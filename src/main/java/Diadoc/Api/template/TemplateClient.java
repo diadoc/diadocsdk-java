@@ -1,5 +1,6 @@
 package Diadoc.Api.template;
 
+import Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos;
 import Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
@@ -11,6 +12,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.*;
 import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.*;
@@ -29,7 +32,7 @@ public class TemplateClient {
 
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/PostTemplate").build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/PostTemplate").build())
                     .setEntity(new ByteArrayEntity(templateToPost.toByteArray()));
 
             return Template.parseFrom(diadocHttpClient.performRequest(request));
@@ -45,7 +48,7 @@ public class TemplateClient {
 
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/TransformTemplateToMessage").build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/TransformTemplateToMessage").build())
                     .setEntity(new ByteArrayEntity(templateTransformationToPost.toByteArray()));
 
             return Message.parseFrom(diadocHttpClient.performRequest(request));
@@ -55,9 +58,9 @@ public class TemplateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link Diadoc.Api.message.MessageClient#getMessage(String, String)}
+     * Use getMessage from message client instead
      */
+
     @Deprecated
     public Template getTemplate(String currentBoxId, String templateId, @Nullable String entityId) throws DiadocSdkException {
         if (currentBoxId == null) {
@@ -90,6 +93,15 @@ public class TemplateClient {
             String templateId,
             DiadocMessage_PostApiProtos.TemplatePatchToPost templatePatchToPost) throws DiadocSdkException {
 
+        return postTemplatePatch(boxId, templateId, null, templatePatchToPost);
+    }
+
+    public MessagePatch postTemplatePatch(
+            String boxId,
+            String templateId,
+            @Nullable String operationId,
+            DiadocMessage_PostApiProtos.TemplatePatchToPost templatePatchToPost) throws DiadocSdkException {
+
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
         }
@@ -101,12 +113,12 @@ public class TemplateClient {
         }
 
         try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/PostTemplatePatch")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("templateId", templateId)
-                                    .build())
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/PostTemplatePatch")
+                    .addParameter("boxId", boxId)
+                    .addParameter("templateId", templateId);
+            Tools.addParameterIfNotNull(url, "operationId", operationId);
+            var request = RequestBuilder.post(url.build())
                     .setEntity(new ByteArrayEntity(templatePatchToPost.toByteArray()));
 
             return MessagePatch.parseFrom(diadocHttpClient.performRequest(request));

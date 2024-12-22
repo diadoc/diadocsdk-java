@@ -2,13 +2,10 @@ package Diadoc.Api.Proto;
 
 option java_outer_classname = "CertificateInfoProtos";
 
-option deprecated = true;
-
 message CertificateInfo {
-	option deprecated = true;
-	optional string Thumbprint = 1 [deprecated = true];
-	optional sfixed64 ValidFrom = 2 [deprecated = true];
-	optional sfixed64 ValidTo = 3 [deprecated = true];
-	optional string OrganizationName = 4 [deprecated = true];
-	optional string Inn = 5 [deprecated = true];
+	optional string Thumbprint = 1;
+	optional sfixed64 ValidFrom = 2;
+	optional sfixed64 ValidTo = 3;
+	optional string OrganizationName = 4;
+	optional string Inn = 5;
 }

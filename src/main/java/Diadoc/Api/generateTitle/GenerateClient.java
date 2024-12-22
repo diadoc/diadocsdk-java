@@ -2,6 +2,7 @@ package Diadoc.Api.generateTitle;
 
 import Diadoc.Api.Proto.Invoicing.TovTorgInfoProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
+import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import Diadoc.Api.httpClient.GeneratedFile;
 import com.google.protobuf.GeneratedMessage;
@@ -51,7 +52,6 @@ public class GenerateClient {
                                                                InvoiceCorrectionRequestGenerationRequestV2 generationRequest) throws DiadocSdkException {
         return getGeneratedXml(boxId, "/V2/GenerateInvoiceCorrectionRequestXml", generationRequest);
     }
-
     public GeneratedFile generateRevocationRequestXml(String boxId,
                                                       String messageId,
                                                       String attachmentId,
@@ -76,13 +76,11 @@ public class GenerateClient {
 
         try {
             var uriBuilder = new URIBuilder(diadocHttpClient.getBaseUrl())
-                    .setPath("/V2/GenerateRevocationRequestXml")
-                    .addParameter("boxId", boxId)
-                    .addParameter("messageId", messageId)
-                    .addParameter("attachmentId", attachmentId);
-            if(contentTypeId != null) {
-                uriBuilder.addParameter("contentTypeId", contentTypeId);
-            }
+                .setPath("/V2/GenerateRevocationRequestXml")
+                .addParameter("boxId", boxId)
+                .addParameter("messageId", messageId)
+                .addParameter("attachmentId", attachmentId);
+            Tools.addParameterIfNotNull(uriBuilder,  "contentTypeId", contentTypeId);
             var request = RequestBuilder.post(uriBuilder.build())
                     .setEntity(new ByteArrayEntity(revocationRequestInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
@@ -99,7 +97,7 @@ public class GenerateClient {
     }
 
     public GeneratedFile generateSignatureRejectionXmlV2(String boxId,
-                                                         SignatureRejectionGenerationRequestV2 generationRequest) throws DiadocSdkException {
+                                                       SignatureRejectionGenerationRequestV2 generationRequest) throws DiadocSdkException {
         return getGeneratedXml(boxId, "/V2/GenerateSignatureRejectionXml", generationRequest);
     }
 
@@ -129,12 +127,12 @@ public class GenerateClient {
 
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath(path)
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("messageId", messageId)
-                                    .addParameter("attachmentId", attachmentId)
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath(path)
+                            .addParameter("boxId", boxId)
+                            .addParameter("messageId", messageId)
+                            .addParameter("attachmentId", attachmentId)
+                            .build())
                     .setEntity(new ByteArrayEntity(data.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
@@ -152,10 +150,10 @@ public class GenerateClient {
 
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath(path)
-                                    .addParameter("boxId", boxId)
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath(path)
+                            .addParameter("boxId", boxId)
+                            .build())
                     .setEntity(new ByteArrayEntity(data.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
@@ -163,74 +161,34 @@ public class GenerateClient {
         }
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateInvoiceXml(InvoiceInfo invoiceInfo) throws DiadocSdkException {
         return generateInvoiceXml(invoiceInfo, "Invoice", false);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateInvoiceXml(InvoiceInfo invoiceInfo, boolean disableValidation) throws DiadocSdkException {
         return generateInvoiceXml(invoiceInfo, "Invoice", disableValidation);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateInvoiceRevisionXml(InvoiceInfo invoiceRevisionInfo) throws DiadocSdkException {
         return generateInvoiceXml(invoiceRevisionInfo, "InvoiceRevision", false);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateInvoiceRevisionXml(InvoiceInfo invoiceRevisionInfo, boolean disableValidation) throws DiadocSdkException {
         return generateInvoiceXml(invoiceRevisionInfo, "InvoiceRevision", disableValidation);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateInvoiceCorrectionXml(InvoiceCorrectionInfo invoiceCorrectionInfo) throws DiadocSdkException {
         return generateInvoiceXml(invoiceCorrectionInfo, "InvoiceCorrection", false);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateInvoiceCorrectionXml(InvoiceCorrectionInfo invoiceCorrectionInfo, boolean disableValidation) throws DiadocSdkException {
         return generateInvoiceXml(invoiceCorrectionInfo, "InvoiceCorrection", disableValidation);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateInvoiceCorrectionRevisionXml(InvoiceCorrectionInfo invoiceCorrectionRevisionInfo) throws DiadocSdkException {
         return generateInvoiceXml(invoiceCorrectionRevisionInfo, "InvoiceCorrectionRevision", false);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateInvoiceCorrectionRevisionXml(InvoiceCorrectionInfo invoiceCorrectionRevisionInfo, boolean disableValidation) throws DiadocSdkException {
         return generateInvoiceXml(invoiceCorrectionRevisionInfo, "InvoiceCorrectionRevision", disableValidation);
     }
@@ -240,13 +198,10 @@ public class GenerateClient {
             throw new IllegalArgumentException("info");
         }
         try {
-
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateInvoiceXml")
-                                    .addParameter("invoiceType", invoiceType)
-                                    .addParameter("disableValidation", String.valueOf(disableValidation)).build())
-                    .setEntity(new ByteArrayEntity(invoiceInfo.toByteArray()));
+            var uri =   new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GenerateInvoiceXml");
+            Tools.addParameterIfNotNull(uri, "invoiceType", invoiceType);
+            Tools.addParameterIfNotNull(uri, "disableValidation", disableValidation);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(invoiceInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
@@ -264,6 +219,39 @@ public class GenerateClient {
             boolean disableValidation,
             @Nullable String letterId,
             @Nullable String documentId) throws DiadocSdkException {
+        checkDocumentParameters(boxId, documentTypeNamedId, documentFunction, documentVersion, userContractData);
+
+        if (titleIndex == null) {
+            throw new IllegalArgumentException("titleIndex");
+        }
+
+        if (titleIndex > 0 && documentId == null) {
+            throw new IllegalArgumentException("documentId");
+        }
+
+        try {
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateTitleXml")
+                    .addParameter("boxId", boxId)
+                    .addParameter("documentTypeNamedId", documentTypeNamedId)
+                    .addParameter("documentFunction", documentFunction)
+                    .addParameter("documentVersion", documentVersion)
+                    .addParameter("titleIndex", String.valueOf(titleIndex));
+
+            Tools.addParameterIfNotNull(uri, "editingSettingId", editingSettingId);
+            Tools.addParameterIfNotNull(uri, "disableValidation", disableValidation);
+            Tools.addParameterIfNotNull(uri, "letterId", letterId);
+            Tools.addParameterIfNotNull(uri, "documentId", documentId);
+
+
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(userContractData));
+            return diadocHttpClient.performRequestWithGeneratedFile(request);
+        } catch (URISyntaxException | IOException | ParseException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    private void checkDocumentParameters(String boxId, String documentTypeNamedId, String documentFunction, String documentVersion, byte[] userContractData) {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
         }
@@ -278,25 +266,6 @@ public class GenerateClient {
         }
         if (userContractData == null) {
             throw new IllegalArgumentException("userContractData");
-        }
-
-        try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateTitleXml")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("documentTypeNamedId", documentTypeNamedId)
-                                    .addParameter("documentFunction", documentFunction)
-                                    .addParameter("documentVersion", documentVersion)
-                                    .addParameter("titleIndex", titleIndex.toString())
-                                    .addParameter("disableValidation", Boolean.toString(disableValidation))
-                                    .addParameter("editingSettingId", editingSettingId)
-                                    .addParameter("letterId", letterId)
-                                    .addParameter("documentId", documentId).build())
-                    .setEntity(new ByteArrayEntity(userContractData));
-            return diadocHttpClient.performRequestWithGeneratedFile(request);
-        } catch (URISyntaxException | IOException | ParseException e) {
-            throw new DiadocSdkException(e);
         }
     }
 
@@ -344,12 +313,6 @@ public class GenerateClient {
                 documentId);
     }
 
-
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateSenderTitleXml(
             String boxId,
             String documentTypeNamedId,
@@ -358,34 +321,18 @@ public class GenerateClient {
             byte[] userContractData,
             @Nullable String editingSettingId,
             boolean disableValidation) throws DiadocSdkException {
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-        if (documentTypeNamedId == null) {
-            throw new IllegalArgumentException("documentTypeNamedId");
-        }
-        if (documentFunction == null) {
-            throw new IllegalArgumentException("documentFunction");
-        }
-        if (documentVersion == null) {
-            throw new IllegalArgumentException("documentVersion");
-        }
-        if (userContractData == null) {
-            throw new IllegalArgumentException("userContractData");
-        }
+        checkDocumentParameters(boxId, documentTypeNamedId, documentFunction, documentVersion, userContractData);
 
         try {
-
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateSenderTitleXml")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("documentTypeNamedId", documentTypeNamedId)
-                                    .addParameter("documentFunction", documentFunction)
-                                    .addParameter("documentVersion", documentVersion)
-                                    .addParameter("disableValidation", Boolean.toString(disableValidation))
-                                    .addParameter("editingSettingId", editingSettingId).build())
-                    .setEntity(new ByteArrayEntity(userContractData));
+            var uri =  new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateSenderTitleXml")
+                    .addParameter("boxId", boxId)
+                    .addParameter("documentTypeNamedId", documentTypeNamedId)
+                    .addParameter("documentFunction", documentFunction)
+                    .addParameter("documentVersion", documentVersion);
+            Tools.addParameterIfNotNull(uri, "disableValidation", disableValidation);
+            Tools.addParameterIfNotNull(uri, "editingSettingId", editingSettingId);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(userContractData));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
@@ -408,11 +355,6 @@ public class GenerateClient {
                 false);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateRecipientTitleXml(
             String boxId,
             String senderTitleMessageId,
@@ -431,14 +373,13 @@ public class GenerateClient {
         }
 
         try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateRecipientTitleXml")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("senderTitleMessageId", senderTitleMessageId)
-                                    .addParameter("senderTitleAttachmentId", senderTitleAttachmentId)
-                                    .addParameter("documentVersion", documentVersion).build())
-                    .setEntity(new ByteArrayEntity(userContractData));
+            var uri =  new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateRecipientTitleXml")
+                    .addParameter("boxId", boxId)
+                    .addParameter("senderTitleMessageId", senderTitleMessageId)
+                    .addParameter("senderTitleAttachmentId", senderTitleAttachmentId);
+            Tools.addParameterIfNotNull(uri, "documentVersion", documentVersion);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(userContractData));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
@@ -462,33 +403,20 @@ public class GenerateClient {
             throw new IllegalArgumentException("sellerTitleInfo");
         }
         try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateTorg12XmlForSeller")
-                                    .addParameter("disableValidation", String.valueOf(disableValidation))
-                                    .addParameter("documentVersion", documentVersion)
-                                    .build())
-                    .setEntity(new ByteArrayEntity(sellerTitleInfo.toByteArray()));
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GenerateTorg12XmlForSeller");
+            Tools.addParameterIfNotNull(uri, "disableValidation", String.valueOf(disableValidation));
+            Tools.addParameterIfNotNull(uri, "documentVersion", documentVersion);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(sellerTitleInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
         }
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateTorg12XmlForSeller(Torg12SellerTitleInfo sellerTitleInfo) throws DiadocSdkException {
         return generateTorgXmlForSeller(sellerTitleInfo, false, null);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateTorg12XmlForSeller(Torg12SellerTitleInfo sellerTitleInfo, boolean disableValidation) throws DiadocSdkException {
         return generateTorgXmlForSeller(sellerTitleInfo, disableValidation, null);
     }
@@ -501,11 +429,6 @@ public class GenerateClient {
         return generateTovTorg551XmlForSeller(sellerTitleInfo, false);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateTorg12XmlForBuyer(
             Torg12BuyerTitleInfo buyerTitleInfo,
             String boxId,
@@ -514,11 +437,6 @@ public class GenerateClient {
         return generateTorgXmlForBuyer(buyerTitleInfo, boxId, sellerTitleMessageId, sellerTitleAttachmentId, null);
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateTovTorg551XmlForBuyer(
             TovTorgInfoProtos.TovTorgBuyerTitleInfo buyerTitleInfo,
             String boxId,
@@ -546,40 +464,22 @@ public class GenerateClient {
             String sellerTitleMessageId,
             String sellerTitleAttachmentId,
             @Nullable String documentVersion) throws DiadocSdkException {
-        if (buyerTitleInfo == null) {
-            throw new IllegalArgumentException("buyerTitleInfo");
-        }
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-        if (sellerTitleMessageId == null) {
-            throw new IllegalArgumentException("sellerTitleMessageId");
-        }
-        if (sellerTitleAttachmentId == null) {
-            throw new IllegalArgumentException("sellerTitleAttachmentId");
-        }
+        checkParameters(buyerTitleInfo, boxId, sellerTitleMessageId, sellerTitleAttachmentId);
 
         try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateTorg12XmlForBuyer")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("sellerTitleMessageId", sellerTitleMessageId)
-                                    .addParameter("sellerTitleAttachmentId", sellerTitleAttachmentId)
-                                    .addParameter("documentVersion", documentVersion)
-                                    .build())
-                    .setEntity(new ByteArrayEntity(buyerTitleInfo.toByteArray()));
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateTorg12XmlForBuyer")
+                    .addParameter("boxId", boxId)
+                    .addParameter("sellerTitleMessageId", sellerTitleMessageId)
+                    .addParameter("sellerTitleAttachmentId", sellerTitleAttachmentId);
+            Tools.addParameterIfNotNull(uri, "documentVersion", documentVersion);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(buyerTitleInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
         }
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateAcceptanceCertificateXmlForSeller(AcceptanceCertificateSellerTitleInfo sellerTitleInfo) throws DiadocSdkException {
         return generateAcceptanceCertificateXmlForSeller(sellerTitleInfo, false, null);
     }
@@ -598,29 +498,21 @@ public class GenerateClient {
 
     private <T extends GeneratedMessage> GeneratedFile generateAcceptanceCertificateXmlForSeller(T sellerTitleInfo, boolean disableValidation, @Nullable String documentVersion)
             throws DiadocSdkException {
-
         if (sellerTitleInfo == null) {
             throw new IllegalArgumentException("sellerTitleInfo");
         }
+
         try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateAcceptanceCertificateXmlForSeller")
-                                    .addParameter("disableValidation", String.valueOf(disableValidation))
-                                    .addParameter("documentVersion", documentVersion)
-                                    .build())
-                    .setEntity(new ByteArrayEntity(sellerTitleInfo.toByteArray()));
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GenerateAcceptanceCertificateXmlForSeller");
+            Tools.addParameterIfNotNull(uri, "documentVersion", documentVersion);
+            Tools.addParameterIfNotNull(uri, "disableValidation", disableValidation);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(sellerTitleInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
         }
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateAcceptanceCertificateXmlForBuyer(AcceptanceCertificateBuyerTitleInfo buyerTitleInfo,
                                                                   String boxId,
                                                                   String sellerTitleMessageId,
@@ -643,6 +535,23 @@ public class GenerateClient {
             String sellerTitleMessageId,
             String sellerTitleAttachmentId,
             @Nullable String documentVersion) throws DiadocSdkException {
+        checkParameters(buyerTitleInfo, boxId, sellerTitleMessageId, sellerTitleAttachmentId);
+        try {
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateAcceptanceCertificateXmlForBuyer")
+                    .addParameter("boxId", boxId)
+                    .addParameter("sellerTitleMessageId", sellerTitleMessageId)
+                    .addParameter("sellerTitleAttachmentId", sellerTitleAttachmentId);
+
+            Tools.addParameterIfNotNull(uri, "documentVersion", documentVersion);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(buyerTitleInfo.toByteArray()));
+            return diadocHttpClient.performRequestWithGeneratedFile(request);
+        } catch (URISyntaxException | IOException | ParseException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    private <T extends GeneratedMessage> void checkParameters(T buyerTitleInfo, String boxId, String sellerTitleMessageId, String sellerTitleAttachmentId) {
         if (buyerTitleInfo == null) {
             throw new IllegalArgumentException("buyerTitleInfo");
         }
@@ -654,20 +563,6 @@ public class GenerateClient {
         }
         if (sellerTitleAttachmentId == null) {
             throw new IllegalArgumentException("sellerTitleAttachmentId");
-        }
-        try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateAcceptanceCertificateXmlForBuyer")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("sellerTitleMessageId", sellerTitleMessageId)
-                                    .addParameter("sellerTitleAttachmentId", sellerTitleAttachmentId)
-                                    .addParameter("documentVersion", documentVersion)
-                                    .build())
-                    .setEntity(new ByteArrayEntity(buyerTitleInfo.toByteArray()));
-            return diadocHttpClient.performRequestWithGeneratedFile(request);
-        } catch (URISyntaxException | IOException | ParseException e) {
-            throw new DiadocSdkException(e);
         }
     }
 
@@ -679,61 +574,38 @@ public class GenerateClient {
         return generateUniversalTransferDocumentXmlForSeller(utdInfo, disableValidation, "utd_05_01_05");
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateUniversalTransferDocumentXmlForSeller(UniversalTransferDocumentSellerTitleInfo utdInfo, boolean disableValidation, String documentVersion) throws DiadocSdkException {
         if (utdInfo == null) {
             throw new IllegalArgumentException("info");
         }
 
         try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateUniversalTransferDocumentXmlForSeller")
-                                    .addParameter("documentVersion", documentVersion)
-                                    .addParameter("disableValidation", String.valueOf(disableValidation))
-                                    .build())
-                    .setEntity(new ByteArrayEntity(utdInfo.toByteArray()));
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateUniversalTransferDocumentXmlForSeller");
+            Tools.addParameterIfNotNull(uri, "documentVersion", documentVersion);
+            Tools.addParameterIfNotNull(uri, "disableValidation", disableValidation);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(utdInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
         }
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateUniversalTransferDocumentXmlForBuyer(
             UniversalTransferDocumentBuyerTitleInfo buyerTitleInfo,
             String boxId,
             String sellerTitleMessageId,
             String sellerTitleAttachmentId
     ) throws DiadocSdkException {
-        if (buyerTitleInfo == null) {
-            throw new IllegalArgumentException("buyerTitleInfo");
-        }
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-        if (sellerTitleMessageId == null) {
-            throw new IllegalArgumentException("sellerTitleMessageId");
-        }
-        if (sellerTitleAttachmentId == null) {
-            throw new IllegalArgumentException("sellerTitleAttachmentId");
-        }
+        checkParameters(buyerTitleInfo, boxId, sellerTitleMessageId, sellerTitleAttachmentId);
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateUniversalTransferDocumentXmlForBuyer")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("sellerTitleMessageId", sellerTitleMessageId)
-                                    .addParameter("sellerTitleAttachmentId", sellerTitleAttachmentId)
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/GenerateUniversalTransferDocumentXmlForBuyer")
+                            .addParameter("boxId", boxId)
+                            .addParameter("sellerTitleMessageId", sellerTitleMessageId)
+                            .addParameter("sellerTitleAttachmentId", sellerTitleAttachmentId)
+                            .build())
                     .setEntity(new ByteArrayEntity(buyerTitleInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
@@ -741,33 +613,28 @@ public class GenerateClient {
         }
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
-     */
-    @Deprecated
     public GeneratedFile generateUniversalCorrectionTransferDocumentXmlForSeller(
             UniversalCorrectionDocumentSellerTitleInfo ucdInfo,
             boolean disableValidation,
-            String documentVersion) throws DiadocSdkException {
+            @Nullable String documentVersion) throws DiadocSdkException {
         if (ucdInfo == null) {
             throw new IllegalArgumentException("info");
         }
 
         try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/GenerateUniversalTransferDocumentXmlForSeller")
-                                    .addParameter("correction", null)
-                                    .addParameter("documentVersion", documentVersion)
-                                    .addParameter("disableValidation", String.valueOf(disableValidation))
-                                    .build())
-                    .setEntity(new ByteArrayEntity(ucdInfo.toByteArray()));
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateUniversalTransferDocumentXmlForSeller");
+            Tools.addParameterIfNotNull(uri, "documentVersion", documentVersion);
+            Tools.addParameterIfNotNull(uri, "disableValidation", disableValidation);
+            Tools.addParameterIfNotNull(uri, "correction", true);
+
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(ucdInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
         }
     }
+
 
     public GeneratedFile generateUniversalCorrectionTransferDocumentXmlForSeller(UniversalCorrectionDocumentSellerTitleInfo ucdInfo) throws DiadocSdkException {
         return generateUniversalCorrectionTransferDocumentXmlForSeller(ucdInfo, false);
@@ -777,10 +644,6 @@ public class GenerateClient {
         return generateUniversalCorrectionTransferDocumentXmlForSeller(ucdInfo, disableValidation, "ucd_05_01_03");
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateReceiptXml(String, String, String, Signer)}
-     */
     @Deprecated
     private GeneratedFile generateDocumentReceiptXml(String boxId, String messageId, String attachmentId, Signer signer, String path)
             throws DiadocSdkException {
@@ -799,12 +662,12 @@ public class GenerateClient {
 
         try {
             var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath(path)
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("messageId", messageId)
-                                    .addParameter("attachmentId", attachmentId)
-                                    .build())
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath(path)
+                            .addParameter("boxId", boxId)
+                            .addParameter("messageId", messageId)
+                            .addParameter("attachmentId", attachmentId)
+                            .build())
                     .setEntity(new ByteArrayEntity(signer.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
@@ -812,20 +675,12 @@ public class GenerateClient {
         }
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateReceiptXml(String, String, String, Signer)}
-     */
     @Deprecated
     public GeneratedFile generateInvoiceDocumentReceiptXml(String boxId, String messageId, String attachmentId, Signer signer)
             throws DiadocSdkException {
         return  generateDocumentReceiptXml(boxId, messageId, attachmentId, signer, "/GenerateInvoiceDocumentReceiptXml");
     }
 
-    /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateReceiptXml(String, String, String, Signer)}
-     */
     @Deprecated
     public GeneratedFile generateDocumentReceiptXml(String boxId, String messageId, String attachmentId, Signer signer) throws DiadocSdkException {
         return generateDocumentReceiptXml(boxId, messageId, attachmentId, signer, "/GenerateDocumentReceiptXml");
