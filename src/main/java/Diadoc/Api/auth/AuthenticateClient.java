@@ -120,6 +120,12 @@ public class AuthenticateClient {
         return StringUtils.newStringUtf8(Base64.encodeBase64(TokenDecryptManager.decryptToken(encryptedToken, currentCert)));
     }
 
+    /**
+     * @deprecated Метод устарел и будет удален
+     * Пожалуйста, ознакомьтесь с документацией для подробной информации:
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/GetExternalServiceAuthInfo.html">документация по методу getExternalServiceAuthInfo</a>
+     */
+    @Deprecated
     public ExternalServiceAuthInfo getExternalServiceAuthInfo(String key) throws DiadocSdkException {
         if (key == null) {
             throw new IllegalArgumentException("key");

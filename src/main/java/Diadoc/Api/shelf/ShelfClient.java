@@ -38,7 +38,9 @@ public class ShelfClient {
     }
 
     /**
-     * @deprecated
+     * @deprecated Метод устарел и будет удален
+     * Пожалуйста, ознакомьтесь с документацией для подробной информации:
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/ShelfDownload.html">документация по методу ShelfDownload</a>
      * Используйте {@link #shelfDownloadV2(String)}
      */
     public byte[] shelfDownload(String nameOnShelf) throws DiadocSdkException {
@@ -70,7 +72,9 @@ public class ShelfClient {
     }
 
     /**
-     * @deprecated
+     * @deprecated Метод устарел и будет удален
+     * Пожалуйста, ознакомьтесь с документацией для подробной информации:
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/ShelfUpload.html">документация по методу ShelfUpload¶</a>
      * Используйте {@link #uploadLargeFileToShelf(byte[], String)}
      * Или {@link #uploadFileToShelfV2(byte[], String)}
      */
@@ -319,6 +323,7 @@ public class ShelfClient {
         return new ArrayList<>(lastMissingParts);
     }
 
+    @Deprecated
     private List<Integer> putPart(String nameOnShelf, ByteArraySegment part, int partIndex, boolean isLastPart, List<Exception> httpErrors) throws URISyntaxException, DiadocException, IOException {
         var url = new URIBuilder(diadocHttpClient.getBaseUrl())
                 .setPath("/ShelfUpload")

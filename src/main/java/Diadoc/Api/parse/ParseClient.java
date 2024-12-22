@@ -27,6 +27,11 @@ public class ParseClient {
         this.diadocHttpClient = diadocHttpClient;
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public InvoiceInfo parseInvoiceXml(byte[] invoiceXmlContent) throws DiadocSdkException {
         try {
             return InvoiceInfo.parseFrom(parseXml(invoiceXmlContent, "/ParseInvoiceXml", null));
@@ -35,6 +40,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public Torg12SellerTitleInfo parseTorg12SellerTitleXml(byte[] sellerTitleXmlContent) throws DiadocSdkException {
         try {
             return Torg12SellerTitleInfo.parseFrom(parseXml(sellerTitleXmlContent, "/ParseTorg12SellerTitleXml", null));
@@ -43,6 +53,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public Torg12BuyerTitleInfo parseTorg12BuyerTitleXml(byte[] buyerTitleXmlContent) throws DiadocSdkException {
         try {
             return Torg12BuyerTitleInfo.parseFrom(parseXml(buyerTitleXmlContent, "/ParseTorg12BuyerTitleXml", null));
@@ -51,6 +66,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public TovTorgSellerTitleInfo parseTovTorg551SellerTitleXml(byte[] sellerTitleXmlContent) throws DiadocSdkException {
         try {
             return TovTorgSellerTitleInfo.parseFrom(parseXml(sellerTitleXmlContent, "/ParseTorg12SellerTitleXml", "tovtorg_05_01_04"));
@@ -59,6 +79,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public TovTorgBuyerTitleInfo parseTovTorg551BuyerTitleXml(byte[] buyerTitleXmlContent) throws DiadocSdkException {
         try {
             return TovTorgBuyerTitleInfo.parseFrom(parseXml(buyerTitleXmlContent, "/ParseTorg12BuyerTitleXml", "tovtorg_05_01_04"));
@@ -67,6 +92,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public AcceptanceCertificateSellerTitleInfo parseAcceptanceCertificateSellerTitleXml(byte[] sellerTitleXmlContent) throws DiadocSdkException {
         try {
             return AcceptanceCertificateSellerTitleInfo.parseFrom(parseXml(
@@ -78,6 +108,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public AcceptanceCertificateBuyerTitleInfo parseAcceptanceCertificateBuyerTitleXml(byte[] buyerTitleXmlContent) throws DiadocSdkException {
         try {
             return AcceptanceCertificateBuyerTitleInfo.parseFrom(parseXml(
@@ -89,6 +124,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public AcceptanceCertificate552SellerTitleInfo parseAcceptanceCertificate552SellerTitleXml(byte[] sellerTitleXmlContent) throws DiadocSdkException {
         try {
             return AcceptanceCertificate552SellerTitleInfo.parseFrom(parseXml(
@@ -100,6 +140,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public AcceptanceCertificate552BuyerTitleInfo parseAcceptanceCertificate552BuyerTitleXml(byte[] buyerTitleXmlContent) throws DiadocSdkException {
         try {
             return AcceptanceCertificate552BuyerTitleInfo.parseFrom(parseXml(
@@ -111,10 +156,20 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public UniversalTransferDocumentSellerTitleInfo parseUniversalTransferDocumentSellerTitleXml(byte[] utdXmlContent) throws DiadocSdkException {
         return parseUniversalTransferDocumentSellerTitleXml(utdXmlContent, "utd_05_01_05");
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public UniversalTransferDocumentSellerTitleInfo parseUniversalTransferDocumentSellerTitleXml(byte[] utdXmlContent, String documentVersion)
             throws DiadocSdkException {
         try {
@@ -127,6 +182,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public UniversalTransferDocumentBuyerTitleInfo parseUniversalTransferDocumentBuyerTitleXml(byte[] utdXmlContent) throws DiadocSdkException {
         try {
             return UniversalTransferDocumentBuyerTitleInfo.parseFrom(parseXml(
@@ -138,10 +198,20 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public UniversalCorrectionDocumentSellerTitleInfo parseUniversalCorrectionDocumentSellerTitleXml(byte[] utdXmlContent) throws DiadocSdkException {
         return parseUniversalCorrectionDocumentSellerTitleXml(utdXmlContent, "ucd_05_01_03");
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public UniversalCorrectionDocumentSellerTitleInfo parseUniversalCorrectionDocumentSellerTitleXml(byte[] utdXmlContent, String documentVersion) throws
             DiadocSdkException {
         try {
@@ -154,6 +224,11 @@ public class ParseClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link #parseTitleXml(String, String, String, String, Integer, byte[])}
+     */
+    @Deprecated
     public UniversalTransferDocumentBuyerTitleInfo parseUniversalCorrectionDocumentBuyerTitleXml(byte[] utdXmlContent) throws DiadocSdkException {
         try {
             return UniversalTransferDocumentBuyerTitleInfo.parseFrom(parseXml(
@@ -188,7 +263,7 @@ public class ParseClient {
         }
     }
 
-    public byte[] parseTitleXml(String boxId, String documentTypeNamedId, String documentFunction, String documentVersion, Integer titleIndex, byte[] content) throws IOException, DiadocSdkException {
+    public byte[] parseTitleXml(String boxId, String documentTypeNamedId, String documentFunction, String documentVersion, Integer titleIndex, byte[] content) throws DiadocSdkException {
         try {
             var request = RequestBuilder.post(
                     new URIBuilder(diadocHttpClient.getBaseUrl())

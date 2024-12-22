@@ -27,6 +27,7 @@ public class SignClient {
         return cloudSign(request, null);
     }
 
+    @Deprecated
     public AsyncMethodResult cloudSign(CloudSignRequest cloudSignRequest, @Nullable String certificateThumbprint) throws DiadocSdkException {
         if (cloudSignRequest == null) {
             throw new IllegalArgumentException("cloudSignRequest");
@@ -45,6 +46,7 @@ public class SignClient {
         }
     }
 
+    @Deprecated
     public CloudSignResult waitCloudSignResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException {
         try {
             var data = diadocHttpClient.waitTaskResult("/CloudSignResult", taskId, timeoutInMillis);
@@ -54,6 +56,7 @@ public class SignClient {
         }
     }
 
+    @Deprecated
     public AsyncMethodResult cloudSignConfirm(String token, String confirmationCode, boolean returnContent) throws DiadocSdkException {
         try {
             var url = new URIBuilder(diadocHttpClient.getBaseUrl())
@@ -70,6 +73,7 @@ public class SignClient {
         }
     }
 
+    @Deprecated
     public CloudSignConfirmResult waitCloudSignConfirmResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException {
         try {
             byte[] data = diadocHttpClient.waitTaskResult("/CloudSignConfirmResult", taskId, timeoutInMillis);
@@ -79,6 +83,11 @@ public class SignClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Подробная информация доступна в <a href="https://developer.kontur.ru/docs/diadoc-api/http/obsolete/AutoSignReceipts.html">документации</a>.
+     */
+    @Deprecated
     public AsyncMethodResult autoSignReceipts(String boxId, @Nullable String certificateThumbprint, @Nullable String batchKey) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
@@ -106,6 +115,11 @@ public class SignClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Подробная информация доступна в <a href="https://developer.kontur.ru/docs/diadoc-api/http/obsolete/AutoSignReceipts.html">документации</a>.
+     */
+    @Deprecated
     public AutosignReceiptsResult waitAutosignReceiptsResult(String taskId, Integer timeoutInMillis)
             throws DiadocSdkException {
         try {

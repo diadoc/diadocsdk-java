@@ -58,9 +58,9 @@ public class TemplateClient {
     }
 
     /**
-     * Use getMessage from message client instead
+     * @deprecated Метод устарел.
+     * Используйте {@link Diadoc.Api.message.MessageClient#getMessage(String, String)}
      */
-
     @Deprecated
     public Template getTemplate(String currentBoxId, String templateId, @Nullable String entityId) throws DiadocSdkException {
         if (currentBoxId == null) {

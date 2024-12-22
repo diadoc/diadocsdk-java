@@ -218,9 +218,9 @@ public class OrganizationClient {
     }
 
     /**
-     * Use getOrganizationUsersV2 instead
+     * @deprecated Метод устарел.
+     * Используйте {@link #getOrganizationUsersV2
      */
-
     @Deprecated
     public OrganizationUsersList getOrganizationUsers(String orgId) throws DiadocSdkException {
         try {
@@ -248,6 +248,11 @@ public class OrganizationClient {
         }
     }
 
+    /**
+     * @deprecated Метод устарел.
+     * Используйте {@link Diadoc.Api.employee.EmployeeClient#getMyEmployee(String)}
+     */
+    @Deprecated
     public OrganizationUserPermissions getMyPermissions(String orgId) throws DiadocSdkException {
         if (orgId == null) {
             throw new IllegalArgumentException("orgId");

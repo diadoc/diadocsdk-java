@@ -27,7 +27,8 @@ public class CounteragentClient {
     }
 
     /**
-     * Use acquireCounteragentV3 instead
+     * @deprecated Метод устарел.
+     * Используйте {@link #acquireCounteragentV3(String, String, AcquireCounteragentRequest)}
      */
 
     @Deprecated
@@ -36,9 +37,9 @@ public class CounteragentClient {
     }
 
     /**
-     * Use acquireCounteragentV3 instead
+     * @deprecated Метод устарел.
+     * Используйте {@link #acquireCounteragentV3(String, String, AcquireCounteragentRequest)}
      */
-
     @Deprecated
     public AsyncMethodResult acquireCounteragent(
             String myOrgId,
@@ -100,8 +101,9 @@ public class CounteragentClient {
 
     /**
      * Use waitAcquireCounteragentResultV2 instead
+     * @deprecated Метод устарел.
+     * Используйте {@link #waitAcquireCounteragentResultV2(String, Integer)}.
      */
-
     @Deprecated
     public AcquireCounteragentResult waitAcquireCounteragentResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException, DiadocException {
         try {
@@ -122,9 +124,9 @@ public class CounteragentClient {
     }
 
     /**
-     * Use getCounteragentV3 instead
+     * @deprecated Метод устарел.
+     * Используйте {@link #getCounteragentV3(String, String)}
      */
-
     @Deprecated
     public Counteragent getCounteragent(String myOrgId, String counteragentOrgId) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myOrgId)) {
@@ -169,9 +171,9 @@ public class CounteragentClient {
     }
 
     /**
-     * Use getCounteragentCertificatesV2 instead
+     * @deprecated Метод устарел.
+     * Используйте {@link #getCounteragentCertificatesV2(String, String)}
      */
-
     @Deprecated
     public CounteragentCertificateList getCounteragentCertificates(String myOrgId, String counteragentOrgId) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myOrgId)) {
@@ -216,9 +218,9 @@ public class CounteragentClient {
     }
 
     /**
-     * Use getCounteragentsV3 instead
+     * @deprecated Метод устарел.
+     * Используйте {@link #getCounteragentsV3(String, String, String)}
      */
-
     @Deprecated
     public CounteragentList getCounteragents(String myOrgId, @Nullable String counteragentStatus, @Nullable String afterIndexKey) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myOrgId)) {
@@ -274,9 +276,9 @@ public class CounteragentClient {
     }
 
     /**
-     * Use breakWithCounteragentV2 instead
+     * @deprecated Метод устарел.
+     * Используйте {@link #breakWithCounteragentV2(String, String, String)}
      */
-
     @Deprecated
     public void breakWithCounteragent(String myOrgId, String counteragentOrgId, @Nullable String comment) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myOrgId)) {
