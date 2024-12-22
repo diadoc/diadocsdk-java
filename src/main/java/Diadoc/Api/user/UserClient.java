@@ -19,6 +19,12 @@ public class UserClient {
         this.diadocHttpClient = diadocHttpClient;
     }
 
+
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #getMyUserV2()}
+     */
+    @Deprecated
     public User getMyUser() throws DiadocSdkException {
         try {
             var request = RequestBuilder.get(
@@ -39,6 +45,12 @@ public class UserClient {
         }
     }
 
+    /**
+     * @deprecated Method is deprecated and is planned to delete.
+    * Information
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/UpdateMyUser.html">link to updateMyUser</a>
+     */
+    @Deprecated
     public UserV2 updateMyUser(UserToUpdate userToUpdate) throws DiadocSdkException {
         if (userToUpdate == null) {
             throw new IllegalArgumentException("userToUpdate");

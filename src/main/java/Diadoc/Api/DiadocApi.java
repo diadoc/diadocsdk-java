@@ -172,7 +172,7 @@ public class DiadocApi {
 
     /**
      * @deprecated
-     * Используйте {@link #getDocumentWorkflowClient()}
+     * Use {@link #getDocumentWorkflowClient()}
      */
     @Deprecated
     public DocumentWorkflowClient gDocumentWorkflowClient() {

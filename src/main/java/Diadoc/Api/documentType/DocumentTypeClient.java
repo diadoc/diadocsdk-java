@@ -38,6 +38,11 @@ public class DocumentTypeClient {
         }
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #detectDocumentTitles(String, String)}
+     */
+    @Deprecated
     public DetectDocumentTypesResponse detectDocumentTypes(String boxId, String nameOnShelf) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
@@ -60,6 +65,11 @@ public class DocumentTypeClient {
 
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #detectDocumentTitles(String, byte[])}
+     */
+    @Deprecated
     public DetectDocumentTypesResponse detectDocumentTypes(String boxId, byte[] content) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
