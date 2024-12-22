@@ -42,8 +42,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateInvoiceCorrectionRequestXmlV2(String, InvoiceCorrectionRequestGenerationRequestV2)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateInvoiceCorrectionRequestXmlV2(String, InvoiceCorrectionRequestGenerationRequestV2)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceCorrectionRequestXml(String boxId,
@@ -95,8 +95,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateSignatureRejectionXmlV2(String, SignatureRejectionGenerationRequestV2)} )}
+     * @deprecated Method is deprecated
+     * Use {@link #generateSignatureRejectionXmlV2(String, SignatureRejectionGenerationRequestV2)} )}
      */
     @Deprecated
     public GeneratedFile generateSignatureRejectionXml(String boxId,
@@ -112,8 +112,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateReceiptXmlV2(String, ReceiptGenerationRequestV2)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateReceiptXmlV2(String, ReceiptGenerationRequestV2)}
      */
     @Deprecated
     public GeneratedFile generateReceiptXml(String boxId, String messageId, String attachmentId, Signer signer) throws DiadocSdkException {
@@ -177,8 +177,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceXml(InvoiceInfo invoiceInfo) throws DiadocSdkException {
@@ -186,8 +186,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceXml(InvoiceInfo invoiceInfo, boolean disableValidation) throws DiadocSdkException {
@@ -195,8 +195,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceRevisionXml(InvoiceInfo invoiceRevisionInfo) throws DiadocSdkException {
@@ -204,8 +204,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceRevisionXml(InvoiceInfo invoiceRevisionInfo, boolean disableValidation) throws DiadocSdkException {
@@ -213,8 +213,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceCorrectionXml(InvoiceCorrectionInfo invoiceCorrectionInfo) throws DiadocSdkException {
@@ -222,8 +222,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceCorrectionXml(InvoiceCorrectionInfo invoiceCorrectionInfo, boolean disableValidation) throws DiadocSdkException {
@@ -231,8 +231,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceCorrectionRevisionXml(InvoiceCorrectionInfo invoiceCorrectionRevisionInfo) throws DiadocSdkException {
@@ -240,8 +240,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceCorrectionRevisionXml(InvoiceCorrectionInfo invoiceCorrectionRevisionInfo, boolean disableValidation) throws DiadocSdkException {
@@ -370,8 +370,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateSenderTitleXml(
@@ -401,8 +401,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateSenderTitleXml(
@@ -422,8 +422,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateRecipientTitleXml(
@@ -458,8 +458,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateRecipientTitleXml(
@@ -491,8 +491,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateTorg12XmlForSeller(Torg12SellerTitleInfo sellerTitleInfo) throws DiadocSdkException {
@@ -500,8 +500,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateTorg12XmlForSeller(Torg12SellerTitleInfo sellerTitleInfo, boolean disableValidation) throws DiadocSdkException {
@@ -509,8 +509,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateTovTorg551XmlForSeller(TovTorgSellerTitleInfo sellerTitleInfo, boolean disableValidation) throws DiadocSdkException {
@@ -518,8 +518,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateTovTorg551XmlForSeller(TovTorgInfoProtos.TovTorgSellerTitleInfo sellerTitleInfo) throws DiadocSdkException {
@@ -527,8 +527,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateTorg12XmlForBuyer(
@@ -540,8 +540,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateTovTorg551XmlForBuyer(
@@ -558,8 +558,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateTovTorg551XmlForBuyer(
@@ -594,8 +594,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateAcceptanceCertificateXmlForSeller(AcceptanceCertificateSellerTitleInfo sellerTitleInfo) throws DiadocSdkException {
@@ -603,8 +603,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateAcceptanceCertificateXmlForSeller(AcceptanceCertificateSellerTitleInfo sellerTitleInfo, boolean disableValidation) throws DiadocSdkException {
@@ -612,8 +612,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateAcceptanceCertificate552XmlForSeller(AcceptanceCertificate552SellerTitleInfo sellerTitleInfo, boolean disableValidation) throws DiadocSdkException {
@@ -621,8 +621,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateAcceptanceCertificate552XmlForSeller(AcceptanceCertificate552SellerTitleInfo sellerTitleInfo) throws DiadocSdkException {
@@ -648,8 +648,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateAcceptanceCertificateXmlForBuyer(AcceptanceCertificateBuyerTitleInfo buyerTitleInfo,
@@ -660,8 +660,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateAcceptanceCertificate552XmlForBuyer(AcceptanceCertificate552BuyerTitleInfo buyerTitleInfo,
@@ -712,8 +712,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateUniversalTransferDocumentXmlForSeller(UniversalTransferDocumentSellerTitleInfo utdInfo) throws DiadocSdkException {
@@ -721,8 +721,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateUniversalTransferDocumentXmlForSeller(UniversalTransferDocumentSellerTitleInfo utdInfo, boolean disableValidation) throws DiadocSdkException {
@@ -730,8 +730,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateUniversalTransferDocumentXmlForSeller(UniversalTransferDocumentSellerTitleInfo utdInfo, boolean disableValidation, String documentVersion) throws DiadocSdkException {
@@ -752,8 +752,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateUniversalTransferDocumentXmlForBuyer(
@@ -779,8 +779,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateUniversalCorrectionTransferDocumentXmlForSeller(
@@ -807,8 +807,8 @@ public class GenerateClient {
 
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateUniversalCorrectionTransferDocumentXmlForSeller(UniversalCorrectionDocumentSellerTitleInfo ucdInfo) throws DiadocSdkException {
@@ -816,8 +816,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
      */
     @Deprecated
     public GeneratedFile generateUniversalCorrectionTransferDocumentXmlForSeller(UniversalCorrectionDocumentSellerTitleInfo ucdInfo, boolean disableValidation) throws DiadocSdkException {
@@ -856,8 +856,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateInvoiceCorrectionRequestXmlV2(String, InvoiceCorrectionRequestGenerationRequestV2)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateInvoiceCorrectionRequestXmlV2(String, InvoiceCorrectionRequestGenerationRequestV2)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceDocumentReceiptXml(String boxId, String messageId, String attachmentId, Signer signer)
@@ -866,8 +866,8 @@ public class GenerateClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #generateReceiptXmlV2(String, ReceiptGenerationRequestV2)}
+     * @deprecated Method is deprecated
+     * Use {@link #generateReceiptXmlV2(String, ReceiptGenerationRequestV2)}
      */
     @Deprecated
     public GeneratedFile generateDocumentReceiptXml(String boxId, String messageId, String attachmentId, Signer signer) throws DiadocSdkException {

@@ -121,9 +121,9 @@ public class AuthenticateClient {
     }
 
     /**
-     * @deprecated Метод устарел и будет удален
-     * Пожалуйста, ознакомьтесь с документацией для подробной информации:
-     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/GetExternalServiceAuthInfo.html">документация по методу getExternalServiceAuthInfo</a>
+     * @deprecated Method is deprecated and is planned to delete
+    * Information
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/GetExternalServiceAuthInfo.html">link to getExternalServiceAuthInfo</a>
      */
     @Deprecated
     public ExternalServiceAuthInfo getExternalServiceAuthInfo(String key) throws DiadocSdkException {

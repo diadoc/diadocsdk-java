@@ -218,8 +218,8 @@ public class OrganizationClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #getOrganizationUsersV2
+     * @deprecated Method is deprecated
+     * Use {@link #getOrganizationUsersV2
      */
     @Deprecated
     public OrganizationUsersList getOrganizationUsers(String orgId) throws DiadocSdkException {
@@ -249,8 +249,8 @@ public class OrganizationClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link Diadoc.Api.employee.EmployeeClient#getMyEmployee(String)}
+     * @deprecated Method is deprecated
+     * Use {@link Diadoc.Api.employee.EmployeeClient#getMyEmployee(String)}
      */
     @Deprecated
     public OrganizationUserPermissions getMyPermissions(String orgId) throws DiadocSdkException {

@@ -84,7 +84,7 @@ public class SignClient {
     }
 
     /**
-     * @deprecated Метод устарел.
+     * @deprecated Method is deprecated
      * Подробная информация доступна в <a href="https://developer.kontur.ru/docs/diadoc-api/http/obsolete/AutoSignReceipts.html">документации</a>.
      */
     @Deprecated
@@ -116,7 +116,7 @@ public class SignClient {
     }
 
     /**
-     * @deprecated Метод устарел.
+     * @deprecated Method is deprecated
      * Подробная информация доступна в <a href="https://developer.kontur.ru/docs/diadoc-api/http/obsolete/AutoSignReceipts.html">документации</a>.
      */
     @Deprecated

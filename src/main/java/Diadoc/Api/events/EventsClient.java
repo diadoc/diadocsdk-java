@@ -27,7 +27,7 @@ public class EventsClient {
     /**
      * @deprecated
      *
-     * Используйте {@link #getNewEventsV7(String, String, String, String, String, MessageType, DocumentDirection, Long, Long, String, OrderBy, Integer)}
+     * Use {@link #getNewEventsV7(String, String, String, String, String, MessageType, DocumentDirection, Long, Long, String, OrderBy, Integer)}
      */
     @Deprecated
     public BoxEventList getNewEvents( String currentBoxId, @Nullable String eventIdCurrent) throws DiadocSdkException {

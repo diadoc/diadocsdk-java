@@ -39,8 +39,8 @@ public class DocumentTypeClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #detectDocumentTitles(String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #detectDocumentTitles(String, String)}
      */
     @Deprecated
     public DetectDocumentTypesResponse detectDocumentTypes(String boxId, String nameOnShelf) throws DiadocSdkException {
@@ -66,8 +66,8 @@ public class DocumentTypeClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #detectDocumentTitles(String, byte[])}
+     * @deprecated Method is deprecated
+     * Use {@link #detectDocumentTitles(String, byte[])}
      */
     @Deprecated
     public DetectDocumentTypesResponse detectDocumentTypes(String boxId, byte[] content) throws DiadocSdkException {

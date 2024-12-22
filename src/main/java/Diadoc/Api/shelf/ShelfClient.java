@@ -38,10 +38,10 @@ public class ShelfClient {
     }
 
     /**
-     * @deprecated Метод устарел и будет удален
-     * Пожалуйста, ознакомьтесь с документацией для подробной информации:
-     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/ShelfDownload.html">документация по методу ShelfDownload</a>
-     * Используйте {@link #shelfDownloadV2(String)}
+     * @deprecated Method is deprecated and is planned to delete
+    * Information
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/ShelfDownload.html">link to ShelfDownload</a>
+     * Use {@link #shelfDownloadV2(String)}
      */
     public byte[] shelfDownload(String nameOnShelf) throws DiadocSdkException {
         if (!nameOnShelf.contains(SHELF_PATH_PREFIX))
@@ -72,10 +72,10 @@ public class ShelfClient {
     }
 
     /**
-     * @deprecated Метод устарел и будет удален
-     * Пожалуйста, ознакомьтесь с документацией для подробной информации:
-     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/ShelfUpload.html">документация по методу ShelfUpload¶</a>
-     * Используйте {@link #uploadLargeFileToShelf(byte[], String)}
+     * @deprecated Method is deprecated and is planned to delete
+    * Information
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/ShelfUpload.html">link to ShelfUpload¶</a>
+     * Use {@link #uploadLargeFileToShelf(byte[], String)}
      * Или {@link #uploadFileToShelfV2(byte[], String)}
      */
     public String uploadFileToShelf(byte[] data) throws DiadocSdkException {

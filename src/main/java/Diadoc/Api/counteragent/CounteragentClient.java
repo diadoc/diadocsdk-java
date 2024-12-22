@@ -27,8 +27,8 @@ public class CounteragentClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #acquireCounteragentV3(String, String, AcquireCounteragentRequest)}
+     * @deprecated Method is deprecated
+     * Use {@link #acquireCounteragentV3(String, String, AcquireCounteragentRequest)}
      */
 
     @Deprecated
@@ -37,8 +37,8 @@ public class CounteragentClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #acquireCounteragentV3(String, String, AcquireCounteragentRequest)}
+     * @deprecated Method is deprecated
+     * Use {@link #acquireCounteragentV3(String, String, AcquireCounteragentRequest)}
      */
     @Deprecated
     public AsyncMethodResult acquireCounteragent(
@@ -101,8 +101,8 @@ public class CounteragentClient {
 
     /**
      * Use waitAcquireCounteragentResultV2 instead
-     * @deprecated Метод устарел.
-     * Используйте {@link #waitAcquireCounteragentResultV2(String, Integer)}.
+     * @deprecated Method is deprecated
+     * Use {@link #waitAcquireCounteragentResultV2(String, Integer)}.
      */
     @Deprecated
     public AcquireCounteragentResult waitAcquireCounteragentResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException, DiadocException {
@@ -124,8 +124,8 @@ public class CounteragentClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #getCounteragentV3(String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #getCounteragentV3(String, String)}
      */
     @Deprecated
     public Counteragent getCounteragent(String myOrgId, String counteragentOrgId) throws DiadocSdkException {
@@ -171,8 +171,8 @@ public class CounteragentClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #getCounteragentCertificatesV2(String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #getCounteragentCertificatesV2(String, String)}
      */
     @Deprecated
     public CounteragentCertificateList getCounteragentCertificates(String myOrgId, String counteragentOrgId) throws DiadocSdkException {
@@ -218,8 +218,8 @@ public class CounteragentClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #getCounteragentsV3(String, String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #getCounteragentsV3(String, String, String)}
      */
     @Deprecated
     public CounteragentList getCounteragents(String myOrgId, @Nullable String counteragentStatus, @Nullable String afterIndexKey) throws DiadocSdkException {
@@ -276,8 +276,8 @@ public class CounteragentClient {
     }
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #breakWithCounteragentV2(String, String, String)}
+     * @deprecated Method is deprecated
+     * Use {@link #breakWithCounteragentV2(String, String, String)}
      */
     @Deprecated
     public void breakWithCounteragent(String myOrgId, String counteragentOrgId, @Nullable String comment) throws DiadocSdkException {

@@ -21,8 +21,8 @@ public class UserClient {
 
 
     /**
-     * @deprecated Метод устарел.
-     * Используйте {@link #getMyUserV2()}
+     * @deprecated Method is deprecated
+     * Use {@link #getMyUserV2()}
      */
     @Deprecated
     public User getMyUser() throws DiadocSdkException {
@@ -46,9 +46,9 @@ public class UserClient {
     }
 
     /**
-     * @deprecated Метод устарел и будет удален.
-     * Пожалуйста, ознакомьтесь с документацией для подробной информации:
-     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/UpdateMyUser.html">документация по методу updateMyUser</a>
+     * @deprecated Method is deprecated and is planned to delete.
+    * Information
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/UpdateMyUser.html">link to updateMyUser</a>
      */
     @Deprecated
     public UserV2 updateMyUser(UserToUpdate userToUpdate) throws DiadocSdkException {
