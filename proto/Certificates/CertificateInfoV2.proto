@@ -1,0 +1,51 @@
+package Diadoc.Api.Proto.Certificates;
+
+option java_outer_classname = "CertificateInfoV2Protos";
+
+message CertificateInfoV2 {
+	required string Thumbprint = 1;
+	required CertificateType Type = 2;
+	optional sfixed64 ValidFrom = 3;
+	optional sfixed64 ValidTo = 4;
+	optional sfixed64 PrivateKeyValidFrom = 5;
+	optional sfixed64 PrivateKeyValidTo = 6;
+	optional string OrganizationName = 7;
+	optional string Inn = 8;
+	optional string UserFirstName = 9;
+	optional string UserMiddleName = 10;
+	optional string UserLastName = 11;
+	optional string UserShortName = 12;
+	optional bool IsDefault = 13;
+	optional CertificateSubjectType SubjectType = 14;
+	repeated CertificateUsage Usages = 15;
+	optional DssCertificateType DssType = 16;
+}
+
+enum CertificateType {
+	Unknown = 0;
+	Token = 1;
+	Dss = 2;
+	KonturCertificate = 3;
+}
+
+enum CertificateSubjectType {
+	UnknownCertificateSubjectType = 0;
+	LegalEntity = 1;
+	IndividualEntity = 2;
+	PhysicalPerson = 3;
+}
+
+enum DssCertificateType {
+	UnknownDssType = 0;
+	MyDss = 1;
+	KSignServer = 2;
+	KSignRutoken = 3;
+	KSignMobile = 4;
+}
+
+enum CertificateUsage {
+	UnknownUsage = 0;
+	KonturCertificateUsage = 1;
+	TokenUsage = 2;
+	DssUsage = 3;
+}

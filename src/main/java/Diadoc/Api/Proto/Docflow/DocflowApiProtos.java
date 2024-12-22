@@ -5984,6 +5984,100 @@ public final class DocflowApiProtos {
      * <code>optional bool PopulatePreviousDocumentStates = 5 [default = false];</code>
      */
     boolean getPopulatePreviousDocumentStates();
+
+    /**
+     * <code>repeated string MessageTypes = 6;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getMessageTypesList();
+    /**
+     * <code>repeated string MessageTypes = 6;</code>
+     */
+    int getMessageTypesCount();
+    /**
+     * <code>repeated string MessageTypes = 6;</code>
+     */
+    java.lang.String getMessageTypes(int index);
+    /**
+     * <code>repeated string MessageTypes = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageTypesBytes(int index);
+
+    /**
+     * <code>repeated string DocumentDirections = 7;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getDocumentDirectionsList();
+    /**
+     * <code>repeated string DocumentDirections = 7;</code>
+     */
+    int getDocumentDirectionsCount();
+    /**
+     * <code>repeated string DocumentDirections = 7;</code>
+     */
+    java.lang.String getDocumentDirections(int index);
+    /**
+     * <code>repeated string DocumentDirections = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getDocumentDirectionsBytes(int index);
+
+    /**
+     * <code>optional string DepartmentId = 8;</code>
+     */
+    boolean hasDepartmentId();
+    /**
+     * <code>optional string DepartmentId = 8;</code>
+     */
+    java.lang.String getDepartmentId();
+    /**
+     * <code>optional string DepartmentId = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getDepartmentIdBytes();
+
+    /**
+     * <code>repeated string TypeNamedIds = 9;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getTypeNamedIdsList();
+    /**
+     * <code>repeated string TypeNamedIds = 9;</code>
+     */
+    int getTypeNamedIdsCount();
+    /**
+     * <code>repeated string TypeNamedIds = 9;</code>
+     */
+    java.lang.String getTypeNamedIds(int index);
+    /**
+     * <code>repeated string TypeNamedIds = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getTypeNamedIdsBytes(int index);
+
+    /**
+     * <code>optional string CounteragentBoxId = 10;</code>
+     */
+    boolean hasCounteragentBoxId();
+    /**
+     * <code>optional string CounteragentBoxId = 10;</code>
+     */
+    java.lang.String getCounteragentBoxId();
+    /**
+     * <code>optional string CounteragentBoxId = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getCounteragentBoxIdBytes();
+
+    /**
+     * <code>optional int32 Limit = 11 [default = 100];</code>
+     */
+    boolean hasLimit();
+    /**
+     * <code>optional int32 Limit = 11 [default = 100];</code>
+     */
+    int getLimit();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.GetDocflowEventsRequest}
@@ -6070,6 +6164,50 @@ public final class DocflowApiProtos {
               populatePreviousDocumentStates_ = input.readBool();
               break;
             }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                messageTypes_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              messageTypes_.add(bs);
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                documentDirections_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              documentDirections_.add(bs);
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              departmentId_ = bs;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                typeNamedIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              typeNamedIds_.add(bs);
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              counteragentBoxId_ = bs;
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000080;
+              limit_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6078,6 +6216,15 @@ public final class DocflowApiProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          messageTypes_ = messageTypes_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          documentDirections_ = documentDirections_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          typeNamedIds_ = typeNamedIds_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -6191,12 +6338,204 @@ public final class DocflowApiProtos {
       return populatePreviousDocumentStates_;
     }
 
+    public static final int MESSAGETYPES_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList messageTypes_;
+    /**
+     * <code>repeated string MessageTypes = 6;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMessageTypesList() {
+      return messageTypes_;
+    }
+    /**
+     * <code>repeated string MessageTypes = 6;</code>
+     */
+    public int getMessageTypesCount() {
+      return messageTypes_.size();
+    }
+    /**
+     * <code>repeated string MessageTypes = 6;</code>
+     */
+    public java.lang.String getMessageTypes(int index) {
+      return messageTypes_.get(index);
+    }
+    /**
+     * <code>repeated string MessageTypes = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageTypesBytes(int index) {
+      return messageTypes_.getByteString(index);
+    }
+
+    public static final int DOCUMENTDIRECTIONS_FIELD_NUMBER = 7;
+    private com.google.protobuf.LazyStringList documentDirections_;
+    /**
+     * <code>repeated string DocumentDirections = 7;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDocumentDirectionsList() {
+      return documentDirections_;
+    }
+    /**
+     * <code>repeated string DocumentDirections = 7;</code>
+     */
+    public int getDocumentDirectionsCount() {
+      return documentDirections_.size();
+    }
+    /**
+     * <code>repeated string DocumentDirections = 7;</code>
+     */
+    public java.lang.String getDocumentDirections(int index) {
+      return documentDirections_.get(index);
+    }
+    /**
+     * <code>repeated string DocumentDirections = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDocumentDirectionsBytes(int index) {
+      return documentDirections_.getByteString(index);
+    }
+
+    public static final int DEPARTMENTID_FIELD_NUMBER = 8;
+    private java.lang.Object departmentId_;
+    /**
+     * <code>optional string DepartmentId = 8;</code>
+     */
+    public boolean hasDepartmentId() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string DepartmentId = 8;</code>
+     */
+    public java.lang.String getDepartmentId() {
+      java.lang.Object ref = departmentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          departmentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string DepartmentId = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDepartmentIdBytes() {
+      java.lang.Object ref = departmentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        departmentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPENAMEDIDS_FIELD_NUMBER = 9;
+    private com.google.protobuf.LazyStringList typeNamedIds_;
+    /**
+     * <code>repeated string TypeNamedIds = 9;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTypeNamedIdsList() {
+      return typeNamedIds_;
+    }
+    /**
+     * <code>repeated string TypeNamedIds = 9;</code>
+     */
+    public int getTypeNamedIdsCount() {
+      return typeNamedIds_.size();
+    }
+    /**
+     * <code>repeated string TypeNamedIds = 9;</code>
+     */
+    public java.lang.String getTypeNamedIds(int index) {
+      return typeNamedIds_.get(index);
+    }
+    /**
+     * <code>repeated string TypeNamedIds = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTypeNamedIdsBytes(int index) {
+      return typeNamedIds_.getByteString(index);
+    }
+
+    public static final int COUNTERAGENTBOXID_FIELD_NUMBER = 10;
+    private java.lang.Object counteragentBoxId_;
+    /**
+     * <code>optional string CounteragentBoxId = 10;</code>
+     */
+    public boolean hasCounteragentBoxId() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string CounteragentBoxId = 10;</code>
+     */
+    public java.lang.String getCounteragentBoxId() {
+      java.lang.Object ref = counteragentBoxId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          counteragentBoxId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string CounteragentBoxId = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCounteragentBoxIdBytes() {
+      java.lang.Object ref = counteragentBoxId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        counteragentBoxId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 11;
+    private int limit_;
+    /**
+     * <code>optional int32 Limit = 11 [default = 100];</code>
+     */
+    public boolean hasLimit() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional int32 Limit = 11 [default = 100];</code>
+     */
+    public int getLimit() {
+      return limit_;
+    }
+
     private void initFields() {
       filter_ = Diadoc.Api.Proto.TimeBasedFilterProtos.TimeBasedFilter.getDefaultInstance();
       afterIndexKey_ = com.google.protobuf.ByteString.EMPTY;
       populateDocuments_ = false;
       injectEntityContent_ = false;
       populatePreviousDocumentStates_ = false;
+      messageTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      documentDirections_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      departmentId_ = "";
+      typeNamedIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      counteragentBoxId_ = "";
+      limit_ = 100;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -6234,6 +6573,24 @@ public final class DocflowApiProtos {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeBool(5, populatePreviousDocumentStates_);
       }
+      for (int i = 0; i < messageTypes_.size(); i++) {
+        output.writeBytes(6, messageTypes_.getByteString(i));
+      }
+      for (int i = 0; i < documentDirections_.size(); i++) {
+        output.writeBytes(7, documentDirections_.getByteString(i));
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(8, getDepartmentIdBytes());
+      }
+      for (int i = 0; i < typeNamedIds_.size(); i++) {
+        output.writeBytes(9, typeNamedIds_.getByteString(i));
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(10, getCounteragentBoxIdBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(11, limit_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6262,6 +6619,45 @@ public final class DocflowApiProtos {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, populatePreviousDocumentStates_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < messageTypes_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(messageTypes_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getMessageTypesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < documentDirections_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(documentDirections_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getDocumentDirectionsList().size();
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getDepartmentIdBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < typeNamedIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(typeNamedIds_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getTypeNamedIdsList().size();
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(10, getCounteragentBoxIdBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, limit_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -6395,6 +6791,18 @@ public final class DocflowApiProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         populatePreviousDocumentStates_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
+        messageTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        documentDirections_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        departmentId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
+        typeNamedIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        counteragentBoxId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000200);
+        limit_ = 100;
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -6447,6 +6855,33 @@ public final class DocflowApiProtos {
           to_bitField0_ |= 0x00000010;
         }
         result.populatePreviousDocumentStates_ = populatePreviousDocumentStates_;
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          messageTypes_ = messageTypes_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.messageTypes_ = messageTypes_;
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          documentDirections_ = documentDirections_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.documentDirections_ = documentDirections_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.departmentId_ = departmentId_;
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          typeNamedIds_ = typeNamedIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.typeNamedIds_ = typeNamedIds_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.counteragentBoxId_ = counteragentBoxId_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.limit_ = limit_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6477,6 +6912,49 @@ public final class DocflowApiProtos {
         }
         if (other.hasPopulatePreviousDocumentStates()) {
           setPopulatePreviousDocumentStates(other.getPopulatePreviousDocumentStates());
+        }
+        if (!other.messageTypes_.isEmpty()) {
+          if (messageTypes_.isEmpty()) {
+            messageTypes_ = other.messageTypes_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureMessageTypesIsMutable();
+            messageTypes_.addAll(other.messageTypes_);
+          }
+          onChanged();
+        }
+        if (!other.documentDirections_.isEmpty()) {
+          if (documentDirections_.isEmpty()) {
+            documentDirections_ = other.documentDirections_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureDocumentDirectionsIsMutable();
+            documentDirections_.addAll(other.documentDirections_);
+          }
+          onChanged();
+        }
+        if (other.hasDepartmentId()) {
+          bitField0_ |= 0x00000080;
+          departmentId_ = other.departmentId_;
+          onChanged();
+        }
+        if (!other.typeNamedIds_.isEmpty()) {
+          if (typeNamedIds_.isEmpty()) {
+            typeNamedIds_ = other.typeNamedIds_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureTypeNamedIdsIsMutable();
+            typeNamedIds_.addAll(other.typeNamedIds_);
+          }
+          onChanged();
+        }
+        if (other.hasCounteragentBoxId()) {
+          bitField0_ |= 0x00000200;
+          counteragentBoxId_ = other.counteragentBoxId_;
+          onChanged();
+        }
+        if (other.hasLimit()) {
+          setLimit(other.getLimit());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6756,6 +7234,469 @@ public final class DocflowApiProtos {
       public Builder clearPopulatePreviousDocumentStates() {
         bitField0_ = (bitField0_ & ~0x00000010);
         populatePreviousDocumentStates_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList messageTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureMessageTypesIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          messageTypes_ = new com.google.protobuf.LazyStringArrayList(messageTypes_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+      /**
+       * <code>repeated string MessageTypes = 6;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMessageTypesList() {
+        return messageTypes_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string MessageTypes = 6;</code>
+       */
+      public int getMessageTypesCount() {
+        return messageTypes_.size();
+      }
+      /**
+       * <code>repeated string MessageTypes = 6;</code>
+       */
+      public java.lang.String getMessageTypes(int index) {
+        return messageTypes_.get(index);
+      }
+      /**
+       * <code>repeated string MessageTypes = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageTypesBytes(int index) {
+        return messageTypes_.getByteString(index);
+      }
+      /**
+       * <code>repeated string MessageTypes = 6;</code>
+       */
+      public Builder setMessageTypes(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessageTypesIsMutable();
+        messageTypes_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string MessageTypes = 6;</code>
+       */
+      public Builder addMessageTypes(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessageTypesIsMutable();
+        messageTypes_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string MessageTypes = 6;</code>
+       */
+      public Builder addAllMessageTypes(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMessageTypesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, messageTypes_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string MessageTypes = 6;</code>
+       */
+      public Builder clearMessageTypes() {
+        messageTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string MessageTypes = 6;</code>
+       */
+      public Builder addMessageTypesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessageTypesIsMutable();
+        messageTypes_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList documentDirections_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDocumentDirectionsIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          documentDirections_ = new com.google.protobuf.LazyStringArrayList(documentDirections_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+      /**
+       * <code>repeated string DocumentDirections = 7;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDocumentDirectionsList() {
+        return documentDirections_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string DocumentDirections = 7;</code>
+       */
+      public int getDocumentDirectionsCount() {
+        return documentDirections_.size();
+      }
+      /**
+       * <code>repeated string DocumentDirections = 7;</code>
+       */
+      public java.lang.String getDocumentDirections(int index) {
+        return documentDirections_.get(index);
+      }
+      /**
+       * <code>repeated string DocumentDirections = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDocumentDirectionsBytes(int index) {
+        return documentDirections_.getByteString(index);
+      }
+      /**
+       * <code>repeated string DocumentDirections = 7;</code>
+       */
+      public Builder setDocumentDirections(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDocumentDirectionsIsMutable();
+        documentDirections_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string DocumentDirections = 7;</code>
+       */
+      public Builder addDocumentDirections(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDocumentDirectionsIsMutable();
+        documentDirections_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string DocumentDirections = 7;</code>
+       */
+      public Builder addAllDocumentDirections(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDocumentDirectionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, documentDirections_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string DocumentDirections = 7;</code>
+       */
+      public Builder clearDocumentDirections() {
+        documentDirections_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string DocumentDirections = 7;</code>
+       */
+      public Builder addDocumentDirectionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDocumentDirectionsIsMutable();
+        documentDirections_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object departmentId_ = "";
+      /**
+       * <code>optional string DepartmentId = 8;</code>
+       */
+      public boolean hasDepartmentId() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional string DepartmentId = 8;</code>
+       */
+      public java.lang.String getDepartmentId() {
+        java.lang.Object ref = departmentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            departmentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string DepartmentId = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDepartmentIdBytes() {
+        java.lang.Object ref = departmentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          departmentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string DepartmentId = 8;</code>
+       */
+      public Builder setDepartmentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        departmentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string DepartmentId = 8;</code>
+       */
+      public Builder clearDepartmentId() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        departmentId_ = getDefaultInstance().getDepartmentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string DepartmentId = 8;</code>
+       */
+      public Builder setDepartmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        departmentId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList typeNamedIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTypeNamedIdsIsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          typeNamedIds_ = new com.google.protobuf.LazyStringArrayList(typeNamedIds_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+      /**
+       * <code>repeated string TypeNamedIds = 9;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTypeNamedIdsList() {
+        return typeNamedIds_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string TypeNamedIds = 9;</code>
+       */
+      public int getTypeNamedIdsCount() {
+        return typeNamedIds_.size();
+      }
+      /**
+       * <code>repeated string TypeNamedIds = 9;</code>
+       */
+      public java.lang.String getTypeNamedIds(int index) {
+        return typeNamedIds_.get(index);
+      }
+      /**
+       * <code>repeated string TypeNamedIds = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTypeNamedIdsBytes(int index) {
+        return typeNamedIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string TypeNamedIds = 9;</code>
+       */
+      public Builder setTypeNamedIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTypeNamedIdsIsMutable();
+        typeNamedIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string TypeNamedIds = 9;</code>
+       */
+      public Builder addTypeNamedIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTypeNamedIdsIsMutable();
+        typeNamedIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string TypeNamedIds = 9;</code>
+       */
+      public Builder addAllTypeNamedIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTypeNamedIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, typeNamedIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string TypeNamedIds = 9;</code>
+       */
+      public Builder clearTypeNamedIds() {
+        typeNamedIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string TypeNamedIds = 9;</code>
+       */
+      public Builder addTypeNamedIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTypeNamedIdsIsMutable();
+        typeNamedIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object counteragentBoxId_ = "";
+      /**
+       * <code>optional string CounteragentBoxId = 10;</code>
+       */
+      public boolean hasCounteragentBoxId() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional string CounteragentBoxId = 10;</code>
+       */
+      public java.lang.String getCounteragentBoxId() {
+        java.lang.Object ref = counteragentBoxId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            counteragentBoxId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string CounteragentBoxId = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCounteragentBoxIdBytes() {
+        java.lang.Object ref = counteragentBoxId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          counteragentBoxId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string CounteragentBoxId = 10;</code>
+       */
+      public Builder setCounteragentBoxId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        counteragentBoxId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string CounteragentBoxId = 10;</code>
+       */
+      public Builder clearCounteragentBoxId() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        counteragentBoxId_ = getDefaultInstance().getCounteragentBoxId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string CounteragentBoxId = 10;</code>
+       */
+      public Builder setCounteragentBoxIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        counteragentBoxId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int limit_ = 100;
+      /**
+       * <code>optional int32 Limit = 11 [default = 100];</code>
+       */
+      public boolean hasLimit() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional int32 Limit = 11 [default = 100];</code>
+       */
+      public int getLimit() {
+        return limit_;
+      }
+      /**
+       * <code>optional int32 Limit = 11 [default = 100];</code>
+       */
+      public Builder setLimit(int value) {
+        bitField0_ |= 0x00000400;
+        limit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 Limit = 11 [default = 100];</code>
+       */
+      public Builder clearLimit() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        limit_ = 100;
         onChanged();
         return this;
       }
@@ -9245,28 +10186,32 @@ public final class DocflowApiProtos {
       "ow\022\020\n\010IndexKey\030\002 \002(\014\"w\n\035GetDocflowsByPac" +
       "ketIdResponse\022<\n\tDocuments\030\001 \003(\0132).Diado" +
       "c.Api.Proto.Docflow.FetchedDocument\022\030\n\020N" +
-      "extPageIndexKey\030\002 \001(\014\"\330\001\n\027GetDocflowEven" +
+      "extPageIndexKey\030\002 \001(\014\"\345\002\n\027GetDocflowEven" +
       "tsRequest\0221\n\006Filter\030\001 \002(\0132!.Diadoc.Api.P",
       "roto.TimeBasedFilter\022\025\n\rAfterIndexKey\030\002 " +
       "\001(\014\022 \n\021PopulateDocuments\030\003 \001(\010:\005false\022\"\n" +
       "\023InjectEntityContent\030\004 \001(\010:\005false\022-\n\036Pop" +
       "ulatePreviousDocumentStates\030\005 \001(\010:\005false" +
-      "\"\240\001\n\030GetDocflowEventsResponse\022\022\n\nTotalCo" +
-      "unt\030\001 \001(\005\0226\n\006Events\030\002 \003(\0132&.Diadoc.Api.P" +
-      "roto.Docflow.DocflowEvent\0228\n\016TotalCountT" +
-      "ype\030\003 \002(\0162 .Diadoc.Api.Proto.TotalCountT" +
-      "ype\"\273\002\n\014DocflowEvent\022\017\n\007EventId\030\001 \001(\t\022.\n" +
-      "\tTimestamp\030\002 \001(\0132\033.Diadoc.Api.Proto.Time",
-      "stamp\0220\n\nDocumentId\030\003 \001(\0132\034.Diadoc.Api.P" +
-      "roto.DocumentId\022\020\n\010IndexKey\030\004 \001(\014\022?\n\010Doc" +
-      "ument\030\005 \001(\0132-.Diadoc.Api.Proto.Docflow.D" +
-      "ocumentWithDocflow\022\027\n\017PreviousEventId\030\006 " +
-      "\001(\t\022L\n\025PreviousDocumentState\030\007 \001(\0132-.Dia" +
-      "doc.Api.Proto.Docflow.DocumentWithDocflo" +
-      "w*\204\001\n\013SearchScope\022\022\n\016SearchScopeAny\020\000\022\027\n" +
-      "\023SearchScopeIncoming\020\001\022\027\n\023SearchScopeOut" +
-      "going\020\002\022\026\n\022SearchScopeDeleted\020\003\022\027\n\023Searc" +
-      "hScopeInternal\020\004B\022B\020DocflowApiProtos"
+      "\022\024\n\014MessageTypes\030\006 \003(\t\022\032\n\022DocumentDirect" +
+      "ions\030\007 \003(\t\022\024\n\014DepartmentId\030\010 \001(\t\022\024\n\014Type" +
+      "NamedIds\030\t \003(\t\022\031\n\021CounteragentBoxId\030\n \001(" +
+      "\t\022\022\n\005Limit\030\013 \001(\005:\003100\"\240\001\n\030GetDocflowEven" +
+      "tsResponse\022\022\n\nTotalCount\030\001 \001(\005\0226\n\006Events" +
+      "\030\002 \003(\0132&.Diadoc.Api.Proto.Docflow.Docflo",
+      "wEvent\0228\n\016TotalCountType\030\003 \002(\0162 .Diadoc." +
+      "Api.Proto.TotalCountType\"\273\002\n\014DocflowEven" +
+      "t\022\017\n\007EventId\030\001 \001(\t\022.\n\tTimestamp\030\002 \001(\0132\033." +
+      "Diadoc.Api.Proto.Timestamp\0220\n\nDocumentId" +
+      "\030\003 \001(\0132\034.Diadoc.Api.Proto.DocumentId\022\020\n\010" +
+      "IndexKey\030\004 \001(\014\022?\n\010Document\030\005 \001(\0132-.Diado" +
+      "c.Api.Proto.Docflow.DocumentWithDocflow\022" +
+      "\027\n\017PreviousEventId\030\006 \001(\t\022L\n\025PreviousDocu" +
+      "mentState\030\007 \001(\0132-.Diadoc.Api.Proto.Docfl" +
+      "ow.DocumentWithDocflow*\204\001\n\013SearchScope\022\022",
+      "\n\016SearchScopeAny\020\000\022\027\n\023SearchScopeIncomin" +
+      "g\020\001\022\027\n\023SearchScopeOutgoing\020\002\022\026\n\022SearchSc" +
+      "opeDeleted\020\003\022\027\n\023SearchScopeInternal\020\004B\022B" +
+      "\020DocflowApiProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9338,7 +10283,7 @@ public final class DocflowApiProtos {
     internal_static_Diadoc_Api_Proto_Docflow_GetDocflowEventsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_GetDocflowEventsRequest_descriptor,
-        new java.lang.String[] { "Filter", "AfterIndexKey", "PopulateDocuments", "InjectEntityContent", "PopulatePreviousDocumentStates", });
+        new java.lang.String[] { "Filter", "AfterIndexKey", "PopulateDocuments", "InjectEntityContent", "PopulatePreviousDocumentStates", "MessageTypes", "DocumentDirections", "DepartmentId", "TypeNamedIds", "CounteragentBoxId", "Limit", });
     internal_static_Diadoc_Api_Proto_Docflow_GetDocflowEventsResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_Diadoc_Api_Proto_Docflow_GetDocflowEventsResponse_fieldAccessorTable = new
