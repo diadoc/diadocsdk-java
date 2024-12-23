@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <protobuf.version>2.6.1</protobuf.version>
+        <protobuf.version>3.25.5</protobuf.version>
         <httpClient.version>4.5.6</httpClient.version>
         <fluent-hc.version>4.5.10</fluent-hc.version>
         <commons-io.version>2.6</commons-io.version>
