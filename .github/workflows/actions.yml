@@ -1,90 +1,121 @@
-﻿
-on:
+﻿on:
   push:
     paths-ignore:
       - "**/*.md"
 env:
   JCP_VERSION: 2.0.40450-A
   JCP_FILENAME_PREFIX: jcp-
-      
+  DIADOC_SIGNING_SECRET: ${{ secrets.DIADOC_SIGNING_SECRET }}
+
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: 6.x
-      
       - name: Setup Maven Action
         uses: s4u/setup-maven-action@v1.14.0
         with:
           java-version: 17
           maven-version: 3.9.8
 
-      - name: Setup NuGet.exe
-        uses: nuget/setup-nuget@v2
-        with:
-          nuget-version: '5.x'
-          
-      - run: nuget install secure-file -ExcludeVersion
-      - run: ./secure-file/tools/secure-file.exe -decrypt ${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip.enc -secret ${{ secrets.DIADOC_SIGNING_SECRET }}
 
-      - name: Extract JCP from ZIP
-        uses: ihiroky/extract-action@v1
-        with:
-          file_path: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip
+      - name: Decrypt and Extract JCP Archive
+        run: |
+          openssl enc -d -aes-256-cbc \
+            -in ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip.enc \
+            -out ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip \
+            -pass env:DIADOC_SIGNING_SECRET
 
-      - run: mvn install:install-file -Dfile="JCP.jar" -DgroupId="ru.CryptoPro" -DartifactId="JCP" -Dversion="${{ env.JCP_VERSION }}" -Dpackaging="jar"
-        working-directory: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
-      - run: mvn install:install-file -Dfile="asn1rt.jar" -DgroupId="com.objsys.asn1j" -DartifactId="asn1rt" -Dversion="${{ env.JCP_VERSION }}" -Dpackaging="jar"
-        working-directory: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
-      - run: mvn install:install-file -Dfile="ASN1P.jar" -DgroupId="ru.CryptoPro" -DartifactId="ASN1P" -Dversion="${{ env.JCP_VERSION }}" -Dpackaging="jar"
-        working-directory: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
-      - run: mvn install:install-file -Dfile="JCryptoP.jar" -DgroupId="ru.CryptoPro" -DartifactId="JCryptoP" -Dversion="${{ env.JCP_VERSION }}" -Dpackaging="jar"
-        working-directory: ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}
-      
+          unzip -o ./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}.zip 
+
+      - name: Install JCP Dependencies
+        run: |
+          jars=(
+            "JCP.jar ru.cryptopro jcp"
+            "asn1rt.jar com.objsys.asn1j asn1rt"
+            "ASN1P.jar ru.cryptopro asn1p"
+            "JCryptoP.jar ru.cryptopro jcryptop"
+          )
+
+          for jar in "${jars[@]}"; do
+            set -- $jar
+            mvn install:install-file \
+              -Dfile=./${{ env.JCP_FILENAME_PREFIX }}${{ env.JCP_VERSION }}/$1 \
+              -DgroupId=$2 \
+              -DartifactId=$3 \
+              -Dversion=${{ env.JCP_VERSION }} \
+              -Dpackaging=jar
+          done
+
       - name: Run the build script
-        uses: cake-build/cake-action@v2
+        run: mvn package
         env:
           github_ref_type: ${{ github.ref_type }}
-        with:
-          target: Default
-          arguments: |
-            configuration: Release
-          verbosity: Diagnostic
-          cake-version: 1.3.0
+
+      - name: Validate artifacts
+        run: |
+          chmod +x .github/workflows/validate_version.sh
+          ARTIFACT_DIR=target
+          LATEST_JAR=$(find "$ARTIFACT_DIR" -type f -name "*.jar" -printf "%T@ %p\n" | sort -n | tail -1 | awk '{print $2}')
+          if [ -z "$LATEST_JAR" ]; then
+            echo "Error: No JAR files found in $ARTIFACT_DIR."
+            exit 1
+          fi
+          
+          echo "Found latest JAR: $LATEST_JAR"
+          FILE_NAME=$(basename "$LATEST_JAR")
+          VERSION=$(echo "$FILE_NAME" | sed -n 's/^diadocsdk-\([0-9.]\+\(-[a-zA-Z0-9.]\+\)*\)\.jar$/\1/p')
+          echo "Validating version: $VERSION"
+          .github/workflows/validate_version.sh "$VERSION"
+
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: packages
           path: |
             target/*.jar
           if-no-files-found: error
 
-  publish:
+
+  publish-manual:
     runs-on: ubuntu-22.04
     needs: build
-    if: startsWith(github.event.ref, 'refs/tags/version')
+    if: |
+      startsWith(github.event.ref, 'refs/tags/version')
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: 6.x
-
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: packages
+
+      - name: Check versions
+        run: |
+          ARTIFACT_DIR="/home/runner/work/diadocsdk-java/diadocsdk-java"
+          LATEST_JAR=$(find "$ARTIFACT_DIR" -type f -name "*.jar" | sort -n | tail -1)
+          if [ -z "$LATEST_JAR" ]; then
+            echo "Error: No JAR files found in $ARTIFACT_DIR."
+            exit 1
+          fi
+          echo "Found latest JAR: $LATEST_JAR"
+          FILE_NAME=$(basename "$LATEST_JAR")
+          MANIFEST_VERSION=$(echo "$FILE_NAME" | sed -n 's/^diadocsdk-\([0-9.]\+\(-[a-zA-Z0-9.]\+\)*\)\.jar$/\1/p')
+          
+          TAG="${{ github.ref }}"
+          VERSION=$(echo "$TAG" | sed -n 's|.*/versions/\([0-9a-zA-Z.-]*\)|\1|p')
+          echo "Extracted version: ${VERSION}"
+
+          if [ "$MANIFEST_VERSION" != "$VERSION" ]; then
+              echo "Version mismatch! Jar version ($MANIFEST_VERSION) does not match tag version ($VERSION)"
+              exit 1
+          fi
 
       - name: Create github release
         uses: softprops/action-gh-release@v1

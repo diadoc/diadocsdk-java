@@ -18,6 +18,8 @@ import "Events/PowerOfAttorneyToPost.proto";
 
 package Diadoc.Api.Proto.Events;
 
+option java_outer_classname = "DiadocMessage_PostApiProtos";
+
 message MessageToPost {
 	required string FromBoxId = 1;
 	optional string ToBoxId = 2;
@@ -447,6 +449,7 @@ message DraftDocumentToPatch {
 	optional string ToBoxId = 2;
 	optional Invoicing.Signer Signer = 3;
 	repeated Invoicing.Signers.ExtendedSigner ExtendedSigner = 4;
+	optional bytes SignerContent = 5;
 }
 
 message ContentToPatch {
@@ -457,12 +460,14 @@ message ContentToPatch {
 	optional string ToBoxId = 5;
 	optional Invoicing.Signer Signer = 6;
 	repeated Invoicing.Signers.ExtendedSigner ExtendedSigner = 7;
+	optional bytes SignerContent = 8;
 }
 
 message DocumentToPatch {
 	required DocumentId DocumentId = 1;
 	optional Invoicing.Signer Signer = 2;
 	repeated Invoicing.Signers.ExtendedSigner ExtendedSigner = 3;
+	optional bytes SignerContent = 4;
 }
 
 message DocumentPatchedContent {

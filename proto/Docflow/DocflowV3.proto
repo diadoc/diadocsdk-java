@@ -8,6 +8,8 @@ import "DocflowStatusV3.proto";
 
 package Diadoc.Api.Proto.Docflow;
 
+option java_outer_classname = "DocflowV3Protos";
+
 message DocflowV3
 {
 	required SenderTitleDocflow SenderTitle = 1;
@@ -41,6 +43,13 @@ message ConfirmationDocflow
 	optional SignedAttachmentV3 ConfirmationAttachment = 2;
 	optional Timestamp ConfirmedAt = 3;
 	optional ReceiptDocflowV3 Receipt = 4;
+	optional OperatorConfirmationDocflow RoamingConfirmation = 5;
+}
+
+message OperatorConfirmationDocflow
+{
+	optional SignedAttachmentV3 ConfirmationAttachment = 1;
+	optional Timestamp ConfirmedAt = 2;
 }
 
 message SignatureRejectionDocflow
@@ -60,6 +69,7 @@ message ParticipantResponseDocflow
 	optional Timestamp SentAt = 5;
 	optional Timestamp DeliveredAt = 6;
 	required Documents.RecipientResponseStatus ResponseStatus = 7;
+	optional ConfirmationDocflow Confirmation = 8;
 }
 
 message AmendmentRequestDocflow

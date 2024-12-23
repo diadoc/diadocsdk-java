@@ -9,6 +9,7 @@ import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -36,6 +37,12 @@ public class ShelfClient {
         return SHELF_MAX_ATTEMPTS;
     }
 
+    /**
+     * @deprecated Method is deprecated and is planned to delete
+    * Information
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/ShelfDownload.html">link to ShelfDownload</a>
+     * Use {@link #shelfDownloadV2(String)}
+     */
     public byte[] shelfDownload(String nameOnShelf) throws DiadocSdkException {
         if (!nameOnShelf.contains(SHELF_PATH_PREFIX))
             nameOnShelf = SHELF_PATH_PREFIX + "/" + nameOnShelf;
@@ -51,6 +58,26 @@ public class ShelfClient {
         }
     }
 
+    public byte[] shelfDownloadV2(String fileName) throws DiadocSdkException {
+        try {
+            var request = RequestBuilder.get(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V2/ShelfDownload")
+                            .addParameter("fileName", fileName)
+                            .build());
+            return diadocHttpClient.performRequest(request);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    /**
+     * @deprecated Method is deprecated and is planned to delete
+    * Information
+     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/ShelfUpload.html">link to ShelfUpload¶</a>
+     * Use {@link #uploadLargeFileToShelf(byte[], String)}
+     * Или {@link #uploadFileToShelfV2(byte[], String)}
+     */
     public String uploadFileToShelf(byte[] data) throws DiadocSdkException {
         if (data == null)
             throw new IllegalArgumentException("data");
@@ -64,7 +91,7 @@ public class ShelfClient {
 
         var httpErrors = new ArrayList<Exception>();
         int attempts = 0;
-        while (missingParts.size() > 0) {
+        while (!missingParts.isEmpty()) {
             if (++attempts > SHELF_MAX_ATTEMPTS)
                 throw new DiadocSdkException("Reached the limit of attempts to send a file. " + formatHttpErrors(httpErrors));
 
@@ -82,6 +109,188 @@ public class ShelfClient {
             }
         }
         return nameOnShelf;
+    }
+
+    public String uploadFileToShelfV2(byte[] content, @Nullable String fileExtension) throws DiadocSdkException, URISyntaxException, DiadocException {
+        if (content == null)
+            throw new IllegalArgumentException("content");
+
+        var httpErrors = new ArrayList<Exception>();
+        var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                .setPath("/V2/ShelfUpload")
+                .addParameter("fileExtension", fileExtension);
+
+        byte[] responseContent;
+        for (var i = 0; i < SHELF_MAX_ATTEMPTS; i++)
+        {
+            try {
+                var response = diadocHttpClient.getResponse(RequestBuilder.post(url.build()).setEntity(new ByteArrayEntity(content)));
+                if (response.getStatusCode() != HttpStatus.SC_OK) {
+                    if (SHELF_NON_RETRIABLE_STATUS_CODES.contains(response.getStatusCode())) {
+                        throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode());
+                    }
+
+                    httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode()));
+                }
+
+                responseContent = response.getContent();
+                if (responseContent == null || responseContent.length == 0) {
+                    continue;
+                }
+
+                return new String(responseContent, StandardCharsets.UTF_8);
+            }
+            catch (IOException e) {
+                httpErrors.add(e);
+            }
+        }
+
+        throw new DiadocSdkException("Reached the limit of attempts to send a file. " + formatHttpErrors(httpErrors));
+    }
+
+    public String uploadLargeFileToShelf(byte[] content, @Nullable String fileExtension) throws DiadocSdkException, URISyntaxException, DiadocException {
+        if (content == null)
+            throw new IllegalArgumentException("content");
+
+        var parts = splitDataIntoParts(content);
+        List<Integer> missingParts = new ArrayList<>();
+
+        for (int i = 0; i < parts.size(); i++)
+            missingParts.add(i);
+
+        var httpErrors = new ArrayList<Exception>();
+        int attempts = 0;
+        String fileName = null;
+
+        while (!missingParts.isEmpty()) {
+            if (++attempts > SHELF_MAX_ATTEMPTS){
+                throw new DiadocSdkException("Reached the limit of attempts to send a file. " + formatHttpErrors(httpErrors));
+            }
+
+            int partsCount = parts.size();
+            int lastPartIndex = partsCount - 1;
+            //always add last part for stability
+            if (!missingParts.contains(lastPartIndex))
+                missingParts.add(lastPartIndex);
+
+            try {
+                if (fileName == null) {
+                    fileName = shelfUploadPartInit(parts.get(0), missingParts, httpErrors, fileExtension);
+                }
+
+                if (fileName != null) {
+                    missingParts = shelfUploadParts(fileName, parts, missingParts, httpErrors);
+                }
+            } catch (URISyntaxException | DiadocException e) {
+                e.printStackTrace();
+                throw new DiadocSdkException(e);
+            }
+        }
+        return fileName;
+    }
+
+    private String shelfUploadPartInit(
+            ByteArraySegment firstPart,
+            List<Integer> missingParts,
+            List<Exception> httpErrors,
+            @Nullable String fileExtension) throws URISyntaxException, DiadocException {
+        var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                .setPath("/ShelfUploadPartInit")
+                .addParameter("fileExtension", fileExtension);
+        if (missingParts.size() == 1)
+        {
+            url.addParameter("isLastPart", "true");
+        }
+
+        try
+        {
+            var response = diadocHttpClient.getResponse(RequestBuilder.post(url.build()).setEntity(new ByteArrayEntity(firstPart.getBytes())));
+            if (response.getStatusCode() != HttpStatus.SC_OK) {
+                if (SHELF_NON_RETRIABLE_STATUS_CODES.contains(response.getStatusCode())) {
+                    throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode());
+                }
+
+                httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode()));
+            }
+
+            var responseContent = response.getContent();
+            if (responseContent == null || responseContent.length == 0)
+                return null;
+
+            missingParts.remove(0);
+            return new String(responseContent, StandardCharsets.UTF_8);
+
+        } catch (IOException e) {
+            httpErrors.add(e);
+        }
+
+        return null;
+    }
+
+    private List<Integer> shelfUploadParts(
+            String fileName,
+            List<ByteArraySegment> parts,
+            List<Integer> missingParts,
+            List<Exception> httpErrors) throws URISyntaxException, DiadocException {
+        Set<Integer> lastMissingParts = new HashSet<>(missingParts);
+        int maxProcessedPartIndex = -1;
+
+        for (int partIndex : missingParts) {
+            boolean isLastPart = partIndex == parts.size() - 1;
+            List<Integer> newMissingParts = uploadPart(fileName, parts.get(partIndex), partIndex, isLastPart, httpErrors);
+            if (newMissingParts != null) {
+                if (partIndex > maxProcessedPartIndex) {
+                    lastMissingParts.clear();
+                    lastMissingParts.addAll(newMissingParts);
+
+                    maxProcessedPartIndex = partIndex;
+                }
+            } else {
+                lastMissingParts.add(partIndex);
+            }
+        }
+        return new ArrayList<>(lastMissingParts);
+    }
+
+    private List<Integer> uploadPart(
+            String fileName,
+            ByteArraySegment part,
+            Integer partIndex,
+            Boolean isLast,
+            List<Exception> httpErrors) throws URISyntaxException, DiadocException {
+        var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                .setPath("/ShelfUploadPart")
+                .addParameter("fileName", fileName)
+                .addParameter("partIndex", Integer.toString(partIndex))
+                .addParameter("isLastPart", Boolean.toString(isLast));
+
+        byte[] responseContent;
+
+        try {
+            var response = diadocHttpClient.getResponse(RequestBuilder.post(url.build()).setEntity(new ByteArrayEntity(part.getBytes())));
+            if (response.getStatusCode() != HttpStatus.SC_OK) {
+                if (SHELF_NON_RETRIABLE_STATUS_CODES.contains(response.getStatusCode())) {
+                    throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode());
+                }
+
+                httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode()));
+                return null;
+            }
+
+            responseContent = response.getContent();
+
+        } catch (IOException e) {
+            httpErrors.add(e);
+            return null;
+        }
+
+        if (responseContent == null || responseContent.length == 0)
+            return null;
+
+        String responseString = new String(responseContent, StandardCharsets.UTF_8);
+
+        int[] missingParts = new Gson().fromJson(responseString, int[].class);
+        return Arrays.stream(missingParts).boxed().collect(Collectors.toList());
     }
 
     private String createNameOnShelf() {
@@ -114,6 +323,7 @@ public class ShelfClient {
         return new ArrayList<>(lastMissingParts);
     }
 
+    @Deprecated
     private List<Integer> putPart(String nameOnShelf, ByteArraySegment part, int partIndex, boolean isLastPart, List<Exception> httpErrors) throws URISyntaxException, DiadocException, IOException {
         var url = new URIBuilder(diadocHttpClient.getBaseUrl())
                 .setPath("/ShelfUpload")
