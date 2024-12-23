@@ -1,6 +1,8 @@
 package Diadoc.Api.print;
 
+import Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
+import Diadoc.Api.httpClient.DiadocResponseInfo;
 import Diadoc.Api.print.models.DocumentProtocolResult;
 import Diadoc.Api.print.models.DocumentZipResult;
 import Diadoc.Api.print.models.PrintFormContent;
@@ -14,10 +16,12 @@ import org.apache.http.entity.ByteArrayEntity;
 import javax.mail.internet.ParseException;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
 
 import static Diadoc.Api.Proto.CustomPrintFormDetectionProtos.*;
 import static Diadoc.Api.Proto.Documents.DocumentProtocolProtos.*;
 import static Diadoc.Api.Proto.Documents.DocumentZipProtos.*;
+import static Diadoc.Api.helpers.Tools.getForwardedDocumentIdParameters;
 
 public class PrintFormClient {
     private DiadocHttpClient diadocHttpClient;
@@ -145,31 +149,46 @@ public class PrintFormClient {
     }
 
     public PrintFormResult generatePrintFormFromAttachment(String fromBoxId, String documentType, byte[] bytes) throws DiadocSdkException {
-        if (Tools.isNullOrEmpty(fromBoxId)) {
-            throw new IllegalArgumentException("fromBoxId");
-        }
+        validateInput(documentType, bytes);
+
+        var response = executeGeneratePrintFormRequest(fromBoxId, documentType, bytes);
+
+        return new PrintFormResult(
+                new PrintFormContent(
+                        response.getContentType(),
+                        response.getFileName() != null ? response.getFileName() : "default",
+                        response.getContent()
+                )
+        );
+    }
+
+    public String generatePrintFormFromAttachmentId(String fromBoxId, String documentType, byte[] bytes) throws DiadocSdkException {
+        validateInput(documentType, bytes);
+
+        var response = executeGeneratePrintFormRequest(fromBoxId, documentType, bytes).getContent();
+
+        return new String(response, StandardCharsets.UTF_8);
+    }
+
+    private void validateInput(String documentType, byte[] bytes) {
         if (Tools.isNullOrEmpty(documentType)) {
             throw new IllegalArgumentException("documentType");
         }
         if (bytes == null) {
             throw new IllegalArgumentException("bytes");
         }
+    }
 
+    private DiadocResponseInfo executeGeneratePrintFormRequest(String fromBoxId, String documentType, byte[] bytes) throws DiadocSdkException {
         try {
-            var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/GeneratePrintFormFromAttachment")
-                    .addParameter("fromBoxId", fromBoxId)
-                    .addParameter("documentType", documentType)
-                    .build())
-                    .setEntity(new ByteArrayEntity(bytes));
+                    .addParameter("documentType", documentType);
+            Tools.addParameterIfNotNull(uri, "fromBoxId", fromBoxId);
 
-            var response = diadocHttpClient.getRawResponse(request);
+            var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(bytes));
 
-            if (response.getRetryAfter() != null) {
-                return new PrintFormResult(response.getRetryAfter());
-            }
-
-            return new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
+            return diadocHttpClient.getRawResponse(request);
 
         } catch (URISyntaxException | ParseException | IOException e) {
             throw new DiadocSdkException(e);
@@ -177,22 +196,60 @@ public class PrintFormClient {
     }
 
     public PrintFormResult getGeneratedPrintForm(String printFormId) throws DiadocSdkException {
+        if (printFormId == null) {
+            throw new IllegalArgumentException("printFormId");
+        }
+
         try {
             var request = RequestBuilder.get(new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/GetGeneratedPrintForm")
                     .addParameter("printFormId", printFormId)
                     .build());
+            var response = diadocHttpClient.getResponse(request);
+            return getPrintFormFromResponse(response);
 
-            var response = diadocHttpClient.getRawResponse(request);
-
-            if (response.getRetryAfter() != null) {
-                return new PrintFormResult(response.getRetryAfter());
-            }
-
-            return new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
-
-        } catch (URISyntaxException | ParseException | IOException e) {
+        } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
+        }
+
+    }
+
+
+    public PrintFormResult generateForwardedDocumentPrintForm(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (forwardedDocumentId == null) {
+            throw new IllegalArgumentException("forwardedDocumentId");
+        }
+
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateForwardedDocumentPrintForm")
+                    .addParameter("boxId", boxId)
+                    .addParameters(getForwardedDocumentIdParameters(forwardedDocumentId))
+                    .build();
+
+            var request = RequestBuilder.get(url);
+            var response = diadocHttpClient.getResponse(request);
+            return getPrintFormFromResponse(response);
+
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+
+    }
+
+    private PrintFormResult getPrintFormFromResponse(DiadocResponseInfo response){
+        if (response.getRetryAfter() != null) {
+            return new PrintFormResult(response.getRetryAfter());
+        }
+        else {
+            return new PrintFormResult(
+                    new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent())
+            );
         }
     }
 }

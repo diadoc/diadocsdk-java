@@ -1,13 +1,20 @@
 package Diadoc.Api.document;
 
+import Diadoc.Api.Proto.Documents.DocumentProtocolProtos;
+import Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos;
+import Diadoc.Api.Proto.Forwarding.ForwardingApiProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
+import Diadoc.Api.print.models.DocumentProtocolResult;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Date;
 
@@ -17,9 +24,10 @@ import static Diadoc.Api.Proto.Documents.DocumentsMoveOperationProtos.DocumentsM
 import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PrepareDocumentsToSignRequest;
 import static Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.PrepareDocumentsToSignResponse;
 import static Diadoc.Api.Proto.SignatureInfoProtos.SignatureInfo;
+import static Diadoc.Api.helpers.Tools.getForwardedDocumentIdParameters;
 
 public class DocumentClient {
-    private DiadocHttpClient diadocHttpClient;
+    private final DiadocHttpClient diadocHttpClient;
 
     public DocumentClient(DiadocHttpClient diadocHttpClient) {
         this.diadocHttpClient = diadocHttpClient;
@@ -79,6 +87,9 @@ public class DocumentClient {
                 url.addParameter("count", filter.getCount().toString());
             }
 
+            Tools.addParameterIfNotNull(url, "fromDepartmentId", filter.getFromDepartmentId());
+            Tools.addParameterIfNotNull(url, "toDepartmentId", filter.getToDepartmentId());
+
             var request = RequestBuilder.get(url.build());
 
             return DocumentList.parseFrom(diadocHttpClient.performRequest(request));
@@ -99,18 +110,19 @@ public class DocumentClient {
             boolean excludeSubdepartments,
             String afterIndexKey,
             Integer count) throws DiadocSdkException {
-        return getDocuments(new DocumentsFilter()
-                .setBoxId(boxId)
-                .setFilterCategory(filterCategory)
-                .setCounteragentBoxId(counteragentBoxId)
-                .setTimestampFrom(timestampFrom)
-                .setTimestampTo(timestampTo)
-                .setFromDocumentDate(fromDocumentDate)
-                .setToDocumentDate(toDocumentDate)
-                .setDepartmentId(departmentId)
-                .setExcludeSubdepartments(excludeSubdepartments)
-                .setAfterIndexKey(afterIndexKey)
-                .setCount(count));
+        return getDocuments(new DocumentsFilter.Builder()
+                .boxId(boxId)
+                .filterCategory(filterCategory)
+                .counteragentBoxId(counteragentBoxId)
+                .timestampFrom(timestampFrom)
+                .timestampTo(timestampTo)
+                .fromDocumentDate(fromDocumentDate)
+                .toDocumentDate(toDocumentDate)
+                .departmentId(departmentId)
+                .excludeSubdepartments(excludeSubdepartments)
+                .afterIndexKey(afterIndexKey)
+                .count(count)
+                .build());
     }
 
     public DocumentList getDocuments(String boxId,
@@ -148,14 +160,30 @@ public class DocumentClient {
             throw new IllegalArgumentException("entityId");
         }
 
+        return getDocument(boxId, messageId, entityId, true);
+    }
+
+
+    public Document getDocument(String boxId, String messageId, String entityId, @Nullable Boolean injectEntityContent) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId");
+        }
+        if (entityId == null) {
+            throw new IllegalArgumentException("entityId");
+        }
+
         try {
-            var request = RequestBuilder.get(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
                             .setPath("/V3/GetDocument")
                             .addParameter("boxId", boxId)
                             .addParameter("messageId", messageId)
-                            .addParameter("entityId", entityId)
-                            .build());
+                            .addParameter("entityId", entityId);
+            Tools.addParameterIfNotNull(url, "injectEntityContent", injectEntityContent);
+
+            var request = RequestBuilder.get(url.build());
             return Document.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
@@ -203,11 +231,24 @@ public class DocumentClient {
             throw new IllegalArgumentException("documentsToSignRequest");
         }
 
+        return prepareDocumentsToSign(documentsToSignRequest, null);
+    }
+
+    public PrepareDocumentsToSignResponse prepareDocumentsToSign(PrepareDocumentsToSignRequest documentsToSignRequest, @Nullable Boolean excludeContent) throws DiadocSdkException {
+        if (documentsToSignRequest == null) {
+            throw new IllegalArgumentException("documentsToSignRequest");
+        }
+
+        if (excludeContent == null) {
+            excludeContent = false;
+        }
+
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/PrepareDocumentsToSign")
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/PrepareDocumentsToSign")
+                                    .addParameter("excludeContent", excludeContent.toString())
+                                    .build())
                     .setEntity(new ByteArrayEntity(documentsToSignRequest.toByteArray()));
             return PrepareDocumentsToSignResponse.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
@@ -264,5 +305,160 @@ public class DocumentClient {
         }
     }
 
+    public ForwardingApiProtos.ForwardDocumentResponse forwardDocument(String boxId, ForwardingApiProtos.ForwardDocumentRequest forwardDocumentRequest) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
 
+        if (forwardDocumentRequest == null) {
+            throw new IllegalArgumentException("forwardDocumentRequest");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V2/ForwardDocument")
+                    .addParameter("boxId", boxId)
+                    .build();
+            var request = RequestBuilder.post(url)
+                    .setEntity(new ByteArrayEntity(forwardDocumentRequest.toByteArray()));
+
+            return ForwardingApiProtos.ForwardDocumentResponse.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public ForwardingApiProtos.GetForwardedDocumentsResponse getForwardedDocuments(String boxId, ForwardingApiProtos.GetForwardedDocumentsRequest fwdDocumentsRequest) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (fwdDocumentsRequest == null) {
+            throw new IllegalArgumentException("fwdDocumentsRequest");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V2/GetForwardedDocuments")
+                    .addParameter("boxId", boxId)
+                    .build();
+            var request = RequestBuilder.post(url)
+                    .setEntity(new ByteArrayEntity(fwdDocumentsRequest.toByteArray()));
+
+            return ForwardingApiProtos.GetForwardedDocumentsResponse.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public byte[] getForwardedEntityContent(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId, String entityId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (forwardedDocumentId == null) {
+            throw new IllegalArgumentException("forwardedDocumentId");
+        }
+
+        if (entityId == null) {
+            throw new IllegalArgumentException("entityId");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V2/GetForwardedEntityContent")
+                    .addParameter("boxId", boxId)
+                    .addParameter("entityId", entityId)
+                    .addParameters(getForwardedDocumentIdParameters(forwardedDocumentId));
+
+            var request = RequestBuilder.get(url.build());
+
+            return diadocHttpClient.performRequest(request);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public DocumentProtocolResult generateForwardedDocumentProtocol(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (forwardedDocumentId == null) {
+            throw new IllegalArgumentException("forwardedDocumentId");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V2/GenerateForwardedDocumentProtocol")
+                    .addParameter("boxId", boxId)
+                    .addParameters(getForwardedDocumentIdParameters(forwardedDocumentId))
+                    .build();
+            return getDocumentProtocolResult(url);
+
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    @NotNull
+    private DocumentProtocolResult getDocumentProtocolResult(URI url) throws IOException {
+        var request = RequestBuilder.get(url);
+
+        var response = diadocHttpClient.getResponse(request);
+
+        if (response.getRetryAfter() != null) {
+            return new DocumentProtocolResult(response.getRetryAfter());
+        }
+        else {
+            var documentProtocol = DocumentProtocolProtos.DocumentProtocol.parseFrom(response.getContent());
+            return new DocumentProtocolResult(documentProtocol);
+        }
+    }
+
+    public DocumentProtocolResult generateForwardedDocumentProtocol(String boxId, String fromBoxId, String messageId, String documentId, String forwardEventId) throws DiadocSdkException {
+        Tools.checkForwardedDocumentParameters(boxId, fromBoxId, messageId, documentId, forwardEventId);
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V2/GenerateForwardedDocumentProtocol")
+                    .addParameter("boxId", boxId)
+                    .addParameter("fromBoxId", fromBoxId)
+                    .addParameter("messageId", messageId)
+                    .addParameter("documentId", documentId)
+                    .build();
+
+            return getDocumentProtocolResult(url);
+
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public void restore(String boxId, String messageId, @Nullable String documentId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId");
+        }
+
+        try {
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/Restore")
+                    .addParameter("boxId", boxId)
+                    .addParameter("messageId", messageId);
+
+            if (documentId != null) {
+                uri.addParameter("documentId", documentId);
+            }
+
+            var request = RequestBuilder.post(uri.build());
+
+            diadocHttpClient.performRequest(request);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 }

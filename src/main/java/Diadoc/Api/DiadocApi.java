@@ -15,6 +15,7 @@ import Diadoc.Api.events.EventsClient;
 import Diadoc.Api.generateTitle.GenerateClient;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import Diadoc.Api.message.MessageClient;
+import Diadoc.Api.operators.OperatorClient;
 import Diadoc.Api.organizations.OrganizationClient;
 import Diadoc.Api.parse.ParseClient;
 import Diadoc.Api.powersOfAttorney.PowerOfAttorneyClient;
@@ -28,29 +29,31 @@ import org.jetbrains.annotations.Nullable;
 
 public class DiadocApi {
 
-    private AuthManager authManager;
-    private AuthenticateClient authClient;
-    private OrganizationClient organizationClient;
-    private DepartmentClient departmentClient;
-    private EmployeeClient employeeClient;
-    private UserClient userClient;
-    private CounteragentClient counteragentClient;
-    private CounteragentGroupClient counteragentGroupClient;
-    private GenerateClient generateClient;
-    private ShelfClient shelfClient;
-    private MessageClient messageClient;
-    private TemplateClient templateClient;
-    private DocumentClient documentClient;
-    private EventsClient eventsClient;
-    private ParseClient parseClient;
-    private PrintFormClient printFormClient;
-    private SignClient signClient;
-    private DocumentTypeClient documentTypeClient;
-    private DocflowClient docflowClient;
-    private PowerOfAttorneyClient powerOfAttorneyClient;
-    private EmployeePowerOfAttorneyClient employeePowerOfAttorneyClient;
-    private DocumentWorkflowClient documentWorkflowClient;
-    private DiadocHttpClient diadocHttpClient;
+    private final AuthManager authManager;
+    private final AuthenticateClient authClient;
+    private final OrganizationClient organizationClient;
+    private final DepartmentClient departmentClient;
+    private final EmployeeClient employeeClient;
+    private final UserClient userClient;
+    private final CounteragentClient counteragentClient;
+    private final CounteragentGroupClient counteragentGroupClient;
+    private final GenerateClient generateClient;
+    private final ShelfClient shelfClient;
+    private final MessageClient messageClient;
+    private final TemplateClient templateClient;
+    private final DocumentClient documentClient;
+    private final EventsClient eventsClient;
+    private final ParseClient parseClient;
+    private final PrintFormClient printFormClient;
+    private final SignClient signClient;
+    private final DocumentTypeClient documentTypeClient;
+    private final DocflowClient docflowClient;
+    private final PowerOfAttorneyClient powerOfAttorneyClient;
+    private final EmployeePowerOfAttorneyClient employeePowerOfAttorneyClient;
+    private final DocumentWorkflowClient documentWorkflowClient;
+
+    private final OperatorClient operatorClient;
+    private final DiadocHttpClient diadocHttpClient;
 
     public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
         if (url == null) {
@@ -79,6 +82,7 @@ public class DiadocApi {
         powerOfAttorneyClient = new PowerOfAttorneyClient(diadocHttpClient);
         employeePowerOfAttorneyClient = new EmployeePowerOfAttorneyClient(diadocHttpClient);
         documentWorkflowClient = new DocumentWorkflowClient(diadocHttpClient);
+        operatorClient = new OperatorClient(diadocHttpClient);
         authManager.setCredentials(null);
     }
 
@@ -166,12 +170,33 @@ public class DiadocApi {
         return employeePowerOfAttorneyClient;
     }
 
+    /**
+     * @deprecated
+     * Use {@link #getDocumentWorkflowClient()}
+     */
+    @Deprecated
     public DocumentWorkflowClient gDocumentWorkflowClient() {
+        return documentWorkflowClient;
+    }
+
+    public DocumentWorkflowClient getDocumentWorkflowClient() {
         return documentWorkflowClient;
     }
 
     public AuthManager getAuthManager() {
         return authManager;
+    }
+
+    public TemplateClient getTemplateClient() {
+        return templateClient;
+    }
+
+    public OperatorClient getOperatorClient() {
+        return operatorClient;
+    }
+
+    public DiadocHttpClient getDiadocHttpClient() {
+        return diadocHttpClient;
     }
 
     public void setSolutionInfo(String solutionInfo) {

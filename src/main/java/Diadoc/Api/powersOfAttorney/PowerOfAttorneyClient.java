@@ -87,7 +87,7 @@ public class PowerOfAttorneyClient {
         try {
             var request = RequestBuilder.post(
                             new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/RegisterPowerOfAttorneyResult")
+                                    .setPath("/PrevalidatePowerOfAttorney")
                                     .addParameter("boxId", boxId)
                                     .addParameter("registrationNumber", registrationNumber)
                                     .addParameter("issuerInn", issuerInn)

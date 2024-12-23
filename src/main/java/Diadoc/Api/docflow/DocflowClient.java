@@ -37,6 +37,11 @@ public class DocflowClient {
         }
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #getDocflowsByPacketIdV3(String, GetDocflowsByPacketIdRequest)}
+     */
+    @Deprecated
     public GetDocflowsByPacketIdResponse getDocflowsByPacketId(String boxId, GetDocflowsByPacketIdRequest packetIdRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
