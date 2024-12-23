@@ -6738,6 +6738,20 @@ public final class DocumentTypeDescriptionV2Protos {
      * <code>required int32 ExtendedDocumentTitleType = 2 [default = -1];</code>
      */
     int getExtendedDocumentTitleType();
+
+    /**
+     * <code>optional string SignerUserDataXsdUrl = 3;</code>
+     */
+    boolean hasSignerUserDataXsdUrl();
+    /**
+     * <code>optional string SignerUserDataXsdUrl = 3;</code>
+     */
+    java.lang.String getSignerUserDataXsdUrl();
+    /**
+     * <code>optional string SignerUserDataXsdUrl = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getSignerUserDataXsdUrlBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Types.SignerInfoV2}
@@ -6799,6 +6813,12 @@ public final class DocumentTypeDescriptionV2Protos {
             case 16: {
               bitField0_ |= 0x00000002;
               extendedDocumentTitleType_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              signerUserDataXsdUrl_ = bs;
               break;
             }
           }
@@ -6871,9 +6891,52 @@ public final class DocumentTypeDescriptionV2Protos {
       return extendedDocumentTitleType_;
     }
 
+    public static final int SIGNERUSERDATAXSDURL_FIELD_NUMBER = 3;
+    private java.lang.Object signerUserDataXsdUrl_;
+    /**
+     * <code>optional string SignerUserDataXsdUrl = 3;</code>
+     */
+    public boolean hasSignerUserDataXsdUrl() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string SignerUserDataXsdUrl = 3;</code>
+     */
+    public java.lang.String getSignerUserDataXsdUrl() {
+      java.lang.Object ref = signerUserDataXsdUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          signerUserDataXsdUrl_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string SignerUserDataXsdUrl = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignerUserDataXsdUrlBytes() {
+      java.lang.Object ref = signerUserDataXsdUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signerUserDataXsdUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       signerType_ = 0;
       extendedDocumentTitleType_ = -1;
+      signerUserDataXsdUrl_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -6902,6 +6965,9 @@ public final class DocumentTypeDescriptionV2Protos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeInt32(2, extendedDocumentTitleType_);
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getSignerUserDataXsdUrlBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6918,6 +6984,10 @@ public final class DocumentTypeDescriptionV2Protos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, extendedDocumentTitleType_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getSignerUserDataXsdUrlBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -7040,6 +7110,8 @@ public final class DocumentTypeDescriptionV2Protos {
         bitField0_ = (bitField0_ & ~0x00000001);
         extendedDocumentTitleType_ = -1;
         bitField0_ = (bitField0_ & ~0x00000002);
+        signerUserDataXsdUrl_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -7076,6 +7148,10 @@ public final class DocumentTypeDescriptionV2Protos {
           to_bitField0_ |= 0x00000002;
         }
         result.extendedDocumentTitleType_ = extendedDocumentTitleType_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.signerUserDataXsdUrl_ = signerUserDataXsdUrl_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7097,6 +7173,11 @@ public final class DocumentTypeDescriptionV2Protos {
         }
         if (other.hasExtendedDocumentTitleType()) {
           setExtendedDocumentTitleType(other.getExtendedDocumentTitleType());
+        }
+        if (other.hasSignerUserDataXsdUrl()) {
+          bitField0_ |= 0x00000004;
+          signerUserDataXsdUrl_ = other.signerUserDataXsdUrl_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7193,6 +7274,82 @@ public final class DocumentTypeDescriptionV2Protos {
       public Builder clearExtendedDocumentTitleType() {
         bitField0_ = (bitField0_ & ~0x00000002);
         extendedDocumentTitleType_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signerUserDataXsdUrl_ = "";
+      /**
+       * <code>optional string SignerUserDataXsdUrl = 3;</code>
+       */
+      public boolean hasSignerUserDataXsdUrl() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string SignerUserDataXsdUrl = 3;</code>
+       */
+      public java.lang.String getSignerUserDataXsdUrl() {
+        java.lang.Object ref = signerUserDataXsdUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            signerUserDataXsdUrl_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerUserDataXsdUrl = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignerUserDataXsdUrlBytes() {
+        java.lang.Object ref = signerUserDataXsdUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signerUserDataXsdUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string SignerUserDataXsdUrl = 3;</code>
+       */
+      public Builder setSignerUserDataXsdUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        signerUserDataXsdUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string SignerUserDataXsdUrl = 3;</code>
+       */
+      public Builder clearSignerUserDataXsdUrl() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        signerUserDataXsdUrl_ = getDefaultInstance().getSignerUserDataXsdUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string SignerUserDataXsdUrl = 3;</code>
+       */
+      public Builder setSignerUserDataXsdUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        signerUserDataXsdUrl_ = value;
         onChanged();
         return this;
       }
@@ -8029,12 +8186,13 @@ public final class DocumentTypeDescriptionV2Protos {
       ".Proto.Documents.Types.DocumentMetadataI" +
       "temV2\022X\n\026EncryptedMetadataItems\030\004 \003(\01328." +
       "Diadoc.Api.Proto.Documents.Types.Documen",
-      "tMetadataItemV2\"I\n\014SignerInfoV2\022\022\n\nSigne" +
+      "tMetadataItemV2\"g\n\014SignerInfoV2\022\022\n\nSigne" +
       "rType\030\001 \002(\005\022%\n\031ExtendedDocumentTitleType" +
-      "\030\002 \002(\005:\002-1\"V\n\026DocumentMetadataItemV2\022\n\n\002" +
-      "Id\030\001 \002(\t\022\014\n\004Type\030\002 \002(\005\022\022\n\nIsRequired\030\003 \002" +
-      "(\010\022\016\n\006Source\030\004 \002(\005B!B\037DocumentTypeDescri" +
-      "ptionV2Protos"
+      "\030\002 \002(\005:\002-1\022\034\n\024SignerUserDataXsdUrl\030\003 \001(\t" +
+      "\"V\n\026DocumentMetadataItemV2\022\n\n\002Id\030\001 \002(\t\022\014" +
+      "\n\004Type\030\002 \002(\005\022\022\n\nIsRequired\030\003 \002(\010\022\016\n\006Sour" +
+      "ce\030\004 \002(\005B!B\037DocumentTypeDescriptionV2Pro" +
+      "tos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8089,7 +8247,7 @@ public final class DocumentTypeDescriptionV2Protos {
     internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfoV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_SignerInfoV2_descriptor,
-        new java.lang.String[] { "SignerType", "ExtendedDocumentTitleType", });
+        new java.lang.String[] { "SignerType", "ExtendedDocumentTitleType", "SignerUserDataXsdUrl", });
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentMetadataItemV2_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentMetadataItemV2_fieldAccessorTable = new
