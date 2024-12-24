@@ -42,6 +42,7 @@ public class DiadocHttpClient {
     private final CloseableHttpClient httpClient;
     private final String baseUrl;
     private String solutionInfo; //  непотокобезопасное место
+    private ConnectionSettings connectionSettings; // а надо ли добавлять таймауты
 
     public DiadocHttpClient(
             CredentialsProvider credentialsProvider,
