@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto;
 
-public final class ExternalServiceAuthInfoProtos {
+@java.lang.Deprecated public final class ExternalServiceAuthInfoProtos {
   private ExternalServiceAuthInfoProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,7 +25,7 @@ public final class ExternalServiceAuthInfoProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface ExternalServiceAuthInfoOrBuilder extends
+  @java.lang.Deprecated public interface ExternalServiceAuthInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.ExternalServiceAuthInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -66,7 +66,7 @@ public final class ExternalServiceAuthInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.ExternalServiceAuthInfo}
    */
-  public static final class ExternalServiceAuthInfo extends
+  @java.lang.Deprecated public static final class ExternalServiceAuthInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.ExternalServiceAuthInfo)
       ExternalServiceAuthInfoOrBuilder {
@@ -759,9 +759,9 @@ public final class ExternalServiceAuthInfoProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\035ExternalServiceAuthInfo.proto\022\020Diadoc." +
-      "Api.Proto\"D\n\027ExternalServiceAuthInfo\022\025\n\r" +
-      "ServiceUserId\030\001 \001(\t\022\022\n\nThumbprint\030\002 \001(\tB" +
-      "\037B\035ExternalServiceAuthInfoProtos"
+      "Api.Proto\"H\n\027ExternalServiceAuthInfo\022\025\n\r" +
+      "ServiceUserId\030\001 \001(\t\022\022\n\nThumbprint\030\002 \001(\t:" +
+      "\002\030\001B\"B\035ExternalServiceAuthInfoProtos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

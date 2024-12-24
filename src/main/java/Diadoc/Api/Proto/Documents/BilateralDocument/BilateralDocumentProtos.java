@@ -5578,7 +5578,7 @@ public final class BilateralDocumentProtos {
 
   }
 
-  public interface BilateralDocumentMetadataOrBuilder extends
+  @java.lang.Deprecated public interface BilateralDocumentMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata)
       com.google.protobuf.MessageOrBuilder {
 
@@ -5607,7 +5607,7 @@ public final class BilateralDocumentProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata}
    */
-  public static final class BilateralDocumentMetadata extends
+  @java.lang.Deprecated public static final class BilateralDocumentMetadata extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.BilateralDocument.BilateralDocumentMetadata)
       BilateralDocumentMetadataOrBuilder {
@@ -6235,33 +6235,33 @@ public final class BilateralDocumentProtos {
       "ractNumber\030\004 \002(\t\022\024\n\014ContractDate\030\005 \002(\t\022V" +
       "\n\rReceiptStatus\030\006 \001(\0162).Diadoc.Api.Proto" +
       ".Documents.ReceiptStatus:\024UnknownReceipt" +
-      "Status\"\362\001\n\031BilateralDocumentMetadata\022}\n\016" +
+      "Status\"\366\001\n\031BilateralDocumentMetadata\022}\n\016" +
       "DocumentStatus\030\001 \001(\0162E.Diadoc.Api.Proto." +
       "Documents.BilateralDocument.BilateralDoc" +
       "umentStatus:\036UnknownBilateralDocumentSta" +
       "tus\022V\n\rReceiptStatus\030\002 \001(\0162).Diadoc.Api." +
       "Proto.Documents.ReceiptStatus:\024UnknownRe" +
-      "ceiptStatus*\232\006\n\027BilateralDocumentStatus\022" +
-      "\"\n\036UnknownBilateralDocumentStatus\020\000\022(\n$O" +
-      "utboundWaitingForRecipientSignature\020\001\022\"\n" +
-      "\036OutboundWithRecipientSignature\020\002\022+\n\'Out" +
-      "boundWithRecipientPartiallySignature\020\023\022-" +
-      "\n)OutboundRecipientSignatureRequestRejec" +
-      "ted\020\003\022%\n!OutboundWaitingForSenderSignatu" +
-      "re\020\n\022\"\n\036OutboundInvalidSenderSignature\020\013" +
-      "\022\'\n#InboundWaitingForRecipientSignature\020" +
-      "\004\022!\n\035InboundWithRecipientSignature\020\005\022*\n&" +
-      "InboundWithRecipientPartiallySignature\020\024" +
-      "\022,\n(InboundRecipientSignatureRequestReje" +
-      "cted\020\006\022$\n InboundInvalidRecipientSignatu" +
-      "re\020\014\022(\n$InternalWaitingForRecipientSigna" +
-      "ture\020\007\022\"\n\036InternalWithRecipientSignature" +
-      "\020\010\022+\n\'InternalWithRecipientPartiallySign" +
-      "ature\020\025\022-\n)InternalRecipientSignatureReq" +
-      "uestRejected\020\t\022%\n!InternalWaitingForSend" +
-      "erSignature\020\r\022\"\n\036InternalInvalidSenderSi" +
-      "gnature\020\016\022%\n!InternalInvalidRecipientSig" +
-      "nature\020\017B\031B\027BilateralDocumentProtos"
+      "ceiptStatus:\002\030\001*\232\006\n\027BilateralDocumentSta" +
+      "tus\022\"\n\036UnknownBilateralDocumentStatus\020\000\022" +
+      "(\n$OutboundWaitingForRecipientSignature\020" +
+      "\001\022\"\n\036OutboundWithRecipientSignature\020\002\022+\n" +
+      "\'OutboundWithRecipientPartiallySignature" +
+      "\020\023\022-\n)OutboundRecipientSignatureRequestR" +
+      "ejected\020\003\022%\n!OutboundWaitingForSenderSig" +
+      "nature\020\n\022\"\n\036OutboundInvalidSenderSignatu" +
+      "re\020\013\022\'\n#InboundWaitingForRecipientSignat" +
+      "ure\020\004\022!\n\035InboundWithRecipientSignature\020\005" +
+      "\022*\n&InboundWithRecipientPartiallySignatu" +
+      "re\020\024\022,\n(InboundRecipientSignatureRequest" +
+      "Rejected\020\006\022$\n InboundInvalidRecipientSig" +
+      "nature\020\014\022(\n$InternalWaitingForRecipientS" +
+      "ignature\020\007\022\"\n\036InternalWithRecipientSigna" +
+      "ture\020\010\022+\n\'InternalWithRecipientPartially" +
+      "Signature\020\025\022-\n)InternalRecipientSignatur" +
+      "eRequestRejected\020\t\022%\n!InternalWaitingFor" +
+      "SenderSignature\020\r\022\"\n\036InternalInvalidSend" +
+      "erSignature\020\016\022%\n!InternalInvalidRecipien" +
+      "tSignature\020\017B\031B\027BilateralDocumentProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

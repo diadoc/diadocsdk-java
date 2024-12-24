@@ -8,6 +8,7 @@ option java_outer_classname = "BilateralDocflowProtos";
 
 message BilateralDocflow
 {
+	option deprecated = true;
 	optional bool IsFinished = 1;
 
 	optional ReceiptDocflow ReceiptDocflow = 2;

@@ -2,8 +2,11 @@ package Diadoc.Api.Proto.Invoicing;
 
 option java_outer_classname = "OfficialProtos";
 
+option deprecated = true;
+
 // Должностное лицо
 message Official {
+	option deprecated = true;
 	required string Surname = 1;
 	required string FirstName = 2;
 	optional string Patronymic = 3;
@@ -11,6 +14,7 @@ message Official {
 }
 
 message Attorney {
+	option deprecated = true;
 	optional string Date = 1;						// дата выдачи доверенности
 	optional string Number = 2;						// номер доверенности
 	optional string IssuerOrganizationName = 3;		// организация, представитель которой выдал доверенность

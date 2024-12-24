@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto.Docflow;
 
-public final class UniversalTransferDocumentDocflowProtos {
+@java.lang.Deprecated public final class UniversalTransferDocumentDocflowProtos {
   private UniversalTransferDocumentDocflowProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,7 +25,7 @@ public final class UniversalTransferDocumentDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface InboundUniversalTransferDocumentDocflowOrBuilder extends
+  @java.lang.Deprecated public interface InboundUniversalTransferDocumentDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -232,7 +232,7 @@ public final class UniversalTransferDocumentDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow}
    */
-  public static final class InboundUniversalTransferDocumentDocflow extends
+  @java.lang.Deprecated public static final class InboundUniversalTransferDocumentDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InboundUniversalTransferDocumentDocflow)
       InboundUniversalTransferDocumentDocflowOrBuilder {
@@ -2661,7 +2661,7 @@ public final class UniversalTransferDocumentDocflowProtos {
 
   }
 
-  public interface OutboundUniversalTransferDocumentDocflowOrBuilder extends
+  @java.lang.Deprecated public interface OutboundUniversalTransferDocumentDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -2879,7 +2879,7 @@ public final class UniversalTransferDocumentDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow}
    */
-  public static final class OutboundUniversalTransferDocumentDocflow extends
+  @java.lang.Deprecated public static final class OutboundUniversalTransferDocumentDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.OutboundUniversalTransferDocumentDocflow)
       OutboundUniversalTransferDocumentDocflowOrBuilder {
@@ -5422,7 +5422,7 @@ public final class UniversalTransferDocumentDocflowProtos {
       "ocflow/ReceiptDocflow.proto\032!Docflow/Xml" +
       "BilateralDocflow.proto\0320Docflow/Recipien" +
       "tSignatureRejectionDocflow.proto\032\034Docflo" +
-      "w/InvoiceDocflow.proto\"\322\006\n\'InboundUniver" +
+      "w/InvoiceDocflow.proto\"\326\006\n\'InboundUniver" +
       "salTransferDocumentDocflow\022\022\n\nIsFinished" +
       "\030\001 \001(\010\022N\n\016ReceiptDocflow\030\002 \001(\01326.Diadoc." +
       "Api.Proto.Docflow.InboundInvoiceReceiptD" +
@@ -5443,30 +5443,31 @@ public final class UniversalTransferDocumentDocflowProtos {
       "\033IsDocumentSignedByRecipient\030\r \001(\010\022%\n\035Is" +
       "DocumentRejectedByRecipient\030\016 \001(\010\022\036\n\026Can" +
       "DocumentBeReceipted\030\017 \001(\010\0220\n(CanDocument" +
-      "BeSignedOrRejectedByRecipient\030\020 \001(\010\"\352\006\n(" +
-      "OutboundUniversalTransferDocumentDocflow" +
-      "\022\022\n\nIsFinished\030\001 \001(\010\022@\n\016ReceiptDocflow\030\002" +
-      " \001(\0132(.Diadoc.Api.Proto.Docflow.ReceiptD" +
-      "ocflow\022Q\n\023ConfirmationDocflow\030\003 \001(\01324.Di" +
-      "adoc.Api.Proto.Docflow.InvoiceConfirmati" +
-      "onDocflow\022[\n\030CorrectionRequestDocflow\030\004 " +
-      "\001(\01329.Diadoc.Api.Proto.Docflow.InvoiceCo" +
-      "rrectionRequestDocflow\022:\n\025ConfirmationTi" +
-      "mestamp\030\005 \001(\0132\033.Diadoc.Api.Proto.Timesta" +
-      "mp\022\034\n\024IsAmendmentRequested\030\006 \001(\010\022\021\n\tIsRe" +
-      "vised\030\007 \001(\010\022\023\n\013IsCorrected\030\010 \001(\010\022#\n\033CanD" +
-      "ocumentBeSignedBySender\030\t \001(\010\022F\n\021BuyerTi" +
-      "tleDocflow\030\n \001(\0132+.Diadoc.Api.Proto.Docf" +
-      "low.BuyerTitleDocflow\022h\n\"RecipientSignat" +
-      "ureRejectionDocflow\030\013 \001(\0132<.Diadoc.Api.P" +
-      "roto.Docflow.RecipientSignatureRejection" +
-      "Docflow\022\032\n\022IsReceiptRequested\030\014 \001(\010\022%\n\035I" +
-      "sRecipientSignatureRequested\030\r \001(\010\022#\n\033Is" +
-      "DocumentSignedByRecipient\030\016 \001(\010\022%\n\035IsDoc" +
-      "umentRejectedByRecipient\030\017 \001(\010\022\036\n\026CanDoc" +
-      "umentBeReceipted\030\020 \001(\010\0220\n(CanDocumentBeS" +
-      "ignedOrRejectedByRecipient\030\021 \001(\010B(B&Univ" +
-      "ersalTransferDocumentDocflowProtos"
+      "BeSignedOrRejectedByRecipient\030\020 \001(\010:\002\030\001\"" +
+      "\356\006\n(OutboundUniversalTransferDocumentDoc" +
+      "flow\022\022\n\nIsFinished\030\001 \001(\010\022@\n\016ReceiptDocfl" +
+      "ow\030\002 \001(\0132(.Diadoc.Api.Proto.Docflow.Rece" +
+      "iptDocflow\022Q\n\023ConfirmationDocflow\030\003 \001(\0132" +
+      "4.Diadoc.Api.Proto.Docflow.InvoiceConfir" +
+      "mationDocflow\022[\n\030CorrectionRequestDocflo" +
+      "w\030\004 \001(\01329.Diadoc.Api.Proto.Docflow.Invoi" +
+      "ceCorrectionRequestDocflow\022:\n\025Confirmati" +
+      "onTimestamp\030\005 \001(\0132\033.Diadoc.Api.Proto.Tim" +
+      "estamp\022\034\n\024IsAmendmentRequested\030\006 \001(\010\022\021\n\t" +
+      "IsRevised\030\007 \001(\010\022\023\n\013IsCorrected\030\010 \001(\010\022#\n\033" +
+      "CanDocumentBeSignedBySender\030\t \001(\010\022F\n\021Buy" +
+      "erTitleDocflow\030\n \001(\0132+.Diadoc.Api.Proto." +
+      "Docflow.BuyerTitleDocflow\022h\n\"RecipientSi" +
+      "gnatureRejectionDocflow\030\013 \001(\0132<.Diadoc.A" +
+      "pi.Proto.Docflow.RecipientSignatureRejec" +
+      "tionDocflow\022\032\n\022IsReceiptRequested\030\014 \001(\010\022" +
+      "%\n\035IsRecipientSignatureRequested\030\r \001(\010\022#" +
+      "\n\033IsDocumentSignedByRecipient\030\016 \001(\010\022%\n\035I" +
+      "sDocumentRejectedByRecipient\030\017 \001(\010\022\036\n\026Ca" +
+      "nDocumentBeReceipted\030\020 \001(\010\0220\n(CanDocumen" +
+      "tBeSignedOrRejectedByRecipient\030\021 \001(\010:\002\030\001" +
+      "B+B&UniversalTransferDocumentDocflowProt" +
+      "os\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

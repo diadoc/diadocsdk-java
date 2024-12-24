@@ -25,7 +25,7 @@ public final class UserToUpdateProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface UserToUpdateOrBuilder extends
+  @java.lang.Deprecated public interface UserToUpdateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Users.UserToUpdate)
       com.google.protobuf.MessageOrBuilder {
 
@@ -62,7 +62,7 @@ public final class UserToUpdateProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Users.UserToUpdate}
    */
-  public static final class UserToUpdate extends
+  @java.lang.Deprecated public static final class UserToUpdate extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Users.UserToUpdate)
       UserToUpdateOrBuilder {
@@ -1954,13 +1954,14 @@ public final class UserToUpdateProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\030Users/UserToUpdate.proto\022\026Diadoc.Api.P" +
-      "roto.Users\032\nUser.proto\"\202\001\n\014UserToUpdate\022" +
+      "roto.Users\032\nUser.proto\"\206\001\n\014UserToUpdate\022" +
       "5\n\005Login\030\001 \001(\0132&.Diadoc.Api.Proto.Users." +
       "UserLoginPatch\022;\n\010FullName\030\002 \001(\0132).Diado" +
-      "c.Api.Proto.Users.UserFullNamePatch\"\037\n\016U" +
-      "serLoginPatch\022\r\n\005Login\030\001 \001(\t\"A\n\021UserFull" +
-      "NamePatch\022,\n\010FullName\030\001 \001(\0132\032.Diadoc.Api" +
-      ".Proto.FullNameB\024B\022UserToUpdateProtos"
+      "c.Api.Proto.Users.UserFullNamePatch:\002\030\001\"" +
+      "\037\n\016UserLoginPatch\022\r\n\005Login\030\001 \001(\t\"A\n\021User" +
+      "FullNamePatch\022,\n\010FullName\030\001 \001(\0132\032.Diadoc" +
+      ".Api.Proto.FullNameB\024B\022UserToUpdateProto" +
+      "s"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

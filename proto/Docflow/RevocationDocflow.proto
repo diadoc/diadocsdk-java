@@ -6,8 +6,12 @@ package Diadoc.Api.Proto.Docflow;
 
 option java_outer_classname = "RevocationDocflowProtos";
 
+option deprecated = true;
+
 message RevocationDocflow
 {
+	option deprecated = true;
+
 	optional bool IsFinished = 1;
 	
 	optional SignedAttachment RevocationRequestAttachment = 2;

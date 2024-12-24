@@ -5,6 +5,7 @@ package Diadoc.Api.Proto.Invoicing.Organizations;
 option java_outer_classname = "ExtendedOrganizationInfoProtos";
 
 message ExtendedOrganizationInfo {
+  option deprecated = true;
   optional string BoxId = 1;       // идентификатор ящика в Диадоке
   optional string OrgName = 2;     // название //НаимОрг
   optional string Inn = 3;         // ИНН //ИНН ФЛ-ИНН

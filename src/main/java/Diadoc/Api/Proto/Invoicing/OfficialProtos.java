@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto.Invoicing;
 
-public final class OfficialProtos {
+@java.lang.Deprecated public final class OfficialProtos {
   private OfficialProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,7 +25,7 @@ public final class OfficialProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface OfficialOrBuilder extends
+  @java.lang.Deprecated public interface OfficialOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.Official)
       com.google.protobuf.MessageOrBuilder {
 
@@ -104,7 +104,7 @@ public final class OfficialProtos {
    *
    * Protobuf type {@code Diadoc.Api.Proto.Invoicing.Official}
    */
-  public static final class Official extends
+  @java.lang.Deprecated public static final class Official extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.Official)
       OfficialOrBuilder {
@@ -1120,7 +1120,7 @@ public final class OfficialProtos {
 
   }
 
-  public interface AttorneyOrBuilder extends
+  @java.lang.Deprecated public interface AttorneyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.Attorney)
       com.google.protobuf.MessageOrBuilder {
 
@@ -1326,7 +1326,7 @@ public final class OfficialProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Invoicing.Attorney}
    */
-  public static final class Attorney extends
+  @java.lang.Deprecated public static final class Attorney extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.Attorney)
       AttorneyOrBuilder {
@@ -3177,16 +3177,16 @@ public final class OfficialProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\030Invoicing/Official.proto\022\032Diadoc.Api.P" +
-      "roto.Invoicing\"T\n\010Official\022\017\n\007Surname\030\001 " +
+      "roto.Invoicing\"X\n\010Official\022\017\n\007Surname\030\001 " +
       "\002(\t\022\021\n\tFirstName\030\002 \002(\t\022\022\n\nPatronymic\030\003 \001" +
-      "(\t\022\020\n\010JobTitle\030\004 \001(\t\"\202\002\n\010Attorney\022\014\n\004Dat" +
-      "e\030\001 \001(\t\022\016\n\006Number\030\002 \001(\t\022\036\n\026IssuerOrganiz" +
-      "ationName\030\003 \001(\t\022:\n\014IssuerPerson\030\004 \001(\0132$." +
-      "Diadoc.Api.Proto.Invoicing.Official\022\034\n\024I" +
-      "ssuerAdditionalInfo\030\005 \001(\t\022=\n\017RecipientPe" +
-      "rson\030\006 \001(\0132$.Diadoc.Api.Proto.Invoicing." +
-      "Official\022\037\n\027RecipientAdditionalInfo\030\007 \001(" +
-      "\tB\020B\016OfficialProtos"
+      "(\t\022\020\n\010JobTitle\030\004 \001(\t:\002\030\001\"\206\002\n\010Attorney\022\014\n" +
+      "\004Date\030\001 \001(\t\022\016\n\006Number\030\002 \001(\t\022\036\n\026IssuerOrg" +
+      "anizationName\030\003 \001(\t\022:\n\014IssuerPerson\030\004 \001(" +
+      "\0132$.Diadoc.Api.Proto.Invoicing.Official\022" +
+      "\034\n\024IssuerAdditionalInfo\030\005 \001(\t\022=\n\017Recipie" +
+      "ntPerson\030\006 \001(\0132$.Diadoc.Api.Proto.Invoic" +
+      "ing.Official\022\037\n\027RecipientAdditionalInfo\030" +
+      "\007 \001(\t:\002\030\001B\023B\016OfficialProtos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

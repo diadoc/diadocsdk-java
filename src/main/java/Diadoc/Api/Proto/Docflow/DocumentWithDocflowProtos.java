@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto.Docflow;
 
-public final class DocumentWithDocflowProtos {
+@java.lang.Deprecated public final class DocumentWithDocflowProtos {
   private DocumentWithDocflowProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,7 +25,7 @@ public final class DocumentWithDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface DocumentWithDocflowOrBuilder extends
+  @java.lang.Deprecated public interface DocumentWithDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.DocumentWithDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -181,7 +181,7 @@ public final class DocumentWithDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentWithDocflow}
    */
-  public static final class DocumentWithDocflow extends
+  @java.lang.Deprecated public static final class DocumentWithDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.DocumentWithDocflow)
       DocumentWithDocflowOrBuilder {
@@ -2596,7 +2596,7 @@ public final class DocumentWithDocflowProtos {
       "doc.Api.Proto.Docflow\032\017Timestamp.proto\032\020" +
       "DocumentId.proto\032\032ForwardDocumentEvent.p" +
       "roto\032\025Docflow/Docflow.proto\032\032Docflow/Doc" +
-      "umentInfo.proto\"\306\003\n\023DocumentWithDocflow\022" +
+      "umentInfo.proto\"\312\003\n\023DocumentWithDocflow\022" +
       "0\n\nDocumentId\030\001 \001(\0132\034.Diadoc.Api.Proto.D" +
       "ocumentId\022\023\n\013LastEventId\030\002 \001(\t\0227\n\022LastEv" +
       "entTimestamp\030\003 \001(\0132\033.Diadoc.Api.Proto.Ti" +
@@ -2607,8 +2607,8 @@ public final class DocumentWithDocflowProtos {
       "pi.Proto.DocumentId\022<\n\026SubordinateDocume" +
       "ntIds\030\007 \003(\0132\034.Diadoc.Api.Proto.DocumentI" +
       "d\022E\n\025ForwardDocumentEvents\030\010 \003(\0132&.Diado" +
-      "c.Api.Proto.ForwardDocumentEventB\033B\031Docu" +
-      "mentWithDocflowProtos"
+      "c.Api.Proto.ForwardDocumentEvent:\002\030\001B\036B\031" +
+      "DocumentWithDocflowProtos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
