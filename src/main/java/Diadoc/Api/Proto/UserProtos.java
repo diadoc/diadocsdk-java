@@ -25,7 +25,7 @@ public final class UserProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface UserOrBuilder extends
+  @java.lang.Deprecated public interface UserOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.User)
       com.google.protobuf.MessageOrBuilder {
 
@@ -124,7 +124,7 @@ public final class UserProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.User}
    */
-  public static final class User extends
+  @java.lang.Deprecated public static final class User extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.User)
       UserOrBuilder {
@@ -3460,15 +3460,15 @@ public final class UserProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\nUser.proto\022\020Diadoc.Api.Proto\032\025Certific" +
-      "ateInfo.proto\"\211\001\n\004User\022\n\n\002Id\030\001 \001(\t\022\020\n\010La" +
+      "ateInfo.proto\"\215\001\n\004User\022\n\n\002Id\030\001 \001(\t\022\020\n\010La" +
       "stName\030\002 \001(\t\022\021\n\tFirstName\030\003 \001(\t\022\022\n\nMiddl" +
       "eName\030\004 \001(\t\022<\n\021CloudCertificates\030\005 \003(\0132!" +
-      ".Diadoc.Api.Proto.CertificateInfo\"k\n\006Use" +
-      "rV2\022\016\n\006UserId\030\001 \002(\t\022\r\n\005Login\030\002 \001(\t\022,\n\010Fu" +
-      "llName\030\003 \001(\0132\032.Diadoc.Api.Proto.FullName" +
-      "\022\024\n\014IsRegistered\030\004 \002(\010\"C\n\010FullName\022\020\n\010La" +
-      "stName\030\001 \002(\t\022\021\n\tFirstName\030\002 \002(\t\022\022\n\nMiddl" +
-      "eName\030\003 \001(\tB\014B\nUserProtos"
+      ".Diadoc.Api.Proto.CertificateInfo:\002\030\001\"k\n" +
+      "\006UserV2\022\016\n\006UserId\030\001 \002(\t\022\r\n\005Login\030\002 \001(\t\022," +
+      "\n\010FullName\030\003 \001(\0132\032.Diadoc.Api.Proto.Full" +
+      "Name\022\024\n\014IsRegistered\030\004 \002(\010\"C\n\010FullName\022\020" +
+      "\n\010LastName\030\001 \002(\t\022\021\n\tFirstName\030\002 \002(\t\022\022\n\nM" +
+      "iddleName\030\003 \001(\tB\014B\nUserProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

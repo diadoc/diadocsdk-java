@@ -291,7 +291,7 @@ public final class NonformalizedDocumentProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentStatus)
   }
 
-  public interface NonformalizedDocumentMetadataOrBuilder extends
+  @java.lang.Deprecated public interface NonformalizedDocumentMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata)
       com.google.protobuf.MessageOrBuilder {
 
@@ -320,7 +320,7 @@ public final class NonformalizedDocumentProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata}
    */
-  public static final class NonformalizedDocumentMetadata extends
+  @java.lang.Deprecated public static final class NonformalizedDocumentMetadata extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentMetadata)
       NonformalizedDocumentMetadataOrBuilder {
@@ -887,34 +887,34 @@ public final class NonformalizedDocumentProtos {
       "\n%Documents/NonformalizedDocument.proto\022" +
       "0Diadoc.Api.Proto.Documents.Nonformalize" +
       "dDocument\032\035Documents/ReceiptStatus.proto" +
-      "\"\203\002\n\035NonformalizedDocumentMetadata\022\211\001\n\016D" +
+      "\"\207\002\n\035NonformalizedDocumentMetadata\022\211\001\n\016D" +
       "ocumentStatus\030\001 \001(\0162M.Diadoc.Api.Proto.D" +
       "ocuments.NonformalizedDocument.Nonformal" +
       "izedDocumentStatus:\"UnknownNonformalized" +
       "DocumentStatus\022V\n\rReceiptStatus\030\002 \001(\0162)." +
       "Diadoc.Api.Proto.Documents.ReceiptStatus" +
-      ":\024UnknownReceiptStatus*\226\006\n\033Nonformalized" +
-      "DocumentStatus\022&\n\"UnknownNonformalizedDo" +
-      "cumentStatus\020\000\022\'\n#OutboundNoRecipientSig" +
-      "natureRequest\020\001\022(\n$OutboundWaitingForRec" +
-      "ipientSignature\020\002\022\"\n\036OutboundWithRecipie" +
-      "ntSignature\020\003\022-\n)OutboundRecipientSignat" +
-      "ureRequestRejected\020\004\022%\n!OutboundWaitingF" +
-      "orSenderSignature\020\r\022\"\n\036OutboundInvalidSe" +
-      "nderSignature\020\016\022&\n\"InboundNoRecipientSig" +
-      "natureRequest\020\005\022\'\n#InboundWaitingForReci" +
-      "pientSignature\020\006\022!\n\035InboundWithRecipient" +
-      "Signature\020\007\022,\n(InboundRecipientSignature" +
-      "RequestRejected\020\010\022$\n InboundInvalidRecip" +
-      "ientSignature\020\017\022\'\n#InternalNoRecipientSi" +
-      "gnatureRequest\020\t\022(\n$InternalWaitingForRe" +
-      "cipientSignature\020\n\022\"\n\036InternalWithRecipi" +
-      "entSignature\020\013\022-\n)InternalRecipientSigna" +
-      "tureRequestRejected\020\014\022%\n!InternalWaiting" +
-      "ForSenderSignature\020\020\022\"\n\036InternalInvalidS" +
-      "enderSignature\020\021\022%\n!InternalInvalidRecip" +
-      "ientSignature\020\022B\035B\033NonformalizedDocument" +
-      "Protos"
+      ":\024UnknownReceiptStatus:\002\030\001*\226\006\n\033Nonformal" +
+      "izedDocumentStatus\022&\n\"UnknownNonformaliz" +
+      "edDocumentStatus\020\000\022\'\n#OutboundNoRecipien" +
+      "tSignatureRequest\020\001\022(\n$OutboundWaitingFo" +
+      "rRecipientSignature\020\002\022\"\n\036OutboundWithRec" +
+      "ipientSignature\020\003\022-\n)OutboundRecipientSi" +
+      "gnatureRequestRejected\020\004\022%\n!OutboundWait" +
+      "ingForSenderSignature\020\r\022\"\n\036OutboundInval" +
+      "idSenderSignature\020\016\022&\n\"InboundNoRecipien" +
+      "tSignatureRequest\020\005\022\'\n#InboundWaitingFor" +
+      "RecipientSignature\020\006\022!\n\035InboundWithRecip" +
+      "ientSignature\020\007\022,\n(InboundRecipientSigna" +
+      "tureRequestRejected\020\010\022$\n InboundInvalidR" +
+      "ecipientSignature\020\017\022\'\n#InternalNoRecipie" +
+      "ntSignatureRequest\020\t\022(\n$InternalWaitingF" +
+      "orRecipientSignature\020\n\022\"\n\036InternalWithRe" +
+      "cipientSignature\020\013\022-\n)InternalRecipientS" +
+      "ignatureRequestRejected\020\014\022%\n!InternalWai" +
+      "tingForSenderSignature\020\020\022\"\n\036InternalInva" +
+      "lidSenderSignature\020\021\022%\n!InternalInvalidR" +
+      "ecipientSignature\020\022B\035B\033NonformalizedDocu" +
+      "mentProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

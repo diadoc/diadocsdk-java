@@ -6,6 +6,8 @@ option java_outer_classname = "ReceiptDocflowProtos";
 
 message ReceiptDocflow
 {
+	option deprecated = true;
+
 	optional bool IsFinished = 1;
 
 	optional SignedAttachment ReceiptAttachment = 2;

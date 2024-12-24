@@ -6,6 +6,7 @@ option java_outer_classname = "UserToUpdateProtos";
 
 message UserToUpdate
 {
+	option deprecated = true;
 	optional UserLoginPatch Login = 1;
 	optional UserFullNamePatch FullName = 2;
 }

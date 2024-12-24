@@ -25,7 +25,7 @@ public final class DocumentInfoProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface DocumentInfoOrBuilder extends
+  @java.lang.Deprecated public interface DocumentInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.DocumentInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -362,7 +362,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentInfo}
    */
-  public static final class DocumentInfo extends
+  @java.lang.Deprecated public static final class DocumentInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.DocumentInfo)
       DocumentInfoOrBuilder {
@@ -3911,7 +3911,7 @@ public final class DocumentInfoProtos {
 
   }
 
-  public interface DocumentDateAndNumberOrBuilder extends
+  @java.lang.Deprecated public interface DocumentDateAndNumberOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.DocumentDateAndNumber)
       com.google.protobuf.MessageOrBuilder {
 
@@ -3952,7 +3952,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentDateAndNumber}
    */
-  public static final class DocumentDateAndNumber extends
+  @java.lang.Deprecated public static final class DocumentDateAndNumber extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.DocumentDateAndNumber)
       DocumentDateAndNumberOrBuilder {
@@ -4630,7 +4630,7 @@ public final class DocumentInfoProtos {
 
   }
 
-  public interface BasicDocumentInfoOrBuilder extends
+  @java.lang.Deprecated public interface BasicDocumentInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.BasicDocumentInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -4714,7 +4714,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.BasicDocumentInfo}
    */
-  public static final class BasicDocumentInfo extends
+  @java.lang.Deprecated public static final class BasicDocumentInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.BasicDocumentInfo)
       BasicDocumentInfoOrBuilder {
@@ -5831,7 +5831,7 @@ public final class DocumentInfoProtos {
 
   }
 
-  public interface InvoiceDocumentInfoOrBuilder extends
+  @java.lang.Deprecated public interface InvoiceDocumentInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InvoiceDocumentInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -5910,7 +5910,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.InvoiceDocumentInfo}
    */
-  public static final class InvoiceDocumentInfo extends
+  @java.lang.Deprecated public static final class InvoiceDocumentInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InvoiceDocumentInfo)
       InvoiceDocumentInfoOrBuilder {
@@ -6914,7 +6914,7 @@ public final class DocumentInfoProtos {
 
   }
 
-  public interface InvoiceCorrectionDocumentInfoOrBuilder extends
+  @java.lang.Deprecated public interface InvoiceCorrectionDocumentInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InvoiceCorrectionDocumentInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -7057,7 +7057,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.InvoiceCorrectionDocumentInfo}
    */
-  public static final class InvoiceCorrectionDocumentInfo extends
+  @java.lang.Deprecated public static final class InvoiceCorrectionDocumentInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InvoiceCorrectionDocumentInfo)
       InvoiceCorrectionDocumentInfoOrBuilder {
@@ -8751,7 +8751,7 @@ public final class DocumentInfoProtos {
 
   }
 
-  public interface PriceListDocumentInfoOrBuilder extends
+  @java.lang.Deprecated public interface PriceListDocumentInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.PriceListDocumentInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -8790,7 +8790,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.PriceListDocumentInfo}
    */
-  public static final class PriceListDocumentInfo extends
+  @java.lang.Deprecated public static final class PriceListDocumentInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.PriceListDocumentInfo)
       PriceListDocumentInfoOrBuilder {
@@ -9498,7 +9498,7 @@ public final class DocumentInfoProtos {
 
   }
 
-  public interface ContractDocumentInfoOrBuilder extends
+  @java.lang.Deprecated public interface ContractDocumentInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.ContractDocumentInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -9539,7 +9539,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.ContractDocumentInfo}
    */
-  public static final class ContractDocumentInfo extends
+  @java.lang.Deprecated public static final class ContractDocumentInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.ContractDocumentInfo)
       ContractDocumentInfoOrBuilder {
@@ -10217,7 +10217,7 @@ public final class DocumentInfoProtos {
 
   }
 
-  public interface SupplementaryAgreementDocumentInfoOrBuilder extends
+  @java.lang.Deprecated public interface SupplementaryAgreementDocumentInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.SupplementaryAgreementDocumentInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -10288,7 +10288,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.SupplementaryAgreementDocumentInfo}
    */
-  public static final class SupplementaryAgreementDocumentInfo extends
+  @java.lang.Deprecated public static final class SupplementaryAgreementDocumentInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.SupplementaryAgreementDocumentInfo)
       SupplementaryAgreementDocumentInfoOrBuilder {
@@ -11355,7 +11355,7 @@ public final class DocumentInfoProtos {
 
   }
 
-  public interface UniversalTransferDocumentInfoOrBuilder extends
+  @java.lang.Deprecated public interface UniversalTransferDocumentInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -11462,7 +11462,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo}
    */
-  public static final class UniversalTransferDocumentInfo extends
+  @java.lang.Deprecated public static final class UniversalTransferDocumentInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.UniversalTransferDocumentInfo)
       UniversalTransferDocumentInfoOrBuilder {
@@ -12729,7 +12729,7 @@ public final class DocumentInfoProtos {
 
   }
 
-  public interface UniversalCorrectionDocumentInfoOrBuilder extends
+  @java.lang.Deprecated public interface UniversalCorrectionDocumentInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -12900,7 +12900,7 @@ public final class DocumentInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo}
    */
-  public static final class UniversalCorrectionDocumentInfo extends
+  @java.lang.Deprecated public static final class UniversalCorrectionDocumentInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.UniversalCorrectionDocumentInfo)
       UniversalCorrectionDocumentInfoOrBuilder {
@@ -14919,7 +14919,7 @@ public final class DocumentInfoProtos {
       "\n\032Docflow/DocumentInfo.proto\022\030Diadoc.Api" +
       ".Proto.Docflow\032\022DocumentType.proto\032\027Docu" +
       "mentDirection.proto\032-Invoicing/Universal" +
-      "TransferDocumentInfo.proto\"\276\010\n\014DocumentI" +
+      "TransferDocumentInfo.proto\"\302\010\n\014DocumentI" +
       "nfo\022I\n\014DocumentType\030\001 \001(\0162\036.Diadoc.Api.P" +
       "roto.DocumentType:\023UnknownDocumentType\022X" +
       "\n\021DocumentDirection\030\002 \001(\0162#.Diadoc.Api.P" +
@@ -14946,57 +14946,58 @@ public final class DocumentInfoProtos {
       "ocumentInfo\022b\n\037UniversalCorrectionDocume" +
       "ntInfo\030\020 \001(\01329.Diadoc.Api.Proto.Docflow." +
       "UniversalCorrectionDocumentInfo\022\031\n\021Attac" +
-      "hmentVersion\030\021 \001(\t\022\017\n\007Version\030\022 \002(\t\"E\n\025D" +
-      "ocumentDateAndNumber\022\024\n\014DocumentDate\030\001 \001" +
-      "(\t\022\026\n\016DocumentNumber\030\002 \001(\t\"\237\001\n\021BasicDocu" +
-      "mentInfo\022\r\n\005Total\030\001 \001(\t\022\r\n\005NoVat\030\002 \001(\010\022\013" +
-      "\n\003Vat\030\003 \001(\t\022\017\n\007Grounds\030\004 \001(\t\022N\n\025Revision" +
-      "DateAndNumber\030\005 \001(\0132/.Diadoc.Api.Proto.D" +
-      "ocflow.DocumentDateAndNumber\"\236\001\n\023Invoice" +
-      "DocumentInfo\022\r\n\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t" +
-      "\022\024\n\014CurrencyCode\030\003 \001(\005\022U\n\034OriginalInvoic" +
-      "eDateAndNumber\030\004 \001(\0132/.Diadoc.Api.Proto." +
-      "Docflow.DocumentDateAndNumber\"\220\003\n\035Invoic" +
-      "eCorrectionDocumentInfo\022\020\n\010TotalInc\030\001 \001(" +
-      "\t\022\020\n\010TotalDec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006V" +
-      "atDec\030\004 \001(\t\022\024\n\014CurrencyCode\030\005 \001(\005\022U\n\034Ori" +
-      "ginalInvoiceDateAndNumber\030\006 \001(\0132/.Diadoc" +
-      ".Api.Proto.Docflow.DocumentDateAndNumber" +
-      "\022]\n$OriginalInvoiceRevisionDateAndNumber" +
-      "\030\007 \001(\0132/.Diadoc.Api.Proto.Docflow.Docume" +
-      "ntDateAndNumber\022_\n&OriginalInvoiceCorrec" +
-      "tionDateAndNumber\030\010 \001(\0132/.Diadoc.Api.Pro" +
-      "to.Docflow.DocumentDateAndNumber\"\217\001\n\025Pri" +
-      "ceListDocumentInfo\022\036\n\026PriceListEffective" +
-      "Date\030\001 \001(\t\022V\n\035ContractDocumentDateAndNum" +
-      "ber\030\002 \001(\0132/.Diadoc.Api.Proto.Docflow.Doc" +
-      "umentDateAndNumber\"C\n\024ContractDocumentIn" +
-      "fo\022\025\n\rContractPrice\030\001 \001(\t\022\024\n\014ContractTyp" +
-      "e\030\002 \001(\t\"\361\001\n\"SupplementaryAgreementDocume" +
-      "ntInfo\022\024\n\014ContractType\030\001 \001(\t\022V\n\035Contract" +
-      "DocumentDateAndNumber\030\002 \002(\0132/.Diadoc.Api" +
-      ".Proto.Docflow.DocumentDateAndNumber\022N\n\025" +
-      "DocumentDateAndNumber\030\003 \002(\0132/.Diadoc.Api" +
-      ".Proto.Docflow.DocumentDateAndNumber\022\r\n\005" +
-      "Total\030\004 \001(\t\"\366\001\n\035UniversalTransferDocumen" +
-      "tInfo\022\r\n\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014Cur" +
-      "rencyCode\030\003 \001(\005\022\017\n\007Grounds\030\004 \001(\t\022:\n\010Func" +
-      "tion\030\005 \002(\0162(.Diadoc.Api.Proto.Invoicing." +
-      "FunctionType\022V\n\035OriginalDocumentDateAndN" +
-      "umber\030\006 \001(\0132/.Diadoc.Api.Proto.Docflow.D" +
-      "ocumentDateAndNumber\"\342\003\n\037UniversalCorrec" +
-      "tionDocumentInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010To" +
-      "talDec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004" +
-      " \001(\t\022\024\n\014CurrencyCode\030\005 \001(\005\022\017\n\007Grounds\030\006 " +
-      "\001(\t\022:\n\010Function\030\007 \002(\0162(.Diadoc.Api.Proto" +
-      ".Invoicing.FunctionType\022V\n\035OriginalDocum" +
-      "entDateAndNumber\030\010 \001(\0132/.Diadoc.Api.Prot" +
-      "o.Docflow.DocumentDateAndNumber\022^\n%Origi" +
-      "nalDocumentRevisionDateAndNumber\030\t \001(\0132/" +
-      ".Diadoc.Api.Proto.Docflow.DocumentDateAn" +
-      "dNumber\022`\n\'OriginalDocumentCorrectionDat" +
-      "eAndNumber\030\n \001(\0132/.Diadoc.Api.Proto.Docf" +
-      "low.DocumentDateAndNumberB\024B\022DocumentInf" +
+      "hmentVersion\030\021 \001(\t\022\017\n\007Version\030\022 \002(\t:\002\030\001\"" +
+      "I\n\025DocumentDateAndNumber\022\024\n\014DocumentDate" +
+      "\030\001 \001(\t\022\026\n\016DocumentNumber\030\002 \001(\t:\002\030\001\"\243\001\n\021B" +
+      "asicDocumentInfo\022\r\n\005Total\030\001 \001(\t\022\r\n\005NoVat" +
+      "\030\002 \001(\010\022\013\n\003Vat\030\003 \001(\t\022\017\n\007Grounds\030\004 \001(\t\022N\n\025" +
+      "RevisionDateAndNumber\030\005 \001(\0132/.Diadoc.Api" +
+      ".Proto.Docflow.DocumentDateAndNumber:\002\030\001" +
+      "\"\242\001\n\023InvoiceDocumentInfo\022\r\n\005Total\030\001 \001(\t\022" +
+      "\013\n\003Vat\030\002 \001(\t\022\024\n\014CurrencyCode\030\003 \001(\005\022U\n\034Or" +
+      "iginalInvoiceDateAndNumber\030\004 \001(\0132/.Diado" +
+      "c.Api.Proto.Docflow.DocumentDateAndNumbe" +
+      "r:\002\030\001\"\224\003\n\035InvoiceCorrectionDocumentInfo\022" +
+      "\020\n\010TotalInc\030\001 \001(\t\022\020\n\010TotalDec\030\002 \001(\t\022\016\n\006V" +
+      "atInc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(\t\022\024\n\014CurrencyC" +
+      "ode\030\005 \001(\005\022U\n\034OriginalInvoiceDateAndNumbe" +
+      "r\030\006 \001(\0132/.Diadoc.Api.Proto.Docflow.Docum" +
+      "entDateAndNumber\022]\n$OriginalInvoiceRevis" +
+      "ionDateAndNumber\030\007 \001(\0132/.Diadoc.Api.Prot" +
+      "o.Docflow.DocumentDateAndNumber\022_\n&Origi" +
+      "nalInvoiceCorrectionDateAndNumber\030\010 \001(\0132" +
+      "/.Diadoc.Api.Proto.Docflow.DocumentDateA" +
+      "ndNumber:\002\030\001\"\223\001\n\025PriceListDocumentInfo\022\036" +
+      "\n\026PriceListEffectiveDate\030\001 \001(\t\022V\n\035Contra" +
+      "ctDocumentDateAndNumber\030\002 \001(\0132/.Diadoc.A" +
+      "pi.Proto.Docflow.DocumentDateAndNumber:\002" +
+      "\030\001\"G\n\024ContractDocumentInfo\022\025\n\rContractPr" +
+      "ice\030\001 \001(\t\022\024\n\014ContractType\030\002 \001(\t:\002\030\001\"\365\001\n\"" +
+      "SupplementaryAgreementDocumentInfo\022\024\n\014Co" +
+      "ntractType\030\001 \001(\t\022V\n\035ContractDocumentDate" +
+      "AndNumber\030\002 \002(\0132/.Diadoc.Api.Proto.Docfl" +
+      "ow.DocumentDateAndNumber\022N\n\025DocumentDate" +
+      "AndNumber\030\003 \002(\0132/.Diadoc.Api.Proto.Docfl" +
+      "ow.DocumentDateAndNumber\022\r\n\005Total\030\004 \001(\t:" +
+      "\002\030\001\"\372\001\n\035UniversalTransferDocumentInfo\022\r\n" +
+      "\005Total\030\001 \001(\t\022\013\n\003Vat\030\002 \001(\t\022\024\n\014CurrencyCod" +
+      "e\030\003 \001(\005\022\017\n\007Grounds\030\004 \001(\t\022:\n\010Function\030\005 \002" +
+      "(\0162(.Diadoc.Api.Proto.Invoicing.Function" +
+      "Type\022V\n\035OriginalDocumentDateAndNumber\030\006 " +
+      "\001(\0132/.Diadoc.Api.Proto.Docflow.DocumentD" +
+      "ateAndNumber:\002\030\001\"\346\003\n\037UniversalCorrection" +
+      "DocumentInfo\022\020\n\010TotalInc\030\001 \001(\t\022\020\n\010TotalD" +
+      "ec\030\002 \001(\t\022\016\n\006VatInc\030\003 \001(\t\022\016\n\006VatDec\030\004 \001(\t" +
+      "\022\024\n\014CurrencyCode\030\005 \001(\005\022\017\n\007Grounds\030\006 \001(\t\022" +
+      ":\n\010Function\030\007 \002(\0162(.Diadoc.Api.Proto.Inv" +
+      "oicing.FunctionType\022V\n\035OriginalDocumentD" +
+      "ateAndNumber\030\010 \001(\0132/.Diadoc.Api.Proto.Do" +
+      "cflow.DocumentDateAndNumber\022^\n%OriginalD" +
+      "ocumentRevisionDateAndNumber\030\t \001(\0132/.Dia" +
+      "doc.Api.Proto.Docflow.DocumentDateAndNum" +
+      "ber\022`\n\'OriginalDocumentCorrectionDateAnd" +
+      "Number\030\n \001(\0132/.Diadoc.Api.Proto.Docflow." +
+      "DocumentDateAndNumber:\002\030\001B\024B\022DocumentInf" +
       "oProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

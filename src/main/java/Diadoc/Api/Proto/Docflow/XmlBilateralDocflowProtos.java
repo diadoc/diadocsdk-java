@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto.Docflow;
 
-public final class XmlBilateralDocflowProtos {
+@java.lang.Deprecated public final class XmlBilateralDocflowProtos {
   private XmlBilateralDocflowProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,7 +25,7 @@ public final class XmlBilateralDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface XmlBilateralDocflowOrBuilder extends
+  @java.lang.Deprecated public interface XmlBilateralDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.XmlBilateralDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -154,7 +154,7 @@ public final class XmlBilateralDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.XmlBilateralDocflow}
    */
-  public static final class XmlBilateralDocflow extends
+  @java.lang.Deprecated public static final class XmlBilateralDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.XmlBilateralDocflow)
       XmlBilateralDocflowOrBuilder {
@@ -1728,7 +1728,7 @@ public final class XmlBilateralDocflowProtos {
 
   }
 
-  public interface BuyerTitleDocflowOrBuilder extends
+  @java.lang.Deprecated public interface BuyerTitleDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.BuyerTitleDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -1791,7 +1791,7 @@ public final class XmlBilateralDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.BuyerTitleDocflow}
    */
-  public static final class BuyerTitleDocflow extends
+  @java.lang.Deprecated public static final class BuyerTitleDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.BuyerTitleDocflow)
       BuyerTitleDocflowOrBuilder {
@@ -2854,7 +2854,7 @@ public final class XmlBilateralDocflowProtos {
       "doc.Api.Proto.Docflow\032\017Timestamp.proto\032\030" +
       "Docflow/Attachment.proto\032\034Docflow/Receip" +
       "tDocflow.proto\0320Docflow/RecipientSignatu" +
-      "reRejectionDocflow.proto\"\374\003\n\023XmlBilatera" +
+      "reRejectionDocflow.proto\"\200\004\n\023XmlBilatera" +
       "lDocflow\022\022\n\nIsFinished\030\001 \001(\010\022@\n\016ReceiptD" +
       "ocflow\030\002 \001(\0132(.Diadoc.Api.Proto.Docflow." +
       "ReceiptDocflow\022F\n\021BuyerTitleDocflow\030\003 \001(" +
@@ -2867,13 +2867,13 @@ public final class XmlBilateralDocflowProtos {
       "yRecipient\030\007 \001(\010\022\036\n\026CanDocumentBeReceipt" +
       "ed\030\010 \001(\010\022#\n\033CanDocumentBeSignedBySender\030" +
       "\t \001(\010\0220\n(CanDocumentBeSignedOrRejectedBy" +
-      "Recipient\030\n \001(\010\"\335\001\n\021BuyerTitleDocflow\022\022\n" +
-      "\nIsFinished\030\001 \001(\010\022H\n\024BuyerTitleAttachmen" +
-      "t\030\002 \001(\0132*.Diadoc.Api.Proto.Docflow.Signe" +
-      "dAttachment\0222\n\rSendTimestamp\030\003 \001(\0132\033.Dia" +
-      "doc.Api.Proto.Timestamp\0226\n\021DeliveryTimes" +
-      "tamp\030\004 \001(\0132\033.Diadoc.Api.Proto.TimestampB" +
-      "\033B\031XmlBilateralDocflowProtos"
+      "Recipient\030\n \001(\010:\002\030\001\"\341\001\n\021BuyerTitleDocflo" +
+      "w\022\022\n\nIsFinished\030\001 \001(\010\022H\n\024BuyerTitleAttac" +
+      "hment\030\002 \001(\0132*.Diadoc.Api.Proto.Docflow.S" +
+      "ignedAttachment\0222\n\rSendTimestamp\030\003 \001(\0132\033" +
+      ".Diadoc.Api.Proto.Timestamp\0226\n\021DeliveryT" +
+      "imestamp\030\004 \001(\0132\033.Diadoc.Api.Proto.Timest" +
+      "amp:\002\030\001B\036B\031XmlBilateralDocflowProtos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -25,7 +25,7 @@ public final class InvoiceDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface InboundInvoiceDocflowOrBuilder extends
+  @java.lang.Deprecated public interface InboundInvoiceDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -136,7 +136,7 @@ public final class InvoiceDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow}
    */
-  public static final class InboundInvoiceDocflow extends
+  @java.lang.Deprecated public static final class InboundInvoiceDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InboundInvoiceDocflow)
       InboundInvoiceDocflowOrBuilder {
@@ -1639,7 +1639,7 @@ public final class InvoiceDocflowProtos {
 
   }
 
-  public interface OutboundInvoiceDocflowOrBuilder extends
+  @java.lang.Deprecated public interface OutboundInvoiceDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -1761,7 +1761,7 @@ public final class InvoiceDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow}
    */
-  public static final class OutboundInvoiceDocflow extends
+  @java.lang.Deprecated public static final class OutboundInvoiceDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.OutboundInvoiceDocflow)
       OutboundInvoiceDocflowOrBuilder {
@@ -3353,7 +3353,7 @@ public final class InvoiceDocflowProtos {
 
   }
 
-  public interface InvoiceConfirmationDocflowOrBuilder extends
+  @java.lang.Deprecated public interface InvoiceConfirmationDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -3401,7 +3401,7 @@ public final class InvoiceDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow}
    */
-  public static final class InvoiceConfirmationDocflow extends
+  @java.lang.Deprecated public static final class InvoiceConfirmationDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InvoiceConfirmationDocflow)
       InvoiceConfirmationDocflowOrBuilder {
@@ -4245,7 +4245,7 @@ public final class InvoiceDocflowProtos {
 
   }
 
-  public interface InboundInvoiceReceiptDocflowOrBuilder extends
+  @java.lang.Deprecated public interface InboundInvoiceReceiptDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -4293,7 +4293,7 @@ public final class InvoiceDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow}
    */
-  public static final class InboundInvoiceReceiptDocflow extends
+  @java.lang.Deprecated public static final class InboundInvoiceReceiptDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InboundInvoiceReceiptDocflow)
       InboundInvoiceReceiptDocflowOrBuilder {
@@ -5137,7 +5137,7 @@ public final class InvoiceDocflowProtos {
 
   }
 
-  public interface InvoiceCorrectionRequestDocflowOrBuilder extends
+  @java.lang.Deprecated public interface InvoiceCorrectionRequestDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -5185,7 +5185,7 @@ public final class InvoiceDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow}
    */
-  public static final class InvoiceCorrectionRequestDocflow extends
+  @java.lang.Deprecated public static final class InvoiceCorrectionRequestDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.InvoiceCorrectionRequestDocflow)
       InvoiceCorrectionRequestDocflowOrBuilder {
@@ -6066,7 +6066,7 @@ public final class InvoiceDocflowProtos {
       "\n\034Docflow/InvoiceDocflow.proto\022\030Diadoc.A" +
       "pi.Proto.Docflow\032\017Timestamp.proto\032\030Docfl" +
       "ow/Attachment.proto\032\034Docflow/ReceiptDocf" +
-      "low.proto\"\255\003\n\025InboundInvoiceDocflow\022\022\n\nI" +
+      "low.proto\"\261\003\n\025InboundInvoiceDocflow\022\022\n\nI" +
       "sFinished\030\001 \001(\010\022N\n\016ReceiptDocflow\030\002 \001(\0132" +
       "6.Diadoc.Api.Proto.Docflow.InboundInvoic" +
       "eReceiptDocflow\022Q\n\023ConfirmationDocflow\030\003" +
@@ -6077,34 +6077,34 @@ public final class InvoiceDocflowProtos {
       "rmationTimestamp\030\005 \001(\0132\033.Diadoc.Api.Prot" +
       "o.Timestamp\022\034\n\024IsAmendmentRequested\030\006 \001(" +
       "\010\022\021\n\tIsRevised\030\007 \001(\010\022\023\n\013IsCorrected\030\010 \001(" +
-      "\010\"\305\003\n\026OutboundInvoiceDocflow\022\022\n\nIsFinish" +
-      "ed\030\001 \001(\010\022@\n\016ReceiptDocflow\030\002 \001(\0132(.Diado" +
-      "c.Api.Proto.Docflow.ReceiptDocflow\022Q\n\023Co" +
-      "nfirmationDocflow\030\003 \001(\01324.Diadoc.Api.Pro" +
-      "to.Docflow.InvoiceConfirmationDocflow\022[\n" +
-      "\030CorrectionRequestDocflow\030\004 \001(\01329.Diadoc" +
-      ".Api.Proto.Docflow.InvoiceCorrectionRequ" +
-      "estDocflow\022:\n\025ConfirmationTimestamp\030\005 \001(" +
-      "\0132\033.Diadoc.Api.Proto.Timestamp\022\034\n\024IsAmen" +
-      "dmentRequested\030\006 \001(\010\022\021\n\tIsRevised\030\007 \001(\010\022" +
-      "\023\n\013IsCorrected\030\010 \001(\010\022#\n\033CanDocumentBeSig" +
-      "nedBySender\030\t \001(\010\"\276\001\n\032InvoiceConfirmatio" +
-      "nDocflow\022\022\n\nIsFinished\030\001 \001(\010\022J\n\026Confirma" +
-      "tionAttachment\030\002 \001(\0132*.Diadoc.Api.Proto." +
-      "Docflow.SignedAttachment\022@\n\016ReceiptDocfl" +
-      "ow\030\003 \001(\0132(.Diadoc.Api.Proto.Docflow.Rece" +
-      "iptDocflow\"\314\001\n\034InboundInvoiceReceiptDocf" +
-      "low\022\022\n\nIsFinished\030\001 \001(\010\022E\n\021ReceiptAttach" +
-      "ment\030\002 \001(\0132*.Diadoc.Api.Proto.Docflow.Si" +
-      "gnedAttachment\022Q\n\023ConfirmationDocflow\030\003 " +
-      "\001(\01324.Diadoc.Api.Proto.Docflow.InvoiceCo" +
-      "nfirmationDocflow\"\310\001\n\037InvoiceCorrectionR" +
-      "equestDocflow\022\022\n\nIsFinished\030\001 \001(\010\022O\n\033Cor" +
-      "rectionRequestAttachment\030\002 \001(\0132*.Diadoc." +
-      "Api.Proto.Docflow.SignedAttachment\022@\n\016Re" +
-      "ceiptDocflow\030\003 \001(\0132(.Diadoc.Api.Proto.Do" +
-      "cflow.ReceiptDocflowB\026B\024InvoiceDocflowPr" +
-      "otos"
+      "\010:\002\030\001\"\311\003\n\026OutboundInvoiceDocflow\022\022\n\nIsFi" +
+      "nished\030\001 \001(\010\022@\n\016ReceiptDocflow\030\002 \001(\0132(.D" +
+      "iadoc.Api.Proto.Docflow.ReceiptDocflow\022Q" +
+      "\n\023ConfirmationDocflow\030\003 \001(\01324.Diadoc.Api" +
+      ".Proto.Docflow.InvoiceConfirmationDocflo" +
+      "w\022[\n\030CorrectionRequestDocflow\030\004 \001(\01329.Di" +
+      "adoc.Api.Proto.Docflow.InvoiceCorrection" +
+      "RequestDocflow\022:\n\025ConfirmationTimestamp\030" +
+      "\005 \001(\0132\033.Diadoc.Api.Proto.Timestamp\022\034\n\024Is" +
+      "AmendmentRequested\030\006 \001(\010\022\021\n\tIsRevised\030\007 " +
+      "\001(\010\022\023\n\013IsCorrected\030\010 \001(\010\022#\n\033CanDocumentB" +
+      "eSignedBySender\030\t \001(\010:\002\030\001\"\302\001\n\032InvoiceCon" +
+      "firmationDocflow\022\022\n\nIsFinished\030\001 \001(\010\022J\n\026" +
+      "ConfirmationAttachment\030\002 \001(\0132*.Diadoc.Ap" +
+      "i.Proto.Docflow.SignedAttachment\022@\n\016Rece" +
+      "iptDocflow\030\003 \001(\0132(.Diadoc.Api.Proto.Docf" +
+      "low.ReceiptDocflow:\002\030\001\"\320\001\n\034InboundInvoic" +
+      "eReceiptDocflow\022\022\n\nIsFinished\030\001 \001(\010\022E\n\021R" +
+      "eceiptAttachment\030\002 \001(\0132*.Diadoc.Api.Prot" +
+      "o.Docflow.SignedAttachment\022Q\n\023Confirmati" +
+      "onDocflow\030\003 \001(\01324.Diadoc.Api.Proto.Docfl" +
+      "ow.InvoiceConfirmationDocflow:\002\030\001\"\314\001\n\037In" +
+      "voiceCorrectionRequestDocflow\022\022\n\nIsFinis" +
+      "hed\030\001 \001(\010\022O\n\033CorrectionRequestAttachment" +
+      "\030\002 \001(\0132*.Diadoc.Api.Proto.Docflow.Signed" +
+      "Attachment\022@\n\016ReceiptDocflow\030\003 \001(\0132(.Dia" +
+      "doc.Api.Proto.Docflow.ReceiptDocflow:\002\030\001" +
+      "B\026B\024InvoiceDocflowProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

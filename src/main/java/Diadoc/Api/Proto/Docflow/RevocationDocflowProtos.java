@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto.Docflow;
 
-public final class RevocationDocflowProtos {
+@java.lang.Deprecated public final class RevocationDocflowProtos {
   private RevocationDocflowProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,7 +25,7 @@ public final class RevocationDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface RevocationDocflowOrBuilder extends
+  @java.lang.Deprecated public interface RevocationDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.RevocationDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -127,7 +127,7 @@ public final class RevocationDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.RevocationDocflow}
    */
-  public static final class RevocationDocflow extends
+  @java.lang.Deprecated public static final class RevocationDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.RevocationDocflow)
       RevocationDocflowOrBuilder {
@@ -1523,7 +1523,7 @@ public final class RevocationDocflowProtos {
       "c.Api.Proto.Docflow\032\030Docflow/Attachment." +
       "proto\032\'Docflow/RecipientSignatureDocflow" +
       ".proto\0320Docflow/RecipientSignatureReject" +
-      "ionDocflow.proto\"\216\003\n\021RevocationDocflow\022\022" +
+      "ionDocflow.proto\"\222\003\n\021RevocationDocflow\022\022" +
       "\n\nIsFinished\030\001 \001(\010\022O\n\033RevocationRequestA" +
       "ttachment\030\002 \001(\0132*.Diadoc.Api.Proto.Docfl" +
       "ow.SignedAttachment\022V\n\031RecipientSignatur" +
@@ -1533,8 +1533,8 @@ public final class RevocationDocflowProtos {
       ".Api.Proto.Docflow.RecipientSignatureRej" +
       "ectionDocflow\022\026\n\016InitiatorBoxId\030\005 \001(\t\022\034\n" +
       "\024IsRevocationAccepted\030\006 \001(\010\022\034\n\024IsRevocat" +
-      "ionRejected\030\007 \001(\010B\031B\027RevocationDocflowPr" +
-      "otos"
+      "ionRejected\030\007 \001(\010:\002\030\001B\034B\027RevocationDocfl" +
+      "owProtos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -43,6 +43,7 @@ message SupplementaryAgreementMetadata {
 }
 
 message BilateralDocumentMetadata {
+	option deprecated = true;
 	optional BilateralDocumentStatus DocumentStatus = 1 [default = UnknownBilateralDocumentStatus];
 	optional ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
 }

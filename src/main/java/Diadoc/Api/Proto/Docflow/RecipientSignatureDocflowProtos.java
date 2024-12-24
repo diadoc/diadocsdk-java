@@ -25,7 +25,7 @@ public final class RecipientSignatureDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface RecipientSignatureDocflowOrBuilder extends
+  @java.lang.Deprecated public interface RecipientSignatureDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -73,7 +73,7 @@ public final class RecipientSignatureDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow}
    */
-  public static final class RecipientSignatureDocflow extends
+  @java.lang.Deprecated public static final class RecipientSignatureDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.RecipientSignatureDocflow)
       RecipientSignatureDocflowOrBuilder {
@@ -933,12 +933,12 @@ public final class RecipientSignatureDocflowProtos {
     java.lang.String[] descriptorData = {
       "\n\'Docflow/RecipientSignatureDocflow.prot" +
       "o\022\030Diadoc.Api.Proto.Docflow\032\017Timestamp.p" +
-      "roto\032\030Docflow/Attachment.proto\"\250\001\n\031Recip" +
+      "roto\032\030Docflow/Attachment.proto\"\254\001\n\031Recip" +
       "ientSignatureDocflow\022\022\n\nIsFinished\030\001 \001(\010" +
       "\022?\n\022RecipientSignature\030\002 \001(\0132#.Diadoc.Ap" +
       "i.Proto.Docflow.Signature\0226\n\021DeliveryTim" +
       "estamp\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestam" +
-      "pB!B\037RecipientSignatureDocflowProtos"
+      "p:\002\030\001B!B\037RecipientSignatureDocflowProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

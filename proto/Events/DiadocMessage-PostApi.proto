@@ -58,6 +58,7 @@ message MessageToPost {
 }
 
 message EncryptedXmlDocumentAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	optional string Comment = 3;
 	repeated DocumentId InitialDocumentIds = 4;
@@ -69,6 +70,7 @@ message EncryptedXmlDocumentAttachment {
 }
 
 message EncryptedInvoiceAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	optional string Comment = 3;
 	repeated DocumentId InitialDocumentIds = 4;
@@ -81,6 +83,7 @@ message EncryptedInvoiceAttachment {
 }
 
 message EncryptedDocumentMetadata {
+	option deprecated = true;
 	required string FileId = 1;
 	required string BuyerFnsParticipantId = 2;
 	required string SenderFnsParticipantId = 3;
@@ -104,6 +107,7 @@ message EncryptedInvoiceCorrectionMetadata {
 }
 
 message XmlDocumentAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	optional string Comment = 3;
 	repeated DocumentId InitialDocumentIds = 4;
@@ -114,6 +118,7 @@ message XmlDocumentAttachment {
 }
 
 message NonformalizedAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;
@@ -128,6 +133,7 @@ message NonformalizedAttachment {
 }
 
 message BasicDocumentAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;
@@ -144,6 +150,7 @@ message BasicDocumentAttachment {
 }
 
 message Torg13Attachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;
@@ -160,6 +167,7 @@ message Torg13Attachment {
 }
 
 message AcceptanceCertificateAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;
@@ -177,6 +185,7 @@ message AcceptanceCertificateAttachment {
 }
 
 message TrustConnectionRequestAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;
@@ -191,6 +200,7 @@ message StructuredDataAttachment {
 }
 
 message PriceListAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;
@@ -207,6 +217,7 @@ message PriceListAttachment {
 }
 
 message ReconciliationActAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;
@@ -221,6 +232,7 @@ message ReconciliationActAttachment {
 }
 
 message ContractAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;
@@ -236,6 +248,7 @@ message ContractAttachment {
 }
 
 message SupplementaryAgreementAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;
@@ -253,6 +266,7 @@ message SupplementaryAgreementAttachment {
 }
 
 message ServiceDetailsAttachment {
+	option deprecated = true;
 	required SignedContent SignedContent = 1;
 	required string FileName = 2;
 	optional string Comment = 3;

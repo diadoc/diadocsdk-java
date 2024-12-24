@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto.Docflow;
 
-public final class RecipientSignatureRejectionDocflowProtos {
+@java.lang.Deprecated public final class RecipientSignatureRejectionDocflowProtos {
   private RecipientSignatureRejectionDocflowProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,7 +25,7 @@ public final class RecipientSignatureRejectionDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface RecipientSignatureRejectionDocflowOrBuilder extends
+  @java.lang.Deprecated public interface RecipientSignatureRejectionDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -73,7 +73,7 @@ public final class RecipientSignatureRejectionDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow}
    */
-  public static final class RecipientSignatureRejectionDocflow extends
+  @java.lang.Deprecated public static final class RecipientSignatureRejectionDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.RecipientSignatureRejectionDocflow)
       RecipientSignatureRejectionDocflowOrBuilder {
@@ -934,13 +934,13 @@ public final class RecipientSignatureRejectionDocflowProtos {
       "\n0Docflow/RecipientSignatureRejectionDoc" +
       "flow.proto\022\030Diadoc.Api.Proto.Docflow\032\017Ti" +
       "mestamp.proto\032\030Docflow/Attachment.proto\"" +
-      "\313\001\n\"RecipientSignatureRejectionDocflow\022\022" +
+      "\317\001\n\"RecipientSignatureRejectionDocflow\022\022" +
       "\n\nIsFinished\030\001 \001(\010\022Y\n%RecipientSignature" +
       "RejectionAttachment\030\002 \001(\0132*.Diadoc.Api.P" +
       "roto.Docflow.SignedAttachment\0226\n\021Deliver" +
       "yTimestamp\030\003 \001(\0132\033.Diadoc.Api.Proto.Time" +
-      "stampB*B(RecipientSignatureRejectionDocf" +
-      "lowProtos"
+      "stamp:\002\030\001B-B(RecipientSignatureRejection" +
+      "DocflowProtos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

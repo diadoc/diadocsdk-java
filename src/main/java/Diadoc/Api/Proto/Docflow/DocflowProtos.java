@@ -165,7 +165,7 @@ public final class DocflowProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Docflow.DocflowStatusSeverity)
   }
 
-  public interface DocflowOrBuilder extends
+  @java.lang.Deprecated public interface DocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.Docflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -557,7 +557,7 @@ public final class DocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.Docflow}
    */
-  public static final class Docflow extends
+  @java.lang.Deprecated public static final class Docflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.Docflow)
       DocflowOrBuilder {
@@ -4931,7 +4931,7 @@ public final class DocflowProtos {
 
   }
 
-  public interface DocflowStatusOrBuilder extends
+  @java.lang.Deprecated public interface DocflowStatusOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.DocflowStatus)
       com.google.protobuf.MessageOrBuilder {
 
@@ -4968,7 +4968,7 @@ public final class DocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocflowStatus}
    */
-  public static final class DocflowStatus extends
+  @java.lang.Deprecated public static final class DocflowStatus extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.DocflowStatus)
       DocflowStatusOrBuilder {
@@ -5701,7 +5701,7 @@ public final class DocflowProtos {
 
   }
 
-  public interface DocflowStatusModelOrBuilder extends
+  @java.lang.Deprecated public interface DocflowStatusModelOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.DocflowStatusModel)
       com.google.protobuf.MessageOrBuilder {
 
@@ -5753,7 +5753,7 @@ public final class DocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocflowStatusModel}
    */
-  public static final class DocflowStatusModel extends
+  @java.lang.Deprecated public static final class DocflowStatusModel extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.DocflowStatusModel)
       DocflowStatusModelOrBuilder {
@@ -6560,7 +6560,7 @@ public final class DocflowProtos {
       "roto\032\037Docflow/RevocationDocflow.proto\032\037D" +
       "ocflow/ResolutionDocflow.proto\032.Docflow/" +
       "UniversalTransferDocumentDocflow.proto\032!" +
-      "Docflow/RoamingNotification.proto\"\376\t\n\007Do" +
+      "Docflow/RoamingNotification.proto\"\202\n\n\007Do" +
       "cflow\022\022\n\nIsFinished\030\001 \001(\010\022F\n\022DocumentAtt" +
       "achment\030\002 \001(\0132*.Diadoc.Api.Proto.Docflow" +
       ".SignedAttachment\022\024\n\014DepartmentId\030\003 \001(\t\022" +
@@ -6592,18 +6592,19 @@ public final class DocflowProtos {
       "flow\030\023 \001(\0132B.Diadoc.Api.Proto.Docflow.Ou" +
       "tboundUniversalTransferDocumentDocflow\022J" +
       "\n\023RoamingNotification\030\024 \001(\0132-.Diadoc.Api" +
-      ".Proto.Docflow.RoamingNotification\"\233\001\n\rD" +
-      "ocflowStatus\022C\n\rPrimaryStatus\030\001 \001(\0132,.Di" +
-      "adoc.Api.Proto.Docflow.DocflowStatusMode" +
-      "l\022E\n\017SecondaryStatus\030\002 \001(\0132,.Diadoc.Api." +
-      "Proto.Docflow.DocflowStatusModel\"\235\001\n\022Doc" +
-      "flowStatusModel\022_\n\010Severity\030\001 \001(\0162/.Diad" +
-      "oc.Api.Proto.Docflow.DocflowStatusSeveri" +
-      "ty:\034UnknownDocflowStatusSeverity\022\022\n\nStat" +
-      "usText\030\002 \001(\t\022\022\n\nStatusHint\030\003 \001(\t*h\n\025Docf" +
-      "lowStatusSeverity\022 \n\034UnknownDocflowStatu" +
-      "sSeverity\020\000\022\010\n\004Info\020\001\022\013\n\007Success\020\002\022\013\n\007Wa" +
-      "rning\020\003\022\t\n\005Error\020\004B\017B\rDocflowProtos"
+      ".Proto.Docflow.RoamingNotification:\002\030\001\"\237" +
+      "\001\n\rDocflowStatus\022C\n\rPrimaryStatus\030\001 \001(\0132" +
+      ",.Diadoc.Api.Proto.Docflow.DocflowStatus" +
+      "Model\022E\n\017SecondaryStatus\030\002 \001(\0132,.Diadoc." +
+      "Api.Proto.Docflow.DocflowStatusModel:\002\030\001" +
+      "\"\241\001\n\022DocflowStatusModel\022_\n\010Severity\030\001 \001(" +
+      "\0162/.Diadoc.Api.Proto.Docflow.DocflowStat" +
+      "usSeverity:\034UnknownDocflowStatusSeverity" +
+      "\022\022\n\nStatusText\030\002 \001(\t\022\022\n\nStatusHint\030\003 \001(\t" +
+      ":\002\030\001*h\n\025DocflowStatusSeverity\022 \n\034Unknown" +
+      "DocflowStatusSeverity\020\000\022\010\n\004Info\020\001\022\013\n\007Suc" +
+      "cess\020\002\022\013\n\007Warning\020\003\022\t\n\005Error\020\004B\017B\rDocflo" +
+      "wProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

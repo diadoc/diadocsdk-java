@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto.Docflow;
 
-public final class UnilateralDocflowProtos {
+@java.lang.Deprecated public final class UnilateralDocflowProtos {
   private UnilateralDocflowProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,7 +25,7 @@ public final class UnilateralDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface UnilateralDocflowOrBuilder extends
+  @java.lang.Deprecated public interface UnilateralDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.UnilateralDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -91,7 +91,7 @@ public final class UnilateralDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.UnilateralDocflow}
    */
-  public static final class UnilateralDocflow extends
+  @java.lang.Deprecated public static final class UnilateralDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.UnilateralDocflow)
       UnilateralDocflowOrBuilder {
@@ -1022,13 +1022,13 @@ public final class UnilateralDocflowProtos {
     java.lang.String[] descriptorData = {
       "\n\037Docflow/UnilateralDocflow.proto\022\030Diado" +
       "c.Api.Proto.Docflow\032\034Docflow/ReceiptDocf" +
-      "low.proto\"\312\001\n\021UnilateralDocflow\022\022\n\nIsFin" +
+      "low.proto\"\316\001\n\021UnilateralDocflow\022\022\n\nIsFin" +
       "ished\030\001 \001(\010\022@\n\016ReceiptDocflow\030\002 \001(\0132(.Di" +
       "adoc.Api.Proto.Docflow.ReceiptDocflow\022\032\n" +
       "\022IsReceiptRequested\030\003 \001(\010\022\036\n\026CanDocument" +
       "BeReceipted\030\004 \001(\010\022#\n\033CanDocumentBeSigned" +
-      "BySender\030\005 \001(\010B\031B\027UnilateralDocflowProto" +
-      "s"
+      "BySender\030\005 \001(\010:\002\030\001B\034B\027UnilateralDocflowP" +
+      "rotos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

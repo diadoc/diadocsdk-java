@@ -25,7 +25,7 @@ public final class ReceiptDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface ReceiptDocflowOrBuilder extends
+  @java.lang.Deprecated public interface ReceiptDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.ReceiptDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -58,7 +58,7 @@ public final class ReceiptDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.ReceiptDocflow}
    */
-  public static final class ReceiptDocflow extends
+  @java.lang.Deprecated public static final class ReceiptDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.ReceiptDocflow)
       ReceiptDocflowOrBuilder {
@@ -722,10 +722,10 @@ public final class ReceiptDocflowProtos {
     java.lang.String[] descriptorData = {
       "\n\034Docflow/ReceiptDocflow.proto\022\030Diadoc.A" +
       "pi.Proto.Docflow\032\030Docflow/Attachment.pro" +
-      "to\"k\n\016ReceiptDocflow\022\022\n\nIsFinished\030\001 \001(\010" +
+      "to\"o\n\016ReceiptDocflow\022\022\n\nIsFinished\030\001 \001(\010" +
       "\022E\n\021ReceiptAttachment\030\002 \001(\0132*.Diadoc.Api" +
-      ".Proto.Docflow.SignedAttachmentB\026B\024Recei" +
-      "ptDocflowProtos"
+      ".Proto.Docflow.SignedAttachment:\002\030\001B\026B\024R" +
+      "eceiptDocflowProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

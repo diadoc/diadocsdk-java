@@ -7,6 +7,8 @@ option java_outer_classname = "RecipientSignatureDocflowProtos";
 
 message RecipientSignatureDocflow
 {
+	option deprecated = true;
+
 	optional bool IsFinished = 1;
 
 	optional Signature RecipientSignature = 2;
