@@ -86,6 +86,7 @@
             <groupId>ru.cryptopro</groupId>
             <artifactId>jcp</artifactId>
             <version>${jcp.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- local -->
@@ -93,6 +94,7 @@
             <groupId>com.objsys.asn1j</groupId>
             <artifactId>asn1rt</artifactId>
             <version>${asn1rt.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- local -->
@@ -100,6 +102,7 @@
             <groupId>ru.cryptopro</groupId>
             <artifactId>asn1p</artifactId>
             <version>${asn1rt.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- local -->
@@ -107,6 +110,7 @@
             <groupId>ru.cryptopro</groupId>
             <artifactId>jcryptop</artifactId>
             <version>${jcryptop.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
