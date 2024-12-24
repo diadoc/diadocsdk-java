@@ -30,6 +30,7 @@ import javax.mail.internet.ContentDisposition;
 import javax.mail.internet.ParseException;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -117,7 +118,7 @@ public class DiadocHttpClient {
         if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
             throw new HttpResponseException(
                     response.getStatusLine().getStatusCode(),
-                    new String(IOUtils.toByteArray(response.getEntity().getContent())));
+                    new String(IOUtils.toByteArray(response.getEntity().getContent()), StandardCharsets.UTF_8));
         }
         return IOUtils.toByteArray(response.getEntity().getContent());
     }
@@ -126,7 +127,7 @@ public class DiadocHttpClient {
         if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
             return DiadocResponseInfo.fail(
                     response.getStatusLine().getStatusCode(),
-                    new String(IOUtils.toByteArray(response.getEntity().getContent())),
+                    new String(IOUtils.toByteArray(response.getEntity().getContent()), StandardCharsets.UTF_8),
                     tryGetRetryAfter(response));
         }
         return DiadocResponseInfo.success(IOUtils.toByteArray(response.getEntity().getContent()), response.getStatusLine().getStatusCode());
