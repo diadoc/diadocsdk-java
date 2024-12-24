@@ -1769,7 +1769,7 @@ public final class DocflowApiProtos {
 
   }
 
-  public interface GetDocflowBatchResponseOrBuilder extends
+  @java.lang.Deprecated public interface GetDocflowBatchResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.GetDocflowBatchResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -1800,7 +1800,7 @@ public final class DocflowApiProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.GetDocflowBatchResponse}
    */
-  public static final class GetDocflowBatchResponse extends
+  @java.lang.Deprecated public static final class GetDocflowBatchResponse extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.GetDocflowBatchResponse)
       GetDocflowBatchResponseOrBuilder {
@@ -3475,7 +3475,7 @@ public final class DocflowApiProtos {
 
   }
 
-  public interface SearchDocflowsResponseOrBuilder extends
+  @java.lang.Deprecated public interface SearchDocflowsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.SearchDocflowsResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -3517,7 +3517,7 @@ public final class DocflowApiProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.SearchDocflowsResponse}
    */
-  public static final class SearchDocflowsResponse extends
+  @java.lang.Deprecated public static final class SearchDocflowsResponse extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.SearchDocflowsResponse)
       SearchDocflowsResponseOrBuilder {
@@ -5178,7 +5178,7 @@ public final class DocflowApiProtos {
 
   }
 
-  public interface FetchedDocumentOrBuilder extends
+  @java.lang.Deprecated public interface FetchedDocumentOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.FetchedDocument)
       com.google.protobuf.MessageOrBuilder {
 
@@ -5211,7 +5211,7 @@ public final class DocflowApiProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.FetchedDocument}
    */
-  public static final class FetchedDocument extends
+  @java.lang.Deprecated public static final class FetchedDocument extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.FetchedDocument)
       FetchedDocumentOrBuilder {
@@ -5869,7 +5869,7 @@ public final class DocflowApiProtos {
 
   }
 
-  public interface GetDocflowsByPacketIdResponseOrBuilder extends
+  @java.lang.Deprecated public interface GetDocflowsByPacketIdResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.GetDocflowsByPacketIdResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -5911,7 +5911,7 @@ public final class DocflowApiProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.GetDocflowsByPacketIdResponse}
    */
-  public static final class GetDocflowsByPacketIdResponse extends
+  @java.lang.Deprecated public static final class GetDocflowsByPacketIdResponse extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.GetDocflowsByPacketIdResponse)
       GetDocflowsByPacketIdResponseOrBuilder {
@@ -8800,7 +8800,7 @@ public final class DocflowApiProtos {
 
   }
 
-  public interface GetDocflowEventsResponseOrBuilder extends
+  @java.lang.Deprecated public interface GetDocflowEventsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.GetDocflowEventsResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -8853,7 +8853,7 @@ public final class DocflowApiProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.GetDocflowEventsResponse}
    */
-  public static final class GetDocflowEventsResponse extends
+  @java.lang.Deprecated public static final class GetDocflowEventsResponse extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.GetDocflowEventsResponse)
       GetDocflowEventsResponseOrBuilder {
@@ -9767,7 +9767,7 @@ public final class DocflowApiProtos {
 
   }
 
-  public interface DocflowEventOrBuilder extends
+  @java.lang.Deprecated public interface DocflowEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.DocflowEvent)
       com.google.protobuf.MessageOrBuilder {
 
@@ -9879,7 +9879,7 @@ public final class DocflowApiProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocflowEvent}
    */
-  public static final class DocflowEvent extends
+  @java.lang.Deprecated public static final class DocflowEvent extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.DocflowEvent)
       DocflowEventOrBuilder {
@@ -11508,51 +11508,52 @@ public final class DocflowApiProtos {
       "etDocflowRequest\"~\n\021GetDocflowRequest\0220\n" +
       "\nDocumentId\030\001 \002(\0132\034.Diadoc.Api.Proto.Doc" +
       "umentId\022\023\n\013LastEventId\030\002 \001(\t\022\"\n\023InjectEn" +
-      "tityContent\030\003 \001(\010:\005false\"[\n\027GetDocflowBa" +
+      "tityContent\030\003 \001(\010:\005false\"_\n\027GetDocflowBa" +
       "tchResponse\022@\n\tDocuments\030\001 \003(\0132-.Diadoc." +
-      "Api.Proto.Docflow.DocumentWithDocflow\"\276\001" +
-      "\n\025SearchDocflowsRequest\022\023\n\013QueryString\030\001" +
-      " \002(\t\022\022\n\005Count\030\002 \001(\005:\003100\022\022\n\nFirstIndex\030\003" +
-      " \001(\005\022D\n\005Scope\030\004 \001(\0162%.Diadoc.Api.Proto.D" +
-      "ocflow.SearchScope:\016SearchScopeAny\022\"\n\023In" +
-      "jectEntityContent\030\005 \001(\010:\005false\"u\n\026Search" +
-      "DocflowsResponse\022@\n\tDocuments\030\001 \003(\0132-.Di" +
+      "Api.Proto.Docflow.DocumentWithDocflow:\002\030" +
+      "\001\"\276\001\n\025SearchDocflowsRequest\022\023\n\013QueryStri" +
+      "ng\030\001 \002(\t\022\022\n\005Count\030\002 \001(\005:\003100\022\022\n\nFirstInd" +
+      "ex\030\003 \001(\005\022D\n\005Scope\030\004 \001(\0162%.Diadoc.Api.Pro" +
+      "to.Docflow.SearchScope:\016SearchScopeAny\022\"" +
+      "\n\023InjectEntityContent\030\005 \001(\010:\005false\"y\n\026Se" +
+      "archDocflowsResponse\022@\n\tDocuments\030\001 \003(\0132" +
+      "-.Diadoc.Api.Proto.Docflow.DocumentWithD" +
+      "ocflow\022\031\n\021HaveMoreDocuments\030\002 \001(\010:\002\030\001\"\177\n" +
+      "\034GetDocflowsByPacketIdRequest\022\020\n\010PacketI" +
+      "d\030\001 \002(\t\022\022\n\005Count\030\002 \001(\005:\003100\022\"\n\023InjectEnt" +
+      "ityContent\030\003 \001(\010:\005false\022\025\n\rAfterIndexKey" +
+      "\030\004 \001(\014\"h\n\017FetchedDocument\022?\n\010Document\030\001 " +
+      "\002(\0132-.Diadoc.Api.Proto.Docflow.DocumentW" +
+      "ithDocflow\022\020\n\010IndexKey\030\002 \002(\014:\002\030\001\"{\n\035GetD" +
+      "ocflowsByPacketIdResponse\022<\n\tDocuments\030\001" +
+      " \003(\0132).Diadoc.Api.Proto.Docflow.FetchedD" +
+      "ocument\022\030\n\020NextPageIndexKey\030\002 \001(\014:\002\030\001\"\345\002" +
+      "\n\027GetDocflowEventsRequest\0221\n\006Filter\030\001 \002(" +
+      "\0132!.Diadoc.Api.Proto.TimeBasedFilter\022\025\n\r" +
+      "AfterIndexKey\030\002 \001(\014\022 \n\021PopulateDocuments" +
+      "\030\003 \001(\010:\005false\022\"\n\023InjectEntityContent\030\004 \001" +
+      "(\010:\005false\022-\n\036PopulatePreviousDocumentSta" +
+      "tes\030\005 \001(\010:\005false\022\024\n\014MessageTypes\030\006 \003(\t\022\032" +
+      "\n\022DocumentDirections\030\007 \003(\t\022\024\n\014Department" +
+      "Id\030\010 \001(\t\022\024\n\014TypeNamedIds\030\t \003(\t\022\031\n\021Counte" +
+      "ragentBoxId\030\n \001(\t\022\022\n\005Limit\030\013 \001(\005:\003100\"\244\001" +
+      "\n\030GetDocflowEventsResponse\022\022\n\nTotalCount" +
+      "\030\001 \001(\005\0226\n\006Events\030\002 \003(\0132&.Diadoc.Api.Prot" +
+      "o.Docflow.DocflowEvent\0228\n\016TotalCountType" +
+      "\030\003 \002(\0162 .Diadoc.Api.Proto.TotalCountType" +
+      ":\002\030\001\"\277\002\n\014DocflowEvent\022\017\n\007EventId\030\001 \001(\t\022." +
+      "\n\tTimestamp\030\002 \001(\0132\033.Diadoc.Api.Proto.Tim" +
+      "estamp\0220\n\nDocumentId\030\003 \001(\0132\034.Diadoc.Api." +
+      "Proto.DocumentId\022\020\n\010IndexKey\030\004 \001(\014\022?\n\010Do" +
+      "cument\030\005 \001(\0132-.Diadoc.Api.Proto.Docflow." +
+      "DocumentWithDocflow\022\027\n\017PreviousEventId\030\006" +
+      " \001(\t\022L\n\025PreviousDocumentState\030\007 \001(\0132-.Di" +
       "adoc.Api.Proto.Docflow.DocumentWithDocfl" +
-      "ow\022\031\n\021HaveMoreDocuments\030\002 \001(\010\"\177\n\034GetDocf" +
-      "lowsByPacketIdRequest\022\020\n\010PacketId\030\001 \002(\t\022" +
-      "\022\n\005Count\030\002 \001(\005:\003100\022\"\n\023InjectEntityConte" +
-      "nt\030\003 \001(\010:\005false\022\025\n\rAfterIndexKey\030\004 \001(\014\"d" +
-      "\n\017FetchedDocument\022?\n\010Document\030\001 \002(\0132-.Di" +
-      "adoc.Api.Proto.Docflow.DocumentWithDocfl" +
-      "ow\022\020\n\010IndexKey\030\002 \002(\014\"w\n\035GetDocflowsByPac" +
-      "ketIdResponse\022<\n\tDocuments\030\001 \003(\0132).Diado" +
-      "c.Api.Proto.Docflow.FetchedDocument\022\030\n\020N" +
-      "extPageIndexKey\030\002 \001(\014\"\345\002\n\027GetDocflowEven" +
-      "tsRequest\0221\n\006Filter\030\001 \002(\0132!.Diadoc.Api.P" +
-      "roto.TimeBasedFilter\022\025\n\rAfterIndexKey\030\002 " +
-      "\001(\014\022 \n\021PopulateDocuments\030\003 \001(\010:\005false\022\"\n" +
-      "\023InjectEntityContent\030\004 \001(\010:\005false\022-\n\036Pop" +
-      "ulatePreviousDocumentStates\030\005 \001(\010:\005false" +
-      "\022\024\n\014MessageTypes\030\006 \003(\t\022\032\n\022DocumentDirect" +
-      "ions\030\007 \003(\t\022\024\n\014DepartmentId\030\010 \001(\t\022\024\n\014Type" +
-      "NamedIds\030\t \003(\t\022\031\n\021CounteragentBoxId\030\n \001(" +
-      "\t\022\022\n\005Limit\030\013 \001(\005:\003100\"\240\001\n\030GetDocflowEven" +
-      "tsResponse\022\022\n\nTotalCount\030\001 \001(\005\0226\n\006Events" +
-      "\030\002 \003(\0132&.Diadoc.Api.Proto.Docflow.Docflo" +
-      "wEvent\0228\n\016TotalCountType\030\003 \002(\0162 .Diadoc." +
-      "Api.Proto.TotalCountType\"\273\002\n\014DocflowEven" +
-      "t\022\017\n\007EventId\030\001 \001(\t\022.\n\tTimestamp\030\002 \001(\0132\033." +
-      "Diadoc.Api.Proto.Timestamp\0220\n\nDocumentId" +
-      "\030\003 \001(\0132\034.Diadoc.Api.Proto.DocumentId\022\020\n\010" +
-      "IndexKey\030\004 \001(\014\022?\n\010Document\030\005 \001(\0132-.Diado" +
-      "c.Api.Proto.Docflow.DocumentWithDocflow\022" +
-      "\027\n\017PreviousEventId\030\006 \001(\t\022L\n\025PreviousDocu" +
-      "mentState\030\007 \001(\0132-.Diadoc.Api.Proto.Docfl" +
-      "ow.DocumentWithDocflow*\204\001\n\013SearchScope\022\022" +
-      "\n\016SearchScopeAny\020\000\022\027\n\023SearchScopeIncomin" +
-      "g\020\001\022\027\n\023SearchScopeOutgoing\020\002\022\026\n\022SearchSc" +
-      "opeDeleted\020\003\022\027\n\023SearchScopeInternal\020\004B\022B" +
-      "\020DocflowApiProtos"
+      "ow:\002\030\001*\204\001\n\013SearchScope\022\022\n\016SearchScopeAny" +
+      "\020\000\022\027\n\023SearchScopeIncoming\020\001\022\027\n\023SearchSco" +
+      "peOutgoing\020\002\022\026\n\022SearchScopeDeleted\020\003\022\027\n\023" +
+      "SearchScopeInternal\020\004B\022B\020DocflowApiProto" +
+      "s"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

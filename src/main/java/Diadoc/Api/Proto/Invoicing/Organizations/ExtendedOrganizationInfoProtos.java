@@ -180,7 +180,7 @@ public final class ExtendedOrganizationInfoProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Invoicing.Organizations.OrgType)
   }
 
-  public interface ExtendedOrganizationInfoOrBuilder extends
+  @java.lang.Deprecated public interface ExtendedOrganizationInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -784,7 +784,7 @@ public final class ExtendedOrganizationInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfo}
    */
-  public static final class ExtendedOrganizationInfo extends
+  @java.lang.Deprecated public static final class ExtendedOrganizationInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.Organizations.ExtendedOrganizationInfo)
       ExtendedOrganizationInfoOrBuilder {
@@ -5258,7 +5258,7 @@ public final class ExtendedOrganizationInfoProtos {
     java.lang.String[] descriptorData = {
       "\n(Invoicing/ExtendedOrganizationInfo.pro" +
       "to\022(Diadoc.Api.Proto.Invoicing.Organizat" +
-      "ions\032\rAddress.proto\"\236\004\n\030ExtendedOrganiza" +
+      "ions\032\rAddress.proto\"\242\004\n\030ExtendedOrganiza" +
       "tionInfo\022\r\n\005BoxId\030\001 \001(\t\022\017\n\007OrgName\030\002 \001(\t" +
       "\022\013\n\003Inn\030\003 \001(\t\022\013\n\003Kpp\030\004 \001(\t\022*\n\007Address\030\005 " +
       "\001(\0132\031.Diadoc.Api.Proto.Address\022\030\n\020FnsPar" +
@@ -5272,10 +5272,10 @@ public final class ExtendedOrganizationInfoProtos {
       "tionAdditionalInfo\030\022 \001(\t\022 \n\030Organization" +
       "OrPersonInfo\030\023 \001(\t\022/\n\'IndividualEntityRe" +
       "gistrationCertificate\030\024 \001(\t\022\017\n\007Country\030\025" +
-      " \001(\t*W\n\007OrgType\022\017\n\013LegalEntity\020\001\022\024\n\020Indi" +
-      "vidualEntity\020\002\022\021\n\rForeignEntity\020\003\022\022\n\016Phy" +
-      "sicalEntity\020\004B B\036ExtendedOrganizationInf" +
-      "oProtos"
+      " \001(\t:\002\030\001*W\n\007OrgType\022\017\n\013LegalEntity\020\001\022\024\n\020" +
+      "IndividualEntity\020\002\022\021\n\rForeignEntity\020\003\022\022\n" +
+      "\016PhysicalEntity\020\004B B\036ExtendedOrganizatio" +
+      "nInfoProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

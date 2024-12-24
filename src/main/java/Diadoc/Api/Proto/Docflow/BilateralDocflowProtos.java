@@ -25,7 +25,7 @@ public final class BilateralDocflowProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface BilateralDocflowOrBuilder extends
+  @java.lang.Deprecated public interface BilateralDocflowOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.BilateralDocflow)
       com.google.protobuf.MessageOrBuilder {
 
@@ -165,7 +165,7 @@ public final class BilateralDocflowProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.BilateralDocflow}
    */
-  public static final class BilateralDocflow extends
+  @java.lang.Deprecated public static final class BilateralDocflow extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.BilateralDocflow)
       BilateralDocflowOrBuilder {
@@ -1846,7 +1846,7 @@ public final class BilateralDocflowProtos {
       ".Api.Proto.Docflow\032\034Docflow/ReceiptDocfl" +
       "ow.proto\032\'Docflow/RecipientSignatureDocf" +
       "low.proto\0320Docflow/RecipientSignatureRej" +
-      "ectionDocflow.proto\"\260\004\n\020BilateralDocflow" +
+      "ectionDocflow.proto\"\264\004\n\020BilateralDocflow" +
       "\022\022\n\nIsFinished\030\001 \001(\010\022@\n\016ReceiptDocflow\030\002" +
       " \001(\0132(.Diadoc.Api.Proto.Docflow.ReceiptD" +
       "ocflow\022V\n\031RecipientSignatureDocflow\030\003 \001(" +
@@ -1860,8 +1860,8 @@ public final class BilateralDocflowProtos {
       "jectedByRecipient\030\010 \001(\010\022\036\n\026CanDocumentBe" +
       "Receipted\030\t \001(\010\022#\n\033CanDocumentBeSignedBy" +
       "Sender\030\n \001(\010\0220\n(CanDocumentBeSignedOrRej" +
-      "ectedByRecipient\030\013 \001(\010B\030B\026BilateralDocfl" +
-      "owProtos"
+      "ectedByRecipient\030\013 \001(\010:\002\030\001B\030B\026BilateralD" +
+      "ocflowProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

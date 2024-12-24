@@ -5,6 +5,7 @@ package Diadoc.Api.Proto.Documents.NonformalizedDocument;
 option java_outer_classname = "NonformalizedDocumentProtos";
 
 message NonformalizedDocumentMetadata {
+	option deprecated = true;
 	optional NonformalizedDocumentStatus DocumentStatus = 1 [default = UnknownNonformalizedDocumentStatus];
 	optional ReceiptStatus ReceiptStatus = 2 [default = UnknownReceiptStatus];
 }

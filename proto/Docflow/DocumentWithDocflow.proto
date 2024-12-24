@@ -8,8 +8,11 @@ package Diadoc.Api.Proto.Docflow;
 
 option java_outer_classname = "DocumentWithDocflowProtos";
 
+option deprecated = true;
+
 message DocumentWithDocflow
 {
+	option deprecated = true;
 	optional DocumentId DocumentId = 1;
 	optional string LastEventId = 2;
 	optional Timestamp LastEventTimestamp = 3;

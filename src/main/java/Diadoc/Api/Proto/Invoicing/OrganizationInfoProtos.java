@@ -5,7 +5,7 @@
 
 package Diadoc.Api.Proto.Invoicing;
 
-public final class OrganizationInfoProtos {
+@java.lang.Deprecated public final class OrganizationInfoProtos {
   private OrganizationInfoProtos() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,7 +25,7 @@ public final class OrganizationInfoProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface DocflowParticipantOrBuilder extends
+  @java.lang.Deprecated public interface DocflowParticipantOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.DocflowParticipant)
       com.google.protobuf.MessageOrBuilder {
 
@@ -148,7 +148,7 @@ public final class OrganizationInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Invoicing.DocflowParticipant}
    */
-  public static final class DocflowParticipant extends
+  @java.lang.Deprecated public static final class DocflowParticipant extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.DocflowParticipant)
       DocflowParticipantOrBuilder {
@@ -1290,7 +1290,7 @@ public final class OrganizationInfoProtos {
 
   }
 
-  public interface DiadocOrganizationInfoOrBuilder extends
+  @java.lang.Deprecated public interface DiadocOrganizationInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -1353,7 +1353,7 @@ public final class OrganizationInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo}
    */
-  public static final class DiadocOrganizationInfo extends
+  @java.lang.Deprecated public static final class DiadocOrganizationInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.DiadocOrganizationInfo)
       DiadocOrganizationInfoOrBuilder {
@@ -2156,7 +2156,7 @@ public final class OrganizationInfoProtos {
 
   }
 
-  public interface OrganizationInfoOrBuilder extends
+  @java.lang.Deprecated public interface OrganizationInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Invoicing.OrganizationInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -2586,7 +2586,7 @@ public final class OrganizationInfoProtos {
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Invoicing.OrganizationInfo}
    */
-  public static final class OrganizationInfo extends
+  @java.lang.Deprecated public static final class OrganizationInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Invoicing.OrganizationInfo)
       OrganizationInfoOrBuilder {
@@ -5889,21 +5889,21 @@ public final class OrganizationInfoProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n Invoicing/OrganizationInfo.proto\022\032Diad" +
-      "oc.Api.Proto.Invoicing\032\rAddress.proto\"W\n" +
+      "oc.Api.Proto.Invoicing\032\rAddress.proto\"[\n" +
       "\022DocflowParticipant\022\r\n\005BoxId\030\001 \001(\t\022\013\n\003In" +
       "n\030\002 \001(\t\022\013\n\003Kpp\030\003 \001(\t\022\030\n\020FnsParticipantId" +
-      "\030\004 \001(\t\"f\n\026DiadocOrganizationInfo\022\r\n\005BoxI" +
-      "d\030\001 \001(\t\022=\n\007OrgInfo\030\002 \001(\0132,.Diadoc.Api.Pr" +
-      "oto.Invoicing.OrganizationInfo\"\271\002\n\020Organ" +
-      "izationInfo\022\014\n\004Name\030\001 \002(\t\022\013\n\003Inn\030\002 \001(\t\022\013" +
-      "\n\003Kpp\030\003 \001(\t\022*\n\007Address\030\004 \002(\0132\031.Diadoc.Ap" +
-      "i.Proto.Address\022\037\n\020IsSoleProprietor\030\005 \001(" +
-      "\010:\005false\022\r\n\005Okopf\030\006 \001(\t\022\014\n\004Okpo\030\007 \001(\t\022\014\n" +
-      "\004Okdp\030\010 \001(\t\022\r\n\005Phone\030\t \001(\t\022\013\n\003Fax\030\n \001(\t\022" +
-      "\031\n\021BankAccountNumber\030\013 \001(\t\022\020\n\010BankName\030\014" +
-      " \001(\t\022\016\n\006BankId\030\r \001(\t\022\022\n\nDepartment\030\016 \001(\t" +
-      "\022\030\n\020FnsParticipantId\030\017 \001(\tB\030B\026Organizati" +
-      "onInfoProtos"
+      "\030\004 \001(\t:\002\030\001\"j\n\026DiadocOrganizationInfo\022\r\n\005" +
+      "BoxId\030\001 \001(\t\022=\n\007OrgInfo\030\002 \001(\0132,.Diadoc.Ap" +
+      "i.Proto.Invoicing.OrganizationInfo:\002\030\001\"\275" +
+      "\002\n\020OrganizationInfo\022\014\n\004Name\030\001 \002(\t\022\013\n\003Inn" +
+      "\030\002 \001(\t\022\013\n\003Kpp\030\003 \001(\t\022*\n\007Address\030\004 \002(\0132\031.D" +
+      "iadoc.Api.Proto.Address\022\037\n\020IsSoleProprie" +
+      "tor\030\005 \001(\010:\005false\022\r\n\005Okopf\030\006 \001(\t\022\014\n\004Okpo\030" +
+      "\007 \001(\t\022\014\n\004Okdp\030\010 \001(\t\022\r\n\005Phone\030\t \001(\t\022\013\n\003Fa" +
+      "x\030\n \001(\t\022\031\n\021BankAccountNumber\030\013 \001(\t\022\020\n\010Ba" +
+      "nkName\030\014 \001(\t\022\016\n\006BankId\030\r \001(\t\022\022\n\nDepartme" +
+      "nt\030\016 \001(\t\022\030\n\020FnsParticipantId\030\017 \001(\t:\002\030\001B\033" +
+      "B\026OrganizationInfoProtos\270\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
