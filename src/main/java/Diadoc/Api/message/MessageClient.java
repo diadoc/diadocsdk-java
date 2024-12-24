@@ -135,7 +135,7 @@ public class MessageClient {
                     .addParameter("messageId", messageId);
 
             if (!Tools.isNullOrEmpty(documentId)) {
-                url.addParameter("documentId", documentId);
+                url.addParameter("entityId", documentId);
             }
 
             var request = RequestBuilder
