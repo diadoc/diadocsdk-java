@@ -39,9 +39,9 @@ import java.util.concurrent.TimeoutException;
 
 public class DiadocHttpClient {
 
-    private CloseableHttpClient httpClient;
-    private String baseUrl;
-    private String solutionInfo;
+    private final CloseableHttpClient httpClient;
+    private final String baseUrl;
+    private String solutionInfo; //  непотокобезопасное место
 
     public DiadocHttpClient(
             CredentialsProvider credentialsProvider,
