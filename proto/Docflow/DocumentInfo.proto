@@ -8,6 +8,7 @@ option java_outer_classname = "DocumentInfoProtos";
 
 message DocumentInfo
 {
+	option deprecated = true;
 	optional DocumentType DocumentType = 1 [default = UnknownDocumentType];
 	optional DocumentDirection DocumentDirection = 2 [default = UnknownDocumentDirection];
 	optional bool IsTest = 3;
@@ -30,12 +31,14 @@ message DocumentInfo
 
 message DocumentDateAndNumber
 {
+	option deprecated = true;
 	optional string DocumentDate = 1;
 	optional string DocumentNumber = 2;
 }
 
 message BasicDocumentInfo
 {
+	option deprecated = true;
 	optional string Total = 1;
 	optional bool NoVat = 2;
 	optional string Vat = 3;
@@ -45,6 +48,7 @@ message BasicDocumentInfo
 
 message InvoiceDocumentInfo
 {
+	option deprecated = true;
 	optional string Total = 1;
 	optional string Vat = 2;
 	optional int32 CurrencyCode = 3;
@@ -53,6 +57,7 @@ message InvoiceDocumentInfo
 
 message InvoiceCorrectionDocumentInfo
 {
+	option deprecated = true;
 	optional string TotalInc = 1;
 	optional string TotalDec = 2;
 	optional string VatInc = 3;
@@ -65,18 +70,21 @@ message InvoiceCorrectionDocumentInfo
 
 message PriceListDocumentInfo
 {
+	option deprecated = true;
 	optional string PriceListEffectiveDate = 1;
 	optional DocumentDateAndNumber ContractDocumentDateAndNumber = 2;
 }
 
 message ContractDocumentInfo
 {
+	option deprecated = true;
 	optional string ContractPrice = 1;
 	optional string ContractType = 2;
 }
 
 message SupplementaryAgreementDocumentInfo
 {
+	option deprecated = true;
 	optional string ContractType = 1;
 	required DocumentDateAndNumber ContractDocumentDateAndNumber = 2;
 	required DocumentDateAndNumber DocumentDateAndNumber = 3;
@@ -85,6 +93,7 @@ message SupplementaryAgreementDocumentInfo
 
 message UniversalTransferDocumentInfo
 {
+	option deprecated = true;
 	optional string Total = 1;
 	optional string Vat = 2;
 	optional int32 CurrencyCode = 3;
@@ -95,6 +104,7 @@ message UniversalTransferDocumentInfo
 
 message UniversalCorrectionDocumentInfo
 {
+	option deprecated = true;
 	optional string TotalInc = 1;
 	optional string TotalDec = 2;
 	optional string VatInc = 3;

@@ -9,8 +9,11 @@ package Diadoc.Api.Proto.Docflow;
 
 option java_outer_classname = "UniversalTransferDocumentDocflowProtos";
 
+option deprecated = true;
+
 message InboundUniversalTransferDocumentDocflow
 {
+  option deprecated = true;
   optional bool IsFinished = 1;
 
   optional InboundInvoiceReceiptDocflow ReceiptDocflow = 2;
@@ -37,6 +40,7 @@ message InboundUniversalTransferDocumentDocflow
 
 message OutboundUniversalTransferDocumentDocflow
 {
+  option deprecated = true;
   optional bool IsFinished = 1;
 
   optional ReceiptDocflow ReceiptDocflow = 2;

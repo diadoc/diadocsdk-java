@@ -7,8 +7,12 @@ package Diadoc.Api.Proto.Docflow;
 
 option java_outer_classname = "XmlBilateralDocflowProtos";
 
+option deprecated = true;
+
 message XmlBilateralDocflow
 {
+	option deprecated = true;
+
 	optional bool IsFinished = 1;
 
 	optional ReceiptDocflow ReceiptDocflow = 2;
@@ -26,6 +30,7 @@ message XmlBilateralDocflow
 
 message BuyerTitleDocflow
 {
+	option deprecated = true;
 	optional bool IsFinished = 1;
 
 	optional SignedAttachment BuyerTitleAttachment = 2;

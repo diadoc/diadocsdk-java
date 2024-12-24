@@ -16,6 +16,7 @@ option java_outer_classname = "DocflowProtos";
 
 message Docflow
 {
+	option deprecated = true;
 	optional bool IsFinished = 1;
 
 	optional SignedAttachment DocumentAttachment = 2;
@@ -47,12 +48,14 @@ message Docflow
 
 message DocflowStatus
 {
+	option deprecated = true;
 	optional DocflowStatusModel PrimaryStatus = 1;
 	optional DocflowStatusModel SecondaryStatus = 2;
 }
 
 message DocflowStatusModel
 {
+	option deprecated = true;
 	optional DocflowStatusSeverity Severity = 1 [default = UnknownDocflowStatusSeverity];
 	optional string StatusText = 2;
 	optional string StatusHint = 3;

@@ -5,6 +5,7 @@ package Diadoc.Api.Proto;
 option java_outer_classname = "UserProtos";
 
 message User {
+	option deprecated = true;
 	optional string Id = 1;
 	optional string LastName = 2;
 	optional string FirstName = 3;

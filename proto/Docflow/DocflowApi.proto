@@ -26,6 +26,7 @@ message GetDocflowRequest
 
 message GetDocflowBatchResponse
 {
+	option deprecated = true;
 	repeated DocumentWithDocflow Documents = 1;
 }
 
@@ -49,6 +50,7 @@ message SearchDocflowsRequest
 
 message SearchDocflowsResponse
 {
+	option deprecated = true;
 	repeated DocumentWithDocflow Documents = 1;
 	optional bool HaveMoreDocuments = 2;
 }
@@ -63,12 +65,14 @@ message GetDocflowsByPacketIdRequest
 
 message FetchedDocument
 {
+	option deprecated = true;
 	required DocumentWithDocflow Document = 1;
 	required bytes IndexKey = 2;
 }
 
 message GetDocflowsByPacketIdResponse
 {
+	option deprecated = true;
 	repeated FetchedDocument Documents = 1;
 	optional bytes NextPageIndexKey = 2;
 }
@@ -90,6 +94,7 @@ message GetDocflowEventsRequest
 
 message GetDocflowEventsResponse
 {
+	option deprecated = true;
 	optional int32 TotalCount = 1;
 	repeated DocflowEvent Events = 2;
 	required TotalCountType TotalCountType = 3;
@@ -97,6 +102,7 @@ message GetDocflowEventsResponse
 
 message DocflowEvent
 {
+	option deprecated = true;
 	optional string EventId = 1;
 	optional Timestamp Timestamp = 2;
 	optional DocumentId DocumentId = 3;

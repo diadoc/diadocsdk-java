@@ -4,7 +4,10 @@ package Diadoc.Api.Proto.Invoicing;
 
 option java_outer_classname = "OrganizationInfoProtos";
 
+option deprecated = true;
+
 message DocflowParticipant {
+	option deprecated = true;
 	optional string BoxId = 1;								// идентификатор ящика в Диадоке
 	optional string Inn = 2;								// ИНН организации-участника обмена
 	optional string Kpp = 3;								// КПП организации-участника обмена
@@ -12,11 +15,13 @@ message DocflowParticipant {
 }
 
 message DiadocOrganizationInfo {
+	option deprecated = true;
 	optional string BoxId = 1;								// идентификатор ящика в Диадоке
 	optional OrganizationInfo OrgInfo = 2;					// реквизиты организации
 }
 
 message OrganizationInfo {
+	option deprecated = true;
 	required string Name = 1;								// название
 	optional string Inn = 2;								// ИНН
 	optional string Kpp = 3;								// КПП

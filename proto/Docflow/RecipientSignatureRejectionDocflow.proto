@@ -5,8 +5,12 @@ package Diadoc.Api.Proto.Docflow;
 
 option java_outer_classname = "RecipientSignatureRejectionDocflowProtos";
 
+option deprecated = true;
+
 message RecipientSignatureRejectionDocflow
 {
+	option deprecated = true;
+
 	optional bool IsFinished = 1;
 
 	optional SignedAttachment RecipientSignatureRejectionAttachment = 2;
