@@ -4,12 +4,14 @@ import Diadoc.Api.Proto.LoginPasswordProtos;
 import Diadoc.Api.crypt.TokenDecryptManager;
 import Diadoc.Api.crypt.exceptions.TokenDecryptException;
 import Diadoc.Api.exceptions.DiadocSdkException;
+import Diadoc.Api.helpers.Tools;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.StringUtils;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ByteArrayEntity;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -48,6 +50,10 @@ public class AuthenticateClient {
     }
 
     public void authenticate(String login, String password) throws DiadocSdkException {
+        authenticate(login, password, null, null);
+    }
+
+    public void authenticate(String login, String password, @Nullable String key, @Nullable String id) throws DiadocSdkException {
         try {
             authManager.clearCredentials();
 
@@ -63,13 +69,13 @@ public class AuthenticateClient {
                                     .setPassword(password)
                                     .build()
                                     .toByteArray()));
+            addServiceHeaders(request, key, id);
 
             var response = diadocHttpClient.performRequest(request);
             authManager.setCredentials(new String(response, UTF_8));
         } catch (IOException | URISyntaxException e) {
             throw new DiadocSdkException(e);
         }
-
     }
 
     public void authenticate(X509Certificate currentCert, boolean autoConfirm) throws DiadocSdkException {
@@ -95,6 +101,23 @@ public class AuthenticateClient {
         }
     }
 
+    public void authenticateByKey(String key, String id) throws DiadocSdkException {
+        try {
+            var request = RequestBuilder
+                    .post(new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath(V_3_AUTHENTICATE)
+                            .addParameter("type", "trust")
+                            .build()
+                    );
+            addServiceHeaders(request, key, id);
+            var response = diadocHttpClient.performRequest(request);
+            authManager.setCredentials(new String(response, UTF_8));
+
+        } catch (URISyntaxException | IOException ex) {
+            throw new DiadocSdkException(ex);
+        }
+    }
+
     public void authenticate(X509Certificate currentCert) throws DiadocSdkException {
         authenticate(currentCert, true);
     }
@@ -116,13 +139,22 @@ public class AuthenticateClient {
         }
     }
 
+    private void addServiceHeaders(RequestBuilder requestBuilder, @Nullable String key, @Nullable String id) {
+        if (!Tools.isNullOrEmpty(key)) {
+            requestBuilder.addHeader("X-Diadoc-ServiceKey", key);
+            if (Tools.isNullOrEmpty(id))
+                throw new IllegalArgumentException("id");
+            requestBuilder.addHeader("X-Diadoc-ServiceUserId", id);
+        }
+    }
+
     private String getDecryptedToken(byte[] encryptedToken, X509Certificate currentCert) throws TokenDecryptException {
         return StringUtils.newStringUtf8(Base64.encodeBase64(TokenDecryptManager.decryptToken(encryptedToken, currentCert)));
     }
 
     /**
      * @deprecated Method is deprecated and is planned to delete
-    * Information
+     * Information
      * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/GetExternalServiceAuthInfo.html">link to getExternalServiceAuthInfo</a>
      */
     @Deprecated
