@@ -17637,6 +17637,30 @@ public final class PowerOfAttorneyProtos {
      */
     com.google.protobuf.ByteString
         getParentRegistrationNumberBytes();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer> 
+        getRootIssuersList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer getRootIssuers(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    int getRootIssuersCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuerOrBuilder> 
+        getRootIssuersOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuerOrBuilder getRootIssuersOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo}
@@ -17702,6 +17726,14 @@ public final class PowerOfAttorneyProtos {
               parentRegistrationNumber_ = bs;
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                rootIssuers_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              rootIssuers_.add(input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -17710,6 +17742,9 @@ public final class PowerOfAttorneyProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          rootIssuers_ = java.util.Collections.unmodifiableList(rootIssuers_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -17826,9 +17861,45 @@ public final class PowerOfAttorneyProtos {
       }
     }
 
+    public static final int ROOTISSUERS_FIELD_NUMBER = 3;
+    private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer> rootIssuers_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer> getRootIssuersList() {
+      return rootIssuers_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuerOrBuilder> 
+        getRootIssuersOrBuilderList() {
+      return rootIssuers_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    public int getRootIssuersCount() {
+      return rootIssuers_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer getRootIssuers(int index) {
+      return rootIssuers_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+     */
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuerOrBuilder getRootIssuersOrBuilder(
+        int index) {
+      return rootIssuers_.get(index);
+    }
+
     private void initFields() {
       rootRegistrationNumber_ = "";
       parentRegistrationNumber_ = "";
+      rootIssuers_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -17839,6 +17910,12 @@ public final class PowerOfAttorneyProtos {
       if (!hasRootRegistrationNumber()) {
         memoizedIsInitialized = 0;
         return false;
+      }
+      for (int i = 0; i < getRootIssuersCount(); i++) {
+        if (!getRootIssuers(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -17852,6 +17929,9 @@ public final class PowerOfAttorneyProtos {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(2, getParentRegistrationNumberBytes());
+      }
+      for (int i = 0; i < rootIssuers_.size(); i++) {
+        output.writeMessage(3, rootIssuers_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -17869,6 +17949,10 @@ public final class PowerOfAttorneyProtos {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, getParentRegistrationNumberBytes());
+      }
+      for (int i = 0; i < rootIssuers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, rootIssuers_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -17979,6 +18063,7 @@ public final class PowerOfAttorneyProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getRootIssuersFieldBuilder();
         }
       }
       private static Builder create() {
@@ -17991,6 +18076,12 @@ public final class PowerOfAttorneyProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         parentRegistrationNumber_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (rootIssuersBuilder_ == null) {
+          rootIssuers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          rootIssuersBuilder_.clear();
+        }
         return this;
       }
 
@@ -18027,6 +18118,15 @@ public final class PowerOfAttorneyProtos {
           to_bitField0_ |= 0x00000002;
         }
         result.parentRegistrationNumber_ = parentRegistrationNumber_;
+        if (rootIssuersBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            rootIssuers_ = java.util.Collections.unmodifiableList(rootIssuers_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.rootIssuers_ = rootIssuers_;
+        } else {
+          result.rootIssuers_ = rootIssuersBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -18053,6 +18153,32 @@ public final class PowerOfAttorneyProtos {
           parentRegistrationNumber_ = other.parentRegistrationNumber_;
           onChanged();
         }
+        if (rootIssuersBuilder_ == null) {
+          if (!other.rootIssuers_.isEmpty()) {
+            if (rootIssuers_.isEmpty()) {
+              rootIssuers_ = other.rootIssuers_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureRootIssuersIsMutable();
+              rootIssuers_.addAll(other.rootIssuers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rootIssuers_.isEmpty()) {
+            if (rootIssuersBuilder_.isEmpty()) {
+              rootIssuersBuilder_.dispose();
+              rootIssuersBuilder_ = null;
+              rootIssuers_ = other.rootIssuers_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              rootIssuersBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRootIssuersFieldBuilder() : null;
+            } else {
+              rootIssuersBuilder_.addAllMessages(other.rootIssuers_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -18061,6 +18187,12 @@ public final class PowerOfAttorneyProtos {
         if (!hasRootRegistrationNumber()) {
           
           return false;
+        }
+        for (int i = 0; i < getRootIssuersCount(); i++) {
+          if (!getRootIssuers(i).isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -18234,6 +18366,246 @@ public final class PowerOfAttorneyProtos {
         parentRegistrationNumber_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer> rootIssuers_ =
+        java.util.Collections.emptyList();
+      private void ensureRootIssuersIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          rootIssuers_ = new java.util.ArrayList<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer>(rootIssuers_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuerOrBuilder> rootIssuersBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer> getRootIssuersList() {
+        if (rootIssuersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rootIssuers_);
+        } else {
+          return rootIssuersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public int getRootIssuersCount() {
+        if (rootIssuersBuilder_ == null) {
+          return rootIssuers_.size();
+        } else {
+          return rootIssuersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer getRootIssuers(int index) {
+        if (rootIssuersBuilder_ == null) {
+          return rootIssuers_.get(index);
+        } else {
+          return rootIssuersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Builder setRootIssuers(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer value) {
+        if (rootIssuersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRootIssuersIsMutable();
+          rootIssuers_.set(index, value);
+          onChanged();
+        } else {
+          rootIssuersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Builder setRootIssuers(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder builderForValue) {
+        if (rootIssuersBuilder_ == null) {
+          ensureRootIssuersIsMutable();
+          rootIssuers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rootIssuersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Builder addRootIssuers(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer value) {
+        if (rootIssuersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRootIssuersIsMutable();
+          rootIssuers_.add(value);
+          onChanged();
+        } else {
+          rootIssuersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Builder addRootIssuers(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer value) {
+        if (rootIssuersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRootIssuersIsMutable();
+          rootIssuers_.add(index, value);
+          onChanged();
+        } else {
+          rootIssuersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Builder addRootIssuers(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder builderForValue) {
+        if (rootIssuersBuilder_ == null) {
+          ensureRootIssuersIsMutable();
+          rootIssuers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rootIssuersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Builder addRootIssuers(
+          int index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder builderForValue) {
+        if (rootIssuersBuilder_ == null) {
+          ensureRootIssuersIsMutable();
+          rootIssuers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rootIssuersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Builder addAllRootIssuers(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer> values) {
+        if (rootIssuersBuilder_ == null) {
+          ensureRootIssuersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rootIssuers_);
+          onChanged();
+        } else {
+          rootIssuersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Builder clearRootIssuers() {
+        if (rootIssuersBuilder_ == null) {
+          rootIssuers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          rootIssuersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Builder removeRootIssuers(int index) {
+        if (rootIssuersBuilder_ == null) {
+          ensureRootIssuersIsMutable();
+          rootIssuers_.remove(index);
+          onChanged();
+        } else {
+          rootIssuersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder getRootIssuersBuilder(
+          int index) {
+        return getRootIssuersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuerOrBuilder getRootIssuersOrBuilder(
+          int index) {
+        if (rootIssuersBuilder_ == null) {
+          return rootIssuers_.get(index);  } else {
+          return rootIssuersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuerOrBuilder> 
+           getRootIssuersOrBuilderList() {
+        if (rootIssuersBuilder_ != null) {
+          return rootIssuersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rootIssuers_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder addRootIssuersBuilder() {
+        return getRootIssuersFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder addRootIssuersBuilder(
+          int index) {
+        return getRootIssuersFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyIssuer RootIssuers = 3;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder> 
+           getRootIssuersBuilderList() {
+        return getRootIssuersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuerOrBuilder> 
+          getRootIssuersFieldBuilder() {
+        if (rootIssuersBuilder_ == null) {
+          rootIssuersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuer.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyIssuerOrBuilder>(
+                  rootIssuers_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          rootIssuers_ = null;
+        }
+        return rootIssuersBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyDelegationInfo)
@@ -20545,12 +20917,14 @@ public final class PowerOfAttorneyProtos {
       "atus\022\016\n\006Status\030\001 \002(\t\0220\n\013LastCheckAt\030\002 \001(" +
       "\0132\033.Diadoc.Api.Proto.Timestamp\";\n\035PowerO" +
       "fAttorneyOperationError\022\014\n\004Code\030\001 \002(\t\022\014\n" +
-      "\004Text\030\002 \002(\t\"a\n\035PowerOfAttorneyDelegation" +
-      "Info\022\036\n\026RootRegistrationNumber\030\001 \002(\t\022 \n\030" +
-      "ParentRegistrationNumber\030\002 \001(\t\"<\n\026PowerO" +
-      "fAttorneyContent\022\017\n\007Content\030\001 \002(\014\022\021\n\tSig" +
+      "\004Text\030\002 \002(\t\"\260\001\n\035PowerOfAttorneyDelegatio" +
+      "nInfo\022\036\n\026RootRegistrationNumber\030\001 \002(\t\022 \n" +
+      "\030ParentRegistrationNumber\030\002 \001(\t\022M\n\013RootI" +
+      "ssuers\030\003 \003(\01328.Diadoc.Api.Proto.PowersOf" +
+      "Attorney.PowerOfAttorneyIssuer\"<\n\026PowerO" +
+      "fAttorneyContent\022\017\n\007Content\030\001 \002(\014\022\021\n\tSig",
       "nature\030\002 \002(\014\"\304\001\n\036PowerOfAttorneyContentR" +
-      "esponse\022L\n\007Content\030\001 \002(\0132;.Diadoc.Api.Pr",
+      "esponse\022L\n\007Content\030\001 \002(\0132;.Diadoc.Api.Pr" +
       "oto.PowersOfAttorney.PowerOfAttorneyCont" +
       "entV2\022T\n\017DelegationChain\030\002 \003(\0132;.Diadoc." +
       "Api.Proto.PowersOfAttorney.PowerOfAttorn" +
@@ -20558,9 +20932,9 @@ public final class PowerOfAttorneyProtos {
       "\022\017\n\007Content\030\001 \002(\014\022\021\n\tSignature\030\002 \002(\014\022H\n\006" +
       "FullId\030\003 \002(\01328.Diadoc.Api.Proto.PowersOf" +
       "Attorney.PowerOfAttorneyFullId*\200\001\n\031Power" +
-      "OfAttorneyIssuerType\022\025\n\021UnknownIssuerTyp" +
+      "OfAttorneyIssuerType\022\025\n\021UnknownIssuerTyp",
       "e\020\000\022\017\n\013LegalEntity\020\001\022\021\n\rForeignEntity\020\002\022" +
-      "\024\n\020IndividualEntity\020\003\022\022\n\016PhysicalEntity\020",
+      "\024\n\020IndividualEntity\020\003\022\022\n\016PhysicalEntity\020" +
       "\004*V\n\032PowerOfAttorneySendingType\022\013\n\007Unkno" +
       "wn\020\000\022\014\n\010Metadata\020\001\022\010\n\004File\020\002\022\023\n\017Document" +
       "Content\020\003B\027B\025PowerOfAttorneyProtos"
@@ -20693,7 +21067,7 @@ public final class PowerOfAttorneyProtos {
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyDelegationInfo_descriptor,
-        new java.lang.String[] { "RootRegistrationNumber", "ParentRegistrationNumber", });
+        new java.lang.String[] { "RootRegistrationNumber", "ParentRegistrationNumber", "RootIssuers", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyContent_fieldAccessorTable = new
