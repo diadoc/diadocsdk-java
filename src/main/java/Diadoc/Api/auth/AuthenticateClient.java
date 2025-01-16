@@ -110,7 +110,7 @@ public class AuthenticateClient {
                             .build())
                     .addHeader("Content-Type", "application/octet-stream")
                     .setEntity(new ByteArrayEntity(currentCert.getEncoded()));
-
+            addServiceHeaders(request, key, id);
             var response = diadocHttpClient.performRequest(request);
 
             if (autoConfirm) {
@@ -161,7 +161,6 @@ public class AuthenticateClient {
                     .addParameter("token", token);
             Tools.addParameterIfNotNull(uri, "saveBinding", saveBinding);
             var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(currentCert.getEncoded()));
-            addServiceHeaders(request, key, id);
             var response = diadocHttpClient.performRequest(request);
 
             authManager.setCredentials(StringUtils.newStringUtf8(response));
