@@ -52,6 +52,10 @@ public class AuthenticateClient {
     }
 
     public void authenticate(String login, String password) throws DiadocSdkException {
+       authenticate(login, password, null, null);
+    }
+
+    public void authenticate(String login, String password, @Nullable String key, @Nullable String id) throws DiadocSdkException {
         try {
             authManager.clearCredentials();
 
@@ -67,6 +71,7 @@ public class AuthenticateClient {
                                     .setPassword(password)
                                     .build()
                                     .toByteArray()));
+            addServiceHeaders(request, key, id);
 
             var response = diadocHttpClient.performRequest(request);
             authManager.setCredentials(new String(response, UTF_8));
@@ -75,31 +80,22 @@ public class AuthenticateClient {
         }
     }
 
-    public byte[] authenticate(X509Certificate currentCert, boolean autoConfirm) throws DiadocSdkException {
-        try {
-            authManager.clearCredentials();
-
-            var request = RequestBuilder
-                    .post(new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath(V_3_AUTHENTICATE)
-                            .addParameter("type", "certificate")
-                            .build())
-                    .addHeader("Content-Type", "application/octet-stream")
-                    .setEntity(new ByteArrayEntity(currentCert.getEncoded()));
-
-            var response = diadocHttpClient.performRequest(request);
-
-            if (autoConfirm) {
-                String token = getDecryptedToken(response, currentCert);
-                confirmAuthenticationByCertificate(currentCert, token, null, null, null);
-            }
-            return response;
-        } catch (URISyntaxException | IOException | CertificateEncodingException | TokenDecryptException ex) {
-            throw new DiadocSdkException(ex);
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #authenticateAutoConfirm(X509Certificate, String, String, Boolean)}
+     * or {@link #authenticate(X509Certificate, String, String)}
+     */
+    @Deprecated
+    public void authenticate(X509Certificate currentCert, boolean autoConfirm) throws DiadocSdkException {
+        if (autoConfirm) {
+            authenticateAutoConfirm(currentCert, null, null, null);
+        }
+        else {
+            authenticate(currentCert, null, null);
         }
     }
 
-    public byte[] authenticate(X509Certificate currentCert, boolean autoConfirm, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
+    public byte[] authenticateAutoConfirm(X509Certificate currentCert, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
         try {
             authManager.clearCredentials();
 
@@ -113,12 +109,31 @@ public class AuthenticateClient {
             addServiceHeaders(request, key, id);
             var response = diadocHttpClient.performRequest(request);
 
-            if (autoConfirm) {
-                String token = getDecryptedToken(response, currentCert);
-                confirmAuthenticationByCertificate(currentCert, token, key, id, saveBinding);
-            }
+            String token = getDecryptedToken(response, currentCert);
+            confirmAuthenticationByCertificate(currentCert, token, key, id, saveBinding);
+
             return response;
         } catch (URISyntaxException | IOException | CertificateEncodingException | TokenDecryptException ex) {
+            throw new DiadocSdkException(ex);
+        }
+    }
+
+    public byte[] authenticate(X509Certificate currentCert, @Nullable String key, @Nullable String id) throws DiadocSdkException {
+        try {
+            authManager.clearCredentials();
+
+            var request = RequestBuilder
+                    .post(new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath(V_3_AUTHENTICATE)
+                            .addParameter("type", "certificate")
+                            .build())
+                    .addHeader("Content-Type", "application/octet-stream")
+                    .setEntity(new ByteArrayEntity(currentCert.getEncoded()));
+            addServiceHeaders(request, key, id);
+            var response = diadocHttpClient.performRequest(request);
+
+            return response;
+        } catch (URISyntaxException | IOException | CertificateEncodingException ex) {
             throw new DiadocSdkException(ex);
         }
     }
@@ -141,8 +156,13 @@ public class AuthenticateClient {
         }
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #authenticateAutoConfirm(X509Certificate, String, String, Boolean)}
+     */
+    @Deprecated
     public void authenticate(X509Certificate currentCert) throws DiadocSdkException {
-        authenticate(currentCert, true);
+        authenticateAutoConfirm(currentCert, null, null, null);
     }
 
     /**
@@ -172,7 +192,10 @@ public class AuthenticateClient {
     public byte[] authenticate(String thumbprint, boolean autoConfirm,  @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
         try {
             var userCertificate = CertificateHelper.getCertificateByThumbprint(thumbprint);
-            return authenticate(userCertificate, autoConfirm, key, id, saveBinding);
+            if (autoConfirm) {
+                return authenticateAutoConfirm(userCertificate, key, id, saveBinding);
+            }
+            return authenticate(userCertificate, key, id);
         } catch (CertificateNotFoundException ex) {
             throw new DiadocSdkException(ex);
         }
