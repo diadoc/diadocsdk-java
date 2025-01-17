@@ -189,7 +189,7 @@ public class AuthenticateClient {
         }
     }
 
-    public byte[] authenticate(String thumbprint, boolean autoConfirm,  @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
+    public byte[] authenticate(String thumbprint, boolean autoConfirm, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
         try {
             var userCertificate = CertificateHelper.getCertificateByThumbprint(thumbprint);
             if (autoConfirm) {
