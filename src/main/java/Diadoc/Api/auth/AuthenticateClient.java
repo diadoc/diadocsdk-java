@@ -174,7 +174,7 @@ public class AuthenticateClient {
         confirmAuthenticationByCertificate(currentCert, token, null);
     }
 
-    public void confirmAuthenticationByCertificate(X509Certificate currentCert, String token,@Nullable Boolean saveBinding) throws DiadocSdkException {
+    public void confirmAuthenticationByCertificate(X509Certificate currentCert, String token, @Nullable Boolean saveBinding) throws DiadocSdkException {
         try {
             var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/V3/AuthenticateConfirm")
