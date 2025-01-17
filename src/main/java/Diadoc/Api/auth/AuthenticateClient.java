@@ -110,7 +110,7 @@ public class AuthenticateClient {
             var response = diadocHttpClient.performRequest(request);
 
             String token = getDecryptedToken(response, currentCert);
-            confirmAuthenticationByCertificate(currentCert, token, key, id, saveBinding);
+            confirmAuthenticationByCertificate(currentCert, token, saveBinding);
 
             return response;
         } catch (URISyntaxException | IOException | CertificateEncodingException | TokenDecryptException ex) {
@@ -167,14 +167,14 @@ public class AuthenticateClient {
 
     /**
      * @deprecated Method is deprecated
-     * Use {@link #confirmAuthenticationByCertificate(X509Certificate, String, String, String, Boolean)}
+     * Use {@link #confirmAuthenticationByCertificate(X509Certificate, String, Boolean)}
      */
     @Deprecated
     public void confirmAuthenticationByCertificate(X509Certificate currentCert, String token) throws DiadocSdkException {
-        confirmAuthenticationByCertificate(currentCert, token, null, null, null);
+        confirmAuthenticationByCertificate(currentCert, token, null);
     }
 
-    public void confirmAuthenticationByCertificate(X509Certificate currentCert, String token, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
+    public void confirmAuthenticationByCertificate(X509Certificate currentCert, String token,@Nullable Boolean saveBinding) throws DiadocSdkException {
         try {
             var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/V3/AuthenticateConfirm")
@@ -201,7 +201,7 @@ public class AuthenticateClient {
         }
     }
 
-    public void confirmAuthenticationByCertificateThumbprint(String thumbprint, String token, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
+    public void confirmAuthenticationByCertificateThumbprint(String thumbprint, String token, @Nullable Boolean saveBinding) throws DiadocSdkException {
         try {
             var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/V3/AuthenticateConfirm")
@@ -209,7 +209,6 @@ public class AuthenticateClient {
                     .addParameter("thumbprint", thumbprint);
             Tools.addParameterIfNotNull(uri, "saveBinding", saveBinding);
             var request = RequestBuilder.post(uri.build());
-            addServiceHeaders(request, key, id);
             var response = diadocHttpClient.performRequest(request);
 
             authManager.setCredentials(StringUtils.newStringUtf8(response));
