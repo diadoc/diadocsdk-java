@@ -97,23 +97,13 @@ public class AuthenticateClient {
 
     public byte[] authenticateAutoConfirm(X509Certificate currentCert, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
         try {
-            authManager.clearCredentials();
-
-            var request = RequestBuilder
-                    .post(new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath(V_3_AUTHENTICATE)
-                            .addParameter("type", "certificate")
-                            .build())
-                    .addHeader("Content-Type", "application/octet-stream")
-                    .setEntity(new ByteArrayEntity(currentCert.getEncoded()));
-            addServiceHeaders(request, key, id);
-            var response = diadocHttpClient.performRequest(request);
+            var response = authenticate(currentCert, key, id);
 
             String token = getDecryptedToken(response, currentCert);
             confirmAuthenticationByCertificate(currentCert, token, saveBinding);
 
             return response;
-        } catch (URISyntaxException | IOException | CertificateEncodingException | TokenDecryptException ex) {
+        } catch (TokenDecryptException | DiadocSdkException ex) {
             throw new DiadocSdkException(ex);
         }
     }
@@ -130,9 +120,7 @@ public class AuthenticateClient {
                     .addHeader("Content-Type", "application/octet-stream")
                     .setEntity(new ByteArrayEntity(currentCert.getEncoded()));
             addServiceHeaders(request, key, id);
-            var response = diadocHttpClient.performRequest(request);
-
-            return response;
+            return diadocHttpClient.performRequest(request);
         } catch (URISyntaxException | IOException | CertificateEncodingException ex) {
             throw new DiadocSdkException(ex);
         }
