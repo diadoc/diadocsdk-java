@@ -95,14 +95,13 @@ public class AuthenticateClient {
         }
     }
 
-    public byte[] authenticateAutoConfirm(X509Certificate currentCert, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
+    public void authenticateAutoConfirm(X509Certificate currentCert, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
         try {
             var response = authenticate(currentCert, key, id);
 
             String token = getDecryptedToken(response, currentCert);
             confirmAuthenticationByCertificate(currentCert, token, saveBinding);
 
-            return response;
         } catch (TokenDecryptException | DiadocSdkException ex) {
             throw new DiadocSdkException(ex);
         }
@@ -177,13 +176,13 @@ public class AuthenticateClient {
         }
     }
 
-    public byte[] authenticate(String thumbprint, boolean autoConfirm, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
+    public void authenticate(String thumbprint, boolean autoConfirm, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
         try {
             var userCertificate = CertificateHelper.getCertificateByThumbprint(thumbprint);
             if (autoConfirm) {
-                return authenticateAutoConfirm(userCertificate, key, id, saveBinding);
+                authenticateAutoConfirm(userCertificate, key, id, saveBinding);
             }
-            return authenticate(userCertificate, key, id);
+            authenticate(userCertificate, key, id);
         } catch (CertificateNotFoundException ex) {
             throw new DiadocSdkException(ex);
         }
