@@ -172,6 +172,12 @@ public class CertificateHelper {
                             return x509;
                     }
                 }
+                if (keystore.isCertificateEntry(s)) {
+                    Certificate c = keystore.getCertificate(s);
+                    if (c instanceof X509Certificate) {
+                       return (X509Certificate) c;
+                    }
+                }
             }
         } catch (Exception e) {
             throw new CertificateNotFoundException(
