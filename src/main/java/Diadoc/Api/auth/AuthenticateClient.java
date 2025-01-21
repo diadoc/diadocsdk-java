@@ -95,19 +95,7 @@ public class AuthenticateClient {
         }
     }
 
-    public void authenticateAutoConfirm(X509Certificate currentCert, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
-        try {
-            var response = authenticate(currentCert, key, id);
-
-            String token = getDecryptedToken(response, currentCert);
-            confirmAuthenticationByCertificate(currentCert, token, saveBinding);
-
-        } catch (TokenDecryptException | DiadocSdkException ex) {
-            throw new DiadocSdkException(ex);
-        }
-    }
-
-    public byte[] authenticate(X509Certificate currentCert, @Nullable String key, @Nullable String id) throws DiadocSdkException {
+    public String authenticate(X509Certificate currentCert, @Nullable String key, @Nullable String id) throws DiadocSdkException {
         try {
             authManager.clearCredentials();
 
@@ -119,8 +107,37 @@ public class AuthenticateClient {
                     .addHeader("Content-Type", "application/octet-stream")
                     .setEntity(new ByteArrayEntity(currentCert.getEncoded()));
             addServiceHeaders(request, key, id);
-            return diadocHttpClient.performRequest(request);
-        } catch (URISyntaxException | IOException | CertificateEncodingException ex) {
+            var response = diadocHttpClient.performRequest(request);
+            return StringUtils.newStringUtf8(Base64.encodeBase64(TokenDecryptManager.decryptToken(response, currentCert)));
+        } catch (URISyntaxException | IOException | CertificateEncodingException | TokenDecryptException ex) {
+            throw new DiadocSdkException(ex);
+        }
+    }
+
+    public void authenticateAutoConfirm(X509Certificate currentCert, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
+        try {
+            var token = authenticate(currentCert, key, id);
+            confirmAuthenticationByCertificate(currentCert, token, saveBinding);
+
+        } catch (DiadocSdkException ex) {
+            throw new DiadocSdkException(ex);
+        }
+    }
+
+    public void authenticateAutoConfirm(String thumbprint, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
+        try {
+            var userCertificate = CertificateHelper.getCertificateByThumbprint(thumbprint);
+            authenticateAutoConfirm(userCertificate, key, id, saveBinding);
+        } catch (CertificateNotFoundException ex) {
+            throw new DiadocSdkException(ex);
+        }
+    }
+
+    public String authenticate(String thumbprint, @Nullable String key, @Nullable String id) throws DiadocSdkException {
+        try {
+            var userCertificate = CertificateHelper.getCertificateByThumbprint(thumbprint);
+            return authenticate(userCertificate, key, id);
+        } catch (CertificateNotFoundException ex) {
             throw new DiadocSdkException(ex);
         }
     }
@@ -172,18 +189,6 @@ public class AuthenticateClient {
 
             authManager.setCredentials(StringUtils.newStringUtf8(response));
         } catch (URISyntaxException | CertificateEncodingException | IOException ex) {
-            throw new DiadocSdkException(ex);
-        }
-    }
-
-    public void authenticate(String thumbprint, boolean autoConfirm, @Nullable String key, @Nullable String id, @Nullable Boolean saveBinding) throws DiadocSdkException {
-        try {
-            var userCertificate = CertificateHelper.getCertificateByThumbprint(thumbprint);
-            if (autoConfirm) {
-                authenticateAutoConfirm(userCertificate, key, id, saveBinding);
-            }
-            authenticate(userCertificate, key, id);
-        } catch (CertificateNotFoundException ex) {
             throw new DiadocSdkException(ex);
         }
     }

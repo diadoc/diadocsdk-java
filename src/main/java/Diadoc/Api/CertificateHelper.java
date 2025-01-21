@@ -4,6 +4,7 @@ import Diadoc.Api.crypt.exceptions.CertificateNotFoundException;
 import Diadoc.Api.sign.GOSTSignInfoProvider;
 import com.objsys.asn1j.runtime.*;
 import org.apache.commons.codec.binary.Hex;
+import org.jetbrains.annotations.Nullable;
 import ru.CryptoPro.JCP.ASN.CryptographicMessageSyntax.*;
 import ru.CryptoPro.JCP.ASN.PKIX1Explicit88.CertificateSerialNumber;
 import ru.CryptoPro.JCP.ASN.PKIX1Explicit88.Name;
@@ -18,6 +19,7 @@ import java.security.cert.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.Objects;
 
 public class CertificateHelper {
 
@@ -158,24 +160,16 @@ public class CertificateHelper {
         return new String(Hex.encodeHex(digest));
     }
 
-    public static X509Certificate getCertificateByThumbprint(String thumbprint) throws CertificateNotFoundException{
+    public static X509Certificate getCertificateByThumbprint(String thumbprint) throws CertificateNotFoundException {
         try {
             KeyStore keystore = KeyStore.getInstance("HDImageStore");
             keystore.load(null, null);
             for (Enumeration<String> en = keystore.aliases(); en.hasMoreElements(); ) {
-                String s = en.nextElement();
-                if (keystore.isKeyEntry(s)) {
-                    Certificate kcerts[] = keystore.getCertificateChain(s);
-                    if (kcerts[0] instanceof X509Certificate) {
-                        X509Certificate x509 = (X509Certificate) kcerts[0];
-                        if (getThumbPrint(x509).startsWith(thumbprint))
-                            return x509;
-                    }
-                }
-                if (keystore.isCertificateEntry(s)) {
-                    Certificate c = keystore.getCertificate(s);
-                    if (c instanceof X509Certificate) {
-                       return (X509Certificate) c;
+                String alias = en.nextElement();
+                if (keystore.isKeyEntry(alias) || keystore.isCertificateEntry(alias)) {
+                    X509Certificate cert = getCertificateByAlias(keystore, alias);
+                    if (cert != null && isThumbprintMatching(cert, thumbprint)) {
+                        return cert;
                     }
                 }
             }
@@ -188,6 +182,24 @@ public class CertificateHelper {
                 String.format("Certificate with thumbprint '%s' not found.", thumbprint)
         );
 
+    }
+
+    private static X509Certificate getCertificateByAlias(KeyStore keystore, String alias) throws KeyStoreException {
+        Certificate[] certs = keystore.getCertificateChain(alias);
+        if (!Objects.isNull(certs) && certs.length > 0 && certs[0] instanceof X509Certificate) {
+            return (X509Certificate) certs[0];
+        }
+
+        Certificate cert = keystore.getCertificate(alias);
+        if (cert instanceof X509Certificate) {
+            return (X509Certificate) cert;
+        }
+
+        return null;
+    }
+
+    private static boolean isThumbprintMatching(X509Certificate certificate, String thumbprint) throws CertificateEncodingException, NoSuchAlgorithmException {
+        return getThumbPrint(certificate).startsWith(thumbprint);
     }
 
     public static List<X509Certificate> getCertificatesFromPersonalStore() {
