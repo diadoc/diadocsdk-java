@@ -18,7 +18,6 @@ import java.security.cert.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
-import java.util.Objects;
 
 public class CertificateHelper {
 
@@ -116,21 +115,9 @@ public class CertificateHelper {
             keystore.load(null, null);
             for (Enumeration<String> en = keystore.aliases(); en.hasMoreElements(); ) {
                 String s = en.nextElement();
-                if (keystore.isKeyEntry(s)) {
-                    Certificate kcerts[] = keystore.getCertificateChain(s);
-                    if (kcerts[0] instanceof X509Certificate) {
-                        X509Certificate x509 = (X509Certificate) kcerts[0];
-                        if (getThumbPrint(x509).startsWith(getThumbPrint(cert)))
-                            return (PrivateKey) keystore.getKey(s, password);
-                    }
-                }
-                if (keystore.isCertificateEntry(s)) {
-                    Certificate c = keystore.getCertificate(s);
-                    if (c instanceof X509Certificate) {
-                        if (getThumbPrint((X509Certificate) c).startsWith(getThumbPrint(cert)))
-                            return (PrivateKey) keystore.getKey(s, password);
-                    }
-                }
+                X509Certificate certificate = getCertificateByAlias(keystore, s);
+                if (certificate != null && getThumbPrint(certificate).startsWith(getThumbPrint(cert)))
+                    return (PrivateKey) keystore.getKey(s, password);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -165,11 +152,9 @@ public class CertificateHelper {
             keystore.load(null, null);
             for (Enumeration<String> en = keystore.aliases(); en.hasMoreElements(); ) {
                 String alias = en.nextElement();
-                if (keystore.isKeyEntry(alias) || keystore.isCertificateEntry(alias)) {
-                    X509Certificate cert = getCertificateByAlias(keystore, alias);
-                    if (cert != null && getThumbPrint(cert).startsWith(thumbprint)) {
-                        return cert;
-                    }
+                X509Certificate cert = getCertificateByAlias(keystore, alias);
+                if (cert != null && getThumbPrint(cert).startsWith(thumbprint)) {
+                    return cert;
                 }
             }
         } catch (Exception e) {
@@ -183,20 +168,6 @@ public class CertificateHelper {
 
     }
 
-    private static X509Certificate getCertificateByAlias(KeyStore keystore, String alias) throws KeyStoreException {
-        Certificate[] certs = keystore.getCertificateChain(alias);
-        if (!Objects.isNull(certs) && certs.length > 0 && certs[0] instanceof X509Certificate) {
-            return (X509Certificate) certs[0];
-        }
-
-        Certificate cert = keystore.getCertificate(alias);
-        if (cert instanceof X509Certificate) {
-            return (X509Certificate) cert;
-        }
-
-        return null;
-    }
-
     public static List<X509Certificate> getCertificatesFromPersonalStore() {
         List<X509Certificate> certs = new ArrayList<X509Certificate>();
         try {
@@ -204,23 +175,31 @@ public class CertificateHelper {
             keystore.load(null, null);
             for (Enumeration<String> en = keystore.aliases(); en.hasMoreElements(); ) {
                 String s = en.nextElement();
-                if (keystore.isKeyEntry(s)) {
-                    Certificate kcerts[] = keystore.getCertificateChain(s);
-                    if (kcerts[0] instanceof X509Certificate) {
-                        X509Certificate x509 = (X509Certificate) kcerts[0];
-                        certs.add((X509Certificate) x509);
-                    }
-                }
-                if (keystore.isCertificateEntry(s)) {
-                    Certificate c = keystore.getCertificate(s);
-                    if (c instanceof X509Certificate) {
-                        certs.add((X509Certificate) c);
-                    }
+                X509Certificate certificate = getCertificateByAlias(keystore, s);
+                if (certificate != null) {
+                    certs.add(certificate);
                 }
             }
             return certs;
         } catch (Exception e) {
             e.printStackTrace();
+        }
+        return null;
+    }
+
+    private static X509Certificate getCertificateByAlias(KeyStore keystore, String alias) throws KeyStoreException {
+        if (keystore.isKeyEntry(alias)) {
+            Certificate kcerts[] = keystore.getCertificateChain(alias);
+            if (kcerts.length > 0 && kcerts[0] instanceof X509Certificate) {
+                return (X509Certificate) kcerts[0];
+
+            }
+        }
+        if (keystore.isCertificateEntry(alias)) {
+            Certificate c = keystore.getCertificate(alias);
+            if (c instanceof X509Certificate) {
+                return (X509Certificate) c;
+            }
         }
         return null;
     }
