@@ -168,7 +168,7 @@ public class CertificateHelper {
                 String alias = en.nextElement();
                 if (keystore.isKeyEntry(alias) || keystore.isCertificateEntry(alias)) {
                     X509Certificate cert = getCertificateByAlias(keystore, alias);
-                    if (cert != null && isThumbprintMatching(cert, thumbprint)) {
+                    if (cert != null && getThumbPrint(cert).startsWith(thumbprint)) {
                         return cert;
                     }
                 }
@@ -196,10 +196,6 @@ public class CertificateHelper {
         }
 
         return null;
-    }
-
-    private static boolean isThumbprintMatching(X509Certificate certificate, String thumbprint) throws CertificateEncodingException, NoSuchAlgorithmException {
-        return getThumbPrint(certificate).startsWith(thumbprint);
     }
 
     public static List<X509Certificate> getCertificatesFromPersonalStore() {
