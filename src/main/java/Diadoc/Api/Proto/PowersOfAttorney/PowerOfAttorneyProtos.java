@@ -231,21 +231,21 @@ public final class PowerOfAttorneyProtos {
      */
     RepresentativeLegalEntity(1, 1),
     /**
-     * <code>RepresentativeIndividualEntrepreneurEntity = 2;</code>
+     * <code>RepresentativeIndividualEntity = 2;</code>
      */
-    RepresentativeIndividualEntrepreneurEntity(2, 2),
+    RepresentativeIndividualEntity(2, 2),
     /**
      * <code>RepresentativePhysicalEntity = 3;</code>
      */
     RepresentativePhysicalEntity(3, 3),
     /**
-     * <code>RepresentativeLegalEntitySubsidiary = 4;</code>
+     * <code>RepresentativeLegalSubsidiaryEntity = 4;</code>
      */
-    RepresentativeLegalEntitySubsidiary(4, 4),
+    RepresentativeLegalSubsidiaryEntity(4, 4),
     /**
-     * <code>RepresentativeForeignLegalEntitySubsidiary = 5;</code>
+     * <code>RepresentativeForeignLegalSubsidiaryEntity = 5;</code>
      */
-    RepresentativeForeignLegalEntitySubsidiary(5, 5),
+    RepresentativeForeignLegalSubsidiaryEntity(5, 5),
     ;
 
     /**
@@ -257,21 +257,21 @@ public final class PowerOfAttorneyProtos {
      */
     public static final int RepresentativeLegalEntity_VALUE = 1;
     /**
-     * <code>RepresentativeIndividualEntrepreneurEntity = 2;</code>
+     * <code>RepresentativeIndividualEntity = 2;</code>
      */
-    public static final int RepresentativeIndividualEntrepreneurEntity_VALUE = 2;
+    public static final int RepresentativeIndividualEntity_VALUE = 2;
     /**
      * <code>RepresentativePhysicalEntity = 3;</code>
      */
     public static final int RepresentativePhysicalEntity_VALUE = 3;
     /**
-     * <code>RepresentativeLegalEntitySubsidiary = 4;</code>
+     * <code>RepresentativeLegalSubsidiaryEntity = 4;</code>
      */
-    public static final int RepresentativeLegalEntitySubsidiary_VALUE = 4;
+    public static final int RepresentativeLegalSubsidiaryEntity_VALUE = 4;
     /**
-     * <code>RepresentativeForeignLegalEntitySubsidiary = 5;</code>
+     * <code>RepresentativeForeignLegalSubsidiaryEntity = 5;</code>
      */
-    public static final int RepresentativeForeignLegalEntitySubsidiary_VALUE = 5;
+    public static final int RepresentativeForeignLegalSubsidiaryEntity_VALUE = 5;
 
 
     public final int getNumber() { return value; }
@@ -280,10 +280,10 @@ public final class PowerOfAttorneyProtos {
       switch (value) {
         case 0: return UnknownRepresentativeType;
         case 1: return RepresentativeLegalEntity;
-        case 2: return RepresentativeIndividualEntrepreneurEntity;
+        case 2: return RepresentativeIndividualEntity;
         case 3: return RepresentativePhysicalEntity;
-        case 4: return RepresentativeLegalEntitySubsidiary;
-        case 5: return RepresentativeForeignLegalEntitySubsidiary;
+        case 4: return RepresentativeLegalSubsidiaryEntity;
+        case 5: return RepresentativeForeignLegalSubsidiaryEntity;
         default: return null;
       }
     }
@@ -21209,11 +21209,11 @@ public final class PowerOfAttorneyProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1 [default = UnknownRepresentativeType];</code>
      */
     boolean hasType();
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1 [default = UnknownRepresentativeType];</code>
      */
     Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeType getType();
 
@@ -21231,17 +21231,17 @@ public final class PowerOfAttorneyProtos {
     Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder getLegalEntityOrBuilder();
 
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
      */
-    boolean hasIndividualEntrepreneur();
+    boolean hasIndividualEntity();
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
      */
-    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity getIndividualEntrepreneur();
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity getIndividualEntity();
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
      */
-    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntityOrBuilder getIndividualEntrepreneurOrBuilder();
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntityOrBuilder getIndividualEntityOrBuilder();
 
     /**
      * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativePhysicalEntity PhysicalEntity = 4;</code>
@@ -21257,30 +21257,30 @@ public final class PowerOfAttorneyProtos {
     Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativePhysicalEntityOrBuilder getPhysicalEntityOrBuilder();
 
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
      */
-    boolean hasLegalEntitySubsidiary();
+    boolean hasLegalSubsidiaryEntity();
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
      */
-    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity getLegalEntitySubsidiary();
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity getLegalSubsidiaryEntity();
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
      */
-    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder getLegalEntitySubsidiaryOrBuilder();
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder getLegalSubsidiaryEntityOrBuilder();
 
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
      */
-    boolean hasForeignLegalEntitySubsidiary();
+    boolean hasForeignLegalSubsidiaryEntity();
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
      */
-    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity getForeignLegalEntitySubsidiary();
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity getForeignLegalSubsidiaryEntity();
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
      */
-    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder getForeignLegalEntitySubsidiaryOrBuilder();
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder getForeignLegalSubsidiaryEntityOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentative}
@@ -21359,14 +21359,14 @@ public final class PowerOfAttorneyProtos {
               break;
             }
             case 26: {
-              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.Builder subBuilder = null;
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                subBuilder = individualEntrepreneur_.toBuilder();
+                subBuilder = individualEntity_.toBuilder();
               }
-              individualEntrepreneur_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.PARSER, extensionRegistry);
+              individualEntity_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(individualEntrepreneur_);
-                individualEntrepreneur_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(individualEntity_);
+                individualEntity_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000004;
               break;
@@ -21387,12 +21387,12 @@ public final class PowerOfAttorneyProtos {
             case 42: {
               Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.Builder subBuilder = null;
               if (((bitField0_ & 0x00000010) == 0x00000010)) {
-                subBuilder = legalEntitySubsidiary_.toBuilder();
+                subBuilder = legalSubsidiaryEntity_.toBuilder();
               }
-              legalEntitySubsidiary_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.PARSER, extensionRegistry);
+              legalSubsidiaryEntity_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(legalEntitySubsidiary_);
-                legalEntitySubsidiary_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(legalSubsidiaryEntity_);
+                legalSubsidiaryEntity_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000010;
               break;
@@ -21400,12 +21400,12 @@ public final class PowerOfAttorneyProtos {
             case 50: {
               Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.Builder subBuilder = null;
               if (((bitField0_ & 0x00000020) == 0x00000020)) {
-                subBuilder = foreignLegalEntitySubsidiary_.toBuilder();
+                subBuilder = foreignLegalSubsidiaryEntity_.toBuilder();
               }
-              foreignLegalEntitySubsidiary_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.PARSER, extensionRegistry);
+              foreignLegalSubsidiaryEntity_ = input.readMessage(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(foreignLegalEntitySubsidiary_);
-                foreignLegalEntitySubsidiary_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(foreignLegalSubsidiaryEntity_);
+                foreignLegalSubsidiaryEntity_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000020;
               break;
@@ -21453,13 +21453,13 @@ public final class PowerOfAttorneyProtos {
     public static final int TYPE_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeType type_;
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1 [default = UnknownRepresentativeType];</code>
      */
     public boolean hasType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1 [default = UnknownRepresentativeType];</code>
      */
     public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeType getType() {
       return type_;
@@ -21486,25 +21486,25 @@ public final class PowerOfAttorneyProtos {
       return legalEntity_;
     }
 
-    public static final int INDIVIDUALENTREPRENEUR_FIELD_NUMBER = 3;
-    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity individualEntrepreneur_;
+    public static final int INDIVIDUALENTITY_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity individualEntity_;
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
      */
-    public boolean hasIndividualEntrepreneur() {
+    public boolean hasIndividualEntity() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
      */
-    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity getIndividualEntrepreneur() {
-      return individualEntrepreneur_;
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity getIndividualEntity() {
+      return individualEntity_;
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
      */
-    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntityOrBuilder getIndividualEntrepreneurOrBuilder() {
-      return individualEntrepreneur_;
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntityOrBuilder getIndividualEntityOrBuilder() {
+      return individualEntity_;
     }
 
     public static final int PHYSICALENTITY_FIELD_NUMBER = 4;
@@ -21528,55 +21528,55 @@ public final class PowerOfAttorneyProtos {
       return physicalEntity_;
     }
 
-    public static final int LEGALENTITYSUBSIDIARY_FIELD_NUMBER = 5;
-    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity legalEntitySubsidiary_;
+    public static final int LEGALSUBSIDIARYENTITY_FIELD_NUMBER = 5;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity legalSubsidiaryEntity_;
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
      */
-    public boolean hasLegalEntitySubsidiary() {
+    public boolean hasLegalSubsidiaryEntity() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
      */
-    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity getLegalEntitySubsidiary() {
-      return legalEntitySubsidiary_;
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity getLegalSubsidiaryEntity() {
+      return legalSubsidiaryEntity_;
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
      */
-    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder getLegalEntitySubsidiaryOrBuilder() {
-      return legalEntitySubsidiary_;
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder getLegalSubsidiaryEntityOrBuilder() {
+      return legalSubsidiaryEntity_;
     }
 
-    public static final int FOREIGNLEGALENTITYSUBSIDIARY_FIELD_NUMBER = 6;
-    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity foreignLegalEntitySubsidiary_;
+    public static final int FOREIGNLEGALSUBSIDIARYENTITY_FIELD_NUMBER = 6;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity foreignLegalSubsidiaryEntity_;
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
      */
-    public boolean hasForeignLegalEntitySubsidiary() {
+    public boolean hasForeignLegalSubsidiaryEntity() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
      */
-    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity getForeignLegalEntitySubsidiary() {
-      return foreignLegalEntitySubsidiary_;
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity getForeignLegalSubsidiaryEntity() {
+      return foreignLegalSubsidiaryEntity_;
     }
     /**
-     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+     * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
      */
-    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder getForeignLegalEntitySubsidiaryOrBuilder() {
-      return foreignLegalEntitySubsidiary_;
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder getForeignLegalSubsidiaryEntityOrBuilder() {
+      return foreignLegalSubsidiaryEntity_;
     }
 
     private void initFields() {
       type_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeType.UnknownRepresentativeType;
       legalEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance();
-      individualEntrepreneur_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.getDefaultInstance();
+      individualEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.getDefaultInstance();
       physicalEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativePhysicalEntity.getDefaultInstance();
-      legalEntitySubsidiary_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance();
-      foreignLegalEntitySubsidiary_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance();
+      legalSubsidiaryEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance();
+      foreignLegalSubsidiaryEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -21590,8 +21590,8 @@ public final class PowerOfAttorneyProtos {
           return false;
         }
       }
-      if (hasIndividualEntrepreneur()) {
-        if (!getIndividualEntrepreneur().isInitialized()) {
+      if (hasIndividualEntity()) {
+        if (!getIndividualEntity().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -21602,14 +21602,14 @@ public final class PowerOfAttorneyProtos {
           return false;
         }
       }
-      if (hasLegalEntitySubsidiary()) {
-        if (!getLegalEntitySubsidiary().isInitialized()) {
+      if (hasLegalSubsidiaryEntity()) {
+        if (!getLegalSubsidiaryEntity().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
       }
-      if (hasForeignLegalEntitySubsidiary()) {
-        if (!getForeignLegalEntitySubsidiary().isInitialized()) {
+      if (hasForeignLegalSubsidiaryEntity()) {
+        if (!getForeignLegalSubsidiaryEntity().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -21628,16 +21628,16 @@ public final class PowerOfAttorneyProtos {
         output.writeMessage(2, legalEntity_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, individualEntrepreneur_);
+        output.writeMessage(3, individualEntity_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeMessage(4, physicalEntity_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeMessage(5, legalEntitySubsidiary_);
+        output.writeMessage(5, legalSubsidiaryEntity_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeMessage(6, foreignLegalEntitySubsidiary_);
+        output.writeMessage(6, foreignLegalSubsidiaryEntity_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -21658,7 +21658,7 @@ public final class PowerOfAttorneyProtos {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, individualEntrepreneur_);
+          .computeMessageSize(3, individualEntity_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
@@ -21666,11 +21666,11 @@ public final class PowerOfAttorneyProtos {
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, legalEntitySubsidiary_);
+          .computeMessageSize(5, legalSubsidiaryEntity_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, foreignLegalEntitySubsidiary_);
+          .computeMessageSize(6, foreignLegalSubsidiaryEntity_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -21782,10 +21782,10 @@ public final class PowerOfAttorneyProtos {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getLegalEntityFieldBuilder();
-          getIndividualEntrepreneurFieldBuilder();
+          getIndividualEntityFieldBuilder();
           getPhysicalEntityFieldBuilder();
-          getLegalEntitySubsidiaryFieldBuilder();
-          getForeignLegalEntitySubsidiaryFieldBuilder();
+          getLegalSubsidiaryEntityFieldBuilder();
+          getForeignLegalSubsidiaryEntityFieldBuilder();
         }
       }
       private static Builder create() {
@@ -21802,10 +21802,10 @@ public final class PowerOfAttorneyProtos {
           legalEntityBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (individualEntrepreneurBuilder_ == null) {
-          individualEntrepreneur_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.getDefaultInstance();
+        if (individualEntityBuilder_ == null) {
+          individualEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.getDefaultInstance();
         } else {
-          individualEntrepreneurBuilder_.clear();
+          individualEntityBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         if (physicalEntityBuilder_ == null) {
@@ -21814,16 +21814,16 @@ public final class PowerOfAttorneyProtos {
           physicalEntityBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
-        if (legalEntitySubsidiaryBuilder_ == null) {
-          legalEntitySubsidiary_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance();
+        if (legalSubsidiaryEntityBuilder_ == null) {
+          legalSubsidiaryEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance();
         } else {
-          legalEntitySubsidiaryBuilder_.clear();
+          legalSubsidiaryEntityBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
-        if (foreignLegalEntitySubsidiaryBuilder_ == null) {
-          foreignLegalEntitySubsidiary_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance();
+        if (foreignLegalSubsidiaryEntityBuilder_ == null) {
+          foreignLegalSubsidiaryEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance();
         } else {
-          foreignLegalEntitySubsidiaryBuilder_.clear();
+          foreignLegalSubsidiaryEntityBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
@@ -21869,10 +21869,10 @@ public final class PowerOfAttorneyProtos {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        if (individualEntrepreneurBuilder_ == null) {
-          result.individualEntrepreneur_ = individualEntrepreneur_;
+        if (individualEntityBuilder_ == null) {
+          result.individualEntity_ = individualEntity_;
         } else {
-          result.individualEntrepreneur_ = individualEntrepreneurBuilder_.build();
+          result.individualEntity_ = individualEntityBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
@@ -21885,18 +21885,18 @@ public final class PowerOfAttorneyProtos {
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        if (legalEntitySubsidiaryBuilder_ == null) {
-          result.legalEntitySubsidiary_ = legalEntitySubsidiary_;
+        if (legalSubsidiaryEntityBuilder_ == null) {
+          result.legalSubsidiaryEntity_ = legalSubsidiaryEntity_;
         } else {
-          result.legalEntitySubsidiary_ = legalEntitySubsidiaryBuilder_.build();
+          result.legalSubsidiaryEntity_ = legalSubsidiaryEntityBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        if (foreignLegalEntitySubsidiaryBuilder_ == null) {
-          result.foreignLegalEntitySubsidiary_ = foreignLegalEntitySubsidiary_;
+        if (foreignLegalSubsidiaryEntityBuilder_ == null) {
+          result.foreignLegalSubsidiaryEntity_ = foreignLegalSubsidiaryEntity_;
         } else {
-          result.foreignLegalEntitySubsidiary_ = foreignLegalEntitySubsidiaryBuilder_.build();
+          result.foreignLegalSubsidiaryEntity_ = foreignLegalSubsidiaryEntityBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -21920,17 +21920,17 @@ public final class PowerOfAttorneyProtos {
         if (other.hasLegalEntity()) {
           mergeLegalEntity(other.getLegalEntity());
         }
-        if (other.hasIndividualEntrepreneur()) {
-          mergeIndividualEntrepreneur(other.getIndividualEntrepreneur());
+        if (other.hasIndividualEntity()) {
+          mergeIndividualEntity(other.getIndividualEntity());
         }
         if (other.hasPhysicalEntity()) {
           mergePhysicalEntity(other.getPhysicalEntity());
         }
-        if (other.hasLegalEntitySubsidiary()) {
-          mergeLegalEntitySubsidiary(other.getLegalEntitySubsidiary());
+        if (other.hasLegalSubsidiaryEntity()) {
+          mergeLegalSubsidiaryEntity(other.getLegalSubsidiaryEntity());
         }
-        if (other.hasForeignLegalEntitySubsidiary()) {
-          mergeForeignLegalEntitySubsidiary(other.getForeignLegalEntitySubsidiary());
+        if (other.hasForeignLegalSubsidiaryEntity()) {
+          mergeForeignLegalSubsidiaryEntity(other.getForeignLegalSubsidiaryEntity());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -21943,8 +21943,8 @@ public final class PowerOfAttorneyProtos {
             return false;
           }
         }
-        if (hasIndividualEntrepreneur()) {
-          if (!getIndividualEntrepreneur().isInitialized()) {
+        if (hasIndividualEntity()) {
+          if (!getIndividualEntity().isInitialized()) {
             
             return false;
           }
@@ -21955,14 +21955,14 @@ public final class PowerOfAttorneyProtos {
             return false;
           }
         }
-        if (hasLegalEntitySubsidiary()) {
-          if (!getLegalEntitySubsidiary().isInitialized()) {
+        if (hasLegalSubsidiaryEntity()) {
+          if (!getLegalSubsidiaryEntity().isInitialized()) {
             
             return false;
           }
         }
-        if (hasForeignLegalEntitySubsidiary()) {
-          if (!getForeignLegalEntitySubsidiary().isInitialized()) {
+        if (hasForeignLegalSubsidiaryEntity()) {
+          if (!getForeignLegalSubsidiaryEntity().isInitialized()) {
             
             return false;
           }
@@ -21991,19 +21991,19 @@ public final class PowerOfAttorneyProtos {
 
       private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeType type_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeType.UnknownRepresentativeType;
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1 [default = UnknownRepresentativeType];</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1 [default = UnknownRepresentativeType];</code>
        */
       public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeType getType() {
         return type_;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1 [default = UnknownRepresentativeType];</code>
        */
       public Builder setType(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeType value) {
         if (value == null) {
@@ -22015,7 +22015,7 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeType Type = 1 [default = UnknownRepresentativeType];</code>
        */
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -22140,120 +22140,120 @@ public final class PowerOfAttorneyProtos {
         return legalEntityBuilder_;
       }
 
-      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity individualEntrepreneur_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.getDefaultInstance();
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity individualEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntityOrBuilder> individualEntrepreneurBuilder_;
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntityOrBuilder> individualEntityBuilder_;
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
        */
-      public boolean hasIndividualEntrepreneur() {
+      public boolean hasIndividualEntity() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity getIndividualEntrepreneur() {
-        if (individualEntrepreneurBuilder_ == null) {
-          return individualEntrepreneur_;
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity getIndividualEntity() {
+        if (individualEntityBuilder_ == null) {
+          return individualEntity_;
         } else {
-          return individualEntrepreneurBuilder_.getMessage();
+          return individualEntityBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
        */
-      public Builder setIndividualEntrepreneur(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity value) {
-        if (individualEntrepreneurBuilder_ == null) {
+      public Builder setIndividualEntity(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity value) {
+        if (individualEntityBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          individualEntrepreneur_ = value;
+          individualEntity_ = value;
           onChanged();
         } else {
-          individualEntrepreneurBuilder_.setMessage(value);
+          individualEntityBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
        */
-      public Builder setIndividualEntrepreneur(
-          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.Builder builderForValue) {
-        if (individualEntrepreneurBuilder_ == null) {
-          individualEntrepreneur_ = builderForValue.build();
+      public Builder setIndividualEntity(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.Builder builderForValue) {
+        if (individualEntityBuilder_ == null) {
+          individualEntity_ = builderForValue.build();
           onChanged();
         } else {
-          individualEntrepreneurBuilder_.setMessage(builderForValue.build());
+          individualEntityBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
        */
-      public Builder mergeIndividualEntrepreneur(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity value) {
-        if (individualEntrepreneurBuilder_ == null) {
+      public Builder mergeIndividualEntity(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity value) {
+        if (individualEntityBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              individualEntrepreneur_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.getDefaultInstance()) {
-            individualEntrepreneur_ =
-              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.newBuilder(individualEntrepreneur_).mergeFrom(value).buildPartial();
+              individualEntity_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.getDefaultInstance()) {
+            individualEntity_ =
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.newBuilder(individualEntity_).mergeFrom(value).buildPartial();
           } else {
-            individualEntrepreneur_ = value;
+            individualEntity_ = value;
           }
           onChanged();
         } else {
-          individualEntrepreneurBuilder_.mergeFrom(value);
+          individualEntityBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
        */
-      public Builder clearIndividualEntrepreneur() {
-        if (individualEntrepreneurBuilder_ == null) {
-          individualEntrepreneur_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.getDefaultInstance();
+      public Builder clearIndividualEntity() {
+        if (individualEntityBuilder_ == null) {
+          individualEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.getDefaultInstance();
           onChanged();
         } else {
-          individualEntrepreneurBuilder_.clear();
+          individualEntityBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.Builder getIndividualEntrepreneurBuilder() {
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.Builder getIndividualEntityBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
-        return getIndividualEntrepreneurFieldBuilder().getBuilder();
+        return getIndividualEntityFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntityOrBuilder getIndividualEntrepreneurOrBuilder() {
-        if (individualEntrepreneurBuilder_ != null) {
-          return individualEntrepreneurBuilder_.getMessageOrBuilder();
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntityOrBuilder getIndividualEntityOrBuilder() {
+        if (individualEntityBuilder_ != null) {
+          return individualEntityBuilder_.getMessageOrBuilder();
         } else {
-          return individualEntrepreneur_;
+          return individualEntity_;
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity IndividualEntrepreneur = 3;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity IndividualEntity = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntityOrBuilder> 
-          getIndividualEntrepreneurFieldBuilder() {
-        if (individualEntrepreneurBuilder_ == null) {
-          individualEntrepreneurBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntityOrBuilder>(
-                  getIndividualEntrepreneur(),
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntityOrBuilder> 
+          getIndividualEntityFieldBuilder() {
+        if (individualEntityBuilder_ == null) {
+          individualEntityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntityOrBuilder>(
+                  getIndividualEntity(),
                   getParentForChildren(),
                   isClean());
-          individualEntrepreneur_ = null;
+          individualEntity_ = null;
         }
-        return individualEntrepreneurBuilder_;
+        return individualEntityBuilder_;
       }
 
       private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativePhysicalEntity physicalEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativePhysicalEntity.getDefaultInstance();
@@ -22372,236 +22372,236 @@ public final class PowerOfAttorneyProtos {
         return physicalEntityBuilder_;
       }
 
-      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity legalEntitySubsidiary_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance();
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity legalSubsidiaryEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder> legalEntitySubsidiaryBuilder_;
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder> legalSubsidiaryEntityBuilder_;
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
        */
-      public boolean hasLegalEntitySubsidiary() {
+      public boolean hasLegalSubsidiaryEntity() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity getLegalEntitySubsidiary() {
-        if (legalEntitySubsidiaryBuilder_ == null) {
-          return legalEntitySubsidiary_;
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity getLegalSubsidiaryEntity() {
+        if (legalSubsidiaryEntityBuilder_ == null) {
+          return legalSubsidiaryEntity_;
         } else {
-          return legalEntitySubsidiaryBuilder_.getMessage();
+          return legalSubsidiaryEntityBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
        */
-      public Builder setLegalEntitySubsidiary(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity value) {
-        if (legalEntitySubsidiaryBuilder_ == null) {
+      public Builder setLegalSubsidiaryEntity(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity value) {
+        if (legalSubsidiaryEntityBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          legalEntitySubsidiary_ = value;
+          legalSubsidiaryEntity_ = value;
           onChanged();
         } else {
-          legalEntitySubsidiaryBuilder_.setMessage(value);
+          legalSubsidiaryEntityBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000010;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
        */
-      public Builder setLegalEntitySubsidiary(
+      public Builder setLegalSubsidiaryEntity(
           Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.Builder builderForValue) {
-        if (legalEntitySubsidiaryBuilder_ == null) {
-          legalEntitySubsidiary_ = builderForValue.build();
+        if (legalSubsidiaryEntityBuilder_ == null) {
+          legalSubsidiaryEntity_ = builderForValue.build();
           onChanged();
         } else {
-          legalEntitySubsidiaryBuilder_.setMessage(builderForValue.build());
+          legalSubsidiaryEntityBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000010;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
        */
-      public Builder mergeLegalEntitySubsidiary(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity value) {
-        if (legalEntitySubsidiaryBuilder_ == null) {
+      public Builder mergeLegalSubsidiaryEntity(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity value) {
+        if (legalSubsidiaryEntityBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010) &&
-              legalEntitySubsidiary_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance()) {
-            legalEntitySubsidiary_ =
-              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.newBuilder(legalEntitySubsidiary_).mergeFrom(value).buildPartial();
+              legalSubsidiaryEntity_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance()) {
+            legalSubsidiaryEntity_ =
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.newBuilder(legalSubsidiaryEntity_).mergeFrom(value).buildPartial();
           } else {
-            legalEntitySubsidiary_ = value;
+            legalSubsidiaryEntity_ = value;
           }
           onChanged();
         } else {
-          legalEntitySubsidiaryBuilder_.mergeFrom(value);
+          legalSubsidiaryEntityBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000010;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
        */
-      public Builder clearLegalEntitySubsidiary() {
-        if (legalEntitySubsidiaryBuilder_ == null) {
-          legalEntitySubsidiary_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance();
+      public Builder clearLegalSubsidiaryEntity() {
+        if (legalSubsidiaryEntityBuilder_ == null) {
+          legalSubsidiaryEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.getDefaultInstance();
           onChanged();
         } else {
-          legalEntitySubsidiaryBuilder_.clear();
+          legalSubsidiaryEntityBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.Builder getLegalEntitySubsidiaryBuilder() {
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.Builder getLegalSubsidiaryEntityBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
-        return getLegalEntitySubsidiaryFieldBuilder().getBuilder();
+        return getLegalSubsidiaryEntityFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder getLegalEntitySubsidiaryOrBuilder() {
-        if (legalEntitySubsidiaryBuilder_ != null) {
-          return legalEntitySubsidiaryBuilder_.getMessageOrBuilder();
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder getLegalSubsidiaryEntityOrBuilder() {
+        if (legalSubsidiaryEntityBuilder_ != null) {
+          return legalSubsidiaryEntityBuilder_.getMessageOrBuilder();
         } else {
-          return legalEntitySubsidiary_;
+          return legalSubsidiaryEntity_;
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalEntitySubsidiary = 5;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity LegalSubsidiaryEntity = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder> 
-          getLegalEntitySubsidiaryFieldBuilder() {
-        if (legalEntitySubsidiaryBuilder_ == null) {
-          legalEntitySubsidiaryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          getLegalSubsidiaryEntityFieldBuilder() {
+        if (legalSubsidiaryEntityBuilder_ == null) {
+          legalSubsidiaryEntityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeLegalEntityOrBuilder>(
-                  getLegalEntitySubsidiary(),
+                  getLegalSubsidiaryEntity(),
                   getParentForChildren(),
                   isClean());
-          legalEntitySubsidiary_ = null;
+          legalSubsidiaryEntity_ = null;
         }
-        return legalEntitySubsidiaryBuilder_;
+        return legalSubsidiaryEntityBuilder_;
       }
 
-      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity foreignLegalEntitySubsidiary_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance();
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity foreignLegalSubsidiaryEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder> foreignLegalEntitySubsidiaryBuilder_;
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder> foreignLegalSubsidiaryEntityBuilder_;
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
        */
-      public boolean hasForeignLegalEntitySubsidiary() {
+      public boolean hasForeignLegalSubsidiaryEntity() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity getForeignLegalEntitySubsidiary() {
-        if (foreignLegalEntitySubsidiaryBuilder_ == null) {
-          return foreignLegalEntitySubsidiary_;
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity getForeignLegalSubsidiaryEntity() {
+        if (foreignLegalSubsidiaryEntityBuilder_ == null) {
+          return foreignLegalSubsidiaryEntity_;
         } else {
-          return foreignLegalEntitySubsidiaryBuilder_.getMessage();
+          return foreignLegalSubsidiaryEntityBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
        */
-      public Builder setForeignLegalEntitySubsidiary(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity value) {
-        if (foreignLegalEntitySubsidiaryBuilder_ == null) {
+      public Builder setForeignLegalSubsidiaryEntity(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity value) {
+        if (foreignLegalSubsidiaryEntityBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          foreignLegalEntitySubsidiary_ = value;
+          foreignLegalSubsidiaryEntity_ = value;
           onChanged();
         } else {
-          foreignLegalEntitySubsidiaryBuilder_.setMessage(value);
+          foreignLegalSubsidiaryEntityBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000020;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
        */
-      public Builder setForeignLegalEntitySubsidiary(
+      public Builder setForeignLegalSubsidiaryEntity(
           Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.Builder builderForValue) {
-        if (foreignLegalEntitySubsidiaryBuilder_ == null) {
-          foreignLegalEntitySubsidiary_ = builderForValue.build();
+        if (foreignLegalSubsidiaryEntityBuilder_ == null) {
+          foreignLegalSubsidiaryEntity_ = builderForValue.build();
           onChanged();
         } else {
-          foreignLegalEntitySubsidiaryBuilder_.setMessage(builderForValue.build());
+          foreignLegalSubsidiaryEntityBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000020;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
        */
-      public Builder mergeForeignLegalEntitySubsidiary(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity value) {
-        if (foreignLegalEntitySubsidiaryBuilder_ == null) {
+      public Builder mergeForeignLegalSubsidiaryEntity(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity value) {
+        if (foreignLegalSubsidiaryEntityBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020) &&
-              foreignLegalEntitySubsidiary_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance()) {
-            foreignLegalEntitySubsidiary_ =
-              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.newBuilder(foreignLegalEntitySubsidiary_).mergeFrom(value).buildPartial();
+              foreignLegalSubsidiaryEntity_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance()) {
+            foreignLegalSubsidiaryEntity_ =
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.newBuilder(foreignLegalSubsidiaryEntity_).mergeFrom(value).buildPartial();
           } else {
-            foreignLegalEntitySubsidiary_ = value;
+            foreignLegalSubsidiaryEntity_ = value;
           }
           onChanged();
         } else {
-          foreignLegalEntitySubsidiaryBuilder_.mergeFrom(value);
+          foreignLegalSubsidiaryEntityBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000020;
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
        */
-      public Builder clearForeignLegalEntitySubsidiary() {
-        if (foreignLegalEntitySubsidiaryBuilder_ == null) {
-          foreignLegalEntitySubsidiary_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance();
+      public Builder clearForeignLegalSubsidiaryEntity() {
+        if (foreignLegalSubsidiaryEntityBuilder_ == null) {
+          foreignLegalSubsidiaryEntity_ = Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.getDefaultInstance();
           onChanged();
         } else {
-          foreignLegalEntitySubsidiaryBuilder_.clear();
+          foreignLegalSubsidiaryEntityBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.Builder getForeignLegalEntitySubsidiaryBuilder() {
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.Builder getForeignLegalSubsidiaryEntityBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
-        return getForeignLegalEntitySubsidiaryFieldBuilder().getBuilder();
+        return getForeignLegalSubsidiaryEntityFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
        */
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder getForeignLegalEntitySubsidiaryOrBuilder() {
-        if (foreignLegalEntitySubsidiaryBuilder_ != null) {
-          return foreignLegalEntitySubsidiaryBuilder_.getMessageOrBuilder();
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder getForeignLegalSubsidiaryEntityOrBuilder() {
+        if (foreignLegalSubsidiaryEntityBuilder_ != null) {
+          return foreignLegalSubsidiaryEntityBuilder_.getMessageOrBuilder();
         } else {
-          return foreignLegalEntitySubsidiary_;
+          return foreignLegalSubsidiaryEntity_;
         }
       }
       /**
-       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalEntitySubsidiary = 6;</code>
+       * <code>optional .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity ForeignLegalSubsidiaryEntity = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder> 
-          getForeignLegalEntitySubsidiaryFieldBuilder() {
-        if (foreignLegalEntitySubsidiaryBuilder_ == null) {
-          foreignLegalEntitySubsidiaryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          getForeignLegalSubsidiaryEntityFieldBuilder() {
+        if (foreignLegalSubsidiaryEntityBuilder_ == null) {
+          foreignLegalSubsidiaryEntityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntity.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeForeignLegalSubsidiaryEntityOrBuilder>(
-                  getForeignLegalEntitySubsidiary(),
+                  getForeignLegalSubsidiaryEntity(),
                   getParentForChildren(),
                   isClean());
-          foreignLegalEntitySubsidiary_ = null;
+          foreignLegalSubsidiaryEntity_ = null;
         }
-        return foreignLegalEntitySubsidiaryBuilder_;
+        return foreignLegalSubsidiaryEntityBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentative)
@@ -23793,8 +23793,8 @@ public final class PowerOfAttorneyProtos {
     // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeLegalEntity)
   }
 
-  public interface PowerOfAttorneyRepresentativeIndividualEntrepreneurEntityOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity)
+  public interface PowerOfAttorneyRepresentativeIndividualEntityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -23826,25 +23826,25 @@ public final class PowerOfAttorneyProtos {
         getOrganizationNameBytes();
   }
   /**
-   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity}
+   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity}
    */
-  public static final class PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity extends
+  public static final class PowerOfAttorneyRepresentativeIndividualEntity extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity)
-      PowerOfAttorneyRepresentativeIndividualEntrepreneurEntityOrBuilder {
-    // Use PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.newBuilder() to construct.
-    private PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity)
+      PowerOfAttorneyRepresentativeIndividualEntityOrBuilder {
+    // Use PowerOfAttorneyRepresentativeIndividualEntity.newBuilder() to construct.
+    private PowerOfAttorneyRepresentativeIndividualEntity(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private PowerOfAttorneyRepresentativeIndividualEntity(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity defaultInstance;
-    public static PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity getDefaultInstance() {
+    private static final PowerOfAttorneyRepresentativeIndividualEntity defaultInstance;
+    public static PowerOfAttorneyRepresentativeIndividualEntity getDefaultInstance() {
       return defaultInstance;
     }
 
-    public PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity getDefaultInstanceForType() {
+    public PowerOfAttorneyRepresentativeIndividualEntity getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -23854,7 +23854,7 @@ public final class PowerOfAttorneyProtos {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity(
+    private PowerOfAttorneyRepresentativeIndividualEntity(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -23903,28 +23903,28 @@ public final class PowerOfAttorneyProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_descriptor;
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_fieldAccessorTable
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.Builder.class);
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity> PARSER =
-        new com.google.protobuf.AbstractParser<PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity>() {
-      public PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parsePartialFrom(
+    public static com.google.protobuf.Parser<PowerOfAttorneyRepresentativeIndividualEntity> PARSER =
+        new com.google.protobuf.AbstractParser<PowerOfAttorneyRepresentativeIndividualEntity>() {
+      public PowerOfAttorneyRepresentativeIndividualEntity parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity(input, extensionRegistry);
+        return new PowerOfAttorneyRepresentativeIndividualEntity(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity> getParserForType() {
+    public com.google.protobuf.Parser<PowerOfAttorneyRepresentativeIndividualEntity> getParserForType() {
       return PARSER;
     }
 
@@ -24073,53 +24073,53 @@ public final class PowerOfAttorneyProtos {
       return super.writeReplace();
     }
 
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseFrom(
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseFrom(
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseFrom(byte[] data)
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseFrom(
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseFrom(java.io.InputStream input)
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseFrom(
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseDelimitedFrom(java.io.InputStream input)
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseDelimitedFrom(
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseFrom(
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parseFrom(
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24128,7 +24128,7 @@ public final class PowerOfAttorneyProtos {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity prototype) {
+    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -24140,25 +24140,25 @@ public final class PowerOfAttorneyProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity}
+     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity)
-        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntityOrBuilder {
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity)
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntityOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_descriptor;
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_fieldAccessorTable
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.Builder.class);
+                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.Builder.class);
       }
 
-      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.newBuilder()
+      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -24191,23 +24191,23 @@ public final class PowerOfAttorneyProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_descriptor;
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_descriptor;
       }
 
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity getDefaultInstanceForType() {
-        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.getDefaultInstance();
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.getDefaultInstance();
       }
 
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity build() {
-        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity result = buildPartial();
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity build() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity buildPartial() {
-        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity(this);
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity buildPartial() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -24224,16 +24224,16 @@ public final class PowerOfAttorneyProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity) {
-          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity)other);
+        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity) {
+          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity other) {
-        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity.getDefaultInstance()) return this;
+      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity other) {
+        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity.getDefaultInstance()) return this;
         if (other.hasInn()) {
           bitField0_ |= 0x00000001;
           inn_ = other.inn_;
@@ -24264,11 +24264,11 @@ public final class PowerOfAttorneyProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity parsedMessage = null;
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity) e.getUnfinishedMessage();
+          parsedMessage = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyRepresentativeIndividualEntity) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -24431,15 +24431,15 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity)
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity)
     }
 
     static {
-      defaultInstance = new PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity(true);
+      defaultInstance = new PowerOfAttorneyRepresentativeIndividualEntity(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity)
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyRepresentativeIndividualEntity)
   }
 
   public interface PowerOfAttorneyRepresentativePhysicalEntityOrBuilder extends
@@ -26042,10 +26042,10 @@ public final class PowerOfAttorneyProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeLegalEntity_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_descriptor;
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_fieldAccessorTable;
+      internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativePhysicalEntity_descriptor;
   private static
@@ -26335,18 +26335,18 @@ public final class PowerOfAttorneyProtos {
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentative_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentative_descriptor,
-        new java.lang.String[] { "Type", "LegalEntity", "IndividualEntrepreneur", "PhysicalEntity", "LegalEntitySubsidiary", "ForeignLegalEntitySubsidiary", });
+        new java.lang.String[] { "Type", "LegalEntity", "IndividualEntity", "PhysicalEntity", "LegalSubsidiaryEntity", "ForeignLegalSubsidiaryEntity", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeLegalEntity_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeLegalEntity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeLegalEntity_descriptor,
         new java.lang.String[] { "Inn", "Kpp", "OrganizationName", "PhysicalEntity", });
-    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_descriptor =
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_descriptor =
       getDescriptor().getMessageTypes().get(24);
-    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_fieldAccessorTable = new
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntrepreneurEntity_descriptor,
+        internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativeIndividualEntity_descriptor,
         new java.lang.String[] { "Inn", "OrganizationName", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyRepresentativePhysicalEntity_descriptor =
       getDescriptor().getMessageTypes().get(25);
