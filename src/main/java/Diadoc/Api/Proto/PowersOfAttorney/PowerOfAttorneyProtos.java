@@ -26100,88 +26100,115 @@ public final class PowerOfAttorneyProtos {
       "rney.PowerOfAttorneyIssuerIndividualEnti" +
       "ty\022^\n\016PhysicalEntity\030\005 \001(\0132F.Diadoc.Api." +
       "Proto.PowersOfAttorney.PowerOfAttorneyIs" +
-      "suerType:\021UnknownIssuerType\022X\n\013LegalEnti" +
-      "ty\030\002 \001(\0132C.Diadoc.Api.Proto.PowersOfAtto" +
-      "rney.PowerOfAttorneyIssuerLegalEntity\022\\\n" +
-      "\rForeignEntity\030\003 \001(\0132E.Diadoc.Api.Proto." +
-      "PowersOfAttorney.PowerOfAttorneyIssuerFo" +
-      "reignEntity\022b\n\020IndividualEntity\030\004 \001(\0132H." +
-      "Diadoc.Api.Proto.PowersOfAttorney.PowerO",
-      "fAttorneyIssuerIndividualEntity\022^\n\016Physi" +
-      "calEntity\030\005 \001(\0132F.Diadoc.Api.Proto.Power" +
-      "sOfAttorney.PowerOfAttorneyIssuerPhysica" +
-      "lEntity\"V\n PowerOfAttorneyIssuerLegalEnt" +
-      "ity\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kpp\030\002 \002(\t\022\030\n\020Organiz" +
-      "ationName\030\003 \002(\t\"X\n\"PowerOfAttorneyIssuer" +
-      "ForeignEntity\022\013\n\003Inn\030\001 \001(\t\022\013\n\003Kpp\030\002 \001(\t\022" +
-      "\030\n\020OrganizationName\030\003 \002(\t\"N\n%PowerOfAtto" +
-      "rneyIssuerIndividualEntity\022\013\n\003Inn\030\001 \002(\t\022" +
-      "\030\n\020OrganizationName\030\003 \002(\t\"b\n#PowerOfAtto",
-      "rneyIssuerPhysicalEntity\022\013\n\003Inn\030\001 \002(\t\022.\n" +
-      "\nPersonName\030\002 \001(\0132\032.Diadoc.Api.Proto.Ful" +
-      "lName\"\266\001\n\030PowerOfAttorneyConfidant\022.\n\nPe" +
-      "rsonName\030\001 \002(\0132\032.Diadoc.Api.Proto.FullNa" +
-      "me\022\013\n\003Inn\030\002 \002(\t\022]\n\014Organization\030\003 \001(\0132G." +
-      "Diadoc.Api.Proto.PowersOfAttorney.PowerO" +
-      "fAttorneyConfidantOrganization\"N\n$PowerO" +
-      "fAttorneyConfidantOrganization\022\013\n\003Inn\030\001 " +
-      "\002(\t\022\013\n\003Kpp\030\002 \001(\t\022\014\n\004Name\030\003 \002(\t\"\256\001\n\036Power" +
-      "OfAttorneyPermissionsInfo\022R\n\013Permissions",
-      "\030\001 \003(\0132=.Diadoc.Api.Proto.PowersOfAttorn" +
-      "ey.PowerOfAttorneyPermissions\022\036\n\026Transfe" +
-      "rPermissionLoss\030\002 \001(\t\022\030\n\020JointPermission" +
-      "s\030\003 \002(\t\"\262\001\n\032PowerOfAttorneyPermissions\022\014" +
-      "\n\004Type\030\001 \002(\t\022\026\n\016TextPermission\030\002 \001(\t\022n\n\031" +
-      "MachineReadablePermission\030\003 \003(\0132K.Diadoc" +
-      ".Api.Proto.PowersOfAttorney.PowerOfAttor" +
-      "neyMachineReadablePermission\"\256\001\n(PowerOf" +
-      "AttorneyMachineReadablePermission\022\020\n\010Mne" +
-      "monic\030\001 \001(\t\022\014\n\004Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022",
-      "T\n\014Restrictions\030\004 \003(\0132>.Diadoc.Api.Proto" +
-      ".PowersOfAttorney.PowerOfAttorneyRestric" +
-      "tions\"~\n\033PowerOfAttorneyRestrictions\022\n\n\002" +
-      "Id\030\001 \002(\005\022\014\n\004Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\021\n\t" +
-      "ValueName\030\004 \001(\t\022\021\n\tValueCode\030\005 \001(\t\022\021\n\tVa" +
-      "lueText\030\006 \001(\t\"\267\001\n\031PowerOfAttorneyToRegis" +
-      "ter\022H\n\006FullId\030\001 \001(\01328.Diadoc.Api.Proto.P" +
-      "owersOfAttorney.PowerOfAttorneyFullId\022P\n" +
-      "\007Content\030\002 \001(\0132?.Diadoc.Api.Proto.Powers" +
-      "OfAttorney.PowerOfAttorneySignedContent\"",
-      "~\n\034PowerOfAttorneySignedContent\022-\n\007Conte" +
-      "nt\030\001 \002(\0132\034.Diadoc.Api.Proto.Content_v3\022/" +
-      "\n\tSignature\030\002 \002(\0132\034.Diadoc.Api.Proto.Con" +
-      "tent_v3\"\241\002\n\035PowerOfAttorneyRegisterResul" +
-      "t\022\027\n\017OperationStatus\030\001 \002(\t\022K\n\017PowerOfAtt" +
-      "orney\030\002 \001(\01322.Diadoc.Api.Proto.PowersOfA" +
-      "ttorney.PowerOfAttorney\022H\n\006Status\030\003 \001(\0132" +
-      "8.Diadoc.Api.Proto.PowersOfAttorney.Powe" +
-      "rOfAttorneyStatus\022P\n\006Errors\030\004 \003(\0132@.Diad" +
-      "oc.Api.Proto.PowersOfAttorney.PowerOfAtt",
-      "orneyOperationError\"Y\n\025PowerOfAttorneySt" +
-      "atus\022\016\n\006Status\030\001 \002(\t\0220\n\013LastCheckAt\030\002 \001(" +
-      "\0132\033.Diadoc.Api.Proto.Timestamp\";\n\035PowerO" +
-      "fAttorneyOperationError\022\014\n\004Code\030\001 \002(\t\022\014\n" +
-      "\004Text\030\002 \002(\t\"\260\001\n\035PowerOfAttorneyDelegatio" +
-      "nInfo\022\036\n\026RootRegistrationNumber\030\001 \002(\t\022 \n" +
-      "\030ParentRegistrationNumber\030\002 \001(\t\022M\n\013RootI" +
-      "ssuers\030\003 \003(\01328.Diadoc.Api.Proto.PowersOf" +
-      "Attorney.PowerOfAttorneyIssuer\"<\n\026PowerO" +
-      "fAttorneyContent\022\017\n\007Content\030\001 \002(\014\022\021\n\tSig",
-      "nature\030\002 \002(\014\"\304\001\n\036PowerOfAttorneyContentR" +
-      "esponse\022L\n\007Content\030\001 \002(\0132;.Diadoc.Api.Pr" +
-      "oto.PowersOfAttorney.PowerOfAttorneyCont" +
-      "entV2\022T\n\017DelegationChain\030\002 \003(\0132;.Diadoc." +
+      "suerPhysicalEntity\"V\n PowerOfAttorneyIss" +
+      "uerLegalEntity\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kpp\030\002 \002(\t" +
+      "\022\030\n\020OrganizationName\030\003 \002(\t\"X\n\"PowerOfAtt" +
+      "orneyIssuerForeignEntity\022\013\n\003Inn\030\001 \001(\t\022\013\n" +
+      "\003Kpp\030\002 \001(\t\022\030\n\020OrganizationName\030\003 \002(\t\"N\n%",
+      "PowerOfAttorneyIssuerIndividualEntity\022\013\n" +
+      "\003Inn\030\001 \002(\t\022\030\n\020OrganizationName\030\003 \002(\t\"b\n#" +
+      "PowerOfAttorneyIssuerPhysicalEntity\022\013\n\003I" +
+      "nn\030\001 \002(\t\022.\n\nPersonName\030\002 \001(\0132\032.Diadoc.Ap" +
+      "i.Proto.FullName\"\266\001\n\030PowerOfAttorneyConf" +
+      "idant\022.\n\nPersonName\030\001 \002(\0132\032.Diadoc.Api.P" +
+      "roto.FullName\022\013\n\003Inn\030\002 \002(\t\022]\n\014Organizati" +
+      "on\030\003 \001(\0132G.Diadoc.Api.Proto.PowersOfAtto" +
+      "rney.PowerOfAttorneyConfidantOrganizatio" +
+      "n\"N\n$PowerOfAttorneyConfidantOrganizatio",
+      "n\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kpp\030\002 \001(\t\022\014\n\004Name\030\003 \002(" +
+      "\t\"\256\001\n\036PowerOfAttorneyPermissionsInfo\022R\n\013" +
+      "Permissions\030\001 \003(\0132=.Diadoc.Api.Proto.Pow" +
+      "ersOfAttorney.PowerOfAttorneyPermissions" +
+      "\022\036\n\026TransferPermissionLoss\030\002 \001(\t\022\030\n\020Join" +
+      "tPermissions\030\003 \002(\t\"\262\001\n\032PowerOfAttorneyPe" +
+      "rmissions\022\014\n\004Type\030\001 \002(\t\022\026\n\016TextPermissio" +
+      "n\030\002 \001(\t\022n\n\031MachineReadablePermission\030\003 \003" +
+      "(\0132K.Diadoc.Api.Proto.PowersOfAttorney.P" +
+      "owerOfAttorneyMachineReadablePermission\"",
+      "\256\001\n(PowerOfAttorneyMachineReadablePermis" +
+      "sion\022\020\n\010Mnemonic\030\001 \001(\t\022\014\n\004Code\030\002 \002(\t\022\014\n\004" +
+      "Name\030\003 \002(\t\022T\n\014Restrictions\030\004 \003(\0132>.Diado" +
+      "c.Api.Proto.PowersOfAttorney.PowerOfAtto" +
+      "rneyRestrictions\"~\n\033PowerOfAttorneyRestr" +
+      "ictions\022\n\n\002Id\030\001 \002(\005\022\014\n\004Code\030\002 \002(\t\022\014\n\004Nam" +
+      "e\030\003 \002(\t\022\021\n\tValueName\030\004 \001(\t\022\021\n\tValueCode\030" +
+      "\005 \001(\t\022\021\n\tValueText\030\006 \001(\t\"\267\001\n\031PowerOfAtto" +
+      "rneyToRegister\022H\n\006FullId\030\001 \001(\01328.Diadoc." +
+      "Api.Proto.PowersOfAttorney.PowerOfAttorn",
+      "eyFullId\022P\n\007Content\030\002 \001(\0132?.Diadoc.Api.P" +
+      "roto.PowersOfAttorney.PowerOfAttorneySig" +
+      "nedContent\"~\n\034PowerOfAttorneySignedConte" +
+      "nt\022-\n\007Content\030\001 \002(\0132\034.Diadoc.Api.Proto.C" +
+      "ontent_v3\022/\n\tSignature\030\002 \002(\0132\034.Diadoc.Ap" +
+      "i.Proto.Content_v3\"\241\002\n\035PowerOfAttorneyRe" +
+      "gisterResult\022\027\n\017OperationStatus\030\001 \002(\t\022K\n" +
+      "\017PowerOfAttorney\030\002 \001(\01322.Diadoc.Api.Prot" +
+      "o.PowersOfAttorney.PowerOfAttorney\022H\n\006St" +
+      "atus\030\003 \001(\01328.Diadoc.Api.Proto.PowersOfAt",
+      "torney.PowerOfAttorneyStatus\022P\n\006Errors\030\004" +
+      " \003(\0132@.Diadoc.Api.Proto.PowersOfAttorney" +
+      ".PowerOfAttorneyOperationError\"Y\n\025PowerO" +
+      "fAttorneyStatus\022\016\n\006Status\030\001 \002(\t\0220\n\013LastC" +
+      "heckAt\030\002 \001(\0132\033.Diadoc.Api.Proto.Timestam" +
+      "p\";\n\035PowerOfAttorneyOperationError\022\014\n\004Co" +
+      "de\030\001 \002(\t\022\014\n\004Text\030\002 \002(\t\"\260\001\n\035PowerOfAttorn" +
+      "eyDelegationInfo\022\036\n\026RootRegistrationNumb" +
+      "er\030\001 \002(\t\022 \n\030ParentRegistrationNumber\030\002 \001" +
+      "(\t\022M\n\013RootIssuers\030\003 \003(\01328.Diadoc.Api.Pro",
+      "to.PowersOfAttorney.PowerOfAttorneyIssue" +
+      "r\"<\n\026PowerOfAttorneyContent\022\017\n\007Content\030\001" +
+      " \002(\014\022\021\n\tSignature\030\002 \002(\014\"\304\001\n\036PowerOfAttor" +
+      "neyContentResponse\022L\n\007Content\030\001 \002(\0132;.Di" +
+      "adoc.Api.Proto.PowersOfAttorney.PowerOfA" +
+      "ttorneyContentV2\022T\n\017DelegationChain\030\002 \003(" +
+      "\0132;.Diadoc.Api.Proto.PowersOfAttorney.Po" +
+      "werOfAttorneyContentV2\"\210\001\n\030PowerOfAttorn" +
+      "eyContentV2\022\017\n\007Content\030\001 \002(\014\022\021\n\tSignatur" +
+      "e\030\002 \002(\014\022H\n\006FullId\030\003 \002(\01328.Diadoc.Api.Pro",
+      "to.PowersOfAttorney.PowerOfAttorneyFullI" +
+      "d\"\265\005\n\035PowerOfAttorneyRepresentative\022m\n\004T" +
+      "ype\030\001 \001(\0162D.Diadoc.Api.Proto.PowersOfAtt" +
+      "orney.PowerOfAttorneyRepresentativeType:" +
+      "\031UnknownRepresentativeType\022`\n\013LegalEntit" +
+      "y\030\002 \001(\0132K.Diadoc.Api.Proto.PowersOfAttor" +
+      "ney.PowerOfAttorneyRepresentativeLegalEn" +
+      "tity\022j\n\020IndividualEntity\030\003 \001(\0132P.Diadoc." +
       "Api.Proto.PowersOfAttorney.PowerOfAttorn" +
-      "eyContentV2\"\210\001\n\030PowerOfAttorneyContentV2" +
-      "\022\017\n\007Content\030\001 \002(\014\022\021\n\tSignature\030\002 \002(\014\022H\n\006" +
-      "FullId\030\003 \002(\01328.Diadoc.Api.Proto.PowersOf" +
-      "Attorney.PowerOfAttorneyFullId*\200\001\n\031Power" +
-      "OfAttorneyIssuerType\022\025\n\021UnknownIssuerTyp",
-      "e\020\000\022\017\n\013LegalEntity\020\001\022\021\n\rForeignEntity\020\002\022" +
-      "\024\n\020IndividualEntity\020\003\022\022\n\016PhysicalEntity\020" +
-      "\004*V\n\032PowerOfAttorneySendingType\022\013\n\007Unkno" +
-      "wn\020\000\022\014\n\010Metadata\020\001\022\010\n\004File\020\002\022\023\n\017Document" +
-      "Content\020\003B\027B\025PowerOfAttorneyProtos"
+      "eyRepresentativeIndividualEntity\022f\n\016Phys",
+      "icalEntity\030\004 \001(\0132N.Diadoc.Api.Proto.Powe" +
+      "rsOfAttorney.PowerOfAttorneyRepresentati" +
+      "vePhysicalEntity\022j\n\025LegalSubsidiaryEntit" +
+      "y\030\005 \001(\0132K.Diadoc.Api.Proto.PowersOfAttor" +
+      "ney.PowerOfAttorneyRepresentativeLegalEn" +
+      "tity\022\202\001\n\034ForeignLegalSubsidiaryEntity\030\006 " +
+      "\001(\0132\\.Diadoc.Api.Proto.PowersOfAttorney." +
+      "PowerOfAttorneyRepresentativeForeignLega" +
+      "lSubsidiaryEntity\"\306\001\n(PowerOfAttorneyRep" +
+      "resentativeLegalEntity\022\013\n\003Inn\030\001 \001(\t\022\013\n\003K",
+      "pp\030\002 \002(\t\022\030\n\020OrganizationName\030\003 \002(\t\022f\n\016Ph" +
+      "ysicalEntity\030\004 \003(\0132N.Diadoc.Api.Proto.Po" +
+      "wersOfAttorney.PowerOfAttorneyRepresenta" +
+      "tivePhysicalEntity\"V\n-PowerOfAttorneyRep" +
+      "resentativeIndividualEntity\022\013\n\003Inn\030\001 \002(\t" +
+      "\022\030\n\020OrganizationName\030\002 \002(\t\"j\n+PowerOfAtt" +
+      "orneyRepresentativePhysicalEntity\022\013\n\003Inn" +
+      "\030\001 \001(\t\022.\n\nPersonName\030\002 \002(\0132\032.Diadoc.Api." +
+      "Proto.FullName\"o\n9PowerOfAttorneyReprese" +
+      "ntativeForeignLegalSubsidiaryEntity\022\013\n\003I",
+      "nn\030\001 \001(\t\022\013\n\003Kpp\030\002 \001(\t\022\030\n\020OrganizationNam" +
+      "e\030\003 \002(\t*\200\001\n\031PowerOfAttorneyIssuerType\022\025\n" +
+      "\021UnknownIssuerType\020\000\022\017\n\013LegalEntity\020\001\022\021\n" +
+      "\rForeignEntity\020\002\022\024\n\020IndividualEntity\020\003\022\022" +
+      "\n\016PhysicalEntity\020\004*V\n\032PowerOfAttorneySen" +
+      "dingType\022\013\n\007Unknown\020\000\022\014\n\010Metadata\020\001\022\010\n\004F" +
+      "ile\020\002\022\023\n\017DocumentContent\020\003*\200\002\n!PowerOfAt" +
+      "torneyRepresentativeType\022\035\n\031UnknownRepre" +
+      "sentativeType\020\000\022\035\n\031RepresentativeLegalEn" +
+      "tity\020\001\022\"\n\036RepresentativeIndividualEntity",
+      "\020\002\022 \n\034RepresentativePhysicalEntity\020\003\022\'\n#" +
+      "RepresentativeLegalSubsidiaryEntity\020\004\022.\n" +
+      "*RepresentativeForeignLegalSubsidiaryEnt" +
+      "ity\020\005B\027B\025PowerOfAttorneyProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
