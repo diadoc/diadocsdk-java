@@ -151,7 +151,7 @@
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <release>10</release>
-                    <fork>false</fork>
+                    <fork>true</fork>
                 </configuration>
             </plugin>
 
