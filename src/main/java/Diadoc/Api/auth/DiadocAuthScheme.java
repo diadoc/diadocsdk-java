@@ -14,7 +14,7 @@ import org.apache.http.util.CharArrayBuffer;
 @Contract()
 public class DiadocAuthScheme extends RFC2617Scheme {
 
-    private boolean complete;
+    private volatile boolean complete;
 
     /**
      * Default constructor for the Diadoc authentication scheme.
