@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 import static Diadoc.Api.Proto.UserProtos.*;
-import static Diadoc.Api.Proto.Users.UserToUpdateProtos.*;
 
 public class UserClient {
     private DiadocHttpClient diadocHttpClient;
@@ -39,28 +38,6 @@ public class UserClient {
         try {
             var request = RequestBuilder.get(
                     new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/V2/GetMyUser").build());
-            return UserV2.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
-    }
-
-    /**
-     * @deprecated Method is deprecated and is planned to delete.
-    * Information
-     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/UpdateMyUser.html">link to updateMyUser</a>
-     */
-    @Deprecated
-    public UserV2 updateMyUser(UserToUpdate userToUpdate) throws DiadocSdkException {
-        if (userToUpdate == null) {
-            throw new IllegalArgumentException("userToUpdate");
-        }
-        try {
-            var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/UpdateMyUser")
-                            .build())
-                    .setEntity(new ByteArrayEntity(userToUpdate.toByteArray()));
             return UserV2.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
