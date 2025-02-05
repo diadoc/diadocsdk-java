@@ -14,7 +14,7 @@ import org.apache.http.util.CharArrayBuffer;
 @Contract()
 public class DiadocAuthScheme extends RFC2617Scheme {
 
-    private boolean complete;
+    private volatile boolean complete;
 
     /**
      * Default constructor for the Diadoc authentication scheme.
@@ -37,7 +37,7 @@ public class DiadocAuthScheme extends RFC2617Scheme {
      * Processes the challenge.
      *
      * @param header the challenge header
-     * @throws org.apache.http.auth.MalformedChallengeException
+     * @throws MalformedChallengeException
      *          is thrown if the authentication challenge
      *          is malformed
      */
@@ -67,12 +67,12 @@ public class DiadocAuthScheme extends RFC2617Scheme {
     }
 
     /**
-     * Produces Diadoc authorization header for the given set of {@link org.apache.http.auth.Credentials}.
+     * Produces Diadoc authorization header for the given set of {@link Credentials}.
      *
      * @param credentials The set of credentials to be used for authentication; must be of type DiadocCredentials
      * @param request     The request being authenticated
      * @return a Diadoc authorization string
-     * @throws org.apache.http.auth.AuthenticationException
+     * @throws AuthenticationException
      *                                     if authorization string cannot
      *                                     be generated due to an authentication failure
      */
