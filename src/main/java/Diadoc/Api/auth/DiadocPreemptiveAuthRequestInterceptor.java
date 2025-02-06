@@ -3,6 +3,7 @@ package Diadoc.Api.auth;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpRequestInterceptor;
+import org.apache.http.auth.AuthScheme;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.AuthState;
 import org.apache.http.auth.Credentials;
@@ -12,6 +13,12 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.protocol.HttpCoreContext;
 
 public class DiadocPreemptiveAuthRequestInterceptor implements HttpRequestInterceptor {
+
+    private final CredentialsSchemeFactory credentialsSchemeMapper;
+
+    public DiadocPreemptiveAuthRequestInterceptor() {
+        this.credentialsSchemeMapper = new CredentialsSchemeFactory();
+    }
 
     public void process(final HttpRequest request, final HttpContext context) {
         AuthState authState = (AuthState) context.getAttribute(HttpClientContext.TARGET_AUTH_STATE);
@@ -24,8 +31,14 @@ public class DiadocPreemptiveAuthRequestInterceptor implements HttpRequestInterc
             Credentials credentials = credentialsProvider.getCredentials(authScope);
             // If found, generate BasicScheme preemptively
             if (credentials != null) {
-                authState.update(new DiadocAuthScheme(), credentials);
+               updateAuthState(authState, credentials);
             }
         }
     }
+
+    private void updateAuthState(AuthState authState, Credentials credentials) {
+        AuthScheme scheme = credentialsSchemeMapper.createScheme(credentials);
+        authState.update(scheme, credentials);
+    }
+
 }

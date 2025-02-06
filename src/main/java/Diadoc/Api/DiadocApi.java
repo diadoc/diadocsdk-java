@@ -1,7 +1,8 @@
 package Diadoc.Api;
 
-import Diadoc.Api.auth.AuthManager;
-import Diadoc.Api.auth.AuthenticateClient;
+import Diadoc.Api.auth.*;
+import Diadoc.Api.auth.oidc.OidcAuthManager;
+import Diadoc.Api.auth.oidc.TokenProvider;
 import Diadoc.Api.counteragent.CounteragentClient;
 import Diadoc.Api.counteragentGroup.CounteragentGroupClient;
 import Diadoc.Api.department.DepartmentClient;
@@ -29,6 +30,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class DiadocApi {
 
+    private final AuthenticationType authenticationType;
     private final AuthManager authManager;
     private final AuthenticateClient authClient;
     private final OrganizationClient organizationClient;
@@ -56,12 +58,21 @@ public class DiadocApi {
     private final DiadocHttpClient diadocHttpClient;
 
     public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
+        this(new AuthManager(apiClientId), url, proxyHost, connectionSettings);
+    }
+
+    public DiadocApi(TokenProvider tokenProvider, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
+        this(new OidcAuthManager(tokenProvider), url, proxyHost, connectionSettings);
+    }
+
+    private DiadocApi(IAuthManager authManager, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
         if (url == null) {
             throw new IllegalArgumentException("url");
         }
-        authManager = new AuthManager(apiClientId);
+        this.authManager = authManager.getAuthenticationType().equals(AuthenticationType.DIADOC) ? (AuthManager) authManager : new FallbackAuthManager();
         diadocHttpClient = new DiadocHttpClient(authManager.getCredentialsProvider(), url, proxyHost, connectionSettings);
-        authClient = new AuthenticateClient(authManager, diadocHttpClient);
+        authenticationType = authManager.getAuthenticationType();
+        authClient = authManager.createAuthenticateClient(diadocHttpClient);
         organizationClient = new OrganizationClient(diadocHttpClient);
         departmentClient = new DepartmentClient(diadocHttpClient);
         employeeClient = new EmployeeClient(diadocHttpClient);
@@ -83,7 +94,6 @@ public class DiadocApi {
         employeePowerOfAttorneyClient = new EmployeePowerOfAttorneyClient(diadocHttpClient);
         documentWorkflowClient = new DocumentWorkflowClient(diadocHttpClient);
         operatorClient = new OperatorClient(diadocHttpClient);
-        authManager.setCredentials(null);
     }
 
     public DiadocApi(String apiClientId, String url) {
@@ -185,6 +195,10 @@ public class DiadocApi {
 
     public AuthManager getAuthManager() {
         return authManager;
+    }
+
+    public AuthenticationType getAuthenticationType() {
+        return authenticationType;
     }
 
     public TemplateClient getTemplateClient() {
