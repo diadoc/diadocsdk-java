@@ -21,8 +21,8 @@ import static java.nio.charset.StandardCharsets.*;
 
 public class AuthenticateClient {
     private static final String V_3_AUTHENTICATE = "/V3/Authenticate";
-    private AuthManager authManager;
-    private DiadocHttpClient diadocHttpClient;
+    private final AuthManager authManager;
+    private final DiadocHttpClient diadocHttpClient;
 
     public AuthenticateClient(AuthManager authManager, DiadocHttpClient diadocHttpClient) {
         this.authManager = authManager;
