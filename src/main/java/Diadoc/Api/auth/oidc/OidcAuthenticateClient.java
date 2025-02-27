@@ -28,6 +28,26 @@ public class OidcAuthenticateClient extends AuthenticateClient {
     }
 
     @Override
+    public String authenticateWithoutAutoConfirm(X509Certificate currentCert) throws DiadocSdkException {
+        throw new UnsupportedOperationException("Cannot determine Diadoc authentication operations for OIDC authentication.");
+    }
+
+    @Override
+    public String authenticateWithoutAutoConfirm(String thumbprint) throws DiadocSdkException {
+        throw new UnsupportedOperationException("Cannot determine Diadoc authentication operations for OIDC authentication.");
+    }
+
+    @Override
+    public void authenticateByThumbprint(String thumbprint) throws DiadocSdkException {
+        throw new UnsupportedOperationException("Cannot determine Diadoc authentication operations for OIDC authentication.");
+    }
+
+    @Override
+    public void confirmAuthenticationByCertificateThumbprint(String thumbprint, String token) throws DiadocSdkException {
+        throw new UnsupportedOperationException("Cannot determine Diadoc authentication operations for OIDC authentication.");
+    }
+
+    @Override
     public void authenticate(X509Certificate currentCert) throws DiadocSdkException {
         throw new UnsupportedOperationException("Cannot determine Diadoc authentication operations for OIDC authentication.");
     }
