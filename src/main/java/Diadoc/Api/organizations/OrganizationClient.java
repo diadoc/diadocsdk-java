@@ -379,7 +379,7 @@ public class OrganizationClient {
                 case HttpStatus.SC_FORBIDDEN:
                     return false;
                 default:
-                    throw new DiadocException(response.getReason(), response.getStatusCode());
+                    throw new DiadocException(response.getReason(), response.getStatusCode(), null, response.getTraceId());
             }
         } catch (URISyntaxException | IOException | DiadocException e) {
             throw new DiadocSdkException(e);

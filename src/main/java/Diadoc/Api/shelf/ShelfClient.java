@@ -17,6 +17,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static Diadoc.Api.helpers.Tools.getTraceId;
+
 public class ShelfClient {
     private DiadocHttpClient diadocHttpClient;
 
@@ -125,12 +127,13 @@ public class ShelfClient {
         {
             try {
                 var response = diadocHttpClient.getResponse(RequestBuilder.post(url.build()).setEntity(new ByteArrayEntity(content)));
+                var traceId = response.getTraceId();
                 if (response.getStatusCode() != HttpStatus.SC_OK) {
                     if (SHELF_NON_RETRIABLE_STATUS_CODES.contains(response.getStatusCode())) {
-                        throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode());
+                        throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode(), traceId), response.getStatusCode(), null, traceId);
                     }
 
-                    httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode()));
+                    httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode(), traceId), response.getStatusCode(), null, traceId));
                 }
 
                 responseContent = response.getContent();
@@ -206,11 +209,12 @@ public class ShelfClient {
         {
             var response = diadocHttpClient.getResponse(RequestBuilder.post(url.build()).setEntity(new ByteArrayEntity(firstPart.getBytes())));
             if (response.getStatusCode() != HttpStatus.SC_OK) {
+                var traceId = response.getTraceId();
                 if (SHELF_NON_RETRIABLE_STATUS_CODES.contains(response.getStatusCode())) {
-                    throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode());
+                    throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode(), traceId), response.getStatusCode(), null, traceId);
                 }
 
-                httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode()));
+                httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode(), traceId), response.getStatusCode(), null, traceId));
             }
 
             var responseContent = response.getContent();
@@ -269,11 +273,12 @@ public class ShelfClient {
         try {
             var response = diadocHttpClient.getResponse(RequestBuilder.post(url.build()).setEntity(new ByteArrayEntity(part.getBytes())));
             if (response.getStatusCode() != HttpStatus.SC_OK) {
+                var traceId = response.getTraceId();
                 if (SHELF_NON_RETRIABLE_STATUS_CODES.contains(response.getStatusCode())) {
-                    throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode());
+                    throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode(), traceId), response.getStatusCode(), null, traceId);
                 }
 
-                httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode()));
+                httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode(), traceId), response.getStatusCode(), null, traceId));
                 return null;
             }
 
@@ -339,11 +344,12 @@ public class ShelfClient {
         try {
             var response = diadocHttpClient.getResponse(RequestBuilder.post(url.build()).setEntity(new ByteArrayEntity(part.getBytes())));
             if (response.getStatusCode() != HttpStatus.SC_OK) {
+                var traceId = response.getTraceId();
                 if (SHELF_NON_RETRIABLE_STATUS_CODES.contains(response.getStatusCode())) {
-                    throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode());
+                    throw new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode(), traceId), response.getStatusCode(), null, traceId);
                 }
 
-                httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode()), response.getStatusCode()));
+                httpErrors.add(new DiadocException(formatResponseMessage(response.getReason(), response.getStatusCode(), traceId), response.getStatusCode(), null, traceId));
                 return null;
             }
 
@@ -374,12 +380,11 @@ public class ShelfClient {
         return result;
     }
 
-    private String formatResponseMessage(String reason, int statusCode) {
-        return String.format("Status code:%s%sMessage:%s%s",
-                statusCode,
-                System7Emu.lineSeparator(),
-                reason,
-                System7Emu.lineSeparator());
+    private String formatResponseMessage(String reason, int statusCode, String traceId) {
+        return String.format("Status code:%s%sMessage:%s%sTraceId: %s%s",
+                statusCode, System7Emu.lineSeparator(),
+                reason, System7Emu.lineSeparator(),
+                traceId, System7Emu.lineSeparator());
     }
 
     private String formatHttpErrors(List<Exception> errors) {

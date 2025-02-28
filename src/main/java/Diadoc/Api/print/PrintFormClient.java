@@ -52,10 +52,10 @@ public class PrintFormClient {
             var response = diadocHttpClient.getRawResponse(request);
 
             if (response.getRetryAfter() != null) {
-                return new PrintFormResult(response.getRetryAfter());
+                return new PrintFormResult(response.getRetryAfter(), null, response.getTraceId());
             }
 
-            return new PrintFormResult(new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()));
+            return new PrintFormResult(0, new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()), response.getTraceId());
 
         } catch (URISyntaxException | ParseException | IOException e) {
             throw new DiadocSdkException(e);
@@ -154,11 +154,13 @@ public class PrintFormClient {
         var response = executeGeneratePrintFormRequest(fromBoxId, documentType, bytes);
 
         return new PrintFormResult(
+                0,
                 new PrintFormContent(
                         response.getContentType(),
                         response.getFileName() != null ? response.getFileName() : "default",
                         response.getContent()
-                )
+                ),
+                response.getTraceId()
         );
     }
 
@@ -244,11 +246,13 @@ public class PrintFormClient {
 
     private PrintFormResult getPrintFormFromResponse(DiadocResponseInfo response){
         if (response.getRetryAfter() != null) {
-            return new PrintFormResult(response.getRetryAfter());
+            return new PrintFormResult(response.getRetryAfter(), null, response.getTraceId());
         }
         else {
             return new PrintFormResult(
-                    new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent())
+                    0,
+                    new PrintFormContent(response.getContentType(), response.getFileName(), response.getContent()),
+                    response.getTraceId()
             );
         }
     }

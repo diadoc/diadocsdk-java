@@ -9,12 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import Diadoc.Api.Constants.Headers;
 import Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos;
 import com.google.protobuf.ByteString;
+import org.apache.http.HttpResponse;
 import org.apache.http.client.utils.URIBuilder;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.jetbrains.annotations.Nullable;
 
 public class Tools {
     public static String ConsoleReadLine() throws IOException {
@@ -99,6 +102,12 @@ public class Tools {
         params.add(new BasicNameValuePair("documentId", forwardedDocumentId.getDocumentId().getEntityId()));
         params.add(new BasicNameValuePair("forwardEventId", forwardedDocumentId.getForwardEventId()));
         return params;
+    }
+
+    @Nullable
+    public static String getTraceId(HttpResponse response) {
+        var traceIdHeader = response.getFirstHeader(Headers.X_KONTUR_TRACE_ID);
+        return traceIdHeader != null ? traceIdHeader.getValue() : null;
     }
 
 }
