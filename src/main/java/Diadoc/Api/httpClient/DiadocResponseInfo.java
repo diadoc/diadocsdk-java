@@ -4,20 +4,23 @@ import org.jetbrains.annotations.Nullable;
 
 public class DiadocResponseInfo {
     @Nullable
-    private byte[] content;
+    private final byte[] content;
     @Nullable
-    private Integer retryAfter;
+    private final Integer retryAfter;
 
-    private int statusCode;
-
-    @Nullable
-    private String reason;
+    private final int statusCode;
 
     @Nullable
-    private String fileName;
+    private final String reason;
 
     @Nullable
-    private String contentType;
+    private final String fileName;
+
+    @Nullable
+    private final String contentType;
+
+    @Nullable
+    private final String traceId;
 
     public DiadocResponseInfo(
             @Nullable byte[] content,
@@ -26,14 +29,76 @@ public class DiadocResponseInfo {
             @Nullable String reason,
             @Nullable String fileName,
             @Nullable String contentType) {
-        this.content = content;
-        this.retryAfter = retryAfter;
-        this.statusCode = statusCode;
-        this.reason = reason;
-        this.fileName = fileName;
-        this.contentType = contentType;
+        this(new DiadocResponseInfoBuilder()
+                .content(content)
+                .retryAfter(retryAfter)
+                .statusCode(statusCode)
+                .reason(reason)
+                .fileName(fileName)
+                .contentType(contentType)
+        );
     }
 
+    public DiadocResponseInfo(DiadocResponseInfoBuilder builder) {
+        this.content = builder.content;
+        this.retryAfter = builder.retryAfter;
+        this.statusCode = builder.statusCode;
+        this.reason = builder.reason;
+        this.fileName = builder.fileName;
+        this.contentType = builder.contentType;
+        this.traceId = builder.traceId;
+    }
+
+    public static class DiadocResponseInfoBuilder {
+        private byte[] content;
+        private Integer retryAfter;
+        private int statusCode;
+        private String reason;
+        private String fileName;
+        private String contentType;
+        private String traceId;
+
+        public DiadocResponseInfoBuilder statusCode(int statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        public DiadocResponseInfoBuilder content(@Nullable byte[] content) {
+            this.content = content;
+            return this;
+        }
+
+        public DiadocResponseInfoBuilder retryAfter(@Nullable Integer retryAfter) {
+            this.retryAfter = retryAfter;
+            return this;
+        }
+
+        public DiadocResponseInfoBuilder reason(@Nullable String reason) {
+            this.reason = reason;
+            return this;
+        }
+
+        public DiadocResponseInfoBuilder fileName(@Nullable String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+
+        public DiadocResponseInfoBuilder contentType(@Nullable String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+
+        public DiadocResponseInfoBuilder traceId(@Nullable String traceId) {
+            this.traceId = traceId;
+            return this;
+        }
+
+        public DiadocResponseInfo build() {
+            return new DiadocResponseInfo(this);
+        }
+    }
+    
+    @Nullable
     public String getFileName() {
         return fileName;
     }
@@ -57,8 +122,14 @@ public class DiadocResponseInfo {
         return reason;
     }
 
+    @Nullable
     public String getContentType() {
         return contentType;
+    }
+
+    @Nullable
+    public String getTraceId() {
+        return traceId;
     }
 
     public static DiadocResponseInfo success(byte[] content, int statusCode) {
@@ -69,9 +140,27 @@ public class DiadocResponseInfo {
         return new DiadocResponseInfo(content, null, statusCode, null, fileName, contentType);
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #fail(int, String, Integer, String)}
+     * 
+     */
+    @Deprecated
     public static DiadocResponseInfo fail(int statusCode, String reason, @Nullable Integer retryAfter) {
-        return new DiadocResponseInfo(null, retryAfter, statusCode, reason, null, null);
+        return new DiadocResponseInfoBuilder()
+                .statusCode(statusCode)
+                .reason(reason)
+                .retryAfter(retryAfter)
+                .build();
     }
 
+    public static DiadocResponseInfo fail(int statusCode, String reason, @Nullable Integer retryAfter, @Nullable String traceId) {
+        return new DiadocResponseInfoBuilder()
+                .statusCode(statusCode)
+                .reason(reason)
+                .retryAfter(retryAfter)
+                .traceId(traceId)
+                .build();
+    }
 
 }

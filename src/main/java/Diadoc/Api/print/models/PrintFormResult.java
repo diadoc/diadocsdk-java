@@ -1,16 +1,27 @@
 package Diadoc.Api.print.models;
 
+import org.jetbrains.annotations.Nullable;
+
 public class PrintFormResult {
-    private int retryAfter;
-    private PrintFormContent content;
+    private final int retryAfter;
+    @Nullable
+    private final PrintFormContent content;
+
+    @Nullable
+    private final String traceId;
 
     public PrintFormResult(PrintFormContent content) {
-        this.content = content;
-        this.retryAfter = 0;
+        this(0, content, null);
     }
 
     public PrintFormResult(int retryAfter) {
+        this(retryAfter, null, null);
+    }
+
+    public PrintFormResult(int retryAfter, @Nullable PrintFormContent content, @Nullable String traceId) {
         this.retryAfter = retryAfter;
+        this.content = content;
+        this.traceId = traceId;
     }
 
     public boolean HasContent() {
@@ -23,5 +34,10 @@ public class PrintFormResult {
 
     public int getRetryAfter() {
         return retryAfter;
+    }
+
+    @Nullable
+    public String getTraceId() {
+        return traceId;
     }
 }

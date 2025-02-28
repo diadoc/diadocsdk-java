@@ -1,10 +1,13 @@
 package Diadoc.Api.httpClient;
 
 import Diadoc.Api.ConnectionSettings;
+import Diadoc.Api.Constants.Headers;
 import Diadoc.Api.exceptions.DiadocException;
 import Diadoc.Api.auth.DiadocPreemptiveAuthRequestInterceptor;
 import Diadoc.Api.exceptions.DiadocSdkException;
+import Diadoc.Api.exceptions.KonturHttpException;
 import Diadoc.Api.helpers.EnvironmentHelpers;
+import Diadoc.Api.helpers.System7Emu;
 import Diadoc.Api.helpers.Tools;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.*;
@@ -34,7 +37,10 @@ import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Date;
+import java.util.Optional;
 import java.util.concurrent.TimeoutException;
+
+import static Diadoc.Api.helpers.Tools.getTraceId;
 
 public class DiadocHttpClient {
 
@@ -91,13 +97,15 @@ public class DiadocHttpClient {
 
     public GeneratedFile performRequestWithGeneratedFile(RequestBuilder requestBuilder) throws IOException, ParseException {
         try (var response = httpClient.execute(createRequest(requestBuilder))) {
-            return new GeneratedFile(tryGetHttpResponseFileName(response), getResponseBytes(response));
+            var responseBytes = getResponseBytes(response);
+            return new GeneratedFile(tryGetHttpResponseFileName(response), responseBytes);
         }
     }
 
     public FileContent performRequestWithFileContent(RequestBuilder requestBuilder) throws IOException {
         try (var response = httpClient.execute(createRequest(requestBuilder))) {
-            return new FileContent(getResponseBytes(response), tryGetFileContentName(response));
+            var responseBytes = getResponseBytes(response);
+            return new FileContent(responseBytes, tryGetFileContentName(response));
         }
     }
 
@@ -114,20 +122,22 @@ public class DiadocHttpClient {
     }
 
     private byte[] getResponseBytes(HttpResponse response) throws IOException {
-        if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
-            throw new HttpResponseException(
-                    response.getStatusLine().getStatusCode(),
-                    new String(IOUtils.toByteArray(response.getEntity().getContent())));
+        var statusCode = response.getStatusLine().getStatusCode();
+        if (statusCode != HttpStatus.SC_OK) {
+            throw calculateHttpResponseException(response);
         }
         return IOUtils.toByteArray(response.getEntity().getContent());
     }
 
     private DiadocResponseInfo getResponse(HttpResponse response) throws IOException {
         if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
+            var traceId = getTraceId(response);
             return DiadocResponseInfo.fail(
                     response.getStatusLine().getStatusCode(),
                     new String(IOUtils.toByteArray(response.getEntity().getContent())),
-                    tryGetRetryAfter(response));
+                    tryGetRetryAfter(response),
+                    traceId
+                    );
         }
         return DiadocResponseInfo.success(IOUtils.toByteArray(response.getEntity().getContent()), response.getStatusLine().getStatusCode());
     }
@@ -135,9 +145,7 @@ public class DiadocHttpClient {
     private DiadocResponseInfo getRawResponse(HttpResponse response) throws IOException, ParseException {
         var statusCode = response.getStatusLine().getStatusCode();
         if (statusCode < HttpStatus.SC_OK || statusCode >= HttpStatus.SC_BAD_REQUEST) {
-            throw new HttpResponseException(
-                    statusCode,
-                    new String(IOUtils.toByteArray(response.getEntity().getContent())));
+            throw calculateHttpResponseException(response);
         }
         return new DiadocResponseInfo(
                 response.getEntity() != null && response.getEntity().getContent() != null
@@ -150,10 +158,23 @@ public class DiadocHttpClient {
                 tryGetContentType(response));
     }
 
+    private HttpResponseException calculateHttpResponseException(HttpResponse response) throws IOException {
+        var statusCode = response.getStatusLine().getStatusCode();
+        var responseBody = new String(IOUtils.toByteArray(response.getEntity().getContent()));
+        var traceId = getTraceId(response);
+        var exception = new HttpResponseException(statusCode, responseBody);
+
+        if (traceId != null) {
+            exception.initCause(new KonturHttpException(statusCode, responseBody, traceId));
+        }
+
+        return exception;
+    }
+
     private HttpUriRequest createRequest(RequestBuilder requestBuilder) {
         var requestConfig = RequestConfig.custom().setAuthenticationEnabled(false).build();
         if (solutionInfo != null && !solutionInfo.isEmpty()) {
-            requestBuilder.setHeader("X-Solution-Info", solutionInfo);
+            requestBuilder.setHeader(Headers.X_SOLUTION_INFO, solutionInfo);
         }
         return requestBuilder.setConfig(requestConfig).build();
     }
@@ -206,7 +227,21 @@ public class DiadocHttpClient {
                         continue;
                     }
                     if (statusCode != HttpStatus.SC_OK) {
-                        throw new DiadocException(response.getStatusLine().getReasonPhrase(), statusCode, tryGetDiadocErrorCode(response));
+                        var traceId = getTraceId(response);
+                        var message = String.format("Status code: %d%sMessage: %s%sTraceId: %s%s",
+                                response.getStatusLine().getStatusCode(),
+                                System7Emu.lineSeparator(),
+                                response.getStatusLine().getReasonPhrase(),
+                                System7Emu.lineSeparator(),
+                                Tools.getTraceId(response) != null ? Tools.getTraceId(response) : "",
+                                System7Emu.lineSeparator()
+                        );
+                        throw new DiadocException(
+                                message,
+                                statusCode,
+                                tryGetDiadocErrorCode(response),
+                                traceId
+                        );
                     }
                     return getResponseBytes(response);
                 }
@@ -231,7 +266,7 @@ public class DiadocHttpClient {
 
     @Nullable
     private static String tryGetDiadocErrorCode(HttpResponse webResponse) {
-        Header[] errorCodeHeaders = webResponse.getHeaders("X-Diadoc-ErrorCode");
+        Header[] errorCodeHeaders = webResponse.getHeaders(Headers.X_DIADOC_ERROR_CODE);
         if (errorCodeHeaders.length > 0) {
             return errorCodeHeaders[0].getValue();
         }
@@ -240,7 +275,7 @@ public class DiadocHttpClient {
 
     @Nullable
     private static String tryGetHttpResponseFileName(HttpResponse webResponse) throws ParseException {
-        Header[] dispositions = webResponse.getHeaders("Content-Disposition");
+        Header[] dispositions = webResponse.getHeaders(Headers.CONTENT_DISPOSITION);
         if (dispositions == null || dispositions.length == 0)
             return null;
         return new ContentDisposition(dispositions[0].getValue()).getParameter("filename");
@@ -248,7 +283,7 @@ public class DiadocHttpClient {
 
     @Nullable
     private static String tryGetFileContentName(HttpResponse response) {
-        Header fileNameHeader = response.getFirstHeader("X-Diadoc-FileName");
+        Header fileNameHeader = response.getFirstHeader(Headers.X_DIADOC_FILE_NAME);
         return fileNameHeader == null ? null : fileNameHeader.getValue();
     }
 }

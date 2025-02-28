@@ -407,12 +407,14 @@ public class DocumentClient {
 
         var response = diadocHttpClient.getResponse(request);
 
+        var traceId = response.getTraceId();
+
         if (response.getRetryAfter() != null) {
-            return new DocumentProtocolResult(response.getRetryAfter());
+            return DocumentProtocolResult.builder().withRetryAfter(response.getRetryAfter()).withTraceId(traceId).build();
         }
         else {
             var documentProtocol = DocumentProtocolProtos.DocumentProtocol.parseFrom(response.getContent());
-            return new DocumentProtocolResult(documentProtocol);
+            return DocumentProtocolResult.builder().withDocumentProtocol(documentProtocol).withTraceId(traceId).build();
         }
     }
 
