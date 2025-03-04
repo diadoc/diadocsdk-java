@@ -15,6 +15,7 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.config.RegistryBuilder;
+import org.apache.http.config.SocketConfig;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
@@ -30,17 +31,21 @@ import javax.mail.internet.ContentDisposition;
 import javax.mail.internet.ParseException;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Date;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.concurrent.TimeoutException;
 
 public class DiadocHttpClient {
 
-    private CloseableHttpClient httpClient;
-    private String baseUrl;
-    private String solutionInfo;
+    private final CloseableHttpClient httpClient;
+    private final String baseUrl;
+    private volatile String solutionInfo;
+
+    private final ConnectionSettings connectionSettings;
 
     public DiadocHttpClient(
             CredentialsProvider credentialsProvider,
@@ -57,6 +62,14 @@ public class DiadocHttpClient {
         if(connectionSettings != null) {
             connectionManager.setMaxTotal(connectionSettings.getMaxTotalConnections());
             connectionManager.setDefaultMaxPerRoute(connectionSettings.getMaxConnectionsPerRoute());
+
+            if (!connectionSettings.getSocketTimeout().isZero()) {
+                connectionManager.setDefaultSocketConfig(
+                        SocketConfig.custom()
+                                .setSoTimeout((int) connectionSettings.getSocketTimeout().toMillis())
+                                .build()
+                );
+            }
         }
         var httpClientBuilder = HttpClients
                 .custom()
@@ -73,6 +86,7 @@ public class DiadocHttpClient {
 
         httpClient = httpClientBuilder.build();
         this.baseUrl = baseUrl;
+        this.connectionSettings = connectionSettings;
     }
 
     public String getBaseUrl() {
@@ -117,7 +131,7 @@ public class DiadocHttpClient {
         if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
             throw new HttpResponseException(
                     response.getStatusLine().getStatusCode(),
-                    new String(IOUtils.toByteArray(response.getEntity().getContent())));
+                    new String(IOUtils.toByteArray(response.getEntity().getContent()), StandardCharsets.UTF_8));
         }
         return IOUtils.toByteArray(response.getEntity().getContent());
     }
@@ -126,7 +140,7 @@ public class DiadocHttpClient {
         if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
             return DiadocResponseInfo.fail(
                     response.getStatusLine().getStatusCode(),
-                    new String(IOUtils.toByteArray(response.getEntity().getContent())),
+                    new String(IOUtils.toByteArray(response.getEntity().getContent()), StandardCharsets.UTF_8),
                     tryGetRetryAfter(response));
         }
         return DiadocResponseInfo.success(IOUtils.toByteArray(response.getEntity().getContent()), response.getStatusLine().getStatusCode());
@@ -137,7 +151,7 @@ public class DiadocHttpClient {
         if (statusCode < HttpStatus.SC_OK || statusCode >= HttpStatus.SC_BAD_REQUEST) {
             throw new HttpResponseException(
                     statusCode,
-                    new String(IOUtils.toByteArray(response.getEntity().getContent())));
+                    new String(IOUtils.toByteArray(response.getEntity().getContent()), StandardCharsets.UTF_8));
         }
         return new DiadocResponseInfo(
                 response.getEntity() != null && response.getEntity().getContent() != null
@@ -151,6 +165,15 @@ public class DiadocHttpClient {
     }
 
     private HttpUriRequest createRequest(RequestBuilder requestBuilder) {
+        var requestConfigBuilder = RequestConfig.custom().setAuthenticationEnabled(false);
+
+        if (connectionSettings != null) {
+            requestConfigBuilder
+                    .setSocketTimeout(Math.toIntExact(connectionSettings.getSocketTimeout().toMillis()))
+                    .setConnectTimeout(Math.toIntExact(connectionSettings.getConnectTimeout().toMillis()))
+                    .setConnectionRequestTimeout(Math.toIntExact(connectionSettings.getConnectionRequestTimeout().toMillis()));
+        }
+
         var requestConfig = RequestConfig.custom().setAuthenticationEnabled(false).build();
         if (solutionInfo != null && !solutionInfo.isEmpty()) {
             requestBuilder.setHeader("X-Solution-Info", solutionInfo);
@@ -185,24 +208,32 @@ public class DiadocHttpClient {
     }
 
     public byte[] waitTaskResult(String path, String taskId, @Nullable Integer timeoutInMillis) throws DiadocSdkException {
-        if (timeoutInMillis == null) {
-            timeoutInMillis = 5 * 60 * 1000;
+        var timeout = Duration.ofMinutes(5);
+
+        if (timeoutInMillis != null) {
+            timeout = Duration.ofMillis(timeoutInMillis);
         }
-        var timeLimit = new Date(new Date().getTime() + timeoutInMillis).getTime();
+
+        var timeLimit = Instant.now().plus(timeout);
 
         try {
             while (true) {
                 try (var response = httpClient.execute(createWaitRequest(path, taskId))) {
                     var statusCode = response.getStatusLine().getStatusCode();
                     if (statusCode == HttpStatus.SC_NO_CONTENT) {
-                        if (new Date().getTime() > timeLimit) {
-                            throw new TimeoutException(String.format("Can't GET '%s'. Timeout %ds expired.", path, timeLimit / 1000));
+                        if (Instant.now().isAfter(timeLimit)) {
+                            throw new TimeoutException(String.format("Can't GET '%s'. Timeout %d seconds expired.", path, timeout.toSeconds()));
                         }
                         var retryAfter = tryGetRetryAfter(response);
                         int delayInSeconds = retryAfter != null
                                 ? Math.min(retryAfter, 15)
                                 : 15;
-                        Thread.sleep(delayInSeconds * 1000);
+                        try {
+                            Thread.sleep((long) delayInSeconds * 1000);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                            throw new DiadocSdkException(e);
+                        }
                         continue;
                     }
                     if (statusCode != HttpStatus.SC_OK) {
@@ -211,7 +242,7 @@ public class DiadocHttpClient {
                     return getResponseBytes(response);
                 }
             }
-        } catch (IOException | URISyntaxException | TimeoutException | InterruptedException | DiadocException e) {
+        } catch (IOException | URISyntaxException | TimeoutException | DiadocException e) {
             e.printStackTrace();
             throw new DiadocSdkException(e);
         }

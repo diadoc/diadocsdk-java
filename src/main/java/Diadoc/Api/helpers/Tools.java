@@ -5,9 +5,11 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos;
 import com.google.protobuf.ByteString;
@@ -17,6 +19,20 @@ import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
 public class Tools {
+
+    /**
+     * See https://msdn.microsoft.com/en-us/library/system.datetime.ticks.aspx
+     * for information about ticks.
+     */
+    private static final Instant TIME_REFERENCE =
+            LocalDateTime.of(LocalDate.of(1, 1, 1), LocalTime.MIDNIGHT)
+                    .atZone(ZoneOffset.UTC)
+                    .toInstant();
+    private static final long NANOS_PER_TICK = 100;
+    private static final long NANOS_PER_SECOND = TimeUnit.SECONDS.toNanos(1);
+    private static final long TICKS_PER_SECOND = NANOS_PER_SECOND / NANOS_PER_TICK;
+
+
     public static String ConsoleReadLine() throws IOException {
         InputStreamReader converter = new InputStreamReader(System.in);
         BufferedReader in = new BufferedReader(converter);
@@ -27,9 +43,27 @@ public class Tools {
         return s == null || (s.isEmpty());
     }
 
+    /**
+     * @deprecated
+     * Use {@link #toCsTicks(Instant)} or {@link #toCsTicks(Duration)}
+     */
+    @Deprecated
     public static long toCsTicks(long time) {
         return 621355968000000000L + time * 10000;
     }
+
+    public static String toCsTicks(Instant instant) {
+        return Long.toString(toCsTicks(Duration.between(TIME_REFERENCE, instant)));
+    }
+
+    public static long toCsTicks(Duration duration) {
+        // Split to seconds and nanos to avoid overflow in Duration.toNanos()
+        // Duration.toMillis() can't be used
+        final long seconds = duration.getSeconds();
+        final int nanos = duration.getNano();
+        return seconds * TICKS_PER_SECOND + nanos / NANOS_PER_TICK;
+    }
+
 
     public static void WriteAllBytes(String getEntityDestinationPath,
                                      ByteString data) throws IOException {
@@ -39,12 +73,16 @@ public class Tools {
     public static void WriteAllBytes(String getEntityDestinationPath,
                                      byte[] data) throws IOException {
 
-        File f = new File(new File(new File(getEntityDestinationPath).getAbsolutePath()).getParent());
-        f.mkdirs();
+        var file = new File(getEntityDestinationPath).getAbsoluteFile();
+        var parentDir = file.getParentFile();
 
-        FileOutputStream fos = new FileOutputStream(new File(getEntityDestinationPath), false);
-        fos.write(data);
-        fos.close();
+        if (parentDir != null) {
+            parentDir.mkdirs();
+        }
+
+        try (FileOutputStream fos = new FileOutputStream(file, false)) {
+            fos.write(data);
+        }
     }
 
     public static byte[] GenerateRandomBytes(int size) {
