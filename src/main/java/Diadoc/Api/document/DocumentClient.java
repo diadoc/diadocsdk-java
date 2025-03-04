@@ -16,7 +16,9 @@ import org.jetbrains.annotations.Nullable;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.Instant;
 import java.util.Date;
+import java.util.Optional;
 
 import static Diadoc.Api.Proto.Documents.DocumentListProtos.DocumentList;
 import static Diadoc.Api.Proto.Documents.DocumentProtos.Document;
@@ -51,15 +53,21 @@ public class DocumentClient {
                 url.addParameter("counteragentBoxId", filter.getCounteragentBoxId());
             }
 
-            if (filter.getTimestampFrom() != null) {
-                var fromTicks = Tools.toCsTicks(filter.getTimestampFrom().getTime());
-                url.addParameter("timestampFromTicks", Long.toString(fromTicks));
-            }
+            var fromCsTicks = Optional.ofNullable(filter.getTimestampFromDateTime())
+                    .map(Tools::toCsTicks)
+                    .orElseGet(() -> Optional.ofNullable(filter.getTimestampFrom())
+                            .map(t -> Tools.toCsTicks(t.toInstant()))
+                            .orElse(null));
 
-            if (filter.getTimestampTo() != null) {
-                var toTicks = Tools.toCsTicks(filter.getTimestampTo().getTime());
-                url.addParameter("timestampToTicks", Long.toString(toTicks));
-            }
+            var toCsTicks = Optional.ofNullable(filter.getTimestampToDateTime())
+                    .map(Tools::toCsTicks)
+                    .orElseGet(() -> Optional.ofNullable(filter.getTimestampTo())
+                            .map(t -> Tools.toCsTicks(t.toInstant()))
+                            .orElse(null));
+
+
+            Tools.addParameterIfNotNull(url, "timestampToTicks", toCsTicks);
+            Tools.addParameterIfNotNull(url,"timestampFromTicks", fromCsTicks);
 
             if (!Tools.isNullOrEmpty(filter.getFromDocumentDate())) {
                 url.addParameter("fromDocumentDate", filter.getFromDocumentDate());
@@ -83,10 +91,8 @@ public class DocumentClient {
             if (filter.getAfterIndexKey() != null) {
                 url.addParameter("afterIndexKey", filter.getAfterIndexKey());
             }
-            if (filter.getCount() != null) {
-                url.addParameter("count", filter.getCount().toString());
-            }
 
+            Tools.addParameterIfNotNull(url, "count", filter.getCount());
             Tools.addParameterIfNotNull(url, "fromDepartmentId", filter.getFromDepartmentId());
             Tools.addParameterIfNotNull(url, "toDepartmentId", filter.getToDepartmentId());
 
@@ -98,6 +104,11 @@ public class DocumentClient {
         }
     }
 
+    /**
+     * @deprecated 
+     * Use {@link #getDocuments(String, String, String, Instant, Instant, String, String, String, boolean, String, Integer)}
+     */
+    @Deprecated
     public DocumentList getDocuments(
             String boxId,
             String filterCategory,
@@ -124,7 +135,39 @@ public class DocumentClient {
                 .count(count)
                 .build());
     }
+    
+    public DocumentList getDocuments(
+            String boxId,
+            String filterCategory,
+            String counteragentBoxId,
+            Instant timestampFromDateTime,
+            Instant timestampToDateTime,
+            String fromDocumentDate,
+            String toDocumentDate,
+            String departmentId,
+            boolean excludeSubdepartments,
+            String afterIndexKey,
+            Integer count) throws DiadocSdkException {
+        return getDocuments(new DocumentsFilter.Builder()
+                .boxId(boxId)
+                .filterCategory(filterCategory)
+                .counteragentBoxId(counteragentBoxId)
+                .timestampFromDateTime(timestampFromDateTime)
+                .timestampToDateTime(timestampToDateTime)
+                .fromDocumentDate(fromDocumentDate)
+                .toDocumentDate(toDocumentDate)
+                .departmentId(departmentId)
+                .excludeSubdepartments(excludeSubdepartments)
+                .afterIndexKey(afterIndexKey)
+                .count(count)
+                .build());
+    }
 
+    /**
+     * @deprecated 
+     * Use {@link #getDocuments(String, String, String, Instant, Instant, String, String, String, boolean, String, Integer)}
+     */
+    @Deprecated
     public DocumentList getDocuments(String boxId,
                                      String filterCategory,
                                      String counteragentBoxId,
@@ -148,6 +191,32 @@ public class DocumentClient {
                 afterIndexKey,
                 null);
     }
+
+    public DocumentList getDocuments(String boxId,
+                                     String filterCategory,
+                                     String counteragentBoxId,
+                                     Instant timestampFrom,
+                                     Instant timestampTo,
+                                     String fromDocumentDate,
+                                     String toDocumentDate,
+                                     String departmentId,
+                                     boolean excludeSubdepartments,
+                                     String afterIndexKey) throws DiadocSdkException {
+        return getDocuments(
+                boxId,
+                filterCategory,
+                counteragentBoxId,
+                timestampFrom,
+                timestampTo,
+                fromDocumentDate,
+                toDocumentDate,
+                departmentId,
+                excludeSubdepartments,
+                afterIndexKey,
+                null);
+    }
+    
+    
 
     public Document getDocument(String boxId, String messageId, String entityId) throws DiadocSdkException {
         if (boxId == null) {
@@ -407,12 +476,14 @@ public class DocumentClient {
 
         var response = diadocHttpClient.getResponse(request);
 
+        var traceId = response.getTraceId();
+
         if (response.getRetryAfter() != null) {
-            return new DocumentProtocolResult(response.getRetryAfter());
+            return DocumentProtocolResult.builder().withRetryAfter(response.getRetryAfter()).withTraceId(traceId).build();
         }
         else {
             var documentProtocol = DocumentProtocolProtos.DocumentProtocol.parseFrom(response.getContent());
-            return new DocumentProtocolResult(documentProtocol);
+            return DocumentProtocolResult.builder().withDocumentProtocol(documentProtocol).withTraceId(traceId).build();
         }
     }
 
