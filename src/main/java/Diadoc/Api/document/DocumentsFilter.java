@@ -1,34 +1,61 @@
 package Diadoc.Api.document;
 
+import java.time.Instant;
 import java.util.Date;
 
 public class DocumentsFilter {
     private String boxId;
+
     private String filterCategory;
+
     private String counteragentBoxId;
 
     private String fromDepartmentId;
+
     private String toDepartmentId;
+
+    /**
+     * @deprecated
+     * Use {@link #timestampFromDateTime}
+     */
+    @Deprecated
     private Date timestampFrom;
+
+    /**
+     * @deprecated
+     * Use {@link #timestampToDateTime}
+     */
+    @Deprecated
     private Date timestampTo;
+
+    private Instant timestampFromDateTime;
+
+    private Instant timestampToDateTime;
+
     private String fromDocumentDate;
+
     private String toDocumentDate;
+
     private String departmentId;
+
     private boolean excludeSubdepartments;
+
     private String sortDirection;
+
     private String afterIndexKey;
+
     private Integer count;
 
     /**
-     * @deprecated Конструктор устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     @Deprecated
     public DocumentsFilter(){}
 
     /**
-     * @deprecated Конструктор устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     @Deprecated
     public DocumentsFilter(
@@ -73,6 +100,8 @@ public class DocumentsFilter {
         this.count = builder.count;
         this.fromDepartmentId = builder.fromDepartmentId;
         this.toDepartmentId = builder.toDepartmentId;
+        this.timestampFromDateTime = builder.timestampFromDateTime;
+        this.timestampToDateTime = builder.timestampToDateTime;
     }
 
     public static class Builder {
@@ -81,8 +110,23 @@ public class DocumentsFilter {
         private String counteragentBoxId;
         private String fromDepartmentId;
         private String toDepartmentId;
+        /**
+         * @deprecated
+         * Use {@link #timestampFromDateTime}
+         */
+        @Deprecated
         private Date timestampFrom;
+
+        /**
+         * @deprecated
+         * Use {@link #timestampToDateTime}
+         */
+        @Deprecated
         private Date timestampTo;
+
+        private Instant timestampFromDateTime;
+
+        private Instant timestampToDateTime;
         private String fromDocumentDate;
         private String toDocumentDate;
         private String departmentId;
@@ -108,11 +152,21 @@ public class DocumentsFilter {
             return this;
         }
 
+        /**
+         * @deprecated
+         * Use {@link #timestampFromDateTime(Instant)}
+         */
+        @Deprecated
         public Builder timestampFrom(Date timestampFrom) {
             this.timestampFrom = timestampFrom;
             return this;
         }
 
+        /**
+         * @deprecated
+         * Use {@link #timestampToDateTime(Instant)} (Instant)}
+         */
+        @Deprecated
         public Builder timestampTo(Date timestampTo) {
             this.timestampTo = timestampTo;
             return this;
@@ -163,6 +217,15 @@ public class DocumentsFilter {
             return this;
         }
 
+        public Builder timestampFromDateTime(Instant timestampFromDateTime) {
+            this.timestampFromDateTime = timestampFromDateTime;
+            return this;
+        }
+        public Builder timestampToDateTime(Instant timestampToDateTime) {
+            this.timestampToDateTime = timestampToDateTime;
+            return this;
+        }
+
         public DocumentsFilter build() {
             return new DocumentsFilter(this);
         }
@@ -173,8 +236,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setBoxId(String boxId) {
         this.boxId = boxId;
@@ -186,8 +249,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setFilterCategory(String filterCategory) {
         this.filterCategory = filterCategory;
@@ -199,8 +262,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setCounteragentBoxId(String counteragentBoxId) {
         this.counteragentBoxId = counteragentBoxId;
@@ -212,8 +275,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setTimestampFrom(Date timestampFrom) {
         this.timestampFrom = timestampFrom;
@@ -225,8 +288,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setTimestampTo(Date timestampTo) {
         this.timestampTo = timestampTo;
@@ -238,8 +301,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setFromDocumentDate(String fromDocumentDate) {
         this.fromDocumentDate = fromDocumentDate;
@@ -251,8 +314,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setToDocumentDate(String toDocumentDate) {
         this.toDocumentDate = toDocumentDate;
@@ -264,8 +327,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setDepartmentId(String departmentId) {
         this.departmentId = departmentId;
@@ -277,8 +340,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setExcludeSubdepartments(boolean excludeSubdepartments) {
         this.excludeSubdepartments = excludeSubdepartments;
@@ -290,8 +353,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
@@ -303,8 +366,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setAfterIndexKey(String afterIndexKey) {
         this.afterIndexKey = afterIndexKey;
@@ -316,8 +379,8 @@ public class DocumentsFilter {
     }
 
     /**
-     * @deprecated Setter устарел
-     * Рекомендуется использовать {@link #DocumentsFilter(Builder)}
+     * @deprecated
+     * Use {@link #DocumentsFilter(Builder)}
      */
     public DocumentsFilter setCount(Integer count) {
         this.count = count;
@@ -331,4 +394,14 @@ public class DocumentsFilter {
     public String getToDepartmentId() {
         return toDepartmentId;
     }
+
+
+    public Instant getTimestampFromDateTime() {
+        return timestampFromDateTime;
+    }
+
+    public Instant getTimestampToDateTime() {
+        return timestampToDateTime;
+    }
+
 }
