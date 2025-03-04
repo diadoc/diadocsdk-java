@@ -29,12 +29,17 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.mail.internet.ContentDisposition;
 import javax.mail.internet.ParseException;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManagerFactory;
+import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.security.KeyManagementException;
+import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.concurrent.TimeoutException;
@@ -47,12 +52,23 @@ public class DiadocHttpClient {
 
     private final ConnectionSettings connectionSettings;
 
+    private final SslMode sslMode;
+
     public DiadocHttpClient(
             CredentialsProvider credentialsProvider,
             String baseUrl,
             @Nullable HttpHost proxyHost,
             @Nullable ConnectionSettings connectionSettings) {
-        var sslSocketFactory = getTrustfulSslSocketFactory();
+       this(credentialsProvider, baseUrl, proxyHost, connectionSettings, null);
+    }
+
+    public DiadocHttpClient(
+            CredentialsProvider credentialsProvider,
+            String baseUrl,
+            @Nullable HttpHost proxyHost,
+            @Nullable ConnectionSettings connectionSettings,
+            @Nullable SslMode sslMode) {
+        var sslSocketFactory = (sslMode == SslMode.STRICT) ? getVerifiedSslSocketFactory() : getTrustfulSslSocketFactory();
 
         var connectionManager = new PoolingHttpClientConnectionManager(
                 RegistryBuilder.<ConnectionSocketFactory>create()
@@ -87,10 +103,19 @@ public class DiadocHttpClient {
         httpClient = httpClientBuilder.build();
         this.baseUrl = baseUrl;
         this.connectionSettings = connectionSettings;
+        this.sslMode = sslMode;
     }
 
     public String getBaseUrl() {
         return baseUrl;
+    }
+
+    public String getSolutionInfo() {
+        return solutionInfo;
+    }
+
+    public SslMode getSslMode() {
+        return sslMode;
     }
 
     public void setSolutionInfo(String solutionInfo) {
@@ -195,6 +220,11 @@ public class DiadocHttpClient {
             return response.getEntity().getContentType().getValue();
         }
         return null;
+    }
+
+    private static SSLConnectionSocketFactory getVerifiedSslSocketFactory() {
+        return null;
+        // TODO
     }
 
     private static SSLConnectionSocketFactory getTrustfulSslSocketFactory() {
