@@ -46,6 +46,18 @@ mvn package
 mvn install
 ```
 
+## Можно использовать maven wrapper
+# windows
+```
+./mvnw.cmd package
+```
+
+# linux
+```
+./mvnw package
+```
+
+
 ## Добавление функциональности
 
 - [Сделайте Fork](https://guides.github.com/activities/forking/)
