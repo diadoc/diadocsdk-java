@@ -189,7 +189,7 @@ public class SignClient {
 
         try {
             var url = new URIBuilder(diadocHttpClient.getBaseUrl())
-                    .setPath("V2/DssSign")
+                    .setPath("/V2/DssSign")
                     .addParameter("boxId", boxId);
 
             var result = diadocHttpClient.performRequest(
