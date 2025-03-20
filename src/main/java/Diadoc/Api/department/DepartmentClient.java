@@ -157,6 +157,11 @@ public class DepartmentClient {
         }
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #getDepartmentV2(String, String)}
+     */
+    @Deprecated
     public OrganizationProtos.Department getDepartment(String orgId, String departmentId) throws DiadocSdkException {
         if (orgId == null) {
             throw new IllegalArgumentException("orgId");
@@ -169,6 +174,26 @@ public class DepartmentClient {
                     new URIBuilder(diadocHttpClient.getBaseUrl())
                             .setPath("/GetDepartment")
                             .addParameter("orgId", orgId)
+                            .addParameter("departmentId", departmentId)
+                            .build());
+            return OrganizationProtos.Department.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public OrganizationProtos.Department getDepartmentV2(String boxId, String departmentId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (departmentId == null) {
+            throw new IllegalArgumentException("departmentId");
+        }
+        try {
+            var request = RequestBuilder.get(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("V2/GetDepartment")
+                            .addParameter("boxId", boxId)
                             .addParameter("departmentId", departmentId)
                             .build());
             return OrganizationProtos.Department.parseFrom(diadocHttpClient.performRequest(request));
