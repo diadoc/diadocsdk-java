@@ -1,6 +1,5 @@
 package Diadoc.Api.auth.oidc;
 
-import Diadoc.Api.Proto.ExternalServiceAuthInfoProtos;
 import Diadoc.Api.auth.AuthenticateClient;
 import Diadoc.Api.exceptions.DiadocSdkException;
 
@@ -54,11 +53,6 @@ public class OidcAuthenticateClient extends AuthenticateClient {
 
     @Override
     public void confirmAuthenticationByCertificate(X509Certificate currentCert, String token) throws DiadocSdkException {
-        throw new UnsupportedOperationException("Cannot determine Diadoc authentication operations for OIDC authentication.");
-    }
-
-    @Override
-    public ExternalServiceAuthInfoProtos.ExternalServiceAuthInfo getExternalServiceAuthInfo(String key) throws DiadocSdkException {
         throw new UnsupportedOperationException("Cannot determine Diadoc authentication operations for OIDC authentication.");
     }
 
