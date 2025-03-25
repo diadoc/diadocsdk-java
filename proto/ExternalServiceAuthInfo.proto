@@ -1,8 +1,0 @@
-package Diadoc.Api.Proto;
-
-option java_outer_classname = "ExternalServiceAuthInfoProtos";
-
-message ExternalServiceAuthInfo {
-	optional string ServiceUserId = 1;
-	optional string Thumbprint = 2;
-}
