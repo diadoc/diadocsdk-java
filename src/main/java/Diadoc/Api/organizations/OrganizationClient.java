@@ -118,7 +118,7 @@ public class OrganizationClient {
 
     /**
      * @deprecated Method is deprecated
-     * Use {@link #getOrganizationsByInnListV2(String, Iterable)}
+     * Use {@link #getOrganizationsByInnListAuthorized(String, Iterable)}
      */
     @Deprecated
     public OrganizationWithCounteragentStatus[] getOrganizationsByInnList(String myOrgId, Iterable<String> innList) throws DiadocSdkException {
@@ -182,13 +182,13 @@ public class OrganizationClient {
         }
     }
 
-    public OrganizationWithCounteragentStatus[] getOrganizationsByInnListV2(String myBoxId, Iterable<String> innList) throws DiadocSdkException {
+    public OrganizationWithCounteragentStatus[] getOrganizationsByInnListAuthorized(String myBoxId, Iterable<String> innList) throws DiadocSdkException {
         var request = GetOrganizationsByInnListRequest.newBuilder();
         request.addAllInnList(innList);
-        return getOrganizationsByInnListV2(myBoxId, request.build());
+        return getOrganizationsByInnListAuthorized(myBoxId, request.build());
     }
 
-    public OrganizationWithCounteragentStatus[] getOrganizationsByInnListV2(String myBoxId, GetOrganizationsByInnListRequest innListRequest) throws DiadocSdkException {
+    public OrganizationWithCounteragentStatus[] getOrganizationsByInnListAuthorized(String myBoxId, GetOrganizationsByInnListRequest innListRequest) throws DiadocSdkException {
         if (myBoxId == null)
             throw new IllegalArgumentException("myBoxId");
         if (innListRequest == null)
@@ -196,7 +196,7 @@ public class OrganizationClient {
         try {
             var request = RequestBuilder.post(
                             new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/V2/GetOrganizationsByInnList")
+                                    .setPath("/GetOrganizationsByInnListAuthorized")
                                     .addParameter("myBoxId", myBoxId)
                                     .build())
                     .setEntity(new ByteArrayEntity(innListRequest.toByteArray()));
