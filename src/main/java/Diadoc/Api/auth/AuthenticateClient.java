@@ -18,7 +18,6 @@ import java.net.URISyntaxException;
 import java.security.cert.CertificateEncodingException;
 import java.security.cert.X509Certificate;
 
-import static Diadoc.Api.Proto.ExternalServiceAuthInfoProtos.ExternalServiceAuthInfo;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class AuthenticateClient {
@@ -176,28 +175,5 @@ public class AuthenticateClient {
 
     private String getDecryptedToken(byte[] encryptedToken, X509Certificate currentCert) throws TokenDecryptException {
         return StringUtils.newStringUtf8(Base64.encodeBase64(TokenDecryptManager.decryptToken(encryptedToken, currentCert)));
-    }
-
-    /**
-     * @deprecated Method is deprecated and is planned to delete
-    * Information
-     * <a href="https://developer.kontur.ru/docs/diadoc-api/http/removal/GetExternalServiceAuthInfo.html">link to getExternalServiceAuthInfo</a>
-     */
-    @Deprecated
-    public ExternalServiceAuthInfo getExternalServiceAuthInfo(String key) throws DiadocSdkException {
-        if (key == null) {
-            throw new IllegalArgumentException("key");
-        }
-        try {
-            var request = RequestBuilder.get(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/GetExternalServiceAuthInfo")
-                            .addParameter("key", key)
-                            .build());
-            var response = diadocHttpClient.performRequest(request);
-            return ExternalServiceAuthInfo.parseFrom(response);
-        } catch (URISyntaxException | IOException ex) {
-            throw new DiadocSdkException(ex);
-        }
     }
 }
