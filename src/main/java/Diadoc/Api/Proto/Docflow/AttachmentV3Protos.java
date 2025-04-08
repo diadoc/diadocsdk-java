@@ -25,6 +25,129 @@ public final class AttachmentV3Protos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Docflow.SignatureType}
+   */
+  public enum SignatureType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownSignatureType = 0;</code>
+     */
+    UnknownSignatureType(0),
+    /**
+     * <code>OnVerification = 1;</code>
+     */
+    OnVerification(1),
+    /**
+     * <code>Qualified = 2;</code>
+     */
+    Qualified(2),
+    /**
+     * <code>NonQualified = 3;</code>
+     */
+    NonQualified(3),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        SignatureType.class.getName());
+    }
+    /**
+     * <code>UnknownSignatureType = 0;</code>
+     */
+    public static final int UnknownSignatureType_VALUE = 0;
+    /**
+     * <code>OnVerification = 1;</code>
+     */
+    public static final int OnVerification_VALUE = 1;
+    /**
+     * <code>Qualified = 2;</code>
+     */
+    public static final int Qualified_VALUE = 2;
+    /**
+     * <code>NonQualified = 3;</code>
+     */
+    public static final int NonQualified_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SignatureType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SignatureType forNumber(int value) {
+      switch (value) {
+        case 0: return UnknownSignatureType;
+        case 1: return OnVerification;
+        case 2: return Qualified;
+        case 3: return NonQualified;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SignatureType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SignatureType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SignatureType>() {
+            public SignatureType findValueByNumber(int number) {
+              return SignatureType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final SignatureType[] VALUES = values();
+
+    public static SignatureType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SignatureType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Docflow.SignatureType)
+  }
+
   public interface SignatureV3OrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.SignatureV3)
       com.google.protobuf.MessageOrBuilder {
@@ -163,6 +286,21 @@ public final class AttachmentV3Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatus PowerOfAttorneyAttachmentStatus = 9;</code>
      */
     Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatusOrBuilder getPowerOfAttorneyAttachmentStatusOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+     * @return Whether the signatureTypeInfo field is set.
+     */
+    boolean hasSignatureTypeInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+     * @return The signatureTypeInfo.
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo getSignatureTypeInfo();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfoOrBuilder getSignatureTypeInfoOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignatureV3}
@@ -477,6 +615,32 @@ public final class AttachmentV3Protos {
       return powerOfAttorneyAttachmentStatus_ == null ? Diadoc.Api.Proto.Docflow.PowerOfAttorneyAttachmentStatusProtos.PowerOfAttorneyAttachmentStatus.getDefaultInstance() : powerOfAttorneyAttachmentStatus_;
     }
 
+    public static final int SIGNATURETYPEINFO_FIELD_NUMBER = 10;
+    private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo signatureTypeInfo_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+     * @return Whether the signatureTypeInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignatureTypeInfo() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+     * @return The signatureTypeInfo.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo getSignatureTypeInfo() {
+      return signatureTypeInfo_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.getDefaultInstance() : signatureTypeInfo_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfoOrBuilder getSignatureTypeInfoOrBuilder() {
+      return signatureTypeInfo_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.getDefaultInstance() : signatureTypeInfo_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -534,6 +698,12 @@ public final class AttachmentV3Protos {
           return false;
         }
       }
+      if (hasSignatureTypeInfo()) {
+        if (!getSignatureTypeInfo().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -567,6 +737,9 @@ public final class AttachmentV3Protos {
       }
       if (((bitField0_ & 0x00000100) != 0)) {
         output.writeMessage(9, getPowerOfAttorneyAttachmentStatus());
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeMessage(10, getSignatureTypeInfo());
       }
       getUnknownFields().writeTo(output);
     }
@@ -610,6 +783,10 @@ public final class AttachmentV3Protos {
       if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getPowerOfAttorneyAttachmentStatus());
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getSignatureTypeInfo());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -671,6 +848,11 @@ public final class AttachmentV3Protos {
         if (!getPowerOfAttorneyAttachmentStatus()
             .equals(other.getPowerOfAttorneyAttachmentStatus())) return false;
       }
+      if (hasSignatureTypeInfo() != other.hasSignatureTypeInfo()) return false;
+      if (hasSignatureTypeInfo()) {
+        if (!getSignatureTypeInfo()
+            .equals(other.getSignatureTypeInfo())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -718,6 +900,10 @@ public final class AttachmentV3Protos {
       if (hasPowerOfAttorneyAttachmentStatus()) {
         hash = (37 * hash) + POWEROFATTORNEYATTACHMENTSTATUS_FIELD_NUMBER;
         hash = (53 * hash) + getPowerOfAttorneyAttachmentStatus().hashCode();
+      }
+      if (hasSignatureTypeInfo()) {
+        hash = (37 * hash) + SIGNATURETYPEINFO_FIELD_NUMBER;
+        hash = (53 * hash) + getSignatureTypeInfo().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -855,6 +1041,7 @@ public final class AttachmentV3Protos {
           getDeliveredAtFieldBuilder();
           getPowerOfAttorneyFieldBuilder();
           getPowerOfAttorneyAttachmentStatusFieldBuilder();
+          getSignatureTypeInfoFieldBuilder();
         }
       }
       @java.lang.Override
@@ -893,6 +1080,11 @@ public final class AttachmentV3Protos {
         if (powerOfAttorneyAttachmentStatusBuilder_ != null) {
           powerOfAttorneyAttachmentStatusBuilder_.dispose();
           powerOfAttorneyAttachmentStatusBuilder_ = null;
+        }
+        signatureTypeInfo_ = null;
+        if (signatureTypeInfoBuilder_ != null) {
+          signatureTypeInfoBuilder_.dispose();
+          signatureTypeInfoBuilder_ = null;
         }
         return this;
       }
@@ -976,6 +1168,12 @@ public final class AttachmentV3Protos {
               : powerOfAttorneyAttachmentStatusBuilder_.build();
           to_bitField0_ |= 0x00000100;
         }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.signatureTypeInfo_ = signatureTypeInfoBuilder_ == null
+              ? signatureTypeInfo_
+              : signatureTypeInfoBuilder_.build();
+          to_bitField0_ |= 0x00000200;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1022,6 +1220,9 @@ public final class AttachmentV3Protos {
         if (other.hasPowerOfAttorneyAttachmentStatus()) {
           mergePowerOfAttorneyAttachmentStatus(other.getPowerOfAttorneyAttachmentStatus());
         }
+        if (other.hasSignatureTypeInfo()) {
+          mergeSignatureTypeInfo(other.getSignatureTypeInfo());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1066,6 +1267,11 @@ public final class AttachmentV3Protos {
         }
         if (hasPowerOfAttorneyAttachmentStatus()) {
           if (!getPowerOfAttorneyAttachmentStatus().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasSignatureTypeInfo()) {
+          if (!getSignatureTypeInfo().isInitialized()) {
             return false;
           }
         }
@@ -1145,6 +1351,13 @@ public final class AttachmentV3Protos {
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
+              case 82: {
+                input.readMessage(
+                    getSignatureTypeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2086,6 +2299,127 @@ public final class AttachmentV3Protos {
           powerOfAttorneyAttachmentStatus_ = null;
         }
         return powerOfAttorneyAttachmentStatusBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo signatureTypeInfo_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfoOrBuilder> signatureTypeInfoBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+       * @return Whether the signatureTypeInfo field is set.
+       */
+      public boolean hasSignatureTypeInfo() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+       * @return The signatureTypeInfo.
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo getSignatureTypeInfo() {
+        if (signatureTypeInfoBuilder_ == null) {
+          return signatureTypeInfo_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.getDefaultInstance() : signatureTypeInfo_;
+        } else {
+          return signatureTypeInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+       */
+      public Builder setSignatureTypeInfo(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo value) {
+        if (signatureTypeInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signatureTypeInfo_ = value;
+        } else {
+          signatureTypeInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+       */
+      public Builder setSignatureTypeInfo(
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.Builder builderForValue) {
+        if (signatureTypeInfoBuilder_ == null) {
+          signatureTypeInfo_ = builderForValue.build();
+        } else {
+          signatureTypeInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+       */
+      public Builder mergeSignatureTypeInfo(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo value) {
+        if (signatureTypeInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            signatureTypeInfo_ != null &&
+            signatureTypeInfo_ != Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.getDefaultInstance()) {
+            getSignatureTypeInfoBuilder().mergeFrom(value);
+          } else {
+            signatureTypeInfo_ = value;
+          }
+        } else {
+          signatureTypeInfoBuilder_.mergeFrom(value);
+        }
+        if (signatureTypeInfo_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+       */
+      public Builder clearSignatureTypeInfo() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        signatureTypeInfo_ = null;
+        if (signatureTypeInfoBuilder_ != null) {
+          signatureTypeInfoBuilder_.dispose();
+          signatureTypeInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.Builder getSignatureTypeInfoBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getSignatureTypeInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfoOrBuilder getSignatureTypeInfoOrBuilder() {
+        if (signatureTypeInfoBuilder_ != null) {
+          return signatureTypeInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return signatureTypeInfo_ == null ?
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.getDefaultInstance() : signatureTypeInfo_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfoOrBuilder> 
+          getSignatureTypeInfoFieldBuilder() {
+        if (signatureTypeInfoBuilder_ == null) {
+          signatureTypeInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfoOrBuilder>(
+                  getSignatureTypeInfo(),
+                  getParentForChildren(),
+                  isClean());
+          signatureTypeInfo_ = null;
+        }
+        return signatureTypeInfoBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.SignatureV3)
@@ -3329,6 +3663,2071 @@ public final class AttachmentV3Protos {
 
   }
 
+  public interface SignatureTypeInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.SignatureTypeInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureType SignatureType = 1;</code>
+     * @return Whether the signatureType field is set.
+     */
+    boolean hasSignatureType();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureType SignatureType = 1;</code>
+     * @return The signatureType.
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType getSignatureType();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+     * @return Whether the qualifiedDetails field is set.
+     */
+    boolean hasQualifiedDetails();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+     * @return The qualifiedDetails.
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails getQualifiedDetails();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetailsOrBuilder getQualifiedDetailsOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+     * @return Whether the nonQualifiedDetails field is set.
+     */
+    boolean hasNonQualifiedDetails();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+     * @return The nonQualifiedDetails.
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails getNonQualifiedDetails();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetailsOrBuilder getNonQualifiedDetailsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignatureTypeInfo}
+   */
+  public static final class SignatureTypeInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.SignatureTypeInfo)
+      SignatureTypeInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        SignatureTypeInfo.class.getName());
+    }
+    // Use SignatureTypeInfo.newBuilder() to construct.
+    private SignatureTypeInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private SignatureTypeInfo() {
+      signatureType_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.class, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SIGNATURETYPE_FIELD_NUMBER = 1;
+    private int signatureType_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureType SignatureType = 1;</code>
+     * @return Whether the signatureType field is set.
+     */
+    @java.lang.Override public boolean hasSignatureType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureType SignatureType = 1;</code>
+     * @return The signatureType.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType getSignatureType() {
+      Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType result = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType.forNumber(signatureType_);
+      return result == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType.UnknownSignatureType : result;
+    }
+
+    public static final int QUALIFIEDDETAILS_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails qualifiedDetails_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+     * @return Whether the qualifiedDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasQualifiedDetails() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+     * @return The qualifiedDetails.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails getQualifiedDetails() {
+      return qualifiedDetails_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.getDefaultInstance() : qualifiedDetails_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetailsOrBuilder getQualifiedDetailsOrBuilder() {
+      return qualifiedDetails_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.getDefaultInstance() : qualifiedDetails_;
+    }
+
+    public static final int NONQUALIFIEDDETAILS_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails nonQualifiedDetails_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+     * @return Whether the nonQualifiedDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasNonQualifiedDetails() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+     * @return The nonQualifiedDetails.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails getNonQualifiedDetails() {
+      return nonQualifiedDetails_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.getDefaultInstance() : nonQualifiedDetails_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetailsOrBuilder getNonQualifiedDetailsOrBuilder() {
+      return nonQualifiedDetails_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.getDefaultInstance() : nonQualifiedDetails_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSignatureType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasQualifiedDetails()) {
+        if (!getQualifiedDetails().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasNonQualifiedDetails()) {
+        if (!getNonQualifiedDetails().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, signatureType_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getQualifiedDetails());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getNonQualifiedDetails());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, signatureType_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getQualifiedDetails());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getNonQualifiedDetails());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo other = (Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo) obj;
+
+      if (hasSignatureType() != other.hasSignatureType()) return false;
+      if (hasSignatureType()) {
+        if (signatureType_ != other.signatureType_) return false;
+      }
+      if (hasQualifiedDetails() != other.hasQualifiedDetails()) return false;
+      if (hasQualifiedDetails()) {
+        if (!getQualifiedDetails()
+            .equals(other.getQualifiedDetails())) return false;
+      }
+      if (hasNonQualifiedDetails() != other.hasNonQualifiedDetails()) return false;
+      if (hasNonQualifiedDetails()) {
+        if (!getNonQualifiedDetails()
+            .equals(other.getNonQualifiedDetails())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSignatureType()) {
+        hash = (37 * hash) + SIGNATURETYPE_FIELD_NUMBER;
+        hash = (53 * hash) + signatureType_;
+      }
+      if (hasQualifiedDetails()) {
+        hash = (37 * hash) + QUALIFIEDDETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getQualifiedDetails().hashCode();
+      }
+      if (hasNonQualifiedDetails()) {
+        hash = (37 * hash) + NONQUALIFIEDDETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getNonQualifiedDetails().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignatureTypeInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.SignatureTypeInfo)
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.class, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getQualifiedDetailsFieldBuilder();
+          getNonQualifiedDetailsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signatureType_ = 0;
+        qualifiedDetails_ = null;
+        if (qualifiedDetailsBuilder_ != null) {
+          qualifiedDetailsBuilder_.dispose();
+          qualifiedDetailsBuilder_ = null;
+        }
+        nonQualifiedDetails_ = null;
+        if (nonQualifiedDetailsBuilder_ != null) {
+          nonQualifiedDetailsBuilder_.dispose();
+          nonQualifiedDetailsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo build() {
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo buildPartial() {
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo result = new Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signatureType_ = signatureType_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.qualifiedDetails_ = qualifiedDetailsBuilder_ == null
+              ? qualifiedDetails_
+              : qualifiedDetailsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nonQualifiedDetails_ = nonQualifiedDetailsBuilder_ == null
+              ? nonQualifiedDetails_
+              : nonQualifiedDetailsBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo other) {
+        if (other == Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.getDefaultInstance()) return this;
+        if (other.hasSignatureType()) {
+          setSignatureType(other.getSignatureType());
+        }
+        if (other.hasQualifiedDetails()) {
+          mergeQualifiedDetails(other.getQualifiedDetails());
+        }
+        if (other.hasNonQualifiedDetails()) {
+          mergeNonQualifiedDetails(other.getNonQualifiedDetails());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasSignatureType()) {
+          return false;
+        }
+        if (hasQualifiedDetails()) {
+          if (!getQualifiedDetails().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasNonQualifiedDetails()) {
+          if (!getNonQualifiedDetails().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType tmpValue =
+                    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  signatureType_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getQualifiedDetailsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getNonQualifiedDetailsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int signatureType_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureType SignatureType = 1;</code>
+       * @return Whether the signatureType field is set.
+       */
+      @java.lang.Override public boolean hasSignatureType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureType SignatureType = 1;</code>
+       * @return The signatureType.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType getSignatureType() {
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType result = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType.forNumber(signatureType_);
+        return result == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType.UnknownSignatureType : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureType SignatureType = 1;</code>
+       * @param value The signatureType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignatureType(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        signatureType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureType SignatureType = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignatureType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signatureType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails qualifiedDetails_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetailsOrBuilder> qualifiedDetailsBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+       * @return Whether the qualifiedDetails field is set.
+       */
+      public boolean hasQualifiedDetails() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+       * @return The qualifiedDetails.
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails getQualifiedDetails() {
+        if (qualifiedDetailsBuilder_ == null) {
+          return qualifiedDetails_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.getDefaultInstance() : qualifiedDetails_;
+        } else {
+          return qualifiedDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+       */
+      public Builder setQualifiedDetails(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails value) {
+        if (qualifiedDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          qualifiedDetails_ = value;
+        } else {
+          qualifiedDetailsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+       */
+      public Builder setQualifiedDetails(
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.Builder builderForValue) {
+        if (qualifiedDetailsBuilder_ == null) {
+          qualifiedDetails_ = builderForValue.build();
+        } else {
+          qualifiedDetailsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+       */
+      public Builder mergeQualifiedDetails(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails value) {
+        if (qualifiedDetailsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            qualifiedDetails_ != null &&
+            qualifiedDetails_ != Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.getDefaultInstance()) {
+            getQualifiedDetailsBuilder().mergeFrom(value);
+          } else {
+            qualifiedDetails_ = value;
+          }
+        } else {
+          qualifiedDetailsBuilder_.mergeFrom(value);
+        }
+        if (qualifiedDetails_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+       */
+      public Builder clearQualifiedDetails() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        qualifiedDetails_ = null;
+        if (qualifiedDetailsBuilder_ != null) {
+          qualifiedDetailsBuilder_.dispose();
+          qualifiedDetailsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.Builder getQualifiedDetailsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getQualifiedDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetailsOrBuilder getQualifiedDetailsOrBuilder() {
+        if (qualifiedDetailsBuilder_ != null) {
+          return qualifiedDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return qualifiedDetails_ == null ?
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.getDefaultInstance() : qualifiedDetails_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.QualifiedDetails QualifiedDetails = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetailsOrBuilder> 
+          getQualifiedDetailsFieldBuilder() {
+        if (qualifiedDetailsBuilder_ == null) {
+          qualifiedDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetailsOrBuilder>(
+                  getQualifiedDetails(),
+                  getParentForChildren(),
+                  isClean());
+          qualifiedDetails_ = null;
+        }
+        return qualifiedDetailsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails nonQualifiedDetails_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetailsOrBuilder> nonQualifiedDetailsBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+       * @return Whether the nonQualifiedDetails field is set.
+       */
+      public boolean hasNonQualifiedDetails() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+       * @return The nonQualifiedDetails.
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails getNonQualifiedDetails() {
+        if (nonQualifiedDetailsBuilder_ == null) {
+          return nonQualifiedDetails_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.getDefaultInstance() : nonQualifiedDetails_;
+        } else {
+          return nonQualifiedDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+       */
+      public Builder setNonQualifiedDetails(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails value) {
+        if (nonQualifiedDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nonQualifiedDetails_ = value;
+        } else {
+          nonQualifiedDetailsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+       */
+      public Builder setNonQualifiedDetails(
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.Builder builderForValue) {
+        if (nonQualifiedDetailsBuilder_ == null) {
+          nonQualifiedDetails_ = builderForValue.build();
+        } else {
+          nonQualifiedDetailsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+       */
+      public Builder mergeNonQualifiedDetails(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails value) {
+        if (nonQualifiedDetailsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            nonQualifiedDetails_ != null &&
+            nonQualifiedDetails_ != Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.getDefaultInstance()) {
+            getNonQualifiedDetailsBuilder().mergeFrom(value);
+          } else {
+            nonQualifiedDetails_ = value;
+          }
+        } else {
+          nonQualifiedDetailsBuilder_.mergeFrom(value);
+        }
+        if (nonQualifiedDetails_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+       */
+      public Builder clearNonQualifiedDetails() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        nonQualifiedDetails_ = null;
+        if (nonQualifiedDetailsBuilder_ != null) {
+          nonQualifiedDetailsBuilder_.dispose();
+          nonQualifiedDetailsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.Builder getNonQualifiedDetailsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getNonQualifiedDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetailsOrBuilder getNonQualifiedDetailsOrBuilder() {
+        if (nonQualifiedDetailsBuilder_ != null) {
+          return nonQualifiedDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return nonQualifiedDetails_ == null ?
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.getDefaultInstance() : nonQualifiedDetails_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.NonQualifiedDetails NonQualifiedDetails = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetailsOrBuilder> 
+          getNonQualifiedDetailsFieldBuilder() {
+        if (nonQualifiedDetailsBuilder_ == null) {
+          nonQualifiedDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetailsOrBuilder>(
+                  getNonQualifiedDetails(),
+                  getParentForChildren(),
+                  isClean());
+          nonQualifiedDetails_ = null;
+        }
+        return nonQualifiedDetailsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.SignatureTypeInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.SignatureTypeInfo)
+    private static final Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SignatureTypeInfo>
+        PARSER = new com.google.protobuf.AbstractParser<SignatureTypeInfo>() {
+      @java.lang.Override
+      public SignatureTypeInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SignatureTypeInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignatureTypeInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QualifiedDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.QualifiedDetails)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource SignatureSource = 1;</code>
+     * @return Whether the signatureSource field is set.
+     */
+    boolean hasSignatureSource();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource SignatureSource = 1;</code>
+     * @return The signatureSource.
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource getSignatureSource();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.QualifiedDetails}
+   */
+  public static final class QualifiedDetails extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.QualifiedDetails)
+      QualifiedDetailsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        QualifiedDetails.class.getName());
+    }
+    // Use QualifiedDetails.newBuilder() to construct.
+    private QualifiedDetails(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private QualifiedDetails() {
+      signatureSource_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.class, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource}
+     */
+    public enum QualifiedSignatureSource
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>Default = 0;</code>
+       */
+      Default(0),
+      ;
+
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 28,
+          /* patch= */ 3,
+          /* suffix= */ "",
+          QualifiedSignatureSource.class.getName());
+      }
+      /**
+       * <code>Default = 0;</code>
+       */
+      public static final int Default_VALUE = 0;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static QualifiedSignatureSource valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static QualifiedSignatureSource forNumber(int value) {
+        switch (value) {
+          case 0: return Default;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<QualifiedSignatureSource>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          QualifiedSignatureSource> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<QualifiedSignatureSource>() {
+              public QualifiedSignatureSource findValueByNumber(int number) {
+                return QualifiedSignatureSource.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final QualifiedSignatureSource[] VALUES = values();
+
+      public static QualifiedSignatureSource valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private QualifiedSignatureSource(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource)
+    }
+
+    private int bitField0_;
+    public static final int SIGNATURESOURCE_FIELD_NUMBER = 1;
+    private int signatureSource_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource SignatureSource = 1;</code>
+     * @return Whether the signatureSource field is set.
+     */
+    @java.lang.Override public boolean hasSignatureSource() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource SignatureSource = 1;</code>
+     * @return The signatureSource.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource getSignatureSource() {
+      Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource result = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource.forNumber(signatureSource_);
+      return result == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource.Default : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSignatureSource()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, signatureSource_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, signatureSource_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails other = (Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails) obj;
+
+      if (hasSignatureSource() != other.hasSignatureSource()) return false;
+      if (hasSignatureSource()) {
+        if (signatureSource_ != other.signatureSource_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSignatureSource()) {
+        hash = (37 * hash) + SIGNATURESOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + signatureSource_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.QualifiedDetails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.QualifiedDetails)
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.class, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signatureSource_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails build() {
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails buildPartial() {
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails result = new Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signatureSource_ = signatureSource_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails other) {
+        if (other == Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.getDefaultInstance()) return this;
+        if (other.hasSignatureSource()) {
+          setSignatureSource(other.getSignatureSource());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasSignatureSource()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource tmpValue =
+                    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  signatureSource_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int signatureSource_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource SignatureSource = 1;</code>
+       * @return Whether the signatureSource field is set.
+       */
+      @java.lang.Override public boolean hasSignatureSource() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource SignatureSource = 1;</code>
+       * @return The signatureSource.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource getSignatureSource() {
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource result = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource.forNumber(signatureSource_);
+        return result == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource.Default : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource SignatureSource = 1;</code>
+       * @param value The signatureSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignatureSource(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails.QualifiedSignatureSource value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        signatureSource_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.QualifiedDetails.QualifiedSignatureSource SignatureSource = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignatureSource() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signatureSource_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.QualifiedDetails)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.QualifiedDetails)
+    private static final Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QualifiedDetails>
+        PARSER = new com.google.protobuf.AbstractParser<QualifiedDetails>() {
+      @java.lang.Override
+      public QualifiedDetails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QualifiedDetails> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QualifiedDetails> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.QualifiedDetails getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NonQualifiedDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.NonQualifiedDetails)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource SignatureSource = 1;</code>
+     * @return Whether the signatureSource field is set.
+     */
+    boolean hasSignatureSource();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource SignatureSource = 1;</code>
+     * @return The signatureSource.
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource getSignatureSource();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.NonQualifiedDetails}
+   */
+  public static final class NonQualifiedDetails extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.NonQualifiedDetails)
+      NonQualifiedDetailsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        NonQualifiedDetails.class.getName());
+    }
+    // Use NonQualifiedDetails.newBuilder() to construct.
+    private NonQualifiedDetails(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private NonQualifiedDetails() {
+      signatureSource_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.class, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource}
+     */
+    public enum NonQualifiedSignatureSource
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>Default = 0;</code>
+       */
+      Default(0),
+      /**
+       * <code>GosKey = 1;</code>
+       */
+      GosKey(1),
+      ;
+
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 28,
+          /* patch= */ 3,
+          /* suffix= */ "",
+          NonQualifiedSignatureSource.class.getName());
+      }
+      /**
+       * <code>Default = 0;</code>
+       */
+      public static final int Default_VALUE = 0;
+      /**
+       * <code>GosKey = 1;</code>
+       */
+      public static final int GosKey_VALUE = 1;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static NonQualifiedSignatureSource valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static NonQualifiedSignatureSource forNumber(int value) {
+        switch (value) {
+          case 0: return Default;
+          case 1: return GosKey;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<NonQualifiedSignatureSource>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          NonQualifiedSignatureSource> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<NonQualifiedSignatureSource>() {
+              public NonQualifiedSignatureSource findValueByNumber(int number) {
+                return NonQualifiedSignatureSource.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final NonQualifiedSignatureSource[] VALUES = values();
+
+      public static NonQualifiedSignatureSource valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private NonQualifiedSignatureSource(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource)
+    }
+
+    private int bitField0_;
+    public static final int SIGNATURESOURCE_FIELD_NUMBER = 1;
+    private int signatureSource_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource SignatureSource = 1;</code>
+     * @return Whether the signatureSource field is set.
+     */
+    @java.lang.Override public boolean hasSignatureSource() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource SignatureSource = 1;</code>
+     * @return The signatureSource.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource getSignatureSource() {
+      Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource result = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource.forNumber(signatureSource_);
+      return result == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource.Default : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSignatureSource()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, signatureSource_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, signatureSource_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails other = (Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails) obj;
+
+      if (hasSignatureSource() != other.hasSignatureSource()) return false;
+      if (hasSignatureSource()) {
+        if (signatureSource_ != other.signatureSource_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSignatureSource()) {
+        hash = (37 * hash) + SIGNATURESOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + signatureSource_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.NonQualifiedDetails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.NonQualifiedDetails)
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.class, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signatureSource_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails build() {
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails buildPartial() {
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails result = new Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signatureSource_ = signatureSource_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails other) {
+        if (other == Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.getDefaultInstance()) return this;
+        if (other.hasSignatureSource()) {
+          setSignatureSource(other.getSignatureSource());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasSignatureSource()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource tmpValue =
+                    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  signatureSource_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int signatureSource_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource SignatureSource = 1;</code>
+       * @return Whether the signatureSource field is set.
+       */
+      @java.lang.Override public boolean hasSignatureSource() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource SignatureSource = 1;</code>
+       * @return The signatureSource.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource getSignatureSource() {
+        Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource result = Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource.forNumber(signatureSource_);
+        return result == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource.Default : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource SignatureSource = 1;</code>
+       * @param value The signatureSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignatureSource(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails.NonQualifiedSignatureSource value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        signatureSource_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.NonQualifiedDetails.NonQualifiedSignatureSource SignatureSource = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignatureSource() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signatureSource_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.NonQualifiedDetails)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.NonQualifiedDetails)
+    private static final Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NonQualifiedDetails>
+        PARSER = new com.google.protobuf.AbstractParser<NonQualifiedDetails>() {
+      @java.lang.Override
+      public NonQualifiedDetails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<NonQualifiedDetails> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NonQualifiedDetails> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.NonQualifiedDetails getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_descriptor;
   private static final 
@@ -3339,6 +5738,21 @@ public final class AttachmentV3Protos {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3353,7 +5767,7 @@ public final class AttachmentV3Protos {
       "\032\rContent.proto\032\017Timestamp.proto\032!Signat" +
       "ureVerificationResult.proto\032-Docflow/Pow" +
       "erOfAttorneyAttachmentStatus.proto\032&Docf" +
-      "low/SignaturePowerOfAttorney.proto\"\336\003\n\013S" +
+      "low/SignaturePowerOfAttorney.proto\"\246\004\n\013S" +
       "ignatureV3\022-\n\003Cms\030\001 \002(\0132 .Diadoc.Api.Pro" +
       "to.Docflow.Entity\0220\n\006CadesT\030\002 \001(\0132 .Diad" +
       "oc.Api.Proto.Docflow.Entity\022\023\n\013SignerBox" +
@@ -3365,13 +5779,32 @@ public final class AttachmentV3Protos {
       "\001(\01322.Diadoc.Api.Proto.Docflow.Signature" +
       "PowerOfAttorney\022b\n\037PowerOfAttorneyAttach" +
       "mentStatus\030\t \001(\01329.Diadoc.Api.Proto.Docf" +
-      "low.PowerOfAttorneyAttachmentStatus\"\322\001\n\022" +
-      "SignedAttachmentV3\0228\n\nAttachment\030\001 \002(\0132$" +
-      ".Diadoc.Api.Proto.Docflow.Attachment\0228\n\t" +
-      "Signature\030\002 \001(\0132%.Diadoc.Api.Proto.Docfl" +
-      "ow.SignatureV3\0221\n\007Comment\030\003 \001(\0132 .Diadoc" +
-      ".Api.Proto.Docflow.Entity\022\025\n\rContentType" +
-      "Id\030\004 \002(\tB\024B\022AttachmentV3Protos"
+      "low.PowerOfAttorneyAttachmentStatus\022F\n\021S" +
+      "ignatureTypeInfo\030\n \001(\0132+.Diadoc.Api.Prot" +
+      "o.Docflow.SignatureTypeInfo\"\322\001\n\022SignedAt" +
+      "tachmentV3\0228\n\nAttachment\030\001 \002(\0132$.Diadoc." +
+      "Api.Proto.Docflow.Attachment\0228\n\tSignatur" +
+      "e\030\002 \001(\0132%.Diadoc.Api.Proto.Docflow.Signa" +
+      "tureV3\0221\n\007Comment\030\003 \001(\0132 .Diadoc.Api.Pro" +
+      "to.Docflow.Entity\022\025\n\rContentTypeId\030\004 \002(\t" +
+      "\"\345\001\n\021SignatureTypeInfo\022>\n\rSignatureType\030" +
+      "\001 \002(\0162\'.Diadoc.Api.Proto.Docflow.Signatu" +
+      "reType\022D\n\020QualifiedDetails\030\002 \001(\0132*.Diado" +
+      "c.Api.Proto.Docflow.QualifiedDetails\022J\n\023" +
+      "NonQualifiedDetails\030\003 \001(\0132-.Diadoc.Api.P" +
+      "roto.Docflow.NonQualifiedDetails\"\231\001\n\020Qua" +
+      "lifiedDetails\022\\\n\017SignatureSource\030\001 \002(\0162C" +
+      ".Diadoc.Api.Proto.Docflow.QualifiedDetai" +
+      "ls.QualifiedSignatureSource\"\'\n\030Qualified" +
+      "SignatureSource\022\013\n\007Default\020\000\"\261\001\n\023NonQual" +
+      "ifiedDetails\022b\n\017SignatureSource\030\001 \002(\0162I." +
+      "Diadoc.Api.Proto.Docflow.NonQualifiedDet" +
+      "ails.NonQualifiedSignatureSource\"6\n\033NonQ" +
+      "ualifiedSignatureSource\022\013\n\007Default\020\000\022\n\n\006" +
+      "GosKey\020\001*^\n\rSignatureType\022\030\n\024UnknownSign" +
+      "atureType\020\000\022\022\n\016OnVerification\020\001\022\r\n\tQuali" +
+      "fied\020\002\022\020\n\014NonQualified\020\003B\024B\022AttachmentV3" +
+      "Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3388,13 +5821,31 @@ public final class AttachmentV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_descriptor,
-        new java.lang.String[] { "Cms", "CadesT", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", "DeliveredAt", "PowerOfAttorney", "PowerOfAttorneyAttachmentStatus", });
+        new java.lang.String[] { "Cms", "CadesT", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", "DeliveredAt", "PowerOfAttorney", "PowerOfAttorneyAttachmentStatus", "SignatureTypeInfo", });
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_descriptor,
         new java.lang.String[] { "Attachment", "Signature", "Comment", "ContentTypeId", });
+    internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_SignatureTypeInfo_descriptor,
+        new java.lang.String[] { "SignatureType", "QualifiedDetails", "NonQualifiedDetails", });
+    internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_QualifiedDetails_descriptor,
+        new java.lang.String[] { "SignatureSource", });
+    internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_NonQualifiedDetails_descriptor,
+        new java.lang.String[] { "SignatureSource", });
     descriptor.resolveAllFeaturesImmutable();
     Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor();
     Diadoc.Api.Proto.ContentProtos.getDescriptor();
