@@ -1,5 +1,16 @@
 package Diadoc.Api.sign;
 
+import Diadoc.Api.Proto.AsyncMethodResultProtos.AsyncMethodResult;
+import Diadoc.Api.Proto.CloudSignProtos.AutosignReceiptsResult;
+import Diadoc.Api.Proto.CloudSignProtos.CloudSignConfirmResult;
+import Diadoc.Api.Proto.CloudSignProtos.CloudSignRequest;
+import Diadoc.Api.Proto.CloudSignProtos.CloudSignResult;
+import Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequest;
+import Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2;
+import Diadoc.Api.Proto.Dss.DssSignProtos.DssSignResult;
+import Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.DocumentTitleType;
+import Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetails;
+import Diadoc.Api.Proto.Invoicing.Signers.ExtendedSignerProtos.ExtendedSignerDetailsToPost;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import com.google.protobuf.InvalidProtocolBufferException;
 import Diadoc.Api.httpClient.DiadocHttpClient;
@@ -152,6 +163,34 @@ public class SignClient {
                 url.addParameter("certificateThumbprint", certificateThumbprint);
             }
 
+
+            var result = diadocHttpClient.performRequest(
+                    RequestBuilder.post(url.build())
+                            .setEntity(new ByteArrayEntity(request.toByteArray())));
+            return AsyncMethodResult.parseFrom(result);
+
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    /**
+     * @deprecated Method is currently unavailable.
+     * Use {@link #dssSign(String, DssSignRequest, String)}
+     */
+    @Deprecated
+    public AsyncMethodResult dssSignV2(String boxId, DssSignRequestV2 request) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (request == null) {
+            throw new IllegalArgumentException("request");
+        }
+
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/V2/DssSign")
+                    .addParameter("boxId", boxId);
 
             var result = diadocHttpClient.performRequest(
                     RequestBuilder.post(url.build())
