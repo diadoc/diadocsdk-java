@@ -26,6 +26,111 @@ public final class DssSignProtos {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Dss.DssSignDataSource}
+   */
+  public enum DssSignDataSource
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CertificateSign = 0;</code>
+     */
+    CertificateSign(0),
+    /**
+     * <code>GosKeySign = 1;</code>
+     */
+    GosKeySign(1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        DssSignDataSource.class.getName());
+    }
+    /**
+     * <code>CertificateSign = 0;</code>
+     */
+    public static final int CertificateSign_VALUE = 0;
+    /**
+     * <code>GosKeySign = 1;</code>
+     */
+    public static final int GosKeySign_VALUE = 1;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DssSignDataSource valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static DssSignDataSource forNumber(int value) {
+      switch (value) {
+        case 0: return CertificateSign;
+        case 1: return GosKeySign;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DssSignDataSource>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DssSignDataSource> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DssSignDataSource>() {
+            public DssSignDataSource findValueByNumber(int number) {
+              return DssSignDataSource.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final DssSignDataSource[] VALUES = values();
+
+    public static DssSignDataSource valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private DssSignDataSource(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Dss.DssSignDataSource)
+  }
+
+  /**
    * Protobuf enum {@code Diadoc.Api.Proto.Dss.DssConfirmType}
    */
   public enum DssConfirmType
@@ -54,6 +159,10 @@ public final class DssSignProtos {
      * <code>MobileSdk = 4;</code>
      */
     MobileSdk(4),
+    /**
+     * <code>GosKey = 5;</code>
+     */
+    GosKey(5),
     ;
 
     static {
@@ -89,6 +198,10 @@ public final class DssSignProtos {
      * <code>MobileSdk = 4;</code>
      */
     public static final int MobileSdk_VALUE = 4;
+    /**
+     * <code>GosKey = 5;</code>
+     */
+    public static final int GosKey_VALUE = 5;
 
 
     public final int getNumber() {
@@ -117,6 +230,7 @@ public final class DssSignProtos {
         case 2: return MyDss;
         case 3: return Applet;
         case 4: return MobileSdk;
+        case 5: return GosKey;
         default: return null;
       }
     }
@@ -143,7 +257,7 @@ public final class DssSignProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(0);
+      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final DssConfirmType[] VALUES = values();
@@ -257,7 +371,7 @@ public final class DssSignProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(1);
+      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final DssOperator[] VALUES = values();
@@ -371,7 +485,7 @@ public final class DssSignProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(2);
+      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final DssFileSigningStatus[] VALUES = values();
@@ -530,7 +644,7 @@ public final class DssSignProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(3);
+      return Diadoc.Api.Proto.Dss.DssSignProtos.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final DssOperationStatus[] VALUES = values();
@@ -1299,6 +1413,2559 @@ public final class DssSignProtos {
 
     @java.lang.Override
     public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DssSignRequestV2OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Dss.DssSignRequestV2)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile> 
+        getFilesList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile getFiles(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    int getFilesCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFileOrBuilder> 
+        getFilesOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFileOrBuilder getFilesOrBuilder(
+        int index);
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Dss.DssSignDataSource SignDataSource = 2;</code>
+     * @return Whether the signDataSource field is set.
+     */
+    boolean hasSignDataSource();
+    /**
+     * <code>required .Diadoc.Api.Proto.Dss.DssSignDataSource SignDataSource = 2;</code>
+     * @return The signDataSource.
+     */
+    Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource getSignDataSource();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+     * @return Whether the certificateData field is set.
+     */
+    boolean hasCertificateData();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+     * @return The certificateData.
+     */
+    Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData getCertificateData();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+     */
+    Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateDataOrBuilder getCertificateDataOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+     * @return Whether the gosKeyData field is set.
+     */
+    boolean hasGosKeyData();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+     * @return The gosKeyData.
+     */
+    Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData getGosKeyData();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+     */
+    Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyDataOrBuilder getGosKeyDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Dss.DssSignRequestV2}
+   */
+  public static final class DssSignRequestV2 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Dss.DssSignRequestV2)
+      DssSignRequestV2OrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        DssSignRequestV2.class.getName());
+    }
+    // Use DssSignRequestV2.newBuilder() to construct.
+    private DssSignRequestV2(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private DssSignRequestV2() {
+      files_ = java.util.Collections.emptyList();
+      signDataSource_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2.class, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FILES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile> files_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile> getFilesList() {
+      return files_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFileOrBuilder> 
+        getFilesOrBuilderList() {
+      return files_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    @java.lang.Override
+    public int getFilesCount() {
+      return files_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile getFiles(int index) {
+      return files_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFileOrBuilder getFilesOrBuilder(
+        int index) {
+      return files_.get(index);
+    }
+
+    public static final int SIGNDATASOURCE_FIELD_NUMBER = 2;
+    private int signDataSource_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Dss.DssSignDataSource SignDataSource = 2;</code>
+     * @return Whether the signDataSource field is set.
+     */
+    @java.lang.Override public boolean hasSignDataSource() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Dss.DssSignDataSource SignDataSource = 2;</code>
+     * @return The signDataSource.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource getSignDataSource() {
+      Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource result = Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource.forNumber(signDataSource_);
+      return result == null ? Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource.CertificateSign : result;
+    }
+
+    public static final int CERTIFICATEDATA_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData certificateData_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+     * @return Whether the certificateData field is set.
+     */
+    @java.lang.Override
+    public boolean hasCertificateData() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+     * @return The certificateData.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData getCertificateData() {
+      return certificateData_ == null ? Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.getDefaultInstance() : certificateData_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateDataOrBuilder getCertificateDataOrBuilder() {
+      return certificateData_ == null ? Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.getDefaultInstance() : certificateData_;
+    }
+
+    public static final int GOSKEYDATA_FIELD_NUMBER = 4;
+    private Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData gosKeyData_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+     * @return Whether the gosKeyData field is set.
+     */
+    @java.lang.Override
+    public boolean hasGosKeyData() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+     * @return The gosKeyData.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData getGosKeyData() {
+      return gosKeyData_ == null ? Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.getDefaultInstance() : gosKeyData_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyDataOrBuilder getGosKeyDataOrBuilder() {
+      return gosKeyData_ == null ? Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.getDefaultInstance() : gosKeyData_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSignDataSource()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getFilesCount(); i++) {
+        if (!getFiles(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasCertificateData()) {
+        if (!getCertificateData().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < files_.size(); i++) {
+        output.writeMessage(1, files_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(2, signDataSource_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(3, getCertificateData());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(4, getGosKeyData());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < files_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, files_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, signDataSource_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCertificateData());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGosKeyData());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 other = (Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2) obj;
+
+      if (!getFilesList()
+          .equals(other.getFilesList())) return false;
+      if (hasSignDataSource() != other.hasSignDataSource()) return false;
+      if (hasSignDataSource()) {
+        if (signDataSource_ != other.signDataSource_) return false;
+      }
+      if (hasCertificateData() != other.hasCertificateData()) return false;
+      if (hasCertificateData()) {
+        if (!getCertificateData()
+            .equals(other.getCertificateData())) return false;
+      }
+      if (hasGosKeyData() != other.hasGosKeyData()) return false;
+      if (hasGosKeyData()) {
+        if (!getGosKeyData()
+            .equals(other.getGosKeyData())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFilesCount() > 0) {
+        hash = (37 * hash) + FILES_FIELD_NUMBER;
+        hash = (53 * hash) + getFilesList().hashCode();
+      }
+      if (hasSignDataSource()) {
+        hash = (37 * hash) + SIGNDATASOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + signDataSource_;
+      }
+      if (hasCertificateData()) {
+        hash = (37 * hash) + CERTIFICATEDATA_FIELD_NUMBER;
+        hash = (53 * hash) + getCertificateData().hashCode();
+      }
+      if (hasGosKeyData()) {
+        hash = (37 * hash) + GOSKEYDATA_FIELD_NUMBER;
+        hash = (53 * hash) + getGosKeyData().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Dss.DssSignRequestV2}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Dss.DssSignRequestV2)
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2.class, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getFilesFieldBuilder();
+          getCertificateDataFieldBuilder();
+          getGosKeyDataFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (filesBuilder_ == null) {
+          files_ = java.util.Collections.emptyList();
+        } else {
+          files_ = null;
+          filesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signDataSource_ = 0;
+        certificateData_ = null;
+        if (certificateDataBuilder_ != null) {
+          certificateDataBuilder_.dispose();
+          certificateDataBuilder_ = null;
+        }
+        gosKeyData_ = null;
+        if (gosKeyDataBuilder_ != null) {
+          gosKeyDataBuilder_.dispose();
+          gosKeyDataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 build() {
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 buildPartial() {
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 result = new Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 result) {
+        if (filesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            files_ = java.util.Collections.unmodifiableList(files_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.files_ = files_;
+        } else {
+          result.files_ = filesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signDataSource_ = signDataSource_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.certificateData_ = certificateDataBuilder_ == null
+              ? certificateData_
+              : certificateDataBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.gosKeyData_ = gosKeyDataBuilder_ == null
+              ? gosKeyData_
+              : gosKeyDataBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2) {
+          return mergeFrom((Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 other) {
+        if (other == Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2.getDefaultInstance()) return this;
+        if (filesBuilder_ == null) {
+          if (!other.files_.isEmpty()) {
+            if (files_.isEmpty()) {
+              files_ = other.files_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFilesIsMutable();
+              files_.addAll(other.files_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.files_.isEmpty()) {
+            if (filesBuilder_.isEmpty()) {
+              filesBuilder_.dispose();
+              filesBuilder_ = null;
+              files_ = other.files_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              filesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getFilesFieldBuilder() : null;
+            } else {
+              filesBuilder_.addAllMessages(other.files_);
+            }
+          }
+        }
+        if (other.hasSignDataSource()) {
+          setSignDataSource(other.getSignDataSource());
+        }
+        if (other.hasCertificateData()) {
+          mergeCertificateData(other.getCertificateData());
+        }
+        if (other.hasGosKeyData()) {
+          mergeGosKeyData(other.getGosKeyData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasSignDataSource()) {
+          return false;
+        }
+        for (int i = 0; i < getFilesCount(); i++) {
+          if (!getFiles(i).isInitialized()) {
+            return false;
+          }
+        }
+        if (hasCertificateData()) {
+          if (!getCertificateData().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile m =
+                    input.readMessage(
+                        Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.parser(),
+                        extensionRegistry);
+                if (filesBuilder_ == null) {
+                  ensureFilesIsMutable();
+                  files_.add(m);
+                } else {
+                  filesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource tmpValue =
+                    Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  signDataSource_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getCertificateDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getGosKeyDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile> files_ =
+        java.util.Collections.emptyList();
+      private void ensureFilesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          files_ = new java.util.ArrayList<Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile>(files_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFileOrBuilder> filesBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile> getFilesList() {
+        if (filesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(files_);
+        } else {
+          return filesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public int getFilesCount() {
+        if (filesBuilder_ == null) {
+          return files_.size();
+        } else {
+          return filesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile getFiles(int index) {
+        if (filesBuilder_ == null) {
+          return files_.get(index);
+        } else {
+          return filesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Builder setFiles(
+          int index, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.set(index, value);
+          onChanged();
+        } else {
+          filesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Builder setFiles(
+          int index, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Builder addFiles(Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.add(value);
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Builder addFiles(
+          int index, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.add(index, value);
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Builder addFiles(
+          Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.add(builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Builder addFiles(
+          int index, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Builder addAllFiles(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile> values) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, files_);
+          onChanged();
+        } else {
+          filesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Builder clearFiles() {
+        if (filesBuilder_ == null) {
+          files_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          filesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Builder removeFiles(int index) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.remove(index);
+          onChanged();
+        } else {
+          filesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder getFilesBuilder(
+          int index) {
+        return getFilesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFileOrBuilder getFilesOrBuilder(
+          int index) {
+        if (filesBuilder_ == null) {
+          return files_.get(index);  } else {
+          return filesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFileOrBuilder> 
+           getFilesOrBuilderList() {
+        if (filesBuilder_ != null) {
+          return filesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(files_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder addFilesBuilder() {
+        return getFilesFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder addFilesBuilder(
+          int index) {
+        return getFilesFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Dss.DssSignFile Files = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder> 
+           getFilesBuilderList() {
+        return getFilesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFileOrBuilder> 
+          getFilesFieldBuilder() {
+        if (filesBuilder_ == null) {
+          filesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFile.Builder, Diadoc.Api.Proto.Dss.DssSignProtos.DssSignFileOrBuilder>(
+                  files_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          files_ = null;
+        }
+        return filesBuilder_;
+      }
+
+      private int signDataSource_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Dss.DssSignDataSource SignDataSource = 2;</code>
+       * @return Whether the signDataSource field is set.
+       */
+      @java.lang.Override public boolean hasSignDataSource() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Dss.DssSignDataSource SignDataSource = 2;</code>
+       * @return The signDataSource.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource getSignDataSource() {
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource result = Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource.forNumber(signDataSource_);
+        return result == null ? Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource.CertificateSign : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Dss.DssSignDataSource SignDataSource = 2;</code>
+       * @param value The signDataSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignDataSource(Diadoc.Api.Proto.Dss.DssSignProtos.DssSignDataSource value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        signDataSource_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Dss.DssSignDataSource SignDataSource = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignDataSource() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signDataSource_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData certificateData_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData, Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.Builder, Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateDataOrBuilder> certificateDataBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+       * @return Whether the certificateData field is set.
+       */
+      public boolean hasCertificateData() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+       * @return The certificateData.
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData getCertificateData() {
+        if (certificateDataBuilder_ == null) {
+          return certificateData_ == null ? Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.getDefaultInstance() : certificateData_;
+        } else {
+          return certificateDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+       */
+      public Builder setCertificateData(Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData value) {
+        if (certificateDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          certificateData_ = value;
+        } else {
+          certificateDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+       */
+      public Builder setCertificateData(
+          Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.Builder builderForValue) {
+        if (certificateDataBuilder_ == null) {
+          certificateData_ = builderForValue.build();
+        } else {
+          certificateDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+       */
+      public Builder mergeCertificateData(Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData value) {
+        if (certificateDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            certificateData_ != null &&
+            certificateData_ != Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.getDefaultInstance()) {
+            getCertificateDataBuilder().mergeFrom(value);
+          } else {
+            certificateData_ = value;
+          }
+        } else {
+          certificateDataBuilder_.mergeFrom(value);
+        }
+        if (certificateData_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+       */
+      public Builder clearCertificateData() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        certificateData_ = null;
+        if (certificateDataBuilder_ != null) {
+          certificateDataBuilder_.dispose();
+          certificateDataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.Builder getCertificateDataBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCertificateDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateDataOrBuilder getCertificateDataOrBuilder() {
+        if (certificateDataBuilder_ != null) {
+          return certificateDataBuilder_.getMessageOrBuilder();
+        } else {
+          return certificateData_ == null ?
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.getDefaultInstance() : certificateData_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssCertificateData CertificateData = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData, Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.Builder, Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateDataOrBuilder> 
+          getCertificateDataFieldBuilder() {
+        if (certificateDataBuilder_ == null) {
+          certificateDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData, Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.Builder, Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateDataOrBuilder>(
+                  getCertificateData(),
+                  getParentForChildren(),
+                  isClean());
+          certificateData_ = null;
+        }
+        return certificateDataBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData gosKeyData_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData, Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.Builder, Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyDataOrBuilder> gosKeyDataBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+       * @return Whether the gosKeyData field is set.
+       */
+      public boolean hasGosKeyData() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+       * @return The gosKeyData.
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData getGosKeyData() {
+        if (gosKeyDataBuilder_ == null) {
+          return gosKeyData_ == null ? Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.getDefaultInstance() : gosKeyData_;
+        } else {
+          return gosKeyDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+       */
+      public Builder setGosKeyData(Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData value) {
+        if (gosKeyDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gosKeyData_ = value;
+        } else {
+          gosKeyDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+       */
+      public Builder setGosKeyData(
+          Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.Builder builderForValue) {
+        if (gosKeyDataBuilder_ == null) {
+          gosKeyData_ = builderForValue.build();
+        } else {
+          gosKeyDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+       */
+      public Builder mergeGosKeyData(Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData value) {
+        if (gosKeyDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            gosKeyData_ != null &&
+            gosKeyData_ != Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.getDefaultInstance()) {
+            getGosKeyDataBuilder().mergeFrom(value);
+          } else {
+            gosKeyData_ = value;
+          }
+        } else {
+          gosKeyDataBuilder_.mergeFrom(value);
+        }
+        if (gosKeyData_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+       */
+      public Builder clearGosKeyData() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        gosKeyData_ = null;
+        if (gosKeyDataBuilder_ != null) {
+          gosKeyDataBuilder_.dispose();
+          gosKeyDataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.Builder getGosKeyDataBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getGosKeyDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+       */
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyDataOrBuilder getGosKeyDataOrBuilder() {
+        if (gosKeyDataBuilder_ != null) {
+          return gosKeyDataBuilder_.getMessageOrBuilder();
+        } else {
+          return gosKeyData_ == null ?
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.getDefaultInstance() : gosKeyData_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Dss.DssGosKeyData GosKeyData = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData, Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.Builder, Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyDataOrBuilder> 
+          getGosKeyDataFieldBuilder() {
+        if (gosKeyDataBuilder_ == null) {
+          gosKeyDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData, Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.Builder, Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyDataOrBuilder>(
+                  getGosKeyData(),
+                  getParentForChildren(),
+                  isClean());
+          gosKeyData_ = null;
+        }
+        return gosKeyDataBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Dss.DssSignRequestV2)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Dss.DssSignRequestV2)
+    private static final Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2();
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DssSignRequestV2>
+        PARSER = new com.google.protobuf.AbstractParser<DssSignRequestV2>() {
+      @java.lang.Override
+      public DssSignRequestV2 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DssSignRequestV2> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DssSignRequestV2> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssSignRequestV2 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DssCertificateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Dss.DssCertificateData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Thumbprint = 1;</code>
+     * @return Whether the thumbprint field is set.
+     */
+    boolean hasThumbprint();
+    /**
+     * <code>required string Thumbprint = 1;</code>
+     * @return The thumbprint.
+     */
+    java.lang.String getThumbprint();
+    /**
+     * <code>required string Thumbprint = 1;</code>
+     * @return The bytes for thumbprint.
+     */
+    com.google.protobuf.ByteString
+        getThumbprintBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Dss.DssCertificateData}
+   */
+  public static final class DssCertificateData extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Dss.DssCertificateData)
+      DssCertificateDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        DssCertificateData.class.getName());
+    }
+    // Use DssCertificateData.newBuilder() to construct.
+    private DssCertificateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private DssCertificateData() {
+      thumbprint_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.class, Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int THUMBPRINT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object thumbprint_ = "";
+    /**
+     * <code>required string Thumbprint = 1;</code>
+     * @return Whether the thumbprint field is set.
+     */
+    @java.lang.Override
+    public boolean hasThumbprint() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string Thumbprint = 1;</code>
+     * @return The thumbprint.
+     */
+    @java.lang.Override
+    public java.lang.String getThumbprint() {
+      java.lang.Object ref = thumbprint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          thumbprint_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Thumbprint = 1;</code>
+     * @return The bytes for thumbprint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getThumbprintBytes() {
+      java.lang.Object ref = thumbprint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        thumbprint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasThumbprint()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, thumbprint_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, thumbprint_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData other = (Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData) obj;
+
+      if (hasThumbprint() != other.hasThumbprint()) return false;
+      if (hasThumbprint()) {
+        if (!getThumbprint()
+            .equals(other.getThumbprint())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasThumbprint()) {
+        hash = (37 * hash) + THUMBPRINT_FIELD_NUMBER;
+        hash = (53 * hash) + getThumbprint().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Dss.DssCertificateData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Dss.DssCertificateData)
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.class, Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        thumbprint_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData build() {
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData buildPartial() {
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData result = new Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.thumbprint_ = thumbprint_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData) {
+          return mergeFrom((Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData other) {
+        if (other == Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData.getDefaultInstance()) return this;
+        if (other.hasThumbprint()) {
+          thumbprint_ = other.thumbprint_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasThumbprint()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                thumbprint_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object thumbprint_ = "";
+      /**
+       * <code>required string Thumbprint = 1;</code>
+       * @return Whether the thumbprint field is set.
+       */
+      public boolean hasThumbprint() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string Thumbprint = 1;</code>
+       * @return The thumbprint.
+       */
+      public java.lang.String getThumbprint() {
+        java.lang.Object ref = thumbprint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            thumbprint_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Thumbprint = 1;</code>
+       * @return The bytes for thumbprint.
+       */
+      public com.google.protobuf.ByteString
+          getThumbprintBytes() {
+        java.lang.Object ref = thumbprint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          thumbprint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Thumbprint = 1;</code>
+       * @param value The thumbprint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThumbprint(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        thumbprint_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Thumbprint = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThumbprint() {
+        thumbprint_ = getDefaultInstance().getThumbprint();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Thumbprint = 1;</code>
+       * @param value The bytes for thumbprint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThumbprintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        thumbprint_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Dss.DssCertificateData)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Dss.DssCertificateData)
+    private static final Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData();
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DssCertificateData>
+        PARSER = new com.google.protobuf.AbstractParser<DssCertificateData>() {
+      @java.lang.Override
+      public DssCertificateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DssCertificateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DssCertificateData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssCertificateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DssGosKeyDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Dss.DssGosKeyData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string Snils = 1;</code>
+     * @return Whether the snils field is set.
+     */
+    boolean hasSnils();
+    /**
+     * <code>optional string Snils = 1;</code>
+     * @return The snils.
+     */
+    java.lang.String getSnils();
+    /**
+     * <code>optional string Snils = 1;</code>
+     * @return The bytes for snils.
+     */
+    com.google.protobuf.ByteString
+        getSnilsBytes();
+
+    /**
+     * <code>optional string Oid = 2;</code>
+     * @return Whether the oid field is set.
+     */
+    boolean hasOid();
+    /**
+     * <code>optional string Oid = 2;</code>
+     * @return The oid.
+     */
+    java.lang.String getOid();
+    /**
+     * <code>optional string Oid = 2;</code>
+     * @return The bytes for oid.
+     */
+    com.google.protobuf.ByteString
+        getOidBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Dss.DssGosKeyData}
+   */
+  public static final class DssGosKeyData extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Dss.DssGosKeyData)
+      DssGosKeyDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        DssGosKeyData.class.getName());
+    }
+    // Use DssGosKeyData.newBuilder() to construct.
+    private DssGosKeyData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private DssGosKeyData() {
+      snils_ = "";
+      oid_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.class, Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SNILS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object snils_ = "";
+    /**
+     * <code>optional string Snils = 1;</code>
+     * @return Whether the snils field is set.
+     */
+    @java.lang.Override
+    public boolean hasSnils() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string Snils = 1;</code>
+     * @return The snils.
+     */
+    @java.lang.Override
+    public java.lang.String getSnils() {
+      java.lang.Object ref = snils_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          snils_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Snils = 1;</code>
+     * @return The bytes for snils.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSnilsBytes() {
+      java.lang.Object ref = snils_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        snils_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object oid_ = "";
+    /**
+     * <code>optional string Oid = 2;</code>
+     * @return Whether the oid field is set.
+     */
+    @java.lang.Override
+    public boolean hasOid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string Oid = 2;</code>
+     * @return The oid.
+     */
+    @java.lang.Override
+    public java.lang.String getOid() {
+      java.lang.Object ref = oid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          oid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Oid = 2;</code>
+     * @return The bytes for oid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOidBytes() {
+      java.lang.Object ref = oid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, snils_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, oid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, snils_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, oid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData other = (Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData) obj;
+
+      if (hasSnils() != other.hasSnils()) return false;
+      if (hasSnils()) {
+        if (!getSnils()
+            .equals(other.getSnils())) return false;
+      }
+      if (hasOid() != other.hasOid()) return false;
+      if (hasOid()) {
+        if (!getOid()
+            .equals(other.getOid())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSnils()) {
+        hash = (37 * hash) + SNILS_FIELD_NUMBER;
+        hash = (53 * hash) + getSnils().hashCode();
+      }
+      if (hasOid()) {
+        hash = (37 * hash) + OID_FIELD_NUMBER;
+        hash = (53 * hash) + getOid().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Dss.DssGosKeyData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Dss.DssGosKeyData)
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.class, Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        snils_ = "";
+        oid_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData build() {
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData buildPartial() {
+        Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData result = new Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.snils_ = snils_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.oid_ = oid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData) {
+          return mergeFrom((Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData other) {
+        if (other == Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData.getDefaultInstance()) return this;
+        if (other.hasSnils()) {
+          snils_ = other.snils_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasOid()) {
+          oid_ = other.oid_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                snils_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                oid_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object snils_ = "";
+      /**
+       * <code>optional string Snils = 1;</code>
+       * @return Whether the snils field is set.
+       */
+      public boolean hasSnils() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string Snils = 1;</code>
+       * @return The snils.
+       */
+      public java.lang.String getSnils() {
+        java.lang.Object ref = snils_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            snils_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Snils = 1;</code>
+       * @return The bytes for snils.
+       */
+      public com.google.protobuf.ByteString
+          getSnilsBytes() {
+        java.lang.Object ref = snils_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          snils_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Snils = 1;</code>
+       * @param value The snils to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSnils(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        snils_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Snils = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSnils() {
+        snils_ = getDefaultInstance().getSnils();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Snils = 1;</code>
+       * @param value The bytes for snils to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSnilsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        snils_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object oid_ = "";
+      /**
+       * <code>optional string Oid = 2;</code>
+       * @return Whether the oid field is set.
+       */
+      public boolean hasOid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string Oid = 2;</code>
+       * @return The oid.
+       */
+      public java.lang.String getOid() {
+        java.lang.Object ref = oid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            oid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Oid = 2;</code>
+       * @return The bytes for oid.
+       */
+      public com.google.protobuf.ByteString
+          getOidBytes() {
+        java.lang.Object ref = oid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          oid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Oid = 2;</code>
+       * @param value The oid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        oid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Oid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOid() {
+        oid_ = getDefaultInstance().getOid();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Oid = 2;</code>
+       * @param value The bytes for oid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        oid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Dss.DssGosKeyData)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Dss.DssGosKeyData)
+    private static final Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData();
+    }
+
+    public static Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DssGosKeyData>
+        PARSER = new com.google.protobuf.AbstractParser<DssGosKeyData>() {
+      @java.lang.Override
+      public DssGosKeyData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DssGosKeyData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DssGosKeyData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Dss.DssSignProtos.DssGosKeyData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3884,6 +6551,21 @@ public final class DssSignProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Dss_DssSignRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Dss_DssSignFile_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -3910,32 +6592,42 @@ public final class DssSignProtos {
       "\n\021Dss/DssSign.proto\022\024Diadoc.Api.Proto.Ds" +
       "s\032\020Content_v3.proto\"B\n\016DssSignRequest\0220\n" +
       "\005Files\030\001 \003(\0132!.Diadoc.Api.Proto.Dss.DssS" +
-      "ignFile\"N\n\013DssSignFile\022-\n\007Content\030\001 \002(\0132" +
-      "\034.Diadoc.Api.Proto.Content_v3\022\020\n\010FileNam" +
-      "e\030\002 \001(\t\"\322\002\n\rDssSignResult\022J\n\017OperationSt" +
-      "atus\030\001 \001(\0162(.Diadoc.Api.Proto.Dss.DssOpe" +
-      "rationStatus:\007Unknown\022F\n\022FileSigningResu" +
-      "lts\030\002 \003(\0132*.Diadoc.Api.Proto.Dss.DssFile" +
-      "SigningResult\022M\n\013ConfirmType\030\003 \001(\0162$.Dia" +
-      "doc.Api.Proto.Dss.DssConfirmType:\022Confir" +
-      "mTypeUnknown\022D\n\010Operator\030\004 \001(\0162!.Diadoc." +
-      "Api.Proto.Dss.DssOperator:\017OperatorUnkno" +
-      "wn\022\030\n\020PhoneLastNumbers\030\005 \001(\t\"\206\001\n\024DssFile" +
-      "SigningResult\022[\n\021FileSigningStatus\030\001 \001(\016" +
-      "2*.Diadoc.Api.Proto.Dss.DssFileSigningSt" +
-      "atus:\024UnknownSigningStatus\022\021\n\tSignature\030" +
-      "\002 \001(\014*j\n\016DssConfirmType\022\037\n\022ConfirmTypeUn" +
-      "known\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\007\n\003Sms\020\001\022\t\n\005M" +
-      "yDss\020\002\022\n\n\006Applet\020\003\022\r\n\tMobileSdk\020\004*;\n\013Dss" +
-      "Operator\022\023\n\017OperatorUnknown\020\000\022\013\n\007Megafon" +
-      "\020\001\022\n\n\006Kontur\020\002*X\n\024DssFileSigningStatus\022\030" +
-      "\n\024UnknownSigningStatus\020\000\022\024\n\020SigningCompl" +
-      "eted\020\001\022\020\n\014SigningError\020\002*\253\001\n\022DssOperatio" +
-      "nStatus\022\013\n\007Unknown\020\000\022\016\n\nInProgress\020\001\022\r\n\t" +
-      "Completed\020\002\022\022\n\016CanceledByUser\020\003\022\013\n\007Timeo" +
-      "ut\020\004\022\013\n\007Crashed\020\005\022\037\n\033UserHasUnconfirmedO" +
-      "peration\020\006\022\032\n\026OperationRetryRequired\020\007B\017" +
-      "B\rDssSignProtos"
+      "ignFile\"\201\002\n\020DssSignRequestV2\0220\n\005Files\030\001 " +
+      "\003(\0132!.Diadoc.Api.Proto.Dss.DssSignFile\022?" +
+      "\n\016SignDataSource\030\002 \002(\0162\'.Diadoc.Api.Prot" +
+      "o.Dss.DssSignDataSource\022A\n\017CertificateDa" +
+      "ta\030\003 \001(\0132(.Diadoc.Api.Proto.Dss.DssCerti" +
+      "ficateData\0227\n\nGosKeyData\030\004 \001(\0132#.Diadoc." +
+      "Api.Proto.Dss.DssGosKeyData\"(\n\022DssCertif" +
+      "icateData\022\022\n\nThumbprint\030\001 \002(\t\"+\n\rDssGosK" +
+      "eyData\022\r\n\005Snils\030\001 \001(\t\022\013\n\003Oid\030\002 \001(\t\"N\n\013Ds" +
+      "sSignFile\022-\n\007Content\030\001 \002(\0132\034.Diadoc.Api." +
+      "Proto.Content_v3\022\020\n\010FileName\030\002 \001(\t\"\322\002\n\rD" +
+      "ssSignResult\022J\n\017OperationStatus\030\001 \001(\0162(." +
+      "Diadoc.Api.Proto.Dss.DssOperationStatus:" +
+      "\007Unknown\022F\n\022FileSigningResults\030\002 \003(\0132*.D" +
+      "iadoc.Api.Proto.Dss.DssFileSigningResult" +
+      "\022M\n\013ConfirmType\030\003 \001(\0162$.Diadoc.Api.Proto" +
+      ".Dss.DssConfirmType:\022ConfirmTypeUnknown\022" +
+      "D\n\010Operator\030\004 \001(\0162!.Diadoc.Api.Proto.Dss" +
+      ".DssOperator:\017OperatorUnknown\022\030\n\020PhoneLa" +
+      "stNumbers\030\005 \001(\t\"\206\001\n\024DssFileSigningResult" +
+      "\022[\n\021FileSigningStatus\030\001 \001(\0162*.Diadoc.Api" +
+      ".Proto.Dss.DssFileSigningStatus:\024Unknown" +
+      "SigningStatus\022\021\n\tSignature\030\002 \001(\014*8\n\021DssS" +
+      "ignDataSource\022\023\n\017CertificateSign\020\000\022\016\n\nGo" +
+      "sKeySign\020\001*v\n\016DssConfirmType\022\037\n\022ConfirmT" +
+      "ypeUnknown\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\007\n\003Sms\020\001" +
+      "\022\t\n\005MyDss\020\002\022\n\n\006Applet\020\003\022\r\n\tMobileSdk\020\004\022\n" +
+      "\n\006GosKey\020\005*;\n\013DssOperator\022\023\n\017OperatorUnk" +
+      "nown\020\000\022\013\n\007Megafon\020\001\022\n\n\006Kontur\020\002*X\n\024DssFi" +
+      "leSigningStatus\022\030\n\024UnknownSigningStatus\020" +
+      "\000\022\024\n\020SigningCompleted\020\001\022\020\n\014SigningError\020" +
+      "\002*\253\001\n\022DssOperationStatus\022\013\n\007Unknown\020\000\022\016\n" +
+      "\nInProgress\020\001\022\r\n\tCompleted\020\002\022\022\n\016Canceled" +
+      "ByUser\020\003\022\013\n\007Timeout\020\004\022\013\n\007Crashed\020\005\022\037\n\033Us" +
+      "erHasUnconfirmedOperation\020\006\022\032\n\026Operation" +
+      "RetryRequired\020\007B\017B\rDssSignProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3948,20 +6640,38 @@ public final class DssSignProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Dss_DssSignRequest_descriptor,
         new java.lang.String[] { "Files", });
-    internal_static_Diadoc_Api_Proto_Dss_DssSignFile_descriptor =
+    internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Dss_DssSignRequestV2_descriptor,
+        new java.lang.String[] { "Files", "SignDataSource", "CertificateData", "GosKeyData", });
+    internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Dss_DssCertificateData_descriptor,
+        new java.lang.String[] { "Thumbprint", });
+    internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Dss_DssGosKeyData_descriptor,
+        new java.lang.String[] { "Snils", "Oid", });
+    internal_static_Diadoc_Api_Proto_Dss_DssSignFile_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_Diadoc_Api_Proto_Dss_DssSignFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Dss_DssSignFile_descriptor,
         new java.lang.String[] { "Content", "FileName", });
     internal_static_Diadoc_Api_Proto_Dss_DssSignResult_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_Diadoc_Api_Proto_Dss_DssSignResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Dss_DssSignResult_descriptor,
         new java.lang.String[] { "OperationStatus", "FileSigningResults", "ConfirmType", "Operator", "PhoneLastNumbers", });
     internal_static_Diadoc_Api_Proto_Dss_DssFileSigningResult_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_Dss_DssFileSigningResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Dss_DssFileSigningResult_descriptor,
