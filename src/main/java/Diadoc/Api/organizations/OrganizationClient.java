@@ -116,6 +116,11 @@ public class OrganizationClient {
 
 
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #getOrganizationsByInnListV2(String, Iterable)}
+     */
+    @Deprecated
     public OrganizationWithCounteragentStatus[] getOrganizationsByInnList(String myOrgId, Iterable<String> innList) throws DiadocSdkException {
         var request = GetOrganizationsByInnListRequest.newBuilder();
         request.addAllInnList(innList);
@@ -144,11 +149,17 @@ public class OrganizationClient {
         }
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #getOrganizationsByInnListV2(Iterable)}
+     */
+    @Deprecated
     public Organization[] getOrganizationsByInnList(Iterable<String> innList) throws DiadocSdkException {
         var request = GetOrganizationsByInnListRequest.newBuilder();
         request.addAllInnList(innList);
         return getOrganizationsByInnList(request.build());
     }
+
 
     public Organization[] getOrganizationsByInnList(GetOrganizationsByInnListRequest innListRequest) throws DiadocSdkException {
         if (innListRequest == null) {
@@ -159,6 +170,61 @@ public class OrganizationClient {
                     new URIBuilder(diadocHttpClient.getBaseUrl())
                             .setPath("/GetOrganizationsByInnList")
                             .build())
+                    .setEntity(new ByteArrayEntity(innListRequest.toByteArray()));
+            var response = GetOrganizationsByInnListResponse.parseFrom(diadocHttpClient.performRequest(request));
+            return response
+                    .getOrganizationsList()
+                    .stream()
+                    .map(OrganizationWithCounteragentStatus::getOrganization)
+                    .toArray(Organization[]::new);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public OrganizationWithCounteragentStatus[] getOrganizationsByInnListV2(String myBoxId, Iterable<String> innList) throws DiadocSdkException {
+        var request = GetOrganizationsByInnListRequest.newBuilder();
+        request.addAllInnList(innList);
+        return getOrganizationsByInnListV2(myBoxId, request.build());
+    }
+
+    public OrganizationWithCounteragentStatus[] getOrganizationsByInnListV2(String myBoxId, GetOrganizationsByInnListRequest innListRequest) throws DiadocSdkException {
+        if (myBoxId == null)
+            throw new IllegalArgumentException("myBoxId");
+        if (innListRequest == null)
+            throw new IllegalArgumentException("innListRequest");
+        try {
+            var request = RequestBuilder.post(
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/V2/GetOrganizationsByInnList")
+                                    .addParameter("myBoxId", myBoxId)
+                                    .build())
+                    .setEntity(new ByteArrayEntity(innListRequest.toByteArray()));
+
+
+            var response = GetOrganizationsByInnListResponse.parseFrom(diadocHttpClient.performRequest(request));
+            return response.getOrganizationsList().toArray(new OrganizationWithCounteragentStatus[0]);
+
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public Organization[] getOrganizationsByInnListV2(Iterable<String> innList) throws DiadocSdkException {
+        var request = GetOrganizationsByInnListRequest.newBuilder();
+        request.addAllInnList(innList);
+        return getOrganizationsByInnListV2(request.build());
+    }
+
+    public Organization[] getOrganizationsByInnListV2(GetOrganizationsByInnListRequest innListRequest) throws DiadocSdkException {
+        if (innListRequest == null) {
+            throw new IllegalArgumentException("innListRequest");
+        }
+        try {
+            var request = RequestBuilder.post(
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/V2/GetOrganizationsByInnList")
+                                    .build())
                     .setEntity(new ByteArrayEntity(innListRequest.toByteArray()));
             var response = GetOrganizationsByInnListResponse.parseFrom(diadocHttpClient.performRequest(request));
             return response
