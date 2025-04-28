@@ -9,6 +9,7 @@ option java_outer_classname = "PowerOfAttorneyProtos";
 message PowerOfAttorneyFullId {
     required string RegistrationNumber = 1;
     required string IssuerInn = 2;
+    optional string RepresentativeInn = 3;
 }
 
 message PowerOfAttorney {
