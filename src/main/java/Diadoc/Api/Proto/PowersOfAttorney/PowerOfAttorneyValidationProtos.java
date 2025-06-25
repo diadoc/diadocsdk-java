@@ -3204,6 +3204,804 @@ public final class PowerOfAttorneyValidationProtos {
 
   }
 
+  public interface PowerOfAttorneyPrevalidateRequestV2OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPrevalidateRequestV2)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+     * @return Whether the fullId field is set.
+     */
+    boolean hasFullId();
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+     * @return The fullId.
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId getFullId();
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder getFullIdOrBuilder();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+     * @return Whether the confidantCertificate field is set.
+     */
+    boolean hasConfidantCertificate();
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+     * @return The confidantCertificate.
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate getConfidantCertificate();
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidateOrBuilder getConfidantCertificateOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPrevalidateRequestV2}
+   */
+  public static final class PowerOfAttorneyPrevalidateRequestV2 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPrevalidateRequestV2)
+      PowerOfAttorneyPrevalidateRequestV2OrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        PowerOfAttorneyPrevalidateRequestV2.class.getName());
+    }
+    // Use PowerOfAttorneyPrevalidateRequestV2.newBuilder() to construct.
+    private PowerOfAttorneyPrevalidateRequestV2(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PowerOfAttorneyPrevalidateRequestV2() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FULLID_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId fullId_;
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+     * @return Whether the fullId field is set.
+     */
+    @java.lang.Override
+    public boolean hasFullId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+     * @return The fullId.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId getFullId() {
+      return fullId_ == null ? Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance() : fullId_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder getFullIdOrBuilder() {
+      return fullId_ == null ? Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance() : fullId_;
+    }
+
+    public static final int CONFIDANTCERTIFICATE_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate confidantCertificate_;
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+     * @return Whether the confidantCertificate field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfidantCertificate() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+     * @return The confidantCertificate.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate getConfidantCertificate() {
+      return confidantCertificate_ == null ? Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.getDefaultInstance() : confidantCertificate_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidateOrBuilder getConfidantCertificateOrBuilder() {
+      return confidantCertificate_ == null ? Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.getDefaultInstance() : confidantCertificate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasFullId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasConfidantCertificate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getFullId().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getConfidantCertificate().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getFullId());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getConfidantCertificate());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFullId());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getConfidantCertificate());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 other = (Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2) obj;
+
+      if (hasFullId() != other.hasFullId()) return false;
+      if (hasFullId()) {
+        if (!getFullId()
+            .equals(other.getFullId())) return false;
+      }
+      if (hasConfidantCertificate() != other.hasConfidantCertificate()) return false;
+      if (hasConfidantCertificate()) {
+        if (!getConfidantCertificate()
+            .equals(other.getConfidantCertificate())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFullId()) {
+        hash = (37 * hash) + FULLID_FIELD_NUMBER;
+        hash = (53 * hash) + getFullId().hashCode();
+      }
+      if (hasConfidantCertificate()) {
+        hash = (37 * hash) + CONFIDANTCERTIFICATE_FIELD_NUMBER;
+        hash = (53 * hash) + getConfidantCertificate().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPrevalidateRequestV2}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPrevalidateRequestV2)
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2.class, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getFullIdFieldBuilder();
+          getConfidantCertificateFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        fullId_ = null;
+        if (fullIdBuilder_ != null) {
+          fullIdBuilder_.dispose();
+          fullIdBuilder_ = null;
+        }
+        confidantCertificate_ = null;
+        if (confidantCertificateBuilder_ != null) {
+          confidantCertificateBuilder_.dispose();
+          confidantCertificateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 build() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 buildPartial() {
+        Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 result = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fullId_ = fullIdBuilder_ == null
+              ? fullId_
+              : fullIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.confidantCertificate_ = confidantCertificateBuilder_ == null
+              ? confidantCertificate_
+              : confidantCertificateBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2) {
+          return mergeFrom((Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 other) {
+        if (other == Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2.getDefaultInstance()) return this;
+        if (other.hasFullId()) {
+          mergeFullId(other.getFullId());
+        }
+        if (other.hasConfidantCertificate()) {
+          mergeConfidantCertificate(other.getConfidantCertificate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasFullId()) {
+          return false;
+        }
+        if (!hasConfidantCertificate()) {
+          return false;
+        }
+        if (!getFullId().isInitialized()) {
+          return false;
+        }
+        if (!getConfidantCertificate().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFullIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getConfidantCertificateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId fullId_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder> fullIdBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+       * @return Whether the fullId field is set.
+       */
+      public boolean hasFullId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+       * @return The fullId.
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId getFullId() {
+        if (fullIdBuilder_ == null) {
+          return fullId_ == null ? Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance() : fullId_;
+        } else {
+          return fullIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+       */
+      public Builder setFullId(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId value) {
+        if (fullIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fullId_ = value;
+        } else {
+          fullIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+       */
+      public Builder setFullId(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder builderForValue) {
+        if (fullIdBuilder_ == null) {
+          fullId_ = builderForValue.build();
+        } else {
+          fullIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+       */
+      public Builder mergeFullId(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId value) {
+        if (fullIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            fullId_ != null &&
+            fullId_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance()) {
+            getFullIdBuilder().mergeFrom(value);
+          } else {
+            fullId_ = value;
+          }
+        } else {
+          fullIdBuilder_.mergeFrom(value);
+        }
+        if (fullId_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+       */
+      public Builder clearFullId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fullId_ = null;
+        if (fullIdBuilder_ != null) {
+          fullIdBuilder_.dispose();
+          fullIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder getFullIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFullIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder getFullIdOrBuilder() {
+        if (fullIdBuilder_ != null) {
+          return fullIdBuilder_.getMessageOrBuilder();
+        } else {
+          return fullId_ == null ?
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance() : fullId_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId FullId = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder> 
+          getFullIdFieldBuilder() {
+        if (fullIdBuilder_ == null) {
+          fullIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder>(
+                  getFullId(),
+                  getParentForChildren(),
+                  isClean());
+          fullId_ = null;
+        }
+        return fullIdBuilder_;
+      }
+
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate confidantCertificate_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidateOrBuilder> confidantCertificateBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+       * @return Whether the confidantCertificate field is set.
+       */
+      public boolean hasConfidantCertificate() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+       * @return The confidantCertificate.
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate getConfidantCertificate() {
+        if (confidantCertificateBuilder_ == null) {
+          return confidantCertificate_ == null ? Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.getDefaultInstance() : confidantCertificate_;
+        } else {
+          return confidantCertificateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+       */
+      public Builder setConfidantCertificate(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate value) {
+        if (confidantCertificateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          confidantCertificate_ = value;
+        } else {
+          confidantCertificateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+       */
+      public Builder setConfidantCertificate(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.Builder builderForValue) {
+        if (confidantCertificateBuilder_ == null) {
+          confidantCertificate_ = builderForValue.build();
+        } else {
+          confidantCertificateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+       */
+      public Builder mergeConfidantCertificate(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate value) {
+        if (confidantCertificateBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            confidantCertificate_ != null &&
+            confidantCertificate_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.getDefaultInstance()) {
+            getConfidantCertificateBuilder().mergeFrom(value);
+          } else {
+            confidantCertificate_ = value;
+          }
+        } else {
+          confidantCertificateBuilder_.mergeFrom(value);
+        }
+        if (confidantCertificate_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+       */
+      public Builder clearConfidantCertificate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        confidantCertificate_ = null;
+        if (confidantCertificateBuilder_ != null) {
+          confidantCertificateBuilder_.dispose();
+          confidantCertificateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.Builder getConfidantCertificateBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getConfidantCertificateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidateOrBuilder getConfidantCertificateOrBuilder() {
+        if (confidantCertificateBuilder_ != null) {
+          return confidantCertificateBuilder_.getMessageOrBuilder();
+        } else {
+          return confidantCertificate_ == null ?
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.getDefaultInstance() : confidantCertificate_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate ConfidantCertificate = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidateOrBuilder> 
+          getConfidantCertificateFieldBuilder() {
+        if (confidantCertificateBuilder_ == null) {
+          confidantCertificateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidate.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.ConfidantCertificateToPrevalidateOrBuilder>(
+                  getConfidantCertificate(),
+                  getParentForChildren(),
+                  isClean());
+          confidantCertificate_ = null;
+        }
+        return confidantCertificateBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPrevalidateRequestV2)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyPrevalidateRequestV2)
+    private static final Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2();
+    }
+
+    public static Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PowerOfAttorneyPrevalidateRequestV2>
+        PARSER = new com.google.protobuf.AbstractParser<PowerOfAttorneyPrevalidateRequestV2>() {
+      @java.lang.Override
+      public PowerOfAttorneyPrevalidateRequestV2 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PowerOfAttorneyPrevalidateRequestV2> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PowerOfAttorneyPrevalidateRequestV2> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.PowerOfAttorneyPrevalidateRequestV2 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ConfidantCertificateToPrevalidateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.PowersOfAttorney.ConfidantCertificateToPrevalidate)
       com.google.protobuf.MessageOrBuilder {
@@ -6185,6 +6983,11 @@ public final class PowerOfAttorneyValidationProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_ConfidantCertificateToPrevalidate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -6215,7 +7018,8 @@ public final class PowerOfAttorneyValidationProtos {
     java.lang.String[] descriptorData = {
       "\n0PowersOfAttorney/PowerOfAttorneyValida" +
       "tion.proto\022!Diadoc.Api.Proto.PowersOfAtt" +
-      "orney\032\016Severity.proto\032\020Content_v3.proto\"" +
+      "orney\032\016Severity.proto\032\020Content_v3.proto\032" +
+      "&PowersOfAttorney/PowerOfAttorney.proto\"" +
       "\352\003\n\037PowerOfAttorneyValidationStatus\022=\n\010S" +
       "everity\030\001 \001(\0162\032.Diadoc.Api.Proto.Severit" +
       "y:\017UnknownSeverity\022o\n\rStatusNamedId\030\002 \001(" +
@@ -6233,35 +7037,41 @@ public final class PowerOfAttorneyValidationProtos {
       "owerOfAttorneyPrevalidateRequest\022b\n\024Conf" +
       "idantCertificate\030\001 \002(\0132D.Diadoc.Api.Prot" +
       "o.PowersOfAttorney.ConfidantCertificateT" +
-      "oPrevalidate\"f\n!ConfidantCertificateToPr" +
-      "evalidate\022\022\n\nThumbprint\030\001 \001(\t\022-\n\007Content" +
-      "\030\002 \001(\0132\034.Diadoc.Api.Proto.Content_v3\"\201\001\n" +
-      " PowerOfAttorneyPrevalidateResult\022]\n\021Pre" +
-      "validateStatus\030\001 \002(\0132B.Diadoc.Api.Proto." +
-      "PowersOfAttorney.PowerOfAttorneyValidati" +
-      "onStatus\"d\n\022ValidationProtocol\022N\n\014CheckR" +
-      "esults\030\001 \003(\01328.Diadoc.Api.Proto.PowersOf" +
-      "Attorney.ValidationCheckResult\"\344\001\n\025Valid" +
-      "ationCheckResult\022k\n\006Status\030\001 \001(\0162G.Diado" +
-      "c.Api.Proto.PowersOfAttorney.PowerOfAtto" +
-      "rneyValidationCheckStatus:\022UnknownCheckS" +
-      "tatus\022\014\n\004Name\030\002 \002(\t\022P\n\005Error\030\003 \001(\0132A.Dia" +
+      "oPrevalidate\"\323\001\n#PowerOfAttorneyPrevalid" +
+      "ateRequestV2\022H\n\006FullId\030\001 \002(\01328.Diadoc.Ap" +
+      "i.Proto.PowersOfAttorney.PowerOfAttorney" +
+      "FullId\022b\n\024ConfidantCertificate\030\002 \002(\0132D.D" +
+      "iadoc.Api.Proto.PowersOfAttorney.Confida" +
+      "ntCertificateToPrevalidate\"f\n!ConfidantC" +
+      "ertificateToPrevalidate\022\022\n\nThumbprint\030\001 " +
+      "\001(\t\022-\n\007Content\030\002 \001(\0132\034.Diadoc.Api.Proto." +
+      "Content_v3\"\201\001\n PowerOfAttorneyPrevalidat" +
+      "eResult\022]\n\021PrevalidateStatus\030\001 \002(\0132B.Dia" +
       "doc.Api.Proto.PowersOfAttorney.PowerOfAt" +
-      "torneyValidationError*\250\001\n&PowerOfAttorne" +
-      "yValidationStatusNamedId\022\021\n\rUnknownStatu" +
-      "s\020\000\022\025\n\021CanNotBeValidated\020\001\022\013\n\007IsValid\020\002\022" +
-      "\016\n\nIsNotValid\020\003\022\023\n\017ValidationError\020\004\022\021\n\r" +
-      "IsNotAttached\020\005\022\017\n\013HasWarnings\020\006*^\n$Powe" +
-      "rOfAttorneyValidationCheckStatus\022\026\n\022Unkn" +
-      "ownCheckStatus\020\000\022\006\n\002Ok\020\001\022\013\n\007Warning\020\002\022\t\n" +
-      "\005Error\020\003B!B\037PowerOfAttorneyValidationPro" +
-      "tos"
+      "torneyValidationStatus\"d\n\022ValidationProt" +
+      "ocol\022N\n\014CheckResults\030\001 \003(\01328.Diadoc.Api." +
+      "Proto.PowersOfAttorney.ValidationCheckRe" +
+      "sult\"\344\001\n\025ValidationCheckResult\022k\n\006Status" +
+      "\030\001 \001(\0162G.Diadoc.Api.Proto.PowersOfAttorn" +
+      "ey.PowerOfAttorneyValidationCheckStatus:" +
+      "\022UnknownCheckStatus\022\014\n\004Name\030\002 \002(\t\022P\n\005Err" +
+      "or\030\003 \001(\0132A.Diadoc.Api.Proto.PowersOfAtto" +
+      "rney.PowerOfAttorneyValidationError*\250\001\n&" +
+      "PowerOfAttorneyValidationStatusNamedId\022\021" +
+      "\n\rUnknownStatus\020\000\022\025\n\021CanNotBeValidated\020\001" +
+      "\022\013\n\007IsValid\020\002\022\016\n\nIsNotValid\020\003\022\023\n\017Validat" +
+      "ionError\020\004\022\021\n\rIsNotAttached\020\005\022\017\n\013HasWarn" +
+      "ings\020\006*^\n$PowerOfAttorneyValidationCheck" +
+      "Status\022\026\n\022UnknownCheckStatus\020\000\022\006\n\002Ok\020\001\022\013" +
+      "\n\007Warning\020\002\022\t\n\005Error\020\003B!B\037PowerOfAttorne" +
+      "yValidationProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.SeverityProtos.getDescriptor(),
           Diadoc.Api.Proto.Content_v3Protos.getDescriptor(),
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.getDescriptor(),
         });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyValidationStatus_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -6281,26 +7091,32 @@ public final class PowerOfAttorneyValidationProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequest_descriptor,
         new java.lang.String[] { "ConfidantCertificate", });
-    internal_static_Diadoc_Api_Proto_PowersOfAttorney_ConfidantCertificateToPrevalidate_descriptor =
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateRequestV2_descriptor,
+        new java.lang.String[] { "FullId", "ConfidantCertificate", });
+    internal_static_Diadoc_Api_Proto_PowersOfAttorney_ConfidantCertificateToPrevalidate_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_ConfidantCertificateToPrevalidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_ConfidantCertificateToPrevalidate_descriptor,
         new java.lang.String[] { "Thumbprint", "Content", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateResult_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_PowerOfAttorneyPrevalidateResult_descriptor,
         new java.lang.String[] { "PrevalidateStatus", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationProtocol_descriptor,
         new java.lang.String[] { "CheckResults", });
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PowersOfAttorney_ValidationCheckResult_descriptor,
@@ -6308,6 +7124,7 @@ public final class PowerOfAttorneyValidationProtos {
     descriptor.resolveAllFeaturesImmutable();
     Diadoc.Api.Proto.SeverityProtos.getDescriptor();
     Diadoc.Api.Proto.Content_v3Protos.getDescriptor();
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

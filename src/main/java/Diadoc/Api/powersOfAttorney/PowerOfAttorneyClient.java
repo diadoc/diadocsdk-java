@@ -66,6 +66,11 @@ public class PowerOfAttorneyClient {
         }
     }
 
+    /**
+     * @deprecated
+     * Use {@link #prevalidatePowerOfAttorneyV2(String, PowerOfAttorneyPrevalidateRequestV2)}
+     */
+    @Deprecated
     public PowerOfAttorneyPrevalidateResult prevalidatePowerOfAttorney(
             String boxId,
             String registrationNumber,
@@ -91,6 +96,30 @@ public class PowerOfAttorneyClient {
                                     .addParameter("boxId", boxId)
                                     .addParameter("registrationNumber", registrationNumber)
                                     .addParameter("issuerInn", issuerInn)
+                                    .build())
+                    .setEntity(new ByteArrayEntity(powerOfAttorneyPrevalidateRequest.toByteArray()));
+
+            return PowerOfAttorneyPrevalidateResult.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public PowerOfAttorneyPrevalidateResult prevalidatePowerOfAttorneyV2(
+            String boxId,
+            PowerOfAttorneyPrevalidateRequestV2 powerOfAttorneyPrevalidateRequest) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (powerOfAttorneyPrevalidateRequest == null) {
+            throw new IllegalArgumentException("powerOfAttorneyPrevalidateRequest");
+        }
+
+        try {
+            var request = RequestBuilder.post(
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/V2/PrevalidatePowerOfAttorney")
+                                    .addParameter("boxId", boxId)
                                     .build())
                     .setEntity(new ByteArrayEntity(powerOfAttorneyPrevalidateRequest.toByteArray()));
 
