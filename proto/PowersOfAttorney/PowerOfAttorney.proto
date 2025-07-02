@@ -32,6 +32,7 @@ message PowerOfAttorneyIssuer {
     optional PowerOfAttorneyIssuerForeignEntity ForeignEntity = 3;
     optional PowerOfAttorneyIssuerIndividualEntity IndividualEntity = 4;
     optional PowerOfAttorneyIssuerPhysicalEntity PhysicalEntity = 5;
+    optional PowerOfAttorneyIssuerLegalEntitySubsidiary LegalEntitySubsidiary = 6;
 }
 
 enum PowerOfAttorneyIssuerType {
@@ -40,6 +41,7 @@ enum PowerOfAttorneyIssuerType {
     ForeignEntity = 2;
     IndividualEntity = 3;
     PhysicalEntity = 4;
+    LegalEntitySubsidiary = 5;
 }
 
 message PowerOfAttorneyIssuerLegalEntity {
@@ -62,6 +64,18 @@ message PowerOfAttorneyIssuerIndividualEntity {
 message PowerOfAttorneyIssuerPhysicalEntity {
     required string Inn = 1;
     optional FullName PersonName = 2;
+}
+
+message PowerOfAttorneyIssuerLegalEntitySubsidiary {
+    required string OrganizationName = 1;
+    required string InnUl = 2;
+    required string Kpp = 3;
+    required string Ogrn = 4;
+    required PowerOfAttorneyLegalEntitySubsidiaryHead LegalEntitySubsidiaryHead = 5;
+}
+
+message PowerOfAttorneyLegalEntitySubsidiaryHead {
+    optional string InnFl = 1;
 }
 
 message PowerOfAttorneyConfidant {
