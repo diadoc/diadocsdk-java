@@ -873,4 +873,29 @@ public class GenerateClient {
     public GeneratedFile generateDocumentReceiptXml(String boxId, String messageId, String attachmentId, Signer signer) throws DiadocSdkException {
         return generateDocumentReceiptXml(boxId, messageId, attachmentId, signer, "/GenerateDocumentReceiptXml");
     }
+
+    public byte[] generateTtGisFixationCancellationRequest(String boxId, String messageId, String documentId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId");
+        }
+        if (documentId == null) {
+            throw new IllegalArgumentException("documentId");
+        }
+
+        try {
+            var request = RequestBuilder.post(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/GenerateTtGisFixationCancellationRequest")
+                            .addParameter("boxId", boxId)
+                            .addParameter("messageId", messageId)
+                            .addParameter("documentId", documentId)
+                            .build());
+            return diadocHttpClient.performRequest(request);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 }

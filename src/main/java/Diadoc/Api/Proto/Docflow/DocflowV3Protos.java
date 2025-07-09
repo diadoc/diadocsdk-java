@@ -241,6 +241,21 @@ public final class DocflowV3Protos {
      * <code>required .Diadoc.Api.Proto.DocflowStatusV3 DocflowStatus = 14;</code>
      */
     Diadoc.Api.Proto.DocflowStatusV3Protos.DocflowStatusV3OrBuilder getDocflowStatusOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+     * @return Whether the ttGisFixation field is set.
+     */
+    boolean hasTtGisFixation();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+     * @return The ttGisFixation.
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow getTtGisFixation();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflowOrBuilder getTtGisFixationOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocflowV3}
@@ -650,6 +665,32 @@ public final class DocflowV3Protos {
       return docflowStatus_ == null ? Diadoc.Api.Proto.DocflowStatusV3Protos.DocflowStatusV3.getDefaultInstance() : docflowStatus_;
     }
 
+    public static final int TTGISFIXATION_FIELD_NUMBER = 15;
+    private Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow ttGisFixation_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+     * @return Whether the ttGisFixation field is set.
+     */
+    @java.lang.Override
+    public boolean hasTtGisFixation() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+     * @return The ttGisFixation.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow getTtGisFixation() {
+      return ttGisFixation_ == null ? Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.getDefaultInstance() : ttGisFixation_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflowOrBuilder getTtGisFixationOrBuilder() {
+      return ttGisFixation_ == null ? Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.getDefaultInstance() : ttGisFixation_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -739,6 +780,12 @@ public final class DocflowV3Protos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (hasTtGisFixation()) {
+        if (!getTtGisFixation().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -784,6 +831,9 @@ public final class DocflowV3Protos {
       }
       if (((bitField0_ & 0x00000400) != 0)) {
         output.writeMessage(14, getDocflowStatus());
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeMessage(15, getTtGisFixation());
       }
       getUnknownFields().writeTo(output);
     }
@@ -845,6 +895,10 @@ public final class DocflowV3Protos {
       if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getDocflowStatus());
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getTtGisFixation());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -920,6 +974,11 @@ public final class DocflowV3Protos {
         if (!getDocflowStatus()
             .equals(other.getDocflowStatus())) return false;
       }
+      if (hasTtGisFixation() != other.hasTtGisFixation()) return false;
+      if (hasTtGisFixation()) {
+        if (!getTtGisFixation()
+            .equals(other.getTtGisFixation())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -982,6 +1041,10 @@ public final class DocflowV3Protos {
       if (hasDocflowStatus()) {
         hash = (37 * hash) + DOCFLOWSTATUS_FIELD_NUMBER;
         hash = (53 * hash) + getDocflowStatus().hashCode();
+      }
+      if (hasTtGisFixation()) {
+        hash = (37 * hash) + TTGISFIXATION_FIELD_NUMBER;
+        hash = (53 * hash) + getTtGisFixation().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1126,6 +1189,7 @@ public final class DocflowV3Protos {
           getOuterDocflowsFieldBuilder();
           getOuterDocflowEntitiesFieldBuilder();
           getDocflowStatusFieldBuilder();
+          getTtGisFixationFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1200,6 +1264,11 @@ public final class DocflowV3Protos {
         if (docflowStatusBuilder_ != null) {
           docflowStatusBuilder_.dispose();
           docflowStatusBuilder_ = null;
+        }
+        ttGisFixation_ = null;
+        if (ttGisFixationBuilder_ != null) {
+          ttGisFixationBuilder_.dispose();
+          ttGisFixationBuilder_ = null;
         }
         return this;
       }
@@ -1323,6 +1392,12 @@ public final class DocflowV3Protos {
               : docflowStatusBuilder_.build();
           to_bitField0_ |= 0x00000400;
         }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.ttGisFixation_ = ttGisFixationBuilder_ == null
+              ? ttGisFixation_
+              : ttGisFixationBuilder_.build();
+          to_bitField0_ |= 0x00000800;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1423,6 +1498,9 @@ public final class DocflowV3Protos {
         if (other.hasDocflowStatus()) {
           mergeDocflowStatus(other.getDocflowStatus());
         }
+        if (other.hasTtGisFixation()) {
+          mergeTtGisFixation(other.getTtGisFixation());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1496,6 +1574,11 @@ public final class DocflowV3Protos {
         }
         if (!getDocflowStatus().isInitialized()) {
           return false;
+        }
+        if (hasTtGisFixation()) {
+          if (!getTtGisFixation().isInitialized()) {
+            return false;
+          }
         }
         return true;
       }
@@ -1619,6 +1702,13 @@ public final class DocflowV3Protos {
                 bitField0_ |= 0x00001000;
                 break;
               } // case 114
+              case 122: {
+                input.readMessage(
+                    getTtGisFixationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 122
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3445,6 +3535,127 @@ public final class DocflowV3Protos {
           docflowStatus_ = null;
         }
         return docflowStatusBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow ttGisFixation_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflowOrBuilder> ttGisFixationBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+       * @return Whether the ttGisFixation field is set.
+       */
+      public boolean hasTtGisFixation() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+       * @return The ttGisFixation.
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow getTtGisFixation() {
+        if (ttGisFixationBuilder_ == null) {
+          return ttGisFixation_ == null ? Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.getDefaultInstance() : ttGisFixation_;
+        } else {
+          return ttGisFixationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+       */
+      public Builder setTtGisFixation(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow value) {
+        if (ttGisFixationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ttGisFixation_ = value;
+        } else {
+          ttGisFixationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+       */
+      public Builder setTtGisFixation(
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.Builder builderForValue) {
+        if (ttGisFixationBuilder_ == null) {
+          ttGisFixation_ = builderForValue.build();
+        } else {
+          ttGisFixationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+       */
+      public Builder mergeTtGisFixation(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow value) {
+        if (ttGisFixationBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) != 0) &&
+            ttGisFixation_ != null &&
+            ttGisFixation_ != Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.getDefaultInstance()) {
+            getTtGisFixationBuilder().mergeFrom(value);
+          } else {
+            ttGisFixation_ = value;
+          }
+        } else {
+          ttGisFixationBuilder_.mergeFrom(value);
+        }
+        if (ttGisFixation_ != null) {
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+       */
+      public Builder clearTtGisFixation() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        ttGisFixation_ = null;
+        if (ttGisFixationBuilder_ != null) {
+          ttGisFixationBuilder_.dispose();
+          ttGisFixationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.Builder getTtGisFixationBuilder() {
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return getTtGisFixationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflowOrBuilder getTtGisFixationOrBuilder() {
+        if (ttGisFixationBuilder_ != null) {
+          return ttGisFixationBuilder_.getMessageOrBuilder();
+        } else {
+          return ttGisFixation_ == null ?
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.getDefaultInstance() : ttGisFixation_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationDocflow TtGisFixation = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflowOrBuilder> 
+          getTtGisFixationFieldBuilder() {
+        if (ttGisFixationBuilder_ == null) {
+          ttGisFixationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflowOrBuilder>(
+                  getTtGisFixation(),
+                  getParentForChildren(),
+                  isClean());
+          ttGisFixation_ = null;
+        }
+        return ttGisFixationBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.DocflowV3)
@@ -20059,6 +20270,1492 @@ public final class DocflowV3Protos {
 
   }
 
+  public interface TtGisFixationDocflowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.TtGisFixationDocflow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.TtGisFixationCancellationStatus CancellationStatus = 1 [default = TtGisFixationCancellationStatusNone];</code>
+     * @return Whether the cancellationStatus field is set.
+     */
+    boolean hasCancellationStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.TtGisFixationCancellationStatus CancellationStatus = 1 [default = TtGisFixationCancellationStatusNone];</code>
+     * @return The cancellationStatus.
+     */
+    Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus getCancellationStatus();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+     * @return Whether the cancellation field is set.
+     */
+    boolean hasCancellation();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+     * @return The cancellation.
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation getCancellation();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellationOrBuilder getCancellationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.TtGisFixationDocflow}
+   */
+  public static final class TtGisFixationDocflow extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.TtGisFixationDocflow)
+      TtGisFixationDocflowOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        TtGisFixationDocflow.class.getName());
+    }
+    // Use TtGisFixationDocflow.newBuilder() to construct.
+    private TtGisFixationDocflow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private TtGisFixationDocflow() {
+      cancellationStatus_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CANCELLATIONSTATUS_FIELD_NUMBER = 1;
+    private int cancellationStatus_ = 0;
+    /**
+     * <code>optional .Diadoc.Api.Proto.TtGisFixationCancellationStatus CancellationStatus = 1 [default = TtGisFixationCancellationStatusNone];</code>
+     * @return Whether the cancellationStatus field is set.
+     */
+    @java.lang.Override public boolean hasCancellationStatus() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.TtGisFixationCancellationStatus CancellationStatus = 1 [default = TtGisFixationCancellationStatusNone];</code>
+     * @return The cancellationStatus.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus getCancellationStatus() {
+      Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus result = Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus.forNumber(cancellationStatus_);
+      return result == null ? Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus.TtGisFixationCancellationStatusNone : result;
+    }
+
+    public static final int CANCELLATION_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation cancellation_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+     * @return Whether the cancellation field is set.
+     */
+    @java.lang.Override
+    public boolean hasCancellation() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+     * @return The cancellation.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation getCancellation() {
+      return cancellation_ == null ? Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.getDefaultInstance() : cancellation_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellationOrBuilder getCancellationOrBuilder() {
+      return cancellation_ == null ? Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.getDefaultInstance() : cancellation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (hasCancellation()) {
+        if (!getCancellation().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, cancellationStatus_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getCancellation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, cancellationStatus_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCancellation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow other = (Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow) obj;
+
+      if (hasCancellationStatus() != other.hasCancellationStatus()) return false;
+      if (hasCancellationStatus()) {
+        if (cancellationStatus_ != other.cancellationStatus_) return false;
+      }
+      if (hasCancellation() != other.hasCancellation()) return false;
+      if (hasCancellation()) {
+        if (!getCancellation()
+            .equals(other.getCancellation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCancellationStatus()) {
+        hash = (37 * hash) + CANCELLATIONSTATUS_FIELD_NUMBER;
+        hash = (53 * hash) + cancellationStatus_;
+      }
+      if (hasCancellation()) {
+        hash = (37 * hash) + CANCELLATION_FIELD_NUMBER;
+        hash = (53 * hash) + getCancellation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.TtGisFixationDocflow}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.TtGisFixationDocflow)
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflowOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getCancellationFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cancellationStatus_ = 0;
+        cancellation_ = null;
+        if (cancellationBuilder_ != null) {
+          cancellationBuilder_.dispose();
+          cancellationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow build() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow result = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.cancellationStatus_ = cancellationStatus_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.cancellation_ = cancellationBuilder_ == null
+              ? cancellation_
+              : cancellationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow.getDefaultInstance()) return this;
+        if (other.hasCancellationStatus()) {
+          setCancellationStatus(other.getCancellationStatus());
+        }
+        if (other.hasCancellation()) {
+          mergeCancellation(other.getCancellation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (hasCancellation()) {
+          if (!getCancellation().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus tmpValue =
+                    Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  cancellationStatus_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getCancellationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int cancellationStatus_ = 0;
+      /**
+       * <code>optional .Diadoc.Api.Proto.TtGisFixationCancellationStatus CancellationStatus = 1 [default = TtGisFixationCancellationStatusNone];</code>
+       * @return Whether the cancellationStatus field is set.
+       */
+      @java.lang.Override public boolean hasCancellationStatus() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.TtGisFixationCancellationStatus CancellationStatus = 1 [default = TtGisFixationCancellationStatusNone];</code>
+       * @return The cancellationStatus.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus getCancellationStatus() {
+        Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus result = Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus.forNumber(cancellationStatus_);
+        return result == null ? Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus.TtGisFixationCancellationStatusNone : result;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.TtGisFixationCancellationStatus CancellationStatus = 1 [default = TtGisFixationCancellationStatusNone];</code>
+       * @param value The cancellationStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCancellationStatus(Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        cancellationStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.TtGisFixationCancellationStatus CancellationStatus = 1 [default = TtGisFixationCancellationStatusNone];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCancellationStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cancellationStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation cancellation_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellationOrBuilder> cancellationBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+       * @return Whether the cancellation field is set.
+       */
+      public boolean hasCancellation() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+       * @return The cancellation.
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation getCancellation() {
+        if (cancellationBuilder_ == null) {
+          return cancellation_ == null ? Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.getDefaultInstance() : cancellation_;
+        } else {
+          return cancellationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+       */
+      public Builder setCancellation(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation value) {
+        if (cancellationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cancellation_ = value;
+        } else {
+          cancellationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+       */
+      public Builder setCancellation(
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.Builder builderForValue) {
+        if (cancellationBuilder_ == null) {
+          cancellation_ = builderForValue.build();
+        } else {
+          cancellationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+       */
+      public Builder mergeCancellation(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation value) {
+        if (cancellationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            cancellation_ != null &&
+            cancellation_ != Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.getDefaultInstance()) {
+            getCancellationBuilder().mergeFrom(value);
+          } else {
+            cancellation_ = value;
+          }
+        } else {
+          cancellationBuilder_.mergeFrom(value);
+        }
+        if (cancellation_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+       */
+      public Builder clearCancellation() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cancellation_ = null;
+        if (cancellationBuilder_ != null) {
+          cancellationBuilder_.dispose();
+          cancellationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.Builder getCancellationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCancellationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellationOrBuilder getCancellationOrBuilder() {
+        if (cancellationBuilder_ != null) {
+          return cancellationBuilder_.getMessageOrBuilder();
+        } else {
+          return cancellation_ == null ?
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.getDefaultInstance() : cancellation_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.TtGisFixationCancellation Cancellation = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellationOrBuilder> 
+          getCancellationFieldBuilder() {
+        if (cancellationBuilder_ == null) {
+          cancellationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.Builder, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellationOrBuilder>(
+                  getCancellation(),
+                  getParentForChildren(),
+                  isClean());
+          cancellation_ = null;
+        }
+        return cancellationBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.TtGisFixationDocflow)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.TtGisFixationDocflow)
+    private static final Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TtGisFixationDocflow>
+        PARSER = new com.google.protobuf.AbstractParser<TtGisFixationDocflow>() {
+      @java.lang.Override
+      public TtGisFixationDocflow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TtGisFixationDocflow> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TtGisFixationDocflow> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationDocflow getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TtGisFixationCancellationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Docflow.TtGisFixationCancellation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     * @return Whether the entity field is set.
+     */
+    boolean hasEntity();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     * @return The entity.
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getEntity();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getEntityOrBuilder();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+     * @return Whether the signature field is set.
+     */
+    boolean hasSignature();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+     * @return The signature.
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 getSignature();
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+     */
+    Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder getSignatureOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Docflow.TtGisFixationCancellation}
+   */
+  public static final class TtGisFixationCancellation extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Docflow.TtGisFixationCancellation)
+      TtGisFixationCancellationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        TtGisFixationCancellation.class.getName());
+    }
+    // Use TtGisFixationCancellation.newBuilder() to construct.
+    private TtGisFixationCancellation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private TtGisFixationCancellation() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ENTITY_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity entity_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     * @return Whether the entity field is set.
+     */
+    @java.lang.Override
+    public boolean hasEntity() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     * @return The entity.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getEntity() {
+      return entity_ == null ? Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance() : entity_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getEntityOrBuilder() {
+      return entity_ == null ? Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance() : entity_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 signature_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+     * @return Whether the signature field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignature() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 getSignature() {
+      return signature_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance() : signature_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder getSignatureOrBuilder() {
+      return signature_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance() : signature_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasEntity()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSignature()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getEntity().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getSignature().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getEntity());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getSignature());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEntity());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSignature());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation other = (Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation) obj;
+
+      if (hasEntity() != other.hasEntity()) return false;
+      if (hasEntity()) {
+        if (!getEntity()
+            .equals(other.getEntity())) return false;
+      }
+      if (hasSignature() != other.hasSignature()) return false;
+      if (hasSignature()) {
+        if (!getSignature()
+            .equals(other.getSignature())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEntity()) {
+        hash = (37 * hash) + ENTITY_FIELD_NUMBER;
+        hash = (53 * hash) + getEntity().hashCode();
+      }
+      if (hasSignature()) {
+        hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+        hash = (53 * hash) + getSignature().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Docflow.TtGisFixationCancellation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Docflow.TtGisFixationCancellation)
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.class, Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getEntityFieldBuilder();
+          getSignatureFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entity_ = null;
+        if (entityBuilder_ != null) {
+          entityBuilder_.dispose();
+          entityBuilder_ = null;
+        }
+        signature_ = null;
+        if (signatureBuilder_ != null) {
+          signatureBuilder_.dispose();
+          signatureBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation build() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation buildPartial() {
+        Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation result = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entity_ = entityBuilder_ == null
+              ? entity_
+              : entityBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signature_ = signatureBuilder_ == null
+              ? signature_
+              : signatureBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation) {
+          return mergeFrom((Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation other) {
+        if (other == Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation.getDefaultInstance()) return this;
+        if (other.hasEntity()) {
+          mergeEntity(other.getEntity());
+        }
+        if (other.hasSignature()) {
+          mergeSignature(other.getSignature());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasEntity()) {
+          return false;
+        }
+        if (!hasSignature()) {
+          return false;
+        }
+        if (!getEntity().isInitialized()) {
+          return false;
+        }
+        if (!getSignature().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getEntityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getSignatureFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity entity_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> entityBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       * @return Whether the entity field is set.
+       */
+      public boolean hasEntity() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       * @return The entity.
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity getEntity() {
+        if (entityBuilder_ == null) {
+          return entity_ == null ? Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance() : entity_;
+        } else {
+          return entityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
+      public Builder setEntity(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
+        if (entityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entity_ = value;
+        } else {
+          entityBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
+      public Builder setEntity(
+          Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder builderForValue) {
+        if (entityBuilder_ == null) {
+          entity_ = builderForValue.build();
+        } else {
+          entityBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
+      public Builder mergeEntity(Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity value) {
+        if (entityBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            entity_ != null &&
+            entity_ != Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance()) {
+            getEntityBuilder().mergeFrom(value);
+          } else {
+            entity_ = value;
+          }
+        } else {
+          entityBuilder_.mergeFrom(value);
+        }
+        if (entity_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
+      public Builder clearEntity() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entity_ = null;
+        if (entityBuilder_ != null) {
+          entityBuilder_.dispose();
+          entityBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder getEntityBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getEntityFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder getEntityOrBuilder() {
+        if (entityBuilder_ != null) {
+          return entityBuilder_.getMessageOrBuilder();
+        } else {
+          return entity_ == null ?
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.getDefaultInstance() : entity_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.Entity Entity = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder> 
+          getEntityFieldBuilder() {
+        if (entityBuilder_ == null) {
+          entityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity, Diadoc.Api.Proto.Docflow.AttachmentProtos.Entity.Builder, Diadoc.Api.Proto.Docflow.AttachmentProtos.EntityOrBuilder>(
+                  getEntity(),
+                  getParentForChildren(),
+                  isClean());
+          entity_ = null;
+        }
+        return entityBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 signature_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder> signatureBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+       * @return Whether the signature field is set.
+       */
+      public boolean hasSignature() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+       * @return The signature.
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 getSignature() {
+        if (signatureBuilder_ == null) {
+          return signature_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance() : signature_;
+        } else {
+          return signatureBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+       */
+      public Builder setSignature(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 value) {
+        if (signatureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signature_ = value;
+        } else {
+          signatureBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+       */
+      public Builder setSignature(
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder builderForValue) {
+        if (signatureBuilder_ == null) {
+          signature_ = builderForValue.build();
+        } else {
+          signatureBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+       */
+      public Builder mergeSignature(Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3 value) {
+        if (signatureBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            signature_ != null &&
+            signature_ != Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance()) {
+            getSignatureBuilder().mergeFrom(value);
+          } else {
+            signature_ = value;
+          }
+        } else {
+          signatureBuilder_.mergeFrom(value);
+        }
+        if (signature_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+       */
+      public Builder clearSignature() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signature_ = null;
+        if (signatureBuilder_ != null) {
+          signatureBuilder_.dispose();
+          signatureBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder getSignatureBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSignatureFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder getSignatureOrBuilder() {
+        if (signatureBuilder_ != null) {
+          return signatureBuilder_.getMessageOrBuilder();
+        } else {
+          return signature_ == null ?
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.getDefaultInstance() : signature_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Docflow.SignatureV3 Signature = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder> 
+          getSignatureFieldBuilder() {
+        if (signatureBuilder_ == null) {
+          signatureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3.Builder, Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureV3OrBuilder>(
+                  getSignature(),
+                  getParentForChildren(),
+                  isClean());
+          signature_ = null;
+        }
+        return signatureBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.TtGisFixationCancellation)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Docflow.TtGisFixationCancellation)
+    private static final Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation();
+    }
+
+    public static Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TtGisFixationCancellation>
+        PARSER = new com.google.protobuf.AbstractParser<TtGisFixationCancellation>() {
+      @java.lang.Override
+      public TtGisFixationCancellation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TtGisFixationCancellation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TtGisFixationCancellation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocflowV3Protos.TtGisFixationCancellation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Docflow_DocflowV3_descriptor;
   private static final 
@@ -20129,6 +21826,16 @@ public final class DocflowV3Protos {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20141,122 +21848,135 @@ public final class DocflowV3Protos {
       "\n\027Docflow/DocflowV3.proto\022\030Diadoc.Api.Pr" +
       "oto.Docflow\032\017Timestamp.proto\032\030Documents/" +
       "Document.proto\032\032Docflow/AttachmentV3.pro" +
-      "to\032!Docflow/RoamingNotification.proto\032!D" +
-      "ocflow/ResolutionDocflowV3.proto\032&OuterD" +
-      "ocflows/OuterDocflowStatus.proto\032\025Docflo" +
-      "wStatusV3.proto\"\240\007\n\tDocflowV3\022A\n\013SenderT" +
-      "itle\030\001 \002(\0132,.Diadoc.Api.Proto.Docflow.Se" +
-      "nderTitleDocflow\022C\n\014Confirmation\030\002 \001(\0132-" +
-      ".Diadoc.Api.Proto.Docflow.ConfirmationDo" +
-      "cflow\022K\n\rProxyResponse\030\013 \001(\01324.Diadoc.Ap" +
-      "i.Proto.Docflow.ParticipantResponseDocfl" +
-      "ow\022D\n\020RecipientReceipt\030\004 \001(\0132*.Diadoc.Ap" +
-      "i.Proto.Docflow.ReceiptDocflowV3\022O\n\021Reci" +
-      "pientResponse\030\005 \001(\01324.Diadoc.Api.Proto.D" +
-      "ocflow.ParticipantResponseDocflow\022K\n\020Ame" +
-      "ndmentRequest\030\006 \001(\01321.Diadoc.Api.Proto.D" +
-      "ocflow.AmendmentRequestDocflow\022A\n\nRevoca" +
-      "tion\030\007 \001(\0132-.Diadoc.Api.Proto.Docflow.Re" +
-      "vocationDocflowV3\022A\n\rSenderReceipt\030\010 \001(\013" +
-      "2*.Diadoc.Api.Proto.Docflow.ReceiptDocfl" +
-      "owV3\022A\n\nResolution\030\t \001(\0132-.Diadoc.Api.Pr" +
-      "oto.Docflow.ResolutionDocflowV3\022J\n\022Resol" +
-      "utionEntities\030\n \001(\0132..Diadoc.Api.Proto.D" +
-      "ocflow.ResolutionEntitiesV3\022=\n\rOuterDocf" +
-      "lows\030\014 \003(\0132&.Diadoc.Api.Proto.Docflow.Ou" +
-      "terDocflow\022L\n\024OuterDocflowEntities\030\r \003(\013" +
-      "2..Diadoc.Api.Proto.Docflow.OuterDocflow" +
-      "Entities\0228\n\rDocflowStatus\030\016 \002(\0132!.Diadoc" +
-      ".Api.Proto.DocflowStatusV3\"\347\002\n\022SenderTit" +
-      "leDocflow\022\022\n\nIsFinished\030\001 \002(\010\022@\n\nAttachm" +
-      "ent\030\002 \002(\0132,.Diadoc.Api.Proto.Docflow.Sig" +
-      "nedAttachmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc" +
-      ".Api.Proto.Timestamp\0220\n\013DeliveredAt\030\004 \001(" +
-      "\0132\033.Diadoc.Api.Proto.Timestamp\022J\n\023Roamin" +
-      "gNotification\030\005 \001(\0132-.Diadoc.Api.Proto.D" +
-      "ocflow.RoamingNotification\022P\n\025SenderSign" +
-      "atureStatus\030\006 \002(\01621.Diadoc.Api.Proto.Doc" +
-      "uments.SenderSignatureStatus\"\272\002\n\023Confirm" +
-      "ationDocflow\022\022\n\nIsFinished\030\001 \002(\010\022L\n\026Conf" +
-      "irmationAttachment\030\002 \001(\0132,.Diadoc.Api.Pr" +
-      "oto.Docflow.SignedAttachmentV3\0220\n\013Confir" +
-      "medAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestamp" +
-      "\022;\n\007Receipt\030\004 \001(\0132*.Diadoc.Api.Proto.Doc" +
-      "flow.ReceiptDocflowV3\022R\n\023RoamingConfirma" +
-      "tion\030\005 \001(\01325.Diadoc.Api.Proto.Docflow.Op" +
-      "eratorConfirmationDocflow\"\235\001\n\033OperatorCo" +
-      "nfirmationDocflow\022L\n\026ConfirmationAttachm" +
-      "ent\030\001 \001(\0132,.Diadoc.Api.Proto.Docflow.Sig" +
-      "nedAttachmentV3\0220\n\013ConfirmedAt\030\002 \001(\0132\033.D" +
-      "iadoc.Api.Proto.Timestamp\"\274\001\n\031SignatureR" +
-      "ejectionDocflow\022H\n\022SignatureRejection\030\001 " +
-      "\002(\0132,.Diadoc.Api.Proto.Docflow.SignedAtt" +
-      "achmentV3\022\020\n\010IsFormal\030\002 \002(\010\0220\n\013Delivered" +
-      "At\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestamp\022\021\n" +
-      "\tPlainText\030\004 \001(\t\"\340\003\n\032ParticipantResponse" +
-      "Docflow\022\022\n\nIsFinished\030\001 \002(\010\0228\n\tSignature" +
-      "\030\002 \001(\0132%.Diadoc.Api.Proto.Docflow.Signat" +
-      "ureV3\022;\n\005Title\030\003 \001(\0132,.Diadoc.Api.Proto." +
-      "Docflow.SignedAttachmentV3\022F\n\tRejection\030" +
-      "\004 \001(\01323.Diadoc.Api.Proto.Docflow.Signatu" +
-      "reRejectionDocflow\022+\n\006SentAt\030\005 \001(\0132\033.Dia" +
-      "doc.Api.Proto.Timestamp\0220\n\013DeliveredAt\030\006" +
-      " \001(\0132\033.Diadoc.Api.Proto.Timestamp\022K\n\016Res" +
-      "ponseStatus\030\007 \002(\01623.Diadoc.Api.Proto.Doc" +
-      "uments.RecipientResponseStatus\022C\n\014Confir" +
-      "mation\030\010 \001(\0132-.Diadoc.Api.Proto.Docflow." +
-      "ConfirmationDocflow\"\210\003\n\027AmendmentRequest" +
-      "Docflow\022\022\n\nIsFinished\030\001 \002(\010\022F\n\020Amendment" +
-      "Request\030\002 \001(\0132,.Diadoc.Api.Proto.Docflow" +
-      ".SignedAttachmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Di" +
-      "adoc.Api.Proto.Timestamp\0220\n\013DeliveredAt\030" +
-      "\004 \001(\0132\033.Diadoc.Api.Proto.Timestamp\022;\n\007Re" +
-      "ceipt\030\005 \001(\0132*.Diadoc.Api.Proto.Docflow.R" +
-      "eceiptDocflowV3\022\026\n\016AmendmentFlags\030\006 \002(\005\022" +
-      "\021\n\tPlainText\030\007 \001(\t\022J\n\023ConfirmationDocflo" +
-      "w\030\010 \001(\0132-.Diadoc.Api.Proto.Docflow.Confi" +
-      "rmationDocflow\"\303\003\n\023RevocationDocflowV3\022\022" +
-      "\n\nIsFinished\030\001 \002(\010\022M\n\021RevocationRequest\030" +
-      "\002 \002(\01322.Diadoc.Api.Proto.Docflow.Revocat" +
-      "ionRequestDocflow\022O\n\022RevocationResponse\030" +
-      "\003 \001(\01323.Diadoc.Api.Proto.Docflow.Revocat" +
-      "ionResponseDocflow\022\026\n\016InitiatorBoxId\030\004 \002" +
-      "(\t\022F\n\020RevocationStatus\030\005 \002(\0162,.Diadoc.Ap" +
-      "i.Proto.Documents.RevocationStatus\022J\n\022Re" +
-      "solutionEntities\030\006 \001(\0132..Diadoc.Api.Prot" +
-      "o.Docflow.ResolutionEntitiesV3\022L\n\024OuterD" +
-      "ocflowEntities\030\007 \003(\0132..Diadoc.Api.Proto." +
-      "Docflow.OuterDocflowEntities\"\241\002\n\030Revocat" +
-      "ionRequestDocflow\022G\n\021RevocationRequest\030\001" +
-      " \002(\0132,.Diadoc.Api.Proto.Docflow.SignedAt" +
-      "tachmentV3\022+\n\006SentAt\030\002 \001(\0132\033.Diadoc.Api." +
-      "Proto.Timestamp\0220\n\013DeliveredAt\030\003 \001(\0132\033.D" +
-      "iadoc.Api.Proto.Timestamp\022J\n\023RoamingNoti" +
-      "fication\030\004 \001(\0132-.Diadoc.Api.Proto.Docflo" +
-      "w.RoamingNotification\022\021\n\tPlainText\030\005 \001(\t" +
-      "\"\257\001\n\031RevocationResponseDocflow\022A\n\022Recipi" +
-      "entSignature\030\001 \001(\0132%.Diadoc.Api.Proto.Do" +
-      "cflow.SignatureV3\022O\n\022SignatureRejection\030" +
-      "\002 \001(\01323.Diadoc.Api.Proto.Docflow.Signatu" +
-      "reRejectionDocflow\"\325\002\n\020ReceiptDocflowV3\022" +
-      "\022\n\nIsFinished\030\001 \002(\010\022G\n\021ReceiptAttachment" +
-      "\030\002 \001(\0132,.Diadoc.Api.Proto.Docflow.Signed" +
-      "AttachmentV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Ap" +
-      "i.Proto.Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033" +
-      ".Diadoc.Api.Proto.Timestamp\022C\n\014Confirmat" +
-      "ion\030\005 \001(\0132-.Diadoc.Api.Proto.Docflow.Con" +
-      "firmationDocflow\022@\n\006Status\030\006 \002(\01620.Diado" +
-      "c.Api.Proto.Documents.GeneralReceiptStat" +
-      "us\"\\\n\014OuterDocflow\022\026\n\016DocflowNamedId\030\001 \002" +
-      "(\t\022\026\n\016ParentEntityId\030\002 \002(\t\022\034\n\024OuterDocfl" +
-      "owEntityId\030\003 \002(\t\"\213\001\n\024OuterDocflowEntitie" +
-      "s\022\026\n\016DocflowNamedId\030\001 \002(\t\022\033\n\023DocflowFrie" +
-      "ndlyName\030\002 \002(\t\022>\n\016StatusEntities\030\003 \003(\0132&" +
-      ".Diadoc.Api.Proto.Docflow.StatusEntity\"\210" +
-      "\001\n\014StatusEntity\022@\n\nAttachment\030\001 \002(\0132,.Di" +
-      "adoc.Api.Proto.Docflow.SignedAttachmentV" +
-      "3\0226\n\006Status\030\002 \002(\0132&.Diadoc.Api.Proto.Out" +
-      "erDocflows.StatusB\021B\017DocflowV3Protos"
+      "to\032\030Docflow/Attachment.proto\032!Docflow/Ro" +
+      "amingNotification.proto\032!Docflow/Resolut" +
+      "ionDocflowV3.proto\032&OuterDocflows/OuterD" +
+      "ocflowStatus.proto\032%TtGisFixationCancell" +
+      "ationStatus.proto\032\025DocflowStatusV3.proto" +
+      "\"\347\007\n\tDocflowV3\022A\n\013SenderTitle\030\001 \002(\0132,.Di" +
+      "adoc.Api.Proto.Docflow.SenderTitleDocflo" +
+      "w\022C\n\014Confirmation\030\002 \001(\0132-.Diadoc.Api.Pro" +
+      "to.Docflow.ConfirmationDocflow\022K\n\rProxyR" +
+      "esponse\030\013 \001(\01324.Diadoc.Api.Proto.Docflow" +
+      ".ParticipantResponseDocflow\022D\n\020Recipient" +
+      "Receipt\030\004 \001(\0132*.Diadoc.Api.Proto.Docflow" +
+      ".ReceiptDocflowV3\022O\n\021RecipientResponse\030\005" +
+      " \001(\01324.Diadoc.Api.Proto.Docflow.Particip" +
+      "antResponseDocflow\022K\n\020AmendmentRequest\030\006" +
+      " \001(\01321.Diadoc.Api.Proto.Docflow.Amendmen" +
+      "tRequestDocflow\022A\n\nRevocation\030\007 \001(\0132-.Di" +
+      "adoc.Api.Proto.Docflow.RevocationDocflow" +
+      "V3\022A\n\rSenderReceipt\030\010 \001(\0132*.Diadoc.Api.P" +
+      "roto.Docflow.ReceiptDocflowV3\022A\n\nResolut" +
+      "ion\030\t \001(\0132-.Diadoc.Api.Proto.Docflow.Res" +
+      "olutionDocflowV3\022J\n\022ResolutionEntities\030\n" +
+      " \001(\0132..Diadoc.Api.Proto.Docflow.Resoluti" +
+      "onEntitiesV3\022=\n\rOuterDocflows\030\014 \003(\0132&.Di" +
+      "adoc.Api.Proto.Docflow.OuterDocflow\022L\n\024O" +
+      "uterDocflowEntities\030\r \003(\0132..Diadoc.Api.P" +
+      "roto.Docflow.OuterDocflowEntities\0228\n\rDoc" +
+      "flowStatus\030\016 \002(\0132!.Diadoc.Api.Proto.Docf" +
+      "lowStatusV3\022E\n\rTtGisFixation\030\017 \001(\0132..Dia" +
+      "doc.Api.Proto.Docflow.TtGisFixationDocfl" +
+      "ow\"\347\002\n\022SenderTitleDocflow\022\022\n\nIsFinished\030" +
+      "\001 \002(\010\022@\n\nAttachment\030\002 \002(\0132,.Diadoc.Api.P" +
+      "roto.Docflow.SignedAttachmentV3\022+\n\006SentA" +
+      "t\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013" +
+      "DeliveredAt\030\004 \001(\0132\033.Diadoc.Api.Proto.Tim" +
+      "estamp\022J\n\023RoamingNotification\030\005 \001(\0132-.Di" +
+      "adoc.Api.Proto.Docflow.RoamingNotificati" +
+      "on\022P\n\025SenderSignatureStatus\030\006 \002(\01621.Diad" +
+      "oc.Api.Proto.Documents.SenderSignatureSt" +
+      "atus\"\272\002\n\023ConfirmationDocflow\022\022\n\nIsFinish" +
+      "ed\030\001 \002(\010\022L\n\026ConfirmationAttachment\030\002 \001(\013" +
+      "2,.Diadoc.Api.Proto.Docflow.SignedAttach" +
+      "mentV3\0220\n\013ConfirmedAt\030\003 \001(\0132\033.Diadoc.Api" +
+      ".Proto.Timestamp\022;\n\007Receipt\030\004 \001(\0132*.Diad" +
+      "oc.Api.Proto.Docflow.ReceiptDocflowV3\022R\n" +
+      "\023RoamingConfirmation\030\005 \001(\01325.Diadoc.Api." +
+      "Proto.Docflow.OperatorConfirmationDocflo" +
+      "w\"\235\001\n\033OperatorConfirmationDocflow\022L\n\026Con" +
+      "firmationAttachment\030\001 \001(\0132,.Diadoc.Api.P" +
+      "roto.Docflow.SignedAttachmentV3\0220\n\013Confi" +
+      "rmedAt\030\002 \001(\0132\033.Diadoc.Api.Proto.Timestam" +
+      "p\"\274\001\n\031SignatureRejectionDocflow\022H\n\022Signa" +
+      "tureRejection\030\001 \002(\0132,.Diadoc.Api.Proto.D" +
+      "ocflow.SignedAttachmentV3\022\020\n\010IsFormal\030\002 " +
+      "\002(\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.Api.Pr" +
+      "oto.Timestamp\022\021\n\tPlainText\030\004 \001(\t\"\340\003\n\032Par" +
+      "ticipantResponseDocflow\022\022\n\nIsFinished\030\001 " +
+      "\002(\010\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Api.Prot" +
+      "o.Docflow.SignatureV3\022;\n\005Title\030\003 \001(\0132,.D" +
+      "iadoc.Api.Proto.Docflow.SignedAttachment" +
+      "V3\022F\n\tRejection\030\004 \001(\01323.Diadoc.Api.Proto" +
+      ".Docflow.SignatureRejectionDocflow\022+\n\006Se" +
+      "ntAt\030\005 \001(\0132\033.Diadoc.Api.Proto.Timestamp\022" +
+      "0\n\013DeliveredAt\030\006 \001(\0132\033.Diadoc.Api.Proto." +
+      "Timestamp\022K\n\016ResponseStatus\030\007 \002(\01623.Diad" +
+      "oc.Api.Proto.Documents.RecipientResponse" +
+      "Status\022C\n\014Confirmation\030\010 \001(\0132-.Diadoc.Ap" +
+      "i.Proto.Docflow.ConfirmationDocflow\"\210\003\n\027" +
+      "AmendmentRequestDocflow\022\022\n\nIsFinished\030\001 " +
+      "\002(\010\022F\n\020AmendmentRequest\030\002 \001(\0132,.Diadoc.A" +
+      "pi.Proto.Docflow.SignedAttachmentV3\022+\n\006S" +
+      "entAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestamp" +
+      "\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.Api.Proto" +
+      ".Timestamp\022;\n\007Receipt\030\005 \001(\0132*.Diadoc.Api" +
+      ".Proto.Docflow.ReceiptDocflowV3\022\026\n\016Amend" +
+      "mentFlags\030\006 \002(\005\022\021\n\tPlainText\030\007 \001(\t\022J\n\023Co" +
+      "nfirmationDocflow\030\010 \001(\0132-.Diadoc.Api.Pro" +
+      "to.Docflow.ConfirmationDocflow\"\303\003\n\023Revoc" +
+      "ationDocflowV3\022\022\n\nIsFinished\030\001 \002(\010\022M\n\021Re" +
+      "vocationRequest\030\002 \002(\01322.Diadoc.Api.Proto" +
+      ".Docflow.RevocationRequestDocflow\022O\n\022Rev" +
+      "ocationResponse\030\003 \001(\01323.Diadoc.Api.Proto" +
+      ".Docflow.RevocationResponseDocflow\022\026\n\016In" +
+      "itiatorBoxId\030\004 \002(\t\022F\n\020RevocationStatus\030\005" +
+      " \002(\0162,.Diadoc.Api.Proto.Documents.Revoca" +
+      "tionStatus\022J\n\022ResolutionEntities\030\006 \001(\0132." +
+      ".Diadoc.Api.Proto.Docflow.ResolutionEnti" +
+      "tiesV3\022L\n\024OuterDocflowEntities\030\007 \003(\0132..D" +
+      "iadoc.Api.Proto.Docflow.OuterDocflowEnti" +
+      "ties\"\241\002\n\030RevocationRequestDocflow\022G\n\021Rev" +
+      "ocationRequest\030\001 \002(\0132,.Diadoc.Api.Proto." +
+      "Docflow.SignedAttachmentV3\022+\n\006SentAt\030\002 \001" +
+      "(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013Deliv" +
+      "eredAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Timestam" +
+      "p\022J\n\023RoamingNotification\030\004 \001(\0132-.Diadoc." +
+      "Api.Proto.Docflow.RoamingNotification\022\021\n" +
+      "\tPlainText\030\005 \001(\t\"\257\001\n\031RevocationResponseD" +
+      "ocflow\022A\n\022RecipientSignature\030\001 \001(\0132%.Dia" +
+      "doc.Api.Proto.Docflow.SignatureV3\022O\n\022Sig" +
+      "natureRejection\030\002 \001(\01323.Diadoc.Api.Proto" +
+      ".Docflow.SignatureRejectionDocflow\"\325\002\n\020R" +
+      "eceiptDocflowV3\022\022\n\nIsFinished\030\001 \002(\010\022G\n\021R" +
+      "eceiptAttachment\030\002 \001(\0132,.Diadoc.Api.Prot" +
+      "o.Docflow.SignedAttachmentV3\022+\n\006SentAt\030\003" +
+      " \001(\0132\033.Diadoc.Api.Proto.Timestamp\0220\n\013Del" +
+      "iveredAt\030\004 \001(\0132\033.Diadoc.Api.Proto.Timest" +
+      "amp\022C\n\014Confirmation\030\005 \001(\0132-.Diadoc.Api.P" +
+      "roto.Docflow.ConfirmationDocflow\022@\n\006Stat" +
+      "us\030\006 \002(\01620.Diadoc.Api.Proto.Documents.Ge" +
+      "neralReceiptStatus\"\\\n\014OuterDocflow\022\026\n\016Do" +
+      "cflowNamedId\030\001 \002(\t\022\026\n\016ParentEntityId\030\002 \002" +
+      "(\t\022\034\n\024OuterDocflowEntityId\030\003 \002(\t\"\213\001\n\024Out" +
+      "erDocflowEntities\022\026\n\016DocflowNamedId\030\001 \002(" +
+      "\t\022\033\n\023DocflowFriendlyName\030\002 \002(\t\022>\n\016Status" +
+      "Entities\030\003 \003(\0132&.Diadoc.Api.Proto.Docflo" +
+      "w.StatusEntity\"\210\001\n\014StatusEntity\022@\n\nAttac" +
+      "hment\030\001 \002(\0132,.Diadoc.Api.Proto.Docflow.S" +
+      "ignedAttachmentV3\0226\n\006Status\030\002 \002(\0132&.Diad" +
+      "oc.Api.Proto.OuterDocflows.Status\"\325\001\n\024Tt" +
+      "GisFixationDocflow\022r\n\022CancellationStatus" +
+      "\030\001 \001(\01621.Diadoc.Api.Proto.TtGisFixationC" +
+      "ancellationStatus:#TtGisFixationCancella" +
+      "tionStatusNone\022I\n\014Cancellation\030\002 \001(\01323.D" +
+      "iadoc.Api.Proto.Docflow.TtGisFixationCan" +
+      "cellation\"\207\001\n\031TtGisFixationCancellation\022" +
+      "0\n\006Entity\030\001 \002(\0132 .Diadoc.Api.Proto.Docfl" +
+      "ow.Entity\0228\n\tSignature\030\002 \002(\0132%.Diadoc.Ap" +
+      "i.Proto.Docflow.SignatureV3B\021B\017DocflowV3" +
+      "Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20264,9 +21984,11 @@ public final class DocflowV3Protos {
           Diadoc.Api.Proto.TimestampProtos.getDescriptor(),
           Diadoc.Api.Proto.Documents.DocumentProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.AttachmentV3Protos.getDescriptor(),
+          Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.getDescriptor(),
           Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.getDescriptor(),
+          Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.getDescriptor(),
           Diadoc.Api.Proto.DocflowStatusV3Protos.getDescriptor(),
         });
     internal_static_Diadoc_Api_Proto_Docflow_DocflowV3_descriptor =
@@ -20274,7 +21996,7 @@ public final class DocflowV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_DocflowV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocflowV3_descriptor,
-        new java.lang.String[] { "SenderTitle", "Confirmation", "ProxyResponse", "RecipientReceipt", "RecipientResponse", "AmendmentRequest", "Revocation", "SenderReceipt", "Resolution", "ResolutionEntities", "OuterDocflows", "OuterDocflowEntities", "DocflowStatus", });
+        new java.lang.String[] { "SenderTitle", "Confirmation", "ProxyResponse", "RecipientReceipt", "RecipientResponse", "AmendmentRequest", "Revocation", "SenderReceipt", "Resolution", "ResolutionEntities", "OuterDocflows", "OuterDocflowEntities", "DocflowStatus", "TtGisFixation", });
     internal_static_Diadoc_Api_Proto_Docflow_SenderTitleDocflow_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_SenderTitleDocflow_fieldAccessorTable = new
@@ -20353,13 +22075,27 @@ public final class DocflowV3Protos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_StatusEntity_descriptor,
         new java.lang.String[] { "Attachment", "Status", });
+    internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationDocflow_descriptor,
+        new java.lang.String[] { "CancellationStatus", "Cancellation", });
+    internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Docflow_TtGisFixationCancellation_descriptor,
+        new java.lang.String[] { "Entity", "Signature", });
     descriptor.resolveAllFeaturesImmutable();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.Documents.DocumentProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.AttachmentV3Protos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.ResolutionDocflowV3Protos.getDescriptor();
     Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.getDescriptor();
+    Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.getDescriptor();
     Diadoc.Api.Proto.DocflowStatusV3Protos.getDescriptor();
   }
 
