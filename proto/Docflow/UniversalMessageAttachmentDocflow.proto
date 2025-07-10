@@ -1,0 +1,11 @@
+import "Docflow/Attachment.proto";
+import "UniversalMessage.proto";
+
+package Diadoc.Api.Proto.Docflow;
+option java_outer_classname = "UniversalMessageAttachmentDocflowProtos";
+
+message UniversalMessageAttachmentDocflow {
+    required Attachment Attachment = 1; 
+    required UniversalMessageInfo MessageInfo = 2;
+    required string ContentTypeId = 3;
+}
