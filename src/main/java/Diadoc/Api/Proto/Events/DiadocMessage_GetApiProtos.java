@@ -511,13 +511,17 @@ public final class DiadocMessage_GetApiProtos {
      */
     PowerOfAttorney(77),
     /**
+     * <code>PowerOfAttorneyStatus = 78;</code>
+     */
+    PowerOfAttorneyStatus(78),
+    /**
      * <pre>
      * Неизвестные типы должны обрабатываться как Title
      * </pre>
      *
-     * <code>PowerOfAttorneyStatus = 78;</code>
+     * <code>TtGisFixationCancellationRequest = 87;</code>
      */
-    PowerOfAttorneyStatus(78),
+    TtGisFixationCancellationRequest(87),
     ;
 
     static {
@@ -766,13 +770,17 @@ public final class DiadocMessage_GetApiProtos {
      */
     public static final int PowerOfAttorney_VALUE = 77;
     /**
+     * <code>PowerOfAttorneyStatus = 78;</code>
+     */
+    public static final int PowerOfAttorneyStatus_VALUE = 78;
+    /**
      * <pre>
      * Неизвестные типы должны обрабатываться как Title
      * </pre>
      *
-     * <code>PowerOfAttorneyStatus = 78;</code>
+     * <code>TtGisFixationCancellationRequest = 87;</code>
      */
-    public static final int PowerOfAttorneyStatus_VALUE = 78;
+    public static final int TtGisFixationCancellationRequest_VALUE = 87;
 
 
     public final int getNumber() {
@@ -854,6 +862,7 @@ public final class DiadocMessage_GetApiProtos {
         case 76: return RoamingConfirmation;
         case 77: return PowerOfAttorney;
         case 78: return PowerOfAttorneyStatus;
+        case 87: return TtGisFixationCancellationRequest;
         default: return null;
       }
     }
@@ -25055,7 +25064,7 @@ public final class DiadocMessage_GetApiProtos {
       "RefusalType\022\036\n\032UnknownTemplateRefusalTyp" +
       "e\020\000\022\013\n\007Refusal\020\001\022\016\n\nWithdrawal\020\002*B\n\nEnti" +
       "tyType\022\025\n\021UnknownEntityType\020\000\022\016\n\nAttachm" +
-      "ent\020\001\022\r\n\tSignature\020\002*\331\013\n\016AttachmentType\022" +
+      "ent\020\001\022\r\n\tSignature\020\002*\377\013\n\016AttachmentType\022" +
       "\"\n\025UnknownAttachmentType\020\377\377\377\377\377\377\377\377\377\001\022\021\n\rN" +
       "onformalized\020\000\022\013\n\007Invoice\020\001\022\022\n\016InvoiceRe" +
       "ceipt\020\002\022\027\n\023InvoiceConfirmation\020\003\022\034\n\030Invo" +
@@ -25093,7 +25102,8 @@ public final class DiadocMessage_GetApiProtos {
       "mation\020I\022\023\n\017TemplateRefusal\020J\022\020\n\014OuterDo" +
       "cflow\020K\022\027\n\023RoamingConfirmation\020L\022\023\n\017Powe" +
       "rOfAttorney\020M\022\031\n\025PowerOfAttorneyStatus\020N" +
-      "B\034B\032DiadocMessage_GetApiProtos"
+      "\022$\n TtGisFixationCancellationRequest\020WB\034" +
+      "B\032DiadocMessage_GetApiProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

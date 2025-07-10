@@ -316,6 +316,12 @@ message MessagePatchToPost {
 	repeated ResolutionRouteRemoval ResolutionRouteRemovals = 21;
 	repeated RecipientTitleAttachment RecipientTitles = 22;
 	repeated EditingPatch EditingPatches = 24;
+	repeated TtGisFixationCancellationRequestAttachment TtGisFixationCancellationRequests = 25;
+}
+
+message TtGisFixationCancellationRequestAttachment {
+	required string DocumentId = 1;
+	required SignedContent SignedContent = 2;
 }
 
 message EditingPatch {

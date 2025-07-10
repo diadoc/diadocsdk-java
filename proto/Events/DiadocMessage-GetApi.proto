@@ -246,5 +246,6 @@ enum AttachmentType {
 	RoamingConfirmation = 76;
 	PowerOfAttorney = 77;
 	PowerOfAttorneyStatus = 78;
+	TtGisFixationCancellationRequest = 87;
 	//Неизвестные типы должны обрабатываться как Title
 }
