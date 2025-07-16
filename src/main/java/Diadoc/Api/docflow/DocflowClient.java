@@ -78,7 +78,7 @@ public class DocflowClient {
         }
     }
 
-    public GetDocflowBatchResponseV3 getDocflowsV4(String boxId, GetDocflowBatchRequest getDocflowBatchRequest) throws DiadocSdkException {
+    public GetDocflowBatchResponseV4 getDocflowsV4(String boxId, GetDocflowBatchRequest getDocflowBatchRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
@@ -89,7 +89,7 @@ public class DocflowClient {
                             .addParameter("boxId", boxId)
                             .build())
                     .setEntity(new ByteArrayEntity(getDocflowBatchRequest.toByteArray()));
-            return GetDocflowBatchResponseV3.parseFrom(diadocHttpClient.performRequest(request));
+            return GetDocflowBatchResponseV4.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
