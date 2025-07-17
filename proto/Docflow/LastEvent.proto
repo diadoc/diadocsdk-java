@@ -1,0 +1,11 @@
+import "Timestamp.proto";
+
+package Diadoc.Api.Proto.Docflow;
+
+option java_outer_classname = "LastEventProtos";
+
+message LastEvent
+{
+	required string EventId = 1;
+	required Timestamp Timestamp = 2;
+}

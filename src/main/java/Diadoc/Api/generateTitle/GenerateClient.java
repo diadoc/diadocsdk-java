@@ -20,14 +20,14 @@ import static Diadoc.Api.Proto.Invoicing.AcceptanceCertificate552InfoProtos.Acce
 import static Diadoc.Api.Proto.Invoicing.AcceptanceCertificate552InfoProtos.AcceptanceCertificate552SellerTitleInfo;
 import static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateBuyerTitleInfo;
 import static Diadoc.Api.Proto.Invoicing.AcceptanceCertificateInfoProtos.AcceptanceCertificateSellerTitleInfo;
+import static Diadoc.Api.Proto.Invoicing.InvoiceCorrectionRequestInfoProtos.InvoiceCorrectionRequestGenerationRequestV2;
 import static Diadoc.Api.Proto.Invoicing.InvoiceCorrectionRequestInfoProtos.InvoiceCorrectionRequestInfo;
 import static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceCorrectionInfo;
 import static Diadoc.Api.Proto.Invoicing.InvoiceInfoProtos.InvoiceInfo;
-import static Diadoc.Api.Proto.Invoicing.RevocationRequestInfoProtos.RevocationRequestInfo;
-import static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo;
-import static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionGenerationRequestV2;
-import static Diadoc.Api.Proto.Invoicing.InvoiceCorrectionRequestInfoProtos.InvoiceCorrectionRequestGenerationRequestV2;
 import static Diadoc.Api.Proto.Invoicing.ReceiptGenerationRequestProtos.ReceiptGenerationRequestV2;
+import static Diadoc.Api.Proto.Invoicing.RevocationRequestInfoProtos.RevocationRequestInfo;
+import static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionGenerationRequestV2;
+import static Diadoc.Api.Proto.Invoicing.SignatureRejectionInfoProtos.SignatureRejectionInfo;
 import static Diadoc.Api.Proto.Invoicing.SignerProtos.Signer;
 import static Diadoc.Api.Proto.Invoicing.Torg12InfoProtos.Torg12BuyerTitleInfo;
 import static Diadoc.Api.Proto.Invoicing.Torg12InfoProtos.Torg12SellerTitleInfo;
@@ -52,11 +52,12 @@ public class GenerateClient {
                                                              InvoiceCorrectionRequestInfo invoiceCorrectionInfo) throws DiadocSdkException {
         return getGeneratedXml(boxId, messageId, attachmentId, "/GenerateInvoiceCorrectionRequestXml", invoiceCorrectionInfo);
     }
-    
+
     public GeneratedFile generateInvoiceCorrectionRequestXmlV2(String boxId,
                                                                InvoiceCorrectionRequestGenerationRequestV2 generationRequest) throws DiadocSdkException {
         return getGeneratedXml(boxId, "/V2/GenerateInvoiceCorrectionRequestXml", generationRequest);
     }
+
     public GeneratedFile generateRevocationRequestXml(String boxId,
                                                       String messageId,
                                                       String attachmentId,
@@ -81,11 +82,11 @@ public class GenerateClient {
 
         try {
             var uriBuilder = new URIBuilder(diadocHttpClient.getBaseUrl())
-                .setPath("/V2/GenerateRevocationRequestXml")
-                .addParameter("boxId", boxId)
-                .addParameter("messageId", messageId)
-                .addParameter("attachmentId", attachmentId);
-            Tools.addParameterIfNotNull(uriBuilder,  "contentTypeId", contentTypeId);
+                    .setPath("/V2/GenerateRevocationRequestXml")
+                    .addParameter("boxId", boxId)
+                    .addParameter("messageId", messageId)
+                    .addParameter("attachmentId", attachmentId);
+            Tools.addParameterIfNotNull(uriBuilder, "contentTypeId", contentTypeId);
             var request = RequestBuilder.post(uriBuilder.build())
                     .setEntity(new ByteArrayEntity(revocationRequestInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
@@ -107,7 +108,7 @@ public class GenerateClient {
     }
 
     public GeneratedFile generateSignatureRejectionXmlV2(String boxId,
-                                                       SignatureRejectionGenerationRequestV2 generationRequest) throws DiadocSdkException {
+                                                         SignatureRejectionGenerationRequestV2 generationRequest) throws DiadocSdkException {
         return getGeneratedXml(boxId, "/V2/GenerateSignatureRejectionXml", generationRequest);
     }
 
@@ -142,12 +143,12 @@ public class GenerateClient {
 
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath(path)
-                            .addParameter("boxId", boxId)
-                            .addParameter("messageId", messageId)
-                            .addParameter("attachmentId", attachmentId)
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath(path)
+                                    .addParameter("boxId", boxId)
+                                    .addParameter("messageId", messageId)
+                                    .addParameter("attachmentId", attachmentId)
+                                    .build())
                     .setEntity(new ByteArrayEntity(data.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
@@ -165,10 +166,10 @@ public class GenerateClient {
 
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath(path)
-                            .addParameter("boxId", boxId)
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath(path)
+                                    .addParameter("boxId", boxId)
+                                    .build())
                     .setEntity(new ByteArrayEntity(data.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
@@ -254,7 +255,7 @@ public class GenerateClient {
             throw new IllegalArgumentException("info");
         }
         try {
-            var uri =   new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GenerateInvoiceXml");
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/GenerateInvoiceXml");
             Tools.addParameterIfNotNull(uri, "invoiceType", invoiceType);
             Tools.addParameterIfNotNull(uri, "disableValidation", disableValidation);
             var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(invoiceInfo.toByteArray()));
@@ -302,6 +303,22 @@ public class GenerateClient {
 
             var request = RequestBuilder.post(uri.build()).setEntity(new ByteArrayEntity(userContractData));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
+        } catch (URISyntaxException | IOException | ParseException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public GeneratedFile generateUniversalMessage(String boxId, String messageId, String attachmentId, byte[] userContract) throws DiadocSdkException {
+        try {
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GenerateUniversalMessage")
+                    .addParameter("boxId", boxId)
+                    .addParameter("messageId", messageId)
+                    .addParameter("attachmentId", attachmentId)
+                    .build();
+            var request = RequestBuilder.post(uri).setEntity(new ByteArrayEntity(userContract));
+            return diadocHttpClient.performRequestWithGeneratedFile(request);
+
         } catch (URISyntaxException | IOException | ParseException e) {
             throw new DiadocSdkException(e);
         }
@@ -385,7 +402,7 @@ public class GenerateClient {
         checkDocumentParameters(boxId, documentTypeNamedId, documentFunction, documentVersion, userContractData);
 
         try {
-            var uri =  new URIBuilder(diadocHttpClient.getBaseUrl())
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/GenerateSenderTitleXml")
                     .addParameter("boxId", boxId)
                     .addParameter("documentTypeNamedId", documentTypeNamedId)
@@ -444,7 +461,7 @@ public class GenerateClient {
         }
 
         try {
-            var uri =  new URIBuilder(diadocHttpClient.getBaseUrl())
+            var uri = new URIBuilder(diadocHttpClient.getBaseUrl())
                     .setPath("/GenerateRecipientTitleXml")
                     .addParameter("boxId", boxId)
                     .addParameter("senderTitleMessageId", senderTitleMessageId)
@@ -765,12 +782,12 @@ public class GenerateClient {
         checkParameters(buyerTitleInfo, boxId, sellerTitleMessageId, sellerTitleAttachmentId);
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/GenerateUniversalTransferDocumentXmlForBuyer")
-                            .addParameter("boxId", boxId)
-                            .addParameter("sellerTitleMessageId", sellerTitleMessageId)
-                            .addParameter("sellerTitleAttachmentId", sellerTitleAttachmentId)
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/GenerateUniversalTransferDocumentXmlForBuyer")
+                                    .addParameter("boxId", boxId)
+                                    .addParameter("sellerTitleMessageId", sellerTitleMessageId)
+                                    .addParameter("sellerTitleAttachmentId", sellerTitleAttachmentId)
+                                    .build())
                     .setEntity(new ByteArrayEntity(buyerTitleInfo.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
@@ -842,12 +859,12 @@ public class GenerateClient {
 
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath(path)
-                            .addParameter("boxId", boxId)
-                            .addParameter("messageId", messageId)
-                            .addParameter("attachmentId", attachmentId)
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath(path)
+                                    .addParameter("boxId", boxId)
+                                    .addParameter("messageId", messageId)
+                                    .addParameter("attachmentId", attachmentId)
+                                    .build())
                     .setEntity(new ByteArrayEntity(signer.toByteArray()));
             return diadocHttpClient.performRequestWithGeneratedFile(request);
         } catch (URISyntaxException | IOException | ParseException e) {
@@ -862,7 +879,7 @@ public class GenerateClient {
     @Deprecated
     public GeneratedFile generateInvoiceDocumentReceiptXml(String boxId, String messageId, String attachmentId, Signer signer)
             throws DiadocSdkException {
-        return  generateDocumentReceiptXml(boxId, messageId, attachmentId, signer, "/GenerateInvoiceDocumentReceiptXml");
+        return generateDocumentReceiptXml(boxId, messageId, attachmentId, signer, "/GenerateInvoiceDocumentReceiptXml");
     }
 
     /**
