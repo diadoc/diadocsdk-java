@@ -2,7 +2,7 @@
 
 option java_outer_classname = "DateTimeOffsetProtos";
 
-message DateTimeOffset
+message DateTimeOffsetDto
 {
   required sfixed64 UtcTicks = 1;
   required sfixed64 OffsetTicks = 2;

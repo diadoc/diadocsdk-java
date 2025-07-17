@@ -1523,34 +1523,34 @@ public final class PowerOfAttorneyProtos {
         int index);
 
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
      * @return Whether the startAtByMoscow field is set.
      */
     boolean hasStartAtByMoscow();
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
      * @return The startAtByMoscow.
      */
-    Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset getStartAtByMoscow();
+    Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto getStartAtByMoscow();
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
      */
-    Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder getStartAtByMoscowOrBuilder();
+    Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder getStartAtByMoscowOrBuilder();
 
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
      * @return Whether the expireAtByMoscow field is set.
      */
     boolean hasExpireAtByMoscow();
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
      * @return The expireAtByMoscow.
      */
-    Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset getExpireAtByMoscow();
+    Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto getExpireAtByMoscow();
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
      */
-    Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder getExpireAtByMoscowOrBuilder();
+    Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder getExpireAtByMoscowOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorney}
@@ -1957,9 +1957,9 @@ public final class PowerOfAttorneyProtos {
     }
 
     public static final int STARTATBYMOSCOW_FIELD_NUMBER = 12;
-    private Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset startAtByMoscow_;
+    private Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto startAtByMoscow_;
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
      * @return Whether the startAtByMoscow field is set.
      */
     @java.lang.Override
@@ -1967,25 +1967,25 @@ public final class PowerOfAttorneyProtos {
       return ((bitField0_ & 0x00000200) != 0);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
      * @return The startAtByMoscow.
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset getStartAtByMoscow() {
-      return startAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance() : startAtByMoscow_;
+    public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto getStartAtByMoscow() {
+      return startAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance() : startAtByMoscow_;
     }
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder getStartAtByMoscowOrBuilder() {
-      return startAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance() : startAtByMoscow_;
+    public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder getStartAtByMoscowOrBuilder() {
+      return startAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance() : startAtByMoscow_;
     }
 
     public static final int EXPIREATBYMOSCOW_FIELD_NUMBER = 13;
-    private Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset expireAtByMoscow_;
+    private Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto expireAtByMoscow_;
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
      * @return Whether the expireAtByMoscow field is set.
      */
     @java.lang.Override
@@ -1993,19 +1993,19 @@ public final class PowerOfAttorneyProtos {
       return ((bitField0_ & 0x00000400) != 0);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
      * @return The expireAtByMoscow.
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset getExpireAtByMoscow() {
-      return expireAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance() : expireAtByMoscow_;
+    public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto getExpireAtByMoscow() {
+      return expireAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance() : expireAtByMoscow_;
     }
     /**
-     * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+     * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
      */
     @java.lang.Override
-    public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder getExpireAtByMoscowOrBuilder() {
-      return expireAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance() : expireAtByMoscow_;
+    public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder getExpireAtByMoscowOrBuilder() {
+      return expireAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance() : expireAtByMoscow_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4461,31 +4461,31 @@ public final class PowerOfAttorneyProtos {
         return representativesBuilder_;
       }
 
-      private Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset startAtByMoscow_;
+      private Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto startAtByMoscow_;
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder> startAtByMoscowBuilder_;
+          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder> startAtByMoscowBuilder_;
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
        * @return Whether the startAtByMoscow field is set.
        */
       public boolean hasStartAtByMoscow() {
         return ((bitField0_ & 0x00000800) != 0);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
        * @return The startAtByMoscow.
        */
-      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset getStartAtByMoscow() {
+      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto getStartAtByMoscow() {
         if (startAtByMoscowBuilder_ == null) {
-          return startAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance() : startAtByMoscow_;
+          return startAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance() : startAtByMoscow_;
         } else {
           return startAtByMoscowBuilder_.getMessage();
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
        */
-      public Builder setStartAtByMoscow(Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset value) {
+      public Builder setStartAtByMoscow(Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto value) {
         if (startAtByMoscowBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4499,10 +4499,10 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
        */
       public Builder setStartAtByMoscow(
-          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder builderForValue) {
+          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder builderForValue) {
         if (startAtByMoscowBuilder_ == null) {
           startAtByMoscow_ = builderForValue.build();
         } else {
@@ -4513,13 +4513,13 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
        */
-      public Builder mergeStartAtByMoscow(Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset value) {
+      public Builder mergeStartAtByMoscow(Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto value) {
         if (startAtByMoscowBuilder_ == null) {
           if (((bitField0_ & 0x00000800) != 0) &&
             startAtByMoscow_ != null &&
-            startAtByMoscow_ != Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance()) {
+            startAtByMoscow_ != Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance()) {
             getStartAtByMoscowBuilder().mergeFrom(value);
           } else {
             startAtByMoscow_ = value;
@@ -4534,7 +4534,7 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
        */
       public Builder clearStartAtByMoscow() {
         bitField0_ = (bitField0_ & ~0x00000800);
@@ -4547,33 +4547,33 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
        */
-      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder getStartAtByMoscowBuilder() {
+      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder getStartAtByMoscowBuilder() {
         bitField0_ |= 0x00000800;
         onChanged();
         return getStartAtByMoscowFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
        */
-      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder getStartAtByMoscowOrBuilder() {
+      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder getStartAtByMoscowOrBuilder() {
         if (startAtByMoscowBuilder_ != null) {
           return startAtByMoscowBuilder_.getMessageOrBuilder();
         } else {
           return startAtByMoscow_ == null ?
-              Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance() : startAtByMoscow_;
+              Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance() : startAtByMoscow_;
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset StartAtByMoscow = 12;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto StartAtByMoscow = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder> 
+          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder> 
           getStartAtByMoscowFieldBuilder() {
         if (startAtByMoscowBuilder_ == null) {
           startAtByMoscowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder>(
+              Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder>(
                   getStartAtByMoscow(),
                   getParentForChildren(),
                   isClean());
@@ -4582,31 +4582,31 @@ public final class PowerOfAttorneyProtos {
         return startAtByMoscowBuilder_;
       }
 
-      private Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset expireAtByMoscow_;
+      private Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto expireAtByMoscow_;
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder> expireAtByMoscowBuilder_;
+          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder> expireAtByMoscowBuilder_;
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
        * @return Whether the expireAtByMoscow field is set.
        */
       public boolean hasExpireAtByMoscow() {
         return ((bitField0_ & 0x00001000) != 0);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
        * @return The expireAtByMoscow.
        */
-      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset getExpireAtByMoscow() {
+      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto getExpireAtByMoscow() {
         if (expireAtByMoscowBuilder_ == null) {
-          return expireAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance() : expireAtByMoscow_;
+          return expireAtByMoscow_ == null ? Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance() : expireAtByMoscow_;
         } else {
           return expireAtByMoscowBuilder_.getMessage();
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
        */
-      public Builder setExpireAtByMoscow(Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset value) {
+      public Builder setExpireAtByMoscow(Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto value) {
         if (expireAtByMoscowBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4620,10 +4620,10 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
        */
       public Builder setExpireAtByMoscow(
-          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder builderForValue) {
+          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder builderForValue) {
         if (expireAtByMoscowBuilder_ == null) {
           expireAtByMoscow_ = builderForValue.build();
         } else {
@@ -4634,13 +4634,13 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
        */
-      public Builder mergeExpireAtByMoscow(Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset value) {
+      public Builder mergeExpireAtByMoscow(Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto value) {
         if (expireAtByMoscowBuilder_ == null) {
           if (((bitField0_ & 0x00001000) != 0) &&
             expireAtByMoscow_ != null &&
-            expireAtByMoscow_ != Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance()) {
+            expireAtByMoscow_ != Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance()) {
             getExpireAtByMoscowBuilder().mergeFrom(value);
           } else {
             expireAtByMoscow_ = value;
@@ -4655,7 +4655,7 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
        */
       public Builder clearExpireAtByMoscow() {
         bitField0_ = (bitField0_ & ~0x00001000);
@@ -4668,33 +4668,33 @@ public final class PowerOfAttorneyProtos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
        */
-      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder getExpireAtByMoscowBuilder() {
+      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder getExpireAtByMoscowBuilder() {
         bitField0_ |= 0x00001000;
         onChanged();
         return getExpireAtByMoscowFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
        */
-      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder getExpireAtByMoscowOrBuilder() {
+      public Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder getExpireAtByMoscowOrBuilder() {
         if (expireAtByMoscowBuilder_ != null) {
           return expireAtByMoscowBuilder_.getMessageOrBuilder();
         } else {
           return expireAtByMoscow_ == null ?
-              Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.getDefaultInstance() : expireAtByMoscow_;
+              Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.getDefaultInstance() : expireAtByMoscow_;
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.DateTimeOffset ExpireAtByMoscow = 13;</code>
+       * <code>required .Diadoc.Api.Proto.DateTimeOffsetDto ExpireAtByMoscow = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder> 
+          Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder> 
           getExpireAtByMoscowFieldBuilder() {
         if (expireAtByMoscowBuilder_ == null) {
           expireAtByMoscowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffset.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetOrBuilder>(
+              Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDto.Builder, Diadoc.Api.Proto.DateTimeOffsetProtos.DateTimeOffsetDtoOrBuilder>(
                   getExpireAtByMoscow(),
                   getParentForChildren(),
                   isClean());
@@ -29476,151 +29476,152 @@ public final class PowerOfAttorneyProtos {
       "\n&PowersOfAttorney/PowerOfAttorney.proto" +
       "\022!Diadoc.Api.Proto.PowersOfAttorney\032\020Con" +
       "tent_v3.proto\032\017Timestamp.proto\032\nUser.pro" +
-      "to\032\024DateTimeOffset.proto\"a\n\025PowerOfAttor" +
-      "neyFullId\022\032\n\022RegistrationNumber\030\001 \002(\t\022\021\n" +
-      "\tIssuerInn\030\002 \002(\t\022\031\n\021RepresentativeInn\030\003 " +
-      "\001(\t\"\307\006\n\017PowerOfAttorney\022H\n\006FullId\030\001 \002(\0132" +
-      "8.Diadoc.Api.Proto.PowersOfAttorney.Powe" +
-      "rOfAttorneyFullId\022H\n\006Issuer\030\002 \002(\01328.Diad" +
+      "to\032\027DateTimeOffsetDto.proto\"a\n\025PowerOfAt" +
+      "torneyFullId\022\032\n\022RegistrationNumber\030\001 \002(\t" +
+      "\022\021\n\tIssuerInn\030\002 \002(\t\022\031\n\021RepresentativeInn" +
+      "\030\003 \001(\t\"\315\006\n\017PowerOfAttorney\022H\n\006FullId\030\001 \002" +
+      "(\01328.Diadoc.Api.Proto.PowersOfAttorney.P" +
+      "owerOfAttorneyFullId\022H\n\006Issuer\030\002 \002(\01328.D" +
+      "iadoc.Api.Proto.PowersOfAttorney.PowerOf" +
+      "AttorneyIssuer\022N\n\tConfidant\030\003 \002(\0132;.Diad" +
       "oc.Api.Proto.PowersOfAttorney.PowerOfAtt" +
-      "orneyIssuer\022N\n\tConfidant\030\003 \002(\0132;.Diadoc." +
-      "Api.Proto.PowersOfAttorney.PowerOfAttorn" +
-      "eyConfidant\022,\n\007StartAt\030\004 \002(\0132\033.Diadoc.Ap" +
-      "i.Proto.Timestamp\022-\n\010ExpireAt\030\005 \002(\0132\033.Di" +
-      "adoc.Api.Proto.Timestamp\022\016\n\006System\030\006 \001(\t" +
-      "\022\016\n\006IdFile\030\007 \001(\t\022K\n\017DelegationChain\030\010 \003(" +
-      "\01322.Diadoc.Api.Proto.PowersOfAttorney.Po" +
-      "werOfAttorney\022Z\n\017PermissionsInfo\030\t \002(\0132A" +
-      ".Diadoc.Api.Proto.PowersOfAttorney.Power" +
-      "OfAttorneyPermissionsInfo\022X\n\016DelegationI" +
-      "nfo\030\n \001(\0132@.Diadoc.Api.Proto.PowersOfAtt" +
-      "orney.PowerOfAttorneyDelegationInfo\022Y\n\017R" +
-      "epresentatives\030\013 \003(\0132@.Diadoc.Api.Proto." +
-      "PowersOfAttorney.PowerOfAttorneyRepresen" +
-      "tative\0229\n\017StartAtByMoscow\030\014 \002(\0132 .Diadoc" +
-      ".Api.Proto.DateTimeOffset\022:\n\020ExpireAtByM" +
-      "oscow\030\r \002(\0132 .Diadoc.Api.Proto.DateTimeO" +
-      "ffset\"\362\003\n\025PowerOfAttorneyIssuer\022]\n\004Type\030" +
-      "\001 \001(\0162<.Diadoc.Api.Proto.PowersOfAttorne" +
-      "y.PowerOfAttorneyIssuerType:\021UnknownIssu" +
-      "erType\022X\n\013LegalEntity\030\002 \001(\0132C.Diadoc.Api" +
-      ".Proto.PowersOfAttorney.PowerOfAttorneyI" +
-      "ssuerLegalEntity\022\\\n\rForeignEntity\030\003 \001(\0132" +
-      "E.Diadoc.Api.Proto.PowersOfAttorney.Powe" +
-      "rOfAttorneyIssuerForeignEntity\022b\n\020Indivi" +
-      "dualEntity\030\004 \001(\0132H.Diadoc.Api.Proto.Powe" +
-      "rsOfAttorney.PowerOfAttorneyIssuerIndivi" +
-      "dualEntity\022^\n\016PhysicalEntity\030\005 \001(\0132F.Dia" +
+      "orneyConfidant\022,\n\007StartAt\030\004 \002(\0132\033.Diadoc" +
+      ".Api.Proto.Timestamp\022-\n\010ExpireAt\030\005 \002(\0132\033" +
+      ".Diadoc.Api.Proto.Timestamp\022\016\n\006System\030\006 " +
+      "\001(\t\022\016\n\006IdFile\030\007 \001(\t\022K\n\017DelegationChain\030\010" +
+      " \003(\01322.Diadoc.Api.Proto.PowersOfAttorney" +
+      ".PowerOfAttorney\022Z\n\017PermissionsInfo\030\t \002(" +
+      "\0132A.Diadoc.Api.Proto.PowersOfAttorney.Po" +
+      "werOfAttorneyPermissionsInfo\022X\n\016Delegati" +
+      "onInfo\030\n \001(\0132@.Diadoc.Api.Proto.PowersOf" +
+      "Attorney.PowerOfAttorneyDelegationInfo\022Y" +
+      "\n\017Representatives\030\013 \003(\0132@.Diadoc.Api.Pro" +
+      "to.PowersOfAttorney.PowerOfAttorneyRepre" +
+      "sentative\022<\n\017StartAtByMoscow\030\014 \002(\0132#.Dia" +
+      "doc.Api.Proto.DateTimeOffsetDto\022=\n\020Expir" +
+      "eAtByMoscow\030\r \002(\0132#.Diadoc.Api.Proto.Dat" +
+      "eTimeOffsetDto\"\362\003\n\025PowerOfAttorneyIssuer" +
+      "\022]\n\004Type\030\001 \001(\0162<.Diadoc.Api.Proto.Powers" +
+      "OfAttorney.PowerOfAttorneyIssuerType:\021Un" +
+      "knownIssuerType\022X\n\013LegalEntity\030\002 \001(\0132C.D" +
+      "iadoc.Api.Proto.PowersOfAttorney.PowerOf" +
+      "AttorneyIssuerLegalEntity\022\\\n\rForeignEnti" +
+      "ty\030\003 \001(\0132E.Diadoc.Api.Proto.PowersOfAtto" +
+      "rney.PowerOfAttorneyIssuerForeignEntity\022" +
+      "b\n\020IndividualEntity\030\004 \001(\0132H.Diadoc.Api.P" +
+      "roto.PowersOfAttorney.PowerOfAttorneyIss" +
+      "uerIndividualEntity\022^\n\016PhysicalEntity\030\005 " +
+      "\001(\0132F.Diadoc.Api.Proto.PowersOfAttorney." +
+      "PowerOfAttorneyIssuerPhysicalEntity\"V\n P" +
+      "owerOfAttorneyIssuerLegalEntity\022\013\n\003Inn\030\001" +
+      " \002(\t\022\013\n\003Kpp\030\002 \002(\t\022\030\n\020OrganizationName\030\003 " +
+      "\002(\t\"X\n\"PowerOfAttorneyIssuerForeignEntit" +
+      "y\022\013\n\003Inn\030\001 \001(\t\022\013\n\003Kpp\030\002 \001(\t\022\030\n\020Organizat" +
+      "ionName\030\003 \002(\t\"N\n%PowerOfAttorneyIssuerIn" +
+      "dividualEntity\022\013\n\003Inn\030\001 \002(\t\022\030\n\020Organizat" +
+      "ionName\030\003 \002(\t\"b\n#PowerOfAttorneyIssuerPh" +
+      "ysicalEntity\022\013\n\003Inn\030\001 \002(\t\022.\n\nPersonName\030" +
+      "\002 \001(\0132\032.Diadoc.Api.Proto.FullName\"\266\001\n\030Po" +
+      "werOfAttorneyConfidant\022.\n\nPersonName\030\001 \002" +
+      "(\0132\032.Diadoc.Api.Proto.FullName\022\013\n\003Inn\030\002 " +
+      "\002(\t\022]\n\014Organization\030\003 \001(\0132G.Diadoc.Api.P" +
+      "roto.PowersOfAttorney.PowerOfAttorneyCon" +
+      "fidantOrganization\"N\n$PowerOfAttorneyCon" +
+      "fidantOrganization\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kpp\030\002" +
+      " \001(\t\022\014\n\004Name\030\003 \002(\t\"\256\001\n\036PowerOfAttorneyPe" +
+      "rmissionsInfo\022R\n\013Permissions\030\001 \003(\0132=.Dia" +
       "doc.Api.Proto.PowersOfAttorney.PowerOfAt" +
-      "torneyIssuerPhysicalEntity\"V\n PowerOfAtt" +
-      "orneyIssuerLegalEntity\022\013\n\003Inn\030\001 \002(\t\022\013\n\003K" +
-      "pp\030\002 \002(\t\022\030\n\020OrganizationName\030\003 \002(\t\"X\n\"Po" +
-      "werOfAttorneyIssuerForeignEntity\022\013\n\003Inn\030" +
-      "\001 \001(\t\022\013\n\003Kpp\030\002 \001(\t\022\030\n\020OrganizationName\030\003" +
-      " \002(\t\"N\n%PowerOfAttorneyIssuerIndividualE" +
-      "ntity\022\013\n\003Inn\030\001 \002(\t\022\030\n\020OrganizationName\030\003" +
-      " \002(\t\"b\n#PowerOfAttorneyIssuerPhysicalEnt" +
-      "ity\022\013\n\003Inn\030\001 \002(\t\022.\n\nPersonName\030\002 \001(\0132\032.D" +
-      "iadoc.Api.Proto.FullName\"\266\001\n\030PowerOfAtto" +
-      "rneyConfidant\022.\n\nPersonName\030\001 \002(\0132\032.Diad" +
-      "oc.Api.Proto.FullName\022\013\n\003Inn\030\002 \002(\t\022]\n\014Or" +
-      "ganization\030\003 \001(\0132G.Diadoc.Api.Proto.Powe" +
-      "rsOfAttorney.PowerOfAttorneyConfidantOrg" +
-      "anization\"N\n$PowerOfAttorneyConfidantOrg" +
-      "anization\022\013\n\003Inn\030\001 \002(\t\022\013\n\003Kpp\030\002 \001(\t\022\014\n\004N" +
-      "ame\030\003 \002(\t\"\256\001\n\036PowerOfAttorneyPermissions" +
-      "Info\022R\n\013Permissions\030\001 \003(\0132=.Diadoc.Api.P" +
-      "roto.PowersOfAttorney.PowerOfAttorneyPer" +
-      "missions\022\036\n\026TransferPermissionLoss\030\002 \001(\t" +
-      "\022\030\n\020JointPermissions\030\003 \002(\t\"\262\001\n\032PowerOfAt" +
-      "torneyPermissions\022\014\n\004Type\030\001 \002(\t\022\026\n\016TextP" +
-      "ermission\030\002 \001(\t\022n\n\031MachineReadablePermis" +
-      "sion\030\003 \003(\0132K.Diadoc.Api.Proto.PowersOfAt" +
-      "torney.PowerOfAttorneyMachineReadablePer" +
-      "mission\"\256\001\n(PowerOfAttorneyMachineReadab" +
-      "lePermission\022\020\n\010Mnemonic\030\001 \001(\t\022\014\n\004Code\030\002" +
-      " \002(\t\022\014\n\004Name\030\003 \002(\t\022T\n\014Restrictions\030\004 \003(\013" +
-      "2>.Diadoc.Api.Proto.PowersOfAttorney.Pow" +
-      "erOfAttorneyRestrictions\"~\n\033PowerOfAttor" +
-      "neyRestrictions\022\n\n\002Id\030\001 \002(\005\022\014\n\004Code\030\002 \002(" +
-      "\t\022\014\n\004Name\030\003 \002(\t\022\021\n\tValueName\030\004 \001(\t\022\021\n\tVa" +
-      "lueCode\030\005 \001(\t\022\021\n\tValueText\030\006 \001(\t\"\267\001\n\031Pow" +
-      "erOfAttorneyToRegister\022H\n\006FullId\030\001 \001(\01328" +
-      ".Diadoc.Api.Proto.PowersOfAttorney.Power" +
-      "OfAttorneyFullId\022P\n\007Content\030\002 \001(\0132?.Diad" +
-      "oc.Api.Proto.PowersOfAttorney.PowerOfAtt" +
-      "orneySignedContent\"~\n\034PowerOfAttorneySig" +
-      "nedContent\022-\n\007Content\030\001 \002(\0132\034.Diadoc.Api" +
-      ".Proto.Content_v3\022/\n\tSignature\030\002 \002(\0132\034.D" +
-      "iadoc.Api.Proto.Content_v3\"\241\002\n\035PowerOfAt" +
-      "torneyRegisterResult\022\027\n\017OperationStatus\030" +
-      "\001 \002(\t\022K\n\017PowerOfAttorney\030\002 \001(\01322.Diadoc." +
-      "Api.Proto.PowersOfAttorney.PowerOfAttorn" +
-      "ey\022H\n\006Status\030\003 \001(\01328.Diadoc.Api.Proto.Po" +
-      "wersOfAttorney.PowerOfAttorneyStatus\022P\n\006" +
-      "Errors\030\004 \003(\0132@.Diadoc.Api.Proto.PowersOf" +
-      "Attorney.PowerOfAttorneyOperationError\"Y" +
-      "\n\025PowerOfAttorneyStatus\022\016\n\006Status\030\001 \002(\t\022" +
-      "0\n\013LastCheckAt\030\002 \001(\0132\033.Diadoc.Api.Proto." +
-      "Timestamp\";\n\035PowerOfAttorneyOperationErr" +
-      "or\022\014\n\004Code\030\001 \002(\t\022\014\n\004Text\030\002 \002(\t\"\260\001\n\035Power" +
-      "OfAttorneyDelegationInfo\022\036\n\026RootRegistra" +
-      "tionNumber\030\001 \002(\t\022 \n\030ParentRegistrationNu" +
-      "mber\030\002 \001(\t\022M\n\013RootIssuers\030\003 \003(\01328.Diadoc" +
-      ".Api.Proto.PowersOfAttorney.PowerOfAttor" +
-      "neyIssuer\"<\n\026PowerOfAttorneyContent\022\017\n\007C" +
-      "ontent\030\001 \002(\014\022\021\n\tSignature\030\002 \002(\014\"\304\001\n\036Powe" +
-      "rOfAttorneyContentResponse\022L\n\007Content\030\001 " +
-      "\002(\0132;.Diadoc.Api.Proto.PowersOfAttorney." +
-      "PowerOfAttorneyContentV2\022T\n\017DelegationCh" +
-      "ain\030\002 \003(\0132;.Diadoc.Api.Proto.PowersOfAtt" +
-      "orney.PowerOfAttorneyContentV2\"\210\001\n\030Power" +
-      "OfAttorneyContentV2\022\017\n\007Content\030\001 \002(\014\022\021\n\t" +
-      "Signature\030\002 \002(\014\022H\n\006FullId\030\003 \002(\01328.Diadoc" +
-      ".Api.Proto.PowersOfAttorney.PowerOfAttor" +
-      "neyFullId\"\265\005\n\035PowerOfAttorneyRepresentat" +
-      "ive\022m\n\004Type\030\001 \001(\0162D.Diadoc.Api.Proto.Pow" +
-      "ersOfAttorney.PowerOfAttorneyRepresentat" +
-      "iveType:\031UnknownRepresentativeType\022`\n\013Le" +
-      "galEntity\030\002 \001(\0132K.Diadoc.Api.Proto.Power" +
-      "sOfAttorney.PowerOfAttorneyRepresentativ" +
-      "eLegalEntity\022j\n\020IndividualEntity\030\003 \001(\0132P" +
-      ".Diadoc.Api.Proto.PowersOfAttorney.Power" +
-      "OfAttorneyRepresentativeIndividualEntity" +
-      "\022f\n\016PhysicalEntity\030\004 \001(\0132N.Diadoc.Api.Pr" +
-      "oto.PowersOfAttorney.PowerOfAttorneyRepr" +
-      "esentativePhysicalEntity\022j\n\025LegalSubsidi" +
-      "aryEntity\030\005 \001(\0132K.Diadoc.Api.Proto.Power" +
-      "sOfAttorney.PowerOfAttorneyRepresentativ" +
-      "eLegalEntity\022\202\001\n\034ForeignLegalSubsidiaryE" +
-      "ntity\030\006 \001(\0132\\.Diadoc.Api.Proto.PowersOfA" +
-      "ttorney.PowerOfAttorneyRepresentativeFor" +
-      "eignLegalSubsidiaryEntity\"\306\001\n(PowerOfAtt" +
-      "orneyRepresentativeLegalEntity\022\013\n\003Inn\030\001 " +
-      "\001(\t\022\013\n\003Kpp\030\002 \002(\t\022\030\n\020OrganizationName\030\003 \002" +
-      "(\t\022f\n\016PhysicalEntity\030\004 \003(\0132N.Diadoc.Api." +
+      "torneyPermissions\022\036\n\026TransferPermissionL" +
+      "oss\030\002 \001(\t\022\030\n\020JointPermissions\030\003 \002(\t\"\262\001\n\032" +
+      "PowerOfAttorneyPermissions\022\014\n\004Type\030\001 \002(\t" +
+      "\022\026\n\016TextPermission\030\002 \001(\t\022n\n\031MachineReada" +
+      "blePermission\030\003 \003(\0132K.Diadoc.Api.Proto.P" +
+      "owersOfAttorney.PowerOfAttorneyMachineRe" +
+      "adablePermission\"\256\001\n(PowerOfAttorneyMach" +
+      "ineReadablePermission\022\020\n\010Mnemonic\030\001 \001(\t\022" +
+      "\014\n\004Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022T\n\014Restricti" +
+      "ons\030\004 \003(\0132>.Diadoc.Api.Proto.PowersOfAtt" +
+      "orney.PowerOfAttorneyRestrictions\"~\n\033Pow" +
+      "erOfAttorneyRestrictions\022\n\n\002Id\030\001 \002(\005\022\014\n\004" +
+      "Code\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\021\n\tValueName\030\004 " +
+      "\001(\t\022\021\n\tValueCode\030\005 \001(\t\022\021\n\tValueText\030\006 \001(" +
+      "\t\"\267\001\n\031PowerOfAttorneyToRegister\022H\n\006FullI" +
+      "d\030\001 \001(\01328.Diadoc.Api.Proto.PowersOfAttor" +
+      "ney.PowerOfAttorneyFullId\022P\n\007Content\030\002 \001" +
+      "(\0132?.Diadoc.Api.Proto.PowersOfAttorney.P" +
+      "owerOfAttorneySignedContent\"~\n\034PowerOfAt" +
+      "torneySignedContent\022-\n\007Content\030\001 \002(\0132\034.D" +
+      "iadoc.Api.Proto.Content_v3\022/\n\tSignature\030" +
+      "\002 \002(\0132\034.Diadoc.Api.Proto.Content_v3\"\241\002\n\035" +
+      "PowerOfAttorneyRegisterResult\022\027\n\017Operati" +
+      "onStatus\030\001 \002(\t\022K\n\017PowerOfAttorney\030\002 \001(\0132" +
+      "2.Diadoc.Api.Proto.PowersOfAttorney.Powe" +
+      "rOfAttorney\022H\n\006Status\030\003 \001(\01328.Diadoc.Api" +
+      ".Proto.PowersOfAttorney.PowerOfAttorneyS" +
+      "tatus\022P\n\006Errors\030\004 \003(\0132@.Diadoc.Api.Proto" +
+      ".PowersOfAttorney.PowerOfAttorneyOperati" +
+      "onError\"Y\n\025PowerOfAttorneyStatus\022\016\n\006Stat" +
+      "us\030\001 \002(\t\0220\n\013LastCheckAt\030\002 \001(\0132\033.Diadoc.A" +
+      "pi.Proto.Timestamp\";\n\035PowerOfAttorneyOpe" +
+      "rationError\022\014\n\004Code\030\001 \002(\t\022\014\n\004Text\030\002 \002(\t\"" +
+      "\260\001\n\035PowerOfAttorneyDelegationInfo\022\036\n\026Roo" +
+      "tRegistrationNumber\030\001 \002(\t\022 \n\030ParentRegis" +
+      "trationNumber\030\002 \001(\t\022M\n\013RootIssuers\030\003 \003(\013" +
+      "28.Diadoc.Api.Proto.PowersOfAttorney.Pow" +
+      "erOfAttorneyIssuer\"<\n\026PowerOfAttorneyCon" +
+      "tent\022\017\n\007Content\030\001 \002(\014\022\021\n\tSignature\030\002 \002(\014" +
+      "\"\304\001\n\036PowerOfAttorneyContentResponse\022L\n\007C" +
+      "ontent\030\001 \002(\0132;.Diadoc.Api.Proto.PowersOf" +
+      "Attorney.PowerOfAttorneyContentV2\022T\n\017Del" +
+      "egationChain\030\002 \003(\0132;.Diadoc.Api.Proto.Po" +
+      "wersOfAttorney.PowerOfAttorneyContentV2\"" +
+      "\210\001\n\030PowerOfAttorneyContentV2\022\017\n\007Content\030" +
+      "\001 \002(\014\022\021\n\tSignature\030\002 \002(\014\022H\n\006FullId\030\003 \002(\013" +
+      "28.Diadoc.Api.Proto.PowersOfAttorney.Pow" +
+      "erOfAttorneyFullId\"\265\005\n\035PowerOfAttorneyRe" +
+      "presentative\022m\n\004Type\030\001 \001(\0162D.Diadoc.Api." +
       "Proto.PowersOfAttorney.PowerOfAttorneyRe" +
-      "presentativePhysicalEntity\"V\n-PowerOfAtt" +
-      "orneyRepresentativeIndividualEntity\022\013\n\003I" +
-      "nn\030\001 \002(\t\022\030\n\020OrganizationName\030\002 \002(\t\"j\n+Po" +
-      "werOfAttorneyRepresentativePhysicalEntit" +
-      "y\022\013\n\003Inn\030\001 \001(\t\022.\n\nPersonName\030\002 \002(\0132\032.Dia" +
-      "doc.Api.Proto.FullName\"o\n9PowerOfAttorne" +
-      "yRepresentativeForeignLegalSubsidiaryEnt" +
-      "ity\022\013\n\003Inn\030\001 \001(\t\022\013\n\003Kpp\030\002 \001(\t\022\030\n\020Organiz" +
-      "ationName\030\003 \002(\t*\200\001\n\031PowerOfAttorneyIssue" +
-      "rType\022\025\n\021UnknownIssuerType\020\000\022\017\n\013LegalEnt" +
-      "ity\020\001\022\021\n\rForeignEntity\020\002\022\024\n\020IndividualEn" +
-      "tity\020\003\022\022\n\016PhysicalEntity\020\004*V\n\032PowerOfAtt" +
-      "orneySendingType\022\013\n\007Unknown\020\000\022\014\n\010Metadat" +
-      "a\020\001\022\010\n\004File\020\002\022\023\n\017DocumentContent\020\003*\200\002\n!P" +
-      "owerOfAttorneyRepresentativeType\022\035\n\031Unkn" +
-      "ownRepresentativeType\020\000\022\035\n\031Representativ" +
-      "eLegalEntity\020\001\022\"\n\036RepresentativeIndividu" +
-      "alEntity\020\002\022 \n\034RepresentativePhysicalEnti" +
-      "ty\020\003\022\'\n#RepresentativeLegalSubsidiaryEnt" +
-      "ity\020\004\022.\n*RepresentativeForeignLegalSubsi" +
-      "diaryEntity\020\005B\027B\025PowerOfAttorneyProtos"
+      "presentativeType:\031UnknownRepresentativeT" +
+      "ype\022`\n\013LegalEntity\030\002 \001(\0132K.Diadoc.Api.Pr" +
+      "oto.PowersOfAttorney.PowerOfAttorneyRepr" +
+      "esentativeLegalEntity\022j\n\020IndividualEntit" +
+      "y\030\003 \001(\0132P.Diadoc.Api.Proto.PowersOfAttor" +
+      "ney.PowerOfAttorneyRepresentativeIndivid" +
+      "ualEntity\022f\n\016PhysicalEntity\030\004 \001(\0132N.Diad" +
+      "oc.Api.Proto.PowersOfAttorney.PowerOfAtt" +
+      "orneyRepresentativePhysicalEntity\022j\n\025Leg" +
+      "alSubsidiaryEntity\030\005 \001(\0132K.Diadoc.Api.Pr" +
+      "oto.PowersOfAttorney.PowerOfAttorneyRepr" +
+      "esentativeLegalEntity\022\202\001\n\034ForeignLegalSu" +
+      "bsidiaryEntity\030\006 \001(\0132\\.Diadoc.Api.Proto." +
+      "PowersOfAttorney.PowerOfAttorneyRepresen" +
+      "tativeForeignLegalSubsidiaryEntity\"\306\001\n(P" +
+      "owerOfAttorneyRepresentativeLegalEntity\022" +
+      "\013\n\003Inn\030\001 \001(\t\022\013\n\003Kpp\030\002 \002(\t\022\030\n\020Organizatio" +
+      "nName\030\003 \002(\t\022f\n\016PhysicalEntity\030\004 \003(\0132N.Di" +
+      "adoc.Api.Proto.PowersOfAttorney.PowerOfA" +
+      "ttorneyRepresentativePhysicalEntity\"V\n-P" +
+      "owerOfAttorneyRepresentativeIndividualEn" +
+      "tity\022\013\n\003Inn\030\001 \002(\t\022\030\n\020OrganizationName\030\002 " +
+      "\002(\t\"j\n+PowerOfAttorneyRepresentativePhys" +
+      "icalEntity\022\013\n\003Inn\030\001 \001(\t\022.\n\nPersonName\030\002 " +
+      "\002(\0132\032.Diadoc.Api.Proto.FullName\"o\n9Power" +
+      "OfAttorneyRepresentativeForeignLegalSubs" +
+      "idiaryEntity\022\013\n\003Inn\030\001 \001(\t\022\013\n\003Kpp\030\002 \001(\t\022\030" +
+      "\n\020OrganizationName\030\003 \002(\t*\200\001\n\031PowerOfAtto" +
+      "rneyIssuerType\022\025\n\021UnknownIssuerType\020\000\022\017\n" +
+      "\013LegalEntity\020\001\022\021\n\rForeignEntity\020\002\022\024\n\020Ind" +
+      "ividualEntity\020\003\022\022\n\016PhysicalEntity\020\004*V\n\032P" +
+      "owerOfAttorneySendingType\022\013\n\007Unknown\020\000\022\014" +
+      "\n\010Metadata\020\001\022\010\n\004File\020\002\022\023\n\017DocumentConten" +
+      "t\020\003*\200\002\n!PowerOfAttorneyRepresentativeTyp" +
+      "e\022\035\n\031UnknownRepresentativeType\020\000\022\035\n\031Repr" +
+      "esentativeLegalEntity\020\001\022\"\n\036Representativ" +
+      "eIndividualEntity\020\002\022 \n\034RepresentativePhy" +
+      "sicalEntity\020\003\022\'\n#RepresentativeLegalSubs" +
+      "idiaryEntity\020\004\022.\n*RepresentativeForeignL" +
+      "egalSubsidiaryEntity\020\005B\027B\025PowerOfAttorne" +
+      "yProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
