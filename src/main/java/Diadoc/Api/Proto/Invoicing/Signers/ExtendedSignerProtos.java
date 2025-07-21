@@ -832,6 +832,14 @@ public final class ExtendedSignerProtos {
      * <code>Utd970Buyer = 13;</code>
      */
     Utd970Buyer(13),
+    /**
+     * <pre>
+     * Данные для титула продавца формата приказа 29
+     * </pre>
+     *
+     * <code>ProformaInvoice29 = 14;</code>
+     */
+    ProformaInvoice29(14),
     ;
 
     static {
@@ -959,6 +967,14 @@ public final class ExtendedSignerProtos {
      * <code>Utd970Buyer = 13;</code>
      */
     public static final int Utd970Buyer_VALUE = 13;
+    /**
+     * <pre>
+     * Данные для титула продавца формата приказа 29
+     * </pre>
+     *
+     * <code>ProformaInvoice29 = 14;</code>
+     */
+    public static final int ProformaInvoice29_VALUE = 14;
 
 
     public final int getNumber() {
@@ -996,6 +1012,7 @@ public final class ExtendedSignerProtos {
         case 11: return Ucd736Buyer;
         case 12: return Utd970Seller;
         case 13: return Utd970Buyer;
+        case 14: return ProformaInvoice29;
         default: return null;
       }
     }
@@ -6956,15 +6973,15 @@ public final class ExtendedSignerProtos {
       "nCreatorEmployee\020\002\022\035\n\031OtherOrganizationE" +
       "mployee\020\003\022\024\n\020AuthorizedPerson\020\004\022\021\n\rBuyer" +
       "Employee\020\005\022#\n\037InformationCreatorBuyerEmp" +
-      "loyee\020\006*\246\002\n\021DocumentTitleType\022\023\n\006Absent\020" +
+      "loyee\020\006*\275\002\n\021DocumentTitleType\022\023\n\006Absent\020" +
       "\377\377\377\377\377\377\377\377\377\001\022\r\n\tUtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022" +
       "\r\n\tUcdSeller\020\002\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg5" +
       "51Seller\020\004\022\023\n\017TovTorg551Buyer\020\005\022\024\n\020AccCe" +
       "rt552Seller\020\006\022\023\n\017AccCert552Buyer\020\007\022\017\n\013Ut" +
       "d820Buyer\020\010\022\016\n\nTorg2Buyer\020\t\022\027\n\023Torg2Addi" +
       "tionalInfo\020\n\022\017\n\013Ucd736Buyer\020\013\022\020\n\014Utd970S" +
-      "eller\020\014\022\017\n\013Utd970Buyer\020\rB\026B\024ExtendedSign" +
-      "erProtos"
+      "eller\020\014\022\017\n\013Utd970Buyer\020\r\022\025\n\021ProformaInvo" +
+      "ice29\020\016B\026B\024ExtendedSignerProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
