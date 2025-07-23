@@ -25,6 +25,7 @@ import Diadoc.Api.shelf.ShelfClient;
 import Diadoc.Api.sign.SignClient;
 import Diadoc.Api.template.TemplateClient;
 import Diadoc.Api.user.UserClient;
+import Diadoc.Api.partnerEvents.PartnerEventsClient;
 import org.apache.http.HttpHost;
 import org.jetbrains.annotations.Nullable;
 
@@ -53,8 +54,8 @@ public class DiadocApi {
     private final PowerOfAttorneyClient powerOfAttorneyClient;
     private final EmployeePowerOfAttorneyClient employeePowerOfAttorneyClient;
     private final DocumentWorkflowClient documentWorkflowClient;
-
     private final OperatorClient operatorClient;
+    private final PartnerEventsClient partnerEventsClient;
     private final DiadocHttpClient diadocHttpClient;
 
     public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
@@ -94,6 +95,7 @@ public class DiadocApi {
         employeePowerOfAttorneyClient = new EmployeePowerOfAttorneyClient(diadocHttpClient);
         documentWorkflowClient = new DocumentWorkflowClient(diadocHttpClient);
         operatorClient = new OperatorClient(diadocHttpClient);
+        partnerEventsClient = new PartnerEventsClient(diadocHttpClient);
     }
 
     public DiadocApi(String apiClientId, String url) {
@@ -208,6 +210,8 @@ public class DiadocApi {
     public OperatorClient getOperatorClient() {
         return operatorClient;
     }
+
+    public PartnerEventsClient getPartnerEventsClient() { return partnerEventsClient; }
 
     public DiadocHttpClient getDiadocHttpClient() {
         return diadocHttpClient;
