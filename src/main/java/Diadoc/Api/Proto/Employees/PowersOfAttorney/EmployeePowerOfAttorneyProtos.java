@@ -2048,6 +2048,801 @@ public final class EmployeePowerOfAttorneyProtos {
 
   }
 
+  public interface EmployeePowerOfAttorneyToUpdateV2OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyToUpdateV2)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+     * @return Whether the powerOfAttorneyFullId field is set.
+     */
+    boolean hasPowerOfAttorneyFullId();
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+     * @return The powerOfAttorneyFullId.
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId getPowerOfAttorneyFullId();
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+     */
+    Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder getPowerOfAttorneyFullIdOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+     * @return Whether the isDefaultPatch field is set.
+     */
+    boolean hasIsDefaultPatch();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+     * @return The isDefaultPatch.
+     */
+    Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch getIsDefaultPatch();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+     */
+    Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatchOrBuilder getIsDefaultPatchOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyToUpdateV2}
+   */
+  public static final class EmployeePowerOfAttorneyToUpdateV2 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyToUpdateV2)
+      EmployeePowerOfAttorneyToUpdateV2OrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        EmployeePowerOfAttorneyToUpdateV2.class.getName());
+    }
+    // Use EmployeePowerOfAttorneyToUpdateV2.newBuilder() to construct.
+    private EmployeePowerOfAttorneyToUpdateV2(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EmployeePowerOfAttorneyToUpdateV2() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2.class, Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int POWEROFATTORNEYFULLID_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId powerOfAttorneyFullId_;
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+     * @return Whether the powerOfAttorneyFullId field is set.
+     */
+    @java.lang.Override
+    public boolean hasPowerOfAttorneyFullId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+     * @return The powerOfAttorneyFullId.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId getPowerOfAttorneyFullId() {
+      return powerOfAttorneyFullId_ == null ? Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance() : powerOfAttorneyFullId_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder getPowerOfAttorneyFullIdOrBuilder() {
+      return powerOfAttorneyFullId_ == null ? Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance() : powerOfAttorneyFullId_;
+    }
+
+    public static final int ISDEFAULTPATCH_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch isDefaultPatch_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+     * @return Whether the isDefaultPatch field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsDefaultPatch() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+     * @return The isDefaultPatch.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch getIsDefaultPatch() {
+      return isDefaultPatch_ == null ? Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.getDefaultInstance() : isDefaultPatch_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatchOrBuilder getIsDefaultPatchOrBuilder() {
+      return isDefaultPatch_ == null ? Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.getDefaultInstance() : isDefaultPatch_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasPowerOfAttorneyFullId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getPowerOfAttorneyFullId().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasIsDefaultPatch()) {
+        if (!getIsDefaultPatch().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getPowerOfAttorneyFullId());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getIsDefaultPatch());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPowerOfAttorneyFullId());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getIsDefaultPatch());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 other = (Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2) obj;
+
+      if (hasPowerOfAttorneyFullId() != other.hasPowerOfAttorneyFullId()) return false;
+      if (hasPowerOfAttorneyFullId()) {
+        if (!getPowerOfAttorneyFullId()
+            .equals(other.getPowerOfAttorneyFullId())) return false;
+      }
+      if (hasIsDefaultPatch() != other.hasIsDefaultPatch()) return false;
+      if (hasIsDefaultPatch()) {
+        if (!getIsDefaultPatch()
+            .equals(other.getIsDefaultPatch())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPowerOfAttorneyFullId()) {
+        hash = (37 * hash) + POWEROFATTORNEYFULLID_FIELD_NUMBER;
+        hash = (53 * hash) + getPowerOfAttorneyFullId().hashCode();
+      }
+      if (hasIsDefaultPatch()) {
+        hash = (37 * hash) + ISDEFAULTPATCH_FIELD_NUMBER;
+        hash = (53 * hash) + getIsDefaultPatch().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyToUpdateV2}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyToUpdateV2)
+        Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2.class, Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getPowerOfAttorneyFullIdFieldBuilder();
+          getIsDefaultPatchFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        powerOfAttorneyFullId_ = null;
+        if (powerOfAttorneyFullIdBuilder_ != null) {
+          powerOfAttorneyFullIdBuilder_.dispose();
+          powerOfAttorneyFullIdBuilder_ = null;
+        }
+        isDefaultPatch_ = null;
+        if (isDefaultPatchBuilder_ != null) {
+          isDefaultPatchBuilder_.dispose();
+          isDefaultPatchBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 build() {
+        Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 buildPartial() {
+        Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 result = new Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.powerOfAttorneyFullId_ = powerOfAttorneyFullIdBuilder_ == null
+              ? powerOfAttorneyFullId_
+              : powerOfAttorneyFullIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.isDefaultPatch_ = isDefaultPatchBuilder_ == null
+              ? isDefaultPatch_
+              : isDefaultPatchBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2) {
+          return mergeFrom((Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 other) {
+        if (other == Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2.getDefaultInstance()) return this;
+        if (other.hasPowerOfAttorneyFullId()) {
+          mergePowerOfAttorneyFullId(other.getPowerOfAttorneyFullId());
+        }
+        if (other.hasIsDefaultPatch()) {
+          mergeIsDefaultPatch(other.getIsDefaultPatch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasPowerOfAttorneyFullId()) {
+          return false;
+        }
+        if (!getPowerOfAttorneyFullId().isInitialized()) {
+          return false;
+        }
+        if (hasIsDefaultPatch()) {
+          if (!getIsDefaultPatch().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPowerOfAttorneyFullIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getIsDefaultPatchFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId powerOfAttorneyFullId_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder> powerOfAttorneyFullIdBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+       * @return Whether the powerOfAttorneyFullId field is set.
+       */
+      public boolean hasPowerOfAttorneyFullId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+       * @return The powerOfAttorneyFullId.
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId getPowerOfAttorneyFullId() {
+        if (powerOfAttorneyFullIdBuilder_ == null) {
+          return powerOfAttorneyFullId_ == null ? Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance() : powerOfAttorneyFullId_;
+        } else {
+          return powerOfAttorneyFullIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+       */
+      public Builder setPowerOfAttorneyFullId(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId value) {
+        if (powerOfAttorneyFullIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          powerOfAttorneyFullId_ = value;
+        } else {
+          powerOfAttorneyFullIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+       */
+      public Builder setPowerOfAttorneyFullId(
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder builderForValue) {
+        if (powerOfAttorneyFullIdBuilder_ == null) {
+          powerOfAttorneyFullId_ = builderForValue.build();
+        } else {
+          powerOfAttorneyFullIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+       */
+      public Builder mergePowerOfAttorneyFullId(Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId value) {
+        if (powerOfAttorneyFullIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            powerOfAttorneyFullId_ != null &&
+            powerOfAttorneyFullId_ != Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance()) {
+            getPowerOfAttorneyFullIdBuilder().mergeFrom(value);
+          } else {
+            powerOfAttorneyFullId_ = value;
+          }
+        } else {
+          powerOfAttorneyFullIdBuilder_.mergeFrom(value);
+        }
+        if (powerOfAttorneyFullId_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+       */
+      public Builder clearPowerOfAttorneyFullId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        powerOfAttorneyFullId_ = null;
+        if (powerOfAttorneyFullIdBuilder_ != null) {
+          powerOfAttorneyFullIdBuilder_.dispose();
+          powerOfAttorneyFullIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder getPowerOfAttorneyFullIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPowerOfAttorneyFullIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+       */
+      public Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder getPowerOfAttorneyFullIdOrBuilder() {
+        if (powerOfAttorneyFullIdBuilder_ != null) {
+          return powerOfAttorneyFullIdBuilder_.getMessageOrBuilder();
+        } else {
+          return powerOfAttorneyFullId_ == null ?
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.getDefaultInstance() : powerOfAttorneyFullId_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyFullId PowerOfAttorneyFullId = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder> 
+          getPowerOfAttorneyFullIdFieldBuilder() {
+        if (powerOfAttorneyFullIdBuilder_ == null) {
+          powerOfAttorneyFullIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId.Builder, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullIdOrBuilder>(
+                  getPowerOfAttorneyFullId(),
+                  getParentForChildren(),
+                  isClean());
+          powerOfAttorneyFullId_ = null;
+        }
+        return powerOfAttorneyFullIdBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch isDefaultPatch_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch, Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.Builder, Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatchOrBuilder> isDefaultPatchBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+       * @return Whether the isDefaultPatch field is set.
+       */
+      public boolean hasIsDefaultPatch() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+       * @return The isDefaultPatch.
+       */
+      public Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch getIsDefaultPatch() {
+        if (isDefaultPatchBuilder_ == null) {
+          return isDefaultPatch_ == null ? Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.getDefaultInstance() : isDefaultPatch_;
+        } else {
+          return isDefaultPatchBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+       */
+      public Builder setIsDefaultPatch(Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch value) {
+        if (isDefaultPatchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          isDefaultPatch_ = value;
+        } else {
+          isDefaultPatchBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+       */
+      public Builder setIsDefaultPatch(
+          Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.Builder builderForValue) {
+        if (isDefaultPatchBuilder_ == null) {
+          isDefaultPatch_ = builderForValue.build();
+        } else {
+          isDefaultPatchBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+       */
+      public Builder mergeIsDefaultPatch(Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch value) {
+        if (isDefaultPatchBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            isDefaultPatch_ != null &&
+            isDefaultPatch_ != Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.getDefaultInstance()) {
+            getIsDefaultPatchBuilder().mergeFrom(value);
+          } else {
+            isDefaultPatch_ = value;
+          }
+        } else {
+          isDefaultPatchBuilder_.mergeFrom(value);
+        }
+        if (isDefaultPatch_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+       */
+      public Builder clearIsDefaultPatch() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        isDefaultPatch_ = null;
+        if (isDefaultPatchBuilder_ != null) {
+          isDefaultPatchBuilder_.dispose();
+          isDefaultPatchBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+       */
+      public Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.Builder getIsDefaultPatchBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getIsDefaultPatchFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+       */
+      public Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatchOrBuilder getIsDefaultPatchOrBuilder() {
+        if (isDefaultPatchBuilder_ != null) {
+          return isDefaultPatchBuilder_.getMessageOrBuilder();
+        } else {
+          return isDefaultPatch_ == null ?
+              Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.getDefaultInstance() : isDefaultPatch_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch IsDefaultPatch = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch, Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.Builder, Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatchOrBuilder> 
+          getIsDefaultPatchFieldBuilder() {
+        if (isDefaultPatchBuilder_ == null) {
+          isDefaultPatchBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch, Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatch.Builder, Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyIsDefaultPatchOrBuilder>(
+                  getIsDefaultPatch(),
+                  getParentForChildren(),
+                  isClean());
+          isDefaultPatch_ = null;
+        }
+        return isDefaultPatchBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyToUpdateV2)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyToUpdateV2)
+    private static final Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2();
+    }
+
+    public static Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EmployeePowerOfAttorneyToUpdateV2>
+        PARSER = new com.google.protobuf.AbstractParser<EmployeePowerOfAttorneyToUpdateV2>() {
+      @java.lang.Override
+      public EmployeePowerOfAttorneyToUpdateV2 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EmployeePowerOfAttorneyToUpdateV2> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmployeePowerOfAttorneyToUpdateV2> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyProtos.EmployeePowerOfAttorneyToUpdateV2 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface EmployeePowerOfAttorneyIsDefaultPatchOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Employees.PowersOfAttorney.EmployeePowerOfAttorneyIsDefaultPatch)
       com.google.protobuf.MessageOrBuilder {
@@ -2536,6 +3331,11 @@ public final class EmployeePowerOfAttorneyProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyIsDefaultPatch_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -2562,9 +3362,15 @@ public final class EmployeePowerOfAttorneyProtos {
       "ployeePowerOfAttorneyToUpdate\022j\n\016IsDefau" +
       "ltPatch\030\001 \001(\0132R.Diadoc.Api.Proto.Employe" +
       "es.PowersOfAttorney.EmployeePowerOfAttor" +
-      "neyIsDefaultPatch\":\n%EmployeePowerOfAtto" +
-      "rneyIsDefaultPatch\022\021\n\tIsDefault\030\001 \002(\010B\037B" +
-      "\035EmployeePowerOfAttorneyProtos"
+      "neyIsDefaultPatch\"\350\001\n!EmployeePowerOfAtt" +
+      "orneyToUpdateV2\022W\n\025PowerOfAttorneyFullId" +
+      "\030\001 \002(\01328.Diadoc.Api.Proto.PowersOfAttorn" +
+      "ey.PowerOfAttorneyFullId\022j\n\016IsDefaultPat" +
+      "ch\030\002 \001(\0132R.Diadoc.Api.Proto.Employees.Po" +
+      "wersOfAttorney.EmployeePowerOfAttorneyIs" +
+      "DefaultPatch\":\n%EmployeePowerOfAttorneyI" +
+      "sDefaultPatch\022\021\n\tIsDefault\030\001 \002(\010B\037B\035Empl" +
+      "oyeePowerOfAttorneyProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2589,8 +3395,14 @@ public final class EmployeePowerOfAttorneyProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdate_descriptor,
         new java.lang.String[] { "IsDefaultPatch", });
-    internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyIsDefaultPatch_descriptor =
+    internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyToUpdateV2_descriptor,
+        new java.lang.String[] { "PowerOfAttorneyFullId", "IsDefaultPatch", });
+    internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyIsDefaultPatch_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyIsDefaultPatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Employees_PowersOfAttorney_EmployeePowerOfAttorneyIsDefaultPatch_descriptor,
