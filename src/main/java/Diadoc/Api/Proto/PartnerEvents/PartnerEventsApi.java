@@ -30,17 +30,17 @@ public final class PartnerEventsApi {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string Cursor = 1;</code>
+     * <code>optional string Cursor = 1;</code>
      * @return Whether the cursor field is set.
      */
     boolean hasCursor();
     /**
-     * <code>required string Cursor = 1;</code>
+     * <code>optional string Cursor = 1;</code>
      * @return The cursor.
      */
     java.lang.String getCursor();
     /**
-     * <code>required string Cursor = 1;</code>
+     * <code>optional string Cursor = 1;</code>
      * @return The bytes for cursor.
      */
     com.google.protobuf.ByteString
@@ -155,7 +155,7 @@ public final class PartnerEventsApi {
     @SuppressWarnings("serial")
     private volatile java.lang.Object cursor_ = "";
     /**
-     * <code>required string Cursor = 1;</code>
+     * <code>optional string Cursor = 1;</code>
      * @return Whether the cursor field is set.
      */
     @java.lang.Override
@@ -163,7 +163,7 @@ public final class PartnerEventsApi {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string Cursor = 1;</code>
+     * <code>optional string Cursor = 1;</code>
      * @return The cursor.
      */
     @java.lang.Override
@@ -182,7 +182,7 @@ public final class PartnerEventsApi {
       }
     }
     /**
-     * <code>required string Cursor = 1;</code>
+     * <code>optional string Cursor = 1;</code>
      * @return The bytes for cursor.
      */
     @java.lang.Override
@@ -300,10 +300,6 @@ public final class PartnerEventsApi {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasCursor()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -648,9 +644,6 @@ public final class PartnerEventsApi {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        if (!hasCursor()) {
-          return false;
-        }
         return true;
       }
 
@@ -711,14 +704,14 @@ public final class PartnerEventsApi {
 
       private java.lang.Object cursor_ = "";
       /**
-       * <code>required string Cursor = 1;</code>
+       * <code>optional string Cursor = 1;</code>
        * @return Whether the cursor field is set.
        */
       public boolean hasCursor() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string Cursor = 1;</code>
+       * <code>optional string Cursor = 1;</code>
        * @return The cursor.
        */
       public java.lang.String getCursor() {
@@ -736,7 +729,7 @@ public final class PartnerEventsApi {
         }
       }
       /**
-       * <code>required string Cursor = 1;</code>
+       * <code>optional string Cursor = 1;</code>
        * @return The bytes for cursor.
        */
       public com.google.protobuf.ByteString
@@ -753,7 +746,7 @@ public final class PartnerEventsApi {
         }
       }
       /**
-       * <code>required string Cursor = 1;</code>
+       * <code>optional string Cursor = 1;</code>
        * @param value The cursor to set.
        * @return This builder for chaining.
        */
@@ -766,7 +759,7 @@ public final class PartnerEventsApi {
         return this;
       }
       /**
-       * <code>required string Cursor = 1;</code>
+       * <code>optional string Cursor = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCursor() {
@@ -776,7 +769,7 @@ public final class PartnerEventsApi {
         return this;
       }
       /**
-       * <code>required string Cursor = 1;</code>
+       * <code>optional string Cursor = 1;</code>
        * @param value The bytes for cursor to set.
        * @return This builder for chaining.
        */
@@ -1129,17 +1122,17 @@ public final class PartnerEventsApi {
         int index);
 
     /**
-     * <code>required string LastCursor = 2;</code>
+     * <code>optional string LastCursor = 2;</code>
      * @return Whether the lastCursor field is set.
      */
     boolean hasLastCursor();
     /**
-     * <code>required string LastCursor = 2;</code>
+     * <code>optional string LastCursor = 2;</code>
      * @return The lastCursor.
      */
     java.lang.String getLastCursor();
     /**
-     * <code>required string LastCursor = 2;</code>
+     * <code>optional string LastCursor = 2;</code>
      * @return The bytes for lastCursor.
      */
     com.google.protobuf.ByteString
@@ -1230,7 +1223,7 @@ public final class PartnerEventsApi {
     @SuppressWarnings("serial")
     private volatile java.lang.Object lastCursor_ = "";
     /**
-     * <code>required string LastCursor = 2;</code>
+     * <code>optional string LastCursor = 2;</code>
      * @return Whether the lastCursor field is set.
      */
     @java.lang.Override
@@ -1238,7 +1231,7 @@ public final class PartnerEventsApi {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string LastCursor = 2;</code>
+     * <code>optional string LastCursor = 2;</code>
      * @return The lastCursor.
      */
     @java.lang.Override
@@ -1257,7 +1250,7 @@ public final class PartnerEventsApi {
       }
     }
     /**
-     * <code>required string LastCursor = 2;</code>
+     * <code>optional string LastCursor = 2;</code>
      * @return The bytes for lastCursor.
      */
     @java.lang.Override
@@ -1282,10 +1275,6 @@ public final class PartnerEventsApi {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasLastCursor()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       for (int i = 0; i < getEventsCount(); i++) {
         if (!getEvents(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -1605,9 +1594,6 @@ public final class PartnerEventsApi {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        if (!hasLastCursor()) {
-          return false;
-        }
         for (int i = 0; i < getEventsCount(); i++) {
           if (!getEvents(i).isInitialized()) {
             return false;
@@ -1909,14 +1895,14 @@ public final class PartnerEventsApi {
 
       private java.lang.Object lastCursor_ = "";
       /**
-       * <code>required string LastCursor = 2;</code>
+       * <code>optional string LastCursor = 2;</code>
        * @return Whether the lastCursor field is set.
        */
       public boolean hasLastCursor() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>required string LastCursor = 2;</code>
+       * <code>optional string LastCursor = 2;</code>
        * @return The lastCursor.
        */
       public java.lang.String getLastCursor() {
@@ -1934,7 +1920,7 @@ public final class PartnerEventsApi {
         }
       }
       /**
-       * <code>required string LastCursor = 2;</code>
+       * <code>optional string LastCursor = 2;</code>
        * @return The bytes for lastCursor.
        */
       public com.google.protobuf.ByteString
@@ -1951,7 +1937,7 @@ public final class PartnerEventsApi {
         }
       }
       /**
-       * <code>required string LastCursor = 2;</code>
+       * <code>optional string LastCursor = 2;</code>
        * @param value The lastCursor to set.
        * @return This builder for chaining.
        */
@@ -1964,7 +1950,7 @@ public final class PartnerEventsApi {
         return this;
       }
       /**
-       * <code>required string LastCursor = 2;</code>
+       * <code>optional string LastCursor = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearLastCursor() {
@@ -1974,7 +1960,7 @@ public final class PartnerEventsApi {
         return this;
       }
       /**
-       * <code>required string LastCursor = 2;</code>
+       * <code>optional string LastCursor = 2;</code>
        * @param value The bytes for lastCursor to set.
        * @return This builder for chaining.
        */
@@ -3260,11 +3246,11 @@ public final class PartnerEventsApi {
       "p.proto\032\020DocumentId.proto\032\024TotalCountTyp" +
       "e.proto\032#Docflow/DocumentWithDocflowV4.p" +
       "roto\"g\n\027GetPartnerEventsRequest\022\016\n\006Curso" +
-      "r\030\001 \002(\t\022\022\n\nDirections\030\002 \003(\t\022\024\n\014MessageTy" +
+      "r\030\001 \001(\t\022\022\n\nDirections\030\002 \003(\t\022\024\n\014MessageTy" +
       "pes\030\003 \003(\t\022\022\n\005Limit\030\004 \001(\005:\003100\"l\n\030GetPart" +
       "nerEventsResponse\022<\n\006Events\030\001 \003(\0132,.Diad" +
       "oc.Api.Proto.PartnerEvents.PartnerEvent\022" +
-      "\022\n\nLastCursor\030\002 \002(\t\"\304\001\n\014PartnerEvent\022\017\n\007" +
+      "\022\n\nLastCursor\030\002 \001(\t\"\304\001\n\014PartnerEvent\022\017\n\007" +
       "EventId\030\001 \002(\t\022.\n\tTimestamp\030\002 \002(\0132\033.Diado" +
       "c.Api.Proto.Timestamp\0220\n\nDocumentId\030\003 \002(" +
       "\0132\034.Diadoc.Api.Proto.DocumentId\022A\n\010Docum" +
