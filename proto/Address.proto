@@ -6,6 +6,7 @@ message Address {
 	optional RussianAddress RussianAddress = 1;
 	optional ForeignAddress ForeignAddress = 2;
 	optional string AddressCode = 3;
+	optional GarAddress GarAddress = 4;
 }
 
 message RussianAddress {
@@ -24,4 +25,47 @@ message RussianAddress {
 message ForeignAddress {
 	required string Country = 1;	// страна (код)
 	required string Address = 2;	// текст адреса
+}
+
+message GarAddress {
+	required string FiasId = 1;
+	optional string ZipCode = 2;
+	required string RegionCode = 3;
+	optional GarAddressNameElement MunicipalDistrict = 4;
+	optional GarAddressNameElement UrbanSettlement = 5;
+	optional GarAddressNameElement City = 6;
+	optional GarAddressNameElement PlanningStructure = 7;
+	optional GarAddressNameElement Street = 8;
+	optional string Stead = 9;
+	optional GarHouse Garhouse = 10;
+	optional GarAddressNumberElement RoomWithinBuilding = 11;
+	optional GarAddressNumberElement RoomWithinApartment = 12;
+	required GarAddressDivisionType DivisionType = 13 [default = Municipal];
+	optional GarAddressNameElement District = 14;
+	optional GarAddressNameElement Settlement = 15;
+}
+
+message GarHouse {
+	required string Abbreviation = 1;
+	required string Number = 2;
+	optional string AddNumber1 = 3;
+	optional string AddAbbreviation1 = 4;
+	optional string AddNumber2 = 5;
+	optional string AddAbbreviation2 = 6;
+}
+
+message GarAddressNameElement {
+	required string Abbreviation = 1;
+	required string Name = 2;
+}
+
+message GarAddressNumberElement {
+	required string Abbreviation = 1;
+	required string Number = 2;
+}
+
+enum GarAddressDivisionType {
+	UnknownDivisionType = 0;
+	Municipal = 1;
+	Administrative = 2;
 }
