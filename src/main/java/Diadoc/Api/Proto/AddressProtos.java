@@ -25,6 +25,120 @@ public final class AddressProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.GarAddressDivisionType}
+   */
+  public enum GarAddressDivisionType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownDivisionType = 0;</code>
+     */
+    UnknownDivisionType(0),
+    /**
+     * <code>Municipal = 1;</code>
+     */
+    Municipal(1),
+    /**
+     * <code>Administrative = 2;</code>
+     */
+    Administrative(2),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        GarAddressDivisionType.class.getName());
+    }
+    /**
+     * <code>UnknownDivisionType = 0;</code>
+     */
+    public static final int UnknownDivisionType_VALUE = 0;
+    /**
+     * <code>Municipal = 1;</code>
+     */
+    public static final int Municipal_VALUE = 1;
+    /**
+     * <code>Administrative = 2;</code>
+     */
+    public static final int Administrative_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static GarAddressDivisionType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static GarAddressDivisionType forNumber(int value) {
+      switch (value) {
+        case 0: return UnknownDivisionType;
+        case 1: return Municipal;
+        case 2: return Administrative;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GarAddressDivisionType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        GarAddressDivisionType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GarAddressDivisionType>() {
+            public GarAddressDivisionType findValueByNumber(int number) {
+              return GarAddressDivisionType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.AddressProtos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final GarAddressDivisionType[] VALUES = values();
+
+    public static GarAddressDivisionType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private GarAddressDivisionType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.GarAddressDivisionType)
+  }
+
   public interface AddressOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Address)
       com.google.protobuf.MessageOrBuilder {
@@ -75,6 +189,21 @@ public final class AddressProtos {
      */
     com.google.protobuf.ByteString
         getAddressCodeBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+     * @return Whether the garAddress field is set.
+     */
+    boolean hasGarAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+     * @return The garAddress.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddress getGarAddress();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressOrBuilder getGarAddressOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Address}
@@ -216,6 +345,32 @@ public final class AddressProtos {
       }
     }
 
+    public static final int GARADDRESS_FIELD_NUMBER = 4;
+    private Diadoc.Api.Proto.AddressProtos.GarAddress garAddress_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+     * @return Whether the garAddress field is set.
+     */
+    @java.lang.Override
+    public boolean hasGarAddress() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+     * @return The garAddress.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddress getGarAddress() {
+      return garAddress_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddress.getDefaultInstance() : garAddress_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressOrBuilder getGarAddressOrBuilder() {
+      return garAddress_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddress.getDefaultInstance() : garAddress_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -231,6 +386,12 @@ public final class AddressProtos {
       }
       if (hasForeignAddress()) {
         if (!getForeignAddress().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasGarAddress()) {
+        if (!getGarAddress().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -251,6 +412,9 @@ public final class AddressProtos {
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, addressCode_);
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(4, getGarAddress());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -270,6 +434,10 @@ public final class AddressProtos {
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, addressCode_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGarAddress());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -301,6 +469,11 @@ public final class AddressProtos {
         if (!getAddressCode()
             .equals(other.getAddressCode())) return false;
       }
+      if (hasGarAddress() != other.hasGarAddress()) return false;
+      if (hasGarAddress()) {
+        if (!getGarAddress()
+            .equals(other.getGarAddress())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -323,6 +496,10 @@ public final class AddressProtos {
       if (hasAddressCode()) {
         hash = (37 * hash) + ADDRESSCODE_FIELD_NUMBER;
         hash = (53 * hash) + getAddressCode().hashCode();
+      }
+      if (hasGarAddress()) {
+        hash = (37 * hash) + GARADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getGarAddress().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -456,6 +633,7 @@ public final class AddressProtos {
                 .alwaysUseFieldBuilders) {
           getRussianAddressFieldBuilder();
           getForeignAddressFieldBuilder();
+          getGarAddressFieldBuilder();
         }
       }
       @java.lang.Override
@@ -473,6 +651,11 @@ public final class AddressProtos {
           foreignAddressBuilder_ = null;
         }
         addressCode_ = "";
+        garAddress_ = null;
+        if (garAddressBuilder_ != null) {
+          garAddressBuilder_.dispose();
+          garAddressBuilder_ = null;
+        }
         return this;
       }
 
@@ -523,6 +706,12 @@ public final class AddressProtos {
           result.addressCode_ = addressCode_;
           to_bitField0_ |= 0x00000004;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.garAddress_ = garAddressBuilder_ == null
+              ? garAddress_
+              : garAddressBuilder_.build();
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -549,6 +738,9 @@ public final class AddressProtos {
           bitField0_ |= 0x00000004;
           onChanged();
         }
+        if (other.hasGarAddress()) {
+          mergeGarAddress(other.getGarAddress());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -563,6 +755,11 @@ public final class AddressProtos {
         }
         if (hasForeignAddress()) {
           if (!getForeignAddress().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasGarAddress()) {
+          if (!getGarAddress().isInitialized()) {
             return false;
           }
         }
@@ -604,6 +801,13 @@ public final class AddressProtos {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                input.readMessage(
+                    getGarAddressFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -941,6 +1145,127 @@ public final class AddressProtos {
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddress garAddress_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddress, Diadoc.Api.Proto.AddressProtos.GarAddress.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressOrBuilder> garAddressBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+       * @return Whether the garAddress field is set.
+       */
+      public boolean hasGarAddress() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+       * @return The garAddress.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddress getGarAddress() {
+        if (garAddressBuilder_ == null) {
+          return garAddress_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddress.getDefaultInstance() : garAddress_;
+        } else {
+          return garAddressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+       */
+      public Builder setGarAddress(Diadoc.Api.Proto.AddressProtos.GarAddress value) {
+        if (garAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          garAddress_ = value;
+        } else {
+          garAddressBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+       */
+      public Builder setGarAddress(
+          Diadoc.Api.Proto.AddressProtos.GarAddress.Builder builderForValue) {
+        if (garAddressBuilder_ == null) {
+          garAddress_ = builderForValue.build();
+        } else {
+          garAddressBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+       */
+      public Builder mergeGarAddress(Diadoc.Api.Proto.AddressProtos.GarAddress value) {
+        if (garAddressBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            garAddress_ != null &&
+            garAddress_ != Diadoc.Api.Proto.AddressProtos.GarAddress.getDefaultInstance()) {
+            getGarAddressBuilder().mergeFrom(value);
+          } else {
+            garAddress_ = value;
+          }
+        } else {
+          garAddressBuilder_.mergeFrom(value);
+        }
+        if (garAddress_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+       */
+      public Builder clearGarAddress() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        garAddress_ = null;
+        if (garAddressBuilder_ != null) {
+          garAddressBuilder_.dispose();
+          garAddressBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddress.Builder getGarAddressBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getGarAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressOrBuilder getGarAddressOrBuilder() {
+        if (garAddressBuilder_ != null) {
+          return garAddressBuilder_.getMessageOrBuilder();
+        } else {
+          return garAddress_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddress.getDefaultInstance() : garAddress_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddress GarAddress = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddress, Diadoc.Api.Proto.AddressProtos.GarAddress.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressOrBuilder> 
+          getGarAddressFieldBuilder() {
+        if (garAddressBuilder_ == null) {
+          garAddressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddress, Diadoc.Api.Proto.AddressProtos.GarAddress.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressOrBuilder>(
+                  getGarAddress(),
+                  getParentForChildren(),
+                  isClean());
+          garAddress_ = null;
+        }
+        return garAddressBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Address)
@@ -4445,6 +4770,6229 @@ public final class AddressProtos {
 
   }
 
+  public interface GarAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.GarAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string FiasId = 1;</code>
+     * @return Whether the fiasId field is set.
+     */
+    boolean hasFiasId();
+    /**
+     * <code>required string FiasId = 1;</code>
+     * @return The fiasId.
+     */
+    java.lang.String getFiasId();
+    /**
+     * <code>required string FiasId = 1;</code>
+     * @return The bytes for fiasId.
+     */
+    com.google.protobuf.ByteString
+        getFiasIdBytes();
+
+    /**
+     * <code>optional string ZipCode = 2;</code>
+     * @return Whether the zipCode field is set.
+     */
+    boolean hasZipCode();
+    /**
+     * <code>optional string ZipCode = 2;</code>
+     * @return The zipCode.
+     */
+    java.lang.String getZipCode();
+    /**
+     * <code>optional string ZipCode = 2;</code>
+     * @return The bytes for zipCode.
+     */
+    com.google.protobuf.ByteString
+        getZipCodeBytes();
+
+    /**
+     * <code>required string RegionCode = 3;</code>
+     * @return Whether the regionCode field is set.
+     */
+    boolean hasRegionCode();
+    /**
+     * <code>required string RegionCode = 3;</code>
+     * @return The regionCode.
+     */
+    java.lang.String getRegionCode();
+    /**
+     * <code>required string RegionCode = 3;</code>
+     * @return The bytes for regionCode.
+     */
+    com.google.protobuf.ByteString
+        getRegionCodeBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+     * @return Whether the municipalDistrict field is set.
+     */
+    boolean hasMunicipalDistrict();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+     * @return The municipalDistrict.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getMunicipalDistrict();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getMunicipalDistrictOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+     * @return Whether the urbanSettlement field is set.
+     */
+    boolean hasUrbanSettlement();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+     * @return The urbanSettlement.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getUrbanSettlement();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getUrbanSettlementOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+     * @return Whether the city field is set.
+     */
+    boolean hasCity();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+     * @return The city.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getCity();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getCityOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+     * @return Whether the planningStructure field is set.
+     */
+    boolean hasPlanningStructure();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+     * @return The planningStructure.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getPlanningStructure();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getPlanningStructureOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+     * @return Whether the street field is set.
+     */
+    boolean hasStreet();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+     * @return The street.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getStreet();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getStreetOrBuilder();
+
+    /**
+     * <code>optional string Stead = 9;</code>
+     * @return Whether the stead field is set.
+     */
+    boolean hasStead();
+    /**
+     * <code>optional string Stead = 9;</code>
+     * @return The stead.
+     */
+    java.lang.String getStead();
+    /**
+     * <code>optional string Stead = 9;</code>
+     * @return The bytes for stead.
+     */
+    com.google.protobuf.ByteString
+        getSteadBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+     * @return Whether the garhouse field is set.
+     */
+    boolean hasGarhouse();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+     * @return The garhouse.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarHouse getGarhouse();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarHouseOrBuilder getGarhouseOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+     * @return Whether the roomWithinBuilding field is set.
+     */
+    boolean hasRoomWithinBuilding();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+     * @return The roomWithinBuilding.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement getRoomWithinBuilding();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder getRoomWithinBuildingOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+     * @return Whether the roomWithinApartment field is set.
+     */
+    boolean hasRoomWithinApartment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+     * @return The roomWithinApartment.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement getRoomWithinApartment();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder getRoomWithinApartmentOrBuilder();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.GarAddressDivisionType DivisionType = 13 [default = Municipal];</code>
+     * @return Whether the divisionType field is set.
+     */
+    boolean hasDivisionType();
+    /**
+     * <code>required .Diadoc.Api.Proto.GarAddressDivisionType DivisionType = 13 [default = Municipal];</code>
+     * @return The divisionType.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType getDivisionType();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+     * @return Whether the district field is set.
+     */
+    boolean hasDistrict();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+     * @return The district.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getDistrict();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getDistrictOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+     * @return Whether the settlement field is set.
+     */
+    boolean hasSettlement();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+     * @return The settlement.
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getSettlement();
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+     */
+    Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getSettlementOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.GarAddress}
+   */
+  public static final class GarAddress extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.GarAddress)
+      GarAddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        GarAddress.class.getName());
+    }
+    // Use GarAddress.newBuilder() to construct.
+    private GarAddress(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GarAddress() {
+      fiasId_ = "";
+      zipCode_ = "";
+      regionCode_ = "";
+      stead_ = "";
+      divisionType_ = 1;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.AddressProtos.GarAddress.class, Diadoc.Api.Proto.AddressProtos.GarAddress.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FIASID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fiasId_ = "";
+    /**
+     * <code>required string FiasId = 1;</code>
+     * @return Whether the fiasId field is set.
+     */
+    @java.lang.Override
+    public boolean hasFiasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string FiasId = 1;</code>
+     * @return The fiasId.
+     */
+    @java.lang.Override
+    public java.lang.String getFiasId() {
+      java.lang.Object ref = fiasId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          fiasId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string FiasId = 1;</code>
+     * @return The bytes for fiasId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFiasIdBytes() {
+      java.lang.Object ref = fiasId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fiasId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZIPCODE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object zipCode_ = "";
+    /**
+     * <code>optional string ZipCode = 2;</code>
+     * @return Whether the zipCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasZipCode() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string ZipCode = 2;</code>
+     * @return The zipCode.
+     */
+    @java.lang.Override
+    public java.lang.String getZipCode() {
+      java.lang.Object ref = zipCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          zipCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ZipCode = 2;</code>
+     * @return The bytes for zipCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getZipCodeBytes() {
+      java.lang.Object ref = zipCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        zipCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGIONCODE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object regionCode_ = "";
+    /**
+     * <code>required string RegionCode = 3;</code>
+     * @return Whether the regionCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasRegionCode() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>required string RegionCode = 3;</code>
+     * @return The regionCode.
+     */
+    @java.lang.Override
+    public java.lang.String getRegionCode() {
+      java.lang.Object ref = regionCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          regionCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string RegionCode = 3;</code>
+     * @return The bytes for regionCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionCodeBytes() {
+      java.lang.Object ref = regionCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        regionCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MUNICIPALDISTRICT_FIELD_NUMBER = 4;
+    private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement municipalDistrict_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+     * @return Whether the municipalDistrict field is set.
+     */
+    @java.lang.Override
+    public boolean hasMunicipalDistrict() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+     * @return The municipalDistrict.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getMunicipalDistrict() {
+      return municipalDistrict_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : municipalDistrict_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getMunicipalDistrictOrBuilder() {
+      return municipalDistrict_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : municipalDistrict_;
+    }
+
+    public static final int URBANSETTLEMENT_FIELD_NUMBER = 5;
+    private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement urbanSettlement_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+     * @return Whether the urbanSettlement field is set.
+     */
+    @java.lang.Override
+    public boolean hasUrbanSettlement() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+     * @return The urbanSettlement.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getUrbanSettlement() {
+      return urbanSettlement_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : urbanSettlement_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getUrbanSettlementOrBuilder() {
+      return urbanSettlement_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : urbanSettlement_;
+    }
+
+    public static final int CITY_FIELD_NUMBER = 6;
+    private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement city_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+     * @return Whether the city field is set.
+     */
+    @java.lang.Override
+    public boolean hasCity() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+     * @return The city.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getCity() {
+      return city_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : city_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getCityOrBuilder() {
+      return city_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : city_;
+    }
+
+    public static final int PLANNINGSTRUCTURE_FIELD_NUMBER = 7;
+    private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement planningStructure_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+     * @return Whether the planningStructure field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlanningStructure() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+     * @return The planningStructure.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getPlanningStructure() {
+      return planningStructure_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : planningStructure_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getPlanningStructureOrBuilder() {
+      return planningStructure_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : planningStructure_;
+    }
+
+    public static final int STREET_FIELD_NUMBER = 8;
+    private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement street_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+     * @return Whether the street field is set.
+     */
+    @java.lang.Override
+    public boolean hasStreet() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+     * @return The street.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getStreet() {
+      return street_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : street_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getStreetOrBuilder() {
+      return street_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : street_;
+    }
+
+    public static final int STEAD_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stead_ = "";
+    /**
+     * <code>optional string Stead = 9;</code>
+     * @return Whether the stead field is set.
+     */
+    @java.lang.Override
+    public boolean hasStead() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional string Stead = 9;</code>
+     * @return The stead.
+     */
+    @java.lang.Override
+    public java.lang.String getStead() {
+      java.lang.Object ref = stead_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          stead_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Stead = 9;</code>
+     * @return The bytes for stead.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSteadBytes() {
+      java.lang.Object ref = stead_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stead_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GARHOUSE_FIELD_NUMBER = 10;
+    private Diadoc.Api.Proto.AddressProtos.GarHouse garhouse_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+     * @return Whether the garhouse field is set.
+     */
+    @java.lang.Override
+    public boolean hasGarhouse() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+     * @return The garhouse.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarHouse getGarhouse() {
+      return garhouse_ == null ? Diadoc.Api.Proto.AddressProtos.GarHouse.getDefaultInstance() : garhouse_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarHouseOrBuilder getGarhouseOrBuilder() {
+      return garhouse_ == null ? Diadoc.Api.Proto.AddressProtos.GarHouse.getDefaultInstance() : garhouse_;
+    }
+
+    public static final int ROOMWITHINBUILDING_FIELD_NUMBER = 11;
+    private Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement roomWithinBuilding_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+     * @return Whether the roomWithinBuilding field is set.
+     */
+    @java.lang.Override
+    public boolean hasRoomWithinBuilding() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+     * @return The roomWithinBuilding.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement getRoomWithinBuilding() {
+      return roomWithinBuilding_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance() : roomWithinBuilding_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder getRoomWithinBuildingOrBuilder() {
+      return roomWithinBuilding_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance() : roomWithinBuilding_;
+    }
+
+    public static final int ROOMWITHINAPARTMENT_FIELD_NUMBER = 12;
+    private Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement roomWithinApartment_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+     * @return Whether the roomWithinApartment field is set.
+     */
+    @java.lang.Override
+    public boolean hasRoomWithinApartment() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+     * @return The roomWithinApartment.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement getRoomWithinApartment() {
+      return roomWithinApartment_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance() : roomWithinApartment_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder getRoomWithinApartmentOrBuilder() {
+      return roomWithinApartment_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance() : roomWithinApartment_;
+    }
+
+    public static final int DIVISIONTYPE_FIELD_NUMBER = 13;
+    private int divisionType_ = 1;
+    /**
+     * <code>required .Diadoc.Api.Proto.GarAddressDivisionType DivisionType = 13 [default = Municipal];</code>
+     * @return Whether the divisionType field is set.
+     */
+    @java.lang.Override public boolean hasDivisionType() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.GarAddressDivisionType DivisionType = 13 [default = Municipal];</code>
+     * @return The divisionType.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType getDivisionType() {
+      Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType result = Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType.forNumber(divisionType_);
+      return result == null ? Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType.Municipal : result;
+    }
+
+    public static final int DISTRICT_FIELD_NUMBER = 14;
+    private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement district_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+     * @return Whether the district field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistrict() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+     * @return The district.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getDistrict() {
+      return district_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : district_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getDistrictOrBuilder() {
+      return district_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : district_;
+    }
+
+    public static final int SETTLEMENT_FIELD_NUMBER = 15;
+    private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement settlement_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+     * @return Whether the settlement field is set.
+     */
+    @java.lang.Override
+    public boolean hasSettlement() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+     * @return The settlement.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getSettlement() {
+      return settlement_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : settlement_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getSettlementOrBuilder() {
+      return settlement_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : settlement_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasFiasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRegionCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDivisionType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasMunicipalDistrict()) {
+        if (!getMunicipalDistrict().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasUrbanSettlement()) {
+        if (!getUrbanSettlement().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasCity()) {
+        if (!getCity().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasPlanningStructure()) {
+        if (!getPlanningStructure().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasStreet()) {
+        if (!getStreet().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasGarhouse()) {
+        if (!getGarhouse().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasRoomWithinBuilding()) {
+        if (!getRoomWithinBuilding().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasRoomWithinApartment()) {
+        if (!getRoomWithinApartment().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasDistrict()) {
+        if (!getDistrict().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasSettlement()) {
+        if (!getSettlement().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, fiasId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, zipCode_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, regionCode_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(4, getMunicipalDistrict());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(5, getUrbanSettlement());
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeMessage(6, getCity());
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeMessage(7, getPlanningStructure());
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeMessage(8, getStreet());
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, stead_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeMessage(10, getGarhouse());
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeMessage(11, getRoomWithinBuilding());
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeMessage(12, getRoomWithinApartment());
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeEnum(13, divisionType_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        output.writeMessage(14, getDistrict());
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeMessage(15, getSettlement());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, fiasId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, zipCode_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, regionCode_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMunicipalDistrict());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getUrbanSettlement());
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getCity());
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getPlanningStructure());
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getStreet());
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, stead_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getGarhouse());
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getRoomWithinBuilding());
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getRoomWithinApartment());
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, divisionType_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getDistrict());
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getSettlement());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.AddressProtos.GarAddress)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.AddressProtos.GarAddress other = (Diadoc.Api.Proto.AddressProtos.GarAddress) obj;
+
+      if (hasFiasId() != other.hasFiasId()) return false;
+      if (hasFiasId()) {
+        if (!getFiasId()
+            .equals(other.getFiasId())) return false;
+      }
+      if (hasZipCode() != other.hasZipCode()) return false;
+      if (hasZipCode()) {
+        if (!getZipCode()
+            .equals(other.getZipCode())) return false;
+      }
+      if (hasRegionCode() != other.hasRegionCode()) return false;
+      if (hasRegionCode()) {
+        if (!getRegionCode()
+            .equals(other.getRegionCode())) return false;
+      }
+      if (hasMunicipalDistrict() != other.hasMunicipalDistrict()) return false;
+      if (hasMunicipalDistrict()) {
+        if (!getMunicipalDistrict()
+            .equals(other.getMunicipalDistrict())) return false;
+      }
+      if (hasUrbanSettlement() != other.hasUrbanSettlement()) return false;
+      if (hasUrbanSettlement()) {
+        if (!getUrbanSettlement()
+            .equals(other.getUrbanSettlement())) return false;
+      }
+      if (hasCity() != other.hasCity()) return false;
+      if (hasCity()) {
+        if (!getCity()
+            .equals(other.getCity())) return false;
+      }
+      if (hasPlanningStructure() != other.hasPlanningStructure()) return false;
+      if (hasPlanningStructure()) {
+        if (!getPlanningStructure()
+            .equals(other.getPlanningStructure())) return false;
+      }
+      if (hasStreet() != other.hasStreet()) return false;
+      if (hasStreet()) {
+        if (!getStreet()
+            .equals(other.getStreet())) return false;
+      }
+      if (hasStead() != other.hasStead()) return false;
+      if (hasStead()) {
+        if (!getStead()
+            .equals(other.getStead())) return false;
+      }
+      if (hasGarhouse() != other.hasGarhouse()) return false;
+      if (hasGarhouse()) {
+        if (!getGarhouse()
+            .equals(other.getGarhouse())) return false;
+      }
+      if (hasRoomWithinBuilding() != other.hasRoomWithinBuilding()) return false;
+      if (hasRoomWithinBuilding()) {
+        if (!getRoomWithinBuilding()
+            .equals(other.getRoomWithinBuilding())) return false;
+      }
+      if (hasRoomWithinApartment() != other.hasRoomWithinApartment()) return false;
+      if (hasRoomWithinApartment()) {
+        if (!getRoomWithinApartment()
+            .equals(other.getRoomWithinApartment())) return false;
+      }
+      if (hasDivisionType() != other.hasDivisionType()) return false;
+      if (hasDivisionType()) {
+        if (divisionType_ != other.divisionType_) return false;
+      }
+      if (hasDistrict() != other.hasDistrict()) return false;
+      if (hasDistrict()) {
+        if (!getDistrict()
+            .equals(other.getDistrict())) return false;
+      }
+      if (hasSettlement() != other.hasSettlement()) return false;
+      if (hasSettlement()) {
+        if (!getSettlement()
+            .equals(other.getSettlement())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFiasId()) {
+        hash = (37 * hash) + FIASID_FIELD_NUMBER;
+        hash = (53 * hash) + getFiasId().hashCode();
+      }
+      if (hasZipCode()) {
+        hash = (37 * hash) + ZIPCODE_FIELD_NUMBER;
+        hash = (53 * hash) + getZipCode().hashCode();
+      }
+      if (hasRegionCode()) {
+        hash = (37 * hash) + REGIONCODE_FIELD_NUMBER;
+        hash = (53 * hash) + getRegionCode().hashCode();
+      }
+      if (hasMunicipalDistrict()) {
+        hash = (37 * hash) + MUNICIPALDISTRICT_FIELD_NUMBER;
+        hash = (53 * hash) + getMunicipalDistrict().hashCode();
+      }
+      if (hasUrbanSettlement()) {
+        hash = (37 * hash) + URBANSETTLEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getUrbanSettlement().hashCode();
+      }
+      if (hasCity()) {
+        hash = (37 * hash) + CITY_FIELD_NUMBER;
+        hash = (53 * hash) + getCity().hashCode();
+      }
+      if (hasPlanningStructure()) {
+        hash = (37 * hash) + PLANNINGSTRUCTURE_FIELD_NUMBER;
+        hash = (53 * hash) + getPlanningStructure().hashCode();
+      }
+      if (hasStreet()) {
+        hash = (37 * hash) + STREET_FIELD_NUMBER;
+        hash = (53 * hash) + getStreet().hashCode();
+      }
+      if (hasStead()) {
+        hash = (37 * hash) + STEAD_FIELD_NUMBER;
+        hash = (53 * hash) + getStead().hashCode();
+      }
+      if (hasGarhouse()) {
+        hash = (37 * hash) + GARHOUSE_FIELD_NUMBER;
+        hash = (53 * hash) + getGarhouse().hashCode();
+      }
+      if (hasRoomWithinBuilding()) {
+        hash = (37 * hash) + ROOMWITHINBUILDING_FIELD_NUMBER;
+        hash = (53 * hash) + getRoomWithinBuilding().hashCode();
+      }
+      if (hasRoomWithinApartment()) {
+        hash = (37 * hash) + ROOMWITHINAPARTMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getRoomWithinApartment().hashCode();
+      }
+      if (hasDivisionType()) {
+        hash = (37 * hash) + DIVISIONTYPE_FIELD_NUMBER;
+        hash = (53 * hash) + divisionType_;
+      }
+      if (hasDistrict()) {
+        hash = (37 * hash) + DISTRICT_FIELD_NUMBER;
+        hash = (53 * hash) + getDistrict().hashCode();
+      }
+      if (hasSettlement()) {
+        hash = (37 * hash) + SETTLEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getSettlement().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.AddressProtos.GarAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.GarAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.GarAddress)
+        Diadoc.Api.Proto.AddressProtos.GarAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.AddressProtos.GarAddress.class, Diadoc.Api.Proto.AddressProtos.GarAddress.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.AddressProtos.GarAddress.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getMunicipalDistrictFieldBuilder();
+          getUrbanSettlementFieldBuilder();
+          getCityFieldBuilder();
+          getPlanningStructureFieldBuilder();
+          getStreetFieldBuilder();
+          getGarhouseFieldBuilder();
+          getRoomWithinBuildingFieldBuilder();
+          getRoomWithinApartmentFieldBuilder();
+          getDistrictFieldBuilder();
+          getSettlementFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        fiasId_ = "";
+        zipCode_ = "";
+        regionCode_ = "";
+        municipalDistrict_ = null;
+        if (municipalDistrictBuilder_ != null) {
+          municipalDistrictBuilder_.dispose();
+          municipalDistrictBuilder_ = null;
+        }
+        urbanSettlement_ = null;
+        if (urbanSettlementBuilder_ != null) {
+          urbanSettlementBuilder_.dispose();
+          urbanSettlementBuilder_ = null;
+        }
+        city_ = null;
+        if (cityBuilder_ != null) {
+          cityBuilder_.dispose();
+          cityBuilder_ = null;
+        }
+        planningStructure_ = null;
+        if (planningStructureBuilder_ != null) {
+          planningStructureBuilder_.dispose();
+          planningStructureBuilder_ = null;
+        }
+        street_ = null;
+        if (streetBuilder_ != null) {
+          streetBuilder_.dispose();
+          streetBuilder_ = null;
+        }
+        stead_ = "";
+        garhouse_ = null;
+        if (garhouseBuilder_ != null) {
+          garhouseBuilder_.dispose();
+          garhouseBuilder_ = null;
+        }
+        roomWithinBuilding_ = null;
+        if (roomWithinBuildingBuilder_ != null) {
+          roomWithinBuildingBuilder_.dispose();
+          roomWithinBuildingBuilder_ = null;
+        }
+        roomWithinApartment_ = null;
+        if (roomWithinApartmentBuilder_ != null) {
+          roomWithinApartmentBuilder_.dispose();
+          roomWithinApartmentBuilder_ = null;
+        }
+        divisionType_ = 1;
+        district_ = null;
+        if (districtBuilder_ != null) {
+          districtBuilder_.dispose();
+          districtBuilder_ = null;
+        }
+        settlement_ = null;
+        if (settlementBuilder_ != null) {
+          settlementBuilder_.dispose();
+          settlementBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddress_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddress getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.AddressProtos.GarAddress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddress build() {
+        Diadoc.Api.Proto.AddressProtos.GarAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddress buildPartial() {
+        Diadoc.Api.Proto.AddressProtos.GarAddress result = new Diadoc.Api.Proto.AddressProtos.GarAddress(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.AddressProtos.GarAddress result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fiasId_ = fiasId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.zipCode_ = zipCode_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.regionCode_ = regionCode_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.municipalDistrict_ = municipalDistrictBuilder_ == null
+              ? municipalDistrict_
+              : municipalDistrictBuilder_.build();
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.urbanSettlement_ = urbanSettlementBuilder_ == null
+              ? urbanSettlement_
+              : urbanSettlementBuilder_.build();
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.city_ = cityBuilder_ == null
+              ? city_
+              : cityBuilder_.build();
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.planningStructure_ = planningStructureBuilder_ == null
+              ? planningStructure_
+              : planningStructureBuilder_.build();
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.street_ = streetBuilder_ == null
+              ? street_
+              : streetBuilder_.build();
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.stead_ = stead_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.garhouse_ = garhouseBuilder_ == null
+              ? garhouse_
+              : garhouseBuilder_.build();
+          to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.roomWithinBuilding_ = roomWithinBuildingBuilder_ == null
+              ? roomWithinBuilding_
+              : roomWithinBuildingBuilder_.build();
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.roomWithinApartment_ = roomWithinApartmentBuilder_ == null
+              ? roomWithinApartment_
+              : roomWithinApartmentBuilder_.build();
+          to_bitField0_ |= 0x00000800;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.divisionType_ = divisionType_;
+          to_bitField0_ |= 0x00001000;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.district_ = districtBuilder_ == null
+              ? district_
+              : districtBuilder_.build();
+          to_bitField0_ |= 0x00002000;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.settlement_ = settlementBuilder_ == null
+              ? settlement_
+              : settlementBuilder_.build();
+          to_bitField0_ |= 0x00004000;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.AddressProtos.GarAddress) {
+          return mergeFrom((Diadoc.Api.Proto.AddressProtos.GarAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.AddressProtos.GarAddress other) {
+        if (other == Diadoc.Api.Proto.AddressProtos.GarAddress.getDefaultInstance()) return this;
+        if (other.hasFiasId()) {
+          fiasId_ = other.fiasId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasZipCode()) {
+          zipCode_ = other.zipCode_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasRegionCode()) {
+          regionCode_ = other.regionCode_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasMunicipalDistrict()) {
+          mergeMunicipalDistrict(other.getMunicipalDistrict());
+        }
+        if (other.hasUrbanSettlement()) {
+          mergeUrbanSettlement(other.getUrbanSettlement());
+        }
+        if (other.hasCity()) {
+          mergeCity(other.getCity());
+        }
+        if (other.hasPlanningStructure()) {
+          mergePlanningStructure(other.getPlanningStructure());
+        }
+        if (other.hasStreet()) {
+          mergeStreet(other.getStreet());
+        }
+        if (other.hasStead()) {
+          stead_ = other.stead_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (other.hasGarhouse()) {
+          mergeGarhouse(other.getGarhouse());
+        }
+        if (other.hasRoomWithinBuilding()) {
+          mergeRoomWithinBuilding(other.getRoomWithinBuilding());
+        }
+        if (other.hasRoomWithinApartment()) {
+          mergeRoomWithinApartment(other.getRoomWithinApartment());
+        }
+        if (other.hasDivisionType()) {
+          setDivisionType(other.getDivisionType());
+        }
+        if (other.hasDistrict()) {
+          mergeDistrict(other.getDistrict());
+        }
+        if (other.hasSettlement()) {
+          mergeSettlement(other.getSettlement());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasFiasId()) {
+          return false;
+        }
+        if (!hasRegionCode()) {
+          return false;
+        }
+        if (!hasDivisionType()) {
+          return false;
+        }
+        if (hasMunicipalDistrict()) {
+          if (!getMunicipalDistrict().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasUrbanSettlement()) {
+          if (!getUrbanSettlement().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasCity()) {
+          if (!getCity().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasPlanningStructure()) {
+          if (!getPlanningStructure().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasStreet()) {
+          if (!getStreet().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasGarhouse()) {
+          if (!getGarhouse().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasRoomWithinBuilding()) {
+          if (!getRoomWithinBuilding().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasRoomWithinApartment()) {
+          if (!getRoomWithinApartment().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasDistrict()) {
+          if (!getDistrict().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasSettlement()) {
+          if (!getSettlement().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                fiasId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                zipCode_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                regionCode_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getMunicipalDistrictFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getUrbanSettlementFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getCityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getPlanningStructureFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getStreetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                stead_ = input.readBytes();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getGarhouseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getRoomWithinBuildingFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getRoomWithinApartmentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 104: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType tmpValue =
+                    Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(13, tmpRaw);
+                } else {
+                  divisionType_ = tmpRaw;
+                  bitField0_ |= 0x00001000;
+                }
+                break;
+              } // case 104
+              case 114: {
+                input.readMessage(
+                    getDistrictFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 122: {
+                input.readMessage(
+                    getSettlementFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object fiasId_ = "";
+      /**
+       * <code>required string FiasId = 1;</code>
+       * @return Whether the fiasId field is set.
+       */
+      public boolean hasFiasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string FiasId = 1;</code>
+       * @return The fiasId.
+       */
+      public java.lang.String getFiasId() {
+        java.lang.Object ref = fiasId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fiasId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string FiasId = 1;</code>
+       * @return The bytes for fiasId.
+       */
+      public com.google.protobuf.ByteString
+          getFiasIdBytes() {
+        java.lang.Object ref = fiasId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fiasId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string FiasId = 1;</code>
+       * @param value The fiasId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFiasId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fiasId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string FiasId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFiasId() {
+        fiasId_ = getDefaultInstance().getFiasId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string FiasId = 1;</code>
+       * @param value The bytes for fiasId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFiasIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        fiasId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object zipCode_ = "";
+      /**
+       * <code>optional string ZipCode = 2;</code>
+       * @return Whether the zipCode field is set.
+       */
+      public boolean hasZipCode() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string ZipCode = 2;</code>
+       * @return The zipCode.
+       */
+      public java.lang.String getZipCode() {
+        java.lang.Object ref = zipCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            zipCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ZipCode = 2;</code>
+       * @return The bytes for zipCode.
+       */
+      public com.google.protobuf.ByteString
+          getZipCodeBytes() {
+        java.lang.Object ref = zipCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          zipCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ZipCode = 2;</code>
+       * @param value The zipCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZipCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        zipCode_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ZipCode = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZipCode() {
+        zipCode_ = getDefaultInstance().getZipCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ZipCode = 2;</code>
+       * @param value The bytes for zipCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZipCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        zipCode_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object regionCode_ = "";
+      /**
+       * <code>required string RegionCode = 3;</code>
+       * @return Whether the regionCode field is set.
+       */
+      public boolean hasRegionCode() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required string RegionCode = 3;</code>
+       * @return The regionCode.
+       */
+      public java.lang.String getRegionCode() {
+        java.lang.Object ref = regionCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            regionCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string RegionCode = 3;</code>
+       * @return The bytes for regionCode.
+       */
+      public com.google.protobuf.ByteString
+          getRegionCodeBytes() {
+        java.lang.Object ref = regionCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          regionCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string RegionCode = 3;</code>
+       * @param value The regionCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        regionCode_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string RegionCode = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegionCode() {
+        regionCode_ = getDefaultInstance().getRegionCode();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string RegionCode = 3;</code>
+       * @param value The bytes for regionCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        regionCode_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement municipalDistrict_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> municipalDistrictBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+       * @return Whether the municipalDistrict field is set.
+       */
+      public boolean hasMunicipalDistrict() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+       * @return The municipalDistrict.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getMunicipalDistrict() {
+        if (municipalDistrictBuilder_ == null) {
+          return municipalDistrict_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : municipalDistrict_;
+        } else {
+          return municipalDistrictBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+       */
+      public Builder setMunicipalDistrict(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (municipalDistrictBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          municipalDistrict_ = value;
+        } else {
+          municipalDistrictBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+       */
+      public Builder setMunicipalDistrict(
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder builderForValue) {
+        if (municipalDistrictBuilder_ == null) {
+          municipalDistrict_ = builderForValue.build();
+        } else {
+          municipalDistrictBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+       */
+      public Builder mergeMunicipalDistrict(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (municipalDistrictBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            municipalDistrict_ != null &&
+            municipalDistrict_ != Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance()) {
+            getMunicipalDistrictBuilder().mergeFrom(value);
+          } else {
+            municipalDistrict_ = value;
+          }
+        } else {
+          municipalDistrictBuilder_.mergeFrom(value);
+        }
+        if (municipalDistrict_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+       */
+      public Builder clearMunicipalDistrict() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        municipalDistrict_ = null;
+        if (municipalDistrictBuilder_ != null) {
+          municipalDistrictBuilder_.dispose();
+          municipalDistrictBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder getMunicipalDistrictBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getMunicipalDistrictFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getMunicipalDistrictOrBuilder() {
+        if (municipalDistrictBuilder_ != null) {
+          return municipalDistrictBuilder_.getMessageOrBuilder();
+        } else {
+          return municipalDistrict_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : municipalDistrict_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement MunicipalDistrict = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> 
+          getMunicipalDistrictFieldBuilder() {
+        if (municipalDistrictBuilder_ == null) {
+          municipalDistrictBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder>(
+                  getMunicipalDistrict(),
+                  getParentForChildren(),
+                  isClean());
+          municipalDistrict_ = null;
+        }
+        return municipalDistrictBuilder_;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement urbanSettlement_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> urbanSettlementBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+       * @return Whether the urbanSettlement field is set.
+       */
+      public boolean hasUrbanSettlement() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+       * @return The urbanSettlement.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getUrbanSettlement() {
+        if (urbanSettlementBuilder_ == null) {
+          return urbanSettlement_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : urbanSettlement_;
+        } else {
+          return urbanSettlementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+       */
+      public Builder setUrbanSettlement(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (urbanSettlementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          urbanSettlement_ = value;
+        } else {
+          urbanSettlementBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+       */
+      public Builder setUrbanSettlement(
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder builderForValue) {
+        if (urbanSettlementBuilder_ == null) {
+          urbanSettlement_ = builderForValue.build();
+        } else {
+          urbanSettlementBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+       */
+      public Builder mergeUrbanSettlement(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (urbanSettlementBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            urbanSettlement_ != null &&
+            urbanSettlement_ != Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance()) {
+            getUrbanSettlementBuilder().mergeFrom(value);
+          } else {
+            urbanSettlement_ = value;
+          }
+        } else {
+          urbanSettlementBuilder_.mergeFrom(value);
+        }
+        if (urbanSettlement_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+       */
+      public Builder clearUrbanSettlement() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        urbanSettlement_ = null;
+        if (urbanSettlementBuilder_ != null) {
+          urbanSettlementBuilder_.dispose();
+          urbanSettlementBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder getUrbanSettlementBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getUrbanSettlementFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getUrbanSettlementOrBuilder() {
+        if (urbanSettlementBuilder_ != null) {
+          return urbanSettlementBuilder_.getMessageOrBuilder();
+        } else {
+          return urbanSettlement_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : urbanSettlement_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement UrbanSettlement = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> 
+          getUrbanSettlementFieldBuilder() {
+        if (urbanSettlementBuilder_ == null) {
+          urbanSettlementBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder>(
+                  getUrbanSettlement(),
+                  getParentForChildren(),
+                  isClean());
+          urbanSettlement_ = null;
+        }
+        return urbanSettlementBuilder_;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement city_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> cityBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+       * @return Whether the city field is set.
+       */
+      public boolean hasCity() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+       * @return The city.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getCity() {
+        if (cityBuilder_ == null) {
+          return city_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : city_;
+        } else {
+          return cityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+       */
+      public Builder setCity(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (cityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          city_ = value;
+        } else {
+          cityBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+       */
+      public Builder setCity(
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder builderForValue) {
+        if (cityBuilder_ == null) {
+          city_ = builderForValue.build();
+        } else {
+          cityBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+       */
+      public Builder mergeCity(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (cityBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            city_ != null &&
+            city_ != Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance()) {
+            getCityBuilder().mergeFrom(value);
+          } else {
+            city_ = value;
+          }
+        } else {
+          cityBuilder_.mergeFrom(value);
+        }
+        if (city_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+       */
+      public Builder clearCity() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        city_ = null;
+        if (cityBuilder_ != null) {
+          cityBuilder_.dispose();
+          cityBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder getCityBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getCityFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getCityOrBuilder() {
+        if (cityBuilder_ != null) {
+          return cityBuilder_.getMessageOrBuilder();
+        } else {
+          return city_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : city_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement City = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> 
+          getCityFieldBuilder() {
+        if (cityBuilder_ == null) {
+          cityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder>(
+                  getCity(),
+                  getParentForChildren(),
+                  isClean());
+          city_ = null;
+        }
+        return cityBuilder_;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement planningStructure_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> planningStructureBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+       * @return Whether the planningStructure field is set.
+       */
+      public boolean hasPlanningStructure() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+       * @return The planningStructure.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getPlanningStructure() {
+        if (planningStructureBuilder_ == null) {
+          return planningStructure_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : planningStructure_;
+        } else {
+          return planningStructureBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+       */
+      public Builder setPlanningStructure(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (planningStructureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          planningStructure_ = value;
+        } else {
+          planningStructureBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+       */
+      public Builder setPlanningStructure(
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder builderForValue) {
+        if (planningStructureBuilder_ == null) {
+          planningStructure_ = builderForValue.build();
+        } else {
+          planningStructureBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+       */
+      public Builder mergePlanningStructure(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (planningStructureBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            planningStructure_ != null &&
+            planningStructure_ != Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance()) {
+            getPlanningStructureBuilder().mergeFrom(value);
+          } else {
+            planningStructure_ = value;
+          }
+        } else {
+          planningStructureBuilder_.mergeFrom(value);
+        }
+        if (planningStructure_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+       */
+      public Builder clearPlanningStructure() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        planningStructure_ = null;
+        if (planningStructureBuilder_ != null) {
+          planningStructureBuilder_.dispose();
+          planningStructureBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder getPlanningStructureBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getPlanningStructureFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getPlanningStructureOrBuilder() {
+        if (planningStructureBuilder_ != null) {
+          return planningStructureBuilder_.getMessageOrBuilder();
+        } else {
+          return planningStructure_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : planningStructure_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement PlanningStructure = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> 
+          getPlanningStructureFieldBuilder() {
+        if (planningStructureBuilder_ == null) {
+          planningStructureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder>(
+                  getPlanningStructure(),
+                  getParentForChildren(),
+                  isClean());
+          planningStructure_ = null;
+        }
+        return planningStructureBuilder_;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement street_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> streetBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+       * @return Whether the street field is set.
+       */
+      public boolean hasStreet() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+       * @return The street.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getStreet() {
+        if (streetBuilder_ == null) {
+          return street_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : street_;
+        } else {
+          return streetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+       */
+      public Builder setStreet(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (streetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          street_ = value;
+        } else {
+          streetBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+       */
+      public Builder setStreet(
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder builderForValue) {
+        if (streetBuilder_ == null) {
+          street_ = builderForValue.build();
+        } else {
+          streetBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+       */
+      public Builder mergeStreet(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (streetBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            street_ != null &&
+            street_ != Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance()) {
+            getStreetBuilder().mergeFrom(value);
+          } else {
+            street_ = value;
+          }
+        } else {
+          streetBuilder_.mergeFrom(value);
+        }
+        if (street_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+       */
+      public Builder clearStreet() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        street_ = null;
+        if (streetBuilder_ != null) {
+          streetBuilder_.dispose();
+          streetBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder getStreetBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getStreetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getStreetOrBuilder() {
+        if (streetBuilder_ != null) {
+          return streetBuilder_.getMessageOrBuilder();
+        } else {
+          return street_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : street_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Street = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> 
+          getStreetFieldBuilder() {
+        if (streetBuilder_ == null) {
+          streetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder>(
+                  getStreet(),
+                  getParentForChildren(),
+                  isClean());
+          street_ = null;
+        }
+        return streetBuilder_;
+      }
+
+      private java.lang.Object stead_ = "";
+      /**
+       * <code>optional string Stead = 9;</code>
+       * @return Whether the stead field is set.
+       */
+      public boolean hasStead() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional string Stead = 9;</code>
+       * @return The stead.
+       */
+      public java.lang.String getStead() {
+        java.lang.Object ref = stead_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            stead_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Stead = 9;</code>
+       * @return The bytes for stead.
+       */
+      public com.google.protobuf.ByteString
+          getSteadBytes() {
+        java.lang.Object ref = stead_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stead_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Stead = 9;</code>
+       * @param value The stead to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStead(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stead_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Stead = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStead() {
+        stead_ = getDefaultInstance().getStead();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Stead = 9;</code>
+       * @param value The bytes for stead to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteadBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        stead_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarHouse garhouse_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarHouse, Diadoc.Api.Proto.AddressProtos.GarHouse.Builder, Diadoc.Api.Proto.AddressProtos.GarHouseOrBuilder> garhouseBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+       * @return Whether the garhouse field is set.
+       */
+      public boolean hasGarhouse() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+       * @return The garhouse.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarHouse getGarhouse() {
+        if (garhouseBuilder_ == null) {
+          return garhouse_ == null ? Diadoc.Api.Proto.AddressProtos.GarHouse.getDefaultInstance() : garhouse_;
+        } else {
+          return garhouseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+       */
+      public Builder setGarhouse(Diadoc.Api.Proto.AddressProtos.GarHouse value) {
+        if (garhouseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          garhouse_ = value;
+        } else {
+          garhouseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+       */
+      public Builder setGarhouse(
+          Diadoc.Api.Proto.AddressProtos.GarHouse.Builder builderForValue) {
+        if (garhouseBuilder_ == null) {
+          garhouse_ = builderForValue.build();
+        } else {
+          garhouseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+       */
+      public Builder mergeGarhouse(Diadoc.Api.Proto.AddressProtos.GarHouse value) {
+        if (garhouseBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            garhouse_ != null &&
+            garhouse_ != Diadoc.Api.Proto.AddressProtos.GarHouse.getDefaultInstance()) {
+            getGarhouseBuilder().mergeFrom(value);
+          } else {
+            garhouse_ = value;
+          }
+        } else {
+          garhouseBuilder_.mergeFrom(value);
+        }
+        if (garhouse_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+       */
+      public Builder clearGarhouse() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        garhouse_ = null;
+        if (garhouseBuilder_ != null) {
+          garhouseBuilder_.dispose();
+          garhouseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarHouse.Builder getGarhouseBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getGarhouseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarHouseOrBuilder getGarhouseOrBuilder() {
+        if (garhouseBuilder_ != null) {
+          return garhouseBuilder_.getMessageOrBuilder();
+        } else {
+          return garhouse_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarHouse.getDefaultInstance() : garhouse_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarHouse Garhouse = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarHouse, Diadoc.Api.Proto.AddressProtos.GarHouse.Builder, Diadoc.Api.Proto.AddressProtos.GarHouseOrBuilder> 
+          getGarhouseFieldBuilder() {
+        if (garhouseBuilder_ == null) {
+          garhouseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarHouse, Diadoc.Api.Proto.AddressProtos.GarHouse.Builder, Diadoc.Api.Proto.AddressProtos.GarHouseOrBuilder>(
+                  getGarhouse(),
+                  getParentForChildren(),
+                  isClean());
+          garhouse_ = null;
+        }
+        return garhouseBuilder_;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement roomWithinBuilding_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder> roomWithinBuildingBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+       * @return Whether the roomWithinBuilding field is set.
+       */
+      public boolean hasRoomWithinBuilding() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+       * @return The roomWithinBuilding.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement getRoomWithinBuilding() {
+        if (roomWithinBuildingBuilder_ == null) {
+          return roomWithinBuilding_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance() : roomWithinBuilding_;
+        } else {
+          return roomWithinBuildingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+       */
+      public Builder setRoomWithinBuilding(Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement value) {
+        if (roomWithinBuildingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          roomWithinBuilding_ = value;
+        } else {
+          roomWithinBuildingBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+       */
+      public Builder setRoomWithinBuilding(
+          Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder builderForValue) {
+        if (roomWithinBuildingBuilder_ == null) {
+          roomWithinBuilding_ = builderForValue.build();
+        } else {
+          roomWithinBuildingBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+       */
+      public Builder mergeRoomWithinBuilding(Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement value) {
+        if (roomWithinBuildingBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            roomWithinBuilding_ != null &&
+            roomWithinBuilding_ != Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance()) {
+            getRoomWithinBuildingBuilder().mergeFrom(value);
+          } else {
+            roomWithinBuilding_ = value;
+          }
+        } else {
+          roomWithinBuildingBuilder_.mergeFrom(value);
+        }
+        if (roomWithinBuilding_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+       */
+      public Builder clearRoomWithinBuilding() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        roomWithinBuilding_ = null;
+        if (roomWithinBuildingBuilder_ != null) {
+          roomWithinBuildingBuilder_.dispose();
+          roomWithinBuildingBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder getRoomWithinBuildingBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getRoomWithinBuildingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder getRoomWithinBuildingOrBuilder() {
+        if (roomWithinBuildingBuilder_ != null) {
+          return roomWithinBuildingBuilder_.getMessageOrBuilder();
+        } else {
+          return roomWithinBuilding_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance() : roomWithinBuilding_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinBuilding = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder> 
+          getRoomWithinBuildingFieldBuilder() {
+        if (roomWithinBuildingBuilder_ == null) {
+          roomWithinBuildingBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder>(
+                  getRoomWithinBuilding(),
+                  getParentForChildren(),
+                  isClean());
+          roomWithinBuilding_ = null;
+        }
+        return roomWithinBuildingBuilder_;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement roomWithinApartment_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder> roomWithinApartmentBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+       * @return Whether the roomWithinApartment field is set.
+       */
+      public boolean hasRoomWithinApartment() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+       * @return The roomWithinApartment.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement getRoomWithinApartment() {
+        if (roomWithinApartmentBuilder_ == null) {
+          return roomWithinApartment_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance() : roomWithinApartment_;
+        } else {
+          return roomWithinApartmentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+       */
+      public Builder setRoomWithinApartment(Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement value) {
+        if (roomWithinApartmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          roomWithinApartment_ = value;
+        } else {
+          roomWithinApartmentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+       */
+      public Builder setRoomWithinApartment(
+          Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder builderForValue) {
+        if (roomWithinApartmentBuilder_ == null) {
+          roomWithinApartment_ = builderForValue.build();
+        } else {
+          roomWithinApartmentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+       */
+      public Builder mergeRoomWithinApartment(Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement value) {
+        if (roomWithinApartmentBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0) &&
+            roomWithinApartment_ != null &&
+            roomWithinApartment_ != Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance()) {
+            getRoomWithinApartmentBuilder().mergeFrom(value);
+          } else {
+            roomWithinApartment_ = value;
+          }
+        } else {
+          roomWithinApartmentBuilder_.mergeFrom(value);
+        }
+        if (roomWithinApartment_ != null) {
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+       */
+      public Builder clearRoomWithinApartment() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        roomWithinApartment_ = null;
+        if (roomWithinApartmentBuilder_ != null) {
+          roomWithinApartmentBuilder_.dispose();
+          roomWithinApartmentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder getRoomWithinApartmentBuilder() {
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return getRoomWithinApartmentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder getRoomWithinApartmentOrBuilder() {
+        if (roomWithinApartmentBuilder_ != null) {
+          return roomWithinApartmentBuilder_.getMessageOrBuilder();
+        } else {
+          return roomWithinApartment_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance() : roomWithinApartment_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNumberElement RoomWithinApartment = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder> 
+          getRoomWithinApartmentFieldBuilder() {
+        if (roomWithinApartmentBuilder_ == null) {
+          roomWithinApartmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder>(
+                  getRoomWithinApartment(),
+                  getParentForChildren(),
+                  isClean());
+          roomWithinApartment_ = null;
+        }
+        return roomWithinApartmentBuilder_;
+      }
+
+      private int divisionType_ = 1;
+      /**
+       * <code>required .Diadoc.Api.Proto.GarAddressDivisionType DivisionType = 13 [default = Municipal];</code>
+       * @return Whether the divisionType field is set.
+       */
+      @java.lang.Override public boolean hasDivisionType() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.GarAddressDivisionType DivisionType = 13 [default = Municipal];</code>
+       * @return The divisionType.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType getDivisionType() {
+        Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType result = Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType.forNumber(divisionType_);
+        return result == null ? Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType.Municipal : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.GarAddressDivisionType DivisionType = 13 [default = Municipal];</code>
+       * @param value The divisionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDivisionType(Diadoc.Api.Proto.AddressProtos.GarAddressDivisionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00001000;
+        divisionType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.GarAddressDivisionType DivisionType = 13 [default = Municipal];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDivisionType() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        divisionType_ = 1;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement district_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> districtBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+       * @return Whether the district field is set.
+       */
+      public boolean hasDistrict() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+       * @return The district.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getDistrict() {
+        if (districtBuilder_ == null) {
+          return district_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : district_;
+        } else {
+          return districtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+       */
+      public Builder setDistrict(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (districtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          district_ = value;
+        } else {
+          districtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+       */
+      public Builder setDistrict(
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder builderForValue) {
+        if (districtBuilder_ == null) {
+          district_ = builderForValue.build();
+        } else {
+          districtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+       */
+      public Builder mergeDistrict(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (districtBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) != 0) &&
+            district_ != null &&
+            district_ != Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance()) {
+            getDistrictBuilder().mergeFrom(value);
+          } else {
+            district_ = value;
+          }
+        } else {
+          districtBuilder_.mergeFrom(value);
+        }
+        if (district_ != null) {
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+       */
+      public Builder clearDistrict() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        district_ = null;
+        if (districtBuilder_ != null) {
+          districtBuilder_.dispose();
+          districtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder getDistrictBuilder() {
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return getDistrictFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getDistrictOrBuilder() {
+        if (districtBuilder_ != null) {
+          return districtBuilder_.getMessageOrBuilder();
+        } else {
+          return district_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : district_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement District = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> 
+          getDistrictFieldBuilder() {
+        if (districtBuilder_ == null) {
+          districtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder>(
+                  getDistrict(),
+                  getParentForChildren(),
+                  isClean());
+          district_ = null;
+        }
+        return districtBuilder_;
+      }
+
+      private Diadoc.Api.Proto.AddressProtos.GarAddressNameElement settlement_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> settlementBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+       * @return Whether the settlement field is set.
+       */
+      public boolean hasSettlement() {
+        return ((bitField0_ & 0x00004000) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+       * @return The settlement.
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getSettlement() {
+        if (settlementBuilder_ == null) {
+          return settlement_ == null ? Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : settlement_;
+        } else {
+          return settlementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+       */
+      public Builder setSettlement(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (settlementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settlement_ = value;
+        } else {
+          settlementBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+       */
+      public Builder setSettlement(
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder builderForValue) {
+        if (settlementBuilder_ == null) {
+          settlement_ = builderForValue.build();
+        } else {
+          settlementBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+       */
+      public Builder mergeSettlement(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement value) {
+        if (settlementBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) != 0) &&
+            settlement_ != null &&
+            settlement_ != Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance()) {
+            getSettlementBuilder().mergeFrom(value);
+          } else {
+            settlement_ = value;
+          }
+        } else {
+          settlementBuilder_.mergeFrom(value);
+        }
+        if (settlement_ != null) {
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+       */
+      public Builder clearSettlement() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        settlement_ = null;
+        if (settlementBuilder_ != null) {
+          settlementBuilder_.dispose();
+          settlementBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder getSettlementBuilder() {
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return getSettlementFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+       */
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder getSettlementOrBuilder() {
+        if (settlementBuilder_ != null) {
+          return settlementBuilder_.getMessageOrBuilder();
+        } else {
+          return settlement_ == null ?
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance() : settlement_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.GarAddressNameElement Settlement = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder> 
+          getSettlementFieldBuilder() {
+        if (settlementBuilder_ == null) {
+          settlementBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder, Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder>(
+                  getSettlement(),
+                  getParentForChildren(),
+                  isClean());
+          settlement_ = null;
+        }
+        return settlementBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.GarAddress)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.GarAddress)
+    private static final Diadoc.Api.Proto.AddressProtos.GarAddress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.AddressProtos.GarAddress();
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GarAddress>
+        PARSER = new com.google.protobuf.AbstractParser<GarAddress>() {
+      @java.lang.Override
+      public GarAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GarAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GarAddress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GarHouseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.GarHouse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return Whether the abbreviation field is set.
+     */
+    boolean hasAbbreviation();
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The abbreviation.
+     */
+    java.lang.String getAbbreviation();
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The bytes for abbreviation.
+     */
+    com.google.protobuf.ByteString
+        getAbbreviationBytes();
+
+    /**
+     * <code>required string Number = 2;</code>
+     * @return Whether the number field is set.
+     */
+    boolean hasNumber();
+    /**
+     * <code>required string Number = 2;</code>
+     * @return The number.
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>required string Number = 2;</code>
+     * @return The bytes for number.
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+
+    /**
+     * <code>optional string AddNumber1 = 3;</code>
+     * @return Whether the addNumber1 field is set.
+     */
+    boolean hasAddNumber1();
+    /**
+     * <code>optional string AddNumber1 = 3;</code>
+     * @return The addNumber1.
+     */
+    java.lang.String getAddNumber1();
+    /**
+     * <code>optional string AddNumber1 = 3;</code>
+     * @return The bytes for addNumber1.
+     */
+    com.google.protobuf.ByteString
+        getAddNumber1Bytes();
+
+    /**
+     * <code>optional string AddAbbreviation1 = 4;</code>
+     * @return Whether the addAbbreviation1 field is set.
+     */
+    boolean hasAddAbbreviation1();
+    /**
+     * <code>optional string AddAbbreviation1 = 4;</code>
+     * @return The addAbbreviation1.
+     */
+    java.lang.String getAddAbbreviation1();
+    /**
+     * <code>optional string AddAbbreviation1 = 4;</code>
+     * @return The bytes for addAbbreviation1.
+     */
+    com.google.protobuf.ByteString
+        getAddAbbreviation1Bytes();
+
+    /**
+     * <code>optional string AddNumber2 = 5;</code>
+     * @return Whether the addNumber2 field is set.
+     */
+    boolean hasAddNumber2();
+    /**
+     * <code>optional string AddNumber2 = 5;</code>
+     * @return The addNumber2.
+     */
+    java.lang.String getAddNumber2();
+    /**
+     * <code>optional string AddNumber2 = 5;</code>
+     * @return The bytes for addNumber2.
+     */
+    com.google.protobuf.ByteString
+        getAddNumber2Bytes();
+
+    /**
+     * <code>optional string AddAbbreviation2 = 6;</code>
+     * @return Whether the addAbbreviation2 field is set.
+     */
+    boolean hasAddAbbreviation2();
+    /**
+     * <code>optional string AddAbbreviation2 = 6;</code>
+     * @return The addAbbreviation2.
+     */
+    java.lang.String getAddAbbreviation2();
+    /**
+     * <code>optional string AddAbbreviation2 = 6;</code>
+     * @return The bytes for addAbbreviation2.
+     */
+    com.google.protobuf.ByteString
+        getAddAbbreviation2Bytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.GarHouse}
+   */
+  public static final class GarHouse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.GarHouse)
+      GarHouseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        GarHouse.class.getName());
+    }
+    // Use GarHouse.newBuilder() to construct.
+    private GarHouse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GarHouse() {
+      abbreviation_ = "";
+      number_ = "";
+      addNumber1_ = "";
+      addAbbreviation1_ = "";
+      addNumber2_ = "";
+      addAbbreviation2_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarHouse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarHouse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.AddressProtos.GarHouse.class, Diadoc.Api.Proto.AddressProtos.GarHouse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ABBREVIATION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object abbreviation_ = "";
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return Whether the abbreviation field is set.
+     */
+    @java.lang.Override
+    public boolean hasAbbreviation() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The abbreviation.
+     */
+    @java.lang.Override
+    public java.lang.String getAbbreviation() {
+      java.lang.Object ref = abbreviation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          abbreviation_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The bytes for abbreviation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAbbreviationBytes() {
+      java.lang.Object ref = abbreviation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abbreviation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object number_ = "";
+    /**
+     * <code>required string Number = 2;</code>
+     * @return Whether the number field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumber() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required string Number = 2;</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Number = 2;</code>
+     * @return The bytes for number.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDNUMBER1_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addNumber1_ = "";
+    /**
+     * <code>optional string AddNumber1 = 3;</code>
+     * @return Whether the addNumber1 field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddNumber1() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string AddNumber1 = 3;</code>
+     * @return The addNumber1.
+     */
+    @java.lang.Override
+    public java.lang.String getAddNumber1() {
+      java.lang.Object ref = addNumber1_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          addNumber1_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string AddNumber1 = 3;</code>
+     * @return The bytes for addNumber1.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddNumber1Bytes() {
+      java.lang.Object ref = addNumber1_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addNumber1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDABBREVIATION1_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addAbbreviation1_ = "";
+    /**
+     * <code>optional string AddAbbreviation1 = 4;</code>
+     * @return Whether the addAbbreviation1 field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddAbbreviation1() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string AddAbbreviation1 = 4;</code>
+     * @return The addAbbreviation1.
+     */
+    @java.lang.Override
+    public java.lang.String getAddAbbreviation1() {
+      java.lang.Object ref = addAbbreviation1_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          addAbbreviation1_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string AddAbbreviation1 = 4;</code>
+     * @return The bytes for addAbbreviation1.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddAbbreviation1Bytes() {
+      java.lang.Object ref = addAbbreviation1_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addAbbreviation1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDNUMBER2_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addNumber2_ = "";
+    /**
+     * <code>optional string AddNumber2 = 5;</code>
+     * @return Whether the addNumber2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddNumber2() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string AddNumber2 = 5;</code>
+     * @return The addNumber2.
+     */
+    @java.lang.Override
+    public java.lang.String getAddNumber2() {
+      java.lang.Object ref = addNumber2_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          addNumber2_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string AddNumber2 = 5;</code>
+     * @return The bytes for addNumber2.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddNumber2Bytes() {
+      java.lang.Object ref = addNumber2_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addNumber2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDABBREVIATION2_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addAbbreviation2_ = "";
+    /**
+     * <code>optional string AddAbbreviation2 = 6;</code>
+     * @return Whether the addAbbreviation2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddAbbreviation2() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional string AddAbbreviation2 = 6;</code>
+     * @return The addAbbreviation2.
+     */
+    @java.lang.Override
+    public java.lang.String getAddAbbreviation2() {
+      java.lang.Object ref = addAbbreviation2_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          addAbbreviation2_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string AddAbbreviation2 = 6;</code>
+     * @return The bytes for addAbbreviation2.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddAbbreviation2Bytes() {
+      java.lang.Object ref = addAbbreviation2_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addAbbreviation2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasAbbreviation()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, abbreviation_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, number_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, addNumber1_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, addAbbreviation1_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, addNumber2_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, addAbbreviation2_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, abbreviation_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, number_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, addNumber1_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, addAbbreviation1_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, addNumber2_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, addAbbreviation2_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.AddressProtos.GarHouse)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.AddressProtos.GarHouse other = (Diadoc.Api.Proto.AddressProtos.GarHouse) obj;
+
+      if (hasAbbreviation() != other.hasAbbreviation()) return false;
+      if (hasAbbreviation()) {
+        if (!getAbbreviation()
+            .equals(other.getAbbreviation())) return false;
+      }
+      if (hasNumber() != other.hasNumber()) return false;
+      if (hasNumber()) {
+        if (!getNumber()
+            .equals(other.getNumber())) return false;
+      }
+      if (hasAddNumber1() != other.hasAddNumber1()) return false;
+      if (hasAddNumber1()) {
+        if (!getAddNumber1()
+            .equals(other.getAddNumber1())) return false;
+      }
+      if (hasAddAbbreviation1() != other.hasAddAbbreviation1()) return false;
+      if (hasAddAbbreviation1()) {
+        if (!getAddAbbreviation1()
+            .equals(other.getAddAbbreviation1())) return false;
+      }
+      if (hasAddNumber2() != other.hasAddNumber2()) return false;
+      if (hasAddNumber2()) {
+        if (!getAddNumber2()
+            .equals(other.getAddNumber2())) return false;
+      }
+      if (hasAddAbbreviation2() != other.hasAddAbbreviation2()) return false;
+      if (hasAddAbbreviation2()) {
+        if (!getAddAbbreviation2()
+            .equals(other.getAddAbbreviation2())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAbbreviation()) {
+        hash = (37 * hash) + ABBREVIATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAbbreviation().hashCode();
+      }
+      if (hasNumber()) {
+        hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getNumber().hashCode();
+      }
+      if (hasAddNumber1()) {
+        hash = (37 * hash) + ADDNUMBER1_FIELD_NUMBER;
+        hash = (53 * hash) + getAddNumber1().hashCode();
+      }
+      if (hasAddAbbreviation1()) {
+        hash = (37 * hash) + ADDABBREVIATION1_FIELD_NUMBER;
+        hash = (53 * hash) + getAddAbbreviation1().hashCode();
+      }
+      if (hasAddNumber2()) {
+        hash = (37 * hash) + ADDNUMBER2_FIELD_NUMBER;
+        hash = (53 * hash) + getAddNumber2().hashCode();
+      }
+      if (hasAddAbbreviation2()) {
+        hash = (37 * hash) + ADDABBREVIATION2_FIELD_NUMBER;
+        hash = (53 * hash) + getAddAbbreviation2().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.AddressProtos.GarHouse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.GarHouse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.GarHouse)
+        Diadoc.Api.Proto.AddressProtos.GarHouseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarHouse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarHouse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.AddressProtos.GarHouse.class, Diadoc.Api.Proto.AddressProtos.GarHouse.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.AddressProtos.GarHouse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        abbreviation_ = "";
+        number_ = "";
+        addNumber1_ = "";
+        addAbbreviation1_ = "";
+        addNumber2_ = "";
+        addAbbreviation2_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarHouse_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarHouse getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.AddressProtos.GarHouse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarHouse build() {
+        Diadoc.Api.Proto.AddressProtos.GarHouse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarHouse buildPartial() {
+        Diadoc.Api.Proto.AddressProtos.GarHouse result = new Diadoc.Api.Proto.AddressProtos.GarHouse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.AddressProtos.GarHouse result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.abbreviation_ = abbreviation_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.number_ = number_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.addNumber1_ = addNumber1_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.addAbbreviation1_ = addAbbreviation1_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.addNumber2_ = addNumber2_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.addAbbreviation2_ = addAbbreviation2_;
+          to_bitField0_ |= 0x00000020;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.AddressProtos.GarHouse) {
+          return mergeFrom((Diadoc.Api.Proto.AddressProtos.GarHouse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.AddressProtos.GarHouse other) {
+        if (other == Diadoc.Api.Proto.AddressProtos.GarHouse.getDefaultInstance()) return this;
+        if (other.hasAbbreviation()) {
+          abbreviation_ = other.abbreviation_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasNumber()) {
+          number_ = other.number_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasAddNumber1()) {
+          addNumber1_ = other.addNumber1_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasAddAbbreviation1()) {
+          addAbbreviation1_ = other.addAbbreviation1_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasAddNumber2()) {
+          addNumber2_ = other.addNumber2_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasAddAbbreviation2()) {
+          addAbbreviation2_ = other.addAbbreviation2_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasAbbreviation()) {
+          return false;
+        }
+        if (!hasNumber()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                abbreviation_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                number_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                addNumber1_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                addAbbreviation1_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                addNumber2_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                addAbbreviation2_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object abbreviation_ = "";
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return Whether the abbreviation field is set.
+       */
+      public boolean hasAbbreviation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return The abbreviation.
+       */
+      public java.lang.String getAbbreviation() {
+        java.lang.Object ref = abbreviation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            abbreviation_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return The bytes for abbreviation.
+       */
+      public com.google.protobuf.ByteString
+          getAbbreviationBytes() {
+        java.lang.Object ref = abbreviation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abbreviation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @param value The abbreviation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbbreviation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        abbreviation_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAbbreviation() {
+        abbreviation_ = getDefaultInstance().getAbbreviation();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @param value The bytes for abbreviation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbbreviationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        abbreviation_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>required string Number = 2;</code>
+       * @return Whether the number field is set.
+       */
+      public boolean hasNumber() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @return The number.
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @return The bytes for number.
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        number_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        number_ = getDefaultInstance().getNumber();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        number_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addNumber1_ = "";
+      /**
+       * <code>optional string AddNumber1 = 3;</code>
+       * @return Whether the addNumber1 field is set.
+       */
+      public boolean hasAddNumber1() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string AddNumber1 = 3;</code>
+       * @return The addNumber1.
+       */
+      public java.lang.String getAddNumber1() {
+        java.lang.Object ref = addNumber1_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            addNumber1_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string AddNumber1 = 3;</code>
+       * @return The bytes for addNumber1.
+       */
+      public com.google.protobuf.ByteString
+          getAddNumber1Bytes() {
+        java.lang.Object ref = addNumber1_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addNumber1_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AddNumber1 = 3;</code>
+       * @param value The addNumber1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddNumber1(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        addNumber1_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddNumber1 = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddNumber1() {
+        addNumber1_ = getDefaultInstance().getAddNumber1();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddNumber1 = 3;</code>
+       * @param value The bytes for addNumber1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddNumber1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        addNumber1_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addAbbreviation1_ = "";
+      /**
+       * <code>optional string AddAbbreviation1 = 4;</code>
+       * @return Whether the addAbbreviation1 field is set.
+       */
+      public boolean hasAddAbbreviation1() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string AddAbbreviation1 = 4;</code>
+       * @return The addAbbreviation1.
+       */
+      public java.lang.String getAddAbbreviation1() {
+        java.lang.Object ref = addAbbreviation1_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            addAbbreviation1_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string AddAbbreviation1 = 4;</code>
+       * @return The bytes for addAbbreviation1.
+       */
+      public com.google.protobuf.ByteString
+          getAddAbbreviation1Bytes() {
+        java.lang.Object ref = addAbbreviation1_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addAbbreviation1_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AddAbbreviation1 = 4;</code>
+       * @param value The addAbbreviation1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddAbbreviation1(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        addAbbreviation1_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddAbbreviation1 = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddAbbreviation1() {
+        addAbbreviation1_ = getDefaultInstance().getAddAbbreviation1();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddAbbreviation1 = 4;</code>
+       * @param value The bytes for addAbbreviation1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddAbbreviation1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        addAbbreviation1_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addNumber2_ = "";
+      /**
+       * <code>optional string AddNumber2 = 5;</code>
+       * @return Whether the addNumber2 field is set.
+       */
+      public boolean hasAddNumber2() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string AddNumber2 = 5;</code>
+       * @return The addNumber2.
+       */
+      public java.lang.String getAddNumber2() {
+        java.lang.Object ref = addNumber2_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            addNumber2_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string AddNumber2 = 5;</code>
+       * @return The bytes for addNumber2.
+       */
+      public com.google.protobuf.ByteString
+          getAddNumber2Bytes() {
+        java.lang.Object ref = addNumber2_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addNumber2_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AddNumber2 = 5;</code>
+       * @param value The addNumber2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddNumber2(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        addNumber2_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddNumber2 = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddNumber2() {
+        addNumber2_ = getDefaultInstance().getAddNumber2();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddNumber2 = 5;</code>
+       * @param value The bytes for addNumber2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddNumber2Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        addNumber2_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addAbbreviation2_ = "";
+      /**
+       * <code>optional string AddAbbreviation2 = 6;</code>
+       * @return Whether the addAbbreviation2 field is set.
+       */
+      public boolean hasAddAbbreviation2() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string AddAbbreviation2 = 6;</code>
+       * @return The addAbbreviation2.
+       */
+      public java.lang.String getAddAbbreviation2() {
+        java.lang.Object ref = addAbbreviation2_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            addAbbreviation2_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string AddAbbreviation2 = 6;</code>
+       * @return The bytes for addAbbreviation2.
+       */
+      public com.google.protobuf.ByteString
+          getAddAbbreviation2Bytes() {
+        java.lang.Object ref = addAbbreviation2_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addAbbreviation2_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string AddAbbreviation2 = 6;</code>
+       * @param value The addAbbreviation2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddAbbreviation2(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        addAbbreviation2_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddAbbreviation2 = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddAbbreviation2() {
+        addAbbreviation2_ = getDefaultInstance().getAddAbbreviation2();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string AddAbbreviation2 = 6;</code>
+       * @param value The bytes for addAbbreviation2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddAbbreviation2Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        addAbbreviation2_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.GarHouse)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.GarHouse)
+    private static final Diadoc.Api.Proto.AddressProtos.GarHouse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.AddressProtos.GarHouse();
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarHouse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GarHouse>
+        PARSER = new com.google.protobuf.AbstractParser<GarHouse>() {
+      @java.lang.Override
+      public GarHouse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GarHouse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GarHouse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarHouse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GarAddressNameElementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.GarAddressNameElement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return Whether the abbreviation field is set.
+     */
+    boolean hasAbbreviation();
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The abbreviation.
+     */
+    java.lang.String getAbbreviation();
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The bytes for abbreviation.
+     */
+    com.google.protobuf.ByteString
+        getAbbreviationBytes();
+
+    /**
+     * <code>required string Name = 2;</code>
+     * @return Whether the name field is set.
+     */
+    boolean hasName();
+    /**
+     * <code>required string Name = 2;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string Name = 2;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.GarAddressNameElement}
+   */
+  public static final class GarAddressNameElement extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.GarAddressNameElement)
+      GarAddressNameElementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        GarAddressNameElement.class.getName());
+    }
+    // Use GarAddressNameElement.newBuilder() to construct.
+    private GarAddressNameElement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GarAddressNameElement() {
+      abbreviation_ = "";
+      name_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNameElement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNameElement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.class, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ABBREVIATION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object abbreviation_ = "";
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return Whether the abbreviation field is set.
+     */
+    @java.lang.Override
+    public boolean hasAbbreviation() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The abbreviation.
+     */
+    @java.lang.Override
+    public java.lang.String getAbbreviation() {
+      java.lang.Object ref = abbreviation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          abbreviation_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The bytes for abbreviation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAbbreviationBytes() {
+      java.lang.Object ref = abbreviation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abbreviation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>required string Name = 2;</code>
+     * @return Whether the name field is set.
+     */
+    @java.lang.Override
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required string Name = 2;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Name = 2;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasAbbreviation()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, abbreviation_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, abbreviation_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.AddressProtos.GarAddressNameElement)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.AddressProtos.GarAddressNameElement other = (Diadoc.Api.Proto.AddressProtos.GarAddressNameElement) obj;
+
+      if (hasAbbreviation() != other.hasAbbreviation()) return false;
+      if (hasAbbreviation()) {
+        if (!getAbbreviation()
+            .equals(other.getAbbreviation())) return false;
+      }
+      if (hasName() != other.hasName()) return false;
+      if (hasName()) {
+        if (!getName()
+            .equals(other.getName())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAbbreviation()) {
+        hash = (37 * hash) + ABBREVIATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAbbreviation().hashCode();
+      }
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.GarAddressNameElement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.GarAddressNameElement)
+        Diadoc.Api.Proto.AddressProtos.GarAddressNameElementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNameElement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNameElement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.class, Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        abbreviation_ = "";
+        name_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNameElement_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement build() {
+        Diadoc.Api.Proto.AddressProtos.GarAddressNameElement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement buildPartial() {
+        Diadoc.Api.Proto.AddressProtos.GarAddressNameElement result = new Diadoc.Api.Proto.AddressProtos.GarAddressNameElement(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.abbreviation_ = abbreviation_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.AddressProtos.GarAddressNameElement) {
+          return mergeFrom((Diadoc.Api.Proto.AddressProtos.GarAddressNameElement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.AddressProtos.GarAddressNameElement other) {
+        if (other == Diadoc.Api.Proto.AddressProtos.GarAddressNameElement.getDefaultInstance()) return this;
+        if (other.hasAbbreviation()) {
+          abbreviation_ = other.abbreviation_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasName()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasAbbreviation()) {
+          return false;
+        }
+        if (!hasName()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                abbreviation_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object abbreviation_ = "";
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return Whether the abbreviation field is set.
+       */
+      public boolean hasAbbreviation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return The abbreviation.
+       */
+      public java.lang.String getAbbreviation() {
+        java.lang.Object ref = abbreviation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            abbreviation_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return The bytes for abbreviation.
+       */
+      public com.google.protobuf.ByteString
+          getAbbreviationBytes() {
+        java.lang.Object ref = abbreviation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abbreviation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @param value The abbreviation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbbreviation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        abbreviation_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAbbreviation() {
+        abbreviation_ = getDefaultInstance().getAbbreviation();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @param value The bytes for abbreviation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbbreviationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        abbreviation_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string Name = 2;</code>
+       * @return Whether the name field is set.
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.GarAddressNameElement)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.GarAddressNameElement)
+    private static final Diadoc.Api.Proto.AddressProtos.GarAddressNameElement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.AddressProtos.GarAddressNameElement();
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GarAddressNameElement>
+        PARSER = new com.google.protobuf.AbstractParser<GarAddressNameElement>() {
+      @java.lang.Override
+      public GarAddressNameElement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GarAddressNameElement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GarAddressNameElement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNameElement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GarAddressNumberElementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.GarAddressNumberElement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return Whether the abbreviation field is set.
+     */
+    boolean hasAbbreviation();
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The abbreviation.
+     */
+    java.lang.String getAbbreviation();
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The bytes for abbreviation.
+     */
+    com.google.protobuf.ByteString
+        getAbbreviationBytes();
+
+    /**
+     * <code>required string Number = 2;</code>
+     * @return Whether the number field is set.
+     */
+    boolean hasNumber();
+    /**
+     * <code>required string Number = 2;</code>
+     * @return The number.
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>required string Number = 2;</code>
+     * @return The bytes for number.
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.GarAddressNumberElement}
+   */
+  public static final class GarAddressNumberElement extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.GarAddressNumberElement)
+      GarAddressNumberElementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        GarAddressNumberElement.class.getName());
+    }
+    // Use GarAddressNumberElement.newBuilder() to construct.
+    private GarAddressNumberElement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GarAddressNumberElement() {
+      abbreviation_ = "";
+      number_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNumberElement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNumberElement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.class, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ABBREVIATION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object abbreviation_ = "";
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return Whether the abbreviation field is set.
+     */
+    @java.lang.Override
+    public boolean hasAbbreviation() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The abbreviation.
+     */
+    @java.lang.Override
+    public java.lang.String getAbbreviation() {
+      java.lang.Object ref = abbreviation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          abbreviation_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Abbreviation = 1;</code>
+     * @return The bytes for abbreviation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAbbreviationBytes() {
+      java.lang.Object ref = abbreviation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abbreviation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object number_ = "";
+    /**
+     * <code>required string Number = 2;</code>
+     * @return Whether the number field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumber() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required string Number = 2;</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Number = 2;</code>
+     * @return The bytes for number.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasAbbreviation()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasNumber()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, abbreviation_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, number_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, abbreviation_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, number_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement other = (Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement) obj;
+
+      if (hasAbbreviation() != other.hasAbbreviation()) return false;
+      if (hasAbbreviation()) {
+        if (!getAbbreviation()
+            .equals(other.getAbbreviation())) return false;
+      }
+      if (hasNumber() != other.hasNumber()) return false;
+      if (hasNumber()) {
+        if (!getNumber()
+            .equals(other.getNumber())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAbbreviation()) {
+        hash = (37 * hash) + ABBREVIATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAbbreviation().hashCode();
+      }
+      if (hasNumber()) {
+        hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getNumber().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.GarAddressNumberElement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.GarAddressNumberElement)
+        Diadoc.Api.Proto.AddressProtos.GarAddressNumberElementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNumberElement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNumberElement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.class, Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        abbreviation_ = "";
+        number_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.AddressProtos.internal_static_Diadoc_Api_Proto_GarAddressNumberElement_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement build() {
+        Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement buildPartial() {
+        Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement result = new Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.abbreviation_ = abbreviation_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.number_ = number_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement) {
+          return mergeFrom((Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement other) {
+        if (other == Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement.getDefaultInstance()) return this;
+        if (other.hasAbbreviation()) {
+          abbreviation_ = other.abbreviation_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasNumber()) {
+          number_ = other.number_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasAbbreviation()) {
+          return false;
+        }
+        if (!hasNumber()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                abbreviation_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                number_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object abbreviation_ = "";
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return Whether the abbreviation field is set.
+       */
+      public boolean hasAbbreviation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return The abbreviation.
+       */
+      public java.lang.String getAbbreviation() {
+        java.lang.Object ref = abbreviation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            abbreviation_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return The bytes for abbreviation.
+       */
+      public com.google.protobuf.ByteString
+          getAbbreviationBytes() {
+        java.lang.Object ref = abbreviation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abbreviation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @param value The abbreviation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbbreviation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        abbreviation_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAbbreviation() {
+        abbreviation_ = getDefaultInstance().getAbbreviation();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Abbreviation = 1;</code>
+       * @param value The bytes for abbreviation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbbreviationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        abbreviation_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>required string Number = 2;</code>
+       * @return Whether the number field is set.
+       */
+      public boolean hasNumber() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @return The number.
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @return The bytes for number.
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        number_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        number_ = getDefaultInstance().getNumber();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Number = 2;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        number_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.GarAddressNumberElement)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.GarAddressNumberElement)
+    private static final Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement();
+    }
+
+    public static Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GarAddressNumberElement>
+        PARSER = new com.google.protobuf.AbstractParser<GarAddressNumberElement>() {
+      @java.lang.Override
+      public GarAddressNumberElement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GarAddressNumberElement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GarAddressNumberElement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.AddressProtos.GarAddressNumberElement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Address_descriptor;
   private static final 
@@ -4460,6 +11008,26 @@ public final class AddressProtos {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_ForeignAddress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_GarAddress_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_GarAddress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_GarHouse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_GarHouse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_GarAddressNameElement_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_GarAddressNameElement_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_GarAddressNumberElement_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_GarAddressNumberElement_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4469,18 +11037,47 @@ public final class AddressProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rAddress.proto\022\020Diadoc.Api.Proto\"\222\001\n\007Ad" +
+      "\n\rAddress.proto\022\020Diadoc.Api.Proto\"\304\001\n\007Ad" +
       "dress\0228\n\016RussianAddress\030\001 \001(\0132 .Diadoc.A" +
       "pi.Proto.RussianAddress\0228\n\016ForeignAddres" +
       "s\030\002 \001(\0132 .Diadoc.Api.Proto.ForeignAddres" +
-      "s\022\023\n\013AddressCode\030\003 \001(\t\"\302\001\n\016RussianAddres" +
-      "s\022\017\n\007ZipCode\030\001 \001(\t\022\016\n\006Region\030\002 \002(\t\022\021\n\tTe" +
-      "rritory\030\003 \001(\t\022\014\n\004City\030\004 \001(\t\022\020\n\010Locality\030" +
-      "\005 \001(\t\022\016\n\006Street\030\006 \001(\t\022\020\n\010Building\030\007 \001(\t\022" +
-      "\r\n\005Block\030\010 \001(\t\022\021\n\tApartment\030\t \001(\t\022\030\n\020Oth" +
-      "erInformation\030\n \001(\t\"2\n\016ForeignAddress\022\017\n" +
-      "\007Country\030\001 \002(\t\022\017\n\007Address\030\002 \002(\tB\017B\rAddre" +
-      "ssProtos"
+      "s\022\023\n\013AddressCode\030\003 \001(\t\0220\n\nGarAddress\030\004 \001" +
+      "(\0132\034.Diadoc.Api.Proto.GarAddress\"\302\001\n\016Rus" +
+      "sianAddress\022\017\n\007ZipCode\030\001 \001(\t\022\016\n\006Region\030\002" +
+      " \002(\t\022\021\n\tTerritory\030\003 \001(\t\022\014\n\004City\030\004 \001(\t\022\020\n" +
+      "\010Locality\030\005 \001(\t\022\016\n\006Street\030\006 \001(\t\022\020\n\010Build" +
+      "ing\030\007 \001(\t\022\r\n\005Block\030\010 \001(\t\022\021\n\tApartment\030\t " +
+      "\001(\t\022\030\n\020OtherInformation\030\n \001(\t\"2\n\016Foreign" +
+      "Address\022\017\n\007Country\030\001 \002(\t\022\017\n\007Address\030\002 \002(" +
+      "\t\"\212\006\n\nGarAddress\022\016\n\006FiasId\030\001 \002(\t\022\017\n\007ZipC" +
+      "ode\030\002 \001(\t\022\022\n\nRegionCode\030\003 \002(\t\022B\n\021Municip" +
+      "alDistrict\030\004 \001(\0132\'.Diadoc.Api.Proto.GarA" +
+      "ddressNameElement\022@\n\017UrbanSettlement\030\005 \001" +
+      "(\0132\'.Diadoc.Api.Proto.GarAddressNameElem" +
+      "ent\0225\n\004City\030\006 \001(\0132\'.Diadoc.Api.Proto.Gar" +
+      "AddressNameElement\022B\n\021PlanningStructure\030" +
+      "\007 \001(\0132\'.Diadoc.Api.Proto.GarAddressNameE" +
+      "lement\0227\n\006Street\030\010 \001(\0132\'.Diadoc.Api.Prot" +
+      "o.GarAddressNameElement\022\r\n\005Stead\030\t \001(\t\022," +
+      "\n\010Garhouse\030\n \001(\0132\032.Diadoc.Api.Proto.GarH" +
+      "ouse\022E\n\022RoomWithinBuilding\030\013 \001(\0132).Diado" +
+      "c.Api.Proto.GarAddressNumberElement\022F\n\023R" +
+      "oomWithinApartment\030\014 \001(\0132).Diadoc.Api.Pr" +
+      "oto.GarAddressNumberElement\022I\n\014DivisionT" +
+      "ype\030\r \002(\0162(.Diadoc.Api.Proto.GarAddressD" +
+      "ivisionType:\tMunicipal\0229\n\010District\030\016 \001(\013" +
+      "2\'.Diadoc.Api.Proto.GarAddressNameElemen" +
+      "t\022;\n\nSettlement\030\017 \001(\0132\'.Diadoc.Api.Proto" +
+      ".GarAddressNameElement\"\214\001\n\010GarHouse\022\024\n\014A" +
+      "bbreviation\030\001 \002(\t\022\016\n\006Number\030\002 \002(\t\022\022\n\nAdd" +
+      "Number1\030\003 \001(\t\022\030\n\020AddAbbreviation1\030\004 \001(\t\022" +
+      "\022\n\nAddNumber2\030\005 \001(\t\022\030\n\020AddAbbreviation2\030" +
+      "\006 \001(\t\";\n\025GarAddressNameElement\022\024\n\014Abbrev" +
+      "iation\030\001 \002(\t\022\014\n\004Name\030\002 \002(\t\"?\n\027GarAddress" +
+      "NumberElement\022\024\n\014Abbreviation\030\001 \002(\t\022\016\n\006N" +
+      "umber\030\002 \002(\t*T\n\026GarAddressDivisionType\022\027\n" +
+      "\023UnknownDivisionType\020\000\022\r\n\tMunicipal\020\001\022\022\n" +
+      "\016Administrative\020\002B\017B\rAddressProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4491,7 +11088,7 @@ public final class AddressProtos {
     internal_static_Diadoc_Api_Proto_Address_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Address_descriptor,
-        new java.lang.String[] { "RussianAddress", "ForeignAddress", "AddressCode", });
+        new java.lang.String[] { "RussianAddress", "ForeignAddress", "AddressCode", "GarAddress", });
     internal_static_Diadoc_Api_Proto_RussianAddress_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_RussianAddress_fieldAccessorTable = new
@@ -4504,6 +11101,30 @@ public final class AddressProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_ForeignAddress_descriptor,
         new java.lang.String[] { "Country", "Address", });
+    internal_static_Diadoc_Api_Proto_GarAddress_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_GarAddress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_GarAddress_descriptor,
+        new java.lang.String[] { "FiasId", "ZipCode", "RegionCode", "MunicipalDistrict", "UrbanSettlement", "City", "PlanningStructure", "Street", "Stead", "Garhouse", "RoomWithinBuilding", "RoomWithinApartment", "DivisionType", "District", "Settlement", });
+    internal_static_Diadoc_Api_Proto_GarHouse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Diadoc_Api_Proto_GarHouse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_GarHouse_descriptor,
+        new java.lang.String[] { "Abbreviation", "Number", "AddNumber1", "AddAbbreviation1", "AddNumber2", "AddAbbreviation2", });
+    internal_static_Diadoc_Api_Proto_GarAddressNameElement_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_Diadoc_Api_Proto_GarAddressNameElement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_GarAddressNameElement_descriptor,
+        new java.lang.String[] { "Abbreviation", "Name", });
+    internal_static_Diadoc_Api_Proto_GarAddressNumberElement_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_Diadoc_Api_Proto_GarAddressNumberElement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_GarAddressNumberElement_descriptor,
+        new java.lang.String[] { "Abbreviation", "Number", });
     descriptor.resolveAllFeaturesImmutable();
   }
 
