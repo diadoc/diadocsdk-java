@@ -330,6 +330,17 @@ public final class OrganizationUserPermissionsProtos {
      * @return The canDeleteRestoreDocuments.
      */
     boolean getCanDeleteRestoreDocuments();
+
+    /**
+     * <code>required bool CanAttachUniversalMessages = 14;</code>
+     * @return Whether the canAttachUniversalMessages field is set.
+     */
+    boolean hasCanAttachUniversalMessages();
+    /**
+     * <code>required bool CanAttachUniversalMessages = 14;</code>
+     * @return The canAttachUniversalMessages.
+     */
+    boolean getCanAttachUniversalMessages();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.OrganizationUserPermissions}
@@ -686,6 +697,25 @@ public final class OrganizationUserPermissionsProtos {
       return canDeleteRestoreDocuments_;
     }
 
+    public static final int CANATTACHUNIVERSALMESSAGES_FIELD_NUMBER = 14;
+    private boolean canAttachUniversalMessages_ = false;
+    /**
+     * <code>required bool CanAttachUniversalMessages = 14;</code>
+     * @return Whether the canAttachUniversalMessages field is set.
+     */
+    @java.lang.Override
+    public boolean hasCanAttachUniversalMessages() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>required bool CanAttachUniversalMessages = 14;</code>
+     * @return The canAttachUniversalMessages.
+     */
+    @java.lang.Override
+    public boolean getCanAttachUniversalMessages() {
+      return canAttachUniversalMessages_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -726,6 +756,10 @@ public final class OrganizationUserPermissionsProtos {
         return false;
       }
       if (!hasCanDeleteRestoreDocuments()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCanAttachUniversalMessages()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -775,6 +809,9 @@ public final class OrganizationUserPermissionsProtos {
       }
       if (((bitField0_ & 0x00000400) != 0)) {
         output.writeBool(13, canDeleteRestoreDocuments_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeBool(14, canAttachUniversalMessages_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -834,6 +871,10 @@ public final class OrganizationUserPermissionsProtos {
       if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, canDeleteRestoreDocuments_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, canAttachUniversalMessages_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -906,6 +947,11 @@ public final class OrganizationUserPermissionsProtos {
         if (getCanDeleteRestoreDocuments()
             != other.getCanDeleteRestoreDocuments()) return false;
       }
+      if (hasCanAttachUniversalMessages() != other.hasCanAttachUniversalMessages()) return false;
+      if (hasCanAttachUniversalMessages()) {
+        if (getCanAttachUniversalMessages()
+            != other.getCanAttachUniversalMessages()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -971,6 +1017,11 @@ public final class OrganizationUserPermissionsProtos {
         hash = (37 * hash) + CANDELETERESTOREDOCUMENTS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getCanDeleteRestoreDocuments());
+      }
+      if (hasCanAttachUniversalMessages()) {
+        hash = (37 * hash) + CANATTACHUNIVERSALMESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCanAttachUniversalMessages());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1126,6 +1177,7 @@ public final class OrganizationUserPermissionsProtos {
           authorizationPermissionBuilder_ = null;
         }
         canDeleteRestoreDocuments_ = false;
+        canAttachUniversalMessages_ = false;
         return this;
       }
 
@@ -1210,6 +1262,10 @@ public final class OrganizationUserPermissionsProtos {
           result.canDeleteRestoreDocuments_ = canDeleteRestoreDocuments_;
           to_bitField0_ |= 0x00000400;
         }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.canAttachUniversalMessages_ = canAttachUniversalMessages_;
+          to_bitField0_ |= 0x00000800;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1272,6 +1328,9 @@ public final class OrganizationUserPermissionsProtos {
         if (other.hasCanDeleteRestoreDocuments()) {
           setCanDeleteRestoreDocuments(other.getCanDeleteRestoreDocuments());
         }
+        if (other.hasCanAttachUniversalMessages()) {
+          setCanAttachUniversalMessages(other.getCanAttachUniversalMessages());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1304,6 +1363,9 @@ public final class OrganizationUserPermissionsProtos {
           return false;
         }
         if (!hasCanDeleteRestoreDocuments()) {
+          return false;
+        }
+        if (!hasCanAttachUniversalMessages()) {
           return false;
         }
         if (!getAuthorizationPermission().isInitialized()) {
@@ -1398,6 +1460,11 @@ public final class OrganizationUserPermissionsProtos {
                 bitField0_ |= 0x00000800;
                 break;
               } // case 104
+              case 112: {
+                canAttachUniversalMessages_ = input.readBool();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 112
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2128,6 +2195,46 @@ public final class OrganizationUserPermissionsProtos {
         return this;
       }
 
+      private boolean canAttachUniversalMessages_ ;
+      /**
+       * <code>required bool CanAttachUniversalMessages = 14;</code>
+       * @return Whether the canAttachUniversalMessages field is set.
+       */
+      @java.lang.Override
+      public boolean hasCanAttachUniversalMessages() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>required bool CanAttachUniversalMessages = 14;</code>
+       * @return The canAttachUniversalMessages.
+       */
+      @java.lang.Override
+      public boolean getCanAttachUniversalMessages() {
+        return canAttachUniversalMessages_;
+      }
+      /**
+       * <code>required bool CanAttachUniversalMessages = 14;</code>
+       * @param value The canAttachUniversalMessages to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCanAttachUniversalMessages(boolean value) {
+
+        canAttachUniversalMessages_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool CanAttachUniversalMessages = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCanAttachUniversalMessages() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        canAttachUniversalMessages_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationUserPermissions)
     }
 
@@ -2848,7 +2955,7 @@ public final class OrganizationUserPermissionsProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n!OrganizationUserPermissions.proto\022\020Dia" +
-      "doc.Api.Proto\"\340\003\n\033OrganizationUserPermis" +
+      "doc.Api.Proto\"\204\004\n\033OrganizationUserPermis" +
       "sions\022\030\n\020UserDepartmentId\030\001 \002(\t\022\027\n\017IsAdm" +
       "inistrator\030\002 \002(\010\022^\n\023DocumentAccessLevel\030" +
       "\003 \001(\0162%.Diadoc.Api.Proto.DocumentAccessL" +
@@ -2860,13 +2967,14 @@ public final class OrganizationUserPermissionsProtos {
       "\022CanCreateDocuments\030\013 \002(\010\022J\n\027Authorizati" +
       "onPermission\030\014 \002(\0132).Diadoc.Api.Proto.Au" +
       "thorizationPermission\022!\n\031CanDeleteRestor" +
-      "eDocuments\030\r \002(\010\"=\n\027AuthorizationPermiss" +
-      "ion\022\021\n\tIsBlocked\030\001 \002(\010\022\017\n\007Comment\030\002 \001(\t*" +
-      "\236\001\n\023DocumentAccessLevel\022\'\n\032UnknownDocume" +
-      "ntAccessLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016DepartmentOn" +
-      "ly\020\000\022\037\n\033DepartmentAndSubdepartments\020\001\022\020\n" +
-      "\014AllDocuments\020\002\022\027\n\023SelectedDepartments\020\003" +
-      "B#B!OrganizationUserPermissionsProtos"
+      "eDocuments\030\r \002(\010\022\"\n\032CanAttachUniversalMe" +
+      "ssages\030\016 \002(\010\"=\n\027AuthorizationPermission\022" +
+      "\021\n\tIsBlocked\030\001 \002(\010\022\017\n\007Comment\030\002 \001(\t*\236\001\n\023" +
+      "DocumentAccessLevel\022\'\n\032UnknownDocumentAc" +
+      "cessLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016DepartmentOnly\020\000" +
+      "\022\037\n\033DepartmentAndSubdepartments\020\001\022\020\n\014All" +
+      "Documents\020\002\022\027\n\023SelectedDepartments\020\003B#B!" +
+      "OrganizationUserPermissionsProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2877,7 +2985,7 @@ public final class OrganizationUserPermissionsProtos {
     internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor,
-        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanManageCounteragents", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", "AuthorizationPermission", "CanDeleteRestoreDocuments", });
+        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanManageCounteragents", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", "AuthorizationPermission", "CanDeleteRestoreDocuments", "CanAttachUniversalMessages", });
     internal_static_Diadoc_Api_Proto_AuthorizationPermission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_AuthorizationPermission_fieldAccessorTable = new
