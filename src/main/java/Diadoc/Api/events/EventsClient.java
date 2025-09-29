@@ -226,6 +226,7 @@ public class EventsClient {
         }
     }
 
+    @Deprecated
     public ForwardingApiProtos.GetForwardedDocumentEventsResponse getForwardedDocumentEvents(
             String boxId, ForwardingApiProtos.GetForwardedDocumentEventsRequest forwardedDocumentEventsRequest
     ) throws DiadocSdkException {

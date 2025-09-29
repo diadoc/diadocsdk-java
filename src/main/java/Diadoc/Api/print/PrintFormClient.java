@@ -216,7 +216,7 @@ public class PrintFormClient {
 
     }
 
-
+    @Deprecated
     public PrintFormResult generateForwardedDocumentPrintForm(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");

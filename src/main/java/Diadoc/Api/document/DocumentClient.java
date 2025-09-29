@@ -374,6 +374,7 @@ public class DocumentClient {
         }
     }
 
+    @Deprecated
     public ForwardingApiProtos.ForwardDocumentResponse forwardDocument(String boxId, ForwardingApiProtos.ForwardDocumentRequest forwardDocumentRequest) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
@@ -397,6 +398,7 @@ public class DocumentClient {
         }
     }
 
+    @Deprecated
     public ForwardingApiProtos.GetForwardedDocumentsResponse getForwardedDocuments(String boxId, ForwardingApiProtos.GetForwardedDocumentsRequest fwdDocumentsRequest) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
@@ -420,6 +422,7 @@ public class DocumentClient {
         }
     }
 
+    @Deprecated
     public byte[] getForwardedEntityContent(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId, String entityId) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
@@ -448,6 +451,7 @@ public class DocumentClient {
         }
     }
 
+    @Deprecated
     public DocumentProtocolResult generateForwardedDocumentProtocol(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
@@ -487,6 +491,7 @@ public class DocumentClient {
         }
     }
 
+    @Deprecated
     public DocumentProtocolResult generateForwardedDocumentProtocol(String boxId, String fromBoxId, String messageId, String documentId, String forwardEventId) throws DiadocSdkException {
         Tools.checkForwardedDocumentParameters(boxId, fromBoxId, messageId, documentId, forwardEventId);
 
