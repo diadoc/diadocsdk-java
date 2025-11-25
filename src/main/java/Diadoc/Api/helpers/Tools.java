@@ -47,8 +47,7 @@ public class Tools {
     }
 
     /**
-     * @deprecated
-     * Use {@link #toCsTicks(Instant)} or {@link #toCsTicks(Duration)}
+     * @deprecated Use {@link #toCsTicks(Instant)} or {@link #toCsTicks(Duration)}
      */
     @Deprecated
     public static long toCsTicks(long time) {
@@ -108,28 +107,6 @@ public class Tools {
     public static void addParameterIfNotNull(URIBuilder urlBuilder, String paramName, Enum<?> paramValue) {
         if (paramValue != null) {
             urlBuilder.addParameter(paramName, paramValue.name());
-        }
-    }
-
-    public static void checkForwardedDocumentParameters(String boxId, String fromBoxId, String messageId, String documentId, String forwardEventId) {
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-
-        if (fromBoxId == null) {
-            throw new IllegalArgumentException("fromBoxId");
-        }
-
-        if (messageId == null) {
-            throw new IllegalArgumentException("messageId");
-        }
-
-        if (documentId == null) {
-            throw new IllegalArgumentException("documentId");
-        }
-
-        if (forwardEventId == null) {
-            throw new IllegalArgumentException("forwardEventId");
         }
     }
 
