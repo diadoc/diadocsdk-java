@@ -67,7 +67,7 @@ public class DocumentClient {
 
 
             Tools.addParameterIfNotNull(url, "timestampToTicks", toCsTicks);
-            Tools.addParameterIfNotNull(url,"timestampFromTicks", fromCsTicks);
+            Tools.addParameterIfNotNull(url, "timestampFromTicks", fromCsTicks);
 
             if (!Tools.isNullOrEmpty(filter.getFromDocumentDate())) {
                 url.addParameter("fromDocumentDate", filter.getFromDocumentDate());
@@ -105,8 +105,7 @@ public class DocumentClient {
     }
 
     /**
-     * @deprecated 
-     * Use {@link #getDocuments(String, String, String, Instant, Instant, String, String, String, boolean, String, Integer)}
+     * @deprecated Use {@link #getDocuments(String, String, String, Instant, Instant, String, String, String, boolean, String, Integer)}
      */
     @Deprecated
     public DocumentList getDocuments(
@@ -135,7 +134,7 @@ public class DocumentClient {
                 .count(count)
                 .build());
     }
-    
+
     public DocumentList getDocuments(
             String boxId,
             String filterCategory,
@@ -164,8 +163,7 @@ public class DocumentClient {
     }
 
     /**
-     * @deprecated 
-     * Use {@link #getDocuments(String, String, String, Instant, Instant, String, String, String, boolean, String, Integer)}
+     * @deprecated Use {@link #getDocuments(String, String, String, Instant, Instant, String, String, String, boolean, String, Integer)}
      */
     @Deprecated
     public DocumentList getDocuments(String boxId,
@@ -215,8 +213,7 @@ public class DocumentClient {
                 afterIndexKey,
                 null);
     }
-    
-    
+
 
     public Document getDocument(String boxId, String messageId, String entityId) throws DiadocSdkException {
         if (boxId == null) {
@@ -246,10 +243,10 @@ public class DocumentClient {
 
         try {
             var url = new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/V3/GetDocument")
-                            .addParameter("boxId", boxId)
-                            .addParameter("messageId", messageId)
-                            .addParameter("entityId", entityId);
+                    .setPath("/V3/GetDocument")
+                    .addParameter("boxId", boxId)
+                    .addParameter("messageId", messageId)
+                    .addParameter("entityId", entityId);
             Tools.addParameterIfNotNull(url, "injectEntityContent", injectEntityContent);
 
             var request = RequestBuilder.get(url.build());
@@ -265,9 +262,9 @@ public class DocumentClient {
         }
         try {
             var request = RequestBuilder.post(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/MoveDocuments")
-                            .build())
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/MoveDocuments")
+                                    .build())
                     .setEntity(new ByteArrayEntity(operation.toByteArray()));
             diadocHttpClient.performRequest(request);
         } catch (URISyntaxException | IOException e) {
@@ -446,66 +443,6 @@ public class DocumentClient {
             var request = RequestBuilder.get(url.build());
 
             return diadocHttpClient.performRequest(request);
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
-    }
-
-    @Deprecated
-    public DocumentProtocolResult generateForwardedDocumentProtocol(String boxId, ForwardedDocumentProtos.ForwardedDocumentId forwardedDocumentId) throws DiadocSdkException {
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-
-        if (forwardedDocumentId == null) {
-            throw new IllegalArgumentException("forwardedDocumentId");
-        }
-
-        try {
-            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
-                    .setPath("/V2/GenerateForwardedDocumentProtocol")
-                    .addParameter("boxId", boxId)
-                    .addParameters(getForwardedDocumentIdParameters(forwardedDocumentId))
-                    .build();
-            return getDocumentProtocolResult(url);
-
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
-    }
-
-    @NotNull
-    private DocumentProtocolResult getDocumentProtocolResult(URI url) throws IOException {
-        var request = RequestBuilder.get(url);
-
-        var response = diadocHttpClient.getResponse(request);
-
-        var traceId = response.getTraceId();
-
-        if (response.getRetryAfter() != null) {
-            return DocumentProtocolResult.builder().withRetryAfter(response.getRetryAfter()).withTraceId(traceId).build();
-        }
-        else {
-            var documentProtocol = DocumentProtocolProtos.DocumentProtocol.parseFrom(response.getContent());
-            return DocumentProtocolResult.builder().withDocumentProtocol(documentProtocol).withTraceId(traceId).build();
-        }
-    }
-
-    @Deprecated
-    public DocumentProtocolResult generateForwardedDocumentProtocol(String boxId, String fromBoxId, String messageId, String documentId, String forwardEventId) throws DiadocSdkException {
-        Tools.checkForwardedDocumentParameters(boxId, fromBoxId, messageId, documentId, forwardEventId);
-
-        try {
-            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
-                    .setPath("/V2/GenerateForwardedDocumentProtocol")
-                    .addParameter("boxId", boxId)
-                    .addParameter("fromBoxId", fromBoxId)
-                    .addParameter("messageId", messageId)
-                    .addParameter("documentId", documentId)
-                    .build();
-
-            return getDocumentProtocolResult(url);
-
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
