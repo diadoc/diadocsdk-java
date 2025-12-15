@@ -65,3 +65,8 @@ mvn install
 - Сделайте Commit изменений (git commit -am 'Add some feature')
 - Сделайте Push новой ветки (git push origin my-new-feature)
 - Создайте новый Pull Request
+
+## Наши контакты
+
+- Клиентская поддержка [Контур.Диадок](https://support.kontur.ru/?support_widget=diadoc) - для решения ошибок в работе интеграционного решения
+- [Форма ОС](https://forms.kontur.ru/form/ddapidoc-feedback) в Документации - для исправления ошибок в Документации
