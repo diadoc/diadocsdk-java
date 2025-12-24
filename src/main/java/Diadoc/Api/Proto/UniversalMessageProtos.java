@@ -195,6 +195,21 @@ public final class UniversalMessageProtos {
      */
     Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageEventOrBuilder getEventsOrBuilder(
         int index);
+
+    /**
+     * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+     * @return Whether the universalMessageCreator field is set.
+     */
+    boolean hasUniversalMessageCreator();
+    /**
+     * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+     * @return The universalMessageCreator.
+     */
+    Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator getUniversalMessageCreator();
+    /**
+     * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+     */
+    Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreatorOrBuilder getUniversalMessageCreatorOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.UniversalMessageInfo}
@@ -295,6 +310,32 @@ public final class UniversalMessageProtos {
       return events_.get(index);
     }
 
+    public static final int UNIVERSALMESSAGECREATOR_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator universalMessageCreator_;
+    /**
+     * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+     * @return Whether the universalMessageCreator field is set.
+     */
+    @java.lang.Override
+    public boolean hasUniversalMessageCreator() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+     * @return The universalMessageCreator.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator getUniversalMessageCreator() {
+      return universalMessageCreator_ == null ? Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.getDefaultInstance() : universalMessageCreator_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreatorOrBuilder getUniversalMessageCreatorOrBuilder() {
+      return universalMessageCreator_ == null ? Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.getDefaultInstance() : universalMessageCreator_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -302,11 +343,19 @@ public final class UniversalMessageProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasUniversalMessageCreator()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getEventsCount(); i++) {
         if (!getEvents(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
+      }
+      if (!getUniversalMessageCreator().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
       }
       memoizedIsInitialized = 1;
       return true;
@@ -320,6 +369,9 @@ public final class UniversalMessageProtos {
       }
       for (int i = 0; i < events_.size(); i++) {
         output.writeMessage(2, events_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(3, getUniversalMessageCreator());
       }
       getUnknownFields().writeTo(output);
     }
@@ -337,6 +389,10 @@ public final class UniversalMessageProtos {
       for (int i = 0; i < events_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, events_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUniversalMessageCreator());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -359,6 +415,11 @@ public final class UniversalMessageProtos {
       }
       if (!getEventsList()
           .equals(other.getEventsList())) return false;
+      if (hasUniversalMessageCreator() != other.hasUniversalMessageCreator()) return false;
+      if (hasUniversalMessageCreator()) {
+        if (!getUniversalMessageCreator()
+            .equals(other.getUniversalMessageCreator())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -377,6 +438,10 @@ public final class UniversalMessageProtos {
       if (getEventsCount() > 0) {
         hash = (37 * hash) + EVENTS_FIELD_NUMBER;
         hash = (53 * hash) + getEventsList().hashCode();
+      }
+      if (hasUniversalMessageCreator()) {
+        hash = (37 * hash) + UNIVERSALMESSAGECREATOR_FIELD_NUMBER;
+        hash = (53 * hash) + getUniversalMessageCreator().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -497,13 +562,20 @@ public final class UniversalMessageProtos {
 
       // Construct using Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getEventsFieldBuilder();
+          getUniversalMessageCreatorFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -517,6 +589,11 @@ public final class UniversalMessageProtos {
           eventsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
+        universalMessageCreator_ = null;
+        if (universalMessageCreatorBuilder_ != null) {
+          universalMessageCreatorBuilder_.dispose();
+          universalMessageCreatorBuilder_ = null;
+        }
         return this;
       }
 
@@ -568,6 +645,12 @@ public final class UniversalMessageProtos {
           result.codeGroup_ = codeGroup_;
           to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.universalMessageCreator_ = universalMessageCreatorBuilder_ == null
+              ? universalMessageCreator_
+              : universalMessageCreatorBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -612,6 +695,9 @@ public final class UniversalMessageProtos {
             }
           }
         }
+        if (other.hasUniversalMessageCreator()) {
+          mergeUniversalMessageCreator(other.getUniversalMessageCreator());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -619,10 +705,16 @@ public final class UniversalMessageProtos {
 
       @java.lang.Override
       public final boolean isInitialized() {
+        if (!hasUniversalMessageCreator()) {
+          return false;
+        }
         for (int i = 0; i < getEventsCount(); i++) {
           if (!getEvents(i).isInitialized()) {
             return false;
           }
+        }
+        if (!getUniversalMessageCreator().isInitialized()) {
+          return false;
         }
         return true;
       }
@@ -668,6 +760,13 @@ public final class UniversalMessageProtos {
                 }
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getUniversalMessageCreatorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -965,6 +1064,127 @@ public final class UniversalMessageProtos {
           events_ = null;
         }
         return eventsBuilder_;
+      }
+
+      private Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator universalMessageCreator_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator, Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.Builder, Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreatorOrBuilder> universalMessageCreatorBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+       * @return Whether the universalMessageCreator field is set.
+       */
+      public boolean hasUniversalMessageCreator() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+       * @return The universalMessageCreator.
+       */
+      public Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator getUniversalMessageCreator() {
+        if (universalMessageCreatorBuilder_ == null) {
+          return universalMessageCreator_ == null ? Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.getDefaultInstance() : universalMessageCreator_;
+        } else {
+          return universalMessageCreatorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+       */
+      public Builder setUniversalMessageCreator(Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator value) {
+        if (universalMessageCreatorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          universalMessageCreator_ = value;
+        } else {
+          universalMessageCreatorBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+       */
+      public Builder setUniversalMessageCreator(
+          Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.Builder builderForValue) {
+        if (universalMessageCreatorBuilder_ == null) {
+          universalMessageCreator_ = builderForValue.build();
+        } else {
+          universalMessageCreatorBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+       */
+      public Builder mergeUniversalMessageCreator(Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator value) {
+        if (universalMessageCreatorBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            universalMessageCreator_ != null &&
+            universalMessageCreator_ != Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.getDefaultInstance()) {
+            getUniversalMessageCreatorBuilder().mergeFrom(value);
+          } else {
+            universalMessageCreator_ = value;
+          }
+        } else {
+          universalMessageCreatorBuilder_.mergeFrom(value);
+        }
+        if (universalMessageCreator_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+       */
+      public Builder clearUniversalMessageCreator() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        universalMessageCreator_ = null;
+        if (universalMessageCreatorBuilder_ != null) {
+          universalMessageCreatorBuilder_.dispose();
+          universalMessageCreatorBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+       */
+      public Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.Builder getUniversalMessageCreatorBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getUniversalMessageCreatorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+       */
+      public Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreatorOrBuilder getUniversalMessageCreatorOrBuilder() {
+        if (universalMessageCreatorBuilder_ != null) {
+          return universalMessageCreatorBuilder_.getMessageOrBuilder();
+        } else {
+          return universalMessageCreator_ == null ?
+              Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.getDefaultInstance() : universalMessageCreator_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator, Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.Builder, Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreatorOrBuilder> 
+          getUniversalMessageCreatorFieldBuilder() {
+        if (universalMessageCreatorBuilder_ == null) {
+          universalMessageCreatorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator, Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.Builder, Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreatorOrBuilder>(
+                  getUniversalMessageCreator(),
+                  getParentForChildren(),
+                  isClean());
+          universalMessageCreator_ = null;
+        }
+        return universalMessageCreatorBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.UniversalMessageInfo)
@@ -1666,6 +1886,739 @@ public final class UniversalMessageProtos {
 
   }
 
+  public interface UniversalMessageCreatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.UniversalMessageCreator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string BoxId = 1;</code>
+     * @return Whether the boxId field is set.
+     */
+    boolean hasBoxId();
+    /**
+     * <code>required string BoxId = 1;</code>
+     * @return The boxId.
+     */
+    java.lang.String getBoxId();
+    /**
+     * <code>required string BoxId = 1;</code>
+     * @return The bytes for boxId.
+     */
+    com.google.protobuf.ByteString
+        getBoxIdBytes();
+
+    /**
+     * <code>required string DepartmentId = 2;</code>
+     * @return Whether the departmentId field is set.
+     */
+    boolean hasDepartmentId();
+    /**
+     * <code>required string DepartmentId = 2;</code>
+     * @return The departmentId.
+     */
+    java.lang.String getDepartmentId();
+    /**
+     * <code>required string DepartmentId = 2;</code>
+     * @return The bytes for departmentId.
+     */
+    com.google.protobuf.ByteString
+        getDepartmentIdBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.UniversalMessageCreator}
+   */
+  public static final class UniversalMessageCreator extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.UniversalMessageCreator)
+      UniversalMessageCreatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        UniversalMessageCreator.class.getName());
+    }
+    // Use UniversalMessageCreator.newBuilder() to construct.
+    private UniversalMessageCreator(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private UniversalMessageCreator() {
+      boxId_ = "";
+      departmentId_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.UniversalMessageProtos.internal_static_Diadoc_Api_Proto_UniversalMessageCreator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.UniversalMessageProtos.internal_static_Diadoc_Api_Proto_UniversalMessageCreator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.class, Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int BOXID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object boxId_ = "";
+    /**
+     * <code>required string BoxId = 1;</code>
+     * @return Whether the boxId field is set.
+     */
+    @java.lang.Override
+    public boolean hasBoxId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string BoxId = 1;</code>
+     * @return The boxId.
+     */
+    @java.lang.Override
+    public java.lang.String getBoxId() {
+      java.lang.Object ref = boxId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          boxId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string BoxId = 1;</code>
+     * @return The bytes for boxId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBoxIdBytes() {
+      java.lang.Object ref = boxId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        boxId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPARTMENTID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object departmentId_ = "";
+    /**
+     * <code>required string DepartmentId = 2;</code>
+     * @return Whether the departmentId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepartmentId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required string DepartmentId = 2;</code>
+     * @return The departmentId.
+     */
+    @java.lang.Override
+    public java.lang.String getDepartmentId() {
+      java.lang.Object ref = departmentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          departmentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string DepartmentId = 2;</code>
+     * @return The bytes for departmentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepartmentIdBytes() {
+      java.lang.Object ref = departmentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        departmentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasBoxId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDepartmentId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, boxId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, departmentId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, boxId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, departmentId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator other = (Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator) obj;
+
+      if (hasBoxId() != other.hasBoxId()) return false;
+      if (hasBoxId()) {
+        if (!getBoxId()
+            .equals(other.getBoxId())) return false;
+      }
+      if (hasDepartmentId() != other.hasDepartmentId()) return false;
+      if (hasDepartmentId()) {
+        if (!getDepartmentId()
+            .equals(other.getDepartmentId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBoxId()) {
+        hash = (37 * hash) + BOXID_FIELD_NUMBER;
+        hash = (53 * hash) + getBoxId().hashCode();
+      }
+      if (hasDepartmentId()) {
+        hash = (37 * hash) + DEPARTMENTID_FIELD_NUMBER;
+        hash = (53 * hash) + getDepartmentId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.UniversalMessageCreator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.UniversalMessageCreator)
+        Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.UniversalMessageProtos.internal_static_Diadoc_Api_Proto_UniversalMessageCreator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.UniversalMessageProtos.internal_static_Diadoc_Api_Proto_UniversalMessageCreator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.class, Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        boxId_ = "";
+        departmentId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.UniversalMessageProtos.internal_static_Diadoc_Api_Proto_UniversalMessageCreator_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator build() {
+        Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator buildPartial() {
+        Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator result = new Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.boxId_ = boxId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.departmentId_ = departmentId_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator) {
+          return mergeFrom((Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator other) {
+        if (other == Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.getDefaultInstance()) return this;
+        if (other.hasBoxId()) {
+          boxId_ = other.boxId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasDepartmentId()) {
+          departmentId_ = other.departmentId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasBoxId()) {
+          return false;
+        }
+        if (!hasDepartmentId()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                boxId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                departmentId_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object boxId_ = "";
+      /**
+       * <code>required string BoxId = 1;</code>
+       * @return Whether the boxId field is set.
+       */
+      public boolean hasBoxId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string BoxId = 1;</code>
+       * @return The boxId.
+       */
+      public java.lang.String getBoxId() {
+        java.lang.Object ref = boxId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            boxId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string BoxId = 1;</code>
+       * @return The bytes for boxId.
+       */
+      public com.google.protobuf.ByteString
+          getBoxIdBytes() {
+        java.lang.Object ref = boxId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          boxId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string BoxId = 1;</code>
+       * @param value The boxId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBoxId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        boxId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string BoxId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBoxId() {
+        boxId_ = getDefaultInstance().getBoxId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string BoxId = 1;</code>
+       * @param value The bytes for boxId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBoxIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        boxId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object departmentId_ = "";
+      /**
+       * <code>required string DepartmentId = 2;</code>
+       * @return Whether the departmentId field is set.
+       */
+      public boolean hasDepartmentId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required string DepartmentId = 2;</code>
+       * @return The departmentId.
+       */
+      public java.lang.String getDepartmentId() {
+        java.lang.Object ref = departmentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            departmentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string DepartmentId = 2;</code>
+       * @return The bytes for departmentId.
+       */
+      public com.google.protobuf.ByteString
+          getDepartmentIdBytes() {
+        java.lang.Object ref = departmentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          departmentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string DepartmentId = 2;</code>
+       * @param value The departmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepartmentId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        departmentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DepartmentId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepartmentId() {
+        departmentId_ = getDefaultInstance().getDepartmentId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string DepartmentId = 2;</code>
+       * @param value The bytes for departmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepartmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        departmentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.UniversalMessageCreator)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.UniversalMessageCreator)
+    private static final Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator();
+    }
+
+    public static Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UniversalMessageCreator>
+        PARSER = new com.google.protobuf.AbstractParser<UniversalMessageCreator>() {
+      @java.lang.Override
+      public UniversalMessageCreator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UniversalMessageCreator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UniversalMessageCreator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_UniversalMessageInfo_descriptor;
   private static final 
@@ -1676,6 +2629,11 @@ public final class UniversalMessageProtos {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_UniversalMessageEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_UniversalMessageCreator_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_UniversalMessageCreator_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1686,17 +2644,20 @@ public final class UniversalMessageProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\026UniversalMessage.proto\022\020Diadoc.Api.Pro" +
-      "to\"\261\001\n\024UniversalMessageInfo\022`\n\tCodeGroup" +
+      "to\"\375\001\n\024UniversalMessageInfo\022`\n\tCodeGroup" +
       "\030\001 \001(\0162+.Diadoc.Api.Proto.UniversalMessa" +
       "geCodeGroup: UnknownUniversalMessageCode" +
       "Group\0227\n\006Events\030\002 \003(\0132\'.Diadoc.Api.Proto" +
-      ".UniversalMessageEvent\">\n\025UniversalMessa" +
-      "geEvent\022\022\n\nStatusCode\030\001 \002(\005\022\021\n\tPlainText" +
-      "\030\002 \001(\t*\213\001\n\031UniversalMessageCodeGroup\022$\n " +
-      "UnknownUniversalMessageCodeGroup\020\000\022\013\n\007Re" +
-      "ceipt\020\001\022\024\n\020AmendmentRequest\020\002\022\r\n\tRejecti" +
-      "on\020\003\022\026\n\022InformationMessage\020\004B\030B\026Universa" +
-      "lMessageProtos"
+      ".UniversalMessageEvent\022J\n\027UniversalMessa" +
+      "geCreator\030\003 \002(\0132).Diadoc.Api.Proto.Unive" +
+      "rsalMessageCreator\">\n\025UniversalMessageEv" +
+      "ent\022\022\n\nStatusCode\030\001 \002(\005\022\021\n\tPlainText\030\002 \001" +
+      "(\t\">\n\027UniversalMessageCreator\022\r\n\005BoxId\030\001" +
+      " \002(\t\022\024\n\014DepartmentId\030\002 \002(\t*\213\001\n\031Universal" +
+      "MessageCodeGroup\022$\n UnknownUniversalMess" +
+      "ageCodeGroup\020\000\022\013\n\007Receipt\020\001\022\024\n\020Amendment" +
+      "Request\020\002\022\r\n\tRejection\020\003\022\026\n\022InformationM" +
+      "essage\020\004B\030B\026UniversalMessageProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1707,13 +2668,19 @@ public final class UniversalMessageProtos {
     internal_static_Diadoc_Api_Proto_UniversalMessageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_UniversalMessageInfo_descriptor,
-        new java.lang.String[] { "CodeGroup", "Events", });
+        new java.lang.String[] { "CodeGroup", "Events", "UniversalMessageCreator", });
     internal_static_Diadoc_Api_Proto_UniversalMessageEvent_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_UniversalMessageEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_UniversalMessageEvent_descriptor,
         new java.lang.String[] { "StatusCode", "PlainText", });
+    internal_static_Diadoc_Api_Proto_UniversalMessageCreator_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_UniversalMessageCreator_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_UniversalMessageCreator_descriptor,
+        new java.lang.String[] { "BoxId", "DepartmentId", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

@@ -298,4 +298,33 @@ public class ParseClient {
             throw new DiadocSdkException(e);
         }
     }
+
+    public byte[] parseUniversalMessage(String boxId, String messageId, String attachmentId) throws DiadocSdkException {
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/ParseUniversalMessage")
+                    .addParameter("boxId", boxId)
+                    .addParameter("messageId", messageId)
+                    .addParameter("attachmentId", attachmentId);
+
+            var request = RequestBuilder.post(url.build());
+            return diadocHttpClient.performRequest(request);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public byte[] parseUniversalMessageXml(byte[] content) throws DiadocSdkException {
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/ParseUniversalMessageXml");
+
+            var request = RequestBuilder.post(url.build())
+                    .setEntity(new ByteArrayEntity(content));
+
+            return diadocHttpClient.performRequest(request);
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
 }
