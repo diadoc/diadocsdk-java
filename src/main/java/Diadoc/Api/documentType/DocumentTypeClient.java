@@ -14,6 +14,7 @@ import java.net.URISyntaxException;
 import static Diadoc.Api.Proto.Documents.DetectTitleResponseProtos.DetectTitleResponse;
 import static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionProtos.DetectDocumentTypesResponse;
 import static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.GetDocumentTypesResponseV2;
+import static Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV3Protos.GetDocumentTypesResponseV3;
 
 public class DocumentTypeClient {
     public DiadocHttpClient diadocHttpClient;
@@ -33,6 +34,22 @@ public class DocumentTypeClient {
                             .addParameter("boxId", boxId)
                             .build());
             return GetDocumentTypesResponseV2.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public GetDocumentTypesResponseV3 getDocumentTypesV3(String boxId) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(boxId)) {
+            throw new IllegalArgumentException("boxId");
+        }
+        try {
+            var request = RequestBuilder.get(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V3/GetDocumentTypes")
+                            .addParameter("boxId", boxId)
+                            .build());
+            return GetDocumentTypesResponseV3.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
