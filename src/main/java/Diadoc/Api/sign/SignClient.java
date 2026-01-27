@@ -83,54 +83,6 @@ public class SignClient {
         }
     }
 
-    /**
-     * @deprecated Method is deprecated
-     * Informantion <a href="https://developer.kontur.ru/docs/diadoc-api/http/obsolete/AutoSignReceipts.html">in documentation</a>.
-     */
-    @Deprecated
-    public AsyncMethodResult autoSignReceipts(String boxId, @Nullable String certificateThumbprint, @Nullable String batchKey) throws DiadocSdkException {
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-
-        try {
-            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
-                    .setPath("/AutoSignReceipts")
-                    .addParameter("boxId", boxId);
-
-            if (certificateThumbprint != null) {
-                url.addParameter("certificateThumbprint", certificateThumbprint);
-            }
-
-            if (batchKey != null) {
-                url.addParameter("batchKey", batchKey);
-            }
-
-            var result = diadocHttpClient.performRequest(
-                    RequestBuilder.post(url.build()).addHeader("Content-Length", "0"));
-            return AsyncMethodResult.parseFrom(result);
-
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
-    }
-
-    /**
-     * @deprecated Method is deprecated
-     * Informantion <a href="https://developer.kontur.ru/docs/diadoc-api/http/obsolete/AutoSignReceipts.html">in documentation</a>.
-     */
-    @Deprecated
-    public AutosignReceiptsResult waitAutosignReceiptsResult(String taskId, Integer timeoutInMillis)
-            throws DiadocSdkException {
-        try {
-            byte[] data = diadocHttpClient.waitTaskResult("/AutosignReceiptsResult", taskId, timeoutInMillis);
-            return AutosignReceiptsResult.parseFrom(data);
-        } catch (InvalidProtocolBufferException e) {
-            throw new DiadocSdkException(e);
-        }
-
-    }
-
     public AsyncMethodResult dssSign(String boxId, DssSignRequest request) throws DiadocSdkException {
         return dssSign(boxId, request, null);
     }
