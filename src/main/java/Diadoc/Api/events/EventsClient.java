@@ -26,7 +26,7 @@ public class EventsClient {
     }
 
     /**
-     * @deprecated Use {@link #getNewEventsV7(String, String, String, String, String, MessageType, DocumentDirection, Long, Long, String, OrderBy, Integer)}
+     * @deprecated Use {@link #getNewEventsV8(String, String, String, String, String, MessageType, DocumentDirection, Long, Long, String, OrderBy, Integer)}
      */
     @Deprecated
     public BoxEventList getNewEvents(String currentBoxId, @Nullable String eventIdCurrent) throws DiadocSdkException {
@@ -50,6 +50,9 @@ public class EventsClient {
         }
     }
 
+    /**
+     * @deprecated Use {@link #getNewEventsV8(String, String, String, String, String, MessageType, DocumentDirection, Long, Long, String, OrderBy, Integer)}
+     */
     public BoxEventList getNewEventsV7(
             String currentBoxId,
             @Nullable String afterEventId,
@@ -142,6 +145,10 @@ public class EventsClient {
         }
     }
 
+    /**
+     * @deprecated
+     * Use {@link #getLastEventV2(String)} 
+     */
     @Nullable
     public BoxEvent getLastEvent(String boxId) throws DiadocSdkException {
         if (boxId == null) {
@@ -184,6 +191,10 @@ public class EventsClient {
         }
     }
 
+    /**
+     * @deprecated
+     * Use {@link #getEventV3(String, String)} 
+     */
     public BoxEvent getEvent(String boxId, String eventId) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
