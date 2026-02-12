@@ -7,7 +7,6 @@ import "Docflow/ResolutionDocflowV3.proto";
 import "OuterDocflows/OuterDocflowStatus.proto";
 import "TtGisFixationCancellationStatus.proto";
 import "DocflowStatusV3.proto";
-import "Docflow/OutOfWorkflowUniversalMessageDocflow.proto";
 
 package Diadoc.Api.Proto.Docflow;
 
@@ -39,7 +38,6 @@ message SenderTitleDocflow
 	optional Timestamp DeliveredAt = 4;
 	optional RoamingNotification RoamingNotification = 5;
 	required Documents.SenderSignatureStatus SenderSignatureStatus = 6;
-	optional OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 7;
 }
 
 message ConfirmationDocflow
