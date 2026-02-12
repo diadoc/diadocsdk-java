@@ -2733,6 +2733,21 @@ public final class DocflowV4Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.ConfirmationDocflowV4 Confirmation = 8;</code>
      */
     Diadoc.Api.Proto.Docflow.DocflowV4Protos.ConfirmationDocflowV4OrBuilder getConfirmationOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+     * @return Whether the outOfWorkflowUniversalMessageDocflow field is set.
+     */
+    boolean hasOutOfWorkflowUniversalMessageDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+     * @return The outOfWorkflowUniversalMessageDocflow.
+     */
+    Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow getOutOfWorkflowUniversalMessageDocflow();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+     */
+    Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflowOrBuilder getOutOfWorkflowUniversalMessageDocflowOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.ParticipantResponseDocflowV4}
@@ -2966,6 +2981,32 @@ public final class DocflowV4Protos {
       return confirmation_ == null ? Diadoc.Api.Proto.Docflow.DocflowV4Protos.ConfirmationDocflowV4.getDefaultInstance() : confirmation_;
     }
 
+    public static final int OUTOFWORKFLOWUNIVERSALMESSAGEDOCFLOW_FIELD_NUMBER = 9;
+    private Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow outOfWorkflowUniversalMessageDocflow_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+     * @return Whether the outOfWorkflowUniversalMessageDocflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutOfWorkflowUniversalMessageDocflow() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+     * @return The outOfWorkflowUniversalMessageDocflow.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow getOutOfWorkflowUniversalMessageDocflow() {
+      return outOfWorkflowUniversalMessageDocflow_ == null ? Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.getDefaultInstance() : outOfWorkflowUniversalMessageDocflow_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflowOrBuilder getOutOfWorkflowUniversalMessageDocflowOrBuilder() {
+      return outOfWorkflowUniversalMessageDocflow_ == null ? Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.getDefaultInstance() : outOfWorkflowUniversalMessageDocflow_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3017,6 +3058,12 @@ public final class DocflowV4Protos {
           return false;
         }
       }
+      if (hasOutOfWorkflowUniversalMessageDocflow()) {
+        if (!getOutOfWorkflowUniversalMessageDocflow().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -3047,6 +3094,9 @@ public final class DocflowV4Protos {
       }
       if (((bitField0_ & 0x00000080) != 0)) {
         output.writeMessage(8, getConfirmation());
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeMessage(9, getOutOfWorkflowUniversalMessageDocflow());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3088,6 +3138,10 @@ public final class DocflowV4Protos {
       if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getConfirmation());
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getOutOfWorkflowUniversalMessageDocflow());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3143,6 +3197,11 @@ public final class DocflowV4Protos {
         if (!getConfirmation()
             .equals(other.getConfirmation())) return false;
       }
+      if (hasOutOfWorkflowUniversalMessageDocflow() != other.hasOutOfWorkflowUniversalMessageDocflow()) return false;
+      if (hasOutOfWorkflowUniversalMessageDocflow()) {
+        if (!getOutOfWorkflowUniversalMessageDocflow()
+            .equals(other.getOutOfWorkflowUniversalMessageDocflow())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3186,6 +3245,10 @@ public final class DocflowV4Protos {
       if (hasConfirmation()) {
         hash = (37 * hash) + CONFIRMATION_FIELD_NUMBER;
         hash = (53 * hash) + getConfirmation().hashCode();
+      }
+      if (hasOutOfWorkflowUniversalMessageDocflow()) {
+        hash = (37 * hash) + OUTOFWORKFLOWUNIVERSALMESSAGEDOCFLOW_FIELD_NUMBER;
+        hash = (53 * hash) + getOutOfWorkflowUniversalMessageDocflow().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3323,6 +3386,7 @@ public final class DocflowV4Protos {
           getSentAtFieldBuilder();
           getDeliveredAtFieldBuilder();
           getConfirmationFieldBuilder();
+          getOutOfWorkflowUniversalMessageDocflowFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3360,6 +3424,11 @@ public final class DocflowV4Protos {
         if (confirmationBuilder_ != null) {
           confirmationBuilder_.dispose();
           confirmationBuilder_ = null;
+        }
+        outOfWorkflowUniversalMessageDocflow_ = null;
+        if (outOfWorkflowUniversalMessageDocflowBuilder_ != null) {
+          outOfWorkflowUniversalMessageDocflowBuilder_.dispose();
+          outOfWorkflowUniversalMessageDocflowBuilder_ = null;
         }
         return this;
       }
@@ -3439,6 +3508,12 @@ public final class DocflowV4Protos {
               : confirmationBuilder_.build();
           to_bitField0_ |= 0x00000080;
         }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.outOfWorkflowUniversalMessageDocflow_ = outOfWorkflowUniversalMessageDocflowBuilder_ == null
+              ? outOfWorkflowUniversalMessageDocflow_
+              : outOfWorkflowUniversalMessageDocflowBuilder_.build();
+          to_bitField0_ |= 0x00000100;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -3477,6 +3552,9 @@ public final class DocflowV4Protos {
         }
         if (other.hasConfirmation()) {
           mergeConfirmation(other.getConfirmation());
+        }
+        if (other.hasOutOfWorkflowUniversalMessageDocflow()) {
+          mergeOutOfWorkflowUniversalMessageDocflow(other.getOutOfWorkflowUniversalMessageDocflow());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3518,6 +3596,11 @@ public final class DocflowV4Protos {
         }
         if (hasConfirmation()) {
           if (!getConfirmation().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasOutOfWorkflowUniversalMessageDocflow()) {
+          if (!getOutOfWorkflowUniversalMessageDocflow().isInitialized()) {
             return false;
           }
         }
@@ -3599,6 +3682,13 @@ public final class DocflowV4Protos {
                 bitField0_ |= 0x00000080;
                 break;
               } // case 66
+              case 74: {
+                input.readMessage(
+                    getOutOfWorkflowUniversalMessageDocflowFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4422,6 +4512,127 @@ public final class DocflowV4Protos {
           confirmation_ = null;
         }
         return confirmationBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow outOfWorkflowUniversalMessageDocflow_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow, Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.Builder, Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflowOrBuilder> outOfWorkflowUniversalMessageDocflowBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+       * @return Whether the outOfWorkflowUniversalMessageDocflow field is set.
+       */
+      public boolean hasOutOfWorkflowUniversalMessageDocflow() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+       * @return The outOfWorkflowUniversalMessageDocflow.
+       */
+      public Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow getOutOfWorkflowUniversalMessageDocflow() {
+        if (outOfWorkflowUniversalMessageDocflowBuilder_ == null) {
+          return outOfWorkflowUniversalMessageDocflow_ == null ? Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.getDefaultInstance() : outOfWorkflowUniversalMessageDocflow_;
+        } else {
+          return outOfWorkflowUniversalMessageDocflowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+       */
+      public Builder setOutOfWorkflowUniversalMessageDocflow(Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow value) {
+        if (outOfWorkflowUniversalMessageDocflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outOfWorkflowUniversalMessageDocflow_ = value;
+        } else {
+          outOfWorkflowUniversalMessageDocflowBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+       */
+      public Builder setOutOfWorkflowUniversalMessageDocflow(
+          Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.Builder builderForValue) {
+        if (outOfWorkflowUniversalMessageDocflowBuilder_ == null) {
+          outOfWorkflowUniversalMessageDocflow_ = builderForValue.build();
+        } else {
+          outOfWorkflowUniversalMessageDocflowBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+       */
+      public Builder mergeOutOfWorkflowUniversalMessageDocflow(Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow value) {
+        if (outOfWorkflowUniversalMessageDocflowBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            outOfWorkflowUniversalMessageDocflow_ != null &&
+            outOfWorkflowUniversalMessageDocflow_ != Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.getDefaultInstance()) {
+            getOutOfWorkflowUniversalMessageDocflowBuilder().mergeFrom(value);
+          } else {
+            outOfWorkflowUniversalMessageDocflow_ = value;
+          }
+        } else {
+          outOfWorkflowUniversalMessageDocflowBuilder_.mergeFrom(value);
+        }
+        if (outOfWorkflowUniversalMessageDocflow_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+       */
+      public Builder clearOutOfWorkflowUniversalMessageDocflow() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        outOfWorkflowUniversalMessageDocflow_ = null;
+        if (outOfWorkflowUniversalMessageDocflowBuilder_ != null) {
+          outOfWorkflowUniversalMessageDocflowBuilder_.dispose();
+          outOfWorkflowUniversalMessageDocflowBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.Builder getOutOfWorkflowUniversalMessageDocflowBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getOutOfWorkflowUniversalMessageDocflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflowOrBuilder getOutOfWorkflowUniversalMessageDocflowOrBuilder() {
+        if (outOfWorkflowUniversalMessageDocflowBuilder_ != null) {
+          return outOfWorkflowUniversalMessageDocflowBuilder_.getMessageOrBuilder();
+        } else {
+          return outOfWorkflowUniversalMessageDocflow_ == null ?
+              Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.getDefaultInstance() : outOfWorkflowUniversalMessageDocflow_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow, Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.Builder, Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflowOrBuilder> 
+          getOutOfWorkflowUniversalMessageDocflowFieldBuilder() {
+        if (outOfWorkflowUniversalMessageDocflowBuilder_ == null) {
+          outOfWorkflowUniversalMessageDocflowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow, Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.Builder, Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflowOrBuilder>(
+                  getOutOfWorkflowUniversalMessageDocflow(),
+                  getParentForChildren(),
+                  isClean());
+          outOfWorkflowUniversalMessageDocflow_ = null;
+        }
+        return outOfWorkflowUniversalMessageDocflowBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.ParticipantResponseDocflowV4)
@@ -14496,99 +14707,103 @@ public final class DocflowV4Protos {
       ".proto\032\034Docflow/DocumentInfoV3.proto\032\020Do" +
       "cumentId.proto\032/Docflow/UniversalMessage" +
       "AttachmentDocflow.proto\032\027Docflow/Docflow" +
-      "V3.proto\032\027Docflow/LastEvent.proto\"\305\003\n\023Re" +
-      "vocationDocflowV4\022\022\n\nIsFinished\030\001 \002(\010\022M\n" +
-      "\021RevocationRequest\030\002 \002(\01322.Diadoc.Api.Pr" +
-      "oto.Docflow.RevocationRequestDocflow\022Q\n\022" +
-      "RevocationResponse\030\003 \001(\01325.Diadoc.Api.Pr" +
-      "oto.Docflow.RevocationResponseDocflowV4\022" +
-      "\026\n\016InitiatorBoxId\030\004 \002(\t\022F\n\020RevocationSta" +
-      "tus\030\005 \002(\0162,.Diadoc.Api.Proto.Documents.R" +
-      "evocationStatus\022J\n\022ResolutionEntities\030\006 " +
-      "\001(\0132..Diadoc.Api.Proto.Docflow.Resolutio" +
-      "nEntitiesV3\022L\n\024OuterDocflowEntities\030\007 \003(" +
-      "\0132..Diadoc.Api.Proto.Docflow.OuterDocflo" +
-      "wEntities\"\263\001\n\033RevocationResponseDocflowV" +
-      "4\022A\n\022RecipientSignature\030\001 \001(\0132%.Diadoc.A" +
-      "pi.Proto.Docflow.SignatureV3\022Q\n\022Signatur" +
-      "eRejection\030\002 \001(\01325.Diadoc.Api.Proto.Docf" +
-      "low.SignatureRejectionDocflowV4\"\346\003\n\034Part" +
-      "icipantResponseDocflowV4\022\022\n\nIsFinished\030\001" +
-      " \002(\010\0228\n\tSignature\030\002 \001(\0132%.Diadoc.Api.Pro" +
-      "to.Docflow.SignatureV3\022;\n\005Title\030\003 \001(\0132,." +
-      "Diadoc.Api.Proto.Docflow.SignedAttachmen" +
-      "tV3\022H\n\tRejection\030\004 \001(\01325.Diadoc.Api.Prot" +
-      "o.Docflow.SignatureRejectionDocflowV4\022+\n" +
-      "\006SentAt\030\005 \001(\0132\033.Diadoc.Api.Proto.Timesta" +
-      "mp\0220\n\013DeliveredAt\030\006 \001(\0132\033.Diadoc.Api.Pro" +
-      "to.Timestamp\022K\n\016ResponseStatus\030\007 \002(\01623.D" +
-      "iadoc.Api.Proto.Documents.RecipientRespo" +
-      "nseStatus\022E\n\014Confirmation\030\010 \001(\0132/.Diadoc" +
-      ".Api.Proto.Docflow.ConfirmationDocflowV4" +
-      "\"\225\002\n\033SignatureRejectionDocflowV4\022H\n\022Sign" +
-      "atureRejection\030\001 \001(\0132,.Diadoc.Api.Proto." +
-      "Docflow.SignedAttachmentV3\022\020\n\010IsFormal\030\002" +
-      " \002(\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.Api.P" +
-      "roto.Timestamp\022\021\n\tPlainText\030\004 \001(\t\022U\n\020Uni" +
-      "versalMessage\030\005 \001(\0132;.Diadoc.Api.Proto.D" +
-      "ocflow.UniversalMessageAttachmentDocflow" +
-      "\"\343\003\n\031AmendmentRequestDocflowV4\022\022\n\nIsFini" +
-      "shed\030\001 \002(\010\022F\n\020AmendmentRequest\030\002 \001(\0132,.D" +
+      "V3.proto\032\027Docflow/LastEvent.proto\0322Docfl" +
+      "ow/OutOfWorkflowUniversalMessageDocflow." +
+      "proto\"\305\003\n\023RevocationDocflowV4\022\022\n\nIsFinis" +
+      "hed\030\001 \002(\010\022M\n\021RevocationRequest\030\002 \002(\01322.D" +
+      "iadoc.Api.Proto.Docflow.RevocationReques" +
+      "tDocflow\022Q\n\022RevocationResponse\030\003 \001(\01325.D" +
+      "iadoc.Api.Proto.Docflow.RevocationRespon" +
+      "seDocflowV4\022\026\n\016InitiatorBoxId\030\004 \002(\t\022F\n\020R" +
+      "evocationStatus\030\005 \002(\0162,.Diadoc.Api.Proto" +
+      ".Documents.RevocationStatus\022J\n\022Resolutio" +
+      "nEntities\030\006 \001(\0132..Diadoc.Api.Proto.Docfl" +
+      "ow.ResolutionEntitiesV3\022L\n\024OuterDocflowE" +
+      "ntities\030\007 \003(\0132..Diadoc.Api.Proto.Docflow" +
+      ".OuterDocflowEntities\"\263\001\n\033RevocationResp" +
+      "onseDocflowV4\022A\n\022RecipientSignature\030\001 \001(" +
+      "\0132%.Diadoc.Api.Proto.Docflow.SignatureV3" +
+      "\022Q\n\022SignatureRejection\030\002 \001(\01325.Diadoc.Ap" +
+      "i.Proto.Docflow.SignatureRejectionDocflo" +
+      "wV4\"\324\004\n\034ParticipantResponseDocflowV4\022\022\n\n" +
+      "IsFinished\030\001 \002(\010\0228\n\tSignature\030\002 \001(\0132%.Di" +
+      "adoc.Api.Proto.Docflow.SignatureV3\022;\n\005Ti" +
+      "tle\030\003 \001(\0132,.Diadoc.Api.Proto.Docflow.Sig" +
+      "nedAttachmentV3\022H\n\tRejection\030\004 \001(\01325.Dia" +
+      "doc.Api.Proto.Docflow.SignatureRejection" +
+      "DocflowV4\022+\n\006SentAt\030\005 \001(\0132\033.Diadoc.Api.P" +
+      "roto.Timestamp\0220\n\013DeliveredAt\030\006 \001(\0132\033.Di" +
+      "adoc.Api.Proto.Timestamp\022K\n\016ResponseStat" +
+      "us\030\007 \002(\01623.Diadoc.Api.Proto.Documents.Re" +
+      "cipientResponseStatus\022E\n\014Confirmation\030\010 " +
+      "\001(\0132/.Diadoc.Api.Proto.Docflow.Confirmat" +
+      "ionDocflowV4\022l\n$OutOfWorkflowUniversalMe" +
+      "ssageDocflow\030\t \001(\0132>.Diadoc.Api.Proto.Do" +
+      "cflow.OutOfWorkflowUniversalMessageDocfl" +
+      "ow\"\225\002\n\033SignatureRejectionDocflowV4\022H\n\022Si" +
+      "gnatureRejection\030\001 \001(\0132,.Diadoc.Api.Prot" +
+      "o.Docflow.SignedAttachmentV3\022\020\n\010IsFormal" +
+      "\030\002 \002(\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.Api" +
+      ".Proto.Timestamp\022\021\n\tPlainText\030\004 \001(\t\022U\n\020U" +
+      "niversalMessage\030\005 \001(\0132;.Diadoc.Api.Proto" +
+      ".Docflow.UniversalMessageAttachmentDocfl" +
+      "ow\"\343\003\n\031AmendmentRequestDocflowV4\022\022\n\nIsFi" +
+      "nished\030\001 \002(\010\022F\n\020AmendmentRequest\030\002 \001(\0132," +
+      ".Diadoc.Api.Proto.Docflow.SignedAttachme" +
+      "ntV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto." +
+      "Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc." +
+      "Api.Proto.Timestamp\022;\n\007Receipt\030\005 \001(\0132*.D" +
+      "iadoc.Api.Proto.Docflow.ReceiptDocflowV4" +
+      "\022\026\n\016AmendmentFlags\030\006 \002(\005\022\021\n\tPlainText\030\007 " +
+      "\001(\t\022L\n\023ConfirmationDocflow\030\010 \001(\0132/.Diado" +
+      "c.Api.Proto.Docflow.ConfirmationDocflowV" +
+      "4\022U\n\020UniversalMessage\030\t \001(\0132;.Diadoc.Api" +
+      ".Proto.Docflow.UniversalMessageAttachmen" +
+      "tDocflow\"\256\003\n\020ReceiptDocflowV4\022\022\n\nIsFinis" +
+      "hed\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 \001(\0132,.D" +
       "iadoc.Api.Proto.Docflow.SignedAttachment" +
       "V3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Ti" +
       "mestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.Ap" +
-      "i.Proto.Timestamp\022;\n\007Receipt\030\005 \001(\0132*.Dia" +
-      "doc.Api.Proto.Docflow.ReceiptDocflowV4\022\026" +
-      "\n\016AmendmentFlags\030\006 \002(\005\022\021\n\tPlainText\030\007 \001(" +
-      "\t\022L\n\023ConfirmationDocflow\030\010 \001(\0132/.Diadoc." +
-      "Api.Proto.Docflow.ConfirmationDocflowV4\022" +
-      "U\n\020UniversalMessage\030\t \001(\0132;.Diadoc.Api.P" +
-      "roto.Docflow.UniversalMessageAttachmentD" +
-      "ocflow\"\256\003\n\020ReceiptDocflowV4\022\022\n\nIsFinishe" +
-      "d\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 \001(\0132,.Dia" +
-      "doc.Api.Proto.Docflow.SignedAttachmentV3" +
-      "\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Time" +
-      "stamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.Api." +
-      "Proto.Timestamp\022E\n\014Confirmation\030\005 \001(\0132/." +
-      "Diadoc.Api.Proto.Docflow.ConfirmationDoc" +
-      "flowV4\022@\n\006Status\030\006 \002(\01620.Diadoc.Api.Prot" +
-      "o.Documents.GeneralReceiptStatus\022U\n\020Univ" +
-      "ersalMessage\030\007 \001(\0132;.Diadoc.Api.Proto.Do" +
-      "cflow.UniversalMessageAttachmentDocflow\"" +
-      "\274\002\n\025ConfirmationDocflowV4\022\022\n\nIsFinished\030" +
-      "\001 \002(\010\022L\n\026ConfirmationAttachment\030\002 \001(\0132,." +
-      "Diadoc.Api.Proto.Docflow.SignedAttachmen" +
-      "tV3\0220\n\013ConfirmedAt\030\003 \001(\0132\033.Diadoc.Api.Pr" +
-      "oto.Timestamp\022;\n\007Receipt\030\004 \001(\0132*.Diadoc." +
-      "Api.Proto.Docflow.ReceiptDocflowV4\022R\n\023Ro" +
-      "amingConfirmation\030\005 \001(\01325.Diadoc.Api.Pro" +
-      "to.Docflow.OperatorConfirmationDocflow\"\357" +
-      "\007\n\tDocflowV4\022A\n\013SenderTitle\030\001 \002(\0132,.Diad" +
-      "oc.Api.Proto.Docflow.SenderTitleDocflow\022" +
-      "E\n\014Confirmation\030\002 \001(\0132/.Diadoc.Api.Proto" +
-      ".Docflow.ConfirmationDocflowV4\022M\n\rProxyR" +
-      "esponse\030\013 \001(\01326.Diadoc.Api.Proto.Docflow" +
-      ".ParticipantResponseDocflowV4\022D\n\020Recipie" +
-      "ntReceipt\030\004 \001(\0132*.Diadoc.Api.Proto.Docfl" +
-      "ow.ReceiptDocflowV4\022Q\n\021RecipientResponse" +
-      "\030\005 \001(\01326.Diadoc.Api.Proto.Docflow.Partic" +
-      "ipantResponseDocflowV4\022M\n\020AmendmentReque" +
-      "st\030\006 \001(\01323.Diadoc.Api.Proto.Docflow.Amen" +
-      "dmentRequestDocflowV4\022A\n\nRevocation\030\007 \001(" +
-      "\0132-.Diadoc.Api.Proto.Docflow.RevocationD" +
-      "ocflowV4\022A\n\rSenderReceipt\030\010 \001(\0132*.Diadoc" +
-      ".Api.Proto.Docflow.ReceiptDocflowV4\022A\n\nR" +
-      "esolution\030\t \001(\0132-.Diadoc.Api.Proto.Docfl" +
-      "ow.ResolutionDocflowV3\022J\n\022ResolutionEnti" +
-      "ties\030\n \001(\0132..Diadoc.Api.Proto.Docflow.Re" +
-      "solutionEntitiesV3\022=\n\rOuterDocflows\030\014 \003(" +
-      "\0132&.Diadoc.Api.Proto.Docflow.OuterDocflo" +
-      "w\022L\n\024OuterDocflowEntities\030\r \003(\0132..Diadoc" +
-      ".Api.Proto.Docflow.OuterDocflowEntities\022" +
-      "8\n\rDocflowStatus\030\016 \002(\0132!.Diadoc.Api.Prot" +
-      "o.DocflowStatusV3\022E\n\rTtGisFixation\030\017 \001(\013" +
-      "2..Diadoc.Api.Proto.Docflow.TtGisFixatio" +
-      "nDocflowB\021B\017DocflowV4Protos"
+      "i.Proto.Timestamp\022E\n\014Confirmation\030\005 \001(\0132" +
+      "/.Diadoc.Api.Proto.Docflow.ConfirmationD" +
+      "ocflowV4\022@\n\006Status\030\006 \002(\01620.Diadoc.Api.Pr" +
+      "oto.Documents.GeneralReceiptStatus\022U\n\020Un" +
+      "iversalMessage\030\007 \001(\0132;.Diadoc.Api.Proto." +
+      "Docflow.UniversalMessageAttachmentDocflo" +
+      "w\"\274\002\n\025ConfirmationDocflowV4\022\022\n\nIsFinishe" +
+      "d\030\001 \002(\010\022L\n\026ConfirmationAttachment\030\002 \001(\0132" +
+      ",.Diadoc.Api.Proto.Docflow.SignedAttachm" +
+      "entV3\0220\n\013ConfirmedAt\030\003 \001(\0132\033.Diadoc.Api." +
+      "Proto.Timestamp\022;\n\007Receipt\030\004 \001(\0132*.Diado" +
+      "c.Api.Proto.Docflow.ReceiptDocflowV4\022R\n\023" +
+      "RoamingConfirmation\030\005 \001(\01325.Diadoc.Api.P" +
+      "roto.Docflow.OperatorConfirmationDocflow" +
+      "\"\357\007\n\tDocflowV4\022A\n\013SenderTitle\030\001 \002(\0132,.Di" +
+      "adoc.Api.Proto.Docflow.SenderTitleDocflo" +
+      "w\022E\n\014Confirmation\030\002 \001(\0132/.Diadoc.Api.Pro" +
+      "to.Docflow.ConfirmationDocflowV4\022M\n\rProx" +
+      "yResponse\030\013 \001(\01326.Diadoc.Api.Proto.Docfl" +
+      "ow.ParticipantResponseDocflowV4\022D\n\020Recip" +
+      "ientReceipt\030\004 \001(\0132*.Diadoc.Api.Proto.Doc" +
+      "flow.ReceiptDocflowV4\022Q\n\021RecipientRespon" +
+      "se\030\005 \001(\01326.Diadoc.Api.Proto.Docflow.Part" +
+      "icipantResponseDocflowV4\022M\n\020AmendmentReq" +
+      "uest\030\006 \001(\01323.Diadoc.Api.Proto.Docflow.Am" +
+      "endmentRequestDocflowV4\022A\n\nRevocation\030\007 " +
+      "\001(\0132-.Diadoc.Api.Proto.Docflow.Revocatio" +
+      "nDocflowV4\022A\n\rSenderReceipt\030\010 \001(\0132*.Diad" +
+      "oc.Api.Proto.Docflow.ReceiptDocflowV4\022A\n" +
+      "\nResolution\030\t \001(\0132-.Diadoc.Api.Proto.Doc" +
+      "flow.ResolutionDocflowV3\022J\n\022ResolutionEn" +
+      "tities\030\n \001(\0132..Diadoc.Api.Proto.Docflow." +
+      "ResolutionEntitiesV3\022=\n\rOuterDocflows\030\014 " +
+      "\003(\0132&.Diadoc.Api.Proto.Docflow.OuterDocf" +
+      "low\022L\n\024OuterDocflowEntities\030\r \003(\0132..Diad" +
+      "oc.Api.Proto.Docflow.OuterDocflowEntitie" +
+      "s\0228\n\rDocflowStatus\030\016 \002(\0132!.Diadoc.Api.Pr" +
+      "oto.DocflowStatusV3\022E\n\rTtGisFixation\030\017 \001" +
+      "(\0132..Diadoc.Api.Proto.Docflow.TtGisFixat" +
+      "ionDocflowB\021B\017DocflowV4Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14604,6 +14819,7 @@ public final class DocflowV4Protos {
           Diadoc.Api.Proto.Docflow.UniversalMessageAttachmentDocflowProtos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.DocflowV3Protos.getDescriptor(),
           Diadoc.Api.Proto.Docflow.LastEventProtos.getDescriptor(),
+          Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.getDescriptor(),
         });
     internal_static_Diadoc_Api_Proto_Docflow_RevocationDocflowV4_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14622,7 +14838,7 @@ public final class DocflowV4Protos {
     internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflowV4_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflowV4_descriptor,
-        new java.lang.String[] { "IsFinished", "Signature", "Title", "Rejection", "SentAt", "DeliveredAt", "ResponseStatus", "Confirmation", });
+        new java.lang.String[] { "IsFinished", "Signature", "Title", "Rejection", "SentAt", "DeliveredAt", "ResponseStatus", "Confirmation", "OutOfWorkflowUniversalMessageDocflow", });
     internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflowV4_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflowV4_fieldAccessorTable = new
@@ -14665,6 +14881,7 @@ public final class DocflowV4Protos {
     Diadoc.Api.Proto.Docflow.UniversalMessageAttachmentDocflowProtos.getDescriptor();
     Diadoc.Api.Proto.Docflow.DocflowV3Protos.getDescriptor();
     Diadoc.Api.Proto.Docflow.LastEventProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
