@@ -1,6 +1,7 @@
 package Diadoc.Api.document;
 
 import Diadoc.Api.Proto.Documents.DocumentProtocolProtos;
+import Diadoc.Api.Proto.Documents.GetDocumentsV4Protos.GetDocumentsV4Request;
 import Diadoc.Api.Proto.Forwarding.ForwardedDocumentProtos;
 import Diadoc.Api.Proto.Forwarding.ForwardingApiProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
@@ -33,6 +34,24 @@ public class DocumentClient {
 
     public DocumentClient(DiadocHttpClient diadocHttpClient) {
         this.diadocHttpClient = diadocHttpClient;
+    }
+
+    public DocumentList getDocumentsV4(String boxId, GetDocumentsV4Request getDocumentsV4Request) throws DiadocSdkException {
+        if (getDocumentsV4Request == null) {
+            throw new IllegalArgumentException("operation");
+        }
+        try {
+            var request = RequestBuilder.post(
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/V4/GetDocuments")
+                                    .addParameter("boxId", boxId)
+                                    .build())
+                    .setEntity(new ByteArrayEntity(getDocumentsV4Request.toByteArray()));
+            diadocHttpClient.performRequest(request);
+            return DocumentList.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
     }
 
     public DocumentList getDocuments(DocumentsFilter filter) throws DiadocSdkException {
