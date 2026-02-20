@@ -47,6 +47,9 @@ public class MessageClient {
         }
     }
 
+    /**
+     * @deprecated Use {@link #getMessageV6(String, String, String, boolean, boolean)}
+     */
     public Message getMessage(String currentBoxId, String messageId, @Nullable String entityId, boolean withOriginalSignature, boolean injectEntityContent) throws DiadocSdkException {
         if (currentBoxId == null) {
             throw new IllegalArgumentException("boxId");
@@ -74,25 +77,41 @@ public class MessageClient {
         }
     }
 
+    /**
+     * @deprecated Use {@link #getMessageV6(String, String, String)}
+     */
     public Message getMessage(String currentBoxId, String messageId, String entityId) throws DiadocSdkException {
         return getMessage(currentBoxId, messageId, entityId, false, false);
     }
 
+    /**
+     * @deprecated Use {@link #getMessageV6(String, String, String, boolean)} 
+     */
     public Message getMessage(String currentBoxId, String messageId, String entityId, boolean withOriginalSignature) throws DiadocSdkException {
         return getMessage(currentBoxId, messageId, entityId, withOriginalSignature, false);
     }
 
+    /**
+     * @deprecated Use {@link #getMessageV6(String, String, boolean, boolean)} 
+     */
     public Message getMessage(String currentBoxId, String messageId, boolean withOriginalSignature, boolean injectEntityContent) throws DiadocSdkException {
         return getMessage(currentBoxId, messageId, null, withOriginalSignature, injectEntityContent);
     }
 
+    /**
+     * @deprecated Use {@link #getMessageV6(String, String)} 
+     */
     public Message getMessage(String currentBoxId, String messageId) throws DiadocSdkException {
         return getMessage(currentBoxId, messageId, false, false);
     }
 
+    /**
+     * @deprecated Use {@link #getMessageV6(String, String, boolean)} 
+     */
     public Message getMessage(String currentBoxId, String messageId, boolean withOriginalSignature) throws DiadocSdkException {
         return getMessage(currentBoxId, messageId, withOriginalSignature, false);
     }
+    
     public Message getMessageV6(String currentBoxId, String messageId, @Nullable String entityId, boolean withOriginalSignature, boolean injectEntityContent) throws DiadocSdkException {
         if (currentBoxId == null) {
             throw new IllegalArgumentException("boxId");
