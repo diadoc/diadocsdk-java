@@ -59,7 +59,7 @@ public class TemplateClient {
 
     /**
      * @deprecated Method is deprecated
-     * Use {@link Diadoc.Api.message.MessageClient#getMessage(String, String)}
+     * Use {@link Diadoc.Api.message.MessageClient#getMessageV6(String, String)} for get template
      */
     @Deprecated
     public Template getTemplate(String currentBoxId, String templateId, @Nullable String entityId) throws DiadocSdkException {

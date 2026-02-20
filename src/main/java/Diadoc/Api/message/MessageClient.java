@@ -159,10 +159,20 @@ public class MessageClient {
         return getMessage(currentBoxId, messageId, withOriginalSignature, false);
     }
 
+    /**
+     * @deprecated
+     * Use {@link #postMessagePatchV4(MessagePatchToPostV2)}
+     */
+    @Deprecated
     public MessagePatch postMessagePatch(MessagePatchToPost patch) throws DiadocSdkException {
         return postMessagePatch(patch, null);
     }
 
+    /**
+     * @deprecated
+     * Use {@link #postMessagePatchV4(MessagePatchToPostV2, String)}
+     */
+    @Deprecated
     public MessagePatch postMessagePatch(MessagePatchToPost patch, @Nullable String operationId) throws DiadocSdkException {
         if (patch == null) {
             throw new IllegalArgumentException("patch");
