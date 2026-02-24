@@ -210,6 +210,17 @@ public final class UniversalMessageProtos {
      * <code>required .Diadoc.Api.Proto.UniversalMessageCreator UniversalMessageCreator = 3;</code>
      */
     Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreatorOrBuilder getUniversalMessageCreatorOrBuilder();
+
+    /**
+     * <code>optional bool IsOutOfWorkflow = 4 [default = false];</code>
+     * @return Whether the isOutOfWorkflow field is set.
+     */
+    boolean hasIsOutOfWorkflow();
+    /**
+     * <code>optional bool IsOutOfWorkflow = 4 [default = false];</code>
+     * @return The isOutOfWorkflow.
+     */
+    boolean getIsOutOfWorkflow();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.UniversalMessageInfo}
@@ -336,6 +347,25 @@ public final class UniversalMessageProtos {
       return universalMessageCreator_ == null ? Diadoc.Api.Proto.UniversalMessageProtos.UniversalMessageCreator.getDefaultInstance() : universalMessageCreator_;
     }
 
+    public static final int ISOUTOFWORKFLOW_FIELD_NUMBER = 4;
+    private boolean isOutOfWorkflow_ = false;
+    /**
+     * <code>optional bool IsOutOfWorkflow = 4 [default = false];</code>
+     * @return Whether the isOutOfWorkflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsOutOfWorkflow() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool IsOutOfWorkflow = 4 [default = false];</code>
+     * @return The isOutOfWorkflow.
+     */
+    @java.lang.Override
+    public boolean getIsOutOfWorkflow() {
+      return isOutOfWorkflow_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -373,6 +403,9 @@ public final class UniversalMessageProtos {
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getUniversalMessageCreator());
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(4, isOutOfWorkflow_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -393,6 +426,10 @@ public final class UniversalMessageProtos {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUniversalMessageCreator());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, isOutOfWorkflow_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -420,6 +457,11 @@ public final class UniversalMessageProtos {
         if (!getUniversalMessageCreator()
             .equals(other.getUniversalMessageCreator())) return false;
       }
+      if (hasIsOutOfWorkflow() != other.hasIsOutOfWorkflow()) return false;
+      if (hasIsOutOfWorkflow()) {
+        if (getIsOutOfWorkflow()
+            != other.getIsOutOfWorkflow()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -442,6 +484,11 @@ public final class UniversalMessageProtos {
       if (hasUniversalMessageCreator()) {
         hash = (37 * hash) + UNIVERSALMESSAGECREATOR_FIELD_NUMBER;
         hash = (53 * hash) + getUniversalMessageCreator().hashCode();
+      }
+      if (hasIsOutOfWorkflow()) {
+        hash = (37 * hash) + ISOUTOFWORKFLOW_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsOutOfWorkflow());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -594,6 +641,7 @@ public final class UniversalMessageProtos {
           universalMessageCreatorBuilder_.dispose();
           universalMessageCreatorBuilder_ = null;
         }
+        isOutOfWorkflow_ = false;
         return this;
       }
 
@@ -651,6 +699,10 @@ public final class UniversalMessageProtos {
               : universalMessageCreatorBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isOutOfWorkflow_ = isOutOfWorkflow_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -697,6 +749,9 @@ public final class UniversalMessageProtos {
         }
         if (other.hasUniversalMessageCreator()) {
           mergeUniversalMessageCreator(other.getUniversalMessageCreator());
+        }
+        if (other.hasIsOutOfWorkflow()) {
+          setIsOutOfWorkflow(other.getIsOutOfWorkflow());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -767,6 +822,11 @@ public final class UniversalMessageProtos {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 32: {
+                isOutOfWorkflow_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1185,6 +1245,46 @@ public final class UniversalMessageProtos {
           universalMessageCreator_ = null;
         }
         return universalMessageCreatorBuilder_;
+      }
+
+      private boolean isOutOfWorkflow_ ;
+      /**
+       * <code>optional bool IsOutOfWorkflow = 4 [default = false];</code>
+       * @return Whether the isOutOfWorkflow field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsOutOfWorkflow() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool IsOutOfWorkflow = 4 [default = false];</code>
+       * @return The isOutOfWorkflow.
+       */
+      @java.lang.Override
+      public boolean getIsOutOfWorkflow() {
+        return isOutOfWorkflow_;
+      }
+      /**
+       * <code>optional bool IsOutOfWorkflow = 4 [default = false];</code>
+       * @param value The isOutOfWorkflow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOutOfWorkflow(boolean value) {
+
+        isOutOfWorkflow_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsOutOfWorkflow = 4 [default = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsOutOfWorkflow() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        isOutOfWorkflow_ = false;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.UniversalMessageInfo)
@@ -2644,20 +2744,21 @@ public final class UniversalMessageProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\026UniversalMessage.proto\022\020Diadoc.Api.Pro" +
-      "to\"\375\001\n\024UniversalMessageInfo\022`\n\tCodeGroup" +
+      "to\"\235\002\n\024UniversalMessageInfo\022`\n\tCodeGroup" +
       "\030\001 \001(\0162+.Diadoc.Api.Proto.UniversalMessa" +
       "geCodeGroup: UnknownUniversalMessageCode" +
       "Group\0227\n\006Events\030\002 \003(\0132\'.Diadoc.Api.Proto" +
       ".UniversalMessageEvent\022J\n\027UniversalMessa" +
       "geCreator\030\003 \002(\0132).Diadoc.Api.Proto.Unive" +
-      "rsalMessageCreator\">\n\025UniversalMessageEv" +
-      "ent\022\022\n\nStatusCode\030\001 \002(\005\022\021\n\tPlainText\030\002 \001" +
-      "(\t\">\n\027UniversalMessageCreator\022\r\n\005BoxId\030\001" +
-      " \002(\t\022\024\n\014DepartmentId\030\002 \002(\t*\213\001\n\031Universal" +
-      "MessageCodeGroup\022$\n UnknownUniversalMess" +
-      "ageCodeGroup\020\000\022\013\n\007Receipt\020\001\022\024\n\020Amendment" +
-      "Request\020\002\022\r\n\tRejection\020\003\022\026\n\022InformationM" +
-      "essage\020\004B\030B\026UniversalMessageProtos"
+      "rsalMessageCreator\022\036\n\017IsOutOfWorkflow\030\004 " +
+      "\001(\010:\005false\">\n\025UniversalMessageEvent\022\022\n\nS" +
+      "tatusCode\030\001 \002(\005\022\021\n\tPlainText\030\002 \001(\t\">\n\027Un" +
+      "iversalMessageCreator\022\r\n\005BoxId\030\001 \002(\t\022\024\n\014" +
+      "DepartmentId\030\002 \002(\t*\213\001\n\031UniversalMessageC" +
+      "odeGroup\022$\n UnknownUniversalMessageCodeG" +
+      "roup\020\000\022\013\n\007Receipt\020\001\022\024\n\020AmendmentRequest\020" +
+      "\002\022\r\n\tRejection\020\003\022\026\n\022InformationMessage\020\004" +
+      "B\030B\026UniversalMessageProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2668,7 +2769,7 @@ public final class UniversalMessageProtos {
     internal_static_Diadoc_Api_Proto_UniversalMessageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_UniversalMessageInfo_descriptor,
-        new java.lang.String[] { "CodeGroup", "Events", "UniversalMessageCreator", });
+        new java.lang.String[] { "CodeGroup", "Events", "UniversalMessageCreator", "IsOutOfWorkflow", });
     internal_static_Diadoc_Api_Proto_UniversalMessageEvent_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_UniversalMessageEvent_fieldAccessorTable = new
