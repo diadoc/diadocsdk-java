@@ -249,6 +249,10 @@ public class GenerateClient {
         return generateInvoiceXml(invoiceCorrectionRevisionInfo, "InvoiceCorrectionRevision", disableValidation);
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     */
     @Deprecated
     private GeneratedFile generateInvoiceXml(MessageLite invoiceInfo, String invoiceType, boolean disableValidation) throws DiadocSdkException {
         if (invoiceInfo == null) {
@@ -488,6 +492,10 @@ public class GenerateClient {
         return generateRecipientTitleXml(boxId, senderTitleMessageId, senderTitleAttachmentId, userContractData, null);
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     */
     @Deprecated
     private <T extends GeneratedMessage> GeneratedFile generateTorgXmlForSeller(
             T sellerTitleInfo,
@@ -587,6 +595,10 @@ public class GenerateClient {
         return generateTovTorg551XmlForBuyer(buyerTitleInfo, boxId, sellerTitleMessageId, sellerTitleAttachmentId, "tovtorg_05_01_04");
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     */
     @Deprecated
     private <T extends GeneratedMessage> GeneratedFile generateTorgXmlForBuyer(
             T buyerTitleInfo,
@@ -646,6 +658,10 @@ public class GenerateClient {
         return generateAcceptanceCertificateXmlForSeller(sellerTitleInfo, false, "rezru_05_01_02");
     }
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     */
     @Deprecated
     private <T extends GeneratedMessage> GeneratedFile generateAcceptanceCertificateXmlForSeller(T sellerTitleInfo, boolean disableValidation, @Nullable String documentVersion)
             throws DiadocSdkException {
@@ -690,6 +706,10 @@ public class GenerateClient {
     }
 
 
+    /**
+     * @deprecated Method is deprecated
+     * Use {@link #generateTitleXml(String, String, String, String, Integer, byte[], String, String)}
+     */
     @Deprecated
     private <T extends GeneratedMessage> GeneratedFile generateAcceptanceCertificateXmlForBuyer(
             T buyerTitleInfo,
@@ -874,7 +894,7 @@ public class GenerateClient {
 
     /**
      * @deprecated Method is deprecated
-     * Use {@link #generateInvoiceCorrectionRequestXmlV2(String, InvoiceCorrectionRequestGenerationRequestV2)}
+     * Use {@link #generateReceiptXmlV2(String, ReceiptGenerationRequestV2)}
      */
     @Deprecated
     public GeneratedFile generateInvoiceDocumentReceiptXml(String boxId, String messageId, String attachmentId, Signer signer)
