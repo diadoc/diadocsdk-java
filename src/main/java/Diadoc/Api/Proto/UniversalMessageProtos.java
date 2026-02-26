@@ -157,6 +157,120 @@ public final class UniversalMessageProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.UniversalMessageCodeGroup)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.UniversalMessageBehaviour}
+   */
+  public enum UniversalMessageBehaviour
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>Undefined = 0;</code>
+     */
+    Undefined(0),
+    /**
+     * <code>AffectsWorkflow = 1;</code>
+     */
+    AffectsWorkflow(1),
+    /**
+     * <code>DoesNotAffectWorkflow = 2;</code>
+     */
+    DoesNotAffectWorkflow(2),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        UniversalMessageBehaviour.class.getName());
+    }
+    /**
+     * <code>Undefined = 0;</code>
+     */
+    public static final int Undefined_VALUE = 0;
+    /**
+     * <code>AffectsWorkflow = 1;</code>
+     */
+    public static final int AffectsWorkflow_VALUE = 1;
+    /**
+     * <code>DoesNotAffectWorkflow = 2;</code>
+     */
+    public static final int DoesNotAffectWorkflow_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UniversalMessageBehaviour valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static UniversalMessageBehaviour forNumber(int value) {
+      switch (value) {
+        case 0: return Undefined;
+        case 1: return AffectsWorkflow;
+        case 2: return DoesNotAffectWorkflow;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UniversalMessageBehaviour>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        UniversalMessageBehaviour> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<UniversalMessageBehaviour>() {
+            public UniversalMessageBehaviour findValueByNumber(int number) {
+              return UniversalMessageBehaviour.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.UniversalMessageProtos.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final UniversalMessageBehaviour[] VALUES = values();
+
+    public static UniversalMessageBehaviour valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private UniversalMessageBehaviour(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.UniversalMessageBehaviour)
+  }
+
   public interface UniversalMessageInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.UniversalMessageInfo)
       com.google.protobuf.MessageOrBuilder {
@@ -2758,7 +2872,9 @@ public final class UniversalMessageProtos {
       "odeGroup\022$\n UnknownUniversalMessageCodeG" +
       "roup\020\000\022\013\n\007Receipt\020\001\022\024\n\020AmendmentRequest\020" +
       "\002\022\r\n\tRejection\020\003\022\026\n\022InformationMessage\020\004" +
-      "B\030B\026UniversalMessageProtos"
+      "*Z\n\031UniversalMessageBehaviour\022\r\n\tUndefin" +
+      "ed\020\000\022\023\n\017AffectsWorkflow\020\001\022\031\n\025DoesNotAffe" +
+      "ctWorkflow\020\002B\030B\026UniversalMessageProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
