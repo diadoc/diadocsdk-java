@@ -25,6 +25,137 @@ public final class DocumentTypeDescriptionV2Protos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.Documents.Types.SupportedRejectionType}
+   */
+  public enum SupportedRejectionType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Reserved status to report to legacy clients for newly introduced statuses
+     * </pre>
+     *
+     * <code>UnknownSupportedRejectionType = -1;</code>
+     */
+    UnknownSupportedRejectionType(-1),
+    /**
+     * <code>None = 0;</code>
+     */
+    None(0),
+    /**
+     * <code>TypeSpecificRejection = 1;</code>
+     */
+    TypeSpecificRejection(1),
+    /**
+     * <code>UniversalMessage = 2;</code>
+     */
+    UniversalMessage(2),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        SupportedRejectionType.class.getName());
+    }
+    /**
+     * <pre>
+     * Reserved status to report to legacy clients for newly introduced statuses
+     * </pre>
+     *
+     * <code>UnknownSupportedRejectionType = -1;</code>
+     */
+    public static final int UnknownSupportedRejectionType_VALUE = -1;
+    /**
+     * <code>None = 0;</code>
+     */
+    public static final int None_VALUE = 0;
+    /**
+     * <code>TypeSpecificRejection = 1;</code>
+     */
+    public static final int TypeSpecificRejection_VALUE = 1;
+    /**
+     * <code>UniversalMessage = 2;</code>
+     */
+    public static final int UniversalMessage_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SupportedRejectionType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SupportedRejectionType forNumber(int value) {
+      switch (value) {
+        case -1: return UnknownSupportedRejectionType;
+        case 0: return None;
+        case 1: return TypeSpecificRejection;
+        case 2: return UniversalMessage;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SupportedRejectionType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SupportedRejectionType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SupportedRejectionType>() {
+            public SupportedRejectionType findValueByNumber(int number) {
+              return SupportedRejectionType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final SupportedRejectionType[] VALUES = values();
+
+    public static SupportedRejectionType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SupportedRejectionType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Documents.Types.SupportedRejectionType)
+  }
+
   public interface DocumentTypeDescriptionV2OrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2)
       com.google.protobuf.MessageOrBuilder {
@@ -3247,6 +3378,17 @@ public final class DocumentTypeDescriptionV2Protos {
      */
     Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.DocumentWorkflowV2OrBuilder getWorkflowsOrBuilder(
         int index);
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.SupportedRejectionType RejectionType = 9 [default = UnknownSupportedRejectionType];</code>
+     * @return Whether the rejectionType field is set.
+     */
+    boolean hasRejectionType();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.SupportedRejectionType RejectionType = 9 [default = UnknownSupportedRejectionType];</code>
+     * @return The rejectionType.
+     */
+    Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType getRejectionType();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Types.DocumentVersionV2}
@@ -3273,6 +3415,7 @@ public final class DocumentTypeDescriptionV2Protos {
       version_ = "";
       titles_ = java.util.Collections.emptyList();
       workflows_ = java.util.Collections.emptyList();
+      rejectionType_ = -1;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -3515,6 +3658,24 @@ public final class DocumentTypeDescriptionV2Protos {
       return workflows_.get(index);
     }
 
+    public static final int REJECTIONTYPE_FIELD_NUMBER = 9;
+    private int rejectionType_ = -1;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.SupportedRejectionType RejectionType = 9 [default = UnknownSupportedRejectionType];</code>
+     * @return Whether the rejectionType field is set.
+     */
+    @java.lang.Override public boolean hasRejectionType() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.Types.SupportedRejectionType RejectionType = 9 [default = UnknownSupportedRejectionType];</code>
+     * @return The rejectionType.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType getRejectionType() {
+      Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType result = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType.forNumber(rejectionType_);
+      return result == null ? Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType.UnknownSupportedRejectionType : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3589,6 +3750,9 @@ public final class DocumentTypeDescriptionV2Protos {
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeBool(8, supportsAmendmentRequest_);
       }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeEnum(9, rejectionType_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3628,6 +3792,10 @@ public final class DocumentTypeDescriptionV2Protos {
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, supportsAmendmentRequest_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, rejectionType_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3678,6 +3846,10 @@ public final class DocumentTypeDescriptionV2Protos {
       }
       if (!getWorkflowsList()
           .equals(other.getWorkflowsList())) return false;
+      if (hasRejectionType() != other.hasRejectionType()) return false;
+      if (hasRejectionType()) {
+        if (rejectionType_ != other.rejectionType_) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3725,6 +3897,10 @@ public final class DocumentTypeDescriptionV2Protos {
       if (getWorkflowsCount() > 0) {
         hash = (37 * hash) + WORKFLOWS_FIELD_NUMBER;
         hash = (53 * hash) + getWorkflowsList().hashCode();
+      }
+      if (hasRejectionType()) {
+        hash = (37 * hash) + REJECTIONTYPE_FIELD_NUMBER;
+        hash = (53 * hash) + rejectionType_;
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3877,6 +4053,7 @@ public final class DocumentTypeDescriptionV2Protos {
           workflowsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000080);
+        rejectionType_ = -1;
         return this;
       }
 
@@ -3956,6 +4133,10 @@ public final class DocumentTypeDescriptionV2Protos {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.isActual_ = isActual_;
           to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.rejectionType_ = rejectionType_;
+          to_bitField0_ |= 0x00000040;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -4043,6 +4224,9 @@ public final class DocumentTypeDescriptionV2Protos {
               workflowsBuilder_.addAllMessages(other.workflows_);
             }
           }
+        }
+        if (other.hasRejectionType()) {
+          setRejectionType(other.getRejectionType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4154,6 +4338,18 @@ public final class DocumentTypeDescriptionV2Protos {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 64
+              case 72: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType tmpValue =
+                    Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(9, tmpRaw);
+                } else {
+                  rejectionType_ = tmpRaw;
+                  bitField0_ |= 0x00000100;
+                }
+                break;
+              } // case 72
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4929,6 +5125,48 @@ public final class DocumentTypeDescriptionV2Protos {
           workflows_ = null;
         }
         return workflowsBuilder_;
+      }
+
+      private int rejectionType_ = -1;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.SupportedRejectionType RejectionType = 9 [default = UnknownSupportedRejectionType];</code>
+       * @return Whether the rejectionType field is set.
+       */
+      @java.lang.Override public boolean hasRejectionType() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.SupportedRejectionType RejectionType = 9 [default = UnknownSupportedRejectionType];</code>
+       * @return The rejectionType.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType getRejectionType() {
+        Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType result = Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType.forNumber(rejectionType_);
+        return result == null ? Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType.UnknownSupportedRejectionType : result;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.SupportedRejectionType RejectionType = 9 [default = UnknownSupportedRejectionType];</code>
+       * @param value The rejectionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRejectionType(Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV2Protos.SupportedRejectionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000100;
+        rejectionType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.Types.SupportedRejectionType RejectionType = 9 [default = UnknownSupportedRejectionType];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRejectionType() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        rejectionType_ = -1;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Types.DocumentVersionV2)
@@ -9171,7 +9409,7 @@ public final class DocumentTypeDescriptionV2Protos {
       "pes.DocumentTypeDescriptionV2\"i\n\022Documen" +
       "tFunctionV2\022\014\n\004Name\030\001 \002(\t\022E\n\010Versions\030\002 " +
       "\003(\01323.Diadoc.Api.Proto.Documents.Types.D" +
-      "ocumentVersionV2\"\313\002\n\021DocumentVersionV2\022\017" +
+      "ocumentVersionV2\"\273\003\n\021DocumentVersionV2\022\017" +
       "\n\007Version\030\001 \002(\t\022\037\n\027SupportsContentPatchi" +
       "ng\030\002 \002(\010\022\032\n\022SupportsEncrypting\030\003 \002(\010\022(\n " +
       "SupportsPredefinedRecipientTitle\030\007 \002(\010\022 " +
@@ -9179,23 +9417,29 @@ public final class DocumentTypeDescriptionV2Protos {
       "es\030\004 \003(\01321.Diadoc.Api.Proto.Documents.Ty" +
       "pes.DocumentTitleV2\022\020\n\010IsActual\030\005 \002(\010\022G\n" +
       "\tWorkflows\030\006 \003(\01324.Diadoc.Api.Proto.Docu" +
-      "ments.Types.DocumentWorkflowV2\"3\n\022Docume" +
-      "ntWorkflowV2\022\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 " +
-      "\002(\010\"\311\002\n\017DocumentTitleV2\022\r\n\005Index\030\007 \002(\005\022\020" +
-      "\n\010IsFormal\030\001 \002(\010\022\016\n\006XsdUrl\030\002 \001(\t\022\026\n\016User" +
-      "DataXsdUrl\030\005 \001(\t\022B\n\nSignerInfo\030\006 \002(\0132..D" +
-      "iadoc.Api.Proto.Documents.Types.SignerIn" +
-      "foV2\022O\n\rMetadataItems\030\003 \003(\01328.Diadoc.Api" +
-      ".Proto.Documents.Types.DocumentMetadataI" +
-      "temV2\022X\n\026EncryptedMetadataItems\030\004 \003(\01328." +
-      "Diadoc.Api.Proto.Documents.Types.Documen" +
-      "tMetadataItemV2\"g\n\014SignerInfoV2\022\022\n\nSigne" +
-      "rType\030\001 \002(\005\022%\n\031ExtendedDocumentTitleType" +
-      "\030\002 \002(\005:\002-1\022\034\n\024SignerUserDataXsdUrl\030\003 \001(\t" +
-      "\"V\n\026DocumentMetadataItemV2\022\n\n\002Id\030\001 \002(\t\022\014" +
-      "\n\004Type\030\002 \002(\005\022\022\n\nIsRequired\030\003 \002(\010\022\016\n\006Sour" +
-      "ce\030\004 \002(\005B!B\037DocumentTypeDescriptionV2Pro" +
-      "tos"
+      "ments.Types.DocumentWorkflowV2\022n\n\rReject" +
+      "ionType\030\t \001(\01628.Diadoc.Api.Proto.Documen" +
+      "ts.Types.SupportedRejectionType:\035Unknown" +
+      "SupportedRejectionType\"3\n\022DocumentWorkfl" +
+      "owV2\022\n\n\002Id\030\001 \002(\005\022\021\n\tIsDefault\030\002 \002(\010\"\311\002\n\017" +
+      "DocumentTitleV2\022\r\n\005Index\030\007 \002(\005\022\020\n\010IsForm" +
+      "al\030\001 \002(\010\022\016\n\006XsdUrl\030\002 \001(\t\022\026\n\016UserDataXsdU" +
+      "rl\030\005 \001(\t\022B\n\nSignerInfo\030\006 \002(\0132..Diadoc.Ap" +
+      "i.Proto.Documents.Types.SignerInfoV2\022O\n\r" +
+      "MetadataItems\030\003 \003(\01328.Diadoc.Api.Proto.D" +
+      "ocuments.Types.DocumentMetadataItemV2\022X\n" +
+      "\026EncryptedMetadataItems\030\004 \003(\01328.Diadoc.A" +
+      "pi.Proto.Documents.Types.DocumentMetadat" +
+      "aItemV2\"g\n\014SignerInfoV2\022\022\n\nSignerType\030\001 " +
+      "\002(\005\022%\n\031ExtendedDocumentTitleType\030\002 \002(\005:\002" +
+      "-1\022\034\n\024SignerUserDataXsdUrl\030\003 \001(\t\"V\n\026Docu" +
+      "mentMetadataItemV2\022\n\n\002Id\030\001 \002(\t\022\014\n\004Type\030\002" +
+      " \002(\005\022\022\n\nIsRequired\030\003 \002(\010\022\016\n\006Source\030\004 \002(\005" +
+      "*\177\n\026SupportedRejectionType\022*\n\035UnknownSup" +
+      "portedRejectionType\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000" +
+      "\022\031\n\025TypeSpecificRejection\020\001\022\024\n\020Universal" +
+      "Message\020\002B!B\037DocumentTypeDescriptionV2Pr" +
+      "otos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9224,7 +9468,7 @@ public final class DocumentTypeDescriptionV2Protos {
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentVersionV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DocumentVersionV2_descriptor,
-        new java.lang.String[] { "Version", "SupportsContentPatching", "SupportsEncrypting", "SupportsPredefinedRecipientTitle", "SupportsAmendmentRequest", "Titles", "IsActual", "Workflows", });
+        new java.lang.String[] { "Version", "SupportsContentPatching", "SupportsEncrypting", "SupportsPredefinedRecipientTitle", "SupportsAmendmentRequest", "Titles", "IsActual", "Workflows", "RejectionType", });
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentWorkflowV2_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentWorkflowV2_fieldAccessorTable = new
