@@ -75,6 +75,17 @@ public final class UniversalMessageAttachmentDocflowProtos {
      */
     com.google.protobuf.ByteString
         getContentTypeIdBytes();
+
+    /**
+     * <code>optional bool IsRead = 4 [default = false];</code>
+     * @return Whether the isRead field is set.
+     */
+    boolean hasIsRead();
+    /**
+     * <code>optional bool IsRead = 4 [default = false];</code>
+     * @return The isRead.
+     */
+    boolean getIsRead();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.UniversalMessageAttachmentDocflow}
@@ -216,6 +227,25 @@ public final class UniversalMessageAttachmentDocflowProtos {
       }
     }
 
+    public static final int ISREAD_FIELD_NUMBER = 4;
+    private boolean isRead_ = false;
+    /**
+     * <code>optional bool IsRead = 4 [default = false];</code>
+     * @return Whether the isRead field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsRead() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional bool IsRead = 4 [default = false];</code>
+     * @return The isRead.
+     */
+    @java.lang.Override
+    public boolean getIsRead() {
+      return isRead_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -259,6 +289,9 @@ public final class UniversalMessageAttachmentDocflowProtos {
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, contentTypeId_);
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBool(4, isRead_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -278,6 +311,10 @@ public final class UniversalMessageAttachmentDocflowProtos {
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, contentTypeId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, isRead_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -309,6 +346,11 @@ public final class UniversalMessageAttachmentDocflowProtos {
         if (!getContentTypeId()
             .equals(other.getContentTypeId())) return false;
       }
+      if (hasIsRead() != other.hasIsRead()) return false;
+      if (hasIsRead()) {
+        if (getIsRead()
+            != other.getIsRead()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -331,6 +373,11 @@ public final class UniversalMessageAttachmentDocflowProtos {
       if (hasContentTypeId()) {
         hash = (37 * hash) + CONTENTTYPEID_FIELD_NUMBER;
         hash = (53 * hash) + getContentTypeId().hashCode();
+      }
+      if (hasIsRead()) {
+        hash = (37 * hash) + ISREAD_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsRead());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -481,6 +528,7 @@ public final class UniversalMessageAttachmentDocflowProtos {
           messageInfoBuilder_ = null;
         }
         contentTypeId_ = "";
+        isRead_ = false;
         return this;
       }
 
@@ -531,6 +579,10 @@ public final class UniversalMessageAttachmentDocflowProtos {
           result.contentTypeId_ = contentTypeId_;
           to_bitField0_ |= 0x00000004;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isRead_ = isRead_;
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -556,6 +608,9 @@ public final class UniversalMessageAttachmentDocflowProtos {
           contentTypeId_ = other.contentTypeId_;
           bitField0_ |= 0x00000004;
           onChanged();
+        }
+        if (other.hasIsRead()) {
+          setIsRead(other.getIsRead());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -617,6 +672,11 @@ public final class UniversalMessageAttachmentDocflowProtos {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 32: {
+                isRead_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -956,6 +1016,46 @@ public final class UniversalMessageAttachmentDocflowProtos {
         return this;
       }
 
+      private boolean isRead_ ;
+      /**
+       * <code>optional bool IsRead = 4 [default = false];</code>
+       * @return Whether the isRead field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsRead() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool IsRead = 4 [default = false];</code>
+       * @return The isRead.
+       */
+      @java.lang.Override
+      public boolean getIsRead() {
+        return isRead_;
+      }
+      /**
+       * <code>optional bool IsRead = 4 [default = false];</code>
+       * @param value The isRead to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsRead(boolean value) {
+
+        isRead_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsRead = 4 [default = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsRead() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        isRead_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.UniversalMessageAttachmentDocflow)
     }
 
@@ -1024,12 +1124,13 @@ public final class UniversalMessageAttachmentDocflowProtos {
       "\n/Docflow/UniversalMessageAttachmentDocf" +
       "low.proto\022\030Diadoc.Api.Proto.Docflow\032\030Doc" +
       "flow/Attachment.proto\032\026UniversalMessage." +
-      "proto\"\261\001\n!UniversalMessageAttachmentDocf" +
+      "proto\"\310\001\n!UniversalMessageAttachmentDocf" +
       "low\0228\n\nAttachment\030\001 \002(\0132$.Diadoc.Api.Pro" +
       "to.Docflow.Attachment\022;\n\013MessageInfo\030\002 \002" +
       "(\0132&.Diadoc.Api.Proto.UniversalMessageIn" +
-      "fo\022\025\n\rContentTypeId\030\003 \002(\tB)B\'UniversalMe" +
-      "ssageAttachmentDocflowProtos"
+      "fo\022\025\n\rContentTypeId\030\003 \002(\t\022\025\n\006IsRead\030\004 \001(" +
+      "\010:\005falseB)B\'UniversalMessageAttachmentDo" +
+      "cflowProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1042,7 +1143,7 @@ public final class UniversalMessageAttachmentDocflowProtos {
     internal_static_Diadoc_Api_Proto_Docflow_UniversalMessageAttachmentDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_UniversalMessageAttachmentDocflow_descriptor,
-        new java.lang.String[] { "Attachment", "MessageInfo", "ContentTypeId", });
+        new java.lang.String[] { "Attachment", "MessageInfo", "ContentTypeId", "IsRead", });
     descriptor.resolveAllFeaturesImmutable();
     Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor();
     Diadoc.Api.Proto.UniversalMessageProtos.getDescriptor();
