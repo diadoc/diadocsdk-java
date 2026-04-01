@@ -106,6 +106,17 @@ public final class PartnerEventsApi {
      * @return The limit.
      */
     int getLimit();
+
+    /**
+     * <code>optional bool PopulatePreviousDocumentStates = 5 [default = false];</code>
+     * @return Whether the populatePreviousDocumentStates field is set.
+     */
+    boolean hasPopulatePreviousDocumentStates();
+    /**
+     * <code>optional bool PopulatePreviousDocumentStates = 5 [default = false];</code>
+     * @return The populatePreviousDocumentStates.
+     */
+    boolean getPopulatePreviousDocumentStates();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.PartnerEvents.GetPartnerEventsRequest}
@@ -293,6 +304,25 @@ public final class PartnerEventsApi {
       return limit_;
     }
 
+    public static final int POPULATEPREVIOUSDOCUMENTSTATES_FIELD_NUMBER = 5;
+    private boolean populatePreviousDocumentStates_ = false;
+    /**
+     * <code>optional bool PopulatePreviousDocumentStates = 5 [default = false];</code>
+     * @return Whether the populatePreviousDocumentStates field is set.
+     */
+    @java.lang.Override
+    public boolean hasPopulatePreviousDocumentStates() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool PopulatePreviousDocumentStates = 5 [default = false];</code>
+     * @return The populatePreviousDocumentStates.
+     */
+    @java.lang.Override
+    public boolean getPopulatePreviousDocumentStates() {
+      return populatePreviousDocumentStates_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -318,6 +348,9 @@ public final class PartnerEventsApi {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeInt32(4, limit_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(5, populatePreviousDocumentStates_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -351,6 +384,10 @@ public final class PartnerEventsApi {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, limit_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, populatePreviousDocumentStates_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -380,6 +417,11 @@ public final class PartnerEventsApi {
         if (getLimit()
             != other.getLimit()) return false;
       }
+      if (hasPopulatePreviousDocumentStates() != other.hasPopulatePreviousDocumentStates()) return false;
+      if (hasPopulatePreviousDocumentStates()) {
+        if (getPopulatePreviousDocumentStates()
+            != other.getPopulatePreviousDocumentStates()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -406,6 +448,11 @@ public final class PartnerEventsApi {
       if (hasLimit()) {
         hash = (37 * hash) + LIMIT_FIELD_NUMBER;
         hash = (53 * hash) + getLimit();
+      }
+      if (hasPopulatePreviousDocumentStates()) {
+        hash = (37 * hash) + POPULATEPREVIOUSDOCUMENTSTATES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPopulatePreviousDocumentStates());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -544,6 +591,7 @@ public final class PartnerEventsApi {
         messageTypes_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         limit_ = 100;
+        populatePreviousDocumentStates_ = false;
         return this;
       }
 
@@ -594,6 +642,10 @@ public final class PartnerEventsApi {
           result.limit_ = limit_;
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.populatePreviousDocumentStates_ = populatePreviousDocumentStates_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -636,6 +688,9 @@ public final class PartnerEventsApi {
         }
         if (other.hasLimit()) {
           setLimit(other.getLimit());
+        }
+        if (other.hasPopulatePreviousDocumentStates()) {
+          setPopulatePreviousDocumentStates(other.getPopulatePreviousDocumentStates());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -685,6 +740,11 @@ public final class PartnerEventsApi {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 40: {
+                populatePreviousDocumentStates_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1038,6 +1098,46 @@ public final class PartnerEventsApi {
       public Builder clearLimit() {
         bitField0_ = (bitField0_ & ~0x00000008);
         limit_ = 100;
+        onChanged();
+        return this;
+      }
+
+      private boolean populatePreviousDocumentStates_ ;
+      /**
+       * <code>optional bool PopulatePreviousDocumentStates = 5 [default = false];</code>
+       * @return Whether the populatePreviousDocumentStates field is set.
+       */
+      @java.lang.Override
+      public boolean hasPopulatePreviousDocumentStates() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional bool PopulatePreviousDocumentStates = 5 [default = false];</code>
+       * @return The populatePreviousDocumentStates.
+       */
+      @java.lang.Override
+      public boolean getPopulatePreviousDocumentStates() {
+        return populatePreviousDocumentStates_;
+      }
+      /**
+       * <code>optional bool PopulatePreviousDocumentStates = 5 [default = false];</code>
+       * @param value The populatePreviousDocumentStates to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPopulatePreviousDocumentStates(boolean value) {
+
+        populatePreviousDocumentStates_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool PopulatePreviousDocumentStates = 5 [default = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPopulatePreviousDocumentStates() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        populatePreviousDocumentStates_ = false;
         onChanged();
         return this;
       }
@@ -2089,6 +2189,21 @@ public final class PartnerEventsApi {
      * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 Document = 4;</code>
      */
     Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4OrBuilder getDocumentOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+     * @return Whether the previousDocumentState field is set.
+     */
+    boolean hasPreviousDocumentState();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+     * @return The previousDocumentState.
+     */
+    Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4 getPreviousDocumentState();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4OrBuilder getPreviousDocumentStateOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.PartnerEvents.PartnerEvent}
@@ -2256,6 +2371,32 @@ public final class PartnerEventsApi {
       return document_ == null ? Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.getDefaultInstance() : document_;
     }
 
+    public static final int PREVIOUSDOCUMENTSTATE_FIELD_NUMBER = 5;
+    private Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4 previousDocumentState_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+     * @return Whether the previousDocumentState field is set.
+     */
+    @java.lang.Override
+    public boolean hasPreviousDocumentState() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+     * @return The previousDocumentState.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4 getPreviousDocumentState() {
+      return previousDocumentState_ == null ? Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.getDefaultInstance() : previousDocumentState_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4OrBuilder getPreviousDocumentStateOrBuilder() {
+      return previousDocumentState_ == null ? Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.getDefaultInstance() : previousDocumentState_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2289,6 +2430,12 @@ public final class PartnerEventsApi {
           return false;
         }
       }
+      if (hasPreviousDocumentState()) {
+        if (!getPreviousDocumentState().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -2307,6 +2454,9 @@ public final class PartnerEventsApi {
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getDocument());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(5, getPreviousDocumentState());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2331,6 +2481,10 @@ public final class PartnerEventsApi {
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDocument());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getPreviousDocumentState());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2367,6 +2521,11 @@ public final class PartnerEventsApi {
         if (!getDocument()
             .equals(other.getDocument())) return false;
       }
+      if (hasPreviousDocumentState() != other.hasPreviousDocumentState()) return false;
+      if (hasPreviousDocumentState()) {
+        if (!getPreviousDocumentState()
+            .equals(other.getPreviousDocumentState())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2393,6 +2552,10 @@ public final class PartnerEventsApi {
       if (hasDocument()) {
         hash = (37 * hash) + DOCUMENT_FIELD_NUMBER;
         hash = (53 * hash) + getDocument().hashCode();
+      }
+      if (hasPreviousDocumentState()) {
+        hash = (37 * hash) + PREVIOUSDOCUMENTSTATE_FIELD_NUMBER;
+        hash = (53 * hash) + getPreviousDocumentState().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -2527,6 +2690,7 @@ public final class PartnerEventsApi {
           getTimestampFieldBuilder();
           getDocumentIdFieldBuilder();
           getDocumentFieldBuilder();
+          getPreviousDocumentStateFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2548,6 +2712,11 @@ public final class PartnerEventsApi {
         if (documentBuilder_ != null) {
           documentBuilder_.dispose();
           documentBuilder_ = null;
+        }
+        previousDocumentState_ = null;
+        if (previousDocumentStateBuilder_ != null) {
+          previousDocumentStateBuilder_.dispose();
+          previousDocumentStateBuilder_ = null;
         }
         return this;
       }
@@ -2605,6 +2774,12 @@ public final class PartnerEventsApi {
               : documentBuilder_.build();
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.previousDocumentState_ = previousDocumentStateBuilder_ == null
+              ? previousDocumentState_
+              : previousDocumentStateBuilder_.build();
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -2634,6 +2809,9 @@ public final class PartnerEventsApi {
         if (other.hasDocument()) {
           mergeDocument(other.getDocument());
         }
+        if (other.hasPreviousDocumentState()) {
+          mergePreviousDocumentState(other.getPreviousDocumentState());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2658,6 +2836,11 @@ public final class PartnerEventsApi {
         }
         if (hasDocument()) {
           if (!getDocument().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasPreviousDocumentState()) {
+          if (!getPreviousDocumentState().isInitialized()) {
             return false;
           }
         }
@@ -2706,6 +2889,13 @@ public final class PartnerEventsApi {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    getPreviousDocumentStateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3166,6 +3356,127 @@ public final class PartnerEventsApi {
         return documentBuilder_;
       }
 
+      private Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4 previousDocumentState_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4, Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.Builder, Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4OrBuilder> previousDocumentStateBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+       * @return Whether the previousDocumentState field is set.
+       */
+      public boolean hasPreviousDocumentState() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+       * @return The previousDocumentState.
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4 getPreviousDocumentState() {
+        if (previousDocumentStateBuilder_ == null) {
+          return previousDocumentState_ == null ? Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.getDefaultInstance() : previousDocumentState_;
+        } else {
+          return previousDocumentStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+       */
+      public Builder setPreviousDocumentState(Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4 value) {
+        if (previousDocumentStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          previousDocumentState_ = value;
+        } else {
+          previousDocumentStateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+       */
+      public Builder setPreviousDocumentState(
+          Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.Builder builderForValue) {
+        if (previousDocumentStateBuilder_ == null) {
+          previousDocumentState_ = builderForValue.build();
+        } else {
+          previousDocumentStateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+       */
+      public Builder mergePreviousDocumentState(Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4 value) {
+        if (previousDocumentStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            previousDocumentState_ != null &&
+            previousDocumentState_ != Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.getDefaultInstance()) {
+            getPreviousDocumentStateBuilder().mergeFrom(value);
+          } else {
+            previousDocumentState_ = value;
+          }
+        } else {
+          previousDocumentStateBuilder_.mergeFrom(value);
+        }
+        if (previousDocumentState_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+       */
+      public Builder clearPreviousDocumentState() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        previousDocumentState_ = null;
+        if (previousDocumentStateBuilder_ != null) {
+          previousDocumentStateBuilder_.dispose();
+          previousDocumentStateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.Builder getPreviousDocumentStateBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getPreviousDocumentStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4OrBuilder getPreviousDocumentStateOrBuilder() {
+        if (previousDocumentStateBuilder_ != null) {
+          return previousDocumentStateBuilder_.getMessageOrBuilder();
+        } else {
+          return previousDocumentState_ == null ?
+              Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.getDefaultInstance() : previousDocumentState_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4 PreviousDocumentState = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4, Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.Builder, Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4OrBuilder> 
+          getPreviousDocumentStateFieldBuilder() {
+        if (previousDocumentStateBuilder_ == null) {
+          previousDocumentStateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4, Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4.Builder, Diadoc.Api.Proto.Docflow.DocumentWithDocflowV4Protos.DocumentWithDocflowV4OrBuilder>(
+                  getPreviousDocumentState(),
+                  getParentForChildren(),
+                  isClean());
+          previousDocumentState_ = null;
+        }
+        return previousDocumentStateBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.PartnerEvents.PartnerEvent)
     }
 
@@ -3245,17 +3556,20 @@ public final class PartnerEventsApi {
       "Diadoc.Api.Proto.PartnerEvents\032\017Timestam" +
       "p.proto\032\020DocumentId.proto\032\024TotalCountTyp" +
       "e.proto\032#Docflow/DocumentWithDocflowV4.p" +
-      "roto\"g\n\027GetPartnerEventsRequest\022\016\n\006Curso" +
-      "r\030\001 \001(\t\022\022\n\nDirections\030\002 \003(\t\022\024\n\014MessageTy" +
-      "pes\030\003 \003(\t\022\022\n\005Limit\030\004 \001(\005:\003100\"l\n\030GetPart" +
-      "nerEventsResponse\022<\n\006Events\030\001 \003(\0132,.Diad" +
-      "oc.Api.Proto.PartnerEvents.PartnerEvent\022" +
-      "\022\n\nLastCursor\030\002 \001(\t\"\304\001\n\014PartnerEvent\022\017\n\007" +
-      "EventId\030\001 \002(\t\022.\n\tTimestamp\030\002 \002(\0132\033.Diado" +
-      "c.Api.Proto.Timestamp\0220\n\nDocumentId\030\003 \002(" +
-      "\0132\034.Diadoc.Api.Proto.DocumentId\022A\n\010Docum" +
-      "ent\030\004 \001(\0132/.Diadoc.Api.Proto.Docflow.Doc" +
-      "umentWithDocflowV4"
+      "roto\"\226\001\n\027GetPartnerEventsRequest\022\016\n\006Curs" +
+      "or\030\001 \001(\t\022\022\n\nDirections\030\002 \003(\t\022\024\n\014MessageT" +
+      "ypes\030\003 \003(\t\022\022\n\005Limit\030\004 \001(\005:\003100\022-\n\036Popula" +
+      "tePreviousDocumentStates\030\005 \001(\010:\005false\"l\n" +
+      "\030GetPartnerEventsResponse\022<\n\006Events\030\001 \003(" +
+      "\0132,.Diadoc.Api.Proto.PartnerEvents.Partn" +
+      "erEvent\022\022\n\nLastCursor\030\002 \001(\t\"\224\002\n\014PartnerE" +
+      "vent\022\017\n\007EventId\030\001 \002(\t\022.\n\tTimestamp\030\002 \002(\013" +
+      "2\033.Diadoc.Api.Proto.Timestamp\0220\n\nDocumen" +
+      "tId\030\003 \002(\0132\034.Diadoc.Api.Proto.DocumentId\022" +
+      "A\n\010Document\030\004 \001(\0132/.Diadoc.Api.Proto.Doc" +
+      "flow.DocumentWithDocflowV4\022N\n\025PreviousDo" +
+      "cumentState\030\005 \001(\0132/.Diadoc.Api.Proto.Doc" +
+      "flow.DocumentWithDocflowV4"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3270,7 +3584,7 @@ public final class PartnerEventsApi {
     internal_static_Diadoc_Api_Proto_PartnerEvents_GetPartnerEventsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PartnerEvents_GetPartnerEventsRequest_descriptor,
-        new java.lang.String[] { "Cursor", "Directions", "MessageTypes", "Limit", });
+        new java.lang.String[] { "Cursor", "Directions", "MessageTypes", "Limit", "PopulatePreviousDocumentStates", });
     internal_static_Diadoc_Api_Proto_PartnerEvents_GetPartnerEventsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_PartnerEvents_GetPartnerEventsResponse_fieldAccessorTable = new
@@ -3282,7 +3596,7 @@ public final class PartnerEventsApi {
     internal_static_Diadoc_Api_Proto_PartnerEvents_PartnerEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_PartnerEvents_PartnerEvent_descriptor,
-        new java.lang.String[] { "EventId", "Timestamp", "DocumentId", "Document", });
+        new java.lang.String[] { "EventId", "Timestamp", "DocumentId", "Document", "PreviousDocumentState", });
     descriptor.resolveAllFeaturesImmutable();
     Diadoc.Api.Proto.TimestampProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
