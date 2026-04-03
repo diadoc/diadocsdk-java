@@ -2366,12 +2366,12 @@ public final class DocumentProtos {
     Diadoc.Api.Proto.TtGisFixationCancellationStatusProtos.TtGisFixationCancellationStatus getTtGisFixationCancellationStatus();
 
     /**
-     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = false];</code>
+     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
      * @return Whether the hasUnreadOutOfWorkflowUniversalMessages field is set.
      */
     boolean hasHasUnreadOutOfWorkflowUniversalMessages();
     /**
-     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = false];</code>
+     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
      * @return The hasUnreadOutOfWorkflowUniversalMessages.
      */
     boolean getHasUnreadOutOfWorkflowUniversalMessages();
@@ -2435,6 +2435,7 @@ public final class DocumentProtos {
       proxyBoxId_ = "";
       proxyDepartmentId_ = "";
       ttGisFixationCancellationStatus_ = 0;
+      hasUnreadOutOfWorkflowUniversalMessages_ = true;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -4955,9 +4956,9 @@ public final class DocumentProtos {
     }
 
     public static final int HASUNREADOUTOFWORKFLOWUNIVERSALMESSAGES_FIELD_NUMBER = 82;
-    private boolean hasUnreadOutOfWorkflowUniversalMessages_ = false;
+    private boolean hasUnreadOutOfWorkflowUniversalMessages_ = true;
     /**
-     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = false];</code>
+     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
      * @return Whether the hasUnreadOutOfWorkflowUniversalMessages field is set.
      */
     @java.lang.Override
@@ -4965,7 +4966,7 @@ public final class DocumentProtos {
       return ((bitField2_ & 0x00000200) != 0);
     }
     /**
-     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = false];</code>
+     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
      * @return The hasUnreadOutOfWorkflowUniversalMessages.
      */
     @java.lang.Override
@@ -6908,7 +6909,7 @@ public final class DocumentProtos {
           docflowStatusBuilder_ = null;
         }
         ttGisFixationCancellationStatus_ = 0;
-        hasUnreadOutOfWorkflowUniversalMessages_ = false;
+        hasUnreadOutOfWorkflowUniversalMessages_ = true;
         return this;
       }
 
@@ -16386,9 +16387,9 @@ public final class DocumentProtos {
         return this;
       }
 
-      private boolean hasUnreadOutOfWorkflowUniversalMessages_ ;
+      private boolean hasUnreadOutOfWorkflowUniversalMessages_ = true;
       /**
-       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = false];</code>
+       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
        * @return Whether the hasUnreadOutOfWorkflowUniversalMessages field is set.
        */
       @java.lang.Override
@@ -16396,7 +16397,7 @@ public final class DocumentProtos {
         return ((bitField2_ & 0x00008000) != 0);
       }
       /**
-       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = false];</code>
+       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
        * @return The hasUnreadOutOfWorkflowUniversalMessages.
        */
       @java.lang.Override
@@ -16404,7 +16405,7 @@ public final class DocumentProtos {
         return hasUnreadOutOfWorkflowUniversalMessages_;
       }
       /**
-       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = false];</code>
+       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
        * @param value The hasUnreadOutOfWorkflowUniversalMessages to set.
        * @return This builder for chaining.
        */
@@ -16416,12 +16417,12 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = false];</code>
+       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearHasUnreadOutOfWorkflowUniversalMessages() {
         bitField2_ = (bitField2_ & ~0x00008000);
-        hasUnreadOutOfWorkflowUniversalMessages_ = false;
+        hasUnreadOutOfWorkflowUniversalMessages_ = true;
         onChanged();
         return this;
       }
@@ -21361,7 +21362,7 @@ public final class DocumentProtos {
       "mentEvent.proto\032\"Events/DiadocMessage-Po" +
       "stApi.proto\032 OuterDocflows/OuterDocflow." +
       "proto\032\025DocflowStatusV3.proto\032%TtGisFixat" +
-      "ionCancellationStatus.proto\"\331)\n\010Document" +
+      "ionCancellationStatus.proto\"\330)\n\010Document" +
       "\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessageId\030\002 \002(\t\022\020\n" +
       "\010EntityId\030\003 \002(\t\022\036\n\026CreationTimestampTick" +
       "s\030\004 \002(\020\022\031\n\021CounteragentBoxId\030\005 \001(\t\022I\n\014Do" +
@@ -21493,72 +21494,72 @@ public final class DocumentProtos {
       ".Proto.DocflowStatusV3\022\177\n\037TtGisFixationC" +
       "ancellationStatus\030Q \001(\01621.Diadoc.Api.Pro" +
       "to.TtGisFixationCancellationStatus:#TtGi" +
-      "sFixationCancellationStatusNone\0226\n\'HasUn" +
+      "sFixationCancellationStatusNone\0225\n\'HasUn" +
       "readOutOfWorkflowUniversalMessages\030R \001(\010" +
-      ":\005false\"r\n\020LastOuterDocflow\022\026\n\016ParentEnt" +
-      "ityId\030\001 \002(\t\022F\n\014OuterDocflow\030\002 \002(\01320.Diad" +
-      "oc.Api.Proto.OuterDocflows.OuterDocflowI" +
-      "nfo\"\310\001\n\020ResolutionStatus\022W\n\004Type\030\001 \001(\01620" +
-      ".Diadoc.Api.Proto.Documents.ResolutionSt" +
-      "atusType:\027UnknownResolutionStatus\0222\n\006Tar" +
-      "get\030\002 \001(\0132\".Diadoc.Api.Proto.ResolutionT" +
-      "arget\022\024\n\014AuthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO" +
-      "\030\004 \002(\t\"\320\001\n\030RecipientReceiptMetadata\022d\n\rR" +
-      "eceiptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Do" +
-      "cuments.GeneralReceiptStatus:\033GeneralRec" +
-      "eiptStatusUnknown\022N\n\024ConfirmationMetadat" +
-      "a\030\002 \001(\01320.Diadoc.Api.Proto.Documents.Con" +
-      "firmationMetadata\"}\n\025SenderReceiptMetada" +
-      "ta\022d\n\rReceiptStatus\030\001 \002(\01620.Diadoc.Api.P" +
-      "roto.Documents.GeneralReceiptStatus:\033Gen" +
-      "eralReceiptStatusUnknown\"\223\001\n\024Confirmatio" +
-      "nMetadata\022d\n\rReceiptStatus\030\001 \002(\01620.Diado" +
-      "c.Api.Proto.Documents.GeneralReceiptStat" +
-      "us:\033GeneralReceiptStatusUnknown\022\025\n\rDateT" +
-      "imeTicks\030\002 \002(\020\"\230\001\n\030AmendmentRequestMetad" +
-      "ata\022\026\n\016AmendmentFlags\030\001 \002(\005\022d\n\rReceiptSt" +
-      "atus\030\002 \002(\01620.Diadoc.Api.Proto.Documents." +
-      "GeneralReceiptStatus:\033GeneralReceiptStat" +
-      "usUnknown\"Y\n\006Origin\022<\n\013MessageType\030\001 \002(\016" +
-      "2\'.Diadoc.Api.Proto.Documents.MessageTyp" +
-      "e\022\021\n\tMessageId\030\002 \002(\t*\302\001\n\024ResolutionStatu" +
-      "sType\022$\n\027UnknownResolutionStatus\020\377\377\377\377\377\377\377" +
-      "\377\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013Disapprov" +
-      "ed\020\002\022\030\n\024ApprovementRequested\020\003\022\026\n\022Signat" +
-      "ureRequested\020\004\022\023\n\017SignatureDenied\020\005\022\024\n\020A" +
-      "ctionsRequested\020\006*\262\001\n\020RevocationStatus\022\033" +
-      "\n\027UnknownRevocationStatus\020\000\022\030\n\024Revocatio" +
-      "nStatusNone\020\001\022\035\n\031RevocationIsRequestedBy" +
-      "Me\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revoca" +
-      "tionAccepted\020\004\022\026\n\022RevocationRejected\020\005*\256" +
-      "\001\n\031RoamingNotificationStatus\022$\n UnknownR" +
-      "oamingNotificationStatus\020\000\022!\n\035RoamingNot" +
-      "ificationStatusNone\020\001\022$\n RoamingNotifica" +
-      "tionStatusSuccess\020\002\022\"\n\036RoamingNotificati" +
-      "onStatusError\020\003*\300\001\n\025SenderSignatureStatu" +
-      "s\022 \n\034UnknownSenderSignatureStatus\020\000\022\035\n\031W" +
-      "aitingForSenderSignature\020\001\022\034\n\030SenderSign" +
-      "atureUnchecked\020\002\022\"\n\036SenderSignatureCheck" +
-      "edAndValid\020\003\022$\n SenderSignatureCheckedAn" +
-      "dInvalid\020\004*\302\001\n\024ProxySignatureStatus\022\037\n\033U" +
-      "nknownProxySignatureStatus\020\000\022\034\n\030ProxySig" +
-      "natureStatusNone\020\001\022\034\n\030WaitingForProxySig" +
-      "nature\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026Prox" +
-      "ySignatureRejected\020\004\022\031\n\025InvalidProxySign" +
-      "ature\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033Gene" +
-      "ralReceiptStatusUnknown\020\000\022%\n!GeneralRece" +
-      "iptStatusNotAcceptable\020\001\022\027\n\023HaveToCreate" +
-      "Receipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010Fini" +
-      "shed\020\004*\220\002\n\027RecipientResponseStatus\022\"\n\036Re" +
-      "cipientResponseStatusUnknown\020\000\022(\n$Recipi" +
-      "entResponseStatusNotAcceptable\020\001\022 \n\034Wait" +
-      "ingForRecipientSignature\020\002\022\032\n\026WithRecipi" +
-      "entSignature\020\003\022%\n!RecipientSignatureRequ" +
-      "estRejected\020\004\022\035\n\031InvalidRecipientSignatu" +
-      "re\020\005\022#\n\037WithRecipientPartiallySignature\020" +
-      "\006*?\n\013MessageType\022\013\n\007Unknown\020\000\022\n\n\006Letter\020" +
-      "\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016DocumentPr" +
-      "otos"
+      ":\004true\"r\n\020LastOuterDocflow\022\026\n\016ParentEnti" +
+      "tyId\030\001 \002(\t\022F\n\014OuterDocflow\030\002 \002(\01320.Diado" +
+      "c.Api.Proto.OuterDocflows.OuterDocflowIn" +
+      "fo\"\310\001\n\020ResolutionStatus\022W\n\004Type\030\001 \001(\01620." +
+      "Diadoc.Api.Proto.Documents.ResolutionSta" +
+      "tusType:\027UnknownResolutionStatus\0222\n\006Targ" +
+      "et\030\002 \001(\0132\".Diadoc.Api.Proto.ResolutionTa" +
+      "rget\022\024\n\014AuthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO\030" +
+      "\004 \002(\t\"\320\001\n\030RecipientReceiptMetadata\022d\n\rRe" +
+      "ceiptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Doc" +
+      "uments.GeneralReceiptStatus:\033GeneralRece" +
+      "iptStatusUnknown\022N\n\024ConfirmationMetadata" +
+      "\030\002 \001(\01320.Diadoc.Api.Proto.Documents.Conf" +
+      "irmationMetadata\"}\n\025SenderReceiptMetadat" +
+      "a\022d\n\rReceiptStatus\030\001 \002(\01620.Diadoc.Api.Pr" +
+      "oto.Documents.GeneralReceiptStatus:\033Gene" +
+      "ralReceiptStatusUnknown\"\223\001\n\024Confirmation" +
+      "Metadata\022d\n\rReceiptStatus\030\001 \002(\01620.Diadoc" +
+      ".Api.Proto.Documents.GeneralReceiptStatu" +
+      "s:\033GeneralReceiptStatusUnknown\022\025\n\rDateTi" +
+      "meTicks\030\002 \002(\020\"\230\001\n\030AmendmentRequestMetada" +
+      "ta\022\026\n\016AmendmentFlags\030\001 \002(\005\022d\n\rReceiptSta" +
+      "tus\030\002 \002(\01620.Diadoc.Api.Proto.Documents.G" +
+      "eneralReceiptStatus:\033GeneralReceiptStatu" +
+      "sUnknown\"Y\n\006Origin\022<\n\013MessageType\030\001 \002(\0162" +
+      "\'.Diadoc.Api.Proto.Documents.MessageType" +
+      "\022\021\n\tMessageId\030\002 \002(\t*\302\001\n\024ResolutionStatus" +
+      "Type\022$\n\027UnknownResolutionStatus\020\377\377\377\377\377\377\377\377" +
+      "\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013Disapprove" +
+      "d\020\002\022\030\n\024ApprovementRequested\020\003\022\026\n\022Signatu" +
+      "reRequested\020\004\022\023\n\017SignatureDenied\020\005\022\024\n\020Ac" +
+      "tionsRequested\020\006*\262\001\n\020RevocationStatus\022\033\n" +
+      "\027UnknownRevocationStatus\020\000\022\030\n\024Revocation" +
+      "StatusNone\020\001\022\035\n\031RevocationIsRequestedByM" +
+      "e\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revocat" +
+      "ionAccepted\020\004\022\026\n\022RevocationRejected\020\005*\256\001" +
+      "\n\031RoamingNotificationStatus\022$\n UnknownRo" +
+      "amingNotificationStatus\020\000\022!\n\035RoamingNoti" +
+      "ficationStatusNone\020\001\022$\n RoamingNotificat" +
+      "ionStatusSuccess\020\002\022\"\n\036RoamingNotificatio" +
+      "nStatusError\020\003*\300\001\n\025SenderSignatureStatus" +
+      "\022 \n\034UnknownSenderSignatureStatus\020\000\022\035\n\031Wa" +
+      "itingForSenderSignature\020\001\022\034\n\030SenderSigna" +
+      "tureUnchecked\020\002\022\"\n\036SenderSignatureChecke" +
+      "dAndValid\020\003\022$\n SenderSignatureCheckedAnd" +
+      "Invalid\020\004*\302\001\n\024ProxySignatureStatus\022\037\n\033Un" +
+      "knownProxySignatureStatus\020\000\022\034\n\030ProxySign" +
+      "atureStatusNone\020\001\022\034\n\030WaitingForProxySign" +
+      "ature\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026Proxy" +
+      "SignatureRejected\020\004\022\031\n\025InvalidProxySigna" +
+      "ture\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033Gener" +
+      "alReceiptStatusUnknown\020\000\022%\n!GeneralRecei" +
+      "ptStatusNotAcceptable\020\001\022\027\n\023HaveToCreateR" +
+      "eceipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010Finis" +
+      "hed\020\004*\220\002\n\027RecipientResponseStatus\022\"\n\036Rec" +
+      "ipientResponseStatusUnknown\020\000\022(\n$Recipie" +
+      "ntResponseStatusNotAcceptable\020\001\022 \n\034Waiti" +
+      "ngForRecipientSignature\020\002\022\032\n\026WithRecipie" +
+      "ntSignature\020\003\022%\n!RecipientSignatureReque" +
+      "stRejected\020\004\022\035\n\031InvalidRecipientSignatur" +
+      "e\020\005\022#\n\037WithRecipientPartiallySignature\020\006" +
+      "*?\n\013MessageType\022\013\n\007Unknown\020\000\022\n\n\006Letter\020\001" +
+      "\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016DocumentPro" +
+      "tos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
