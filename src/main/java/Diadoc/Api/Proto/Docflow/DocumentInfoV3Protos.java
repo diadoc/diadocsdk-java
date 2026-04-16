@@ -313,6 +313,17 @@ public final class DocumentInfoV3Protos {
      */
     com.google.protobuf.ByteString
         getEditingSettingIdBytes();
+
+    /**
+     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
+     * @return Whether the hasUnreadOutOfWorkflowUniversalMessages field is set.
+     */
+    boolean hasHasUnreadOutOfWorkflowUniversalMessages();
+    /**
+     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
+     * @return The hasUnreadOutOfWorkflowUniversalMessages.
+     */
+    boolean getHasUnreadOutOfWorkflowUniversalMessages();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentInfoV3}
@@ -343,6 +354,7 @@ public final class DocumentInfoV3Protos {
       metadata_ = java.util.Collections.emptyList();
       customData_ = java.util.Collections.emptyList();
       editingSettingId_ = "";
+      hasUnreadOutOfWorkflowUniversalMessages_ = true;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -908,6 +920,25 @@ public final class DocumentInfoV3Protos {
       }
     }
 
+    public static final int HASUNREADOUTOFWORKFLOWUNIVERSALMESSAGES_FIELD_NUMBER = 82;
+    private boolean hasUnreadOutOfWorkflowUniversalMessages_ = true;
+    /**
+     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
+     * @return Whether the hasUnreadOutOfWorkflowUniversalMessages field is set.
+     */
+    @java.lang.Override
+    public boolean hasHasUnreadOutOfWorkflowUniversalMessages() {
+      return ((bitField0_ & 0x00020000) != 0);
+    }
+    /**
+     * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
+     * @return The hasUnreadOutOfWorkflowUniversalMessages.
+     */
+    @java.lang.Override
+    public boolean getHasUnreadOutOfWorkflowUniversalMessages() {
+      return hasUnreadOutOfWorkflowUniversalMessages_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1075,6 +1106,9 @@ public final class DocumentInfoV3Protos {
       if (((bitField0_ & 0x00010000) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 19, editingSettingId_);
       }
+      if (((bitField0_ & 0x00020000) != 0)) {
+        output.writeBool(82, hasUnreadOutOfWorkflowUniversalMessages_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1156,6 +1190,10 @@ public final class DocumentInfoV3Protos {
       }
       if (((bitField0_ & 0x00010000) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(19, editingSettingId_);
+      }
+      if (((bitField0_ & 0x00020000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(82, hasUnreadOutOfWorkflowUniversalMessages_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1259,6 +1297,11 @@ public final class DocumentInfoV3Protos {
         if (!getEditingSettingId()
             .equals(other.getEditingSettingId())) return false;
       }
+      if (hasHasUnreadOutOfWorkflowUniversalMessages() != other.hasHasUnreadOutOfWorkflowUniversalMessages()) return false;
+      if (hasHasUnreadOutOfWorkflowUniversalMessages()) {
+        if (getHasUnreadOutOfWorkflowUniversalMessages()
+            != other.getHasUnreadOutOfWorkflowUniversalMessages()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1348,6 +1391,11 @@ public final class DocumentInfoV3Protos {
       if (hasEditingSettingId()) {
         hash = (37 * hash) + EDITINGSETTINGID_FIELD_NUMBER;
         hash = (53 * hash) + getEditingSettingId().hashCode();
+      }
+      if (hasHasUnreadOutOfWorkflowUniversalMessages()) {
+        hash = (37 * hash) + HASUNREADOUTOFWORKFLOWUNIVERSALMESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHasUnreadOutOfWorkflowUniversalMessages());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1558,6 +1606,7 @@ public final class DocumentInfoV3Protos {
           originBuilder_ = null;
         }
         editingSettingId_ = "";
+        hasUnreadOutOfWorkflowUniversalMessages_ = true;
         return this;
       }
 
@@ -1698,6 +1747,10 @@ public final class DocumentInfoV3Protos {
           result.editingSettingId_ = editingSettingId_;
           to_bitField0_ |= 0x00010000;
         }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.hasUnreadOutOfWorkflowUniversalMessages_ = hasUnreadOutOfWorkflowUniversalMessages_;
+          to_bitField0_ |= 0x00020000;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1821,6 +1874,9 @@ public final class DocumentInfoV3Protos {
           editingSettingId_ = other.editingSettingId_;
           bitField0_ |= 0x00040000;
           onChanged();
+        }
+        if (other.hasHasUnreadOutOfWorkflowUniversalMessages()) {
+          setHasUnreadOutOfWorkflowUniversalMessages(other.getHasUnreadOutOfWorkflowUniversalMessages());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2064,6 +2120,11 @@ public final class DocumentInfoV3Protos {
                 bitField0_ |= 0x00040000;
                 break;
               } // case 154
+              case 656: {
+                hasUnreadOutOfWorkflowUniversalMessages_ = input.readBool();
+                bitField0_ |= 0x00080000;
+                break;
+              } // case 656
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4009,6 +4070,46 @@ public final class DocumentInfoV3Protos {
         if (value == null) { throw new NullPointerException(); }
         editingSettingId_ = value;
         bitField0_ |= 0x00040000;
+        onChanged();
+        return this;
+      }
+
+      private boolean hasUnreadOutOfWorkflowUniversalMessages_ = true;
+      /**
+       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
+       * @return Whether the hasUnreadOutOfWorkflowUniversalMessages field is set.
+       */
+      @java.lang.Override
+      public boolean hasHasUnreadOutOfWorkflowUniversalMessages() {
+        return ((bitField0_ & 0x00080000) != 0);
+      }
+      /**
+       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
+       * @return The hasUnreadOutOfWorkflowUniversalMessages.
+       */
+      @java.lang.Override
+      public boolean getHasUnreadOutOfWorkflowUniversalMessages() {
+        return hasUnreadOutOfWorkflowUniversalMessages_;
+      }
+      /**
+       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
+       * @param value The hasUnreadOutOfWorkflowUniversalMessages to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHasUnreadOutOfWorkflowUniversalMessages(boolean value) {
+
+        hasUnreadOutOfWorkflowUniversalMessages_ = value;
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHasUnreadOutOfWorkflowUniversalMessages() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        hasUnreadOutOfWorkflowUniversalMessages_ = true;
         onChanged();
         return this;
       }
@@ -13079,7 +13180,7 @@ public final class DocumentInfoV3Protos {
       "s/Document.proto\032\016LockMode.proto\032\032Forwar" +
       "dDocumentEvent.proto\032\027DocumentDirection." +
       "proto\032\"Events/DiadocMessage-PostApi.prot" +
-      "o\032\024CustomDataItem.proto\"\206\007\n\016DocumentInfo" +
+      "o\032\024CustomDataItem.proto\"\275\007\n\016DocumentInfo" +
       "V3\0222\n\013FullVersion\030\001 \002(\0132\035.Diadoc.Api.Pro" +
       "to.FullVersion\022<\n\013MessageType\030\002 \002(\0162\'.Di" +
       "adoc.Api.Proto.Documents.MessageType\022\022\n\n" +
@@ -13102,40 +13203,41 @@ public final class DocumentInfoV3Protos {
       "2..Diadoc.Api.Proto.Docflow.DocumentTemp" +
       "lateInfo\0222\n\006Origin\030\022 \001(\0132\".Diadoc.Api.Pr" +
       "oto.Documents.Origin\022\032\n\020EditingSettingId" +
-      "\030\023 \001(\t:\000\"\351\001\n\024DocumentParticipants\022=\n\006Sen" +
-      "der\030\001 \002(\0132-.Diadoc.Api.Proto.Docflow.Doc" +
-      "umentParticipant\022<\n\005Proxy\030\002 \001(\0132-.Diadoc" +
-      ".Api.Proto.Docflow.DocumentParticipant\022@" +
-      "\n\tRecipient\030\003 \001(\0132-.Diadoc.Api.Proto.Doc" +
-      "flow.DocumentParticipant\022\022\n\nIsInternal\030\004" +
-      " \002(\010\":\n\023DocumentParticipant\022\r\n\005BoxId\030\001 \002" +
-      "(\t\022\024\n\014DepartmentId\030\002 \001(\t\"w\n\rDocumentLink" +
-      "s\0220\n\nInitialIds\030\001 \003(\0132\034.Diadoc.Api.Proto" +
-      ".DocumentId\0224\n\016SubordinateIds\030\002 \003(\0132\034.Di" +
-      "adoc.Api.Proto.DocumentId\"z\n\nPacketInfo\022" +
-      ",\n\010LockMode\030\001 \002(\0162\032.Diadoc.Api.Proto.Loc" +
-      "kMode\022\020\n\010PacketId\030\002 \001(\t\022,\n\007AddedAt\030\003 \001(\013" +
-      "2\033.Diadoc.Api.Proto.Timestamp\"\200\001\n\022Docume" +
-      "ntLetterInfo\022\023\n\013IsEncrypted\030\001 \002(\010\022E\n\025For" +
-      "wardDocumentEvents\030\002 \003(\0132&.Diadoc.Api.Pr" +
-      "oto.ForwardDocumentEvent\022\016\n\006IsTest\030\003 \002(\010" +
-      "\"Y\n\021DocumentDraftInfo\022\022\n\nIsRecycled\030\001 \002(" +
-      "\010\022\020\n\010IsLocked\030\002 \002(\010\022\036\n\026TransformedToLett" +
-      "erIds\030\003 \003(\t\"\304\002\n\024DocumentTemplateInfo\022J\n\022" +
-      "LetterParticipants\030\001 \002(\0132..Diadoc.Api.Pr" +
-      "oto.Docflow.DocumentParticipants\022\036\n\026Tran" +
-      "sformedToLetterIds\030\002 \003(\t\022Y\n\033TemplateTran" +
-      "sformationInfos\030\003 \003(\01324.Diadoc.Api.Proto" +
-      ".Docflow.TemplateTransformationInfo\022J\n\023T" +
-      "emplateRefusalInfo\030\004 \001(\0132-.Diadoc.Api.Pr" +
-      "oto.Docflow.TemplateRefusalInfo\022\031\n\nIsReu" +
-      "sable\030\005 \001(\010:\005false\"\213\001\n\032TemplateTransform" +
-      "ationInfo\022\030\n\020TransformationId\030\001 \002(\t\022=\n\027T" +
-      "ransformedToDocumentId\030\002 \001(\0132\034.Diadoc.Ap" +
-      "i.Proto.DocumentId\022\024\n\014AuthorUserId\030\003 \001(\t" +
-      "\"K\n\023TemplateRefusalInfo\022\r\n\005BoxId\030\001 \002(\t\022\024" +
-      "\n\014AuthorUserId\030\002 \001(\t\022\017\n\007Comment\030\003 \001(\tB\026B" +
-      "\024DocumentInfoV3Protos"
+      "\030\023 \001(\t:\000\0225\n\'HasUnreadOutOfWorkflowUniver" +
+      "salMessages\030R \001(\010:\004true\"\351\001\n\024DocumentPart" +
+      "icipants\022=\n\006Sender\030\001 \002(\0132-.Diadoc.Api.Pr" +
+      "oto.Docflow.DocumentParticipant\022<\n\005Proxy" +
+      "\030\002 \001(\0132-.Diadoc.Api.Proto.Docflow.Docume" +
+      "ntParticipant\022@\n\tRecipient\030\003 \001(\0132-.Diado" +
+      "c.Api.Proto.Docflow.DocumentParticipant\022" +
+      "\022\n\nIsInternal\030\004 \002(\010\":\n\023DocumentParticipa" +
+      "nt\022\r\n\005BoxId\030\001 \002(\t\022\024\n\014DepartmentId\030\002 \001(\t\"" +
+      "w\n\rDocumentLinks\0220\n\nInitialIds\030\001 \003(\0132\034.D" +
+      "iadoc.Api.Proto.DocumentId\0224\n\016Subordinat" +
+      "eIds\030\002 \003(\0132\034.Diadoc.Api.Proto.DocumentId" +
+      "\"z\n\nPacketInfo\022,\n\010LockMode\030\001 \002(\0162\032.Diado" +
+      "c.Api.Proto.LockMode\022\020\n\010PacketId\030\002 \001(\t\022," +
+      "\n\007AddedAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Times" +
+      "tamp\"\200\001\n\022DocumentLetterInfo\022\023\n\013IsEncrypt" +
+      "ed\030\001 \002(\010\022E\n\025ForwardDocumentEvents\030\002 \003(\0132" +
+      "&.Diadoc.Api.Proto.ForwardDocumentEvent\022" +
+      "\016\n\006IsTest\030\003 \002(\010\"Y\n\021DocumentDraftInfo\022\022\n\n" +
+      "IsRecycled\030\001 \002(\010\022\020\n\010IsLocked\030\002 \002(\010\022\036\n\026Tr" +
+      "ansformedToLetterIds\030\003 \003(\t\"\304\002\n\024DocumentT" +
+      "emplateInfo\022J\n\022LetterParticipants\030\001 \002(\0132" +
+      "..Diadoc.Api.Proto.Docflow.DocumentParti" +
+      "cipants\022\036\n\026TransformedToLetterIds\030\002 \003(\t\022" +
+      "Y\n\033TemplateTransformationInfos\030\003 \003(\01324.D" +
+      "iadoc.Api.Proto.Docflow.TemplateTransfor" +
+      "mationInfo\022J\n\023TemplateRefusalInfo\030\004 \001(\0132" +
+      "-.Diadoc.Api.Proto.Docflow.TemplateRefus" +
+      "alInfo\022\031\n\nIsReusable\030\005 \001(\010:\005false\"\213\001\n\032Te" +
+      "mplateTransformationInfo\022\030\n\020Transformati" +
+      "onId\030\001 \002(\t\022=\n\027TransformedToDocumentId\030\002 " +
+      "\001(\0132\034.Diadoc.Api.Proto.DocumentId\022\024\n\014Aut" +
+      "horUserId\030\003 \001(\t\"K\n\023TemplateRefusalInfo\022\r" +
+      "\n\005BoxId\030\001 \002(\t\022\024\n\014AuthorUserId\030\002 \001(\t\022\017\n\007C" +
+      "omment\030\003 \001(\tB\026B\024DocumentInfoV3Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13155,7 +13257,7 @@ public final class DocumentInfoV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_DocumentInfoV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocumentInfoV3_descriptor,
-        new java.lang.String[] { "FullVersion", "MessageType", "WorkflowId", "Participants", "DocumentDirection", "DepartmentId", "CustomDocumentId", "Metadata", "CustomData", "DocumentLinks", "PacketInfo", "IsRead", "IsDeleted", "IsInvitation", "LetterInfo", "DraftInfo", "TemplateInfo", "Origin", "EditingSettingId", });
+        new java.lang.String[] { "FullVersion", "MessageType", "WorkflowId", "Participants", "DocumentDirection", "DepartmentId", "CustomDocumentId", "Metadata", "CustomData", "DocumentLinks", "PacketInfo", "IsRead", "IsDeleted", "IsInvitation", "LetterInfo", "DraftInfo", "TemplateInfo", "Origin", "EditingSettingId", "HasUnreadOutOfWorkflowUniversalMessages", });
     internal_static_Diadoc_Api_Proto_Docflow_DocumentParticipants_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_DocumentParticipants_fieldAccessorTable = new
