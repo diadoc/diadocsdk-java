@@ -21,6 +21,7 @@ import Diadoc.Api.organizations.OrganizationClient;
 import Diadoc.Api.parse.ParseClient;
 import Diadoc.Api.powersOfAttorney.PowerOfAttorneyClient;
 import Diadoc.Api.print.PrintFormClient;
+import Diadoc.Api.security.SecurityClient;
 import Diadoc.Api.shelf.ShelfClient;
 import Diadoc.Api.sign.SignClient;
 import Diadoc.Api.template.TemplateClient;
@@ -56,6 +57,7 @@ public class DiadocApi {
     private final DocumentWorkflowClient documentWorkflowClient;
     private final OperatorClient operatorClient;
     private final PartnerEventsClient partnerEventsClient;
+    private final SecurityClient securityClient;
     private final DiadocHttpClient diadocHttpClient;
 
     public DiadocApi(String apiClientId, String url, @Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
@@ -96,6 +98,7 @@ public class DiadocApi {
         documentWorkflowClient = new DocumentWorkflowClient(diadocHttpClient);
         operatorClient = new OperatorClient(diadocHttpClient);
         partnerEventsClient = new PartnerEventsClient(diadocHttpClient);
+        securityClient = new SecurityClient(diadocHttpClient);
     }
 
     public DiadocApi(String apiClientId, String url) {
@@ -212,6 +215,8 @@ public class DiadocApi {
     }
 
     public PartnerEventsClient getPartnerEventsClient() { return partnerEventsClient; }
+
+    public SecurityClient getSecurityClient() { return securityClient; }
 
     public DiadocHttpClient getDiadocHttpClient() {
         return diadocHttpClient;
