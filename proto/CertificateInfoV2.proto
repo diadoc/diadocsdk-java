@@ -26,6 +26,7 @@ enum CertificateType {
 	TokenCertificateType = 1;
 	DssCertificateType = 2;
 	KonturCertificateType = 3;
+	GoskeyCertificateType = 4;
 }
 
 enum CertificateSubjectType {

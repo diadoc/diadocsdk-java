@@ -46,6 +46,10 @@ public final class CertificateInfoV2Protos {
      * <code>KonturCertificateType = 3;</code>
      */
     KonturCertificateType(3),
+    /**
+     * <code>GoskeyCertificateType = 4;</code>
+     */
+    GoskeyCertificateType(4),
     ;
 
     static {
@@ -73,6 +77,10 @@ public final class CertificateInfoV2Protos {
      * <code>KonturCertificateType = 3;</code>
      */
     public static final int KonturCertificateType_VALUE = 3;
+    /**
+     * <code>GoskeyCertificateType = 4;</code>
+     */
+    public static final int GoskeyCertificateType_VALUE = 4;
 
 
     public final int getNumber() {
@@ -99,6 +107,7 @@ public final class CertificateInfoV2Protos {
         case 1: return TokenCertificateType;
         case 2: return DssCertificateType;
         case 3: return KonturCertificateType;
+        case 4: return GoskeyCertificateType;
         default: return null;
       }
     }
@@ -3202,18 +3211,19 @@ public final class CertificateInfoV2Protos {
       "Diadoc.Api.Proto.CertificateSubjectType\022" +
       "2\n\006Usages\030\017 \003(\0162\".Diadoc.Api.Proto.Certi" +
       "ficateUsage\022*\n\007DssType\030\020 \001(\0162\031.Diadoc.Ap" +
-      "i.Proto.DssType*z\n\017CertificateType\022\032\n\026Un" +
-      "knownCertificateType\020\000\022\030\n\024TokenCertifica" +
-      "teType\020\001\022\026\n\022DssCertificateType\020\002\022\031\n\025Kont" +
-      "urCertificateType\020\003*v\n\026CertificateSubjec" +
-      "tType\022!\n\035UnknownCertificateSubjectType\020\000" +
-      "\022\017\n\013LegalEntity\020\001\022\024\n\020IndividualEntity\020\002\022" +
-      "\022\n\016PhysicalPerson\020\003*\\\n\007DssType\022\022\n\016Unknow" +
-      "nDssType\020\000\022\t\n\005MyDss\020\001\022\017\n\013KSignServer\020\002\022\020" +
-      "\n\014KSignRutoken\020\003\022\017\n\013KSignMobile\020\004*^\n\020Cer" +
-      "tificateUsage\022\020\n\014UnknownUsage\020\000\022\032\n\026Kontu" +
-      "rCertificateUsage\020\001\022\016\n\nTokenUsage\020\002\022\014\n\010D" +
-      "ssUsage\020\003B\031B\027CertificateInfoV2Protos"
+      "i.Proto.DssType*\225\001\n\017CertificateType\022\032\n\026U" +
+      "nknownCertificateType\020\000\022\030\n\024TokenCertific" +
+      "ateType\020\001\022\026\n\022DssCertificateType\020\002\022\031\n\025Kon" +
+      "turCertificateType\020\003\022\031\n\025GoskeyCertificat" +
+      "eType\020\004*v\n\026CertificateSubjectType\022!\n\035Unk" +
+      "nownCertificateSubjectType\020\000\022\017\n\013LegalEnt" +
+      "ity\020\001\022\024\n\020IndividualEntity\020\002\022\022\n\016PhysicalP" +
+      "erson\020\003*\\\n\007DssType\022\022\n\016UnknownDssType\020\000\022\t" +
+      "\n\005MyDss\020\001\022\017\n\013KSignServer\020\002\022\020\n\014KSignRutok" +
+      "en\020\003\022\017\n\013KSignMobile\020\004*^\n\020CertificateUsag" +
+      "e\022\020\n\014UnknownUsage\020\000\022\032\n\026KonturCertificate" +
+      "Usage\020\001\022\016\n\nTokenUsage\020\002\022\014\n\010DssUsage\020\003B\031B" +
+      "\027CertificateInfoV2Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
