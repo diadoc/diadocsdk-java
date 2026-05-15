@@ -341,6 +341,17 @@ public final class OrganizationUserPermissionsProtos {
      * @return The canAttachUniversalMessages.
      */
     boolean getCanAttachUniversalMessages();
+
+    /**
+     * <code>optional bool CanUseGoskeyFL = 15;</code>
+     * @return Whether the canUseGoskeyFL field is set.
+     */
+    boolean hasCanUseGoskeyFL();
+    /**
+     * <code>optional bool CanUseGoskeyFL = 15;</code>
+     * @return The canUseGoskeyFL.
+     */
+    boolean getCanUseGoskeyFL();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.OrganizationUserPermissions}
@@ -716,6 +727,25 @@ public final class OrganizationUserPermissionsProtos {
       return canAttachUniversalMessages_;
     }
 
+    public static final int CANUSEGOSKEYFL_FIELD_NUMBER = 15;
+    private boolean canUseGoskeyFL_ = false;
+    /**
+     * <code>optional bool CanUseGoskeyFL = 15;</code>
+     * @return Whether the canUseGoskeyFL field is set.
+     */
+    @java.lang.Override
+    public boolean hasCanUseGoskeyFL() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional bool CanUseGoskeyFL = 15;</code>
+     * @return The canUseGoskeyFL.
+     */
+    @java.lang.Override
+    public boolean getCanUseGoskeyFL() {
+      return canUseGoskeyFL_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -813,6 +843,9 @@ public final class OrganizationUserPermissionsProtos {
       if (((bitField0_ & 0x00000800) != 0)) {
         output.writeBool(14, canAttachUniversalMessages_);
       }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeBool(15, canUseGoskeyFL_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -875,6 +908,10 @@ public final class OrganizationUserPermissionsProtos {
       if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, canAttachUniversalMessages_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(15, canUseGoskeyFL_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -952,6 +989,11 @@ public final class OrganizationUserPermissionsProtos {
         if (getCanAttachUniversalMessages()
             != other.getCanAttachUniversalMessages()) return false;
       }
+      if (hasCanUseGoskeyFL() != other.hasCanUseGoskeyFL()) return false;
+      if (hasCanUseGoskeyFL()) {
+        if (getCanUseGoskeyFL()
+            != other.getCanUseGoskeyFL()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1022,6 +1064,11 @@ public final class OrganizationUserPermissionsProtos {
         hash = (37 * hash) + CANATTACHUNIVERSALMESSAGES_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getCanAttachUniversalMessages());
+      }
+      if (hasCanUseGoskeyFL()) {
+        hash = (37 * hash) + CANUSEGOSKEYFL_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCanUseGoskeyFL());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1178,6 +1225,7 @@ public final class OrganizationUserPermissionsProtos {
         }
         canDeleteRestoreDocuments_ = false;
         canAttachUniversalMessages_ = false;
+        canUseGoskeyFL_ = false;
         return this;
       }
 
@@ -1266,6 +1314,10 @@ public final class OrganizationUserPermissionsProtos {
           result.canAttachUniversalMessages_ = canAttachUniversalMessages_;
           to_bitField0_ |= 0x00000800;
         }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.canUseGoskeyFL_ = canUseGoskeyFL_;
+          to_bitField0_ |= 0x00001000;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1330,6 +1382,9 @@ public final class OrganizationUserPermissionsProtos {
         }
         if (other.hasCanAttachUniversalMessages()) {
           setCanAttachUniversalMessages(other.getCanAttachUniversalMessages());
+        }
+        if (other.hasCanUseGoskeyFL()) {
+          setCanUseGoskeyFL(other.getCanUseGoskeyFL());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1465,6 +1520,11 @@ public final class OrganizationUserPermissionsProtos {
                 bitField0_ |= 0x00001000;
                 break;
               } // case 112
+              case 120: {
+                canUseGoskeyFL_ = input.readBool();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 120
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2235,6 +2295,46 @@ public final class OrganizationUserPermissionsProtos {
         return this;
       }
 
+      private boolean canUseGoskeyFL_ ;
+      /**
+       * <code>optional bool CanUseGoskeyFL = 15;</code>
+       * @return Whether the canUseGoskeyFL field is set.
+       */
+      @java.lang.Override
+      public boolean hasCanUseGoskeyFL() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional bool CanUseGoskeyFL = 15;</code>
+       * @return The canUseGoskeyFL.
+       */
+      @java.lang.Override
+      public boolean getCanUseGoskeyFL() {
+        return canUseGoskeyFL_;
+      }
+      /**
+       * <code>optional bool CanUseGoskeyFL = 15;</code>
+       * @param value The canUseGoskeyFL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCanUseGoskeyFL(boolean value) {
+
+        canUseGoskeyFL_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool CanUseGoskeyFL = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCanUseGoskeyFL() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        canUseGoskeyFL_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationUserPermissions)
     }
 
@@ -2955,7 +3055,7 @@ public final class OrganizationUserPermissionsProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n!OrganizationUserPermissions.proto\022\020Dia" +
-      "doc.Api.Proto\"\204\004\n\033OrganizationUserPermis" +
+      "doc.Api.Proto\"\234\004\n\033OrganizationUserPermis" +
       "sions\022\030\n\020UserDepartmentId\030\001 \002(\t\022\027\n\017IsAdm" +
       "inistrator\030\002 \002(\010\022^\n\023DocumentAccessLevel\030" +
       "\003 \001(\0162%.Diadoc.Api.Proto.DocumentAccessL" +
@@ -2968,13 +3068,14 @@ public final class OrganizationUserPermissionsProtos {
       "onPermission\030\014 \002(\0132).Diadoc.Api.Proto.Au" +
       "thorizationPermission\022!\n\031CanDeleteRestor" +
       "eDocuments\030\r \002(\010\022\"\n\032CanAttachUniversalMe" +
-      "ssages\030\016 \002(\010\"=\n\027AuthorizationPermission\022" +
-      "\021\n\tIsBlocked\030\001 \002(\010\022\017\n\007Comment\030\002 \001(\t*\236\001\n\023" +
-      "DocumentAccessLevel\022\'\n\032UnknownDocumentAc" +
-      "cessLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016DepartmentOnly\020\000" +
-      "\022\037\n\033DepartmentAndSubdepartments\020\001\022\020\n\014All" +
-      "Documents\020\002\022\027\n\023SelectedDepartments\020\003B#B!" +
-      "OrganizationUserPermissionsProtos"
+      "ssages\030\016 \002(\010\022\026\n\016CanUseGoskeyFL\030\017 \001(\010\"=\n\027" +
+      "AuthorizationPermission\022\021\n\tIsBlocked\030\001 \002" +
+      "(\010\022\017\n\007Comment\030\002 \001(\t*\236\001\n\023DocumentAccessLe" +
+      "vel\022\'\n\032UnknownDocumentAccessLevel\020\377\377\377\377\377\377" +
+      "\377\377\377\001\022\022\n\016DepartmentOnly\020\000\022\037\n\033DepartmentAn" +
+      "dSubdepartments\020\001\022\020\n\014AllDocuments\020\002\022\027\n\023S" +
+      "electedDepartments\020\003B#B!OrganizationUser" +
+      "PermissionsProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2985,7 +3086,7 @@ public final class OrganizationUserPermissionsProtos {
     internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor,
-        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanManageCounteragents", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", "AuthorizationPermission", "CanDeleteRestoreDocuments", "CanAttachUniversalMessages", });
+        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanManageCounteragents", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", "AuthorizationPermission", "CanDeleteRestoreDocuments", "CanAttachUniversalMessages", "CanUseGoskeyFL", });
     internal_static_Diadoc_Api_Proto_AuthorizationPermission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_AuthorizationPermission_fieldAccessorTable = new
