@@ -235,6 +235,129 @@ public final class OrganizationProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.Sociability)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.OrganizationType}
+   */
+  public enum OrganizationType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownOrganizationType = 0;</code>
+     */
+    UnknownOrganizationType(0),
+    /**
+     * <code>Individual = 1;</code>
+     */
+    Individual(1),
+    /**
+     * <code>Juridical = 2;</code>
+     */
+    Juridical(2),
+    /**
+     * <code>Physical = 3;</code>
+     */
+    Physical(3),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        OrganizationType.class.getName());
+    }
+    /**
+     * <code>UnknownOrganizationType = 0;</code>
+     */
+    public static final int UnknownOrganizationType_VALUE = 0;
+    /**
+     * <code>Individual = 1;</code>
+     */
+    public static final int Individual_VALUE = 1;
+    /**
+     * <code>Juridical = 2;</code>
+     */
+    public static final int Juridical_VALUE = 2;
+    /**
+     * <code>Physical = 3;</code>
+     */
+    public static final int Physical_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static OrganizationType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static OrganizationType forNumber(int value) {
+      switch (value) {
+        case 0: return UnknownOrganizationType;
+        case 1: return Individual;
+        case 2: return Juridical;
+        case 3: return Physical;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<OrganizationType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        OrganizationType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<OrganizationType>() {
+            public OrganizationType findValueByNumber(int number) {
+              return OrganizationType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.OrganizationProtos.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final OrganizationType[] VALUES = values();
+
+    public static OrganizationType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private OrganizationType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.OrganizationType)
+  }
+
   public interface OrganizationListOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.OrganizationList)
       com.google.protobuf.MessageOrBuilder {
@@ -1360,6 +1483,28 @@ public final class OrganizationProtos {
      * @return The hasCertificateToSign.
      */
     boolean getHasCertificateToSign();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.OrganizationType OrganizationType = 27;</code>
+     * @return Whether the organizationType field is set.
+     */
+    boolean hasOrganizationType();
+    /**
+     * <code>required .Diadoc.Api.Proto.OrganizationType OrganizationType = 27;</code>
+     * @return The organizationType.
+     */
+    Diadoc.Api.Proto.OrganizationProtos.OrganizationType getOrganizationType();
+
+    /**
+     * <code>optional bool IsOwner = 28 [default = false];</code>
+     * @return Whether the isOwner field is set.
+     */
+    boolean hasIsOwner();
+    /**
+     * <code>optional bool IsOwner = 28 [default = false];</code>
+     * @return The isOwner.
+     */
+    boolean getIsOwner();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Organization}
@@ -1397,6 +1542,7 @@ public final class OrganizationProtos {
       sociability_ = 0;
       liquidationDate_ = "";
       certificateOfRegistryInfo_ = "";
+      organizationType_ = 0;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -2268,6 +2414,43 @@ public final class OrganizationProtos {
       return hasCertificateToSign_;
     }
 
+    public static final int ORGANIZATIONTYPE_FIELD_NUMBER = 27;
+    private int organizationType_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.OrganizationType OrganizationType = 27;</code>
+     * @return Whether the organizationType field is set.
+     */
+    @java.lang.Override public boolean hasOrganizationType() {
+      return ((bitField0_ & 0x00800000) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.OrganizationType OrganizationType = 27;</code>
+     * @return The organizationType.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.OrganizationProtos.OrganizationType getOrganizationType() {
+      Diadoc.Api.Proto.OrganizationProtos.OrganizationType result = Diadoc.Api.Proto.OrganizationProtos.OrganizationType.forNumber(organizationType_);
+      return result == null ? Diadoc.Api.Proto.OrganizationProtos.OrganizationType.UnknownOrganizationType : result;
+    }
+
+    public static final int ISOWNER_FIELD_NUMBER = 28;
+    private boolean isOwner_ = false;
+    /**
+     * <code>optional bool IsOwner = 28 [default = false];</code>
+     * @return Whether the isOwner field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsOwner() {
+      return ((bitField0_ & 0x01000000) != 0);
+    }
+    /**
+     * <code>optional bool IsOwner = 28 [default = false];</code>
+     * @return The isOwner.
+     */
+    @java.lang.Override
+    public boolean getIsOwner() {
+      return isOwner_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2288,6 +2471,10 @@ public final class OrganizationProtos {
         return false;
       }
       if (!hasSociability()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOrganizationType()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -2391,6 +2578,12 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x00400000) != 0)) {
         output.writeBool(26, hasCertificateToSign_);
       }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        output.writeEnum(27, organizationType_);
+      }
+      if (((bitField0_ & 0x01000000) != 0)) {
+        output.writeBool(28, isOwner_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2488,6 +2681,14 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x00400000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(26, hasCertificateToSign_);
+      }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(27, organizationType_);
+      }
+      if (((bitField0_ & 0x01000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(28, isOwner_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2622,6 +2823,15 @@ public final class OrganizationProtos {
         if (getHasCertificateToSign()
             != other.getHasCertificateToSign()) return false;
       }
+      if (hasOrganizationType() != other.hasOrganizationType()) return false;
+      if (hasOrganizationType()) {
+        if (organizationType_ != other.organizationType_) return false;
+      }
+      if (hasIsOwner() != other.hasIsOwner()) return false;
+      if (hasIsOwner()) {
+        if (getIsOwner()
+            != other.getIsOwner()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2740,6 +2950,15 @@ public final class OrganizationProtos {
         hash = (37 * hash) + HASCERTIFICATETOSIGN_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getHasCertificateToSign());
+      }
+      if (hasOrganizationType()) {
+        hash = (37 * hash) + ORGANIZATIONTYPE_FIELD_NUMBER;
+        hash = (53 * hash) + organizationType_;
+      }
+      if (hasIsOwner()) {
+        hash = (37 * hash) + ISOWNER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsOwner());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -2921,6 +3140,8 @@ public final class OrganizationProtos {
         certificateOfRegistryInfo_ = "";
         isForeign_ = false;
         hasCertificateToSign_ = false;
+        organizationType_ = 0;
+        isOwner_ = false;
         return this;
       }
 
@@ -3070,6 +3291,14 @@ public final class OrganizationProtos {
         if (((from_bitField0_ & 0x01000000) != 0)) {
           result.hasCertificateToSign_ = hasCertificateToSign_;
           to_bitField0_ |= 0x00400000;
+        }
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.organizationType_ = organizationType_;
+          to_bitField0_ |= 0x00800000;
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.isOwner_ = isOwner_;
+          to_bitField0_ |= 0x01000000;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -3229,6 +3458,12 @@ public final class OrganizationProtos {
         if (other.hasHasCertificateToSign()) {
           setHasCertificateToSign(other.getHasCertificateToSign());
         }
+        if (other.hasOrganizationType()) {
+          setOrganizationType(other.getOrganizationType());
+        }
+        if (other.hasIsOwner()) {
+          setIsOwner(other.getIsOwner());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3246,6 +3481,9 @@ public final class OrganizationProtos {
           return false;
         }
         if (!hasSociability()) {
+          return false;
+        }
+        if (!hasOrganizationType()) {
           return false;
         }
         for (int i = 0; i < getBoxesCount(); i++) {
@@ -3432,6 +3670,23 @@ public final class OrganizationProtos {
                 bitField0_ |= 0x01000000;
                 break;
               } // case 208
+              case 216: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.OrganizationProtos.OrganizationType tmpValue =
+                    Diadoc.Api.Proto.OrganizationProtos.OrganizationType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(27, tmpRaw);
+                } else {
+                  organizationType_ = tmpRaw;
+                  bitField0_ |= 0x02000000;
+                }
+                break;
+              } // case 216
+              case 224: {
+                isOwner_ = input.readBool();
+                bitField0_ |= 0x04000000;
+                break;
+              } // case 224
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5368,6 +5623,88 @@ public final class OrganizationProtos {
       public Builder clearHasCertificateToSign() {
         bitField0_ = (bitField0_ & ~0x01000000);
         hasCertificateToSign_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int organizationType_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.OrganizationType OrganizationType = 27;</code>
+       * @return Whether the organizationType field is set.
+       */
+      @java.lang.Override public boolean hasOrganizationType() {
+        return ((bitField0_ & 0x02000000) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.OrganizationType OrganizationType = 27;</code>
+       * @return The organizationType.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.OrganizationProtos.OrganizationType getOrganizationType() {
+        Diadoc.Api.Proto.OrganizationProtos.OrganizationType result = Diadoc.Api.Proto.OrganizationProtos.OrganizationType.forNumber(organizationType_);
+        return result == null ? Diadoc.Api.Proto.OrganizationProtos.OrganizationType.UnknownOrganizationType : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.OrganizationType OrganizationType = 27;</code>
+       * @param value The organizationType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationType(Diadoc.Api.Proto.OrganizationProtos.OrganizationType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x02000000;
+        organizationType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.OrganizationType OrganizationType = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationType() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        organizationType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isOwner_ ;
+      /**
+       * <code>optional bool IsOwner = 28 [default = false];</code>
+       * @return Whether the isOwner field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsOwner() {
+        return ((bitField0_ & 0x04000000) != 0);
+      }
+      /**
+       * <code>optional bool IsOwner = 28 [default = false];</code>
+       * @return The isOwner.
+       */
+      @java.lang.Override
+      public boolean getIsOwner() {
+        return isOwner_;
+      }
+      /**
+       * <code>optional bool IsOwner = 28 [default = false];</code>
+       * @param value The isOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOwner(boolean value) {
+
+        isOwner_ = value;
+        bitField0_ |= 0x04000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsOwner = 28 [default = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsOwner() {
+        bitField0_ = (bitField0_ & ~0x04000000);
+        isOwner_ = false;
         onChanged();
         return this;
       }
@@ -8382,7 +8719,7 @@ public final class OrganizationProtos {
       "\n\022Organization.proto\022\020Diadoc.Api.Proto\032\r" +
       "Address.proto\"I\n\020OrganizationList\0225\n\rOrg" +
       "anizations\030\001 \003(\0132\036.Diadoc.Api.Proto.Orga" +
-      "nization\"\363\004\n\014Organization\022\r\n\005OrgId\030\001 \002(\t" +
+      "nization\"\311\005\n\014Organization\022\r\n\005OrgId\030\001 \002(\t" +
       "\022\013\n\003Inn\030\002 \002(\t\022\013\n\003Kpp\030\003 \001(\t\022\020\n\010FullName\030\004" +
       " \002(\t\022\021\n\tShortName\030\005 \001(\t\022$\n\005Boxes\030\007 \003(\0132\025" +
       ".Diadoc.Api.Proto.Box\022\014\n\004Ogrn\030\010 \001(\t\022\030\n\020F" +
@@ -8397,21 +8734,26 @@ public final class OrganizationProtos {
       "\013Sociability\030\026 \002(\0162\035.Diadoc.Api.Proto.So" +
       "ciability\022\027\n\017LiquidationDate\030\027 \001(\t\022!\n\031Ce" +
       "rtificateOfRegistryInfo\030\030 \001(\t\022\021\n\tIsForei" +
-      "gn\030\031 \001(\010\022\034\n\024HasCertificateToSign\030\032 \001(\010\"\266" +
-      "\001\n\nDepartment\022\024\n\014DepartmentId\030\001 \002(\t\022\032\n\022P" +
-      "arentDepartmentId\030\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n" +
-      "\014Abbreviation\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Addr" +
-      "ess\030\006 \001(\0132\031.Diadoc.Api.Proto.Address\022\031\n\n" +
-      "IsDisabled\030\007 \001(\010:\005false\"\350\001\n\003Box\022\r\n\005BoxId" +
-      "\030\001 \002(\t\022\021\n\tBoxIdGuid\030\006 \002(\t\022\r\n\005Title\030\002 \002(\t" +
-      "\0224\n\014Organization\030\003 \001(\0132\036.Diadoc.Api.Prot" +
-      "o.Organization\022W\n\024InvoiceFormatVersion\030\004" +
-      " \001(\01622.Diadoc.Api.Proto.OrganizationInvo" +
-      "iceFormatVersion:\005v5_02\022!\n\031EncryptedDocu" +
-      "mentsAllowed\030\005 \001(\010*8\n OrganizationInvoic" +
-      "eFormatVersion\022\t\n\005v5_01\020\001\022\t\n\005v5_02\020\002*:\n\013" +
-      "Sociability\022\024\n\020AllOrganizations\020\000\022\025\n\021Cou" +
-      "nteragentsOnly\020\001B\024B\022OrganizationProtos"
+      "gn\030\031 \001(\010\022\034\n\024HasCertificateToSign\030\032 \001(\010\022<" +
+      "\n\020OrganizationType\030\033 \002(\0162\".Diadoc.Api.Pr" +
+      "oto.OrganizationType\022\026\n\007IsOwner\030\034 \001(\010:\005f" +
+      "alse\"\266\001\n\nDepartment\022\024\n\014DepartmentId\030\001 \002(" +
+      "\t\022\032\n\022ParentDepartmentId\030\002 \002(\t\022\014\n\004Name\030\003 " +
+      "\002(\t\022\024\n\014Abbreviation\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*" +
+      "\n\007Address\030\006 \001(\0132\031.Diadoc.Api.Proto.Addre" +
+      "ss\022\031\n\nIsDisabled\030\007 \001(\010:\005false\"\350\001\n\003Box\022\r\n" +
+      "\005BoxId\030\001 \002(\t\022\021\n\tBoxIdGuid\030\006 \002(\t\022\r\n\005Title" +
+      "\030\002 \002(\t\0224\n\014Organization\030\003 \001(\0132\036.Diadoc.Ap" +
+      "i.Proto.Organization\022W\n\024InvoiceFormatVer" +
+      "sion\030\004 \001(\01622.Diadoc.Api.Proto.Organizati" +
+      "onInvoiceFormatVersion:\005v5_02\022!\n\031Encrypt" +
+      "edDocumentsAllowed\030\005 \001(\010*8\n Organization" +
+      "InvoiceFormatVersion\022\t\n\005v5_01\020\001\022\t\n\005v5_02" +
+      "\020\002*:\n\013Sociability\022\024\n\020AllOrganizations\020\000\022" +
+      "\025\n\021CounteragentsOnly\020\001*\\\n\020OrganizationTy" +
+      "pe\022\033\n\027UnknownOrganizationType\020\000\022\016\n\nIndiv" +
+      "idual\020\001\022\r\n\tJuridical\020\002\022\014\n\010Physical\020\003B\024B\022" +
+      "OrganizationProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8429,7 +8771,7 @@ public final class OrganizationProtos {
     internal_static_Diadoc_Api_Proto_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Organization_descriptor,
-        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", });
+        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", "OrganizationType", "IsOwner", });
     internal_static_Diadoc_Api_Proto_Department_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Department_fieldAccessorTable = new
