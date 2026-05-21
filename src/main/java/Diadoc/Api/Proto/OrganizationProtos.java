@@ -358,6 +358,129 @@ public final class OrganizationProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.OrganizationType)
   }
 
+  /**
+   * Protobuf enum {@code Diadoc.Api.Proto.ReadyForEpdStatus}
+   */
+  public enum ReadyForEpdStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UnknownEpdStatus = 0;</code>
+     */
+    UnknownEpdStatus(0),
+    /**
+     * <code>UndefinedEpdStatus = 1;</code>
+     */
+    UndefinedEpdStatus(1),
+    /**
+     * <code>Ready = 2;</code>
+     */
+    Ready(2),
+    /**
+     * <code>NotReady = 3;</code>
+     */
+    NotReady(3),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        ReadyForEpdStatus.class.getName());
+    }
+    /**
+     * <code>UnknownEpdStatus = 0;</code>
+     */
+    public static final int UnknownEpdStatus_VALUE = 0;
+    /**
+     * <code>UndefinedEpdStatus = 1;</code>
+     */
+    public static final int UndefinedEpdStatus_VALUE = 1;
+    /**
+     * <code>Ready = 2;</code>
+     */
+    public static final int Ready_VALUE = 2;
+    /**
+     * <code>NotReady = 3;</code>
+     */
+    public static final int NotReady_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ReadyForEpdStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ReadyForEpdStatus forNumber(int value) {
+      switch (value) {
+        case 0: return UnknownEpdStatus;
+        case 1: return UndefinedEpdStatus;
+        case 2: return Ready;
+        case 3: return NotReady;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ReadyForEpdStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ReadyForEpdStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ReadyForEpdStatus>() {
+            public ReadyForEpdStatus findValueByNumber(int number) {
+              return ReadyForEpdStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.OrganizationProtos.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final ReadyForEpdStatus[] VALUES = values();
+
+    public static ReadyForEpdStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ReadyForEpdStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.ReadyForEpdStatus)
+  }
+
   public interface ForeignInformationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.ForeignInformation)
       com.google.protobuf.MessageOrBuilder {
@@ -2423,6 +2546,17 @@ public final class OrganizationProtos {
      * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
      */
     Diadoc.Api.Proto.OrganizationProtos.ForeignInformationOrBuilder getForeignInformationOrBuilder();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.ReadyForEpdStatus ReadyForEpdStatus = 30;</code>
+     * @return Whether the readyForEpdStatus field is set.
+     */
+    boolean hasReadyForEpdStatus();
+    /**
+     * <code>required .Diadoc.Api.Proto.ReadyForEpdStatus ReadyForEpdStatus = 30;</code>
+     * @return The readyForEpdStatus.
+     */
+    Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus getReadyForEpdStatus();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Organization}
@@ -2461,6 +2595,7 @@ public final class OrganizationProtos {
       liquidationDate_ = "";
       certificateOfRegistryInfo_ = "";
       organizationType_ = 0;
+      readyForEpdStatus_ = 0;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -3395,6 +3530,24 @@ public final class OrganizationProtos {
       return foreignInformation_ == null ? Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.getDefaultInstance() : foreignInformation_;
     }
 
+    public static final int READYFOREPDSTATUS_FIELD_NUMBER = 30;
+    private int readyForEpdStatus_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.ReadyForEpdStatus ReadyForEpdStatus = 30;</code>
+     * @return Whether the readyForEpdStatus field is set.
+     */
+    @java.lang.Override public boolean hasReadyForEpdStatus() {
+      return ((bitField0_ & 0x04000000) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.ReadyForEpdStatus ReadyForEpdStatus = 30;</code>
+     * @return The readyForEpdStatus.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus getReadyForEpdStatus() {
+      Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus result = Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus.forNumber(readyForEpdStatus_);
+      return result == null ? Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus.UnknownEpdStatus : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3419,6 +3572,10 @@ public final class OrganizationProtos {
         return false;
       }
       if (!hasOrganizationType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasReadyForEpdStatus()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -3537,6 +3694,9 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x02000000) != 0)) {
         output.writeMessage(29, getForeignInformation());
       }
+      if (((bitField0_ & 0x04000000) != 0)) {
+        output.writeEnum(30, readyForEpdStatus_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3646,6 +3806,10 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x02000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(29, getForeignInformation());
+      }
+      if (((bitField0_ & 0x04000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(30, readyForEpdStatus_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3794,6 +3958,10 @@ public final class OrganizationProtos {
         if (!getForeignInformation()
             .equals(other.getForeignInformation())) return false;
       }
+      if (hasReadyForEpdStatus() != other.hasReadyForEpdStatus()) return false;
+      if (hasReadyForEpdStatus()) {
+        if (readyForEpdStatus_ != other.readyForEpdStatus_) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3925,6 +4093,10 @@ public final class OrganizationProtos {
       if (hasForeignInformation()) {
         hash = (37 * hash) + FOREIGNINFORMATION_FIELD_NUMBER;
         hash = (53 * hash) + getForeignInformation().hashCode();
+      }
+      if (hasReadyForEpdStatus()) {
+        hash = (37 * hash) + READYFOREPDSTATUS_FIELD_NUMBER;
+        hash = (53 * hash) + readyForEpdStatus_;
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4114,6 +4286,7 @@ public final class OrganizationProtos {
           foreignInformationBuilder_.dispose();
           foreignInformationBuilder_ = null;
         }
+        readyForEpdStatus_ = 0;
         return this;
       }
 
@@ -4277,6 +4450,10 @@ public final class OrganizationProtos {
               ? foreignInformation_
               : foreignInformationBuilder_.build();
           to_bitField0_ |= 0x02000000;
+        }
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.readyForEpdStatus_ = readyForEpdStatus_;
+          to_bitField0_ |= 0x04000000;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -4445,6 +4622,9 @@ public final class OrganizationProtos {
         if (other.hasForeignInformation()) {
           mergeForeignInformation(other.getForeignInformation());
         }
+        if (other.hasReadyForEpdStatus()) {
+          setReadyForEpdStatus(other.getReadyForEpdStatus());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4465,6 +4645,9 @@ public final class OrganizationProtos {
           return false;
         }
         if (!hasOrganizationType()) {
+          return false;
+        }
+        if (!hasReadyForEpdStatus()) {
           return false;
         }
         for (int i = 0; i < getBoxesCount(); i++) {
@@ -4680,6 +4863,18 @@ public final class OrganizationProtos {
                 bitField0_ |= 0x08000000;
                 break;
               } // case 234
+              case 240: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus tmpValue =
+                    Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(30, tmpRaw);
+                } else {
+                  readyForEpdStatus_ = tmpRaw;
+                  bitField0_ |= 0x10000000;
+                }
+                break;
+              } // case 240
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6821,6 +7016,48 @@ public final class OrganizationProtos {
           foreignInformation_ = null;
         }
         return foreignInformationBuilder_;
+      }
+
+      private int readyForEpdStatus_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.ReadyForEpdStatus ReadyForEpdStatus = 30;</code>
+       * @return Whether the readyForEpdStatus field is set.
+       */
+      @java.lang.Override public boolean hasReadyForEpdStatus() {
+        return ((bitField0_ & 0x10000000) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.ReadyForEpdStatus ReadyForEpdStatus = 30;</code>
+       * @return The readyForEpdStatus.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus getReadyForEpdStatus() {
+        Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus result = Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus.forNumber(readyForEpdStatus_);
+        return result == null ? Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus.UnknownEpdStatus : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.ReadyForEpdStatus ReadyForEpdStatus = 30;</code>
+       * @param value The readyForEpdStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReadyForEpdStatus(Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x10000000;
+        readyForEpdStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.ReadyForEpdStatus ReadyForEpdStatus = 30;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReadyForEpdStatus() {
+        bitField0_ = (bitField0_ & ~0x10000000);
+        readyForEpdStatus_ = 0;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Organization)
@@ -9840,7 +10077,7 @@ public final class OrganizationProtos {
       "oreignTaxpayerCode\030\001 \002(\t\022\036\n\026Identificati" +
       "onOfStatus\030\002 \001(\t\022\030\n\020OtherInformation\030\003 \001" +
       "(\t\"I\n\020OrganizationList\0225\n\rOrganizations\030" +
-      "\001 \003(\0132\036.Diadoc.Api.Proto.Organization\"\213\006" +
+      "\001 \003(\0132\036.Diadoc.Api.Proto.Organization\"\313\006" +
       "\n\014Organization\022\r\n\005OrgId\030\001 \002(\t\022\013\n\003Inn\030\002 \002" +
       "(\t\022\013\n\003Kpp\030\003 \001(\t\022\020\n\010FullName\030\004 \002(\t\022\021\n\tSho" +
       "rtName\030\005 \001(\t\022$\n\005Boxes\030\007 \003(\0132\025.Diadoc.Api" +
@@ -9860,23 +10097,27 @@ public final class OrganizationProtos {
       "ionType\030\033 \002(\0162\".Diadoc.Api.Proto.Organiz" +
       "ationType\022\026\n\007IsOwner\030\034 \001(\010:\005false\022@\n\022For" +
       "eignInformation\030\035 \001(\0132$.Diadoc.Api.Proto" +
-      ".ForeignInformation\"\266\001\n\nDepartment\022\024\n\014De" +
-      "partmentId\030\001 \002(\t\022\032\n\022ParentDepartmentId\030\002" +
-      " \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n\014Abbreviation\030\004 \001(\t" +
-      "\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Address\030\006 \001(\0132\031.Diadoc." +
-      "Api.Proto.Address\022\031\n\nIsDisabled\030\007 \001(\010:\005f" +
-      "alse\"\350\001\n\003Box\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tBoxIdGuid" +
-      "\030\006 \002(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Organization\030\003 " +
-      "\001(\0132\036.Diadoc.Api.Proto.Organization\022W\n\024I" +
-      "nvoiceFormatVersion\030\004 \001(\01622.Diadoc.Api.P" +
-      "roto.OrganizationInvoiceFormatVersion:\005v" +
-      "5_02\022!\n\031EncryptedDocumentsAllowed\030\005 \001(\010*" +
-      "8\n OrganizationInvoiceFormatVersion\022\t\n\005v" +
-      "5_01\020\001\022\t\n\005v5_02\020\002*:\n\013Sociability\022\024\n\020AllO" +
-      "rganizations\020\000\022\025\n\021CounteragentsOnly\020\001*\\\n" +
-      "\020OrganizationType\022\033\n\027UnknownOrganization" +
-      "Type\020\000\022\016\n\nIndividual\020\001\022\r\n\tJuridical\020\002\022\014\n" +
-      "\010Physical\020\003B\024B\022OrganizationProtos"
+      ".ForeignInformation\022>\n\021ReadyForEpdStatus" +
+      "\030\036 \002(\0162#.Diadoc.Api.Proto.ReadyForEpdSta" +
+      "tus\"\266\001\n\nDepartment\022\024\n\014DepartmentId\030\001 \002(\t" +
+      "\022\032\n\022ParentDepartmentId\030\002 \002(\t\022\014\n\004Name\030\003 \002" +
+      "(\t\022\024\n\014Abbreviation\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*\n" +
+      "\007Address\030\006 \001(\0132\031.Diadoc.Api.Proto.Addres" +
+      "s\022\031\n\nIsDisabled\030\007 \001(\010:\005false\"\350\001\n\003Box\022\r\n\005" +
+      "BoxId\030\001 \002(\t\022\021\n\tBoxIdGuid\030\006 \002(\t\022\r\n\005Title\030" +
+      "\002 \002(\t\0224\n\014Organization\030\003 \001(\0132\036.Diadoc.Api" +
+      ".Proto.Organization\022W\n\024InvoiceFormatVers" +
+      "ion\030\004 \001(\01622.Diadoc.Api.Proto.Organizatio" +
+      "nInvoiceFormatVersion:\005v5_02\022!\n\031Encrypte" +
+      "dDocumentsAllowed\030\005 \001(\010*8\n OrganizationI" +
+      "nvoiceFormatVersion\022\t\n\005v5_01\020\001\022\t\n\005v5_02\020" +
+      "\002*:\n\013Sociability\022\024\n\020AllOrganizations\020\000\022\025" +
+      "\n\021CounteragentsOnly\020\001*\\\n\020OrganizationTyp" +
+      "e\022\033\n\027UnknownOrganizationType\020\000\022\016\n\nIndivi" +
+      "dual\020\001\022\r\n\tJuridical\020\002\022\014\n\010Physical\020\003*Z\n\021R" +
+      "eadyForEpdStatus\022\024\n\020UnknownEpdStatus\020\000\022\026" +
+      "\n\022UndefinedEpdStatus\020\001\022\t\n\005Ready\020\002\022\014\n\010Not" +
+      "Ready\020\003B\024B\022OrganizationProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9900,7 +10141,7 @@ public final class OrganizationProtos {
     internal_static_Diadoc_Api_Proto_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Organization_descriptor,
-        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", "OrganizationType", "IsOwner", "ForeignInformation", });
+        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", "OrganizationType", "IsOwner", "ForeignInformation", "ReadyForEpdStatus", });
     internal_static_Diadoc_Api_Proto_Department_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Department_fieldAccessorTable = new
