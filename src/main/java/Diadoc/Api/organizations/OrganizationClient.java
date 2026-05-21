@@ -82,6 +82,13 @@ public class OrganizationClient {
         }
     }
 
+    public Organization getOrganizationByForeignTaxpayerCode(String foreignTaxpayerCode) throws DiadocSdkException {
+        if (foreignTaxpayerCode == null || foreignTaxpayerCode.isEmpty()) {
+            throw new IllegalArgumentException("foreignTaxpayerCode");
+        }
+        return getOrganization("foreignTaxpayerCode", foreignTaxpayerCode);
+    }
+
     public Organization getOrganizationByFnsParticipantId(String fnsParticipantId) throws DiadocSdkException {
         if (fnsParticipantId == null || fnsParticipantId.isEmpty()) {
             throw new IllegalArgumentException("fnsParticipantId");
@@ -262,6 +269,29 @@ public class OrganizationClient {
 
     public OrganizationList getOrganizationsByInnKpp(String inn, @Nullable String kpp) throws DiadocSdkException {
         return getOrganizationsByInnKpp(inn, kpp, false);
+    }
+
+    public OrganizationList getOrganizationsByForeignTaxpayerCode(String foreignTaxpayerCode, boolean includeRelations) throws DiadocSdkException {
+        if (foreignTaxpayerCode == null || foreignTaxpayerCode.isEmpty()) {
+            throw new IllegalArgumentException("foreignTaxpayerCode");
+        }
+        try {
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GetOrganizationsByForeignTaxpayerCode")
+                    .addParameter("foreignTaxpayerCode", foreignTaxpayerCode);
+
+            if (includeRelations) {
+                url.addParameter("includeRelations", "true");
+            }
+            var request = RequestBuilder.get(url.build());
+            return getOrganizationsList(request);
+        } catch (URISyntaxException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public OrganizationList getOrganizationsByForeignTaxpayerCode(String foreignTaxpayerCode) throws DiadocSdkException {
+        return getOrganizationsByForeignTaxpayerCode(foreignTaxpayerCode, false);
     }
 
     public OrganizationList getMyOrganizations(boolean autoRegister) throws DiadocSdkException {
