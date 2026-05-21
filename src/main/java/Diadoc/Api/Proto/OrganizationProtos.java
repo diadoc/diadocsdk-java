@@ -358,6 +358,909 @@ public final class OrganizationProtos {
     // @@protoc_insertion_point(enum_scope:Diadoc.Api.Proto.OrganizationType)
   }
 
+  public interface ForeignInformationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.ForeignInformation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string ForeignTaxpayerCode = 1;</code>
+     * @return Whether the foreignTaxpayerCode field is set.
+     */
+    boolean hasForeignTaxpayerCode();
+    /**
+     * <code>required string ForeignTaxpayerCode = 1;</code>
+     * @return The foreignTaxpayerCode.
+     */
+    java.lang.String getForeignTaxpayerCode();
+    /**
+     * <code>required string ForeignTaxpayerCode = 1;</code>
+     * @return The bytes for foreignTaxpayerCode.
+     */
+    com.google.protobuf.ByteString
+        getForeignTaxpayerCodeBytes();
+
+    /**
+     * <code>optional string IdentificationOfStatus = 2;</code>
+     * @return Whether the identificationOfStatus field is set.
+     */
+    boolean hasIdentificationOfStatus();
+    /**
+     * <code>optional string IdentificationOfStatus = 2;</code>
+     * @return The identificationOfStatus.
+     */
+    java.lang.String getIdentificationOfStatus();
+    /**
+     * <code>optional string IdentificationOfStatus = 2;</code>
+     * @return The bytes for identificationOfStatus.
+     */
+    com.google.protobuf.ByteString
+        getIdentificationOfStatusBytes();
+
+    /**
+     * <code>optional string OtherInformation = 3;</code>
+     * @return Whether the otherInformation field is set.
+     */
+    boolean hasOtherInformation();
+    /**
+     * <code>optional string OtherInformation = 3;</code>
+     * @return The otherInformation.
+     */
+    java.lang.String getOtherInformation();
+    /**
+     * <code>optional string OtherInformation = 3;</code>
+     * @return The bytes for otherInformation.
+     */
+    com.google.protobuf.ByteString
+        getOtherInformationBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.ForeignInformation}
+   */
+  public static final class ForeignInformation extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.ForeignInformation)
+      ForeignInformationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        ForeignInformation.class.getName());
+    }
+    // Use ForeignInformation.newBuilder() to construct.
+    private ForeignInformation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ForeignInformation() {
+      foreignTaxpayerCode_ = "";
+      identificationOfStatus_ = "";
+      otherInformation_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.OrganizationProtos.internal_static_Diadoc_Api_Proto_ForeignInformation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.OrganizationProtos.internal_static_Diadoc_Api_Proto_ForeignInformation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.class, Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FOREIGNTAXPAYERCODE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object foreignTaxpayerCode_ = "";
+    /**
+     * <code>required string ForeignTaxpayerCode = 1;</code>
+     * @return Whether the foreignTaxpayerCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasForeignTaxpayerCode() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string ForeignTaxpayerCode = 1;</code>
+     * @return The foreignTaxpayerCode.
+     */
+    @java.lang.Override
+    public java.lang.String getForeignTaxpayerCode() {
+      java.lang.Object ref = foreignTaxpayerCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          foreignTaxpayerCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string ForeignTaxpayerCode = 1;</code>
+     * @return The bytes for foreignTaxpayerCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getForeignTaxpayerCodeBytes() {
+      java.lang.Object ref = foreignTaxpayerCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        foreignTaxpayerCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDENTIFICATIONOFSTATUS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object identificationOfStatus_ = "";
+    /**
+     * <code>optional string IdentificationOfStatus = 2;</code>
+     * @return Whether the identificationOfStatus field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdentificationOfStatus() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string IdentificationOfStatus = 2;</code>
+     * @return The identificationOfStatus.
+     */
+    @java.lang.Override
+    public java.lang.String getIdentificationOfStatus() {
+      java.lang.Object ref = identificationOfStatus_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          identificationOfStatus_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string IdentificationOfStatus = 2;</code>
+     * @return The bytes for identificationOfStatus.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdentificationOfStatusBytes() {
+      java.lang.Object ref = identificationOfStatus_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        identificationOfStatus_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OTHERINFORMATION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object otherInformation_ = "";
+    /**
+     * <code>optional string OtherInformation = 3;</code>
+     * @return Whether the otherInformation field is set.
+     */
+    @java.lang.Override
+    public boolean hasOtherInformation() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string OtherInformation = 3;</code>
+     * @return The otherInformation.
+     */
+    @java.lang.Override
+    public java.lang.String getOtherInformation() {
+      java.lang.Object ref = otherInformation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          otherInformation_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string OtherInformation = 3;</code>
+     * @return The bytes for otherInformation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOtherInformationBytes() {
+      java.lang.Object ref = otherInformation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        otherInformation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasForeignTaxpayerCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, foreignTaxpayerCode_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, identificationOfStatus_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, otherInformation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, foreignTaxpayerCode_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, identificationOfStatus_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, otherInformation_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.OrganizationProtos.ForeignInformation)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.OrganizationProtos.ForeignInformation other = (Diadoc.Api.Proto.OrganizationProtos.ForeignInformation) obj;
+
+      if (hasForeignTaxpayerCode() != other.hasForeignTaxpayerCode()) return false;
+      if (hasForeignTaxpayerCode()) {
+        if (!getForeignTaxpayerCode()
+            .equals(other.getForeignTaxpayerCode())) return false;
+      }
+      if (hasIdentificationOfStatus() != other.hasIdentificationOfStatus()) return false;
+      if (hasIdentificationOfStatus()) {
+        if (!getIdentificationOfStatus()
+            .equals(other.getIdentificationOfStatus())) return false;
+      }
+      if (hasOtherInformation() != other.hasOtherInformation()) return false;
+      if (hasOtherInformation()) {
+        if (!getOtherInformation()
+            .equals(other.getOtherInformation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasForeignTaxpayerCode()) {
+        hash = (37 * hash) + FOREIGNTAXPAYERCODE_FIELD_NUMBER;
+        hash = (53 * hash) + getForeignTaxpayerCode().hashCode();
+      }
+      if (hasIdentificationOfStatus()) {
+        hash = (37 * hash) + IDENTIFICATIONOFSTATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getIdentificationOfStatus().hashCode();
+      }
+      if (hasOtherInformation()) {
+        hash = (37 * hash) + OTHERINFORMATION_FIELD_NUMBER;
+        hash = (53 * hash) + getOtherInformation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.OrganizationProtos.ForeignInformation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.ForeignInformation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.ForeignInformation)
+        Diadoc.Api.Proto.OrganizationProtos.ForeignInformationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.OrganizationProtos.internal_static_Diadoc_Api_Proto_ForeignInformation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.OrganizationProtos.internal_static_Diadoc_Api_Proto_ForeignInformation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.class, Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        foreignTaxpayerCode_ = "";
+        identificationOfStatus_ = "";
+        otherInformation_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.OrganizationProtos.internal_static_Diadoc_Api_Proto_ForeignInformation_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.OrganizationProtos.ForeignInformation getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.OrganizationProtos.ForeignInformation build() {
+        Diadoc.Api.Proto.OrganizationProtos.ForeignInformation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.OrganizationProtos.ForeignInformation buildPartial() {
+        Diadoc.Api.Proto.OrganizationProtos.ForeignInformation result = new Diadoc.Api.Proto.OrganizationProtos.ForeignInformation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.OrganizationProtos.ForeignInformation result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.foreignTaxpayerCode_ = foreignTaxpayerCode_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.identificationOfStatus_ = identificationOfStatus_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.otherInformation_ = otherInformation_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.OrganizationProtos.ForeignInformation) {
+          return mergeFrom((Diadoc.Api.Proto.OrganizationProtos.ForeignInformation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.OrganizationProtos.ForeignInformation other) {
+        if (other == Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.getDefaultInstance()) return this;
+        if (other.hasForeignTaxpayerCode()) {
+          foreignTaxpayerCode_ = other.foreignTaxpayerCode_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasIdentificationOfStatus()) {
+          identificationOfStatus_ = other.identificationOfStatus_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasOtherInformation()) {
+          otherInformation_ = other.otherInformation_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasForeignTaxpayerCode()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                foreignTaxpayerCode_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                identificationOfStatus_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                otherInformation_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object foreignTaxpayerCode_ = "";
+      /**
+       * <code>required string ForeignTaxpayerCode = 1;</code>
+       * @return Whether the foreignTaxpayerCode field is set.
+       */
+      public boolean hasForeignTaxpayerCode() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string ForeignTaxpayerCode = 1;</code>
+       * @return The foreignTaxpayerCode.
+       */
+      public java.lang.String getForeignTaxpayerCode() {
+        java.lang.Object ref = foreignTaxpayerCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            foreignTaxpayerCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string ForeignTaxpayerCode = 1;</code>
+       * @return The bytes for foreignTaxpayerCode.
+       */
+      public com.google.protobuf.ByteString
+          getForeignTaxpayerCodeBytes() {
+        java.lang.Object ref = foreignTaxpayerCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          foreignTaxpayerCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ForeignTaxpayerCode = 1;</code>
+       * @param value The foreignTaxpayerCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForeignTaxpayerCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        foreignTaxpayerCode_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ForeignTaxpayerCode = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForeignTaxpayerCode() {
+        foreignTaxpayerCode_ = getDefaultInstance().getForeignTaxpayerCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ForeignTaxpayerCode = 1;</code>
+       * @param value The bytes for foreignTaxpayerCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForeignTaxpayerCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        foreignTaxpayerCode_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object identificationOfStatus_ = "";
+      /**
+       * <code>optional string IdentificationOfStatus = 2;</code>
+       * @return Whether the identificationOfStatus field is set.
+       */
+      public boolean hasIdentificationOfStatus() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string IdentificationOfStatus = 2;</code>
+       * @return The identificationOfStatus.
+       */
+      public java.lang.String getIdentificationOfStatus() {
+        java.lang.Object ref = identificationOfStatus_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            identificationOfStatus_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string IdentificationOfStatus = 2;</code>
+       * @return The bytes for identificationOfStatus.
+       */
+      public com.google.protobuf.ByteString
+          getIdentificationOfStatusBytes() {
+        java.lang.Object ref = identificationOfStatus_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          identificationOfStatus_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string IdentificationOfStatus = 2;</code>
+       * @param value The identificationOfStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentificationOfStatus(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        identificationOfStatus_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string IdentificationOfStatus = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdentificationOfStatus() {
+        identificationOfStatus_ = getDefaultInstance().getIdentificationOfStatus();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string IdentificationOfStatus = 2;</code>
+       * @param value The bytes for identificationOfStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentificationOfStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        identificationOfStatus_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object otherInformation_ = "";
+      /**
+       * <code>optional string OtherInformation = 3;</code>
+       * @return Whether the otherInformation field is set.
+       */
+      public boolean hasOtherInformation() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string OtherInformation = 3;</code>
+       * @return The otherInformation.
+       */
+      public java.lang.String getOtherInformation() {
+        java.lang.Object ref = otherInformation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            otherInformation_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string OtherInformation = 3;</code>
+       * @return The bytes for otherInformation.
+       */
+      public com.google.protobuf.ByteString
+          getOtherInformationBytes() {
+        java.lang.Object ref = otherInformation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          otherInformation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string OtherInformation = 3;</code>
+       * @param value The otherInformation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOtherInformation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        otherInformation_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OtherInformation = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOtherInformation() {
+        otherInformation_ = getDefaultInstance().getOtherInformation();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string OtherInformation = 3;</code>
+       * @param value The bytes for otherInformation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOtherInformationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        otherInformation_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.ForeignInformation)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.ForeignInformation)
+    private static final Diadoc.Api.Proto.OrganizationProtos.ForeignInformation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.OrganizationProtos.ForeignInformation();
+    }
+
+    public static Diadoc.Api.Proto.OrganizationProtos.ForeignInformation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ForeignInformation>
+        PARSER = new com.google.protobuf.AbstractParser<ForeignInformation>() {
+      @java.lang.Override
+      public ForeignInformation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ForeignInformation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ForeignInformation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.OrganizationProtos.ForeignInformation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface OrganizationListOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.OrganizationList)
       com.google.protobuf.MessageOrBuilder {
@@ -1505,6 +2408,21 @@ public final class OrganizationProtos {
      * @return The isOwner.
      */
     boolean getIsOwner();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+     * @return Whether the foreignInformation field is set.
+     */
+    boolean hasForeignInformation();
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+     * @return The foreignInformation.
+     */
+    Diadoc.Api.Proto.OrganizationProtos.ForeignInformation getForeignInformation();
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+     */
+    Diadoc.Api.Proto.OrganizationProtos.ForeignInformationOrBuilder getForeignInformationOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Organization}
@@ -2451,6 +3369,32 @@ public final class OrganizationProtos {
       return isOwner_;
     }
 
+    public static final int FOREIGNINFORMATION_FIELD_NUMBER = 29;
+    private Diadoc.Api.Proto.OrganizationProtos.ForeignInformation foreignInformation_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+     * @return Whether the foreignInformation field is set.
+     */
+    @java.lang.Override
+    public boolean hasForeignInformation() {
+      return ((bitField0_ & 0x02000000) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+     * @return The foreignInformation.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.OrganizationProtos.ForeignInformation getForeignInformation() {
+      return foreignInformation_ == null ? Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.getDefaultInstance() : foreignInformation_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.OrganizationProtos.ForeignInformationOrBuilder getForeignInformationOrBuilder() {
+      return foreignInformation_ == null ? Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.getDefaultInstance() : foreignInformation_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2492,6 +3436,12 @@ public final class OrganizationProtos {
       }
       for (int i = 0; i < getDepartmentsCount(); i++) {
         if (!getDepartments(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasForeignInformation()) {
+        if (!getForeignInformation().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -2583,6 +3533,9 @@ public final class OrganizationProtos {
       }
       if (((bitField0_ & 0x01000000) != 0)) {
         output.writeBool(28, isOwner_);
+      }
+      if (((bitField0_ & 0x02000000) != 0)) {
+        output.writeMessage(29, getForeignInformation());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2689,6 +3642,10 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x01000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(28, isOwner_);
+      }
+      if (((bitField0_ & 0x02000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, getForeignInformation());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2832,6 +3789,11 @@ public final class OrganizationProtos {
         if (getIsOwner()
             != other.getIsOwner()) return false;
       }
+      if (hasForeignInformation() != other.hasForeignInformation()) return false;
+      if (hasForeignInformation()) {
+        if (!getForeignInformation()
+            .equals(other.getForeignInformation())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2959,6 +3921,10 @@ public final class OrganizationProtos {
         hash = (37 * hash) + ISOWNER_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsOwner());
+      }
+      if (hasForeignInformation()) {
+        hash = (37 * hash) + FOREIGNINFORMATION_FIELD_NUMBER;
+        hash = (53 * hash) + getForeignInformation().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3093,6 +4059,7 @@ public final class OrganizationProtos {
           getBoxesFieldBuilder();
           getAddressFieldBuilder();
           getDepartmentsFieldBuilder();
+          getForeignInformationFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3142,6 +4109,11 @@ public final class OrganizationProtos {
         hasCertificateToSign_ = false;
         organizationType_ = 0;
         isOwner_ = false;
+        foreignInformation_ = null;
+        if (foreignInformationBuilder_ != null) {
+          foreignInformationBuilder_.dispose();
+          foreignInformationBuilder_ = null;
+        }
         return this;
       }
 
@@ -3299,6 +4271,12 @@ public final class OrganizationProtos {
         if (((from_bitField0_ & 0x04000000) != 0)) {
           result.isOwner_ = isOwner_;
           to_bitField0_ |= 0x01000000;
+        }
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          result.foreignInformation_ = foreignInformationBuilder_ == null
+              ? foreignInformation_
+              : foreignInformationBuilder_.build();
+          to_bitField0_ |= 0x02000000;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -3464,6 +4442,9 @@ public final class OrganizationProtos {
         if (other.hasIsOwner()) {
           setIsOwner(other.getIsOwner());
         }
+        if (other.hasForeignInformation()) {
+          mergeForeignInformation(other.getForeignInformation());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3498,6 +4479,11 @@ public final class OrganizationProtos {
         }
         for (int i = 0; i < getDepartmentsCount(); i++) {
           if (!getDepartments(i).isInitialized()) {
+            return false;
+          }
+        }
+        if (hasForeignInformation()) {
+          if (!getForeignInformation().isInitialized()) {
             return false;
           }
         }
@@ -3687,6 +4673,13 @@ public final class OrganizationProtos {
                 bitField0_ |= 0x04000000;
                 break;
               } // case 224
+              case 234: {
+                input.readMessage(
+                    getForeignInformationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x08000000;
+                break;
+              } // case 234
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5707,6 +6700,127 @@ public final class OrganizationProtos {
         isOwner_ = false;
         onChanged();
         return this;
+      }
+
+      private Diadoc.Api.Proto.OrganizationProtos.ForeignInformation foreignInformation_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.OrganizationProtos.ForeignInformation, Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.Builder, Diadoc.Api.Proto.OrganizationProtos.ForeignInformationOrBuilder> foreignInformationBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+       * @return Whether the foreignInformation field is set.
+       */
+      public boolean hasForeignInformation() {
+        return ((bitField0_ & 0x08000000) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+       * @return The foreignInformation.
+       */
+      public Diadoc.Api.Proto.OrganizationProtos.ForeignInformation getForeignInformation() {
+        if (foreignInformationBuilder_ == null) {
+          return foreignInformation_ == null ? Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.getDefaultInstance() : foreignInformation_;
+        } else {
+          return foreignInformationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+       */
+      public Builder setForeignInformation(Diadoc.Api.Proto.OrganizationProtos.ForeignInformation value) {
+        if (foreignInformationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          foreignInformation_ = value;
+        } else {
+          foreignInformationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x08000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+       */
+      public Builder setForeignInformation(
+          Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.Builder builderForValue) {
+        if (foreignInformationBuilder_ == null) {
+          foreignInformation_ = builderForValue.build();
+        } else {
+          foreignInformationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x08000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+       */
+      public Builder mergeForeignInformation(Diadoc.Api.Proto.OrganizationProtos.ForeignInformation value) {
+        if (foreignInformationBuilder_ == null) {
+          if (((bitField0_ & 0x08000000) != 0) &&
+            foreignInformation_ != null &&
+            foreignInformation_ != Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.getDefaultInstance()) {
+            getForeignInformationBuilder().mergeFrom(value);
+          } else {
+            foreignInformation_ = value;
+          }
+        } else {
+          foreignInformationBuilder_.mergeFrom(value);
+        }
+        if (foreignInformation_ != null) {
+          bitField0_ |= 0x08000000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+       */
+      public Builder clearForeignInformation() {
+        bitField0_ = (bitField0_ & ~0x08000000);
+        foreignInformation_ = null;
+        if (foreignInformationBuilder_ != null) {
+          foreignInformationBuilder_.dispose();
+          foreignInformationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+       */
+      public Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.Builder getForeignInformationBuilder() {
+        bitField0_ |= 0x08000000;
+        onChanged();
+        return getForeignInformationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+       */
+      public Diadoc.Api.Proto.OrganizationProtos.ForeignInformationOrBuilder getForeignInformationOrBuilder() {
+        if (foreignInformationBuilder_ != null) {
+          return foreignInformationBuilder_.getMessageOrBuilder();
+        } else {
+          return foreignInformation_ == null ?
+              Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.getDefaultInstance() : foreignInformation_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.ForeignInformation ForeignInformation = 29;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.OrganizationProtos.ForeignInformation, Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.Builder, Diadoc.Api.Proto.OrganizationProtos.ForeignInformationOrBuilder> 
+          getForeignInformationFieldBuilder() {
+        if (foreignInformationBuilder_ == null) {
+          foreignInformationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.OrganizationProtos.ForeignInformation, Diadoc.Api.Proto.OrganizationProtos.ForeignInformation.Builder, Diadoc.Api.Proto.OrganizationProtos.ForeignInformationOrBuilder>(
+                  getForeignInformation(),
+                  getParentForChildren(),
+                  isClean());
+          foreignInformation_ = null;
+        }
+        return foreignInformationBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Organization)
@@ -8688,6 +9802,11 @@ public final class OrganizationProtos {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_ForeignInformation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_ForeignInformation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_OrganizationList_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -8717,69 +9836,79 @@ public final class OrganizationProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\022Organization.proto\022\020Diadoc.Api.Proto\032\r" +
-      "Address.proto\"I\n\020OrganizationList\0225\n\rOrg" +
-      "anizations\030\001 \003(\0132\036.Diadoc.Api.Proto.Orga" +
-      "nization\"\311\005\n\014Organization\022\r\n\005OrgId\030\001 \002(\t" +
-      "\022\013\n\003Inn\030\002 \002(\t\022\013\n\003Kpp\030\003 \001(\t\022\020\n\010FullName\030\004" +
-      " \002(\t\022\021\n\tShortName\030\005 \001(\t\022$\n\005Boxes\030\007 \003(\0132\025" +
-      ".Diadoc.Api.Proto.Box\022\014\n\004Ogrn\030\010 \001(\t\022\030\n\020F" +
-      "nsParticipantId\030\t \001(\t\022*\n\007Address\030\n \001(\0132\031" +
-      ".Diadoc.Api.Proto.Address\022\033\n\023FnsRegistra" +
-      "tionDate\030\013 \001(\t\0221\n\013Departments\030\014 \003(\0132\034.Di" +
-      "adoc.Api.Proto.Department\022\020\n\010IfnsCode\030\r " +
-      "\001(\t\022\017\n\007IsPilot\030\016 \001(\010\022\020\n\010IsActive\030\017 \001(\010\022\016" +
-      "\n\006IsTest\030\020 \001(\010\022\020\n\010IsBranch\030\021 \001(\010\022\021\n\tIsRo" +
-      "aming\030\022 \001(\010\022\022\n\nIsEmployee\030\023 \001(\010\022\027\n\017Invit" +
-      "ationCount\030\024 \001(\005\022\023\n\013SearchCount\030\025 \001(\005\0222\n" +
-      "\013Sociability\030\026 \002(\0162\035.Diadoc.Api.Proto.So" +
-      "ciability\022\027\n\017LiquidationDate\030\027 \001(\t\022!\n\031Ce" +
-      "rtificateOfRegistryInfo\030\030 \001(\t\022\021\n\tIsForei" +
-      "gn\030\031 \001(\010\022\034\n\024HasCertificateToSign\030\032 \001(\010\022<" +
-      "\n\020OrganizationType\030\033 \002(\0162\".Diadoc.Api.Pr" +
-      "oto.OrganizationType\022\026\n\007IsOwner\030\034 \001(\010:\005f" +
-      "alse\"\266\001\n\nDepartment\022\024\n\014DepartmentId\030\001 \002(" +
-      "\t\022\032\n\022ParentDepartmentId\030\002 \002(\t\022\014\n\004Name\030\003 " +
-      "\002(\t\022\024\n\014Abbreviation\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*" +
-      "\n\007Address\030\006 \001(\0132\031.Diadoc.Api.Proto.Addre" +
-      "ss\022\031\n\nIsDisabled\030\007 \001(\010:\005false\"\350\001\n\003Box\022\r\n" +
-      "\005BoxId\030\001 \002(\t\022\021\n\tBoxIdGuid\030\006 \002(\t\022\r\n\005Title" +
-      "\030\002 \002(\t\0224\n\014Organization\030\003 \001(\0132\036.Diadoc.Ap" +
-      "i.Proto.Organization\022W\n\024InvoiceFormatVer" +
-      "sion\030\004 \001(\01622.Diadoc.Api.Proto.Organizati" +
-      "onInvoiceFormatVersion:\005v5_02\022!\n\031Encrypt" +
-      "edDocumentsAllowed\030\005 \001(\010*8\n Organization" +
-      "InvoiceFormatVersion\022\t\n\005v5_01\020\001\022\t\n\005v5_02" +
-      "\020\002*:\n\013Sociability\022\024\n\020AllOrganizations\020\000\022" +
-      "\025\n\021CounteragentsOnly\020\001*\\\n\020OrganizationTy" +
-      "pe\022\033\n\027UnknownOrganizationType\020\000\022\016\n\nIndiv" +
-      "idual\020\001\022\r\n\tJuridical\020\002\022\014\n\010Physical\020\003B\024B\022" +
-      "OrganizationProtos"
+      "Address.proto\"k\n\022ForeignInformation\022\033\n\023F" +
+      "oreignTaxpayerCode\030\001 \002(\t\022\036\n\026Identificati" +
+      "onOfStatus\030\002 \001(\t\022\030\n\020OtherInformation\030\003 \001" +
+      "(\t\"I\n\020OrganizationList\0225\n\rOrganizations\030" +
+      "\001 \003(\0132\036.Diadoc.Api.Proto.Organization\"\213\006" +
+      "\n\014Organization\022\r\n\005OrgId\030\001 \002(\t\022\013\n\003Inn\030\002 \002" +
+      "(\t\022\013\n\003Kpp\030\003 \001(\t\022\020\n\010FullName\030\004 \002(\t\022\021\n\tSho" +
+      "rtName\030\005 \001(\t\022$\n\005Boxes\030\007 \003(\0132\025.Diadoc.Api" +
+      ".Proto.Box\022\014\n\004Ogrn\030\010 \001(\t\022\030\n\020FnsParticipa" +
+      "ntId\030\t \001(\t\022*\n\007Address\030\n \001(\0132\031.Diadoc.Api" +
+      ".Proto.Address\022\033\n\023FnsRegistrationDate\030\013 " +
+      "\001(\t\0221\n\013Departments\030\014 \003(\0132\034.Diadoc.Api.Pr" +
+      "oto.Department\022\020\n\010IfnsCode\030\r \001(\t\022\017\n\007IsPi" +
+      "lot\030\016 \001(\010\022\020\n\010IsActive\030\017 \001(\010\022\016\n\006IsTest\030\020 " +
+      "\001(\010\022\020\n\010IsBranch\030\021 \001(\010\022\021\n\tIsRoaming\030\022 \001(\010" +
+      "\022\022\n\nIsEmployee\030\023 \001(\010\022\027\n\017InvitationCount\030" +
+      "\024 \001(\005\022\023\n\013SearchCount\030\025 \001(\005\0222\n\013Sociabilit" +
+      "y\030\026 \002(\0162\035.Diadoc.Api.Proto.Sociability\022\027" +
+      "\n\017LiquidationDate\030\027 \001(\t\022!\n\031CertificateOf" +
+      "RegistryInfo\030\030 \001(\t\022\021\n\tIsForeign\030\031 \001(\010\022\034\n" +
+      "\024HasCertificateToSign\030\032 \001(\010\022<\n\020Organizat" +
+      "ionType\030\033 \002(\0162\".Diadoc.Api.Proto.Organiz" +
+      "ationType\022\026\n\007IsOwner\030\034 \001(\010:\005false\022@\n\022For" +
+      "eignInformation\030\035 \001(\0132$.Diadoc.Api.Proto" +
+      ".ForeignInformation\"\266\001\n\nDepartment\022\024\n\014De" +
+      "partmentId\030\001 \002(\t\022\032\n\022ParentDepartmentId\030\002" +
+      " \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n\014Abbreviation\030\004 \001(\t" +
+      "\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Address\030\006 \001(\0132\031.Diadoc." +
+      "Api.Proto.Address\022\031\n\nIsDisabled\030\007 \001(\010:\005f" +
+      "alse\"\350\001\n\003Box\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tBoxIdGuid" +
+      "\030\006 \002(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Organization\030\003 " +
+      "\001(\0132\036.Diadoc.Api.Proto.Organization\022W\n\024I" +
+      "nvoiceFormatVersion\030\004 \001(\01622.Diadoc.Api.P" +
+      "roto.OrganizationInvoiceFormatVersion:\005v" +
+      "5_02\022!\n\031EncryptedDocumentsAllowed\030\005 \001(\010*" +
+      "8\n OrganizationInvoiceFormatVersion\022\t\n\005v" +
+      "5_01\020\001\022\t\n\005v5_02\020\002*:\n\013Sociability\022\024\n\020AllO" +
+      "rganizations\020\000\022\025\n\021CounteragentsOnly\020\001*\\\n" +
+      "\020OrganizationType\022\033\n\027UnknownOrganization" +
+      "Type\020\000\022\016\n\nIndividual\020\001\022\r\n\tJuridical\020\002\022\014\n" +
+      "\010Physical\020\003B\024B\022OrganizationProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.AddressProtos.getDescriptor(),
         });
-    internal_static_Diadoc_Api_Proto_OrganizationList_descriptor =
+    internal_static_Diadoc_Api_Proto_ForeignInformation_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_ForeignInformation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_ForeignInformation_descriptor,
+        new java.lang.String[] { "ForeignTaxpayerCode", "IdentificationOfStatus", "OtherInformation", });
+    internal_static_Diadoc_Api_Proto_OrganizationList_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_OrganizationList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationList_descriptor,
         new java.lang.String[] { "Organizations", });
     internal_static_Diadoc_Api_Proto_Organization_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Organization_descriptor,
-        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", "OrganizationType", "IsOwner", });
+        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", "OrganizationType", "IsOwner", "ForeignInformation", });
     internal_static_Diadoc_Api_Proto_Department_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Department_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Department_descriptor,
         new java.lang.String[] { "DepartmentId", "ParentDepartmentId", "Name", "Abbreviation", "Kpp", "Address", "IsDisabled", });
     internal_static_Diadoc_Api_Proto_Box_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_Diadoc_Api_Proto_Box_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Box_descriptor,

@@ -4,6 +4,12 @@ package Diadoc.Api.Proto;
 
 option java_outer_classname = "OrganizationProtos";
 
+message ForeignInformation {
+	required string ForeignTaxpayerCode = 1;
+	optional string IdentificationOfStatus = 2;
+	optional string OtherInformation = 3;
+}
+
 message OrganizationList {
 	repeated Organization Organizations = 1;
 }
@@ -36,6 +42,7 @@ message Organization {
 	optional bool HasCertificateToSign = 26;
 	required OrganizationType OrganizationType = 27;
 	optional bool IsOwner = 28 [default = false];
+	optional ForeignInformation ForeignInformation = 29;
 }
 
 message Department {
