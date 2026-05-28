@@ -840,6 +840,102 @@ public final class ExtendedSignerProtos {
      * <code>ProformaInvoice29 = 14;</code>
      */
     ProformaInvoice29(14),
+    /**
+     * <pre>
+     * Данные для титула продавца формата приказа 108
+     * </pre>
+     *
+     * <code>LogisticsOrderRequest108 = 15;</code>
+     */
+    LogisticsOrderRequest108(15),
+    /**
+     * <pre>
+     * Данные для титула грузоотправителя (Т1) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillReception1065Sender = 16;</code>
+     */
+    LogisticsWaybillReception1065Sender(16),
+    /**
+     * <pre>
+     * Данные для титула перевозчика (Т2) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillReception1065Recipient = 17;</code>
+     */
+    LogisticsWaybillReception1065Recipient(17),
+    /**
+     * <pre>
+     * Данные для титула грузополучателя (Т3) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillDelivery1065Sender = 18;</code>
+     */
+    LogisticsWaybillDelivery1065Sender(18),
+    /**
+     * <pre>
+     * Данные для титула перевозчика о выдаче груза (Т4) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillDelivery1065Recipient = 19;</code>
+     */
+    LogisticsWaybillDelivery1065Recipient(19),
+    /**
+     * <pre>
+     * Данные для титула перевозчика о факте хозяйственной жизни (Т5) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillConsignorCost1065 = 20;</code>
+     */
+    LogisticsWaybillConsignorCost1065(20),
+    /**
+     * <pre>
+     * Данные для титула грузополучателя о факте хозяйственной жизни (Т6) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillCarrierCost1065 = 21;</code>
+     */
+    LogisticsWaybillCarrierCost1065(21),
+    /**
+     * <pre>
+     * Данные для титула переадресовки (Т7) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillReaddress1065 = 22;</code>
+     */
+    LogisticsWaybillReaddress1065(22),
+    /**
+     * <pre>
+     * Данные для титула смен водителя (Т8) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillRelay1065 = 23;</code>
+     */
+    LogisticsWaybillRelay1065(23),
+    /**
+     * <pre>
+     * Данные для титула продавца УКД формата приказа 29
+     * </pre>
+     *
+     * <code>Ucd29Seller = 24;</code>
+     */
+    Ucd29Seller(24),
+    /**
+     * <pre>
+     * Данные для титула покупателя УКД формата приказа 29
+     * </pre>
+     *
+     * <code>Ucd29Buyer = 25;</code>
+     */
+    Ucd29Buyer(25),
+    /**
+     * <pre>
+     * Данные для титула получателя заказ-заявки формата приказа 108
+     * </pre>
+     *
+     * <code>LogisticsOrderRequestRecipient108 = 26;</code>
+     */
+    LogisticsOrderRequestRecipient108(26),
     ;
 
     static {
@@ -975,6 +1071,102 @@ public final class ExtendedSignerProtos {
      * <code>ProformaInvoice29 = 14;</code>
      */
     public static final int ProformaInvoice29_VALUE = 14;
+    /**
+     * <pre>
+     * Данные для титула продавца формата приказа 108
+     * </pre>
+     *
+     * <code>LogisticsOrderRequest108 = 15;</code>
+     */
+    public static final int LogisticsOrderRequest108_VALUE = 15;
+    /**
+     * <pre>
+     * Данные для титула грузоотправителя (Т1) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillReception1065Sender = 16;</code>
+     */
+    public static final int LogisticsWaybillReception1065Sender_VALUE = 16;
+    /**
+     * <pre>
+     * Данные для титула перевозчика (Т2) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillReception1065Recipient = 17;</code>
+     */
+    public static final int LogisticsWaybillReception1065Recipient_VALUE = 17;
+    /**
+     * <pre>
+     * Данные для титула грузополучателя (Т3) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillDelivery1065Sender = 18;</code>
+     */
+    public static final int LogisticsWaybillDelivery1065Sender_VALUE = 18;
+    /**
+     * <pre>
+     * Данные для титула перевозчика о выдаче груза (Т4) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillDelivery1065Recipient = 19;</code>
+     */
+    public static final int LogisticsWaybillDelivery1065Recipient_VALUE = 19;
+    /**
+     * <pre>
+     * Данные для титула перевозчика о факте хозяйственной жизни (Т5) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillConsignorCost1065 = 20;</code>
+     */
+    public static final int LogisticsWaybillConsignorCost1065_VALUE = 20;
+    /**
+     * <pre>
+     * Данные для титула грузополучателя о факте хозяйственной жизни (Т6) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillCarrierCost1065 = 21;</code>
+     */
+    public static final int LogisticsWaybillCarrierCost1065_VALUE = 21;
+    /**
+     * <pre>
+     * Данные для титула переадресовки (Т7) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillReaddress1065 = 22;</code>
+     */
+    public static final int LogisticsWaybillReaddress1065_VALUE = 22;
+    /**
+     * <pre>
+     * Данные для титула смен водителя (Т8) формата приказа 1065
+     * </pre>
+     *
+     * <code>LogisticsWaybillRelay1065 = 23;</code>
+     */
+    public static final int LogisticsWaybillRelay1065_VALUE = 23;
+    /**
+     * <pre>
+     * Данные для титула продавца УКД формата приказа 29
+     * </pre>
+     *
+     * <code>Ucd29Seller = 24;</code>
+     */
+    public static final int Ucd29Seller_VALUE = 24;
+    /**
+     * <pre>
+     * Данные для титула покупателя УКД формата приказа 29
+     * </pre>
+     *
+     * <code>Ucd29Buyer = 25;</code>
+     */
+    public static final int Ucd29Buyer_VALUE = 25;
+    /**
+     * <pre>
+     * Данные для титула получателя заказ-заявки формата приказа 108
+     * </pre>
+     *
+     * <code>LogisticsOrderRequestRecipient108 = 26;</code>
+     */
+    public static final int LogisticsOrderRequestRecipient108_VALUE = 26;
 
 
     public final int getNumber() {
@@ -1013,6 +1205,18 @@ public final class ExtendedSignerProtos {
         case 12: return Utd970Seller;
         case 13: return Utd970Buyer;
         case 14: return ProformaInvoice29;
+        case 15: return LogisticsOrderRequest108;
+        case 16: return LogisticsWaybillReception1065Sender;
+        case 17: return LogisticsWaybillReception1065Recipient;
+        case 18: return LogisticsWaybillDelivery1065Sender;
+        case 19: return LogisticsWaybillDelivery1065Recipient;
+        case 20: return LogisticsWaybillConsignorCost1065;
+        case 21: return LogisticsWaybillCarrierCost1065;
+        case 22: return LogisticsWaybillReaddress1065;
+        case 23: return LogisticsWaybillRelay1065;
+        case 24: return Ucd29Seller;
+        case 25: return Ucd29Buyer;
+        case 26: return LogisticsOrderRequestRecipient108;
         default: return null;
       }
     }
