@@ -22,7 +22,7 @@ import static Diadoc.Api.helpers.Tools.getTraceId;
 public class ShelfClient {
     private DiadocHttpClient diadocHttpClient;
 
-    private static final int SHELF_PART_LENGTH = 512 * 1024;
+    private static final int SHELF_PART_LENGTH = 3 * 1024 * 1024;
     private static final int SHELF_MAX_ATTEMPTS = 3;
     private static final List<Integer> SHELF_NON_RETRIABLE_STATUS_CODES = Arrays.asList(HttpStatus.SC_UNAUTHORIZED, HttpStatus.SC_FORBIDDEN, HttpStatus.SC_PAYMENT_REQUIRED);
     private static final String SHELF_PATH_PREFIX = "__userId__";
