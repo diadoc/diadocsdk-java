@@ -196,15 +196,20 @@ public class EmployeeClient {
     }
 
     public CertificateList getMyCertificates(String boxId) throws DiadocSdkException {
+        return getMyCertificates(boxId, false);
+    }
+
+    public CertificateList getMyCertificates(String boxId, boolean includeGoskeyCertificates) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
         }
         try {
-            var request = RequestBuilder.get(
-                    new URIBuilder(diadocHttpClient.getBaseUrl())
-                            .setPath("/GetMyCertificates")
-                            .addParameter("boxId", boxId)
-                            .build());
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GetMyCertificates")
+                    .addParameter("boxId", boxId);
+            if (includeGoskeyCertificates)
+                url.addParameter("includeGoskeyCertificates", Boolean.toString(true));
+            var request = RequestBuilder.get(url.build());
             return CertificateList.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
