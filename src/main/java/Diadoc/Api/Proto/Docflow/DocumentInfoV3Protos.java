@@ -4224,6 +4224,17 @@ public final class DocumentInfoV3Protos {
      * @return The isInternal.
      */
     boolean getIsInternal();
+
+    /**
+     * <code>required bool IsCrossBorder = 5;</code>
+     * @return Whether the isCrossBorder field is set.
+     */
+    boolean hasIsCrossBorder();
+    /**
+     * <code>required bool IsCrossBorder = 5;</code>
+     * @return The isCrossBorder.
+     */
+    boolean getIsCrossBorder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentParticipants}
@@ -4360,6 +4371,25 @@ public final class DocumentInfoV3Protos {
       return isInternal_;
     }
 
+    public static final int ISCROSSBORDER_FIELD_NUMBER = 5;
+    private boolean isCrossBorder_ = false;
+    /**
+     * <code>required bool IsCrossBorder = 5;</code>
+     * @return Whether the isCrossBorder field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsCrossBorder() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>required bool IsCrossBorder = 5;</code>
+     * @return The isCrossBorder.
+     */
+    @java.lang.Override
+    public boolean getIsCrossBorder() {
+      return isCrossBorder_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4372,6 +4402,10 @@ public final class DocumentInfoV3Protos {
         return false;
       }
       if (!hasIsInternal()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasIsCrossBorder()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -4410,6 +4444,9 @@ public final class DocumentInfoV3Protos {
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeBool(4, isInternal_);
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeBool(5, isCrossBorder_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4434,6 +4471,10 @@ public final class DocumentInfoV3Protos {
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, isInternal_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, isCrossBorder_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4470,6 +4511,11 @@ public final class DocumentInfoV3Protos {
         if (getIsInternal()
             != other.getIsInternal()) return false;
       }
+      if (hasIsCrossBorder() != other.hasIsCrossBorder()) return false;
+      if (hasIsCrossBorder()) {
+        if (getIsCrossBorder()
+            != other.getIsCrossBorder()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4497,6 +4543,11 @@ public final class DocumentInfoV3Protos {
         hash = (37 * hash) + ISINTERNAL_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsInternal());
+      }
+      if (hasIsCrossBorder()) {
+        hash = (37 * hash) + ISCROSSBORDER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsCrossBorder());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4653,6 +4704,7 @@ public final class DocumentInfoV3Protos {
           recipientBuilder_ = null;
         }
         isInternal_ = false;
+        isCrossBorder_ = false;
         return this;
       }
 
@@ -4709,6 +4761,10 @@ public final class DocumentInfoV3Protos {
           result.isInternal_ = isInternal_;
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.isCrossBorder_ = isCrossBorder_;
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -4736,6 +4792,9 @@ public final class DocumentInfoV3Protos {
         if (other.hasIsInternal()) {
           setIsInternal(other.getIsInternal());
         }
+        if (other.hasIsCrossBorder()) {
+          setIsCrossBorder(other.getIsCrossBorder());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4747,6 +4806,9 @@ public final class DocumentInfoV3Protos {
           return false;
         }
         if (!hasIsInternal()) {
+          return false;
+        }
+        if (!hasIsCrossBorder()) {
           return false;
         }
         if (!getSender().isInitialized()) {
@@ -4807,6 +4869,11 @@ public final class DocumentInfoV3Protos {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 40: {
+                isCrossBorder_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5227,6 +5294,46 @@ public final class DocumentInfoV3Protos {
         return this;
       }
 
+      private boolean isCrossBorder_ ;
+      /**
+       * <code>required bool IsCrossBorder = 5;</code>
+       * @return Whether the isCrossBorder field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsCrossBorder() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>required bool IsCrossBorder = 5;</code>
+       * @return The isCrossBorder.
+       */
+      @java.lang.Override
+      public boolean getIsCrossBorder() {
+        return isCrossBorder_;
+      }
+      /**
+       * <code>required bool IsCrossBorder = 5;</code>
+       * @param value The isCrossBorder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsCrossBorder(boolean value) {
+
+        isCrossBorder_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool IsCrossBorder = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsCrossBorder() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        isCrossBorder_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.DocumentParticipants)
     }
 
@@ -5315,6 +5422,17 @@ public final class DocumentInfoV3Protos {
      */
     com.google.protobuf.ByteString
         getDepartmentIdBytes();
+
+    /**
+     * <code>required bool IsRoaming = 3;</code>
+     * @return Whether the isRoaming field is set.
+     */
+    boolean hasIsRoaming();
+    /**
+     * <code>required bool IsRoaming = 3;</code>
+     * @return The isRoaming.
+     */
+    boolean getIsRoaming();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.DocumentParticipant}
@@ -5454,6 +5572,25 @@ public final class DocumentInfoV3Protos {
       }
     }
 
+    public static final int ISROAMING_FIELD_NUMBER = 3;
+    private boolean isRoaming_ = false;
+    /**
+     * <code>required bool IsRoaming = 3;</code>
+     * @return Whether the isRoaming field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsRoaming() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>required bool IsRoaming = 3;</code>
+     * @return The isRoaming.
+     */
+    @java.lang.Override
+    public boolean getIsRoaming() {
+      return isRoaming_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5462,6 +5599,10 @@ public final class DocumentInfoV3Protos {
       if (isInitialized == 0) return false;
 
       if (!hasBoxId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasIsRoaming()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -5478,6 +5619,9 @@ public final class DocumentInfoV3Protos {
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, departmentId_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, isRoaming_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5492,6 +5636,10 @@ public final class DocumentInfoV3Protos {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, departmentId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isRoaming_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5518,6 +5666,11 @@ public final class DocumentInfoV3Protos {
         if (!getDepartmentId()
             .equals(other.getDepartmentId())) return false;
       }
+      if (hasIsRoaming() != other.hasIsRoaming()) return false;
+      if (hasIsRoaming()) {
+        if (getIsRoaming()
+            != other.getIsRoaming()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5536,6 +5689,11 @@ public final class DocumentInfoV3Protos {
       if (hasDepartmentId()) {
         hash = (37 * hash) + DEPARTMENTID_FIELD_NUMBER;
         hash = (53 * hash) + getDepartmentId().hashCode();
+      }
+      if (hasIsRoaming()) {
+        hash = (37 * hash) + ISROAMING_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsRoaming());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -5670,6 +5828,7 @@ public final class DocumentInfoV3Protos {
         bitField0_ = 0;
         boxId_ = "";
         departmentId_ = "";
+        isRoaming_ = false;
         return this;
       }
 
@@ -5712,6 +5871,10 @@ public final class DocumentInfoV3Protos {
           result.departmentId_ = departmentId_;
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isRoaming_ = isRoaming_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -5737,6 +5900,9 @@ public final class DocumentInfoV3Protos {
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (other.hasIsRoaming()) {
+          setIsRoaming(other.getIsRoaming());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -5745,6 +5911,9 @@ public final class DocumentInfoV3Protos {
       @java.lang.Override
       public final boolean isInitialized() {
         if (!hasBoxId()) {
+          return false;
+        }
+        if (!hasIsRoaming()) {
           return false;
         }
         return true;
@@ -5776,6 +5945,11 @@ public final class DocumentInfoV3Protos {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 24: {
+                isRoaming_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5949,6 +6123,46 @@ public final class DocumentInfoV3Protos {
         if (value == null) { throw new NullPointerException(); }
         departmentId_ = value;
         bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean isRoaming_ ;
+      /**
+       * <code>required bool IsRoaming = 3;</code>
+       * @return Whether the isRoaming field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsRoaming() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required bool IsRoaming = 3;</code>
+       * @return The isRoaming.
+       */
+      @java.lang.Override
+      public boolean getIsRoaming() {
+        return isRoaming_;
+      }
+      /**
+       * <code>required bool IsRoaming = 3;</code>
+       * @param value The isRoaming to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsRoaming(boolean value) {
+
+        isRoaming_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool IsRoaming = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsRoaming() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isRoaming_ = false;
         onChanged();
         return this;
       }
@@ -13204,40 +13418,41 @@ public final class DocumentInfoV3Protos {
       "lateInfo\0222\n\006Origin\030\022 \001(\0132\".Diadoc.Api.Pr" +
       "oto.Documents.Origin\022\032\n\020EditingSettingId" +
       "\030\023 \001(\t:\000\0225\n\'HasUnreadOutOfWorkflowUniver" +
-      "salMessages\030R \001(\010:\004true\"\351\001\n\024DocumentPart" +
+      "salMessages\030R \001(\010:\004true\"\200\002\n\024DocumentPart" +
       "icipants\022=\n\006Sender\030\001 \002(\0132-.Diadoc.Api.Pr" +
       "oto.Docflow.DocumentParticipant\022<\n\005Proxy" +
       "\030\002 \001(\0132-.Diadoc.Api.Proto.Docflow.Docume" +
       "ntParticipant\022@\n\tRecipient\030\003 \001(\0132-.Diado" +
       "c.Api.Proto.Docflow.DocumentParticipant\022" +
-      "\022\n\nIsInternal\030\004 \002(\010\":\n\023DocumentParticipa" +
-      "nt\022\r\n\005BoxId\030\001 \002(\t\022\024\n\014DepartmentId\030\002 \001(\t\"" +
-      "w\n\rDocumentLinks\0220\n\nInitialIds\030\001 \003(\0132\034.D" +
-      "iadoc.Api.Proto.DocumentId\0224\n\016Subordinat" +
-      "eIds\030\002 \003(\0132\034.Diadoc.Api.Proto.DocumentId" +
-      "\"z\n\nPacketInfo\022,\n\010LockMode\030\001 \002(\0162\032.Diado" +
-      "c.Api.Proto.LockMode\022\020\n\010PacketId\030\002 \001(\t\022," +
-      "\n\007AddedAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Times" +
-      "tamp\"\200\001\n\022DocumentLetterInfo\022\023\n\013IsEncrypt" +
-      "ed\030\001 \002(\010\022E\n\025ForwardDocumentEvents\030\002 \003(\0132" +
-      "&.Diadoc.Api.Proto.ForwardDocumentEvent\022" +
-      "\016\n\006IsTest\030\003 \002(\010\"Y\n\021DocumentDraftInfo\022\022\n\n" +
-      "IsRecycled\030\001 \002(\010\022\020\n\010IsLocked\030\002 \002(\010\022\036\n\026Tr" +
-      "ansformedToLetterIds\030\003 \003(\t\"\304\002\n\024DocumentT" +
-      "emplateInfo\022J\n\022LetterParticipants\030\001 \002(\0132" +
-      "..Diadoc.Api.Proto.Docflow.DocumentParti" +
-      "cipants\022\036\n\026TransformedToLetterIds\030\002 \003(\t\022" +
-      "Y\n\033TemplateTransformationInfos\030\003 \003(\01324.D" +
-      "iadoc.Api.Proto.Docflow.TemplateTransfor" +
-      "mationInfo\022J\n\023TemplateRefusalInfo\030\004 \001(\0132" +
-      "-.Diadoc.Api.Proto.Docflow.TemplateRefus" +
-      "alInfo\022\031\n\nIsReusable\030\005 \001(\010:\005false\"\213\001\n\032Te" +
-      "mplateTransformationInfo\022\030\n\020Transformati" +
-      "onId\030\001 \002(\t\022=\n\027TransformedToDocumentId\030\002 " +
-      "\001(\0132\034.Diadoc.Api.Proto.DocumentId\022\024\n\014Aut" +
-      "horUserId\030\003 \001(\t\"K\n\023TemplateRefusalInfo\022\r" +
-      "\n\005BoxId\030\001 \002(\t\022\024\n\014AuthorUserId\030\002 \001(\t\022\017\n\007C" +
-      "omment\030\003 \001(\tB\026B\024DocumentInfoV3Protos"
+      "\022\n\nIsInternal\030\004 \002(\010\022\025\n\rIsCrossBorder\030\005 \002" +
+      "(\010\"M\n\023DocumentParticipant\022\r\n\005BoxId\030\001 \002(\t" +
+      "\022\024\n\014DepartmentId\030\002 \001(\t\022\021\n\tIsRoaming\030\003 \002(" +
+      "\010\"w\n\rDocumentLinks\0220\n\nInitialIds\030\001 \003(\0132\034" +
+      ".Diadoc.Api.Proto.DocumentId\0224\n\016Subordin" +
+      "ateIds\030\002 \003(\0132\034.Diadoc.Api.Proto.Document" +
+      "Id\"z\n\nPacketInfo\022,\n\010LockMode\030\001 \002(\0162\032.Dia" +
+      "doc.Api.Proto.LockMode\022\020\n\010PacketId\030\002 \001(\t" +
+      "\022,\n\007AddedAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Tim" +
+      "estamp\"\200\001\n\022DocumentLetterInfo\022\023\n\013IsEncry" +
+      "pted\030\001 \002(\010\022E\n\025ForwardDocumentEvents\030\002 \003(" +
+      "\0132&.Diadoc.Api.Proto.ForwardDocumentEven" +
+      "t\022\016\n\006IsTest\030\003 \002(\010\"Y\n\021DocumentDraftInfo\022\022" +
+      "\n\nIsRecycled\030\001 \002(\010\022\020\n\010IsLocked\030\002 \002(\010\022\036\n\026" +
+      "TransformedToLetterIds\030\003 \003(\t\"\304\002\n\024Documen" +
+      "tTemplateInfo\022J\n\022LetterParticipants\030\001 \002(" +
+      "\0132..Diadoc.Api.Proto.Docflow.DocumentPar" +
+      "ticipants\022\036\n\026TransformedToLetterIds\030\002 \003(" +
+      "\t\022Y\n\033TemplateTransformationInfos\030\003 \003(\01324" +
+      ".Diadoc.Api.Proto.Docflow.TemplateTransf" +
+      "ormationInfo\022J\n\023TemplateRefusalInfo\030\004 \001(" +
+      "\0132-.Diadoc.Api.Proto.Docflow.TemplateRef" +
+      "usalInfo\022\031\n\nIsReusable\030\005 \001(\010:\005false\"\213\001\n\032" +
+      "TemplateTransformationInfo\022\030\n\020Transforma" +
+      "tionId\030\001 \002(\t\022=\n\027TransformedToDocumentId\030" +
+      "\002 \001(\0132\034.Diadoc.Api.Proto.DocumentId\022\024\n\014A" +
+      "uthorUserId\030\003 \001(\t\"K\n\023TemplateRefusalInfo" +
+      "\022\r\n\005BoxId\030\001 \002(\t\022\024\n\014AuthorUserId\030\002 \001(\t\022\017\n" +
+      "\007Comment\030\003 \001(\tB\026B\024DocumentInfoV3Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13263,13 +13478,13 @@ public final class DocumentInfoV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_DocumentParticipants_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocumentParticipants_descriptor,
-        new java.lang.String[] { "Sender", "Proxy", "Recipient", "IsInternal", });
+        new java.lang.String[] { "Sender", "Proxy", "Recipient", "IsInternal", "IsCrossBorder", });
     internal_static_Diadoc_Api_Proto_Docflow_DocumentParticipant_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Docflow_DocumentParticipant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_DocumentParticipant_descriptor,
-        new java.lang.String[] { "BoxId", "DepartmentId", });
+        new java.lang.String[] { "BoxId", "DepartmentId", "IsRoaming", });
     internal_static_Diadoc_Api_Proto_Docflow_DocumentLinks_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Docflow_DocumentLinks_fieldAccessorTable = new
