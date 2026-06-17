@@ -46,51 +46,6 @@ public class EmployeePowerOfAttorneyClient {
         }
     }
 
-    /**
-     * @deprecated
-     * Use {@link #updateEmployeePowerOfAttorneyV2(String, String, EmployeePowerOfAttorneyToUpdateV2)}
-     */
-    @Deprecated
-    public EmployeePowerOfAttorney updateEmployeePowerOfAttorney(
-            String boxId,
-            @Nullable String userId,
-            String registrationNumber,
-            String issuerInn,
-            EmployeePowerOfAttorneyToUpdate powerOfAttorneyToUpdate) throws DiadocSdkException {
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-        if (registrationNumber == null) {
-            throw new IllegalArgumentException("registrationNumber");
-        }
-        if (issuerInn == null) {
-            throw new IllegalArgumentException("issuerInn");
-        }
-        if (powerOfAttorneyToUpdate == null) {
-            throw new IllegalArgumentException("powerOfAttorneyToUpdate");
-        }
-
-        try {
-            var urlBuilder = new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/UpdateEmployeePowerOfAttorney")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("registrationNumber", registrationNumber)
-                                    .addParameter("issuerInn", issuerInn);
-
-            if (!Tools.isNullOrEmpty(userId)){
-                urlBuilder.addParameter("userId", userId);
-            }
-
-            var request = RequestBuilder
-                    .post(urlBuilder.build())
-                    .setEntity(new ByteArrayEntity(powerOfAttorneyToUpdate.toByteArray()));
-
-            return EmployeePowerOfAttorney.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
-    }
-
     public EmployeePowerOfAttorney updateEmployeePowerOfAttorneyV2(
             String boxId,
             @Nullable String userId,
@@ -124,45 +79,6 @@ public class EmployeePowerOfAttorneyClient {
         }
     }
 
-    /**
-     * @deprecated
-     * Use {@link #addEmployeePowerOfAttorneyV2(String, String, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId)}
-     */
-    @Deprecated
-    public EmployeePowerOfAttorney addEmployeePowerOfAttorney(
-            String boxId,
-            @Nullable String userId,
-            String registrationNumber,
-            String issuerInn) throws DiadocSdkException {
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-        if (registrationNumber == null) {
-            throw new IllegalArgumentException("registrationNumber");
-        }
-        if (issuerInn == null) {
-            throw new IllegalArgumentException("issuerInn");
-        }
-
-        try {
-            var urlBuilder = new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/AddEmployeePowerOfAttorney")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("registrationNumber", registrationNumber)
-                                    .addParameter("issuerInn", issuerInn);
-
-            if (!Tools.isNullOrEmpty(userId)){
-                urlBuilder.addParameter("userId", userId);
-            }
-
-            var request = RequestBuilder.post(urlBuilder.build());
-
-            return EmployeePowerOfAttorney.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
-    }
-
     public EmployeePowerOfAttorney addEmployeePowerOfAttorneyV2(
             String boxId,
             @Nullable String userId,
@@ -187,45 +103,6 @@ public class EmployeePowerOfAttorneyClient {
                     .setEntity(new ByteArrayEntity(fullId.toByteArray()));
 
             return EmployeePowerOfAttorney.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
-    }
-
-    /**
-     * @deprecated
-     * Use {@link #deleteEmployeePowerOfAttorneyV2(String, String, Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.PowerOfAttorneyFullId)}
-     */
-    @Deprecated
-    public void deleteEmployeePowerOfAttorney(
-            String boxId,
-            @Nullable String userId,
-            String registrationNumber,
-            String issuerInn) throws DiadocSdkException {
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-        if (registrationNumber == null) {
-            throw new IllegalArgumentException("registrationNumber");
-        }
-        if (issuerInn == null) {
-            throw new IllegalArgumentException("issuerInn");
-        }
-
-        try {
-            var urlBuilder = new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/DeleteEmployeePowerOfAttorney")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("registrationNumber", registrationNumber)
-                                    .addParameter("issuerInn", issuerInn);
-
-            if (!Tools.isNullOrEmpty(userId)){
-                urlBuilder.addParameter("userId", userId);
-            }
-
-            var request = RequestBuilder.post(urlBuilder.build());
-
-            diadocHttpClient.performRequest(request);
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
