@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 import Diadoc.Api.Proto.AsyncMethodResultProtos.*;
-import Diadoc.Api.Proto.Events.PowerOfAttorneyInfoProtos.*;
 import Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyProtos.*;
 import Diadoc.Api.Proto.PowersOfAttorney.PowerOfAttorneyValidationProtos.*;
 import org.apache.http.client.methods.RequestBuilder;
@@ -61,45 +60,6 @@ public class PowerOfAttorneyClient {
                                     .build());
 
             return PowerOfAttorneyRegisterResult.parseFrom(diadocHttpClient.performRequest(request));
-        } catch (URISyntaxException | IOException e) {
-            throw new DiadocSdkException(e);
-        }
-    }
-
-    /**
-     * @deprecated
-     * Use {@link #prevalidatePowerOfAttorneyV2(String, PowerOfAttorneyPrevalidateRequestV2)}
-     */
-    @Deprecated
-    public PowerOfAttorneyPrevalidateResult prevalidatePowerOfAttorney(
-            String boxId,
-            String registrationNumber,
-            String issuerInn,
-            PowerOfAttorneyPrevalidateRequest powerOfAttorneyPrevalidateRequest) throws DiadocSdkException {
-        if (boxId == null) {
-            throw new IllegalArgumentException("boxId");
-        }
-        if (registrationNumber == null) {
-            throw new IllegalArgumentException("registrationNumber");
-        }
-        if (issuerInn == null) {
-            throw new IllegalArgumentException("issuerInn");
-        }
-        if (powerOfAttorneyPrevalidateRequest == null) {
-            throw new IllegalArgumentException("powerOfAttorneyPrevalidateRequest");
-        }
-
-        try {
-            var request = RequestBuilder.post(
-                            new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("/PrevalidatePowerOfAttorney")
-                                    .addParameter("boxId", boxId)
-                                    .addParameter("registrationNumber", registrationNumber)
-                                    .addParameter("issuerInn", issuerInn)
-                                    .build())
-                    .setEntity(new ByteArrayEntity(powerOfAttorneyPrevalidateRequest.toByteArray()));
-
-            return PowerOfAttorneyPrevalidateResult.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
