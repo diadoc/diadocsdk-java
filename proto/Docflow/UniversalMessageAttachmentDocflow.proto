@@ -1,6 +1,5 @@
 import "Docflow/Attachment.proto";
 import "UniversalMessage.proto";
-import "Docflow/RoamingNotification.proto";
 
 package Diadoc.Api.Proto.Docflow;
 option java_outer_classname = "UniversalMessageAttachmentDocflowProtos";
@@ -10,5 +9,4 @@ message UniversalMessageAttachmentDocflow {
     required UniversalMessageInfo MessageInfo = 2;
     required string ContentTypeId = 3;
     optional bool IsRead = 4 [default = false];
-    optional RoamingNotification RoamingNotification = 5;
 }
