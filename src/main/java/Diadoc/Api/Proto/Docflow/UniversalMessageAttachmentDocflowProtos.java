@@ -86,6 +86,21 @@ public final class UniversalMessageAttachmentDocflowProtos {
      * @return The isRead.
      */
     boolean getIsRead();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+     * @return Whether the roamingNotification field is set.
+     */
+    boolean hasRoamingNotification();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+     * @return The roamingNotification.
+     */
+    Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification getRoamingNotification();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+     */
+    Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotificationOrBuilder getRoamingNotificationOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.UniversalMessageAttachmentDocflow}
@@ -246,6 +261,32 @@ public final class UniversalMessageAttachmentDocflowProtos {
       return isRead_;
     }
 
+    public static final int ROAMINGNOTIFICATION_FIELD_NUMBER = 5;
+    private Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification roamingNotification_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+     * @return Whether the roamingNotification field is set.
+     */
+    @java.lang.Override
+    public boolean hasRoamingNotification() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+     * @return The roamingNotification.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification getRoamingNotification() {
+      return roamingNotification_ == null ? Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.getDefaultInstance() : roamingNotification_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotificationOrBuilder getRoamingNotificationOrBuilder() {
+      return roamingNotification_ == null ? Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.getDefaultInstance() : roamingNotification_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -273,6 +314,12 @@ public final class UniversalMessageAttachmentDocflowProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (hasRoamingNotification()) {
+        if (!getRoamingNotification().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -291,6 +338,9 @@ public final class UniversalMessageAttachmentDocflowProtos {
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeBool(4, isRead_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(5, getRoamingNotification());
       }
       getUnknownFields().writeTo(output);
     }
@@ -315,6 +365,10 @@ public final class UniversalMessageAttachmentDocflowProtos {
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, isRead_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getRoamingNotification());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -351,6 +405,11 @@ public final class UniversalMessageAttachmentDocflowProtos {
         if (getIsRead()
             != other.getIsRead()) return false;
       }
+      if (hasRoamingNotification() != other.hasRoamingNotification()) return false;
+      if (hasRoamingNotification()) {
+        if (!getRoamingNotification()
+            .equals(other.getRoamingNotification())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -378,6 +437,10 @@ public final class UniversalMessageAttachmentDocflowProtos {
         hash = (37 * hash) + ISREAD_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsRead());
+      }
+      if (hasRoamingNotification()) {
+        hash = (37 * hash) + ROAMINGNOTIFICATION_FIELD_NUMBER;
+        hash = (53 * hash) + getRoamingNotification().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -511,6 +574,7 @@ public final class UniversalMessageAttachmentDocflowProtos {
                 .alwaysUseFieldBuilders) {
           getAttachmentFieldBuilder();
           getMessageInfoFieldBuilder();
+          getRoamingNotificationFieldBuilder();
         }
       }
       @java.lang.Override
@@ -529,6 +593,11 @@ public final class UniversalMessageAttachmentDocflowProtos {
         }
         contentTypeId_ = "";
         isRead_ = false;
+        roamingNotification_ = null;
+        if (roamingNotificationBuilder_ != null) {
+          roamingNotificationBuilder_.dispose();
+          roamingNotificationBuilder_ = null;
+        }
         return this;
       }
 
@@ -583,6 +652,12 @@ public final class UniversalMessageAttachmentDocflowProtos {
           result.isRead_ = isRead_;
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.roamingNotification_ = roamingNotificationBuilder_ == null
+              ? roamingNotification_
+              : roamingNotificationBuilder_.build();
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -612,6 +687,9 @@ public final class UniversalMessageAttachmentDocflowProtos {
         if (other.hasIsRead()) {
           setIsRead(other.getIsRead());
         }
+        if (other.hasRoamingNotification()) {
+          mergeRoamingNotification(other.getRoamingNotification());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -633,6 +711,11 @@ public final class UniversalMessageAttachmentDocflowProtos {
         }
         if (!getMessageInfo().isInitialized()) {
           return false;
+        }
+        if (hasRoamingNotification()) {
+          if (!getRoamingNotification().isInitialized()) {
+            return false;
+          }
         }
         return true;
       }
@@ -677,6 +760,13 @@ public final class UniversalMessageAttachmentDocflowProtos {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 42: {
+                input.readMessage(
+                    getRoamingNotificationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1056,6 +1146,127 @@ public final class UniversalMessageAttachmentDocflowProtos {
         return this;
       }
 
+      private Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification roamingNotification_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification, Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.Builder, Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotificationOrBuilder> roamingNotificationBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+       * @return Whether the roamingNotification field is set.
+       */
+      public boolean hasRoamingNotification() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+       * @return The roamingNotification.
+       */
+      public Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification getRoamingNotification() {
+        if (roamingNotificationBuilder_ == null) {
+          return roamingNotification_ == null ? Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.getDefaultInstance() : roamingNotification_;
+        } else {
+          return roamingNotificationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+       */
+      public Builder setRoamingNotification(Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification value) {
+        if (roamingNotificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          roamingNotification_ = value;
+        } else {
+          roamingNotificationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+       */
+      public Builder setRoamingNotification(
+          Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.Builder builderForValue) {
+        if (roamingNotificationBuilder_ == null) {
+          roamingNotification_ = builderForValue.build();
+        } else {
+          roamingNotificationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+       */
+      public Builder mergeRoamingNotification(Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification value) {
+        if (roamingNotificationBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            roamingNotification_ != null &&
+            roamingNotification_ != Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.getDefaultInstance()) {
+            getRoamingNotificationBuilder().mergeFrom(value);
+          } else {
+            roamingNotification_ = value;
+          }
+        } else {
+          roamingNotificationBuilder_.mergeFrom(value);
+        }
+        if (roamingNotification_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+       */
+      public Builder clearRoamingNotification() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        roamingNotification_ = null;
+        if (roamingNotificationBuilder_ != null) {
+          roamingNotificationBuilder_.dispose();
+          roamingNotificationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.Builder getRoamingNotificationBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getRoamingNotificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotificationOrBuilder getRoamingNotificationOrBuilder() {
+        if (roamingNotificationBuilder_ != null) {
+          return roamingNotificationBuilder_.getMessageOrBuilder();
+        } else {
+          return roamingNotification_ == null ?
+              Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.getDefaultInstance() : roamingNotification_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.RoamingNotification RoamingNotification = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification, Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.Builder, Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotificationOrBuilder> 
+          getRoamingNotificationFieldBuilder() {
+        if (roamingNotificationBuilder_ == null) {
+          roamingNotificationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification, Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotification.Builder, Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.RoamingNotificationOrBuilder>(
+                  getRoamingNotification(),
+                  getParentForChildren(),
+                  isClean());
+          roamingNotification_ = null;
+        }
+        return roamingNotificationBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.UniversalMessageAttachmentDocflow)
     }
 
@@ -1124,29 +1335,34 @@ public final class UniversalMessageAttachmentDocflowProtos {
       "\n/Docflow/UniversalMessageAttachmentDocf" +
       "low.proto\022\030Diadoc.Api.Proto.Docflow\032\030Doc" +
       "flow/Attachment.proto\032\026UniversalMessage." +
-      "proto\"\310\001\n!UniversalMessageAttachmentDocf" +
-      "low\0228\n\nAttachment\030\001 \002(\0132$.Diadoc.Api.Pro" +
-      "to.Docflow.Attachment\022;\n\013MessageInfo\030\002 \002" +
-      "(\0132&.Diadoc.Api.Proto.UniversalMessageIn" +
-      "fo\022\025\n\rContentTypeId\030\003 \002(\t\022\025\n\006IsRead\030\004 \001(" +
-      "\010:\005falseB)B\'UniversalMessageAttachmentDo" +
-      "cflowProtos"
+      "proto\032!Docflow/RoamingNotification.proto" +
+      "\"\224\002\n!UniversalMessageAttachmentDocflow\0228" +
+      "\n\nAttachment\030\001 \002(\0132$.Diadoc.Api.Proto.Do" +
+      "cflow.Attachment\022;\n\013MessageInfo\030\002 \002(\0132&." +
+      "Diadoc.Api.Proto.UniversalMessageInfo\022\025\n" +
+      "\rContentTypeId\030\003 \002(\t\022\025\n\006IsRead\030\004 \001(\010:\005fa" +
+      "lse\022J\n\023RoamingNotification\030\005 \001(\0132-.Diado" +
+      "c.Api.Proto.Docflow.RoamingNotificationB" +
+      ")B\'UniversalMessageAttachmentDocflowProt" +
+      "os"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor(),
           Diadoc.Api.Proto.UniversalMessageProtos.getDescriptor(),
+          Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.getDescriptor(),
         });
     internal_static_Diadoc_Api_Proto_Docflow_UniversalMessageAttachmentDocflow_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Diadoc_Api_Proto_Docflow_UniversalMessageAttachmentDocflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_UniversalMessageAttachmentDocflow_descriptor,
-        new java.lang.String[] { "Attachment", "MessageInfo", "ContentTypeId", "IsRead", });
+        new java.lang.String[] { "Attachment", "MessageInfo", "ContentTypeId", "IsRead", "RoamingNotification", });
     descriptor.resolveAllFeaturesImmutable();
     Diadoc.Api.Proto.Docflow.AttachmentProtos.getDescriptor();
     Diadoc.Api.Proto.UniversalMessageProtos.getDescriptor();
+    Diadoc.Api.Proto.Docflow.RoamingNotificationProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
