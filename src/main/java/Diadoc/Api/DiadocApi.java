@@ -127,8 +127,8 @@ public class DiadocApi {
      * "Quick start" of authentication according to the OpenID Connect scheme with advanced settings.
      * See. {@link #createWithOidcRefreshToken(String, String, String, String)}.
      *
-     * @param oidcBaseUrl the address of the OpenID Connect server, e.g. {@code "https://identity.kontur.ru"}.
-     * If {@code null}, the default address is used.
+     * @param oidcBaseUrl адрес сервера OpenID Connect, например {@code "https://identity.kontur.ru"}.
+     *                    Если {@code null}, используется адрес по умолчанию.
      */
     public static DiadocApi createWithOidcRefreshToken(
             String apiClientId,
@@ -138,9 +138,8 @@ public class DiadocApi {
             @Nullable String oidcBaseUrl,
             @Nullable HttpHost proxyHost,
             @Nullable ConnectionSettings connectionSettings) {
-        TokenProvider tokenProvider = oidcBaseUrl == null
-                ? new OidcRefreshTokenProvider(apiClientId, oidcClientSecret, oidcRefreshToken)
-                : new OidcRefreshTokenProvider(apiClientId, oidcClientSecret, oidcRefreshToken, oidcBaseUrl);
+        TokenProvider tokenProvider = new OidcRefreshTokenProvider(
+                apiClientId, oidcClientSecret, oidcRefreshToken, oidcBaseUrl, proxyHost, connectionSettings);
         return new DiadocApi(tokenProvider, url, proxyHost, connectionSettings);
     }
 

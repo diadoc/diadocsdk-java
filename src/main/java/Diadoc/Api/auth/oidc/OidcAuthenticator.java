@@ -1,16 +1,21 @@
 ﻿package Diadoc.Api.auth.oidc;
 
+import Diadoc.Api.ConnectionSettings;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
 import com.google.gson.Gson;
+import org.apache.http.HttpHost;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -25,11 +30,21 @@ public final class OidcAuthenticator {
     private OidcAuthenticator() {
     }
 
-    public static String authenticateWithOidc(String clientId, String clientSecret, String refreshToken) throws DiadocSdkException {
-        return authenticateWithOidc(clientId, clientSecret, refreshToken, DEFAULT_OIDC_BASE_URL);
+    public static OidcTokenResponse authenticateWithOidc(String clientId, String clientSecret, String refreshToken) throws DiadocSdkException {
+        return authenticateWithOidc(clientId, clientSecret, refreshToken, null, null, null);
     }
 
-    public static String authenticateWithOidc(String clientId, String clientSecret, String refreshToken, String oidcBaseUrl) throws DiadocSdkException {
+    public static OidcTokenResponse authenticateWithOidc(String clientId, String clientSecret, String refreshToken, @Nullable String oidcBaseUrl) throws DiadocSdkException {
+        return authenticateWithOidc(clientId, clientSecret, refreshToken, oidcBaseUrl, null, null);
+    }
+
+    public static OidcTokenResponse authenticateWithOidc(
+            String clientId,
+            String clientSecret,
+            String refreshToken,
+            @Nullable String oidcBaseUrl,
+            @Nullable HttpHost proxyHost,
+            @Nullable ConnectionSettings connectionSettings) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(clientId)) {
             throw new IllegalArgumentException("clientId cannot be empty or null");
         }
@@ -41,11 +56,16 @@ public final class OidcAuthenticator {
         }
 
         String baseUrl = Tools.isNullOrEmpty(oidcBaseUrl) ? DEFAULT_OIDC_BASE_URL : oidcBaseUrl;
-        OidcTokenResponse response = performOidcTokenRequest(baseUrl, clientId, clientSecret, refreshToken);
-        return response.getAccessToken();
+        return performOidcTokenRequest(baseUrl, clientId, clientSecret, refreshToken, proxyHost, connectionSettings);
     }
 
-    private static OidcTokenResponse performOidcTokenRequest(String baseUrl, String clientId, String clientSecret, String refreshToken) throws DiadocSdkException {
+    private static OidcTokenResponse performOidcTokenRequest(
+            String baseUrl,
+            String clientId,
+            String clientSecret,
+            String refreshToken,
+            @Nullable HttpHost proxyHost,
+            @Nullable ConnectionSettings connectionSettings) throws DiadocSdkException {
         List<NameValuePair> parameters = new ArrayList<>();
         parameters.add(new BasicNameValuePair("grant_type", "refresh_token"));
         parameters.add(new BasicNameValuePair("refresh_token", refreshToken));
@@ -55,7 +75,7 @@ public final class OidcAuthenticator {
         HttpPost request = new HttpPost(baseUrl + OIDC_TOKEN_ENDPOINT_PATH);
         request.setEntity(new UrlEncodedFormEntity(parameters, StandardCharsets.UTF_8));
 
-        try (CloseableHttpClient httpClient = HttpClients.createDefault();
+        try (CloseableHttpClient httpClient = buildHttpClient(proxyHost, connectionSettings);
              CloseableHttpResponse httpResponse = httpClient.execute(request)) {
             String json = EntityUtils.toString(httpResponse.getEntity(), StandardCharsets.UTF_8);
 
@@ -69,6 +89,23 @@ public final class OidcAuthenticator {
         } catch (IOException e) {
             throw new DiadocSdkException(e);
         }
+    }
+
+    private static CloseableHttpClient buildHttpClient(@Nullable HttpHost proxyHost, @Nullable ConnectionSettings connectionSettings) {
+        HttpClientBuilder httpClientBuilder = HttpClients.custom();
+
+        if (connectionSettings != null) {
+            PoolingHttpClientConnectionManager connectionManager = new PoolingHttpClientConnectionManager();
+            connectionManager.setMaxTotal(connectionSettings.getMaxTotalConnections());
+            connectionManager.setDefaultMaxPerRoute(connectionSettings.getMaxConnectionsPerRoute());
+            httpClientBuilder.setConnectionManager(connectionManager);
+        }
+
+        if (proxyHost != null) {
+            httpClientBuilder.setProxy(proxyHost);
+        }
+
+        return httpClientBuilder.build();
     }
 
     private static OidcTokenResponse parseOidcTokenResponse(String json) throws DiadocSdkException {
