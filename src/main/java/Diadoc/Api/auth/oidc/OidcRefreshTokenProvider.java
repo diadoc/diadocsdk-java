@@ -15,9 +15,9 @@ public class OidcRefreshTokenProvider implements TokenProvider {
     private final String oidcBaseUrl;
     private final HttpHost proxyHost;
     private final ConnectionSettings connectionSettings;
+    private final Object tokenRefreshLock = new Object();
 
-    private volatile String cachedAccessToken;
-    private volatile long cachedAccessTokenExpiresAtMillis;
+    private volatile CachedToken cachedToken;
 
     public OidcRefreshTokenProvider(String clientId, String clientSecret, String refreshToken) {
         this(clientId, clientSecret, refreshToken, null, null, null);
@@ -44,38 +44,59 @@ public class OidcRefreshTokenProvider implements TokenProvider {
 
     @Override
     public String getToken() {
-        if (isCachedTokenValid()) {
-            return cachedAccessToken;
+        CachedToken token = cachedToken;
+        if (isValid(token)) {
+            return token.accessToken();
         }
-        synchronized (this) {
-            if (isCachedTokenValid()) {
-                return cachedAccessToken;
+        synchronized (tokenRefreshLock) {
+            token = cachedToken;
+            if (isValid(token)) {
+                return token.accessToken();
             }
             return fetchAndCacheToken();
         }
     }
 
     public String refresh() {
-        synchronized (this) {
+        synchronized (tokenRefreshLock) {
             return fetchAndCacheToken();
         }
     }
 
-    private boolean isCachedTokenValid() {
-        return cachedAccessToken != null && System.currentTimeMillis() < cachedAccessTokenExpiresAtMillis;
+    private static boolean isValid(@Nullable CachedToken token) {
+        return token != null && System.currentTimeMillis() < token.expiresAtMillis();
     }
 
     private String fetchAndCacheToken() {
         try {
             OidcTokenResponse response = OidcAuthenticator.authenticateWithOidc(
                     clientId, clientSecret, refreshToken, oidcBaseUrl, proxyHost, connectionSettings);
-            cachedAccessToken = response.getAccessToken();
-            cachedAccessTokenExpiresAtMillis = System.currentTimeMillis()
+            long expiresAtMillis = System.currentTimeMillis()
                     + response.getExpiresIn() * 1000L
                     - EXPIRATION_SAFETY_MARGIN_MILLIS;
-            return cachedAccessToken;
+            CachedToken token = new CachedToken(response.getAccessToken(), expiresAtMillis);
+            cachedToken = token;
+            return token.accessToken();
         } catch (DiadocSdkException e) {
             throw new OidcTokenRefreshException(e);
+        }
+    }
+
+    private static final class CachedToken {
+        private final String accessToken;
+        private final long expiresAtMillis;
+
+        private CachedToken(String accessToken, long expiresAtMillis) {
+            this.accessToken = accessToken;
+            this.expiresAtMillis = expiresAtMillis;
+        }
+
+        private String accessToken() {
+            return accessToken;
+        }
+
+        private long expiresAtMillis() {
+            return expiresAtMillis;
         }
     }
 }
