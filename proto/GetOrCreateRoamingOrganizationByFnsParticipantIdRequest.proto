@@ -1,0 +1,5 @@
+package Diadoc.Api.Proto;
+
+message GetOrCreateRoamingOrganizationByFnsParticipantIdRequest {
+	required string FnsParticipantId = 1;
+}

@@ -13,6 +13,7 @@ import Diadoc.Api.documentWorkflow.DocumentWorkflowClient;
 import Diadoc.Api.employee.EmployeeClient;
 import Diadoc.Api.employeePowersOfAttorney.EmployeePowerOfAttorneyClient;
 import Diadoc.Api.events.EventsClient;
+import Diadoc.Api.fnsParticipants.FnsParticipantsClient;
 import Diadoc.Api.generateTitle.GenerateClient;
 import Diadoc.Api.httpClient.DiadocHttpClient;
 import Diadoc.Api.message.MessageClient;
@@ -38,6 +39,7 @@ public class DiadocApi {
     private final OrganizationClient organizationClient;
     private final DepartmentClient departmentClient;
     private final EmployeeClient employeeClient;
+    private final FnsParticipantsClient fnsParticipantsClient;
     private final UserClient userClient;
     private final CounteragentClient counteragentClient;
     private final CounteragentGroupClient counteragentGroupClient;
@@ -78,6 +80,7 @@ public class DiadocApi {
         authClient = authManager.createAuthenticateClient(diadocHttpClient);
         organizationClient = new OrganizationClient(diadocHttpClient);
         departmentClient = new DepartmentClient(diadocHttpClient);
+        fnsParticipantsClient = new FnsParticipantsClient(diadocHttpClient);
         employeeClient = new EmployeeClient(diadocHttpClient);
         userClient = new UserClient(diadocHttpClient);
         counteragentClient = new CounteragentClient(diadocHttpClient);
@@ -120,6 +123,8 @@ public class DiadocApi {
     public EmployeeClient getEmployeeClient() {
         return employeeClient;
     }
+
+    public FnsParticipantsClient getFnsParticipantsClient() { return fnsParticipantsClient; }
 
     public UserClient getUserClient() {
         return userClient;
