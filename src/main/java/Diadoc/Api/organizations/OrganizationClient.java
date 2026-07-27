@@ -92,7 +92,7 @@ public class OrganizationClient {
 
     public Organization getOrCreateRoamingOrganizationByFnsParticipantId(String myBoxId, GetOrCreateRoamingOrganizationByFnsParticipantIdRequestOuterClass.GetOrCreateRoamingOrganizationByFnsParticipantIdRequest getOrCreateRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(myBoxId)) {
-            throw new IllegalArgumentException("boxId");
+            throw new IllegalArgumentException("myBoxId");
         }
 
         if (getOrCreateRequest == null) {
@@ -102,7 +102,7 @@ public class OrganizationClient {
         try {
             var request = RequestBuilder.post(
                             new URIBuilder(diadocHttpClient.getBaseUrl())
-                                    .setPath("//etOrCreateRoamingOrganizationByFnsParticipantId")
+                                    .setPath("/GetOrCreateRoamingOrganizationByFnsParticipantId")
                                     .addParameter("myBoxId", myBoxId)
                                     .build())
                     .setEntity(new ByteArrayEntity(getOrCreateRequest.toByteArray()));
