@@ -1,0 +1,20 @@
+package Diadoc.Api.Proto.FnsParticipants;
+
+message SearchFnsParticipantsResponse {
+	required FnsParticipantSearchStatus Status = 1;
+	repeated FnsParticipant Participants = 2;
+}
+
+message FnsParticipant {
+	required string FnsParticipantId = 1;
+	required string Inn = 2;
+	optional string Kpp = 3;
+	required string FullName = 4;
+}
+
+enum FnsParticipantSearchStatus {
+	UnknownFnsParticipantSearchStatus = 0;
+	OkFnsParticipantSearchStatus = 1;
+	NotFoundFnsParticipantSearchStatus = 2;
+	NotAllowedFnsParticipantSearchStatus = 3;
+}

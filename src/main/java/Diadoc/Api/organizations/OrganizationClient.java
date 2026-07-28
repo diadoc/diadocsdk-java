@@ -1,5 +1,6 @@
 package Diadoc.Api.organizations;
 
+import Diadoc.Api.Proto.GetOrCreateRoamingOrganizationByFnsParticipantIdRequestOuterClass;
 import Diadoc.Api.Proto.ResolutionRouteListProtos;
 import Diadoc.Api.exceptions.DiadocException;
 import Diadoc.Api.exceptions.DiadocSdkException;
@@ -87,6 +88,28 @@ public class OrganizationClient {
             throw new IllegalArgumentException("foreignTaxpayerCode");
         }
         return getOrganization("foreignTaxpayerCode", foreignTaxpayerCode);
+    }
+
+    public Organization getOrCreateRoamingOrganizationByFnsParticipantId(String myBoxId, GetOrCreateRoamingOrganizationByFnsParticipantIdRequestOuterClass.GetOrCreateRoamingOrganizationByFnsParticipantIdRequest getOrCreateRequest) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(myBoxId)) {
+            throw new IllegalArgumentException("myBoxId");
+        }
+
+        if (getOrCreateRequest == null) {
+            throw new IllegalArgumentException("getOrCreateRequest");
+        }
+
+        try {
+            var request = RequestBuilder.post(
+                            new URIBuilder(diadocHttpClient.getBaseUrl())
+                                    .setPath("/GetOrCreateRoamingOrganizationByFnsParticipantId")
+                                    .addParameter("myBoxId", myBoxId)
+                                    .build())
+                    .setEntity(new ByteArrayEntity(getOrCreateRequest.toByteArray()));
+            return Organization.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
     }
 
     public Organization getOrganizationByFnsParticipantId(String fnsParticipantId) throws DiadocSdkException {

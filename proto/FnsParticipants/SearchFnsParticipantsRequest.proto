@@ -1,0 +1,7 @@
+package Diadoc.Api.Proto.FnsParticipants;
+
+message SearchFnsParticipantsRequest {
+	optional string Inn = 1;
+	optional string Kpp = 2;
+	optional string FnsParticipantId = 3;
+}
