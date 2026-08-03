@@ -1,4 +1,4 @@
-﻿package Diadoc.Api.auth.oidc;
+package Diadoc.Api.auth.oidc;
 
 public class OidcTokenRefreshException extends RuntimeException {
 

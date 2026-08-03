@@ -1,4 +1,4 @@
-﻿package Diadoc.Api.auth.oidc;
+package Diadoc.Api.auth.oidc;
 
 import Diadoc.Api.ConnectionSettings;
 import Diadoc.Api.exceptions.DiadocSdkException;

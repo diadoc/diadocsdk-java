@@ -1,4 +1,4 @@
-﻿package Diadoc.Api.auth.oidc;
+package Diadoc.Api.auth.oidc;
 
 import com.google.gson.annotations.SerializedName;
 
