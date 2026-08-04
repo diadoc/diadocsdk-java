@@ -101,6 +101,21 @@ public final class EmployeeProtos {
      * <code>optional .Diadoc.Api.Proto.Timestamp CreationTimestamp = 5;</code>
      */
     Diadoc.Api.Proto.TimestampProtos.TimestampOrBuilder getCreationTimestampOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+     * @return Whether the externalIdentity field is set.
+     */
+    boolean hasExternalIdentity();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+     * @return The externalIdentity.
+     */
+    Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity getExternalIdentity();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+     */
+    Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentityOrBuilder getExternalIdentityOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Employees.Employee}
@@ -287,6 +302,32 @@ public final class EmployeeProtos {
       return creationTimestamp_ == null ? Diadoc.Api.Proto.TimestampProtos.Timestamp.getDefaultInstance() : creationTimestamp_;
     }
 
+    public static final int EXTERNALIDENTITY_FIELD_NUMBER = 6;
+    private Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity externalIdentity_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+     * @return Whether the externalIdentity field is set.
+     */
+    @java.lang.Override
+    public boolean hasExternalIdentity() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+     * @return The externalIdentity.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity getExternalIdentity() {
+      return externalIdentity_ == null ? Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.getDefaultInstance() : externalIdentity_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentityOrBuilder getExternalIdentityOrBuilder() {
+      return externalIdentity_ == null ? Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.getDefaultInstance() : externalIdentity_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -346,6 +387,9 @@ public final class EmployeeProtos {
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(5, getCreationTimestamp());
       }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeMessage(6, getExternalIdentity());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -373,6 +417,10 @@ public final class EmployeeProtos {
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCreationTimestamp());
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getExternalIdentity());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -414,6 +462,11 @@ public final class EmployeeProtos {
         if (!getCreationTimestamp()
             .equals(other.getCreationTimestamp())) return false;
       }
+      if (hasExternalIdentity() != other.hasExternalIdentity()) return false;
+      if (hasExternalIdentity()) {
+        if (!getExternalIdentity()
+            .equals(other.getExternalIdentity())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -445,6 +498,10 @@ public final class EmployeeProtos {
       if (hasCreationTimestamp()) {
         hash = (37 * hash) + CREATIONTIMESTAMP_FIELD_NUMBER;
         hash = (53 * hash) + getCreationTimestamp().hashCode();
+      }
+      if (hasExternalIdentity()) {
+        hash = (37 * hash) + EXTERNALIDENTITY_FIELD_NUMBER;
+        hash = (53 * hash) + getExternalIdentity().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -579,6 +636,7 @@ public final class EmployeeProtos {
           getUserFieldBuilder();
           getPermissionsFieldBuilder();
           getCreationTimestampFieldBuilder();
+          getExternalIdentityFieldBuilder();
         }
       }
       @java.lang.Override
@@ -601,6 +659,11 @@ public final class EmployeeProtos {
         if (creationTimestampBuilder_ != null) {
           creationTimestampBuilder_.dispose();
           creationTimestampBuilder_ = null;
+        }
+        externalIdentity_ = null;
+        if (externalIdentityBuilder_ != null) {
+          externalIdentityBuilder_.dispose();
+          externalIdentityBuilder_ = null;
         }
         return this;
       }
@@ -662,6 +725,12 @@ public final class EmployeeProtos {
               : creationTimestampBuilder_.build();
           to_bitField0_ |= 0x00000010;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.externalIdentity_ = externalIdentityBuilder_ == null
+              ? externalIdentity_
+              : externalIdentityBuilder_.build();
+          to_bitField0_ |= 0x00000020;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -693,6 +762,9 @@ public final class EmployeeProtos {
         }
         if (other.hasCreationTimestamp()) {
           mergeCreationTimestamp(other.getCreationTimestamp());
+        }
+        if (other.hasExternalIdentity()) {
+          mergeExternalIdentity(other.getExternalIdentity());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -774,6 +846,13 @@ public final class EmployeeProtos {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
+              case 50: {
+                input.readMessage(
+                    getExternalIdentityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1272,6 +1351,127 @@ public final class EmployeeProtos {
           creationTimestamp_ = null;
         }
         return creationTimestampBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity externalIdentity_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.Builder, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentityOrBuilder> externalIdentityBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+       * @return Whether the externalIdentity field is set.
+       */
+      public boolean hasExternalIdentity() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+       * @return The externalIdentity.
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity getExternalIdentity() {
+        if (externalIdentityBuilder_ == null) {
+          return externalIdentity_ == null ? Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.getDefaultInstance() : externalIdentity_;
+        } else {
+          return externalIdentityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+       */
+      public Builder setExternalIdentity(Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity value) {
+        if (externalIdentityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          externalIdentity_ = value;
+        } else {
+          externalIdentityBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+       */
+      public Builder setExternalIdentity(
+          Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.Builder builderForValue) {
+        if (externalIdentityBuilder_ == null) {
+          externalIdentity_ = builderForValue.build();
+        } else {
+          externalIdentityBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+       */
+      public Builder mergeExternalIdentity(Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity value) {
+        if (externalIdentityBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            externalIdentity_ != null &&
+            externalIdentity_ != Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.getDefaultInstance()) {
+            getExternalIdentityBuilder().mergeFrom(value);
+          } else {
+            externalIdentity_ = value;
+          }
+        } else {
+          externalIdentityBuilder_.mergeFrom(value);
+        }
+        if (externalIdentity_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+       */
+      public Builder clearExternalIdentity() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        externalIdentity_ = null;
+        if (externalIdentityBuilder_ != null) {
+          externalIdentityBuilder_.dispose();
+          externalIdentityBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.Builder getExternalIdentityBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getExternalIdentityFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentityOrBuilder getExternalIdentityOrBuilder() {
+        if (externalIdentityBuilder_ != null) {
+          return externalIdentityBuilder_.getMessageOrBuilder();
+        } else {
+          return externalIdentity_ == null ?
+              Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.getDefaultInstance() : externalIdentity_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeExternalIdentity ExternalIdentity = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.Builder, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentityOrBuilder> 
+          getExternalIdentityFieldBuilder() {
+        if (externalIdentityBuilder_ == null) {
+          externalIdentityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.Builder, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentityOrBuilder>(
+                  getExternalIdentity(),
+                  getParentForChildren(),
+                  isClean());
+          externalIdentity_ = null;
+        }
+        return externalIdentityBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Employees.Employee)
@@ -4430,6 +4630,725 @@ public final class EmployeeProtos {
 
   }
 
+  public interface EmployeeExternalIdentityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Employees.EmployeeExternalIdentity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string ExternalId = 1;</code>
+     * @return Whether the externalId field is set.
+     */
+    boolean hasExternalId();
+    /**
+     * <code>optional string ExternalId = 1;</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <code>optional string ExternalId = 1;</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
+
+    /**
+     * <code>optional string Email = 2;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>optional string Email = 2;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>optional string Email = 2;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Employees.EmployeeExternalIdentity}
+   */
+  public static final class EmployeeExternalIdentity extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Employees.EmployeeExternalIdentity)
+      EmployeeExternalIdentityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        EmployeeExternalIdentity.class.getName());
+    }
+    // Use EmployeeExternalIdentity.newBuilder() to construct.
+    private EmployeeExternalIdentity(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EmployeeExternalIdentity() {
+      externalId_ = "";
+      email_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.class, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EXTERNALID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalId_ = "";
+    /**
+     * <code>optional string ExternalId = 1;</code>
+     * @return Whether the externalId field is set.
+     */
+    @java.lang.Override
+    public boolean hasExternalId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string ExternalId = 1;</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          externalId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ExternalId = 1;</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object email_ = "";
+    /**
+     * <code>optional string Email = 2;</code>
+     * @return Whether the email field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string Email = 2;</code>
+     * @return The email.
+     */
+    @java.lang.Override
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          email_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Email = 2;</code>
+     * @return The bytes for email.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, externalId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, email_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, externalId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, email_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity other = (Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity) obj;
+
+      if (hasExternalId() != other.hasExternalId()) return false;
+      if (hasExternalId()) {
+        if (!getExternalId()
+            .equals(other.getExternalId())) return false;
+      }
+      if (hasEmail() != other.hasEmail()) return false;
+      if (hasEmail()) {
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExternalId()) {
+        hash = (37 * hash) + EXTERNALID_FIELD_NUMBER;
+        hash = (53 * hash) + getExternalId().hashCode();
+      }
+      if (hasEmail()) {
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEmail().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Employees.EmployeeExternalIdentity}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Employees.EmployeeExternalIdentity)
+        Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.class, Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        externalId_ = "";
+        email_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Employees.EmployeeProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity build() {
+        Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity buildPartial() {
+        Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity result = new Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.externalId_ = externalId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.email_ = email_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity) {
+          return mergeFrom((Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity other) {
+        if (other == Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity.getDefaultInstance()) return this;
+        if (other.hasExternalId()) {
+          externalId_ = other.externalId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasEmail()) {
+          email_ = other.email_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                externalId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                email_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object externalId_ = "";
+      /**
+       * <code>optional string ExternalId = 1;</code>
+       * @return Whether the externalId field is set.
+       */
+      public boolean hasExternalId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string ExternalId = 1;</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            externalId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ExternalId = 1;</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ExternalId = 1;</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        externalId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ExternalId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        externalId_ = getDefaultInstance().getExternalId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ExternalId = 1;</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        externalId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>optional string Email = 2;</code>
+       * @return Whether the email field is set.
+       */
+      public boolean hasEmail() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string Email = 2;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            email_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Email = 2;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Email = 2;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        email_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Email = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        email_ = getDefaultInstance().getEmail();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Email = 2;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        email_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Employees.EmployeeExternalIdentity)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Employees.EmployeeExternalIdentity)
+    private static final Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity();
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EmployeeExternalIdentity>
+        PARSER = new com.google.protobuf.AbstractParser<EmployeeExternalIdentity>() {
+      @java.lang.Override
+      public EmployeeExternalIdentity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EmployeeExternalIdentity> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmployeeExternalIdentity> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Employees.EmployeeProtos.EmployeeExternalIdentity getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Employees_Employee_descriptor;
   private static final 
@@ -4450,6 +5369,11 @@ public final class EmployeeProtos {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Employees_EmployeeList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4461,13 +5385,15 @@ public final class EmployeeProtos {
     java.lang.String[] descriptorData = {
       "\n\030Employees/Employee.proto\022\032Diadoc.Api.P" +
       "roto.Employees\032\nUser.proto\032!Organization" +
-      "UserPermissions.proto\032\017Timestamp.proto\"\337" +
-      "\001\n\010Employee\022&\n\004User\030\001 \002(\0132\030.Diadoc.Api.P" +
+      "UserPermissions.proto\032\017Timestamp.proto\"\257" +
+      "\002\n\010Employee\022&\n\004User\030\001 \002(\0132\030.Diadoc.Api.P" +
       "roto.UserV2\022D\n\013Permissions\030\002 \002(\0132/.Diado" +
       "c.Api.Proto.Employees.EmployeePermission" +
       "s\022\020\n\010Position\030\003 \002(\t\022\033\n\023CanBeInvitedForCh" +
       "at\030\004 \002(\010\0226\n\021CreationTimestamp\030\005 \001(\0132\033.Di" +
-      "adoc.Api.Proto.Timestamp\"\320\002\n\023EmployeePer" +
+      "adoc.Api.Proto.Timestamp\022N\n\020ExternalIden" +
+      "tity\030\006 \001(\01324.Diadoc.Api.Proto.Employees." +
+      "EmployeeExternalIdentity\"\320\002\n\023EmployeePer" +
       "missions\022\030\n\020UserDepartmentId\030\001 \002(\t\022\027\n\017Is" +
       "Administrator\030\002 \002(\010\022^\n\023DocumentAccessLev" +
       "el\030\003 \002(\0162%.Diadoc.Api.Proto.DocumentAcce" +
@@ -4479,8 +5405,9 @@ public final class EmployeeProtos {
       "ion\"1\n\016EmployeeAction\022\014\n\004Name\030\001 \002(\t\022\021\n\tI" +
       "sAllowed\030\002 \002(\010\"[\n\014EmployeeList\0227\n\tEmploy" +
       "ees\030\001 \003(\0132$.Diadoc.Api.Proto.Employees.E" +
-      "mployee\022\022\n\nTotalCount\030\002 \002(\005B\020B\016EmployeeP" +
-      "rotos"
+      "mployee\022\022\n\nTotalCount\030\002 \002(\005\"=\n\030EmployeeE" +
+      "xternalIdentity\022\022\n\nExternalId\030\001 \001(\t\022\r\n\005E" +
+      "mail\030\002 \001(\tB\020B\016EmployeeProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4494,7 +5421,7 @@ public final class EmployeeProtos {
     internal_static_Diadoc_Api_Proto_Employees_Employee_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Employees_Employee_descriptor,
-        new java.lang.String[] { "User", "Permissions", "Position", "CanBeInvitedForChat", "CreationTimestamp", });
+        new java.lang.String[] { "User", "Permissions", "Position", "CanBeInvitedForChat", "CreationTimestamp", "ExternalIdentity", });
     internal_static_Diadoc_Api_Proto_Employees_EmployeePermissions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Employees_EmployeePermissions_fieldAccessorTable = new
@@ -4513,6 +5440,12 @@ public final class EmployeeProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Employees_EmployeeList_descriptor,
         new java.lang.String[] { "Employees", "TotalCount", });
+    internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Employees_EmployeeExternalIdentity_descriptor,
+        new java.lang.String[] { "ExternalId", "Email", });
     descriptor.resolveAllFeaturesImmutable();
     Diadoc.Api.Proto.UserProtos.getDescriptor();
     Diadoc.Api.Proto.OrganizationUserPermissionsProtos.getDescriptor();
