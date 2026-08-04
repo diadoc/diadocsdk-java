@@ -2,6 +2,7 @@ package Diadoc.Api;
 
 import Diadoc.Api.auth.*;
 import Diadoc.Api.auth.oidc.OidcAuthManager;
+import Diadoc.Api.auth.oidc.OidcRefreshTokenProvider;
 import Diadoc.Api.auth.oidc.TokenProvider;
 import Diadoc.Api.counteragent.CounteragentClient;
 import Diadoc.Api.counteragentGroup.CounteragentGroupClient;
@@ -106,6 +107,40 @@ public class DiadocApi {
 
     public DiadocApi(String apiClientId, String url) {
         this(apiClientId, url, null, null);
+    }
+
+    /**
+     "Quick start" of authentication according to the OpenID Connect scheme: the access token will be automatically
+     * received (and cached) by the integrator's refresh token when the API was first accessed. Address
+     * identity.kontur.ru server is used by default.
+     *
+     * @param apiClientId the integrator's client identifier (Client Id from your personal account), also used as OIDC client_id
+     * @param oidcClientSecret secret key of the integrator application (Client Secret)
+     * @param oidcRefreshToken Refresh Integrator Token
+     * @param url address of the Diadoc server
+     */
+    public static DiadocApi createWithOidcRefreshToken(String apiClientId, String oidcClientSecret, String oidcRefreshToken, String url) {
+        return createWithOidcRefreshToken(apiClientId, oidcClientSecret, oidcRefreshToken, url, null, null, null);
+    }
+
+    /**
+     * "Quick start" of authentication according to the OpenID Connect scheme with advanced settings.
+     * See. {@link #createWithOidcRefreshToken(String, String, String, String)}.
+     *
+     * @param oidcBaseUrl адрес сервера OpenID Connect, например {@code "https://identity.kontur.ru"}.
+     *                    Если {@code null}, используется адрес по умолчанию.
+     */
+    public static DiadocApi createWithOidcRefreshToken(
+            String apiClientId,
+            String oidcClientSecret,
+            String oidcRefreshToken,
+            String url,
+            @Nullable String oidcBaseUrl,
+            @Nullable HttpHost proxyHost,
+            @Nullable ConnectionSettings connectionSettings) {
+        TokenProvider tokenProvider = new OidcRefreshTokenProvider(
+                apiClientId, oidcClientSecret, oidcRefreshToken, oidcBaseUrl, proxyHost, connectionSettings);
+        return new DiadocApi(tokenProvider, url, proxyHost, connectionSettings);
     }
 
     public AuthenticateClient getAuthClient() {
