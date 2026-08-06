@@ -1,5 +1,7 @@
 package Diadoc.Api.message;
 
+import Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.MessageToPostPrototype;
+import Diadoc.Api.Proto.Events.DiadocMessage_GetApiProtos.MessageValidationResult;
 import Diadoc.Api.Proto.Invoicing.FnsRegistrationMessageInfoProtos;
 import Diadoc.Api.exceptions.DiadocSdkException;
 import Diadoc.Api.helpers.Tools;
@@ -42,6 +44,22 @@ public class MessageClient {
                     .setEntity(new ByteArrayEntity(msg.toByteArray()));
 
             return Message.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public MessageValidationResult canPostMessage(MessageToPostPrototype prototype) throws DiadocSdkException {
+        if (prototype == null) {
+            throw new IllegalArgumentException("prototype");
+        }
+        try {
+            var uriBuilder = new URIBuilder(diadocHttpClient.getBaseUrl()).setPath("/CanPostMessage");
+            var request = RequestBuilder
+                    .post(uriBuilder.build())
+                    .setEntity(new ByteArrayEntity(prototype.toByteArray()));
+
+            return MessageValidationResult.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
