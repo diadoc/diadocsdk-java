@@ -7177,7 +7177,7 @@ public final class ExtendedSignerProtos {
       "nCreatorEmployee\020\002\022\035\n\031OtherOrganizationE" +
       "mployee\020\003\022\024\n\020AuthorizedPerson\020\004\022\021\n\rBuyer" +
       "Employee\020\005\022#\n\037InformationCreatorBuyerEmp" +
-      "loyee\020\006*\275\002\n\021DocumentTitleType\022\023\n\006Absent\020" +
+      "loyee\020\006*\331\005\n\021DocumentTitleType\022\023\n\006Absent\020" +
       "\377\377\377\377\377\377\377\377\377\001\022\r\n\tUtdSeller\020\000\022\014\n\010UtdBuyer\020\001\022" +
       "\r\n\tUcdSeller\020\002\022\014\n\010UcdBuyer\020\003\022\024\n\020TovTorg5" +
       "51Seller\020\004\022\023\n\017TovTorg551Buyer\020\005\022\024\n\020AccCe" +
@@ -7185,7 +7185,18 @@ public final class ExtendedSignerProtos {
       "d820Buyer\020\010\022\016\n\nTorg2Buyer\020\t\022\027\n\023Torg2Addi" +
       "tionalInfo\020\n\022\017\n\013Ucd736Buyer\020\013\022\020\n\014Utd970S" +
       "eller\020\014\022\017\n\013Utd970Buyer\020\r\022\025\n\021ProformaInvo" +
-      "ice29\020\016B\026B\024ExtendedSignerProtos"
+      "ice29\020\016\022\034\n\030LogisticsOrderRequest108\020\017\022\'\n" +
+      "#LogisticsWaybillReception1065Sender\020\020\022*" +
+      "\n&LogisticsWaybillReception1065Recipient" +
+      "\020\021\022&\n\"LogisticsWaybillDelivery1065Sender" +
+      "\020\022\022)\n%LogisticsWaybillDelivery1065Recipi" +
+      "ent\020\023\022%\n!LogisticsWaybillConsignorCost10" +
+      "65\020\024\022#\n\037LogisticsWaybillCarrierCost1065\020" +
+      "\025\022!\n\035LogisticsWaybillReaddress1065\020\026\022\035\n\031" +
+      "LogisticsWaybillRelay1065\020\027\022\017\n\013Ucd29Sell" +
+      "er\020\030\022\016\n\nUcd29Buyer\020\031\022%\n!LogisticsOrderRe" +
+      "questRecipient108\020\032B\026B\024ExtendedSignerPro" +
+      "tos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

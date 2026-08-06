@@ -44,6 +44,7 @@ message Organization {
 	optional bool IsOwner = 28 [default = false];
 	optional ForeignInformation ForeignInformation = 29;
 	required ReadyForEpdStatus ReadyForEpdStatus = 30;
+	required string Comment = 31;
 }
 
 message Department {
