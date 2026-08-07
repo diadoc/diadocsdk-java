@@ -2557,6 +2557,23 @@ public final class OrganizationProtos {
      * @return The readyForEpdStatus.
      */
     Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus getReadyForEpdStatus();
+
+    /**
+     * <code>required string Comment = 31;</code>
+     * @return Whether the comment field is set.
+     */
+    boolean hasComment();
+    /**
+     * <code>required string Comment = 31;</code>
+     * @return The comment.
+     */
+    java.lang.String getComment();
+    /**
+     * <code>required string Comment = 31;</code>
+     * @return The bytes for comment.
+     */
+    com.google.protobuf.ByteString
+        getCommentBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Organization}
@@ -2596,6 +2613,7 @@ public final class OrganizationProtos {
       certificateOfRegistryInfo_ = "";
       organizationType_ = 0;
       readyForEpdStatus_ = 0;
+      comment_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -3548,6 +3566,55 @@ public final class OrganizationProtos {
       return result == null ? Diadoc.Api.Proto.OrganizationProtos.ReadyForEpdStatus.UnknownEpdStatus : result;
     }
 
+    public static final int COMMENT_FIELD_NUMBER = 31;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object comment_ = "";
+    /**
+     * <code>required string Comment = 31;</code>
+     * @return Whether the comment field is set.
+     */
+    @java.lang.Override
+    public boolean hasComment() {
+      return ((bitField0_ & 0x08000000) != 0);
+    }
+    /**
+     * <code>required string Comment = 31;</code>
+     * @return The comment.
+     */
+    @java.lang.Override
+    public java.lang.String getComment() {
+      java.lang.Object ref = comment_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          comment_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Comment = 31;</code>
+     * @return The bytes for comment.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommentBytes() {
+      java.lang.Object ref = comment_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        comment_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3576,6 +3643,10 @@ public final class OrganizationProtos {
         return false;
       }
       if (!hasReadyForEpdStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasComment()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -3697,6 +3768,9 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x04000000) != 0)) {
         output.writeEnum(30, readyForEpdStatus_);
       }
+      if (((bitField0_ & 0x08000000) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 31, comment_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3810,6 +3884,9 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x04000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(30, readyForEpdStatus_);
+      }
+      if (((bitField0_ & 0x08000000) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(31, comment_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3962,6 +4039,11 @@ public final class OrganizationProtos {
       if (hasReadyForEpdStatus()) {
         if (readyForEpdStatus_ != other.readyForEpdStatus_) return false;
       }
+      if (hasComment() != other.hasComment()) return false;
+      if (hasComment()) {
+        if (!getComment()
+            .equals(other.getComment())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4097,6 +4179,10 @@ public final class OrganizationProtos {
       if (hasReadyForEpdStatus()) {
         hash = (37 * hash) + READYFOREPDSTATUS_FIELD_NUMBER;
         hash = (53 * hash) + readyForEpdStatus_;
+      }
+      if (hasComment()) {
+        hash = (37 * hash) + COMMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getComment().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4287,6 +4373,7 @@ public final class OrganizationProtos {
           foreignInformationBuilder_ = null;
         }
         readyForEpdStatus_ = 0;
+        comment_ = "";
         return this;
       }
 
@@ -4454,6 +4541,10 @@ public final class OrganizationProtos {
         if (((from_bitField0_ & 0x10000000) != 0)) {
           result.readyForEpdStatus_ = readyForEpdStatus_;
           to_bitField0_ |= 0x04000000;
+        }
+        if (((from_bitField0_ & 0x20000000) != 0)) {
+          result.comment_ = comment_;
+          to_bitField0_ |= 0x08000000;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -4625,6 +4716,11 @@ public final class OrganizationProtos {
         if (other.hasReadyForEpdStatus()) {
           setReadyForEpdStatus(other.getReadyForEpdStatus());
         }
+        if (other.hasComment()) {
+          comment_ = other.comment_;
+          bitField0_ |= 0x20000000;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4648,6 +4744,9 @@ public final class OrganizationProtos {
           return false;
         }
         if (!hasReadyForEpdStatus()) {
+          return false;
+        }
+        if (!hasComment()) {
           return false;
         }
         for (int i = 0; i < getBoxesCount(); i++) {
@@ -4875,6 +4974,11 @@ public final class OrganizationProtos {
                 }
                 break;
               } // case 240
+              case 250: {
+                comment_ = input.readBytes();
+                bitField0_ |= 0x20000000;
+                break;
+              } // case 250
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7056,6 +7160,86 @@ public final class OrganizationProtos {
       public Builder clearReadyForEpdStatus() {
         bitField0_ = (bitField0_ & ~0x10000000);
         readyForEpdStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object comment_ = "";
+      /**
+       * <code>required string Comment = 31;</code>
+       * @return Whether the comment field is set.
+       */
+      public boolean hasComment() {
+        return ((bitField0_ & 0x20000000) != 0);
+      }
+      /**
+       * <code>required string Comment = 31;</code>
+       * @return The comment.
+       */
+      public java.lang.String getComment() {
+        java.lang.Object ref = comment_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            comment_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Comment = 31;</code>
+       * @return The bytes for comment.
+       */
+      public com.google.protobuf.ByteString
+          getCommentBytes() {
+        java.lang.Object ref = comment_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          comment_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Comment = 31;</code>
+       * @param value The comment to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComment(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        comment_ = value;
+        bitField0_ |= 0x20000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Comment = 31;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComment() {
+        comment_ = getDefaultInstance().getComment();
+        bitField0_ = (bitField0_ & ~0x20000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Comment = 31;</code>
+       * @param value The bytes for comment to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        comment_ = value;
+        bitField0_ |= 0x20000000;
         onChanged();
         return this;
       }
@@ -10077,7 +10261,7 @@ public final class OrganizationProtos {
       "oreignTaxpayerCode\030\001 \002(\t\022\036\n\026Identificati" +
       "onOfStatus\030\002 \001(\t\022\030\n\020OtherInformation\030\003 \001" +
       "(\t\"I\n\020OrganizationList\0225\n\rOrganizations\030" +
-      "\001 \003(\0132\036.Diadoc.Api.Proto.Organization\"\313\006" +
+      "\001 \003(\0132\036.Diadoc.Api.Proto.Organization\"\334\006" +
       "\n\014Organization\022\r\n\005OrgId\030\001 \002(\t\022\013\n\003Inn\030\002 \002" +
       "(\t\022\013\n\003Kpp\030\003 \001(\t\022\020\n\010FullName\030\004 \002(\t\022\021\n\tSho" +
       "rtName\030\005 \001(\t\022$\n\005Boxes\030\007 \003(\0132\025.Diadoc.Api" +
@@ -10099,25 +10283,26 @@ public final class OrganizationProtos {
       "eignInformation\030\035 \001(\0132$.Diadoc.Api.Proto" +
       ".ForeignInformation\022>\n\021ReadyForEpdStatus" +
       "\030\036 \002(\0162#.Diadoc.Api.Proto.ReadyForEpdSta" +
-      "tus\"\266\001\n\nDepartment\022\024\n\014DepartmentId\030\001 \002(\t" +
-      "\022\032\n\022ParentDepartmentId\030\002 \002(\t\022\014\n\004Name\030\003 \002" +
-      "(\t\022\024\n\014Abbreviation\030\004 \001(\t\022\013\n\003Kpp\030\005 \001(\t\022*\n" +
-      "\007Address\030\006 \001(\0132\031.Diadoc.Api.Proto.Addres" +
-      "s\022\031\n\nIsDisabled\030\007 \001(\010:\005false\"\350\001\n\003Box\022\r\n\005" +
-      "BoxId\030\001 \002(\t\022\021\n\tBoxIdGuid\030\006 \002(\t\022\r\n\005Title\030" +
-      "\002 \002(\t\0224\n\014Organization\030\003 \001(\0132\036.Diadoc.Api" +
-      ".Proto.Organization\022W\n\024InvoiceFormatVers" +
-      "ion\030\004 \001(\01622.Diadoc.Api.Proto.Organizatio" +
-      "nInvoiceFormatVersion:\005v5_02\022!\n\031Encrypte" +
-      "dDocumentsAllowed\030\005 \001(\010*8\n OrganizationI" +
-      "nvoiceFormatVersion\022\t\n\005v5_01\020\001\022\t\n\005v5_02\020" +
-      "\002*:\n\013Sociability\022\024\n\020AllOrganizations\020\000\022\025" +
-      "\n\021CounteragentsOnly\020\001*\\\n\020OrganizationTyp" +
-      "e\022\033\n\027UnknownOrganizationType\020\000\022\016\n\nIndivi" +
-      "dual\020\001\022\r\n\tJuridical\020\002\022\014\n\010Physical\020\003*Z\n\021R" +
-      "eadyForEpdStatus\022\024\n\020UnknownEpdStatus\020\000\022\026" +
-      "\n\022UndefinedEpdStatus\020\001\022\t\n\005Ready\020\002\022\014\n\010Not" +
-      "Ready\020\003B\024B\022OrganizationProtos"
+      "tus\022\017\n\007Comment\030\037 \002(\t\"\266\001\n\nDepartment\022\024\n\014D" +
+      "epartmentId\030\001 \002(\t\022\032\n\022ParentDepartmentId\030" +
+      "\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n\014Abbreviation\030\004 \001(" +
+      "\t\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Address\030\006 \001(\0132\031.Diadoc" +
+      ".Api.Proto.Address\022\031\n\nIsDisabled\030\007 \001(\010:\005" +
+      "false\"\350\001\n\003Box\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tBoxIdGui" +
+      "d\030\006 \002(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Organization\030\003" +
+      " \001(\0132\036.Diadoc.Api.Proto.Organization\022W\n\024" +
+      "InvoiceFormatVersion\030\004 \001(\01622.Diadoc.Api." +
+      "Proto.OrganizationInvoiceFormatVersion:\005" +
+      "v5_02\022!\n\031EncryptedDocumentsAllowed\030\005 \001(\010" +
+      "*8\n OrganizationInvoiceFormatVersion\022\t\n\005" +
+      "v5_01\020\001\022\t\n\005v5_02\020\002*:\n\013Sociability\022\024\n\020All" +
+      "Organizations\020\000\022\025\n\021CounteragentsOnly\020\001*\\" +
+      "\n\020OrganizationType\022\033\n\027UnknownOrganizatio" +
+      "nType\020\000\022\016\n\nIndividual\020\001\022\r\n\tJuridical\020\002\022\014" +
+      "\n\010Physical\020\003*Z\n\021ReadyForEpdStatus\022\024\n\020Unk" +
+      "nownEpdStatus\020\000\022\026\n\022UndefinedEpdStatus\020\001\022" +
+      "\t\n\005Ready\020\002\022\014\n\010NotReady\020\003B\024B\022Organization" +
+      "Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10141,7 +10326,7 @@ public final class OrganizationProtos {
     internal_static_Diadoc_Api_Proto_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Organization_descriptor,
-        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", "OrganizationType", "IsOwner", "ForeignInformation", "ReadyForEpdStatus", });
+        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", "OrganizationType", "IsOwner", "ForeignInformation", "ReadyForEpdStatus", "Comment", });
     internal_static_Diadoc_Api_Proto_Department_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Department_fieldAccessorTable = new

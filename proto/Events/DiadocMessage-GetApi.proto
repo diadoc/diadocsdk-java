@@ -252,3 +252,48 @@ enum AttachmentType {
 	TtGisFixationCancellationRequest = 87;
 	//Неизвестные типы должны обрабатываться как Title
 }
+
+message MessageToPostPrototype {
+	required string FromBoxId = 1;
+	optional string FromDepartmentId = 2;
+	optional string ToBoxId = 3;
+	optional string ToDepartmentId = 4;
+	optional bool IsInternal = 5 [default = false];
+	optional string ProxyBoxId = 6;
+	optional string ProxyDepartmentId = 7;
+	repeated DocumentAttachmentPrototype DocumentPrototypes = 8;
+}
+
+message DocumentAttachmentPrototype {
+	required string CustomDocumentId = 1;
+	required string TypeNamedId = 2;
+	optional string Function = 3;
+	optional string Version = 4;
+}
+
+message MessageValidationResult {
+	required string FromBoxId = 1;
+	required string FromTitle = 2;
+	optional string ToBoxId = 3;
+	optional string ToTitle = 4;
+	optional bool IsInternal = 5 [default = false];
+	optional bool IsProxified = 6 [default = false];
+	optional string ProxyBoxId = 7;
+	optional string ProxyTitle = 8;
+	repeated MessageValidationError Errors = 9;
+}
+
+message MessageValidationError {
+	required MessageValidationErrorSeverity Severity = 1;
+	required string UserMessage = 2;
+	required string ApiMessage = 3;
+	optional string CustomDocumentId = 4;
+	optional string BoxId = 5;
+	optional string DepartmentId = 6;
+}
+
+enum MessageValidationErrorSeverity {
+	Unknown = 0;
+	Error = 1;
+	Warning = 2;
+}
