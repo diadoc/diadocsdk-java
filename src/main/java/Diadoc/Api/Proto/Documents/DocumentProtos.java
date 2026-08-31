@@ -2375,6 +2375,21 @@ public final class DocumentProtos {
      * @return The hasUnreadOutOfWorkflowUniversalMessages.
      */
     boolean getHasUnreadOutOfWorkflowUniversalMessages();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+     * @return Whether the recipientResponseAmendmentRequestMetadata field is set.
+     */
+    boolean hasRecipientResponseAmendmentRequestMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+     * @return The recipientResponseAmendmentRequestMetadata.
+     */
+    Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata getRecipientResponseAmendmentRequestMetadata();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+     */
+    Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadataOrBuilder getRecipientResponseAmendmentRequestMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Document}
@@ -4974,6 +4989,32 @@ public final class DocumentProtos {
       return hasUnreadOutOfWorkflowUniversalMessages_;
     }
 
+    public static final int RECIPIENTRESPONSEAMENDMENTREQUESTMETADATA_FIELD_NUMBER = 84;
+    private Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata recipientResponseAmendmentRequestMetadata_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+     * @return Whether the recipientResponseAmendmentRequestMetadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecipientResponseAmendmentRequestMetadata() {
+      return ((bitField2_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+     * @return The recipientResponseAmendmentRequestMetadata.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata getRecipientResponseAmendmentRequestMetadata() {
+      return recipientResponseAmendmentRequestMetadata_ == null ? Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.getDefaultInstance() : recipientResponseAmendmentRequestMetadata_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadataOrBuilder getRecipientResponseAmendmentRequestMetadataOrBuilder() {
+      return recipientResponseAmendmentRequestMetadata_ == null ? Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.getDefaultInstance() : recipientResponseAmendmentRequestMetadata_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5210,6 +5251,12 @@ public final class DocumentProtos {
       if (!getDocflowStatus().isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
+      }
+      if (hasRecipientResponseAmendmentRequestMetadata()) {
+        if (!getRecipientResponseAmendmentRequestMetadata().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -5457,6 +5504,9 @@ public final class DocumentProtos {
       }
       if (((bitField2_ & 0x00000200) != 0)) {
         output.writeBool(82, hasUnreadOutOfWorkflowUniversalMessages_);
+      }
+      if (((bitField2_ & 0x00000400) != 0)) {
+        output.writeMessage(84, getRecipientResponseAmendmentRequestMetadata());
       }
       getUnknownFields().writeTo(output);
     }
@@ -5764,6 +5814,10 @@ public final class DocumentProtos {
       if (((bitField2_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(82, hasUnreadOutOfWorkflowUniversalMessages_);
+      }
+      if (((bitField2_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(84, getRecipientResponseAmendmentRequestMetadata());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6153,6 +6207,11 @@ public final class DocumentProtos {
         if (getHasUnreadOutOfWorkflowUniversalMessages()
             != other.getHasUnreadOutOfWorkflowUniversalMessages()) return false;
       }
+      if (hasRecipientResponseAmendmentRequestMetadata() != other.hasRecipientResponseAmendmentRequestMetadata()) return false;
+      if (hasRecipientResponseAmendmentRequestMetadata()) {
+        if (!getRecipientResponseAmendmentRequestMetadata()
+            .equals(other.getRecipientResponseAmendmentRequestMetadata())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6495,6 +6554,10 @@ public final class DocumentProtos {
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getHasUnreadOutOfWorkflowUniversalMessages());
       }
+      if (hasRecipientResponseAmendmentRequestMetadata()) {
+        hash = (37 * hash) + RECIPIENTRESPONSEAMENDMENTREQUESTMETADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getRecipientResponseAmendmentRequestMetadata().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6662,6 +6725,7 @@ public final class DocumentProtos {
           getSenderReceiptMetadataFieldBuilder();
           getLastOuterDocflowsFieldBuilder();
           getDocflowStatusFieldBuilder();
+          getRecipientResponseAmendmentRequestMetadataFieldBuilder();
         }
       }
       @java.lang.Override
@@ -6910,6 +6974,11 @@ public final class DocumentProtos {
         }
         ttGisFixationCancellationStatus_ = 0;
         hasUnreadOutOfWorkflowUniversalMessages_ = true;
+        recipientResponseAmendmentRequestMetadata_ = null;
+        if (recipientResponseAmendmentRequestMetadataBuilder_ != null) {
+          recipientResponseAmendmentRequestMetadataBuilder_.dispose();
+          recipientResponseAmendmentRequestMetadataBuilder_ = null;
+        }
         return this;
       }
 
@@ -7377,6 +7446,12 @@ public final class DocumentProtos {
           result.hasUnreadOutOfWorkflowUniversalMessages_ = hasUnreadOutOfWorkflowUniversalMessages_;
           to_bitField2_ |= 0x00000200;
         }
+        if (((from_bitField2_ & 0x00010000) != 0)) {
+          result.recipientResponseAmendmentRequestMetadata_ = recipientResponseAmendmentRequestMetadataBuilder_ == null
+              ? recipientResponseAmendmentRequestMetadata_
+              : recipientResponseAmendmentRequestMetadataBuilder_.build();
+          to_bitField2_ |= 0x00000400;
+        }
         result.bitField1_ |= to_bitField1_;
         result.bitField2_ |= to_bitField2_;
       }
@@ -7815,6 +7890,9 @@ public final class DocumentProtos {
         if (other.hasHasUnreadOutOfWorkflowUniversalMessages()) {
           setHasUnreadOutOfWorkflowUniversalMessages(other.getHasUnreadOutOfWorkflowUniversalMessages());
         }
+        if (other.hasRecipientResponseAmendmentRequestMetadata()) {
+          mergeRecipientResponseAmendmentRequestMetadata(other.getRecipientResponseAmendmentRequestMetadata());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -8006,6 +8084,11 @@ public final class DocumentProtos {
         }
         if (!getDocflowStatus().isInitialized()) {
           return false;
+        }
+        if (hasRecipientResponseAmendmentRequestMetadata()) {
+          if (!getRecipientResponseAmendmentRequestMetadata().isInitialized()) {
+            return false;
+          }
         }
         return true;
       }
@@ -8599,6 +8682,13 @@ public final class DocumentProtos {
                 bitField2_ |= 0x00008000;
                 break;
               } // case 656
+              case 674: {
+                input.readMessage(
+                    getRecipientResponseAmendmentRequestMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField2_ |= 0x00010000;
+                break;
+              } // case 674
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -16427,6 +16517,127 @@ public final class DocumentProtos {
         return this;
       }
 
+      private Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata recipientResponseAmendmentRequestMetadata_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata, Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadataOrBuilder> recipientResponseAmendmentRequestMetadataBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+       * @return Whether the recipientResponseAmendmentRequestMetadata field is set.
+       */
+      public boolean hasRecipientResponseAmendmentRequestMetadata() {
+        return ((bitField2_ & 0x00010000) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+       * @return The recipientResponseAmendmentRequestMetadata.
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata getRecipientResponseAmendmentRequestMetadata() {
+        if (recipientResponseAmendmentRequestMetadataBuilder_ == null) {
+          return recipientResponseAmendmentRequestMetadata_ == null ? Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.getDefaultInstance() : recipientResponseAmendmentRequestMetadata_;
+        } else {
+          return recipientResponseAmendmentRequestMetadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+       */
+      public Builder setRecipientResponseAmendmentRequestMetadata(Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata value) {
+        if (recipientResponseAmendmentRequestMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          recipientResponseAmendmentRequestMetadata_ = value;
+        } else {
+          recipientResponseAmendmentRequestMetadataBuilder_.setMessage(value);
+        }
+        bitField2_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+       */
+      public Builder setRecipientResponseAmendmentRequestMetadata(
+          Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.Builder builderForValue) {
+        if (recipientResponseAmendmentRequestMetadataBuilder_ == null) {
+          recipientResponseAmendmentRequestMetadata_ = builderForValue.build();
+        } else {
+          recipientResponseAmendmentRequestMetadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField2_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+       */
+      public Builder mergeRecipientResponseAmendmentRequestMetadata(Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata value) {
+        if (recipientResponseAmendmentRequestMetadataBuilder_ == null) {
+          if (((bitField2_ & 0x00010000) != 0) &&
+            recipientResponseAmendmentRequestMetadata_ != null &&
+            recipientResponseAmendmentRequestMetadata_ != Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.getDefaultInstance()) {
+            getRecipientResponseAmendmentRequestMetadataBuilder().mergeFrom(value);
+          } else {
+            recipientResponseAmendmentRequestMetadata_ = value;
+          }
+        } else {
+          recipientResponseAmendmentRequestMetadataBuilder_.mergeFrom(value);
+        }
+        if (recipientResponseAmendmentRequestMetadata_ != null) {
+          bitField2_ |= 0x00010000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+       */
+      public Builder clearRecipientResponseAmendmentRequestMetadata() {
+        bitField2_ = (bitField2_ & ~0x00010000);
+        recipientResponseAmendmentRequestMetadata_ = null;
+        if (recipientResponseAmendmentRequestMetadataBuilder_ != null) {
+          recipientResponseAmendmentRequestMetadataBuilder_.dispose();
+          recipientResponseAmendmentRequestMetadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.Builder getRecipientResponseAmendmentRequestMetadataBuilder() {
+        bitField2_ |= 0x00010000;
+        onChanged();
+        return getRecipientResponseAmendmentRequestMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadataOrBuilder getRecipientResponseAmendmentRequestMetadataOrBuilder() {
+        if (recipientResponseAmendmentRequestMetadataBuilder_ != null) {
+          return recipientResponseAmendmentRequestMetadataBuilder_.getMessageOrBuilder();
+        } else {
+          return recipientResponseAmendmentRequestMetadata_ == null ?
+              Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.getDefaultInstance() : recipientResponseAmendmentRequestMetadata_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata, Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadataOrBuilder> 
+          getRecipientResponseAmendmentRequestMetadataFieldBuilder() {
+        if (recipientResponseAmendmentRequestMetadataBuilder_ == null) {
+          recipientResponseAmendmentRequestMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata, Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadataOrBuilder>(
+                  getRecipientResponseAmendmentRequestMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          recipientResponseAmendmentRequestMetadata_ = null;
+        }
+        return recipientResponseAmendmentRequestMetadataBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.Document)
     }
 
@@ -21362,7 +21573,7 @@ public final class DocumentProtos {
       "mentEvent.proto\032\"Events/DiadocMessage-Po" +
       "stApi.proto\032 OuterDocflows/OuterDocflow." +
       "proto\032\025DocflowStatusV3.proto\032%TtGisFixat" +
-      "ionCancellationStatus.proto\"\330)\n\010Document" +
+      "ionCancellationStatus.proto\"\301*\n\010Document" +
       "\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessageId\030\002 \002(\t\022\020\n" +
       "\010EntityId\030\003 \002(\t\022\036\n\026CreationTimestampTick" +
       "s\030\004 \002(\020\022\031\n\021CounteragentBoxId\030\005 \001(\t\022I\n\014Do" +
@@ -21496,70 +21707,72 @@ public final class DocumentProtos {
       "to.TtGisFixationCancellationStatus:#TtGi" +
       "sFixationCancellationStatusNone\0225\n\'HasUn" +
       "readOutOfWorkflowUniversalMessages\030R \001(\010" +
-      ":\004true\"r\n\020LastOuterDocflow\022\026\n\016ParentEnti" +
-      "tyId\030\001 \002(\t\022F\n\014OuterDocflow\030\002 \002(\01320.Diado" +
-      "c.Api.Proto.OuterDocflows.OuterDocflowIn" +
-      "fo\"\310\001\n\020ResolutionStatus\022W\n\004Type\030\001 \001(\01620." +
-      "Diadoc.Api.Proto.Documents.ResolutionSta" +
-      "tusType:\027UnknownResolutionStatus\0222\n\006Targ" +
-      "et\030\002 \001(\0132\".Diadoc.Api.Proto.ResolutionTa" +
-      "rget\022\024\n\014AuthorUserId\030\003 \002(\t\022\021\n\tAuthorFIO\030" +
-      "\004 \002(\t\"\320\001\n\030RecipientReceiptMetadata\022d\n\rRe" +
-      "ceiptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Doc" +
-      "uments.GeneralReceiptStatus:\033GeneralRece" +
-      "iptStatusUnknown\022N\n\024ConfirmationMetadata" +
-      "\030\002 \001(\01320.Diadoc.Api.Proto.Documents.Conf" +
-      "irmationMetadata\"}\n\025SenderReceiptMetadat" +
-      "a\022d\n\rReceiptStatus\030\001 \002(\01620.Diadoc.Api.Pr" +
-      "oto.Documents.GeneralReceiptStatus:\033Gene" +
-      "ralReceiptStatusUnknown\"\223\001\n\024Confirmation" +
-      "Metadata\022d\n\rReceiptStatus\030\001 \002(\01620.Diadoc" +
-      ".Api.Proto.Documents.GeneralReceiptStatu" +
-      "s:\033GeneralReceiptStatusUnknown\022\025\n\rDateTi" +
-      "meTicks\030\002 \002(\020\"\230\001\n\030AmendmentRequestMetada" +
-      "ta\022\026\n\016AmendmentFlags\030\001 \002(\005\022d\n\rReceiptSta" +
-      "tus\030\002 \002(\01620.Diadoc.Api.Proto.Documents.G" +
+      ":\004true\022g\n)RecipientResponseAmendmentRequ" +
+      "estMetadata\030T \001(\01324.Diadoc.Api.Proto.Doc" +
+      "uments.AmendmentRequestMetadata\"r\n\020LastO" +
+      "uterDocflow\022\026\n\016ParentEntityId\030\001 \002(\t\022F\n\014O" +
+      "uterDocflow\030\002 \002(\01320.Diadoc.Api.Proto.Out" +
+      "erDocflows.OuterDocflowInfo\"\310\001\n\020Resoluti" +
+      "onStatus\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.Prot" +
+      "o.Documents.ResolutionStatusType:\027Unknow" +
+      "nResolutionStatus\0222\n\006Target\030\002 \001(\0132\".Diad" +
+      "oc.Api.Proto.ResolutionTarget\022\024\n\014AuthorU" +
+      "serId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n\030Recip" +
+      "ientReceiptMetadata\022d\n\rReceiptStatus\030\001 \002" +
+      "(\01620.Diadoc.Api.Proto.Documents.GeneralR" +
+      "eceiptStatus:\033GeneralReceiptStatusUnknow" +
+      "n\022N\n\024ConfirmationMetadata\030\002 \001(\01320.Diadoc" +
+      ".Api.Proto.Documents.ConfirmationMetadat" +
+      "a\"}\n\025SenderReceiptMetadata\022d\n\rReceiptSta" +
+      "tus\030\001 \002(\01620.Diadoc.Api.Proto.Documents.G" +
       "eneralReceiptStatus:\033GeneralReceiptStatu" +
-      "sUnknown\"Y\n\006Origin\022<\n\013MessageType\030\001 \002(\0162" +
-      "\'.Diadoc.Api.Proto.Documents.MessageType" +
-      "\022\021\n\tMessageId\030\002 \002(\t*\302\001\n\024ResolutionStatus" +
-      "Type\022$\n\027UnknownResolutionStatus\020\377\377\377\377\377\377\377\377" +
-      "\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013Disapprove" +
-      "d\020\002\022\030\n\024ApprovementRequested\020\003\022\026\n\022Signatu" +
-      "reRequested\020\004\022\023\n\017SignatureDenied\020\005\022\024\n\020Ac" +
-      "tionsRequested\020\006*\262\001\n\020RevocationStatus\022\033\n" +
-      "\027UnknownRevocationStatus\020\000\022\030\n\024Revocation" +
-      "StatusNone\020\001\022\035\n\031RevocationIsRequestedByM" +
-      "e\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Revocat" +
-      "ionAccepted\020\004\022\026\n\022RevocationRejected\020\005*\256\001" +
-      "\n\031RoamingNotificationStatus\022$\n UnknownRo" +
-      "amingNotificationStatus\020\000\022!\n\035RoamingNoti" +
-      "ficationStatusNone\020\001\022$\n RoamingNotificat" +
-      "ionStatusSuccess\020\002\022\"\n\036RoamingNotificatio" +
-      "nStatusError\020\003*\300\001\n\025SenderSignatureStatus" +
-      "\022 \n\034UnknownSenderSignatureStatus\020\000\022\035\n\031Wa" +
-      "itingForSenderSignature\020\001\022\034\n\030SenderSigna" +
-      "tureUnchecked\020\002\022\"\n\036SenderSignatureChecke" +
-      "dAndValid\020\003\022$\n SenderSignatureCheckedAnd" +
-      "Invalid\020\004*\302\001\n\024ProxySignatureStatus\022\037\n\033Un" +
-      "knownProxySignatureStatus\020\000\022\034\n\030ProxySign" +
-      "atureStatusNone\020\001\022\034\n\030WaitingForProxySign" +
-      "ature\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026Proxy" +
-      "SignatureRejected\020\004\022\031\n\025InvalidProxySigna" +
-      "ture\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033Gener" +
-      "alReceiptStatusUnknown\020\000\022%\n!GeneralRecei" +
-      "ptStatusNotAcceptable\020\001\022\027\n\023HaveToCreateR" +
-      "eceipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010Finis" +
-      "hed\020\004*\220\002\n\027RecipientResponseStatus\022\"\n\036Rec" +
-      "ipientResponseStatusUnknown\020\000\022(\n$Recipie" +
-      "ntResponseStatusNotAcceptable\020\001\022 \n\034Waiti" +
-      "ngForRecipientSignature\020\002\022\032\n\026WithRecipie" +
-      "ntSignature\020\003\022%\n!RecipientSignatureReque" +
-      "stRejected\020\004\022\035\n\031InvalidRecipientSignatur" +
-      "e\020\005\022#\n\037WithRecipientPartiallySignature\020\006" +
-      "*?\n\013MessageType\022\013\n\007Unknown\020\000\022\n\n\006Letter\020\001" +
-      "\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016DocumentPro" +
-      "tos"
+      "sUnknown\"\223\001\n\024ConfirmationMetadata\022d\n\rRec" +
+      "eiptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Docu" +
+      "ments.GeneralReceiptStatus:\033GeneralRecei" +
+      "ptStatusUnknown\022\025\n\rDateTimeTicks\030\002 \002(\020\"\230" +
+      "\001\n\030AmendmentRequestMetadata\022\026\n\016Amendment" +
+      "Flags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620.Dia" +
+      "doc.Api.Proto.Documents.GeneralReceiptSt" +
+      "atus:\033GeneralReceiptStatusUnknown\"Y\n\006Ori" +
+      "gin\022<\n\013MessageType\030\001 \002(\0162\'.Diadoc.Api.Pr" +
+      "oto.Documents.MessageType\022\021\n\tMessageId\030\002" +
+      " \002(\t*\302\001\n\024ResolutionStatusType\022$\n\027Unknown" +
+      "ResolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n" +
+      "\010Approved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024Approvem" +
+      "entRequested\020\003\022\026\n\022SignatureRequested\020\004\022\023" +
+      "\n\017SignatureDenied\020\005\022\024\n\020ActionsRequested\020" +
+      "\006*\262\001\n\020RevocationStatus\022\033\n\027UnknownRevocat" +
+      "ionStatus\020\000\022\030\n\024RevocationStatusNone\020\001\022\035\n" +
+      "\031RevocationIsRequestedByMe\020\002\022\030\n\024Requests" +
+      "MyRevocation\020\003\022\026\n\022RevocationAccepted\020\004\022\026" +
+      "\n\022RevocationRejected\020\005*\256\001\n\031RoamingNotifi" +
+      "cationStatus\022$\n UnknownRoamingNotificati" +
+      "onStatus\020\000\022!\n\035RoamingNotificationStatusN" +
+      "one\020\001\022$\n RoamingNotificationStatusSucces" +
+      "s\020\002\022\"\n\036RoamingNotificationStatusError\020\003*" +
+      "\300\001\n\025SenderSignatureStatus\022 \n\034UnknownSend" +
+      "erSignatureStatus\020\000\022\035\n\031WaitingForSenderS" +
+      "ignature\020\001\022\034\n\030SenderSignatureUnchecked\020\002" +
+      "\022\"\n\036SenderSignatureCheckedAndValid\020\003\022$\n " +
+      "SenderSignatureCheckedAndInvalid\020\004*\302\001\n\024P" +
+      "roxySignatureStatus\022\037\n\033UnknownProxySigna" +
+      "tureStatus\020\000\022\034\n\030ProxySignatureStatusNone" +
+      "\020\001\022\034\n\030WaitingForProxySignature\020\002\022\026\n\022With" +
+      "ProxySignature\020\003\022\032\n\026ProxySignatureReject" +
+      "ed\020\004\022\031\n\025InvalidProxySignature\020\005*\234\001\n\024Gene" +
+      "ralReceiptStatus\022\037\n\033GeneralReceiptStatus" +
+      "Unknown\020\000\022%\n!GeneralReceiptStatusNotAcce" +
+      "ptable\020\001\022\027\n\023HaveToCreateReceipt\020\002\022\025\n\021Wai" +
+      "tingForReceipt\020\003\022\014\n\010Finished\020\004*\220\002\n\027Recip" +
+      "ientResponseStatus\022\"\n\036RecipientResponseS" +
+      "tatusUnknown\020\000\022(\n$RecipientResponseStatu" +
+      "sNotAcceptable\020\001\022 \n\034WaitingForRecipientS" +
+      "ignature\020\002\022\032\n\026WithRecipientSignature\020\003\022%" +
+      "\n!RecipientSignatureRequestRejected\020\004\022\035\n" +
+      "\031InvalidRecipientSignature\020\005\022#\n\037WithReci" +
+      "pientPartiallySignature\020\006*?\n\013MessageType" +
+      "\022\013\n\007Unknown\020\000\022\n\n\006Letter\020\001\022\t\n\005Draft\020\002\022\014\n\010" +
+      "Template\020\003B\020B\016DocumentProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21588,7 +21801,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", "EditingSettingId", "LockMode", "SenderReceiptMetadata", "Version", "LastOuterDocflows", "ProxyBoxId", "ProxyDepartmentId", "DocflowStatus", "TtGisFixationCancellationStatus", "HasUnreadOutOfWorkflowUniversalMessages", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", "EditingSettingId", "LockMode", "SenderReceiptMetadata", "Version", "LastOuterDocflows", "ProxyBoxId", "ProxyDepartmentId", "DocflowStatus", "TtGisFixationCancellationStatus", "HasUnreadOutOfWorkflowUniversalMessages", "RecipientResponseAmendmentRequestMetadata", });
     internal_static_Diadoc_Api_Proto_Documents_LastOuterDocflow_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_LastOuterDocflow_fieldAccessorTable = new

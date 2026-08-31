@@ -2748,6 +2748,21 @@ public final class DocflowV4Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflow OutOfWorkflowUniversalMessageDocflow = 9;</code>
      */
     Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflowOrBuilder getOutOfWorkflowUniversalMessageDocflowOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+     * @return Whether the amendmentRequest field is set.
+     */
+    boolean hasAmendmentRequest();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+     * @return The amendmentRequest.
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4 getAmendmentRequest();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+     */
+    Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4OrBuilder getAmendmentRequestOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.ParticipantResponseDocflowV4}
@@ -3007,6 +3022,32 @@ public final class DocflowV4Protos {
       return outOfWorkflowUniversalMessageDocflow_ == null ? Diadoc.Api.Proto.Docflow.OutOfWorkflowUniversalMessageDocflowOuterClass.OutOfWorkflowUniversalMessageDocflow.getDefaultInstance() : outOfWorkflowUniversalMessageDocflow_;
     }
 
+    public static final int AMENDMENTREQUEST_FIELD_NUMBER = 10;
+    private Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4 amendmentRequest_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+     * @return Whether the amendmentRequest field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmendmentRequest() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+     * @return The amendmentRequest.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4 getAmendmentRequest() {
+      return amendmentRequest_ == null ? Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.getDefaultInstance() : amendmentRequest_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4OrBuilder getAmendmentRequestOrBuilder() {
+      return amendmentRequest_ == null ? Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.getDefaultInstance() : amendmentRequest_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3064,6 +3105,12 @@ public final class DocflowV4Protos {
           return false;
         }
       }
+      if (hasAmendmentRequest()) {
+        if (!getAmendmentRequest().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -3097,6 +3144,9 @@ public final class DocflowV4Protos {
       }
       if (((bitField0_ & 0x00000100) != 0)) {
         output.writeMessage(9, getOutOfWorkflowUniversalMessageDocflow());
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeMessage(10, getAmendmentRequest());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3142,6 +3192,10 @@ public final class DocflowV4Protos {
       if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getOutOfWorkflowUniversalMessageDocflow());
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getAmendmentRequest());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3202,6 +3256,11 @@ public final class DocflowV4Protos {
         if (!getOutOfWorkflowUniversalMessageDocflow()
             .equals(other.getOutOfWorkflowUniversalMessageDocflow())) return false;
       }
+      if (hasAmendmentRequest() != other.hasAmendmentRequest()) return false;
+      if (hasAmendmentRequest()) {
+        if (!getAmendmentRequest()
+            .equals(other.getAmendmentRequest())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3249,6 +3308,10 @@ public final class DocflowV4Protos {
       if (hasOutOfWorkflowUniversalMessageDocflow()) {
         hash = (37 * hash) + OUTOFWORKFLOWUNIVERSALMESSAGEDOCFLOW_FIELD_NUMBER;
         hash = (53 * hash) + getOutOfWorkflowUniversalMessageDocflow().hashCode();
+      }
+      if (hasAmendmentRequest()) {
+        hash = (37 * hash) + AMENDMENTREQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getAmendmentRequest().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3387,6 +3450,7 @@ public final class DocflowV4Protos {
           getDeliveredAtFieldBuilder();
           getConfirmationFieldBuilder();
           getOutOfWorkflowUniversalMessageDocflowFieldBuilder();
+          getAmendmentRequestFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3429,6 +3493,11 @@ public final class DocflowV4Protos {
         if (outOfWorkflowUniversalMessageDocflowBuilder_ != null) {
           outOfWorkflowUniversalMessageDocflowBuilder_.dispose();
           outOfWorkflowUniversalMessageDocflowBuilder_ = null;
+        }
+        amendmentRequest_ = null;
+        if (amendmentRequestBuilder_ != null) {
+          amendmentRequestBuilder_.dispose();
+          amendmentRequestBuilder_ = null;
         }
         return this;
       }
@@ -3514,6 +3583,12 @@ public final class DocflowV4Protos {
               : outOfWorkflowUniversalMessageDocflowBuilder_.build();
           to_bitField0_ |= 0x00000100;
         }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.amendmentRequest_ = amendmentRequestBuilder_ == null
+              ? amendmentRequest_
+              : amendmentRequestBuilder_.build();
+          to_bitField0_ |= 0x00000200;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -3555,6 +3630,9 @@ public final class DocflowV4Protos {
         }
         if (other.hasOutOfWorkflowUniversalMessageDocflow()) {
           mergeOutOfWorkflowUniversalMessageDocflow(other.getOutOfWorkflowUniversalMessageDocflow());
+        }
+        if (other.hasAmendmentRequest()) {
+          mergeAmendmentRequest(other.getAmendmentRequest());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3601,6 +3679,11 @@ public final class DocflowV4Protos {
         }
         if (hasOutOfWorkflowUniversalMessageDocflow()) {
           if (!getOutOfWorkflowUniversalMessageDocflow().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasAmendmentRequest()) {
+          if (!getAmendmentRequest().isInitialized()) {
             return false;
           }
         }
@@ -3689,6 +3772,13 @@ public final class DocflowV4Protos {
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
+              case 82: {
+                input.readMessage(
+                    getAmendmentRequestFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4633,6 +4723,127 @@ public final class DocflowV4Protos {
           outOfWorkflowUniversalMessageDocflow_ = null;
         }
         return outOfWorkflowUniversalMessageDocflowBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4 amendmentRequest_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4, Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.Builder, Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4OrBuilder> amendmentRequestBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+       * @return Whether the amendmentRequest field is set.
+       */
+      public boolean hasAmendmentRequest() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+       * @return The amendmentRequest.
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4 getAmendmentRequest() {
+        if (amendmentRequestBuilder_ == null) {
+          return amendmentRequest_ == null ? Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.getDefaultInstance() : amendmentRequest_;
+        } else {
+          return amendmentRequestBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+       */
+      public Builder setAmendmentRequest(Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4 value) {
+        if (amendmentRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          amendmentRequest_ = value;
+        } else {
+          amendmentRequestBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+       */
+      public Builder setAmendmentRequest(
+          Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.Builder builderForValue) {
+        if (amendmentRequestBuilder_ == null) {
+          amendmentRequest_ = builderForValue.build();
+        } else {
+          amendmentRequestBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+       */
+      public Builder mergeAmendmentRequest(Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4 value) {
+        if (amendmentRequestBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            amendmentRequest_ != null &&
+            amendmentRequest_ != Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.getDefaultInstance()) {
+            getAmendmentRequestBuilder().mergeFrom(value);
+          } else {
+            amendmentRequest_ = value;
+          }
+        } else {
+          amendmentRequestBuilder_.mergeFrom(value);
+        }
+        if (amendmentRequest_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+       */
+      public Builder clearAmendmentRequest() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        amendmentRequest_ = null;
+        if (amendmentRequestBuilder_ != null) {
+          amendmentRequestBuilder_.dispose();
+          amendmentRequestBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.Builder getAmendmentRequestBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getAmendmentRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+       */
+      public Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4OrBuilder getAmendmentRequestOrBuilder() {
+        if (amendmentRequestBuilder_ != null) {
+          return amendmentRequestBuilder_.getMessageOrBuilder();
+        } else {
+          return amendmentRequest_ == null ?
+              Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.getDefaultInstance() : amendmentRequest_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Docflow.AmendmentRequestDocflowV4 AmendmentRequest = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4, Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.Builder, Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4OrBuilder> 
+          getAmendmentRequestFieldBuilder() {
+        if (amendmentRequestBuilder_ == null) {
+          amendmentRequestBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4, Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4.Builder, Diadoc.Api.Proto.Docflow.DocflowV4Protos.AmendmentRequestDocflowV4OrBuilder>(
+                  getAmendmentRequest(),
+                  getParentForChildren(),
+                  isClean());
+          amendmentRequest_ = null;
+        }
+        return amendmentRequestBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.ParticipantResponseDocflowV4)
@@ -14725,7 +14936,7 @@ public final class DocflowV4Protos {
       "\0132%.Diadoc.Api.Proto.Docflow.SignatureV3" +
       "\022Q\n\022SignatureRejection\030\002 \001(\01325.Diadoc.Ap" +
       "i.Proto.Docflow.SignatureRejectionDocflo" +
-      "wV4\"\324\004\n\034ParticipantResponseDocflowV4\022\022\n\n" +
+      "wV4\"\243\005\n\034ParticipantResponseDocflowV4\022\022\n\n" +
       "IsFinished\030\001 \002(\010\0228\n\tSignature\030\002 \001(\0132%.Di" +
       "adoc.Api.Proto.Docflow.SignatureV3\022;\n\005Ti" +
       "tle\030\003 \001(\0132,.Diadoc.Api.Proto.Docflow.Sig" +
@@ -14740,70 +14951,72 @@ public final class DocflowV4Protos {
       "ionDocflowV4\022l\n$OutOfWorkflowUniversalMe" +
       "ssageDocflow\030\t \001(\0132>.Diadoc.Api.Proto.Do" +
       "cflow.OutOfWorkflowUniversalMessageDocfl" +
-      "ow\"\225\002\n\033SignatureRejectionDocflowV4\022H\n\022Si" +
-      "gnatureRejection\030\001 \001(\0132,.Diadoc.Api.Prot" +
-      "o.Docflow.SignedAttachmentV3\022\020\n\010IsFormal" +
-      "\030\002 \002(\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.Api" +
-      ".Proto.Timestamp\022\021\n\tPlainText\030\004 \001(\t\022U\n\020U" +
-      "niversalMessage\030\005 \001(\0132;.Diadoc.Api.Proto" +
-      ".Docflow.UniversalMessageAttachmentDocfl" +
-      "ow\"\343\003\n\031AmendmentRequestDocflowV4\022\022\n\nIsFi" +
-      "nished\030\001 \002(\010\022F\n\020AmendmentRequest\030\002 \001(\0132," +
-      ".Diadoc.Api.Proto.Docflow.SignedAttachme" +
-      "ntV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto." +
-      "Timestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc." +
-      "Api.Proto.Timestamp\022;\n\007Receipt\030\005 \001(\0132*.D" +
-      "iadoc.Api.Proto.Docflow.ReceiptDocflowV4" +
-      "\022\026\n\016AmendmentFlags\030\006 \002(\005\022\021\n\tPlainText\030\007 " +
-      "\001(\t\022L\n\023ConfirmationDocflow\030\010 \001(\0132/.Diado" +
-      "c.Api.Proto.Docflow.ConfirmationDocflowV" +
-      "4\022U\n\020UniversalMessage\030\t \001(\0132;.Diadoc.Api" +
-      ".Proto.Docflow.UniversalMessageAttachmen" +
-      "tDocflow\"\256\003\n\020ReceiptDocflowV4\022\022\n\nIsFinis" +
-      "hed\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 \001(\0132,.D" +
-      "iadoc.Api.Proto.Docflow.SignedAttachment" +
-      "V3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Ti" +
-      "mestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.Ap" +
-      "i.Proto.Timestamp\022E\n\014Confirmation\030\005 \001(\0132" +
-      "/.Diadoc.Api.Proto.Docflow.ConfirmationD" +
-      "ocflowV4\022@\n\006Status\030\006 \002(\01620.Diadoc.Api.Pr" +
-      "oto.Documents.GeneralReceiptStatus\022U\n\020Un" +
-      "iversalMessage\030\007 \001(\0132;.Diadoc.Api.Proto." +
+      "ow\022M\n\020AmendmentRequest\030\n \001(\01323.Diadoc.Ap" +
+      "i.Proto.Docflow.AmendmentRequestDocflowV" +
+      "4\"\225\002\n\033SignatureRejectionDocflowV4\022H\n\022Sig" +
+      "natureRejection\030\001 \001(\0132,.Diadoc.Api.Proto" +
+      ".Docflow.SignedAttachmentV3\022\020\n\010IsFormal\030" +
+      "\002 \002(\010\0220\n\013DeliveredAt\030\003 \001(\0132\033.Diadoc.Api." +
+      "Proto.Timestamp\022\021\n\tPlainText\030\004 \001(\t\022U\n\020Un" +
+      "iversalMessage\030\005 \001(\0132;.Diadoc.Api.Proto." +
       "Docflow.UniversalMessageAttachmentDocflo" +
-      "w\"\274\002\n\025ConfirmationDocflowV4\022\022\n\nIsFinishe" +
-      "d\030\001 \002(\010\022L\n\026ConfirmationAttachment\030\002 \001(\0132" +
-      ",.Diadoc.Api.Proto.Docflow.SignedAttachm" +
-      "entV3\0220\n\013ConfirmedAt\030\003 \001(\0132\033.Diadoc.Api." +
-      "Proto.Timestamp\022;\n\007Receipt\030\004 \001(\0132*.Diado" +
-      "c.Api.Proto.Docflow.ReceiptDocflowV4\022R\n\023" +
-      "RoamingConfirmation\030\005 \001(\01325.Diadoc.Api.P" +
-      "roto.Docflow.OperatorConfirmationDocflow" +
-      "\"\357\007\n\tDocflowV4\022A\n\013SenderTitle\030\001 \002(\0132,.Di" +
-      "adoc.Api.Proto.Docflow.SenderTitleDocflo" +
-      "w\022E\n\014Confirmation\030\002 \001(\0132/.Diadoc.Api.Pro" +
-      "to.Docflow.ConfirmationDocflowV4\022M\n\rProx" +
-      "yResponse\030\013 \001(\01326.Diadoc.Api.Proto.Docfl" +
-      "ow.ParticipantResponseDocflowV4\022D\n\020Recip" +
-      "ientReceipt\030\004 \001(\0132*.Diadoc.Api.Proto.Doc" +
-      "flow.ReceiptDocflowV4\022Q\n\021RecipientRespon" +
-      "se\030\005 \001(\01326.Diadoc.Api.Proto.Docflow.Part" +
-      "icipantResponseDocflowV4\022M\n\020AmendmentReq" +
-      "uest\030\006 \001(\01323.Diadoc.Api.Proto.Docflow.Am" +
-      "endmentRequestDocflowV4\022A\n\nRevocation\030\007 " +
-      "\001(\0132-.Diadoc.Api.Proto.Docflow.Revocatio" +
-      "nDocflowV4\022A\n\rSenderReceipt\030\010 \001(\0132*.Diad" +
-      "oc.Api.Proto.Docflow.ReceiptDocflowV4\022A\n" +
-      "\nResolution\030\t \001(\0132-.Diadoc.Api.Proto.Doc" +
-      "flow.ResolutionDocflowV3\022J\n\022ResolutionEn" +
-      "tities\030\n \001(\0132..Diadoc.Api.Proto.Docflow." +
-      "ResolutionEntitiesV3\022=\n\rOuterDocflows\030\014 " +
-      "\003(\0132&.Diadoc.Api.Proto.Docflow.OuterDocf" +
-      "low\022L\n\024OuterDocflowEntities\030\r \003(\0132..Diad" +
-      "oc.Api.Proto.Docflow.OuterDocflowEntitie" +
-      "s\0228\n\rDocflowStatus\030\016 \002(\0132!.Diadoc.Api.Pr" +
-      "oto.DocflowStatusV3\022E\n\rTtGisFixation\030\017 \001" +
-      "(\0132..Diadoc.Api.Proto.Docflow.TtGisFixat" +
-      "ionDocflowB\021B\017DocflowV4Protos"
+      "w\"\343\003\n\031AmendmentRequestDocflowV4\022\022\n\nIsFin" +
+      "ished\030\001 \002(\010\022F\n\020AmendmentRequest\030\002 \001(\0132,." +
+      "Diadoc.Api.Proto.Docflow.SignedAttachmen" +
+      "tV3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto.T" +
+      "imestamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.A" +
+      "pi.Proto.Timestamp\022;\n\007Receipt\030\005 \001(\0132*.Di" +
+      "adoc.Api.Proto.Docflow.ReceiptDocflowV4\022" +
+      "\026\n\016AmendmentFlags\030\006 \002(\005\022\021\n\tPlainText\030\007 \001" +
+      "(\t\022L\n\023ConfirmationDocflow\030\010 \001(\0132/.Diadoc" +
+      ".Api.Proto.Docflow.ConfirmationDocflowV4" +
+      "\022U\n\020UniversalMessage\030\t \001(\0132;.Diadoc.Api." +
+      "Proto.Docflow.UniversalMessageAttachment" +
+      "Docflow\"\256\003\n\020ReceiptDocflowV4\022\022\n\nIsFinish" +
+      "ed\030\001 \002(\010\022G\n\021ReceiptAttachment\030\002 \001(\0132,.Di" +
+      "adoc.Api.Proto.Docflow.SignedAttachmentV" +
+      "3\022+\n\006SentAt\030\003 \001(\0132\033.Diadoc.Api.Proto.Tim" +
+      "estamp\0220\n\013DeliveredAt\030\004 \001(\0132\033.Diadoc.Api" +
+      ".Proto.Timestamp\022E\n\014Confirmation\030\005 \001(\0132/" +
+      ".Diadoc.Api.Proto.Docflow.ConfirmationDo" +
+      "cflowV4\022@\n\006Status\030\006 \002(\01620.Diadoc.Api.Pro" +
+      "to.Documents.GeneralReceiptStatus\022U\n\020Uni" +
+      "versalMessage\030\007 \001(\0132;.Diadoc.Api.Proto.D" +
+      "ocflow.UniversalMessageAttachmentDocflow" +
+      "\"\274\002\n\025ConfirmationDocflowV4\022\022\n\nIsFinished" +
+      "\030\001 \002(\010\022L\n\026ConfirmationAttachment\030\002 \001(\0132," +
+      ".Diadoc.Api.Proto.Docflow.SignedAttachme" +
+      "ntV3\0220\n\013ConfirmedAt\030\003 \001(\0132\033.Diadoc.Api.P" +
+      "roto.Timestamp\022;\n\007Receipt\030\004 \001(\0132*.Diadoc" +
+      ".Api.Proto.Docflow.ReceiptDocflowV4\022R\n\023R" +
+      "oamingConfirmation\030\005 \001(\01325.Diadoc.Api.Pr" +
+      "oto.Docflow.OperatorConfirmationDocflow\"" +
+      "\357\007\n\tDocflowV4\022A\n\013SenderTitle\030\001 \002(\0132,.Dia" +
+      "doc.Api.Proto.Docflow.SenderTitleDocflow" +
+      "\022E\n\014Confirmation\030\002 \001(\0132/.Diadoc.Api.Prot" +
+      "o.Docflow.ConfirmationDocflowV4\022M\n\rProxy" +
+      "Response\030\013 \001(\01326.Diadoc.Api.Proto.Docflo" +
+      "w.ParticipantResponseDocflowV4\022D\n\020Recipi" +
+      "entReceipt\030\004 \001(\0132*.Diadoc.Api.Proto.Docf" +
+      "low.ReceiptDocflowV4\022Q\n\021RecipientRespons" +
+      "e\030\005 \001(\01326.Diadoc.Api.Proto.Docflow.Parti" +
+      "cipantResponseDocflowV4\022M\n\020AmendmentRequ" +
+      "est\030\006 \001(\01323.Diadoc.Api.Proto.Docflow.Ame" +
+      "ndmentRequestDocflowV4\022A\n\nRevocation\030\007 \001" +
+      "(\0132-.Diadoc.Api.Proto.Docflow.Revocation" +
+      "DocflowV4\022A\n\rSenderReceipt\030\010 \001(\0132*.Diado" +
+      "c.Api.Proto.Docflow.ReceiptDocflowV4\022A\n\n" +
+      "Resolution\030\t \001(\0132-.Diadoc.Api.Proto.Docf" +
+      "low.ResolutionDocflowV3\022J\n\022ResolutionEnt" +
+      "ities\030\n \001(\0132..Diadoc.Api.Proto.Docflow.R" +
+      "esolutionEntitiesV3\022=\n\rOuterDocflows\030\014 \003" +
+      "(\0132&.Diadoc.Api.Proto.Docflow.OuterDocfl" +
+      "ow\022L\n\024OuterDocflowEntities\030\r \003(\0132..Diado" +
+      "c.Api.Proto.Docflow.OuterDocflowEntities" +
+      "\0228\n\rDocflowStatus\030\016 \002(\0132!.Diadoc.Api.Pro" +
+      "to.DocflowStatusV3\022E\n\rTtGisFixation\030\017 \001(" +
+      "\0132..Diadoc.Api.Proto.Docflow.TtGisFixati" +
+      "onDocflowB\021B\017DocflowV4Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14838,7 +15051,7 @@ public final class DocflowV4Protos {
     internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflowV4_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_ParticipantResponseDocflowV4_descriptor,
-        new java.lang.String[] { "IsFinished", "Signature", "Title", "Rejection", "SentAt", "DeliveredAt", "ResponseStatus", "Confirmation", "OutOfWorkflowUniversalMessageDocflow", });
+        new java.lang.String[] { "IsFinished", "Signature", "Title", "Rejection", "SentAt", "DeliveredAt", "ResponseStatus", "Confirmation", "OutOfWorkflowUniversalMessageDocflow", "AmendmentRequest", });
     internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflowV4_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Docflow_SignatureRejectionDocflowV4_fieldAccessorTable = new
