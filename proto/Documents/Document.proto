@@ -103,6 +103,8 @@ message Document {
 	required DocflowStatusV3 DocflowStatus = 80;
 	optional TtGisFixationCancellationStatus TtGisFixationCancellationStatus = 81 [default = TtGisFixationCancellationStatusNone];
 	optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];
+	optional AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;
+
 }
 
 message LastOuterDocflow {
