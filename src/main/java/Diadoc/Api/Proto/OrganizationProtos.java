@@ -2574,6 +2574,23 @@ public final class OrganizationProtos {
      */
     com.google.protobuf.ByteString
         getCommentBytes();
+
+    /**
+     * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+     * @return Whether the disconnectionFromOperatorDate field is set.
+     */
+    boolean hasDisconnectionFromOperatorDate();
+    /**
+     * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+     * @return The disconnectionFromOperatorDate.
+     */
+    java.lang.String getDisconnectionFromOperatorDate();
+    /**
+     * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+     * @return The bytes for disconnectionFromOperatorDate.
+     */
+    com.google.protobuf.ByteString
+        getDisconnectionFromOperatorDateBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Organization}
@@ -2614,6 +2631,7 @@ public final class OrganizationProtos {
       organizationType_ = 0;
       readyForEpdStatus_ = 0;
       comment_ = "";
+      disconnectionFromOperatorDate_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -3615,6 +3633,55 @@ public final class OrganizationProtos {
       }
     }
 
+    public static final int DISCONNECTIONFROMOPERATORDATE_FIELD_NUMBER = 32;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object disconnectionFromOperatorDate_ = "";
+    /**
+     * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+     * @return Whether the disconnectionFromOperatorDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasDisconnectionFromOperatorDate() {
+      return ((bitField0_ & 0x10000000) != 0);
+    }
+    /**
+     * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+     * @return The disconnectionFromOperatorDate.
+     */
+    @java.lang.Override
+    public java.lang.String getDisconnectionFromOperatorDate() {
+      java.lang.Object ref = disconnectionFromOperatorDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          disconnectionFromOperatorDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+     * @return The bytes for disconnectionFromOperatorDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDisconnectionFromOperatorDateBytes() {
+      java.lang.Object ref = disconnectionFromOperatorDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        disconnectionFromOperatorDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3771,6 +3838,9 @@ public final class OrganizationProtos {
       if (((bitField0_ & 0x08000000) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 31, comment_);
       }
+      if (((bitField0_ & 0x10000000) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 32, disconnectionFromOperatorDate_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3887,6 +3957,9 @@ public final class OrganizationProtos {
       }
       if (((bitField0_ & 0x08000000) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(31, comment_);
+      }
+      if (((bitField0_ & 0x10000000) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(32, disconnectionFromOperatorDate_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4044,6 +4117,11 @@ public final class OrganizationProtos {
         if (!getComment()
             .equals(other.getComment())) return false;
       }
+      if (hasDisconnectionFromOperatorDate() != other.hasDisconnectionFromOperatorDate()) return false;
+      if (hasDisconnectionFromOperatorDate()) {
+        if (!getDisconnectionFromOperatorDate()
+            .equals(other.getDisconnectionFromOperatorDate())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4183,6 +4261,10 @@ public final class OrganizationProtos {
       if (hasComment()) {
         hash = (37 * hash) + COMMENT_FIELD_NUMBER;
         hash = (53 * hash) + getComment().hashCode();
+      }
+      if (hasDisconnectionFromOperatorDate()) {
+        hash = (37 * hash) + DISCONNECTIONFROMOPERATORDATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDisconnectionFromOperatorDate().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4374,6 +4456,7 @@ public final class OrganizationProtos {
         }
         readyForEpdStatus_ = 0;
         comment_ = "";
+        disconnectionFromOperatorDate_ = "";
         return this;
       }
 
@@ -4545,6 +4628,10 @@ public final class OrganizationProtos {
         if (((from_bitField0_ & 0x20000000) != 0)) {
           result.comment_ = comment_;
           to_bitField0_ |= 0x08000000;
+        }
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          result.disconnectionFromOperatorDate_ = disconnectionFromOperatorDate_;
+          to_bitField0_ |= 0x10000000;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -4719,6 +4806,11 @@ public final class OrganizationProtos {
         if (other.hasComment()) {
           comment_ = other.comment_;
           bitField0_ |= 0x20000000;
+          onChanged();
+        }
+        if (other.hasDisconnectionFromOperatorDate()) {
+          disconnectionFromOperatorDate_ = other.disconnectionFromOperatorDate_;
+          bitField0_ |= 0x40000000;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4979,6 +5071,11 @@ public final class OrganizationProtos {
                 bitField0_ |= 0x20000000;
                 break;
               } // case 250
+              case 258: {
+                disconnectionFromOperatorDate_ = input.readBytes();
+                bitField0_ |= 0x40000000;
+                break;
+              } // case 258
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7240,6 +7337,86 @@ public final class OrganizationProtos {
         if (value == null) { throw new NullPointerException(); }
         comment_ = value;
         bitField0_ |= 0x20000000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object disconnectionFromOperatorDate_ = "";
+      /**
+       * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+       * @return Whether the disconnectionFromOperatorDate field is set.
+       */
+      public boolean hasDisconnectionFromOperatorDate() {
+        return ((bitField0_ & 0x40000000) != 0);
+      }
+      /**
+       * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+       * @return The disconnectionFromOperatorDate.
+       */
+      public java.lang.String getDisconnectionFromOperatorDate() {
+        java.lang.Object ref = disconnectionFromOperatorDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            disconnectionFromOperatorDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+       * @return The bytes for disconnectionFromOperatorDate.
+       */
+      public com.google.protobuf.ByteString
+          getDisconnectionFromOperatorDateBytes() {
+        java.lang.Object ref = disconnectionFromOperatorDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          disconnectionFromOperatorDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+       * @param value The disconnectionFromOperatorDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisconnectionFromOperatorDate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        disconnectionFromOperatorDate_ = value;
+        bitField0_ |= 0x40000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisconnectionFromOperatorDate() {
+        disconnectionFromOperatorDate_ = getDefaultInstance().getDisconnectionFromOperatorDate();
+        bitField0_ = (bitField0_ & ~0x40000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string DisconnectionFromOperatorDate = 32;</code>
+       * @param value The bytes for disconnectionFromOperatorDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisconnectionFromOperatorDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        disconnectionFromOperatorDate_ = value;
+        bitField0_ |= 0x40000000;
         onChanged();
         return this;
       }
@@ -10261,7 +10438,7 @@ public final class OrganizationProtos {
       "oreignTaxpayerCode\030\001 \002(\t\022\036\n\026Identificati" +
       "onOfStatus\030\002 \001(\t\022\030\n\020OtherInformation\030\003 \001" +
       "(\t\"I\n\020OrganizationList\0225\n\rOrganizations\030" +
-      "\001 \003(\0132\036.Diadoc.Api.Proto.Organization\"\334\006" +
+      "\001 \003(\0132\036.Diadoc.Api.Proto.Organization\"\203\007" +
       "\n\014Organization\022\r\n\005OrgId\030\001 \002(\t\022\013\n\003Inn\030\002 \002" +
       "(\t\022\013\n\003Kpp\030\003 \001(\t\022\020\n\010FullName\030\004 \002(\t\022\021\n\tSho" +
       "rtName\030\005 \001(\t\022$\n\005Boxes\030\007 \003(\0132\025.Diadoc.Api" +
@@ -10283,26 +10460,27 @@ public final class OrganizationProtos {
       "eignInformation\030\035 \001(\0132$.Diadoc.Api.Proto" +
       ".ForeignInformation\022>\n\021ReadyForEpdStatus" +
       "\030\036 \002(\0162#.Diadoc.Api.Proto.ReadyForEpdSta" +
-      "tus\022\017\n\007Comment\030\037 \002(\t\"\266\001\n\nDepartment\022\024\n\014D" +
-      "epartmentId\030\001 \002(\t\022\032\n\022ParentDepartmentId\030" +
-      "\002 \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n\014Abbreviation\030\004 \001(" +
-      "\t\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Address\030\006 \001(\0132\031.Diadoc" +
-      ".Api.Proto.Address\022\031\n\nIsDisabled\030\007 \001(\010:\005" +
-      "false\"\350\001\n\003Box\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tBoxIdGui" +
-      "d\030\006 \002(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Organization\030\003" +
-      " \001(\0132\036.Diadoc.Api.Proto.Organization\022W\n\024" +
-      "InvoiceFormatVersion\030\004 \001(\01622.Diadoc.Api." +
-      "Proto.OrganizationInvoiceFormatVersion:\005" +
-      "v5_02\022!\n\031EncryptedDocumentsAllowed\030\005 \001(\010" +
-      "*8\n OrganizationInvoiceFormatVersion\022\t\n\005" +
-      "v5_01\020\001\022\t\n\005v5_02\020\002*:\n\013Sociability\022\024\n\020All" +
-      "Organizations\020\000\022\025\n\021CounteragentsOnly\020\001*\\" +
-      "\n\020OrganizationType\022\033\n\027UnknownOrganizatio" +
-      "nType\020\000\022\016\n\nIndividual\020\001\022\r\n\tJuridical\020\002\022\014" +
-      "\n\010Physical\020\003*Z\n\021ReadyForEpdStatus\022\024\n\020Unk" +
-      "nownEpdStatus\020\000\022\026\n\022UndefinedEpdStatus\020\001\022" +
-      "\t\n\005Ready\020\002\022\014\n\010NotReady\020\003B\024B\022Organization" +
-      "Protos"
+      "tus\022\017\n\007Comment\030\037 \002(\t\022%\n\035DisconnectionFro" +
+      "mOperatorDate\030  \001(\t\"\266\001\n\nDepartment\022\024\n\014De" +
+      "partmentId\030\001 \002(\t\022\032\n\022ParentDepartmentId\030\002" +
+      " \002(\t\022\014\n\004Name\030\003 \002(\t\022\024\n\014Abbreviation\030\004 \001(\t" +
+      "\022\013\n\003Kpp\030\005 \001(\t\022*\n\007Address\030\006 \001(\0132\031.Diadoc." +
+      "Api.Proto.Address\022\031\n\nIsDisabled\030\007 \001(\010:\005f" +
+      "alse\"\350\001\n\003Box\022\r\n\005BoxId\030\001 \002(\t\022\021\n\tBoxIdGuid" +
+      "\030\006 \002(\t\022\r\n\005Title\030\002 \002(\t\0224\n\014Organization\030\003 " +
+      "\001(\0132\036.Diadoc.Api.Proto.Organization\022W\n\024I" +
+      "nvoiceFormatVersion\030\004 \001(\01622.Diadoc.Api.P" +
+      "roto.OrganizationInvoiceFormatVersion:\005v" +
+      "5_02\022!\n\031EncryptedDocumentsAllowed\030\005 \001(\010*" +
+      "8\n OrganizationInvoiceFormatVersion\022\t\n\005v" +
+      "5_01\020\001\022\t\n\005v5_02\020\002*:\n\013Sociability\022\024\n\020AllO" +
+      "rganizations\020\000\022\025\n\021CounteragentsOnly\020\001*\\\n" +
+      "\020OrganizationType\022\033\n\027UnknownOrganization" +
+      "Type\020\000\022\016\n\nIndividual\020\001\022\r\n\tJuridical\020\002\022\014\n" +
+      "\010Physical\020\003*Z\n\021ReadyForEpdStatus\022\024\n\020Unkn" +
+      "ownEpdStatus\020\000\022\026\n\022UndefinedEpdStatus\020\001\022\t" +
+      "\n\005Ready\020\002\022\014\n\010NotReady\020\003B\024B\022OrganizationP" +
+      "rotos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10326,7 +10504,7 @@ public final class OrganizationProtos {
     internal_static_Diadoc_Api_Proto_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Organization_descriptor,
-        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", "OrganizationType", "IsOwner", "ForeignInformation", "ReadyForEpdStatus", "Comment", });
+        new java.lang.String[] { "OrgId", "Inn", "Kpp", "FullName", "ShortName", "Boxes", "Ogrn", "FnsParticipantId", "Address", "FnsRegistrationDate", "Departments", "IfnsCode", "IsPilot", "IsActive", "IsTest", "IsBranch", "IsRoaming", "IsEmployee", "InvitationCount", "SearchCount", "Sociability", "LiquidationDate", "CertificateOfRegistryInfo", "IsForeign", "HasCertificateToSign", "OrganizationType", "IsOwner", "ForeignInformation", "ReadyForEpdStatus", "Comment", "DisconnectionFromOperatorDate", });
     internal_static_Diadoc_Api_Proto_Department_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_Diadoc_Api_Proto_Department_fieldAccessorTable = new
