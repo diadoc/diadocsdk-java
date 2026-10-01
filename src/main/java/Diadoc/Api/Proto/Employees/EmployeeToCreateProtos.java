@@ -1140,6 +1140,21 @@ public final class EmployeeToCreateProtos {
      * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateByCertificate Certificate = 2;</code>
      */
     Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateByCertificateOrBuilder getCertificateOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+     * @return Whether the ssoProvider field is set.
+     */
+    boolean hasSsoProvider();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+     * @return The ssoProvider.
+     */
+    Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider getSsoProvider();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+     */
+    Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProviderOrBuilder getSsoProviderOrBuilder();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Employees.EmployeeToCreateCredentials}
@@ -1231,6 +1246,32 @@ public final class EmployeeToCreateProtos {
       return certificate_ == null ? Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateByCertificate.getDefaultInstance() : certificate_;
     }
 
+    public static final int SSOPROVIDER_FIELD_NUMBER = 3;
+    private Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider ssoProvider_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+     * @return Whether the ssoProvider field is set.
+     */
+    @java.lang.Override
+    public boolean hasSsoProvider() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+     * @return The ssoProvider.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider getSsoProvider() {
+      return ssoProvider_ == null ? Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.getDefaultInstance() : ssoProvider_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProviderOrBuilder getSsoProviderOrBuilder() {
+      return ssoProvider_ == null ? Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.getDefaultInstance() : ssoProvider_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1250,6 +1291,12 @@ public final class EmployeeToCreateProtos {
           return false;
         }
       }
+      if (hasSsoProvider()) {
+        if (!getSsoProvider().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1262,6 +1309,9 @@ public final class EmployeeToCreateProtos {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getCertificate());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getSsoProvider());
       }
       getUnknownFields().writeTo(output);
     }
@@ -1279,6 +1329,10 @@ public final class EmployeeToCreateProtos {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCertificate());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSsoProvider());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1305,6 +1359,11 @@ public final class EmployeeToCreateProtos {
         if (!getCertificate()
             .equals(other.getCertificate())) return false;
       }
+      if (hasSsoProvider() != other.hasSsoProvider()) return false;
+      if (hasSsoProvider()) {
+        if (!getSsoProvider()
+            .equals(other.getSsoProvider())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1323,6 +1382,10 @@ public final class EmployeeToCreateProtos {
       if (hasCertificate()) {
         hash = (37 * hash) + CERTIFICATE_FIELD_NUMBER;
         hash = (53 * hash) + getCertificate().hashCode();
+      }
+      if (hasSsoProvider()) {
+        hash = (37 * hash) + SSOPROVIDER_FIELD_NUMBER;
+        hash = (53 * hash) + getSsoProvider().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1456,6 +1519,7 @@ public final class EmployeeToCreateProtos {
                 .alwaysUseFieldBuilders) {
           getLoginFieldBuilder();
           getCertificateFieldBuilder();
+          getSsoProviderFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1471,6 +1535,11 @@ public final class EmployeeToCreateProtos {
         if (certificateBuilder_ != null) {
           certificateBuilder_.dispose();
           certificateBuilder_ = null;
+        }
+        ssoProvider_ = null;
+        if (ssoProviderBuilder_ != null) {
+          ssoProviderBuilder_.dispose();
+          ssoProviderBuilder_ = null;
         }
         return this;
       }
@@ -1518,6 +1587,12 @@ public final class EmployeeToCreateProtos {
               : certificateBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ssoProvider_ = ssoProviderBuilder_ == null
+              ? ssoProvider_
+              : ssoProviderBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1539,6 +1614,9 @@ public final class EmployeeToCreateProtos {
         if (other.hasCertificate()) {
           mergeCertificate(other.getCertificate());
         }
+        if (other.hasSsoProvider()) {
+          mergeSsoProvider(other.getSsoProvider());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1553,6 +1631,11 @@ public final class EmployeeToCreateProtos {
         }
         if (hasCertificate()) {
           if (!getCertificate().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasSsoProvider()) {
+          if (!getSsoProvider().isInitialized()) {
             return false;
           }
         }
@@ -1589,6 +1672,13 @@ public final class EmployeeToCreateProtos {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getSsoProviderFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1846,6 +1936,127 @@ public final class EmployeeToCreateProtos {
           certificate_ = null;
         }
         return certificateBuilder_;
+      }
+
+      private Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider ssoProvider_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider, Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.Builder, Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProviderOrBuilder> ssoProviderBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+       * @return Whether the ssoProvider field is set.
+       */
+      public boolean hasSsoProvider() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+       * @return The ssoProvider.
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider getSsoProvider() {
+        if (ssoProviderBuilder_ == null) {
+          return ssoProvider_ == null ? Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.getDefaultInstance() : ssoProvider_;
+        } else {
+          return ssoProviderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+       */
+      public Builder setSsoProvider(Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider value) {
+        if (ssoProviderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ssoProvider_ = value;
+        } else {
+          ssoProviderBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+       */
+      public Builder setSsoProvider(
+          Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.Builder builderForValue) {
+        if (ssoProviderBuilder_ == null) {
+          ssoProvider_ = builderForValue.build();
+        } else {
+          ssoProviderBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+       */
+      public Builder mergeSsoProvider(Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider value) {
+        if (ssoProviderBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            ssoProvider_ != null &&
+            ssoProvider_ != Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.getDefaultInstance()) {
+            getSsoProviderBuilder().mergeFrom(value);
+          } else {
+            ssoProvider_ = value;
+          }
+        } else {
+          ssoProviderBuilder_.mergeFrom(value);
+        }
+        if (ssoProvider_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+       */
+      public Builder clearSsoProvider() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        ssoProvider_ = null;
+        if (ssoProviderBuilder_ != null) {
+          ssoProviderBuilder_.dispose();
+          ssoProviderBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.Builder getSsoProviderBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getSsoProviderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+       */
+      public Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProviderOrBuilder getSsoProviderOrBuilder() {
+        if (ssoProviderBuilder_ != null) {
+          return ssoProviderBuilder_.getMessageOrBuilder();
+        } else {
+          return ssoProvider_ == null ?
+              Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.getDefaultInstance() : ssoProvider_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider SsoProvider = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider, Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.Builder, Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProviderOrBuilder> 
+          getSsoProviderFieldBuilder() {
+        if (ssoProviderBuilder_ == null) {
+          ssoProviderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider, Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.Builder, Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProviderOrBuilder>(
+                  getSsoProvider(),
+                  getParentForChildren(),
+                  isClean());
+          ssoProvider_ = null;
+        }
+        return ssoProviderBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Employees.EmployeeToCreateCredentials)
@@ -3490,6 +3701,955 @@ public final class EmployeeToCreateProtos {
 
   }
 
+  public interface EmployeeToCreateBySsoProviderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string Email = 1;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>required string Email = 1;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>required string Email = 1;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+     * @return Whether the fullName field is set.
+     */
+    boolean hasFullName();
+    /**
+     * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+     * @return The fullName.
+     */
+    Diadoc.Api.Proto.UserProtos.FullName getFullName();
+    /**
+     * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+     */
+    Diadoc.Api.Proto.UserProtos.FullNameOrBuilder getFullNameOrBuilder();
+
+    /**
+     * <code>required string ProviderId = 3;</code>
+     * @return Whether the providerId field is set.
+     */
+    boolean hasProviderId();
+    /**
+     * <code>required string ProviderId = 3;</code>
+     * @return The providerId.
+     */
+    java.lang.String getProviderId();
+    /**
+     * <code>required string ProviderId = 3;</code>
+     * @return The bytes for providerId.
+     */
+    com.google.protobuf.ByteString
+        getProviderIdBytes();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider}
+   */
+  public static final class EmployeeToCreateBySsoProvider extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider)
+      EmployeeToCreateBySsoProviderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        EmployeeToCreateBySsoProvider.class.getName());
+    }
+    // Use EmployeeToCreateBySsoProvider.newBuilder() to construct.
+    private EmployeeToCreateBySsoProvider(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EmployeeToCreateBySsoProvider() {
+      email_ = "";
+      providerId_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.class, Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EMAIL_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object email_ = "";
+    /**
+     * <code>required string Email = 1;</code>
+     * @return Whether the email field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string Email = 1;</code>
+     * @return The email.
+     */
+    @java.lang.Override
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          email_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string Email = 1;</code>
+     * @return The bytes for email.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FULLNAME_FIELD_NUMBER = 2;
+    private Diadoc.Api.Proto.UserProtos.FullName fullName_;
+    /**
+     * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+     * @return Whether the fullName field is set.
+     */
+    @java.lang.Override
+    public boolean hasFullName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+     * @return The fullName.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.UserProtos.FullName getFullName() {
+      return fullName_ == null ? Diadoc.Api.Proto.UserProtos.FullName.getDefaultInstance() : fullName_;
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.UserProtos.FullNameOrBuilder getFullNameOrBuilder() {
+      return fullName_ == null ? Diadoc.Api.Proto.UserProtos.FullName.getDefaultInstance() : fullName_;
+    }
+
+    public static final int PROVIDERID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object providerId_ = "";
+    /**
+     * <code>required string ProviderId = 3;</code>
+     * @return Whether the providerId field is set.
+     */
+    @java.lang.Override
+    public boolean hasProviderId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>required string ProviderId = 3;</code>
+     * @return The providerId.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderId() {
+      java.lang.Object ref = providerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          providerId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string ProviderId = 3;</code>
+     * @return The bytes for providerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderIdBytes() {
+      java.lang.Object ref = providerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasEmail()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasProviderId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasFullName()) {
+        if (!getFullName().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, email_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getFullName());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, providerId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, email_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFullName());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, providerId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider other = (Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider) obj;
+
+      if (hasEmail() != other.hasEmail()) return false;
+      if (hasEmail()) {
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
+      }
+      if (hasFullName() != other.hasFullName()) return false;
+      if (hasFullName()) {
+        if (!getFullName()
+            .equals(other.getFullName())) return false;
+      }
+      if (hasProviderId() != other.hasProviderId()) return false;
+      if (hasProviderId()) {
+        if (!getProviderId()
+            .equals(other.getProviderId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEmail()) {
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEmail().hashCode();
+      }
+      if (hasFullName()) {
+        hash = (37 * hash) + FULLNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getFullName().hashCode();
+      }
+      if (hasProviderId()) {
+        hash = (37 * hash) + PROVIDERID_FIELD_NUMBER;
+        hash = (53 * hash) + getProviderId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider)
+        Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProviderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.class, Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getFullNameFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        email_ = "";
+        fullName_ = null;
+        if (fullNameBuilder_ != null) {
+          fullNameBuilder_.dispose();
+          fullNameBuilder_ = null;
+        }
+        providerId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider build() {
+        Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider buildPartial() {
+        Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider result = new Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.email_ = email_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fullName_ = fullNameBuilder_ == null
+              ? fullName_
+              : fullNameBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.providerId_ = providerId_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider) {
+          return mergeFrom((Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider other) {
+        if (other == Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider.getDefaultInstance()) return this;
+        if (other.hasEmail()) {
+          email_ = other.email_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasFullName()) {
+          mergeFullName(other.getFullName());
+        }
+        if (other.hasProviderId()) {
+          providerId_ = other.providerId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasEmail()) {
+          return false;
+        }
+        if (!hasProviderId()) {
+          return false;
+        }
+        if (hasFullName()) {
+          if (!getFullName().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                email_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getFullNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                providerId_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>required string Email = 1;</code>
+       * @return Whether the email field is set.
+       */
+      public boolean hasEmail() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string Email = 1;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            email_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string Email = 1;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string Email = 1;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        email_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Email = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        email_ = getDefaultInstance().getEmail();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string Email = 1;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        email_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private Diadoc.Api.Proto.UserProtos.FullName fullName_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.UserProtos.FullName, Diadoc.Api.Proto.UserProtos.FullName.Builder, Diadoc.Api.Proto.UserProtos.FullNameOrBuilder> fullNameBuilder_;
+      /**
+       * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+       * @return Whether the fullName field is set.
+       */
+      public boolean hasFullName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+       * @return The fullName.
+       */
+      public Diadoc.Api.Proto.UserProtos.FullName getFullName() {
+        if (fullNameBuilder_ == null) {
+          return fullName_ == null ? Diadoc.Api.Proto.UserProtos.FullName.getDefaultInstance() : fullName_;
+        } else {
+          return fullNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+       */
+      public Builder setFullName(Diadoc.Api.Proto.UserProtos.FullName value) {
+        if (fullNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fullName_ = value;
+        } else {
+          fullNameBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+       */
+      public Builder setFullName(
+          Diadoc.Api.Proto.UserProtos.FullName.Builder builderForValue) {
+        if (fullNameBuilder_ == null) {
+          fullName_ = builderForValue.build();
+        } else {
+          fullNameBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+       */
+      public Builder mergeFullName(Diadoc.Api.Proto.UserProtos.FullName value) {
+        if (fullNameBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            fullName_ != null &&
+            fullName_ != Diadoc.Api.Proto.UserProtos.FullName.getDefaultInstance()) {
+            getFullNameBuilder().mergeFrom(value);
+          } else {
+            fullName_ = value;
+          }
+        } else {
+          fullNameBuilder_.mergeFrom(value);
+        }
+        if (fullName_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+       */
+      public Builder clearFullName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fullName_ = null;
+        if (fullNameBuilder_ != null) {
+          fullNameBuilder_.dispose();
+          fullNameBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+       */
+      public Diadoc.Api.Proto.UserProtos.FullName.Builder getFullNameBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getFullNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+       */
+      public Diadoc.Api.Proto.UserProtos.FullNameOrBuilder getFullNameOrBuilder() {
+        if (fullNameBuilder_ != null) {
+          return fullNameBuilder_.getMessageOrBuilder();
+        } else {
+          return fullName_ == null ?
+              Diadoc.Api.Proto.UserProtos.FullName.getDefaultInstance() : fullName_;
+        }
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.FullName FullName = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.UserProtos.FullName, Diadoc.Api.Proto.UserProtos.FullName.Builder, Diadoc.Api.Proto.UserProtos.FullNameOrBuilder> 
+          getFullNameFieldBuilder() {
+        if (fullNameBuilder_ == null) {
+          fullNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.UserProtos.FullName, Diadoc.Api.Proto.UserProtos.FullName.Builder, Diadoc.Api.Proto.UserProtos.FullNameOrBuilder>(
+                  getFullName(),
+                  getParentForChildren(),
+                  isClean());
+          fullName_ = null;
+        }
+        return fullNameBuilder_;
+      }
+
+      private java.lang.Object providerId_ = "";
+      /**
+       * <code>required string ProviderId = 3;</code>
+       * @return Whether the providerId field is set.
+       */
+      public boolean hasProviderId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required string ProviderId = 3;</code>
+       * @return The providerId.
+       */
+      public java.lang.String getProviderId() {
+        java.lang.Object ref = providerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            providerId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string ProviderId = 3;</code>
+       * @return The bytes for providerId.
+       */
+      public com.google.protobuf.ByteString
+          getProviderIdBytes() {
+        java.lang.Object ref = providerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ProviderId = 3;</code>
+       * @param value The providerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        providerId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ProviderId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderId() {
+        providerId_ = getDefaultInstance().getProviderId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ProviderId = 3;</code>
+       * @param value The bytes for providerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        providerId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Employees.EmployeeToCreateBySsoProvider)
+    private static final Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider();
+    }
+
+    public static Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EmployeeToCreateBySsoProvider>
+        PARSER = new com.google.protobuf.AbstractParser<EmployeeToCreateBySsoProvider>() {
+      @java.lang.Override
+      public EmployeeToCreateBySsoProvider parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EmployeeToCreateBySsoProvider> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmployeeToCreateBySsoProvider> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Employees.EmployeeToCreateProtos.EmployeeToCreateBySsoProvider getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreate_descriptor;
   private static final 
@@ -3510,6 +4670,11 @@ public final class EmployeeToCreateProtos {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateByCertificate_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3526,17 +4691,22 @@ public final class EmployeeToCreateProtos {
       "o.Employees.EmployeeToCreateCredentials\022" +
       "\020\n\010Position\030\002 \001(\t\022\033\n\023CanBeInvitedForChat" +
       "\030\003 \002(\010\022D\n\013Permissions\030\004 \002(\0132/.Diadoc.Api" +
-      ".Proto.Employees.EmployeePermissions\"\261\001\n" +
+      ".Proto.Employees.EmployeePermissions\"\201\002\n" +
       "\033EmployeeToCreateCredentials\022B\n\005Login\030\001 " +
       "\001(\01323.Diadoc.Api.Proto.Employees.Employe" +
       "eToCreateByLogin\022N\n\013Certificate\030\002 \001(\01329." +
       "Diadoc.Api.Proto.Employees.EmployeeToCre" +
-      "ateByCertificate\"V\n\027EmployeeToCreateByLo" +
+      "ateByCertificate\022N\n\013SsoProvider\030\003 \001(\01329." +
+      "Diadoc.Api.Proto.Employees.EmployeeToCre" +
+      "ateBySsoProvider\"V\n\027EmployeeToCreateByLo" +
       "gin\022\r\n\005Login\030\001 \002(\t\022,\n\010FullName\030\002 \001(\0132\032.D" +
       "iadoc.Api.Proto.FullName\"T\n\035EmployeeToCr" +
       "eateByCertificate\022\017\n\007Content\030\001 \002(\014\022\023\n\013Ac" +
-      "cessBasis\030\002 \001(\t\022\r\n\005Email\030\003 \001(\tB\030B\026Employ" +
-      "eeToCreateProtos"
+      "cessBasis\030\002 \001(\t\022\r\n\005Email\030\003 \001(\t\"p\n\035Employ" +
+      "eeToCreateBySsoProvider\022\r\n\005Email\030\001 \002(\t\022," +
+      "\n\010FullName\030\002 \001(\0132\032.Diadoc.Api.Proto.Full" +
+      "Name\022\022\n\nProviderId\030\003 \002(\tB\030B\026EmployeeToCr" +
+      "eateProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3555,7 +4725,7 @@ public final class EmployeeToCreateProtos {
     internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateCredentials_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateCredentials_descriptor,
-        new java.lang.String[] { "Login", "Certificate", });
+        new java.lang.String[] { "Login", "Certificate", "SsoProvider", });
     internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateByLogin_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateByLogin_fieldAccessorTable = new
@@ -3568,6 +4738,12 @@ public final class EmployeeToCreateProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateByCertificate_descriptor,
         new java.lang.String[] { "Content", "AccessBasis", "Email", });
+    internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Employees_EmployeeToCreateBySsoProvider_descriptor,
+        new java.lang.String[] { "Email", "FullName", "ProviderId", });
     descriptor.resolveAllFeaturesImmutable();
     Diadoc.Api.Proto.UserProtos.getDescriptor();
     Diadoc.Api.Proto.Employees.EmployeeProtos.getDescriptor();

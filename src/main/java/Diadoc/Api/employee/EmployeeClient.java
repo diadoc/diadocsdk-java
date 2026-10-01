@@ -98,6 +98,28 @@ public class EmployeeClient {
         }
     }
 
+    public EmployeeList getEmployeesByExternalId(String boxId, String externalId) throws DiadocSdkException {
+        if (boxId == null) {
+            throw new IllegalArgumentException("boxId");
+        }
+        if (externalId == null) {
+            throw new IllegalArgumentException("externalId");
+        }
+
+        try{
+            var url = new URIBuilder(diadocHttpClient.getBaseUrl())
+                    .setPath("/GetEmployeesByExternalId")
+                    .addParameter("boxId", boxId)
+                    .addParameter("externalId", externalId);
+
+            var request = RequestBuilder.get(url.build());
+            return EmployeeList.parseFrom(diadocHttpClient.performRequest(request));
+        }
+        catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
     public EmployeeList getEmployees(String boxId, @Nullable Integer page, @Nullable Integer count) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");
