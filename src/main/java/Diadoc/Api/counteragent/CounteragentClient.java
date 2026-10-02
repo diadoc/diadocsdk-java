@@ -107,7 +107,7 @@ public class CounteragentClient {
     @Deprecated
     public AcquireCounteragentResult waitAcquireCounteragentResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException, DiadocException {
         try {
-            byte[] data = diadocHttpClient.waitTaskResult("/AcquireCounteragentResult", taskId, timeoutInMillis);
+            byte[] data = diadocHttpClient.waitTaskResult("/AcquireCounteragentResult", taskId, null, timeoutInMillis);
             return AcquireCounteragentResult.parseFrom(data);
         } catch (IOException e) {
             throw new DiadocSdkException(e);
@@ -122,7 +122,7 @@ public class CounteragentClient {
     @Deprecated
     public AcquireCounteragentResultV2 waitAcquireCounteragentResultV2(String taskId, Integer timeoutInMillis) throws DiadocSdkException, DiadocException {
         try {
-            byte[] data = diadocHttpClient.waitTaskResult("/V2/AcquireCounteragentResult", taskId, timeoutInMillis);
+            byte[] data = diadocHttpClient.waitTaskResult("/V2/AcquireCounteragentResult", taskId, null, timeoutInMillis);
             return AcquireCounteragentResultV2.parseFrom(data);
         } catch (IOException e) {
             throw new DiadocSdkException(e);
@@ -131,7 +131,7 @@ public class CounteragentClient {
 
     public AcquireCounteragentResultV2 waitAcquireCounteragentResultV3(String myBoxId, String taskId, Integer timeoutInMillis) throws DiadocSdkException, DiadocException {
         try {
-            byte[] data = diadocHttpClient.waitTaskResult("/V3/AcquireCounteragentResult", myBoxId, taskId, timeoutInMillis);
+            byte[] data = diadocHttpClient.waitTaskResult("/V3/AcquireCounteragentResult", taskId, myBoxId, timeoutInMillis);
             return AcquireCounteragentResultV2.parseFrom(data);
         } catch (IOException e) {
             throw new DiadocSdkException(e);

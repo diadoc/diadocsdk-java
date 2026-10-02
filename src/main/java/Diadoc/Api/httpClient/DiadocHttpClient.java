@@ -181,21 +181,16 @@ public class DiadocHttpClient {
         return requestBuilder.setConfig(requestConfig).build();
     }
 
-    private HttpUriRequest createWaitRequest(String path, String taskId) throws URISyntaxException {
-        return createRequest(RequestBuilder.get(
-                new URIBuilder(baseUrl)
-                        .setPath(path)
-                        .addParameter("taskId", taskId)
-                        .build()));
-    }
+    private HttpUriRequest createWaitRequest(String path, String taskId, @Nullable String myBoxId) throws URISyntaxException {
+        var uriBuilder = new URIBuilder(baseUrl)
+                .setPath(path)
+                .addParameter("taskId", taskId);
 
-    private HttpUriRequest createWaitRequest(String path, String myBoxId, String taskId) throws URISyntaxException {
-        return createRequest(RequestBuilder.get(
-                new URIBuilder(baseUrl)
-                        .setPath(path)
-                        .addParameter("myBoxId", myBoxId)
-                        .addParameter("taskId", taskId)
-                        .build()));
+        if (myBoxId != null) {
+            uriBuilder.addParameter("myBoxId", myBoxId);
+        }
+
+        return createRequest(RequestBuilder.get(uriBuilder.build()));
     }
 
     @Nullable
@@ -216,7 +211,7 @@ public class DiadocHttpClient {
         }
     }
 
-    public byte[] waitTaskResult(String path, String taskId, @Nullable Integer timeoutInMillis) throws DiadocSdkException {
+    public byte[] waitTaskResult(String path, String taskId, @Nullable String myBoxId, @Nullable Integer timeoutInMillis) throws DiadocSdkException {
         var timeout = Duration.ofMinutes(5);
 
         if (timeoutInMillis != null) {
@@ -227,62 +222,7 @@ public class DiadocHttpClient {
 
         try {
             while (true) {
-                try (var response = httpClient.execute(createWaitRequest(path, taskId))) {
-                    var statusCode = response.getStatusLine().getStatusCode();
-                    if (statusCode == HttpStatus.SC_NO_CONTENT) {
-                        if (Instant.now().isAfter(timeLimit)) {
-                            throw new TimeoutException(String.format("Can't GET '%s'. Timeout %d seconds expired.", path, timeout.toSeconds()));
-                        }
-                        var retryAfter = tryGetRetryAfter(response);
-                        int delayInSeconds = retryAfter != null
-                                ? Math.min(retryAfter, 15)
-                                : 15;
-                        try {
-                            Thread.sleep((long) delayInSeconds * 1000);
-                        } catch (InterruptedException e) {
-                            Thread.currentThread().interrupt();
-                            throw new DiadocSdkException(e);
-                        }
-                        continue;
-                    }
-                    if (statusCode != HttpStatus.SC_OK) {
-                        var traceId = getTraceId(response);
-                        var message = String.format("Status code: %d%sMessage: %s%sTraceId: %s%s",
-                                response.getStatusLine().getStatusCode(),
-                                System7Emu.lineSeparator(),
-                                response.getStatusLine().getReasonPhrase(),
-                                System7Emu.lineSeparator(),
-                                Tools.getTraceId(response) != null ? Tools.getTraceId(response) : "",
-                                System7Emu.lineSeparator()
-                        );
-                        throw new DiadocException(
-                                message,
-                                statusCode,
-                                tryGetDiadocErrorCode(response),
-                                traceId
-                        );
-                    }
-                    return getResponseBytes(response);
-                }
-            }
-        } catch (IOException | URISyntaxException | TimeoutException | DiadocException e) {
-            e.printStackTrace();
-            throw new DiadocSdkException(e);
-        }
-    }
-
-    public byte[] waitTaskResult(String path, String myBoxId, String taskId, @Nullable Integer timeoutInMillis) throws DiadocSdkException {
-        var timeout = Duration.ofMinutes(5);
-
-        if (timeoutInMillis != null) {
-            timeout = Duration.ofMillis(timeoutInMillis);
-        }
-
-        var timeLimit = Instant.now().plus(timeout);
-
-        try {
-            while (true) {
-                try (var response = httpClient.execute(createWaitRequest(path, myBoxId, taskId))) {
+                try (var response = httpClient.execute(createWaitRequest(path, taskId, myBoxId))) {
                     var statusCode = response.getStatusLine().getStatusCode();
                     if (statusCode == HttpStatus.SC_NO_CONTENT) {
                         if (Instant.now().isAfter(timeLimit)) {

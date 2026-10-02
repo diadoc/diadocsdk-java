@@ -59,7 +59,7 @@ public class SignClient {
     @Deprecated
     public CloudSignResult waitCloudSignResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException {
         try {
-            var data = diadocHttpClient.waitTaskResult("/CloudSignResult", taskId, timeoutInMillis);
+            var data = diadocHttpClient.waitTaskResult("/CloudSignResult", taskId, null, timeoutInMillis);
             return CloudSignResult.parseFrom(data);
         } catch (InvalidProtocolBufferException e) {
             throw new DiadocSdkException(e);
@@ -86,7 +86,7 @@ public class SignClient {
     @Deprecated
     public CloudSignConfirmResult waitCloudSignConfirmResult(String taskId, Integer timeoutInMillis) throws DiadocSdkException {
         try {
-            byte[] data = diadocHttpClient.waitTaskResult("/CloudSignConfirmResult", taskId, timeoutInMillis);
+            byte[] data = diadocHttpClient.waitTaskResult("/CloudSignConfirmResult", taskId, null, timeoutInMillis);
             return CloudSignConfirmResult.parseFrom(data);
         } catch (InvalidProtocolBufferException e) {
             throw new DiadocSdkException(e);
