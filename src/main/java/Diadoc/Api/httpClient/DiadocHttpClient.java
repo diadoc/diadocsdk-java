@@ -181,12 +181,16 @@ public class DiadocHttpClient {
         return requestBuilder.setConfig(requestConfig).build();
     }
 
-    private HttpUriRequest createWaitRequest(String path, String taskId) throws URISyntaxException {
-        return createRequest(RequestBuilder.get(
-                new URIBuilder(baseUrl)
-                        .setPath(path)
-                        .addParameter("taskId", taskId)
-                        .build()));
+    private HttpUriRequest createWaitRequest(String path, String taskId, @Nullable String myBoxId) throws URISyntaxException {
+        var uriBuilder = new URIBuilder(baseUrl)
+                .setPath(path)
+                .addParameter("taskId", taskId);
+
+        if (myBoxId != null) {
+            uriBuilder.addParameter("myBoxId", myBoxId);
+        }
+
+        return createRequest(RequestBuilder.get(uriBuilder.build()));
     }
 
     @Nullable
@@ -207,7 +211,7 @@ public class DiadocHttpClient {
         }
     }
 
-    public byte[] waitTaskResult(String path, String taskId, @Nullable Integer timeoutInMillis) throws DiadocSdkException {
+    public byte[] waitTaskResult(String path, String taskId, @Nullable String myBoxId, @Nullable Integer timeoutInMillis) throws DiadocSdkException {
         var timeout = Duration.ofMinutes(5);
 
         if (timeoutInMillis != null) {
@@ -218,7 +222,7 @@ public class DiadocHttpClient {
 
         try {
             while (true) {
-                try (var response = httpClient.execute(createWaitRequest(path, taskId))) {
+                try (var response = httpClient.execute(createWaitRequest(path, taskId, myBoxId))) {
                     var statusCode = response.getStatusLine().getStatusCode();
                     if (statusCode == HttpStatus.SC_NO_CONTENT) {
                         if (Instant.now().isAfter(timeLimit)) {
