@@ -301,6 +301,17 @@ public final class AttachmentV3Protos {
      * <code>optional .Diadoc.Api.Proto.Docflow.SignatureTypeInfo SignatureTypeInfo = 10;</code>
      */
     Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfoOrBuilder getSignatureTypeInfoOrBuilder();
+
+    /**
+     * <code>optional bool IsAttached = 11 [default = false];</code>
+     * @return Whether the isAttached field is set.
+     */
+    boolean hasIsAttached();
+    /**
+     * <code>optional bool IsAttached = 11 [default = false];</code>
+     * @return The isAttached.
+     */
+    boolean getIsAttached();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Docflow.SignatureV3}
@@ -641,6 +652,25 @@ public final class AttachmentV3Protos {
       return signatureTypeInfo_ == null ? Diadoc.Api.Proto.Docflow.AttachmentV3Protos.SignatureTypeInfo.getDefaultInstance() : signatureTypeInfo_;
     }
 
+    public static final int ISATTACHED_FIELD_NUMBER = 11;
+    private boolean isAttached_ = false;
+    /**
+     * <code>optional bool IsAttached = 11 [default = false];</code>
+     * @return Whether the isAttached field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsAttached() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional bool IsAttached = 11 [default = false];</code>
+     * @return The isAttached.
+     */
+    @java.lang.Override
+    public boolean getIsAttached() {
+      return isAttached_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -741,6 +771,9 @@ public final class AttachmentV3Protos {
       if (((bitField0_ & 0x00000200) != 0)) {
         output.writeMessage(10, getSignatureTypeInfo());
       }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeBool(11, isAttached_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -787,6 +820,10 @@ public final class AttachmentV3Protos {
       if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getSignatureTypeInfo());
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, isAttached_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -853,6 +890,11 @@ public final class AttachmentV3Protos {
         if (!getSignatureTypeInfo()
             .equals(other.getSignatureTypeInfo())) return false;
       }
+      if (hasIsAttached() != other.hasIsAttached()) return false;
+      if (hasIsAttached()) {
+        if (getIsAttached()
+            != other.getIsAttached()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -904,6 +946,11 @@ public final class AttachmentV3Protos {
       if (hasSignatureTypeInfo()) {
         hash = (37 * hash) + SIGNATURETYPEINFO_FIELD_NUMBER;
         hash = (53 * hash) + getSignatureTypeInfo().hashCode();
+      }
+      if (hasIsAttached()) {
+        hash = (37 * hash) + ISATTACHED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsAttached());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1086,6 +1133,7 @@ public final class AttachmentV3Protos {
           signatureTypeInfoBuilder_.dispose();
           signatureTypeInfoBuilder_ = null;
         }
+        isAttached_ = false;
         return this;
       }
 
@@ -1174,6 +1222,10 @@ public final class AttachmentV3Protos {
               : signatureTypeInfoBuilder_.build();
           to_bitField0_ |= 0x00000200;
         }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.isAttached_ = isAttached_;
+          to_bitField0_ |= 0x00000400;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1222,6 +1274,9 @@ public final class AttachmentV3Protos {
         }
         if (other.hasSignatureTypeInfo()) {
           mergeSignatureTypeInfo(other.getSignatureTypeInfo());
+        }
+        if (other.hasIsAttached()) {
+          setIsAttached(other.getIsAttached());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1358,6 +1413,11 @@ public final class AttachmentV3Protos {
                 bitField0_ |= 0x00000200;
                 break;
               } // case 82
+              case 88: {
+                isAttached_ = input.readBool();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2420,6 +2480,46 @@ public final class AttachmentV3Protos {
           signatureTypeInfo_ = null;
         }
         return signatureTypeInfoBuilder_;
+      }
+
+      private boolean isAttached_ ;
+      /**
+       * <code>optional bool IsAttached = 11 [default = false];</code>
+       * @return Whether the isAttached field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsAttached() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional bool IsAttached = 11 [default = false];</code>
+       * @return The isAttached.
+       */
+      @java.lang.Override
+      public boolean getIsAttached() {
+        return isAttached_;
+      }
+      /**
+       * <code>optional bool IsAttached = 11 [default = false];</code>
+       * @param value The isAttached to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsAttached(boolean value) {
+
+        isAttached_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool IsAttached = 11 [default = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsAttached() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        isAttached_ = false;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Docflow.SignatureV3)
@@ -5767,7 +5867,7 @@ public final class AttachmentV3Protos {
       "\032\rContent.proto\032\017Timestamp.proto\032!Signat" +
       "ureVerificationResult.proto\032-Docflow/Pow" +
       "erOfAttorneyAttachmentStatus.proto\032&Docf" +
-      "low/SignaturePowerOfAttorney.proto\"\246\004\n\013S" +
+      "low/SignaturePowerOfAttorney.proto\"\301\004\n\013S" +
       "ignatureV3\022-\n\003Cms\030\001 \002(\0132 .Diadoc.Api.Pro" +
       "to.Docflow.Entity\0220\n\006CadesT\030\002 \001(\0132 .Diad" +
       "oc.Api.Proto.Docflow.Entity\022\023\n\013SignerBox" +
@@ -5781,30 +5881,30 @@ public final class AttachmentV3Protos {
       "mentStatus\030\t \001(\01329.Diadoc.Api.Proto.Docf" +
       "low.PowerOfAttorneyAttachmentStatus\022F\n\021S" +
       "ignatureTypeInfo\030\n \001(\0132+.Diadoc.Api.Prot" +
-      "o.Docflow.SignatureTypeInfo\"\322\001\n\022SignedAt" +
-      "tachmentV3\0228\n\nAttachment\030\001 \002(\0132$.Diadoc." +
-      "Api.Proto.Docflow.Attachment\0228\n\tSignatur" +
-      "e\030\002 \001(\0132%.Diadoc.Api.Proto.Docflow.Signa" +
-      "tureV3\0221\n\007Comment\030\003 \001(\0132 .Diadoc.Api.Pro" +
-      "to.Docflow.Entity\022\025\n\rContentTypeId\030\004 \002(\t" +
-      "\"\345\001\n\021SignatureTypeInfo\022>\n\rSignatureType\030" +
-      "\001 \002(\0162\'.Diadoc.Api.Proto.Docflow.Signatu" +
-      "reType\022D\n\020QualifiedDetails\030\002 \001(\0132*.Diado" +
-      "c.Api.Proto.Docflow.QualifiedDetails\022J\n\023" +
-      "NonQualifiedDetails\030\003 \001(\0132-.Diadoc.Api.P" +
-      "roto.Docflow.NonQualifiedDetails\"\231\001\n\020Qua" +
-      "lifiedDetails\022\\\n\017SignatureSource\030\001 \002(\0162C" +
-      ".Diadoc.Api.Proto.Docflow.QualifiedDetai" +
-      "ls.QualifiedSignatureSource\"\'\n\030Qualified" +
-      "SignatureSource\022\013\n\007Default\020\000\"\261\001\n\023NonQual" +
-      "ifiedDetails\022b\n\017SignatureSource\030\001 \002(\0162I." +
-      "Diadoc.Api.Proto.Docflow.NonQualifiedDet" +
-      "ails.NonQualifiedSignatureSource\"6\n\033NonQ" +
-      "ualifiedSignatureSource\022\013\n\007Default\020\000\022\n\n\006" +
-      "GosKey\020\001*^\n\rSignatureType\022\030\n\024UnknownSign" +
-      "atureType\020\000\022\022\n\016OnVerification\020\001\022\r\n\tQuali" +
-      "fied\020\002\022\020\n\014NonQualified\020\003B\024B\022AttachmentV3" +
-      "Protos"
+      "o.Docflow.SignatureTypeInfo\022\031\n\nIsAttache" +
+      "d\030\013 \001(\010:\005false\"\322\001\n\022SignedAttachmentV3\0228\n" +
+      "\nAttachment\030\001 \002(\0132$.Diadoc.Api.Proto.Doc" +
+      "flow.Attachment\0228\n\tSignature\030\002 \001(\0132%.Dia" +
+      "doc.Api.Proto.Docflow.SignatureV3\0221\n\007Com" +
+      "ment\030\003 \001(\0132 .Diadoc.Api.Proto.Docflow.En" +
+      "tity\022\025\n\rContentTypeId\030\004 \002(\t\"\345\001\n\021Signatur" +
+      "eTypeInfo\022>\n\rSignatureType\030\001 \002(\0162\'.Diado" +
+      "c.Api.Proto.Docflow.SignatureType\022D\n\020Qua" +
+      "lifiedDetails\030\002 \001(\0132*.Diadoc.Api.Proto.D" +
+      "ocflow.QualifiedDetails\022J\n\023NonQualifiedD" +
+      "etails\030\003 \001(\0132-.Diadoc.Api.Proto.Docflow." +
+      "NonQualifiedDetails\"\231\001\n\020QualifiedDetails" +
+      "\022\\\n\017SignatureSource\030\001 \002(\0162C.Diadoc.Api.P" +
+      "roto.Docflow.QualifiedDetails.QualifiedS" +
+      "ignatureSource\"\'\n\030QualifiedSignatureSour" +
+      "ce\022\013\n\007Default\020\000\"\261\001\n\023NonQualifiedDetails\022" +
+      "b\n\017SignatureSource\030\001 \002(\0162I.Diadoc.Api.Pr" +
+      "oto.Docflow.NonQualifiedDetails.NonQuali" +
+      "fiedSignatureSource\"6\n\033NonQualifiedSigna" +
+      "tureSource\022\013\n\007Default\020\000\022\n\n\006GosKey\020\001*^\n\rS" +
+      "ignatureType\022\030\n\024UnknownSignatureType\020\000\022\022" +
+      "\n\016OnVerification\020\001\022\r\n\tQualified\020\002\022\020\n\014Non" +
+      "Qualified\020\003B\024B\022AttachmentV3Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5821,7 +5921,7 @@ public final class AttachmentV3Protos {
     internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Docflow_SignatureV3_descriptor,
-        new java.lang.String[] { "Cms", "CadesT", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", "DeliveredAt", "PowerOfAttorney", "PowerOfAttorneyAttachmentStatus", "SignatureTypeInfo", });
+        new java.lang.String[] { "Cms", "CadesT", "SignerBoxId", "SignerDepartmentId", "IsValid", "VerificationResult", "DeliveredAt", "PowerOfAttorney", "PowerOfAttorneyAttachmentStatus", "SignatureTypeInfo", "IsAttached", });
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Docflow_SignedAttachmentV3_fieldAccessorTable = new
