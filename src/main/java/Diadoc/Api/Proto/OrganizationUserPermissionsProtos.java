@@ -363,6 +363,17 @@ public final class OrganizationUserPermissionsProtos {
      * @return The canCreatePaymentOrders.
      */
     boolean getCanCreatePaymentOrders();
+
+    /**
+     * <code>optional bool CanAccessReports = 17;</code>
+     * @return Whether the canAccessReports field is set.
+     */
+    boolean hasCanAccessReports();
+    /**
+     * <code>optional bool CanAccessReports = 17;</code>
+     * @return The canAccessReports.
+     */
+    boolean getCanAccessReports();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.OrganizationUserPermissions}
@@ -776,6 +787,25 @@ public final class OrganizationUserPermissionsProtos {
       return canCreatePaymentOrders_;
     }
 
+    public static final int CANACCESSREPORTS_FIELD_NUMBER = 17;
+    private boolean canAccessReports_ = false;
+    /**
+     * <code>optional bool CanAccessReports = 17;</code>
+     * @return Whether the canAccessReports field is set.
+     */
+    @java.lang.Override
+    public boolean hasCanAccessReports() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>optional bool CanAccessReports = 17;</code>
+     * @return The canAccessReports.
+     */
+    @java.lang.Override
+    public boolean getCanAccessReports() {
+      return canAccessReports_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -879,6 +909,9 @@ public final class OrganizationUserPermissionsProtos {
       if (((bitField0_ & 0x00002000) != 0)) {
         output.writeBool(16, canCreatePaymentOrders_);
       }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeBool(17, canAccessReports_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -949,6 +982,10 @@ public final class OrganizationUserPermissionsProtos {
       if (((bitField0_ & 0x00002000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(16, canCreatePaymentOrders_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, canAccessReports_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1036,6 +1073,11 @@ public final class OrganizationUserPermissionsProtos {
         if (getCanCreatePaymentOrders()
             != other.getCanCreatePaymentOrders()) return false;
       }
+      if (hasCanAccessReports() != other.hasCanAccessReports()) return false;
+      if (hasCanAccessReports()) {
+        if (getCanAccessReports()
+            != other.getCanAccessReports()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1116,6 +1158,11 @@ public final class OrganizationUserPermissionsProtos {
         hash = (37 * hash) + CANCREATEPAYMENTORDERS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getCanCreatePaymentOrders());
+      }
+      if (hasCanAccessReports()) {
+        hash = (37 * hash) + CANACCESSREPORTS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCanAccessReports());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1274,6 +1321,7 @@ public final class OrganizationUserPermissionsProtos {
         canAttachUniversalMessages_ = false;
         canUseGoskeyFL_ = false;
         canCreatePaymentOrders_ = false;
+        canAccessReports_ = false;
         return this;
       }
 
@@ -1370,6 +1418,10 @@ public final class OrganizationUserPermissionsProtos {
           result.canCreatePaymentOrders_ = canCreatePaymentOrders_;
           to_bitField0_ |= 0x00002000;
         }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.canAccessReports_ = canAccessReports_;
+          to_bitField0_ |= 0x00004000;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1440,6 +1492,9 @@ public final class OrganizationUserPermissionsProtos {
         }
         if (other.hasCanCreatePaymentOrders()) {
           setCanCreatePaymentOrders(other.getCanCreatePaymentOrders());
+        }
+        if (other.hasCanAccessReports()) {
+          setCanAccessReports(other.getCanAccessReports());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1585,6 +1640,11 @@ public final class OrganizationUserPermissionsProtos {
                 bitField0_ |= 0x00004000;
                 break;
               } // case 128
+              case 136: {
+                canAccessReports_ = input.readBool();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 136
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2435,6 +2495,46 @@ public final class OrganizationUserPermissionsProtos {
         return this;
       }
 
+      private boolean canAccessReports_ ;
+      /**
+       * <code>optional bool CanAccessReports = 17;</code>
+       * @return Whether the canAccessReports field is set.
+       */
+      @java.lang.Override
+      public boolean hasCanAccessReports() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>optional bool CanAccessReports = 17;</code>
+       * @return The canAccessReports.
+       */
+      @java.lang.Override
+      public boolean getCanAccessReports() {
+        return canAccessReports_;
+      }
+      /**
+       * <code>optional bool CanAccessReports = 17;</code>
+       * @param value The canAccessReports to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCanAccessReports(boolean value) {
+
+        canAccessReports_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool CanAccessReports = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCanAccessReports() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        canAccessReports_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OrganizationUserPermissions)
     }
 
@@ -3155,7 +3255,7 @@ public final class OrganizationUserPermissionsProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n!OrganizationUserPermissions.proto\022\020Dia" +
-      "doc.Api.Proto\"\274\004\n\033OrganizationUserPermis" +
+      "doc.Api.Proto\"\326\004\n\033OrganizationUserPermis" +
       "sions\022\030\n\020UserDepartmentId\030\001 \002(\t\022\027\n\017IsAdm" +
       "inistrator\030\002 \002(\010\022^\n\023DocumentAccessLevel\030" +
       "\003 \001(\0162%.Diadoc.Api.Proto.DocumentAccessL" +
@@ -3169,14 +3269,14 @@ public final class OrganizationUserPermissionsProtos {
       "thorizationPermission\022!\n\031CanDeleteRestor" +
       "eDocuments\030\r \002(\010\022\"\n\032CanAttachUniversalMe" +
       "ssages\030\016 \002(\010\022\026\n\016CanUseGoskeyFL\030\017 \001(\010\022\036\n\026" +
-      "CanCreatePaymentOrders\030\020 \001(\010\"=\n\027Authoriz" +
-      "ationPermission\022\021\n\tIsBlocked\030\001 \002(\010\022\017\n\007Co" +
-      "mment\030\002 \001(\t*\236\001\n\023DocumentAccessLevel\022\'\n\032U" +
-      "nknownDocumentAccessLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016" +
-      "DepartmentOnly\020\000\022\037\n\033DepartmentAndSubdepa" +
-      "rtments\020\001\022\020\n\014AllDocuments\020\002\022\027\n\023SelectedD" +
-      "epartments\020\003B#B!OrganizationUserPermissi" +
-      "onsProtos"
+      "CanCreatePaymentOrders\030\020 \001(\010\022\030\n\020CanAcces" +
+      "sReports\030\021 \001(\010\"=\n\027AuthorizationPermissio" +
+      "n\022\021\n\tIsBlocked\030\001 \002(\010\022\017\n\007Comment\030\002 \001(\t*\236\001" +
+      "\n\023DocumentAccessLevel\022\'\n\032UnknownDocument" +
+      "AccessLevel\020\377\377\377\377\377\377\377\377\377\001\022\022\n\016DepartmentOnly" +
+      "\020\000\022\037\n\033DepartmentAndSubdepartments\020\001\022\020\n\014A" +
+      "llDocuments\020\002\022\027\n\023SelectedDepartments\020\003B#" +
+      "B!OrganizationUserPermissionsProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3187,7 +3287,7 @@ public final class OrganizationUserPermissionsProtos {
     internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OrganizationUserPermissions_descriptor,
-        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanManageCounteragents", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", "AuthorizationPermission", "CanDeleteRestoreDocuments", "CanAttachUniversalMessages", "CanUseGoskeyFL", "CanCreatePaymentOrders", });
+        new java.lang.String[] { "UserDepartmentId", "IsAdministrator", "DocumentAccessLevel", "CanSignDocuments", "CanManageCounteragents", "CanAddResolutions", "CanRequestResolutions", "SelectedDepartmentIds", "JobTitle", "CanCreateDocuments", "AuthorizationPermission", "CanDeleteRestoreDocuments", "CanAttachUniversalMessages", "CanUseGoskeyFL", "CanCreatePaymentOrders", "CanAccessReports", });
     internal_static_Diadoc_Api_Proto_AuthorizationPermission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_AuthorizationPermission_fieldAccessorTable = new
