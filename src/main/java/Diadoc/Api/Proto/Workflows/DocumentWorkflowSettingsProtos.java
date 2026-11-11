@@ -25,6 +25,3868 @@ public final class DocumentWorkflowSettingsProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface DocumentWorkflowSettingsListV3OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsListV3)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3> 
+        getDocumentWorkflowSettingsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 getDocumentWorkflowSettings(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    int getDocumentWorkflowSettingsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder> 
+        getDocumentWorkflowSettingsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder getDocumentWorkflowSettingsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsListV3}
+   */
+  public static final class DocumentWorkflowSettingsListV3 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsListV3)
+      DocumentWorkflowSettingsListV3OrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        DocumentWorkflowSettingsListV3.class.getName());
+    }
+    // Use DocumentWorkflowSettingsListV3.newBuilder() to construct.
+    private DocumentWorkflowSettingsListV3(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private DocumentWorkflowSettingsListV3() {
+      documentWorkflowSettings_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3.class, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3.Builder.class);
+    }
+
+    public static final int DOCUMENTWORKFLOWSETTINGS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3> documentWorkflowSettings_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3> getDocumentWorkflowSettingsList() {
+      return documentWorkflowSettings_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder> 
+        getDocumentWorkflowSettingsOrBuilderList() {
+      return documentWorkflowSettings_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    @java.lang.Override
+    public int getDocumentWorkflowSettingsCount() {
+      return documentWorkflowSettings_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 getDocumentWorkflowSettings(int index) {
+      return documentWorkflowSettings_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder getDocumentWorkflowSettingsOrBuilder(
+        int index) {
+      return documentWorkflowSettings_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getDocumentWorkflowSettingsCount(); i++) {
+        if (!getDocumentWorkflowSettings(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < documentWorkflowSettings_.size(); i++) {
+        output.writeMessage(1, documentWorkflowSettings_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < documentWorkflowSettings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, documentWorkflowSettings_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 other = (Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3) obj;
+
+      if (!getDocumentWorkflowSettingsList()
+          .equals(other.getDocumentWorkflowSettingsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDocumentWorkflowSettingsCount() > 0) {
+        hash = (37 * hash) + DOCUMENTWORKFLOWSETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentWorkflowSettingsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsListV3}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsListV3)
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3.class, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (documentWorkflowSettingsBuilder_ == null) {
+          documentWorkflowSettings_ = java.util.Collections.emptyList();
+        } else {
+          documentWorkflowSettings_ = null;
+          documentWorkflowSettingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 build() {
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 buildPartial() {
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 result = new Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 result) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            documentWorkflowSettings_ = java.util.Collections.unmodifiableList(documentWorkflowSettings_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.documentWorkflowSettings_ = documentWorkflowSettings_;
+        } else {
+          result.documentWorkflowSettings_ = documentWorkflowSettingsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3) {
+          return mergeFrom((Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 other) {
+        if (other == Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3.getDefaultInstance()) return this;
+        if (documentWorkflowSettingsBuilder_ == null) {
+          if (!other.documentWorkflowSettings_.isEmpty()) {
+            if (documentWorkflowSettings_.isEmpty()) {
+              documentWorkflowSettings_ = other.documentWorkflowSettings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDocumentWorkflowSettingsIsMutable();
+              documentWorkflowSettings_.addAll(other.documentWorkflowSettings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentWorkflowSettings_.isEmpty()) {
+            if (documentWorkflowSettingsBuilder_.isEmpty()) {
+              documentWorkflowSettingsBuilder_.dispose();
+              documentWorkflowSettingsBuilder_ = null;
+              documentWorkflowSettings_ = other.documentWorkflowSettings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              documentWorkflowSettingsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getDocumentWorkflowSettingsFieldBuilder() : null;
+            } else {
+              documentWorkflowSettingsBuilder_.addAllMessages(other.documentWorkflowSettings_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        for (int i = 0; i < getDocumentWorkflowSettingsCount(); i++) {
+          if (!getDocumentWorkflowSettings(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 m =
+                    input.readMessage(
+                        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.parser(),
+                        extensionRegistry);
+                if (documentWorkflowSettingsBuilder_ == null) {
+                  ensureDocumentWorkflowSettingsIsMutable();
+                  documentWorkflowSettings_.add(m);
+                } else {
+                  documentWorkflowSettingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3> documentWorkflowSettings_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentWorkflowSettingsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          documentWorkflowSettings_ = new java.util.ArrayList<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3>(documentWorkflowSettings_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder> documentWorkflowSettingsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3> getDocumentWorkflowSettingsList() {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentWorkflowSettings_);
+        } else {
+          return documentWorkflowSettingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public int getDocumentWorkflowSettingsCount() {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          return documentWorkflowSettings_.size();
+        } else {
+          return documentWorkflowSettingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 getDocumentWorkflowSettings(int index) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          return documentWorkflowSettings_.get(index);
+        } else {
+          return documentWorkflowSettingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Builder setDocumentWorkflowSettings(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 value) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentWorkflowSettingsIsMutable();
+          documentWorkflowSettings_.set(index, value);
+          onChanged();
+        } else {
+          documentWorkflowSettingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Builder setDocumentWorkflowSettings(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder builderForValue) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          ensureDocumentWorkflowSettingsIsMutable();
+          documentWorkflowSettings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentWorkflowSettingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Builder addDocumentWorkflowSettings(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 value) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentWorkflowSettingsIsMutable();
+          documentWorkflowSettings_.add(value);
+          onChanged();
+        } else {
+          documentWorkflowSettingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Builder addDocumentWorkflowSettings(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 value) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentWorkflowSettingsIsMutable();
+          documentWorkflowSettings_.add(index, value);
+          onChanged();
+        } else {
+          documentWorkflowSettingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Builder addDocumentWorkflowSettings(
+          Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder builderForValue) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          ensureDocumentWorkflowSettingsIsMutable();
+          documentWorkflowSettings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentWorkflowSettingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Builder addDocumentWorkflowSettings(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder builderForValue) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          ensureDocumentWorkflowSettingsIsMutable();
+          documentWorkflowSettings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentWorkflowSettingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Builder addAllDocumentWorkflowSettings(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3> values) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          ensureDocumentWorkflowSettingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentWorkflowSettings_);
+          onChanged();
+        } else {
+          documentWorkflowSettingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Builder clearDocumentWorkflowSettings() {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          documentWorkflowSettings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          documentWorkflowSettingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Builder removeDocumentWorkflowSettings(int index) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          ensureDocumentWorkflowSettingsIsMutable();
+          documentWorkflowSettings_.remove(index);
+          onChanged();
+        } else {
+          documentWorkflowSettingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder getDocumentWorkflowSettingsBuilder(
+          int index) {
+        return getDocumentWorkflowSettingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder getDocumentWorkflowSettingsOrBuilder(
+          int index) {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          return documentWorkflowSettings_.get(index);  } else {
+          return documentWorkflowSettingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder> 
+           getDocumentWorkflowSettingsOrBuilderList() {
+        if (documentWorkflowSettingsBuilder_ != null) {
+          return documentWorkflowSettingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentWorkflowSettings_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder addDocumentWorkflowSettingsBuilder() {
+        return getDocumentWorkflowSettingsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder addDocumentWorkflowSettingsBuilder(
+          int index) {
+        return getDocumentWorkflowSettingsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3 DocumentWorkflowSettings = 1;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder> 
+           getDocumentWorkflowSettingsBuilderList() {
+        return getDocumentWorkflowSettingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder> 
+          getDocumentWorkflowSettingsFieldBuilder() {
+        if (documentWorkflowSettingsBuilder_ == null) {
+          documentWorkflowSettingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder>(
+                  documentWorkflowSettings_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          documentWorkflowSettings_ = null;
+        }
+        return documentWorkflowSettingsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsListV3)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsListV3)
+    private static final Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3();
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DocumentWorkflowSettingsListV3>
+        PARSER = new com.google.protobuf.AbstractParser<DocumentWorkflowSettingsListV3>() {
+      @java.lang.Override
+      public DocumentWorkflowSettingsListV3 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DocumentWorkflowSettingsListV3> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DocumentWorkflowSettingsListV3> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsListV3 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DocumentWorkflowSettingsV3OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 Id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>required int32 Id = 1;</code>
+     * @return The id.
+     */
+    int getId();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3> 
+        getParticipantsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 getParticipants(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    int getParticipantsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder> 
+        getParticipantsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder getParticipantsOrBuilder(
+        int index);
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehavior OperatorConfirmationReceiptBehavior = 3;</code>
+     * @return Whether the operatorConfirmationReceiptBehavior field is set.
+     */
+    boolean hasOperatorConfirmationReceiptBehavior();
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehavior OperatorConfirmationReceiptBehavior = 3;</code>
+     * @return The operatorConfirmationReceiptBehavior.
+     */
+    Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior getOperatorConfirmationReceiptBehavior();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehavior ReceiptOperatorConfirmationReceiptBehavior = 4;</code>
+     * @return Whether the receiptOperatorConfirmationReceiptBehavior field is set.
+     */
+    boolean hasReceiptOperatorConfirmationReceiptBehavior();
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehavior ReceiptOperatorConfirmationReceiptBehavior = 4;</code>
+     * @return The receiptOperatorConfirmationReceiptBehavior.
+     */
+    Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior getReceiptOperatorConfirmationReceiptBehavior();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehavior ReceiptOperatorConfirmationBehavior = 5;</code>
+     * @return Whether the receiptOperatorConfirmationBehavior field is set.
+     */
+    boolean hasReceiptOperatorConfirmationBehavior();
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehavior ReceiptOperatorConfirmationBehavior = 5;</code>
+     * @return The receiptOperatorConfirmationBehavior.
+     */
+    Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior getReceiptOperatorConfirmationBehavior();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehavior AmendmentRequestResponseBehavior = 6;</code>
+     * @return Whether the amendmentRequestResponseBehavior field is set.
+     */
+    boolean hasAmendmentRequestResponseBehavior();
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehavior AmendmentRequestResponseBehavior = 6;</code>
+     * @return The amendmentRequestResponseBehavior.
+     */
+    Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior getAmendmentRequestResponseBehavior();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehavior ReceiptRoamingConfirmationBehavior = 7;</code>
+     * @return Whether the receiptRoamingConfirmationBehavior field is set.
+     */
+    boolean hasReceiptRoamingConfirmationBehavior();
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehavior ReceiptRoamingConfirmationBehavior = 7;</code>
+     * @return The receiptRoamingConfirmationBehavior.
+     */
+    Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior getReceiptRoamingConfirmationBehavior();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehavior InvitationBehavior = 8;</code>
+     * @return Whether the invitationBehavior field is set.
+     */
+    boolean hasInvitationBehavior();
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehavior InvitationBehavior = 8;</code>
+     * @return The invitationBehavior.
+     */
+    Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior getInvitationBehavior();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3}
+   */
+  public static final class DocumentWorkflowSettingsV3 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3)
+      DocumentWorkflowSettingsV3OrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        DocumentWorkflowSettingsV3.class.getName());
+    }
+    // Use DocumentWorkflowSettingsV3.newBuilder() to construct.
+    private DocumentWorkflowSettingsV3(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private DocumentWorkflowSettingsV3() {
+      participants_ = java.util.Collections.emptyList();
+      operatorConfirmationReceiptBehavior_ = 0;
+      receiptOperatorConfirmationReceiptBehavior_ = 0;
+      receiptOperatorConfirmationBehavior_ = 0;
+      amendmentRequestResponseBehavior_ = 0;
+      receiptRoamingConfirmationBehavior_ = 0;
+      invitationBehavior_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.class, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_ = 0;
+    /**
+     * <code>required int32 Id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required int32 Id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public int getId() {
+      return id_;
+    }
+
+    public static final int PARTICIPANTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3> participants_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3> getParticipantsList() {
+      return participants_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder> 
+        getParticipantsOrBuilderList() {
+      return participants_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    @java.lang.Override
+    public int getParticipantsCount() {
+      return participants_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 getParticipants(int index) {
+      return participants_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder getParticipantsOrBuilder(
+        int index) {
+      return participants_.get(index);
+    }
+
+    public static final int OPERATORCONFIRMATIONRECEIPTBEHAVIOR_FIELD_NUMBER = 3;
+    private int operatorConfirmationReceiptBehavior_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehavior OperatorConfirmationReceiptBehavior = 3;</code>
+     * @return Whether the operatorConfirmationReceiptBehavior field is set.
+     */
+    @java.lang.Override public boolean hasOperatorConfirmationReceiptBehavior() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehavior OperatorConfirmationReceiptBehavior = 3;</code>
+     * @return The operatorConfirmationReceiptBehavior.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior getOperatorConfirmationReceiptBehavior() {
+      Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior result = Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior.forNumber(operatorConfirmationReceiptBehavior_);
+      return result == null ? Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior.Unknown : result;
+    }
+
+    public static final int RECEIPTOPERATORCONFIRMATIONRECEIPTBEHAVIOR_FIELD_NUMBER = 4;
+    private int receiptOperatorConfirmationReceiptBehavior_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehavior ReceiptOperatorConfirmationReceiptBehavior = 4;</code>
+     * @return Whether the receiptOperatorConfirmationReceiptBehavior field is set.
+     */
+    @java.lang.Override public boolean hasReceiptOperatorConfirmationReceiptBehavior() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehavior ReceiptOperatorConfirmationReceiptBehavior = 4;</code>
+     * @return The receiptOperatorConfirmationReceiptBehavior.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior getReceiptOperatorConfirmationReceiptBehavior() {
+      Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior result = Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior.forNumber(receiptOperatorConfirmationReceiptBehavior_);
+      return result == null ? Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior.Unknown : result;
+    }
+
+    public static final int RECEIPTOPERATORCONFIRMATIONBEHAVIOR_FIELD_NUMBER = 5;
+    private int receiptOperatorConfirmationBehavior_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehavior ReceiptOperatorConfirmationBehavior = 5;</code>
+     * @return Whether the receiptOperatorConfirmationBehavior field is set.
+     */
+    @java.lang.Override public boolean hasReceiptOperatorConfirmationBehavior() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehavior ReceiptOperatorConfirmationBehavior = 5;</code>
+     * @return The receiptOperatorConfirmationBehavior.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior getReceiptOperatorConfirmationBehavior() {
+      Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior result = Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior.forNumber(receiptOperatorConfirmationBehavior_);
+      return result == null ? Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior.Unknown : result;
+    }
+
+    public static final int AMENDMENTREQUESTRESPONSEBEHAVIOR_FIELD_NUMBER = 6;
+    private int amendmentRequestResponseBehavior_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehavior AmendmentRequestResponseBehavior = 6;</code>
+     * @return Whether the amendmentRequestResponseBehavior field is set.
+     */
+    @java.lang.Override public boolean hasAmendmentRequestResponseBehavior() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehavior AmendmentRequestResponseBehavior = 6;</code>
+     * @return The amendmentRequestResponseBehavior.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior getAmendmentRequestResponseBehavior() {
+      Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior result = Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior.forNumber(amendmentRequestResponseBehavior_);
+      return result == null ? Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior.Unknown : result;
+    }
+
+    public static final int RECEIPTROAMINGCONFIRMATIONBEHAVIOR_FIELD_NUMBER = 7;
+    private int receiptRoamingConfirmationBehavior_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehavior ReceiptRoamingConfirmationBehavior = 7;</code>
+     * @return Whether the receiptRoamingConfirmationBehavior field is set.
+     */
+    @java.lang.Override public boolean hasReceiptRoamingConfirmationBehavior() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehavior ReceiptRoamingConfirmationBehavior = 7;</code>
+     * @return The receiptRoamingConfirmationBehavior.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior getReceiptRoamingConfirmationBehavior() {
+      Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior result = Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior.forNumber(receiptRoamingConfirmationBehavior_);
+      return result == null ? Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior.Unknown : result;
+    }
+
+    public static final int INVITATIONBEHAVIOR_FIELD_NUMBER = 8;
+    private int invitationBehavior_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehavior InvitationBehavior = 8;</code>
+     * @return Whether the invitationBehavior field is set.
+     */
+    @java.lang.Override public boolean hasInvitationBehavior() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehavior InvitationBehavior = 8;</code>
+     * @return The invitationBehavior.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior getInvitationBehavior() {
+      Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior result = Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior.forNumber(invitationBehavior_);
+      return result == null ? Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior.Unknown : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOperatorConfirmationReceiptBehavior()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasReceiptOperatorConfirmationReceiptBehavior()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasReceiptOperatorConfirmationBehavior()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAmendmentRequestResponseBehavior()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasReceiptRoamingConfirmationBehavior()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasInvitationBehavior()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getParticipantsCount(); i++) {
+        if (!getParticipants(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, id_);
+      }
+      for (int i = 0; i < participants_.size(); i++) {
+        output.writeMessage(2, participants_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(3, operatorConfirmationReceiptBehavior_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeEnum(4, receiptOperatorConfirmationReceiptBehavior_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeEnum(5, receiptOperatorConfirmationBehavior_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeEnum(6, amendmentRequestResponseBehavior_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeEnum(7, receiptRoamingConfirmationBehavior_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeEnum(8, invitationBehavior_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      for (int i = 0; i < participants_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, participants_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, operatorConfirmationReceiptBehavior_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, receiptOperatorConfirmationReceiptBehavior_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, receiptOperatorConfirmationBehavior_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, amendmentRequestResponseBehavior_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, receiptRoamingConfirmationBehavior_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, invitationBehavior_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 other = (Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (getId()
+            != other.getId()) return false;
+      }
+      if (!getParticipantsList()
+          .equals(other.getParticipantsList())) return false;
+      if (hasOperatorConfirmationReceiptBehavior() != other.hasOperatorConfirmationReceiptBehavior()) return false;
+      if (hasOperatorConfirmationReceiptBehavior()) {
+        if (operatorConfirmationReceiptBehavior_ != other.operatorConfirmationReceiptBehavior_) return false;
+      }
+      if (hasReceiptOperatorConfirmationReceiptBehavior() != other.hasReceiptOperatorConfirmationReceiptBehavior()) return false;
+      if (hasReceiptOperatorConfirmationReceiptBehavior()) {
+        if (receiptOperatorConfirmationReceiptBehavior_ != other.receiptOperatorConfirmationReceiptBehavior_) return false;
+      }
+      if (hasReceiptOperatorConfirmationBehavior() != other.hasReceiptOperatorConfirmationBehavior()) return false;
+      if (hasReceiptOperatorConfirmationBehavior()) {
+        if (receiptOperatorConfirmationBehavior_ != other.receiptOperatorConfirmationBehavior_) return false;
+      }
+      if (hasAmendmentRequestResponseBehavior() != other.hasAmendmentRequestResponseBehavior()) return false;
+      if (hasAmendmentRequestResponseBehavior()) {
+        if (amendmentRequestResponseBehavior_ != other.amendmentRequestResponseBehavior_) return false;
+      }
+      if (hasReceiptRoamingConfirmationBehavior() != other.hasReceiptRoamingConfirmationBehavior()) return false;
+      if (hasReceiptRoamingConfirmationBehavior()) {
+        if (receiptRoamingConfirmationBehavior_ != other.receiptRoamingConfirmationBehavior_) return false;
+      }
+      if (hasInvitationBehavior() != other.hasInvitationBehavior()) return false;
+      if (hasInvitationBehavior()) {
+        if (invitationBehavior_ != other.invitationBehavior_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId();
+      }
+      if (getParticipantsCount() > 0) {
+        hash = (37 * hash) + PARTICIPANTS_FIELD_NUMBER;
+        hash = (53 * hash) + getParticipantsList().hashCode();
+      }
+      if (hasOperatorConfirmationReceiptBehavior()) {
+        hash = (37 * hash) + OPERATORCONFIRMATIONRECEIPTBEHAVIOR_FIELD_NUMBER;
+        hash = (53 * hash) + operatorConfirmationReceiptBehavior_;
+      }
+      if (hasReceiptOperatorConfirmationReceiptBehavior()) {
+        hash = (37 * hash) + RECEIPTOPERATORCONFIRMATIONRECEIPTBEHAVIOR_FIELD_NUMBER;
+        hash = (53 * hash) + receiptOperatorConfirmationReceiptBehavior_;
+      }
+      if (hasReceiptOperatorConfirmationBehavior()) {
+        hash = (37 * hash) + RECEIPTOPERATORCONFIRMATIONBEHAVIOR_FIELD_NUMBER;
+        hash = (53 * hash) + receiptOperatorConfirmationBehavior_;
+      }
+      if (hasAmendmentRequestResponseBehavior()) {
+        hash = (37 * hash) + AMENDMENTREQUESTRESPONSEBEHAVIOR_FIELD_NUMBER;
+        hash = (53 * hash) + amendmentRequestResponseBehavior_;
+      }
+      if (hasReceiptRoamingConfirmationBehavior()) {
+        hash = (37 * hash) + RECEIPTROAMINGCONFIRMATIONBEHAVIOR_FIELD_NUMBER;
+        hash = (53 * hash) + receiptRoamingConfirmationBehavior_;
+      }
+      if (hasInvitationBehavior()) {
+        hash = (37 * hash) + INVITATIONBEHAVIOR_FIELD_NUMBER;
+        hash = (53 * hash) + invitationBehavior_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3)
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.class, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0;
+        if (participantsBuilder_ == null) {
+          participants_ = java.util.Collections.emptyList();
+        } else {
+          participants_ = null;
+          participantsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        operatorConfirmationReceiptBehavior_ = 0;
+        receiptOperatorConfirmationReceiptBehavior_ = 0;
+        receiptOperatorConfirmationBehavior_ = 0;
+        amendmentRequestResponseBehavior_ = 0;
+        receiptRoamingConfirmationBehavior_ = 0;
+        invitationBehavior_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 build() {
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 buildPartial() {
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 result = new Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 result) {
+        if (participantsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            participants_ = java.util.Collections.unmodifiableList(participants_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.participants_ = participants_;
+        } else {
+          result.participants_ = participantsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.operatorConfirmationReceiptBehavior_ = operatorConfirmationReceiptBehavior_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.receiptOperatorConfirmationReceiptBehavior_ = receiptOperatorConfirmationReceiptBehavior_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.receiptOperatorConfirmationBehavior_ = receiptOperatorConfirmationBehavior_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.amendmentRequestResponseBehavior_ = amendmentRequestResponseBehavior_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.receiptRoamingConfirmationBehavior_ = receiptRoamingConfirmationBehavior_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.invitationBehavior_ = invitationBehavior_;
+          to_bitField0_ |= 0x00000040;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3) {
+          return mergeFrom((Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 other) {
+        if (other == Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (participantsBuilder_ == null) {
+          if (!other.participants_.isEmpty()) {
+            if (participants_.isEmpty()) {
+              participants_ = other.participants_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureParticipantsIsMutable();
+              participants_.addAll(other.participants_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.participants_.isEmpty()) {
+            if (participantsBuilder_.isEmpty()) {
+              participantsBuilder_.dispose();
+              participantsBuilder_ = null;
+              participants_ = other.participants_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              participantsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getParticipantsFieldBuilder() : null;
+            } else {
+              participantsBuilder_.addAllMessages(other.participants_);
+            }
+          }
+        }
+        if (other.hasOperatorConfirmationReceiptBehavior()) {
+          setOperatorConfirmationReceiptBehavior(other.getOperatorConfirmationReceiptBehavior());
+        }
+        if (other.hasReceiptOperatorConfirmationReceiptBehavior()) {
+          setReceiptOperatorConfirmationReceiptBehavior(other.getReceiptOperatorConfirmationReceiptBehavior());
+        }
+        if (other.hasReceiptOperatorConfirmationBehavior()) {
+          setReceiptOperatorConfirmationBehavior(other.getReceiptOperatorConfirmationBehavior());
+        }
+        if (other.hasAmendmentRequestResponseBehavior()) {
+          setAmendmentRequestResponseBehavior(other.getAmendmentRequestResponseBehavior());
+        }
+        if (other.hasReceiptRoamingConfirmationBehavior()) {
+          setReceiptRoamingConfirmationBehavior(other.getReceiptRoamingConfirmationBehavior());
+        }
+        if (other.hasInvitationBehavior()) {
+          setInvitationBehavior(other.getInvitationBehavior());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasId()) {
+          return false;
+        }
+        if (!hasOperatorConfirmationReceiptBehavior()) {
+          return false;
+        }
+        if (!hasReceiptOperatorConfirmationReceiptBehavior()) {
+          return false;
+        }
+        if (!hasReceiptOperatorConfirmationBehavior()) {
+          return false;
+        }
+        if (!hasAmendmentRequestResponseBehavior()) {
+          return false;
+        }
+        if (!hasReceiptRoamingConfirmationBehavior()) {
+          return false;
+        }
+        if (!hasInvitationBehavior()) {
+          return false;
+        }
+        for (int i = 0; i < getParticipantsCount(); i++) {
+          if (!getParticipants(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 m =
+                    input.readMessage(
+                        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.parser(),
+                        extensionRegistry);
+                if (participantsBuilder_ == null) {
+                  ensureParticipantsIsMutable();
+                  participants_.add(m);
+                } else {
+                  participantsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior tmpValue =
+                    Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(3, tmpRaw);
+                } else {
+                  operatorConfirmationReceiptBehavior_ = tmpRaw;
+                  bitField0_ |= 0x00000004;
+                }
+                break;
+              } // case 24
+              case 32: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior tmpValue =
+                    Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(4, tmpRaw);
+                } else {
+                  receiptOperatorConfirmationReceiptBehavior_ = tmpRaw;
+                  bitField0_ |= 0x00000008;
+                }
+                break;
+              } // case 32
+              case 40: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior tmpValue =
+                    Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(5, tmpRaw);
+                } else {
+                  receiptOperatorConfirmationBehavior_ = tmpRaw;
+                  bitField0_ |= 0x00000010;
+                }
+                break;
+              } // case 40
+              case 48: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior tmpValue =
+                    Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(6, tmpRaw);
+                } else {
+                  amendmentRequestResponseBehavior_ = tmpRaw;
+                  bitField0_ |= 0x00000020;
+                }
+                break;
+              } // case 48
+              case 56: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior tmpValue =
+                    Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(7, tmpRaw);
+                } else {
+                  receiptRoamingConfirmationBehavior_ = tmpRaw;
+                  bitField0_ |= 0x00000040;
+                }
+                break;
+              } // case 56
+              case 64: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior tmpValue =
+                    Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(8, tmpRaw);
+                } else {
+                  invitationBehavior_ = tmpRaw;
+                  bitField0_ |= 0x00000080;
+                }
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <code>required int32 Id = 1;</code>
+       * @return Whether the id field is set.
+       */
+      @java.lang.Override
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required int32 Id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>required int32 Id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(int value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 Id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3> participants_ =
+        java.util.Collections.emptyList();
+      private void ensureParticipantsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          participants_ = new java.util.ArrayList<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3>(participants_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder> participantsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3> getParticipantsList() {
+        if (participantsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(participants_);
+        } else {
+          return participantsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public int getParticipantsCount() {
+        if (participantsBuilder_ == null) {
+          return participants_.size();
+        } else {
+          return participantsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 getParticipants(int index) {
+        if (participantsBuilder_ == null) {
+          return participants_.get(index);
+        } else {
+          return participantsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Builder setParticipants(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 value) {
+        if (participantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureParticipantsIsMutable();
+          participants_.set(index, value);
+          onChanged();
+        } else {
+          participantsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Builder setParticipants(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder builderForValue) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          participants_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          participantsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Builder addParticipants(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 value) {
+        if (participantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureParticipantsIsMutable();
+          participants_.add(value);
+          onChanged();
+        } else {
+          participantsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Builder addParticipants(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 value) {
+        if (participantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureParticipantsIsMutable();
+          participants_.add(index, value);
+          onChanged();
+        } else {
+          participantsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Builder addParticipants(
+          Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder builderForValue) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          participants_.add(builderForValue.build());
+          onChanged();
+        } else {
+          participantsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Builder addParticipants(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder builderForValue) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          participants_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          participantsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Builder addAllParticipants(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3> values) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, participants_);
+          onChanged();
+        } else {
+          participantsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Builder clearParticipants() {
+        if (participantsBuilder_ == null) {
+          participants_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          participantsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Builder removeParticipants(int index) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          participants_.remove(index);
+          onChanged();
+        } else {
+          participantsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder getParticipantsBuilder(
+          int index) {
+        return getParticipantsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder getParticipantsOrBuilder(
+          int index) {
+        if (participantsBuilder_ == null) {
+          return participants_.get(index);  } else {
+          return participantsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder> 
+           getParticipantsOrBuilderList() {
+        if (participantsBuilder_ != null) {
+          return participantsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(participants_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder addParticipantsBuilder() {
+        return getParticipantsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder addParticipantsBuilder(
+          int index) {
+        return getParticipantsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantSettingV3 Participants = 2;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder> 
+           getParticipantsBuilderList() {
+        return getParticipantsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder> 
+          getParticipantsFieldBuilder() {
+        if (participantsBuilder_ == null) {
+          participantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder>(
+                  participants_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          participants_ = null;
+        }
+        return participantsBuilder_;
+      }
+
+      private int operatorConfirmationReceiptBehavior_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehavior OperatorConfirmationReceiptBehavior = 3;</code>
+       * @return Whether the operatorConfirmationReceiptBehavior field is set.
+       */
+      @java.lang.Override public boolean hasOperatorConfirmationReceiptBehavior() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehavior OperatorConfirmationReceiptBehavior = 3;</code>
+       * @return The operatorConfirmationReceiptBehavior.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior getOperatorConfirmationReceiptBehavior() {
+        Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior result = Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior.forNumber(operatorConfirmationReceiptBehavior_);
+        return result == null ? Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior.Unknown : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehavior OperatorConfirmationReceiptBehavior = 3;</code>
+       * @param value The operatorConfirmationReceiptBehavior to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorConfirmationReceiptBehavior(Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehaviorProtos.OperatorConfirmationReceiptBehavior value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        operatorConfirmationReceiptBehavior_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationReceiptBehavior.OperatorConfirmationReceiptBehavior OperatorConfirmationReceiptBehavior = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatorConfirmationReceiptBehavior() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        operatorConfirmationReceiptBehavior_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int receiptOperatorConfirmationReceiptBehavior_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehavior ReceiptOperatorConfirmationReceiptBehavior = 4;</code>
+       * @return Whether the receiptOperatorConfirmationReceiptBehavior field is set.
+       */
+      @java.lang.Override public boolean hasReceiptOperatorConfirmationReceiptBehavior() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehavior ReceiptOperatorConfirmationReceiptBehavior = 4;</code>
+       * @return The receiptOperatorConfirmationReceiptBehavior.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior getReceiptOperatorConfirmationReceiptBehavior() {
+        Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior result = Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior.forNumber(receiptOperatorConfirmationReceiptBehavior_);
+        return result == null ? Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior.Unknown : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehavior ReceiptOperatorConfirmationReceiptBehavior = 4;</code>
+       * @param value The receiptOperatorConfirmationReceiptBehavior to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiptOperatorConfirmationReceiptBehavior(Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehaviorProtos.ReceiptOperatorConfirmationReceiptBehavior value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        receiptOperatorConfirmationReceiptBehavior_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ReceiptOperatorConfirmationReceiptBehavior.ReceiptOperatorConfirmationReceiptBehavior ReceiptOperatorConfirmationReceiptBehavior = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiptOperatorConfirmationReceiptBehavior() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        receiptOperatorConfirmationReceiptBehavior_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int receiptOperatorConfirmationBehavior_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehavior ReceiptOperatorConfirmationBehavior = 5;</code>
+       * @return Whether the receiptOperatorConfirmationBehavior field is set.
+       */
+      @java.lang.Override public boolean hasReceiptOperatorConfirmationBehavior() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehavior ReceiptOperatorConfirmationBehavior = 5;</code>
+       * @return The receiptOperatorConfirmationBehavior.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior getReceiptOperatorConfirmationBehavior() {
+        Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior result = Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior.forNumber(receiptOperatorConfirmationBehavior_);
+        return result == null ? Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior.Unknown : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehavior ReceiptOperatorConfirmationBehavior = 5;</code>
+       * @param value The receiptOperatorConfirmationBehavior to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiptOperatorConfirmationBehavior(Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehaviorProtos.OperatorConfirmationBehavior value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        receiptOperatorConfirmationBehavior_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.OperatorConfirmationBehavior.OperatorConfirmationBehavior ReceiptOperatorConfirmationBehavior = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiptOperatorConfirmationBehavior() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        receiptOperatorConfirmationBehavior_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int amendmentRequestResponseBehavior_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehavior AmendmentRequestResponseBehavior = 6;</code>
+       * @return Whether the amendmentRequestResponseBehavior field is set.
+       */
+      @java.lang.Override public boolean hasAmendmentRequestResponseBehavior() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehavior AmendmentRequestResponseBehavior = 6;</code>
+       * @return The amendmentRequestResponseBehavior.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior getAmendmentRequestResponseBehavior() {
+        Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior result = Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior.forNumber(amendmentRequestResponseBehavior_);
+        return result == null ? Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior.Unknown : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehavior AmendmentRequestResponseBehavior = 6;</code>
+       * @param value The amendmentRequestResponseBehavior to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmendmentRequestResponseBehavior(Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehaviorProtos.AmendmentRequestResponseBehavior value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000020;
+        amendmentRequestResponseBehavior_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.AmendmentRequestResponseBehavior.AmendmentRequestResponseBehavior AmendmentRequestResponseBehavior = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmendmentRequestResponseBehavior() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        amendmentRequestResponseBehavior_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int receiptRoamingConfirmationBehavior_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehavior ReceiptRoamingConfirmationBehavior = 7;</code>
+       * @return Whether the receiptRoamingConfirmationBehavior field is set.
+       */
+      @java.lang.Override public boolean hasReceiptRoamingConfirmationBehavior() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehavior ReceiptRoamingConfirmationBehavior = 7;</code>
+       * @return The receiptRoamingConfirmationBehavior.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior getReceiptRoamingConfirmationBehavior() {
+        Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior result = Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior.forNumber(receiptRoamingConfirmationBehavior_);
+        return result == null ? Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior.Unknown : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehavior ReceiptRoamingConfirmationBehavior = 7;</code>
+       * @param value The receiptRoamingConfirmationBehavior to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiptRoamingConfirmationBehavior(Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.RoamingConfirmationBehavior value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000040;
+        receiptRoamingConfirmationBehavior_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehavior ReceiptRoamingConfirmationBehavior = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiptRoamingConfirmationBehavior() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        receiptRoamingConfirmationBehavior_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int invitationBehavior_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehavior InvitationBehavior = 8;</code>
+       * @return Whether the invitationBehavior field is set.
+       */
+      @java.lang.Override public boolean hasInvitationBehavior() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehavior InvitationBehavior = 8;</code>
+       * @return The invitationBehavior.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior getInvitationBehavior() {
+        Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior result = Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior.forNumber(invitationBehavior_);
+        return result == null ? Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior.Unknown : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehavior InvitationBehavior = 8;</code>
+       * @param value The invitationBehavior to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvitationBehavior(Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.InvitationBehavior value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000080;
+        invitationBehavior_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehavior InvitationBehavior = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvitationBehavior() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        invitationBehavior_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsV3)
+    private static final Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3();
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DocumentWorkflowSettingsV3>
+        PARSER = new com.google.protobuf.AbstractParser<DocumentWorkflowSettingsV3>() {
+      @java.lang.Override
+      public DocumentWorkflowSettingsV3 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DocumentWorkflowSettingsV3> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DocumentWorkflowSettingsV3> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.DocumentWorkflowSettingsV3 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParticipantSettingV3OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Workflows.ParticipantSettingV3)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantType Participant = 1;</code>
+     * @return Whether the participant field is set.
+     */
+    boolean hasParticipant();
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantType Participant = 1;</code>
+     * @return The participant.
+     */
+    Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType getParticipant();
+
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3> 
+        getActionsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 getActions(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    int getActionsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder> 
+        getActionsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder getActionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Workflows.ParticipantSettingV3}
+   */
+  public static final class ParticipantSettingV3 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Workflows.ParticipantSettingV3)
+      ParticipantSettingV3OrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        ParticipantSettingV3.class.getName());
+    }
+    // Use ParticipantSettingV3.newBuilder() to construct.
+    private ParticipantSettingV3(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ParticipantSettingV3() {
+      participant_ = 0;
+      actions_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.class, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PARTICIPANT_FIELD_NUMBER = 1;
+    private int participant_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantType Participant = 1;</code>
+     * @return Whether the participant field is set.
+     */
+    @java.lang.Override public boolean hasParticipant() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantType Participant = 1;</code>
+     * @return The participant.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType getParticipant() {
+      Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType result = Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType.forNumber(participant_);
+      return result == null ? Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType.Unknown : result;
+    }
+
+    public static final int ACTIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3> actions_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3> getActionsList() {
+      return actions_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder> 
+        getActionsOrBuilderList() {
+      return actions_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    @java.lang.Override
+    public int getActionsCount() {
+      return actions_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 getActions(int index) {
+      return actions_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder getActionsOrBuilder(
+        int index) {
+      return actions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasParticipant()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getActionsCount(); i++) {
+        if (!getActions(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, participant_);
+      }
+      for (int i = 0; i < actions_.size(); i++) {
+        output.writeMessage(2, actions_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, participant_);
+      }
+      for (int i = 0; i < actions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, actions_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 other = (Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3) obj;
+
+      if (hasParticipant() != other.hasParticipant()) return false;
+      if (hasParticipant()) {
+        if (participant_ != other.participant_) return false;
+      }
+      if (!getActionsList()
+          .equals(other.getActionsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParticipant()) {
+        hash = (37 * hash) + PARTICIPANT_FIELD_NUMBER;
+        hash = (53 * hash) + participant_;
+      }
+      if (getActionsCount() > 0) {
+        hash = (37 * hash) + ACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getActionsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Workflows.ParticipantSettingV3}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Workflows.ParticipantSettingV3)
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.class, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        participant_ = 0;
+        if (actionsBuilder_ == null) {
+          actions_ = java.util.Collections.emptyList();
+        } else {
+          actions_ = null;
+          actionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 build() {
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 buildPartial() {
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 result = new Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 result) {
+        if (actionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            actions_ = java.util.Collections.unmodifiableList(actions_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.actions_ = actions_;
+        } else {
+          result.actions_ = actionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.participant_ = participant_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3) {
+          return mergeFrom((Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 other) {
+        if (other == Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3.getDefaultInstance()) return this;
+        if (other.hasParticipant()) {
+          setParticipant(other.getParticipant());
+        }
+        if (actionsBuilder_ == null) {
+          if (!other.actions_.isEmpty()) {
+            if (actions_.isEmpty()) {
+              actions_ = other.actions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureActionsIsMutable();
+              actions_.addAll(other.actions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.actions_.isEmpty()) {
+            if (actionsBuilder_.isEmpty()) {
+              actionsBuilder_.dispose();
+              actionsBuilder_ = null;
+              actions_ = other.actions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              actionsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getActionsFieldBuilder() : null;
+            } else {
+              actionsBuilder_.addAllMessages(other.actions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasParticipant()) {
+          return false;
+        }
+        for (int i = 0; i < getActionsCount(); i++) {
+          if (!getActions(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType tmpValue =
+                    Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  participant_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 18: {
+                Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 m =
+                    input.readMessage(
+                        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.parser(),
+                        extensionRegistry);
+                if (actionsBuilder_ == null) {
+                  ensureActionsIsMutable();
+                  actions_.add(m);
+                } else {
+                  actionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int participant_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantType Participant = 1;</code>
+       * @return Whether the participant field is set.
+       */
+      @java.lang.Override public boolean hasParticipant() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantType Participant = 1;</code>
+       * @return The participant.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType getParticipant() {
+        Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType result = Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType.forNumber(participant_);
+        return result == null ? Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType.Unknown : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantType Participant = 1;</code>
+       * @param value The participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipant(Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantTypeProtos.ParticipantType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        participant_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ParticipantType.ParticipantType Participant = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        participant_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3> actions_ =
+        java.util.Collections.emptyList();
+      private void ensureActionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          actions_ = new java.util.ArrayList<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3>(actions_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder> actionsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3> getActionsList() {
+        if (actionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(actions_);
+        } else {
+          return actionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public int getActionsCount() {
+        if (actionsBuilder_ == null) {
+          return actions_.size();
+        } else {
+          return actionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 getActions(int index) {
+        if (actionsBuilder_ == null) {
+          return actions_.get(index);
+        } else {
+          return actionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Builder setActions(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 value) {
+        if (actionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActionsIsMutable();
+          actions_.set(index, value);
+          onChanged();
+        } else {
+          actionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Builder setActions(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder builderForValue) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          actions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          actionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Builder addActions(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 value) {
+        if (actionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActionsIsMutable();
+          actions_.add(value);
+          onChanged();
+        } else {
+          actionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Builder addActions(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 value) {
+        if (actionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActionsIsMutable();
+          actions_.add(index, value);
+          onChanged();
+        } else {
+          actionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Builder addActions(
+          Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder builderForValue) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          actions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          actionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Builder addActions(
+          int index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder builderForValue) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          actions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          actionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Builder addAllActions(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3> values) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, actions_);
+          onChanged();
+        } else {
+          actionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Builder clearActions() {
+        if (actionsBuilder_ == null) {
+          actions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          actionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Builder removeActions(int index) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          actions_.remove(index);
+          onChanged();
+        } else {
+          actionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder getActionsBuilder(
+          int index) {
+        return getActionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder getActionsOrBuilder(
+          int index) {
+        if (actionsBuilder_ == null) {
+          return actions_.get(index);  } else {
+          return actionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder> 
+           getActionsOrBuilderList() {
+        if (actionsBuilder_ != null) {
+          return actionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(actions_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder addActionsBuilder() {
+        return getActionsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder addActionsBuilder(
+          int index) {
+        return getActionsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3 Actions = 2;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder> 
+           getActionsBuilderList() {
+        return getActionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder> 
+          getActionsFieldBuilder() {
+        if (actionsBuilder_ == null) {
+          actionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder>(
+                  actions_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          actions_ = null;
+        }
+        return actionsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Workflows.ParticipantSettingV3)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Workflows.ParticipantSettingV3)
+    private static final Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3();
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ParticipantSettingV3>
+        PARSER = new com.google.protobuf.AbstractParser<ParticipantSettingV3>() {
+      @java.lang.Override
+      public ParticipantSettingV3 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ParticipantSettingV3> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ParticipantSettingV3> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantSettingV3 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParticipantActionSettingV3OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 TitleIndex = 1;</code>
+     * @return Whether the titleIndex field is set.
+     */
+    boolean hasTitleIndex();
+    /**
+     * <code>required int32 TitleIndex = 1;</code>
+     * @return The titleIndex.
+     */
+    int getTitleIndex();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantAction ParticipantAction = 2;</code>
+     * @return Whether the participantAction field is set.
+     */
+    boolean hasParticipantAction();
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantAction ParticipantAction = 2;</code>
+     * @return The participantAction.
+     */
+    Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction getParticipantAction();
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehavior TitleReceiptBehavior = 3;</code>
+     * @return Whether the titleReceiptBehavior field is set.
+     */
+    boolean hasTitleReceiptBehavior();
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehavior TitleReceiptBehavior = 3;</code>
+     * @return The titleReceiptBehavior.
+     */
+    Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior getTitleReceiptBehavior();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3}
+   */
+  public static final class ParticipantActionSettingV3 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3)
+      ParticipantActionSettingV3OrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        ParticipantActionSettingV3.class.getName());
+    }
+    // Use ParticipantActionSettingV3.newBuilder() to construct.
+    private ParticipantActionSettingV3(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ParticipantActionSettingV3() {
+      participantAction_ = 0;
+      titleReceiptBehavior_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.class, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TITLEINDEX_FIELD_NUMBER = 1;
+    private int titleIndex_ = 0;
+    /**
+     * <code>required int32 TitleIndex = 1;</code>
+     * @return Whether the titleIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasTitleIndex() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required int32 TitleIndex = 1;</code>
+     * @return The titleIndex.
+     */
+    @java.lang.Override
+    public int getTitleIndex() {
+      return titleIndex_;
+    }
+
+    public static final int PARTICIPANTACTION_FIELD_NUMBER = 2;
+    private int participantAction_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantAction ParticipantAction = 2;</code>
+     * @return Whether the participantAction field is set.
+     */
+    @java.lang.Override public boolean hasParticipantAction() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantAction ParticipantAction = 2;</code>
+     * @return The participantAction.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction getParticipantAction() {
+      Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction result = Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction.forNumber(participantAction_);
+      return result == null ? Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction.Unknown : result;
+    }
+
+    public static final int TITLERECEIPTBEHAVIOR_FIELD_NUMBER = 3;
+    private int titleReceiptBehavior_ = 0;
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehavior TitleReceiptBehavior = 3;</code>
+     * @return Whether the titleReceiptBehavior field is set.
+     */
+    @java.lang.Override public boolean hasTitleReceiptBehavior() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehavior TitleReceiptBehavior = 3;</code>
+     * @return The titleReceiptBehavior.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior getTitleReceiptBehavior() {
+      Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior result = Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior.forNumber(titleReceiptBehavior_);
+      return result == null ? Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior.Unknown : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasTitleIndex()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasParticipantAction()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTitleReceiptBehavior()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, titleIndex_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, participantAction_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeEnum(3, titleReceiptBehavior_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, titleIndex_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, participantAction_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, titleReceiptBehavior_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 other = (Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3) obj;
+
+      if (hasTitleIndex() != other.hasTitleIndex()) return false;
+      if (hasTitleIndex()) {
+        if (getTitleIndex()
+            != other.getTitleIndex()) return false;
+      }
+      if (hasParticipantAction() != other.hasParticipantAction()) return false;
+      if (hasParticipantAction()) {
+        if (participantAction_ != other.participantAction_) return false;
+      }
+      if (hasTitleReceiptBehavior() != other.hasTitleReceiptBehavior()) return false;
+      if (hasTitleReceiptBehavior()) {
+        if (titleReceiptBehavior_ != other.titleReceiptBehavior_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTitleIndex()) {
+        hash = (37 * hash) + TITLEINDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getTitleIndex();
+      }
+      if (hasParticipantAction()) {
+        hash = (37 * hash) + PARTICIPANTACTION_FIELD_NUMBER;
+        hash = (53 * hash) + participantAction_;
+      }
+      if (hasTitleReceiptBehavior()) {
+        hash = (37 * hash) + TITLERECEIPTBEHAVIOR_FIELD_NUMBER;
+        hash = (53 * hash) + titleReceiptBehavior_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3)
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.class, Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        titleIndex_ = 0;
+        participantAction_ = 0;
+        titleReceiptBehavior_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 build() {
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 buildPartial() {
+        Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 result = new Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.titleIndex_ = titleIndex_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.participantAction_ = participantAction_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.titleReceiptBehavior_ = titleReceiptBehavior_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3) {
+          return mergeFrom((Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 other) {
+        if (other == Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3.getDefaultInstance()) return this;
+        if (other.hasTitleIndex()) {
+          setTitleIndex(other.getTitleIndex());
+        }
+        if (other.hasParticipantAction()) {
+          setParticipantAction(other.getParticipantAction());
+        }
+        if (other.hasTitleReceiptBehavior()) {
+          setTitleReceiptBehavior(other.getTitleReceiptBehavior());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasTitleIndex()) {
+          return false;
+        }
+        if (!hasParticipantAction()) {
+          return false;
+        }
+        if (!hasTitleReceiptBehavior()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                titleIndex_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction tmpValue =
+                    Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  participantAction_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              case 24: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior tmpValue =
+                    Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(3, tmpRaw);
+                } else {
+                  titleReceiptBehavior_ = tmpRaw;
+                  bitField0_ |= 0x00000004;
+                }
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int titleIndex_ ;
+      /**
+       * <code>required int32 TitleIndex = 1;</code>
+       * @return Whether the titleIndex field is set.
+       */
+      @java.lang.Override
+      public boolean hasTitleIndex() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required int32 TitleIndex = 1;</code>
+       * @return The titleIndex.
+       */
+      @java.lang.Override
+      public int getTitleIndex() {
+        return titleIndex_;
+      }
+      /**
+       * <code>required int32 TitleIndex = 1;</code>
+       * @param value The titleIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleIndex(int value) {
+
+        titleIndex_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 TitleIndex = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitleIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        titleIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int participantAction_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantAction ParticipantAction = 2;</code>
+       * @return Whether the participantAction field is set.
+       */
+      @java.lang.Override public boolean hasParticipantAction() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantAction ParticipantAction = 2;</code>
+       * @return The participantAction.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction getParticipantAction() {
+        Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction result = Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction.forNumber(participantAction_);
+        return result == null ? Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction.Unknown : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantAction ParticipantAction = 2;</code>
+       * @param value The participantAction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipantAction(Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantActionProtos.ParticipantAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        participantAction_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.ParticipantAction.ParticipantAction ParticipantAction = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipantAction() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        participantAction_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int titleReceiptBehavior_ = 0;
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehavior TitleReceiptBehavior = 3;</code>
+       * @return Whether the titleReceiptBehavior field is set.
+       */
+      @java.lang.Override public boolean hasTitleReceiptBehavior() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehavior TitleReceiptBehavior = 3;</code>
+       * @return The titleReceiptBehavior.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior getTitleReceiptBehavior() {
+        Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior result = Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior.forNumber(titleReceiptBehavior_);
+        return result == null ? Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior.Unknown : result;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehavior TitleReceiptBehavior = 3;</code>
+       * @param value The titleReceiptBehavior to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleReceiptBehavior(Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehaviorProtos.TitleReceiptBehavior value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        titleReceiptBehavior_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Workflows.TitleReceiptBehavior.TitleReceiptBehavior TitleReceiptBehavior = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitleReceiptBehavior() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        titleReceiptBehavior_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Workflows.ParticipantActionSettingV3)
+    private static final Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3();
+    }
+
+    public static Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ParticipantActionSettingV3>
+        PARSER = new com.google.protobuf.AbstractParser<ParticipantActionSettingV3>() {
+      @java.lang.Override
+      public ParticipantActionSettingV3 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ParticipantActionSettingV3> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ParticipantActionSettingV3> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsProtos.ParticipantActionSettingV3 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DocumentWorkflowSettingsListV2OrBuilder extends
       // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Workflows.DocumentWorkflowSettingsListV2)
       com.google.protobuf.MessageOrBuilder {
@@ -6310,6 +10172,26 @@ public final class DocumentWorkflowSettingsProtos {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV2_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -6360,92 +10242,129 @@ public final class DocumentWorkflowSettingsProtos {
       "estResponseBehavior.proto\032\"Workflows/Inv" +
       "itationBehavior.proto\032+Workflows/Roaming" +
       "ConfirmationBehavior.proto\"z\n\036DocumentWo" +
-      "rkflowSettingsListV2\022X\n\030DocumentWorkflow" +
+      "rkflowSettingsListV3\022X\n\030DocumentWorkflow" +
       "Settings\030\001 \003(\01326.Diadoc.Api.Proto.Workfl" +
-      "ows.DocumentWorkflowSettingsV2\"\321\007\n\032Docum" +
-      "entWorkflowSettingsV2\022\n\n\002Id\030\001 \002(\005\022F\n\014Par" +
+      "ows.DocumentWorkflowSettingsV3\"\232\007\n\032Docum" +
+      "entWorkflowSettingsV3\022\n\n\002Id\030\001 \002(\005\022F\n\014Par" +
       "ticipants\030\002 \003(\01320.Diadoc.Api.Proto.Workf" +
-      "lows.ParticipantSettingV2\022\231\001\n#OperatorCo" +
-      "nfirmationReceiptBehavior\030\003 \001(\0162c.Diadoc" +
+      "lows.ParticipantSettingV3\022\220\001\n#OperatorCo" +
+      "nfirmationReceiptBehavior\030\003 \002(\0162c.Diadoc" +
       ".Api.Proto.Workflows.OperatorConfirmatio" +
       "nReceiptBehavior.OperatorConfirmationRec" +
-      "eiptBehavior:\007Unknown\022\256\001\n*ReceiptOperato" +
-      "rConfirmationReceiptBehavior\030\004 \001(\0162q.Dia" +
-      "doc.Api.Proto.Workflows.ReceiptOperatorC" +
-      "onfirmationReceiptBehavior.ReceiptOperat" +
-      "orConfirmationReceiptBehavior:\007Unknown\022\213" +
-      "\001\n#ReceiptOperatorConfirmationBehavior\030\005" +
-      " \001(\0162U.Diadoc.Api.Proto.Workflows.Operat" +
-      "orConfirmationBehavior.OperatorConfirmat" +
-      "ionBehavior:\007Unknown\022\220\001\n AmendmentReques" +
-      "tResponseBehavior\030\006 \001(\0162].Diadoc.Api.Pro" +
-      "to.Workflows.AmendmentRequestResponseBeh" +
-      "avior.AmendmentRequestResponseBehavior:\007" +
-      "Unknown\022\210\001\n\"ReceiptRoamingConfirmationBe" +
-      "havior\030\007 \001(\0162S.Diadoc.Api.Proto.Workflow" +
-      "s.RoamingConfirmationBehavior.RoamingCon" +
-      "firmationBehavior:\007Unknown\022f\n\022Invitation" +
-      "Behavior\030\010 \001(\0162A.Diadoc.Api.Proto.Workfl" +
-      "ows.InvitationBehavior.InvitationBehavio" +
-      "r:\007Unknown\"\304\002\n\024ParticipantSettingV2\022Y\n\013P" +
-      "articipant\030\001 \001(\0162;.Diadoc.Api.Proto.Work" +
-      "flows.ParticipantType.ParticipantType:\007U" +
-      "nknown\022c\n\021ParticipantAction\030\002 \001(\0162?.Diad" +
-      "oc.Api.Proto.Workflows.ParticipantAction" +
-      ".ParticipantAction:\007Unknown\022l\n\024TitleRece" +
-      "iptBehavior\030\003 \001(\0162E.Diadoc.Api.Proto.Wor" +
-      "kflows.TitleReceiptBehavior.TitleReceipt" +
-      "Behavior:\007Unknown\"v\n\034DocumentWorkflowSet" +
-      "tingsList\022V\n\030DocumentWorkflowSettings\030\001 " +
-      "\003(\01324.Diadoc.Api.Proto.Workflows.Documen" +
-      "tWorkflowSettings\"\370\t\n\030DocumentWorkflowSe" +
-      "ttings\022\n\n\002Id\030\001 \002(\005\022D\n\014Participants\030\002 \003(\013" +
-      "2..Diadoc.Api.Proto.Workflows.Participan" +
-      "tSetting\022\231\001\n#OperatorConfirmationReceipt" +
-      "Behavior\030\003 \001(\0162c.Diadoc.Api.Proto.Workfl" +
-      "ows.OperatorConfirmationReceiptBehavior." +
-      "OperatorConfirmationReceiptBehavior:\007Unk" +
-      "nown\022\256\001\n*ReceiptOperatorConfirmationRece" +
-      "iptBehavior\030\004 \001(\0162q.Diadoc.Api.Proto.Wor" +
-      "kflows.ReceiptOperatorConfirmationReceip" +
-      "tBehavior.ReceiptOperatorConfirmationRec" +
-      "eiptBehavior:\007Unknown\022\213\001\n#ReceiptOperato" +
-      "rConfirmationBehavior\030\005 \001(\0162U.Diadoc.Api" +
-      ".Proto.Workflows.OperatorConfirmationBeh" +
-      "avior.OperatorConfirmationBehavior:\007Unkn" +
-      "own\022\220\001\n AmendmentRequestResponseBehavior" +
-      "\030\006 \001(\0162].Diadoc.Api.Proto.Workflows.Amen" +
-      "dmentRequestResponseBehavior.AmendmentRe" +
-      "questResponseBehavior:\007Unknown\022\224\001\n,Amend" +
-      "mentRequestOperatorConfirmationBehavior\030" +
-      "\007 \001(\0162U.Diadoc.Api.Proto.Workflows.Opera" +
-      "torConfirmationBehavior.OperatorConfirma" +
-      "tionBehavior:\007Unknown\022\210\001\n\"ReceiptRoaming" +
-      "ConfirmationBehavior\030\010 \001(\0162S.Diadoc.Api." +
-      "Proto.Workflows.RoamingConfirmationBehav" +
-      "ior.RoamingConfirmationBehavior:\007Unknown" +
-      "\022\221\001\n+AmendmentRequestRoamingConfirmation" +
-      "Behavior\030\t \001(\0162S.Diadoc.Api.Proto.Workfl" +
-      "ows.RoamingConfirmationBehavior.RoamingC" +
-      "onfirmationBehavior:\007Unknown\022f\n\022Invitati" +
-      "onBehavior\030\n \001(\0162A.Diadoc.Api.Proto.Work" +
-      "flows.InvitationBehavior.InvitationBehav" +
-      "ior:\007Unknown\"\315\004\n\022ParticipantSetting\022Y\n\013P" +
-      "articipant\030\001 \001(\0162;.Diadoc.Api.Proto.Work" +
-      "flows.ParticipantType.ParticipantType:\007U" +
-      "nknown\022c\n\021ParticipantAction\030\002 \001(\0162?.Diad" +
-      "oc.Api.Proto.Workflows.ParticipantAction" +
-      ".ParticipantAction:\007Unknown\022l\n\024TitleRece" +
-      "iptBehavior\030\003 \001(\0162E.Diadoc.Api.Proto.Wor" +
-      "kflows.TitleReceiptBehavior.TitleReceipt" +
-      "Behavior:\007Unknown\022\204\001\n\034OperatorConfirmati" +
-      "onBehavior\030\004 \001(\0162U.Diadoc.Api.Proto.Work" +
-      "flows.OperatorConfirmationBehavior.Opera" +
-      "torConfirmationBehavior:\007Unknown\022\201\001\n\033Roa" +
-      "mingConfirmationBehavior\030\005 \001(\0162S.Diadoc." +
-      "Api.Proto.Workflows.RoamingConfirmationB" +
-      "ehavior.RoamingConfirmationBehavior:\007Unk" +
-      "nownB B\036DocumentWorkflowSettingsProtos"
+      "eiptBehavior\022\245\001\n*ReceiptOperatorConfirma" +
+      "tionReceiptBehavior\030\004 \002(\0162q.Diadoc.Api.P" +
+      "roto.Workflows.ReceiptOperatorConfirmati" +
+      "onReceiptBehavior.ReceiptOperatorConfirm" +
+      "ationReceiptBehavior\022\202\001\n#ReceiptOperator" +
+      "ConfirmationBehavior\030\005 \002(\0162U.Diadoc.Api." +
+      "Proto.Workflows.OperatorConfirmationBeha" +
+      "vior.OperatorConfirmationBehavior\022\207\001\n Am" +
+      "endmentRequestResponseBehavior\030\006 \002(\0162].D" +
+      "iadoc.Api.Proto.Workflows.AmendmentReque" +
+      "stResponseBehavior.AmendmentRequestRespo" +
+      "nseBehavior\022\177\n\"ReceiptRoamingConfirmatio" +
+      "nBehavior\030\007 \002(\0162S.Diadoc.Api.Proto.Workf" +
+      "lows.RoamingConfirmationBehavior.Roaming" +
+      "ConfirmationBehavior\022]\n\022InvitationBehavi" +
+      "or\030\010 \002(\0162A.Diadoc.Api.Proto.Workflows.In" +
+      "vitationBehavior.InvitationBehavior\"\261\001\n\024" +
+      "ParticipantSettingV3\022P\n\013Participant\030\001 \002(" +
+      "\0162;.Diadoc.Api.Proto.Workflows.Participa" +
+      "ntType.ParticipantType\022G\n\007Actions\030\002 \003(\0132" +
+      "6.Diadoc.Api.Proto.Workflows.Participant" +
+      "ActionSettingV3\"\361\001\n\032ParticipantActionSet" +
+      "tingV3\022\022\n\nTitleIndex\030\001 \002(\005\022Z\n\021Participan" +
+      "tAction\030\002 \002(\0162?.Diadoc.Api.Proto.Workflo" +
+      "ws.ParticipantAction.ParticipantAction\022c" +
+      "\n\024TitleReceiptBehavior\030\003 \002(\0162E.Diadoc.Ap" +
+      "i.Proto.Workflows.TitleReceiptBehavior.T" +
+      "itleReceiptBehavior\"z\n\036DocumentWorkflowS" +
+      "ettingsListV2\022X\n\030DocumentWorkflowSetting" +
+      "s\030\001 \003(\01326.Diadoc.Api.Proto.Workflows.Doc" +
+      "umentWorkflowSettingsV2\"\321\007\n\032DocumentWork" +
+      "flowSettingsV2\022\n\n\002Id\030\001 \002(\005\022F\n\014Participan" +
+      "ts\030\002 \003(\01320.Diadoc.Api.Proto.Workflows.Pa" +
+      "rticipantSettingV2\022\231\001\n#OperatorConfirmat" +
+      "ionReceiptBehavior\030\003 \001(\0162c.Diadoc.Api.Pr" +
+      "oto.Workflows.OperatorConfirmationReceip" +
+      "tBehavior.OperatorConfirmationReceiptBeh" +
+      "avior:\007Unknown\022\256\001\n*ReceiptOperatorConfir" +
+      "mationReceiptBehavior\030\004 \001(\0162q.Diadoc.Api" +
+      ".Proto.Workflows.ReceiptOperatorConfirma" +
+      "tionReceiptBehavior.ReceiptOperatorConfi" +
+      "rmationReceiptBehavior:\007Unknown\022\213\001\n#Rece" +
+      "iptOperatorConfirmationBehavior\030\005 \001(\0162U." +
+      "Diadoc.Api.Proto.Workflows.OperatorConfi" +
+      "rmationBehavior.OperatorConfirmationBeha" +
+      "vior:\007Unknown\022\220\001\n AmendmentRequestRespon" +
+      "seBehavior\030\006 \001(\0162].Diadoc.Api.Proto.Work" +
+      "flows.AmendmentRequestResponseBehavior.A" +
+      "mendmentRequestResponseBehavior:\007Unknown" +
+      "\022\210\001\n\"ReceiptRoamingConfirmationBehavior\030" +
+      "\007 \001(\0162S.Diadoc.Api.Proto.Workflows.Roami" +
+      "ngConfirmationBehavior.RoamingConfirmati" +
+      "onBehavior:\007Unknown\022f\n\022InvitationBehavio" +
+      "r\030\010 \001(\0162A.Diadoc.Api.Proto.Workflows.Inv" +
+      "itationBehavior.InvitationBehavior:\007Unkn" +
+      "own\"\304\002\n\024ParticipantSettingV2\022Y\n\013Particip" +
+      "ant\030\001 \001(\0162;.Diadoc.Api.Proto.Workflows.P" +
+      "articipantType.ParticipantType:\007Unknown\022" +
+      "c\n\021ParticipantAction\030\002 \001(\0162?.Diadoc.Api." +
+      "Proto.Workflows.ParticipantAction.Partic" +
+      "ipantAction:\007Unknown\022l\n\024TitleReceiptBeha" +
+      "vior\030\003 \001(\0162E.Diadoc.Api.Proto.Workflows." +
+      "TitleReceiptBehavior.TitleReceiptBehavio" +
+      "r:\007Unknown\"v\n\034DocumentWorkflowSettingsLi" +
+      "st\022V\n\030DocumentWorkflowSettings\030\001 \003(\01324.D" +
+      "iadoc.Api.Proto.Workflows.DocumentWorkfl" +
+      "owSettings\"\370\t\n\030DocumentWorkflowSettings\022" +
+      "\n\n\002Id\030\001 \002(\005\022D\n\014Participants\030\002 \003(\0132..Diad" +
+      "oc.Api.Proto.Workflows.ParticipantSettin" +
+      "g\022\231\001\n#OperatorConfirmationReceiptBehavio" +
+      "r\030\003 \001(\0162c.Diadoc.Api.Proto.Workflows.Ope" +
+      "ratorConfirmationReceiptBehavior.Operato" +
+      "rConfirmationReceiptBehavior:\007Unknown\022\256\001" +
+      "\n*ReceiptOperatorConfirmationReceiptBeha" +
+      "vior\030\004 \001(\0162q.Diadoc.Api.Proto.Workflows." +
+      "ReceiptOperatorConfirmationReceiptBehavi" +
+      "or.ReceiptOperatorConfirmationReceiptBeh" +
+      "avior:\007Unknown\022\213\001\n#ReceiptOperatorConfir" +
+      "mationBehavior\030\005 \001(\0162U.Diadoc.Api.Proto." +
+      "Workflows.OperatorConfirmationBehavior.O" +
+      "peratorConfirmationBehavior:\007Unknown\022\220\001\n" +
+      " AmendmentRequestResponseBehavior\030\006 \001(\0162" +
+      "].Diadoc.Api.Proto.Workflows.AmendmentRe" +
+      "questResponseBehavior.AmendmentRequestRe" +
+      "sponseBehavior:\007Unknown\022\224\001\n,AmendmentReq" +
+      "uestOperatorConfirmationBehavior\030\007 \001(\0162U" +
+      ".Diadoc.Api.Proto.Workflows.OperatorConf" +
+      "irmationBehavior.OperatorConfirmationBeh" +
+      "avior:\007Unknown\022\210\001\n\"ReceiptRoamingConfirm" +
+      "ationBehavior\030\010 \001(\0162S.Diadoc.Api.Proto.W" +
+      "orkflows.RoamingConfirmationBehavior.Roa" +
+      "mingConfirmationBehavior:\007Unknown\022\221\001\n+Am" +
+      "endmentRequestRoamingConfirmationBehavio" +
+      "r\030\t \001(\0162S.Diadoc.Api.Proto.Workflows.Roa" +
+      "mingConfirmationBehavior.RoamingConfirma" +
+      "tionBehavior:\007Unknown\022f\n\022InvitationBehav" +
+      "ior\030\n \001(\0162A.Diadoc.Api.Proto.Workflows.I" +
+      "nvitationBehavior.InvitationBehavior:\007Un" +
+      "known\"\315\004\n\022ParticipantSetting\022Y\n\013Particip" +
+      "ant\030\001 \001(\0162;.Diadoc.Api.Proto.Workflows.P" +
+      "articipantType.ParticipantType:\007Unknown\022" +
+      "c\n\021ParticipantAction\030\002 \001(\0162?.Diadoc.Api." +
+      "Proto.Workflows.ParticipantAction.Partic" +
+      "ipantAction:\007Unknown\022l\n\024TitleReceiptBeha" +
+      "vior\030\003 \001(\0162E.Diadoc.Api.Proto.Workflows." +
+      "TitleReceiptBehavior.TitleReceiptBehavio" +
+      "r:\007Unknown\022\204\001\n\034OperatorConfirmationBehav" +
+      "ior\030\004 \001(\0162U.Diadoc.Api.Proto.Workflows.O" +
+      "peratorConfirmationBehavior.OperatorConf" +
+      "irmationBehavior:\007Unknown\022\201\001\n\033RoamingCon" +
+      "firmationBehavior\030\005 \001(\0162S.Diadoc.Api.Pro" +
+      "to.Workflows.RoamingConfirmationBehavior" +
+      ".RoamingConfirmationBehavior:\007UnknownB B" +
+      "\036DocumentWorkflowSettingsProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6460,38 +10379,62 @@ public final class DocumentWorkflowSettingsProtos {
           Diadoc.Api.Proto.Workflows.InvitationBehavior.InvitationBehaviorProtos.getDescriptor(),
           Diadoc.Api.Proto.Workflows.RoamingConfirmationBehavior.RoamingConfirmationBehaviorProtos.getDescriptor(),
         });
-    internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV2_descriptor =
+    internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV3_descriptor,
+        new java.lang.String[] { "DocumentWorkflowSettings", });
+    internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV3_descriptor,
+        new java.lang.String[] { "Id", "Participants", "OperatorConfirmationReceiptBehavior", "ReceiptOperatorConfirmationReceiptBehavior", "ReceiptOperatorConfirmationBehavior", "AmendmentRequestResponseBehavior", "ReceiptRoamingConfirmationBehavior", "InvitationBehavior", });
+    internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV3_descriptor,
+        new java.lang.String[] { "Participant", "Actions", });
+    internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Workflows_ParticipantActionSettingV3_descriptor,
+        new java.lang.String[] { "TitleIndex", "ParticipantAction", "TitleReceiptBehavior", });
+    internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV2_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsListV2_descriptor,
         new java.lang.String[] { "DocumentWorkflowSettings", });
     internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV2_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsV2_descriptor,
         new java.lang.String[] { "Id", "Participants", "OperatorConfirmationReceiptBehavior", "ReceiptOperatorConfirmationReceiptBehavior", "ReceiptOperatorConfirmationBehavior", "AmendmentRequestResponseBehavior", "ReceiptRoamingConfirmationBehavior", "InvitationBehavior", });
     internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV2_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Workflows_ParticipantSettingV2_descriptor,
         new java.lang.String[] { "Participant", "ParticipantAction", "TitleReceiptBehavior", });
     internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsList_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettingsList_descriptor,
         new java.lang.String[] { "DocumentWorkflowSettings", });
     internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettings_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Workflows_DocumentWorkflowSettings_descriptor,
         new java.lang.String[] { "Id", "Participants", "OperatorConfirmationReceiptBehavior", "ReceiptOperatorConfirmationReceiptBehavior", "ReceiptOperatorConfirmationBehavior", "AmendmentRequestResponseBehavior", "AmendmentRequestOperatorConfirmationBehavior", "ReceiptRoamingConfirmationBehavior", "AmendmentRequestRoamingConfirmationBehavior", "InvitationBehavior", });
     internal_static_Diadoc_Api_Proto_Workflows_ParticipantSetting_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_Diadoc_Api_Proto_Workflows_ParticipantSetting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Workflows_ParticipantSetting_descriptor,

@@ -2377,6 +2377,30 @@ public final class DocumentProtos {
     boolean getHasUnreadOutOfWorkflowUniversalMessages();
 
     /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo> 
+        getParticipantsList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo getParticipants(int index);
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    int getParticipantsCount();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    java.util.List<? extends Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder> 
+        getParticipantsOrBuilderList();
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder getParticipantsOrBuilder(
+        int index);
+
+    /**
      * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
      * @return Whether the recipientResponseAmendmentRequestMetadata field is set.
      */
@@ -2451,6 +2475,7 @@ public final class DocumentProtos {
       proxyDepartmentId_ = "";
       ttGisFixationCancellationStatus_ = 0;
       hasUnreadOutOfWorkflowUniversalMessages_ = true;
+      participants_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -4989,6 +5014,47 @@ public final class DocumentProtos {
       return hasUnreadOutOfWorkflowUniversalMessages_;
     }
 
+    public static final int PARTICIPANTS_FIELD_NUMBER = 83;
+    @SuppressWarnings("serial")
+    private java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo> participants_;
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    @java.lang.Override
+    public java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo> getParticipantsList() {
+      return participants_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder> 
+        getParticipantsOrBuilderList() {
+      return participants_;
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    @java.lang.Override
+    public int getParticipantsCount() {
+      return participants_.size();
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo getParticipants(int index) {
+      return participants_.get(index);
+    }
+    /**
+     * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder getParticipantsOrBuilder(
+        int index) {
+      return participants_.get(index);
+    }
+
     public static final int RECIPIENTRESPONSEAMENDMENTREQUESTMETADATA_FIELD_NUMBER = 84;
     private Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata recipientResponseAmendmentRequestMetadata_;
     /**
@@ -5252,6 +5318,12 @@ public final class DocumentProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      for (int i = 0; i < getParticipantsCount(); i++) {
+        if (!getParticipants(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       if (hasRecipientResponseAmendmentRequestMetadata()) {
         if (!getRecipientResponseAmendmentRequestMetadata().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -5504,6 +5576,9 @@ public final class DocumentProtos {
       }
       if (((bitField2_ & 0x00000200) != 0)) {
         output.writeBool(82, hasUnreadOutOfWorkflowUniversalMessages_);
+      }
+      for (int i = 0; i < participants_.size(); i++) {
+        output.writeMessage(83, participants_.get(i));
       }
       if (((bitField2_ & 0x00000400) != 0)) {
         output.writeMessage(84, getRecipientResponseAmendmentRequestMetadata());
@@ -5814,6 +5889,10 @@ public final class DocumentProtos {
       if (((bitField2_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(82, hasUnreadOutOfWorkflowUniversalMessages_);
+      }
+      for (int i = 0; i < participants_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(83, participants_.get(i));
       }
       if (((bitField2_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -6207,6 +6286,8 @@ public final class DocumentProtos {
         if (getHasUnreadOutOfWorkflowUniversalMessages()
             != other.getHasUnreadOutOfWorkflowUniversalMessages()) return false;
       }
+      if (!getParticipantsList()
+          .equals(other.getParticipantsList())) return false;
       if (hasRecipientResponseAmendmentRequestMetadata() != other.hasRecipientResponseAmendmentRequestMetadata()) return false;
       if (hasRecipientResponseAmendmentRequestMetadata()) {
         if (!getRecipientResponseAmendmentRequestMetadata()
@@ -6554,6 +6635,10 @@ public final class DocumentProtos {
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getHasUnreadOutOfWorkflowUniversalMessages());
       }
+      if (getParticipantsCount() > 0) {
+        hash = (37 * hash) + PARTICIPANTS_FIELD_NUMBER;
+        hash = (53 * hash) + getParticipantsList().hashCode();
+      }
       if (hasRecipientResponseAmendmentRequestMetadata()) {
         hash = (37 * hash) + RECIPIENTRESPONSEAMENDMENTREQUESTMETADATA_FIELD_NUMBER;
         hash = (53 * hash) + getRecipientResponseAmendmentRequestMetadata().hashCode();
@@ -6725,6 +6810,7 @@ public final class DocumentProtos {
           getSenderReceiptMetadataFieldBuilder();
           getLastOuterDocflowsFieldBuilder();
           getDocflowStatusFieldBuilder();
+          getParticipantsFieldBuilder();
           getRecipientResponseAmendmentRequestMetadataFieldBuilder();
         }
       }
@@ -6974,6 +7060,13 @@ public final class DocumentProtos {
         }
         ttGisFixationCancellationStatus_ = 0;
         hasUnreadOutOfWorkflowUniversalMessages_ = true;
+        if (participantsBuilder_ == null) {
+          participants_ = java.util.Collections.emptyList();
+        } else {
+          participants_ = null;
+          participantsBuilder_.clear();
+        }
+        bitField2_ = (bitField2_ & ~0x00010000);
         recipientResponseAmendmentRequestMetadata_ = null;
         if (recipientResponseAmendmentRequestMetadataBuilder_ != null) {
           recipientResponseAmendmentRequestMetadataBuilder_.dispose();
@@ -7067,6 +7160,15 @@ public final class DocumentProtos {
           result.lastOuterDocflows_ = lastOuterDocflows_;
         } else {
           result.lastOuterDocflows_ = lastOuterDocflowsBuilder_.build();
+        }
+        if (participantsBuilder_ == null) {
+          if (((bitField2_ & 0x00010000) != 0)) {
+            participants_ = java.util.Collections.unmodifiableList(participants_);
+            bitField2_ = (bitField2_ & ~0x00010000);
+          }
+          result.participants_ = participants_;
+        } else {
+          result.participants_ = participantsBuilder_.build();
         }
       }
 
@@ -7446,7 +7548,7 @@ public final class DocumentProtos {
           result.hasUnreadOutOfWorkflowUniversalMessages_ = hasUnreadOutOfWorkflowUniversalMessages_;
           to_bitField2_ |= 0x00000200;
         }
-        if (((from_bitField2_ & 0x00010000) != 0)) {
+        if (((from_bitField2_ & 0x00020000) != 0)) {
           result.recipientResponseAmendmentRequestMetadata_ = recipientResponseAmendmentRequestMetadataBuilder_ == null
               ? recipientResponseAmendmentRequestMetadata_
               : recipientResponseAmendmentRequestMetadataBuilder_.build();
@@ -7890,6 +7992,32 @@ public final class DocumentProtos {
         if (other.hasHasUnreadOutOfWorkflowUniversalMessages()) {
           setHasUnreadOutOfWorkflowUniversalMessages(other.getHasUnreadOutOfWorkflowUniversalMessages());
         }
+        if (participantsBuilder_ == null) {
+          if (!other.participants_.isEmpty()) {
+            if (participants_.isEmpty()) {
+              participants_ = other.participants_;
+              bitField2_ = (bitField2_ & ~0x00010000);
+            } else {
+              ensureParticipantsIsMutable();
+              participants_.addAll(other.participants_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.participants_.isEmpty()) {
+            if (participantsBuilder_.isEmpty()) {
+              participantsBuilder_.dispose();
+              participantsBuilder_ = null;
+              participants_ = other.participants_;
+              bitField2_ = (bitField2_ & ~0x00010000);
+              participantsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getParticipantsFieldBuilder() : null;
+            } else {
+              participantsBuilder_.addAllMessages(other.participants_);
+            }
+          }
+        }
         if (other.hasRecipientResponseAmendmentRequestMetadata()) {
           mergeRecipientResponseAmendmentRequestMetadata(other.getRecipientResponseAmendmentRequestMetadata());
         }
@@ -8084,6 +8212,11 @@ public final class DocumentProtos {
         }
         if (!getDocflowStatus().isInitialized()) {
           return false;
+        }
+        for (int i = 0; i < getParticipantsCount(); i++) {
+          if (!getParticipants(i).isInitialized()) {
+            return false;
+          }
         }
         if (hasRecipientResponseAmendmentRequestMetadata()) {
           if (!getRecipientResponseAmendmentRequestMetadata().isInitialized()) {
@@ -8682,11 +8815,24 @@ public final class DocumentProtos {
                 bitField2_ |= 0x00008000;
                 break;
               } // case 656
+              case 666: {
+                Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo m =
+                    input.readMessage(
+                        Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.parser(),
+                        extensionRegistry);
+                if (participantsBuilder_ == null) {
+                  ensureParticipantsIsMutable();
+                  participants_.add(m);
+                } else {
+                  participantsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 666
               case 674: {
                 input.readMessage(
                     getRecipientResponseAmendmentRequestMetadataFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField2_ |= 0x00010000;
+                bitField2_ |= 0x00020000;
                 break;
               } // case 674
               default: {
@@ -16517,6 +16663,246 @@ public final class DocumentProtos {
         return this;
       }
 
+      private java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo> participants_ =
+        java.util.Collections.emptyList();
+      private void ensureParticipantsIsMutable() {
+        if (!((bitField2_ & 0x00010000) != 0)) {
+          participants_ = new java.util.ArrayList<Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo>(participants_);
+          bitField2_ |= 0x00010000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder> participantsBuilder_;
+
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo> getParticipantsList() {
+        if (participantsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(participants_);
+        } else {
+          return participantsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public int getParticipantsCount() {
+        if (participantsBuilder_ == null) {
+          return participants_.size();
+        } else {
+          return participantsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo getParticipants(int index) {
+        if (participantsBuilder_ == null) {
+          return participants_.get(index);
+        } else {
+          return participantsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Builder setParticipants(
+          int index, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo value) {
+        if (participantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureParticipantsIsMutable();
+          participants_.set(index, value);
+          onChanged();
+        } else {
+          participantsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Builder setParticipants(
+          int index, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder builderForValue) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          participants_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          participantsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Builder addParticipants(Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo value) {
+        if (participantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureParticipantsIsMutable();
+          participants_.add(value);
+          onChanged();
+        } else {
+          participantsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Builder addParticipants(
+          int index, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo value) {
+        if (participantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureParticipantsIsMutable();
+          participants_.add(index, value);
+          onChanged();
+        } else {
+          participantsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Builder addParticipants(
+          Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder builderForValue) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          participants_.add(builderForValue.build());
+          onChanged();
+        } else {
+          participantsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Builder addParticipants(
+          int index, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder builderForValue) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          participants_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          participantsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Builder addAllParticipants(
+          java.lang.Iterable<? extends Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo> values) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, participants_);
+          onChanged();
+        } else {
+          participantsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Builder clearParticipants() {
+        if (participantsBuilder_ == null) {
+          participants_ = java.util.Collections.emptyList();
+          bitField2_ = (bitField2_ & ~0x00010000);
+          onChanged();
+        } else {
+          participantsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Builder removeParticipants(int index) {
+        if (participantsBuilder_ == null) {
+          ensureParticipantsIsMutable();
+          participants_.remove(index);
+          onChanged();
+        } else {
+          participantsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder getParticipantsBuilder(
+          int index) {
+        return getParticipantsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder getParticipantsOrBuilder(
+          int index) {
+        if (participantsBuilder_ == null) {
+          return participants_.get(index);  } else {
+          return participantsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public java.util.List<? extends Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder> 
+           getParticipantsOrBuilderList() {
+        if (participantsBuilder_ != null) {
+          return participantsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(participants_);
+        }
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder addParticipantsBuilder() {
+        return getParticipantsFieldBuilder().addBuilder(
+            Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder addParticipantsBuilder(
+          int index) {
+        return getParticipantsFieldBuilder().addBuilder(
+            index, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Diadoc.Api.Proto.Documents.DocumentParticipantInfo Participants = 83;</code>
+       */
+      public java.util.List<Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder> 
+           getParticipantsBuilderList() {
+        return getParticipantsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder> 
+          getParticipantsFieldBuilder() {
+        if (participantsBuilder_ == null) {
+          participantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder>(
+                  participants_,
+                  ((bitField2_ & 0x00010000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          participants_ = null;
+        }
+        return participantsBuilder_;
+      }
+
       private Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata recipientResponseAmendmentRequestMetadata_;
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata, Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.Builder, Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadataOrBuilder> recipientResponseAmendmentRequestMetadataBuilder_;
@@ -16525,7 +16911,7 @@ public final class DocumentProtos {
        * @return Whether the recipientResponseAmendmentRequestMetadata field is set.
        */
       public boolean hasRecipientResponseAmendmentRequestMetadata() {
-        return ((bitField2_ & 0x00010000) != 0);
+        return ((bitField2_ & 0x00020000) != 0);
       }
       /**
        * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
@@ -16550,7 +16936,7 @@ public final class DocumentProtos {
         } else {
           recipientResponseAmendmentRequestMetadataBuilder_.setMessage(value);
         }
-        bitField2_ |= 0x00010000;
+        bitField2_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -16564,7 +16950,7 @@ public final class DocumentProtos {
         } else {
           recipientResponseAmendmentRequestMetadataBuilder_.setMessage(builderForValue.build());
         }
-        bitField2_ |= 0x00010000;
+        bitField2_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -16573,7 +16959,7 @@ public final class DocumentProtos {
        */
       public Builder mergeRecipientResponseAmendmentRequestMetadata(Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata value) {
         if (recipientResponseAmendmentRequestMetadataBuilder_ == null) {
-          if (((bitField2_ & 0x00010000) != 0) &&
+          if (((bitField2_ & 0x00020000) != 0) &&
             recipientResponseAmendmentRequestMetadata_ != null &&
             recipientResponseAmendmentRequestMetadata_ != Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.getDefaultInstance()) {
             getRecipientResponseAmendmentRequestMetadataBuilder().mergeFrom(value);
@@ -16584,7 +16970,7 @@ public final class DocumentProtos {
           recipientResponseAmendmentRequestMetadataBuilder_.mergeFrom(value);
         }
         if (recipientResponseAmendmentRequestMetadata_ != null) {
-          bitField2_ |= 0x00010000;
+          bitField2_ |= 0x00020000;
           onChanged();
         }
         return this;
@@ -16593,7 +16979,7 @@ public final class DocumentProtos {
        * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
        */
       public Builder clearRecipientResponseAmendmentRequestMetadata() {
-        bitField2_ = (bitField2_ & ~0x00010000);
+        bitField2_ = (bitField2_ & ~0x00020000);
         recipientResponseAmendmentRequestMetadata_ = null;
         if (recipientResponseAmendmentRequestMetadataBuilder_ != null) {
           recipientResponseAmendmentRequestMetadataBuilder_.dispose();
@@ -16606,7 +16992,7 @@ public final class DocumentProtos {
        * <code>optional .Diadoc.Api.Proto.Documents.AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;</code>
        */
       public Diadoc.Api.Proto.Documents.DocumentProtos.AmendmentRequestMetadata.Builder getRecipientResponseAmendmentRequestMetadataBuilder() {
-        bitField2_ |= 0x00010000;
+        bitField2_ |= 0x00020000;
         onChanged();
         return getRecipientResponseAmendmentRequestMetadataFieldBuilder().getBuilder();
       }
@@ -21510,6 +21896,697 @@ public final class DocumentProtos {
 
   }
 
+  public interface DocumentParticipantInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Diadoc.Api.Proto.Documents.DocumentParticipantInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+     * @return Whether the participant field is set.
+     */
+    boolean hasParticipant();
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+     * @return The participant.
+     */
+    Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 getParticipant();
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+     */
+    Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder getParticipantOrBuilder();
+
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 2;</code>
+     * @return Whether the recipientResponseStatus field is set.
+     */
+    boolean hasRecipientResponseStatus();
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 2;</code>
+     * @return The recipientResponseStatus.
+     */
+    Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getRecipientResponseStatus();
+  }
+  /**
+   * Protobuf type {@code Diadoc.Api.Proto.Documents.DocumentParticipantInfo}
+   */
+  public static final class DocumentParticipantInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Diadoc.Api.Proto.Documents.DocumentParticipantInfo)
+      DocumentParticipantInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        DocumentParticipantInfo.class.getName());
+    }
+    // Use DocumentParticipantInfo.newBuilder() to construct.
+    private DocumentParticipantInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private DocumentParticipantInfo() {
+      recipientResponseStatus_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.class, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PARTICIPANT_FIELD_NUMBER = 1;
+    private Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 participant_;
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+     * @return Whether the participant field is set.
+     */
+    @java.lang.Override
+    public boolean hasParticipant() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+     * @return The participant.
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 getParticipant() {
+      return participant_ == null ? Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.getDefaultInstance() : participant_;
+    }
+    /**
+     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+     */
+    @java.lang.Override
+    public Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder getParticipantOrBuilder() {
+      return participant_ == null ? Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.getDefaultInstance() : participant_;
+    }
+
+    public static final int RECIPIENTRESPONSESTATUS_FIELD_NUMBER = 2;
+    private int recipientResponseStatus_ = 0;
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 2;</code>
+     * @return Whether the recipientResponseStatus field is set.
+     */
+    @java.lang.Override public boolean hasRecipientResponseStatus() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 2;</code>
+     * @return The recipientResponseStatus.
+     */
+    @java.lang.Override public Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getRecipientResponseStatus() {
+      Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus result = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.forNumber(recipientResponseStatus_);
+      return result == null ? Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasParticipant()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getParticipant().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getParticipant());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, recipientResponseStatus_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParticipant());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, recipientResponseStatus_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo)) {
+        return super.equals(obj);
+      }
+      Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo other = (Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo) obj;
+
+      if (hasParticipant() != other.hasParticipant()) return false;
+      if (hasParticipant()) {
+        if (!getParticipant()
+            .equals(other.getParticipant())) return false;
+      }
+      if (hasRecipientResponseStatus() != other.hasRecipientResponseStatus()) return false;
+      if (hasRecipientResponseStatus()) {
+        if (recipientResponseStatus_ != other.recipientResponseStatus_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParticipant()) {
+        hash = (37 * hash) + PARTICIPANT_FIELD_NUMBER;
+        hash = (53 * hash) + getParticipant().hashCode();
+      }
+      if (hasRecipientResponseStatus()) {
+        hash = (37 * hash) + RECIPIENTRESPONSESTATUS_FIELD_NUMBER;
+        hash = (53 * hash) + recipientResponseStatus_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Diadoc.Api.Proto.Documents.DocumentParticipantInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Diadoc.Api.Proto.Documents.DocumentParticipantInfo)
+        Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.class, Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.Builder.class);
+      }
+
+      // Construct using Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getParticipantFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        participant_ = null;
+        if (participantBuilder_ != null) {
+          participantBuilder_.dispose();
+          participantBuilder_ = null;
+        }
+        recipientResponseStatus_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Diadoc.Api.Proto.Documents.DocumentProtos.internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo getDefaultInstanceForType() {
+        return Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo build() {
+        Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo buildPartial() {
+        Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo result = new Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.participant_ = participantBuilder_ == null
+              ? participant_
+              : participantBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recipientResponseStatus_ = recipientResponseStatus_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo) {
+          return mergeFrom((Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo other) {
+        if (other == Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo.getDefaultInstance()) return this;
+        if (other.hasParticipant()) {
+          mergeParticipant(other.getParticipant());
+        }
+        if (other.hasRecipientResponseStatus()) {
+          setRecipientResponseStatus(other.getRecipientResponseStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasParticipant()) {
+          return false;
+        }
+        if (!getParticipant().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParticipantFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus tmpValue =
+                    Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  recipientResponseStatus_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 participant_;
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.Builder, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder> participantBuilder_;
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+       * @return Whether the participant field is set.
+       */
+      public boolean hasParticipant() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+       * @return The participant.
+       */
+      public Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 getParticipant() {
+        if (participantBuilder_ == null) {
+          return participant_ == null ? Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.getDefaultInstance() : participant_;
+        } else {
+          return participantBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+       */
+      public Builder setParticipant(Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 value) {
+        if (participantBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          participant_ = value;
+        } else {
+          participantBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+       */
+      public Builder setParticipant(
+          Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.Builder builderForValue) {
+        if (participantBuilder_ == null) {
+          participant_ = builderForValue.build();
+        } else {
+          participantBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+       */
+      public Builder mergeParticipant(Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 value) {
+        if (participantBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            participant_ != null &&
+            participant_ != Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.getDefaultInstance()) {
+            getParticipantBuilder().mergeFrom(value);
+          } else {
+            participant_ = value;
+          }
+        } else {
+          participantBuilder_.mergeFrom(value);
+        }
+        if (participant_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+       */
+      public Builder clearParticipant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        participant_ = null;
+        if (participantBuilder_ != null) {
+          participantBuilder_.dispose();
+          participantBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.Builder getParticipantBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParticipantFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+       */
+      public Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder getParticipantOrBuilder() {
+        if (participantBuilder_ != null) {
+          return participantBuilder_.getMessageOrBuilder();
+        } else {
+          return participant_ == null ?
+              Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.getDefaultInstance() : participant_;
+        }
+      }
+      /**
+       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Participant = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.Builder, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder> 
+          getParticipantFieldBuilder() {
+        if (participantBuilder_ == null) {
+          participantBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.Builder, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder>(
+                  getParticipant(),
+                  getParentForChildren(),
+                  isClean());
+          participant_ = null;
+        }
+        return participantBuilder_;
+      }
+
+      private int recipientResponseStatus_ = 0;
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 2;</code>
+       * @return Whether the recipientResponseStatus field is set.
+       */
+      @java.lang.Override public boolean hasRecipientResponseStatus() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 2;</code>
+       * @return The recipientResponseStatus.
+       */
+      @java.lang.Override
+      public Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus getRecipientResponseStatus() {
+        Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus result = Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.forNumber(recipientResponseStatus_);
+        return result == null ? Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus.RecipientResponseStatusUnknown : result;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 2;</code>
+       * @param value The recipientResponseStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientResponseStatus(Diadoc.Api.Proto.Documents.DocumentProtos.RecipientResponseStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        recipientResponseStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .Diadoc.Api.Proto.Documents.RecipientResponseStatus RecipientResponseStatus = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipientResponseStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        recipientResponseStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.Documents.DocumentParticipantInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:Diadoc.Api.Proto.Documents.DocumentParticipantInfo)
+    private static final Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo();
+    }
+
+    public static Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DocumentParticipantInfo>
+        PARSER = new com.google.protobuf.AbstractParser<DocumentParticipantInfo>() {
+      @java.lang.Override
+      public DocumentParticipantInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DocumentParticipantInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DocumentParticipantInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Diadoc.Api.Proto.Documents.DocumentProtos.DocumentParticipantInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Diadoc_Api_Proto_Documents_Document_descriptor;
   private static final 
@@ -21550,6 +22627,11 @@ public final class DocumentProtos {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Diadoc_Api_Proto_Documents_Origin_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -21569,210 +22651,218 @@ public final class DocumentProtos {
       "proto\032%Documents/NonformalizedDocument.p" +
       "roto\032\"Documents/UnilateralDocument.proto" +
       "\032)Documents/UniversalTransferDocument.pr" +
-      "oto\032\026ResolutionTarget.proto\032\032ForwardDocu" +
-      "mentEvent.proto\032\"Events/DiadocMessage-Po" +
-      "stApi.proto\032 OuterDocflows/OuterDocflow." +
-      "proto\032\025DocflowStatusV3.proto\032%TtGisFixat" +
-      "ionCancellationStatus.proto\"\301*\n\010Document" +
-      "\022\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessageId\030\002 \002(\t\022\020\n" +
-      "\010EntityId\030\003 \002(\t\022\036\n\026CreationTimestampTick" +
-      "s\030\004 \002(\020\022\031\n\021CounteragentBoxId\030\005 \001(\t\022I\n\014Do" +
-      "cumentType\030\006 \001(\0162\036.Diadoc.Api.Proto.Docu" +
-      "mentType:\023UnknownDocumentType\0228\n\022Initial" +
-      "DocumentIds\030\007 \003(\0132\034.Diadoc.Api.Proto.Doc" +
-      "umentId\022<\n\026SubordinateDocumentIds\030\010 \003(\0132" +
-      "\034.Diadoc.Api.Proto.DocumentId\022*\n\007Content" +
-      "\030\t \001(\0132\031.Diadoc.Api.Proto.Content\022\020\n\010Fil" +
-      "eName\030\n \001(\t\022\024\n\014DocumentDate\030\013 \001(\t\022\026\n\016Doc" +
-      "umentNumber\030\014 \001(\t\022v\n\035NonformalizedDocume" +
-      "ntMetadata\030\r \001(\0132O.Diadoc.Api.Proto.Docu" +
-      "ments.NonformalizedDocument.Nonformalize" +
-      "dDocumentMetadata\022T\n\017InvoiceMetadata\030\016 \001" +
-      "(\0132;.Diadoc.Api.Proto.Documents.InvoiceD" +
-      "ocument.InvoiceMetadata\022t\n\036TrustConnecti" +
-      "onRequestMetadata\030\017 \001(\0132L.Diadoc.Api.Pro" +
-      "to.Documents.BilateralDocument.TrustConn" +
-      "ectionRequestMetadata\022[\n\016Torg12Metadata\030" +
-      "\020 \001(\0132C.Diadoc.Api.Proto.Documents.Bilat" +
-      "eralDocument.BasicDocumentMetadata\022d\n\027In" +
-      "voiceRevisionMetadata\030\021 \001(\0132C.Diadoc.Api" +
-      ".Proto.Documents.InvoiceDocument.Invoice" +
-      "RevisionMetadata\022h\n\031InvoiceCorrectionMet" +
-      "adata\030\022 \001(\0132E.Diadoc.Api.Proto.Documents" +
-      ".InvoiceDocument.InvoiceCorrectionMetada" +
-      "ta\022x\n!InvoiceCorrectionRevisionMetadata\030" +
-      "\023 \001(\0132M.Diadoc.Api.Proto.Documents.Invoi" +
-      "ceDocument.InvoiceCorrectionRevisionMeta" +
-      "data\022~\n\035AcceptanceCertificateMetadata\030\024 " +
-      "\001(\0132W.Diadoc.Api.Proto.Documents.Accepta" +
-      "nceCertificateDocument.AcceptanceCertifi" +
-      "cateMetadata\022g\n\027ProformaInvoiceMetadata\030" +
-      "\025 \001(\0132F.Diadoc.Api.Proto.Documents.Unila" +
-      "teralDocument.ProformaInvoiceMetadata\022^\n" +
-      "\021XmlTorg12Metadata\030\026 \001(\0132C.Diadoc.Api.Pr" +
-      "oto.Documents.BilateralDocument.BasicDoc" +
-      "umentMetadata\022m\n XmlAcceptanceCertificat" +
-      "eMetadata\030\027 \001(\0132C.Diadoc.Api.Proto.Docum" +
-      "ents.BilateralDocument.BasicDocumentMeta" +
-      "data\022\030\n\tIsDeleted\030\030 \001(\010:\005false\022\024\n\014Depart" +
-      "mentId\030\031 \001(\t\022\025\n\006IsTest\030\032 \001(\010:\005false\022\030\n\020F" +
-      "romDepartmentId\030\033 \001(\t\022\026\n\016ToDepartmentId\030" +
-      "\034 \001(\t\022Z\n\021PriceListMetadata\030\035 \001(\0132?.Diado" +
-      "c.Api.Proto.Documents.BilateralDocument." +
-      "PriceListMetadata\022\030\n\020CustomDocumentId\030\036 " +
-      "\001(\t\022F\n\020ResolutionStatus\030\037 \001(\0132,.Diadoc.A" +
-      "pi.Proto.Documents.ResolutionStatus\022_\n\020R" +
-      "evocationStatus\030  \001(\0162,.Diadoc.Api.Proto" +
-      ".Documents.RevocationStatus:\027UnknownRevo" +
-      "cationStatus\022\032\n\022SendTimestampTicks\030! \001(\020" +
-      "\022\036\n\026DeliveryTimestampTicks\030\" \001(\020\022E\n\025Forw" +
-      "ardDocumentEvents\030# \003(\0132&.Diadoc.Api.Pro" +
-      "to.ForwardDocumentEvent\022j\n\031Reconciliatio" +
-      "nActMetadata\030& \001(\0132G.Diadoc.Api.Proto.Do" +
-      "cuments.BilateralDocument.BilateralDocum" +
-      "entMetadata\022X\n\020ContractMetadata\030\' \001(\0132>." +
+      "oto\032%Documents/DocumentParticipantV2.pro" +
+      "to\032\026ResolutionTarget.proto\032\032ForwardDocum" +
+      "entEvent.proto\032\"Events/DiadocMessage-Pos" +
+      "tApi.proto\032 OuterDocflows/OuterDocflow.p" +
+      "roto\032\025DocflowStatusV3.proto\032%TtGisFixati" +
+      "onCancellationStatus.proto\"\214+\n\010Document\022" +
+      "\020\n\010IndexKey\030\001 \001(\t\022\021\n\tMessageId\030\002 \002(\t\022\020\n\010" +
+      "EntityId\030\003 \002(\t\022\036\n\026CreationTimestampTicks" +
+      "\030\004 \002(\020\022\031\n\021CounteragentBoxId\030\005 \001(\t\022I\n\014Doc" +
+      "umentType\030\006 \001(\0162\036.Diadoc.Api.Proto.Docum" +
+      "entType:\023UnknownDocumentType\0228\n\022InitialD" +
+      "ocumentIds\030\007 \003(\0132\034.Diadoc.Api.Proto.Docu" +
+      "mentId\022<\n\026SubordinateDocumentIds\030\010 \003(\0132\034" +
+      ".Diadoc.Api.Proto.DocumentId\022*\n\007Content\030" +
+      "\t \001(\0132\031.Diadoc.Api.Proto.Content\022\020\n\010File" +
+      "Name\030\n \001(\t\022\024\n\014DocumentDate\030\013 \001(\t\022\026\n\016Docu" +
+      "mentNumber\030\014 \001(\t\022v\n\035NonformalizedDocumen" +
+      "tMetadata\030\r \001(\0132O.Diadoc.Api.Proto.Docum" +
+      "ents.NonformalizedDocument.Nonformalized" +
+      "DocumentMetadata\022T\n\017InvoiceMetadata\030\016 \001(" +
+      "\0132;.Diadoc.Api.Proto.Documents.InvoiceDo" +
+      "cument.InvoiceMetadata\022t\n\036TrustConnectio" +
+      "nRequestMetadata\030\017 \001(\0132L.Diadoc.Api.Prot" +
+      "o.Documents.BilateralDocument.TrustConne" +
+      "ctionRequestMetadata\022[\n\016Torg12Metadata\030\020" +
+      " \001(\0132C.Diadoc.Api.Proto.Documents.Bilate" +
+      "ralDocument.BasicDocumentMetadata\022d\n\027Inv" +
+      "oiceRevisionMetadata\030\021 \001(\0132C.Diadoc.Api." +
+      "Proto.Documents.InvoiceDocument.InvoiceR" +
+      "evisionMetadata\022h\n\031InvoiceCorrectionMeta" +
+      "data\030\022 \001(\0132E.Diadoc.Api.Proto.Documents." +
+      "InvoiceDocument.InvoiceCorrectionMetadat" +
+      "a\022x\n!InvoiceCorrectionRevisionMetadata\030\023" +
+      " \001(\0132M.Diadoc.Api.Proto.Documents.Invoic" +
+      "eDocument.InvoiceCorrectionRevisionMetad" +
+      "ata\022~\n\035AcceptanceCertificateMetadata\030\024 \001" +
+      "(\0132W.Diadoc.Api.Proto.Documents.Acceptan" +
+      "ceCertificateDocument.AcceptanceCertific" +
+      "ateMetadata\022g\n\027ProformaInvoiceMetadata\030\025" +
+      " \001(\0132F.Diadoc.Api.Proto.Documents.Unilat" +
+      "eralDocument.ProformaInvoiceMetadata\022^\n\021" +
+      "XmlTorg12Metadata\030\026 \001(\0132C.Diadoc.Api.Pro" +
+      "to.Documents.BilateralDocument.BasicDocu" +
+      "mentMetadata\022m\n XmlAcceptanceCertificate" +
+      "Metadata\030\027 \001(\0132C.Diadoc.Api.Proto.Docume" +
+      "nts.BilateralDocument.BasicDocumentMetad" +
+      "ata\022\030\n\tIsDeleted\030\030 \001(\010:\005false\022\024\n\014Departm" +
+      "entId\030\031 \001(\t\022\025\n\006IsTest\030\032 \001(\010:\005false\022\030\n\020Fr" +
+      "omDepartmentId\030\033 \001(\t\022\026\n\016ToDepartmentId\030\034" +
+      " \001(\t\022Z\n\021PriceListMetadata\030\035 \001(\0132?.Diadoc" +
+      ".Api.Proto.Documents.BilateralDocument.P" +
+      "riceListMetadata\022\030\n\020CustomDocumentId\030\036 \001" +
+      "(\t\022F\n\020ResolutionStatus\030\037 \001(\0132,.Diadoc.Ap" +
+      "i.Proto.Documents.ResolutionStatus\022_\n\020Re" +
+      "vocationStatus\030  \001(\0162,.Diadoc.Api.Proto." +
+      "Documents.RevocationStatus:\027UnknownRevoc" +
+      "ationStatus\022\032\n\022SendTimestampTicks\030! \001(\020\022" +
+      "\036\n\026DeliveryTimestampTicks\030\" \001(\020\022E\n\025Forwa" +
+      "rdDocumentEvents\030# \003(\0132&.Diadoc.Api.Prot" +
+      "o.ForwardDocumentEvent\022j\n\031Reconciliation" +
+      "ActMetadata\030& \001(\0132G.Diadoc.Api.Proto.Doc" +
+      "uments.BilateralDocument.BilateralDocume" +
+      "ntMetadata\022X\n\020ContractMetadata\030\' \001(\0132>.D" +
+      "iadoc.Api.Proto.Documents.BilateralDocum" +
+      "ent.ContractMetadata\022[\n\016Torg13Metadata\030(" +
+      " \001(\0132C.Diadoc.Api.Proto.Documents.Bilate" +
+      "ralDocument.BasicDocumentMetadata\022e\n\026Ser" +
+      "viceDetailsMetadata\030) \001(\0132E.Diadoc.Api.P" +
+      "roto.Documents.UnilateralDocument.Servic" +
+      "eDetailsMetadata\022z\n\031RoamingNotificationS" +
+      "tatus\030* \001(\01625.Diadoc.Api.Proto.Documents" +
+      ".RoamingNotificationStatus: UnknownRoami" +
+      "ngNotificationStatus\022!\n\022HasCustomPrintFo" +
+      "rm\030+ \001(\010:\005false\0224\n\nCustomData\030, \003(\0132 .Di" +
+      "adoc.Api.Proto.CustomDataItem\022\020\n\010PacketI" +
+      "d\030- \001(\t\022X\n\021DocumentDirection\030. \001(\0162#.Dia" +
+      "doc.Api.Proto.DocumentDirection:\030Unknown" +
+      "DocumentDirection\022&\n\036LastModificationTim" +
+      "estampTicks\030/ \001(\020\022\032\n\022IsEncryptedContent\030" +
+      "0 \001(\010\022n\n\025SenderSignatureStatus\0301 \001(\01621.D" +
+      "iadoc.Api.Proto.Documents.SenderSignatur" +
+      "eStatus:\034UnknownSenderSignatureStatus\022t\n" +
+      "\036SupplementaryAgreementMetadata\0302 \001(\0132L." +
       "Diadoc.Api.Proto.Documents.BilateralDocu" +
-      "ment.ContractMetadata\022[\n\016Torg13Metadata\030" +
-      "( \001(\0132C.Diadoc.Api.Proto.Documents.Bilat" +
-      "eralDocument.BasicDocumentMetadata\022e\n\026Se" +
-      "rviceDetailsMetadata\030) \001(\0132E.Diadoc.Api." +
-      "Proto.Documents.UnilateralDocument.Servi" +
-      "ceDetailsMetadata\022z\n\031RoamingNotification" +
-      "Status\030* \001(\01625.Diadoc.Api.Proto.Document" +
-      "s.RoamingNotificationStatus: UnknownRoam" +
-      "ingNotificationStatus\022!\n\022HasCustomPrintF" +
-      "orm\030+ \001(\010:\005false\0224\n\nCustomData\030, \003(\0132 .D" +
-      "iadoc.Api.Proto.CustomDataItem\022\020\n\010Packet" +
-      "Id\030- \001(\t\022X\n\021DocumentDirection\030. \001(\0162#.Di" +
-      "adoc.Api.Proto.DocumentDirection:\030Unknow" +
-      "nDocumentDirection\022&\n\036LastModificationTi" +
-      "mestampTicks\030/ \001(\020\022\032\n\022IsEncryptedContent" +
-      "\0300 \001(\010\022n\n\025SenderSignatureStatus\0301 \001(\01621." +
-      "Diadoc.Api.Proto.Documents.SenderSignatu" +
-      "reStatus:\034UnknownSenderSignatureStatus\022t" +
-      "\n\036SupplementaryAgreementMetadata\0302 \001(\0132L" +
-      ".Diadoc.Api.Proto.Documents.BilateralDoc" +
-      "ument.SupplementaryAgreementMetadata\022\025\n\006" +
-      "IsRead\0303 \001(\010:\005false\022,\n$RoamingNotificati" +
-      "onStatusDescription\0304 \001(\t\022\035\n\016PacketIsLoc" +
-      "ked\0305 \001(\010:\005false\022s\n\032PriceListAgreementMe" +
-      "tadata\0306 \001(\0132O.Diadoc.Api.Proto.Document" +
-      "s.NonformalizedDocument.NonformalizedDoc" +
-      "umentMetadata\022t\n\033CertificateRegistryMeta" +
-      "data\0307 \001(\0132O.Diadoc.Api.Proto.Documents." +
-      "NonformalizedDocument.NonformalizedDocum" +
-      "entMetadata\022\202\001\n!UniversalTransferDocumen" +
-      "tMetadata\0308 \001(\0132W.Diadoc.Api.Proto.Docum" +
-      "ents.UniversalTransferDocument.Universal" +
-      "TransferDocumentMetadata\022\222\001\n)UniversalTr" +
-      "ansferDocumentRevisionMetadata\0309 \001(\0132_.D" +
-      "iadoc.Api.Proto.Documents.UniversalTrans" +
-      "ferDocument.UniversalTransferDocumentRev" +
-      "isionMetadata\022\206\001\n#UniversalCorrectionDoc" +
-      "umentMetadata\030: \001(\0132Y.Diadoc.Api.Proto.D" +
-      "ocuments.UniversalTransferDocument.Unive" +
-      "rsalCorrectionDocumentMetadata\022\226\001\n+Unive" +
-      "rsalCorrectionDocumentRevisionMetadata\030;" +
-      " \001(\0132a.Diadoc.Api.Proto.Documents.Univer" +
-      "salTransferDocument.UniversalCorrectionD" +
-      "ocumentRevisionMetadata\022\033\n\021ResolutionRou" +
-      "teId\030< \001(\t:\000\022\031\n\021AttachmentVersion\030= \001(\t\022" +
-      "k\n\024ProxySignatureStatus\030> \001(\01620.Diadoc.A" +
-      "pi.Proto.Documents.ProxySignatureStatus:" +
-      "\033UnknownProxySignatureStatus\022\023\n\013TypeName" +
-      "dId\030? \002(\t\022\020\n\010Function\030@ \002(\t\022\022\n\nWorkflowI" +
-      "d\030A \002(\005\022\r\n\005Title\030B \002(\t\0227\n\010Metadata\030C \003(\013" +
-      "2%.Diadoc.Api.Proto.Events.MetadataItem\022" +
-      "V\n\030RecipientReceiptMetadata\030D \002(\01324.Diad" +
-      "oc.Api.Proto.Documents.RecipientReceiptM" +
-      "etadata\022N\n\024ConfirmationMetadata\030E \002(\01320." +
-      "Diadoc.Api.Proto.Documents.ConfirmationM" +
-      "etadata\022t\n\027RecipientResponseStatus\030F \002(\016" +
-      "23.Diadoc.Api.Proto.Documents.RecipientR" +
-      "esponseStatus:\036RecipientResponseStatusUn" +
-      "known\022V\n\030AmendmentRequestMetadata\030G \002(\0132" +
-      "4.Diadoc.Api.Proto.Documents.AmendmentRe" +
-      "questMetadata\0222\n\006Origin\030H \001(\0132\".Diadoc.A" +
-      "pi.Proto.Documents.Origin\022\032\n\020EditingSett" +
-      "ingId\030I \001(\t:\000\0222\n\010LockMode\030J \002(\0162\032.Diadoc" +
-      ".Api.Proto.LockMode:\004None\022P\n\025SenderRecei" +
-      "ptMetadata\030K \002(\01321.Diadoc.Api.Proto.Docu" +
-      "ments.SenderReceiptMetadata\022\017\n\007Version\030L" +
-      " \002(\t\022G\n\021LastOuterDocflows\030M \003(\0132,.Diadoc" +
-      ".Api.Proto.Documents.LastOuterDocflow\022\022\n" +
-      "\nProxyBoxId\030N \001(\t\022\031\n\021ProxyDepartmentId\030O" +
-      " \001(\t\0228\n\rDocflowStatus\030P \002(\0132!.Diadoc.Api" +
-      ".Proto.DocflowStatusV3\022\177\n\037TtGisFixationC" +
-      "ancellationStatus\030Q \001(\01621.Diadoc.Api.Pro" +
-      "to.TtGisFixationCancellationStatus:#TtGi" +
-      "sFixationCancellationStatusNone\0225\n\'HasUn" +
-      "readOutOfWorkflowUniversalMessages\030R \001(\010" +
-      ":\004true\022g\n)RecipientResponseAmendmentRequ" +
-      "estMetadata\030T \001(\01324.Diadoc.Api.Proto.Doc" +
-      "uments.AmendmentRequestMetadata\"r\n\020LastO" +
-      "uterDocflow\022\026\n\016ParentEntityId\030\001 \002(\t\022F\n\014O" +
-      "uterDocflow\030\002 \002(\01320.Diadoc.Api.Proto.Out" +
-      "erDocflows.OuterDocflowInfo\"\310\001\n\020Resoluti" +
-      "onStatus\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.Prot" +
-      "o.Documents.ResolutionStatusType:\027Unknow" +
-      "nResolutionStatus\0222\n\006Target\030\002 \001(\0132\".Diad" +
-      "oc.Api.Proto.ResolutionTarget\022\024\n\014AuthorU" +
-      "serId\030\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n\030Recip" +
-      "ientReceiptMetadata\022d\n\rReceiptStatus\030\001 \002" +
-      "(\01620.Diadoc.Api.Proto.Documents.GeneralR" +
-      "eceiptStatus:\033GeneralReceiptStatusUnknow" +
-      "n\022N\n\024ConfirmationMetadata\030\002 \001(\01320.Diadoc" +
-      ".Api.Proto.Documents.ConfirmationMetadat" +
-      "a\"}\n\025SenderReceiptMetadata\022d\n\rReceiptSta" +
-      "tus\030\001 \002(\01620.Diadoc.Api.Proto.Documents.G" +
-      "eneralReceiptStatus:\033GeneralReceiptStatu" +
-      "sUnknown\"\223\001\n\024ConfirmationMetadata\022d\n\rRec" +
-      "eiptStatus\030\001 \002(\01620.Diadoc.Api.Proto.Docu" +
-      "ments.GeneralReceiptStatus:\033GeneralRecei" +
-      "ptStatusUnknown\022\025\n\rDateTimeTicks\030\002 \002(\020\"\230" +
-      "\001\n\030AmendmentRequestMetadata\022\026\n\016Amendment" +
-      "Flags\030\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620.Dia" +
-      "doc.Api.Proto.Documents.GeneralReceiptSt" +
-      "atus:\033GeneralReceiptStatusUnknown\"Y\n\006Ori" +
-      "gin\022<\n\013MessageType\030\001 \002(\0162\'.Diadoc.Api.Pr" +
-      "oto.Documents.MessageType\022\021\n\tMessageId\030\002" +
-      " \002(\t*\302\001\n\024ResolutionStatusType\022$\n\027Unknown" +
-      "ResolutionStatus\020\377\377\377\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n" +
-      "\010Approved\020\001\022\017\n\013Disapproved\020\002\022\030\n\024Approvem" +
-      "entRequested\020\003\022\026\n\022SignatureRequested\020\004\022\023" +
-      "\n\017SignatureDenied\020\005\022\024\n\020ActionsRequested\020" +
-      "\006*\262\001\n\020RevocationStatus\022\033\n\027UnknownRevocat" +
-      "ionStatus\020\000\022\030\n\024RevocationStatusNone\020\001\022\035\n" +
-      "\031RevocationIsRequestedByMe\020\002\022\030\n\024Requests" +
-      "MyRevocation\020\003\022\026\n\022RevocationAccepted\020\004\022\026" +
-      "\n\022RevocationRejected\020\005*\256\001\n\031RoamingNotifi" +
-      "cationStatus\022$\n UnknownRoamingNotificati" +
-      "onStatus\020\000\022!\n\035RoamingNotificationStatusN" +
-      "one\020\001\022$\n RoamingNotificationStatusSucces" +
-      "s\020\002\022\"\n\036RoamingNotificationStatusError\020\003*" +
-      "\300\001\n\025SenderSignatureStatus\022 \n\034UnknownSend" +
-      "erSignatureStatus\020\000\022\035\n\031WaitingForSenderS" +
-      "ignature\020\001\022\034\n\030SenderSignatureUnchecked\020\002" +
-      "\022\"\n\036SenderSignatureCheckedAndValid\020\003\022$\n " +
-      "SenderSignatureCheckedAndInvalid\020\004*\302\001\n\024P" +
-      "roxySignatureStatus\022\037\n\033UnknownProxySigna" +
-      "tureStatus\020\000\022\034\n\030ProxySignatureStatusNone" +
-      "\020\001\022\034\n\030WaitingForProxySignature\020\002\022\026\n\022With" +
-      "ProxySignature\020\003\022\032\n\026ProxySignatureReject" +
-      "ed\020\004\022\031\n\025InvalidProxySignature\020\005*\234\001\n\024Gene" +
-      "ralReceiptStatus\022\037\n\033GeneralReceiptStatus" +
-      "Unknown\020\000\022%\n!GeneralReceiptStatusNotAcce" +
-      "ptable\020\001\022\027\n\023HaveToCreateReceipt\020\002\022\025\n\021Wai" +
-      "tingForReceipt\020\003\022\014\n\010Finished\020\004*\220\002\n\027Recip" +
-      "ientResponseStatus\022\"\n\036RecipientResponseS" +
-      "tatusUnknown\020\000\022(\n$RecipientResponseStatu" +
-      "sNotAcceptable\020\001\022 \n\034WaitingForRecipientS" +
-      "ignature\020\002\022\032\n\026WithRecipientSignature\020\003\022%" +
-      "\n!RecipientSignatureRequestRejected\020\004\022\035\n" +
-      "\031InvalidRecipientSignature\020\005\022#\n\037WithReci" +
-      "pientPartiallySignature\020\006*?\n\013MessageType" +
-      "\022\013\n\007Unknown\020\000\022\n\n\006Letter\020\001\022\t\n\005Draft\020\002\022\014\n\010" +
-      "Template\020\003B\020B\016DocumentProtos"
+      "ment.SupplementaryAgreementMetadata\022\025\n\006I" +
+      "sRead\0303 \001(\010:\005false\022,\n$RoamingNotificatio" +
+      "nStatusDescription\0304 \001(\t\022\035\n\016PacketIsLock" +
+      "ed\0305 \001(\010:\005false\022s\n\032PriceListAgreementMet" +
+      "adata\0306 \001(\0132O.Diadoc.Api.Proto.Documents" +
+      ".NonformalizedDocument.NonformalizedDocu" +
+      "mentMetadata\022t\n\033CertificateRegistryMetad" +
+      "ata\0307 \001(\0132O.Diadoc.Api.Proto.Documents.N" +
+      "onformalizedDocument.NonformalizedDocume" +
+      "ntMetadata\022\202\001\n!UniversalTransferDocument" +
+      "Metadata\0308 \001(\0132W.Diadoc.Api.Proto.Docume" +
+      "nts.UniversalTransferDocument.UniversalT" +
+      "ransferDocumentMetadata\022\222\001\n)UniversalTra" +
+      "nsferDocumentRevisionMetadata\0309 \001(\0132_.Di" +
+      "adoc.Api.Proto.Documents.UniversalTransf" +
+      "erDocument.UniversalTransferDocumentRevi" +
+      "sionMetadata\022\206\001\n#UniversalCorrectionDocu" +
+      "mentMetadata\030: \001(\0132Y.Diadoc.Api.Proto.Do" +
+      "cuments.UniversalTransferDocument.Univer" +
+      "salCorrectionDocumentMetadata\022\226\001\n+Univer" +
+      "salCorrectionDocumentRevisionMetadata\030; " +
+      "\001(\0132a.Diadoc.Api.Proto.Documents.Univers" +
+      "alTransferDocument.UniversalCorrectionDo" +
+      "cumentRevisionMetadata\022\033\n\021ResolutionRout" +
+      "eId\030< \001(\t:\000\022\031\n\021AttachmentVersion\030= \001(\t\022k" +
+      "\n\024ProxySignatureStatus\030> \001(\01620.Diadoc.Ap" +
+      "i.Proto.Documents.ProxySignatureStatus:\033" +
+      "UnknownProxySignatureStatus\022\023\n\013TypeNamed" +
+      "Id\030? \002(\t\022\020\n\010Function\030@ \002(\t\022\022\n\nWorkflowId" +
+      "\030A \002(\005\022\r\n\005Title\030B \002(\t\0227\n\010Metadata\030C \003(\0132" +
+      "%.Diadoc.Api.Proto.Events.MetadataItem\022V" +
+      "\n\030RecipientReceiptMetadata\030D \002(\01324.Diado" +
+      "c.Api.Proto.Documents.RecipientReceiptMe" +
+      "tadata\022N\n\024ConfirmationMetadata\030E \002(\01320.D" +
+      "iadoc.Api.Proto.Documents.ConfirmationMe" +
+      "tadata\022t\n\027RecipientResponseStatus\030F \002(\0162" +
+      "3.Diadoc.Api.Proto.Documents.RecipientRe" +
+      "sponseStatus:\036RecipientResponseStatusUnk" +
+      "nown\022V\n\030AmendmentRequestMetadata\030G \002(\01324" +
+      ".Diadoc.Api.Proto.Documents.AmendmentReq" +
+      "uestMetadata\0222\n\006Origin\030H \001(\0132\".Diadoc.Ap" +
+      "i.Proto.Documents.Origin\022\032\n\020EditingSetti" +
+      "ngId\030I \001(\t:\000\0222\n\010LockMode\030J \002(\0162\032.Diadoc." +
+      "Api.Proto.LockMode:\004None\022P\n\025SenderReceip" +
+      "tMetadata\030K \002(\01321.Diadoc.Api.Proto.Docum" +
+      "ents.SenderReceiptMetadata\022\017\n\007Version\030L " +
+      "\002(\t\022G\n\021LastOuterDocflows\030M \003(\0132,.Diadoc." +
+      "Api.Proto.Documents.LastOuterDocflow\022\022\n\n" +
+      "ProxyBoxId\030N \001(\t\022\031\n\021ProxyDepartmentId\030O " +
+      "\001(\t\0228\n\rDocflowStatus\030P \002(\0132!.Diadoc.Api." +
+      "Proto.DocflowStatusV3\022\177\n\037TtGisFixationCa" +
+      "ncellationStatus\030Q \001(\01621.Diadoc.Api.Prot" +
+      "o.TtGisFixationCancellationStatus:#TtGis" +
+      "FixationCancellationStatusNone\0225\n\'HasUnr" +
+      "eadOutOfWorkflowUniversalMessages\030R \001(\010:" +
+      "\004true\022I\n\014Participants\030S \003(\01323.Diadoc.Api" +
+      ".Proto.Documents.DocumentParticipantInfo" +
+      "\022g\n)RecipientResponseAmendmentRequestMet" +
+      "adata\030T \001(\01324.Diadoc.Api.Proto.Documents" +
+      ".AmendmentRequestMetadata\"r\n\020LastOuterDo" +
+      "cflow\022\026\n\016ParentEntityId\030\001 \002(\t\022F\n\014OuterDo" +
+      "cflow\030\002 \002(\01320.Diadoc.Api.Proto.OuterDocf" +
+      "lows.OuterDocflowInfo\"\310\001\n\020ResolutionStat" +
+      "us\022W\n\004Type\030\001 \001(\01620.Diadoc.Api.Proto.Docu" +
+      "ments.ResolutionStatusType:\027UnknownResol" +
+      "utionStatus\0222\n\006Target\030\002 \001(\0132\".Diadoc.Api" +
+      ".Proto.ResolutionTarget\022\024\n\014AuthorUserId\030" +
+      "\003 \002(\t\022\021\n\tAuthorFIO\030\004 \002(\t\"\320\001\n\030RecipientRe" +
+      "ceiptMetadata\022d\n\rReceiptStatus\030\001 \002(\01620.D" +
+      "iadoc.Api.Proto.Documents.GeneralReceipt" +
+      "Status:\033GeneralReceiptStatusUnknown\022N\n\024C" +
+      "onfirmationMetadata\030\002 \001(\01320.Diadoc.Api.P" +
+      "roto.Documents.ConfirmationMetadata\"}\n\025S" +
+      "enderReceiptMetadata\022d\n\rReceiptStatus\030\001 " +
+      "\002(\01620.Diadoc.Api.Proto.Documents.General" +
+      "ReceiptStatus:\033GeneralReceiptStatusUnkno" +
+      "wn\"\223\001\n\024ConfirmationMetadata\022d\n\rReceiptSt" +
+      "atus\030\001 \002(\01620.Diadoc.Api.Proto.Documents." +
+      "GeneralReceiptStatus:\033GeneralReceiptStat" +
+      "usUnknown\022\025\n\rDateTimeTicks\030\002 \002(\020\"\230\001\n\030Ame" +
+      "ndmentRequestMetadata\022\026\n\016AmendmentFlags\030" +
+      "\001 \002(\005\022d\n\rReceiptStatus\030\002 \002(\01620.Diadoc.Ap" +
+      "i.Proto.Documents.GeneralReceiptStatus:\033" +
+      "GeneralReceiptStatusUnknown\"Y\n\006Origin\022<\n" +
+      "\013MessageType\030\001 \002(\0162\'.Diadoc.Api.Proto.Do" +
+      "cuments.MessageType\022\021\n\tMessageId\030\002 \002(\t\"\267" +
+      "\001\n\027DocumentParticipantInfo\022F\n\013Participan" +
+      "t\030\001 \002(\01321.Diadoc.Api.Proto.Documents.Doc" +
+      "umentParticipantV2\022T\n\027RecipientResponseS" +
+      "tatus\030\002 \001(\01623.Diadoc.Api.Proto.Documents" +
+      ".RecipientResponseStatus*\302\001\n\024ResolutionS" +
+      "tatusType\022$\n\027UnknownResolutionStatus\020\377\377\377" +
+      "\377\377\377\377\377\377\001\022\010\n\004None\020\000\022\014\n\010Approved\020\001\022\017\n\013Disap" +
+      "proved\020\002\022\030\n\024ApprovementRequested\020\003\022\026\n\022Si" +
+      "gnatureRequested\020\004\022\023\n\017SignatureDenied\020\005\022" +
+      "\024\n\020ActionsRequested\020\006*\262\001\n\020RevocationStat" +
+      "us\022\033\n\027UnknownRevocationStatus\020\000\022\030\n\024Revoc" +
+      "ationStatusNone\020\001\022\035\n\031RevocationIsRequest" +
+      "edByMe\020\002\022\030\n\024RequestsMyRevocation\020\003\022\026\n\022Re" +
+      "vocationAccepted\020\004\022\026\n\022RevocationRejected" +
+      "\020\005*\256\001\n\031RoamingNotificationStatus\022$\n Unkn" +
+      "ownRoamingNotificationStatus\020\000\022!\n\035Roamin" +
+      "gNotificationStatusNone\020\001\022$\n RoamingNoti" +
+      "ficationStatusSuccess\020\002\022\"\n\036RoamingNotifi" +
+      "cationStatusError\020\003*\300\001\n\025SenderSignatureS" +
+      "tatus\022 \n\034UnknownSenderSignatureStatus\020\000\022" +
+      "\035\n\031WaitingForSenderSignature\020\001\022\034\n\030Sender" +
+      "SignatureUnchecked\020\002\022\"\n\036SenderSignatureC" +
+      "heckedAndValid\020\003\022$\n SenderSignatureCheck" +
+      "edAndInvalid\020\004*\302\001\n\024ProxySignatureStatus\022" +
+      "\037\n\033UnknownProxySignatureStatus\020\000\022\034\n\030Prox" +
+      "ySignatureStatusNone\020\001\022\034\n\030WaitingForProx" +
+      "ySignature\020\002\022\026\n\022WithProxySignature\020\003\022\032\n\026" +
+      "ProxySignatureRejected\020\004\022\031\n\025InvalidProxy" +
+      "Signature\020\005*\234\001\n\024GeneralReceiptStatus\022\037\n\033" +
+      "GeneralReceiptStatusUnknown\020\000\022%\n!General" +
+      "ReceiptStatusNotAcceptable\020\001\022\027\n\023HaveToCr" +
+      "eateReceipt\020\002\022\025\n\021WaitingForReceipt\020\003\022\014\n\010" +
+      "Finished\020\004*\220\002\n\027RecipientResponseStatus\022\"" +
+      "\n\036RecipientResponseStatusUnknown\020\000\022(\n$Re" +
+      "cipientResponseStatusNotAcceptable\020\001\022 \n\034" +
+      "WaitingForRecipientSignature\020\002\022\032\n\026WithRe" +
+      "cipientSignature\020\003\022%\n!RecipientSignature" +
+      "RequestRejected\020\004\022\035\n\031InvalidRecipientSig" +
+      "nature\020\005\022#\n\037WithRecipientPartiallySignat" +
+      "ure\020\006*?\n\013MessageType\022\013\n\007Unknown\020\000\022\n\n\006Let" +
+      "ter\020\001\022\t\n\005Draft\020\002\022\014\n\010Template\020\003B\020B\016Docume" +
+      "ntProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21789,6 +22879,7 @@ public final class DocumentProtos {
           Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.getDescriptor(),
           Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.getDescriptor(),
           Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.getDescriptor(),
+          Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.getDescriptor(),
           Diadoc.Api.Proto.ResolutionTargetProtos.getDescriptor(),
           Diadoc.Api.Proto.ForwardDocumentEventProtos.getDescriptor(),
           Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.getDescriptor(),
@@ -21801,7 +22892,7 @@ public final class DocumentProtos {
     internal_static_Diadoc_Api_Proto_Documents_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Document_descriptor,
-        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", "EditingSettingId", "LockMode", "SenderReceiptMetadata", "Version", "LastOuterDocflows", "ProxyBoxId", "ProxyDepartmentId", "DocflowStatus", "TtGisFixationCancellationStatus", "HasUnreadOutOfWorkflowUniversalMessages", "RecipientResponseAmendmentRequestMetadata", });
+        new java.lang.String[] { "IndexKey", "MessageId", "EntityId", "CreationTimestampTicks", "CounteragentBoxId", "DocumentType", "InitialDocumentIds", "SubordinateDocumentIds", "Content", "FileName", "DocumentDate", "DocumentNumber", "NonformalizedDocumentMetadata", "InvoiceMetadata", "TrustConnectionRequestMetadata", "Torg12Metadata", "InvoiceRevisionMetadata", "InvoiceCorrectionMetadata", "InvoiceCorrectionRevisionMetadata", "AcceptanceCertificateMetadata", "ProformaInvoiceMetadata", "XmlTorg12Metadata", "XmlAcceptanceCertificateMetadata", "IsDeleted", "DepartmentId", "IsTest", "FromDepartmentId", "ToDepartmentId", "PriceListMetadata", "CustomDocumentId", "ResolutionStatus", "RevocationStatus", "SendTimestampTicks", "DeliveryTimestampTicks", "ForwardDocumentEvents", "ReconciliationActMetadata", "ContractMetadata", "Torg13Metadata", "ServiceDetailsMetadata", "RoamingNotificationStatus", "HasCustomPrintForm", "CustomData", "PacketId", "DocumentDirection", "LastModificationTimestampTicks", "IsEncryptedContent", "SenderSignatureStatus", "SupplementaryAgreementMetadata", "IsRead", "RoamingNotificationStatusDescription", "PacketIsLocked", "PriceListAgreementMetadata", "CertificateRegistryMetadata", "UniversalTransferDocumentMetadata", "UniversalTransferDocumentRevisionMetadata", "UniversalCorrectionDocumentMetadata", "UniversalCorrectionDocumentRevisionMetadata", "ResolutionRouteId", "AttachmentVersion", "ProxySignatureStatus", "TypeNamedId", "Function", "WorkflowId", "Title", "Metadata", "RecipientReceiptMetadata", "ConfirmationMetadata", "RecipientResponseStatus", "AmendmentRequestMetadata", "Origin", "EditingSettingId", "LockMode", "SenderReceiptMetadata", "Version", "LastOuterDocflows", "ProxyBoxId", "ProxyDepartmentId", "DocflowStatus", "TtGisFixationCancellationStatus", "HasUnreadOutOfWorkflowUniversalMessages", "Participants", "RecipientResponseAmendmentRequestMetadata", });
     internal_static_Diadoc_Api_Proto_Documents_LastOuterDocflow_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_LastOuterDocflow_fieldAccessorTable = new
@@ -21844,6 +22935,12 @@ public final class DocumentProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Origin_descriptor,
         new java.lang.String[] { "MessageType", "MessageId", });
+    internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Diadoc_Api_Proto_Documents_DocumentParticipantInfo_descriptor,
+        new java.lang.String[] { "Participant", "RecipientResponseStatus", });
     descriptor.resolveAllFeaturesImmutable();
     Diadoc.Api.Proto.ContentProtos.getDescriptor();
     Diadoc.Api.Proto.DocumentIdProtos.getDescriptor();
@@ -21857,6 +22954,7 @@ public final class DocumentProtos {
     Diadoc.Api.Proto.Documents.NonformalizedDocument.NonformalizedDocumentProtos.getDescriptor();
     Diadoc.Api.Proto.Documents.UnilateralDocument.UnilateralDocumentProtos.getDescriptor();
     Diadoc.Api.Proto.Documents.UniversalTransferDocument.UniversalTransferDocumentProtos.getDescriptor();
+    Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.getDescriptor();
     Diadoc.Api.Proto.ResolutionTargetProtos.getDescriptor();
     Diadoc.Api.Proto.ForwardDocumentEventProtos.getDescriptor();
     Diadoc.Api.Proto.Events.DiadocMessage_PostApiProtos.getDescriptor();

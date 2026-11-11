@@ -46,6 +46,10 @@ public final class ParticipantActionProtos {
      * <code>OptionalSignature = 3;</code>
      */
     OptionalSignature(3),
+    /**
+     * <code>OptionalTitle = 4;</code>
+     */
+    OptionalTitle(4),
     ;
 
     static {
@@ -73,6 +77,10 @@ public final class ParticipantActionProtos {
      * <code>OptionalSignature = 3;</code>
      */
     public static final int OptionalSignature_VALUE = 3;
+    /**
+     * <code>OptionalTitle = 4;</code>
+     */
+    public static final int OptionalTitle_VALUE = 4;
 
 
     public final int getNumber() {
@@ -99,6 +107,7 @@ public final class ParticipantActionProtos {
         case 1: return Title;
         case 2: return Signature;
         case 3: return OptionalSignature;
+        case 4: return OptionalTitle;
         default: return null;
       }
     }
@@ -159,9 +168,10 @@ public final class ParticipantActionProtos {
     java.lang.String[] descriptorData = {
       "\n!Workflows/ParticipantAction.proto\022,Dia" +
       "doc.Api.Proto.Workflows.ParticipantActio" +
-      "n*Q\n\021ParticipantAction\022\013\n\007Unknown\020\000\022\t\n\005T" +
+      "n*d\n\021ParticipantAction\022\013\n\007Unknown\020\000\022\t\n\005T" +
       "itle\020\001\022\r\n\tSignature\020\002\022\025\n\021OptionalSignatu" +
-      "re\020\003B\031B\027ParticipantActionProtos"
+      "re\020\003\022\021\n\rOptionalTitle\020\004B\031B\027ParticipantAc" +
+      "tionProtos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
