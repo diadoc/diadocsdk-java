@@ -56,6 +56,7 @@ message MessageToPost {
 	repeated XmlDocumentAttachment UniversalTransferDocumentSellerTitles = 33;
 	repeated DocumentAttachment DocumentAttachments = 34;
 	optional LockMode LockMode = 35 [default = None];
+	optional string FromDraftId = 36;
 }
 
 message EncryptedXmlDocumentAttachment {
@@ -286,6 +287,8 @@ message DocumentAttachment {
 	optional int32 WorkflowId = 16;
 	optional bool IsEncrypted = 17 [default = false];
 	optional string EditingSettingId = 18;
+	// reserved 19 for ParticipantRoles
+	optional string FromDraftDocumentId = 20;
 }
 
 message MetadataItem {
